@@ -1,0 +1,11 @@
+# Only needed if you deploy from a terminal with `npx wrangler deploy`.
+# If you paste worker.js into the Cloudflare dashboard instead, you can ignore this file.
+name = "gcse-marking"
+main = "worker.js"
+compatibility_date = "2026-10-01"
+
+[vars]
+FIREBASE_PROJECT_ID = "PASTE_PROJECT_ID"
+ALLOWED_ORIGINS = "https://boblasticart.github.io"
+ALLOWED_EMAILS = ""
+# GEMINI_API_KEY is a secret: run `npx wrangler secret put GEMINI_API_KEY`

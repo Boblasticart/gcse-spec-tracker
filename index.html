@@ -1,0 +1,1070 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>GCSE Spec Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Figtree:wght@400;500;600&display=swap">
+<style>
+/* Layout: sticky subject tabs, one subject at a time, papers > topics > spec points with a 3-state control per point */
+:root{
+  --bg:#f2f5fa; --surface:#ffffff; --ink:#14213d; --muted:#586583; --line:#dde3ef;
+  --accent:#2b4acb; --accent-ink:#ffffff;
+  --none-bg:#eaeef6; --none-fg:#586583; --none-solid:#c3cbdd;
+  --work-bg:#fff0cf; --work-fg:#85560a; --work-solid:#e8a31a;
+  --done-bg:#d8f2e2; --done-fg:#0f6638; --done-solid:#22a45d;
+  --display:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
+  --body:'Figtree','Segoe UI',system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0d1324; --surface:#151d33; --ink:#e8ecf7; --muted:#9aa6c4; --line:#27314d;
+  --accent:#86a0ff; --accent-ink:#0d1324;
+  --none-bg:#202a44; --none-fg:#9aa6c4; --none-solid:#3a4768;
+  --work-bg:#3a2d10; --work-fg:#f3c76e; --work-solid:#e8a31a;
+  --done-bg:#12362a; --done-fg:#72dda2; --done-solid:#2fbf73; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0d1324; --surface:#151d33; --ink:#e8ecf7; --muted:#9aa6c4; --line:#27314d;
+  --accent:#86a0ff; --accent-ink:#0d1324;
+  --none-bg:#202a44; --none-fg:#9aa6c4; --none-solid:#3a4768;
+  --work-bg:#3a2d10; --work-fg:#f3c76e; --work-solid:#e8a31a;
+  --done-bg:#12362a; --done-fg:#72dda2; --done-solid:#2fbf73; color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.4}
+*{box-sizing:border-box}
+button{font:inherit;color:inherit;cursor:pointer}
+button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wrap{max-width:860px;margin:0 auto;padding-inline:16px;padding-block:18px 56px}
+header.top{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+h1{font-family:var(--display);font-size:1.7rem;margin:0;letter-spacing:-.01em;text-wrap:balance}
+.sync{font-size:.78rem;color:var(--muted)}
+.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:8px;margin-bottom:10px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:thin}
+.tab{flex:0 0 auto;border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:7px 12px;display:flex;flex-direction:column;align-items:flex-start;gap:1px;min-width:92px}
+.tab b{font-weight:600;font-size:.92rem}
+.tab span{font-size:.74rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.tab[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.tab[aria-selected="true"] span{color:var(--accent-ink);opacity:.85}
+.summary{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:14px}
+.summary h2{font-family:var(--display);font-size:1.25rem;margin:0 0 2px}
+.summary .sub{color:var(--muted);font-size:.85rem;margin:0 0 12px}
+.big{display:flex;align-items:baseline;gap:8px;margin-bottom:8px}
+.big strong{font-family:var(--display);font-size:2.3rem;line-height:1;font-variant-numeric:tabular-nums}
+.big span{color:var(--muted);font-size:.9rem}
+.bar{display:flex;height:12px;border-radius:99px;overflow:hidden;background:var(--none-bg)}
+.bar i{display:block;height:100%}
+.bar .d{background:var(--done-solid)}.bar .w{background:var(--work-solid)}
+.legend{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px;font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.legend span:before{content:"";display:inline-block;width:9px;height:9px;border-radius:3px;margin-right:6px;background:var(--none-solid)}
+.legend .l-d:before{background:var(--done-solid)}.legend .l-w:before{background:var(--work-solid)}
+.tools{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.chip{border:1px solid var(--line);background:var(--surface);border-radius:99px;padding:5px 12px;font-size:.84rem}
+.chip[aria-pressed="true"]{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent);font-weight:600}
+.tools .gap{flex:1}
+.paper{margin:20px 0 8px}
+.paper h3{font-family:var(--display);font-size:1.05rem;margin:0;display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.paper h3 small{font-family:var(--body);font-weight:500;color:var(--muted);font-size:.8rem;font-variant-numeric:tabular-nums}
+.topic{background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-top:8px;overflow:hidden}
+.thead{width:100%;display:grid;grid-template-columns:1fr auto;gap:4px 12px;align-items:center;text-align:left;background:none;border:0;padding:11px 14px}
+.thead .nm{font-weight:600;min-width:0}
+.thead .ct{font-size:.8rem;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.thead .mini{grid-column:1/-1;height:5px}
+.thead .mini.bar{height:5px}
+.pts{border-top:1px solid var(--line)}
+.pt{display:flex;gap:8px 14px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:9px 14px;border-bottom:1px solid var(--line)}
+.pt:last-of-type{border-bottom:0}
+.pt .tx{flex:1 1 260px;min-width:0}
+.pt.s2 .tx{color:var(--muted)}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:9px;overflow:hidden;flex:0 0 auto}
+.seg button{background:var(--surface);border:0;border-right:1px solid var(--line);padding:5px 10px;font-size:.78rem;color:var(--muted);white-space:nowrap}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"].b0{background:var(--none-bg);color:var(--none-fg);font-weight:600}
+.seg button[aria-pressed="true"].b1{background:var(--work-bg);color:var(--work-fg);font-weight:600}
+.seg button[aria-pressed="true"].b2{background:var(--done-bg);color:var(--done-fg);font-weight:600}
+.bulk{display:flex;gap:8px;justify-content:flex-end;padding:8px 14px;background:var(--bg);border-top:1px solid var(--line)}
+.bulk button{background:none;border:0;color:var(--accent);font-size:.8rem;padding:2px 4px;text-decoration:underline;text-underline-offset:2px}
+.empty{color:var(--muted);padding:24px 0;text-align:center}
+.note{font-size:.8rem;color:var(--muted);margin-top:22px}
+@media (max-width:520px){
+  h1{font-size:1.4rem}
+  .seg{width:100%}.seg button{flex:1;padding:8px 4px}
+}
+@media (prefers-reduced-motion:no-preference){.bar i{transition:width .25s ease}}
+
+.views{margin-bottom:12px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:6px}
+.stats div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 12px;display:flex;flex-direction:column;gap:2px}
+.stats strong{font-family:var(--display);font-size:1.5rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stats span{font-size:.78rem;color:var(--muted)}
+.meta{font-size:.78rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.qc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px;margin-top:10px}
+.qh{display:flex;justify-content:space-between;gap:10px;align-items:baseline;margin-bottom:8px}
+.ql{font-size:.76rem;color:var(--muted);min-width:0}
+.qm{font-size:.78rem;font-weight:600;white-space:nowrap;font-variant-numeric:tabular-nums}
+.qt{white-space:pre-wrap;margin-bottom:10px}
+.ans{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:9px;padding:9px 10px;resize:vertical}
+.ans:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.qa{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:8px}
+.btn{background:var(--accent);color:var(--accent-ink);border:0;border-radius:9px;padding:8px 14px;font-weight:600;font-size:.88rem}
+.btn[disabled]{opacity:.6;cursor:default}
+.btn.ghost{background:none;color:var(--accent);border:1px solid var(--line)}
+.err{font-size:.82rem;color:var(--work-fg)}
+.res{margin-top:12px;border-radius:10px;padding:12px;background:var(--none-bg)}
+.res.ok{background:var(--done-bg);color:var(--done-fg)}
+.res.no{background:var(--work-bg);color:var(--work-fg)}
+.res p,.res ul{margin:8px 0 0}
+.rh b{font-family:var(--display);font-size:1.15rem;font-variant-numeric:tabular-nums}
+.yours{font-size:.88rem;white-space:pre-wrap}
+.ms{list-style:none;padding:0;font-size:.88rem}
+.ms li{display:flex;gap:8px;padding:2px 0}
+.ms li span{flex:0 0 1.1em;font-weight:700}
+.ex,.tp{font-size:.88rem}
+.res .btn{margin-top:10px;color:inherit;border-color:currentColor}
+.res .dec .btn{background:var(--accent);color:var(--accent-ink);border:0}
+.res .dec .btn.ghost{background:none;color:inherit;border:1px solid currentColor}
+.dec{margin-top:12px;border-top:1px solid currentColor;padding-top:8px}
+.more{margin-top:16px;padding:14px;border:1px dashed var(--line);border-radius:12px;text-align:center}
+.more p{margin:0 0 4px;color:var(--muted);font-size:.9rem}
+.rev{margin-top:16px}
+.rvh{font-family:var(--display);font-size:1.1rem;margin:0 0 4px}
+.rvs{color:var(--muted);font-size:.88rem;margin:4px 0}
+.rg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px;margin-top:10px}
+.rgh{display:flex;justify-content:space-between;gap:10px;align-items:baseline;margin-bottom:6px}
+.rgh b{min-width:0}
+.rgh span{font-size:.8rem;color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums}
+.rq{border-top:1px solid var(--line);padding-top:8px;margin-top:8px}
+.rqt{font-size:.88rem;margin:0 0 4px;white-space:pre-wrap}
+.rq h5{font-size:.74rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin:10px 0 3px}
+.rq ul{margin:0;padding-left:1.1em;font-size:.9rem}
+.terms{display:flex;flex-wrap:wrap;gap:6px}
+.terms span{background:var(--none-bg);border-radius:99px;padding:3px 10px;font-size:.82rem}
+.dec2{display:flex;gap:8px 14px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-top:12px;padding-top:10px;border-top:1px solid var(--line);font-size:.86rem}
+@media (max-width:520px){.dec2 .seg{width:100%}}
+.nl{background:none;border:0;color:var(--accent);font-size:.78rem;padding:0 2px;margin-left:4px;text-decoration:underline;text-underline-offset:2px;white-space:nowrap}
+
+.rdr{max-width:760px}
+.rdr h4.sec{font-size:1.1rem;margin:22px 0 6px;padding:6px 12px;border-left:5px solid var(--accent);background:var(--none-bg);border-radius:0 10px 10px 0}
+.co{border-radius:12px;padding:10px 14px;margin:10px 0;border:1px solid transparent}
+.co b.ct{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:2px}
+.co p{margin:2px 0}
+.co.def{background:#e6f0ff;border-color:#b9d0ff;color:#13306b}
+.co.key{background:#fff4d6;border-color:#f2d98a;color:#5a4300}
+.co.tip{background:#e3f6e8;border-color:#a9dcb7;color:#10501f}
+.co.warn{background:#fde8e8;border-color:#f3b3b3;color:#6e1414}
+:root[data-theme="dark"] .co.def{background:#16294d;border-color:#2c4a86;color:#cfe0ff}
+:root[data-theme="dark"] .co.key{background:#3b3010;border-color:#6b5a1b;color:#ffe9a8}
+:root[data-theme="dark"] .co.tip{background:#12341c;border-color:#2b6a3e;color:#c4f0d0}
+:root[data-theme="dark"] .co.warn{background:#3d1717;border-color:#7a2f2f;color:#ffd0d0}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .co.def{background:#16294d;border-color:#2c4a86;color:#cfe0ff}:root:not([data-theme="light"]) .co.key{background:#3b3010;border-color:#6b5a1b;color:#ffe9a8}:root:not([data-theme="light"]) .co.tip{background:#12341c;border-color:#2b6a3e;color:#c4f0d0}:root:not([data-theme="light"]) .co.warn{background:#3d1717;border-color:#7a2f2f;color:#ffd0d0}}
+.tw{overflow-x:auto;margin:10px 0;border:1px solid var(--line);border-radius:10px}
+.tw table{border-collapse:collapse;width:100%;font-size:.88rem}
+.tw th{background:var(--accent);color:var(--accent-ink);text-align:left;padding:7px 10px}
+.tw td{padding:7px 10px;border-top:1px solid var(--line);vertical-align:top}
+.tw tr:nth-child(even) td{background:var(--none-bg)}
+.eq{border:1px solid var(--line);border-radius:12px;margin:8px 0;background:var(--surface)}
+.eq summary{cursor:pointer;padding:10px 14px;font-weight:600;list-style:none}
+.eq summary::-webkit-details-marker{display:none}
+.eq summary small{color:var(--muted);font-weight:500;margin-left:6px}
+.eq .ms{padding:2px 14px 12px;border-top:1px dashed var(--line)}
+.eq .ms ul{margin:6px 0}
+.eq .tp{font-size:.85rem;color:var(--muted)}
+.qzbar{display:flex;gap:8px 12px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:9px 14px;background:var(--bg);border-top:1px solid var(--line)}
+.rdr{max-width:720px}
+.crumb{color:var(--muted);font-size:.82rem;margin:10px 0 2px}
+.ntitle{font-family:var(--display);font-size:1.5rem;margin:0 0 6px;text-wrap:balance}
+.src{color:var(--muted);font-size:.8rem;margin:0 0 12px}
+.rdr h4{font-family:var(--display);font-size:1.02rem;margin:18px 0 4px}
+.rdr p{margin:6px 0}
+.rdr ul,.rdr ol{margin:6px 0;padding-left:1.2em}
+.rdr li{margin:3px 0}
+.nsum{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:6px 0 4px}
+.nan{background:var(--none-bg);border-radius:12px;padding:12px 14px;margin:16px 0}
+.nan p{margin:4px 0 0}
+.fig{margin:14px 0;background:#fbfcff;border:1px solid #cfd8ee;border-radius:12px;padding:10px;color:#1b2540}
+.fig svg{display:block;width:100%;height:auto;max-width:640px;margin:0 auto}
+.fig svg text{stroke:none}
+.fig figcaption{font-size:.8rem;color:#4a5878;margin-top:6px;text-align:center}
+.wk{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 14px}
+.wa{font-weight:600}
+.terms2{margin:6px 0}
+.terms2 dt{font-weight:600;margin-top:8px}
+.terms2 dd{margin:1px 0 0;color:var(--muted)}
+.wr{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:8px 0}
+.wr>div{border-radius:10px;padding:9px 12px;font-size:.9rem}
+.wr span{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;opacity:.8;margin-bottom:2px}
+.wr .bad{background:var(--work-bg);color:var(--work-fg)}
+.wr .good{background:var(--done-bg);color:var(--done-fg)}
+.nnav{display:flex;gap:8px;justify-content:space-between;flex-wrap:wrap;margin-top:22px}
+.nnav .btn{min-width:0}
+.qb{border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:9px 13px;margin:9px 0;background:var(--surface)}
+.qb .qh{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.qb .qh span{color:var(--muted);font-size:.78rem}
+.qb p{margin:4px 0}
+.qb .qt,.qb .qc{font-size:.88rem;color:var(--muted)}
+.es{border:1px solid var(--line);border-radius:12px;padding:0 14px 10px;margin:8px 0;background:var(--surface)}
+.es summary{cursor:pointer;font-weight:600;padding:11px 0}
+.es .esb p{margin:9px 0;line-height:1.6}
+@media (max-width:520px){.wr{grid-template-columns:1fr}.nnav .btn{width:100%}}
+.pp{display:flex;gap:8px 14px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:10px 14px;border-bottom:1px solid var(--line)}
+.pp:last-child{border-bottom:0}
+.pp .tx{flex:1 1 240px;min-width:0}
+.pp .tt{font-weight:600}
+.pp .mt{font-size:.8rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.pp .ac{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.pp.dn .tt{color:var(--muted)}
+a.btn{display:inline-block;text-decoration:none}
+a.btn.off{opacity:.55;pointer-events:none}
+.pdone{border:1px solid var(--line);background:var(--surface);border-radius:9px;padding:6px 10px;font-size:.8rem;color:var(--muted);white-space:nowrap}
+.pdone[aria-pressed="true"]{background:var(--done-bg);color:var(--done-fg);border-color:transparent;font-weight:600}
+.ppnote{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:10px;font-size:.88rem;color:var(--muted)}
+.ppnote b{color:var(--ink)}
+
+/* Annotated poem: text left, numbered colour-coded notes right */
+.pm{margin:14px 0 6px}
+.pmk{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 10px;font-size:.78rem}
+.pmk span{border-radius:99px;padding:2px 10px}
+.pmh{color:var(--muted);font-size:.85rem;margin:0 0 8px}
+.pms{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:10px 16px;padding:12px 0;border-top:1px solid var(--line)}
+.pms:first-of-type{border-top:0}
+.pml{font-family:Georgia,'Times New Roman',serif;font-size:1rem;line-height:1.75;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}
+.pml .ln{display:block;padding-left:2.2em;text-indent:-2.2em;white-space:pre-wrap}
+.pml .no{display:inline-block;width:2.2em;text-indent:0;color:var(--muted);font-family:var(--body);font-size:.7rem;font-variant-numeric:tabular-nums}
+.pml .lab{display:block;font-family:var(--body);font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:4px}
+.pml .gist{font-family:var(--body);font-size:.92rem;line-height:1.5}
+.pml.cr{background:var(--none-bg)}
+@media (min-width:641px){.pml{position:sticky;top:64px;align-self:start}}
+.pml mark{border-radius:4px;padding:0 2px;color:inherit}
+.pml mark sup,.pma b.nn{font-family:var(--body);font-size:.66rem;font-weight:700}
+.pma{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.pma li{border-radius:9px;padding:7px 10px;font-size:.88rem;line-height:1.45;border-left:4px solid transparent}
+.pma li .pw{font-weight:600}
+.k-lang{background:#dbeafe;border-color:#2563eb!important}
+.k-struct{background:#ede9fe;border-color:#7c3aed!important}
+.k-form{background:#dcfce7;border-color:#16a34a!important}
+.k-ctx{background:#fef3c7;border-color:#d97706!important}
+.k-big{background:#fce7f3;border-color:#db2777!important}
+.pma li,.pmk span{color:#14213d}
+mark.k-lang,mark.k-struct,mark.k-form,mark.k-ctx,mark.k-big{border-left:0!important}
+:root[data-theme="dark"] .k-lang{background:#1e3a6e}:root[data-theme="dark"] .k-struct{background:#3b2a6b}:root[data-theme="dark"] .k-form{background:#14432a}:root[data-theme="dark"] .k-ctx{background:#4a3410}:root[data-theme="dark"] .k-big{background:#5a1d3d}
+:root[data-theme="dark"] .pma li,:root[data-theme="dark"] .pmk span{color:#e8ecf7}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .k-lang{background:#1e3a6e}:root:not([data-theme="light"]) .k-struct{background:#3b2a6b}:root:not([data-theme="light"]) .k-form{background:#14432a}:root:not([data-theme="light"]) .k-ctx{background:#4a3410}:root:not([data-theme="light"]) .k-big{background:#5a1d3d}:root:not([data-theme="light"]) .pma li,:root:not([data-theme="light"]) .pmk span{color:#e8ecf7}}
+@media (max-width:640px){.pms{grid-template-columns:1fr}}
+
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <h1>GCSE Spec Tracker</h1>
+    <div class="sync" id="sync">Loading your progress...</div>
+  </header>
+  <div id="app"></div>
+  <p class="note">Spec points are written from the exam board specifications at topic level. Tap a point to mark it Not done, Needs work or Done. Answering questions in Improvement or Today&#39;s 7 updates your points automatically: after three correct answers in a row I ask whether you want to class the point as mastered or keep practising, and a miss on a Done point puts it back to Needs work. Practice papers has one exam-style PDF for every topic. Where a spec lets your school choose options (Geography), mark the topics you do not study as Done or ignore them.</p>
+</div>
+
+<script src="firebase-config.js"></script>
+<script src="adapter.js"></script>
+<script>
+const D=[
+{id:'phy',name:'Physics',board:'AQA',code:'8463',papers:[
+ {n:'Paper 1',t:[
+  ['4.1 Energy',['Energy stores and transfers in a system','Kinetic, gravitational and elastic potential energy calculations','Specific heat capacity (required practical)','Power and energy transfer','Conservation of energy and closed systems','Reducing unwanted energy transfers and thermal conductivity (required practical)','Efficiency calculations','Renewable and non-renewable energy resources','Comparing reliability, cost and environmental impact']],
+  ['4.2 Electricity',['Circuit symbols, charge and current','Resistance and V = IR','I-V characteristics: resistor, filament lamp, diode','LDRs and thermistors','Required practical: resistance of a wire','Required practical: I-V characteristics','Series and parallel circuit rules','Direct and alternating potential difference','Mains electricity: live, neutral and earth wires','Power P = IV and P = I²R','Energy transferred E = Pt and E = QV','The National Grid','Static charge and electric fields']],
+  ['4.3 Particle model of matter',['Density and the particle model (required practical)','Changes of state','Internal energy and energy transfers','Specific latent heat','Particle motion in gases: pressure and temperature','Pressure and volume of a gas']],
+  ['4.4 Atomic structure',['Atoms, isotopes and the nuclear model','Development of the atomic model','Alpha, beta, gamma and neutron radiation','Nuclear equations','Half-life and count rate','Irradiation and contamination','Uses and hazards of radiation, background radiation','Nuclear fission','Nuclear fusion']]
+ ]},
+ {n:'Paper 2',t:[
+  ['4.5 Forces',['Scalar and vector quantities','Contact and non-contact forces, weight and gravity','Resultant forces and free body diagrams','Work done and energy transfer','Forces and elasticity: Hooke\'s law (required practical)','Moments, levers and gears','Pressure in fluids and atmospheric pressure','Upthrust, floating and sinking','Distance, displacement, speed and velocity','Acceleration and velocity-time graphs','Distance-time graphs','Terminal velocity','Newton\'s first law','Newton\'s second law (required practical)','Newton\'s third law','Stopping distances and reaction time','Momentum and conservation of momentum','Force as rate of change of momentum (HT)']],
+  ['4.6 Waves',['Transverse and longitudinal waves','Wave properties and the wave equation','Required practical: waves in a ripple tank and on a string','Reflection and refraction of waves','Required practical: reflection and refraction','Sound waves and ultrasound','Seismic waves','Electromagnetic spectrum and its properties','Uses and dangers of EM waves','Radio waves and alternating currents (HT)','Lenses, images and ray diagrams','Black body radiation and infrared absorption (required practical)','Temperature of the Earth']],
+  ['4.7 Magnetism and electromagnetism',['Poles, magnetic fields and field lines','Fields of wires, solenoids and electromagnets','The motor effect and Fleming\'s left-hand rule','F = BIl','Electric motors and loudspeakers','The generator effect, alternators and dynamos','Microphones','Transformers and the National Grid']],
+  ['4.8 Space physics',['Solar system, life cycle of stars','Orbital motion and satellites','Red-shift and the Big Bang','Dark matter and dark energy']]
+ ]}
+]},
+{id:'bio',name:'Biology',board:'AQA',code:'8461',papers:[
+ {n:'Paper 1',t:[
+  ['4.1 Cell biology',['Eukaryotic and prokaryotic cells','Animal and plant cell structures','Microscopy and magnification (required practical)','Cell specialisation and differentiation','Culturing microorganisms (required practical)','Chromosomes, mitosis and the cell cycle','Stem cells','Diffusion','Osmosis (required practical)','Active transport','Surface area to volume ratio']],
+  ['4.2 Organisation',['Cells, tissues, organs and organ systems','Digestive system and enzymes','Food tests and enzyme rate (required practical)','Heart, blood vessels and blood','Coronary heart disease and treatments','Health, non-communicable diseases and risk factors','Cancer','Plant tissues and organs','Transpiration and translocation','Stomata and transpiration rate (triple)']],
+  ['4.3 Infection and response',['Communicable diseases and pathogens','Viral, bacterial, fungal and protist diseases','Spread and prevention of disease','Human defence systems','Vaccination','Antibiotics and painkillers','Discovery and development of drugs','Plant disease detection and defences (triple)','Monoclonal antibodies (triple)']],
+  ['4.4 Bioenergetics',['Photosynthesis','Rate of photosynthesis and limiting factors (required practical)','Uses of glucose','Aerobic respiration','Anaerobic respiration','Response to exercise','Metabolism']]
+ ]},
+ {n:'Paper 2',t:[
+  ['4.5 Homeostasis and response',['Homeostasis','Nervous system and reflex actions','Required practical: reaction time','The brain and the eye (triple)','Control of body temperature (triple)','Endocrine system and hormones','Control of blood glucose and diabetes','Kidneys and water and nitrogen balance (triple)','Hormones in human reproduction and contraception','Hormone treatments for infertility (HT)','Negative feedback: thyroxine and adrenaline (triple)','Plant hormones (triple)']],
+  ['4.6 Inheritance, variation and evolution',['Sexual and asexual reproduction','Meiosis','DNA structure and the genome','Protein synthesis (HT)','Genetic inheritance and Punnett squares','Inherited disorders and sex determination','Variation and mutation','Natural selection and evolution','Selective breeding','Genetic engineering','Cloning (triple)','Theories of evolution and speciation','Fossils and extinction','Resistant bacteria','Classification and evolutionary trees']],
+  ['4.7 Ecology',['Communities, abiotic and biotic factors','Adaptations and competition','Quadrats and transects (required practical)','Food chains and trophic levels','Biomass transfers (triple)','Biodiversity and human impacts','Global warming and deforestation','Maintaining biodiversity','Carbon and water cycles','Decomposition (required practical, triple)','Food security and farming techniques (triple)','Biotechnology: mycoprotein and GM crops (triple)']]
+ ]}
+]},
+{id:'chem',name:'Chemistry',board:'AQA',code:'8462',papers:[
+ {n:'Paper 1',t:[
+  ['4.1 Atomic structure and the periodic table',['Atoms, elements, compounds and mixtures','Separation techniques','Models of the atom','Relative atomic mass and electronic structure','Development of the periodic table','Metals and non-metals','Group 0: noble gases','Group 1: alkali metals','Group 7: halogens','Transition metals']],
+  ['4.2 Bonding, structure and properties of matter',['Ionic, covalent and metallic bonding','Ionic compounds','Small molecules and polymers','Giant covalent structures','Metals and alloys','States of matter and properties','Diamond, graphite, graphene and fullerenes','Nanoparticles (triple)']],
+  ['4.3 Quantitative chemistry',['Conservation of mass','Relative formula mass','Moles','Reacting masses and limiting reactants','Concentration of solutions','Percentage yield (triple)','Atom economy (triple)','Titration calculations (triple)','Gas volumes (triple)']],
+  ['4.4 Chemical changes',['Reactivity series and displacement','Extraction of metals','Oxidation and reduction','Acids with metals, bases and carbonates','Preparing salts (required practical)','pH and strong and weak acids','Electrolysis','Electrolysis of aqueous solutions (required practical)','Extraction of aluminium']],
+  ['4.5 Energy changes',['Exothermic and endothermic reactions','Required practical: temperature changes','Reaction profiles','Bond energy calculations (HT)','Cells and batteries','Fuel cells (triple)']]
+ ]},
+ {n:'Paper 2',t:[
+  ['4.6 Rate and extent of chemical change',['Rate of reaction and factors','Required practical: rates of reaction','Collision theory and activation energy','Catalysts','Reversible reactions and energy changes','Dynamic equilibrium','Le Chatelier\'s principle (HT)']],
+  ['4.7 Organic chemistry',['Crude oil, hydrocarbons and alkanes','Fractional distillation','Cracking','Alkenes and their reactions','Alcohols (triple)','Carboxylic acids (triple)','Addition polymerisation','Condensation polymerisation (triple)','Amino acids and DNA (triple)']],
+  ['4.8 Chemical analysis',['Pure substances, formulations and mixtures','Chromatography and Rf values','Identifying gases','Flame tests (triple)','Metal hydroxide precipitates (triple)','Tests for anions (triple)','Instrumental methods (triple)']],
+  ['4.9 Chemistry of the atmosphere',['Evolution of the atmosphere','Atmosphere composition','Greenhouse gases and global warming','Carbon footprint','Atmospheric pollutants']],
+  ['4.10 Using resources',['Sustainable use of resources','Potable water and waste water (required practical)','Life cycle assessments','Recycling','Corrosion, alloys, ceramics, composites and polymers','Haber process and ammonia (HT)','NPK fertilisers']]
+ ]}
+]},
+{id:'maths',name:'Maths',board:'Edexcel',code:'1MA1 Higher',papers:[
+ {n:'Number',t:[
+  ['Number',['Order of operations and calculations','Factors, multiples, primes, HCF and LCM','Fractions, decimals and percentages','Recurring decimals to fractions','Rounding, estimation and significant figures','Error intervals and bounds','Indices and roots','Fractional and negative indices','Standard form','Surds and rationalising','Exact calculations with pi and surds']]
+ ]},
+ {n:'Algebra',t:[
+  ['Algebra',['Notation, substitution and formulae','Simplify and expand brackets','Factorising: quadratics and harder','Solving linear equations','Rearranging formulae','Solving quadratics: factorise, formula, completing the square','Simultaneous equations including non-linear','Inequalities and graphical regions','Sequences: linear, quadratic, geometric and nth term','Straight line graphs, parallel and perpendicular','Graphs: quadratic, cubic, reciprocal, exponential','Trigonometric graphs','Transformations of graphs','Turning points and completing the square','Iteration','Functions: composite and inverse','Algebraic fractions','Algebraic proof','Gradients, tangents and rate of change from graphs','Area under graphs','Equation of a circle and tangent']]
+ ]},
+ {n:'Ratio, proportion and rates of change',t:[
+  ['Ratio and proportion',['Ratio and sharing','Direct and inverse proportion','Percentage change and reverse percentages','Compound interest, growth and decay','Speed, density and pressure','Units and conversions','Compound measures']]
+ ]},
+ {n:'Geometry and measures',t:[
+  ['Geometry',['Angle facts, parallel lines and polygons','Bearings','Pythagoras\' theorem','Right-angled trigonometry and exact values','Sine rule, cosine rule and area of a triangle','3D Pythagoras and trigonometry','Circle theorems','Area, circumference, arcs and sectors','Volume and surface area including cones, spheres and pyramids','Congruence and similarity','Area and volume scale factors','Transformations and negative or fractional enlargement','Constructions and loci','Plans and elevations','Vectors and vector proofs']]
+ ]},
+ {n:'Probability and statistics',t:[
+  ['Probability',['Basic and experimental probability','Venn diagrams and set notation','Tree diagrams and conditional probability','Expected outcomes']],
+  ['Statistics',['Averages, range and frequency tables','Grouped data estimates','Scatter graphs and correlation','Histograms','Cumulative frequency and box plots','Pie charts, stem and leaf, sampling','Capture-recapture']]
+ ]}
+]},
+{id:'cs',name:'Comp Sci',board:'OCR',code:'J277',papers:[
+ {n:'Paper 1: Computer systems',t:[
+  ['1.1 Systems architecture',['Purpose of the CPU','Fetch-decode-execute cycle','CPU components: ALU, CU, cache, registers','Von Neumann architecture','CPU performance: clock speed, cores, cache','Embedded systems']],
+  ['1.2 Memory and storage',['Primary storage: RAM, ROM, virtual memory','Secondary storage: optical, magnetic, solid state','Units and data capacity calculations','Lossy and lossless compression']],
+  ['1.3 Networks, connections and protocols',['LAN and WAN, network performance','Client-server and peer-to-peer','NIC, switch, router and WAP','The internet, DNS, hosting and cloud','Star and mesh topologies','Wired and wireless connections','Protocols: TCP/IP, HTTP, HTTPS, FTP, POP, IMAP, SMTP','Four-layer model']],
+  ['1.4 Network security',['Threats: malware, phishing, social engineering, brute force, DoS, interception, SQL injection','Prevention: anti-malware, firewalls, access levels, passwords, encryption, physical security']],
+  ['1.5 Systems software',['Operating system functions','Utility software']],
+  ['1.6 Ethical, legal, cultural and environmental',['Impacts of technology','Digital divide and privacy','Data Protection Act 2018','Computer Misuse Act 1990','Copyright, Designs and Patents Act 1988','Open source and proprietary software','Environmental impacts']]
+ ]},
+ {n:'Paper 2: Computational thinking, algorithms and programming',t:[
+  ['2.1 Algorithms',['Abstraction, decomposition, algorithmic thinking','Pseudocode and flowcharts','Linear and binary search','Bubble, merge and insertion sort','Trace tables and finding errors']],
+  ['2.2 Programming fundamentals',['Variables, constants, operators and assignment','Selection and iteration','Data types and casting','String manipulation','File handling','Arrays and 2D arrays','Records and SQL','Functions and procedures','Random numbers']],
+  ['2.3 Producing robust programs',['Defensive design: validation and authentication','Maintainability','Testing and test data','Types of errors','Refining algorithms']],
+  ['2.4 Boolean logic',['AND, OR, NOT gates','Truth tables and logic diagrams']],
+  ['2.5 Programming languages and IDEs',['High-level and low-level languages','Compilers, interpreters and assemblers','IDE tools']],
+  ['2.6 Data representation',['Binary and denary conversion','Hexadecimal','Binary addition and shifts','ASCII and Unicode','Images: pixels, colour depth, resolution, metadata','Sound: sample rate, bit depth, duration']]
+ ]}
+]},
+{id:'geo',name:'Geography',board:'AQA',code:'8035',papers:[
+ {n:'Paper 1: Living with the physical environment',t:[
+  ['The challenge of natural hazards',['Types of natural hazard','Plate tectonics and plate margins','Tectonic hazards: effects, responses and case studies','Living in hazardous areas','Monitoring, prediction, protection and planning','Global atmospheric circulation','Tropical storms: formation, effects and responses','UK extreme weather case study','Evidence and causes of climate change','Managing climate change: mitigation and adaptation']],
+  ['The living world',['Ecosystems, food webs and the small-scale UK case study','Tropical rainforests: characteristics and adaptations','Deforestation: causes, impacts and case study','Sustainable management of rainforests','Hot deserts: characteristics and adaptations','Desertification and case study','Cold environments: characteristics and adaptations','Development in cold environments and case study','Sustainable management of cold environments']],
+  ['Physical landscapes in the UK (coasts, rivers, glacial: you study two)',['UK relief and landscapes','Coasts: erosion, weathering and transport','Coastal landforms','Coastal management and case study','Rivers: processes and landforms','Flood risk and management case study','Glacial processes and landforms','Tourism in glacial landscapes']]
+ ]},
+ {n:'Paper 2: Challenges in the human environment',t:[
+  ['Urban issues and challenges',['Global patterns of urbanisation','Causes of urban growth','Megacity case study: opportunities and challenges','UK city case study: change and regeneration','Sustainable urban living']],
+  ['The changing economic world',['Measuring development','Demographic transition model','Causes of uneven development','Reducing the development gap','Nigeria case study','UK economy: deindustrialisation and post-industrial','Role of the UK in the wider world']],
+  ['The challenge of resource management (food, water or energy: you study one)',['Global resource distribution','Food: supply, demand and insecurity','Water: supply, demand and transfer','Energy: supply, demand and sustainability','Strategies to increase supply sustainably']]
+ ]},
+ {n:'Paper 3: Geographical applications',t:[
+  ['Issue evaluation and fieldwork',['Issue evaluation: using the pre-release resources','Fieldwork: enquiry questions and methods','Fieldwork: presenting and analysing data','Fieldwork: conclusions and evaluation','Geographical skills: maps, graphs and statistics']]
+ ]}
+]},
+{id:'eng',name:'English Lit',board:'Edexcel',code:'1ET0',papers:[
+ {n:'Paper 1: Shakespeare (Macbeth)',t:[
+  ['Macbeth: context and exam skills',['Jacobean context: James I, divine right and the Gunpowder Plot','Witchcraft, the supernatural and Daemonologie','Tragedy, the tragic hero and Shakespeare\'s sources','Plot and structure act by act','Grade 9 method: planning the Macbeth essay (AO1 to AO4)','Part (a) extract question: grade 9 method']],
+  ['Macbeth: characters',['Macbeth: the tragic arc','Lady Macbeth','Banquo','Macduff and Lady Macduff','Duncan and Malcolm','The Witches (the Weird Sisters)','The Porter, Ross and minor characters']],
+  ['Macbeth: themes',['Ambition and power','Guilt, conscience and sleep','Fate and free will','Kingship, tyranny and legitimacy','Gender and masculinity','Appearance and reality','Violence, blood and disorder in nature']],
+  ['Macbeth: language, structure and form',['Imagery patterns: blood, darkness, clothing and sleep','Soliloquies, asides and dramatic irony','Verse, prose, rhythm and sound','Structure of the tragedy: turning points','Paradox, equivocation and motifs']],
+  ['Macbeth: key extracts act by act',['Act 1: the prophecy, the letter and the decision to kill (Sc 3, 5, 7)','Act 2: the dagger, the murder and the Porter','Act 3: Banquo\'s murder and the banquet','Act 4: the apparitions and the Macduff massacre','Act 5: sleepwalking, "tomorrow" and the fall']],
+  ['Macbeth: model answers and theses',['Grade 9 thesis statements bank (Macbeth)','Model essay: ambition and power','Model essay: Lady Macbeth and gender','Model essay: guilt and conscience','Model essay: kingship and tyranny','Model essay: the supernatural, fate and free will']]
+ ]},
+ {n:'Paper 2: 19th-century novel (A Christmas Carol)',t:[
+  ['A Christmas Carol: context and exam skills',['Victorian society and Dickens\'s purpose','Poverty, the Poor Law and workhouses','Industrial Revolution, child labour and the Children\'s Employment Commission','Victorian Christmas and the novella form','Plot and structure stave by stave','Grade 9 method: planning the Christmas Carol essay (AO1 to AO4)']],
+  ['A Christmas Carol: characters',['Scrooge: the transformation','Marley and the three Ghosts','Bob Cratchit and Tiny Tim','Fred','Fezziwig, Belle and Fan','Ignorance and Want','Minor characters: the charity collectors, Mrs Dilber and Old Joe']],
+  ['A Christmas Carol: themes',['Redemption and transformation','Poverty and social responsibility','Greed, wealth and generosity','Family, community and the Christmas spirit','Time, memory and regret','Isolation, warmth and cold']],
+  ['A Christmas Carol: language, structure and form',['Stave structure and the cyclical journey','Light and dark, weather and pathetic fallacy','Symbolism and motifs: chains, bells, cold and fire','Narrative voice, humour and direct address','Foreshadowing, repetition and the rule of three','Similes, personification and Dickens\'s descriptive style']],
+  ['A Christmas Carol: key extracts stave by stave',['Stave 1: Marley\'s Ghost and the opening portrait of Scrooge','Stave 2: Christmas Past, Fezziwig and Belle','Stave 3: Christmas Present, the Cratchits and Ignorance and Want','Stave 4: Christmas Yet to Come and the grave','Stave 5: the transformed Scrooge']],
+  ['A Christmas Carol: model answers and theses',['Grade 9 thesis statements bank (A Christmas Carol)','Model essay: Scrooge\'s transformation','Model essay: poverty and social responsibility','Model essay: the Ghosts and their purpose','Model essay: family, generosity and Christmas','Model essay: time, memory and regret']]
+ ]},
+ {n:'Paper 2: Poetry anthology (Conflict cluster)',t:[
+  ['Conflict poetry: poems 1 to 8',['Half-Caste (John Agard)','Catrin (Gillian Clarke)','War Photographer (Carole Satyamurti)','The Class Game (Mary Casey)','No Problem (Benjamin Zephaniah)','What Were They Like? (Denise Levertov)','Belfast Confetti (Ciaran Carson)','Poppies (Jane Weir)']],
+  ['Conflict poetry: poems 9 to 15',['A Poison Tree (William Blake)','The Charge of the Light Brigade (Alfred, Lord Tennyson)','Extract from The Prelude (William Wordsworth)','The Man He Killed (Thomas Hardy)','Cousin Kate (Christina Rossetti)','Exposure (Wilfred Owen)','The Destruction of Sennacherib (Lord Byron)']],
+  ['Conflict poetry: comparison and exam method',['Themes of conflict and a poem-pairing map','Grade 9 method for the poetry comparison (Section B)','Model comparison: Exposure and Poppies','Model comparison: The Charge of the Light Brigade and The Man He Killed','Model comparison: Half-Caste and No Problem','Model comparison: A Poison Tree and Cousin Kate','Section C unseen poetry: grade 9 method and model']]
+ ]}
+]},
+{id:'bus',name:'Business',board:'Edexcel',code:'1BS0',papers:[
+ {n:'Theme 1: Investigating small business (Paper 1)',t:[
+  ['1.1 Enterprise and entrepreneurship',['The dynamic nature of business','Risk and reward','The role of business enterprise','The role of entrepreneurship']],
+  ['1.2 Spotting a business opportunity',['Customer needs','Market research','Market segmentation','The competitive environment']],
+  ['1.3 Putting a business idea into practice',['Business aims and objectives','Business revenues, costs and profits','Cash and cash-flow','Sources of business finance']],
+  ['1.4 Making the business effective',['The options for start-up and small businesses','Business location','The marketing mix','Business plans']],
+  ['1.5 Understanding external influences on business',['Business stakeholders','Technology and business','Legislation and business','The economy and business']]
+ ]},
+ {n:'Theme 2: Building a business (Paper 2)',t:[
+  ['2.1 Growing the business',['Business growth','Changes in business aims and objectives','Business and globalisation','Ethics, the environment and business']],
+  ['2.2 Making marketing decisions',['Product','Price','Promotion','Place','Using the marketing mix to make business decisions']],
+  ['2.3 Making operational decisions',['Business operations','Working with suppliers','Managing quality','The sales process']],
+  ['2.4 Making financial decisions',['Business calculations','Understanding business performance']],
+  ['2.5 Making human resource decisions',['Organisational structures','Effective recruitment','Effective training and development','Motivation']]
+ ]}
+]}
+];
+
+const PAPERS={"phy":[{"k":"Physics_4.1_Energy","t":"4.1 Energy","g":"Paper 1","pg":24,"mk":158},{"k":"Physics_4.2_Electricity","t":"4.2 Electricity","g":"Paper 1","pg":27,"mk":173},{"k":"Physics_4.3_Particle_model_of_matter","t":"4.3 Particle model of matter","g":"Paper 1","pg":23,"mk":145},{"k":"Physics_4.4_Atomic_structure","t":"4.4 Atomic structure","g":"Paper 1","pg":19,"mk":133},{"k":"Physics_4.5_Forces","t":"4.5 Forces","g":"Paper 2","pg":33,"mk":227},{"k":"Physics_4.6_Waves","t":"4.6 Waves","g":"Paper 2","pg":22,"mk":147},{"k":"Physics_4.7_Magnetism_and_electromagnetism","t":"4.7 Magnetism and electromagnetism","g":"Paper 2","pg":21,"mk":125},{"k":"Physics_4.8_Space_physics","t":"4.8 Space physics","g":"Paper 2","pg":16,"mk":99},{"k":"Physics_Calc_4.1_Energy","t":"4.1 Energy","g":"Calculation questions – Paper 1","pg":6,"mk":53},{"k":"Physics_Calc_4.2_Electricity","t":"4.2 Electricity","g":"Calculation questions – Paper 1","pg":6,"mk":58},{"k":"Physics_Calc_4.3_Particle_model","t":"4.3 Particle model of matter","g":"Calculation questions – Paper 1","pg":5,"mk":41},{"k":"Physics_Calc_4.4_Atomic_structure","t":"4.4 Atomic structure","g":"Calculation questions – Paper 1","pg":5,"mk":31},{"k":"Physics_Calc_4.5_Forces","t":"4.5 Forces","g":"Calculation questions – Paper 2","pg":8,"mk":78},{"k":"Physics_Calc_4.6_Waves","t":"4.6 Waves","g":"Calculation questions – Paper 2","pg":6,"mk":48},{"k":"Physics_Calc_4.7_Magnetism","t":"4.7 Magnetism and electromagnetism","g":"Calculation questions – Paper 2","pg":5,"mk":38}],"bio":[{"k":"Biology_4.1_Cell_biology","t":"4.1 Cell biology","g":"Paper 1","pg":27,"mk":176},{"k":"Biology_4.2_Organisation","t":"4.2 Organisation","g":"Paper 1","pg":34,"mk":224},{"k":"Biology_4.3_Infection_and_response","t":"4.3 Infection and response","g":"Paper 1","pg":29,"mk":180},{"k":"Biology_4.4_Bioenergetics","t":"4.4 Bioenergetics","g":"Paper 1","pg":26,"mk":159},{"k":"Biology_4.5_Homeostasis_and_response","t":"4.5 Homeostasis and response","g":"Paper 2","pg":34,"mk":236},{"k":"Biology_4.6_Inheritance_variation_and_evolution","t":"4.6 Inheritance, variation and evolution","g":"Paper 2","pg":35,"mk":229},{"k":"Biology_4.7_Ecology","t":"4.7 Ecology","g":"Paper 2","pg":31,"mk":198}],"chem":[{"k":"Chemistry_4.1_Atomic_structure_and_the_periodic_table","t":"4.1 Atomic structure and the periodic table","g":"Paper 1","pg":31,"mk":171},{"k":"Chemistry_4.2_Bonding_structure_and_properties_of_matter","t":"4.2 Bonding, structure and properties of matter","g":"Paper 1","pg":25,"mk":149},{"k":"Chemistry_4.3_Quantitative_chemistry","t":"4.3 Quantitative chemistry","g":"Paper 1","pg":20,"mk":132},{"k":"Chemistry_4.4_Chemical_changes","t":"4.4 Chemical changes","g":"Paper 1","pg":23,"mk":134},{"k":"Chemistry_4.5_Energy_changes","t":"4.5 Energy changes","g":"Paper 1","pg":24,"mk":123},{"k":"Chemistry_4.6_Rate_and_extent_of_chemical_change","t":"4.6 Rate and extent of chemical change","g":"Paper 2","pg":25,"mk":126},{"k":"Chemistry_4.7_Organic_chemistry","t":"4.7 Organic chemistry","g":"Paper 2","pg":23,"mk":126},{"k":"Chemistry_4.8_Chemical_analysis","t":"4.8 Chemical analysis","g":"Paper 2","pg":19,"mk":112},{"k":"Chemistry_4.9_Chemistry_of_the_atmosphere","t":"4.9 Chemistry of the atmosphere","g":"Paper 2","pg":20,"mk":108},{"k":"Chemistry_4.10_Using_resources","t":"4.10 Using resources","g":"Paper 2","pg":23,"mk":135}],"maths":[{"k":"Maths_1_Number","t":"1 Number","g":"Topics","pg":17,"mk":107},{"k":"Maths_2_Algebra","t":"2 Algebra","g":"Topics","pg":24,"mk":158},{"k":"Maths_3_Ratio_Proportion_Rates_of_Change","t":"3 Ratio, proportion and rates of change","g":"Topics","pg":15,"mk":99},{"k":"Maths_4_Geometry_and_Measures","t":"4 Geometry and measures","g":"Topics","pg":26,"mk":146},{"k":"Maths_5_Probability","t":"5 Probability","g":"Topics","pg":16,"mk":98},{"k":"Maths_6_Statistics","t":"6 Statistics","g":"Topics","pg":17,"mk":85}],"cs":[{"k":"CS_1.1_Systems_architecture","t":"1.1 Systems architecture","g":"Paper 1: Computer systems","pg":18,"mk":100},{"k":"CS_1.2_Memory_and_storage","t":"1.2 Memory and storage","g":"Paper 1: Computer systems","pg":17,"mk":108},{"k":"CS_1.3_Networks_connections_and_protocols","t":"1.3 Networks, connections and protocols","g":"Paper 1: Computer systems","pg":17,"mk":90},{"k":"CS_1.4_Network_security","t":"1.4 Network security","g":"Paper 1: Computer systems","pg":14,"mk":76},{"k":"CS_1.5_Systems_software","t":"1.5 Systems software","g":"Paper 1: Computer systems","pg":13,"mk":72},{"k":"CS_1.6_Ethical_legal_cultural_environmental","t":"1.6 Ethical, legal, cultural and environmental impacts","g":"Paper 1: Computer systems","pg":14,"mk":73},{"k":"CS_2.1_Algorithms","t":"2.1 Algorithms","g":"Paper 2: Computational thinking, algorithms and programming","pg":17,"mk":100},{"k":"CS_2.2_Programming_fundamentals","t":"2.2 Programming fundamentals","g":"Paper 2: Computational thinking, algorithms and programming","pg":17,"mk":110},{"k":"CS_2.3_Producing_robust_programs","t":"2.3 Producing robust programs","g":"Paper 2: Computational thinking, algorithms and programming","pg":14,"mk":79},{"k":"CS_2.4_Boolean_logic","t":"2.4 Boolean logic","g":"Paper 2: Computational thinking, algorithms and programming","pg":12,"mk":64},{"k":"CS_2.5_Programming_languages_and_IDEs","t":"2.5 Programming languages and IDEs","g":"Paper 2: Computational thinking, algorithms and programming","pg":13,"mk":69}],"geo":[{"k":"Geography_1_Natural_hazards","t":"The challenge of natural hazards","g":"Paper 1: Living with the physical environment","pg":29,"mk":129},{"k":"Geography_2_The_living_world","t":"The living world","g":"Paper 1: Living with the physical environment","pg":23,"mk":116},{"k":"Geography_3_Physical_landscapes_in_the_UK","t":"Physical landscapes in the UK","g":"Paper 1: Living with the physical environment","pg":26,"mk":135},{"k":"Geography_4_Urban_issues_and_challenges","t":"Urban issues and challenges","g":"Paper 2: Challenges in the human environment","pg":22,"mk":105},{"k":"Geography_5_The_changing_economic_world","t":"The changing economic world","g":"Paper 2: Challenges in the human environment","pg":21,"mk":120},{"k":"Geography_6_Resource_management","t":"Resource management","g":"Paper 2: Challenges in the human environment","pg":19,"mk":95},{"k":"Geography_7_Geographical_applications","t":"Geographical applications (issue evaluation and fieldwork)","g":"Paper 3: Geographical applications","pg":18,"mk":87}]};
+const PURL=/*PURL*/{"Physics_4.1_Energy": "papers/Physics_4.1_Energy.pdf", "Physics_4.2_Electricity": "papers/Physics_4.2_Electricity.pdf", "Physics_4.3_Particle_model_of_matter": "papers/Physics_4.3_Particle_model_of_matter.pdf", "Physics_4.4_Atomic_structure": "papers/Physics_4.4_Atomic_structure.pdf", "Physics_4.5_Forces": "papers/Physics_4.5_Forces.pdf", "Physics_4.6_Waves": "papers/Physics_4.6_Waves.pdf", "Physics_4.7_Magnetism_and_electromagnetism": "papers/Physics_4.7_Magnetism_and_electromagnetism.pdf", "Physics_4.8_Space_physics": "papers/Physics_4.8_Space_physics.pdf", "Physics_Calc_4.1_Energy": "papers/Physics_Calc_4.1_Energy.pdf", "Physics_Calc_4.2_Electricity": "papers/Physics_Calc_4.2_Electricity.pdf", "Physics_Calc_4.3_Particle_model": "papers/Physics_Calc_4.3_Particle_model.pdf", "Physics_Calc_4.4_Atomic_structure": "papers/Physics_Calc_4.4_Atomic_structure.pdf", "Physics_Calc_4.5_Forces": "papers/Physics_Calc_4.5_Forces.pdf", "Physics_Calc_4.6_Waves": "papers/Physics_Calc_4.6_Waves.pdf", "Physics_Calc_4.7_Magnetism": "papers/Physics_Calc_4.7_Magnetism.pdf", "Biology_4.1_Cell_biology": "papers/Biology_4.1_Cell_biology.pdf", "Biology_4.2_Organisation": "papers/Biology_4.2_Organisation.pdf", "Biology_4.3_Infection_and_response": "papers/Biology_4.3_Infection_and_response.pdf", "Biology_4.4_Bioenergetics": "papers/Biology_4.4_Bioenergetics.pdf", "Biology_4.5_Homeostasis_and_response": "papers/Biology_4.5_Homeostasis_and_response.pdf", "Biology_4.6_Inheritance_variation_and_evolution": "papers/Biology_4.6_Inheritance_variation_and_evolution.pdf", "Biology_4.7_Ecology": "papers/Biology_4.7_Ecology.pdf", "Chemistry_4.1_Atomic_structure_and_the_periodic_table": "papers/Chemistry_4.1_Atomic_structure_and_the_periodic_table.pdf", "Chemistry_4.2_Bonding_structure_and_properties_of_matter": "papers/Chemistry_4.2_Bonding_structure_and_properties_of_matter.pdf", "Chemistry_4.3_Quantitative_chemistry": "papers/Chemistry_4.3_Quantitative_chemistry.pdf", "Chemistry_4.4_Chemical_changes": "papers/Chemistry_4.4_Chemical_changes.pdf", "Chemistry_4.5_Energy_changes": "papers/Chemistry_4.5_Energy_changes.pdf", "Chemistry_4.6_Rate_and_extent_of_chemical_change": "papers/Chemistry_4.6_Rate_and_extent_of_chemical_change.pdf", "Chemistry_4.7_Organic_chemistry": "papers/Chemistry_4.7_Organic_chemistry.pdf", "Chemistry_4.8_Chemical_analysis": "papers/Chemistry_4.8_Chemical_analysis.pdf", "Chemistry_4.9_Chemistry_of_the_atmosphere": "papers/Chemistry_4.9_Chemistry_of_the_atmosphere.pdf", "Chemistry_4.10_Using_resources": "papers/Chemistry_4.10_Using_resources.pdf", "Maths_1_Number": "papers/Maths_1_Number.pdf", "Maths_2_Algebra": "papers/Maths_2_Algebra.pdf", "Maths_3_Ratio_Proportion_Rates_of_Change": "papers/Maths_3_Ratio_Proportion_Rates_of_Change.pdf", "Maths_4_Geometry_and_Measures": "papers/Maths_4_Geometry_and_Measures.pdf", "Maths_5_Probability": "papers/Maths_5_Probability.pdf", "Maths_6_Statistics": "papers/Maths_6_Statistics.pdf", "CS_1.1_Systems_architecture": "papers/CS_1.1_Systems_architecture.pdf", "CS_1.2_Memory_and_storage": "papers/CS_1.2_Memory_and_storage.pdf", "CS_1.3_Networks_connections_and_protocols": "papers/CS_1.3_Networks_connections_and_protocols.pdf", "CS_1.4_Network_security": "papers/CS_1.4_Network_security.pdf", "CS_1.5_Systems_software": "papers/CS_1.5_Systems_software.pdf", "CS_1.6_Ethical_legal_cultural_environmental": "papers/CS_1.6_Ethical_legal_cultural_environmental.pdf", "CS_2.1_Algorithms": "papers/CS_2.1_Algorithms.pdf", "CS_2.2_Programming_fundamentals": "papers/CS_2.2_Programming_fundamentals.pdf", "CS_2.3_Producing_robust_programs": "papers/CS_2.3_Producing_robust_programs.pdf", "CS_2.4_Boolean_logic": "papers/CS_2.4_Boolean_logic.pdf", "CS_2.5_Programming_languages_and_IDEs": "papers/CS_2.5_Programming_languages_and_IDEs.pdf", "Geography_1_Natural_hazards": "papers/Geography_1_Natural_hazards.pdf", "Geography_2_The_living_world": "papers/Geography_2_The_living_world.pdf", "Geography_3_Physical_landscapes_in_the_UK": "papers/Geography_3_Physical_landscapes_in_the_UK.pdf", "Geography_4_Urban_issues_and_challenges": "papers/Geography_4_Urban_issues_and_challenges.pdf", "Geography_5_The_changing_economic_world": "papers/Geography_5_The_changing_economic_world.pdf", "Geography_6_Resource_management": "papers/Geography_6_Resource_management.pdf", "Geography_7_Geographical_applications": "papers/Geography_7_Geographical_applications.pdf"}/*END*/;
+let PD={};try{PD=JSON.parse(localStorage.getItem('gcse-papers-v1')||'{}')||{}}catch(e){}
+const LS='gcse-spec-tracker-v2', TABS='gcse-spec-tab';
+let S={},C={},M={},Q={},A={},DAILY={};
+let cur=D[0].id, view='spec', filter='all', open=new Set(), expandAll=false;
+const DR={},BUSY={},ERR={},RETRY={}; let genBusy=false, genErr='';
+let REV={}; const REVOPEN={}; let revBusy=false, revErr='';
+let NLOAD={},W={},NOTES={},QUIZ={},QRES={},NOTE_CUR=null,QZ_CUR=null,backView='spec',backY=0;
+const NBUSY={},NERR={},QZDR={},QZRETAKE={},PT={},TP={}; let qzBusy=false,qzErr='',qzMarking=false;
+try{
+  const L=JSON.parse(localStorage.getItem(LS)||'null');
+  if(L){S=L.S||{};C=L.C||{};M=L.M||{};W=L.W||{}}
+  else{const o=JSON.parse(localStorage.getItem('gcse-spec-tracker-v1')||'null');if(o)S=o}
+}catch(e){}
+try{const c=localStorage.getItem(TABS);if(c&&D.some(s=>s.id===c))cur=c}catch(e){}
+const LBL={};
+D.forEach(s=>{
+  S[s.id]=S[s.id]||{};C[s.id]=C[s.id]||{};M[s.id]=M[s.id]||{};W[s.id]=W[s.id]||{};
+  let ti=0;
+  s.papers.forEach(p=>{p.topics=p.t.map(t=>{const id=s.id+'.'+(ti++);return{id,name:t[0],pts:t[1].map((x,i)=>{LBL[id+'.'+i]=t[0]+' › '+x;return{id:id+'.'+i,text:x}})}})});
+});
+D.forEach(s=>s.papers.forEach(p=>p.topics.forEach(t=>{TP[t.id]={sid:s.id,topic:t,paper:p.n};t.pts.forEach((x,i)=>{PT[x.id]={sid:s.id,tid:t.id,topic:t.name,text:x.text,i}})})));
+const byId=Object.fromEntries(D.map(s=>[s.id,s]));
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const today=()=>new Date().toLocaleDateString('en-CA');
+const addDays=(d,n)=>{const x=new Date(d+'T12:00:00');x.setDate(x.getDate()+n);return x.toLocaleDateString('en-CA')};
+const fmt=d=>d?new Date(d+'T12:00:00').toLocaleDateString('en-GB',{day:'numeric',month:'short'}):'';
+const INT=[1,2,4,8,16,32];
+const stat=(sid,pid)=>S[sid][pid]||0;
+function count(sid,pts){const c=[0,0,0];pts.forEach(p=>c[stat(sid,p.id)]++);return c}
+const allPts=s=>s.papers.flatMap(p=>p.topics.flatMap(t=>t.pts));
+const pct=(n,t)=>t?Math.round(100*n/t):0;
+const bar=(c,cls)=>{const t=c[0]+c[1]+c[2]||1;return `<div class="bar ${cls||''}"><i class="d" style="width:${100*c[2]/t}%"></i><i class="w" style="width:${100*c[1]/t}%"></i></div>`};
+const needsWork=sid=>Object.keys(S[sid]).filter(id=>S[sid][id]===1);
+function todayDoc(sid){return Object.values(DAILY).find(d=>d.sid===sid&&d.date===today())}
+function todayStats(sid){const d=todayDoc(sid);if(!d||!d.qids)return null;return{n:d.qids.length,done:d.qids.filter(id=>A[id]).length,sid:d.sid}}
+
+/* ---------- views ---------- */
+function renderSpec(s){
+  let body='',shown=0;
+  s.papers.forEach(p=>{
+    const pc=count(s.id,p.topics.flatMap(t=>t.pts));
+    let tb='';
+    p.topics.forEach(t=>{
+      const c=count(s.id,t.pts);
+      const pts=t.pts.filter(x=>filter==='all'||String(stat(s.id,x.id))===filter);
+      if(!pts.length)return;
+      shown+=pts.length;
+      const isOpen=filter!=='all'||open.has(t.id);
+      let inner='';
+      if(isOpen){
+        inner='<div class="pts">'+pts.map(x=>{const v=stat(s.id,x.id);return `<div class="pt s${v}"><div class="tx">${x.text} <button class="nl" data-act="note" data-sid="${s.id}" data-id="${x.id}">${W[s.id][x.id]?'Notes \u2713':'Notes'}</button></div><div class="seg" role="group" aria-label="Status: ${x.text}">`+
+          ['Not done','Needs work','Done'].map((l,i)=>`<button class="b${i}" aria-pressed="${v===i}" data-act="st" data-id="${x.id}" data-s="${i}">${l}</button>`).join('')+`</div></div>`}).join('')+
+          `<div class="qzbar"><span class="meta">${t.pts.filter(x=>W[s.id][x.id]).length}/${t.pts.length} notes read${QRES[t.id]?` \u00b7 last quiz ${QRES[t.id].pct}%`:''}</span><button class="btn${t.pts.every(x=>W[s.id][x.id])?'':' ghost'}" data-act="quiz" data-sid="${s.id}" data-v="${t.id}">${t.pts.every(x=>W[s.id][x.id])?'Quiz me on this topic':'Quiz me anyway'}</button></div><div class="bulk"><button data-act="all" data-v="${t.id}" data-s="2">Mark all done</button><button data-act="all" data-v="${t.id}" data-s="0">Reset topic</button></div></div>`;
+      }
+      tb+=`<div class="topic"><button class="thead" data-act="top" data-v="${t.id}" aria-expanded="${isOpen}"><span class="nm">${t.name}</span><span class="ct">${c[2]}/${t.pts.length} done${c[1]?' · '+c[1]+' to fix':''}</span>${bar(c,'mini')}</button>${inner}</div>`;
+    });
+    if(tb)body+=`<div class="paper"><h3><span>${p.n}</span><small>${pct(pc[2],pc[0]+pc[1]+pc[2])}% done</small></h3>${tb}</div>`;
+  });
+  if(!shown)body='<p class="empty">Nothing in this view. Try a different filter.</p>';
+  const fl=[['all','All'],['0','Not done'],['1','Needs work'],['2','Done']].map(f=>`<button class="chip" aria-pressed="${filter===f[0]}" data-act="filter" data-v="${f[0]}">${f[1]}</button>`).join('');
+  return `<div class="tools">${fl}<span class="gap"></span><button class="chip" data-act="exp" data-v="${expandAll?0:1}">${expandAll?'Collapse all':'Expand all'}</button></div>${body}`;
+}
+
+function renderPapers(s){
+  const L=PAPERS[s.id]||[];
+  if(!L.length)return '<p class="empty">No practice papers for this subject yet.</p>';
+  const gs=[];L.forEach(e=>{let g=gs.find(x=>x.g===e.g);if(!g){g={g:e.g,l:[]};gs.push(g)}g.l.push(e)});
+  const dn=L.filter(e=>PD[e.k]).length, mk=L.reduce((a,e)=>a+e.mk,0);
+  let h=`<div class="ppnote"><b>${L.length} practice papers, ${mk} marks in total.</b> One per topic, covering the whole ${esc(s.board)} ${esc(s.name)} spec. Each has exam-style questions in the layout of the real paper, followed by the full mark scheme and a page of examiner tips. The questions are original, not real past papers. Open one, print it or work on screen, then mark yourself honestly. Tick it off here when you have finished (${dn}/${L.length} so far).${gs.some(g=>/^Calculation/.test(g.g))?' The calculation question sets drill every required equation from grade 4 to grade 9, with a topic formula list at the front and worked answers at the back.':''}</div>`;
+  gs.forEach(g=>{
+    h+=`<div class="paper"><h3><span>${esc(g.g)}</span><small>${g.l.filter(e=>PD[e.k]).length}/${g.l.length} attempted</small></h3><div class="topic">`+g.l.map(e=>{
+      const u=PURL[e.k];
+      return `<div class="pp${PD[e.k]?' dn':''}"><div class="tx"><div class="tt">${esc(e.t)}</div><div class="mt">${e.pg} pages · ${e.mk} marks</div></div><div class="ac"><button class="pdone" aria-pressed="${!!PD[e.k]}" data-act="pdone" data-k="${esc(e.k)}">${PD[e.k]?'Attempted':'Mark attempted'}</button>${u?`<a class="btn" href="${esc(u)}" target="_blank" rel="noopener">Open PDF</a>`:'<a class="btn off" aria-disabled="true">Not uploaded</a>'}</div></div>`}).join('')+`</div></div>`;
+  });
+  return h;
+}
+
+function decide(sid,pid){
+  const m=M[sid]&&M[sid][pid];
+  if(!m||!m.p||S[sid][pid]!==1)return '';
+  return `<div class="dec"><p><b>Three correct in a row on this point.</b> Class it as mastered, or keep practising?</p><div class="qa"><button class="btn" data-act="master" data-sid="${esc(sid)}" data-id="${esc(pid)}">Mastered</button><button class="btn ghost" data-act="more" data-sid="${esc(sid)}" data-id="${esc(pid)}">More practice</button></div></div>`;
+}
+
+const arr=x=>Array.isArray(x)?x.map(String):(x?[String(x)]:[]);
+function reviewGroups(sid){
+  const d=todayDoc(sid),g={};
+  if(!d)return [];
+  d.qids.forEach(id=>{const q=Q[id],a=A[id];if(!q||!a)return;const x=g[q.pid]=g[q.pid]||{pid:q.pid,sid:q.sid,label:q.label,aw:0,mx:0,qs:[]};x.aw+=a.aw;x.mx+=a.mx;x.qs.push(id)});
+  return Object.values(g);
+}
+function reviewNeeds(sid){
+  const d=todayDoc(sid);if(!d)return [];
+  const have=(REV[today()+'-'+sid]||{}).items||{};
+  return d.qids.filter(id=>A[id]&&A[id].aw<A[id].mx&&Q[id]&&!have[id]);
+}
+function renderReview(sid){
+  const gs=reviewGroups(sid);
+  if(!gs.length)return `<div class="rev"><h3 class="rvh">Weakness review</h3><p class="empty">Answer a few of today's questions first, then I can review them with you.</p></div>`;
+  const items=((REV[today()+'-'+sid]||{}).items)||{};
+  const need=reviewNeeds(sid);
+  let h=`<div class="rev"><h3 class="rvh">Weakness review</h3><p class="rvs">Each topic shows what went wrong, what was missing and the AQA wording to use. Then you decide: Mastered or Needs more work. My suggestion is only a guide.</p>`;
+  if(revBusy)h+=`<p class="rvs"><b>Reviewing your answers...</b></p>`;
+  if(revErr)h+=`<p class="err">${esc(revErr)}${revErr.indexOf('turned off')>-1?' <button class="btn ghost" data-act="perm">Change permissions</button>':''}</p>`;
+  if(need.length&&!revBusy&&!revErr)h+=`<p class="rvs">${need.length} new answer${need.length===1?'':'s'} to review. Tap Review my weaknesses again.</p>`;
+  gs.forEach(g=>{
+    const m=(M[g.sid]||{})[g.pid]||{}, st=(S[g.sid]||{})[g.pid]||0;
+    const auto=(st===2||m.b>=3)?'Mastered':'Needs more work';
+    const full=g.aw===g.mx;
+    h+=`<section class="rg"><div class="rgh"><b>${esc(g.label)}</b><span>${g.aw}/${g.mx} marks today</span></div>`;
+    if(full)h+=`<p class="rvs">Full marks on this point today.</p>`;
+    g.qs.forEach(id=>{
+      const a=A[id],q=Q[id];
+      if(a.aw>=a.mx)return;
+      const it=items[id];
+      h+=`<div class="rq"><p class="rqt">${esc(q.q.length>130?q.q.slice(0,130)+'...':q.q)} <i>(${a.aw}/${a.mx})</i></p>`;
+      if(!it)h+=`<p class="rvs">${revBusy?'Working on this one...':'Not reviewed yet.'}</p>`;
+      else{
+        if(it.mistakes&&it.mistakes.length)h+=`<h5>What went wrong</h5><ul>${it.mistakes.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`;
+        if(it.missing&&it.missing.length)h+=`<h5>What you were missing</h5><ul>${it.missing.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`;
+        if(it.terms&&it.terms.length)h+=`<h5>AQA terms to use</h5><div class="terms">${it.terms.map(x=>`<span>${esc(x)}</span>`).join('')}</div>`;
+        if(it.tip)h+=`<p class="tp"><b>Examiner tip:</b> ${esc(it.tip)}</p>`;
+      }
+      h+='</div>';
+    });
+    h+=`<div class="dec2"><span>Suggested: <b>${auto}</b> · now marked ${st===2?'Done':st===1?'Needs work':'Not done'}</span><div class="seg"><button class="b2" aria-pressed="${st===2}" data-act="dec" data-sid="${esc(g.sid)}" data-id="${esc(g.pid)}" data-s="2">Mastered</button><button class="b1" aria-pressed="${st===1}" data-act="dec" data-sid="${esc(g.sid)}" data-id="${esc(g.pid)}" data-s="1">Needs more work</button></div></div></section>`;
+  });
+  return h+'</div>';
+}
+async function genReview(sid){
+  if(revBusy)return;
+  const need=reviewNeeds(sid);
+  if(!need.length)return;
+  const t=today(),key=t+'-'+sid,have=(REV[key]||{}).items||{};
+  revBusy=true;revErr='';soft();
+  try{
+    const sm=await claude.use('sample');if(!sm)throw{code:'nosample'};
+    const s=byId[sid];
+    const blocks=need.map((id,i)=>{const q=Q[id],a=A[id];return `${i+1}. Spec point: ${q.label}\nQuestion (${q.marks} marks): ${q.q}\nMark scheme:\n${(q.scheme||[]).map((m,j)=>'  '+(j+1)+'. '+m).join('\n')}\nStudent answer: ${a.ans}\nMark scheme points earned: ${(a.hit||[]).join(', ')||'none'}\nAwarded: ${a.aw}/${a.mx}`}).join('\n\n');
+    const prompt=`You are an ${s.board} GCSE ${s.name} examiner tutoring a Higher tier student. For each numbered item below the student lost marks. For each one: (1) explain exactly what was wrong or missing in their answer by comparing it with the mark scheme; (2) state the content knowledge they were lacking, as short plain statements they can learn; (3) list the specific ${s.board} terminology and key terms the mark scheme rewards, using the exact words examiners expect; (4) give one short examiner tip about the common mistake. Use plain language a 15 year old understands. Only refer to marking points that are in the mark scheme shown.
+
+${blocks}
+
+Reply with JSON only: {"items":[{"n":1,"mistakes":["..."],"missing":["..."],"terms":["..."],"tip":"..."}]}`;
+    const r=await sm.json(prompt,{modelTier:'complex',cache:false});
+    const items=Object.assign({},have);
+    (r.items||[]).forEach(x=>{const id=need[(+x.n||0)-1];if(id)items[id]={mistakes:arr(x.mistakes),missing:arr(x.missing),terms:arr(x.terms),tip:String(x.tip||'')}});
+    REV[key]={sid,date:t,items,ts:new Date().toISOString()};
+    if(db)await db.doc('rv/'+key).set(REV[key]);
+  }catch(e){revErr=e&&e.code==='not_granted'?'Marking is turned off for this page. Tap Change permissions or reload, then try again.':e&&e.code==='nosample'?'Sign in to get your answers reviewed.':'Could not write the review. Try again in a moment.'}
+  revBusy=false;soft();
+}
+function qcard(id){
+  const q=Q[id];if(!q)return '';
+  const a=A[id], showForm=!a||RETRY[id];
+  let h=`<article class="qc" id="q-${esc(id)}"><div class="qh"><span class="ql">${esc(q.label||'')}</span><span class="qm">${q.marks} mark${q.marks===1?'':'s'}</span></div><div class="qt">${esc(q.q)}</div>`;
+  if(showForm){
+    h+=`<textarea class="ans" id="ta-${esc(id)}" data-q="${esc(id)}" rows="4" placeholder="Type your answer here" ${BUSY[id]?'disabled':''}>${esc(DR[id]||'')}</textarea>`;
+    h+=`<div class="qa"><button class="btn" data-act="submit" data-q="${esc(id)}" ${BUSY[id]?'disabled':''}>${BUSY[id]?'Marking...':'Submit for marking'}</button>${RETRY[id]?`<button class="btn ghost" data-act="cancel" data-q="${esc(id)}">Cancel</button>`:''}${ERR[id]?`<span class="err">${esc(ERR[id])}</span>`:''}${ERR[id]&&ERR[id].indexOf('turned off')>-1?`<button class="btn ghost" data-act="perm">Change permissions</button>`:''}</div>`;
+  }
+  if(a){
+    const hit=new Set(a.hit||[]);
+    h+=`<div class="res ${a.ok?'ok':'no'}"><div class="rh"><b>${a.aw}/${a.mx}</b> <span>${a.ok?'Correct. Moving on.':'Not there yet. Here is what the mark scheme wanted.'}</span></div>`+
+       `<p class="yours"><i>Your answer:</i> ${esc(a.ans)}</p>`+
+       `<ul class="ms">${(q.scheme||[]).map((m,i)=>`<li class="${hit.has(i+1)?'h':'m'}"><span>${hit.has(i+1)?'✓':'✗'}</span>${esc(m)}</li>`).join('')}</ul>`+
+       (a.expl?`<p class="ex">${esc(a.expl)}</p>`:'')+(a.tip?`<p class="tp"><b>Common mistake:</b> ${esc(a.tip)}</p>`:'')+
+       (!RETRY[id]&&!a.ok?`<button class="btn ghost" data-act="retry" data-q="${esc(id)}">Try it again</button>`:'')+decide(q.sid,q.pid)+`</div>`;
+  }
+  return h+'</article>';
+}
+
+function renderImprove(s){
+  const sid=s.id, nw=needsWork(sid), dn=Object.keys(S[sid]).filter(id=>S[sid][id]===2);
+  let att=0,cor=0;Object.values(M[sid]).forEach(m=>{att+=m.n;cor+=m.c});
+  if(!nw.length&&!dn.length)return `<p class="empty">Nothing covered in ${s.name} yet. When you finish a topic with me it appears here as Needs work, with questions to prove it.</p>`;
+  const meta=id=>{const m=M[sid][id];return m?`${m.c}/${m.n} correct · streak ${m.b} · next check ${fmt(m.d)}`:'Not tested yet'};
+  const lab=id=>esc(C[sid][id]||LBL[id]||id);
+  const sortNw=nw.slice().sort((a,b)=>((M[sid][a]||{}).d||'0').localeCompare((M[sid][b]||{}).d||'0'));
+  const inToday=new Set((todayDoc(sid)||{}).qids||[]);
+  const qs=Object.keys(Q).filter(id=>Q[id].sid===sid&&((A[id]&&!A[id].ok)||(!A[id]&&Q[id].src==='seed'&&!inToday.has(id))));
+  const missed=qs.filter(id=>A[id]), fresh=qs.filter(id=>!A[id]);
+  let h=`<div class="stats"><div><strong>${nw.length}</strong><span>need work</span></div><div><strong>${dn.length}</strong><span>mastered</span></div><div><strong>${att?pct(cor,att):'-'}${att?'%':''}</strong><span>answers correct</span></div></div>`;
+  const ready=nw.filter(id=>(M[sid][id]||{}).p);
+  if(ready.length)h+=`<div class="paper"><h3><span>Ready for your decision</span><small>3 correct in a row</small></h3><div class="topic"><div class="pts" style="border-top:0">${ready.map(id=>`<div class="pt s1"><div class="tx">${lab(id)}</div><div class="seg"><button class="b2" aria-pressed="false" data-act="master" data-sid="${sid}" data-id="${id}">Mastered</button><button class="b1" aria-pressed="false" data-act="more" data-sid="${sid}" data-id="${id}">More practice</button></div></div>`).join('')}</div></div></div>`;
+  h+=`<div class="paper"><h3><span>Points to improve</span><small>3 correct in a row, then you decide</small></h3>`;
+  h+=nw.length?`<div class="topic"><div class="pts" style="border-top:0">${sortNw.map(id=>`<div class="pt s1"><div class="tx">${lab(id)}</div><span class="meta">${meta(id)}</span></div>`).join('')}</div></div>`:'<p class="empty">No points need work right now.</p>';
+  h+=`</div><div class="paper"><h3><span>Questions to go over again</span><small>${qs.length} waiting</small></h3>`;
+  h+=qs.length?missed.concat(fresh).map(qcard).join(''):'<p class="empty">All caught up. New misses from your daily questions land here.</p>';
+  h+='</div>';
+  if(dn.length){
+    h+=`<div class="paper"><h3><span>Mastered</span><small>these come back later to keep them fresh</small></h3><div class="topic"><div class="pts" style="border-top:0">${dn.map(id=>`<div class="pt s2"><div class="tx">${lab(id)}</div><span class="meta">${meta(id)}</span></div>`).join('')}</div></div></div>`;
+  }
+  return h;
+}
+
+function renderToday(){
+  const s=byId[cur], d=todayDoc(cur), st=todayStats(cur);
+  if(!d){
+    const any=Object.keys(S[cur]).length;
+    return `<div class="summary"><h2>Today's 7: ${esc(s.name)}</h2><p class="sub">${fmt(today())}</p><p class="empty" style="padding:8px 0 14px">${any?`Today's ${esc(s.name)} questions have not arrived yet. Tap below to write today\'s set.`:`Nothing in ${esc(s.name)} is covered yet, so there are no questions. Once you finish a topic it appears here.`}</p>${any?`<div class="qa" style="justify-content:center"><button class="btn" data-act="gen" ${genBusy?'disabled':''}>${genBusy?'Writing questions...':'Write today\'s 7 now'}</button>${genErr?`<span class="err">${esc(genErr)}</span>`:''}</div>`:''}</div>`;
+  }
+  let aw=0,mx=0;d.qids.forEach(id=>{if(A[id]){aw+=A[id].aw;mx+=A[id].mx}});
+  return `<div class="summary"><h2>Today's 7: ${esc(s.name)}</h2><p class="sub">${fmt(today())} \u00b7 ${esc(s.board)} exam-style questions on spec you have covered</p>`+
+    `<div class="big"><strong>${st.done}/${st.n}</strong><span>answered${mx?` \u00b7 ${aw}/${mx} marks`:''}</span></div>${bar([st.n-st.done,0,st.done])}</div>`+d.qids.map(qcard).join('')+
+    `<div class="more"><p>${st.done>=st.n?'All answered. Want to keep going?':'Want to get ahead?'} Get 7 more questions on your weak topics in ${esc(s.name)}.</p><div class="qa" style="justify-content:center"><button class="btn" data-act="more7" ${genBusy?'disabled':''}>${genBusy?'Writing questions...':'Give me 7 more'}</button><button class="btn ghost" data-act="review" ${revBusy?'disabled':''}>${revBusy?'Reviewing...':REVOPEN[cur]?'Hide review':'Review my weaknesses'}</button>${genErr?`<span class="err">${esc(genErr)}</span>`:''}</div></div>`+(REVOPEN[cur]?renderReview(cur):'');
+}
+
+function render(){
+  const s=byId[cur];
+  const tabs=D.map(x=>{const c=count(x.id,allPts(x));return `<button class="tab" role="tab" aria-selected="${x.id===cur}" data-act="tab" data-v="${x.id}"><b>${x.name}</b><span>${pct(c[2],c[0]+c[1]+c[2])}% done</span></button>`}).join('');
+  const ac=count(s.id,allPts(s)), tot=ac[0]+ac[1]+ac[2];
+  const nw=needsWork(s.id).length, ts=todayStats(s.id);
+  const vw=[['spec','Spec'],['improve','Improvement'+(nw?' ('+nw+')':'')],['today',"Today's 7"+(ts?' ('+ts.done+'/'+ts.n+')':'')],['papers','Practice papers'+((PAPERS[s.id]||[]).length?' ('+PAPERS[s.id].length+')':'')]].map(v=>`<button class="chip" aria-pressed="${view===v[0]}" data-act="view" data-v="${v[0]}">${v[1]}</button>`).join('');
+  const reader=view==='note'||view==='quiz';
+  const summary=(view==='today'||view==='papers'||reader)?'':`<section class="summary"><h2>${s.board} ${s.name}</h2><p class="sub">${s.code} · ${tot} spec points</p>
+      <div class="big"><strong>${pct(ac[2],tot)}%</strong><span>of the spec marked done</span></div>${bar(ac)}
+      <div class="legend"><span class="l-d">${ac[2]} done</span><span class="l-w">${ac[1]} done, need work</span><span>${ac[0]} not done</span></div></section>`;
+  const body=view==='spec'?renderSpec(s):view==='improve'?renderImprove(s):view==='papers'?renderPapers(s):view==='note'&&NOTE_CUR?renderNote():view==='quiz'&&QZ_CUR?renderQuiz():renderToday();
+  document.getElementById('app').innerHTML=
+   `<div class="tabs" role="tablist">${tabs}</div>${reader?'':`<div class="tools views">${vw}</div>`}${summary}${body}`;
+}
+let pendingRender=false;
+function soft(){
+  const ae=document.activeElement;
+  if(ae&&ae.tagName==='TEXTAREA'){pendingRender=true;return}
+  const y=window.scrollY;render();window.scrollTo(0,y);
+}
+document.addEventListener('focusout',e=>{if(e.target.tagName==='TEXTAREA'&&pendingRender){pendingRender=false;setTimeout(soft,50)}});
+document.addEventListener('input',e=>{if(!e.target.classList)return;if(e.target.classList.contains('qzans')){(QZDR[e.target.dataset.t]=QZDR[e.target.dataset.t]||[])[+e.target.dataset.i]=e.target.value}else if(e.target.classList.contains('ans'))DR[e.target.dataset.q]=e.target.value});
+
+/* ---------- notes, quiz and reader ---------- */
+const fi=s=>esc(s).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
+const SVG_TAGS=new Set(['svg','g','path','rect','circle','ellipse','line','polyline','polygon','text','tspan','defs','marker','title','linearGradient','radialGradient','stop']);
+const SVG_ATTR=new Set(['viewBox','width','height','x','y','x1','y1','x2','y2','cx','cy','r','rx','ry','d','points','fill','stroke','stroke-width','stroke-dasharray','stroke-linecap','stroke-linejoin','transform','font-size','font-weight','text-anchor','dominant-baseline','marker-end','marker-start','id','refX','refY','markerWidth','markerHeight','orient','opacity','fill-opacity','stroke-opacity','offset','stop-color','stop-opacity','font-style','letter-spacing']);
+const SAFE_PAINT=/^(none|currentColor|#[0-9a-fA-F]{3,8}|url\(#[A-Za-z0-9_-]+\))$/;
+function cleanSvg(src){
+  try{
+    const doc=new DOMParser().parseFromString(String(src),'image/svg+xml');
+    const root=doc.documentElement;
+    if(!root||root.nodeName!=='svg'||doc.getElementsByTagName('parsererror').length)return '';
+    const walk=n=>{
+      let out='';
+      n.childNodes.forEach(c=>{
+        if(c.nodeType===3){out+=esc(c.nodeValue)}
+        else if(c.nodeType===1){
+          const tag=c.nodeName;
+          if(!SVG_TAGS.has(tag))return;
+          let at='';
+          for(const a of Array.from(c.attributes)){
+            const k=a.name,v=a.value;
+            if(!SVG_ATTR.has(k))continue;
+            if((k==='fill'||k==='stroke'||k==='stop-color')&&!SAFE_PAINT.test(v))continue;
+            if((k==='marker-end'||k==='marker-start')&&!/^url\(#[A-Za-z0-9_-]+\)$/.test(v))continue;
+            if(/javascript|data:|<|>/i.test(v))continue;
+            at+=` ${k}="${esc(v)}"`;
+          }
+          if((tag==='text'||tag==='tspan')&&!/ fill=/.test(at))at+=' fill="#1b2540"';
+          out+=`<${tag}${at}>${walk(c)}</${tag}>`;
+        }
+      });
+      return out;
+    };
+    const vb=root.getAttribute('viewBox')||'0 0 400 240';
+    if(!/^[0-9. -]+$/.test(vb))return '';
+    return `<svg viewBox="${esc(vb)}" role="img" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">${walk(root)}</svg>`;
+  }catch(e){return ''}
+}
+function normNote(r){
+  r=r||{};
+  const A=x=>Array.isArray(x)?x:[];
+  return{
+    summary:String(r.summary||''),
+    core:A(r.core).map(c=>({h:String(c.h||''),p:String(c.p||''),bullets:A(c.bullets).map(String),table:c.table&&A(c.table.head).length&&A(c.table.rows).length?{head:A(c.table.head).map(String),rows:A(c.table.rows).map(r=>A(r).map(String))}:null,callouts:A(c.callouts).map(k=>({k:String(k.k||'key'),t:String(k.t||''),p:String(k.p||'')})),fig:A(c.fig).map(d=>({cap:String(d.cap||''),svg:String(d.svg||'')}))})),
+    analogy:r.analogy&&r.analogy.p?{t:String(r.analogy.t||'Analogy'),p:String(r.analogy.p)}:null,
+    terms:A(r.terms).map(t=>({t:String(t.t||''),d:String(t.d||'')})),
+    mistakes:A(r.mistakes).map(m=>({w:String(m.w||''),r:String(m.r||'')})),
+    exam:A(r.exam).map(x=>x&&typeof x==='object'?{q:String(x.q||''),marks:Number(x.marks)||1,model:A(x.model).map(String),tip:String(x.tip||'')}:String(x)),
+    worked:A(r.worked).map(w=>({q:String(w.q||''),steps:A(w.steps).map(String),ans:String(w.ans||'')})),
+    quotes:A(r.quotes).map(q=>({q:String(q.q||''),ref:String(q.ref||''),a:String(q.a||''),t:String(q.t||''),c:String(q.c||'')})),
+    essays:A(r.essays).map(e=>({t:String(e.t||'Model essay'),q:String(e.q||''),thesis:String(e.thesis||''),plan:A(e.plan).map(String),text:String(e.text||''),why:A(e.why).map(String)})),
+    svg:A(r.svg).map(d=>({cap:String(d.cap||''),svg:String(d.svg||'')})),
+    poem:r.poem&&typeof r.poem==='object'&&A(r.poem.stanzas).length?{title:String(r.poem.title||''),poet:String(r.poem.poet||''),year:String(r.poem.year||''),pd:!!r.poem.pd,how:String(r.poem.how||''),stanzas:A(r.poem.stanzas).map(s=>({label:String(s.label||''),lines:A(s.lines).map(String),gist:String(s.gist||''),notes:A(s.notes).map(x=>({w:String(x.w||''),n:String(x.n||''),k:String(x.k||'lang')}))}))}:null
+  };
+}
+const PMK={lang:'Language',struct:'Structure',form:'Form',ctx:'Context',big:'Big idea'};
+function poemHtml(p){
+  let h=`<div class="pm"><h4 class="sec">${p.pd?'The poem, annotated':'Annotation guide: lay it beside your anthology'}</h4>`;
+  h+=`<p class="pmh">${esc(p.title)} · ${esc(p.poet)}${p.year?' · '+esc(p.year):''}${p.how?' — '+fi(p.how):''}</p>`;
+  h+='<div class="pmk">'+Object.keys(PMK).map(k=>`<span class="k-${k}">${PMK[k]}</span>`).join('')+'</div>';
+  let num=0,ln=0;
+  p.stanzas.forEach(s=>{
+    const marks=s.lines.map(()=>[]), list=[];
+    s.notes.forEach(x=>{
+      num++;const k=PMK[x.k]?x.k:'lang';let placed=false;
+      if(p.pd&&x.w){for(let i=0;i<s.lines.length&&!placed;i++){let from=0;while(!placed){const j=s.lines[i].indexOf(x.w,from);if(j<0)break;const e=j+x.w.length;if(!marks[i].some(m=>j<m[1]&&e>m[0])){marks[i].push([j,e,num,k]);placed=true}else from=j+1}}}
+      list.push(`<li class="k-${k}"><b class="nn">${num}</b> ${x.w?`<span class="pw">${p.pd?'“'+esc(x.w)+'”':esc(x.w)}:</span> `:''}${fi(x.n)}</li>`);
+    });
+    let left;
+    if(p.pd&&s.lines.length){
+      left=(s.label?`<span class="lab">${esc(s.label)}</span>`:'')+s.lines.map((t,i)=>{
+        ln++;const ms=marks[i].sort((a,b)=>a[0]-b[0]);let o='',c=0;
+        ms.forEach(m=>{o+=esc(t.slice(c,m[0]))+`<mark class="k-${m[3]}">${esc(t.slice(m[0],m[1]))}<sup>${m[2]}</sup></mark>`;c=m[1]});
+        o+=esc(t.slice(c));
+        return `<span class="ln"><span class="no">${(ln%5===0||ln===1)?ln:''}</span>${o||'&nbsp;'}</span>`}).join('');
+      left=`<div class="pml">${left}</div>`;
+    }else{
+      left=`<div class="pml cr"><span class="lab">${esc(s.label)}</span><div class="gist">${fi(s.gist)}</div></div>`;
+    }
+    h+=`<div class="pms">${left}<ol class="pma">${list.join('')}</ol></div>`;
+  });
+  return h+'</div>';
+}
+function noteHtml(n){
+  let h='';
+  if(n.summary)h+=`<div class="nsum"><b>What the spec asks.</b> ${fi(n.summary)}</div>`;
+  if(n.poem)h+=poemHtml(n.poem);
+  (n.core||[]).forEach(c=>{
+    h+=`<h4 class="sec">${esc(c.h)}</h4>`;
+    if(c.p)h+=`<p>${fi(c.p)}</p>`;
+    if(c.bullets&&c.bullets.length)h+='<ul>'+c.bullets.map(b=>`<li>${fi(b)}</li>`).join('')+'</ul>';
+    if(c.table&&c.table.head&&c.table.rows)h+=`<div class="tw"><table><thead><tr>${c.table.head.map(x=>`<th>${fi(x)}</th>`).join('')}</tr></thead><tbody>${c.table.rows.map(r=>`<tr>${r.map(x=>`<td>${fi(x)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+    (c.callouts||[]).forEach(k=>{const kk=['def','key','tip','warn'].includes(k.k)?k.k:'key';const lb={def:'Definition',key:'Key point',tip:'Exam tip',warn:'Watch out'}[kk];h+=`<div class="co ${kk}"><b class="ct">${esc(k.t||lb)}</b><p>${fi(k.p)}</p></div>`});
+    (c.fig||[]).forEach(d=>{const s=cleanSvg(d.svg);if(s)h+=`<figure class="fig">${s}<figcaption>${esc(d.cap)}</figcaption></figure>`});
+  });
+  (n.svg||[]).forEach(d=>{const s=cleanSvg(d.svg);if(s)h+=`<figure class="fig">${s}<figcaption>${esc(d.cap)}</figcaption></figure>`});
+  if(n.quotes&&n.quotes.length)h+=`<h4 class="sec">Quote bank with grade 9 analysis</h4><p class="src">Short key phrases only. Find each one in your copy of the text and learn the analysis, not just the words.</p>`+n.quotes.map(q=>`<div class="qb"><div class="qh"><b>${fi(q.q)}</b>${q.ref?`<span>${esc(q.ref)}</span>`:''}</div><p>${fi(q.a)}</p>${q.t?`<p class="qt"><b>Techniques:</b> ${fi(q.t)}</p>`:''}${q.c?`<p class="qc"><b>Context (AO3):</b> ${fi(q.c)}</p>`:''}</div>`).join('');
+  if(n.essays&&n.essays.length)n.essays.forEach((e,i)=>{h+=`<h4 class="sec">${esc(e.t)}</h4><details class="es"${i===0?' open':''}><summary>${fi(e.q)}</summary>${e.thesis?`<div class="co key"><b class="ct">Thesis</b><p>${fi(e.thesis)}</p></div>`:''}${e.plan.length?`<p><b>Plan</b></p><ol>${e.plan.map(x=>`<li>${fi(x)}</li>`).join('')}</ol>`:''}<div class="esb">${e.text.split(/\n\n+/).map(x=>`<p>${fi(x)}</p>`).join('')}</div>${e.why.length?`<div class="co tip"><b class="ct">Why this earns grade 9</b><ul>${e.why.map(x=>`<li>${fi(x)}</li>`).join('')}</ul></div>`:''}</details>`});
+  if(n.analogy)h+=`<div class="nan"><b>Think of it like this: ${esc(n.analogy.t)}</b><p>${fi(n.analogy.p)}</p></div>`;
+  if(n.worked&&n.worked.length)n.worked.forEach(w=>{h+=`<h4>Worked example</h4><div class="wk"><p><b>${fi(w.q)}</b></p><ol>${w.steps.map(x=>`<li>${fi(x)}</li>`).join('')}</ol>${w.ans?`<p class="wa">${fi(w.ans)}</p>`:''}</div>`});
+  if(n.terms&&n.terms.length)h+=`<h4>Key terms (use these exact words)</h4><dl class="terms2">${n.terms.map(t=>`<dt>${esc(t.t)}</dt><dd>${fi(t.d)}</dd>`).join('')}</dl>`;
+  if(n.mistakes&&n.mistakes.length)h+=`<h4>Commonly wrong answers</h4>`+n.mistakes.map(m=>`<div class="wr"><div class="bad"><span>Students write</span>${fi(m.w)}</div><div class="good"><span>The mark scheme wants</span>${fi(m.r)}</div></div>`).join('');
+  const eqs=(n.exam||[]).filter(x=>x&&typeof x==='object'),ets=(n.exam||[]).filter(x=>typeof x==='string');
+  if(eqs.length)h+=`<h4 class="sec">Commonly asked exam questions</h4><p class="src">Tap a question to see the mark-scheme answer. Try it first.</p>`+eqs.map(q=>`<details class="eq"><summary>${fi(q.q)}<small>[${esc(String(q.marks||''))} mark${q.marks===1?'':'s'}]</small></summary><div class="ms"><ul>${(q.model||[]).map(x=>`<li>${fi(x)}</li>`).join('')}</ul>${q.tip?`<p class="tp">${fi(q.tip)}</p>`:''}</div></details>`).join('');
+  if(ets.length)h+=`<h4>How the marks are earned</h4><ul>${ets.map(x=>`<li>${fi(x)}</li>`).join('')}</ul>`;
+  return h;
+}
+function markViewed(sid,pid){if(!W[sid][pid]){W[sid][pid]=1;queue(sid)}}
+function renderNote(){
+  const {sid,pid}=NOTE_CUR, pt=PT[pid], s=byId[sid], tp=TP[pt.tid], n=NOTES[pid];
+  const pts=tp.topic.pts, i=pts.findIndex(x=>x.id===pid);
+  const nav=`<div class="nnav">${i>0?`<button class="btn ghost" data-act="note" data-sid="${sid}" data-id="${pts[i-1].id}">← ${esc(pts[i-1].text.length>38?pts[i-1].text.slice(0,38)+'...':pts[i-1].text)}</button>`:'<span></span>'}${i<pts.length-1?`<button class="btn" data-act="note" data-sid="${sid}" data-id="${pts[i+1].id}">Next: ${esc(pts[i+1].text.length>34?pts[i+1].text.slice(0,34)+'...':pts[i+1].text)} →</button>`:`<button class="btn" data-act="quiz" data-sid="${sid}" data-v="${pt.tid}">Quiz me on this topic</button>`}</div>`;
+  const read=pts.filter(x=>W[sid][x.id]).length;
+  let h=`<div class="rdr"><button class="chip" data-act="back">← Back to spec</button><p class="crumb">${esc(s.board)} ${esc(s.name)} › ${esc(pt.topic)} · ${read}/${pts.length} read</p><h2 class="ntitle">${esc(pt.text)}</h2>`;
+  if(n){
+    h+=`<p class="src">${n.src==='ai'?'Written by AI when you opened it. Check anything surprising against your spec or textbook.':'Prepared notes, written to the specification.'}</p>`+noteHtml(n);
+  }else if(NLOAD[pid]){
+    h+=`<p class="empty">Opening your notes...</p>`;
+  }else if(NBUSY[pid]){
+    h+=`<p class="empty">The AI is writing these notes. This takes about a minute.</p>`;
+  }else{
+    h+=`<div class="summary"><p class="sub">${NERR[pid]?'These notes did not load.':'Getting your notes ready.'}</p>${NERR[pid]?`<p class="err">${esc(NERR[pid])}</p>`:''}<div class="qa"><button class="btn" data-act="wnote">Try again</button>${NERR[pid]&&NERR[pid].indexOf('turned off')>-1?'<button class="btn ghost" data-act="perm">Change permissions</button>':''}</div></div>`;
+  }
+  return h+nav+'</div>';
+}
+async function loadNote(sid,pid){
+  if(NOTES[pid]||NLOAD[pid]||NBUSY[pid])return;
+  NLOAD[pid]=1;delete NERR[pid];soft();
+  try{
+    if(!db){delete NLOAD[pid];genNote(pid);return}
+    const sn=await db.doc('notes/'+pid).get();
+    if(sn.exists){NOTES[pid]=JSON.parse(JSON.stringify(sn.data()));markViewed(sid,pid)}
+    else{delete NLOAD[pid];genNote(pid);return}
+  }catch(e){NERR[pid]='Could not open the notes. Check your connection and try again.'}
+  delete NLOAD[pid];soft();
+}
+async function genNote(pid){
+  if(NBUSY[pid])return;
+  const pt=PT[pid], s=byId[pt.sid], tp=TP[pt.tid];
+  NBUSY[pid]=1;delete NERR[pid];soft();
+  try{
+    const sm=await claude.use('sample');if(!sm)throw{code:'nosample'};
+    const others=tp.topic.pts.filter(x=>x.id!==pid).map(x=>x.text).join('; ');
+    const prompt=`You are a senior ${s.board} GCSE ${s.name} examiner writing complete revision notes for a Higher tier student aiming for grade 9. The notes must be as full and detailed as a top student's colour-coded revision notes: nothing the spec requires may be missing.
+
+Specification: ${s.board} ${s.code}. Section: ${tp.paper} > ${tp.topic.name}.
+Write notes for this ONE spec point: "${pt.text}".
+Other points in the same topic (context only, do not cover them): ${others||'none'}.
+
+Rules:
+- Accurate to the ${s.board} specification, using the exact terminology that mark schemes reward. If unsure of a detail, leave it out rather than guess. Include Higher tier and triple-only content where this point has it. Cover EVERY property, definition, process, equation, example and required practical the spec names for this point.
+- Grade 9 depth: the reasoning that links ideas, with explanations of WHY, in plain language a 15 year old can follow.
+- core: 5 to 9 sections. Each has a heading h, a paragraph p, bullets (use many), and optionally: table {head:[..],rows:[[..]]} for comparisons and property lists, callouts [{k:"def"|"key"|"tip"|"warn",t:"",p:""}] (def = definitions to copy word for word, key = must-know fact, tip = exam tip, warn = common trap), and fig [{cap,svg}] to place a diagram inside that section.
+- Diagrams: 1 to 3 detailed, correct, clearly labelled, colourful diagrams. SVG with viewBox "0 0 600 360", use fill and stroke hex colours (soft fills such as #dbeafe #fde68a #bbf7d0 #fecaca #e9d5ff with darker strokes), arrows, labels, font-size 14. Only shapes, paths, lines, text, gradients. Every label must be correct.
+- analogy: a vivid analogy that maps correctly, plus where it breaks down.
+- terms: key terms with precise definitions. mistakes: 5 to 8 commonly wrong answers seen in real exams (w = what students write, r = what the mark scheme wants).
+- exam: 4 to 6 questions of the kind that are commonly asked on this point in real ${s.board} papers, each {q,marks,model:[each mark-scheme point as one line],tip}. Include a mix of 1, 2, 4 and 6 mark questions where the point allows.
+- worked: one or two worked examples with numbers if the point involves calculation, otherwise [].
+- Use **double asterisks** to bold a key phrase. Plain text equations.
+
+Reply with JSON only:
+{"summary":"one sentence","core":[{"h":"","p":"","bullets":[""],"table":null,"callouts":[{"k":"def","t":"","p":""}],"fig":[]}],"analogy":{"t":"","p":""},"terms":[{"t":"","d":""}],"mistakes":[{"w":"","r":""}],"exam":[{"q":"","marks":2,"model":[""],"tip":""}],"worked":[{"q":"","steps":[""],"ans":""}],"svg":[]}`;
+    const r=await sm.json(prompt,{modelTier:'complex',cache:false});
+    const n=normNote(r);
+    if(!n.core.length)throw{code:'bad'};
+    n.src='ai';n.ts=new Date().toISOString();
+    NOTES[pid]=n;
+    markViewed(pt.sid,pid);
+    if(db)await db.doc('notes/'+pid).set(n);
+  }catch(e){NERR[pid]=e&&e.code==='not_granted'?'Claude writing is turned off for this page. Tap Change permissions or reload, then try again.':e&&e.code==='nosample'?'Sign in to have notes written.':'Could not write the notes. Try again in a moment.'}
+  delete NBUSY[pid];soft();
+}
+
+function quizDone(tid){const t=TP[tid];return t.topic.pts.every(x=>W[t.sid][x.id])}
+function renderQuiz(){
+  const {sid,tid}=QZ_CUR, tp=TP[tid], s=byId[sid], quiz=QUIZ[tid], res=QRES[tid];
+  let h=`<div class="rdr"><button class="chip" data-act="back">← Back to spec</button><p class="crumb">${esc(s.board)} ${esc(s.name)} › ${esc(tp.topic.name)}</p><h2 class="ntitle">Topic quiz</h2><p class="src">Pass mark 80%. Pass and the whole topic is marked Done. Below that it stays Needs work and you see what to re-read.</p>`;
+  if(qzBusy&&!quiz)return h+`<p class="empty">The AI is writing your quiz. This takes about a minute.</p></div>`;
+  if(!quiz)return h+`<div class="qa"><button class="btn" data-act="newquiz" data-v="${tid}">Start the quiz</button>${qzErr?`<span class="err">${esc(qzErr)}</span>`:''}${qzErr&&qzErr.indexOf('turned off')>-1?'<button class="btn ghost" data-act="perm">Change permissions</button>':''}</div></div>`;
+  const showRes=res&&res.qts===quiz.ts&&!QZRETAKE[tid];
+  if(showRes){
+    h+=`<div class="res ${res.pass?'ok':'no'}"><div class="rh"><b>${res.aw}/${res.mx} · ${res.pct}%</b> <span>${res.pass?'Topic finished. Every point in this topic is now marked Done.':'Not finished yet. The points stay on Needs work. Re-read the notes below, then try again.'}</span></div></div>`;
+    const lost=new Set();
+    quiz.qs.forEach((q,i)=>{const it=res.items[i]||{};if(it.aw<q.marks)lost.add(q.pid)});
+    if(lost.size)h+=`<h4 class="rvh" style="margin-top:14px">Re-read these notes</h4><div class="qa">${[...lost].map(id=>`<button class="chip" data-act="note" data-sid="${sid}" data-id="${id}">${esc(PT[id].text.length>46?PT[id].text.slice(0,46)+'...':PT[id].text)}</button>`).join('')}</div>`;
+    quiz.qs.forEach((q,i)=>{
+      const it=res.items[i]||{},hit=new Set(it.hit||[]);
+      h+=`<article class="qc"><div class="qh"><span class="ql">Question ${i+1} · ${esc((PT[q.pid]||{}).text||'')}</span><span class="qm">${it.aw||0}/${q.marks}</span></div><div class="qt">${esc(q.q)}</div><div class="res ${it.aw>=q.marks?'ok':'no'}"><p class="yours"><i>Your answer:</i> ${esc(it.ans||'(blank)')}</p><ul class="ms">${q.scheme.map((m,j)=>`<li><span>${hit.has(j+1)?'✓':'✗'}</span>${esc(m)}</li>`).join('')}</ul>${it.expl?`<p class="ex">${esc(it.expl)}</p>`:''}</div></article>`;
+    });
+    h+=`<div class="qa" style="margin-top:12px"><button class="btn" data-act="retake" data-v="${tid}">Try this quiz again</button><button class="btn ghost" data-act="newquiz" data-v="${tid}" ${qzBusy?'disabled':''}>${qzBusy?'Writing...':'New quiz'}</button></div></div>`;
+    return h;
+  }
+  const dr=QZDR[tid]=QZDR[tid]||[];
+  let total=0;
+  quiz.qs.forEach((q,i)=>{
+    total+=q.marks;
+    h+=`<article class="qc"><div class="qh"><span class="ql">Question ${i+1} · ${esc((PT[q.pid]||{}).text||'')}</span><span class="qm">${q.marks} mark${q.marks===1?'':'s'}</span></div><div class="qt">${esc(q.q)}</div><textarea class="ans qzans" data-t="${tid}" data-i="${i}" rows="${q.marks>3?5:3}" placeholder="Type your answer" ${qzMarking?'disabled':''}>${esc(dr[i]||'')}</textarea></article>`;
+  });
+  h+=`<div class="qa" style="margin-top:12px"><button class="btn" data-act="submitquiz" data-v="${tid}" ${qzMarking?'disabled':''}>${qzMarking?'Marking...':`Submit quiz (${total} marks)`}</button><button class="btn ghost" data-act="newquiz" data-v="${tid}" ${qzBusy||qzMarking?'disabled':''}>${qzBusy?'Writing...':'New quiz'}</button>${qzErr?`<span class="err">${esc(qzErr)}</span>`:''}${qzErr&&qzErr.indexOf('turned off')>-1?'<button class="btn ghost" data-act="perm">Change permissions</button>':''}</div></div>`;
+  return h;
+}
+async function genQuiz(tid){
+  if(qzBusy)return;
+  const tp=TP[tid], s=byId[tp.sid];
+  qzBusy=true;qzErr='';delete QZRETAKE[tid];soft();
+  try{
+    const sm=await claude.use('sample');if(!sm)throw{code:'nosample'};
+    const list=tp.topic.pts.map((p,i)=>(i+1)+'. '+p.text).join('\n');
+    const prompt=`You are an ${s.board} GCSE ${s.name} examiner. Write a 10 question topic quiz for a Higher tier student on "${tp.topic.name}" (${s.board} ${s.code}).
+
+Spec points:
+${list}
+
+Rules:
+- Questions 1 to 5 are short recall and application questions worth 1 to 3 marks. Questions 6 to 10 are exam-style questions worth 3 to 6 marks, in the style and command words of real ${s.board} papers (describe, explain, calculate, evaluate, compare), the kind that come up again and again. Include at least one calculation or extended explanation if the topic allows.
+- Cover as many spec points as you can, weighted towards the harder Higher tier content. Each question is original, self-contained and tagged with the number of the spec point it mainly tests.
+- Give an accurate ${s.board}-style mark scheme for each: an array of marking points, one mark each, so the number of marking points equals the marks. Put allow and ignore guidance in an optional notes string. Check every calculation.
+
+Reply with JSON only: {"questions":[{"pt":1,"marks":2,"q":"...","scheme":["...","..."],"notes":""}]}`;
+    const r=await sm.json(prompt,{modelTier:'complex',cache:false});
+    const qs=(r.questions||[]).filter(x=>x&&x.q&&Array.isArray(x.scheme)&&x.scheme.length).slice(0,12);
+    if(qs.length<6)throw{code:'bad'};
+    const pts=tp.topic.pts;
+    const doc={sid:tp.sid,tid,ts:new Date().toISOString(),qs:qs.map(x=>({pid:(pts[(+x.pt||1)-1]||pts[0]).id,marks:x.scheme.length,q:String(x.q),scheme:x.scheme.map(String),notes:String(x.notes||'')}))};
+    QUIZ[tid]=doc;QZDR[tid]=[];
+    if(db)await db.doc('quiz/'+tid).set(doc);
+  }catch(e){qzErr=e&&e.code==='not_granted'?'Claude writing is turned off for this page. Tap Change permissions or reload, then try again.':e&&e.code==='nosample'?'Sign in to take the quiz.':'Could not write the quiz. Try again in a moment.'}
+  qzBusy=false;soft();
+}
+async function submitQuiz(tid){
+  const quiz=QUIZ[tid],tp=TP[tid],sid=tp.sid,dr=QZDR[tid]||[];
+  if(!quiz||qzMarking)return;
+  if(!dr.some(x=>x&&x.trim())){qzErr='Type at least one answer first.';soft();return}
+  qzMarking=true;qzErr='';soft();
+  try{
+    const sm=await claude.use('sample');if(!sm)throw{code:'nosample'};
+    const s=byId[sid];
+    const blocks=quiz.qs.map((q,i)=>`${i+1}. Question (${q.marks} marks): ${q.q}\nMark scheme:\n${q.scheme.map((m,j)=>'  '+(j+1)+'. '+m).join('\n')}\n${q.notes?'Examiner notes: '+q.notes+'\n':''}Student answer: ${(dr[i]||'').trim()||'(no answer)'}`).join('\n\n');
+    const prompt=`You are a strict but fair ${s.board} GCSE ${s.name} examiner. Mark every answer below using ONLY its mark scheme. Award a mark only when the student's answer clearly makes the marking point, accepting equivalent wording and ignoring spelling that does not change the meaning. A blank answer scores 0.
+
+${blocks}
+
+Reply with JSON only: {"items":[{"n":1,"awarded":0,"hit":[numbers of mark scheme points earned],"explanation":"for marks lost: 1 to 3 plain sentences saying exactly what to write to gain them, using the board's terminology; empty if full marks"}]}`;
+    const r=await sm.json(prompt,{modelTier:'complex',cache:false});
+    let aw=0,mx=0;const items=[];
+    quiz.qs.forEach((q,i)=>{
+      const it=(r.items||[]).find(x=>+x.n===i+1)||{};
+      const a=Math.max(0,Math.min(q.marks,Math.round(+it.awarded||0)));
+      aw+=a;mx+=q.marks;
+      items.push({aw:a,hit:Array.isArray(it.hit)?it.hit.map(Number):[],expl:String(it.explanation||''),ans:(dr[i]||'').trim()});
+    });
+    const p=pct(aw,mx),pass=p>=80;
+    const res={sid,tid,qts:quiz.ts,aw,mx,pct:p,pass,items,ts:new Date().toISOString()};
+    QRES[tid]=res;delete QZRETAKE[tid];
+    tp.topic.pts.forEach(x=>{
+      const m=M[sid][x.id]=M[sid][x.id]||{b:0,n:0,c:0};
+      C[sid][x.id]=LBL[x.id]||'';
+      if(pass){S[sid][x.id]=2;m.p=0;m.b=Math.max(m.b,3);m.d=addDays(today(),INT[m.b])}
+      else{S[sid][x.id]=1;m.p=0;m.b=Math.min(m.b,1);m.d=addDays(today(),1)}
+    });
+    queue(sid);
+    if(db)await db.doc('qr/'+tid).set(res);
+  }catch(e){qzErr=e&&e.code==='not_granted'?'Claude marking is turned off for this page. Tap Change permissions or reload, then submit again.':e&&e.code==='nosample'?'Sign in to get your answers marked.':'Marking failed. Your answers are still here. Try again in a moment.'}
+  qzMarking=false;soft();
+}
+
+/* ---------- persistence: db when available, otherwise this browser only ---------- */
+let db=null, dirty=new Set(), timer=null, chain=Promise.resolve();
+const syncEl=document.getElementById('sync');
+function saveLocal(){try{localStorage.setItem(LS,JSON.stringify({S,C,M,W}))}catch(e){}}
+function queue(sid){
+  saveLocal();
+  if(!db)return;
+  dirty.add(sid);clearTimeout(timer);
+  timer=setTimeout(()=>{
+    [...dirty].forEach(id=>{
+      dirty.delete(id);
+      chain=chain.then(()=>db.doc('progress/'+id).set({s:S[id],c:C[id],m:M[id],w:W[id],v:2})).then(()=>{syncEl.textContent='Saved to your account'}).catch(()=>{syncEl.textContent='Saved on this device only'});
+    });
+  },500);
+}
+function setStatus(sid,pid,v){
+  if(v===0){delete S[sid][pid];delete C[sid][pid]}else{S[sid][pid]=v;C[sid][pid]=LBL[pid]||''}
+  queue(sid);
+}
+function recordResult(q,aw,mx){
+  const sid=q.sid,pid=q.pid;
+  if(!sid||!pid||!S[sid])return;
+  const pass=mx>0&&aw/mx>=0.7;
+  const m=M[sid][pid]=M[sid][pid]||{b:0,n:0,c:0};
+  m.n++;if(pass){m.c++;m.b=Math.min(m.b+1,5)}else m.b=0;
+  m.l=today();m.d=addDays(today(),INT[m.b]);
+  if(!pass)m.p=0;
+  if(S[sid][pid]===2){if(!pass)S[sid][pid]=1}
+  else{S[sid][pid]=1;if(m.b>=3)m.p=1}
+  C[sid][pid]=LBL[pid]||q.label||'';
+  queue(sid);
+}
+
+/* ---------- marking and question writing, via the Gemini marking server (adapter.js) ---------- */
+async function markAnswer(q,ans){
+  const sm=await claude.use('sample');
+  if(!sm)throw{code:'nosample'};
+  const prompt=`You are a strict but fair UK GCSE examiner. Mark the student's answer using ONLY the mark scheme below. Award a mark only when the student's answer clearly makes the marking point, accepting equivalent wording and ignoring spelling that does not change the science or maths. Do not give credit for contradictions.
+
+Question (${q.marks} marks): ${q.q}
+
+Mark scheme (numbered, one mark each unless stated):
+${(q.scheme||[]).map((m,i)=>(i+1)+'. '+m).join('\n')}
+${q.notes?'Examiner notes: '+q.notes+'\n':''}
+Student answer: ${ans}
+
+Reply with JSON only, in this shape:
+{"awarded": integer from 0 to ${q.marks}, "hit": [numbers of the mark scheme points the student earned], "explanation": "2 to 4 plain sentences telling the student exactly what to write to gain the marks they missed, referring to the mark scheme points", "tip": "one sentence on the common mistake students make on this kind of question"}`;
+  const r=await sm.json(prompt,{modelTier:'complex',cache:false});
+  const aw=Math.max(0,Math.min(q.marks,Math.round(+r.awarded||0)));
+  return{aw,hit:Array.isArray(r.hit)?r.hit.map(Number):[],expl:String(r.explanation||''),tip:String(r.tip||'')};
+}
+async function submitQ(id){
+  const q=Q[id],ans=(DR[id]||'').trim();
+  if(!q)return;
+  if(!ans){ERR[id]='Type an answer first.';soft();return}
+  BUSY[id]=1;delete ERR[id];soft();
+  try{
+    const r=await markAnswer(q,ans);
+    const prev=A[id]||{};
+    const att={sid:q.sid,pid:q.pid||'',ans,aw:r.aw,mx:q.marks,ok:r.aw/q.marks>=0.7,hit:r.hit,expl:r.expl,tip:r.tip,ts:new Date().toISOString(),tries:(prev.tries||0)+1};
+    A[id]=att;delete RETRY[id];delete DR[id];
+    recordResult(q,r.aw,q.marks);
+    if(db)db.doc('a/'+id).set(att).catch(()=>{});
+  }catch(e){
+    ERR[id]=e&&e.code==='nosample'?'Sign in to get your answers marked.':e&&e.code==='not_granted'?'Marking is turned off for this page. Tap Change permissions to allow it, or reload the page, then submit again.':'Marking failed. Try again in a moment.';
+  }
+  delete BUSY[id];soft();
+}
+async function genToday(append){
+  if(genBusy)return;
+  const s=byId[cur];
+  if(!Object.keys(S[s.id]).length){genErr='Nothing covered yet, so there is nothing to ask about.';soft();return}
+  genBusy=true;genErr='';soft();
+  try{
+    const sm=await claude.use('sample');if(!sm)throw{code:'nosample'};
+    const t=today();
+    const cur0=todayDoc(s.id);
+    if(append&&cur0){
+      const used=new Set(cur0.qids);
+      const pool=Object.keys(Q).filter(id=>Q[id].sid===s.id&&Q[id].src==='seed'&&!A[id]&&!used.has(id)).slice(0,7);
+      if(pool.length){
+        const nd={sid:s.id,date:t,qids:cur0.qids.concat(pool)};
+        DAILY[t+'-'+s.id]=nd;
+        if(db)await db.doc('daily/'+t+'-'+s.id).set(nd);
+        genBusy=false;soft();return;
+      }
+    }
+    const ids=Object.keys(S[s.id]).sort((a,b)=>{
+      const ma=M[s.id][a],mb=M[s.id][b];
+      const ra=(S[s.id][a]===1?0:1)+(ma&&ma.d>t?2:0), rb=(S[s.id][b]===1?0:1)+(mb&&mb.d>t?2:0);
+      return ra-rb||((ma||{}).d||'').localeCompare((mb||{}).d||'');
+    });
+    const pts=[];for(let i=0;pts.length<7;i++)pts.push(ids[i%ids.length]);
+    const list=pts.map((id,i)=>(i+1)+'. '+(C[s.id][id]||LBL[id])).join('\n');
+    const prompt=`You write ${s.board} GCSE ${s.name} exam-style questions for a Higher tier student. Write exactly 7 original questions, one for each numbered spec point below, in the style and command words of real ${s.board} papers (describe, explain, calculate, evaluate), the kind that come up again and again in past papers. Each is worth 2 to 6 marks. Give an AQA-style mark scheme as a list of marking points, one mark each, in the order a student would earn them, so the number of points equals the marks.
+
+Spec points:
+${list}
+
+Reply with JSON only: {"questions":[{"n":1,"marks":3,"q":"question text","scheme":["marking point","marking point","marking point"],"notes":"optional examiner note on what to allow or ignore"}]}`;
+    const r=await sm.json(prompt,{modelTier:'complex',cache:false});
+    const qs=(r.questions||[]).slice(0,7);
+    if(qs.length<5)throw{code:'bad'};
+    const qids=[];
+    for(let i=0;i<qs.length;i++){
+      const x=qs[i],id=append?('d'+t+'-'+s.id+'-m'+Date.now().toString(36)+(i+1)):('d'+t+'-'+s.id+'-'+(i+1)),pid=pts[(x.n||i+1)-1]||pts[i];
+      const doc={sid:s.id,pid,label:C[s.id][pid]||LBL[pid]||'',marks:Math.max(1,x.scheme.length),q:String(x.q),scheme:x.scheme.map(String),notes:String(x.notes||''),src:'daily',date:t};
+      Q[id]=doc;qids.push(id);
+      if(db)await db.doc('q/'+id).set(doc);
+    }
+    const all=append&&cur0?cur0.qids.concat(qids):qids;
+    DAILY[t+'-'+s.id]={sid:s.id,qids:all,date:t};
+    if(db)await db.doc('daily/'+t+'-'+s.id).set(DAILY[t+'-'+s.id]);
+  }catch(e){genErr=e&&e.code==='not_granted'?'Sign in, then try again.':'Could not write the questions. Try again in a moment.'}
+  genBusy=false;soft();
+}
+
+document.addEventListener('click',e=>{
+  const b=e.target.closest('[data-act]');if(!b)return;
+  const a=b.dataset.act,v=b.dataset.v;
+  if(a==='tab'){cur=v;if(view==='note'||view==='quiz')view='spec';try{localStorage.setItem(TABS,v)}catch(_){}}
+  else if(a==='view')view=v;
+  else if(a==='filter')filter=v;
+  else if(a==='top'){open.has(v)?open.delete(v):open.add(v)}
+  else if(a==='exp'){expandAll=v==='1';open=new Set();if(expandAll)byId[cur].papers.forEach(p=>p.topics.forEach(t=>open.add(t.id)))}
+  else if(a==='st')setStatus(cur,b.dataset.id,+b.dataset.s);
+  else if(a==='all'){const t=byId[cur].papers.flatMap(p=>p.topics).find(t=>t.id===v);t.pts.forEach(p=>setStatus(cur,p.id,+b.dataset.s))}
+  else if(a==='submit'){submitQ(b.dataset.q);return}
+  else if(a==='master'){const sd=b.dataset.sid,id=b.dataset.id;if(M[sd]&&M[sd][id])M[sd][id].p=0;S[sd][id]=2;C[sd][id]=LBL[id]||'';queue(sd)}
+  else if(a==='more'){const sd=b.dataset.sid,id=b.dataset.id,m=M[sd]&&M[sd][id];if(m){m.p=0;m.b=2;m.d=addDays(today(),1)}queue(sd)}
+  else if(a==='retry'){RETRY[b.dataset.q]=1;delete DR[b.dataset.q]}
+  else if(a==='cancel'){delete RETRY[b.dataset.q]}
+  else if(a==='gen'){genToday();return}
+  else if(a==='more7'){genToday(true);return}
+  else if(a==='review'){if(REVOPEN[cur]&&!reviewNeeds(cur).length){REVOPEN[cur]=false}else{REVOPEN[cur]=true;genReview(cur)}}
+  else if(a==='dec'){const sd=b.dataset.sid,id=b.dataset.id,v=b.dataset.s;
+    if(v==='2'){S[sd][id]=2;if(M[sd][id])M[sd][id].p=0}
+    else{S[sd][id]=1;const m=M[sd][id]=M[sd][id]||{b:0,n:0,c:0};m.p=0;m.b=Math.min(m.b,1);m.d=addDays(today(),1)}
+    C[sd][id]=LBL[id]||'';queue(sd)}
+  else if(a==='note'){if(view!=='note'&&view!=='quiz'){backView=view;backY=window.scrollY}cur=b.dataset.sid;NOTE_CUR={sid:b.dataset.sid,pid:b.dataset.id};view='note';if(NOTES[b.dataset.id])markViewed(b.dataset.sid,b.dataset.id);else if(!NBUSY[b.dataset.id]&&!NERR[b.dataset.id])setTimeout(()=>loadNote(b.dataset.sid,b.dataset.id),0);window.scrollTo(0,0);render();return}
+  else if(a==='back'){view=backView==='improve'?'improve':'spec';render();window.scrollTo(0,backY);return}
+  else if(a==='wnote'){delete NERR[NOTE_CUR.pid];loadNote(NOTE_CUR.sid,NOTE_CUR.pid);return}
+  else if(a==='quiz'){if(view!=='note'&&view!=='quiz'){backView=view;backY=window.scrollY}cur=b.dataset.sid;QZ_CUR={sid:b.dataset.sid,tid:v};view='quiz';window.scrollTo(0,0);if(!QUIZ[v])genQuiz(v);render();return}
+  else if(a==='newquiz'){delete QRES[v];QZDR[v]=[];delete QZRETAKE[v];delete QUIZ[v];genQuiz(v);return}
+  else if(a==='submitquiz'){submitQuiz(v);return}
+  else if(a==='retake'){QZRETAKE[v]=true;QZDR[v]=[]}
+  else if(a==='pdone'){const k=b.dataset.k;if(PD[k])delete PD[k];else PD[k]=today();try{localStorage.setItem('gcse-papers-v1',JSON.stringify(PD))}catch(_){}}
+  else if(a==='perm'){(async()=>{try{const pm=await claude.use('permissions');if(pm&&pm.manage)await pm.manage()}catch(e){}})();return}
+  const y=window.scrollY;render();window.scrollTo(0,y);
+});
+
+render();
+(async()=>{
+  try{db=await claude.use('db')}catch(e){db=null}
+  if(!db){syncEl.textContent='Saved on this device only';return}
+  syncEl.textContent='Saved to your account';
+  const fail=()=>{syncEl.textContent='Saved on this device only'};
+  D.forEach(s=>{
+    db.doc('progress/'+s.id).onSnapshot(snap=>{
+      if(snap.exists){
+        if(dirty.has(s.id)||snap.metadata.hasPendingWrites)return;
+        const d=JSON.parse(JSON.stringify(snap.data()||{}));
+        const next={S:d.s||{},C:d.c||{},M:d.m||{},W:d.w||{}};
+        if(JSON.stringify(next)!==JSON.stringify({S:S[s.id],C:C[s.id],M:M[s.id],W:W[s.id]})){S[s.id]=next.S;C[s.id]=next.C;M[s.id]=next.M;W[s.id]=next.W;saveLocal();soft()}
+      }else if(Object.keys(S[s.id]).length){queue(s.id)}
+    },fail);
+  });
+  db.collection('q').onSnapshot(sn=>{const o={};sn.docs.forEach(d=>{o[d.id]=JSON.parse(JSON.stringify(d.data()))});Q=o;soft()},fail);
+  db.collection('a').onSnapshot(sn=>{const o={};sn.docs.forEach(d=>{o[d.id]=JSON.parse(JSON.stringify(d.data()))});A=o;soft()},fail);
+  db.collection('quiz').onSnapshot(sn=>{const o={};sn.docs.forEach(d=>{o[d.id]=JSON.parse(JSON.stringify(d.data()))});QUIZ=o;soft()},fail);
+  db.collection('qr').onSnapshot(sn=>{const o={};sn.docs.forEach(d=>{o[d.id]=JSON.parse(JSON.stringify(d.data()))});QRES=o;soft()},fail);
+  db.collection('rv').onSnapshot(sn=>{const o={};sn.docs.forEach(d=>{o[d.id]=JSON.parse(JSON.stringify(d.data()))});REV=o;soft()},fail);
+  db.collection('daily').onSnapshot(sn=>{const o={};sn.docs.forEach(d=>{o[d.id]=JSON.parse(JSON.stringify(d.data()))});DAILY=o;soft()},fail);
+})();
+</script>
+
+</body></html>
