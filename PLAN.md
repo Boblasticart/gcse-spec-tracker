@@ -9,6 +9,29 @@ This file is the single source of truth for the scheduled rebuild runs. Every ru
 
 ---
 
+## 0. Status (every run reads this first and keeps it updated)
+
+```
+RUN LOCK:        none
+CURRENT:         M0 Foundations
+CURRENT STEPS:   (none started)
+LAST GREEN CI:   (none yet)
+LAST RUN ENDED:  (no runs yet)
+```
+
+**How the status block works:**
+
+- **RUN LOCK** shows which run is working right now, as `running since <UTC time>, session <id>`.
+  - At the very start of a run, fetch the latest `rebuild` branch and read this block.
+  - If the lock was set less than 20 hours ago by another session, another run is still working. Stop at once without changing anything, and don't message the owner.
+  - If it is `none` or older than 20 hours (a crashed run), take it: write your own time and session, then commit and push **before doing any other work** (commit message `Run lock: take`). If the push is rejected because someone else pushed first, fetch, re-read, and stop if their lock is now set.
+  - At the end of the run, set it back to `none` and fill in `LAST RUN ENDED`.
+- **CURRENT** is the milestone being worked on.
+- **CURRENT STEPS** lists that milestone's steps as `[x]`/`[ ]` lines (the run writes them when it starts the milestone). Tick each step as soon as its code is pushed and its CI is green, and push the tick straight away. A later run continues from the first unticked step and **never redoes a ticked step**. Check against the actual files and CI rather than guessing: if a ticked step's files are missing, untick it and note why in the run log.
+- **LAST GREEN CI** is the link to the most recent green Actions run on `rebuild`.
+- When a milestone's acceptance checks are green, tick it in section 5, move CURRENT to the next milestone and clear CURRENT STEPS.
+
+
 ## 1. Goal
 
 Rebuild the tracker as a production-ready Next.js + TypeScript app on Vercel with:
@@ -49,6 +72,7 @@ Rebuild the tracker as a production-ready Next.js + TypeScript app on Vercel wit
 
 **The workspace cannot download npm packages.** Installing, building and testing therefore happen in **GitHub Actions**. A run's loop is:
 
+0. **Check the run lock** in section 0 first (see the rules there). Stop if another run holds it; otherwise take it and push.
 1. **Get the code.** `git clone https://github.com/Boblasticart/gcse-spec-tracker` (if access fails, call `add_repo` with owner `Boblasticart`, repo `gcse-spec-tracker`, access `push`). Then `git checkout rebuild` and `git pull`.
 2. **Read this file.** Note anything under **Waiting on the owner**. Pick the first milestone that isn't ticked. If the last run-log entry says a milestone was left half-done, finish that first.
 3. **Write the code** for a coherent chunk with its tests. Keep the code modular and typed. Never put secrets in the repo.
@@ -59,7 +83,7 @@ Rebuild the tracker as a production-ready Next.js + TypeScript app on Vercel wit
 5. **Only tick a milestone when CI is green** for its acceptance checks. Commit `PLAN.md` with the tick and a run-log line straight away, so a usage cut-off loses at most one milestone.
 6. **Keep going** to the next milestone until the work is done or usage runs out. Aim to use the whole day's allowance. Wednesday's run has a fresh weekly allowance too, so do the biggest milestone then.
 7. **If you need something from the owner** (accounts, keys, a decision), add it under **Waiting on the owner** in plain steps, send them a short message, and carry on with anything that doesn't depend on it.
-8. **End of run:** send the owner a short plain-English message covering what got done, what's next, and anything they need to do.
+8. **End of run:** update section 0 (release the lock, record where you got to), push, then send the owner a short plain-English message covering what got done, what's next, and anything they need to do.
 9. **When every milestone is ticked:** say so, and tell the owner they can delete the "GCSE tracker rebuild" scheduled task. Later runs should then just confirm completion and stop.
 
 **Things that can't be done from the workspace:** deleting branches, changing repo settings, or calling Vercel or Supabase directly. Ask the owner. The workspace *can* push commits (including `.github/workflows/*`) and read Actions runs and logs.
@@ -198,4 +222,5 @@ Needed by **M2** (so the Vercel preview works) and before **M12**. Runs: keep th
 
 Newest at the bottom. One or two lines per run: date, milestones finished, anything left half-done, CI run link.
 
+- 2026-11-07 (planning session): Added section 0 (run lock and step-level tracking) so runs never overlap or redo work.
 - 2026-11-07 (planning session): Plan written. Checked that GitHub Actions can install packages, run Postgres 16 and that logs are readable from the workspace (Next 16.4.5, Serwist 9.5.13 available). Daily scheduled run created for 01:10 UK time.
