@@ -1,20 +1,19 @@
 /* GCSE Spec Tracker marking server (Cloudflare Worker).
  *
- * POST /json  with  Authorization: Bearer <Firebase ID token>  and body {"prompt": "..."}
+ * POST /json  with  Authorization: Bearer <Supabase access token>  and body {"prompt": "..."}
  * -> asks Gemini for a JSON answer and returns {"result": <parsed JSON>}.
  *
  * Settings (Cloudflare dashboard > your Worker > Settings > Variables and Secrets):
  *   GEMINI_API_KEY       secret   your Gemini API key (never put this in the website)
- *   FIREBASE_PROJECT_ID  text     your Firebase project id, e.g. gcse-spec-tracker-1a2b3
+ *   SUPABASE_URL         text     your Supabase project URL, e.g. https://abcdefghijklmnop.supabase.co
+ *   SUPABASE_KEY         text     your Supabase publishable key (sb_publishable_...), the same one as the website
  *   ALLOWED_ORIGINS      text     your site, e.g. https://boblasticart.github.io  (comma-separate several)
- *   ALLOWED_EMAILS       text     optional: only these Google accounts may use marking (comma-separated).
+ *   ALLOWED_EMAILS       text     optional: only these accounts' emails may use marking (comma-separated).
  *                                 Leave empty to let anyone who signs in use it (they use YOUR Gemini quota).
  *   GEMINI_MODEL         text     optional, default gemini-flash-latest
  */
 
-const JWKS_URL = 'https://www.googleapis.com/service_accounts/v1/jwk/securetoken@system.gserviceaccount.com';
 const MAX_PROMPT = 60000; // characters
-let jwksCache = { keys: null, until: 0 };
 
 export default {
   async fetch(request, env) {
@@ -34,17 +33,17 @@ export default {
     if (request.method === 'GET' && url.pathname === '/') return reply(200, { ok: true, service: 'gcse-marking' });
     if (request.method !== 'POST' || url.pathname !== '/json') return reply(404, { error: 'Not found' });
     if (allowed.length && !allowed.includes(origin)) return reply(403, { error: 'This site is not allowed to use the marking server (check ALLOWED_ORIGINS).' });
-    if (!env.GEMINI_API_KEY || !env.FIREBASE_PROJECT_ID) return reply(500, { error: 'Marking server is missing GEMINI_API_KEY or FIREBASE_PROJECT_ID.' });
+    if (!env.GEMINI_API_KEY || !env.SUPABASE_URL || !env.SUPABASE_KEY) return reply(500, { error: 'Marking server is missing GEMINI_API_KEY, SUPABASE_URL or SUPABASE_KEY.' });
 
     let who;
     try {
       const tok = (request.headers.get('authorization') || '').replace(/^Bearer\s+/i, '');
-      who = await verifyFirebaseToken(tok, env.FIREBASE_PROJECT_ID);
+      who = await supabaseUser(tok, env);
     } catch (e) {
       return reply(401, { error: 'Please sign in again.' });
     }
     const emails = list(env.ALLOWED_EMAILS).map((x) => x.toLowerCase());
-    if (emails.length && !(who.email_verified && emails.includes(String(who.email || '').toLowerCase()))) {
+    if (emails.length && !(who.email_confirmed_at && emails.includes(String(who.email || '').toLowerCase()))) {
       return reply(403, { error: 'This account is not allowed to use AI marking.' });
     }
 
@@ -95,42 +94,16 @@ function parseJsonLoose(text) {
   throw new Error('Gemini did not return JSON.');
 }
 
-/* ---------- Firebase ID token check (RS256 against Google's public keys) ---------- */
-export async function verifyFirebaseToken(token, projectId, now = Math.floor(Date.now() / 1000), getKeys = fetchKeys) {
-  const parts = String(token || '').split('.');
-  if (parts.length !== 3) throw new Error('malformed');
-  const header = JSON.parse(b64urlText(parts[0]));
-  const payload = JSON.parse(b64urlText(parts[1]));
-  if (header.alg !== 'RS256' || !header.kid) throw new Error('bad header');
-  const keys = await getKeys();
-  const jwk = keys.find((k) => k.kid === header.kid);
-  if (!jwk) throw new Error('unknown key');
-  const key = await crypto.subtle.importKey('jwk', { kty: jwk.kty, n: jwk.n, e: jwk.e, alg: 'RS256', ext: true },
-    { name: 'RSASSA-PKCS1-v1_5', hash: 'SHA-256' }, false, ['verify']);
-  const ok = await crypto.subtle.verify('RSASSA-PKCS1-v1_5', key, b64urlBytes(parts[2]), new TextEncoder().encode(parts[0] + '.' + parts[1]));
-  if (!ok) throw new Error('bad signature');
-  if (payload.aud !== projectId) throw new Error('wrong audience');
-  if (payload.iss !== 'https://securetoken.google.com/' + projectId) throw new Error('wrong issuer');
-  if (!payload.sub || typeof payload.sub !== 'string') throw new Error('no subject');
-  if (typeof payload.exp !== 'number' || payload.exp <= now) throw new Error('expired');
-  if (typeof payload.iat !== 'number' || payload.iat > now + 300) throw new Error('issued in the future');
-  return payload;
+/* ---------- Supabase sign-in check ----------
+ * Asks Supabase Auth who the token belongs to. Supabase rejects expired, forged or signed-out tokens,
+ * so this works whichever kind of signing key the project uses. */
+export async function supabaseUser(token, env) {
+  if (!token || token.split('.').length !== 3) throw new Error('no token');
+  const res = await fetch(env.SUPABASE_URL.replace(/\/+$/, '') + '/auth/v1/user', {
+    headers: { apikey: env.SUPABASE_KEY, authorization: 'Bearer ' + token }
+  });
+  if (!res.ok) throw new Error('not signed in');
+  const u = await res.json();
+  if (!u || !u.id) throw new Error('not signed in');
+  return u;
 }
-
-async function fetchKeys() {
-  if (jwksCache.keys && Date.now() < jwksCache.until) return jwksCache.keys;
-  const res = await fetch(JWKS_URL);
-  if (!res.ok) throw new Error('could not load keys');
-  const data = await res.json();
-  const m = /max-age=(\d+)/.exec(res.headers.get('cache-control') || '');
-  jwksCache = { keys: data.keys || [], until: Date.now() + (m ? +m[1] : 3600) * 1000 };
-  return jwksCache.keys;
-}
-
-function b64urlBytes(s) {
-  const b = atob(s.replace(/-/g, '+').replace(/_/g, '/') + '==='.slice((s.length + 3) % 4));
-  const out = new Uint8Array(b.length);
-  for (let i = 0; i < b.length; i++) out[i] = b.charCodeAt(i);
-  return out;
-}
-function b64urlText(s) { return new TextDecoder().decode(b64urlBytes(s)); }
