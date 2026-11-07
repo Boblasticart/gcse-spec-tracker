@@ -23,8 +23,8 @@ LAST RUN ENDED:  (no runs yet)
 
 - **RUN LOCK** shows which run is working right now, as `running since <UTC time>, session <id>`.
   - At the very start of a run, fetch the latest `rebuild` branch and read this block.
-  - If the lock was set less than 20 hours ago by another session, another run is still working. Stop at once without changing anything, and don't message the owner.
-  - If it is `none` or older than 20 hours (a crashed run), take it: write your own time and session, then commit and push **before doing any other work** (commit message `Run lock: take`). If the push is rejected because someone else pushed first, fetch, re-read, and stop if their lock is now set.
+  - If the lock was set less than 6 hours ago by another session, another run is still working. Stop at once without changing anything, and don't message the owner.
+  - If it is `none` or older than 6 hours (a run that crashed or was cut off when usage ran out), take it: write your own time and session, then commit and push **before doing any other work** (commit message `Run lock: take`). If the push is rejected because someone else pushed first, fetch, re-read, and stop if their lock is now set.
   - At the end of the run, set it back to `none` and fill in `LAST RUN ENDED`.
 - **CURRENT** is the milestone being worked on.
 - **CURRENT STEPS** lists that milestone's steps as `[x]`/`[ ]` lines (the run writes them when it starts the milestone). Tick each step as soon as its code is pushed and its CI is green, and push the tick straight away. A later run continues from the first unticked step and **never redoes a ticked step**. Check against the actual files and CI rather than guessing: if a ticked step's files are missing, untick it and note why in the run log.
