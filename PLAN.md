@@ -14,7 +14,12 @@ This file is the single source of truth for the scheduled rebuild runs. Every ru
 ```
 RUN LOCK:        running since 2026-11-08T01:11Z, session session_01Sm3c8k2fGvVpAVEZbZ3KRh
 CURRENT:         M3 Persistence + sync
-CURRENT STEPS:   (none started)
+CURRENT STEPS:   M3
+  [ ] 1 Server docs service: path rules, GET full/delta (tombstones), PUT batch with versions (compare-and-set, conflicts return the server copy)
+  [ ] 2 Import/export of the old export file (gcse-spec-tracker-export v1) + server-side data/updates.json (applied once per account, at sign-in and on full hydrate)
+  [ ] 3 Client: pure merge rules (progress three-way by key, others last-writer-wins), Zustand docs store, sync engine with an outbox interface (memory now, IndexedDB in M9), hydration on sign-in
+  [ ] 4 Minimal 3-way status control on /spec/[subject] using the store, save status text, Import/Export on the dashboard
+  [ ] 5 Tests: merge, progress maths, docs API + import fixture (Postgres); e2e tick -> reload -> new browser context shows the same state
 LAST GREEN CI:   https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/42435205966 (M2)
 LAST RUN ENDED:  (no runs yet)
 ```
