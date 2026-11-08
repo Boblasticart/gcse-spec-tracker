@@ -19,6 +19,24 @@ export async function hasSessionCookie(): Promise<boolean> {
   return !!validToken(jar.get(sessionCookieName())?.value);
 }
 
+/**
+ * For the root layout: never throws on a database problem, so public pages
+ * still render. Cookies are read outside the try so Next.js still sees the
+ * page as dynamic.
+ */
+export async function getCurrentUserSafe(): Promise<PublicUser | null> {
+  const jar = await cookies();
+  const token = validToken(jar.get(sessionCookieName())?.value);
+  if (!token) return null;
+  try {
+    const auth = await getAuthForToken(token);
+    return auth.kind === "active" ? toPublicUser(auth.user) : null;
+  } catch (err) {
+    console.error("Could not read the session", err);
+    return null;
+  }
+}
+
 export async function getCurrentUser(): Promise<PublicUser | null> {
   const auth = await getCurrentAuth();
   return auth.kind === "active" ? toPublicUser(auth.user) : null;

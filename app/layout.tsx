@@ -5,8 +5,7 @@ import type { ReactNode } from "react";
 import { SessionProvider } from "@/client/session";
 import { SignInPromptProvider } from "@/client/sign-in-prompt";
 import { DocsProvider } from "@/client/sync/react";
-import { getCurrentUser } from "@/server/auth/current";
-import type { PublicUser } from "@/server/auth/session";
+import { getCurrentUserSafe } from "@/server/auth/current";
 import { SiteHeader } from "@/ui/site-header";
 
 import "./globals.css";
@@ -24,18 +23,8 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-async function initialUser(): Promise<PublicUser | null> {
-  try {
-    return await getCurrentUser();
-  } catch (err) {
-    // Public pages still work if the database is briefly unreachable.
-    console.error("Could not read the session", err);
-    return null;
-  }
-}
-
 export default async function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
-  const user = await initialUser();
+  const user = await getCurrentUserSafe();
   return (
     <html lang="en-GB" className={`${heading.variable} ${body.variable}`}>
       <body className="min-h-dvh font-sans antialiased">
