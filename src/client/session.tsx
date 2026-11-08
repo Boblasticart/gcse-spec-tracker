@@ -28,8 +28,15 @@ export function SessionProvider({ initialUser, children }: { initialUser: Sessio
 
   // Pages can be served from cache, so check once on load. This also slides the cookie.
   useEffect(() => {
-    if (initialUser) void refresh();
-  }, [initialUser, refresh]);
+    if (!initialUser) return;
+    let live = true;
+    void api<{ user: SessionUser | null }>("/api/auth/me").then((res) => {
+      if (live && res.ok) setUser(res.user);
+    });
+    return () => {
+      live = false;
+    };
+  }, [initialUser]);
 
   const value = useMemo(() => ({ user, setUser, refresh }), [user, refresh]);
   return <SessionContext.Provider value={value}>{children}</SessionContext.Provider>;
