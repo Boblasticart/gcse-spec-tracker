@@ -13,14 +13,9 @@ This file is the single source of truth for the scheduled rebuild runs. Every ru
 
 ```
 RUN LOCK:        running since 2026-11-08T01:11Z, session session_01Sm3c8k2fGvVpAVEZbZ3KRh
-CURRENT:         M1 Auth backend
-CURRENT STEPS:   M1
-  [ ] 1 Prisma 6 schema + hand-written migration (schema app, RLS on, PUBLIC revoked); CI runs migrate deploy + drift check
-  [ ] 2 Server core: env (zod), clock (test offset), db (retry), http helpers (typed errors, Origin check, IP), mailer (gmail/file/memory)
-  [ ] 3 Auth library: password (argon2id + common list), tokens, OTP, sessions, rate limits, auth service
-  [ ] 4 /api/auth/* routes (sign-up, sign-in, verify-otp, resend-otp, sign-out, me) + minimal GET /api/docs behind requireUser
-  [ ] 5 Vitest against CI Postgres covering every M1 acceptance check
-LAST GREEN CI:   https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/42433717305 (M0, b54f4a4 + lockfile 7ecf2ca)
+CURRENT:         M2 Auth UI + gating
+CURRENT STEPS:   (none started)
+LAST GREEN CI:   https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/42434527012 (M1)
 LAST RUN ENDED:  (no runs yet)
 ```
 
@@ -169,7 +164,7 @@ Tick a box only when its acceptance checks pass in CI. Rough size: 1 to 2 milest
   - Write `docs/PARITY.md`: a checklist of every legacy feature, built from those actions (`tab`, `view`, `filter`, `exp`, `all`, `top`, `st`, `dec`, `note`, `wnote`, `back`, `gen`, `more7`, `more`, `submit`, `retry`, `master`, `review`, `quiz`, `newquiz`, `submitquiz`, `retake`, `pdone`, `perm`, `cancel`).
   - Add `scripts/sync-content.mjs` (copies `data/` and `papers/` into `public/`, gitignored, run in `prebuild`/`predev`).
   - Accept when: CI green with typecheck, lint, a sample unit test and `next build`; the parity checklist is committed.
-- [ ] **M1 Auth backend.**
+- [x] **M1 Auth backend.**
   - Prisma schema and migration (schema `app`, with RLS enabled in the migration SQL).
   - `src/server/auth/*`, the mailer (gmail/file), rate limits, and the `/api/auth/*` routes.
   - Accept when: Vitest covers hashing, OTP generation and compare, expiry, the attempt limit, resend cooldown, lockout, enumeration-safe responses, the verified-email sign-up case, and that pending sessions can't call `/api/docs`. Tests run against the CI Postgres.
@@ -230,3 +225,4 @@ Newest at the bottom. One or two lines per run: date, milestones finished, anyth
 - 2026-11-07 (planning session): Added section 0 (run lock and step-level tracking) so runs never overlap or redo work.
 - 2026-11-07 (planning session): Plan written. Checked that GitHub Actions can install packages, run Postgres 16 and that logs are readable from the workspace (Next 16.4.5, Serwist 9.5.13 available). Daily scheduled run created for 01:10 UK time.
 - 2026-11-08 (scheduled run): M0 done. Next 16.4.5 scaffold, CI (bootstrap-lockfile committed `package-lock.json`), `scripts/extract-legacy.ts` (dependency-free lexer, runs on Node type stripping) generating `src/content/{spec,papers,prompts,legacy-map}.ts`, `docs/PARITY.md`, sync-content. 21 unit + 2 e2e tests green: https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/42433717305. Decision: to change dependencies, edit `package.json` and delete `package-lock.json` in the same commit; CI regenerates and commits it.
+- 2026-11-08 (scheduled run): M1 done. Prisma 6.19 (decision: stay on Prisma 6, not 7, for a stable `url`/`directUrl` + `?schema=app` setup), hand-written init migration (RLS on all 6 tables, schema revoked from PUBLIC/anon/authenticated) with a CI drift check, auth service + `/api/auth/*` + minimal `GET /api/docs`. 50 tests green incl. 16 against Postgres: https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/42434527012. Decisions: session token hash is HMAC-SHA256 keyed with `SESSION_SECRET`; sign-up to a verified email sets a decoy cookie (no session) so responses match, and verify answers it with `INVALID_CODE` (so no "attempts left" count is ever shown); extra limits of 5 sign-ups per email and 20 per IP per hour; unknown emails lock out after 5 failures too.
