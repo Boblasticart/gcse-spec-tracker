@@ -14,7 +14,12 @@ This file is the single source of truth for the scheduled rebuild runs. Every ru
 ```
 RUN LOCK:        running since 2026-11-08T01:11Z, session session_01Sm3c8k2fGvVpAVEZbZ3KRh
 CURRENT:         M2 Auth UI + gating
-CURRENT STEPS:   (none started)
+CURRENT STEPS:   M2
+  [ ] 1 Server-side session for pages (getCurrentAuth via cookies()), test-only clock route (/api/test/clock, ENABLE_TEST_CLOCK=1 and never on Vercel)
+  [ ] 2 UI pieces: api client, SessionProvider, Button/Field, OtpInput (paste, one-time-code, backspace), sign-in sheet, <Gate>, header with sign-out
+  [ ] 3 Pages: /auth/sign-up, /auth/sign-in, /auth/verify (resend countdown, clear errors), public landing + /spec/[subject] browse, gated (app)/dashboard
+  [ ] 4 proxy.ts cheap cookie check + server-side gate in the (app) layout; safe ?next= redirects
+  [ ] 5 Playwright: sign-up -> code from .mail/ -> verify -> dashboard -> sign out -> blocked; wrong code; expired code (time travel); too many attempts; OTP input paste/backspace
 LAST GREEN CI:   https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/42434527012 (M1)
 LAST RUN ENDED:  (no runs yet)
 ```
