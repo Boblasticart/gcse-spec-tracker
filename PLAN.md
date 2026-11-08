@@ -13,14 +13,9 @@ This file is the single source of truth for the scheduled rebuild runs. Every ru
 
 ```
 RUN LOCK:        running since 2026-11-08T01:11Z, session session_01Sm3c8k2fGvVpAVEZbZ3KRh
-CURRENT:         M5 Design system + shell
-CURRENT STEPS:   M5
-  [ ] 1 Tokens (CSS variables mapped into Tailwind v4 @theme), AA-contrast light and dark palettes, typography; move existing components onto tokens
-  [ ] 2 Flicker-free theme: inline <head> script sets `dark` before paint; System/Light/Dark toggle (persisted, follows the OS on System)
-  [ ] 3 Shell: subject tabs (roving focus, arrow keys, % done) + view chips (Spec / Improvement / Today's 7 / Practice papers) on /spec/[subject]; route plan: /spec, /papers, /notes public; /improve, /today, /quiz gated
-  [ ] 4 Components + micro-interactions with `motion` (MotionConfig reducedMotion="user"): button press, card lift, status toggle spring, input focus, Toast provider; skip link and visible focus
-  [ ] 5 Playwright: no theme class change after first paint (stored dark + OS dark), toggle persists, axe has no serious/critical issues on key pages, screenshots at 375 px and 1280 px uploaded as a CI artifact
-LAST GREEN CI:   https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/42436626971 (M4)
+CURRENT:         M6 Screens I
+CURRENT STEPS:   (none started)
+LAST GREEN CI:   https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/42437508621 (M5)
 LAST RUN ENDED:  (no runs yet)
 ```
 
@@ -184,7 +179,7 @@ Tick a box only when its acceptance checks pass in CI. Rough size: 1 to 2 milest
   - `/api/ai/json` (Gemini, JSON mode, the per-user daily cap, a friendly rate-limit message).
   - Port the legacy prompts unchanged: generating today's 7 focused on weak topics (bring back mastered topics when there are no weak ones), marking with mark-scheme explanations, review weaknesses, note writing, and quizzes.
   - Accept when: unit tests with a mocked Gemini cover every prompt path and malformed or fenced JSON.
-- [ ] **M5 Design system + shell.**
+- [x] **M5 Design system + shell.**
   - Tokens (CSS variables), typography, flicker-free dark mode (inline script in `<head>` sets the `dark` class before paint; System/Light/Dark toggle), the layout with subject tabs, and the components with micro-interactions: button press/hover, card lift, checklist toggle spring, input focus, toast.
   - Accessibility: visible focus, AA contrast, keyboard paths, `aria-*`, and `prefers-reduced-motion`.
   - Accept when: Playwright checks there's no theme flash (no class change after first paint), axe has no serious violations, and screenshots at 375 px and 1280 px are attached to CI.
@@ -235,3 +230,4 @@ Newest at the bottom. One or two lines per run: date, milestones finished, anyth
 - 2026-11-08 (scheduled run): M2 done. Sign-up/sign-in/verify pages, 6-box OTP input, resend countdown, `<Gate>` + sign-in sheet, `proxy.ts` + server-side gate in `app/(app)/layout.tsx`, public landing and `/spec/[subject]`, test-only `/api/test/clock` (needs `ENABLE_TEST_CLOCK=1`, refused whenever `VERCEL` is set). 8 e2e + 52 unit tests green: https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/42435205966. Playwright runs with 1 worker because the auth tests move the server clock.
 - 2026-11-08 (scheduled run): M3 done. `GET/PUT /api/docs` (compare-and-set versions, conflicts return the server copy, deltas include deletions), `/api/docs/import|export` (old export format; big files split in the browser), `data/updates.json` applied once per account at sign-in and on full load (advisory lock), `SyncEngine` + Zustand store with a pluggable outbox (memory now), 3-way progress merge, status control on `/spec/[subject]`, Backup panel on the dashboard. 80 unit + 11 e2e green: https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/42436147449. Decisions: practice-paper "done" dates will live in a new `papers/done` doc; the legacy localStorage import is not possible across sites (PARITY marks it n/a: use Back up + Import).
 - 2026-11-08 (scheduled run): M4 done. Decision: `/api/ai/json` takes `{ task, input }` (todaysSeven, markAnswer, reviewWeaknesses, writeNote, writeQuiz, markQuiz) and the **server** builds the prompt from the extracted legacy templates, so the Gemini key can't be used as an open proxy. Today's 7 picks points server-side from the saved `progress/{sid}` with the legacy sort. Tests evaluate the legacy template + legacy code from index.html in a VM and require identical prompts. Mock model behind `AI_MOCK=1` (never on Vercel) for e2e; optional `AI_ALLOWED_EMAILS`. Green: https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/42436626971.
+- 2026-11-08 (scheduled run): M5 done. Tokens in `app/globals.css` (AA-checked light/dark), inline theme script + System/Light/Dark radio toggle, `TrackerShell` (subject tabs + view chips; routes `/spec|/papers/[subject]` public, `/improve|/today/[subject]` gated placeholders), `motion` spring on the status control, Card lift, Toasts, skip link. Playwright checks no theme flash, axe (no serious/critical, light + dark, signed in and out) and uploads a `screenshots` artifact (375/1280, light/dark): https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/42437508621. Note for M11: the theme script is inline, so the CSP needs its hash or a nonce.
