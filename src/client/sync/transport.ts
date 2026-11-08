@@ -1,4 +1,4 @@
-import type { ChangeResult, DocChangeIn, DocDto } from "@/lib/docs";
+import type { ChangeResult, DocDto } from "@/lib/docs";
 
 import { api } from "../api";
 import type { DocsTransport } from "./engine";
