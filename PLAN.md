@@ -13,14 +13,9 @@ This file is the single source of truth for the scheduled rebuild runs. Every ru
 
 ```
 RUN LOCK:        running since 2026-11-08T01:11Z, session session_01Sm3c8k2fGvVpAVEZbZ3KRh
-CURRENT:         M4 AI routes
-CURRENT STEPS:   M4
-  [ ] 1 Shared pieces: note normaliser (legacy normNote), London "today" + addDays, typed task inputs/outputs
-  [ ] 2 Server AI: Gemini client (JSON mode, timeout, worker's thought-part filtering), loose JSON parser (fenced/wrapped), test-only mock model (AI_MOCK=1, never on Vercel)
-  [ ] 3 Prompt builders from the extracted legacy templates (all six) + legacy result normalisers + today's-7 point picker (weak first, then mastered)
-  [ ] 4 POST /api/ai/json { task, input }: signed-in only, optional AI_ALLOWED_EMAILS, per-user daily cap (UsageCounter, default 150), friendly errors
-  [ ] 5 Tests: every prompt equals the legacy template evaluated with the legacy code; malformed/fenced JSON; normalisers; cap and route (Postgres)
-LAST GREEN CI:   https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/42436147449 (M3)
+CURRENT:         M5 Design system + shell
+CURRENT STEPS:   (none started)
+LAST GREEN CI:   https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/42436626971 (M4)
 LAST RUN ENDED:  (no runs yet)
 ```
 
@@ -180,7 +175,7 @@ Tick a box only when its acceptance checks pass in CI. Rough size: 1 to 2 milest
 - [x] **M3 Persistence + sync.**
   - The `UserDoc` API (GET, delta, PUT with versions, import/export of the old export file), the Zustand store, the hydration on sign-in, the conflict merge, and the server-side `updates.json`.
   - Accept when: tests cover the merge rules and import of `tracker-progress-export.json`-style data (use a small fixture, **never** the owner's real export). An e2e test shows that ticking a point, reloading and signing in on a new browser context shows the same state.
-- [ ] **M4 AI routes.**
+- [x] **M4 AI routes.**
   - `/api/ai/json` (Gemini, JSON mode, the per-user daily cap, a friendly rate-limit message).
   - Port the legacy prompts unchanged: generating today's 7 focused on weak topics (bring back mastered topics when there are no weak ones), marking with mark-scheme explanations, review weaknesses, note writing, and quizzes.
   - Accept when: unit tests with a mocked Gemini cover every prompt path and malformed or fenced JSON.
@@ -221,7 +216,8 @@ Needed by **M2** (so the Vercel preview works) and before **M12**. Runs: keep th
 3. **Gmail app password:** turn on 2-Step Verification for the Google account that will send the codes, then create an app password at myaccount.google.com/apppasswords.
 4. **Gemini API key** (the key holder must be 18+).
 5. **Vercel environment variables:** `DATABASE_URL`, `DIRECT_URL`, `GMAIL_USER`, `GMAIL_APP_PASSWORD`, `GEMINI_API_KEY`, `OTP_PEPPER` and `SESSION_SECRET` (each a long random string; runs give the owner a one-line way to make them), and `APP_URL` (the Vercel URL).
-6. **Delete the leftover test branch `ci-probe`** on GitHub (Branches page, then the bin icon). It is harmless but untidy.
+6. **Optional AI settings** (Vercel environment variables): `AI_ALLOWED_EMAILS` = your own email address(es), comma-separated, so only you can spend your Gemini allowance (recommended, because anyone can make an account); `AI_DAILY_CAP` (default 150 per student per day); `GEMINI_MODEL` (default `gemini-flash-latest`).
+7. **Delete the leftover test branch `ci-probe`** on GitHub (Branches page, then the bin icon). It is harmless but untidy.
 
 ## 7. Run log
 
@@ -233,3 +229,5 @@ Newest at the bottom. One or two lines per run: date, milestones finished, anyth
 - 2026-11-08 (scheduled run): M1 done. Prisma 6.19 (decision: stay on Prisma 6, not 7, for a stable `url`/`directUrl` + `?schema=app` setup), hand-written init migration (RLS on all 6 tables, schema revoked from PUBLIC/anon/authenticated) with a CI drift check, auth service + `/api/auth/*` + minimal `GET /api/docs`. 50 tests green incl. 16 against Postgres: https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/42434527012. Decisions: session token hash is HMAC-SHA256 keyed with `SESSION_SECRET`; sign-up to a verified email sets a decoy cookie (no session) so responses match, and verify answers it with `INVALID_CODE` (so no "attempts left" count is ever shown); extra limits of 5 sign-ups per email and 20 per IP per hour; unknown emails lock out after 5 failures too.
 - 2026-11-08 (scheduled run): M2 done. Sign-up/sign-in/verify pages, 6-box OTP input, resend countdown, `<Gate>` + sign-in sheet, `proxy.ts` + server-side gate in `app/(app)/layout.tsx`, public landing and `/spec/[subject]`, test-only `/api/test/clock` (needs `ENABLE_TEST_CLOCK=1`, refused whenever `VERCEL` is set). 8 e2e + 52 unit tests green: https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/42435205966. Playwright runs with 1 worker because the auth tests move the server clock.
 - 2026-11-08 (scheduled run): M3 done. `GET/PUT /api/docs` (compare-and-set versions, conflicts return the server copy, deltas include deletions), `/api/docs/import|export` (old export format; big files split in the browser), `data/updates.json` applied once per account at sign-in and on full load (advisory lock), `SyncEngine` + Zustand store with a pluggable outbox (memory now), 3-way progress merge, status control on `/spec/[subject]`, Backup panel on the dashboard. 80 unit + 11 e2e green: https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/42436147449. Decisions: practice-paper "done" dates will live in a new `papers/done` doc; the legacy localStorage import is not possible across sites (PARITY marks it n/a: use Back up + Import).
+
+- 2026-11-08 (scheduled run): M4 done. Decision: `/api/ai/json` takes `{ task, input }` (todaysSeven, markAnswer, reviewWeaknesses, writeNote, writeQuiz, markQuiz) and the **server** builds the prompt from the extracted legacy templates, so the Gemini key can't be used as an open proxy. Today's 7 picks points server-side from the saved `progress/{sid}` with the legacy sort. Tests evaluate the legacy template + legacy code from index.html in a VM and require identical prompts. Mock model behind `AI_MOCK=1` (never on Vercel) for e2e; optional `AI_ALLOWED_EMAILS`. Green: https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/42436626971.
