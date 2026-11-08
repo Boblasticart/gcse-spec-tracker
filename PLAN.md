@@ -13,14 +13,9 @@ This file is the single source of truth for the scheduled rebuild runs. Every ru
 
 ```
 RUN LOCK:        running since 2026-11-08T01:11Z, session session_01Sm3c8k2fGvVpAVEZbZ3KRh
-CURRENT:         M3 Persistence + sync
-CURRENT STEPS:   M3
-  [ ] 1 Server docs service: path rules, GET full/delta (tombstones), PUT batch with versions (compare-and-set, conflicts return the server copy)
-  [ ] 2 Import/export of the old export file (gcse-spec-tracker-export v1) + server-side data/updates.json (applied once per account, at sign-in and on full hydrate)
-  [ ] 3 Client: pure merge rules (progress three-way by key, others last-writer-wins), Zustand docs store, sync engine with an outbox interface (memory now, IndexedDB in M9), hydration on sign-in
-  [ ] 4 Minimal 3-way status control on /spec/[subject] using the store, save status text, Import/Export on the dashboard
-  [ ] 5 Tests: merge, progress maths, docs API + import fixture (Postgres); e2e tick -> reload -> new browser context shows the same state
-LAST GREEN CI:   https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/42435205966 (M2)
+CURRENT:         M4 AI routes
+CURRENT STEPS:   (none started)
+LAST GREEN CI:   https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/42436147449 (M3)
 LAST RUN ENDED:  (no runs yet)
 ```
 
@@ -177,7 +172,7 @@ Tick a box only when its acceptance checks pass in CI. Rough size: 1 to 2 milest
   - Sign-up, sign-in and verify pages; a 6-box OTP input (paste, autofill `one-time-code`, backspace across boxes); the resend countdown; clear error states.
   - `proxy.ts`/`middleware.ts`, `<Gate>`, a signed-out public browse experience, and sign-out.
   - Accept when: Playwright runs sign-up, then reads the code from `.mail/`, verifies, reaches the dashboard, signs out, and is blocked from a gated page. It also covers a wrong code, an expired code (time travel via a test-only clock env), and too many attempts.
-- [ ] **M3 Persistence + sync.**
+- [x] **M3 Persistence + sync.**
   - The `UserDoc` API (GET, delta, PUT with versions, import/export of the old export file), the Zustand store, the hydration on sign-in, the conflict merge, and the server-side `updates.json`.
   - Accept when: tests cover the merge rules and import of `tracker-progress-export.json`-style data (use a small fixture, **never** the owner's real export). An e2e test shows that ticking a point, reloading and signing in on a new browser context shows the same state.
 - [ ] **M4 AI routes.**
@@ -232,3 +227,4 @@ Newest at the bottom. One or two lines per run: date, milestones finished, anyth
 - 2026-11-08 (scheduled run): M0 done. Next 16.4.5 scaffold, CI (bootstrap-lockfile committed `package-lock.json`), `scripts/extract-legacy.ts` (dependency-free lexer, runs on Node type stripping) generating `src/content/{spec,papers,prompts,legacy-map}.ts`, `docs/PARITY.md`, sync-content. 21 unit + 2 e2e tests green: https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/42433717305. Decision: to change dependencies, edit `package.json` and delete `package-lock.json` in the same commit; CI regenerates and commits it.
 - 2026-11-08 (scheduled run): M1 done. Prisma 6.19 (decision: stay on Prisma 6, not 7, for a stable `url`/`directUrl` + `?schema=app` setup), hand-written init migration (RLS on all 6 tables, schema revoked from PUBLIC/anon/authenticated) with a CI drift check, auth service + `/api/auth/*` + minimal `GET /api/docs`. 50 tests green incl. 16 against Postgres: https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/42434527012. Decisions: session token hash is HMAC-SHA256 keyed with `SESSION_SECRET`; sign-up to a verified email sets a decoy cookie (no session) so responses match, and verify answers it with `INVALID_CODE` (so no "attempts left" count is ever shown); extra limits of 5 sign-ups per email and 20 per IP per hour; unknown emails lock out after 5 failures too.
 - 2026-11-08 (scheduled run): M2 done. Sign-up/sign-in/verify pages, 6-box OTP input, resend countdown, `<Gate>` + sign-in sheet, `proxy.ts` + server-side gate in `app/(app)/layout.tsx`, public landing and `/spec/[subject]`, test-only `/api/test/clock` (needs `ENABLE_TEST_CLOCK=1`, refused whenever `VERCEL` is set). 8 e2e + 52 unit tests green: https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/42435205966. Playwright runs with 1 worker because the auth tests move the server clock.
+- 2026-11-08 (scheduled run): M3 done. `GET/PUT /api/docs` (compare-and-set versions, conflicts return the server copy, deltas include deletions), `/api/docs/import|export` (old export format; big files split in the browser), `data/updates.json` applied once per account at sign-in and on full load (advisory lock), `SyncEngine` + Zustand store with a pluggable outbox (memory now), 3-way progress merge, status control on `/spec/[subject]`, Backup panel on the dashboard. 80 unit + 11 e2e green: https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/42436147449. Decisions: practice-paper "done" dates will live in a new `papers/done` doc; the legacy localStorage import is not possible across sites (PARITY marks it n/a: use Back up + Import).
