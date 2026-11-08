@@ -37,8 +37,11 @@ export function readCookie(header: string | null, name: string): string | undefi
   return undefined;
 }
 
-export function sessionTokenFrom(request: Request): string | undefined {
-  const token = readCookie(request.headers.get("cookie"), sessionCookieName());
-  // Tokens are 43 base64url characters; reject anything else early.
+/** Tokens are 43 base64url characters; anything else is ignored. */
+export function validToken(token: string | undefined): string | undefined {
   return token && /^[A-Za-z0-9_-]{20,128}$/.test(token) ? token : undefined;
+}
+
+export function sessionTokenFrom(request: Request): string | undefined {
+  return validToken(readCookie(request.headers.get("cookie"), sessionCookieName()));
 }

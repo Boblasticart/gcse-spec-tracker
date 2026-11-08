@@ -23,8 +23,12 @@ export type AuthState =
   | { kind: "active"; session: Session; user: User; refreshedCookie?: string };
 
 /** Looks up the session behind the request's cookie. Expired sessions are deleted. */
-export async function getAuth(request: Request): Promise<AuthState> {
-  const token = sessionTokenFrom(request);
+export function getAuth(request: Request): Promise<AuthState> {
+  return getAuthForToken(sessionTokenFrom(request));
+}
+
+/** Looks up a session by its raw cookie token. */
+export async function getAuthForToken(token: string | undefined): Promise<AuthState> {
   if (!token) return { kind: "none" };
   const tokenHash = hashSessionToken(token);
   const found = await withReadRetry(() =>

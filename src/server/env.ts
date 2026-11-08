@@ -16,8 +16,6 @@ const schema = z
     GMAIL_USER: z.email().optional(),
     GMAIL_APP_PASSWORD: z.string().optional(),
     MAIL_FROM_NAME: z.string().default("GCSE Spec Tracker"),
-    /** Test-only: lets e2e tests move the server clock. Refused in production unless CI is set. */
-    ENABLE_TEST_CLOCK: z.enum(["0", "1"]).default("0"),
   })
   .superRefine((env, ctx) => {
     if (env.MAIL_TRANSPORT === "gmail" && (!env.GMAIL_USER || !env.GMAIL_APP_PASSWORD)) {
