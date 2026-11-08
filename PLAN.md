@@ -14,7 +14,12 @@ This file is the single source of truth for the scheduled rebuild runs. Every ru
 ```
 RUN LOCK:        running since 2026-11-08T01:11Z, session session_01Sm3c8k2fGvVpAVEZbZ3KRh
 CURRENT:         M4 AI routes
-CURRENT STEPS:   (none started)
+CURRENT STEPS:   M4
+  [ ] 1 Shared pieces: note normaliser (legacy normNote), London "today" + addDays, typed task inputs/outputs
+  [ ] 2 Server AI: Gemini client (JSON mode, timeout, worker's thought-part filtering), loose JSON parser (fenced/wrapped), test-only mock model (AI_MOCK=1, never on Vercel)
+  [ ] 3 Prompt builders from the extracted legacy templates (all six) + legacy result normalisers + today's-7 point picker (weak first, then mastered)
+  [ ] 4 POST /api/ai/json { task, input }: signed-in only, optional AI_ALLOWED_EMAILS, per-user daily cap (UsageCounter, default 150), friendly errors
+  [ ] 5 Tests: every prompt equals the legacy template evaluated with the legacy code; malformed/fenced JSON; normalisers; cap and route (Postgres)
 LAST GREEN CI:   https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/42436147449 (M3)
 LAST RUN ENDED:  (no runs yet)
 ```
