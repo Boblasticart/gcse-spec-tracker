@@ -1,0 +1,106 @@
+name: CI
+
+on:
+  push:
+    branches: [rebuild]
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  NEXT_TELEMETRY_DISABLED: "1"
+  NODE_VERSION: "22"
+
+jobs:
+  # The workspace that writes this code cannot run `npm install`, so the
+  # lockfile is generated here the first time (or after it is deleted to
+  # change dependencies) and committed back to the branch.
+  bootstrap-lockfile:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/rebuild'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      committed: ${{ steps.commit.outputs.committed }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: check
+        run: |
+          if [ -f package-lock.json ]; then echo "missing=false" >> "$GITHUB_OUTPUT"; else echo "missing=true" >> "$GITHUB_OUTPUT"; fi
+      - if: steps.check.outputs.missing == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - if: steps.check.outputs.missing == 'true'
+        run: npm install --package-lock-only --no-audit --no-fund
+      - if: steps.check.outputs.missing == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: package-lock
+          path: package-lock.json
+      - id: commit
+        if: steps.check.outputs.missing == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add package-lock.json
+          git commit -m "Add package-lock.json generated in CI"
+          git push origin HEAD:rebuild
+          echo "committed=true" >> "$GITHUB_OUTPUT"
+
+  ci:
+    needs: bootstrap-lockfile
+    if: ${{ always() && needs.bootstrap-lockfile.result != 'failure' && needs.bootstrap-lockfile.result != 'cancelled' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: tracker
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd pg_isready --health-interval 5s --health-timeout 5s --health-retries 10
+    env:
+      DATABASE_URL: postgresql://postgres:postgres@localhost:5432/tracker?schema=app
+      DIRECT_URL: postgresql://postgres:postgres@localhost:5432/tracker?schema=app
+      APP_URL: http://localhost:3000
+      MAIL_TRANSPORT: file
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Pick up the lockfile commit made by bootstrap-lockfile, if any.
+          ref: ${{ needs.bootstrap-lockfile.outputs.committed == 'true' && 'rebuild' || github.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - name: Install
+        run: |
+          if [ -f package-lock.json ]; then npm ci --no-audit --no-fund; else npm install --no-audit --no-fund; fi
+      - name: Content extraction is up to date
+        run: npm run content:check
+      - name: Typecheck
+        run: npm run typecheck
+      - name: Lint
+        run: npm run lint
+      - name: Unit tests
+        run: npm test
+      - name: Build
+        run: npm run build
+      - name: Install Playwright browser
+        run: npx playwright install --with-deps chromium
+      - name: End-to-end tests
+        run: npm run e2e
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: |
+            playwright-report/
+            test-results/
+          if-no-files-found: ignore
+          retention-days: 14

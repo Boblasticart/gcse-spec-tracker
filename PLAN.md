@@ -14,7 +14,13 @@ This file is the single source of truth for the scheduled rebuild runs. Every ru
 ```
 RUN LOCK:        running since 2026-11-08T01:11Z, session session_01Sm3c8k2fGvVpAVEZbZ3KRh
 CURRENT:         M0 Foundations
-CURRENT STEPS:   (none started)
+CURRENT STEPS:   M0
+  [ ] 1 Scaffold Next.js + TS strict + Tailwind v4 + ESLint + Vitest + Playwright
+  [ ] 2 CI workflow (Node 22, Postgres 16) + bootstrap-lockfile job; lockfile committed
+  [ ] 3 scripts/extract-legacy.ts + generated src/content (spec, papers, prompts, legacy-map)
+  [ ] 4 docs/PARITY.md (with a test that it lists every action, view and prompt)
+  [ ] 5 scripts/sync-content.mjs (data/ + papers/ into public/)
+  [ ] 6 CI green: content check, typecheck, lint, unit tests, next build, e2e smoke
 LAST GREEN CI:   (none yet)
 LAST RUN ENDED:  (no runs yet)
 ```
