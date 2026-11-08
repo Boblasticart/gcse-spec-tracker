@@ -12,7 +12,7 @@ This file is the single source of truth for the scheduled rebuild runs. Every ru
 ## 0. Status (every run reads this first and keeps it updated)
 
 ```
-RUN LOCK:        none
+RUN LOCK:        running since 2026-11-08T01:11Z, session session_01Sm3c8k2fGvVpAVEZbZ3KRh
 CURRENT:         M0 Foundations
 CURRENT STEPS:   (none started)
 LAST GREEN CI:   (none yet)
