@@ -103,10 +103,18 @@ test("too many wrong codes kills the code until a new one is sent", async ({ pag
 test("signed-out visitors can browse, and gated buttons ask them to sign in", async ({ page }) => {
   await page.goto("/spec/phy");
   await expect(page.getByRole("heading", { level: 1, name: "Physics" })).toBeVisible();
-  await page.getByRole("button", { name: "Track my progress" }).click();
-  const dialog = page.getByRole("dialog", { name: "Sign in to track this subject" });
+  await page.getByText("4.1 Energy", { exact: true }).click();
+  await page
+    .getByRole("group", { name: "Status of Energy stores and transfers in a system" })
+    .getByRole("button", { name: "Done", exact: true })
+    .click();
+  const dialog = page.getByRole("dialog", { name: "Sign in to track your progress" });
   await expect(dialog).toBeVisible();
   await expect(dialog.getByRole("link", { name: "Sign in" })).toHaveAttribute("href", "/auth/sign-in?next=%2Fspec%2Fphy");
   await dialog.getByRole("button", { name: "Not now" }).click();
   await expect(dialog).toBeHidden();
+
+  await page.goto("/");
+  await page.getByRole("link", { name: "Go to my dashboard" }).click();
+  await expect(page.getByRole("dialog", { name: "Sign in to start tracking" })).toBeVisible();
 });

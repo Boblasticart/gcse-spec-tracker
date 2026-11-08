@@ -16,7 +16,11 @@ declare global {
 /** Records every change to <html class> that happens after the first frame is painted. */
 async function watchThemeClass(page: Page, stored?: string): Promise<void> {
   await page.addInitScript((theme) => {
-    if (theme) localStorage.setItem("gst-theme", theme);
+    // Seed the stored theme once per tab, so reloads keep whatever the user picked.
+    if (theme && !sessionStorage.getItem("seeded")) {
+      localStorage.setItem("gst-theme", theme);
+      sessionStorage.setItem("seeded", "1");
+    }
     window.__classChanges = [];
     window.__painted = false;
     new MutationObserver(() => {
@@ -97,6 +101,7 @@ test.describe("accessibility", () => {
     await page.getByText("4.3 Quantitative chemistry", { exact: true }).click();
     await expectNoSeriousIssues(page, "/spec/chem signed in");
 
+    await page.goto("/spec/chem");
     await page.keyboard.press("Tab");
     const skip = page.getByRole("link", { name: "Skip to content" });
     await expect(skip).toBeFocused();
