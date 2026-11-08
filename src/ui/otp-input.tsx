@@ -102,10 +102,10 @@ export function OtpInput({ value, onChange, onComplete, disabled, invalid, autoF
           aria-label={`Digit ${i + 1} of ${OTP_LENGTH}`}
           aria-invalid={invalid || undefined}
           className={cn(
-            "h-14 w-full min-w-0 rounded-xl border bg-white text-center font-heading text-2xl font-semibold shadow-sm transition outline-none",
-            "focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/15 disabled:opacity-60 dark:bg-stone-900",
+            "h-14 w-full min-w-0 rounded-xl border bg-surface text-center font-heading text-2xl font-semibold shadow-sm transition outline-none",
+            "focus:border-accent focus:ring-4 focus:ring-accent/20 disabled:opacity-60",
             "motion-reduce:transition-none",
-            invalid ? "border-rose-500" : d ? "border-indigo-400 dark:border-indigo-500" : "border-stone-300 dark:border-stone-700",
+            invalid ? "border-danger" : d ? "border-accent" : "border-line-strong",
           )}
         />
       ))}

@@ -8,14 +8,14 @@ type Variant = "primary" | "secondary" | "ghost";
 
 const base =
   "inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold transition " +
-  "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 " +
+  "" +
   "disabled:cursor-not-allowed disabled:opacity-50 active:scale-[0.98] motion-reduce:transition-none motion-reduce:active:scale-100";
 
 const variants: Record<Variant, string> = {
-  primary: "bg-indigo-600 text-white hover:bg-indigo-500 shadow-sm",
+  primary: "bg-accent text-on-accent hover:bg-accent-hover shadow-sm",
   secondary:
-    "border border-stone-300 bg-white text-stone-900 hover:bg-stone-50 dark:border-stone-700 dark:bg-stone-900 dark:text-stone-100 dark:hover:bg-stone-800",
-  ghost: "text-stone-700 hover:bg-stone-100 dark:text-stone-300 dark:hover:bg-stone-800",
+    "border border-line-strong bg-surface text-fg hover:bg-subtle",
+  ghost: "text-fg hover:bg-subtle",
 };
 
 export function buttonClass(variant: Variant = "primary", extra?: string): string {

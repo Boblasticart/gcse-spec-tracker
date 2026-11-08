@@ -75,7 +75,7 @@ export function CredentialsForm({ mode, next }: CredentialsFormProps) {
             type="button"
             onClick={() => setShow((s) => !s)}
             aria-pressed={show}
-            className="rounded-md px-2 py-1 text-xs font-semibold text-stone-600 hover:bg-stone-100 dark:text-stone-300 dark:hover:bg-stone-800"
+            className="rounded-md px-2 py-1 text-xs font-semibold text-muted hover:bg-subtle"
           >
             {show ? "Hide" : "Show"}
           </button>
@@ -84,11 +84,11 @@ export function CredentialsForm({ mode, next }: CredentialsFormProps) {
       <Button type="submit" busy={busy} className="w-full">
         {signUp ? "Make my account" : "Sign in"}
       </Button>
-      <p className="text-center text-sm text-stone-600 dark:text-stone-400">
+      <p className="text-center text-sm text-muted">
         {signUp ? "Already have an account? " : "New here? "}
         <Link
           href={(signUp ? `/auth/sign-in${q}` : `/auth/sign-up${q}`) as Route}
-          className="font-semibold text-indigo-600 hover:underline dark:text-indigo-400"
+          className="font-semibold text-accent-text hover:underline"
         >
           {signUp ? "Sign in" : "Make an account"}
         </Link>

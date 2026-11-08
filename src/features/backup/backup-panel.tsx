@@ -6,6 +6,7 @@ import { api } from "@/client/api";
 import { useEngine } from "@/client/sync/react";
 import { EXPORT_FORMAT } from "@/lib/docs";
 import { Button, buttonClass } from "@/ui/button";
+import { cardClass } from "@/ui/card";
 import { FormAlert } from "@/ui/field";
 
 import { splitExport } from "./split";
@@ -48,11 +49,11 @@ export function BackupPanel() {
   };
 
   return (
-    <section aria-labelledby="backup-title" className="rounded-2xl border border-stone-200 p-5 dark:border-stone-800">
+    <section aria-labelledby="backup-title" className={cardClass(false, "p-5")}>
       <h2 id="backup-title" className="font-heading text-lg font-semibold">
         Backup and import
       </h2>
-      <p className="mt-1 text-sm text-stone-600 dark:text-stone-400">
+      <p className="mt-1 text-sm text-muted">
         Moving from the old tracker? Use its <strong>Back up</strong> button, then import that file here. Items with the
         same name are replaced.
       </p>

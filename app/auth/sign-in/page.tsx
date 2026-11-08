@@ -13,7 +13,7 @@ export default async function SignInPage({ searchParams }: PageProps<"/auth/sign
   return (
     <>
       <h1 className="mb-1 font-heading text-2xl font-bold">Sign in</h1>
-      <p className="mb-6 text-stone-600 dark:text-stone-400">Welcome back. We&apos;ll email you a code to finish.</p>
+      <p className="mb-6 text-muted">Welcome back. We&apos;ll email you a code to finish.</p>
       <CredentialsForm mode="sign-in" next={next} />
     </>
   );

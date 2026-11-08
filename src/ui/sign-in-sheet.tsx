@@ -34,13 +34,13 @@ export function SignInSheet({ open, onClose, reason = "to save your progress" }:
         if (e.target === ref.current) onClose();
       }}
       aria-labelledby="sign-in-sheet-title"
-      className="m-auto w-[min(28rem,calc(100%-2rem))] rounded-2xl border border-stone-200 bg-white p-0 text-stone-900 shadow-2xl backdrop:bg-stone-950/40 backdrop:backdrop-blur-sm dark:border-stone-800 dark:bg-stone-900 dark:text-stone-100"
+      className="m-auto w-[min(28rem,calc(100%-2rem))] rounded-2xl border border-line bg-surface p-0 text-fg shadow-2xl backdrop:bg-black/40 backdrop:backdrop-blur-sm"
     >
       <div className="space-y-4 p-6">
         <h2 id="sign-in-sheet-title" className="font-heading text-xl font-semibold">
           Sign in {reason}
         </h2>
-        <p className="text-sm text-stone-600 dark:text-stone-400">
+        <p className="text-sm text-muted">
           You can look around without an account. Sign in to tick off spec points, answer questions and keep your
           progress on every device.
         </p>
@@ -55,7 +55,7 @@ export function SignInSheet({ open, onClose, reason = "to save your progress" }:
         <button
           type="button"
           onClick={onClose}
-          className="w-full rounded-lg py-2 text-sm text-stone-600 hover:text-stone-900 dark:text-stone-400 dark:hover:text-stone-100"
+          className="w-full rounded-lg py-2 text-sm text-muted hover:text-fg"
         >
           Not now
         </button>

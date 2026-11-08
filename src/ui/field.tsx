@@ -26,9 +26,9 @@ export function Field({ label, hint, error, trailing, className, id, ...input }:
           aria-invalid={error ? true : undefined}
           aria-describedby={describedBy}
           className={cn(
-            "block w-full rounded-lg border bg-white px-3 py-2.5 text-base shadow-sm transition outline-none",
-            "focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/15 dark:bg-stone-900",
-            error ? "border-rose-500" : "border-stone-300 dark:border-stone-700",
+            "block w-full rounded-lg border bg-surface px-3 py-2.5 text-base shadow-sm transition outline-none",
+            "focus:border-accent focus:ring-4 focus:ring-accent/20",
+            error ? "border-danger" : "border-line-strong",
             trailing ? "pr-20" : undefined,
           )}
           {...input}
@@ -36,12 +36,12 @@ export function Field({ label, hint, error, trailing, className, id, ...input }:
         {trailing && <div className="absolute inset-y-0 right-1.5 flex items-center">{trailing}</div>}
       </div>
       {hint && (
-        <p id={hintId} className="text-sm text-stone-600 dark:text-stone-400">
+        <p id={hintId} className="text-sm text-muted">
           {hint}
         </p>
       )}
       {error && (
-        <p id={errorId} className="text-sm font-medium text-rose-600 dark:text-rose-400">
+        <p id={errorId} className="text-sm font-medium text-danger">
           {error}
         </p>
       )}
@@ -56,8 +56,8 @@ export function FormAlert({ children, tone = "error" }: { children: ReactNode; t
       className={cn(
         "rounded-lg border px-3 py-2.5 text-sm",
         tone === "error"
-          ? "border-rose-200 bg-rose-50 text-rose-800 dark:border-rose-900 dark:bg-rose-950/50 dark:text-rose-200"
-          : "border-indigo-200 bg-indigo-50 text-indigo-900 dark:border-indigo-900 dark:bg-indigo-950/50 dark:text-indigo-100",
+          ? "border-danger/30 bg-danger-soft text-fg"
+          : "border-accent/30 bg-accent-soft text-fg",
       )}
     >
       {children}

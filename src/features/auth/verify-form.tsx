@@ -89,7 +89,7 @@ export function VerifyForm({ next, initialError = null }: VerifyFormProps) {
         <FormAlert>{error?.message}</FormAlert>
         <Link
           href={`/auth/sign-in?next=${encodeURIComponent(next)}` as Route}
-          className="block text-center font-semibold text-indigo-600 hover:underline dark:text-indigo-400"
+          className="block text-center font-semibold text-accent-text hover:underline"
         >
           Sign in again
         </Link>
@@ -99,8 +99,8 @@ export function VerifyForm({ next, initialError = null }: VerifyFormProps) {
 
   return (
     <form onSubmit={onSubmit} className="space-y-5" noValidate>
-      <p className="text-stone-600 dark:text-stone-400" id="otp-help">
-        We&apos;ve emailed a 6-digit code to {email ? <strong className="text-stone-900 dark:text-stone-100">{email}</strong> : "you"}.
+      <p className="text-muted" id="otp-help">
+        We&apos;ve emailed a 6-digit code to {email ? <strong className="text-fg">{email}</strong> : "you"}.
         It works for 10 minutes. Check your spam folder if you can&apos;t see it.
       </p>
       {error && <FormAlert>{error.message}</FormAlert>}
@@ -130,7 +130,7 @@ export function VerifyForm({ next, initialError = null }: VerifyFormProps) {
         >
           {wait > 0 ? `Send a new code in ${wait}s` : "Send a new code"}
         </Button>
-        <Link href="/auth/sign-in" className="text-stone-600 hover:underline dark:text-stone-400">
+        <Link href="/auth/sign-in" className="text-muted hover:underline">
           Use a different email
         </Link>
       </div>

@@ -26,17 +26,17 @@ export function SyncStatus() {
       title={summary === "error" ? (message ?? undefined) : undefined}
       className={cn(
         "hidden items-center gap-1.5 text-xs sm:inline-flex",
-        summary === "error" ? "text-amber-700 dark:text-amber-400" : "text-stone-500",
+        summary === "error" ? "text-work" : "text-muted",
       )}
     >
       <span
         aria-hidden
         className={cn(
           "size-1.5 rounded-full",
-          summary === "saved" && "bg-emerald-500",
-          summary === "saving" && "animate-pulse bg-indigo-500 motion-reduce:animate-none",
-          summary === "loading" && "animate-pulse bg-stone-400 motion-reduce:animate-none",
-          summary === "error" && "bg-amber-500",
+          summary === "saved" && "bg-done",
+          summary === "saving" && "animate-pulse bg-accent motion-reduce:animate-none",
+          summary === "loading" && "animate-pulse bg-muted motion-reduce:animate-none",
+          summary === "error" && "bg-work",
         )}
       />
       {TEXT[summary]}
