@@ -14,7 +14,12 @@ This file is the single source of truth for the scheduled rebuild runs. Every ru
 ```
 RUN LOCK:        running since 2026-11-08T01:11Z, session session_01Sm3c8k2fGvVpAVEZbZ3KRh
 CURRENT:         M6 Screens I
-CURRENT STEPS:   (none started)
+CURRENT STEPS:   M6
+  [ ] 1 Legacy note SVG sanitiser ported (dependency-free, safe by construction) with a parity test against the legacy cleanSvg on every SVG in data/notes (jsdom)
+  [ ] 2 Notes reader /notes/[pid]: prepared note from data/notes (server), AI note from the account, full legacy renderer (bold, tables, callouts, figures, quotes, essays, poems with marks, worked, terms, mistakes, exam), marks read, prev/next, back
+  [ ] 3 Spec view: summary + bars, filters, expand/collapse all, topic open/close with counts, status control, bulk Mark all done / Reset topic, Notes links (read tick), quiz bar
+  [ ] 4 Improvement view (stats, ready-for-decision Mastered / More practice, points with review meta, questions waiting, mastered list) + Practice papers grouped with Mark attempted (papers/done doc)
+  [ ] 5 e2e for tab, view, filter, exp, top, st, all, note, back, pdone, master, more; tick them in docs/PARITY.md
 LAST GREEN CI:   https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/42437508621 (M5)
 LAST RUN ENDED:  (no runs yet)
 ```
