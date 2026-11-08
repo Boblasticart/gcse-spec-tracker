@@ -13,14 +13,9 @@ This file is the single source of truth for the scheduled rebuild runs. Every ru
 
 ```
 RUN LOCK:        running since 2026-11-08T01:11Z, session session_01Sm3c8k2fGvVpAVEZbZ3KRh
-CURRENT:         M2 Auth UI + gating
-CURRENT STEPS:   M2
-  [ ] 1 Server-side session for pages (getCurrentAuth via cookies()), test-only clock route (/api/test/clock, ENABLE_TEST_CLOCK=1 and never on Vercel)
-  [ ] 2 UI pieces: api client, SessionProvider, Button/Field, OtpInput (paste, one-time-code, backspace), sign-in sheet, <Gate>, header with sign-out
-  [ ] 3 Pages: /auth/sign-up, /auth/sign-in, /auth/verify (resend countdown, clear errors), public landing + /spec/[subject] browse, gated (app)/dashboard
-  [ ] 4 proxy.ts cheap cookie check + server-side gate in the (app) layout; safe ?next= redirects
-  [ ] 5 Playwright: sign-up -> code from .mail/ -> verify -> dashboard -> sign out -> blocked; wrong code; expired code (time travel); too many attempts; OTP input paste/backspace
-LAST GREEN CI:   https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/42434527012 (M1)
+CURRENT:         M3 Persistence + sync
+CURRENT STEPS:   (none started)
+LAST GREEN CI:   https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/42435205966 (M2)
 LAST RUN ENDED:  (no runs yet)
 ```
 
@@ -173,7 +168,7 @@ Tick a box only when its acceptance checks pass in CI. Rough size: 1 to 2 milest
   - Prisma schema and migration (schema `app`, with RLS enabled in the migration SQL).
   - `src/server/auth/*`, the mailer (gmail/file), rate limits, and the `/api/auth/*` routes.
   - Accept when: Vitest covers hashing, OTP generation and compare, expiry, the attempt limit, resend cooldown, lockout, enumeration-safe responses, the verified-email sign-up case, and that pending sessions can't call `/api/docs`. Tests run against the CI Postgres.
-- [ ] **M2 Auth UI + gating.**
+- [x] **M2 Auth UI + gating.**
   - Sign-up, sign-in and verify pages; a 6-box OTP input (paste, autofill `one-time-code`, backspace across boxes); the resend countdown; clear error states.
   - `proxy.ts`/`middleware.ts`, `<Gate>`, a signed-out public browse experience, and sign-out.
   - Accept when: Playwright runs sign-up, then reads the code from `.mail/`, verifies, reaches the dashboard, signs out, and is blocked from a gated page. It also covers a wrong code, an expired code (time travel via a test-only clock env), and too many attempts.
@@ -231,3 +226,4 @@ Newest at the bottom. One or two lines per run: date, milestones finished, anyth
 - 2026-11-07 (planning session): Plan written. Checked that GitHub Actions can install packages, run Postgres 16 and that logs are readable from the workspace (Next 16.4.5, Serwist 9.5.13 available). Daily scheduled run created for 01:10 UK time.
 - 2026-11-08 (scheduled run): M0 done. Next 16.4.5 scaffold, CI (bootstrap-lockfile committed `package-lock.json`), `scripts/extract-legacy.ts` (dependency-free lexer, runs on Node type stripping) generating `src/content/{spec,papers,prompts,legacy-map}.ts`, `docs/PARITY.md`, sync-content. 21 unit + 2 e2e tests green: https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/42433717305. Decision: to change dependencies, edit `package.json` and delete `package-lock.json` in the same commit; CI regenerates and commits it.
 - 2026-11-08 (scheduled run): M1 done. Prisma 6.19 (decision: stay on Prisma 6, not 7, for a stable `url`/`directUrl` + `?schema=app` setup), hand-written init migration (RLS on all 6 tables, schema revoked from PUBLIC/anon/authenticated) with a CI drift check, auth service + `/api/auth/*` + minimal `GET /api/docs`. 50 tests green incl. 16 against Postgres: https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/42434527012. Decisions: session token hash is HMAC-SHA256 keyed with `SESSION_SECRET`; sign-up to a verified email sets a decoy cookie (no session) so responses match, and verify answers it with `INVALID_CODE` (so no "attempts left" count is ever shown); extra limits of 5 sign-ups per email and 20 per IP per hour; unknown emails lock out after 5 failures too.
+- 2026-11-08 (scheduled run): M2 done. Sign-up/sign-in/verify pages, 6-box OTP input, resend countdown, `<Gate>` + sign-in sheet, `proxy.ts` + server-side gate in `app/(app)/layout.tsx`, public landing and `/spec/[subject]`, test-only `/api/test/clock` (needs `ENABLE_TEST_CLOCK=1`, refused whenever `VERCEL` is set). 8 e2e + 52 unit tests green: https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/42435205966. Playwright runs with 1 worker because the auth tests move the server clock.
