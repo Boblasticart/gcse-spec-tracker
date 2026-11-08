@@ -13,15 +13,14 @@ This file is the single source of truth for the scheduled rebuild runs. Every ru
 
 ```
 RUN LOCK:        running since 2026-11-08T01:11Z, session session_01Sm3c8k2fGvVpAVEZbZ3KRh
-CURRENT:         M0 Foundations
-CURRENT STEPS:   M0
-  [ ] 1 Scaffold Next.js + TS strict + Tailwind v4 + ESLint + Vitest + Playwright
-  [ ] 2 CI workflow (Node 22, Postgres 16) + bootstrap-lockfile job; lockfile committed
-  [ ] 3 scripts/extract-legacy.ts + generated src/content (spec, papers, prompts, legacy-map)
-  [ ] 4 docs/PARITY.md (with a test that it lists every action, view and prompt)
-  [ ] 5 scripts/sync-content.mjs (data/ + papers/ into public/)
-  [ ] 6 CI green: content check, typecheck, lint, unit tests, next build, e2e smoke
-LAST GREEN CI:   (none yet)
+CURRENT:         M1 Auth backend
+CURRENT STEPS:   M1
+  [ ] 1 Prisma 6 schema + hand-written migration (schema app, RLS on, PUBLIC revoked); CI runs migrate deploy + drift check
+  [ ] 2 Server core: env (zod), clock (test offset), db (retry), http helpers (typed errors, Origin check, IP), mailer (gmail/file/memory)
+  [ ] 3 Auth library: password (argon2id + common list), tokens, OTP, sessions, rate limits, auth service
+  [ ] 4 /api/auth/* routes (sign-up, sign-in, verify-otp, resend-otp, sign-out, me) + minimal GET /api/docs behind requireUser
+  [ ] 5 Vitest against CI Postgres covering every M1 acceptance check
+LAST GREEN CI:   https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/42433717305 (M0, b54f4a4 + lockfile 7ecf2ca)
 LAST RUN ENDED:  (no runs yet)
 ```
 
@@ -162,7 +161,7 @@ sw/                       Serwist service worker source
 
 Tick a box only when its acceptance checks pass in CI. Rough size: 1 to 2 milestones per run.
 
-- [ ] **M0 Foundations.**
+- [x] **M0 Foundations.**
   - Scaffold Next.js + TS strict + Tailwind v4 + ESLint + Vitest + Playwright at the repo root, without touching the old files.
   - Add a CI workflow (Node 22, Postgres 16 service, `npm install`; `npm ci` once a lockfile exists).
   - Add a one-off **`bootstrap-lockfile` job** that runs when `package-lock.json` is missing: it commits the lockfile back to `rebuild` (needs `permissions: contents: write`), or uploads it as an artifact for the next run to commit.
@@ -230,3 +229,4 @@ Newest at the bottom. One or two lines per run: date, milestones finished, anyth
 
 - 2026-11-07 (planning session): Added section 0 (run lock and step-level tracking) so runs never overlap or redo work.
 - 2026-11-07 (planning session): Plan written. Checked that GitHub Actions can install packages, run Postgres 16 and that logs are readable from the workspace (Next 16.4.5, Serwist 9.5.13 available). Daily scheduled run created for 01:10 UK time.
+- 2026-11-08 (scheduled run): M0 done. Next 16.4.5 scaffold, CI (bootstrap-lockfile committed `package-lock.json`), `scripts/extract-legacy.ts` (dependency-free lexer, runs on Node type stripping) generating `src/content/{spec,papers,prompts,legacy-map}.ts`, `docs/PARITY.md`, sync-content. 21 unit + 2 e2e tests green: https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/42433717305. Decision: to change dependencies, edit `package.json` and delete `package-lock.json` in the same commit; CI regenerates and commits it.
