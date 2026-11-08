@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Route } from "next";
 
 import { allPoints, SPEC } from "@/content";
 import { ButtonLink } from "@/ui/button";
@@ -17,7 +18,7 @@ export default function HomePage() {
         <Gate reason="to start tracking">
           <ButtonLink href="/dashboard">Go to my dashboard</ButtonLink>
         </Gate>
-        <ButtonLink href="/spec/phy" variant="secondary">
+        <ButtonLink href={"/spec/phy" as Route} variant="secondary">
           Browse the spec
         </ButtonLink>
       </div>
