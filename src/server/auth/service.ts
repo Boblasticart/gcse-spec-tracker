@@ -9,6 +9,7 @@ import { db, isUniqueViolation } from "../db";
 import { getEnv } from "../env";
 import { HttpError, type RequestMeta } from "../http";
 import { accountExistsEmail, otpEmail, sendMail } from "../mail";
+import { applyRepoUpdates } from "../docs/updates";
 import { clearedSessionCookie, sessionCookie, sessionTokenFrom } from "./cookies";
 import { hashOtpCode, hashSessionToken, isSixDigitCode, newOtpCode, newSessionToken, safeEqualHex } from "./crypto";
 import { countEvents, logEvent } from "./events";
@@ -251,6 +252,12 @@ export async function verifyOtp(request: Request, code: string, meta: RequestMet
   if (!activated) throw CODE_EXPIRED();
 
   await logEvent("OTP_OK", { userId: user.id, email: user.email, ip: meta.ip });
+  try {
+    // New entries in data/updates.json are applied once per account, at sign-in.
+    await applyRepoUpdates(user.id);
+  } catch (err) {
+    console.error("Could not apply repo updates at sign-in", err);
+  }
   return {
     body: { ok: true, user: toPublicUser(activated) },
     setCookie: sessionCookie(token, AUTH_POLICY.activeSessionMs),

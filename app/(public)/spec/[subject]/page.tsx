@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { allPoints, getSubject, SPEC } from "@/content";
+import { PointStatusControl } from "@/features/spec/point-status";
 import { Button } from "@/ui/button";
 import { Gate } from "@/ui/gate";
 
@@ -14,7 +15,7 @@ export async function generateMetadata({ params }: PageProps<"/spec/[subject]">)
   return { title: s ? `${s.name} spec` : "Spec" };
 }
 
-/** Public, read-only spec browser. Tracking controls arrive in M6 and are gated. */
+/** Public spec browser. Status controls ask signed-out visitors to sign in. (Full spec view in M6.) */
 export default async function SpecPage({ params }: PageProps<"/spec/[subject]">) {
   const subject = getSubject((await params).subject);
   if (!subject) notFound();
@@ -42,7 +43,10 @@ export default async function SpecPage({ params }: PageProps<"/spec/[subject]">)
                 </summary>
                 <ul className="space-y-1 border-t border-stone-200 px-4 py-3 text-sm dark:border-stone-800">
                   {topic.points.map((p) => (
-                    <li key={p.id}>{p.text}</li>
+                    <li key={p.id} data-point={p.id} className="flex flex-wrap items-center justify-between gap-2 py-1">
+                      <span>{p.text}</span>
+                      <PointStatusControl sid={subject.id} pid={p.id} label={p.text} />
+                    </li>
                   ))}
                 </ul>
               </details>

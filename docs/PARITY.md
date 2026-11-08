@@ -74,4 +74,4 @@ where it is planned (see `PLAN.md`, section 5).
 | [ ] | Practice papers done list (legacy `gcse-papers-v1` in localStorage) moves into the account | M6 |
 | [ ] | Status line: "Saved to your account" / "Saved on this device only" | M9 |
 | [ ] | Old export file (`gcse-spec-tracker-export` v1) import and export | M3 |
-| [ ] | Legacy local data (`gcse-spec-tracker-v2`, `-v1`) offered for import on first sign-in | M3 |
+| n/a | Legacy local data (`gcse-spec-tracker-v2`, `-v1`): the new site has a different web address, so the browser can't share it. Students use the old tracker's Back up button and Import the file instead | M3 |

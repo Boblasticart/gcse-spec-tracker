@@ -3,6 +3,8 @@ import { Bricolage_Grotesque, Figtree } from "next/font/google";
 import type { ReactNode } from "react";
 
 import { SessionProvider } from "@/client/session";
+import { SignInPromptProvider } from "@/client/sign-in-prompt";
+import { DocsProvider } from "@/client/sync/react";
 import { getCurrentUser } from "@/server/auth/current";
 import type { PublicUser } from "@/server/auth/session";
 import { SiteHeader } from "@/ui/site-header";
@@ -38,8 +40,12 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
     <html lang="en-GB" className={`${heading.variable} ${body.variable}`}>
       <body className="min-h-dvh font-sans antialiased">
         <SessionProvider initialUser={user}>
-          <SiteHeader />
-          {children}
+          <DocsProvider>
+            <SignInPromptProvider>
+              <SiteHeader />
+              {children}
+            </SignInPromptProvider>
+          </DocsProvider>
         </SessionProvider>
       </body>
     </html>

@@ -8,6 +8,7 @@ import { api } from "@/client/api";
 import { useSession } from "@/client/session";
 
 import { Button, ButtonLink } from "./button";
+import { SyncStatus } from "./sync-status";
 
 export function SiteHeader() {
   const { user, setUser } = useSession();
@@ -32,6 +33,7 @@ export function SiteHeader() {
         <nav aria-label="Main" className="ml-auto flex items-center gap-2">
           {user ? (
             <>
+              <SyncStatus />
               <Link href="/dashboard" className="rounded-lg px-3 py-2 text-sm font-medium hover:bg-stone-100 dark:hover:bg-stone-800">
                 Dashboard
               </Link>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { allPoints, SPEC } from "@/content";
+import { BackupPanel } from "@/features/backup/backup-panel";
 import { requirePageUser } from "@/server/auth/current";
 
 export const metadata: Metadata = { title: "Dashboard" };
@@ -24,6 +25,9 @@ export default async function DashboardPage() {
           </li>
         ))}
       </ul>
+      <div className="mt-10">
+        <BackupPanel />
+      </div>
     </main>
   );
 }

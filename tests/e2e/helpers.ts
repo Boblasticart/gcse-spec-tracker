@@ -16,7 +16,7 @@ interface StoredMail {
   sentAt: string;
 }
 
-async function mailsTo(email: string): Promise<StoredMail[]> {
+export async function mailsTo(email: string): Promise<StoredMail[]> {
   let names: string[] = [];
   try {
     names = await readdir(MAIL_DIR);
@@ -74,4 +74,28 @@ export const wrongCode = (code: string): string => (code === "000000" ? "111111"
 /** A form alert with this text (Next.js has its own hidden route-announcer alert too). */
 export function alert(page: Page, text: string) {
   return page.getByRole("alert").filter({ hasText: text });
+}
+
+/** Makes a new verified account and lands on the dashboard. */
+export async function signUpAndVerify(page: Page, email = uniqueEmail()): Promise<string> {
+  await startSignUp(page, email);
+  await typeCode(page, await waitForCode(email));
+  await expect(page).toHaveURL(/\/dashboard$/);
+  return email;
+}
+
+/** Signs in an existing account (with its code) and lands on `next`. */
+export async function signIn(page: Page, email: string, next = "/dashboard"): Promise<void> {
+  const before = (await mailsTo(email)).filter((m) => m.kind === "otp").at(-1)?.code;
+  await page.goto(`/auth/sign-in?next=${encodeURIComponent(next)}`);
+  await page.getByLabel("Email").fill(email);
+  await page.getByLabel("Password", { exact: true }).fill(PASSWORD);
+  await page.getByRole("button", { name: "Sign in" }).click();
+  await expect(page).toHaveURL(/\/auth\/verify/);
+  await typeCode(page, await waitForCode(email, before));
+  await expect(page).toHaveURL(new RegExp(`${next.replace(/[/.]/g, "\\$&")}$`));
+}
+
+export async function expectSaved(page: Page): Promise<void> {
+  await expect(page.getByTestId("sync-status")).toHaveAttribute("data-state", "saved");
 }
