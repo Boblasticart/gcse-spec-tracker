@@ -1,0 +1,129 @@
+// All tables live in the Postgres schema named in DATABASE_URL (`?schema=app`),
+// never in `public`, which Supabase exposes through its Data API.
+// Every table has row level security enabled with no policies (see the
+// migration SQL), so only the server's own connection can use them.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+enum SessionStatus {
+  PENDING_OTP
+  ACTIVE
+}
+
+enum OtpPurpose {
+  SIGN_UP
+  SIGN_IN
+}
+
+enum AuthEventKind {
+  SIGN_UP
+  SIGN_UP_EXISTING
+  SIGN_IN_ATTEMPT
+  SIGN_IN_FAIL
+  SIGN_IN_OK
+  SIGN_IN_LOCKED
+  OTP_SENT
+  OTP_FAIL
+  OTP_OK
+  SIGN_OUT
+}
+
+model User {
+  id              String    @id @default(uuid()) @db.Uuid
+  email           String    @unique
+  passwordHash    String
+  emailVerifiedAt DateTime?
+  failedLogins    Int       @default(0)
+  lockedUntil     DateTime?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  sessions   Session[]
+  otpCodes   OtpCode[]
+  authEvents AuthEvent[]
+  docs       UserDoc[]
+  usage      UsageCounter[]
+}
+
+model Session {
+  id         String        @id @default(uuid()) @db.Uuid
+  userId     String        @db.Uuid
+  tokenHash  String        @unique
+  status     SessionStatus
+  createdAt  DateTime      @default(now())
+  expiresAt  DateTime
+  lastSeenAt DateTime      @default(now())
+  ip         String?
+  userAgent  String?
+
+  user     User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  otpCodes OtpCode[]
+
+  @@index([userId])
+}
+
+model OtpCode {
+  id         String     @id @default(uuid()) @db.Uuid
+  userId     String     @db.Uuid
+  sessionId  String     @db.Uuid
+  purpose    OtpPurpose
+  codeHash   String
+  expiresAt  DateTime
+  attempts   Int        @default(0)
+  consumedAt DateTime?
+  createdAt  DateTime   @default(now())
+
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  session Session @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+
+  @@index([sessionId, createdAt])
+  @@index([userId, createdAt])
+}
+
+model AuthEvent {
+  id        String        @id @default(uuid()) @db.Uuid
+  kind      AuthEventKind
+  email     String?
+  userId    String?       @db.Uuid
+  ip        String?
+  createdAt DateTime      @default(now())
+
+  user User? @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@index([kind, email, createdAt])
+  @@index([kind, ip, createdAt])
+  @@index([createdAt])
+}
+
+/// One tracker document, e.g. path `progress/phy`, with the same JSON shape as the legacy tracker.
+model UserDoc {
+  userId    String   @db.Uuid
+  path      String
+  data      Json
+  version   Int      @default(1)
+  deleted   Boolean  @default(false)
+  updatedAt DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([userId, path])
+  @@index([userId, updatedAt])
+}
+
+model UsageCounter {
+  userId  String   @db.Uuid
+  day     DateTime @db.Date
+  aiCalls Int      @default(0)
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([userId, day])
+}

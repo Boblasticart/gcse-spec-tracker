@@ -25,12 +25,12 @@ jobs:
     outputs:
       committed: ${{ steps.commit.outputs.committed }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - id: check
         run: |
           if [ -f package-lock.json ]; then echo "missing=false" >> "$GITHUB_OUTPUT"; else echo "missing=true" >> "$GITHUB_OUTPUT"; fi
       - if: steps.check.outputs.missing == 'true'
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: ${{ env.NODE_VERSION }}
       - if: steps.check.outputs.missing == 'true'
@@ -70,12 +70,15 @@ jobs:
       DIRECT_URL: postgresql://postgres:postgres@localhost:5432/tracker?schema=app
       APP_URL: http://localhost:3000
       MAIL_TRANSPORT: file
+      # CI-only throwaway secrets (not used anywhere else).
+      OTP_PEPPER: ci-only-otp-pepper-not-a-real-secret-000000
+      SESSION_SECRET: ci-only-session-secret-not-a-real-secret-00
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           # Pick up the lockfile commit made by bootstrap-lockfile, if any.
           ref: ${{ needs.bootstrap-lockfile.outputs.committed == 'true' && 'rebuild' || github.sha }}
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: ${{ env.NODE_VERSION }}
       - name: Install
@@ -83,6 +86,10 @@ jobs:
           if [ -f package-lock.json ]; then npm ci --no-audit --no-fund; else npm install --no-audit --no-fund; fi
       - name: Content extraction is up to date
         run: npm run content:check
+      - name: Apply database migrations
+        run: npm run db:migrate
+      - name: Migrations match prisma/schema.prisma
+        run: npm run db:drift
       - name: Typecheck
         run: npm run typecheck
       - name: Lint
