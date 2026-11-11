@@ -12,7 +12,8 @@ export function buildCsp(nonce: string, { dev, https }: { dev: boolean; https: b
     "style-src": ["'self'", "'unsafe-inline'"],
     "img-src": ["'self'", "data:", "blob:"],
     "font-src": ["'self'"],
-    "connect-src": ["'self'", ...(dev ? ["ws:"] : [])],
+    // data: is for the PDF builder, which loads its layout engine from an embedded data URL.
+    "connect-src": ["'self'", "data:", ...(dev ? ["ws:"] : [])],
     "worker-src": ["'self'", "blob:"],
     "manifest-src": ["'self'"],
     "frame-src": ["'self'"],
