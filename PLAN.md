@@ -13,14 +13,13 @@ This file is the single source of truth for the scheduled rebuild runs. Every ru
 
 ```
 RUN LOCK:        running since 2026-11-11T20:43Z, session session_01Sm3c8ibPxjEJSSFEcpxsh8
-CURRENT:         M7 Screens II
-CURRENT STEPS:   M7
-  [ ] 1 Question card (qcard): typed answer, submit for marking via /api/ai/json markAnswer, result with mark-scheme ticks, explanation, tip, retry/cancel, decide; saves a/* and the spaced-review state m[pid] exactly like legacy submitQ
-  [ ] 2 Today's 7 view /today/[subject]: summary, gen (todaysSeven, saves q/* + daily/*), more7, questions; Improvement "questions waiting" use the same interactive card
-  [ ] 3 Review weaknesses (review, dec): reviewWeaknesses, rv/* doc, per-point decide
-  [ ] 4 Quizzes /quiz/[topic] (quiz, newquiz, submitquiz, retake) and AI notes (wnote) in the reader; perm becomes a sign-in / friendly error
-  [ ] 5 e2e with the mocked AI for gen, more7, submit, retry, cancel, review, dec, quiz, newquiz, submitquiz, retake, wnote; tick them in docs/PARITY.md
-LAST GREEN CI:   https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/43099068474 (M6)
+CURRENT:         M8 Live progress dashboard
+CURRENT STEPS:   M8
+  [ ] 1 Metric maths (pure, unit-tested): per-subject mastery, done / needs work / not done, questions answered, marks %, streak (days with answers or quiz results), study minutes from stats/time
+  [ ] 2 Study timer: active time on Today's 7, Improvement and quiz screens (paused when the tab is hidden or idle), saved to the new stats/time doc {days:{YYYY-MM-DD:seconds}}
+  [ ] 3 Animated SVG components (Ring, Bars, Counter) respecting reduced motion; dashboard page with per-subject rings, bars and the stat tiles
+  [ ] 4 e2e: ticking a point changes the dashboard numbers (with a transition), stats/time saved; screenshots
+LAST GREEN CI:   https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/43101140040 (M7)
 LAST RUN ENDED:  (no runs yet)
 ```
 
@@ -191,7 +190,7 @@ Tick a box only when its acceptance checks pass in CI. Rough size: 1 to 2 milest
 - [x] **M6 Screens I.**
   - Spec view (papers, then topics, then points; the 3-way status control; filters; expand all; bulk), Improvement view, Notes reader (renders the existing note JSON exactly; study the legacy renderer, including `SAFE_PAINT`/`SVG_TAGS` sanitising for note images), and Practice papers (open the PDF, mark as done).
   - Accept when: those parity items are ticked in `docs/PARITY.md`, with e2e coverage of each action.
-- [ ] **M7 Screens II.**
+- [x] **M7 Screens II.**
   - Today's 7 (typed answers, marking result with the mark scheme, `more7`, retry, "you did well: more questions or mark as mastered?"), Review weaknesses, and Quizzes (new, submit, retake).
   - Accept when: the remaining parity items are ticked, with e2e coverage using the mocked AI.
 - [ ] **M8 Live progress dashboard.**
@@ -237,3 +236,4 @@ Newest at the bottom. One or two lines per run: date, milestones finished, anyth
 - 2026-11-08 (scheduled run): M4 done. Decision: `/api/ai/json` takes `{ task, input }` (todaysSeven, markAnswer, reviewWeaknesses, writeNote, writeQuiz, markQuiz) and the **server** builds the prompt from the extracted legacy templates, so the Gemini key can't be used as an open proxy. Today's 7 picks points server-side from the saved `progress/{sid}` with the legacy sort. Tests evaluate the legacy template + legacy code from index.html in a VM and require identical prompts. Mock model behind `AI_MOCK=1` (never on Vercel) for e2e; optional `AI_ALLOWED_EMAILS`. Green: https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/42436626971.
 - 2026-11-08 (scheduled run): M5 done. Tokens in `app/globals.css` (AA-checked light/dark), inline theme script + System/Light/Dark radio toggle, `TrackerShell` (subject tabs + view chips; routes `/spec|/papers/[subject]` public, `/improve|/today/[subject]` gated placeholders), `motion` spring on the status control, Card lift, Toasts, skip link. Playwright checks no theme flash, axe (no serious/critical, light + dark, signed in and out) and uploads a `screenshots` artifact (375/1280, light/dark): https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/42437508621. Note for M11: the theme script is inline, so the CSP needs its hash or a nonce.
 - 2026-11-11 (scheduled run, started late at 20:43 UTC; the 2026-11-08 run's lock was stale and no runs happened on 11-09/11-10): M6 done. Dependency-free note SVG sanitiser (`src/lib/notes/svg.ts`, fails closed on DOCTYPE/unknown entities/prefixed elements) proven identical to the legacy `cleanSvg` (jsdom, dev-only) on all 1,927 figures in data/notes; notes reader `/notes/[pid]` (prepared notes read on the server, `outputFileTracingIncludes` for data/notes), spec view, Improvement view, practice papers (`papers/done`), placeholder `/quiz/[topic]`. 166 unit + 25 e2e green: https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/43099068474. Decisions: spec filter/open topics/Back target live in memory only (lost on reload, as in the legacy tracker); Improvement "questions waiting" are read-only cards until M7; note figures always sit on white so legacy colours stay readable in dark mode. GitHub Actions runs sat queued for ~25 min at the start of this run, then recovered.
+- 2026-11-11 (same run): M7 done. Question card (legacy qcard/submitQ/recordResult, checked against the legacy code in a VM), Today's 7 (gen; more7 uses untried bank questions first, as legacy), weakness review (review/dec, `rv/*`), topic quizzes `/quiz/[topic]` (written on first open, 80% pass marks the topic Done), AI notes written and saved in the reader when there is no prepared note. All parity actions now ticked. `AI_MOCK=1` is set only on the CI e2e step. 29 e2e green: https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/43101140040. Decisions: the weakness review says "{board} terms to use" instead of always "AQA"; question drafts are kept in memory while the page is open (like legacy `DR`).
