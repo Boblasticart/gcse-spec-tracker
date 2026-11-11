@@ -59,8 +59,20 @@ export async function typeCode(page: Page, code: string): Promise<void> {
   await page.keyboard.type(code);
 }
 
+/**
+ * The server limits sign-ups per IP address (20 an hour). Every test runs from
+ * the same machine, so each new account comes from its own made-up address,
+ * passed the way the hosting proxy would.
+ */
+async function useOwnAddress(page: Page): Promise<void> {
+  const n = randomUUID().replace(/-/g, "");
+  const ip = `10.${parseInt(n.slice(0, 2), 16)}.${parseInt(n.slice(2, 4), 16)}.${parseInt(n.slice(4, 6), 16)}`;
+  await page.context().setExtraHTTPHeaders({ "x-real-ip": ip });
+}
+
 /** Fills the sign-up form and lands on the code screen. */
 export async function startSignUp(page: Page, email: string, next?: string): Promise<void> {
+  await useOwnAddress(page);
   await page.goto(next ? `/auth/sign-up?next=${encodeURIComponent(next)}` : "/auth/sign-up");
   await page.getByLabel("Email").fill(email);
   await page.getByLabel("Password", { exact: true }).fill(PASSWORD);
