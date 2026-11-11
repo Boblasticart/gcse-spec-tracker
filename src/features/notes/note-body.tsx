@@ -1,6 +1,6 @@
 import { Fragment, type ReactNode } from "react";
 
-import type { NoteDoc, NoteFigure } from "@/lib/notes/normalize";
+import type { NoteDoc, NoteExamQuestion, NoteFigure } from "@/lib/notes/normalize";
 import { layoutPoem, POEM_KEYS } from "@/lib/notes/poem";
 import { cleanSvg } from "@/lib/notes/svg";
 import { cn } from "@/ui/cn";
@@ -143,7 +143,7 @@ function Poem({ poem }: { poem: NonNullable<NoteDoc["poem"]> }) {
 
 /** Renders a normalised note exactly in the legacy order. */
 export function NoteBody({ note: n }: { note: NoteDoc }) {
-  const examQs = n.exam.filter((x): x is Exclude<typeof x, string> => typeof x === "object" && x !== null);
+  const examQs = n.exam.filter((x): x is NoteExamQuestion => typeof x === "object" && x !== null);
   const examTips = n.exam.filter((x): x is string => typeof x === "string");
   return (
     <div className="note-body leading-relaxed [&_ol]:ml-5 [&_ol]:list-decimal [&_ul]:ml-5 [&_ul]:list-disc">
