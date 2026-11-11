@@ -12,7 +12,7 @@ This file is the single source of truth for the scheduled rebuild runs. Every ru
 ## 0. Status (every run reads this first and keeps it updated)
 
 ```
-RUN LOCK:        running since 2026-11-11T01:17Z, session session_01Sm3c8ibPxjEJSSFEcpxsh8
+RUN LOCK:        running since 2026-11-11T20:43Z, session session_01Sm3c8ibPxjEJSSFEcpxsh8
 CURRENT:         M6 Screens I
 CURRENT STEPS:   M6
   [ ] 1 Legacy note SVG sanitiser ported (dependency-free, safe by construction) with a parity test against the legacy cleanSvg on every SVG in data/notes (jsdom)
