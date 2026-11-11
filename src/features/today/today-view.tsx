@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 
 import { runAi } from "@/client/ai";
+import { useStudyTimer } from "@/client/tracker/study-timer";
 import { useDoc, useDocs, useEngine } from "@/client/sync/react";
 import { useAnswers, useQuestions } from "@/client/tracker/questions";
 import { getSubject } from "@/content";
@@ -50,6 +51,7 @@ export function TodayView({ sid }: { sid: string }) {
   const [revErr, setRevErr] = useState("");
   const [revOpen, setRevOpen] = useState(() => reviewOpen.has(sid));
   const stats = useMemo(() => todayStats(daily, answers), [daily, answers]);
+  useStudyTimer();
 
   if (!subject) return null;
   if (phase !== "ready") return <p className="mt-8 text-center text-muted">Loading your questions...</p>;

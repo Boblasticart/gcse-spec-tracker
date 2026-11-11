@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 
 import { runAi } from "@/client/ai";
+import { useStudyTimer } from "@/client/tracker/study-timer";
 import { useDoc, useDocs, useEngine } from "@/client/sync/react";
 import { getPoint, getTopic } from "@/content";
 import { londonToday } from "@/lib/dates";
@@ -29,6 +30,7 @@ export function QuizView({ tid }: { tid: string }) {
   const [err, setErr] = useState("");
   const [retake, setRetake] = useState(false);
   const started = useRef(false);
+  useStudyTimer();
 
   const setDraft = (i: number, v: string): void => {
     setDrafts((d) => {

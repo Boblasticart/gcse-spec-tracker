@@ -2,6 +2,7 @@
 
 import { useMemo, type ReactNode } from "react";
 
+import { useStudyTimer } from "@/client/tracker/study-timer";
 import { useDoc, useDocs } from "@/client/sync/react";
 import { useAnswers, useQuestions } from "@/client/tracker/questions";
 import { useRestoreScroll } from "@/client/tracker/ui-state";
@@ -41,6 +42,7 @@ export function ImproveView({ sid }: { sid: string }) {
   const { questions } = useQuestions();
   const answers = useAnswers();
   useRestoreScroll();
+  useStudyTimer();
 
   const todayQids = useMemo(() => (Array.isArray(daily?.qids) ? daily.qids.map(String) : []), [daily]);
   const model = useMemo(() => improveModel({ sid, progress, questions, answers, todayQids }), [sid, progress, questions, answers, todayQids]);
