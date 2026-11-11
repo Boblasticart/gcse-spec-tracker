@@ -123,3 +123,41 @@ body {
     scroll-behavior: auto !important;
   }
 }
+
+/* Poem annotation colours (legacy PMK keys). Text stays --fg on these pale fills. */
+:root {
+  --k-lang: #dbeafe;
+  --k-lang-edge: #2563eb;
+  --k-struct: #fce7f3;
+  --k-struct-edge: #db2777;
+  --k-form: #dcfce7;
+  --k-form-edge: #16a34a;
+  --k-ctx: #fef3c7;
+  --k-ctx-edge: #d97706;
+  --k-big: #ede9fe;
+  --k-big-edge: #7c3aed;
+}
+
+.dark {
+  --k-lang: #172554;
+  --k-lang-edge: #60a5fa;
+  --k-struct: #500724;
+  --k-struct-edge: #f472b6;
+  --k-form: #052e16;
+  --k-form-edge: #4ade80;
+  --k-ctx: #451a03;
+  --k-ctx-edge: #fbbf24;
+  --k-big: #2e1065;
+  --k-big-edge: #a78bfa;
+}
+
+.poem-k.k-lang { background: var(--k-lang); color: var(--fg); }
+.poem-k.k-struct { background: var(--k-struct); color: var(--fg); }
+.poem-k.k-form { background: var(--k-form); color: var(--fg); }
+.poem-k.k-ctx { background: var(--k-ctx); color: var(--fg); }
+.poem-k.k-big { background: var(--k-big); color: var(--fg); }
+.poem-note.k-lang { border-color: var(--k-lang-edge); }
+.poem-note.k-struct { border-color: var(--k-struct-edge); }
+.poem-note.k-form { border-color: var(--k-form-edge); }
+.poem-note.k-ctx { border-color: var(--k-ctx-edge); }
+.poem-note.k-big { border-color: var(--k-big-edge); }

@@ -22,3 +22,9 @@ export function addDays(day: string, n: number): string {
 export function pct(n: number, total: number): number {
   return total ? Math.round((100 * n) / total) : 0;
 }
+
+/** Legacy `fmt`: "12 Nov" for a `YYYY-MM-DD` day, "" when there is none. */
+export function shortDay(day: string | undefined): string {
+  if (!day || !isIsoDay(day)) return "";
+  return new Date(`${day}T12:00:00Z`).toLocaleDateString("en-GB", { day: "numeric", month: "short", timeZone: "UTC" });
+}

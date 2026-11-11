@@ -27,3 +27,41 @@ describe("legacy setStatus", () => {
     expect(countStatuses(p, ["a", "b", "c", "d"])).toEqual([2, 1, 1]);
   });
 });
+
+describe("legacy bulk, notes read, master and more", () => {
+  it("all: sets every point of a topic, and Reset clears them", async () => {
+    const { withStatuses } = await import("@/client/tracker/progress");
+    const done = withStatuses({ s: { "phy.0.0": 1 }, w: { "phy.0.0": 1 } }, ["phy.0.0", "phy.0.1"], 2);
+    expect(done.s).toEqual({ "phy.0.0": 2, "phy.0.1": 2 });
+    expect(done.w).toEqual({ "phy.0.0": 1 });
+    const reset = withStatuses(done, ["phy.0.0", "phy.0.1"], 0);
+    expect(reset.s).toEqual({});
+    expect(reset.c).toEqual({});
+  });
+
+  it("markViewed sets w[pid] once", async () => {
+    const { withNoteRead, isNoteRead } = await import("@/client/tracker/progress");
+    const p = withNoteRead(undefined, "phy.0.0");
+    expect(p.w).toEqual({ "phy.0.0": 1 });
+    expect(isNoteRead(p, "phy.0.0")).toBe(true);
+    expect(isNoteRead(p, "phy.0.1")).toBe(false);
+  });
+
+  it("master: clears the prompt, marks Done and saves the label", async () => {
+    const { withMastered } = await import("@/client/tracker/progress");
+    const before = { s: { "phy.0.0": 1 }, c: {}, m: { "phy.0.0": { b: 3, n: 3, c: 3, p: 1, d: "2026-11-20" } }, w: {}, v: 2 };
+    const p = withMastered(before, "phy.0.0");
+    expect(p.s["phy.0.0"]).toBe(2);
+    expect(p.c["phy.0.0"]).toBe("4.1 Energy › Energy stores and transfers in a system");
+    expect(p.m["phy.0.0"]).toEqual({ b: 3, n: 3, c: 3, p: 0, d: "2026-11-20" });
+    expect(before.m["phy.0.0"].p).toBe(1);
+  });
+
+  it("more: keeps it Needs work, box 2, due tomorrow", async () => {
+    const { withMorePractice } = await import("@/client/tracker/progress");
+    const p = withMorePractice({ s: { "phy.0.0": 1 }, m: { "phy.0.0": { b: 4, n: 3, c: 3, p: 1 } } }, "phy.0.0", "2026-12-31");
+    expect(p.s["phy.0.0"]).toBe(1);
+    expect(p.m["phy.0.0"]).toEqual({ b: 2, n: 3, c: 3, p: 0, d: "2027-01-01" });
+    expect(withMorePractice({}, "phy.0.0", "2026-12-31").m).toEqual({});
+  });
+});
