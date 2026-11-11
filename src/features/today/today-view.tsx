@@ -26,6 +26,9 @@ import { Button } from "@/ui/button";
 
 import { WeaknessReview } from "./weakness-review";
 
+/** The time used in new question ids (read in event handlers only). */
+const clockNow = (): number => Date.now();
+
 /** Review panel open per subject while the page is open (legacy `REVOPEN`). */
 const reviewOpen = new Set<string>();
 
@@ -77,7 +80,7 @@ export function TodayView({ sid }: { sid: string }) {
       setGenErr(r.message);
       return;
     }
-    const now = Date.now();
+    const now = clockNow();
     const qids = r.result.questions.map((doc, i) => {
       const id = newQuestionId(today, sid, i + 1, append, now);
       engine.update(`q/${id}`, () => doc);
