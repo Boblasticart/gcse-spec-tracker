@@ -13,12 +13,12 @@ This file is the single source of truth for the scheduled rebuild runs. Every ru
 
 ```
 RUN LOCK:        running since 2026-11-11T21:49Z, session session_01Sm3c8ibPxjEJSSFEcpxsh8 (extra run asked for by the owner; must end before 01:10 UK)
-CURRENT:         M10 PDF report
-CURRENT STEPS:   M10
-  [ ] 1 Report data (pure, unit-tested): student email, date, per-subject mastery and counts, needs-work list, recent marks, streak and study time, from the same metrics as the dashboard
-  [ ] 2 "Download progress PDF" button on the dashboard: @react-pdf/renderer loaded only when clicked, built in the browser (works offline), styled cover + sections
-  [ ] 3 e2e: download the PDF, check it is non-empty and contains the email and subject names
-LAST GREEN CI:   https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/43107147412 (M9)
+CURRENT:         M11 Hardening + docs
+CURRENT STEPS:   M11
+  [ ] 1 Security headers with a nonce-based CSP (theme script and Next scripts get the nonce), frame-ancestors 'none', Referrer-Policy, Permissions-Policy, HSTS in production; e2e checks the headers and that no CSP errors fire
+  [ ] 2 Account: delete my account (password re-check, deletes user, sessions, codes, docs, usage; clears this device) and full data export (all docs incl. new ones); AuthEvent pruning after 30 days; friendly error and not-found pages
+  [ ] 3 README owner setup guide + "moving from the GitHub Pages version"; docs/SECURITY.md listing the threat checks
+LAST GREEN CI:   https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/43109980322 (M10)
 LAST RUN ENDED:  2026-11-11T21:35Z (M6, M7, M8 done; M9 next)
 ```
 
@@ -198,7 +198,7 @@ Tick a box only when its acceptance checks pass in CI. Rough size: 1 to 2 milest
 - [x] **M9 PWA + offline.**
   - Serwist: precache the app shell, cache `data/questions.json`, notes and papers at runtime (papers cache-first once opened), add an offline fallback page, a manifest and icons, the IndexedDB outbox and replay, and a header status ("Saved", "Offline: 3 changes waiting", "Syncing...").
   - Accept when: Playwright goes offline, ticks items, reloads (the app still loads), goes back online, and the server has the changes.
-- [ ] **M10 PDF report.**
+- [x] **M10 PDF report.**
   - A "Download progress PDF" button builds a styled report client-side: cover, per-subject mastery, needs-work list, recent marks, streak and study time. It works offline.
   - Accept when: e2e downloads the PDF, it is non-empty, and it contains the student's email and the subject names.
 - [ ] **M11 Hardening + docs.**
@@ -238,3 +238,4 @@ Newest at the bottom. One or two lines per run: date, milestones finished, anyth
 - 2026-11-11 (same run): M7 done. Question card (legacy qcard/submitQ/recordResult, checked against the legacy code in a VM), Today's 7 (gen; more7 uses untried bank questions first, as legacy), weakness review (review/dec, `rv/*`), topic quizzes `/quiz/[topic]` (written on first open, 80% pass marks the topic Done), AI notes written and saved in the reader when there is no prepared note. All parity actions now ticked. `AI_MOCK=1` is set only on the CI e2e step. 29 e2e green: https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/43101140040. Decisions: the weakness review says "{board} terms to use" instead of always "AQA"; question drafts are kept in memory while the page is open (like legacy `DR`).
 - 2026-11-11 (same run): M8 done. Metric maths (`src/lib/tracker/metrics.ts`: mastery, counts, answered incl. quiz answers, marks %, streak = days with an answer, quiz or 1+ min of study, counted back from today or yesterday, London days), `useStudyTimer` (Today's 7, Improvement, quizzes; pauses when hidden or idle for 2 min; saves every 30 s and on leaving; max 6 h a day) into the new `stats/time` doc `{days:{YYYY-MM-DD:seconds},v:1}`, animated `Ring`/`Counter`/`StackedBar` (motion, reduced-motion aware), dashboard with overall and per-subject rings. 32 e2e green: https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/43101944250. Decision: `stats/time` is last-writer-wins, so two devices studying at the same moment can lose a few seconds (acceptable).
 - 2026-11-11 (extra run asked for by the owner, 21:49 to before 01:10 UK so it can't overlap the scheduled run): M9 done. Sync engine keeps its outbox and a snapshot of the last server copy in IndexedDB (`idb`, one record per account), opens from the snapshot when there is no connection, holds changes while offline and sends them on reconnect; header shows Saved / Syncing… / "Offline: N changes waiting"; sign-out sends waiting changes, then clears this device's copy. Serwist via `@serwist/next` with `next build --webpack` (decision: the webpack plugin is the stable route; `@serwist/turbopack` is still experimental), SW source in `sw/sw.ts` with its own tsconfig; /api never cached; notes + question bank stale-while-revalidate; PDFs cache-first once opened; `/~offline` fallback; only icons/ from public/ are precached (notes and PDFs would be ~100 MB). Manifest + generated icons in public/icons. Decision: no Background Sync; the page sends waiting changes on reconnect and on start. 34 e2e green: https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/43107147412.
+- 2026-11-11 (extra run): M10 done. `buildReport` (pure, unit-tested) + `ReportDocument` (@react-pdf/renderer, Helvetica so no font downloads, cover + mastery by subject + needs work + recent marks + streak/study time), loaded only on click and built in the browser; works offline (e2e checks both). e2e reads the PDF text with pdfjs-dist (dev only). Fix: e2e sign-ups now each send their own `x-real-ip`, because the suite had grown past the 20-sign-ups-per-IP-per-hour limit. 36 e2e green: https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/43109980322.
