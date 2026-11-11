@@ -1,7 +1,8 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 
 import type { ApiResult } from "@/client/api";
 import { SyncEngine, type DocsTransport } from "@/client/sync/engine";
+import { memoryOutbox } from "@/client/sync/outbox";
 import type { ChangeResult, DocChangeIn, DocDto } from "@/lib/docs";
 
 /** An in-memory server with the same compare-and-set rules as PUT /api/docs. */
@@ -148,5 +149,58 @@ describe("sync engine", () => {
     engine.update("a/q", () => ({}));
     engine.reset();
     expect(engine.store.getState()).toMatchObject({ phase: "idle", docs: {}, pending: 0 });
+  });
+
+  it("opens offline from the saved snapshot, keeps changes waiting, and sends them when back online", async () => {
+    const server = new FakeServer();
+    server.external("progress/phy", progress({ a: 1 }));
+    const storage = memoryOutbox();
+    const first = new SyncEngine(server, { ...manualTimers(), storage });
+    await first.hydrate();
+
+    // A new page load with no connection: the snapshot opens instead.
+    server.offline = true;
+    const engine = new SyncEngine(server, { ...manualTimers(), storage });
+    engine.setOnline(false);
+    await engine.hydrate();
+    expect(engine.store.getState()).toMatchObject({ phase: "ready", online: false, lastError: null });
+    expect(engine.get("progress/phy")).toEqual(progress({ a: 1 }));
+
+    engine.update("progress/phy", () => progress({ a: 2 }));
+    await engine.flush();
+    expect(server.puts).toHaveLength(0);
+    expect(engine.store.getState().pending).toBe(1);
+
+    // Reloaded again, still offline: the waiting change is still there.
+    const again = new SyncEngine(server, { ...manualTimers(), storage });
+    again.setOnline(false);
+    await again.hydrate();
+    expect(again.get("progress/phy")).toEqual(progress({ a: 2 }));
+    expect(again.store.getState().pending).toBe(1);
+
+    server.offline = false;
+    again.setOnline(true);
+    await vi.waitFor(() => expect(server.docs.get("progress/phy")?.data).toEqual(progress({ a: 2 })));
+    await vi.waitFor(() => expect(again.store.getState().pending).toBe(0));
+  });
+
+  it("does not open a snapshot after a server error (only when offline)", async () => {
+    const server = new FakeServer();
+    const storage = memoryOutbox();
+    await storage.saveSnapshot?.({ docs: [["a/x", { data: { v: 1 }, version: 1 }]], cursor: "c" });
+    const engine = new SyncEngine({ ...server, list: async () => ({ ok: false, code: "SERVER_ERROR", message: "boom", status: 500 }), put: server.put.bind(server) }, { ...manualTimers(), storage });
+    await engine.hydrate();
+    expect(engine.store.getState()).toMatchObject({ phase: "error", lastError: "boom" });
+  });
+
+  it("sign-out clears this device's copy", async () => {
+    const server = new FakeServer();
+    server.external("progress/phy", progress({ a: 1 }));
+    const storage = memoryOutbox();
+    const engine = new SyncEngine(server, { ...manualTimers(), storage });
+    await engine.hydrate();
+    expect(await storage.loadSnapshot?.()).not.toBeNull();
+    engine.reset();
+    await vi.waitFor(async () => expect(await storage.loadSnapshot?.()).toBeNull());
   });
 });

@@ -5,6 +5,7 @@ import { useStore } from "zustand";
 
 import { useSession } from "../session";
 import { SyncEngine } from "./engine";
+import { idbStorage } from "./idb-storage";
 import type { DocsState } from "./store";
 import { httpTransport } from "./transport";
 
@@ -21,7 +22,13 @@ export function DocsProvider({ children, engine: injected }: { children: ReactNo
       engine.reset();
       return;
     }
+    engine.setOnline(navigator.onLine);
+    engine.attachStorage(idbStorage(userId));
     void engine.hydrate();
+    const onOnline = (): void => engine.setOnline(true);
+    const onOffline = (): void => engine.setOnline(false);
+    window.addEventListener("online", onOnline);
+    window.addEventListener("offline", onOffline);
     const onFocus = (): void => {
       if (document.visibilityState === "visible") void engine.pull();
     };
@@ -35,6 +42,8 @@ export function DocsProvider({ children, engine: injected }: { children: ReactNo
       document.removeEventListener("visibilitychange", onFocus);
       document.removeEventListener("visibilitychange", onHide);
       window.removeEventListener("online", onFocus);
+      window.removeEventListener("online", onOnline);
+      window.removeEventListener("offline", onOffline);
       void engine.flush();
     };
   }, [engine, userId]);
@@ -57,15 +66,17 @@ export function useDoc(path: string): unknown {
   return useDocs((s) => s.docs[path]?.data);
 }
 
-export type SyncSummary = "off" | "loading" | "saving" | "saved" | "error";
+export type SyncSummary = "off" | "loading" | "saving" | "saved" | "offline" | "error";
 
 export function useSyncSummary(): { summary: SyncSummary; pending: number; message: string | null } {
   const phase = useDocs((s) => s.phase);
   const pending = useDocs((s) => s.pending);
   const saving = useDocs((s) => s.saving);
   const lastError = useDocs((s) => s.lastError);
+  const online = useDocs((s) => s.online);
   let summary: SyncSummary = "off";
-  if (phase === "loading") summary = "loading";
+  if (!online && phase !== "idle") summary = "offline";
+  else if (phase === "loading") summary = "loading";
   else if (phase === "error" || lastError) summary = "error";
   else if (phase === "ready") summary = saving || pending ? "saving" : "saved";
   return { summary, pending, message: lastError };

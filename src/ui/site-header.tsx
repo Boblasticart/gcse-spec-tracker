@@ -6,6 +6,7 @@ import { useState } from "react";
 
 import { api } from "@/client/api";
 import { useSession } from "@/client/session";
+import { useEngine } from "@/client/sync/react";
 import { useToast } from "./toast";
 
 import { Button, ButtonLink } from "./button";
@@ -17,9 +18,12 @@ export function SiteHeader() {
   const router = useRouter();
   const [busy, setBusy] = useState(false);
   const toast = useToast();
+  const engine = useEngine();
 
   const signOut = async (): Promise<void> => {
     setBusy(true);
+    // Send anything still waiting before this device forgets the account's data.
+    await engine.flush();
     await api("/api/auth/sign-out", { method: "POST" });
     setUser(null);
     setBusy(false);

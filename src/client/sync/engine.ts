@@ -2,7 +2,7 @@ import { MAX_BATCH, type ChangeResult, type DocChangeIn, type DocDto } from "@/l
 
 import type { ApiResult } from "../api";
 import { resolveConflict } from "./merge";
-import { memoryOutbox, type OutboxEntry, type OutboxStorage } from "./outbox";
+import { memoryOutbox, type DocsSnapshot, type OutboxEntry, type OutboxStorage } from "./outbox";
 import { createDocsStore, initialDocsState, type DocEntry, type DocsStore } from "./store";
 
 export interface DocsTransport {
@@ -30,7 +30,7 @@ const MAX_ROUNDS = 5;
 export class SyncEngine {
   readonly store: DocsStore;
   private readonly transport: DocsTransport;
-  private readonly storage: OutboxStorage;
+  private storage: OutboxStorage;
   private readonly debounceMs: number;
   private readonly retryMs: number;
   private readonly setTimer: (fn: () => void, ms: number) => unknown;
@@ -42,6 +42,7 @@ export class SyncEngine {
   private flushing: Promise<void> | null = null;
   private rev = 0;
   private generation = 0;
+  private online = true;
 
   constructor(transport: DocsTransport, options: EngineOptions = {}) {
     this.transport = transport;
@@ -53,22 +54,72 @@ export class SyncEngine {
     this.clearTimer = options.clearTimer ?? ((h) => clearTimeout(h as ReturnType<typeof setTimeout>));
   }
 
-  /** Loads every doc for the signed-in student, then replays any unsaved changes. */
+  /** Uses this storage from now on (e.g. the signed-in student's IndexedDB). Call before `hydrate`. */
+  attachStorage(storage: OutboxStorage): void {
+    this.storage = storage;
+  }
+
+  /** Tells the engine whether the device is online. Going online sends any waiting changes. */
+  setOnline(online: boolean): void {
+    if (online === this.online) return;
+    this.online = online;
+    this.store.setState({ online });
+    if (online) {
+      if (this.store.getState().phase !== "ready" || this.offlineSnapshot) void this.hydrate();
+      else {
+        void this.flush();
+        void this.pull();
+      }
+    }
+  }
+
+  /** True while the docs on screen came from the offline snapshot rather than the server. */
+  private offlineSnapshot = false;
+
+  /**
+   * Loads every doc for the signed-in student, then replays any unsaved
+   * changes. With no connection it opens the last saved snapshot instead.
+   */
   async hydrate(): Promise<void> {
     const gen = this.generation;
-    this.store.setState({ phase: "loading", lastError: null });
-    for (const e of await this.storage.load()) this.outbox.set(e.path, e);
+    if (this.store.getState().phase !== "ready") this.store.setState({ phase: "loading", lastError: null });
+    const stored = await this.storage.load().catch(() => [] as OutboxEntry[]);
+    if (gen !== this.generation) return;
+    for (const e of stored) {
+      if (this.outbox.has(e.path)) continue;
+      this.outbox.set(e.path, e);
+      this.rev = Math.max(this.rev, e.rev);
+    }
     const res = await this.transport.list();
     if (gen !== this.generation) return;
     if (!res.ok) {
+      const snapshot = res.status === 0 ? await this.storage.loadSnapshot?.().catch(() => null) : null;
+      if (gen !== this.generation) return;
+      if (snapshot) {
+        this.confirmed.clear();
+        for (const [path, entry] of snapshot.docs) this.confirmed.set(path, entry);
+        this.cursor = snapshot.cursor;
+        this.offlineSnapshot = true;
+        this.store.setState({ lastError: null });
+        this.publish("ready");
+        return;
+      }
       this.store.setState({ phase: "error", lastError: res.message });
       return;
     }
+    this.offlineSnapshot = false;
     this.confirmed.clear();
     for (const d of res.docs) if (!d.deleted) this.confirmed.set(d.path, { data: d.data, version: d.version });
     this.cursor = res.cursor;
     this.publish("ready");
+    this.saveSnapshot();
     if (this.outbox.size) void this.flush();
+  }
+
+  private saveSnapshot(): void {
+    if (!this.storage.saveSnapshot) return;
+    const snapshot: DocsSnapshot = { docs: [...this.confirmed.entries()], cursor: this.cursor };
+    void this.storage.saveSnapshot(snapshot).catch(() => undefined);
   }
 
   /** Fetches only what changed on the server since the last load (e.g. edits from another device). */
@@ -85,6 +136,7 @@ export class SyncEngine {
     }
     this.cursor = res.cursor;
     this.publish();
+    this.saveSnapshot();
   }
 
   get(path: string): unknown {
@@ -103,7 +155,7 @@ export class SyncEngine {
       local: next ?? null,
       rev: ++this.rev,
     });
-    void this.storage.save([...this.outbox.values()]);
+    void this.storage.save([...this.outbox.values()]).catch(() => undefined);
     this.publish();
     this.schedule(this.debounceMs);
   }
@@ -111,6 +163,8 @@ export class SyncEngine {
   /** Sends queued changes now. Safe to call at any time. */
   flush(): Promise<void> {
     if (this.flushing) return this.flushing;
+    // Offline (or still showing the offline snapshot): changes wait until we're back.
+    if (!this.online || this.offlineSnapshot) return Promise.resolve();
     this.cancelTimer();
     this.flushing = this.runFlush().finally(() => {
       this.flushing = null;
@@ -118,15 +172,18 @@ export class SyncEngine {
     return this.flushing;
   }
 
-  /** Forgets everything (sign-out). */
+  /** Forgets everything (sign-out), including what this device kept for offline use. */
   reset(): void {
     this.generation++;
     this.cancelTimer();
     this.outbox.clear();
     this.confirmed.clear();
     this.cursor = undefined;
-    void this.storage.save([]);
-    this.store.setState(initialDocsState());
+    this.offlineSnapshot = false;
+    const storage = this.storage;
+    void (storage.clear ? storage.clear() : storage.save([])).catch(() => undefined);
+    this.storage = memoryOutbox();
+    this.store.setState({ ...initialDocsState(), online: this.online });
   }
 
   private async runFlush(): Promise<void> {
@@ -163,7 +220,8 @@ export class SyncEngine {
           entry.rev = ++this.rev;
         }
       }
-      void this.storage.save([...this.outbox.values()]);
+      void this.storage.save([...this.outbox.values()]).catch(() => undefined);
+      this.saveSnapshot();
       this.store.setState({ lastError: null });
       this.publish();
       const truncated = batch.length === MAX_BATCH && this.outbox.size > 0;

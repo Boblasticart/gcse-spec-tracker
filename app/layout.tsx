@@ -15,6 +15,8 @@ const body = Figtree({ subsets: ["latin"], variable: "--font-figtree", display: 
 export const metadata: Metadata = {
   title: { default: "GCSE Spec Tracker", template: "%s · GCSE Spec Tracker" },
   description: "Track every GCSE spec point, practise exam questions and see your progress.",
+  icons: { apple: "/icons/apple-touch-icon.png" },
+  appleWebApp: { capable: true, title: "GCSE Tracker", statusBarStyle: "default" },
 };
 
 export const viewport: Viewport = {

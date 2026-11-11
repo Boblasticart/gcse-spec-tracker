@@ -14,7 +14,10 @@ This file is the single source of truth for the scheduled rebuild runs. Every ru
 ```
 RUN LOCK:        running since 2026-11-11T21:49Z, session session_01Sm3c8ibPxjEJSSFEcpxsh8 (extra run asked for by the owner; must end before 01:10 UK)
 CURRENT:         M9 PWA + offline
-CURRENT STEPS:   M9 (next run: write the steps here first; check which Serwist package works with the installed Next 16 build, Turbopack or `next build --webpack`)
+CURRENT STEPS:   M9
+  [ ] 1 Sync engine works offline: IndexedDB outbox + offline snapshot (idb), online/offline aware, flush on reconnect and on start; header "Saved" / "Syncing…" / "Offline: N changes waiting"; sign-out sends waiting changes then clears this device's copy
+  [ ] 2 Serwist service worker (sw/sw.ts, @serwist/next with `next build --webpack`): app shell precache, pages cached on visit, notes + question bank stale-while-revalidate, PDFs cache-first once opened, /api never cached, /~offline fallback; manifest + icons
+  [ ] 3 e2e: offline tick, reload offline, offline page, back online and the server has the changes
 LAST GREEN CI:   https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/43101944250 (M8)
 LAST RUN ENDED:  2026-11-11T21:35Z (M6, M7, M8 done; M9 next)
 ```

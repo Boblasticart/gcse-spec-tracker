@@ -10,9 +10,9 @@
     "predev": "node scripts/sync-content.mjs",
     "dev": "next dev",
     "prebuild": "node scripts/sync-content.mjs",
-    "build": "next build",
+    "build": "next build --webpack",
     "start": "next start",
-    "typecheck": "next typegen && tsc --noEmit",
+    "typecheck": "next typegen && tsc --noEmit && tsc --noEmit -p sw",
     "lint": "eslint . --max-warnings=0",
     "test": "vitest run",
     "test:watch": "vitest",
@@ -23,17 +23,20 @@
     "postinstall": "prisma generate",
     "db:migrate": "prisma migrate deploy",
     "db:drift": "prisma migrate diff --from-url \"$DATABASE_URL\" --to-schema-datamodel prisma/schema.prisma --exit-code",
-    "vercel-build": "prisma migrate deploy && next build"
+    "vercel-build": "prisma migrate deploy && next build --webpack"
   },
   "dependencies": {
     "@node-rs/argon2": "^2.0.2",
     "@prisma/client": "^6.16.0",
+    "@serwist/next": "^9.5.0",
+    "idb": "^8.0.0",
     "motion": "^12.23.0",
     "next": "^16.0.0",
     "nodemailer": "^7.0.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "server-only": "^0.0.1",
+    "serwist": "^9.5.0",
     "zod": "^4.1.0",
     "zustand": "^5.0.8"
   },

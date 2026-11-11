@@ -17,6 +17,8 @@ export interface DocsState {
   saving: boolean;
   /** Plain-English problem with the last save or load, if any. */
   lastError: string | null;
+  /** False while the device is offline: changes wait in the outbox. */
+  online: boolean;
 }
 
 export const initialDocsState = (): DocsState => ({
@@ -25,6 +27,7 @@ export const initialDocsState = (): DocsState => ({
   pending: 0,
   saving: false,
   lastError: null,
+  online: true,
 });
 
 export type DocsStore = StoreApi<DocsState>;

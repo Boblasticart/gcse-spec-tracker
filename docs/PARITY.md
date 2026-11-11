@@ -72,6 +72,6 @@ where it is planned (see `PLAN.md`, section 5).
 | [x] | Prepared notes from `data/notes/{pid}.json` and the question bank `data/questions.json` | M6/M7 |
 | [x] | Note renderer: bold markup, poems with annotation keys (`POEM_MARK_KEYS`), SVG images cleaned with `SVG_TAGS`, `SVG_ATTRS` and `SAFE_PAINT` | M6 |
 | [x] | Practice papers done list (legacy `gcse-papers-v1` in localStorage) moves into the account | M6 |
-| [ ] | Status line: "Saved to your account" / "Saved on this device only" | M9 |
+| [x] | Status line: "Saved to your account" / "Saved on this device only" | M9 |
 | [ ] | Old export file (`gcse-spec-tracker-export` v1) import and export | M3 |
 | n/a | Legacy local data (`gcse-spec-tracker-v2`, `-v1`): the new site has a different web address, so the browser can't share it. Students use the old tracker's Back up button and Import the file instead | M3 |

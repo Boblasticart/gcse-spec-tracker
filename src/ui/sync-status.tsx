@@ -8,15 +8,16 @@ import { cn } from "./cn";
 const TEXT = {
   off: "",
   loading: "Loading your progress…",
-  saving: "Saving…",
+  saving: "Syncing…",
   saved: "Saved",
+  offline: "Offline",
   error: "Not saved yet",
 } as const;
 
-/** "Saved" / "Saving…" next to the account menu. */
+/** "Saved" / "Syncing…" / "Offline: 3 changes waiting" next to the account menu. */
 export function SyncStatus() {
   const { user } = useSession();
-  const { summary, message } = useSyncSummary();
+  const { summary, message, pending } = useSyncSummary();
   if (!user || summary === "off") return null;
   return (
     <span
@@ -26,7 +27,7 @@ export function SyncStatus() {
       title={summary === "error" ? (message ?? undefined) : undefined}
       className={cn(
         "hidden items-center gap-1.5 text-xs sm:inline-flex",
-        summary === "error" ? "text-work" : "text-muted",
+        summary === "error" || summary === "offline" ? "text-work" : "text-muted",
       )}
     >
       <span
@@ -36,10 +37,14 @@ export function SyncStatus() {
           summary === "saved" && "bg-done",
           summary === "saving" && "animate-pulse bg-accent motion-reduce:animate-none",
           summary === "loading" && "animate-pulse bg-muted motion-reduce:animate-none",
-          summary === "error" && "bg-work",
+          (summary === "error" || summary === "offline") && "bg-work",
         )}
       />
-      {TEXT[summary]}
+      {summary === "offline"
+        ? pending
+          ? `Offline: ${pending} change${pending === 1 ? "" : "s"} waiting`
+          : "Offline: changes will sync"
+        : TEXT[summary]}
     </span>
   );
 }
