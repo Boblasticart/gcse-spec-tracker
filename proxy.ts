@@ -1,5 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 
+import { buildCsp, newNonce } from "@/lib/csp";
 import { isGated, SESSION_COOKIE_NAMES } from "@/lib/gated";
 
 /**
@@ -17,7 +18,14 @@ export function proxy(request: NextRequest): NextResponse {
   }
   const headers = new Headers(request.headers);
   headers.set("x-gst-path", pathname + search);
-  return NextResponse.next({ request: { headers } });
+  // Per-request CSP nonce: Next.js reads the CSP request header and adds the nonce to its scripts.
+  const nonce = newNonce();
+  const csp = buildCsp(nonce, { dev: process.env.NODE_ENV === "development", https: (process.env.APP_URL ?? "").startsWith("https:") });
+  headers.set("x-nonce", nonce);
+  headers.set("content-security-policy", csp);
+  const response = NextResponse.next({ request: { headers } });
+  response.headers.set("content-security-policy", csp);
+  return response;
 }
 
 export const config = {

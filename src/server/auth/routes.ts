@@ -2,6 +2,7 @@ import "server-only";
 
 import { z } from "zod";
 
+import { pruneAuthEventsIfDue } from "../account/service";
 import { assertSameOrigin, handler, json, parseJson, requestMeta } from "../http";
 import { PASSWORD_MAX } from "./password";
 import { me, resendOtp, signIn, signOut, signUp, verifyOtp, type AuthResult } from "./service";
@@ -25,12 +26,14 @@ const codeBody = z.object({
 export const signUpRoute = handler(async (request: Request) => {
   assertSameOrigin(request);
   const body = await parseJson(request, credentials);
+  void pruneAuthEventsIfDue();
   return send(await signUp(body, requestMeta(request)));
 });
 
 export const signInRoute = handler(async (request: Request) => {
   assertSameOrigin(request);
   const body = await parseJson(request, credentials);
+  void pruneAuthEventsIfDue();
   return send(await signIn(body, requestMeta(request)));
 });
 

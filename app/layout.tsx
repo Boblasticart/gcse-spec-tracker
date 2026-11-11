@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Bricolage_Grotesque, Figtree } from "next/font/google";
+import { headers } from "next/headers";
 import type { ReactNode } from "react";
 
 import { Providers } from "@/client/providers";
@@ -30,11 +31,12 @@ export const viewport: Viewport = {
 
 export default async function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   const user = await getCurrentUserSafe();
+  const nonce = (await headers()).get("x-nonce") ?? undefined;
   return (
     // The theme script adds `dark` and `data-theme` before React hydrates.
     <html lang="en-GB" className={`${heading.variable} ${body.variable}`} suppressHydrationWarning>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
+        <script nonce={nonce} suppressHydrationWarning dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
       </head>
       <body className="min-h-dvh font-sans antialiased">
         <a

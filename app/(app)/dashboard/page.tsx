@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { AccountPanel } from "@/features/account/account-panel";
 import { BackupPanel } from "@/features/backup/backup-panel";
 import { ProgressDashboard } from "@/features/dashboard/progress-dashboard";
 import { DownloadReport } from "@/features/report/download-report";
@@ -20,8 +21,9 @@ export default async function DashboardPage() {
         <DownloadReport />
       </div>
       <ProgressDashboard />
-      <div className="mt-10">
+      <div className="mt-10 grid gap-4">
         <BackupPanel />
+        <AccountPanel />
       </div>
     </main>
   );

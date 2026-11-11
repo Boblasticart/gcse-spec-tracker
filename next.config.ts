@@ -4,6 +4,8 @@ import { randomUUID } from "node:crypto";
 import withSerwistInit from "@serwist/next";
 import type { NextConfig } from "next";
 
+import { SECURITY_HEADERS } from "./src/lib/csp";
+
 /** Changes on every deploy, so the offline page is refreshed. */
 function revision(): string {
   const fromCi = process.env.VERCEL_GIT_COMMIT_SHA ?? process.env.GITHUB_SHA;
@@ -37,6 +39,14 @@ const nextConfig: NextConfig = {
   // The notes reader reads the legacy prepared notes from data/notes at request time.
   outputFileTracingIncludes: {
     "/notes/[pid]": ["./data/notes/*.json"],
+  },
+  async headers() {
+    const hsts = process.env.VERCEL_ENV === "production" ? [{ key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains" }] : [];
+    return [
+      { source: "/:path*", headers: [...SECURITY_HEADERS, ...hsts] },
+      // JSON APIs never need to run or embed anything (pages get their CSP from proxy.ts).
+      { source: "/api/:path*", headers: [{ key: "Content-Security-Policy", value: "default-src 'none'; frame-ancestors 'none'" }] },
+    ];
   },
 };
 
