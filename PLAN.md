@@ -12,7 +12,7 @@ This file is the single source of truth for the scheduled rebuild runs. Every ru
 ## 0. Status (every run reads this first and keeps it updated)
 
 ```
-RUN LOCK:        none
+RUN LOCK:        running since 2026-11-11T21:49Z, session session_01Sm3c8ibPxjEJSSFEcpxsh8 (extra run asked for by the owner; must end before 01:10 UK)
 CURRENT:         M9 PWA + offline
 CURRENT STEPS:   M9 (next run: write the steps here first; check which Serwist package works with the installed Next 16 build, Turbopack or `next build --webpack`)
 LAST GREEN CI:   https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/43101944250 (M8)
