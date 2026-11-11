@@ -102,6 +102,9 @@ jobs:
       - name: Install Playwright browser
         run: npx playwright install --with-deps chromium
       - name: End-to-end tests
+        env:
+          # A predictable stand-in for Gemini (refused whenever VERCEL is set).
+          AI_MOCK: "1"
         run: npm run e2e
       - if: always()
         uses: actions/upload-artifact@v4

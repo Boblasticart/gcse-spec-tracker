@@ -2,7 +2,9 @@
 
 import type { Route } from "next";
 import Link from "next/link";
-import { useEffect, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
+
+import { runAi } from "@/client/ai";
 
 import { useSession } from "@/client/session";
 import { useSignInPrompt } from "@/client/sign-in-prompt";
@@ -43,6 +45,29 @@ export function NoteReader({ pid, prepared, children }: { pid: string; prepared:
     if (user && ready && hasNote && !read) engine.update(progressPath, (doc) => withNoteRead(doc, pid));
   }, [user, ready, hasNote, read, engine, progressPath, pid]);
 
+  // Legacy `genNote` / `wnote`: with no prepared note, the AI writes one and it is saved to the account.
+  const [busy, setBusy] = useState(false);
+  const [err, setErr] = useState("");
+  const tried = useRef<string | null>(null);
+  const writeNote = async (): Promise<void> => {
+    setBusy(true);
+    setErr("");
+    const r = await runAi("writeNote", { pid }, "Sign in to have notes written.");
+    setBusy(false);
+    if (!r.ok) {
+      setErr(r.message);
+      return;
+    }
+    engine.update(`notes/${pid}`, () => ({ ...r.result.note, src: "ai", ts: new Date().toISOString() }));
+  };
+  useEffect(() => {
+    if (user && ready && !hasNote && tried.current !== pid) {
+      tried.current = pid;
+      void writeNote();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- once per point
+  }, [user, ready, hasNote, pid]);
+
   if (!ref) return null;
   const { subject, topic, index } = ref;
   const pts = topic.points;
@@ -67,12 +92,22 @@ export function NoteReader({ pid, prepared, children }: { pid: string; prepared:
   } else {
     body = (
       <div className={cardClass(false, "mt-4 p-5")} data-testid="note-missing">
-        <p className="font-medium">There are no prepared notes for this point yet.</p>
+        <p className="font-medium">There are no prepared notes for this point yet{user ? ", so the AI will write some for you." : "."}</p>
         {user ? (
-          ready ? (
-            <p className="mt-1 text-sm text-muted">Writing notes with AI for points like this one is coming back soon.</p>
+          busy ? (
+            <p className="mt-1 text-sm text-muted">The AI is writing these notes. This takes about a minute.</p>
+          ) : err ? (
+            <>
+              <p className="mt-1 text-sm text-muted">These notes did not load.</p>
+              <p role="alert" className="mt-1 text-sm text-danger">
+                {err}
+              </p>
+              <Button className="mt-3" onClick={() => void writeNote()}>
+                Try again
+              </Button>
+            </>
           ) : (
-            <p className="mt-1 text-sm text-muted">Opening your notes...</p>
+            <p className="mt-1 text-sm text-muted">Getting your notes ready.</p>
           )
         ) : (
           <>

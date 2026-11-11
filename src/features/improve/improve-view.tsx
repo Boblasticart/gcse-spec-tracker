@@ -2,17 +2,18 @@
 
 import { useMemo, type ReactNode } from "react";
 
-import { useDoc, useDocs, useEngine } from "@/client/sync/react";
-import { withMastered, withMorePractice } from "@/client/tracker/progress";
+import { useDoc, useDocs } from "@/client/sync/react";
 import { useAnswers, useQuestions } from "@/client/tracker/questions";
 import { useRestoreScroll } from "@/client/tracker/ui-state";
 import { getSubject } from "@/content";
 import { londonToday, pct } from "@/lib/dates";
 import { asProgress } from "@/lib/docs";
 import { NoteLink } from "@/features/notes/links";
+import { QuestionCard } from "@/features/questions/question-card";
+import { DecisionButtons } from "./decision";
 import { cn } from "@/ui/cn";
 
-import { improveModel, pointName, reviewMeta, type AnswerDoc, type QuestionDoc } from "./model";
+import { improveModel, pointName, reviewMeta } from "./model";
 
 function Panel({ title, note, children }: { title: string; note: string; children: ReactNode }) {
   return (
@@ -28,54 +29,6 @@ function Panel({ title, note, children }: { title: string; note: string; childre
 
 function PointList({ children }: { children: ReactNode }) {
   return <ul className="divide-y divide-line rounded-2xl border border-line bg-surface px-4 text-sm shadow-card">{children}</ul>;
-}
-
-/** Legacy `master` / `more` buttons for a point that has had three correct in a row. */
-export function DecisionButtons({ sid, pid, label }: { sid: string; pid: string; label: string }) {
-  const engine = useEngine();
-  const ready = useDocs((s) => s.phase === "ready");
-  const path = `progress/${sid}`;
-  return (
-    <div role="group" aria-label={`Decide on ${label}`} className="inline-flex shrink-0 gap-1 text-xs font-semibold">
-      <button
-        type="button"
-        disabled={!ready}
-        className="rounded-md bg-done px-2.5 py-1.5 text-on-fill transition active:scale-95 disabled:opacity-50 motion-reduce:active:scale-100"
-        onClick={() => engine.update(path, (doc) => withMastered(doc, pid))}
-      >
-        Mastered
-      </button>
-      <button
-        type="button"
-        disabled={!ready}
-        className="rounded-md bg-work px-2.5 py-1.5 text-on-fill transition active:scale-95 disabled:opacity-50 motion-reduce:active:scale-100"
-        onClick={() => engine.update(path, (doc) => withMorePractice(doc, pid, londonToday()))}
-      >
-        More practice
-      </button>
-    </div>
-  );
-}
-
-/** A question waiting to be gone over again. Answering them comes back with Today's 7 (PLAN.md M7). */
-function WaitingQuestion({ id, q, a }: { id: string; q: QuestionDoc; a: AnswerDoc | undefined }) {
-  const marks = Number(q.marks) || 0;
-  return (
-    <article className="rounded-2xl border border-line bg-surface p-4 shadow-card" data-question={id}>
-      <div className="flex flex-wrap items-baseline justify-between gap-2 text-xs text-muted">
-        <span>{q.label ?? ""}</span>
-        <span>
-          {marks} mark{marks === 1 ? "" : "s"}
-        </span>
-      </div>
-      <p className="mt-2 whitespace-pre-wrap">{q.q ?? ""}</p>
-      {a ? (
-        <p className="mt-2 text-sm text-muted">
-          Last try: {a.aw}/{a.mx}
-        </p>
-      ) : null}
-    </article>
-  );
 }
 
 /** Legacy `renderImprove`: what needs work, what's ready for a decision, questions to redo and what's mastered. */
@@ -156,7 +109,7 @@ export function ImproveView({ sid }: { sid: string }) {
           <div className="space-y-3">
             {model.waiting.map((id) => {
               const q = questions[id];
-              return q ? <WaitingQuestion key={id} id={id} q={q} a={answers[id]} /> : null;
+              return q && q.q ? <QuestionCard key={id} id={id} q={{ ...q, marks: Number(q.marks) || 1, q: q.q }} /> : null;
             })}
           </div>
         ) : (

@@ -10,6 +10,7 @@ export interface QuestionDoc {
   q?: string;
   marks?: number;
   scheme?: string[];
+  notes?: string;
   src?: string;
   date?: string;
 }
