@@ -13,14 +13,14 @@ This file is the single source of truth for the scheduled rebuild runs. Every ru
 
 ```
 RUN LOCK:        running since 2026-11-11T20:43Z, session session_01Sm3c8ibPxjEJSSFEcpxsh8
-CURRENT:         M6 Screens I
-CURRENT STEPS:   M6
-  [ ] 1 Legacy note SVG sanitiser ported (dependency-free, safe by construction) with a parity test against the legacy cleanSvg on every SVG in data/notes (jsdom)
-  [ ] 2 Notes reader /notes/[pid]: prepared note from data/notes (server), AI note from the account, full legacy renderer (bold, tables, callouts, figures, quotes, essays, poems with marks, worked, terms, mistakes, exam), marks read, prev/next, back
-  [ ] 3 Spec view: summary + bars, filters, expand/collapse all, topic open/close with counts, status control, bulk Mark all done / Reset topic, Notes links (read tick), quiz bar
-  [ ] 4 Improvement view (stats, ready-for-decision Mastered / More practice, points with review meta, questions waiting, mastered list) + Practice papers grouped with Mark attempted (papers/done doc)
-  [ ] 5 e2e for tab, view, filter, exp, top, st, all, note, back, pdone, master, more; tick them in docs/PARITY.md
-LAST GREEN CI:   https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/42437508621 (M5)
+CURRENT:         M7 Screens II
+CURRENT STEPS:   M7
+  [ ] 1 Question card (qcard): typed answer, submit for marking via /api/ai/json markAnswer, result with mark-scheme ticks, explanation, tip, retry/cancel, decide; saves a/* and the spaced-review state m[pid] exactly like legacy submitQ
+  [ ] 2 Today's 7 view /today/[subject]: summary, gen (todaysSeven, saves q/* + daily/*), more7, questions; Improvement "questions waiting" use the same interactive card
+  [ ] 3 Review weaknesses (review, dec): reviewWeaknesses, rv/* doc, per-point decide
+  [ ] 4 Quizzes /quiz/[topic] (quiz, newquiz, submitquiz, retake) and AI notes (wnote) in the reader; perm becomes a sign-in / friendly error
+  [ ] 5 e2e with the mocked AI for gen, more7, submit, retry, cancel, review, dec, quiz, newquiz, submitquiz, retake, wnote; tick them in docs/PARITY.md
+LAST GREEN CI:   https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/43099068474 (M6)
 LAST RUN ENDED:  (no runs yet)
 ```
 
@@ -188,7 +188,7 @@ Tick a box only when its acceptance checks pass in CI. Rough size: 1 to 2 milest
   - Tokens (CSS variables), typography, flicker-free dark mode (inline script in `<head>` sets the `dark` class before paint; System/Light/Dark toggle), the layout with subject tabs, and the components with micro-interactions: button press/hover, card lift, checklist toggle spring, input focus, toast.
   - Accessibility: visible focus, AA contrast, keyboard paths, `aria-*`, and `prefers-reduced-motion`.
   - Accept when: Playwright checks there's no theme flash (no class change after first paint), axe has no serious violations, and screenshots at 375 px and 1280 px are attached to CI.
-- [ ] **M6 Screens I.**
+- [x] **M6 Screens I.**
   - Spec view (papers, then topics, then points; the 3-way status control; filters; expand all; bulk), Improvement view, Notes reader (renders the existing note JSON exactly; study the legacy renderer, including `SAFE_PAINT`/`SVG_TAGS` sanitising for note images), and Practice papers (open the PDF, mark as done).
   - Accept when: those parity items are ticked in `docs/PARITY.md`, with e2e coverage of each action.
 - [ ] **M7 Screens II.**
@@ -236,3 +236,4 @@ Newest at the bottom. One or two lines per run: date, milestones finished, anyth
 - 2026-11-08 (scheduled run): M3 done. `GET/PUT /api/docs` (compare-and-set versions, conflicts return the server copy, deltas include deletions), `/api/docs/import|export` (old export format; big files split in the browser), `data/updates.json` applied once per account at sign-in and on full load (advisory lock), `SyncEngine` + Zustand store with a pluggable outbox (memory now), 3-way progress merge, status control on `/spec/[subject]`, Backup panel on the dashboard. 80 unit + 11 e2e green: https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/42436147449. Decisions: practice-paper "done" dates will live in a new `papers/done` doc; the legacy localStorage import is not possible across sites (PARITY marks it n/a: use Back up + Import).
 - 2026-11-08 (scheduled run): M4 done. Decision: `/api/ai/json` takes `{ task, input }` (todaysSeven, markAnswer, reviewWeaknesses, writeNote, writeQuiz, markQuiz) and the **server** builds the prompt from the extracted legacy templates, so the Gemini key can't be used as an open proxy. Today's 7 picks points server-side from the saved `progress/{sid}` with the legacy sort. Tests evaluate the legacy template + legacy code from index.html in a VM and require identical prompts. Mock model behind `AI_MOCK=1` (never on Vercel) for e2e; optional `AI_ALLOWED_EMAILS`. Green: https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/42436626971.
 - 2026-11-08 (scheduled run): M5 done. Tokens in `app/globals.css` (AA-checked light/dark), inline theme script + System/Light/Dark radio toggle, `TrackerShell` (subject tabs + view chips; routes `/spec|/papers/[subject]` public, `/improve|/today/[subject]` gated placeholders), `motion` spring on the status control, Card lift, Toasts, skip link. Playwright checks no theme flash, axe (no serious/critical, light + dark, signed in and out) and uploads a `screenshots` artifact (375/1280, light/dark): https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/42437508621. Note for M11: the theme script is inline, so the CSP needs its hash or a nonce.
+- 2026-11-11 (scheduled run, started late at 20:43 UTC; the 2026-11-08 run's lock was stale and no runs happened on 11-09/11-10): M6 done. Dependency-free note SVG sanitiser (`src/lib/notes/svg.ts`, fails closed on DOCTYPE/unknown entities/prefixed elements) proven identical to the legacy `cleanSvg` (jsdom, dev-only) on all 1,927 figures in data/notes; notes reader `/notes/[pid]` (prepared notes read on the server, `outputFileTracingIncludes` for data/notes), spec view, Improvement view, practice papers (`papers/done`), placeholder `/quiz/[topic]`. 166 unit + 25 e2e green: https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/43099068474. Decisions: spec filter/open topics/Back target live in memory only (lost on reload, as in the legacy tracker); Improvement "questions waiting" are read-only cards until M7; note figures always sit on white so legacy colours stay readable in dark mode. GitHub Actions runs sat queued for ~25 min at the start of this run, then recovered.
