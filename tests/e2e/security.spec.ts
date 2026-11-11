@@ -19,7 +19,7 @@ async function watchCsp(page: Page): Promise<void> {
 
 const violations = (page: Page) => page.evaluate(() => window.__csp);
 
-test("pages send a nonce CSP and hardening headers; APIs are locked down", async ({ page, request }) => {
+test("pages send a nonce CSP and hardening headers; APIs are locked down", async ({ request }) => {
   const res = await request.get("/spec/phy");
   const csp = res.headers()["content-security-policy"] ?? "";
   expect(csp).toMatch(/script-src 'self' 'nonce-[A-Za-z0-9+/=]+' 'strict-dynamic'/);
