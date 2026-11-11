@@ -13,12 +13,12 @@ This file is the single source of truth for the scheduled rebuild runs. Every ru
 
 ```
 RUN LOCK:        running since 2026-11-11T21:49Z, session session_01Sm3c8ibPxjEJSSFEcpxsh8 (extra run asked for by the owner; must end before 01:10 UK)
-CURRENT:         M9 PWA + offline
-CURRENT STEPS:   M9
-  [ ] 1 Sync engine works offline: IndexedDB outbox + offline snapshot (idb), online/offline aware, flush on reconnect and on start; header "Saved" / "Syncing…" / "Offline: N changes waiting"; sign-out sends waiting changes then clears this device's copy
-  [ ] 2 Serwist service worker (sw/sw.ts, @serwist/next with `next build --webpack`): app shell precache, pages cached on visit, notes + question bank stale-while-revalidate, PDFs cache-first once opened, /api never cached, /~offline fallback; manifest + icons
-  [ ] 3 e2e: offline tick, reload offline, offline page, back online and the server has the changes
-LAST GREEN CI:   https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/43101944250 (M8)
+CURRENT:         M10 PDF report
+CURRENT STEPS:   M10
+  [ ] 1 Report data (pure, unit-tested): student email, date, per-subject mastery and counts, needs-work list, recent marks, streak and study time, from the same metrics as the dashboard
+  [ ] 2 "Download progress PDF" button on the dashboard: @react-pdf/renderer loaded only when clicked, built in the browser (works offline), styled cover + sections
+  [ ] 3 e2e: download the PDF, check it is non-empty and contains the email and subject names
+LAST GREEN CI:   https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/43107147412 (M9)
 LAST RUN ENDED:  2026-11-11T21:35Z (M6, M7, M8 done; M9 next)
 ```
 
@@ -195,7 +195,7 @@ Tick a box only when its acceptance checks pass in CI. Rough size: 1 to 2 milest
 - [x] **M8 Live progress dashboard.**
   - Animated SVG: per-subject mastery rings, done / needs work / not done bars, questions answered, marks %, streak, and study minutes. Study minutes come from a new `stats/time` doc, logged from active time on question and quiz screens, paused when the tab is hidden.
   - Accept when: e2e ticking an item changes the numbers with a transition, and unit tests cover the metric maths.
-- [ ] **M9 PWA + offline.**
+- [x] **M9 PWA + offline.**
   - Serwist: precache the app shell, cache `data/questions.json`, notes and papers at runtime (papers cache-first once opened), add an offline fallback page, a manifest and icons, the IndexedDB outbox and replay, and a header status ("Saved", "Offline: 3 changes waiting", "Syncing...").
   - Accept when: Playwright goes offline, ticks items, reloads (the app still loads), goes back online, and the server has the changes.
 - [ ] **M10 PDF report.**
@@ -237,3 +237,4 @@ Newest at the bottom. One or two lines per run: date, milestones finished, anyth
 - 2026-11-11 (scheduled run, started late at 20:43 UTC; the 2026-11-08 run's lock was stale and no runs happened on 11-09/11-10): M6 done. Dependency-free note SVG sanitiser (`src/lib/notes/svg.ts`, fails closed on DOCTYPE/unknown entities/prefixed elements) proven identical to the legacy `cleanSvg` (jsdom, dev-only) on all 1,927 figures in data/notes; notes reader `/notes/[pid]` (prepared notes read on the server, `outputFileTracingIncludes` for data/notes), spec view, Improvement view, practice papers (`papers/done`), placeholder `/quiz/[topic]`. 166 unit + 25 e2e green: https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/43099068474. Decisions: spec filter/open topics/Back target live in memory only (lost on reload, as in the legacy tracker); Improvement "questions waiting" are read-only cards until M7; note figures always sit on white so legacy colours stay readable in dark mode. GitHub Actions runs sat queued for ~25 min at the start of this run, then recovered.
 - 2026-11-11 (same run): M7 done. Question card (legacy qcard/submitQ/recordResult, checked against the legacy code in a VM), Today's 7 (gen; more7 uses untried bank questions first, as legacy), weakness review (review/dec, `rv/*`), topic quizzes `/quiz/[topic]` (written on first open, 80% pass marks the topic Done), AI notes written and saved in the reader when there is no prepared note. All parity actions now ticked. `AI_MOCK=1` is set only on the CI e2e step. 29 e2e green: https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/43101140040. Decisions: the weakness review says "{board} terms to use" instead of always "AQA"; question drafts are kept in memory while the page is open (like legacy `DR`).
 - 2026-11-11 (same run): M8 done. Metric maths (`src/lib/tracker/metrics.ts`: mastery, counts, answered incl. quiz answers, marks %, streak = days with an answer, quiz or 1+ min of study, counted back from today or yesterday, London days), `useStudyTimer` (Today's 7, Improvement, quizzes; pauses when hidden or idle for 2 min; saves every 30 s and on leaving; max 6 h a day) into the new `stats/time` doc `{days:{YYYY-MM-DD:seconds},v:1}`, animated `Ring`/`Counter`/`StackedBar` (motion, reduced-motion aware), dashboard with overall and per-subject rings. 32 e2e green: https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/43101944250. Decision: `stats/time` is last-writer-wins, so two devices studying at the same moment can lose a few seconds (acceptable).
+- 2026-11-11 (extra run asked for by the owner, 21:49 to before 01:10 UK so it can't overlap the scheduled run): M9 done. Sync engine keeps its outbox and a snapshot of the last server copy in IndexedDB (`idb`, one record per account), opens from the snapshot when there is no connection, holds changes while offline and sends them on reconnect; header shows Saved / Syncing… / "Offline: N changes waiting"; sign-out sends waiting changes, then clears this device's copy. Serwist via `@serwist/next` with `next build --webpack` (decision: the webpack plugin is the stable route; `@serwist/turbopack` is still experimental), SW source in `sw/sw.ts` with its own tsconfig; /api never cached; notes + question bank stale-while-revalidate; PDFs cache-first once opened; `/~offline` fallback; only icons/ from public/ are precached (notes and PDFs would be ~100 MB). Manifest + generated icons in public/icons. Decision: no Background Sync; the page sends waiting changes on reconnect and on start. 34 e2e green: https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/43107147412.
