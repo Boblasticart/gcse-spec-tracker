@@ -8,7 +8,7 @@ import { expectSaved, signUpAndVerify } from "./helpers";
 
 async function pdfText(path: string): Promise<string> {
   const { getDocument } = await import("pdfjs-dist/legacy/build/pdf.mjs");
-  const doc = await getDocument({ data: new Uint8Array(await readFile(path)), isEvalSupported: false, disableFontFace: true }).promise;
+  const doc = await getDocument({ data: new Uint8Array(await readFile(path)), disableFontFace: true }).promise;
   let text = "";
   for (let i = 1; i <= doc.numPages; i++) {
     const content = await (await doc.getPage(i)).getTextContent();
