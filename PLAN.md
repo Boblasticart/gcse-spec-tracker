@@ -12,14 +12,14 @@ This file is the single source of truth for the scheduled rebuild runs. Every ru
 ## 0. Status (every run reads this first and keeps it updated)
 
 ```
-RUN LOCK:        running since 2026-11-11T21:49Z, session session_01Sm3c8ibPxjEJSSFEcpxsh8 (extra run asked for by the owner; must end before 01:10 UK)
-CURRENT:         M11 Hardening + docs
-CURRENT STEPS:   M11
-  [ ] 1 Security headers with a nonce-based CSP (theme script and Next scripts get the nonce), frame-ancestors 'none', Referrer-Policy, Permissions-Policy, HSTS in production; e2e checks the headers and that no CSP errors fire
-  [ ] 2 Account: delete my account (password re-check, deletes user, sessions, codes, docs, usage; clears this device) and full data export (all docs incl. new ones); AuthEvent pruning after 30 days; friendly error and not-found pages
-  [ ] 3 README owner setup guide + "moving from the GitHub Pages version"; docs/SECURITY.md listing the threat checks
-LAST GREEN CI:   https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/43109980322 (M10)
-LAST RUN ENDED:  2026-11-11T21:35Z (M6, M7, M8 done; M9 next)
+RUN LOCK:        none
+CURRENT:         M12 Go live (waiting on the owner)
+CURRENT STEPS:   M12
+  [ ] 1 Owner finishes "Waiting on the owner" items 1 to 5 and checks the Vercel preview of `rebuild` (sign up, tick points, Today's 7, a quiz, the PDF, offline)
+  [ ] 2 Owner approves (item 8 below says how). Until then, runs only check for approval, then stop and say so briefly
+  [ ] 3 After approval: fast-forward `main` to `rebuild` (GitHub Pages keeps serving the legacy files on `main`, so the old site stays reachable), confirm the production deploy works, tick M12
+LAST GREEN CI:   https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/43113392780 (M11)
+LAST RUN ENDED:  2026-11-11T22:45Z (extra run: M9, M10, M11 done; M12 needs the owner)
 ```
 
 **How the status block works:**
@@ -201,7 +201,7 @@ Tick a box only when its acceptance checks pass in CI. Rough size: 1 to 2 milest
 - [x] **M10 PDF report.**
   - A "Download progress PDF" button builds a styled report client-side: cover, per-subject mastery, needs-work list, recent marks, streak and study time. It works offline.
   - Accept when: e2e downloads the PDF, it is non-empty, and it contains the student's email and the subject names.
-- [ ] **M11 Hardening + docs.**
+- [x] **M11 Hardening + docs.**
   - Security headers and CSP review, account deletion and full data export, AuthEvent pruning, and error pages.
   - Rewrite the README with an owner setup guide (Vercel, Gmail app password, Supabase connection strings, env vars) and a "moving from the GitHub Pages version" section (sign up, then Import the old export file).
   - Accept when: CI is green and `docs/SECURITY.md` lists the threat checks done.
@@ -221,6 +221,7 @@ Needed by **M2** (so the Vercel preview works) and before **M12**. Runs: keep th
 5. **Vercel environment variables:** `DATABASE_URL`, `DIRECT_URL`, `GMAIL_USER`, `GMAIL_APP_PASSWORD`, `GEMINI_API_KEY`, `OTP_PEPPER` and `SESSION_SECRET` (each a long random string; runs give the owner a one-line way to make them), and `APP_URL` (the Vercel URL).
 6. **Optional AI settings** (Vercel environment variables): `AI_ALLOWED_EMAILS` = your own email address(es), comma-separated, so only you can spend your Gemini allowance (recommended, because anyone can make an account); `AI_DAILY_CAP` (default 150 per student per day); `GEMINI_MODEL` (default `gemini-flash-latest`).
 7. **Delete the leftover test branch `ci-probe`** on GitHub (Branches page, then the bin icon). It is harmless but untidy.
+8. **Approve going live (M12):** when the Vercel preview of the `rebuild` branch works for you, edit this file on GitHub and add a line here saying `M12 approved by the owner on <date>` (or tell Claude in a chat). The next run then makes it live. Nothing goes live before that. The full setup guide is now in the README ("Setting up the new app").
 
 ## 7. Run log
 
@@ -239,3 +240,4 @@ Newest at the bottom. One or two lines per run: date, milestones finished, anyth
 - 2026-11-11 (same run): M8 done. Metric maths (`src/lib/tracker/metrics.ts`: mastery, counts, answered incl. quiz answers, marks %, streak = days with an answer, quiz or 1+ min of study, counted back from today or yesterday, London days), `useStudyTimer` (Today's 7, Improvement, quizzes; pauses when hidden or idle for 2 min; saves every 30 s and on leaving; max 6 h a day) into the new `stats/time` doc `{days:{YYYY-MM-DD:seconds},v:1}`, animated `Ring`/`Counter`/`StackedBar` (motion, reduced-motion aware), dashboard with overall and per-subject rings. 32 e2e green: https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/43101944250. Decision: `stats/time` is last-writer-wins, so two devices studying at the same moment can lose a few seconds (acceptable).
 - 2026-11-11 (extra run asked for by the owner, 21:49 to before 01:10 UK so it can't overlap the scheduled run): M9 done. Sync engine keeps its outbox and a snapshot of the last server copy in IndexedDB (`idb`, one record per account), opens from the snapshot when there is no connection, holds changes while offline and sends them on reconnect; header shows Saved / Syncing… / "Offline: N changes waiting"; sign-out sends waiting changes, then clears this device's copy. Serwist via `@serwist/next` with `next build --webpack` (decision: the webpack plugin is the stable route; `@serwist/turbopack` is still experimental), SW source in `sw/sw.ts` with its own tsconfig; /api never cached; notes + question bank stale-while-revalidate; PDFs cache-first once opened; `/~offline` fallback; only icons/ from public/ are precached (notes and PDFs would be ~100 MB). Manifest + generated icons in public/icons. Decision: no Background Sync; the page sends waiting changes on reconnect and on start. 34 e2e green: https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/43107147412.
 - 2026-11-11 (extra run): M10 done. `buildReport` (pure, unit-tested) + `ReportDocument` (@react-pdf/renderer, Helvetica so no font downloads, cover + mastery by subject + needs work + recent marks + streak/study time), loaded only on click and built in the browser; works offline (e2e checks both). e2e reads the PDF text with pdfjs-dist (dev only). Fix: e2e sign-ups now each send their own `x-real-ip`, because the suite had grown past the 20-sign-ups-per-IP-per-hour limit. 36 e2e green: https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/43109980322.
+- 2026-11-11 (extra run): M11 done. Per-request nonce CSP from `proxy.ts` (`'strict-dynamic'`, `'wasm-unsafe-eval'` for the PDF layout engine, `connect-src` allows `data:` for the same reason, `upgrade-insecure-requests` only on https), hardening headers for every response, `default-src 'none'` on APIs, HSTS on production; Download all my data (`/api/account/export`, every doc) and Delete my account (`/api/account/delete`, password re-checked, cascade); auth events pruned after 30 days at most hourly from sign-up/sign-in; 404/error/global-error pages; README owner setup guide + `.env.example`; `docs/SECURITY.md`. 197 unit + 40 e2e green: https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/43113392780. Only M12 remains, and it needs the owner. Lock released at 22:45 UTC, well before the 01:10 scheduled run.
