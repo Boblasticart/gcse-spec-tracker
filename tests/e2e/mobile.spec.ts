@@ -53,6 +53,12 @@ async function check(page: Page, name: string): Promise<void> {
   const report = await overflowing(page);
   // Printed so the layout can be checked from the CI log.
   console.log(`MOBILE ${name} @${report.width}: scrollWidth=${report.scrollWidth} ${JSON.stringify(report.items)}`);
+  if (process.env.MOBILE_SHOTS === "1" && report.width === 390) {
+    const h = await page.evaluate(() => Math.min(document.documentElement.scrollHeight, 2400));
+    const jpg = await page.screenshot({ type: "jpeg", quality: 45, clip: { x: 0, y: 0, width: 390, height: h }, fullPage: true });
+    const b64 = jpg.toString("base64");
+    for (let i = 0; i < b64.length; i += 4000) console.log(`SHOT ${name} ${i / 4000} ${b64.slice(i, i + 4000)}`);
+  }
   expect(report.scrollWidth, `${name} scrolls sideways`).toBeLessThanOrEqual(report.width);
   expect(report.items, `${name} has boxes wider than the screen`).toEqual([]);
 }
