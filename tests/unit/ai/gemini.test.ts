@@ -8,7 +8,7 @@ const req = { task: "markAnswer" as const, prompt: "p", input: {} };
 
 async function kindOf(status: number, body: unknown): Promise<string> {
   try {
-    await geminiModel({ apiKey: "k", fetchImpl: reply(status, body) })(req);
+    await geminiModel({ apiKey: "k", retryDelaysMs: [], fetchImpl: reply(status, body) })(req);
     return "ok";
   } catch (e) {
     return e instanceof ModelError ? e.kind : "other";
@@ -47,5 +47,18 @@ describe("Gemini client", () => {
     expect(await geminiModel({ apiKey: "k", fetchImpl: f })(req)).toBe("{}");
     expect(bodies[0]?.generationConfig.thinkingConfig).toEqual({ thinkingBudget: 1024 });
     expect(bodies[1]?.generationConfig.thinkingConfig).toBeUndefined();
+  });
+
+  it("retries when Google says the model is overloaded", async () => {
+    let n = 0;
+    const f = (async () => {
+      n++;
+      return n < 3
+        ? new Response(JSON.stringify({ error: { message: "The model is overloaded." } }), { status: 503 })
+        : new Response(JSON.stringify({ candidates: [{ content: { parts: [{ text: "{}" }] } }] }));
+    }) as typeof fetch;
+    expect(await geminiModel({ apiKey: "k", retryDelaysMs: [1, 1], fetchImpl: f })(req)).toBe("{}");
+    expect(n).toBe(3);
+    expect(await kindOf(503, {})).toBe("rate_limited");
   });
 });
