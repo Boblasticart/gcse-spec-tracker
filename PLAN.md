@@ -12,14 +12,14 @@ This file is the single source of truth for the scheduled rebuild runs. Every ru
 ## 0. Status (every run reads this first and keeps it updated)
 
 ```
-RUN LOCK:        running since 2026-11-12T01:17Z, session session_01Sm3c8kF6PP56NqsaJQDfVZ
+RUN LOCK:        none
 CURRENT:         M12 Go live (waiting on the owner)
 CURRENT STEPS:   M12
   [ ] 1 Owner finishes "Waiting on the owner" items 1 to 5 and checks the Vercel preview of `rebuild` (sign up, tick points, Today's 7, a quiz, the PDF, offline)
   [ ] 2 Owner approves (item 8 below says how). Until then, runs only check for approval, then stop and say so briefly
   [ ] 3 After approval: fast-forward `main` to `rebuild` (GitHub Pages keeps serving the legacy files on `main`, so the old site stays reachable), confirm the production deploy works, tick M12
-LAST GREEN CI:   https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/43113392780 (M11)
-LAST RUN ENDED:  2026-11-11T22:45Z (extra run: M9, M10, M11 done; M12 needs the owner)
+LAST GREEN CI:   https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/43114016751 (M11 + plan update)
+LAST RUN ENDED:  2026-11-12T01:20Z (scheduled run: no M12 approval yet, nothing to build)
 ```
 
 **How the status block works:**
@@ -241,3 +241,4 @@ Newest at the bottom. One or two lines per run: date, milestones finished, anyth
 - 2026-11-11 (extra run asked for by the owner, 21:49 to before 01:10 UK so it can't overlap the scheduled run): M9 done. Sync engine keeps its outbox and a snapshot of the last server copy in IndexedDB (`idb`, one record per account), opens from the snapshot when there is no connection, holds changes while offline and sends them on reconnect; header shows Saved / Syncing… / "Offline: N changes waiting"; sign-out sends waiting changes, then clears this device's copy. Serwist via `@serwist/next` with `next build --webpack` (decision: the webpack plugin is the stable route; `@serwist/turbopack` is still experimental), SW source in `sw/sw.ts` with its own tsconfig; /api never cached; notes + question bank stale-while-revalidate; PDFs cache-first once opened; `/~offline` fallback; only icons/ from public/ are precached (notes and PDFs would be ~100 MB). Manifest + generated icons in public/icons. Decision: no Background Sync; the page sends waiting changes on reconnect and on start. 34 e2e green: https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/43107147412.
 - 2026-11-11 (extra run): M10 done. `buildReport` (pure, unit-tested) + `ReportDocument` (@react-pdf/renderer, Helvetica so no font downloads, cover + mastery by subject + needs work + recent marks + streak/study time), loaded only on click and built in the browser; works offline (e2e checks both). e2e reads the PDF text with pdfjs-dist (dev only). Fix: e2e sign-ups now each send their own `x-real-ip`, because the suite had grown past the 20-sign-ups-per-IP-per-hour limit. 36 e2e green: https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/43109980322.
 - 2026-11-11 (extra run): M11 done. Per-request nonce CSP from `proxy.ts` (`'strict-dynamic'`, `'wasm-unsafe-eval'` for the PDF layout engine, `connect-src` allows `data:` for the same reason, `upgrade-insecure-requests` only on https), hardening headers for every response, `default-src 'none'` on APIs, HSTS on production; Download all my data (`/api/account/export`, every doc) and Delete my account (`/api/account/delete`, password re-checked, cascade); auth events pruned after 30 days at most hourly from sign-up/sign-in; 404/error/global-error pages; README owner setup guide + `.env.example`; `docs/SECURITY.md`. 197 unit + 40 e2e green: https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/43113392780. Only M12 remains, and it needs the owner. Lock released at 22:45 UTC, well before the 01:10 scheduled run.
+- 2026-11-12 (scheduled run): No M12 approval found on `rebuild` or `main`, so no changes made. Latest CI on `rebuild` green. `ci-probe` branch still exists (owner item 7).
