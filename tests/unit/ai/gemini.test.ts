@@ -35,4 +35,17 @@ describe("Gemini client", () => {
     expect(await kindOf(500, { error: { message: "boom" } })).toBe("failed");
     expect(await kindOf(400, { error: { message: "Invalid JSON payload" } })).toBe("failed");
   });
+
+  it("asks for short thinking, and retries without it if the model doesn't support the setting", async () => {
+    const bodies: { generationConfig: { thinkingConfig?: unknown } }[] = [];
+    const f = (async (_u: unknown, init?: RequestInit) => {
+      const b = JSON.parse(String(init?.body)) as { generationConfig: { thinkingConfig?: unknown } };
+      bodies.push(b);
+      if (b.generationConfig.thinkingConfig) return new Response(JSON.stringify({ error: { message: "Thinking is not supported by this model." } }), { status: 400 });
+      return new Response(JSON.stringify({ candidates: [{ content: { parts: [{ text: "{}" }] } }] }));
+    }) as typeof fetch;
+    expect(await geminiModel({ apiKey: "k", fetchImpl: f })(req)).toBe("{}");
+    expect(bodies[0]?.generationConfig.thinkingConfig).toEqual({ thinkingBudget: 1024 });
+    expect(bodies[1]?.generationConfig.thinkingConfig).toBeUndefined();
+  });
 });

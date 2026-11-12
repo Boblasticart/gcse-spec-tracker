@@ -6,6 +6,8 @@ export interface GeminiOptions {
   apiKey: string;
   model?: string;
   timeoutMs?: number;
+  /** Max thinking tokens (null = the model's default). */
+  thinkingBudget?: number | null;
   fetchImpl?: typeof fetch;
 }
 
@@ -15,20 +17,32 @@ interface GeminiReply {
 }
 
 /** Gemini in JSON mode, as the old Cloudflare Worker called it. */
-export function geminiModel({ apiKey, model = "gemini-flash-latest", timeoutMs = 90_000, fetchImpl = fetch }: GeminiOptions): Model {
+export function geminiModel({ apiKey, model = "gemini-flash-latest", timeoutMs = 100_000, thinkingBudget = 1024, fetchImpl = fetch }: GeminiOptions): Model {
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`;
+  const call = (prompt: string, withThinking: boolean): Promise<Response> =>
+    fetchImpl(url, {
+      method: "POST",
+      headers: { "content-type": "application/json", "x-goog-api-key": apiKey },
+      body: JSON.stringify({
+        contents: [{ role: "user", parts: [{ text: prompt }] }],
+        generationConfig: {
+          responseMimeType: "application/json",
+          temperature: 0.3,
+          // Keep "thinking" short: long thinking made answers take over 90 seconds.
+          ...(withThinking ? { thinkingConfig: { thinkingBudget: thinkingBudget } } : {}),
+        },
+      }),
+      signal: AbortSignal.timeout(timeoutMs),
+    });
   return async ({ prompt }) => {
     let res: Response;
     try {
-      res = await fetchImpl(url, {
-        method: "POST",
-        headers: { "content-type": "application/json", "x-goog-api-key": apiKey },
-        body: JSON.stringify({
-          contents: [{ role: "user", parts: [{ text: prompt }] }],
-          generationConfig: { responseMimeType: "application/json", temperature: 0.3 },
-        }),
-        signal: AbortSignal.timeout(timeoutMs),
-      });
+      res = await call(prompt, thinkingBudget !== null);
+      // Models that don't accept a thinking setting: ask again without it.
+      if (res.status === 400 && thinkingBudget !== null) {
+        const peek = (await res.clone().json().catch(() => null)) as GeminiReply | null;
+        if (/thinking/i.test(peek?.error?.message ?? "")) res = await call(prompt, false);
+      }
     } catch (err) {
       const timedOut = (err as Error).name === "TimeoutError";
       throw new ModelError("failed", `Gemini request failed: ${(err as Error).message}`, timedOut ? 504 : 0);
