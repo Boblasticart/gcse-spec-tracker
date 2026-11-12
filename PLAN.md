@@ -13,13 +13,10 @@ This file is the single source of truth for the scheduled rebuild runs. Every ru
 
 ```
 RUN LOCK:        none
-CURRENT:         M12 Go live (waiting on the owner)
-CURRENT STEPS:   M12
-  [x] 1 Owner finishes "Waiting on the owner" items 1 to 5 and checks the Vercel preview of `rebuild` (sign up, tick points, Today's 7, a quiz, the PDF, offline)
-  [x] 2 Owner approves (item 8 below says how). Until then, runs only check for approval, then stop and say so briefly
-  [ ] 3 (main fast-forwarded to rebuild on 2026-11-12, Vercel production build and GitHub Pages build both green; waiting for the owner to confirm the production address works, then tick M12) After approval: fast-forward `main` to `rebuild` (GitHub Pages keeps serving the legacy files on `main`, so the old site stays reachable), confirm the production deploy works, tick M12
-LAST GREEN CI:   https://github.com/Boblasticart/gcse-spec-tracker/actions/runs/43114016751 (M11 + plan update)
-LAST RUN ENDED:  2026-11-12T01:20Z (scheduled run: no M12 approval yet, nothing to build)
+CURRENT:         ALL MILESTONES DONE (M0 to M12). The rebuild is finished: runs should only confirm this and stop.
+CURRENT STEPS:   none
+LAST GREEN CI:   https://github.com/Boblasticart/gcse-spec-tracker/actions/runs (rebuild, 2026-11-12, all green)
+LAST RUN ENDED:  2026-11-12 (live chat: M12 go-live confirmed by the owner)
 ```
 
 **How the status block works:**
@@ -205,7 +202,7 @@ Tick a box only when its acceptance checks pass in CI. Rough size: 1 to 2 milest
   - Security headers and CSP review, account deletion and full data export, AuthEvent pruning, and error pages.
   - Rewrite the README with an owner setup guide (Vercel, Gmail app password, Supabase connection strings, env vars) and a "moving from the GitHub Pages version" section (sign up, then Import the old export file).
   - Accept when: CI is green and `docs/SECURITY.md` lists the threat checks done.
-- [ ] **M12 Go live.**
+- [x] **M12 Go live.**
   - The owner tests the Vercel preview of `rebuild`; after their OK, fast-forward `main` to `rebuild`.
   - Keep the old static site reachable (e.g. `public/legacy/` or leave GitHub Pages on `main` as is).
   - Accept when: the owner confirms that production works.
@@ -245,4 +242,5 @@ Newest at the bottom. One or two lines per run: date, milestones finished, anyth
 - 2026-11-12 (live chat with the owner, no lock needed for small fixes): owner set up Vercel (project `gcse-spec-tracker`; a duplicate `gcse-spec-tracker-ocwb` can be deleted), Supabase strings, Gmail app password and Gemini key (new `AQ.` format; we send it as `x-goog-api-key`, which supports it). Fixes: Vercel Framework Preset had to be Next.js; the origin check now also accepts Vercel's own deployment addresses (`VERCEL_URL`, `VERCEL_BRANCH_URL`, `VERCEL_PROJECT_PRODUCTION_URL`), which fixed "This request did not come from the tracker" on the preview. Sign-up with an emailed code works on https://gcse-spec-tracker-git-rebuild-boblasticart.vercel.app. Vercel builds of `main` fail until go-live (expected). Next: owner tests the features, then approves M12.
 - 2026-11-12 (live chat): fixed on the preview: Vercel build now runs the full `npm run build` (copies data/ and papers/ into public/, fixing PDF and question-bank 404s); Gemini key rejections, timeouts, overloads and unusable replies now show a short reference code; Gemini thinking capped (1024 tokens, with fallback), maxOutputTokens 32768, two retries on 503/500, replies as bare arrays or with renamed fields accepted. Owner reports every feature tested and working on https://gcse-spec-tracker-git-rebuild-boblasticart.vercel.app.
 - 2026-11-12 (live chat): owner approved M12. `main` fast-forwarded to `rebuild` (2e5793f); legacy files unchanged; Vercel production build green (https://vercel.com/boblasticart/gcse-spec-tracker/DL5DhjrJcMaZP45UhG5doxnfi1Vr) and the GitHub Pages build of `main` green. M12 is ticked once the owner confirms the production address works.
+- 2026-11-12 (live chat): M12 done. The owner set APP_URL to https://gcse-spec-tracker.vercel.app, redeployed production from `main`, and confirmed everything works on the live site. Every milestone is ticked; the owner can delete the "GCSE tracker rebuild" scheduled task. The old GitHub Pages site still runs from the unchanged legacy files on `main`.
 
