@@ -55,7 +55,7 @@ export function PapersView({ sid }: { sid: string }) {
       </div>
       {groups.map((g) => (
         <section key={g.name} className="mt-8" aria-label={g.name}>
-          <h2 className="flex items-baseline justify-between gap-3 font-heading text-xl font-semibold">
+          <h2 className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-0.5 font-heading text-xl font-semibold">
             <span>{g.name}</span>
             <small className="shrink-0 font-sans text-sm font-medium text-muted">
               {g.papers.filter((p) => done[p.key]).length}/{g.papers.length} attempted
@@ -65,28 +65,28 @@ export function PapersView({ sid }: { sid: string }) {
             {g.papers.map((p) => {
               const when = done[p.key];
               return (
-                <li key={p.key} data-paper={p.key} className={cn("flex flex-wrap items-center gap-3 px-4 py-3", when && "bg-done-soft/60")}>
+                <li key={p.key} data-paper={p.key} className={cn("flex flex-col gap-3 px-4 py-3 sm:flex-row sm:items-center", when && "bg-done-soft/60")}>
                   <div className="min-w-0 flex-1">
                     <div className="font-medium">{p.title}</div>
                     <div className="text-sm text-muted">
                       {p.pages} pages · {p.marks} marks{when ? ` · attempted ${shortDay(when)}` : ""}
                     </div>
                   </div>
-                  <div className="flex shrink-0 gap-2">
+                  <div className="flex gap-2 sm:shrink-0">
                     <button
                       type="button"
                       aria-pressed={!!when}
                       disabled={!!user && !ready}
                       onClick={() => toggle(p.key)}
                       className={cn(
-                        "rounded-lg border px-3 py-2 text-sm font-semibold transition active:scale-95 disabled:opacity-50 motion-reduce:active:scale-100",
+                        "flex-1 rounded-lg border px-3 py-2 text-sm font-semibold transition sm:flex-none active:scale-95 disabled:opacity-50 motion-reduce:active:scale-100",
                         when ? "border-transparent bg-done text-on-fill" : "border-line-strong bg-surface hover:bg-subtle",
                       )}
                     >
                       {when ? "Attempted" : "Mark attempted"}
                       <span className="sr-only">: {p.title}</span>
                     </button>
-                    <a href={`/${p.url}`} target="_blank" rel="noopener" className={buttonClass("primary", "px-3 py-2")}>
+                    <a href={`/${p.url}`} target="_blank" rel="noopener" className={buttonClass("primary", "flex-1 px-3 py-2 sm:flex-none")}>
                       Open PDF<span className="sr-only">: {p.title} (opens in a new tab)</span>
                     </a>
                   </div>

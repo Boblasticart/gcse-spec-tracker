@@ -58,7 +58,7 @@ export function SpecView({ sid }: { sid: string }) {
 
       {papers.map((paper) => (
         <section key={paper.name} className="mt-8" aria-label={paper.name}>
-          <h2 className="flex items-baseline justify-between gap-3 font-heading text-xl font-semibold">
+          <h2 className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-0.5 font-heading text-xl font-semibold">
             <span>{paper.name}</span>
             <small className="shrink-0 font-sans text-sm font-medium text-muted">{paper.pctDone}% done</small>
           </h2>
@@ -84,7 +84,7 @@ export function SpecView({ sid }: { sid: string }) {
                     <div id={panelId} className="border-t border-line px-4">
                       <ul className="divide-y divide-line text-sm">
                         {row.points.map((p) => (
-                          <li key={p.id} data-point={p.id} className="flex flex-wrap items-center justify-between gap-2 py-2.5">
+                          <li key={p.id} data-point={p.id} className="flex flex-col gap-2 py-3 sm:flex-row sm:items-center sm:justify-between sm:py-2.5">
                             <span className="min-w-0 flex-1">
                               {p.text}{" "}
                               <NoteLink

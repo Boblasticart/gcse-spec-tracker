@@ -33,7 +33,7 @@ export function PointStatusControl({ sid, pid, label }: { sid: string; pid: stri
     <div
       role="group"
       aria-label={`Status of ${label}`}
-      className="inline-flex shrink-0 gap-0.5 rounded-lg border border-line bg-surface-2 p-0.5 text-xs font-semibold"
+      className="flex w-full shrink-0 gap-0.5 rounded-lg border border-line bg-surface-2 p-0.5 text-xs font-semibold sm:inline-flex sm:w-auto"
     >
       {STATUS_LABELS.map((text, i) => {
         const pressed = current === i;
@@ -45,7 +45,7 @@ export function PointStatusControl({ sid, pid, label }: { sid: string; pid: stri
             disabled={!!user && !ready}
             onClick={() => choose(i as PointStatus)}
             className={cn(
-              "relative rounded-md px-2.5 py-1.5 transition-colors disabled:opacity-50 active:scale-95 motion-reduce:active:scale-100",
+              "relative flex-1 rounded-md px-2.5 py-2 sm:flex-none sm:py-1.5 transition-colors disabled:opacity-50 active:scale-95 motion-reduce:active:scale-100",
               pressed ? ON_FILL[i] : "text-muted hover:bg-subtle hover:text-fg",
             )}
           >

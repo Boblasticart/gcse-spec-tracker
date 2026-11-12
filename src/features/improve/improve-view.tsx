@@ -12,14 +12,13 @@ import { asProgress } from "@/lib/docs";
 import { NoteLink } from "@/features/notes/links";
 import { QuestionCard } from "@/features/questions/question-card";
 import { DecisionButtons } from "./decision";
-import { cn } from "@/ui/cn";
 
 import { improveModel, pointName, reviewMeta } from "./model";
 
 function Panel({ title, note, children }: { title: string; note: string; children: ReactNode }) {
   return (
     <section className="mt-8" aria-label={title}>
-      <h2 className="flex items-baseline justify-between gap-3 font-heading text-xl font-semibold">
+      <h2 className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-0.5 font-heading text-xl font-semibold">
         <span>{title}</span>
         <small className="shrink-0 font-sans text-sm font-medium text-muted">{note}</small>
       </h2>
@@ -77,7 +76,7 @@ export function ImproveView({ sid }: { sid: string }) {
         <Panel title="Ready for your decision" note="3 correct in a row">
           <PointList>
             {model.ready.map((id) => (
-              <li key={id} data-point={id} className="flex flex-wrap items-center justify-between gap-2 py-2.5">
+              <li key={id} data-point={id} className="flex flex-col gap-1.5 py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-3 sm:py-2.5">
                 <span className="min-w-0 flex-1">{pointName(p, id)}</span>
                 <DecisionButtons sid={sid} pid={id} label={pointName(p, id)} />
               </li>
@@ -90,7 +89,7 @@ export function ImproveView({ sid }: { sid: string }) {
         {model.needsWork.length ? (
           <PointList>
             {model.needsWork.map((id) => (
-              <li key={id} data-point={id} className={cn("flex flex-wrap items-center justify-between gap-x-3 gap-y-1 py-2.5")}>
+              <li key={id} data-point={id} className="flex flex-col gap-1.5 py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-3 sm:py-2.5">
                 <span className="min-w-0 flex-1">
                   {pointName(p, id)}{" "}
                   <NoteLink pid={id} from="improve" className="ml-1 inline-flex rounded-md border border-line px-1.5 py-0.5 text-xs font-semibold text-accent-text hover:border-accent">
@@ -123,7 +122,7 @@ export function ImproveView({ sid }: { sid: string }) {
         <Panel title="Mastered" note="these come back later to keep them fresh">
           <PointList>
             {model.mastered.map((id) => (
-              <li key={id} data-point={id} className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 py-2.5">
+              <li key={id} data-point={id} className="flex flex-col gap-1.5 py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-3 sm:py-2.5">
                 <span className="min-w-0 flex-1">{pointName(p, id)}</span>
                 <span className="text-xs text-muted">{reviewMeta(p.m[id])}</span>
               </li>
