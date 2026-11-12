@@ -7,7 +7,7 @@ numbers). A unit test (`tests/unit/parity.test.ts`) fails if a legacy action, vi
 missing from this file.
 
 Tick an item only when the rebuild has it **and** an e2e test covers it. The milestone column says
-where it is planned (see `PLAN.md`, section 5).
+where it is planned (see `docs/archive/PLAN-rebuild.md`, section 5).
 
 ## Views
 

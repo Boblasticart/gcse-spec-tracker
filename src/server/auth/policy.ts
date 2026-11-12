@@ -1,6 +1,6 @@
 import { DAY, HOUR, MINUTE } from "../clock";
 
-/** Every auth limit in one place (see PLAN.md, "Auth flow"). */
+/** Every auth limit in one place (see docs/archive/PLAN-rebuild.md, "Auth flow"). */
 export const AUTH_POLICY = {
   pendingSessionMs: 15 * MINUTE,
   activeSessionMs: 30 * DAY,

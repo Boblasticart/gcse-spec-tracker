@@ -88,7 +88,8 @@ Everything comes across: statuses, review dates, answers, quizzes, notes and que
 | `sw/sw.ts` | Service worker (Serwist), built into `public/sw.js` by `next build --webpack` |
 | `prisma/` | Database schema and migrations (schema `app`) |
 | `tests/unit`, `tests/e2e` | Vitest and Playwright tests (they run in GitHub Actions with Postgres 16) |
-| `PLAN.md`, `docs/PARITY.md`, `docs/SECURITY.md` | The rebuild plan, feature parity checklist and security notes |
+| `TASKS.md`, `docs/CONTEXT.md`, `docs/DONE.md` | The job queue for the nightly scheduled runs, what they need to know, and finished jobs |
+| `docs/archive/PLAN-rebuild.md`, `docs/PARITY.md`, `docs/SECURITY.md` | The finished rebuild plan, feature parity checklist and security notes |
 
 Local development: copy `.env.example` to `.env`, run Postgres, then `npm install`, `npm run db:migrate` and `npm run dev`. With `MAIL_TRANSPORT=file` the codes are written to `.mail/` instead of being emailed, and `AI_MOCK=1` replaces Gemini with a predictable stand-in (never used on Vercel).
 
