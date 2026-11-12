@@ -58,7 +58,7 @@ In Vercel, open the project's **Settings → Environment Variables** and add:
 
 To make a random string, open any terminal and run `node -e "console.log(require('crypto').randomBytes(32).toString('base64url'))"`, or use a password manager's generator (40+ characters).
 
-Then click **Deploy**. When it's done, open the address, sign up, type the code from your email, and you're in.
+Then click **Deploy**. Until the new app goes live, `main` still holds only the old site, so **Vercel's builds of `main` fail; that's expected**. The new app is on the `rebuild` branch: Vercel builds it on every push and lists it under **Deployments** with `rebuild` as its source (its address has `git-rebuild` in it). Open that address, sign up, type the code from your email, and you're in. Use that address as `APP_URL`, then redeploy that `rebuild` deployment.
 
 ### Moving from the GitHub Pages version
 
