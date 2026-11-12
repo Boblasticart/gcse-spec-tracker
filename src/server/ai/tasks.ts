@@ -39,7 +39,6 @@ const subjectOr400 = (sid: string): Subject => {
 
 /** Legacy `arr`. */
 const arr = (x: unknown): string[] => (Array.isArray(x) ? x.map(String) : x ? [String(x)] : []);
-const list = (x: unknown): unknown[] => (Array.isArray(x) ? x : []);
 
 /**
  * The array the prompt asked for under `key`. Newer models sometimes reply
