@@ -221,7 +221,7 @@ Needed by **M2** (so the Vercel preview works) and before **M12**. Runs: keep th
 5. **Vercel environment variables:** `DATABASE_URL`, `DIRECT_URL`, `GMAIL_USER`, `GMAIL_APP_PASSWORD`, `GEMINI_API_KEY`, `OTP_PEPPER` and `SESSION_SECRET` (each a long random string; runs give the owner a one-line way to make them), and `APP_URL` (the Vercel URL).
 6. **Optional AI settings** (Vercel environment variables): `AI_ALLOWED_EMAILS` = your own email address(es), comma-separated, so only you can spend your Gemini allowance (recommended, because anyone can make an account); `AI_DAILY_CAP` (default 150 per student per day); `GEMINI_MODEL` (default `gemini-flash-latest`).
 7. **Delete the leftover test branch `ci-probe`** on GitHub (Branches page, then the bin icon). It is harmless but untidy.
-8. **Approve going live (M12):** when the Vercel preview of the `rebuild` branch works for you, edit this file on GitHub and add a line here saying `M12 approved by the owner on <date>` (or tell Claude in a chat). The next run then makes it live. Nothing goes live before that. The full setup guide is now in the README ("Setting up the new app").
+8. **M12 approved by the owner on 2026-11-12** (in a live chat, after testing every feature on the preview). **Approve going live (M12):** when the Vercel preview of the `rebuild` branch works for you, edit this file on GitHub and add a line here saying `M12 approved by the owner on <date>` (or tell Claude in a chat). The next run then makes it live. Nothing goes live before that. The full setup guide is now in the README ("Setting up the new app").
 
 ## 7. Run log
 
