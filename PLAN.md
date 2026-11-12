@@ -12,7 +12,7 @@ This file is the single source of truth for the scheduled rebuild runs. Every ru
 ## 0. Status (every run reads this first and keeps it updated)
 
 ```
-RUN LOCK:        none
+RUN LOCK:        running since 2026-11-12T01:17Z, session session_01Sm3c8kF6PP56NqsaJQDfVZ
 CURRENT:         M12 Go live (waiting on the owner)
 CURRENT STEPS:   M12
   [ ] 1 Owner finishes "Waiting on the owner" items 1 to 5 and checks the Vercel preview of `rebuild` (sign up, tick points, Today's 7, a quiz, the PDF, offline)
