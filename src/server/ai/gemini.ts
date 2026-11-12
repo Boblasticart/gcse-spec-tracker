@@ -12,7 +12,7 @@ export interface GeminiOptions {
 }
 
 interface GeminiReply {
-  candidates?: { content?: { parts?: { text?: unknown; thought?: unknown }[] } }[];
+  candidates?: { content?: { parts?: { text?: unknown; thought?: unknown }[] }; finishReason?: string }[];
   error?: { message?: string };
 }
 
@@ -28,6 +28,8 @@ export function geminiModel({ apiKey, model = "gemini-flash-latest", timeoutMs =
         generationConfig: {
           responseMimeType: "application/json",
           temperature: 0.3,
+          // Room for long notes and quizzes (and for thinking, which shares this budget on some models).
+          maxOutputTokens: 32768,
           // Keep "thinking" short: long thinking made answers take over 90 seconds.
           ...(withThinking ? { thinkingConfig: { thinkingBudget: thinkingBudget } } : {}),
         },
@@ -61,7 +63,8 @@ export function geminiModel({ apiKey, model = "gemini-flash-latest", timeoutMs =
       .filter((p) => !p.thought && typeof p.text === "string")
       .map((p) => p.text as string)
       .join("");
-    if (!text) throw new ModelError("failed", "Gemini sent back an empty answer.");
+    if (data?.candidates?.[0]?.finishReason === "MAX_TOKENS") throw new ModelError("failed", "Gemini's answer was cut off (too long).", 413);
+    if (!text) throw new ModelError("failed", `Gemini sent back an empty answer (${data?.candidates?.[0]?.finishReason ?? "no reason"}).`, 204);
     return text;
   };
 }

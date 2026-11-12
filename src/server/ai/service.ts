@@ -89,8 +89,9 @@ export async function runTask<T extends TaskId>(
     return built.finish(parseModelJson(text)) as TaskOutput<T>;
   } catch (err) {
     if (err instanceof AiOutputError) {
-      console.error(`AI task ${task} gave unusable output: ${err.message}`);
-      throw new HttpError(502, "AI_BAD_OUTPUT", `${FAILURE_MESSAGES[task]} (ref OUT)`);
+      console.error(`AI task ${task} gave unusable output: ${err.message}. Start of reply: ${text.slice(0, 400)}`);
+      const ref = /JSON/.test(err.message) ? "OUT-JSON" : "OUT-FEW";
+      throw new HttpError(502, "AI_BAD_OUTPUT", `${FAILURE_MESSAGES[task]} (ref ${ref})`);
     }
     throw err;
   }

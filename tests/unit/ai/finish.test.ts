@@ -73,3 +73,24 @@ describe("legacy result rules", () => {
     await expect(BUILDERS.markQuiz({ tid: "phy.1", questions, answers: ["", " "] }, ctx())).rejects.toMatchObject({ body: { code: "NO_ANSWERS" } });
   });
 });
+
+describe("tolerant reply shapes", () => {
+  it("accepts a bare array or a differently named list, and other field names", async () => {
+    const { listIn } = await import("@/server/ai/tasks");
+    expect(listIn([1, 2], "questions")).toEqual([1, 2]);
+    expect(listIn({ questions: [1] }, "questions")).toEqual([1]);
+    expect(listIn({ items: [3] }, "questions")).toEqual([3]);
+    expect(listIn({ a: [1], b: [2] }, "questions")).toEqual([]);
+    expect(listIn("x", "questions")).toEqual([]);
+  });
+});
+
+describe("todaysSeven with other reply shapes", () => {
+  it("reads a bare array that uses question / mark_scheme", async () => {
+    const built = await BUILDERS.todaysSeven({ sid: "phy" }, ctx());
+    const raw = Array.from({ length: 7 }, (_, i) => ({ n: i + 1, question: `Q${i}`, mark_scheme: ["a", "b"] }));
+    const out = built.finish(raw);
+    expect(out.questions).toHaveLength(7);
+    expect(out.questions[0]).toMatchObject({ q: "Q0", scheme: ["a", "b"], marks: 2 });
+  });
+});

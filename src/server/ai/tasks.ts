@@ -40,6 +40,27 @@ const subjectOr400 = (sid: string): Subject => {
 /** Legacy `arr`. */
 const arr = (x: unknown): string[] => (Array.isArray(x) ? x.map(String) : x ? [String(x)] : []);
 const list = (x: unknown): unknown[] => (Array.isArray(x) ? x : []);
+
+/**
+ * The array the prompt asked for under `key`. Newer models sometimes reply
+ * with the bare array, or wrap it under a different name; accept those too.
+ */
+export function listIn(raw: unknown, key: string): unknown[] {
+  if (Array.isArray(raw)) return raw;
+  const o = asObject(raw);
+  if (Array.isArray(o[key])) return o[key] as unknown[];
+  const arrays = Object.values(o).filter(Array.isArray);
+  return arrays.length === 1 ? (arrays[0] as unknown[]) : [];
+}
+
+/** Question fields under the names other models sometimes use. */
+function questionFields(x: Record<string, unknown>): Record<string, unknown> {
+  return {
+    ...x,
+    q: x.q ?? x.question ?? x.text,
+    scheme: x.scheme ?? x.mark_scheme ?? x.markScheme ?? x.marking_points ?? x.markingPoints,
+  };
+}
 const clampMarks = (v: unknown, max: number): number => Math.max(0, Math.min(max, Math.round(Number(v) || 0)));
 const numbers = (v: unknown): number[] => (Array.isArray(v) ? v.map(Number) : []);
 
@@ -74,8 +95,9 @@ const todaysSeven: Builder<"todaysSeven"> = async (input, ctx) => {
   return {
     prompt: fillPrompt(LEGACY_PROMPTS.todaysSeven, [s.board, s.name, s.board, listText]),
     finish: (raw) => {
-      const qs = list(asObject(raw).questions)
+      const qs = listIn(raw, "questions")
         .map(asObject)
+        .map(questionFields)
         .filter((x) => x.q && Array.isArray(x.scheme) && x.scheme.length)
         .slice(0, 7);
       if (qs.length < 5) throw new AiOutputError("Too few questions");
@@ -122,7 +144,7 @@ const reviewWeaknesses: Builder<"reviewWeaknesses"> = async ({ sid, items }) => 
     prompt: fillPrompt(LEGACY_PROMPTS.reviewWeaknesses, [s.board, s.name, s.board, blocks]),
     finish: (raw) => {
       const out: (ReviewItem | null)[] = items.map(() => null);
-      for (const x of list(asObject(raw).items).map(asObject)) {
+      for (const x of listIn(raw, "items").map(asObject)) {
         const i = (Number(x.n) || 0) - 1;
         if (i >= 0 && i < out.length) {
           out[i] = { mistakes: arr(x.mistakes), missing: arr(x.missing), terms: arr(x.terms), tip: String(x.tip || "") };
@@ -170,8 +192,9 @@ const writeQuiz: Builder<"writeQuiz"> = async ({ tid }) => {
   return {
     prompt: fillPrompt(LEGACY_PROMPTS.writeQuiz, [s.board, s.name, topic.name, s.board, s.code, listText, s.board, s.board]),
     finish: (raw) => {
-      const qs = list(asObject(raw).questions)
+      const qs = listIn(raw, "questions")
         .map(asObject)
+        .map(questionFields)
         .filter((x) => x.q && Array.isArray(x.scheme) && x.scheme.length)
         .slice(0, 12);
       if (qs.length < 6) throw new AiOutputError("Too few quiz questions");
@@ -209,7 +232,7 @@ const markQuiz: Builder<"markQuiz"> = async ({ tid, questions, answers }) => {
   return {
     prompt: fillPrompt(LEGACY_PROMPTS.markQuiz, [s.board, s.name, blocks]),
     finish: (raw) => {
-      const replies = list(asObject(raw).items).map(asObject);
+      const replies = listIn(raw, "items").map(asObject);
       let aw = 0;
       let mx = 0;
       const items: QuizMarkItem[] = questions.map((q, i) => {

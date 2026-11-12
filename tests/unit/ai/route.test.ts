@@ -68,10 +68,10 @@ describe.skipIf(!hasDb)("POST /api/ai/json (Postgres)", () => {
     expect(await runTask(user, "markAnswer", { question, answer: "x" }, { model: fenced })).toEqual({ aw: 1, hit: [1], expl: "e", tip: "t" });
     await expect(runTask(user, "markAnswer", { question, answer: "x" }, { model: fixed("Sorry, no.") })).rejects.toMatchObject({
       status: 502,
-      body: { code: "AI_BAD_OUTPUT", message: "Marking failed. Try again in a moment. (ref OUT)" },
+      body: { code: "AI_BAD_OUTPUT", message: "Marking failed. Try again in a moment. (ref OUT-JSON)" },
     });
     await expect(runTask(user, "writeQuiz", { tid: "phy.0" }, { model: fixed('{"questions":[]}') })).rejects.toMatchObject({
-      body: { code: "AI_BAD_OUTPUT", message: "Could not write the quiz. Try again in a moment. (ref OUT)" },
+      body: { code: "AI_BAD_OUTPUT", message: "Could not write the quiz. Try again in a moment. (ref OUT-FEW)" },
     });
   });
 
