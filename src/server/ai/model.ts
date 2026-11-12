@@ -13,7 +13,7 @@ export interface ModelRequest {
 export type Model = (req: ModelRequest) => Promise<string>;
 
 export class ModelError extends Error {
-  readonly kind: "rate_limited" | "failed" | "unavailable";
+  readonly kind: "rate_limited" | "failed" | "unavailable" | "key_rejected";
 
   constructor(kind: ModelError["kind"], message: string) {
     super(message);

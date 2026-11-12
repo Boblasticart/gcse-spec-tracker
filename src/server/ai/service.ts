@@ -77,6 +77,10 @@ export async function runTask<T extends TaskId>(
     if (err instanceof ModelError && err.kind === "rate_limited") {
       throw new HttpError(429, "AI_BUSY", "The AI is busy right now. Wait a minute and try again.", { retryAfter: 60 });
     }
+    if (err instanceof ModelError && err.kind === "key_rejected") {
+      console.error(`AI task ${task} failed`, err);
+      throw new HttpError(503, "AI_KEY_REJECTED", "Google turned down this site's Gemini key. The site owner needs to check GEMINI_API_KEY in Vercel, then redeploy.");
+    }
     console.error(`AI task ${task} failed`, err);
     throw new HttpError(502, "AI_FAILED", FAILURE_MESSAGES[task]);
   }

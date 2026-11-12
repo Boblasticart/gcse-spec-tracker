@@ -35,6 +35,10 @@ export function geminiModel({ apiKey, model = "gemini-flash-latest", timeoutMs =
     const data = (await res.json().catch(() => null)) as GeminiReply | null;
     if (!res.ok) {
       if (res.status === 429) throw new ModelError("rate_limited", "Gemini rate limit reached.");
+      const why = data?.error?.message ?? "";
+      if (res.status === 401 || res.status === 403 || (res.status === 400 && /api key|credential|token/i.test(why))) {
+        throw new ModelError("key_rejected", `Gemini refused the key (${res.status}): ${why}`);
+      }
       throw new ModelError("failed", data?.error?.message ?? `Gemini error ${res.status}`);
     }
     const parts = data?.candidates?.[0]?.content?.parts ?? [];
