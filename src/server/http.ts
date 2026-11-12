@@ -52,11 +52,25 @@ export function handler<A extends unknown[]>(fn: (...args: A) => Promise<Respons
   };
 }
 
-/** CSRF defence for state-changing requests: the Origin header must be our own origin. */
+/**
+ * Our own origins: APP_URL, plus on Vercel the addresses Vercel itself gives
+ * this deployment (its unique URL, its branch URL and the production URL).
+ * Vercel sets these, so a preview works even if APP_URL names another of them.
+ */
+export function allowedOrigins(env: NodeJS.ProcessEnv = process.env): Set<string> {
+  const out = new Set<string>([new URL(getEnv().APP_URL).origin]);
+  if (env.VERCEL) {
+    for (const host of [env.VERCEL_URL, env.VERCEL_BRANCH_URL, env.VERCEL_PROJECT_PRODUCTION_URL]) {
+      if (host && /^[a-z0-9.-]+$/i.test(host)) out.add(`https://${host.toLowerCase()}`);
+    }
+  }
+  return out;
+}
+
+/** CSRF defence for state-changing requests: the Origin header must be one of our own origins. */
 export function assertSameOrigin(request: Request): void {
-  const expected = new URL(getEnv().APP_URL).origin;
   const origin = request.headers.get("origin");
-  if (origin !== expected) {
+  if (!origin || !allowedOrigins().has(origin)) {
     throw new HttpError(403, "BAD_ORIGIN", "This request did not come from the tracker. Reload the page and try again.");
   }
 }
