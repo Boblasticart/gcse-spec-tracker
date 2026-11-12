@@ -17,8 +17,8 @@ const minutes = (s: number): string => formatMinutes(s);
 
 function Tile({ label, children, hint }: { label: string; children: ReactNode; hint?: string }) {
   return (
-    <div className="rounded-2xl border border-line bg-surface p-4 shadow-card">
-      <div className="font-heading text-3xl font-bold">{children}</div>
+    <div className="rounded-2xl border border-line bg-surface p-3 shadow-card sm:p-4">
+      <div className="font-heading text-2xl font-bold sm:text-3xl">{children}</div>
       <div className="text-sm text-muted">{label}</div>
       {hint ? <div className="mt-1 text-xs text-muted">{hint}</div> : null}
     </div>

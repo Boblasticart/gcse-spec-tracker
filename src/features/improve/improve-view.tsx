@@ -58,15 +58,15 @@ export function ImproveView({ sid }: { sid: string }) {
   }
 
   const stat = (n: ReactNode, label: string): ReactNode => (
-    <div className="rounded-2xl border border-line bg-surface p-4 text-center shadow-card">
-      <strong className="block font-heading text-3xl font-bold tabular-nums">{n}</strong>
-      <span className="text-sm text-muted">{label}</span>
+    <div className="rounded-2xl border border-line bg-surface p-3 text-center shadow-card sm:p-4">
+      <strong className="block font-heading text-2xl font-bold tabular-nums sm:text-3xl">{n}</strong>
+      <span className="text-xs leading-tight text-muted sm:text-sm">{label}</span>
     </div>
   );
 
   return (
     <div className="mt-6">
-      <div className="grid grid-cols-3 gap-3" data-testid="improve-stats">
+      <div className="grid grid-cols-3 gap-2 sm:gap-3" data-testid="improve-stats">
         {stat(model.needsWork.length, "need work")}
         {stat(model.mastered.length, "mastered")}
         {stat(model.attempted ? `${pct(model.correct, model.attempted)}%` : "-", "answers correct")}
