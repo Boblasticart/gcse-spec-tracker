@@ -82,14 +82,15 @@ export async function runTask<T extends TaskId>(
       throw new HttpError(503, "AI_KEY_REJECTED", "Google turned down this site's Gemini key. The site owner needs to check GEMINI_API_KEY in Vercel, then redeploy.");
     }
     console.error(`AI task ${task} failed`, err);
-    throw new HttpError(502, "AI_FAILED", FAILURE_MESSAGES[task]);
+    const ref = err instanceof ModelError ? `G${err.status}` : "X";
+    throw new HttpError(502, "AI_FAILED", `${FAILURE_MESSAGES[task]} (ref ${ref})`);
   }
   try {
     return built.finish(parseModelJson(text)) as TaskOutput<T>;
   } catch (err) {
     if (err instanceof AiOutputError) {
       console.error(`AI task ${task} gave unusable output: ${err.message}`);
-      throw new HttpError(502, "AI_BAD_OUTPUT", FAILURE_MESSAGES[task]);
+      throw new HttpError(502, "AI_BAD_OUTPUT", `${FAILURE_MESSAGES[task]} (ref OUT)`);
     }
     throw err;
   }

@@ -30,7 +30,8 @@ export function geminiModel({ apiKey, model = "gemini-flash-latest", timeoutMs =
         signal: AbortSignal.timeout(timeoutMs),
       });
     } catch (err) {
-      throw new ModelError("failed", `Gemini request failed: ${(err as Error).message}`);
+      const timedOut = (err as Error).name === "TimeoutError";
+      throw new ModelError("failed", `Gemini request failed: ${(err as Error).message}`, timedOut ? 504 : 0);
     }
     const data = (await res.json().catch(() => null)) as GeminiReply | null;
     if (!res.ok) {
@@ -39,7 +40,7 @@ export function geminiModel({ apiKey, model = "gemini-flash-latest", timeoutMs =
       if (res.status === 401 || res.status === 403 || (res.status === 400 && /api key|credential|token/i.test(why))) {
         throw new ModelError("key_rejected", `Gemini refused the key (${res.status}): ${why}`);
       }
-      throw new ModelError("failed", data?.error?.message ?? `Gemini error ${res.status}`);
+      throw new ModelError("failed", `Gemini error ${res.status}: ${why || "no details"}`, res.status);
     }
     const parts = data?.candidates?.[0]?.content?.parts ?? [];
     const text = parts

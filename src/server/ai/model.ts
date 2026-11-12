@@ -15,9 +15,13 @@ export type Model = (req: ModelRequest) => Promise<string>;
 export class ModelError extends Error {
   readonly kind: "rate_limited" | "failed" | "unavailable" | "key_rejected";
 
-  constructor(kind: ModelError["kind"], message: string) {
+  /** Gemini's HTTP status (0 = no answer, 504 = timed out), so the student sees a short reference code. */
+  readonly status: number;
+
+  constructor(kind: ModelError["kind"], message: string, status = 0) {
     super(message);
     this.name = "ModelError";
     this.kind = kind;
+    this.status = status;
   }
 }
