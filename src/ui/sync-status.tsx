@@ -26,7 +26,7 @@ export function SyncStatus() {
       data-state={summary}
       title={summary === "error" ? (message ?? undefined) : undefined}
       className={cn(
-        "hidden items-center gap-1.5 text-xs sm:inline-flex",
+        "inline-flex max-w-40 items-center gap-1.5 truncate text-xs sm:max-w-none",
         summary === "error" || summary === "offline" ? "text-work" : "text-muted",
       )}
     >
