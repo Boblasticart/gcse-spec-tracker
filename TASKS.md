@@ -5,15 +5,15 @@ Runs read **only this file and `docs/CONTEXT.md`**. Keep this file short: finish
 ## Status
 
 ```
-RUN LOCK:       running since 2026-11-13T01:10Z, session session_01Sm3c8gtK97bWGMZPawFfux
+RUN LOCK:       none
 CURRENT JOB:    J2 Note-writing pipeline
 CURRENT STEPS:
-- [ ] 1. QA gate script (`scripts/notes/qa.ts`): schema, size, SVG sanitiser, depth rules per course; unit tests that pass the existing notes and catch bad ones.
+- [x] 1. QA gate script (`scripts/notes/qa.ts`): schema, size, SVG sanitiser, depth rules per course; unit tests that pass the existing notes and catch bad ones.
 - [ ] 2. Playwright render check for figures (overlapping or cut-off labels), run on a batch of notes.
 - [ ] 3. Gemini writer (`scripts/notes/write.ts`): existing note prompt, rate limits, resume, progress file `content/notes/progress.json`, failures list `content/notes/failures.json`.
 - [ ] 4. Workflow `.github/workflows/notes.yml` (manual + scheduled): write, QA, render check, commit passing notes to `rebuild`.
 - [ ] 5. 10-note test batch passes QA and shows on the preview (needs the GEMINI_API_KEY secret and one catalogue spec).
-LAST RUN ENDED: 2026-11-12 (new queue J1 to J14 added by the owner)
+LAST RUN ENDED: 2026-11-13 ~02:00 UTC (J1 done; J2 step 1 done, resume at J2 step 2)
 ```
 
 ## Queue (top = next)
@@ -57,6 +57,7 @@ Each subject job is done when every listed spec's points are in the catalogue, e
 
 ## Waiting on the owner
 
+- **Needed for the subject jobs (J3 onwards):** unattended runs could not read the exam boards' websites (the web-page reader asked for permission and nobody was there to answer). Open the scheduled task "GCSE tracker rebuild" in Claude and switch on **Automatically approve**, or tell a run in chat that reading aqa.org.uk, qualifications.pearson.com, ocr.org.uk and eduqas.co.uk is fine.
 - **Needed for J2:** add the Gemini key as a GitHub secret: repo **Settings → Secrets and variables → Actions → New repository secret**, name `GEMINI_API_KEY`, value = your Gemini key. If Gemini's free daily limit makes the notes too slow, you may want to switch on billing in Google AI Studio (runs will say if so).
 - Delete the leftover branch `ci-probe` on GitHub (optional, harmless).
 - Delete the duplicate Vercel project `gcse-spec-tracker-ocwb` (optional).
