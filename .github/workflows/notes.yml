@@ -1,0 +1,93 @@
+name: Write notes
+
+# Writes prepared notes for catalogue spec points with every AI key the owner
+# has added as a secret (see content/notes/providers.json), checks each one
+# (QA gate + figure render check) and commits the ones that pass to `rebuild`.
+# Progress and the failures list are committed too, so each run carries on
+# where the last one stopped.
+
+# Scheduled and manual runs only start once this file is on `main`. Until then
+# (and for test batches) a run starts when content/notes/run-request.json
+# changes on `rebuild`; its fields are the same as the manual inputs.
+on:
+  push:
+    branches: [rebuild]
+    paths: [content/notes/run-request.json]
+  workflow_dispatch:
+    inputs:
+      specs:
+        description: "Spec ids, comma separated (empty = all catalogue specs)"
+        required: false
+        default: ""
+      limit:
+        description: "Most notes to write this run"
+        required: false
+        default: "300"
+      minutes:
+        description: "Stop starting new notes after this many minutes"
+        required: false
+        default: "300"
+      retry_failures:
+        description: "Try points on the failures list again"
+        type: boolean
+        required: false
+        default: false
+  schedule:
+    # Daily, after Gemini's free allowance resets (midnight Pacific time).
+    - cron: "23 8 * * *"
+
+concurrency:
+  group: write-notes
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  write:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: rebuild
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+      - name: Install
+        run: npm ci --no-audit --no-fund
+      - name: Install Playwright browser
+        run: npx playwright install --with-deps chromium
+      - name: Write notes
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          SPECS: ${{ inputs.specs }}
+          LIMIT: ${{ inputs.limit || '300' }}
+          MINUTES: ${{ inputs.minutes || '300' }}
+          RETRY: ${{ inputs.retry_failures && 'true' || 'false' }}
+        run: |
+          if [ "${{ github.event_name }}" = "push" ]; then
+            r=content/notes/run-request.json
+            SPECS=$(node -e "console.log((require('./$r').specs||[]).join(','))")
+            LIMIT=$(node -e "console.log(require('./$r').limit||10)")
+            MINUTES=$(node -e "console.log(require('./$r').minutes||60)")
+            RETRY=$(node -e "console.log(require('./$r').retry_failures?'true':'false')")
+          fi
+          case "$SPECS$LIMIT$MINUTES" in *[!a-z0-9_,]*) echo "bad run request"; exit 1;; esac
+          args="--limit $LIMIT --minutes $MINUTES"
+          if [ -n "$SPECS" ]; then args="$args --specs $SPECS"; fi
+          if [ "$RETRY" = "true" ]; then args="$args --retry-failures"; fi
+          npx tsx scripts/notes/write.ts $args
+      - name: Commit notes
+        if: always()
+        run: |
+          git config user.name "notes-bot"
+          git config user.email "notes-bot@users.noreply.github.com"
+          git add content/notes
+          if git diff --cached --quiet; then echo "No new notes."; exit 0; fi
+          n=$(git diff --cached --numstat -- 'content/notes/*/*.json' | wc -l)
+          git commit -m "Notes: update $n topic file(s) (written and checked by the Write notes workflow)"
+          for i in 1 2 3; do git pull --rebase origin rebuild && git push origin HEAD:rebuild && exit 0; sleep 10; done
+          exit 1
