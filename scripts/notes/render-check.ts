@@ -37,6 +37,11 @@ interface PageLike {
 export const OVERLAP_SHARE = 0.3;
 /** Pixels a label may poke past the edge before it counts as cut off. */
 export const EDGE_PX = 1.5;
+/**
+ * Labels are measured in Arial-sized text (Liberation Sans has Arial's exact
+ * widths and is installed with Playwright's browser on CI), so results are the
+ * same on every machine and match most students' devices.
+ */
 /** Width figures are drawn at (about a phone in landscape / a narrow desktop column). */
 export const DRAW_WIDTH = 640;
 
@@ -53,7 +58,7 @@ export async function checkFigures(page: PageLike, figures: readonly Figure[]): 
   const problems: FigureProblem[] = cleaned.filter((f) => !f.svg).map((f) => ({ id: f.id, problem: "empty", detail: "not a usable SVG" }));
   const ok = cleaned.filter((f) => f.svg);
   const html = `<!doctype html><html><head><meta charset="utf-8"><style>
-    body{margin:0;font-family:system-ui,sans-serif;color:#1b2540;background:#fff}
+    body{margin:0;font-family:"Liberation Sans",Arial,Helvetica,sans-serif;color:#1b2540;background:#fff}
     figure{margin:0 0 16px;width:${DRAW_WIDTH}px}
     svg{display:block;width:100%;height:auto;overflow:hidden}
   </style></head><body>${ok.map((f, i) => `<figure data-i="${i}">${f.svg}</figure>`).join("")}</body></html>`;
@@ -118,7 +123,9 @@ async function main(): Promise<void> {
     console.error("usage: node scripts/notes/render-check.ts <note.json | topic.json | folder> ...");
     process.exit(2);
   }
-  const { chromium } = (await import("@playwright/test")) as unknown as { chromium: { launch(): Promise<{ newPage(): Promise<PageLike>; close(): Promise<void> }> } };
+  type Chromium = { launch(): Promise<{ newPage(): Promise<PageLike>; close(): Promise<void> }> };
+  const pw = (await import("@playwright/test")) as unknown as { chromium?: Chromium; default?: { chromium: Chromium } };
+  const chromium = (pw.chromium ?? pw.default?.chromium)!;
   const browser = await chromium.launch();
   const page = await browser.newPage();
   let failed = 0;
