@@ -45,4 +45,9 @@ describe("progress report data", () => {
     expect([r.studyToday, r.studyWeek, r.studyTotal]).toEqual(["10 min", "10 min", "30 min"]);
     expect(reportFileName("2026-11-11")).toBe("gcse-progress-2026-11-11.pdf");
   });
+  it("only lists the subjects the student takes", () => {
+    const r = buildReport({ email: "a@b.c", today: "2026-11-12", docs: { ...docs, "settings/boards": { boards: { physics: "" }, v: 1 } } });
+    expect(r.subjects.map((s) => s.sid)).not.toContain("phy");
+    expect(r.subjects.map((s) => s.sid)).toContain("bio");
+  });
 });

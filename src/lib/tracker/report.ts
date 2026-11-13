@@ -3,7 +3,7 @@
  * docs and metrics as the dashboard. Pure, so it is unit-tested and the PDF
  * component only has to lay it out.
  */
-import { getPoint, pointLabel, SPEC } from "@/content";
+import { BOARDS_PATH, chosenSpecs, getPoint, pointLabel } from "@/content";
 import { londonToday, pct, shortDay } from "@/lib/dates";
 import { asProgress } from "@/lib/docs";
 
@@ -68,7 +68,7 @@ export function buildReport({ email, today, docs }: ReportInput): ReportData {
       .filter(([p, d]) => p.startsWith(prefix) && d && typeof d === "object")
       .map(([p, d]) => [p.slice(prefix.length), d as Record<string, unknown>]);
 
-  const subjects: ReportSubject[] = SPEC.map((s) => {
+  const subjects: ReportSubject[] = chosenSpecs(docs[BOARDS_PATH]).map((s) => {
     const progress = docs[`progress/${s.id}`];
     const m = subjectMetrics(s, progress);
     const p = asProgress(progress);

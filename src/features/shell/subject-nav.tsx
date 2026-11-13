@@ -5,22 +5,24 @@ import Link from "next/link";
 import { useSession } from "@/client/session";
 import { useDocs } from "@/client/sync/react";
 import { countStatuses } from "@/client/tracker/progress";
-import { allPoints, SPEC } from "@/content";
+import { useChosenSpecs } from "@/client/tracker/specs";
+import { allPoints, CATALOGUE } from "@/content";
 import { pct } from "@/lib/dates";
 import { cn } from "@/ui/cn";
 
 import { viewHref, type ViewId } from "./views";
 
-const POINT_IDS: Readonly<Record<string, string[]>> = Object.fromEntries(SPEC.map((s) => [s.id, allPoints(s).map((p) => p.id)]));
+const POINT_IDS: Readonly<Record<string, string[]>> = Object.fromEntries(CATALOGUE.map((s) => [s.id, allPoints(s).map((p) => p.id)]));
 
 /** Subject tabs (legacy `tab`): one link per subject, keeping the current view, with % done when signed in. */
 export function SubjectNav({ current, view }: { current: string; view: ViewId }) {
   const { user } = useSession();
   const docs = useDocs((s) => s.docs);
+  const specs = useChosenSpecs();
   return (
     <nav aria-label="Subjects" className="-mx-4 overflow-x-auto px-4 pb-1 [scrollbar-width:none]">
       <ul className="flex min-w-max gap-1.5">
-        {SPEC.map((s) => {
+        {specs.map((s) => {
           const ids = POINT_IDS[s.id] ?? [];
           const done = countStatuses(docs[`progress/${s.id}`]?.data, ids)[2];
           const active = s.id === current;

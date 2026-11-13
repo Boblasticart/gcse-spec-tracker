@@ -6,7 +6,7 @@ import { useMemo, type ReactNode } from "react";
 
 import { useDoc, useDocs } from "@/client/sync/react";
 import { useCollection } from "@/client/tracker/questions";
-import { SPEC } from "@/content";
+import { BOARDS_PATH, chosenSpecs } from "@/content";
 import { londonToday, pct } from "@/lib/dates";
 import { formatMinutes, STATS_TIME_PATH, studyMetrics, subjectMetrics } from "@/lib/tracker/metrics";
 import { cardClass } from "@/ui/card";
@@ -34,7 +34,7 @@ export function ProgressDashboard() {
   const time = useDoc(STATS_TIME_PATH);
   const today = londonToday();
 
-  const subjects = useMemo(() => SPEC.map((s) => subjectMetrics(s, docs[`progress/${s.id}`]?.data)), [docs]);
+  const subjects = useMemo(() => chosenSpecs(docs[BOARDS_PATH]?.data).map((s) => subjectMetrics(s, docs[`progress/${s.id}`]?.data)), [docs]);
   const study = useMemo(() => studyMetrics(Object.values(answers), Object.values(quizResults), time, today), [answers, quizResults, time, today]);
   const totals = subjects.reduce<[number, number, number]>((t, s) => [t[0] + s.counts[0], t[1] + s.counts[1], t[2] + s.counts[2]], [0, 0, 0]);
   const allPts = totals[0] + totals[1] + totals[2];

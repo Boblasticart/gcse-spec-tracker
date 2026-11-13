@@ -3,6 +3,7 @@ import { AccountPanel } from "@/features/account/account-panel";
 import { BackupPanel } from "@/features/backup/backup-panel";
 import { ProgressDashboard } from "@/features/dashboard/progress-dashboard";
 import { DownloadReport } from "@/features/report/download-report";
+import { BoardsPanel } from "@/features/settings/boards-panel";
 import { requirePageUser } from "@/server/auth/current";
 
 export const metadata: Metadata = { title: "Dashboard" };
@@ -20,8 +21,10 @@ export default async function DashboardPage() {
         </div>
         <DownloadReport />
       </div>
+      <BoardsPanel placement="top" />
       <ProgressDashboard />
       <div className="mt-10 grid gap-4">
+        <BoardsPanel placement="settings" />
         <BackupPanel />
         <AccountPanel />
       </div>

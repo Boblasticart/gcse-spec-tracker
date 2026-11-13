@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import { getSubject, SPEC } from "@/content";
+import { CATALOGUE, getSubject } from "@/content";
 import { TrackerShell } from "@/features/shell/tracker-shell";
 import { SpecView } from "@/features/spec/spec-view";
 import { SubjectSummary } from "@/features/tracker/subject-summary";
 
 export function generateStaticParams(): { subject: string }[] {
-  return SPEC.map((s) => ({ subject: s.id }));
+  return CATALOGUE.map((s) => ({ subject: s.id }));
 }
 
 export async function generateMetadata({ params }: PageProps<"/spec/[subject]">): Promise<Metadata> {
