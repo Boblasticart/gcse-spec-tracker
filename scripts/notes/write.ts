@@ -183,7 +183,8 @@ async function main(): Promise<void> {
       } catch (e) {
         if (e instanceof RateLimited) {
           console.log(`[${p.id}] rate limited${e.daily ? " for today" : ""}: ${e.message.slice(0, 120)}`);
-          job.tried.length ? retries.unshift(job) : queue.unshift(job.pid);
+          if (job.tried.length) retries.unshift(job);
+          else queue.unshift(job.pid);
           inFlight--;
           if (e.daily) {
             progress.usage[p.id] = { day: today(), n: p.rpd };
