@@ -6,8 +6,13 @@ Runs read **only this file and `docs/CONTEXT.md`**. Keep this file short: finish
 
 ```
 RUN LOCK:       running since 2026-11-13T01:10Z, session session_01Sm3c8gtK97bWGMZPawFfux
-CURRENT JOB:    none
-CURRENT STEPS:  none
+CURRENT JOB:    J2 Note-writing pipeline
+CURRENT STEPS:
+- [ ] 1. QA gate script (`scripts/notes/qa.ts`): schema, size, SVG sanitiser, depth rules per course; unit tests that pass the existing notes and catch bad ones.
+- [ ] 2. Playwright render check for figures (overlapping or cut-off labels), run on a batch of notes.
+- [ ] 3. Gemini writer (`scripts/notes/write.ts`): existing note prompt, rate limits, resume, progress file `content/notes/progress.json`, failures list `content/notes/failures.json`.
+- [ ] 4. Workflow `.github/workflows/notes.yml` (manual + scheduled): write, QA, render check, commit passing notes to `rebuild`.
+- [ ] 5. 10-note test batch passes QA and shows on the preview (needs the GEMINI_API_KEY secret and one catalogue spec).
 LAST RUN ENDED: 2026-11-12 (new queue J1 to J14 added by the owner)
 ```
 
