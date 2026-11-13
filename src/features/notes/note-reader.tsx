@@ -35,12 +35,18 @@ function useShardNote(shard: string | null | undefined, pid: string): unknown {
   useEffect(() => {
     if (!shard) return;
     let live = true;
-    fetch(shard)
-      .then((r) => (r.ok ? (r.json() as Promise<Record<string, unknown>>) : {}))
-      .catch(() => ({}) as Record<string, unknown>)
-      .then((all) => {
-        if (live) setState({ key, note: all && typeof all === "object" && pid in all ? all[pid] : null });
-      });
+    const load = async (): Promise<Record<string, unknown>> => {
+      try {
+        const r = await fetch(shard);
+        const all: unknown = r.ok ? await r.json() : null;
+        return all && typeof all === "object" ? (all as Record<string, unknown>) : {};
+      } catch {
+        return {};
+      }
+    };
+    void load().then((all) => {
+      if (live) setState({ key, note: Object.hasOwn(all, pid) ? all[pid] : null });
+    });
     return () => {
       live = false;
     };
