@@ -3,6 +3,8 @@
  * so Next.js serves them at the same URLs as the GitHub Pages site
  * (`/data/notes/bio.0.0.json`, `/papers/Physics_4.1_Energy.pdf`).
  * The copies are gitignored; the originals are never modified.
+ * Also copies the catalogue notes (`content/notes/`) to `public/content/notes/`,
+ * where the browser loads them (see src/lib/notes/store.ts).
  * Runs before `next dev` and `next build`.
  */
 import { cpSync, existsSync, mkdirSync, rmSync } from "node:fs";
@@ -10,7 +12,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
-const FOLDERS = ["data", "papers"];
+const FOLDERS = ["data", "papers", "content/notes"];
 
 for (const name of FOLDERS) {
   const from = join(root, name);

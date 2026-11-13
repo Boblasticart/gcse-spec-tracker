@@ -35,7 +35,7 @@ const ours: RuntimeCaching[] = [
   },
   {
     // Prepared notes and the question bank.
-    matcher: ({ url, sameOrigin }) => sameOrigin && url.pathname.startsWith("/data/") && url.pathname.endsWith(".json"),
+    matcher: ({ url, sameOrigin }) => sameOrigin && (url.pathname.startsWith("/data/") || url.pathname.startsWith("/content/notes/")) && url.pathname.endsWith(".json"),
     handler: new StaleWhileRevalidate({
       cacheName: "content",
       plugins: [new ExpirationPlugin({ maxEntries: 600, maxAgeSeconds: 60 * 24 * 60 * 60 })],

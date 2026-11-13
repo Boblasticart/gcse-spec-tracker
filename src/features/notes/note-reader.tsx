@@ -28,7 +28,28 @@ export const quizHref = (tid: string): Route => `/quiz/${tid}` as Route;
  * otherwise a note the AI wrote for this account (`notes/{pid}`) is shown.
  * Opening a note marks it read (legacy `markViewed`).
  */
-export function NoteReader({ pid, prepared, children }: { pid: string; prepared: boolean; children?: ReactNode }) {
+/** A catalogue note from its static topic file: undefined while loading, null if there isn't one. */
+function useShardNote(shard: string | null | undefined, pid: string): unknown {
+  const [state, setState] = useState<{ key: string; note: unknown }>({ key: "", note: undefined });
+  const key = shard ? `${shard}#${pid}` : "";
+  useEffect(() => {
+    if (!shard) return;
+    let live = true;
+    fetch(shard)
+      .then((r) => (r.ok ? (r.json() as Promise<Record<string, unknown>>) : {}))
+      .catch(() => ({}) as Record<string, unknown>)
+      .then((all) => {
+        if (live) setState({ key, note: all && typeof all === "object" && pid in all ? all[pid] : null });
+      });
+    return () => {
+      live = false;
+    };
+  }, [shard, pid, key]);
+  if (!shard) return null;
+  return state.key === key ? state.note : undefined;
+}
+
+export function NoteReader({ pid, prepared, shard, children }: { pid: string; prepared: boolean; shard?: string | null; children?: ReactNode }) {
   const ref = getPoint(pid);
   const { user } = useSession();
   const prompt = useSignInPrompt();
@@ -38,7 +59,9 @@ export function NoteReader({ pid, prepared, children }: { pid: string; prepared:
   const sid = ref?.subject.id ?? "";
   const progressPath = `progress/${sid}`;
   const progress = useDoc(progressPath);
-  const hasNote = prepared || aiNoteRaw !== undefined;
+  const shardNote = useShardNote(shard, pid);
+  const shardLoading = shardNote === undefined;
+  const hasNote = prepared || aiNoteRaw !== undefined || (shardNote !== undefined && shardNote !== null);
   const read = isNoteRead(progress, pid);
 
   useEffect(() => {
@@ -61,12 +84,12 @@ export function NoteReader({ pid, prepared, children }: { pid: string; prepared:
     engine.update(`notes/${pid}`, () => ({ ...r.result.note, src: "ai", ts: new Date().toISOString() }));
   };
   useEffect(() => {
-    if (user && ready && !hasNote && tried.current !== pid) {
+    if (user && ready && !hasNote && !shardLoading && tried.current !== pid) {
       tried.current = pid;
       void writeNote();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps -- once per point
-  }, [user, ready, hasNote, pid]);
+  }, [user, ready, hasNote, shardLoading, pid]);
 
   if (!ref) return null;
   const { subject, topic, index } = ref;
@@ -77,7 +100,16 @@ export function NoteReader({ pid, prepared, children }: { pid: string; prepared:
 
   let body: ReactNode;
   if (prepared) body = children;
-  else if (aiNoteRaw !== undefined) {
+  else if (shardNote !== undefined && shardNote !== null) {
+    body = (
+      <>
+        <p className="text-sm text-muted">Prepared notes, written to the specification.</p>
+        <NoteBody note={normNote(shardNote)} />
+      </>
+    );
+  } else if (shardLoading) {
+    body = <p className="text-sm text-muted">Loading notes...</p>;
+  } else if (aiNoteRaw !== undefined) {
     const note = normNote(aiNoteRaw);
     body = (
       <>

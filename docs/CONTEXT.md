@@ -17,6 +17,12 @@
 - Auth limits all live in `src/server/auth/policy.ts`.
 - Feature list: `docs/PARITY.md`. Security notes: `docs/SECURITY.md`. Owner setup guide: `README.md`. Full rebuild history and decisions: `docs/archive/PLAN-rebuild.md` (read only if a job needs the background).
 
+**Specs and notes (J1).**
+- Catalogue: `src/content/catalogue.ts`. 15 courses; the 8 legacy specs keep their ids (`phy`, point `phy.0.1`) and stay each course's default. Other specs are `content/specs/{id}.json` (`RawSpec`); run `node scripts/build-catalogue.mjs` after adding one (CI checks). Point ids are positional (`{spec}.{topic}.{point}`): only ever append points.
+- A student's boards: doc `settings/boards` = `{boards: {course: specId | ""}, v: 1}`; missing = default. Progress stays per spec id, so switching boards never touches other progress.
+- Note storage decision: legacy notes stay in `data/notes/` (read by the server). Catalogue notes are static files, one per topic: `content/notes/{spec}/{topic}.json` = `{pid: note}`, copied to `public/content/notes/` at build and loaded by the browser (`src/lib/notes/store.ts`). They are CDN files, never in the server bundle. If Vercel ever limits the deploy size, the same files can be served from GitHub through jsDelivr instead.
+- CI builds two made-up specs (`src/content/fixture-specs.ts`, `NEXT_PUBLIC_SPEC_FIXTURES=1`) for tests only.
+
 **Never change:** `data/`, `papers/`, `index.html`, `adapter.js`, `supabase/`, `worker/`, `supabase-config.js` (the old GitHub Pages site and content). Wrap or adapt instead. Saved document shapes (`progress/{sid}` = `{s,c,m,w,v:2}`, `a/*`, `daily/*`, `q/*`, `rv/*`, `quiz/*`, `qr/*`, `notes/*`, `papers/done`, `stats/time`, `meta/applied`) stay compatible.
 
 **Never commit** secrets, `.env` files, the owner's real progress export, or anything read from their Supabase.
