@@ -8,7 +8,7 @@ Runs read **only this file and `docs/CONTEXT.md`**. Keep this file short: finish
 RUN LOCK:       none
 CURRENT JOB:    J2 Note-writing pipeline
 CURRENT STEPS:
-- [x] 1. QA gate script (`scripts/notes/qa.ts`): schema, size, SVG sanitiser, depth rules per course; unit tests that pass the existing notes and catch bad ones.
+- [x] 1. QA gate (`src/lib/notes/qa.ts`): schema, size, SVG sanitiser, depth rules per course; unit tests that pass the existing notes and catch bad ones.
 - [ ] 2. Playwright render check for figures (overlapping or cut-off labels), run on a batch of notes.
 - [ ] 3. Gemini writer (`scripts/notes/write.ts`): existing note prompt, rate limits, resume, progress file `content/notes/progress.json`, failures list `content/notes/failures.json`.
 - [ ] 4. Workflow `.github/workflows/notes.yml` (manual + scheduled): write, QA, render check, commit passing notes to `rebuild`.
