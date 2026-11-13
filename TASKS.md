@@ -9,7 +9,7 @@ RUN LOCK:       running since 2026-11-13T01:10Z, session session_01Sm3c8gtK97bWG
 CURRENT JOB:    J1 Choose your board, and many specs
 CURRENT STEPS:
 - [x] 1. Spec catalogue: 15 courses, specs as JSON files in content/specs/, legacy specs kept as each course's default, a `settings/boards` doc for the student's choices, unit tests (incl. 60+ specs).
-- [ ] 2. Board picker on the dashboard (Settings) and after sign-up; subject tabs, dashboard and report use the chosen specs.
+- [x] 2. Board picker on the dashboard (Settings) and after sign-up; subject tabs, dashboard and report use the chosen specs.
 - [ ] 3. Note storage for new specs (per-topic static JSON, loaded by the browser), decision recorded in docs/CONTEXT.md.
 - [ ] 4. e2e: switch a subject's board, see that spec's topics, earlier progress untouched; CI green.
 LAST RUN ENDED: 2026-11-12 (new queue J1 to J14 added by the owner)
