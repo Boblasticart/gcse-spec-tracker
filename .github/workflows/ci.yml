@@ -103,6 +103,14 @@ jobs:
         run: npm run build
       - name: Install Playwright browser
         run: npx playwright install --with-deps chromium
+      - name: Note writer works end to end (mock AI, made-up spec; nothing is committed)
+        env:
+          NOTES_MOCK: "1"
+        run: |
+          npx tsx scripts/notes/write.ts --specs phy_fixture --limit 3
+          test "$(node -e "console.log(Object.keys(require('./content/notes/progress.json').notes).length)")" = 3
+          npx tsx scripts/notes/render-check.ts content/notes/phy_fixture
+          rm -rf content/notes/phy_fixture content/notes/progress.json content/notes/failures.json
       - name: End-to-end tests
         env:
           # A predictable stand-in for Gemini (refused whenever VERCEL is set).

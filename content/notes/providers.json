@@ -1,0 +1,8 @@
+{
+  "_help": "AI providers the note writer shares work between. A provider is used only if its key (env) is set as a GitHub secret. rpm/rpd = requests per minute/day this pipeline allows itself (kept under each free tier). If a model name stops working, change it here.",
+  "providers": [
+    { "id": "gemini", "env": "GEMINI_API_KEY", "kind": "gemini", "model": "gemini-2.5-flash", "rpm": 8, "rpd": 200, "maxTokens": 32000 },
+    { "id": "groq", "env": "GROQ_API_KEY", "kind": "openai", "url": "https://api.groq.com/openai/v1/chat/completions", "model": "openai/gpt-oss-120b", "rpm": 20, "rpd": 800, "maxTokens": 16000 },
+    { "id": "openrouter", "env": "OPENROUTER_API_KEY", "kind": "openai", "url": "https://openrouter.ai/api/v1/chat/completions", "model": "deepseek/deepseek-chat-v3.1:free", "rpm": 15, "rpd": 45, "maxTokens": 16000 }
+  ]
+}
