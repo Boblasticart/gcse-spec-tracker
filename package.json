@@ -18,7 +18,7 @@
     "test:watch": "vitest",
     "e2e": "playwright test",
     "content:extract": "node scripts/extract-legacy.ts",
-    "content:check": "node scripts/extract-legacy.ts --check",
+    "content:check": "node scripts/extract-legacy.ts --check && node scripts/build-catalogue.mjs --check",
     "content:sync": "node scripts/sync-content.mjs",
     "postinstall": "prisma generate",
     "db:migrate": "prisma migrate deploy",

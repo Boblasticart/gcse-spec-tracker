@@ -1,6 +1,47 @@
 /** Shapes of the content extracted from the legacy tracker (`index.html`). */
 
-export type SubjectId = "phy" | "bio" | "chem" | "maths" | "cs" | "geo" | "eng" | "bus";
+/** The eight specs the legacy tracker shipped with; each stays the default for its course. */
+export type LegacySubjectId = "phy" | "bio" | "chem" | "maths" | "cs" | "geo" | "eng" | "bus";
+
+/**
+ * A spec id. Legacy specs keep their short ids ("phy"); catalogue specs use
+ * lower-case ids without dots, e.g. "phy_ocra". Progress is saved per spec id.
+ */
+export type SubjectId = string;
+
+/** A school subject a student can take; each has one or more specs (board, code, tier). */
+export type CourseId =
+  | "physics"
+  | "biology"
+  | "chemistry"
+  | "maths"
+  | "cs"
+  | "geography"
+  | "englit"
+  | "business"
+  | "englang"
+  | "combsci"
+  | "history"
+  | "rs"
+  | "french"
+  | "spanish"
+  | "pe";
+
+/**
+ * A spec as stored in `content/specs/{id}.json`. Point ids are given by
+ * position: `${id}.${topicIndex}.${pointIndex}`, topics numbered across papers.
+ */
+export interface RawSpec {
+  readonly id: string;
+  readonly course: CourseId;
+  readonly name: string;
+  readonly board: string;
+  readonly code: string;
+  readonly tier?: "Foundation" | "Higher";
+  /** Official specification document the points were read from. */
+  readonly source?: string;
+  readonly papers: readonly { readonly name: string; readonly topics: readonly { readonly name: string; readonly points: readonly string[] }[] }[];
+}
 
 /** One spec point. `id` is `${topicId}.${index}`, exactly as the legacy tracker numbers it. */
 export interface SpecPoint {
@@ -26,6 +67,9 @@ export interface Subject {
   readonly board: string;
   readonly code: string;
   readonly papers: readonly SpecPaper[];
+  /** The course this spec belongs to (catalogue specs; legacy specs get theirs from the catalogue). */
+  readonly course?: CourseId;
+  readonly tier?: "Foundation" | "Higher";
 }
 
 /** A practice paper PDF in `papers/`. */

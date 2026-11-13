@@ -7,7 +7,7 @@
 export const LEGACY_COLLECTIONS = ["progress", "a", "daily", "rv", "quiz", "qr", "q", "notes"] as const;
 
 /** New collections added by the rebuild (new things get new names). */
-export const NEW_COLLECTIONS = ["papers", "stats"] as const;
+export const NEW_COLLECTIONS = ["papers", "stats", "settings"] as const;
 
 /** `meta/applied` records which data/updates.json entries have been applied. Never exported. */
 export const ALL_COLLECTIONS = [...LEGACY_COLLECTIONS, ...NEW_COLLECTIONS, "meta"] as const;

@@ -1,14 +1,16 @@
 /** Typed access to the content extracted from the legacy tracker. */
+import { CATALOGUE, type Spec } from "./catalogue";
 import { PAPERS } from "./papers";
 import { LEGACY_PROMPTS } from "./prompts";
 import { SPEC } from "./spec";
 import type { LegacyPrompt, PracticePaper, SpecPoint, Subject, SubjectId, Topic } from "./types";
 
 export * from "./types";
+export * from "./catalogue";
 export { PAPERS, LEGACY_PROMPTS, SPEC };
 
 export interface PointRef {
-  readonly subject: Subject;
+  readonly subject: Spec;
   readonly paperName: string;
   readonly topic: Topic;
   readonly point: SpecPoint;
@@ -16,16 +18,16 @@ export interface PointRef {
 }
 
 export interface TopicRef {
-  readonly subject: Subject;
+  readonly subject: Spec;
   readonly paperName: string;
   readonly topic: Topic;
 }
 
-const subjectsById = new Map<string, Subject>(SPEC.map((s) => [s.id, s]));
+const subjectsById = new Map<string, Spec>(CATALOGUE.map((s) => [s.id, s]));
 const topicsById = new Map<string, TopicRef>();
 const pointsById = new Map<string, PointRef>();
 
-for (const subject of SPEC) {
+for (const subject of CATALOGUE) {
   for (const paper of subject.papers) {
     for (const topic of paper.topics) {
       topicsById.set(topic.id, { subject, paperName: paper.name, topic });
@@ -36,13 +38,14 @@ for (const subject of SPEC) {
   }
 }
 
-export const SUBJECT_IDS: readonly SubjectId[] = SPEC.map((s) => s.id);
+/** Every spec id in the catalogue (legacy ids first). */
+export const SUBJECT_IDS: readonly SubjectId[] = CATALOGUE.map((s) => s.id);
 
 export function isSubjectId(v: unknown): v is SubjectId {
   return typeof v === "string" && subjectsById.has(v);
 }
 
-export function getSubject(id: string): Subject | undefined {
+export function getSubject(id: string): Spec | undefined {
   return subjectsById.get(id);
 }
 

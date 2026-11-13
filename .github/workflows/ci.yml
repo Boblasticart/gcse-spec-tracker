@@ -71,6 +71,8 @@ jobs:
       APP_URL: http://localhost:3000
       MAIL_TRANSPORT: file
       ENABLE_TEST_CLOCK: "1"
+      # Builds the made-up test specs (src/content/fixture-specs.ts) into the CI app only.
+      NEXT_PUBLIC_SPEC_FIXTURES: "1"
       # CI-only throwaway secrets (not used anywhere else).
       OTP_PEPPER: ci-only-otp-pepper-not-a-real-secret-000000
       SESSION_SECRET: ci-only-session-secret-not-a-real-secret-00
