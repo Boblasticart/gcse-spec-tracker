@@ -27,7 +27,7 @@ describe("content", () => {
   });
 
   it("points every practice paper at a real PDF", () => {
-    const all = Object.values(PAPERS).flat();
+    const all = Object.values(PAPERS).flatMap((v) => v ?? []);
     expect(all).toHaveLength(56);
     for (const p of all) expect(existsSync(join(__dirname, "..", "..", p.url)), p.url).toBe(true);
   });
