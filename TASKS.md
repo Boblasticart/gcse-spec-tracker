@@ -61,9 +61,7 @@ Add each key as a GitHub secret: repo **Settings → Secrets and variables → A
 
 - [ ] `GEMINI_API_KEY`: Google AI Studio (aistudio.google.com → Get API key).
 - [ ] `OPENROUTER_API_KEY`: OpenRouter (openrouter.ai → Keys). Runs will use its free models.
-- [ ] Your Grok key, from **one** of your two accounts. Pick the name from what the key starts with:
-  - starts with `xai-` (Grok, from xAI, console.x.ai): name it `XAI_API_KEY`
-  - starts with `gsk_` (Groq, console.groq.com): name it `GROQ_API_KEY`
+- [ ] `GROQ_API_KEY`: Groq (console.groq.com → API Keys), the key starting `gsk_`. Add **one** key only, from one account: two Groq accounts to double the limit breaks Groq's rules.
 - Optional, any other company you have your own free account with (e.g. Mistral `MISTRAL_API_KEY`, Cohere `COHERE_API_KEY`, GitHub Models `GH_MODELS_TOKEN`): add it and a line here, and runs will use it too.
 
 ## Waiting on the owner
