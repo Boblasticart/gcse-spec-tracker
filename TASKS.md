@@ -9,7 +9,7 @@ RUN LOCK:       running since 2026-11-13T20:21Z, session session_01Sm3c8gtK97bWG
 CURRENT JOB:    J2 Note-writing pipeline
 CURRENT STEPS:
 - [x] 1. QA gate (`src/lib/notes/qa.ts`): schema, size, SVG sanitiser, depth rules per course; unit tests that pass the existing notes and catch bad ones.
-- [ ] 2. Playwright render check for figures (overlapping or cut-off labels), run on a batch of notes.
+- [x] 2. Playwright render check for figures (overlapping or cut-off labels), run on a batch of notes.
 - [ ] 3. Note writer (`scripts/notes/write.ts`) that shares work across every AI key the owner has added (see "AI keys for the note writer"): existing note prompt, each provider kept within its own free limits, skip a provider that hits its daily limit and resume after its reset, notes that fail QA retried on another model, each note records which model wrote it, progress file `content/notes/progress.json`, failures list `content/notes/failures.json`.
 - [ ] 4. Workflow `.github/workflows/notes.yml` (manual + scheduled): write, QA, render check, commit passing notes to `rebuild`.
 - [ ] 5. 10-note test batch passes QA and shows on the preview (needs the GEMINI_API_KEY secret and one catalogue spec).
