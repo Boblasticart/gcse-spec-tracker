@@ -22,7 +22,7 @@ test("render check passes clean figures and catches overlapping or cut-off label
 
 test("render check passes existing notes with clean figures", async ({ page }) => {
   for (const pid of ["phy.0.0", "phy.0.1", "phy.1.1", "chem.0.0", "maths.0.0", "geo.0.0"]) {
-    const note: unknown = JSON.parse(readFileSync(join(__dirname, "..", "..", "data", "notes", `${pid}.json`), "utf8"));
+    const note: unknown = JSON.parse(readFileSync(join(process.cwd(), "data", "notes", `${pid}.json`), "utf8"));
     const figures = figuresOf(pid, note);
     expect(figures.length, pid).toBeGreaterThan(0);
     expect(await checkFigures(page, figures), pid).toEqual([]);
