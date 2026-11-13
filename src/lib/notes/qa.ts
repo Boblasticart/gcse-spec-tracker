@@ -35,6 +35,7 @@ interface Minimums {
   core: number;
   terms: number;
   mistakes: number;
+  /** Exam questions or exam tips (legacy notes store tips as plain strings). */
   exam: number;
   worked: number;
   figures: number;
@@ -131,15 +132,15 @@ export function qaNote(raw: unknown, opts: { pid: string; course: CourseId }): Q
     if (!str(s.p).trim() && arr(s.bullets).length === 0 && !isObj(s.table)) errors.push(`core ${i + 1}: no text`);
   });
 
-  const count = (key: string, need: number, ok: (v: Obj) => boolean, label: string): void => {
+  const count = (key: string, need: number, ok: (v: Obj) => boolean, label: string, allowText = false): void => {
     const items = arr(raw[key]);
-    const good = items.filter((v) => isObj(v) && ok(v)).length;
+    const good = items.filter((v) => (isObj(v) ? ok(v) : allowText && typeof v === "string" && v.trim() !== "")).length;
     if (good < items.length) errors.push(`${items.length - good} ${label} are incomplete`);
     if (items.length < need) errors.push(`${items.length} ${label} (expected at least ${need})`);
   };
   count("terms", min.terms, (t) => !!str(t.t) && !!str(t.d), "key terms");
   count("mistakes", min.mistakes, (m) => !!str(m.w) && !!str(m.r), "common mistakes");
-  count("exam", min.exam, (x) => !!str(x.q) && Number(x.marks) > 0, "exam questions");
+  count("exam", min.exam, (x) => !!str(x.q) && Number(x.marks) > 0, "exam questions or tips", true);
   count("worked", min.worked, (w) => !!str(w.q) && arr(w.steps).length > 0 && !!str(w.ans), "worked examples");
 
   const figures = [...arr(raw.svg), ...core.flatMap((c) => (isObj(c) ? arr(c.fig) : []))];
