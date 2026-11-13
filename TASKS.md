@@ -5,7 +5,7 @@ Runs read **only this file and `docs/CONTEXT.md`**. Keep this file short: finish
 ## Status
 
 ```
-RUN LOCK:       none
+RUN LOCK:       running since 2026-11-13T20:21Z, session session_01Sm3c8gtK97bWGMZPawFfux (owner in chat)
 CURRENT JOB:    J2 Note-writing pipeline
 CURRENT STEPS:
 - [x] 1. QA gate (`src/lib/notes/qa.ts`): schema, size, SVG sanitiser, depth rules per course; unit tests that pass the existing notes and catch bad ones.
@@ -59,7 +59,7 @@ Each subject job is done when every listed spec's points are in the catalogue, e
 
 Add each key as a GitHub secret: repo **Settings → Secrets and variables → Actions → New repository secret**. Paste the name exactly as below, and the key as the value. Never paste a key into this file or anywhere else in the repo. Only add keys from your own accounts, **one account per company**: several accounts with the same company to get round its limits breaks its rules and can get the accounts blocked. Tick each line once added; runs use whichever keys exist.
 
-- [ ] `GEMINI_API_KEY`: Google AI Studio (aistudio.google.com → Get API key).
+- [x] `GEMINI_API_KEY`: Google AI Studio (aistudio.google.com → Get API key).
 - [ ] `OPENROUTER_API_KEY`: OpenRouter (openrouter.ai → Keys). Runs will use its free models.
 - [ ] `GROQ_API_KEY`: Groq (console.groq.com → API Keys), the key starting `gsk_`. Add **one** key only, from one account: two Groq accounts to double the limit breaks Groq's rules.
 - Optional, any other company you have your own free account with (e.g. Mistral `MISTRAL_API_KEY`, Cohere `COHERE_API_KEY`, GitHub Models `GH_MODELS_TOKEN`): add it and a line here, and runs will use it too.
