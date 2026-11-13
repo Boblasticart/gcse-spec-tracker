@@ -10,7 +10,7 @@ CURRENT JOB:    J2 Note-writing pipeline
 CURRENT STEPS:
 - [x] 1. QA gate (`src/lib/notes/qa.ts`): schema, size, SVG sanitiser, depth rules per course; unit tests that pass the existing notes and catch bad ones.
 - [ ] 2. Playwright render check for figures (overlapping or cut-off labels), run on a batch of notes.
-- [ ] 3. Gemini writer (`scripts/notes/write.ts`): existing note prompt, rate limits, resume, progress file `content/notes/progress.json`, failures list `content/notes/failures.json`.
+- [ ] 3. Note writer (`scripts/notes/write.ts`) that shares work across every AI key the owner has added (see "AI keys for the note writer"): existing note prompt, each provider kept within its own free limits, skip a provider that hits its daily limit and resume after its reset, notes that fail QA retried on another model, each note records which model wrote it, progress file `content/notes/progress.json`, failures list `content/notes/failures.json`.
 - [ ] 4. Workflow `.github/workflows/notes.yml` (manual + scheduled): write, QA, render check, commit passing notes to `rebuild`.
 - [ ] 5. 10-note test batch passes QA and shows on the preview (needs the GEMINI_API_KEY secret and one catalogue spec).
 LAST RUN ENDED: 2026-11-13 ~02:00 UTC (J1 done; J2 step 1 done, resume at J2 step 2)
@@ -55,10 +55,20 @@ Each subject job is done when every listed spec's points are in the catalogue, e
 
 - [ ] J1 Choose your board: pick subjects and exam boards on the dashboard; progress is kept per board. Preview: https://gcse-spec-tracker-git-rebuild-boblasticart.vercel.app/dashboard (only today's boards exist until the subject jobs add more).
 
+## AI keys for the note writer (owner fills in)
+
+Add each key as a GitHub secret: repo **Settings → Secrets and variables → Actions → New repository secret**. Paste the name exactly as below, and the key as the value. Never paste a key into this file or anywhere else in the repo. Only add keys from your own accounts, **one account per company**: several accounts with the same company to get round its limits breaks its rules and can get the accounts blocked. Tick each line once added; runs use whichever keys exist.
+
+- [ ] `GEMINI_API_KEY`: Google AI Studio (aistudio.google.com → Get API key).
+- [ ] `OPENROUTER_API_KEY`: OpenRouter (openrouter.ai → Keys). Runs will use its free models.
+- [ ] Your Grok key, from **one** of your two accounts. Pick the name from what the key starts with:
+  - starts with `xai-` (Grok, from xAI, console.x.ai): name it `XAI_API_KEY`
+  - starts with `gsk_` (Groq, console.groq.com): name it `GROQ_API_KEY`
+- Optional, any other company you have your own free account with (e.g. Mistral `MISTRAL_API_KEY`, Cohere `COHERE_API_KEY`, GitHub Models `GH_MODELS_TOKEN`): add it and a line here, and runs will use it too.
+
 ## Waiting on the owner
 
 - **Needed for the subject jobs (J3 onwards):** unattended runs could not read the exam boards' websites (the web-page reader asked for permission and nobody was there to answer). Open the scheduled task "GCSE tracker rebuild" in Claude and switch on **Automatically approve**, or tell a run in chat that reading aqa.org.uk, qualifications.pearson.com, ocr.org.uk and eduqas.co.uk is fine.
-- **Needed for J2:** add the Gemini key as a GitHub secret: repo **Settings → Secrets and variables → Actions → New repository secret**, name `GEMINI_API_KEY`, value = your Gemini key. If Gemini's free daily limit makes the notes too slow, you may want to switch on billing in Google AI Studio (runs will say if so).
 - Delete the leftover branch `ci-probe` on GitHub (optional, harmless).
 - Delete the duplicate Vercel project `gcse-spec-tracker-ocwb` (optional).
 
