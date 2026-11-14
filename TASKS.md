@@ -5,7 +5,7 @@ Runs read **only this file and `docs/CONTEXT.md`**. Keep this file short: finish
 ## Status
 
 ```
-RUN LOCK:       none
+RUN LOCK:       running since 2026-11-14T01:10Z, session 01Sm3c8ifRJM5XspXTPWhatQ
 CURRENT JOB:    J2 Note-writing pipeline
 CURRENT STEPS:
 - [x] 1. QA gate (`src/lib/notes/qa.ts`): schema, size, SVG sanitiser, depth rules per course; unit tests that pass the existing notes and catch bad ones.
