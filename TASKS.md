@@ -5,7 +5,7 @@ Runs read **only this file and `docs/CONTEXT.md`**. Keep this file short: finish
 ## Status
 
 ```
-RUN LOCK:       running since 2026-11-14T01:10Z, session 01Sm3c8ifRJM5XspXTPWhatQ
+RUN LOCK:       none
 CURRENT JOB:    J2 Note-writing pipeline
 CURRENT STEPS:
 - [x] 1. QA gate (`src/lib/notes/qa.ts`): schema, size, SVG sanitiser, depth rules per course; unit tests that pass the existing notes and catch bad ones.
@@ -13,7 +13,7 @@ CURRENT STEPS:
 - [x] 3. Note writer (`scripts/notes/write.ts`) that shares work across every AI key the owner has added (see "AI keys for the note writer"): existing note prompt, each provider kept within its own free limits, skip a provider that hits its daily limit and resume after its reset, notes that fail QA retried on another model, each note records which model wrote it, progress file `content/notes/progress.json`, failures list `content/notes/failures.json`.
 - [x] 4. Workflow `.github/workflows/notes.yml` (manual + scheduled): write, QA, render check, commit passing notes to `rebuild`.
 - [ ] 5. 10-note test batch passes QA and shows on the preview. Keys are set (the workflow sees gemini, groq, openrouter). Needs one real catalogue spec first: add it (content/specs/), then set run-request.json `specs` to it and `limit` 10, push, and check the Write notes run.
-LAST RUN ENDED: 2026-11-13 ~21:00 UTC, in chat with the owner (J2 steps 2-4 done; step 5 waits for one real catalogue spec)
+LAST RUN ENDED: 2026-11-14 ~01:20 UTC, scheduled run (no progress: the board website reader still asked for permission with nobody there; J2 step 5 still waits for one real catalogue spec)
 ```
 
 ## Queue (top = next)
@@ -66,7 +66,7 @@ Add each key as a GitHub secret: repo **Settings → Secrets and variables → A
 
 ## Waiting on the owner
 
-- **Needed for the subject jobs (J3 onwards) and J2 step 5:** runs (unattended, and also in chat on 2026-11-13) could not read the exam boards' websites (the web-page reader asked for permission and nobody was there to answer). Open the scheduled task "GCSE tracker rebuild" in Claude and switch on **Automatically approve**, or tell a run in chat that reading aqa.org.uk, qualifications.pearson.com, ocr.org.uk and eduqas.co.uk is fine. Another way: download a spec PDF from the board's website and attach it in chat.
+- **Needed for the subject jobs (J3 onwards) and J2 step 5:** runs (unattended on 2026-11-13 and 2026-11-14, and in chat on 2026-11-13) could not read the exam boards' websites (the web-page reader asked for permission and nobody was there to answer). Open the scheduled task "GCSE tracker rebuild" in Claude and switch on **Automatically approve**, or tell a run in chat that reading aqa.org.uk, qualifications.pearson.com, ocr.org.uk and eduqas.co.uk is fine. Another way: download a spec PDF from the board's website and attach it in chat.
 - Delete the leftover branch `ci-probe` on GitHub (optional, harmless).
 - Delete the duplicate Vercel project `gcse-spec-tracker-ocwb` (optional).
 
