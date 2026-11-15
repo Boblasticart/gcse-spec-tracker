@@ -58,11 +58,16 @@ jobs:
         run: npm ci --no-audit --no-fund
       - name: Install Playwright browser
         run: npx playwright install --with-deps chromium
+      - name: Git identity
+        run: |
+          git config user.name "notes-bot"
+          git config user.email "notes-bot@users.noreply.github.com"
       - name: Write notes
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          NOTES_COMMIT_EVERY: "10"
           SPECS: ${{ inputs.specs }}
           LIMIT: ${{ inputs.limit || '300' }}
           MINUTES: ${{ inputs.minutes || '300' }}

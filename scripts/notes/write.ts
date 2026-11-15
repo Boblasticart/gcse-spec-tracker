@@ -12,6 +12,7 @@
  * daily use are kept in content/notes/progress.json, so a run can stop at any
  * moment and the next one carries on.
  */
+import { execSync } from "node:child_process";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -136,6 +137,20 @@ async function main(): Promise<void> {
     progress.totals.written++;
     delete failures[pid];
     save();
+    // In the workflow, push every few notes so they reach the preview during a long run (and survive a cut-off).
+    const every = Number(process.env.NOTES_COMMIT_EVERY ?? 0);
+    if (every > 0 && progress.totals.written % every === 0) pushNotes();
+  };
+
+  const pushNotes = (): void => {
+    try {
+      execSync("git add content/notes", { cwd: ROOT, stdio: "ignore" });
+      execSync('git diff --cached --quiet || git commit -q -m "Notes: progress (written and checked by the Write notes workflow)"', { cwd: ROOT, stdio: "ignore", shell: "/bin/bash" });
+      execSync("git pull -q --rebase origin rebuild && git push -q origin HEAD:rebuild", { cwd: ROOT, stdio: "ignore", shell: "/bin/bash" });
+      console.log("pushed notes so far");
+    } catch (e) {
+      console.log(`could not push notes yet: ${(e as Error).message.slice(0, 120)}`);
+    }
   };
 
   const worker = async (base: ProviderConfig): Promise<void> => {
