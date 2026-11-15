@@ -56,6 +56,7 @@ Each subject job is done when every listed spec's points are in the catalogue, e
 
 ## Ready for the owner's OK (on the preview, not live yet)
 
+_None._
 
 ## AI keys for the note writer (owner fills in)
 
@@ -92,5 +93,5 @@ Add each key as a GitHub secret: repo **Settings → Secrets and variables → A
    - Only when the owner says OK in a chat, or ticks `[x]` beside a line under "Ready for the owner's OK".
    - Then fast-forward `main` to `rebuild` (only if `main` is an ancestor and CI is green), push `main`, and remove those lines.
    - Never push to `main` otherwise.
-7. **Keep the notes coming (every run).** Since 2026-11-15 the Write notes workflow is on `main`, so its daily schedule (08:23 UTC) runs it. If no "Write notes" run has started in the last 26 hours anyway, if no "Write notes" run has started in the last 20 hours, set `"run"` in `content/notes/run-request.json` to today's date and push (that push starts it). Then read `content/notes/failures.json` and fix what it shows (prompt, models in providers.json, QA rules), never by hand-writing notes.
+7. **Keep the notes coming (every run).** Since 2026-11-15 the Write notes workflow is on `main`, so its daily schedule (08:23 UTC) runs it. If no "Write notes" run has started in the last 26 hours anyway, set `"run"` in `content/notes/run-request.json` to today's date and push (that push starts it). Then read `content/notes/failures.json` and fix what it shows (prompt, models in providers.json, QA rules), never by hand-writing notes.
 8. **End of run.** Set RUN LOCK back to `none`, fill in LAST RUN ENDED and push. Then send the owner one short, friendly, jargon-free message saying what was done, what's next, and what they need to do.
