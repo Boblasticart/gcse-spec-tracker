@@ -160,6 +160,7 @@ async function main(): Promise<void> {
     console.log(`[${base.id}] models: ${models.join(", ") || "none"}`);
     if (!models.length) return;
     let p: ProviderConfig = { ...base, model: models[0]! };
+    let stalls = 0;
     const gap = Math.ceil(60_000 / p.rpm);
     let next = 0;
     for (;;) {
@@ -221,6 +222,14 @@ async function main(): Promise<void> {
         }
         if (e instanceof RateLimited) {
           console.log(`[${p.id}] rate limited${e.daily ? " for today" : ""}: ${e.message.slice(0, 120)}`);
+          // A model that keeps not answering (common with free models) is swapped for the next one.
+          stalls = /no reply|cut off/.test(e.message) ? stalls + 1 : 0;
+          if (stalls >= 2 && mi + 1 < models.length) {
+            mi++;
+            stalls = 0;
+            p = { ...base, model: models[mi]! };
+            console.log(`[${p.id}] switching to ${p.model}`);
+          }
           if (job.tried.length) retries.unshift(job);
           else queue.unshift(job.pid);
           inFlight--;

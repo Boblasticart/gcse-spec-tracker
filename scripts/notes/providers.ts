@@ -58,7 +58,12 @@ async function post(url: string, headers: Record<string, string>, body: unknown)
     // Timeouts and dropped connections are the provider being busy, not the note's fault.
     throw new RateLimited(`no reply: ${(e as Error).message}`, false, 60_000);
   }
-  const text = await res.text();
+  let text: string;
+  try {
+    text = await res.text();
+  } catch (e) {
+    throw new RateLimited(`reply cut off: ${(e as Error).message}`, false, 60_000);
+  }
   if (res.status >= 500) throw new RateLimited(`busy, HTTP ${res.status}: ${text.slice(0, 200)}`, false, 90_000);
   if (res.status === 429) {
     const daily = /per.?day|daily|RPD|quota.*exceeded.*day|free-models-per-day/i.test(text);
@@ -104,6 +109,20 @@ export async function complete(p: ProviderConfig, key: string, prompt: string): 
 /** The models to try for a provider. "auto-free" asks OpenRouter which free models exist today (biggest context first). */
 export async function resolveModels(p: ProviderConfig, key: string): Promise<string[]> {
   const list = p.models?.length ? p.models : [p.model];
+  if (list.includes("auto") && p.url) {
+    // Ask an OpenAI-style API which chat models this key can use today.
+    try {
+      const res = await fetch(p.url.replace(/\/chat\/completions$/, "/models"), { headers: { authorization: `Bearer ${key}` }, signal: AbortSignal.timeout(30_000) });
+      const data = (await res.json()) as { data?: { id: string; active?: boolean; context_window?: number }[] };
+      const chat = (data.data ?? [])
+        .filter((m) => m.active !== false && !/whisper|guard|tts|orpheus|prompt|compound|playai|distil|embed/i.test(m.id))
+        .sort((a, b) => (b.context_window ?? 0) - (a.context_window ?? 0))
+        .map((m) => m.id);
+      return [...new Set(list.flatMap((m) => (m === "auto" ? chat : [m])))];
+    } catch {
+      return list.filter((m) => m !== "auto");
+    }
+  }
   if (!list.includes("auto-free")) return list;
   try {
     const res = await fetch("https://openrouter.ai/api/v1/models", { headers: { authorization: `Bearer ${key}` }, signal: AbortSignal.timeout(30_000) });
