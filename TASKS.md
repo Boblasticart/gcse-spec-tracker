@@ -6,13 +6,11 @@ Runs read **only this file and `docs/CONTEXT.md`**. Keep this file short: finish
 
 ```
 RUN LOCK:       none
-CURRENT JOB:    J2 Note-writing pipeline
+CURRENT JOB:    J3 Maths
 CURRENT STEPS:
-- [x] 1. QA gate (`src/lib/notes/qa.ts`): schema, size, SVG sanitiser, depth rules per course; unit tests that pass the existing notes and catch bad ones.
-- [x] 2. Playwright render check for figures (overlapping or cut-off labels), run on a batch of notes.
-- [x] 3. Note writer (`scripts/notes/write.ts`) that shares work across every AI key the owner has added (see "AI keys for the note writer"): existing note prompt, each provider kept within its own free limits, skip a provider that hits its daily limit and resume after its reset, notes that fail QA retried on another model, each note records which model wrote it, progress file `content/notes/progress.json`, failures list `content/notes/failures.json`.
-- [x] 4. Workflow `.github/workflows/notes.yml` (manual + scheduled): write, QA, render check, commit passing notes to `rebuild`.
-- [ ] 5. 10-note test batch passes QA and shows on the preview. Keys are set (the workflow sees gemini, groq, openrouter). Needs one real catalogue spec first: add it (content/specs/), then set run-request.json `specs` to it and `limit` 10, push, and check the Write notes run.
+- [ ] 1. Every point of maths_aqa_h, maths_aqa_f, maths_ocr_h, maths_eduqas_h, maths_eduqas_f has a note that passed QA (the Write notes workflow does this; fix whatever lands in content/notes/failures.json).
+- [ ] 2. Add OCR J560 Foundation (check which J560 lines are Higher-only in the tier columns) and let its notes be written.
+- [ ] 3. Spot-check 5 maths notes on the preview (render, accuracy against the spec), then list J3 under "Ready for the owner's OK".
 LAST RUN ENDED: 2026-11-15 ~01:20 UTC, scheduled run (no progress: the board website reader still asked for permission with nobody there; J2 step 5 still waits for one real catalogue spec)
 ```
 
@@ -28,12 +26,6 @@ LAST RUN ENDED: 2026-11-15 ~01:20 UTC, scheduled run (no progress: the board web
 
 The spec codes below are a starting list. Check each against the board's own website, and record withdrawn or renamed specs here. Spec-point lists come from the official specification documents, read with WebFetch.
 
-1. **J2 Note-writing pipeline.**
-   - A GitHub Actions workflow (manual + scheduled) uses the `GEMINI_API_KEY` repository secret to write notes for queued spec points in the exact existing note format.
-   - It must stay within Gemini's rate limits, resume where it stopped, and log progress in a committed progress file.
-   - Every note must pass a QA gate before it is committed: schema and size checks, the existing SVG sanitiser, a Playwright render check for overlapping or cut-off labels, and enough depth (diagrams expected for science/maths/CS/geography/PE; fewer for English, languages, history and RS).
-   - Failures go on a list that Claude fixes in later runs.
-   - Done when: a 10-note test batch passes QA and shows on the preview.
 2. **J3 Maths:** AQA 8300, OCR J560, Eduqas (Higher and Foundation where the spec has tiers).
    - 2026-11-15: with the owner approving the four board websites in chat, ALL specs were read in one sitting: 52 catalogue specs, about 5,200 points, in content/specs/ (sources in each file). Every subject job (J3 to J14) now only needs its notes written by the Write notes workflow, plus checks.
    - Not offered any more (skipped): Eduqas GCSE Biology/Chemistry/Physics (withdrawn), Eduqas French/Spanish (discontinued 2025), OCR French/Spanish (withdrawn 2017).
@@ -56,7 +48,7 @@ Each subject job is done when every listed spec's points are in the catalogue, e
 
 ## Ready for the owner's OK (on the preview, not live yet)
 
-_None._
+- [ ] J2 Note-writing pipeline: notes written by Gemini/Groq/OpenRouter in GitHub, every note checked (layout, depth, safe diagrams, no overlapping or cut-off labels) before it is saved; first 11 AQA Maths notes passed. Preview: https://gcse-spec-tracker-git-rebuild-boblasticart.vercel.app/notes/maths_aqa_f.0.0
 
 ## AI keys for the note writer (owner fills in)
 
