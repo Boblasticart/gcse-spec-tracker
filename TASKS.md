@@ -66,7 +66,7 @@ Add each key as a GitHub secret: repo **Settings → Secrets and variables → A
 
 ## Waiting on the owner
 
-- **Needed for the subject jobs (J3 onwards) and J2 step 5:** runs (unattended on 2026-11-13, 2026-11-14 and 2026-11-15, and in chat on 2026-11-13) could not read the exam boards' websites (the web-page reader asked for permission and nobody was there to answer). Open the scheduled task "GCSE tracker rebuild" in Claude and switch on **Automatically approve**, or tell a run in chat that reading aqa.org.uk, qualifications.pearson.com, ocr.org.uk and eduqas.co.uk is fine. Another way: download a spec PDF from the board's website and attach it in chat.
+- **Needed for the subject jobs (J3 onwards) and J2 step 5:** runs cannot read the exam boards' websites: the web-page reader asks for permission for each site and nobody answers it in time. The scheduled task already has automatic approval switched on (checked 2026-11-15), so that setting is not the fix. Way forward: the owner downloads each spec PDF from the board's website and attaches it in chat (start with AQA Maths 8300); a run then adds the spec from the PDF. Runs must not fetch board sites any other way.
 - Delete the leftover branch `ci-probe` on GitHub (optional, harmless).
 - Delete the duplicate Vercel project `gcse-spec-tracker-ocwb` (optional).
 
