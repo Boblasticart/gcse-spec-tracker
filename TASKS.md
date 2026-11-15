@@ -11,7 +11,7 @@ CURRENT STEPS:
 - [ ] 1. Every point of maths_aqa_h, maths_aqa_f, maths_ocr_h, maths_eduqas_h, maths_eduqas_f has a note that passed QA (the Write notes workflow does this; fix whatever lands in content/notes/failures.json).
 - [ ] 2. Add OCR J560 Foundation (check which J560 lines are Higher-only in the tier columns) and let its notes be written.
 - [ ] 3. Spot-check 5 maths notes on the preview (render, accuracy against the spec), then list J3 under "Ready for the owner's OK".
-LAST RUN ENDED: 2026-11-15 ~01:20 UTC, scheduled run (no progress: the board website reader still asked for permission with nobody there; J2 step 5 still waits for one real catalogue spec)
+LAST RUN ENDED: 2026-11-15 evening, in chat with the owner (J1 live; all 52 specs read; J2 done; notes being written, maths first)
 ```
 
 ## Queue (top = next)
