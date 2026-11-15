@@ -4743,5 +4743,1113 @@
   "src": "pre",
   "by": "gemini/gemini-3.8-flash",
   "ts": "2026-11-15T16:48:29.158Z"
+ },
+ "maths_aqa_f.0.13": {
+  "summary": "Estimation is the mathematical skill of finding a quick, sensible approximation to a complex calculation, most commonly by rounding each given value to one significant figure before computing. In AQA Foundation examinations, estimation questions test both your ability to simplify numbers accurately and your capacity to check whether calculated answers are realistic, avoiding severe arithmetic errors. Mastering this topic ensures you secure straightforward method marks on non-calculator and calculator papers while providing an essential toolkit for verifying results across all areas of mathematics.",
+  "core": [
+   {
+    "h": "The Principle of Estimation",
+    "p": "Estimation replaces complicated numbers with simpler, easy-to-calculate values that are close to the originals, allowing mental or rapid written arithmetic. In AQA GCSE Maths, an estimate is not a wild guess; it follows strict rounding conventions so that examiners can reward precise method steps.",
+    "bullets": [
+     "Estimating means finding an approximate value rather than an exact numerical result.",
+     "The standard exam instruction **'Work out an estimate'** or **'Estimate the value of'** requires rounding **every number** in the calculation before doing any arithmetic.",
+     "Attempting the exact calculation first and rounding the final answer receives zero marks for method on AQA mark schemes.",
+     "The symbol **≈** means 'approximately equal to' and should be written to show where an approximation has replaced an exact value."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Estimation Definition",
+      "p": "The process of finding an approximate answer to a problem by replacing difficult numbers with rounded, easy-to-manipulate values before carrying out operations."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "The One Significant Figure (1 s.f.) Standard",
+    "p": "Unless an alternative instruction is explicitly stated in the question, the universal standard for GCSE estimation is to round every single number to **1 significant figure**.",
+    "bullets": [
+     "Locate the first non-zero digit starting from the left: this is the first significant figure.",
+     "Look at the immediate next digit to the right (the decider digit).",
+     "If the decider digit is 5 or greater, increase the first significant figure by 1; if it is 4 or less, leave the first significant figure unchanged.",
+     "Replace all remaining digits up to the decimal point with place-holding zeros.",
+     "Do not leave trailing zeros after a decimal point when rounding to 1 s.f. (e.g. 0.040 is 2 s.f., write 0.04)."
+    ],
+    "table": {
+     "head": [
+      "Original Value",
+      "First Significant Digit",
+      "Decider Digit",
+      "Rounded to 1 s.f."
+     ],
+     "rows": [
+      [
+       "438",
+       "4 (in hundreds column)",
+       "3 (< 5)",
+       "400"
+      ],
+      [
+       "78.9",
+       "7 (in tens column)",
+       "8 (≥ 5)",
+       "80"
+      ],
+      [
+       "0.0671",
+       "6 (in hundredths column)",
+       "7 (≥ 5)",
+       "0.07"
+      ],
+      [
+       "0.00329",
+       "3 (in thousandths column)",
+       "2 (< 5)",
+       "0.003"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "The Common Zero Mistake",
+      "p": "Never round numbers to 1 decimal place or to the nearest ten unless specifically told to do so. In an estimation question, always round to 1 significant figure."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Estimating Products and Multiplications",
+    "p": "To estimate products, round each factor to 1 significant figure first, then multiply the single-digit numbers and adjust for place value using powers of 10.",
+    "bullets": [
+     "Step 1: Round every factor to 1 significant figure.",
+     "Step 2: Multiply the leading non-zero digits together.",
+     "Step 3: Count and append the total number of place-value zeros from both factors.",
+     "Example: To estimate 389 × 52, round 389 to 400 and 52 to 50.",
+     "Calculate 4 × 5 = 20, then attach three zeros: 20,000.",
+     "Using 390 × 50 is penalized because 390 is 2 significant figures, making mental calculation unnecessarily harder."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Counting Zeros Carefully",
+      "p": "When multiplying numbers whose non-zero digits produce a multiple of 10 (such as 4 × 5 = 20 or 2 × 5 = 10), do not mistake the resulting 0 in 20 for one of the trailing place-value zeros."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Estimating Quotients and Divisions",
+    "p": "Estimating division requires careful handling of place value, particularly when dividing by small decimals or when fractions are involved.",
+    "bullets": [
+     "Round both the numerator (dividend) and the denominator (divisor) to 1 significant figure.",
+     "Simplify any powers of 10 by cancelling equal numbers of trailing zeros in the numerator and denominator.",
+     "If dividing by a decimal smaller than 1, convert the division into an equivalent fraction with a whole number denominator.",
+     "For example, 60 ÷ 0.2 is equivalent to 600 ÷ 2 = 300.",
+     "Dividing by a number smaller than 1 always produces an answer greater than the numerator."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Dividing by Decimals Trap",
+      "p": "Students often write 60 ÷ 0.2 = 12 or 60 ÷ 0.2 = 30. Remember: dividing by 0.2 is identical to multiplying by 5 (since 1 ÷ 0.2 = 5)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Complex Fractional Calculations",
+    "p": "Multi-step estimation questions often present a fraction containing products or sums in both the numerator and denominator.",
+    "bullets": [
+     "Round **every individual term** to 1 significant figure before carrying out any addition, subtraction, multiplication, or division.",
+     "Evaluate the numerator completely to obtain a single approximate value.",
+     "Evaluate the denominator completely to obtain a single approximate value.",
+     "Perform the final division between the simplified numerator and denominator.",
+     "Write down every intermediate rounded value to guarantee method marks even if an arithmetic slip occurs at the end."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Exam Method Rule",
+      "p": "On AQA mark schemes, the first mark (M1) is almost always awarded for seeing two or three correctly rounded values written down explicitly (e.g. 300, 40, 0.5)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Estimating Roots and Non-Standard Values",
+    "p": "When expressions involve square roots, cube roots, or values near friendly boundaries, adjust to the nearest square or cube number to maintain ease of mental calculation.",
+    "bullets": [
+     "For square roots such as √47.3, identify the closest square number: √49 = 7.",
+     "For √98.4, replace with √100 = 10.",
+     "For cube roots such as ∛28.1, replace with ∛27 = 3.",
+     "This adjustment takes precedence over rigid 1 s.f. rounding because finding non-integer square roots defeats the purpose of estimation.",
+     "State clearly which square or cube number you have chosen."
+    ],
+    "table": {
+     "head": [
+      "Given Expression",
+      "Nearest Known Exact Power",
+      "Estimated Replacement",
+      "Value"
+     ],
+     "rows": [
+      [
+       "√35.8",
+       "36 is nearest square",
+       "√36",
+       "6"
+      ],
+      [
+       "√82.1",
+       "81 is nearest square",
+       "√81",
+       "9"
+      ],
+      [
+       "∛63.5",
+       "64 is nearest cube",
+       "∛64",
+       "4"
+      ],
+      [
+       "√142.9",
+       "144 is nearest square",
+       "√144",
+       "12"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Checking Calculations Using Inverse Operations",
+    "p": "AQA requires students to check calculations using inverse operations to confirm that a result is numerically sound and free from entry errors.",
+    "bullets": [
+     "Addition and subtraction are inverse operations: if a + b = c, check that c - b = a or c - a = b.",
+     "Multiplication and division are inverse operations: if a × b = c, check that c ÷ b = a or c ÷ a = b.",
+     "Squaring and square-rooting are inverse operations for positive numbers: if √a = b, check that b² = a.",
+     "When an exam question instructs: **'Show how to check your answer'**, you must write out the inverse calculation explicitly."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Show the Check Explicitly",
+      "p": "Do not simply write 'It matches' or 'I checked it on my calculator'. You must write down the exact inverse calculation, such as: Check: 142.8 - 56.9 = 85.9."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Determining Overestimates and Underestimates",
+    "p": "Grade 5 questions on Foundation papers often ask whether an estimate is an overestimate or an underestimate, requiring logical justification.",
+    "bullets": [
+     "An **overestimate** is an approximation that is larger than the true answer.",
+     "An **underestimate** is an approximation that is smaller than the true answer.",
+     "In a product A × B: if both numbers are rounded up, the result is definitively an overestimate; if both are rounded down, it is an underestimate.",
+     "In a fraction N ÷ D: rounding the numerator UP makes the fraction larger; rounding the denominator UP makes the fraction smaller.",
+     "Rounding the numerator DOWN and the denominator UP guarantees an underestimate because you divide a smaller value by a larger value."
+    ],
+    "table": {
+     "head": [
+      "Operation Form",
+      "Rounding Action",
+      "Effect on Result"
+     ],
+     "rows": [
+      [
+       "Product: A × B",
+       "Both rounded UP",
+       "Definite OVERESTIMATE"
+      ],
+      [
+       "Product: A × B",
+       "Both rounded DOWN",
+       "Definite UNDERESTIMATE"
+      ],
+      [
+       "Fraction: N / D",
+       "N rounded UP, D rounded DOWN",
+       "Definite OVERESTIMATE"
+      ],
+      [
+       "Fraction: N / D",
+       "N rounded DOWN, D rounded UP",
+       "Definite UNDERESTIMATE"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Mixed Rounding Cases",
+      "p": "If one factor in a multiplication is rounded up and the other is rounded down, you cannot state whether it is an over- or underestimate without comparing percentage changes. AQA questions will be constructed so the direction of error is unambiguous."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Approximation in Practical and Financial Contexts",
+    "p": "Estimation is frequently tested in real-world contexts such as supermarket bills, petrol consumption, hourly pay, or home decorating.",
+    "bullets": [
+     "In budgeting questions, it is safer to round costs **up** to avoid under-budgeting, but exam questions standardly follow 1 s.f. unless practical constraints are stated.",
+     "For unit rates, convert units before rounding (e.g. convert pence to pounds or grams to kilograms).",
+     "Use estimates to evaluate claims: for example, checking if '£20 is enough to buy 6 items costing £3.89 each'.",
+     "6 × £3.89 is approximately 6 × £4 = £24, which proves immediately that £20 is not sufficient."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Assessing Reasonableness of Calculator Results",
+    "p": "A key examiner objective is ensuring students identify calculator entry errors (such as missing brackets or displaced decimal points).",
+    "bullets": [
+     "Entering 4.2 + 8.9 ÷ 2.1 into a basic calculator without brackets evaluates 4.2 + (8.9 ÷ 2.1) ≈ 8.44 instead of (4.2 + 8.9) ÷ 2.1 ≈ 6.24.",
+     "Rough mental estimation before typing reveals whether the calculator screen displays a sensible answer.",
+     "If calculating the cost of 5 books gives £780, an immediate 1 s.f. check (5 × £15 ≈ £75) shows a factor-of-ten keying error occurred.",
+     "Check orders of magnitude: an estimate tells you where the decimal point belongs."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Order of Magnitude Check",
+      "p": "Before accepting a calculator answer, calculate the leading digits and power of 10 mentally. If your estimate is 400 and your calculator gives 42.1, you have missed a zero or misplaced a decimal point."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Packing Crate Analogy",
+   "p": "Estimating is like replacing irregularly shaped rocks with uniform rectangular packing blocks of roughly the same size before loading a crate. Instead of measuring every jagged edge, you use standard block sizes (powers of ten and single digits) to rapidly see if the crate will hold the load. The analogy breaks down because real rocks leave gaps that cannot be mathematically resolved by simple multiplication, whereas rounded numbers carry an exact, predictable mathematical error that can be analyzed as either an overestimate or an underestimate."
+  },
+  "terms": [
+   {
+    "t": "Estimate",
+    "d": "To calculate a rough or approximate value using simplified numbers, usually rounded to one significant figure."
+   },
+   {
+    "t": "Approximation",
+    "d": "A number or result that is nearly equal to an exact value, but not completely accurate."
+   },
+   {
+    "t": "Significant Figure (s.f.)",
+    "d": "The digits in a number that carry meaning contributing to its precision, beginning with the first non-zero digit from the left."
+   },
+   {
+    "t": "Leading Zero",
+    "d": "Any zero that precedes the first non-zero digit in a decimal fraction (e.g. 0.007); leading zeros are never significant."
+   },
+   {
+    "t": "Decider Digit",
+    "d": "The digit immediately to the right of the last required place value that determines whether to round up (≥ 5) or stay the same (< 5)."
+   },
+   {
+    "t": "Inverse Operation",
+    "d": "The operation that reverses the effect of another operation, such as addition reversing subtraction or multiplication reversing division."
+   },
+   {
+    "t": "Overestimate",
+    "d": "An estimated result that is strictly higher than the exact value of the calculation."
+   },
+   {
+    "t": "Underestimate",
+    "d": "An estimated result that is strictly lower than the exact value of the calculation."
+   },
+   {
+    "t": "Dividend",
+    "d": "The number being divided (the top of a fraction or the numerator)."
+   },
+   {
+    "t": "Divisor",
+    "d": "The number by which another number is divided (the bottom of a fraction or the denominator)."
+   },
+   {
+    "t": "Order of Magnitude",
+    "d": "An estimate of size expressed as a power of 10, used to verify the scale and decimal placement of an answer."
+   },
+   {
+    "t": "Sensible Answer",
+    "d": "A result that fits the realistic physical constraints of a real-life situation or mathematical context."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Student rounds 438 × 29 to 440 × 30 = 13,200.",
+    "r": "Round each number to 1 significant figure: 400 × 30 = 12,000. Rounding to 2 s.f. loses the method mark."
+   },
+   {
+    "w": "For 48 ÷ 0.19, the student writes 50 ÷ 0.2 = 25.",
+    "r": "50 ÷ 0.2 = 500 ÷ 2 = 250. Dividing by a decimal less than 1 produces a value larger than the dividend."
+   },
+   {
+    "w": "Student calculates the exact answer on paper (e.g. 38.2 × 4.9 = 187.18) and rounds that answer to 190.",
+    "r": "Round before calculating: 40 × 5 = 200. Calculating exactly first receives zero marks on AQA estimation questions."
+   },
+   {
+    "w": "When asked 'Is your estimate an overestimate or underestimate?', student says 'Overestimate because 40 is bigger than 38.2' but ignores that the denominator was also rounded up.",
+    "r": "Analyze all components: rounding a denominator up decreases the fraction, which can counteract rounding the numerator up."
+   },
+   {
+    "w": "Student writes √68 ≈ √60 or tries to calculate √68 as 8.24.",
+    "r": "Replace √68 with the square root of the nearest square number: √64 = 8."
+   },
+   {
+    "w": "Student writes 0.048 rounded to 1 s.f. as 0.0 or 0.1.",
+    "r": "The first significant figure is 4; the decider is 8, so 0.048 rounds to 0.05."
+   },
+   {
+    "w": "When asked to check 34 + 48 = 82 using an inverse operation, student writes 82 = 82.",
+    "r": "Write an explicit inverse subtraction statement: 82 - 48 = 34 or 82 - 34 = 48."
+   },
+   {
+    "w": "For 300 × 40, student writes 1,200.",
+    "r": "3 × 4 = 12, followed by three zeros (two from 300, one from 40), giving 12,000."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Estimate the value of 312 × 48.",
+    "marks": 2,
+    "model": [
+     "Round 312 to 1 s.f. giving 300 and 48 to 1 s.f. giving 50 (M1)",
+     "300 × 50 = 15,000 (A1)"
+    ],
+    "tip": "Always write down the two rounded numbers clearly before writing the final product."
+   },
+   {
+    "q": "Work out an estimate for (68.4 × 21.3) / 0.479.",
+    "marks": 3,
+    "model": [
+     "Round to 1 s.f.: 68.4 ≈ 70, 21.3 ≈ 20, 0.479 ≈ 0.5 (M1)",
+     "Evaluate numerator: 70 × 20 = 1400 (M1)",
+     "1400 / 0.5 = 2800 (A1)"
+    ],
+    "tip": "Dividing by 0.5 is the same as multiplying by 2."
+   },
+   {
+    "q": "Use approximations to estimate the value of √(99.2) + 4.93².",
+    "marks": 2,
+    "model": [
+     "√(99.2) ≈ √100 = 10 and 4.93 ≈ 5 (M1)",
+     "10 + 5² = 10 + 25 = 35 (A1)"
+    ],
+    "tip": "Choose the nearest square number for square roots rather than rounding inside the root to 1 s.f."
+   },
+   {
+    "q": "Show how to check the calculation 43 × 18 = 774 using an inverse operation.",
+    "marks": 1,
+    "model": [
+     "774 ÷ 18 = 43 or 774 ÷ 43 = 18 (B1)"
+    ],
+    "tip": "An inverse check must use division to reverse multiplication."
+   },
+   {
+    "q": "Estimate the value of (412 - 189) / 0.19.",
+    "marks": 3,
+    "model": [
+     "Round values to 1 s.f.: 412 ≈ 400, 189 ≈ 200, 0.19 ≈ 0.2 (M1)",
+     "Numerator: 400 - 200 = 200 (M1)",
+     "200 / 0.2 = 2000 / 2 = 1000 (A1)"
+    ],
+    "tip": "Work out the numerator before dividing by 0.2."
+   },
+   {
+    "q": "A cinema has 28 rows of seats with 32 seats in each row. Tickets cost £8.95 each. Estimate the total ticket sales if every seat is sold.",
+    "marks": 3,
+    "model": [
+     "Round to 1 s.f.: rows ≈ 30, seats ≈ 30, price ≈ £9 (or £10) (M1)",
+     "Estimated total seats = 30 × 30 = 900 (M1)",
+     "900 × 9 = £8100 (or 900 × 10 = £9000) (A1)"
+    ],
+    "tip": "State your rounded values clearly so the examiner can follow your method."
+   },
+   {
+    "q": "Is the estimate 40 × 60 = 2400 an overestimate or an underestimate for 38 × 57? Explain your answer.",
+    "marks": 2,
+    "model": [
+     "Overestimate (B1)",
+     "Both numbers (38 and 57) have been rounded up to 40 and 60, so the product must be larger than the exact value (E1)"
+    ],
+    "tip": "When both values in a multiplication are rounded up, the product is always an overestimate."
+   },
+   {
+    "q": "Work out an estimate for (5.89 × 10³) / 19.4.",
+    "marks": 2,
+    "model": [
+     "5.89 × 10³ ≈ 6000 and 19.4 ≈ 20 (M1)",
+     "6000 / 20 = 300 (A1)"
+    ],
+    "tip": "Convert ordinary numbers or standard form into friendly single-digit multiples of powers of 10."
+   },
+   {
+    "q": "A runner completes a 395 m lap in 78.4 seconds. Estimate the runner's average speed in metres per second.",
+    "marks": 2,
+    "model": [
+     "Distance ≈ 400 m and time ≈ 80 s (M1)",
+     "Speed = 400 / 80 = 5 m/s (A1)"
+    ],
+    "tip": "Use speed = distance ÷ time with both values rounded to 1 s.f."
+   },
+   {
+    "q": "Estimate the value of (7.1 × 10⁻²) × 390.",
+    "marks": 2,
+    "model": [
+     "0.071 ≈ 0.07 and 390 ≈ 400 (M1)",
+     "0.07 × 400 = 7 × 4 = 28 (A1)"
+    ],
+    "tip": "0.07 × 400 is the same as 7 × 4 because the two zeros cancel the two decimal places."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Work out an estimate for the value of (49.8 × 7.12) / (0.187 + 0.319).",
+    "steps": [
+     "Step 1: Round every single term in the expression to 1 significant figure.",
+     "49.8 rounds to 50 (first non-zero digit is 4, followed by 9, so round up).",
+     "7.12 rounds to 7 (first non-zero digit is 7, followed by 1, so round down).",
+     "0.187 rounds to 0.2 (first non-zero digit is 1, followed by 8, so round up).",
+     "0.319 rounds to 0.3 (first non-zero digit is 3, followed by 1, so round down).",
+     "Step 2: Calculate the estimated numerator: 50 × 7 = 350.",
+     "Step 3: Calculate the estimated denominator: 0.2 + 0.3 = 0.5.",
+     "Step 4: Perform the final division: 350 ÷ 0.5.",
+     "Step 5: Dividing by 0.5 is equivalent to multiplying by 2: 350 × 2 = 700."
+    ],
+    "ans": "700"
+   },
+   {
+    "q": "A car travels 586 miles on a full tank of petrol. The tank holds 52 litres of petrol. Petrol costs £1.48 per litre. Estimate the fuel cost per mile.",
+    "steps": [
+     "Step 1: Identify what needs to be calculated: Total cost of tank ÷ total miles.",
+     "Step 2: Round each value to 1 significant figure.",
+     "Miles: 586 ≈ 600 miles.",
+     "Litres: 52 ≈ 50 litres.",
+     "Cost per litre: £1.48 ≈ £1 (or £1.50 if using a sensible friendly half-unit; 1 s.f. gives £1). Using strict 1 s.f.: £1.",
+     "Step 3: Calculate total cost of tank: 50 litres × £1 = £50 (or 50 × £1.50 = £75).",
+     "Step 4: Calculate cost per mile: £50 ÷ 600 miles = 50 / 600 = 5 / 60 = 1 / 12 of a pound.",
+     "Converting to pence: (5000 p) ÷ 600 ≈ 8.3p (or using £1.50: £75 / 600 = 12.5p). Both show the method clearly."
+    ],
+    "ans": "8.3p (or approx 8p to 12.5p depending on rounding of price)"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Figure 1: Locating the first significant figure and rounding on a place value scale",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"20\" y=\"20\" width=\"360\" height=\"85\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"30\" y=\"42\" font-size=\"13\" font-weight=\"bold\" fill=\"#1b2540\">Rounding 478 to 1 Significant Figure</text><line x1=\"40\" y1=\"75\" x2=\"360\" y2=\"75\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"50\" cy=\"75\" r=\"4\" fill=\"#1b2540\"/><text x=\"35\" y=\"95\" font-size=\"11\" fill=\"#1b2540\">400</text><circle cx=\"200\" cy=\"75\" r=\"4\" fill=\"#1b2540\"/><text x=\"185\" y=\"95\" font-size=\"11\" fill=\"#1b2540\">450</text><circle cx=\"350\" cy=\"75\" r=\"4\" fill=\"#1b2540\"/><text x=\"335\" y=\"95\" font-size=\"11\" fill=\"#1b2540\">500</text><polygon points=\"317,60 312,50 322,50\" fill=\"#dc2626\"/><circle cx=\"317\" cy=\"75\" r=\"5\" fill=\"#dc2626\"/><text x=\"280\" y=\"45\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">478 ≈ 500</text><rect x=\"20\" y=\"125\" width=\"360\" height=\"95\" fill=\"#fef3c7\" stroke=\"#1b2540\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"30\" y=\"147\" font-size=\"13\" font-weight=\"bold\" fill=\"#1b2540\">Decimals: 0.0462 to 1 Significant Figure</text><text x=\"30\" y=\"172\" font-size=\"12\" fill=\"#1b2540\">0 . 0 <tspan fill=\"#2563eb\" font-weight=\"bold\">4</tspan> <tspan fill=\"#dc2626\" font-weight=\"bold\">6</tspan> 2</text><text x=\"75\" y=\"192\" font-size=\"11\" fill=\"#2563eb\">1st s.f. (4)</text><text x=\"135\" y=\"192\" font-size=\"11\" fill=\"#dc2626\">Decider (6 ≥ 5) → Round UP</text><text x=\"30\" y=\"212\" font-size=\"12\" font-weight=\"bold\" fill=\"#16a34a\">Answer: 0.05 (zeros before 4 are place-holders)</text></svg>"
+   },
+   {
+    "cap": "Figure 2: Analysis of Overestimate vs Underestimate in Fractions",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"20\" y=\"20\" width=\"170\" height=\"200\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"32\" y=\"45\" font-size=\"13\" font-weight=\"bold\" fill=\"#166534\">OVERESTIMATE</text><rect x=\"35\" y=\"60\" width=\"140\" height=\"35\" fill=\"#ffffff\" stroke=\"#1b2540\" rx=\"4\"/><text x=\"45\" y=\"82\" font-size=\"12\" fill=\"#1b2540\">Numerator Rounded UP ↑</text><text x=\"100\" y=\"110\" font-size=\"14\" font-weight=\"bold\" fill=\"#1b2540\">÷</text><rect x=\"35\" y=\"120\" width=\"140\" height=\"35\" fill=\"#ffffff\" stroke=\"#1b2540\" rx=\"4\"/><text x=\"40\" y=\"142\" font-size=\"12\" fill=\"#1b2540\">Denominator DOWN ↓</text><text x=\"30\" y=\"180\" font-size=\"11\" fill=\"#166534\">Larger top ÷ Smaller bottom</text><text x=\"30\" y=\"200\" font-size=\"11\" font-weight=\"bold\" fill=\"#166534\">Result is strictly GREATER</text><rect x=\"210\" y=\"20\" width=\"170\" height=\"200\" fill=\"#fecaca\" stroke=\"#1b2540\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"220\" y=\"45\" font-size=\"13\" font-weight=\"bold\" fill=\"#991b1b\">UNDERESTIMATE</text><rect x=\"225\" y=\"60\" width=\"140\" height=\"35\" fill=\"#ffffff\" stroke=\"#1b2540\" rx=\"4\"/><text x=\"230\" y=\"82\" font-size=\"12\" fill=\"#1b2540\">Numerator DOWN ↓</text><text x=\"290\" y=\"110\" font-size=\"14\" font-weight=\"bold\" fill=\"#1b2540\">÷</text><rect x=\"225\" y=\"120\" width=\"140\" height=\"35\" fill=\"#ffffff\" stroke=\"#1b2540\" rx=\"4\"/><text x=\"235\" y=\"142\" font-size=\"12\" fill=\"#1b2540\">Denominator UP ↑</text><text x=\"220\" y=\"180\" font-size=\"11\" fill=\"#991b1b\">Smaller top ÷ Larger bottom</text><text x=\"220\" y=\"200\" font-size=\"11\" font-weight=\"bold\" fill=\"#991b1b\">Result is strictly SMALLER</text></svg>"
+   },
+   {
+    "cap": "Figure 3: Checking Calculations Using Inverse Operations",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"30\" y=\"25\" width=\"145\" height=\"80\" fill=\"#e9d5ff\" stroke=\"#1b2540\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"40\" y=\"50\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\">Forward Calculation</text><text x=\"40\" y=\"72\" font-size=\"13\" fill=\"#1b2540\">48 × 16 = 768</text><rect x=\"225\" y=\"25\" width=\"145\" height=\"80\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"235\" y=\"50\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\">Inverse Check</text><text x=\"235\" y=\"72\" font-size=\"13\" fill=\"#1b2540\">768 ÷ 16 = 48</text><path d=\"M 180 55 L 220 55\" stroke=\"#1b2540\" stroke-width=\"2\" marker-end=\"url(#arr)\"/><path d=\"M 220 75 L 180 75\" stroke=\"#1b2540\" stroke-width=\"2\" marker-end=\"url(#arr)\"/><defs><marker id=\"arr\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 1 L 8 5 L 0 9 z\" fill=\"#1b2540\"/></marker></defs><rect x=\"30\" y=\"130\" width=\"340\" height=\"85\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"40\" y=\"155\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\">Inverse Pairs for Checking:</text><text x=\"40\" y=\"175\" font-size=\"12\" fill=\"#1b2540\">• Addition (+) and Subtraction (−) undo each other</text><text x=\"40\" y=\"195\" font-size=\"12\" fill=\"#1b2540\">• Multiplication (×) and Division (÷) undo each other</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_f.0.13",
+  "sid": "maths_aqa_f",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.8-flash",
+  "ts": "2026-11-15T17:07:39.834Z"
+ },
+ "maths_aqa_f.0.14": {
+  "summary": "Specification point N15 covers rounding numbers to a specified place value, decimal places, or significant figures, as well as choosing an appropriate degree of accuracy in practical contexts such as money and measurements. It also demands a deep understanding of truncation, which discards digits without rounding, and the construction of error intervals using formal inequality notation. Mastering this topic ensures students can express limits of accuracy precisely and avoid over-rounding or inappropriate calculator precision.",
+  "core": [
+   {
+    "h": "The Mechanics of Rounding and Place Value",
+    "p": "Rounding replaces a number with an approximation that is simpler, shorter, or more meaningful in context. The mathematical rule relies on looking at the decider digit immediately to the right of the target rounding position.",
+    "bullets": [
+     "Identify the **target digit** based on the required degree of accuracy (units, tens, tenths, etc.).",
+     "Inspect the **decider digit** immediately to the right of the target digit.",
+     "If the decider digit is **5 or greater** (5, 6, 7, 8, 9), round up by adding 1 to the target digit.",
+     "If the decider digit is **less than 5** (0, 1, 2, 3, 4), keep the target digit unchanged.",
+     "Replace all following digits to the left of the decimal point with **placeholder zeros**; discard any digits after the decimal point unless preserving required decimal places."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "The Role of Placeholder Zeros",
+      "p": "When rounding integers (e.g. 482 to the nearest 100), placeholder zeros are essential to maintain place value (500). When rounding decimals (e.g. 4.82 to 1 d.p.), extra zeros must NOT be written (4.8, not 4.80) unless explicitly asked for a specific number of decimal places."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Rounding to Decimal Places (d.p.)",
+    "p": "Decimal places count the number of digits appearing after the decimal point, irrespective of whether they are zeros or non-zero digits.",
+    "bullets": [
+     "**1 decimal place (1 d.p.)**: round to the nearest tenth (0.1).",
+     "**2 decimal places (2 d.p.)**: round to the nearest hundredth (0.01).",
+     "**3 decimal places (3 d.p.)**: round to the nearest thousandth (0.001).",
+     "If rounding up causes a 9 to become 10, write down 0 and carry 1 to the next column to the left.",
+     "Crucially, keep trailing zeros if they are part of the required decimal places. For example, 3.996 to 2 d.p. is **4.00**, not 4."
+    ],
+    "table": {
+     "head": [
+      "Original Number",
+      "Target Accuracy",
+      "Decider Digit",
+      "Correct Rounded Value"
+     ],
+     "rows": [
+      [
+       "7.348",
+       "1 d.p.",
+       "4 (less than 5)",
+       "7.3"
+      ],
+      [
+       "14.972",
+       "1 d.p.",
+       "7 (5 or more)",
+       "15.0"
+      ],
+      [
+       "0.0863",
+       "2 d.p.",
+       "6 (5 or more)",
+       "0.09"
+      ],
+      [
+       "12.997",
+       "2 d.p.",
+       "7 (5 or more)",
+       "13.00"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Never Truncate when Rounding to d.p.",
+      "p": "Writing 7.348 as 7.34 to 2 d.p. is a common mistake when students just slice off the 8. The decider 8 rounds 4 up to 5, giving 7.35."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Rounding to Significant Figures (s.f.)",
+    "p": "Significant figures reflect the precision of a measurement. Unlike decimal places, counting significant figures begins at the first non-zero digit when reading from left to right.",
+    "bullets": [
+     "**First significant figure**: The very first digit that is not zero reading left to right.",
+     "**Leading zeros** (zeros before the first non-zero digit, e.g. in 0.0045) are **never significant**; they are merely place-holders.",
+     "**Trapped zeros** (zeros between non-zero digits, e.g. the zero in 503 or 4.02) are **always significant**.",
+     "**Trailing zeros in decimals** (zeros at the end of a decimal, e.g. 8.20) are **significant** because they show deliberate precision.",
+     "**Trailing zeros in whole numbers** without a decimal point (e.g. 5200) are generally ambiguous in isolation, but when produced by rounding, they act as place-holders."
+    ],
+    "table": {
+     "head": [
+      "Number",
+      "1st Sig Fig",
+      "Rounded to 1 s.f.",
+      "Rounded to 2 s.f.",
+      "Rounded to 3 s.f."
+     ],
+     "rows": [
+      [
+       "4827",
+       "4",
+       "5000",
+       "4800",
+       "4830"
+      ],
+      [
+       "0.00762",
+       "7",
+       "0.008",
+       "0.0076",
+       "0.00762"
+      ],
+      [
+       "309.4",
+       "3",
+       "300",
+       "310",
+       "309"
+      ],
+      [
+       "0.04085",
+       "4",
+       "0.04",
+       "0.041",
+       "0.0409"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Counting Sig Figs Strategy",
+      "p": "Always scan from left to right. Ignore all zeros until you hit your first non-zero digit. That digit is significant figure 1. Every single digit after that—zero or non-zero—counts towards your total."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Truncation: Definition and Methods",
+    "p": "Truncation means cutting off or discarding digits past a specified position, completely ignoring standard rounding rules. No decider digit is evaluated and no rounding up ever occurs.",
+    "bullets": [
+     "To truncate to a given number of decimal places, simply **delete** all subsequent digits.",
+     "Truncating a positive number **never** increases its value; it either leaves it unchanged or makes it smaller.",
+     "For example, truncating 8.79 to 1 decimal place yields **8.7** (whereas rounding gives 8.8).",
+     "Truncating 458 to the nearest 10 means dropping the units to zero, giving **450** (whereas rounding gives 460).",
+     "Calculators and computer software often truncate intermediate values during display routines, which is why exam questions explicitly state whether a value was rounded or truncated."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Truncation",
+      "p": "Truncation is the process of chopping off a number at a given place value or digit without adjusting the preceding digit, regardless of the value of the discarded digits."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Appropriate Degree of Accuracy in Context",
+    "p": "In real-world applications, raw calculator displays (such as 14.33333333) make no practical sense. Students must select and justify an appropriate degree of accuracy depending on the physical context.",
+    "bullets": [
+     "**Money**: Must be rounded to **2 decimal places** (e.g. £14.30, not £14.3 or £14.333) unless whole pounds are requested.",
+     "**Counts of indivisible objects**: People, buses, bricks, or tickets must be whole integers. Context dictates whether to round up (ceiling) or round down (floor).",
+     "**Intermediate steps vs final answer**: Keep values exact (as fractions or surds) or keep at least 4 to 5 significant figures during intermediate calculations to prevent compounding **rounding errors** in the final answer.",
+     "**Consistency with input data**: A calculated measure should rarely be quoted to more significant figures than the least accurate measurement provided in the question."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Premature Rounding Trap",
+      "p": "Rounding intermediate working to 1 or 2 significant figures leads to significant inaccuracies in the final answer. Store values in calculator memories and round ONLY the final answer."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Understanding Error Intervals and Limits of Accuracy",
+    "p": "Every rounded or truncated value represents an infinite set of potential original values. The error interval is the mathematical range that encompasses all possible values of the true quantity.",
+    "bullets": [
+     "The **Lower Bound (LB)** is the smallest possible number that could round or truncate to the given value.",
+     "The **Upper Bound (UB)** is the boundary number above which values would round or truncate to a different value.",
+     "The error interval specifies that the original variable $x$ satisfies **LB ≤ x < UB**.",
+     "Notice the strict inequality `<` on the upper bound: the upper bound itself rounds up to the next value, so $x$ must be strictly less than UB.",
+     "Notice the non-strict inequality `≤` on the lower bound: the lower bound itself rounds to the target value, so $x$ can equal LB."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Error Interval",
+      "p": "An error interval is an inequality of the form LB ≤ x < UB defining all possible values of a real quantity x that produce a given rounded or truncated result."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Error Intervals for Rounded Numbers (The Half-Unit Rule)",
+    "p": "When a number is rounded to a specified unit of accuracy $U$, the maximum error is half of that unit ($0.5 \\times U$).",
+    "bullets": [
+     "Step 1: Identify the **degree of accuracy** ($U$) to which the number was rounded (e.g., nearest 10 implies $U = 10$; nearest 1 d.p. implies $U = 0.1$; nearest whole unit implies $U = 1$).",
+     "Step 2: Divide this unit by 2 to find the **half-unit**: $\\text{Half-unit} = \\frac{U}{2}$.",
+     "Step 3: **Lower Bound** = $\\text{Rounded Value} - \\frac{U}{2}$.",
+     "Step 4: **Upper Bound** = $\\text{Rounded Value} + \\frac{U}{2}$.",
+     "Step 5: Write the answer in the form: $\\text{LB} \\le x < \\text{UB}$."
+    ],
+    "table": {
+     "head": [
+      "Stated Value",
+      "Degree of Accuracy (U)",
+      "Half-Unit (U/2)",
+      "Lower Bound",
+      "Upper Bound",
+      "Error Interval"
+     ],
+     "rows": [
+      [
+       "50",
+       "Nearest 10 (U=10)",
+       "5",
+       "45",
+       "55",
+       "45 ≤ x < 55"
+      ],
+      [
+       "8.4",
+       "Nearest 0.1 (1 d.p.)",
+       "0.05",
+       "8.35",
+       "8.45",
+       "8.35 ≤ x < 8.45"
+      ],
+      [
+       "200",
+       "Nearest 100 (U=100)",
+       "50",
+       "150",
+       "250",
+       "150 ≤ x < 250"
+      ],
+      [
+       "6.0",
+       "Nearest 0.1 (1 d.p.)",
+       "0.05",
+       "5.95",
+       "6.05",
+       "5.95 ≤ x < 6.05"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Testing the Boundaries",
+      "p": "If you are unsure of your bounds, test them: 8.35 rounds up to 8.4 (so 8.35 is included: ≤). 8.45 rounds up to 8.5 (so 8.45 is NOT included: <). Thus 8.35 ≤ x < 8.45 is correct."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Error Intervals for Truncated Numbers",
+    "p": "Truncation does not round numbers, so the half-unit rule does NOT apply. Instead, the lower bound is the truncated value itself, and the upper bound is one full unit above it.",
+    "bullets": [
+     "Step 1: Identify the unit of truncation $U$ (e.g., truncated to 1 d.p. means $U = 0.1$; truncated to integer means $U = 1$).",
+     "Step 2: The **Lower Bound** is equal to the given truncated value: $\\text{LB} = \\text{Truncated Value}$.",
+     "Step 3: The **Upper Bound** is found by adding one full unit of truncation: $\\text{UB} = \\text{Truncated Value} + U$.",
+     "Step 4: The error interval is written as $\\text{LB} \\le x < \\text{UB}$.",
+     "For example, if $y = 6.3$ truncated to 1 d.p., then $6.3000...$ is the minimum possible, while anything up to $6.3999...$ truncates to $6.3$. Therefore, $6.3 \\le y < 6.4$."
+    ],
+    "table": {
+     "head": [
+      "Truncated Value",
+      "Truncated to",
+      "Unit (U)",
+      "Lower Bound",
+      "Upper Bound",
+      "Error Interval"
+     ],
+     "rows": [
+      [
+       "4",
+       "Nearest integer",
+       "1",
+       "4",
+       "5",
+       "4 ≤ x < 5"
+      ],
+      [
+       "7.2",
+       "1 decimal place",
+       "0.1",
+       "7.2",
+       "7.3",
+       "7.2 ≤ x < 7.3"
+      ],
+      [
+       "0.85",
+       "2 decimal places",
+       "0.01",
+       "0.85",
+       "0.86",
+       "0.85 ≤ x < 0.86"
+      ],
+      [
+       "90",
+       "Tens",
+       "10",
+       "90",
+       "100",
+       "90 ≤ x < 100"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Do Not Subtract for Truncation",
+      "p": "Students often wrongly subtract half a unit when they see 'truncated'. Truncation NEVER moves down from the displayed digits. The lower bound is the exact displayed number."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Error Intervals for Significant Figures",
+    "p": "Determining the error interval for a number rounded to significant figures requires finding the place value of the specified significant figure.",
+    "bullets": [
+     "Identify which place value column holds the last significant figure.",
+     "The unit of accuracy $U$ is the value of that specific column.",
+     "For $4800$ rounded to 2 s.f., the second significant figure is in the **hundreds** column, so $U = 100$, and the half-unit is $50$. The interval is $4750 \\le x < 4850$.",
+     "For $0.0034$ rounded to 2 s.f., the second significant figure is in the **ten-thousandths** column ($0.0001$), so $U = 0.0001$, and the half-unit is $0.00005$. The interval is $0.00335 \\le x < 0.00345$."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Rule for Sig Fig Bounds",
+      "p": "Always determine the place value of the LAST significant figure. Halve that place value to obtain the amount to add and subtract."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Inequality Notation and Graphical Representation",
+    "p": "AQA mark schemes strictly penalise incorrect inequality signs. The standard format requires a less-than-or-equal symbol on the left and a strict less-than symbol on the right.",
+    "bullets": [
+     "Format: **LB ≤ x < UB**.",
+     "On a number line, the lower bound is marked with a **solid (filled) circle** because the value is inclusive.",
+     "The upper bound is marked with an **open (unfilled) circle** because the upper bound itself is excluded.",
+     "Never write an upper bound as $0.4999...$ or $8.44$: the upper bound is mathematically **8.45**, and the strict inequality `<` handles the exclusion.",
+     "Writing $8.35 \\le x \\le 8.44$ loses the final accuracy mark in AQA GCSE examinations."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Examiner Focus: Exact Upper Bound",
+      "p": "Mark schemes explicitly mandate writing the exact critical value with `<`. Writing $x \\le 54.9$ or $x < 54.99$ instead of $x < 55$ is one of the most common ways students lose marks."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Sieve vs the Trimming Knife",
+   "p": "Rounding is like grading fruit through a vibrating sieve with standard mesh pockets: if an apple is more than halfway towards the next size pocket, it tips into the larger bin; otherwise, it drops back into the smaller bin. Truncation, on the other hand, is like a robotic trimming knife set at an exact line: anything sticking past the line is chopped off instantly, with no regard to how long it was. The analogy breaks down because physical fruit has volume and varying shapes, whereas mathematical truncation and rounding operate on pure numbers positioned on a continuous one-dimensional real number line."
+  },
+  "terms": [
+   {
+    "t": "Decider Digit",
+    "d": "The digit immediately to the right of the last place value being kept, which dictates whether to round up (if 5 to 9) or leave the target digit unchanged (if 0 to 4)."
+   },
+   {
+    "t": "Significant Figure (s.f.)",
+    "d": "Each of the digits of a number that are used to express it to the required degree of accuracy, starting from the first non-zero digit reading left to right."
+   },
+   {
+    "t": "Decimal Place (d.p.)",
+    "d": "The position of a digit to the right of the decimal point, representing negative powers of 10 (tenths, hundredths, thousandths, etc.)."
+   },
+   {
+    "t": "Truncation",
+    "d": "The removal of digits to the right of a specified place value without any rounding."
+   },
+   {
+    "t": "Error Interval",
+    "d": "The range of possible real values that an original quantity could have taken prior to being rounded or truncated, written as LB ≤ x < UB."
+   },
+   {
+    "t": "Lower Bound (LB)",
+    "d": "The smallest value that would round or truncate to give the specified recorded value."
+   },
+   {
+    "t": "Upper Bound (UB)",
+    "d": "The boundary value that forms the strict upper limit of the error interval; any number strictly less than this bound will round or truncate to the stated value."
+   },
+   {
+    "t": "Degree of Accuracy",
+    "d": "The specified level of precision to which a number is stated, such as to the nearest integer, 2 decimal places, or 3 significant figures."
+   },
+   {
+    "t": "Leading Zero",
+    "d": "A zero occurring at the beginning of a decimal number before the first non-zero digit; leading zeros are not significant figures."
+   },
+   {
+    "t": "Trapped Zero",
+    "d": "A zero situated between two non-zero digits; trapped zeros are always significant."
+   },
+   {
+    "t": "Trailing Zero",
+    "d": "A zero at the end of a number. In a decimal number, trailing zeros indicate precision and are significant; in whole numbers, they usually act as place-holders."
+   },
+   {
+    "t": "Placeholder Zero",
+    "d": "A zero inserted to maintain the correct place value of significant digits when rounding integers."
+   },
+   {
+    "t": "Strict Inequality",
+    "d": "An inequality indicated by < or > where the variable cannot equal the boundary value."
+   },
+   {
+    "t": "Inclusive Inequality",
+    "d": "An inequality indicated by ≤ or ≥ where the variable can equal the boundary value."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Writing 64.9 or 64.99 instead of 65 as the upper bound for a number rounded to the nearest integer as 64.",
+    "r": "The upper bound must be written as 65 with a strict inequality: 63.5 ≤ x < 65. The strict inequality '<' ensures 65 itself is excluded."
+   },
+   {
+    "w": "Rounding 3.048 to 1 d.p. by rounding 8 to make 5, then 5 to make 1, writing 3.1.",
+    "r": "Double rounding is invalid. Look only at the first decider digit immediately to the right of the tenths column: 4 is less than 5, so the answer is 3.0."
+   },
+   {
+    "w": "Writing the error interval for a truncated number y = 8.4 (truncated to 1 d.p.) as 8.35 ≤ y < 8.45.",
+    "r": "Truncation does not round down. The lower bound is the truncated value itself: 8.4 ≤ y < 8.5."
+   },
+   {
+    "w": "Writing 4.079 rounded to 2 d.p. as 4.8 or 4.080.",
+    "r": "The target is 2 decimal places: 9 rounds 7 up to 8, giving exactly two decimal digits: 4.08."
+   },
+   {
+    "w": "Omitting the trailing zero when rounding £4.298 to the nearest penny, writing £4.3.",
+    "r": "Money in pounds must always have 2 decimal places: £4.30."
+   },
+   {
+    "w": "Stating that 0.00502 has 5 significant figures.",
+    "r": "Leading zeros are not significant. The first significant figure is 5; the number has 3 significant figures (5, 0, 2)."
+   },
+   {
+    "w": "Writing an error interval using the wrong variable or inverted signs, such as 45 ≥ x > 55.",
+    "r": "Write the inequality from smallest to largest with correct symbols: 45 ≤ x < 55."
+   },
+   {
+    "w": "Writing 520 rounded to 1 s.f. as 5.",
+    "r": "The value must maintain its magnitude using placeholder zeros: 520 rounded to 1 s.f. is 500."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Round 48 372 to the nearest hundred.",
+    "marks": 1,
+    "model": [
+     "Identify the hundreds digit (3) and the decider digit (7).",
+     "Since 7 is 5 or greater, round 3 up to 4 and replace remaining digits with zeros: 48 400."
+    ],
+    "tip": "Do not alter the digits before the hundreds column."
+   },
+   {
+    "q": "Round 0.060 48 to 2 significant figures.",
+    "marks": 1,
+    "model": [
+     "First non-zero digit is 6 (1st s.f.), next is 0 (2nd s.f.).",
+     "Decider digit is 4 (less than 5), so keep 0 as 0: 0.060."
+    ],
+    "tip": "The zero after the 6 is significant and MUST be included in your answer."
+   },
+   {
+    "q": "A number, n, is rounded to 1 decimal place. The result is 7.4. Write down the error interval for n.",
+    "marks": 2,
+    "model": [
+     "Accuracy unit is 0.1, so half-unit is 0.1 / 2 = 0.05.",
+     "Lower bound = 7.4 - 0.05 = 7.35; Upper bound = 7.4 + 0.05 = 7.45.",
+     "Error interval: 7.35 ≤ n < 7.45."
+    ],
+    "tip": "Ensure you use '≤' for the lower bound and '<' for the upper bound."
+   },
+   {
+    "q": "A length, L cm, is truncated to 1 decimal place. The result is 15.8 cm. Write down the error interval for L.",
+    "marks": 2,
+    "model": [
+     "For truncation, the lower bound is the truncated value: 15.8.",
+     "The upper bound is one unit higher (15.8 + 0.1): 15.9.",
+     "Error interval: 15.8 ≤ L < 15.9."
+    ],
+    "tip": "Do not subtract 0.05. Truncation means the number could not be smaller than 15.8."
+   },
+   {
+    "q": "P = 600, correct to 1 significant figure. Write down the error interval for P.",
+    "marks": 2,
+    "model": [
+     "The 1st significant figure is 6, which is in the hundreds column (unit = 100).",
+     "Half-unit = 100 / 2 = 50.",
+     "Lower bound = 600 - 50 = 550; Upper bound = 600 + 50 = 650.",
+     "Error interval: 550 ≤ P < 650."
+    ],
+    "tip": "Check the place value of the significant figure; here it is hundreds, not tens."
+   },
+   {
+    "q": "A calculator display shows 18.66666667. Write this value to: (a) 1 decimal place, (b) 3 significant figures, (c) as a sensible money amount in pounds.",
+    "marks": 3,
+    "model": [
+     "(a) Tenths digit is 6, decider is 6 (≥5), so round to 18.7.",
+     "(b) First 3 sig figs are 1, 8, 6. Decider is 6 (≥5), so round to 18.7.",
+     "(c) Money requires 2 decimal places: hundredths digit is 6, decider is 6, giving £18.67."
+    ],
+    "tip": "Always write money with two decimal places and a £ sign."
+   },
+   {
+    "q": "The mass, m kg, of a parcel is 24 kg rounded to the nearest kg. (a) Write down the error interval for m. (b) Explain why a parcel weighing exactly 24.5 kg is not in this interval.",
+    "marks": 2,
+    "model": [
+     "(a) Nearest kg has half-unit 0.5: 23.5 ≤ m < 24.5.",
+     "(b) A parcel of 24.5 kg would round up to 25 kg to the nearest kg, so it cannot round to 24 kg."
+    ],
+    "tip": "The upper bound is always excluded by '<' because that value rounds up to the next unit."
+   },
+   {
+    "q": "A number x is truncated to the nearest whole number. The result is 37. Complete the error interval: .... ≤ x < ....",
+    "marks": 2,
+    "model": [
+     "Lower bound is the truncated value itself: 37.",
+     "Upper bound is 37 + 1 = 38.",
+     "37 ≤ x < 38."
+    ],
+    "tip": "Truncated to a whole number means any number from 37.0 up to 37.999... which is strictly less than 38."
+   },
+   {
+    "q": "A student works out the cost of 7 tickets costing £13.49 each. The student writes £94.4. State why this answer is inappropriate and write down the correct answer.",
+    "marks": 2,
+    "model": [
+     "7 × 13.49 = 94.43.",
+     "Money must be written to 2 decimal places, and the student also truncated/rounded incorrectly.",
+     "Correct answer is £94.43."
+    ],
+    "tip": "Always give pence to 2 decimal places even if the final digit is 0."
+   }
+  ],
+  "worked": [
+   {
+    "q": "The population of a town is reported as 80 000 correct to 2 significant figures. (a) Find the place value of the second significant figure. (b) Calculate the lower and upper bounds of the population. (c) State the error interval using inequality notation.",
+    "steps": [
+     "Step 1: Write out 80 000 and count significant figures from left to right. The first sig fig is 8 (in the ten-thousands column). The second sig fig is the zero in the thousands column.",
+     "Step 2: The place value of the 2nd significant figure is 1000. Therefore, the unit of accuracy is U = 1000.",
+     "Step 3: Calculate the half-unit: 1000 ÷ 2 = 500.",
+     "Step 4: Lower Bound = 80 000 - 500 = 79 500.",
+     "Step 5: Upper Bound = 80 000 + 500 = 80 500.",
+     "Step 6: Combine into the standard inequality format: LB ≤ x < UB."
+    ],
+    "ans": "79 500 ≤ population < 80 500"
+   },
+   {
+    "q": "A piece of wood is measured as 4.6 cm long, truncated to 1 decimal place. A second piece of wood is measured as 4.6 cm long, rounded to 1 decimal place. (a) Write down the error interval for each piece of wood. (b) What is the greatest possible difference between their actual lengths?",
+    "steps": [
+     "Step 1: Truncated piece (T): Lower bound is 4.6 cm, Upper bound is 4.6 + 0.1 = 4.7 cm. Error interval: 4.6 ≤ T < 4.7.",
+     "Step 2: Rounded piece (R): Half-unit is 0.1 ÷ 2 = 0.05 cm. Lower bound is 4.6 - 0.05 = 4.55 cm. Upper bound is 4.6 + 0.05 = 4.65 cm. Error interval: 4.55 ≤ R < 4.65.",
+     "Step 3: Greatest possible difference occurs between the maximum possible length of T and the minimum possible length of R (or vice versa).",
+     "Step 4: Maximum for T approaches 4.7 cm; minimum for R is 4.55 cm. Difference = 4.7 - 4.55 = 0.15 cm.",
+     "Step 5: Check the reverse: Maximum for R approaches 4.65 cm; minimum for T is 4.6 cm. Difference = 4.65 - 4.6 = 0.05 cm. The greatest difference is 0.15 cm."
+    ],
+    "ans": "(a) Truncated: 4.6 ≤ T < 4.7; Rounded: 4.55 ≤ R < 4.65. (b) Greatest possible difference is 0.15 cm."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Number line demonstrating the error interval for 70 rounded to the nearest 10 (65 ≤ x < 75), highlighting the inclusive lower bound and exclusive upper bound.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><text x=\"200\" y=\"28\" font-size=\"13\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">Error Interval: 70 to the nearest 10</text><line x1=\"40\" y1=\"100\" x2=\"360\" y2=\"100\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"60\" y1=\"92\" x2=\"60\" y2=\"108\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"130\" y1=\"90\" x2=\"130\" y2=\"110\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"200\" y1=\"85\" x2=\"200\" y2=\"115\" stroke=\"#1b2540\" stroke-width=\"2.5\"/><line x1=\"270\" y1=\"90\" x2=\"270\" y2=\"110\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"340\" y1=\"92\" x2=\"340\" y2=\"108\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"60\" y=\"128\" font-size=\"11\" fill=\"#64748b\" text-anchor=\"middle\">60</text><text x=\"130\" y=\"128\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">65</text><text x=\"200\" y=\"132\" font-size=\"13\" font-weight=\"bold\" fill=\"#2563eb\" text-anchor=\"middle\">70</text><text x=\"270\" y=\"128\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">75</text><text x=\"340\" y=\"128\" font-size=\"11\" fill=\"#64748b\" text-anchor=\"middle\">80</text><rect x=\"130\" y=\"65\" width=\"140\" height=\"18\" fill=\"#bbf7d0\" stroke=\"#16a34a\" stroke-width=\"1\" rx=\"4\"/><text x=\"200\" y=\"78\" font-size=\"11\" fill=\"#166534\" font-weight=\"bold\" text-anchor=\"middle\">Range rounding to 70</text><circle cx=\"130\" cy=\"100\" r=\"5\" fill=\"#16a34a\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><circle cx=\"270\" cy=\"100\" r=\"5\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"130\" y=\"160\" font-size=\"11\" fill=\"#16a34a\" font-weight=\"bold\" text-anchor=\"middle\">Lower Bound (65)</text><text x=\"130\" y=\"175\" font-size=\"11\" fill=\"#16a34a\" text-anchor=\"middle\">Included (≤)</text><text x=\"270\" y=\"160\" font-size=\"11\" fill=\"#dc2626\" font-weight=\"bold\" text-anchor=\"middle\">Upper Bound (75)</text><text x=\"270\" y=\"175\" font-size=\"11\" fill=\"#dc2626\" text-anchor=\"middle\">Excluded (&lt;)</text><rect x=\"110\" y=\"195\" width=\"180\" height=\"30\" fill=\"#dbeafe\" stroke=\"#2563eb\" rx=\"6\"/><text x=\"200\" y=\"215\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\" text-anchor=\"middle\">65 ≤ x &lt; 75</text></svg>"
+   },
+   {
+    "cap": "Visual comparison between rounding to 1 d.p. and truncation to 1 d.p. for a displayed value of 4.6.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><text x=\"200\" y=\"26\" font-size=\"13\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">Rounding vs Truncation to 1 d.p. (Value = 4.6)</text><rect x=\"20\" y=\"45\" width=\"360\" height=\"75\" fill=\"#eff6ff\" stroke=\"#bfdbfe\" rx=\"6\"/><text x=\"30\" y=\"65\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">ROUNDED to 4.6</text><line x1=\"60\" y1=\"90\" x2=\"340\" y2=\"90\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><rect x=\"120\" y=\"83\" width=\"120\" height=\"14\" fill=\"#bbf7d0\" stroke=\"#16a34a\" stroke-width=\"1\"/><circle cx=\"120\" cy=\"90\" r=\"4\" fill=\"#16a34a\"/><circle cx=\"240\" cy=\"90\" r=\"4\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><text x=\"120\" y=\"110\" font-size=\"11\" fill=\"#166534\" text-anchor=\"middle\">4.55 (LB)</text><text x=\"180\" y=\"110\" font-size=\"11\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">4.6</text><text x=\"240\" y=\"110\" font-size=\"11\" fill=\"#dc2626\" text-anchor=\"middle\">4.65 (UB)</text><text x=\"310\" y=\"94\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\">4.55 ≤ x &lt; 4.65</text><rect x=\"20\" y=\"140\" width=\"360\" height=\"75\" fill=\"#fef2f2\" stroke=\"#fecaca\" rx=\"6\"/><text x=\"30\" y=\"160\" font-size=\"12\" font-weight=\"bold\" fill=\"#991b1b\">TRUNCATED to 4.6</text><line x1=\"60\" y1=\"185\" x2=\"340\" y2=\"185\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><rect x=\"140\" y=\"178\" width=\"120\" height=\"14\" fill=\"#fde68a\" stroke=\"#d97706\" stroke-width=\"1\"/><circle cx=\"140\" cy=\"185\" r=\"4\" fill=\"#d97706\"/><circle cx=\"260\" cy=\"185\" r=\"4\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><text x=\"140\" y=\"205\" font-size=\"11\" fill=\"#b45309\" text-anchor=\"middle\">4.60 (LB)</text><text x=\"260\" y=\"205\" font-size=\"11\" fill=\"#dc2626\" text-anchor=\"middle\">4.70 (UB)</text><text x=\"310\" y=\"189\" font-size=\"11\" font-weight=\"bold\" fill=\"#991b1b\">4.6 ≤ x &lt; 4.7</text></svg>"
+   },
+   {
+    "cap": "Rules for identifying significant figures: leading zeros, trapped zeros, and trailing zeros.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><text x=\"200\" y=\"28\" font-size=\"13\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">Anatomy of Significant Figures: 0.05040</text><rect x=\"50\" y=\"55\" width=\"40\" height=\"50\" fill=\"#fecaca\" stroke=\"#dc2626\" rx=\"4\"/><text x=\"70\" y=\"88\" font-size=\"16\" font-weight=\"bold\" fill=\"#991b1b\" text-anchor=\"middle\">0.</text><rect x=\"95\" y=\"55\" width=\"40\" height=\"50\" fill=\"#fecaca\" stroke=\"#dc2626\" rx=\"4\"/><text x=\"115\" y=\"88\" font-size=\"16\" font-weight=\"bold\" fill=\"#991b1b\" text-anchor=\"middle\">0</text><rect x=\"150\" y=\"55\" width=\"40\" height=\"50\" fill=\"#bbf7d0\" stroke=\"#16a34a\" rx=\"4\"/><text x=\"170\" y=\"88\" font-size=\"16\" font-weight=\"bold\" fill=\"#166534\" text-anchor=\"middle\">5</text><rect x=\"195\" y=\"55\" width=\"40\" height=\"50\" fill=\"#e9d5ff\" stroke=\"#9333ea\" rx=\"4\"/><text x=\"215\" y=\"88\" font-size=\"16\" font-weight=\"bold\" fill=\"#6b21a8\" text-anchor=\"middle\">0</text><rect x=\"240\" y=\"55\" width=\"40\" height=\"50\" fill=\"#bbf7d0\" stroke=\"#16a34a\" rx=\"4\"/><text x=\"260\" y=\"88\" font-size=\"16\" font-weight=\"bold\" fill=\"#166534\" text-anchor=\"middle\">4</text><rect x=\"285\" y=\"55\" width=\"40\" height=\"50\" fill=\"#dbeafe\" stroke=\"#2563eb\" rx=\"4\"/><text x=\"305\" y=\"88\" font-size=\"16\" font-weight=\"bold\" fill=\"#1e40af\" text-anchor=\"middle\">0</text><line x1=\"92\" y1=\"115\" x2=\"92\" y2=\"140\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><text x=\"92\" y=\"155\" font-size=\"11\" fill=\"#dc2626\" font-weight=\"bold\" text-anchor=\"middle\">Leading Zeros</text><text x=\"92\" y=\"170\" font-size=\"11\" fill=\"#dc2626\" text-anchor=\"middle\">NOT significant</text><line x1=\"215\" y1=\"115\" x2=\"215\" y2=\"140\" stroke=\"#9333ea\" stroke-width=\"1.5\"/><text x=\"215\" y=\"155\" font-size=\"11\" fill=\"#9333ea\" font-weight=\"bold\" text-anchor=\"middle\">Trapped Zero</text><text x=\"215\" y=\"170\" font-size=\"11\" fill=\"#9333ea\" text-anchor=\"middle\">Significant (2nd)</text><line x1=\"305\" y1=\"115\" x2=\"305\" y2=\"140\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"305\" y=\"155\" font-size=\"11\" fill=\"#2563eb\" font-weight=\"bold\" text-anchor=\"middle\">Trailing Zero</text><text x=\"305\" y=\"170\" font-size=\"11\" fill=\"#2563eb\" text-anchor=\"middle\">Significant (4th)</text><rect x=\"50\" y=\"195\" width=\"300\" height=\"30\" fill=\"#f1f5f9\" stroke=\"#cbd5e1\" rx=\"6\"/><text x=\"200\" y=\"215\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">Total Significant Figures = 4 (digits 5, 0, 4, 0)</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_f.0.14",
+  "sid": "maths_aqa_f",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.8-flash",
+  "ts": "2026-11-15T17:10:37.904Z"
  }
 }
