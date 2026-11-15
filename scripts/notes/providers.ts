@@ -10,6 +10,8 @@ export interface ProviderConfig {
   kind: "gemini" | "openai" | "mock";
   url?: string;
   model: string;
+  /** Models to try in order when one is retired or too big for the free tier ("auto-free" = OpenRouter's current free models). */
+  models?: string[];
   rpm: number;
   rpd: number;
   maxTokens: number;
@@ -24,6 +26,14 @@ export class RateLimited extends Error {
   ) {
     super(message);
     this.name = "RateLimited";
+  }
+}
+
+/** Thrown when this model can't be used (retired, not free any more, or request too large for its limits): try the next one. */
+export class ModelUnavailable extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = "ModelUnavailable";
   }
 }
 
@@ -45,6 +55,9 @@ async function post(url: string, headers: Record<string, string>, body: unknown)
   if (res.status === 429) {
     const daily = /per.?day|daily|RPD|quota.*exceeded.*day|free-models-per-day/i.test(text);
     throw new RateLimited(`429: ${text.slice(0, 300)}`, daily, retryAfter(res));
+  }
+  if (res.status === 404 || res.status === 413 || (res.status === 400 && /model/i.test(text))) {
+    throw new ModelUnavailable(`HTTP ${res.status}: ${text.slice(0, 300)}`);
   }
   if (!res.ok) throw new Error(`HTTP ${res.status}: ${text.slice(0, 300)}`);
   return JSON.parse(text) as unknown;
@@ -78,4 +91,22 @@ export async function complete(p: ProviderConfig, key: string, prompt: string): 
   const text = ch?.message?.content ?? "";
   if (!text) throw new Error(`empty reply (${ch?.finish_reason ?? "no choice"})`);
   return text;
+}
+
+/** The models to try for a provider. "auto-free" asks OpenRouter which free models exist today (biggest context first). */
+export async function resolveModels(p: ProviderConfig, key: string): Promise<string[]> {
+  const list = p.models?.length ? p.models : [p.model];
+  if (!list.includes("auto-free")) return list;
+  try {
+    const res = await fetch("https://openrouter.ai/api/v1/models", { headers: { authorization: `Bearer ${key}` }, signal: AbortSignal.timeout(30_000) });
+    const data = (await res.json()) as { data?: { id: string; context_length?: number }[] };
+    const free = (data.data ?? [])
+      .filter((m) => m.id.endsWith(":free") && (m.context_length ?? 0) >= 32_000)
+      .sort((a, b) => (b.context_length ?? 0) - (a.context_length ?? 0))
+      .map((m) => m.id)
+      .slice(0, 6);
+    return list.flatMap((m) => (m === "auto-free" ? free : [m]));
+  } catch {
+    return list.filter((m) => m !== "auto-free");
+  }
 }

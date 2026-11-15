@@ -24,7 +24,7 @@ export function buildNotePrompt(ref: PointRef, retryErrors: readonly string[] = 
     `Other points in the same topic (context only, do not cover them): ${others}.`,
     "",
     "Rules:",
-    `- Accurate to the ${s.board} specification, using the exact terminology that mark schemes reward. If unsure of a detail, leave it out rather than guess. Include Higher tier and triple-only content where this point has it. Cover EVERY property, definition, process, equation, example, set text detail and required practical the spec names for this point.`,
+    `- Accurate to the ${s.board} specification, using the exact terminology that mark schemes reward. If unsure of a detail, leave it out rather than guess. ${s.tier === "Foundation" ? "This is the Foundation tier: cover only Foundation content and leave out Higher-only content." : "Include Higher tier and triple-only content where this point has it."} Cover EVERY property, definition, process, equation, example, set text detail and required practical the spec names for this point.`,
     "- Grade 9 depth: the reasoning that links ideas, with explanations of WHY, in plain language a 15 year old can follow.",
     `- summary: 2 to 4 sentences (at least ${m.summary} characters) giving the big picture.`,
     `- core: ${m.core + 2} to ${m.core + 6} sections. Each has a heading h, a paragraph p, bullets (use many), and optionally: table {head:[..],rows:[[..]]} for comparisons and property lists, callouts [{k:"def"|"key"|"tip"|"warn",t:"",p:""}] (def = definitions to copy word for word, key = must-know fact, tip = exam tip, warn = common trap), and fig [{cap,svg}] to place a diagram inside that section.`,

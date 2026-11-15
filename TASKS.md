@@ -35,6 +35,8 @@ The spec codes below are a starting list. Check each against the board's own web
    - Failures go on a list that Claude fixes in later runs.
    - Done when: a 10-note test batch passes QA and shows on the preview.
 2. **J3 Maths:** AQA 8300, OCR J560, Eduqas (Higher and Foundation where the spec has tiers).
+   - Specs added 2026-11-15 (read from the boards' sites with the owner approving): `maths_aqa_h` (AQA 8300 Higher, 97 points), `maths_aqa_f` (Foundation, 88 points: Higher-only refs A13 A15 A16 A20 R15 G8 G10 G22 G23 left out), `maths_ocr_h` (OCR J560 Higher, 45 subsections, spec v2.1 Aug 2026).
+   - Still to add: OCR J560 Foundation (the PDF text doesn't show which column each line is in; check the tier columns), Eduqas Maths (C300; the spec PDF link wasn't found on eduqas.co.uk's page: find it under Key Documents).
 3. **J4 English Language:** AQA 8700, Edexcel 1EN0, OCR J351, Eduqas.
 4. **J5 English Literature:** AQA 8702, OCR J352, Eduqas.
 5. **J6 Sciences** (Combined, Biology, Chemistry, Physics):

@@ -22,7 +22,7 @@ import { qaNote } from "@/lib/notes/qa";
 import { parseModelJson } from "@/server/ai/json";
 
 import { buildNotePrompt } from "./prompt";
-import { RateLimited, complete, type ProviderConfig } from "./providers";
+import { ModelUnavailable, RateLimited, complete, resolveModels, type ProviderConfig } from "./providers";
 import { checkFigures, figuresOf } from "./render-check";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
@@ -134,8 +134,13 @@ async function main(): Promise<void> {
     save();
   };
 
-  const worker = async (p: ProviderConfig): Promise<void> => {
-    const key = process.env[p.env]!;
+  const worker = async (base: ProviderConfig): Promise<void> => {
+    const key = process.env[base.env]!;
+    const models = base.kind === "mock" ? [base.model] : await resolveModels(base, key);
+    let mi = 0;
+    console.log(`[${base.id}] models: ${models.join(", ") || "none"}`);
+    if (!models.length) return;
+    let p: ProviderConfig = { ...base, model: models[0]! };
     const gap = Math.ceil(60_000 / p.rpm);
     let next = 0;
     for (;;) {
@@ -181,6 +186,20 @@ async function main(): Promise<void> {
           continue;
         }
       } catch (e) {
+        if (e instanceof ModelUnavailable) {
+          // Not this note's fault: put it back and move on to the provider's next model.
+          console.log(`[${p.id}] ${p.model} can't be used (${e.message.slice(0, 160)})`);
+          if (job.tried.length) retries.unshift(job);
+          else queue.unshift(job.pid);
+          inFlight--;
+          mi++;
+          if (mi >= models.length) {
+            console.log(`[${p.id}] no usable model left; stopping`);
+            return;
+          }
+          p = { ...base, model: models[mi]! };
+          continue;
+        }
         if (e instanceof RateLimited) {
           console.log(`[${p.id}] rate limited${e.daily ? " for today" : ""}: ${e.message.slice(0, 120)}`);
           if (job.tried.length) retries.unshift(job);
