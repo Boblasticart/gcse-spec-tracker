@@ -1,0 +1,550 @@
+{
+ "maths_aqa_h.0.1": {
+  "summary": "This topic covers the systematic use of the four arithmetic operations on all number forms required for the Higher Tier: integers, terminating decimals, simple fractions and mixed numbers, together with the formal written methods and place‑value understanding that underpin accurate calculation. Mastery means you can move fluently between representations, apply the correct written algorithm, and justify each step using the properties of operations. You will also be able to check your answers quickly by estimation or using inverse operations, a skill that is heavily rewarded in grade 9 papers. Ultimately, this builds a solid foundation for algebraic manipulation later in the course.",
+  "core": [
+   {
+    "h": "Place value and number types",
+    "p": "Understanding the decimal system is the basis for all calculations – each digit represents a power of ten, positive to the left of the decimal point and negative to the right. This section defines the forms you will manipulate.",
+    "bullets": [
+     "Integers: whole numbers that can be positive, negative or zero.",
+     "Terminating decimals: numbers that end after a finite number of decimal places (e.g. 3.125).",
+     "Simple fractions: a/b where a and b are integers and b≠0, written in lowest terms.",
+     "Mixed numbers: a whole number plus a proper fraction, e.g. 2 ⅔.",
+     "Place‑value chart shows units (10⁰), tens (10¹), hundreds (10²) … and tenths (10⁻¹), hundredths (10⁻²) etc."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Place value",
+      "p": "The value of a digit is the digit multiplied by the power of ten corresponding to its position."
+     },
+     {
+      "k": "key",
+      "t": "Key fact",
+      "p": "A terminating decimal can always be written as a fraction with denominator a power of 10."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Place value chart",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" fill=\"#dbeafe\" stroke=\"#1b2540\"/><text x=\"30\" y=\"40\" font-size=\"12\" fill=\"#1b2540\">Hundreds (10²)</text><text x=\"30\" y=\"70\" font-size=\"12\" fill=\"#1b2540\">Tens (10¹)</text><text x=\"30\" y=\"100\" font-size=\"12\" fill=\"#1b2540\">Units (10⁰)</text><text x=\"30\" y=\"130\" font-size=\"12\" fill=\"#1b2540\">Tenths (10⁻¹)</text><text x=\"30\" y=\"160\" font-size=\"12\" fill=\"#1b2540\">Hundredths (10⁻²)</text><text x=\"30\" y=\"190\" font-size=\"12\" fill=\"#1b2540\">Thousandths (10⁻³)</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Formal written method – addition of integers",
+    "p": "The column method aligns numbers by place value, adds each column from right to left, and carries over when the sum exceeds 9 or is less than 0 (borrowing).",
+    "bullets": [
+     "Write numbers in a vertical column, aligning units, tens, hundreds etc.",
+     "Add the units column; if the sum is ≥10 write the unit digit and carry the tens to the next column.",
+     "Continue leftwards, adding any carry each time.",
+     "If the result is negative, use the same steps with absolute values and attach a minus sign at the end.",
+     "Check by using the inverse operation (subtraction)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam tip",
+      "p": "Always double‑check the sign of the final answer – a common source of lost marks."
+     },
+     {
+      "k": "warn",
+      "t": "Common trap",
+      "p": "Do not forget to carry when the column sum is exactly 10; write 0 and carry 1."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Formal written method – subtraction of integers",
+    "p": "Subtraction is performed by adding the opposite; the column method uses borrowing when the top digit is smaller than the bottom digit.",
+    "bullets": [
+     "Write the larger absolute value on top; if the original problem is a‑b and a<b, note the answer will be negative.",
+     "If a digit in the top number is smaller than the one below, borrow 1 (i.e. 10) from the next column to the left.",
+     "Subtract each column, moving right‑to‑left.",
+     "If the original problem was negative, attach the appropriate sign at the end.",
+     "Verify by adding the result to the subtrahend – you should recover the minuend."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Borrowing",
+      "p": "Replacing a digit in a higher place by one less and adding 10 to the digit in the next lower place."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Formal written method – multiplication of integers",
+    "p": "The standard algorithm multiplies each digit of the second factor by the whole first factor, shifting one place left for each step, then adds the partial products.",
+    "bullets": [
+     "Write the factors in a column, the multiplier beneath the multiplicand.",
+     "Multiply the units digit of the multiplier by the whole multiplicand; write the product under the line.",
+     "Move one place left (add a zero) and multiply the tens digit, and so on.",
+     "Add all the partial products using the integer addition method.",
+     "Place the sign of the answer according to the rule: like signs give a positive, unlike give a negative."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Key fact",
+      "p": "The product of two integers is positive if both have the same sign, negative otherwise."
+     },
+     {
+      "k": "tip",
+      "t": "Exam tip",
+      "p": "Check your work by dividing the product by one factor – you should obtain the other factor."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Formal written method – division of integers",
+    "p": "Long division divides the dividend by the divisor digit by digit, producing a quotient and possibly a remainder; the sign follows the same rule as multiplication.",
+    "bullets": [
+     "Write the dividend inside the division house and the divisor outside.",
+     "Determine how many times the divisor fits into the leading digits of the dividend.",
+     "Write that digit in the quotient, multiply back, subtract, and bring down the next digit.",
+     "Continue until all digits have been brought down.",
+     "If there is a remainder, it can be expressed as a fraction (remainder/divisor).",
+     "Assign the correct sign to the final answer."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Common trap",
+      "p": "Do not forget to bring down zeros when the divisor does not fit; this leads to missing decimal places."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Operations with terminating decimals",
+    "p": "Decimals are handled exactly like integers once the decimal point is removed; the position of the point is restored at the end of the calculation.",
+    "bullets": [
+     "Align decimal points vertically before adding or subtracting.",
+     "For multiplication, count the total number of decimal places in both factors; place the decimal point in the product accordingly.",
+     "For division, move the decimal point in the divisor to make it a whole number, moving the dividend’s point the same number of places; then perform integer division.",
+     "Use the formal written methods described for integers on the resulting whole numbers.",
+     "Check by estimating the size of the answer (e.g., 2.3×0.4≈1)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Decimal place value",
+      "p": "Each place to the right of the decimal point represents a negative power of ten (10⁻¹, 10⁻², …)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Operations with simple fractions",
+    "p": "Fractions are added, subtracted, multiplied and divided using the standard algebraic rules; results are simplified to lowest terms.",
+    "bullets": [
+     "Addition/Subtraction: find a common denominator (usually the LCM), convert each fraction, then add/subtract numerators.",
+     "Multiplication: multiply numerators together and denominators together; simplify before or after.",
+     "Division: multiply by the reciprocal of the divisor (a/b ÷ c/d = a/b × d/c).",
+     "Always reduce the final answer to its lowest terms by dividing numerator and denominator by their HCF.",
+     "Check by converting the answer back to a decimal if needed."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Key fact",
+      "p": "The reciprocal of a fraction a/b is b/a, provided a≠0."
+     },
+     {
+      "k": "tip",
+      "t": "Exam tip",
+      "p": "Cancel common factors before multiplying to keep numbers small."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Operations with mixed numbers",
+    "p": "Mixed numbers are most easily handled by converting them to improper fractions, performing the required operation, then converting back if required.",
+    "bullets": [
+     "Conversion to improper fraction: (whole × denominator + numerator)/denominator.",
+     "Perform the operation using the fraction rules above.",
+     "If the answer is an improper fraction and a mixed number is required, divide the numerator by the denominator: quotient = whole number, remainder = new numerator.",
+     "Simplify the fractional part to lowest terms.",
+     "When adding or subtracting mixed numbers, you may also work with whole numbers and fractions separately, but conversion is usually quicker."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Improper fraction",
+      "p": "A fraction where the numerator is greater than or equal to the denominator."
+     },
+     {
+      "k": "warn",
+      "t": "Common trap",
+      "p": "For subtraction, ensure you convert both mixed numbers to improper fractions first; otherwise you may forget to borrow across the whole‑fraction boundary."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Mixed number conversion",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" fill=\"#fde68a\" stroke=\"#1b2540\"/><text x=\"30\" y=\"50\" font-size=\"12\" fill=\"#1b2540\">2 ⅔ = (2×3+2)/3 = 8/3</text><text x=\"30\" y=\"90\" font-size=\"12\" fill=\"#1b2540\">7 ¼ = (7×4+1)/4 = 29/4</text><text x=\"30\" y=\"130\" font-size=\"12\" fill=\"#1b2540\">Add: 8/3 + 29/4 = (32+87)/12 = 119/12 = 9 ⅞</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Order of operations (BODMAS) with the four operations",
+    "p": "When several operations appear in a single expression, brackets, orders (powers/roots), division and multiplication, addition and subtraction must be performed in the correct sequence.",
+    "bullets": [
+     "Brackets first – solve any expression inside parentheses or brackets.",
+     "Orders next – evaluate any powers or roots.",
+     "Multiplication and division are of equal priority; work from left to right.",
+     "Addition and subtraction are of equal priority; work from left to right.",
+     "When the same operation repeats, the left‑most operation is performed first (left‑to‑right rule)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "BODMAS",
+      "p": "A mnemonic for the hierarchy: Brackets, Orders, Division, Multiplication, Addition, Subtraction."
+     },
+     {
+      "k": "tip",
+      "t": "Exam tip",
+      "p": "Write a small intermediate result on the margin to avoid losing track of complex calculations."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Operation flowchart",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" fill=\"#bbf7d0\" stroke=\"#1b2540\"/><text x=\"30\" y=\"40\" font-size=\"12\" fill=\"#1b2540\">Start → Brackets?</text><text x=\"30\" y=\"70\" font-size=\"12\" fill=\"#1b2540\">Yes → Solve inside → Back to Start</text><text x=\"30\" y=\"100\" font-size=\"12\" fill=\"#1b2540\">No → Orders?</text><text x=\"30\" y=\"130\" font-size=\"12\" fill=\"#1b2540\">Yes → Evaluate → Back to Start</text><text x=\"30\" y=\"160\" font-size=\"12\" fill=\"#1b2540\">No → Multiply/Divide left‑to‑right</text><text x=\"30\" y=\"190\" font-size=\"12\" fill=\"#1b2540\">Then Add/Subtract left‑to‑right → End</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Checking work – estimation and inverse operations",
+    "p": "A quick estimate or using the inverse operation can confirm that a calculated answer is plausible, saving marks by catching errors early.",
+    "bullets": [
+     "Round each number to one or two significant figures and perform the operation – the result should be close to the exact answer.",
+     "For addition, check by subtracting one addend from the sum; you should recover the other addend.",
+     "For multiplication, divide the product by one factor; you should obtain the other factor.",
+     "For division, multiply the quotient by the divisor – you should get the dividend.",
+     "If the check fails, re‑examine each step for sign errors, misplaced decimal points, or uncancelled factors."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Key fact",
+      "p": "The inverse of addition is subtraction; the inverse of multiplication is division."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Algebraic notation for the four operations",
+    "p": "Even when working with numbers, the same symbols are used in algebra; being comfortable with them helps transition to later topics.",
+    "bullets": [
+     "Addition: a + b – commutative (a + b = b + a).",
+     "Subtraction: a − b – not commutative; a − b ≠ b − a.",
+     "Multiplication: a × b or a · b – commutative (a × b = b × a).",
+     "Division: a ÷ b or a⁄b – not commutative; a ÷ b ≠ b ÷ a.",
+     "Use parentheses to show the intended order, e.g. (a + b) × c.",
+     "When writing mixed numbers, use a space or a plus sign: 2 ⅔ = 2 + 2⁄3."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Commutative property",
+      "p": "Changing the order of two numbers does not change the result for addition or multiplication."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Key properties of the four operations",
+    "p": "These properties justify many shortcuts and are explicitly rewarded in the mark scheme when used correctly.",
+    "bullets": [
+     "Associative: (a + b) + c = a + (b + c) and (a × b) × c = a × (b × c).",
+     "Distributive: a × (b + c) = a × b + a × c.",
+     "Identity: a + 0 = a; a × 1 = a.",
+     "Zero property: a × 0 = 0.",
+     "Inverse: a − a = 0; a ÷ a = 1 (a≠0)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam tip",
+      "p": "When a problem asks for a quick mental calculation, look for a distributive split that uses round numbers."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Number operations as a kitchen recipe",
+   "p": "Think of integers, decimals, fractions and mixed numbers as different ingredients – flour, sugar, oil, and spices. Adding them is like mixing ingredients in a bowl, subtraction is removing an ingredient, multiplication is scaling the recipe up (doubling, tripling), and division is scaling it down (halving). The formal written methods are the step‑by‑step instructions that ensure you add the right amount of each ingredient in the correct order, just as a chef follows a recipe to avoid a disastrous dish. The analogy breaks down when you consider that numbers can be infinitely precise, whereas ingredients are limited by measurement tools; also, operations like division by zero have no culinary equivalent."
+  },
+  "terms": [
+   {
+    "t": "Integer",
+    "d": "A whole number that can be positive, negative or zero, with no fractional or decimal part."
+   },
+   {
+    "t": "Terminating decimal",
+    "d": "A decimal that ends after a finite number of places, e.g., 0.75."
+   },
+   {
+    "t": "Simple fraction",
+    "d": "A ratio of two integers a/b where b≠0, written in lowest terms."
+   },
+   {
+    "t": "Mixed number",
+    "d": "A whole number combined with a proper fraction, e.g., 3 ½."
+   },
+   {
+    "t": "Improper fraction",
+    "d": "A fraction where the numerator is greater than or equal to the denominator."
+   },
+   {
+    "t": "Place value",
+    "d": "The value of a digit determined by its position, each position representing a power of ten."
+   },
+   {
+    "t": "Borrowing",
+    "d": "In subtraction, reducing a higher place by one and adding ten to the lower place to enable the subtraction."
+   },
+   {
+    "t": "Carrying",
+    "d": "In addition, moving a ten from a lower place to the next higher place when the column sum exceeds nine."
+   },
+   {
+    "t": "Reciprocal",
+    "d": "The inverse of a fraction a/b, written b/a, used for division of fractions."
+   },
+   {
+    "t": "Least common denominator (LCD)",
+    "d": "The smallest common multiple of the denominators of two or more fractions, used for addition and subtraction."
+   },
+   {
+    "t": "Highest common factor (HCF)",
+    "d": "The greatest integer that divides two or more numbers, used to simplify fractions."
+   },
+   {
+    "t": "Distributive property",
+    "d": "A rule that a(b + c) = ab + ac, allowing multiplication over addition."
+   },
+   {
+    "t": "Associative property",
+    "d": "A rule that (a + b) + c = a + (b + c) and (a × b) × c = a × (b × c)."
+   },
+   {
+    "t": "Identity element",
+    "d": "The number that leaves another number unchanged when combined by an operation (0 for addition, 1 for multiplication)."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "\"-5 + 3 = -8\"",
+    "r": "The correct answer is -2; adding a positive number reduces the magnitude of a negative number."
+   },
+   {
+    "w": "\"2.4 × 0.3 = 0.72\" (written as 72)",
+    "r": "The product must retain the decimal point; 2.4 × 0.3 = 0.72, not 72."
+   },
+   {
+    "w": "\"When adding fractions, just add the numerators and keep the denominator\"",
+    "r": "You must first find a common denominator unless the denominators are already the same."
+   },
+   {
+    "w": "\"Dividing by a fraction is the same as multiplying by the same fraction\"",
+    "r": "Division by a fraction requires multiplying by its reciprocal, not by the fraction itself."
+   },
+   {
+    "w": "\"The sign of a product is always positive\"",
+    "r": "The product is negative when the factors have opposite signs."
+   },
+   {
+    "w": "\"Borrowing means you add 1 to the lower digit\"",
+    "r": "Borrowing means you take 1 (i.e., ten) from the next higher place and add it to the lower place."
+   },
+   {
+    "w": "\"0.125 = 125/10\"",
+    "r": "0.125 = 125/1000, which simplifies to 1/8."
+   },
+   {
+    "w": "\"When converting a mixed number, you multiply the denominator by the whole number\"",
+    "r": "You multiply the whole number by the denominator, then add the numerator: (whole × denominator + numerator)/denominator."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Calculate -7 + 12 − 5. Show all steps using the formal written method for integers.",
+    "marks": 2,
+    "model": [
+     "Write the numbers in a column aligning units",
+     "Add -7 and 12 to get 5, then subtract 5 to obtain 0"
+    ],
+    "tip": "Remember to treat the sign of each intermediate result correctly."
+   },
+   {
+    "q": "A shop sells 3.75 kg of fruit. If a customer buys 1.2 kg, how much is left? Show your work using decimal subtraction.",
+    "marks": 2,
+    "model": [
+     "Write 3.75 and 1.20 in a column",
+     "Subtract units, then tenths, then hundredths",
+     "Result = 2.55 kg"
+    ],
+    "tip": "Align the decimal points before subtracting."
+   },
+   {
+    "q": "Add 2 ⅔ and 1 ¾. Give your answer as a mixed number in lowest terms.",
+    "marks": 4,
+    "model": [
+     "Convert 2 ⅔ to 8/3 and 1 ¾ to 7/4",
+     "Find LCD = 12",
+     "Convert: 8/3 = 32/12, 7/4 = 21/12",
+     "Add: 53/12",
+     "Convert to mixed: 4 ⅔ (since 12×4=48, remainder 5)",
+     "Simplify fraction 5/12 (already lowest)"
+    ],
+    "tip": "Work with improper fractions throughout, then convert back at the end."
+   },
+   {
+    "q": "Multiply 0.6 by 0.25 using the integer method. Show each step.",
+    "marks": 4,
+    "model": [
+     "Remove decimals: 0.6 → 6 (1 dp), 0.25 → 25 (2 dp)",
+     "Multiply 6 × 25 = 150",
+     "Total decimal places = 1+2 = 3",
+     "Place decimal point 3 places from right: 0.150"
+    ],
+    "tip": "Count total decimal places before placing the point."
+   },
+   {
+    "q": "Divide 48 by 0.8 using the formal written method. Give your answer to two decimal places.",
+    "marks": 4,
+    "model": [
+     "Move decimal in divisor to make it a whole number: 0.8 → 8 (move 1 place)",
+     "Move dividend the same amount: 48 → 480",
+     "Perform integer division: 480 ÷ 8 = 60",
+     "Place decimal back (none needed) → 60.00"
+    ],
+    "tip": "Keep the decimal shift consistent for dividend and divisor."
+   },
+   {
+    "q": "Simplify (3 + 5) × 2 − 4 ÷ 2. Show the order of operations clearly.",
+    "marks": 4,
+    "model": [
+     "Brackets: 3 + 5 = 8",
+     "Multiplication: 8 × 2 = 16",
+     "Division: 4 ÷ 2 = 2",
+     "Subtraction: 16 − 2 = 14"
+    ],
+    "tip": "Work left‑to‑right for multiplication and division after brackets."
+   },
+   {
+    "q": "A recipe requires 1 ½ cups of sugar. If you double the recipe, how many cups of sugar are needed? Show your work using the distributive property.",
+    "marks": 2,
+    "model": [
+     "Convert 1 ½ to 3/2",
+     "Double: 2 × 3/2 = 3"
+    ],
+    "tip": "Multiplying a mixed number is easiest after converting to an improper fraction."
+   },
+   {
+    "q": "Check your answer for 7 − (‑3) by using an inverse operation.",
+    "marks": 2,
+    "model": [
+     "7 − (‑3) = 7 + 3 = 10",
+     "Check: 10 − 3 = 7"
+    ],
+    "tip": "Adding the opposite is the inverse of subtraction."
+   },
+   {
+    "q": "A number is multiplied by 4 to give 28. Find the original number using the inverse operation and show your steps.",
+    "marks": 2,
+    "model": [
+     "Let x × 4 = 28",
+     "Divide both sides by 4: x = 28 ÷ 4 = 7"
+    ],
+    "tip": "Division is the inverse of multiplication."
+   },
+   {
+    "q": "Express 0.375 as a fraction in lowest terms, then as a mixed number.",
+    "marks": 4,
+    "model": [
+     "Write as 375/1000",
+     "Simplify by HCF 125 → 3/8",
+     "Since 3/8 < 1, mixed number is 0 ⅜ (or simply 3/8)"
+    ],
+    "tip": "Identify the highest common factor before simplifying."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Add -23, 45 and -12 using the column method.",
+    "steps": [
+     "Write the numbers in a column aligning units: -23, 45, -12",
+     "Add 45 and -23 = 22 (positive)",
+     "Add 22 and -12 = 10"
+    ],
+    "ans": "10"
+   },
+   {
+    "q": "Subtract 5.67 from 12.4 using the decimal subtraction method.",
+    "steps": [
+     "Write 12.40 and 5.67 in a column, aligning decimal points",
+     "Subtract units: 0‑7 cannot, borrow 1 from tenths (4 becomes 3, units become 10)",
+     "10‑7 = 3",
+     "Tenths: 3‑6 cannot, borrow 1 from hundreds (1 becomes 0, tenths become 13)",
+     "13‑6 = 7",
+     "Hundreds: 0‑5 cannot, borrow from thousands (0 becomes -1, but we treat as 10)",
+     "10‑5 = 5"
+    ],
+    "ans": "6.73"
+   },
+   {
+    "q": "Multiply 3 ⅓ by 2 ½ using the formal written method for mixed numbers.",
+    "steps": [
+     "Convert 3 ⅓ to improper fraction: (3×3+1)/3 = 10/3",
+     "Convert 2 ½ to improper fraction: (2×2+1)/2 = 5/2",
+     "Multiply numerators: 10 × 5 = 50",
+     "Multiply denominators: 3 × 2 = 6",
+     "Simplify 50/6 by dividing by 2 → 25/3",
+     "Convert to mixed number: 25 ÷ 3 = 8 remainder 1 → 8 ⅓"
+    ],
+    "ans": "8 ⅓"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Place value chart",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" fill=\"#dbeafe\" stroke=\"#1b2540\"/><text x=\"30\" y=\"40\" font-size=\"12\" fill=\"#1b2540\">Hundreds (10²)</text><text x=\"30\" y=\"70\" font-size=\"12\" fill=\"#1b2540\">Tens (10¹)</text><text x=\"30\" y=\"100\" font-size=\"12\" fill=\"#1b2540\">Units (10⁰)</text><text x=\"30\" y=\"130\" font-size=\"12\" fill=\"#1b2540\">Tenths (10⁻¹)</text><text x=\"30\" y=\"160\" font-size=\"12\" fill=\"#1b2540\">Hundredths (10⁻²)</text><text x=\"30\" y=\"190\" font-size=\"12\" fill=\"#1b2540\">Thousandths (10⁻³)</text></svg>"
+   },
+   {
+    "cap": "Operation flowchart",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" fill=\"#bbf7d0\" stroke=\"#1b2540\"/><text x=\"30\" y=\"40\" font-size=\"12\" fill=\"#1b2540\">Start → Brackets?</text><text x=\"30\" y=\"70\" font-size=\"12\" fill=\"#1b2540\">Yes → Solve inside → Back to Start</text><text x=\"30\" y=\"100\" font-size=\"12\" fill=\"#1b2540\">No → Orders?</text><text x=\"30\" y=\"130\" font-size=\"12\" fill=\"#1b2540\">Yes → Evaluate → Back to Start</text><text x=\"30\" y=\"160\" font-size=\"12\" fill=\"#1b2540\">No → Multiply/Divide left‑to‑right</text><text x=\"30\" y=\"190\" font-size=\"12\" fill=\"#1b2540\">Then Add/Subtract left‑to‑right → End</text></svg>"
+   },
+   {
+    "cap": "Mixed number conversion",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" fill=\"#fde68a\" stroke=\"#1b2540\"/><text x=\"30\" y=\"50\" font-size=\"12\" fill=\"#1b2540\">2 ⅔ = (2×3+2)/3 = 8/3</text><text x=\"30\" y=\"90\" font-size=\"12\" fill=\"#1b2540\">7 ¼ = (7×4+1)/4 = 29/4</text><text x=\"30\" y=\"130\" font-size=\"12\" fill=\"#1b2540\">Add: 8/3 + 29/4 = (32+87)/12 = 119/12 = 9 ⅞</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_h.0.1",
+  "sid": "maths_aqa_h",
+  "v": 2,
+  "src": "pre",
+  "by": "groq/openai/gpt-oss-120b",
+  "ts": "2026-11-15T15:39:58.699Z"
+ }
+}
