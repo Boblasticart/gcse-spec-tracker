@@ -546,5 +546,530 @@
   "src": "pre",
   "by": "groq/openai/gpt-oss-120b",
   "ts": "2026-11-15T15:39:58.699Z"
+ },
+ "maths_aqa_h.0.4": {
+  "summary": "Systematic listing strategies let you count outcomes without enumerating every single case, saving time and avoiding errors. The product rule for counting states that if one event can occur in m ways and a second independent event can occur in n ways, the combined event can occur in m × n ways. Mastery of this rule, together with tree diagrams and tables, is essential for tackling higher‑tier N5 questions where multiple stages or selections are involved. Understanding the underlying assumptions – independence and order – lets you apply the rule confidently and earn full marks.",
+  "core": [
+   {
+    "h": "What is systematic listing?",
+    "p": "Systematic listing is a logical method for counting the number of possible outcomes by arranging them in an organised structure rather than writing each one out individually.",
+    "bullets": [
+     "It provides a clear visual representation of all cases",
+     "Ensures no case is omitted or double‑counted",
+     "Useful for both simple and complex multi‑stage problems"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Systematic listing",
+      "p": "A technique that arranges all possible outcomes in a structured form (tree, table, or chart) to count them efficiently."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "When to use systematic listing",
+    "p": "Use systematic listing when the problem involves several stages, choices with or without replacement, or when direct enumeration would be lengthy.",
+    "bullets": [
+     "Multiple stages (e.g., roll a die then flip a coin)",
+     "Selections from a set where order matters or does not matter",
+     "Problems that can be broken into independent parts"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "",
+      "p": "Identify the independent stages first – each stage contributes a factor to the total count."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Product rule for counting – statement",
+    "p": "If event A can occur in m ways and, for each way of A, event B can occur in n ways, then the combined event (A and B) can occur in m × n ways.",
+    "bullets": [
+     "m and n are positive integers",
+     "The events must be independent – the number of ways B can occur does not depend on the choice of A"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "",
+      "p": "Total outcomes = (ways for first stage) × (ways for second stage)"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Conditions for applying the product rule",
+    "p": "The product rule only works when the stages are independent and the order of selection is relevant unless stated otherwise.",
+    "bullets": [
+     "Independence: the count for later stages does not change with earlier choices",
+     "Order: if the problem says ‘arranged’ or ‘ordered’, keep the order; otherwise consider combinations separately"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "",
+      "p": "Do NOT apply the product rule when the second stage’s options are reduced by the first stage (unless you adjust the count)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Tree diagrams – visualising the product rule",
+    "p": "A tree diagram branches out each possible outcome of a stage, making the multiplication of possibilities explicit.",
+    "bullets": [
+     "Root node represents the start",
+     "First level branches = ways for stage 1",
+     "Second level branches = ways for stage 2 for each first‑level branch",
+     "Total leaves = product of the branch counts"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Leaf",
+      "p": "The final endpoint of a branch representing one complete outcome."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Tree diagram for rolling a die then flipping a coin",
+      "svg": "<svg viewBox=\"0 0 400 240\"><g fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"><line x1=\"200\" y1=\"20\" x2=\"200\" y2=\"80\"/><line x1=\"200\" y1=\"80\" x2=\"80\" y2=\"140\"/><line x1=\"200\" y1=\"80\" x2=\"200\" y2=\"140\"/><line x1=\"200\" y1=\"80\" x2=\"320\" y2=\"140\"/><line x1=\"80\" y1=\"140\" x2=\"40\" y2=\"200\"/><line x1=\"80\" y1=\"140\" x2=\"120\" y2=\"200\"/><line x1=\"200\" y1=\"140\" x2=\"160\" y2=\"200\"/><line x1=\"200\" y1=\"140\" x2=\"240\" y2=\"200\"/><line x1=\"320\" y1=\"140\" x2=\"280\" y2=\"200\"/><line x1=\"320\" y1=\"140\" x2=\"360\" y2=\"200\"/></g><g fill=\"#dbeafe\" stroke=\"#1b2540\" font-size=\"12\"><text x=\"200\" y=\"15\" text-anchor=\"middle\">Start</text><text x=\"80\" y=\"95\" text-anchor=\"middle\">1</text><text x=\"200\" y=\"95\" text-anchor=\"middle\">2</text><text x=\"320\" y=\"95\" text-anchor=\"middle\">3</text><text x=\"40\" y=\"215\" text-anchor=\"middle\">H</text><text x=\"120\" y=\"215\" text-anchor=\"middle\">T</text><text x=\"160\" y=\"215\" text-anchor=\"middle\">H</text><text x=\"240\" y=\"215\" text-anchor=\"middle\">T</text><text x=\"280\" y=\"215\" text-anchor=\"middle\">H</text><text x=\"360\" y=\"215\" text-anchor=\"middle\">T</text></g></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Using tables for systematic listing",
+    "p": "Tables arrange the outcomes of two (or more) stages in rows and columns, making the product rule a matter of counting cells.",
+    "bullets": [
+     "Rows = outcomes of first stage",
+     "Columns = outcomes of second stage",
+     "Each cell = one combined outcome",
+     "Total cells = rows × columns"
+    ],
+    "table": {
+     "head": [
+      "Die roll",
+      "Coin flip"
+     ],
+     "rows": [
+      [
+       "1",
+       "H"
+      ],
+      [
+       "1",
+       "T"
+      ],
+      [
+       "2",
+       "H"
+      ],
+      [
+       "2",
+       "T"
+      ],
+      [
+       "…",
+       "…"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "",
+      "p": "When the table becomes large, count rows and columns instead of shading every cell."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Table for die‑coin example",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"50\" y=\"50\" width=\"300\" height=\"140\" fill=\"#fde68a\" stroke=\"#1b2540\"/><line x1=\"200\" y1=\"50\" x2=\"200\" y2=\"190\" stroke=\"#1b2540\"/><line x1=\"50\" y1=\"120\" x2=\"350\" y2=\"120\" stroke=\"#1b2540\"/><g fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\"><text x=\"125\" y=\"40\">Die roll</text><text x=\"275\" y=\"40\">Coin flip</text><text x=\"125\" y=\"115\">1</text><text x=\"275\" y=\"115\">H</text><text x=\"125\" y=\"175\">2</text><text x=\"275\" y=\"175\">T</text></g></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Example 1 – two independent stages",
+    "p": "A bag contains 3 red and 4 blue beads. One bead is drawn, replaced, then a second bead is drawn. How many possible colour sequences are there?",
+    "bullets": [
+     "First draw: 2 colour choices (R or B)",
+     "Second draw (after replacement): again 2 choices",
+     "Product rule: 2 × 2 = 4 sequences"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "",
+      "p": "RR, RB, BR, BB"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Example 2 – three stages, no replacement",
+    "p": "Four different cards are drawn one after another without replacement. How many possible ordered triples can be formed?",
+    "bullets": [
+     "First card: 4 choices",
+     "Second card: 3 remaining choices",
+     "Third card: 2 remaining choices",
+     "Product rule: 4 × 3 × 2 = 24"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "",
+      "p": "Do NOT multiply by 4 again – the number of options falls after each draw."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Higher‑tier twist – selections with replacement and order matters",
+    "p": "When the question states ‘with replacement’ and asks for ordered selections, each stage retains the full set of options, so the product rule applies unchanged across all stages.",
+    "bullets": [
+     "If n objects are available and k selections are made with replacement, total = n^k",
+     "Useful for questions involving passwords, dice rolls, or colour codes"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "",
+      "p": "n^k is a compact way to write repeated multiplication"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Common pitfalls and how to avoid them",
+    "p": "Students often misuse the product rule by ignoring dependence or by double‑counting when order is irrelevant.",
+    "bullets": [
+     "Mistake: treating dependent stages as independent – adjust the count for the reduced options",
+     "Mistake: using product rule for combinations when order does not matter – switch to nCk formula",
+     "Check: write a short sentence describing the independence before multiplying"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "",
+      "p": "Always ask ‘Does the choice for the second stage depend on the first?’"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Quick checklist before answering",
+    "p": "A short list to verify that the product rule has been applied correctly.",
+    "bullets": [
+     "Identify each stage and list its number of ways",
+     "Confirm stages are independent (or adjust for dependence)",
+     "Multiply the numbers sequentially",
+     "State the reasoning in words for full marks"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Independent stages",
+      "p": "Stages where the number of options for a later stage does not change because of earlier choices."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Exam‑style question – 2 marks",
+    "p": "A standard die is rolled twice. How many possible ordered pairs of results are there?",
+    "bullets": [
+     "First roll: 6 ways",
+     "Second roll: 6 ways (independent)",
+     "Product rule: 6 × 6 = 36"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "",
+      "p": "36 ordered pairs"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Exam‑style question – 4 marks",
+    "p": "A box contains 5 different toys. Two toys are selected one after the other without replacement. How many possible ordered selections are there?",
+    "bullets": [
+     "First selection: 5 ways",
+     "Second selection: 4 ways (one toy removed)",
+     "Product rule: 5 × 4 = 20"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "",
+      "p": "20 ordered pairs"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Exam‑style question – 6 marks (higher tier)",
+    "p": "A password consists of 3 characters: the first must be a digit (0‑9), the second a lower‑case letter (a‑z), the third either a digit or a lower‑case letter. How many different passwords are possible?",
+    "bullets": [
+     "First character: 10 options",
+     "Second character: 26 options",
+     "Third character: 10 + 26 = 36 options",
+     "Product rule: 10 × 26 × 36 = 9 360"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "",
+      "p": "9 360 possible passwords"
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Tree diagram analogy",
+   "p": "Think of systematic listing like a branching family tree: each generation represents a stage of choices, and every leaf at the bottom is a possible outcome, just as every descendant is a unique combination of ancestors. The analogy breaks down if the family rules change mid‑generation (e.g., a rule that a child cannot have the same name as a sibling), which mirrors dependent stages where the product rule must be adjusted."
+  },
+  "terms": [
+   {
+    "t": "Systematic listing",
+    "d": "A method of arranging all possible outcomes in an organised visual form (tree, table, or chart) to count them efficiently."
+   },
+   {
+    "t": "Product rule for counting",
+    "d": "If one event can occur in m ways and a second independent event can occur in n ways, the combined event can occur in m × n ways."
+   },
+   {
+    "t": "Independent stages",
+    "d": "Stages where the number of options for a later stage does not depend on the choice made in an earlier stage."
+   },
+   {
+    "t": "Leaf (in a tree diagram)",
+    "d": "The final endpoint representing one complete outcome."
+   },
+   {
+    "t": "Ordered selection",
+    "d": "A selection where the sequence matters; different orders count as different outcomes."
+   },
+   {
+    "t": "With replacement",
+    "d": "After a choice is made, it is returned to the set so that the next stage has the same number of options."
+   },
+   {
+    "t": "Without replacement",
+    "d": "After a choice is made, it is not returned, reducing the number of options for subsequent stages."
+   },
+   {
+    "t": "Combination",
+    "d": "A selection where order does not matter; counted using nCk rather than the product rule."
+   },
+   {
+    "t": "Permutation",
+    "d": "An ordered arrangement of objects; counted using the product rule when appropriate."
+   },
+   {
+    "t": "n^k",
+    "d": "Notation for repeated multiplication of n by itself k times, used for k selections with replacement."
+   },
+   {
+    "t": "Branch (in a tree diagram)",
+    "d": "A line representing one possible choice at a particular stage."
+   },
+   {
+    "t": "Node",
+    "d": "A point in a tree diagram where branches split, representing a stage of decision."
+   },
+   {
+    "t": "Factorial notation (!)",
+    "d": "n! = n × (n‑1) × … × 1, used for counting permutations of n distinct objects."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "I multiplied 5 by 5 for two selections without replacement because there are still 5 objects.",
+    "r": "The second selection has only 4 remaining objects, so the correct product is 5 × 4."
+   },
+   {
+    "w": "I used the product rule for a problem where order didn’t matter and gave 12 instead of 6.",
+    "r": "When order is irrelevant you must use combinations (nCk) not the product rule."
+   },
+   {
+    "w": "I counted the same outcome twice in a tree diagram because I didn’t label the branches uniquely.",
+    "r": "Each branch must represent a distinct choice; label them clearly to avoid double‑counting."
+   },
+   {
+    "w": "I assumed the stages were independent without checking, leading to an over‑count.",
+    "r": "Always verify independence; if the second stage’s options change, adjust the count accordingly."
+   },
+   {
+    "w": "I wrote 10 × 26 × 36 = 9360 but then wrote ‘9 360’ with a missing comma, losing marks for presentation.",
+    "r": "Present large numbers with a space or comma for readability; the value is 9 360."
+   },
+   {
+    "w": "I used the product rule for selecting 3 toys from 5 with replacement and wrote 5 × 5 × 5 = 125, but the question asked for selections without replacement.",
+    "r": "For without replacement the counts reduce: 5 × 4 × 3 = 60."
+   },
+   {
+    "w": "I thought ‘with replacement’ meant you could pick the same object twice in the same stage, so I added options instead of multiplying.",
+    "r": "‘With replacement’ means each stage retains the full set of options; you still multiply the counts."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A fair coin is tossed three times. How many possible ordered sequences of heads (H) and tails (T) are there?",
+    "marks": 2,
+    "model": [
+     "First toss: 2 ways",
+     "Second toss: 2 ways",
+     "Third toss: 2 ways",
+     "Total = 2×2×2 = 8"
+    ],
+    "tip": "State the product rule and multiply 2 three times; write the final answer as 8 sequences."
+   },
+   {
+    "q": "A box contains 6 different coloured balls. Two balls are drawn one after the other without replacement. How many ordered pairs can be formed?",
+    "marks": 4,
+    "model": [
+     "First draw: 6 ways",
+     "Second draw: 5 ways (one ball removed)",
+     "Total = 6×5 = 30"
+    ],
+    "tip": "Mention ‘without replacement’ and show the reduction from 6 to 5."
+   },
+   {
+    "q": "A password consists of 2 letters followed by 2 digits. Letters may repeat, digits may repeat. How many different passwords are possible?",
+    "marks": 6,
+    "model": [
+     "First letter: 26 ways",
+     "Second letter: 26 ways",
+     "First digit: 10 ways",
+     "Second digit: 10 ways",
+     "Total = 26×26×10×10 = 67 600"
+    ],
+    "tip": "Write the reasoning for each stage and keep the multiplication clear; final answer 67 600."
+   },
+   {
+    "q": "A die is rolled twice. How many outcomes give a sum of 7?",
+    "marks": 2,
+    "model": [
+     "List possible ordered pairs that sum to 7: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1)",
+     "Total = 6"
+    ],
+    "tip": "Use systematic listing (pairs) then count; you can also note symmetry."
+   },
+   {
+    "q": "From a set of 4 different keys, a lock is opened by selecting a sequence of 3 keys, without replacement. How many possible sequences are there?",
+    "marks": 4,
+    "model": [
+     "First key: 4 ways",
+     "Second key: 3 ways",
+     "Third key: 2 ways",
+     "Total = 4×3×2 = 24"
+    ],
+    "tip": "Emphasise ‘without replacement’ and that order matters."
+   },
+   {
+    "q": "A code consists of 3 characters where each character can be a digit (0‑9) or a letter (A‑Z). Characters may repeat. How many different codes are possible?",
+    "marks": 6,
+    "model": [
+     "Number of options for each character: 10 digits + 26 letters = 36",
+     "Three independent characters: 36×36×36 = 46 656"
+    ],
+    "tip": "Use n^k notation: 36^3 = 46 656; explain independence."
+   },
+   {
+    "q": "A bag contains 2 red, 3 blue and 4 green marbles. One marble is drawn, its colour noted, and it is replaced. This is repeated three times. How many possible colour sequences are there?",
+    "marks": 4,
+    "model": [
+     "Each draw: 3 colour choices (R,B,G)",
+     "Three independent draws: 3×3×3 = 27"
+    ],
+    "tip": "State the product rule with 3 stages, each having 3 options."
+   },
+   {
+    "q": "A committee of 3 is to be chosen from 8 people. How many different committees can be formed?",
+    "marks": 2,
+    "model": [
+     "Order does not matter – use combinations: 8C3 = 56"
+    ],
+    "tip": "Explain why the product rule is not appropriate here; use combination formula."
+   },
+   {
+    "q": "A spinner is divided into 5 equal sectors labelled 1‑5. It is spun twice without replacement (the sector landed on is removed). How many ordered outcomes are possible?",
+    "marks": 4,
+    "model": [
+     "First spin: 5 ways",
+     "Second spin: 4 ways (sector removed)",
+     "Total = 5×4 = 20"
+    ],
+    "tip": "Highlight ‘without replacement’ even though it is a spinner, not a physical removal."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A die is rolled twice. Find the number of ordered outcomes where the first roll is even and the second roll is odd.",
+    "steps": [
+     "Even numbers on a die: 2,4,6 → 3 ways",
+     "Odd numbers on a die: 1,3,5 → 3 ways",
+     "Product rule: 3×3 = 9"
+    ],
+    "ans": "9 ordered outcomes"
+   },
+   {
+    "q": "A box contains 4 different pens. Two pens are drawn one after the other with replacement. How many ordered pairs can be obtained?",
+    "steps": [
+     "First draw: 4 ways",
+     "Replacement means second draw also has 4 ways",
+     "Product rule: 4×4 = 16"
+    ],
+    "ans": "16 ordered pairs"
+   },
+   {
+    "q": "A password is formed from 2 letters (A‑Z) followed by 1 digit (0‑9). Letters may not repeat, but the digit may repeat any previous character. How many passwords are possible?",
+    "steps": [
+     "First letter: 26 ways",
+     "Second letter (no repeat): 25 ways",
+     "Digit: 10 ways (independent)",
+     "Product rule: 26×25×10 = 6 500"
+    ],
+    "ans": "6 500"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Tree diagram for die‑coin example",
+    "svg": "<svg viewBox=\"0 0 400 240\"><g fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"><line x1=\"200\" y1=\"20\" x2=\"200\" y2=\"80\"/><line x1=\"200\" y1=\"80\" x2=\"80\" y2=\"140\"/><line x1=\"200\" y1=\"80\" x2=\"200\" y2=\"140\"/><line x1=\"200\" y1=\"80\" x2=\"320\" y2=\"140\"/><line x1=\"80\" y1=\"140\" x2=\"40\" y2=\"200\"/><line x1=\"80\" y1=\"140\" x2=\"120\" y2=\"200\"/><line x1=\"200\" y1=\"140\" x2=\"160\" y2=\"200\"/><line x1=\"200\" y1=\"140\" x2=\"240\" y2=\"200\"/><line x1=\"320\" y1=\"140\" x2=\"280\" y2=\"200\"/><line x1=\"320\" y1=\"140\" x2=\"360\" y2=\"200\"/></g><g fill=\"#dbeafe\" stroke=\"#1b2540\" font-size=\"12\"><text x=\"200\" y=\"15\" text-anchor=\"middle\">Start</text><text x=\"80\" y=\"95\" text-anchor=\"middle\">1</text><text x=\"200\" y=\"95\" text-anchor=\"middle\">2</text><text x=\"320\" y=\"95\" text-anchor=\"middle\">3</text><text x=\"40\" y=\"215\" text-anchor=\"middle\">H</text><text x=\"120\" y=\"215\" text-anchor=\"middle\">T</text><text x=\"160\" y=\"215\" text-anchor=\"middle\">H</text><text x=\"240\" y=\"215\" text-anchor=\"middle\">T</text><text x=\"280\" y=\"215\" text-anchor=\"middle\">H</text><text x=\"360\" y=\"215\" text-anchor=\"middle\">T</text></g></svg>"
+   },
+   {
+    "cap": "Table for die‑coin example",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"50\" y=\"50\" width=\"300\" height=\"140\" fill=\"#fde68a\" stroke=\"#1b2540\"/><line x1=\"200\" y1=\"50\" x2=\"200\" y2=\"190\" stroke=\"#1b2540\"/><line x1=\"50\" y1=\"120\" x2=\"350\" y2=\"120\" stroke=\"#1b2540\"/><g fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\"><text x=\"125\" y=\"40\">Die roll</text><text x=\"275\" y=\"40\">Coin flip</text><text x=\"125\" y=\"115\">1</text><text x=\"275\" y=\"115\">H</text><text x=\"125\" y=\"175\">2</text><text x=\"275\" y=\"175\">T</text></g></svg>"
+   },
+   {
+    "cap": "Tree diagram for three‑stage password example",
+    "svg": "<svg viewBox=\"0 0 400 240\"><g fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"><line x1=\"200\" y1=\"20\" x2=\"200\" y2=\"70\"/><line x1=\"200\" y1=\"70\" x2=\"80\" y2=\"130\"/><line x1=\"200\" y1=\"70\" x2=\"200\" y2=\"130\"/><line x1=\"200\" y1=\"70\" x2=\"320\" y2=\"130\"/><line x1=\"80\" y1=\"130\" x2=\"40\" y2=\"190\"/><line x1=\"80\" y1=\"130\" x2=\"120\" y2=\"190\"/><line x1=\"200\" y1=\"130\" x2=\"160\" y2=\"190\"/><line x1=\"200\" y1=\"130\" x2=\"240\" y2=\"190\"/><line x1=\"320\" y1=\"130\" x2=\"280\" y2=\"190\"/><line x1=\"320\" y1=\"130\" x2=\"360\" y2=\"190\"/></g><g fill=\"#bbf7d0\" stroke=\"#1b2540\" font-size=\"12\"><text x=\"200\" y=\"15\" text-anchor=\"middle\">Start</text><text x=\"80\" y=\"95\" text-anchor=\"middle\">Letter 1</text><text x=\"200\" y=\"95\" text-anchor=\"middle\">Letter 2</text><text x=\"320\" y=\"95\" text-anchor=\"middle\">Digit</text><text x=\"40\" y=\"205\" text-anchor=\"middle\">A</text><text x=\"120\" y=\"205\" text-anchor=\"middle\">B</text><text x=\"160\" y=\"205\" text-anchor=\"middle\">0</text><text x=\"240\" y=\"205\" text-anchor=\"middle\">1</text><text x=\"280\" y=\"205\" text-anchor=\"middle\">2</text><text x=\"360\" y=\"205\" text-anchor=\"middle\">3</text></g></svg>"
+   }
+  ],
+  "pid": "maths_aqa_h.0.4",
+  "sid": "maths_aqa_h",
+  "v": 2,
+  "src": "pre",
+  "by": "groq/openai/gpt-oss-120b",
+  "ts": "2026-11-15T15:45:37.627Z"
  }
 }
