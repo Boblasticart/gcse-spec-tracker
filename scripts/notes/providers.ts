@@ -37,7 +37,8 @@ export class ModelUnavailable extends Error {
   }
 }
 
-const TIMEOUT_MS = 240_000;
+/** Long notes from "thinking" models can take several minutes. */
+const TIMEOUT_MS = 600_000;
 
 function retryAfter(res: Response): number {
   const s = Number(res.headers.get("retry-after"));
@@ -45,13 +46,20 @@ function retryAfter(res: Response): number {
 }
 
 async function post(url: string, headers: Record<string, string>, body: unknown): Promise<unknown> {
-  const res = await fetch(url, {
-    method: "POST",
-    headers: { "content-type": "application/json", ...headers },
-    body: JSON.stringify(body),
-    signal: AbortSignal.timeout(TIMEOUT_MS),
-  });
+  let res: Response;
+  try {
+    res = await fetch(url, {
+      method: "POST",
+      headers: { "content-type": "application/json", ...headers },
+      body: JSON.stringify(body),
+      signal: AbortSignal.timeout(TIMEOUT_MS),
+    });
+  } catch (e) {
+    // Timeouts and dropped connections are the provider being busy, not the note's fault.
+    throw new RateLimited(`no reply: ${(e as Error).message}`, false, 60_000);
+  }
   const text = await res.text();
+  if (res.status >= 500) throw new RateLimited(`busy, HTTP ${res.status}: ${text.slice(0, 200)}`, false, 90_000);
   if (res.status === 429) {
     const daily = /per.?day|daily|RPD|quota.*exceeded.*day|free-models-per-day/i.test(text);
     throw new RateLimited(`429: ${text.slice(0, 300)}`, daily, retryAfter(res));

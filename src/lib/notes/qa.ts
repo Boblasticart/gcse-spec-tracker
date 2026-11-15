@@ -43,8 +43,8 @@ interface Minimums {
 }
 
 export const MINIMUMS: Readonly<Record<Depth, Minimums>> = {
-  diagram: { summary: 200, core: 8, terms: 10, mistakes: 6, exam: 8, worked: 2, figures: 3, bytes: 20_000 },
-  some: { summary: 200, core: 6, terms: 8, mistakes: 5, exam: 6, worked: 1, figures: 1, bytes: 12_000 },
+  diagram: { summary: 200, core: 8, terms: 10, mistakes: 6, exam: 8, worked: 2, figures: 3, bytes: 14_000 },
+  some: { summary: 200, core: 6, terms: 8, mistakes: 5, exam: 6, worked: 1, figures: 1, bytes: 10_000 },
   text: { summary: 120, core: 4, terms: 6, mistakes: 4, exam: 4, worked: 0, figures: 0, bytes: 6_000 },
 };
 

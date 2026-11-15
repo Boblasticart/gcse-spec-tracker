@@ -106,11 +106,11 @@ jobs:
       - name: Note writer works end to end (mock AI, made-up spec; nothing is committed)
         env:
           NOTES_MOCK: "1"
+          NOTES_DIR: ${{ runner.temp }}/notes
         run: |
           npx tsx scripts/notes/write.ts --specs phy_fixture --limit 3
-          test "$(node -e "console.log(Object.keys(require('./content/notes/progress.json').notes).length)")" = 3
-          npx tsx scripts/notes/render-check.ts content/notes/phy_fixture
-          rm -rf content/notes/phy_fixture content/notes/progress.json content/notes/failures.json
+          test "$(node -e "console.log(Object.keys(require(process.env.NOTES_DIR + '/progress.json').notes).length)")" = 3
+          npx tsx scripts/notes/render-check.ts "$NOTES_DIR/phy_fixture"
       - name: End-to-end tests
         env:
           # A predictable stand-in for Gemini (refused whenever VERCEL is set).

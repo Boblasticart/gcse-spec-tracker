@@ -26,7 +26,8 @@ import { ModelUnavailable, RateLimited, complete, resolveModels, type ProviderCo
 import { checkFigures, figuresOf } from "./render-check";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
-const NOTES = join(ROOT, "content", "notes");
+/** Where notes, progress and failures go (NOTES_DIR lets CI test the writer without touching the real files). */
+const NOTES = process.env.NOTES_DIR ?? join(ROOT, "content", "notes");
 const PROGRESS = join(NOTES, "progress.json");
 const FAILURES = join(NOTES, "failures.json");
 const MAX_ATTEMPTS = 2;
@@ -59,12 +60,15 @@ function arg(name: string): string | undefined {
 export function pendingPoints(specIds: readonly string[] | null, failures: Failures, retryFailures: boolean): string[] {
   const out: string[] = [];
   const shards = new Map<string, Record<string, unknown>>();
-  for (const s of CATALOGUE) {
+  // The owner's order: most popular subject first.
+  const order = ["maths", "englang", "englit", "combsci", "biology", "chemistry", "physics", "history", "geography", "rs", "french", "spanish", "cs", "pe", "business"];
+  const specs = [...CATALOGUE].sort((a, b) => order.indexOf(a.course) - order.indexOf(b.course));
+  for (const s of specs) {
     if (isLegacySpecId(s.id) || (specIds && !specIds.includes(s.id))) continue;
     for (const p of allPoints(s)) {
       const path = noteShardPath(p.id);
       if (!path) continue;
-      const file = join(ROOT, path.replace(/^\/content\//, "content/"));
+      const file = join(NOTES, path.replace(/^\/content\/notes\//, ""));
       if (!shards.has(file)) shards.set(file, readJson<Record<string, unknown>>(file, {}));
       if (shards.get(file)![p.id] !== undefined) continue;
       if (failures[p.id] && !retryFailures) continue;
@@ -80,7 +84,7 @@ async function main(): Promise<void> {
   const deadline = Date.now() + Number(arg("minutes") ?? 300) * 60_000;
   const retryFailures = process.argv.includes("--retry-failures");
 
-  const config = readJson<{ providers: ProviderConfig[] }>(join(NOTES, "providers.json"), { providers: [] });
+  const config = readJson<{ providers: ProviderConfig[] }>(join(ROOT, "content", "notes", "providers.json"), { providers: [] });
   const providers =
     process.env.NOTES_MOCK === "1"
       ? [{ id: "mock", env: "NOTES_MOCK", kind: "mock" as const, model: "replay", rpm: 600, rpd: 10_000, maxTokens: 0 }]
@@ -124,7 +128,7 @@ async function main(): Promise<void> {
 
   const saveNote = (pid: string, note: Record<string, unknown>, by: string): void => {
     const path = noteShardPath(pid)!;
-    const file = join(ROOT, path.replace(/^\/content\//, "content/"));
+    const file = join(NOTES, path.replace(/^\/content\/notes\//, ""));
     const shard = readJson<Record<string, unknown>>(file, {});
     shard[pid] = note;
     writeJson(file, shard);

@@ -35,8 +35,9 @@ The spec codes below are a starting list. Check each against the board's own web
    - Failures go on a list that Claude fixes in later runs.
    - Done when: a 10-note test batch passes QA and shows on the preview.
 2. **J3 Maths:** AQA 8300, OCR J560, Eduqas (Higher and Foundation where the spec has tiers).
-   - Specs added 2026-11-15 (read from the boards' sites with the owner approving): `maths_aqa_h` (AQA 8300 Higher, 97 points), `maths_aqa_f` (Foundation, 88 points: Higher-only refs A13 A15 A16 A20 R15 G8 G10 G22 G23 left out), `maths_ocr_h` (OCR J560 Higher, 45 subsections, spec v2.1 Aug 2026).
-   - Still to add: OCR J560 Foundation (the PDF text doesn't show which column each line is in; check the tier columns), Eduqas Maths (C300; the spec PDF link wasn't found on eduqas.co.uk's page: find it under Key Documents).
+   - 2026-11-15: with the owner approving the four board websites in chat, ALL specs were read in one sitting: 52 catalogue specs, about 5,200 points, in content/specs/ (sources in each file). Every subject job (J3 to J14) now only needs its notes written by the Write notes workflow, plus checks.
+   - Not offered any more (skipped): Eduqas GCSE Biology/Chemistry/Physics (withdrawn), Eduqas French/Spanish (discontinued 2025), OCR French/Spanish (withdrawn 2017).
+   - Still to add: Combined Science specs (AQA 8464/8465, Edexcel 1SC0, OCR J250/J260) reusing the separate-science notes; OCR J560 Foundation (tier columns unreadable).
 3. **J4 English Language:** AQA 8700, Edexcel 1EN0, OCR J351, Eduqas.
 4. **J5 English Literature:** AQA 8702, OCR J352, Eduqas.
 5. **J6 Sciences** (Combined, Biology, Chemistry, Physics):
