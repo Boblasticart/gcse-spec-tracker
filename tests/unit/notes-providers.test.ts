@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { ModelUnavailable, RateLimited, classifyHttpError, geminiFlashModels } from "../../scripts/notes/providers";
+import { ModelUnavailable, RateLimited, classifyHttpError, geminiFlashModels, geminiStreamText, openaiStreamText, parseSse } from "../../scripts/notes/providers";
 
 describe("note writer: provider replies", () => {
   it("moves on to another model when a model can't be used", () => {
@@ -21,6 +21,21 @@ describe("note writer: provider replies", () => {
 
   it("counts ordinary bad requests against the note", () => {
     expect(classifyHttpError(400, '{"error":{"message":"Failed to validate JSON"}}')).toBeNull();
+  });
+
+  it("does not blame the model when a reply fails the provider's JSON check", () => {
+    expect(classifyHttpError(400, '{"error":{"message":"Failed to generate JSON. Please adjust your prompt.","failed_generation":"{\\"exam\\":[{\\"model\\":[]}]}"}}')).toBeNull();
+    expect(classifyHttpError(400, '{"error":{"message":"`max_tokens` must be less than or equal to `4096`"}}')).toBeInstanceOf(ModelUnavailable);
+    expect(classifyHttpError(400, '{"error":{"message":"The model `x` has been decommissioned"}}')).toBeInstanceOf(ModelUnavailable);
+  });
+
+  it("reads streamed replies", () => {
+    const gemini = parseSse('data: {"candidates":[{"content":{"parts":[{"text":"think","thought":true},{"text":"{\\"a\\":"}]}}]}\r\n\r\ndata: {"candidates":[{"content":{"parts":[{"text":"1}"}]},"finishReason":"STOP"}]}\n\n');
+    expect(geminiStreamText(gemini)).toEqual({ text: '{"a":1}', finish: "STOP" });
+    const openai = parseSse(': OPENROUTER PROCESSING\n\ndata: {"choices":[{"delta":{"content":"{\\"a\\""}}]}\n\ndata: {"choices":[{"delta":{"content":":1}"},"finish_reason":"stop"}]}\n\ndata: [DONE]\n\n');
+    expect(openaiStreamText(openai)).toEqual({ text: '{"a":1}', finish: "stop" });
+    expect(openaiStreamText(parseSse('{"choices":[{"message":{"content":"plain"},"finish_reason":"stop"}]}'))).toEqual({ text: "plain", finish: "stop" });
+    expect(parseSse("not json")).toEqual([]);
   });
 
   it("lists text Flash models, newest first", () => {

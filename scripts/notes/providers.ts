@@ -39,8 +39,8 @@ export class ModelUnavailable extends Error {
   }
 }
 
-/** Long notes from "thinking" models can take several minutes. */
-const TIMEOUT_MS = 600_000;
+/** Long notes from "thinking" models can take many minutes. Replies are streamed, so a slow start is not mistaken for a dead connection. */
+const TIMEOUT_MS = 900_000;
 
 function retryAfter(res: Response): number {
   const s = Number(res.headers.get("retry-after"));
@@ -61,13 +61,66 @@ export function classifyHttpError(status: number, text: string, retryAfterMs = 6
     return new RateLimited(`429: ${text.slice(0, 300)}`, daily, retryAfterMs);
   }
   // 403: e.g. an OpenRouter free model only open to certain apps, or a model this key may not use.
-  if (status === 403 || status === 404 || status === 413 || (status === 400 && /model/i.test(text))) {
+  // 400: only when the provider says the model itself is the problem (retired, unknown, too small for the request).
+  // A reply that failed the provider's own JSON check is an ordinary failed attempt, not a broken model.
+  const badModel = status === 400 && !/failed to (generate|validate) json/i.test(text) && /max_tokens|context (window|length)|decommissioned|no longer|not (found|supported|exist)|does not exist|unknown model|invalid model/i.test(text);
+  if (status === 403 || status === 404 || status === 413 || badModel) {
     return new ModelUnavailable(`HTTP ${status}: ${text.slice(0, 300)}`);
   }
   return null;
 }
 
-async function post(url: string, headers: Record<string, string>, body: unknown): Promise<unknown> {
+/** The JSON messages in a streamed ("server-sent events") reply. A plain JSON reply comes back as one message. */
+export function parseSse(text: string): unknown[] {
+  const out: unknown[] = [];
+  for (const line of text.split(/\r?\n/)) {
+    if (!line.startsWith("data:")) continue;
+    const data = line.slice(5).trim();
+    if (!data || data === "[DONE]") continue;
+    try {
+      out.push(JSON.parse(data));
+    } catch {
+      // a cut-off last line: ignore it
+    }
+  }
+  if (!out.length) {
+    try {
+      out.push(JSON.parse(text));
+    } catch {
+      // not JSON either: the caller reports an empty reply
+    }
+  }
+  return out;
+}
+
+/** Joins a streamed Gemini reply's text (skipping "thinking" parts). */
+export function geminiStreamText(chunks: readonly unknown[]): { text: string; finish: string } {
+  type Chunk = { candidates?: { content?: { parts?: { text?: string; thought?: boolean }[] }; finishReason?: string }[] };
+  let text = "";
+  let finish = "";
+  for (const c of chunks as Chunk[]) {
+    const cand = c?.candidates?.[0];
+    for (const part of cand?.content?.parts ?? []) if (!part.thought) text += part.text ?? "";
+    if (cand?.finishReason) finish = cand.finishReason;
+  }
+  return { text, finish };
+}
+
+/** Joins a streamed OpenAI-style reply's text. */
+export function openaiStreamText(chunks: readonly unknown[]): { text: string; finish: string } {
+  type Chunk = { choices?: { delta?: { content?: string | null }; message?: { content?: string | null }; finish_reason?: string | null }[] };
+  let text = "";
+  let finish = "";
+  for (const c of chunks as Chunk[]) {
+    const ch = c?.choices?.[0];
+    text += ch?.delta?.content ?? ch?.message?.content ?? "";
+    if (ch?.finish_reason) finish = ch.finish_reason;
+  }
+  return { text, finish };
+}
+
+/** Sends a request and returns the streamed reply's messages. */
+async function post(url: string, headers: Record<string, string>, body: unknown): Promise<unknown[]> {
   let res: Response;
   try {
     res = await fetch(url, {
@@ -89,7 +142,11 @@ async function post(url: string, headers: Record<string, string>, body: unknown)
   const err = classifyHttpError(res.status, text, retryAfter(res));
   if (err) throw err;
   if (!res.ok) throw new Error(`HTTP ${res.status}: ${text.slice(0, 300)}`);
-  return JSON.parse(text) as unknown;
+  const chunks = parseSse(text);
+  // A provider that fails part-way through a stream reports it inside the stream.
+  const failed = chunks.find((c) => !!c && typeof c === "object" && "error" in c) as { error?: unknown } | undefined;
+  if (failed) throw new RateLimited(`busy, reply cut off: ${JSON.stringify(failed.error).slice(0, 200)}`, false, 90_000);
+  return chunks;
 }
 
 /** Sends one prompt and returns the model's text reply. */
@@ -99,30 +156,29 @@ export async function complete(p: ProviderConfig, key: string, prompt: string): 
     return readFileSync(new URL("../../data/notes/phy.0.1.json", import.meta.url), "utf8");
   }
   if (p.kind === "gemini") {
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(p.model)}:generateContent`;
-    const data = (await post(url, { "x-goog-api-key": key }, {
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(p.model)}:streamGenerateContent?alt=sse`;
+    const chunks = await post(url, { "x-goog-api-key": key }, {
       contents: [{ role: "user", parts: [{ text: prompt }] }],
       generationConfig: { responseMimeType: "application/json", maxOutputTokens: p.maxTokens, temperature: 0.4 },
-    })) as { candidates?: { content?: { parts?: { text?: string }[] }; finishReason?: string }[] };
-    const c = data.candidates?.[0];
-    const text = (c?.content?.parts ?? []).map((x) => x.text ?? "").join("");
-    if (!text) throw new Error(`empty reply (${c?.finishReason ?? "no candidate"})`);
+    });
+    const { text, finish } = geminiStreamText(chunks);
+    if (!text) throw new Error(`empty reply (${finish || "no candidate"})`);
     return text;
   }
-  const data = (await post(p.url ?? "", { authorization: `Bearer ${key}` }, {
+  const chunks = await post(p.url ?? "", { authorization: `Bearer ${key}` }, {
     model: p.model,
     messages: [{ role: "user", content: prompt }],
     response_format: { type: "json_object" },
     max_tokens: p.maxTokens,
     temperature: 0.4,
+    stream: true,
     // gpt-oss models "think" first; keep that short so the note itself fits in the token budget.
     ...(/gpt-oss/.test(p.model) ? { reasoning_effort: "low" } : {}),
-  })) as { choices?: { message?: { content?: string }; finish_reason?: string }[] };
-  const ch = data.choices?.[0];
-  const text = ch?.message?.content ?? "";
+  });
+  const { text, finish } = openaiStreamText(chunks);
   // A model that spends its whole token budget thinking replies with nothing: not the note's fault, so after two of these the writer moves on to the next model.
-  if (!text && ch?.finish_reason === "length") throw new RateLimited("reply cut off: empty reply (length)", false, 5000);
-  if (!text) throw new Error(`empty reply (${ch?.finish_reason ?? "no choice"})`);
+  if (!text && finish === "length") throw new RateLimited("reply cut off: empty reply (length)", false, 5000);
+  if (!text) throw new Error(`empty reply (${finish || "no choice"})`);
   return text;
 }
 
