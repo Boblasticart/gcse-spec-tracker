@@ -15,6 +15,8 @@ export interface ProviderConfig {
   rpm: number;
   rpd: number;
   maxTokens: number;
+  /** How many notes to ask this provider for at once (replies take minutes, so this is what fills the per-minute allowance). Default 1. */
+  parallel?: number;
 }
 
 /** Thrown when a provider says we've hit its limit; `daily` = done for today. */

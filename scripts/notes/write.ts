@@ -161,7 +161,8 @@ async function main(): Promise<void> {
     if (!models.length) return;
     let p: ProviderConfig = { ...base, model: models[0]! };
     let stalls = 0;
-    const gap = Math.ceil(60_000 / p.rpm);
+    // Several workers can share one provider; together they stay under its requests-per-minute.
+    const gap = Math.ceil((60_000 / p.rpm) * Math.max(1, base.parallel ?? 1));
     let next = 0;
     for (;;) {
       if (Date.now() > deadline) return;
@@ -264,7 +265,7 @@ async function main(): Promise<void> {
     }
   };
 
-  await Promise.all(providers.map(worker));
+  await Promise.all(providers.flatMap((p) => Array.from({ length: Math.max(1, p.parallel ?? 1) }, () => p)).map(worker));
   save();
   await browser.close();
   console.log(`done: ${progress.totals.written} written in total, ${Object.keys(failures).length} on the failures list, ${queue.length} left in this batch`);
