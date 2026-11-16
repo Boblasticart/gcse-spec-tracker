@@ -15,7 +15,7 @@ export function buildNotePrompt(ref: PointRef, retryErrors: readonly string[] = 
   const figures =
     m.figures === 0
       ? "- Diagrams: only if they truly help (e.g. a timeline or structure plan); otherwise svg: [] and no fig."
-      : `- Diagrams: ${m.figures} to ${m.figures + 2} detailed, correct, clearly labelled, colourful diagrams in total (in svg, or as fig inside a core section).`;
+      : `- Diagrams: ${m.figures} to ${m.figures + 2} detailed, correct, clearly labelled, colourful diagrams in total (in svg, or as fig inside a core section). Fewer than ${m.figures} complete diagrams and the note is rejected.`;
   const lines = [
     `You are a senior ${s.board} GCSE ${s.name} examiner writing complete revision notes for a student aiming for grade 9. The notes must be as full and detailed as a top student's colour-coded revision notes: nothing the spec requires may be missing.`,
     "",

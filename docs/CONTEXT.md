@@ -23,6 +23,8 @@
 - Note storage decision: legacy notes stay in `data/notes/` (read by the server). Catalogue notes are static files, one per topic: `content/notes/{spec}/{topic}.json` = `{pid: note}`, copied to `public/content/notes/` at build and loaded by the browser (`src/lib/notes/store.ts`). They are CDN files, never in the server bundle. If Vercel ever limits the deploy size, the same files can be served from GitHub through jsDelivr instead.
 - CI builds two made-up specs (`src/content/fixture-specs.ts`, `NEXT_PUBLIC_SPEC_FIXTURES=1`) for tests only.
 
+**The automatic pipeline (J2b).** The Write notes workflow (daily 08:23 UTC, `.github/workflows/notes.yml`) runs `scripts/notes/write.ts`, which works through the jobs in `content/pipeline/jobs.json` on the owner's free AI keys. It retries failures itself on later days, skips weak models, repairs notes where safe, and writes `content/pipeline/STATUS.md` after every run: read that first. How it works and how to add a job: `docs/PIPELINE.md`.
+
 **Never change:** `data/`, `papers/`, `index.html`, `adapter.js`, `supabase/`, `worker/`, `supabase-config.js` (the old GitHub Pages site and content). Wrap or adapt instead. Saved document shapes (`progress/{sid}` = `{s,c,m,w,v:2}`, `a/*`, `daily/*`, `q/*`, `rv/*`, `quiz/*`, `qr/*`, `notes/*`, `papers/done`, `stats/time`, `meta/applied`) stay compatible.
 
 **Never commit** secrets, `.env` files, the owner's real progress export, or anything read from their Supabase.

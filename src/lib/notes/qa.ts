@@ -63,7 +63,8 @@ type Obj = Record<string, unknown>;
 const isObj = (v: unknown): v is Obj => !!v && typeof v === "object" && !Array.isArray(v);
 const arr = (v: unknown): unknown[] => (Array.isArray(v) ? v : []);
 const str = (v: unknown): string => (typeof v === "string" ? v : "");
-const HTML_TAG = /<\/?(script|style|iframe|img|a|div|span|p|b|i|br|svg|object|embed)\b[^>]*>/i;
+/** A real HTML tag (name, then only attributes), so maths such as "a<b and c>d" is not mistaken for one. */
+export const HTML_TAG = /<\/?(script|style|iframe|img|a|div|span|p|b|i|br|svg|object|embed)(\s+[a-z-]+\s*=\s*("[^"]*"|'[^']*'|[^\s"'<>]+))*\s*\/?>/i;
 
 function elements(node: XmlElement, out: XmlElement[] = []): XmlElement[] {
   out.push(node);
