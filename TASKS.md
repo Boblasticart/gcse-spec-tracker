@@ -5,13 +5,13 @@ Runs read **only this file and `docs/CONTEXT.md`**. Keep this file short: finish
 ## Status
 
 ```
-RUN LOCK:       running since 2026-11-16T01:10Z, session 01Sm3c8jfY1ypFSCYZak5GLh
+RUN LOCK:       none
 CURRENT JOB:    J3 Maths
 CURRENT STEPS:
 - [ ] 1. Every point of maths_aqa_h, maths_aqa_f, maths_ocr_h, maths_eduqas_h, maths_eduqas_f has a note that passed QA (the Write notes workflow does this; fix whatever lands in content/notes/failures.json).
 - [ ] 2. Add OCR J560 Foundation (check which J560 lines are Higher-only in the tier columns) and let its notes be written.
 - [ ] 3. Spot-check 5 maths notes on the preview (render, accuracy against the spec), then list J3 under "Ready for the owner's OK".
-LAST RUN ENDED: 2026-11-15 evening, in chat with the owner (J1 live; all 52 specs read; J2 done; notes being written, maths first)
+LAST RUN ENDED: 2026-11-16 02:30 UTC (writer fixed: skips unusable models, moves to the next Gemini model when one runs out, 4 Gemini requests at once, shorter diagram labels; run 43789115274 writing; 30 maths notes so far. Next run: read that run's log and raise the QA pass rate, only about 1 in 5 Gemini replies passed)
 ```
 
 ## Queue (top = next)
@@ -61,7 +61,7 @@ Add each key as a GitHub secret: repo **Settings → Secrets and variables → A
 
 ## Waiting on the owner
 
-- **Needed for the subject jobs (J3 onwards) and J2 step 5:** runs cannot read the exam boards' websites: the web-page reader asks for permission for each site and nobody answers it in time. The scheduled task already has automatic approval switched on (checked 2026-11-15), so that setting is not the fix. Way forward: the owner downloads each spec PDF from the board's website and attaches it in chat (start with AQA Maths 8300); a run then adds the spec from the PDF. Runs must not fetch board sites any other way.
+- **Needed for J3 step 2 only (all other specs were read on 2026-11-15):** nightly runs cannot read the exam boards' websites (each site needs permission nobody is there to give). The owner attaches the OCR J560 Maths specification PDF in a chat, and a run adds the Foundation tier from it. Runs must not fetch board sites any other way.
 - Delete the leftover branch `ci-probe` on GitHub (optional, harmless).
 - Delete the duplicate Vercel project `gcse-spec-tracker-ocwb` (optional).
 
