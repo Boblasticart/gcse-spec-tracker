@@ -8,8 +8,8 @@ Runs read **only this file and `docs/CONTEXT.md`**. Keep this file short: finish
 RUN LOCK:       running since 2026-11-16T12:50Z, session 01Sm3c8jfY1ypFSCYZak5GLh (in chat with the owner)
 CURRENT JOB:    J2b Automatic pipeline (owner asked in chat 2026-11-16: one pipeline that can make "anything I want", notes first, fully automatic)
 CURRENT STEPS:
-- [ ] 1. General engine (scripts/pipeline/): any job runs on the same AI keys and limits; the notes job moved onto it; failed items retried by themselves on later days (up to 6 tries); weak models skipped; notes repaired automatically where safe; content/pipeline/STATUS.md written every run.
-- [ ] 2. New kinds of content with no code: a "custom" job in content/pipeline/jobs.json (prompt + what the reply must contain + where to save). Guide in docs/PIPELINE.md.
+- [x] 1. General engine (scripts/pipeline/): any job runs on the same AI keys and limits; the notes job moved onto it; failed items retried by themselves on later days (up to 6 tries); weak models skipped; notes repaired automatically where safe; content/pipeline/STATUS.md written every run.
+- [x] 2. New kinds of content with no code: a "custom" job in content/pipeline/jobs.json (prompt + what the reply must contain + where to save). Guide in docs/PIPELINE.md.
 - [ ] 3. A real Write notes run on the new engine finishes and saves notes; then list J2b under "Ready for the owner's OK".
 (J3 Maths carries on by itself meanwhile: its steps are in the Queue below.)
 LAST RUN ENDED: 2026-11-16 02:30 UTC (writer fixed: skips unusable models, moves to the next Gemini model when one runs out, 4 Gemini requests at once, shorter diagram labels; run 43789115274 writing; 30 maths notes so far. Next run: read that run's log and raise the QA pass rate, only about 1 in 5 Gemini replies passed)
