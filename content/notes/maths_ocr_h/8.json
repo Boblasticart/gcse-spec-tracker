@@ -1,0 +1,447 @@
+{
+ "maths_ocr_h.8.1": {
+  "summary": "Mastering congruence for OCR GCSE Higher tier requires absolute precision in proving triangles are identical using four strict conditions: SSS, SAS, ASA, and RHS. Grade 9 success depends on writing rigorous mathematical arguments with clear statements of condition, correct side/angle equality justification, and strict avoidance of unproven assumptions like SSA or AAA. These notes provide full breakdowns, formal proof layouts, diagrams, and examiner-level pitfalls to ensure top marks on Papers 4, 5, and 6.",
+  "core": [
+   {
+    "h": "1. What is Congruence?",
+    "p": "Two geometric figures are **congruent** if they are identical in both shape and size. This means all corresponding interior angles and all corresponding side lengths are equal. If you pick up one shape and rigidly transform it using translations, rotations, or reflections, it will map precisely onto the other.",
+    "bullets": [
+     "Congruent shapes have an area scale factor of 1 and a linear scale factor of 1.",
+     "The symbol for congruence is ≅ (an equals sign with a tilde above it).",
+     "Order of vertices in polygon notation matters enormously: if triangle ABC ≅ triangle XYZ, then vertex A matches X, B matches Y, and C matches Z.",
+     "Corresponding sides: AB = XY, BC = YZ, AC = XZ.",
+     "Corresponding angles: angle A = angle X, angle B = angle Y, angle C = angle Z."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Congruent Figures",
+      "p": "Figures that have the exact same shape and size, where all corresponding sides and angles are equal."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. The Four Conditions for Triangle Congruence",
+    "p": "To prove two triangles are congruent, you do not need to measure all three sides and all three angles. Mathematicians have proven that specific combinations of three independent measurements uniquely determine a triangle. The four accepted OCR conditions are SSS, SAS, ASA, and RHS.",
+    "bullets": [
+     "**SSS**: Side-Side-Side. All three pairs of corresponding sides are equal in length.",
+     "**SAS**: Side-Angle-Side. Two pairs of corresponding sides and the **included angle** (the angle directly between those two sides) are equal.",
+     "**ASA**: Angle-Side-Angle. Two pairs of corresponding angles and the **included side** (the side lying between those two angles) are equal.",
+     "**RHS**: Right-angle-Hypotenuse-Side. Applies only to right-angled triangles where the hypotenuse and one other corresponding side are equal."
+    ],
+    "table": {
+     "head": [
+      "Condition",
+      "Required Elements",
+      "Strict Position Requirement"
+     ],
+     "rows": [
+      [
+       "SSS",
+       "3 sides",
+       "None"
+      ],
+      [
+       "SAS",
+       "2 sides, 1 angle",
+       "Angle must be strictly between the two known sides"
+      ],
+      [
+       "ASA",
+       "2 angles, 1 side",
+       "Side must be strictly between the two known angles"
+      ],
+      [
+       "RHS",
+       "90 degree angle, Hypotenuse, 1 side",
+       "Hypotenuse and any one other side"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Order and Included Positions",
+      "p": "In SAS and ASA, the position of the angle or side is non-negotiable. If the angle is not between the two sides (making it SSA), congruence is NOT guaranteed."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "3. SSS (Side-Side-Side) Proofs",
+    "p": "When all three pairs of sides of two triangles are equal in length, the triangles are fully locked into a rigid shape. No other triangle can be formed with those side lengths. Therefore, they are congruent.",
+    "bullets": [
+     "Look for shared sides in composite figures (e.g., a diagonal splitting a quadrilateral). State 'AC = CA (common side)'.",
+     "Look for tick marks on diagrams indicating equal lengths.",
+     "Structure your written proof by listing each matching side explicitly with a reason.",
+     "Conclude with a clear statement citing 'SSS'."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Common Sides",
+      "p": "When a side is shared between two triangles, always write 'Side AB = Side AB (common side)' to earn the reason mark."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. SAS (Side-Angle-Side) Proofs and the Included Angle",
+    "p": "The SAS condition requires two pairs of sides and the angle formed directly between them to be equal. If the equal angle is floating outside the two known sides (creating SSA), the triangles might not be congruent because the opposite side can swing.",
+    "bullets": [
+     "Verify the angle is bounded by the two specified sides.",
+     "Use geometric properties like vertically opposite angles or alternate angles to establish angle equality if not explicitly given.",
+     "State clearly: 'Angle ABC = Angle XYZ (given or proven)'."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Spotting SAS",
+      "p": "Trace the sides with your finger: Side 1 -> Angle -> Side 2. The angle vertex must connect the two side lengths."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "5. ASA (Angle-Side-Angle) Proofs",
+    "p": "If two angles and the side joining their vertices in one triangle are equal to the corresponding angles and joining side in another triangle, the triangles are congruent. Note that if you know two angles in a triangle, you automatically know the third angle because angles in a triangle sum to 180 degrees (AAS is therefore accepted as it reduces to ASA).",
+    "bullets": [
+     "Check that the equal side connects the two pairs of equal angles.",
+     "Look for parallel lines providing alternate interior angles (Z-angles) or corresponding angles (F-angles).",
+     "State: 'Angle BAC = Angle YXZ', 'Side AC = Side XZ', 'Angle ACB = Angle XZY', therefore congruent by ASA."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "AAS Corollary",
+      "p": "Angle-Angle-Side is valid because knowing any two angles allows calculation of the third, making it identical to ASA."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. RHS (Right-angle, Hypotenuse, Side) Proofs",
+    "p": "RHS is exclusively reserved for **right-angled triangles**. You must prove three specific facts: both triangles contain a 90 degree angle, both have equal hypotenuses (the longest side opposite the right angle), and one pair of shorter sides is equal.",
+    "bullets": [
+     "Do not attempt to use RHS on non-right-angled triangles.",
+     "State clearly that the right angle is present: 'Angle ABC = Angle XYZ = 90 degrees'.",
+     "Identify the hypotenuse explicitly: 'Hypotenuse AC = Hypotenuse XZ'."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Hypotenuse Identification",
+      "p": "The hypotenuse is always the side opposite the right angle. Make sure you match the hypotenuses, not just any random side."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Forbidden Conditions: SSA and AAA",
+    "p": "Examiners regularly test whether you know what does NOT prove congruence. Falling into these traps loses all marks on proof questions.",
+    "bullets": [
+     "**SSA** (Side-Side-Angle): Two sides and a non-included angle. This creates the 'ambiguous case of a triangle' where two completely different triangle shapes can be formed.",
+     "**AAA** (Angle-Angle-Angle): Three equal angles proves **similarity** (same shape), but not congruence. A miniature equilateral triangle has identical angles to a massive equilateral triangle, but they are not congruent."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Never write SSA or AAA",
+      "p": "Writing 'congruent by AAA' or 'congruent by SSA' awards 0 marks. Memorise the valid four: SSS, SAS, ASA, RHS."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Structure of a Rigorous GCSE Proof",
+    "p": "At Grade 9, OCR mark schemes demand precise mathematical communication. A sloppy layout will cost communication marks even if the underlying logic is correct.",
+    "bullets": [
+     "Start by naming the two triangles you are comparing: 'In triangle ABC and triangle PQR:'",
+     "List three distinct bullet points, each containing a statement and a precise geometric reason in brackets.",
+     "Conclude with a clear summary statement: 'Triangle ABC ≅ Triangle PQR by [Condition].'"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Three Lines Requirement",
+      "p": "Every formal proof requires exactly three distinct equality statements with reasons before stating the final congruence condition."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Using Parallel Lines and Symmetry in Proofs",
+    "p": "Higher tier OCR papers embed congruence proofs inside complex geometry problems involving parallel lines, cyclic quadrilaterals, regular polygons, or circle theorems. You must extract angle and side facts from these properties.",
+    "bullets": [
+     "Parallel lines give **alternate angles** (equal) and **corresponding angles** (equal).",
+     "Isosceles triangles give two equal base angles and two equal sides.",
+     "Bisectors (angle bisectors or perpendicular bisectors) create equal angles or equal segment lengths.",
+     "Midpoints mean half-lengths are equal on either side."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Hidden Equality",
+      "p": "Always check for vertical angles ('vertically opposite angles are equal') when two straight lines intersect."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Deducing Further Lengths and Angles",
+    "p": "Once you have proven two triangles are congruent using SSS, SAS, ASA, or RHS, you can unlock unknown lengths or angles in the wider diagram.",
+    "bullets": [
+     "State the congruence proof first to establish that the triangles are congruent.",
+     "Use the golden rule **IGCSE/GCSE abbreviation**: **CORCON** or simply state **'Corresponding sides of congruent triangles are equal'** (often abbreviated in mark schemes as corresponding sides/angles in congruent triangles are equal).",
+     "Equate the required unknown side or angle to its corresponding counterpart."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Deduction Rule",
+      "p": "Once congruence is established, all other corresponding parts are automatically equal."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Fingerprint and Key Analogy",
+   "p": "Proving triangle congruence is like checking if two physical keys are identical. If you measure all three dimensions of the cuts (SSS), or two cuts and the exact shoulder angle between them (SAS), you know the keys are identical and will open the exact same lock. However, knowing all three angles (AAA) is like knowing three people have two eyes and a nose—it tells you they are the same species (similar), but their overall sizes and proportions could be wildly different."
+  },
+  "terms": [
+   {
+    "t": "Congruent",
+    "d": "Identical in shape and size, where all corresponding sides and angles match perfectly."
+   },
+   {
+    "t": "SSS",
+    "d": "Side-Side-Side condition for triangle congruence."
+   },
+   {
+    "t": "SAS",
+    "d": "Side-Angle-Side condition where the angle is strictly between the two known sides."
+   },
+   {
+    "t": "ASA",
+    "d": "Angle-Side-Angle condition where the side is strictly between the two known angles."
+   },
+   {
+    "t": "RHS",
+    "d": "Right-angle, Hypotenuse, Side condition for right-angled triangles."
+   },
+   {
+    "t": "Included Angle",
+    "d": "The interior angle formed directly between two given side lengths."
+   },
+   {
+    "t": "Included Side",
+    "d": "The side length connecting the vertices of two given interior angles."
+   },
+   {
+    "t": "Hypotenuse",
+    "d": "The longest side of a right-angled triangle, opposite the 90 degree angle."
+   },
+   {
+    "t": "SSA",
+    "d": "Side-Side-Angular condition; invalid for proving congruence due to the ambiguous case."
+   },
+   {
+    "t": "AAA",
+    "d": "Angle-Angle-Angle condition; proves similarity, not congruence."
+   },
+   {
+    "t": "Corresponding Sides",
+    "d": "Matching sides in congruent or similar geometric figures."
+   },
+   {
+    "t": "Rigid Transformation",
+    "d": "A transformation (translation, rotation, reflection) that preserves length and angle."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Writing 'Congruent by AAA' because all three angles match.",
+    "r": "AAA proves similarity, not congruence. Mentioning AAA scores 0."
+   },
+   {
+    "w": "Using SAS when the angle is not between the two given sides.",
+    "r": "The angle must be the included angle. If it is elsewhere, it is SSA, which is invalid."
+   },
+   {
+    "w": "Applying RHS to a triangle that does not have a 90 degree angle.",
+    "r": "RHS is strictly restricted to right-angled triangles."
+   },
+   {
+    "w": "Forgetting to state the shared side in touching triangles.",
+    "r": "You must explicitly write 'Side XY = Side XY (common side)' to earn the reason mark."
+   },
+   {
+    "w": "Mixing up the order of vertices in congruence statements.",
+    "r": "Vertices must correspond in exact order: triangle ABC ≅ triangle XYZ means A matches X, B matches Y, C matches Z."
+   },
+   {
+    "w": "Writing 'All sides and angles are equal' as the reason for congruence.",
+    "r": "You must cite one of the four specific conditions (SSS, SAS, ASA, RHS) before concluding congruence."
+   },
+   {
+    "w": "Assuming shapes are congruent just because they look identical on a non-scale diagram.",
+    "r": "Congruence must be proven algebraically or via geometric theorems, never by visual estimation."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Explain why two triangles with side lengths 5cm, 7cm, 10cm are congruent.",
+    "marks": 2,
+    "model": [
+     "All three pairs of corresponding sides are equal in length",
+     "Therefore congruent by SSS"
+    ],
+    "tip": "State SSS clearly after confirming all three sides match."
+   },
+   {
+    "q": "Triangle ABC has AB = 6cm, angle B = 50 degrees, BC = 8cm. Triangle PQR has PQ = 6cm, angle Q = 50 degrees, QR = 8cm. Prove triangle ABC is congruent to triangle PQR.",
+    "marks": 3,
+    "model": [
+     "AB = PQ = 6 cm and BC = QR = 8 cm (given)",
+     "Angle ABC = Angle PQR = 50 degrees (included angle given)",
+     "Congruent by SAS"
+    ],
+    "tip": "Verify the angle is between the two given sides before citing SAS."
+   },
+   {
+    "q": "State which of the following conditions does NOT prove congruence: SSS, ASA, SSA, RHS.",
+    "marks": 1,
+    "model": [
+     "SSA"
+    ],
+    "tip": "Never confuse SSA (invalid) with SAS (valid)."
+   },
+   {
+    "q": "In a quadrilateral ABCD, diagonal AC bisects angle DAB and angle DCB. Prove triangle ABC is congruent to triangle ADC.",
+    "marks": 4,
+    "model": [
+     "Angle BAC = Angle DAC (AC bisects angle DAB)",
+     "Angle BCA = Angle DCA (AC bisects angle DCB)",
+     "AC = AC (common side)",
+     "Triangle ABC is congruent to triangle ADC by ASA"
+    ],
+    "tip": "Check that the common side AC lies between the two pairs of proven angles for ASA."
+   },
+   {
+    "q": "Explain why AAA is not a valid condition for triangle congruence.",
+    "marks": 2,
+    "model": [
+     "AAA proves that shapes have identical angles and proportional sides",
+     "This proves similarity, but triangles can be different sizes while sharing identical angles"
+    ],
+    "tip": "Use the concept of enlargement to explain why size can vary."
+   },
+   {
+    "q": "Two right-angled triangles both have a hypotenuse of 13cm and a shorter side of 5cm. Prove they are congruent.",
+    "marks": 3,
+    "model": [
+     "Both triangles contain a 90 degree angle (right-angled triangles)",
+     "Hypotenuses are equal (13 cm)",
+     "One other corresponding side is equal (5 cm)",
+     "Congruent by RHS"
+    ],
+    "tip": "Explicitly mention the 90 degree angle, the hypotenuse, and the side."
+   },
+   {
+    "q": "Triangle ABC and Triangle XYZ have AB = XY, AC = XZ, and angle B = angle Y. Are they necessarily congruent? Justify your answer.",
+    "marks": 2,
+    "model": [
+     "No",
+     "The angle is not the included angle between the two given sides, making this SSA which is an invalid condition"
+    ],
+    "tip": "Spot non-included angles immediately to avoid the SSA trap."
+   },
+   {
+    "q": "In triangle ABC, AB = AC. Line AD is perpendicular to BC. Prove triangle ABD is congruent to triangle ACD.",
+    "marks": 4,
+    "model": [
+     "AB = AC (given in isosceles triangle)",
+     "Angle ADB = Angle ADC = 90 degrees (perpendicular line)",
+     "AD = AD (common side)",
+     "Congruent by RHS"
+    ],
+    "tip": "Recognize that a perpendicular line creates right-angled triangles allowing RHS."
+   },
+   {
+    "q": "Two equilateral triangles both have side lengths of 6cm. Are they congruent? Give your reason.",
+    "marks": 2,
+    "model": [
+     "Yes",
+     "All three pairs of sides are equal (6 cm each), so they are congruent by SSS"
+    ],
+    "tip": "Equilateral triangles with equal sides satisfy SSS."
+   },
+   {
+    "q": "Describe the difference between similarity and congruence in terms of scale factors.",
+    "marks": 2,
+    "model": [
+     "Congruent shapes have a linear scale factor of 1 (identical size)",
+     "Similar shapes can have any positive linear scale factor (same shape, different size)"
+    ],
+    "tip": "Keep definitions sharp: congruence means scale factor 1."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Triangle ABC and Triangle DEF have AB = 8 cm, BC = 6 cm, and AC = 10 cm. Triangle DEF has DE = 8 cm, EF = 6 cm, and DF = 10 cm. Prove that triangle ABC ≅ triangle DEF and find the size of angle EDF.",
+    "steps": [
+     "Step 1: List the corresponding side lengths for both triangles: AB = DE = 8 cm, BC = EF = 6 cm, AC = DF = 10 cm.",
+     "Step 2: State the congruence condition: All three pairs of corresponding sides are equal, so triangle ABC ≅ triangle DEF by SSS.",
+     "Step 3: Identify the angle corresponding to angle EDF. Vertex D matches A, E matches B, and F matches C. Therefore, angle EDF corresponds to angle BAC.",
+     "Step 4: Notice that 6^2 + 8^2 = 10^2 (36 + 64 = 100), meaning ABC and DEF are right-angled triangles with hypotenuse 10 cm.",
+     "Step 5: Calculate angle BAC using trigonometry: cos(A) = 8/10 = 0.8, so angle A = inverse cos(0.8) = 36.87 degrees.",
+     "Step 6: State final answer for angle EDF: Angle EDF = 36.9 degrees (to 1 decimal place)."
+    ],
+    "ans": "Triangle ABC ≅ Triangle DEF by SSS. Angle EDF = 36.9 degrees."
+   },
+   {
+    "q": "In the diagram, line segment AB intersects line segment CD at point M. M is the midpoint of both AB and CD. Prove that triangle AMC is congruent to triangle BMD.",
+    "steps": [
+     "Step 1: Set up the proof for triangle AMC and triangle BMD.",
+     "Step 2: State AM = BM because M is the midpoint of AB (given).",
+     "Step 3: State CM = DM because M is the midpoint of CD (given).",
+     "Step 4: State Angle AMC = Angle BMD because vertically opposite angles are equal.",
+     "Step 5: Conclude congruence: Triangle AMC ≅ Triangle BMD by SAS (two sides and the included vertically opposite angle are equal).",
+     "Step 6: State deduction: Therefore, AC = BD because corresponding sides in congruent triangles are equal."
+    ],
+    "ans": "Proved congruent by SAS. AC = BD by corresponding sides of congruent triangles."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Figure 1: Triangle congruence conditions SSS, SAS, ASA, and RHS showing equal sides with tick marks and equal angles with arc markings.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><g stroke=\"#1b2540\" stroke-width=\"1.5\" fill=\"none\"><polygon points=\"30,70 90,70 60,30\" fill=\"#dbeafe\"/><polygon points=\"120,70 180,70 150,30\" fill=\"#dbeafe\"/><text x=\"100\" y=\"55\" font-size=\"12\" fill=\"#1b2540\" stroke=\"none\">SSS</text><polygon points=\"230,70 290,70 260,30\" fill=\"#fde68a\"/><polygon points=\"320,70 380,70 350,30\" fill=\"#fde68a\"/><text x=\"300\" y=\"55\" font-size=\"12\" fill=\"#1b2540\" stroke=\"none\">SAS</text><polygon points=\"30,190 90,190 60,150\" fill=\"#bbf7d0\"/><polygon points=\"120,190 180,190 150,150\" fill=\"#bbf7d0\"/><text x=\"100\" y=\"175\" font-size=\"12\" fill=\"#1b2540\" stroke=\"none\">ASA</text><polygon points=\"230,190 280,190 230,140\" fill=\"#fecaca\"/><polygon points=\"320,190 370,190 320,140\" fill=\"#fecaca\"/><text x=\"300\" y=\"175\" font-size=\"12\" fill=\"#1b2540\" stroke=\"none\">RHS</text></g></svg>"
+   },
+   {
+    "cap": "Figure 2: The invalid SSA condition demonstrating the ambiguous case where two distinct triangles can be formed with the same two sides and non-included angle.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><g stroke=\"#1b2540\" stroke-width=\"1.5\" fill=\"none\"><polygon points=\"50,180 180,180 120,80\" fill=\"#fecaca\"/><path d=\"M120,80 L150,180\" stroke-dasharray=\"4,4\"/><text x=\"90\" y=\"130\" font-size=\"12\" fill=\"#1b2540\" stroke=\"none\">Side</text><text x=\"155\" y=\"130\" font-size=\"12\" fill=\"#1b2540\" stroke=\"none\">Side</text><text x=\"70\" y=\"165\" font-size=\"12\" fill=\"#1b2540\" stroke=\"none\">Angle</text><text x=\"100\" y=\"210\" font-size=\"12\" fill=\"#1b2540\" stroke=\"none\">SSA: Ambiguous triangle case (Invalid for congruence)</text></g></svg>"
+   },
+   {
+    "cap": "Figure 3: Intersecting line segments demonstrating vertical angles and midpoints used in standard GCSE congruence proofs.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><g stroke=\"#1b2540\" stroke-width=\"1.5\" fill=\"none\"><line x1=\"60\" y1=\"180\" x2=\"340\" y2=\"60\"/><line x1=\"80\" y1=\"60\" x2=\"320\" y2=\"180\"/><circle cx=\"200\" cy=\"120\" r=\"4\" fill=\"#1b2540\"/><text x=\"210\" y=\"115\" font-size=\"12\" fill=\"#1b2540\" stroke=\"none\">M</text><text x=\"130\" y=\"145\" font-size=\"12\" fill=\"#1b2540\" stroke=\"none\">AMC</text><text x=\"250\" y=\"95\" font-size=\"12\" fill=\"#1b2540\" stroke=\"none\">BMD</text><text x=\"100\" y=\"215\" font-size=\"12\" fill=\"#1b2540\" stroke=\"none\">Vertically opposite angles at M are equal</text></g></svg>"
+   }
+  ],
+  "pid": "maths_ocr_h.8.1",
+  "sid": "maths_ocr_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-16T03:40:35.388Z"
+ }
+}

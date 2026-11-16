@@ -1,0 +1,460 @@
+{
+ "maths_ocr_h.10.1": {
+  "summary": "Mastering combined events requires systematic recording using sample space grids, exhaustive Venn diagrams with set notation, and tree diagrams handling both independent and dependent probabilities. Grade 9 questions frequently test conditional probability via reduced sample spaces, algebraic tree branches, and simultaneous application of addition and multiplication laws. Precision in reading whether events are mutually exclusive or independent is vital for securing full marks.",
+  "core": [
+   {
+    "h": "Sample Space Diagrams",
+    "p": "A sample space lists every single possible outcome of a combined event systematically. For two independent experiments, a 2D grid or table is the most reliable way to avoid missing combinations and correctly compute theoretical probabilities.",
+    "bullets": [
+     "Use rows for the first event and columns for the second event.",
+     "Count the total number of cells to find the denominator of the probability fraction.",
+     "Identify and circle the favorable outcomes that satisfy the given condition.",
+     "Particularly useful for rolling two dice or spinning two spinners."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Sample Space Total",
+      "p": "The sum of all probabilities in any valid sample space must always equal exactly 1."
+     },
+     {
+      "k": "tip",
+      "t": "Grid Layout",
+      "p": "Always label your axes clearly with the possible outcomes of each individual event before counting cells."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A sample space grid showing the sum of rolling two fair six-sided dice, highlighting outcomes summing to 7.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#f8fafc\" stroke=\"#1e293b\" stroke-width=\"2\" rx=\"6\"/><line x1=\"80\" y1=\"20\" x2=\"80\" y2=\"220\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"20\" y1=\"60\" x2=\"380\" y2=\"60\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><text x=\"40\" y=\"45\" font-size=\"12\" fill=\"#1e293b\">Dice 1</text><text x=\"100\" y=\"45\" font-size=\"12\" fill=\"#1e293b\">1  2  3  4  5  6</text><text x=\"30\" y=\"90\" font-size=\"12\" fill=\"#1e293b\">Dice 2</text><text x=\"35\" y=\"110\" font-size=\"12\" fill=\"#1e293b\">1</text><text x=\"35\" y=\"130\" font-size=\"12\" fill=\"#1e293b\">2</text><text x=\"35\" y=\"150\" font-size=\"12\" fill=\"#1e293b\">3</text><text x=\"35\" y=\"170\" font-size=\"12\" fill=\"#1e293b\">4</text><text x=\"35\" y=\"190\" font-size=\"12\" fill=\"#1e293b\">5</text><text x=\"35\" y=\"210\" font-size=\"12\" fill=\"#1e293b\">6</text><rect x=\"100\" y=\"180\" width=\"30\" height=\"20\" fill=\"#bbf7d0\" stroke=\"#166534\"/><text x=\"110\" y=\"195\" font-size=\"11\" fill=\"#166534\">7</text><rect x=\"140\" y=\"160\" width=\"30\" height=\"20\" fill=\"#bbf7d0\" stroke=\"#166534\"/><text x=\"150\" y=\"175\" font-size=\"11\" fill=\"#166534\">7</text><rect x=\"180\" y=\"140\" width=\"30\" height=\"20\" fill=\"#bbf7d0\" stroke=\"#166534\"/><text x=\"190\" y=\"155\" font-size=\"11\" fill=\"#166534\">7</text><rect x=\"220\" y=\"120\" width=\"30\" height=\"20\" fill=\"#bbf7d0\" stroke=\"#166534\"/><text x=\"230\" y=\"135\" font-size=\"11\" fill=\"#166534\">7</text><rect x=\"260\" y=\"100\" width=\"30\" height=\"20\" fill=\"#bbf7d0\" stroke=\"#166534\"/><text x=\"270\" y=\"115\" font-size=\"11\" fill=\"#166534\">7</text><rect x=\"300\" y=\"80\" width=\"30\" height=\"20\" fill=\"#bbf7d0\" stroke=\"#166534\"/><text x=\"310\" y=\"95\" font-size=\"11\" fill=\"#166534\">7</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Venn Diagrams & Set Notation",
+    "p": "Venn diagrams partition a universal set into regions representing different events. Master set notation symbols such as union, intersection, complement, and subset to correctly interpret complex probability questions.",
+    "bullets": [
+     "Universal set is denoted by epsilon or U, drawn as a bounding rectangle.",
+     "Intersection (A intersection B) means both events happen simultaneously.",
+     "Union (A union B) means event A or event B or both happen.",
+     "Complement (A prime) means event A does not happen."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Mutually Exclusive",
+      "p": "Events that cannot occur at the same time, meaning their intersection is empty: P(A intersection B) = 0."
+     },
+     {
+      "k": "warn",
+      "t": "Mutually Exclusive Trap",
+      "p": "Do not assume events are mutually exclusive unless stated or proven that they share no outcomes."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A Venn diagram showing two intersecting sets A and B within a universal set U.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#f8fafc\" stroke=\"#1e293b\" stroke-width=\"2\" rx=\"6\"/><text x=\"30\" y=\"40\" font-size=\"12\" fill=\"#1e293b\">U</text><circle cx=\"160\" cy=\"120\" r=\"60\" fill=\"#dbeafe\" stroke=\"#1e40af\" stroke-width=\"2\" fill-opacity=\"0.5\"/><circle cx=\"240\" cy=\"120\" r=\"60\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"2\" fill-opacity=\"0.5\"/><text x=\"130\" y=\"125\" font-size=\"12\" fill=\"#1e40af\">A</text><text x=\"260\" y=\"125\" font-size=\"12\" fill=\"#b45309\">B</text><text x=\"190\" y=\"125\" font-size=\"11\" fill=\"#1e293b\">A ∩ B</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "The Addition Law",
+    "p": "The addition law calculates the probability of the union of two events: P(A union B) = P(A) + P(B) - P(A intersection B). Subtracting the intersection prevents double-counting outcomes that belong to both sets.",
+    "bullets": [
+     "If events are mutually exclusive, P(A intersection B) = 0, simplifying the rule to P(A) + P(B).",
+     "Always check if outcomes overlap before adding probabilities directly.",
+     "Can be rearranged to find the intersection if union and individual probabilities are known.",
+     "Fundamental for working with frequency trees and Venn diagram probabilities."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Addition Law Formula",
+      "p": "P(A ∪ B) = P(A) + P(B) - P(A ∩ B)"
+     },
+     {
+      "k": "tip",
+      "t": "Mutually Exclusive Check",
+      "p": "If the question states 'either A or B', check if they can happen together. If not, just add them."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "The Multiplication Law for Independent Events",
+    "p": "Two events are independent if the outcome of the first event does not affect the probability of the second event. For independent events, the probability of both occurring is the product of their individual probabilities.",
+    "bullets": [
+     "Expressed mathematically as P(A intersection B) = P(A) * P(B).",
+     "Applies to replacement scenarios, such as putting a counter back before drawing a second.",
+     "Can be extended to three or more independent events by multiplying all individual probabilities.",
+     "Used extensively in multi-stage tree diagrams."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Independent Events",
+      "p": "Events A and B are independent if P(B given A) = P(B), meaning knowing A happened gives no new information about B."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Tree Diagrams: Independent & Dependent Events",
+    "p": "Tree diagrams map sequential combined events. Branches leaving a single node must sum in probability to 1. **Multiplication along branches** (the AND rule) gives sequence probabilities, while **addition down branches** (the OR rule) combines different successful pathways.",
+    "bullets": [
+     "First stage branches represent the first event; second stage branches branch out from each first outcome.",
+     "Without replacement means denominators and numerators decrease for dependent second-stage branches.",
+     "With replacement means probabilities on the second stage remain identical to the first stage.",
+     "Check that all end-of-branch probabilities sum to exactly 1."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "And / Or Rules",
+      "p": "Multiply along branches (AND). Add probabilities of different qualifying branches together (OR)."
+     },
+     {
+      "k": "warn",
+      "t": "Denominator Drop",
+      "p": "In without-replacement problems, both the numerator and the denominator decrease by 1 for the second event."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A tree diagram representing two dependent trials (without replacement), showing changing probabilities.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"40\" y1=\"120\" x2=\"120\" y2=\"70\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"40\" y1=\"120\" x2=\"120\" y2=\"170\" stroke=\"#1e293b\" stroke-width=\"2\"/><text x=\"70\" y=\"85\" font-size=\"11\" fill=\"#1e293b\">3/5</text><text x=\"70\" y=\"155\" font-size=\"11\" fill=\"#1e293b\">2/5</text><line x1=\"160\" y1=\"70\" x2=\"240\" y2=\"40\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"160\" y1=\"70\" x2=\"240\" y2=\"100\" stroke=\"#1e293b\" stroke-width=\"2\"/><text x=\"190\" y=\"45\" font-size=\"11\" fill=\"#1e293b\">2/4</text><text x=\"190\" y=\"95\" font-size=\"11\" fill=\"#1e293b\">2/4</text><text x=\"260\" y=\"45\" font-size=\"11\" fill=\"#166534\">Red, Red</text><text x=\"260\" y=\"105\" font-size=\"11\" fill=\"#166534\">Red, Blue</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Conditional Probability & Reduced Sample Spaces",
+    "p": "Conditional probability restricts the sample space to a known outcome. Written as P(A given B), it calculates the probability that event A occurs given that event B has already occurred.",
+    "bullets": [
+     "Formula: P(A given B) = P(A intersection B) / P(B).",
+     "Visually seen in Venn diagrams by ignoring everything outside set B when calculating A's share within B.",
+     "Commonly tested using tree diagram backward reasoning or frequency tree partitions.",
+     "Requires careful reading of phrases such as 'Given that...' or 'Knowing that...'."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Conditional Formula",
+      "p": "P(A | B) = P(A ∩ B) / P(B)"
+     },
+     {
+      "k": "tip",
+      "t": "New Denominator",
+      "p": "Think of conditional probability as shrinking your universal set to only include the given condition."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Frequency Trees",
+    "p": "Frequency trees use absolute frequencies instead of probabilities on branches. They are exceptionally useful for survey data, medical testing, and conditional probability problems.",
+    "bullets": [
+     "Start with total frequency at the root node.",
+     "Split into primary categories (e.g., Male / Female).",
+     "Split further into secondary categories (e.g., Pass / Fail).",
+     "The sum of branches leaving any node must equal the number at that node."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Converting to Probability",
+      "p": "To turn a frequency tree into a tree diagram, divide every branch number by its starting node total."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Algebraic Probability & Quadratic Equations",
+    "p": "Higher tier OCR papers frequently introduce unknown variables into probability problems. You must set up algebraic expressions for probabilities and solve resulting linear or quadratic equations.",
+    "bullets": [
+     "Bag contains x red counters and 3 blue counters. Probability of red is x / (x+3).",
+     "Two draws without replacement lead to algebraic fractions multiplying together.",
+     "Equating the product of branches to a given total probability often yields a quadratic equation.",
+     "Reject negative solutions or solutions where probability exceeds 1."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Valid Probability Range",
+      "p": "Any algebraic solution for a probability must evaluate to a number between 0 and 1 inclusive."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Proving Independence",
+    "p": "To prove whether two events are independent mathematically, you must test the multiplicative property. If P(A intersection B) equals P(A) * P(B), the events are independent; otherwise, they are dependent.",
+    "bullets": [
+     "Calculate P(A) and P(B) from the given data.",
+     "Find their product P(A) * P(B).",
+     "Compare this product directly to the given intersection probability P(A intersection B).",
+     "Conclude explicitly by stating whether the values are equal or not."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Independence Test",
+      "p": "Check if P(A ∩ B) = P(A) × P(B). If true, independent. If false, dependent."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Exhaustive Events",
+    "p": "A set of events is exhaustive if at least one of them must occur during every trial. The sum of the probabilities of all mutually exclusive exhaustive events is exactly 1.",
+    "bullets": [
+     "P(A) + P(B) + P(C) = 1 if A, B, and C are mutually exclusive and exhaustive.",
+     "Complementary events (A and not A) are always exhaustive and mutually exclusive.",
+     "Used to find missing probabilities in complex tables or partitions.",
+     "Essential check for completing probability distributions."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Exhaustive Definition",
+      "p": "A collection of events is exhaustive if the union of all events equals the entire universal set U."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Restaurant Menu and Kitchen Inventory Analogy",
+   "p": "Imagine a restaurant where choosing a starter and a main course is like a sample space or tree diagram: every combination multiplies your options. Conditional probability is like the kitchen running out of ingredients: once the chef knows there are no more steaks left (given condition), the probability of a customer ordering steak drops instantly to zero, and the denominator for all remaining meat dishes changes. The analogy breaks down because human customers do not choose meals with fixed mathematical probabilities like rolling random dice."
+  },
+  "terms": [
+   {
+    "t": "Sample Space",
+    "d": "A complete list of all possible outcomes of a trial or experiment."
+   },
+   {
+    "t": "Venn Diagram",
+    "d": "A diagram using overlapping circles to show logical relationships between sets."
+   },
+   {
+    "t": "Intersection",
+    "d": "The set of elements belonging to both event A and event B, denoted A intersection B."
+   },
+   {
+    "t": "Union",
+    "d": "The set of elements belonging to event A or event B or both, denoted A union B."
+   },
+   {
+    "t": "Complement",
+    "d": "The set of all outcomes in the universal set that are not in event A, denoted A prime."
+   },
+   {
+    "t": "Mutually Exclusive",
+    "d": "Events that cannot occur at the same time."
+   },
+   {
+    "t": "Independent Events",
+    "d": "Events where the outcome of one does not affect the probability of the other."
+   },
+   {
+    "t": "Dependent Events",
+    "d": "Events where the outcome of the first event affects the probability of the second."
+   },
+   {
+    "t": "Conditional Probability",
+    "d": "The probability of an event occurring given that another event has already occurred."
+   },
+   {
+    "t": "Tree Diagram",
+    "d": "A diagram showing successive stages of combined events and their probabilities."
+   },
+   {
+    "t": "Addition Law",
+    "d": "P(A union B) = P(A) + P(B) - P(A intersection B)."
+   },
+   {
+    "t": "Multiplication Law",
+    "d": "P(A intersection B) = P(A) * P(B) for independent events."
+   },
+   {
+    "t": "Exhaustive Events",
+    "d": "A set of events covering all possible outcomes of an experiment."
+   },
+   {
+    "t": "Frequency Tree",
+    "d": "A diagram tracking absolute frequencies across multiple stages of events."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Adding probabilities of independent events when calculating both happening",
+    "r": "Multiply probabilities for combined independent events (AND rule)."
+   },
+   {
+    "w": "Forgetting to decrease denominators in without-replacement tree diagrams",
+    "r": "Both numerator and denominator decrease by 1 for dependent second-stage branches."
+   },
+   {
+    "w": "Assuming all non-intersecting shapes on rough sketches are mutually exclusive",
+    "r": "Check numerical data; overlapping regions must be subtracted in the addition law."
+   },
+   {
+    "w": "Writing conditional probability as P(A) / P(B)",
+    "r": "Conditional probability is P(A intersection B) divided by P(B)."
+   },
+   {
+    "w": "Leaving tree diagram branch probabilities summing to something other than 1",
+    "r": "All branches leaving a single node must sum to exactly 1."
+   },
+   {
+    "w": "Forgetting to subtract the intersection in the addition law",
+    "r": "Always subtract P(A intersection B) to prevent double-counting."
+   },
+   {
+    "w": "Accepting an algebraic probability greater than 1",
+    "r": "Reject invalid algebraic roots where probability exceeds 1 or is negative."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Event A and event B are independent. P(A) = 0.4 and P(B) = 0.5. Find P(A intersection B).",
+    "marks": 2,
+    "model": [
+     "0.4 * 0.5",
+     "0.2"
+    ],
+    "tip": "Use the multiplication law for independent events by multiplying their individual probabilities."
+   },
+   {
+    "q": "A bag contains 3 red counters and 2 blue counters. Two counters are taken at random without replacement. Find the probability that both counters are red.",
+    "marks": 3,
+    "model": [
+     "First red probability = 3/5",
+     "Second red probability = 2/4",
+     "3/5 * 2/4 = 6/20 = 3/10"
+    ],
+    "tip": "Without replacement means denominators decrease by 1 for the second draw."
+   },
+   {
+    "q": "P(A) = 0.6, P(B) = 0.5 and P(A union B) = 0.8. Find P(A intersection B).",
+    "marks": 3,
+    "model": [
+     "State addition law: P(A union B) = P(A) + P(B) - P(A intersection B)",
+     "0.8 = 0.6 + 0.5 - P(A intersection B)",
+     "P(A intersection B) = 0.3"
+    ],
+    "tip": "Substitute known values into the addition law formula and rearrange."
+   },
+   {
+    "q": "Proving independence: P(A) = 0.3, P(B) = 0.4, P(A intersection B) = 0.1. Are A and B independent? Show working.",
+    "marks": 3,
+    "model": [
+     "Calculate P(A) * P(B) = 0.3 * 0.4 = 0.12",
+     "Compare with P(A intersection B) = 0.1",
+     "Since 0.12 does not equal 0.1, they are not independent"
+    ],
+    "tip": "Always explicitly state your comparison conclusion to gain the final mark."
+   },
+   {
+    "q": "A card is drawn from a standard deck of 52 cards. Find the probability that it is a King or a Heart.",
+    "marks": 4,
+    "model": [
+     "P(King) = 4/52",
+     "P(Heart) = 13/52",
+     "P(King intersection Heart) = 1/52",
+     "4/52 + 13/52 - 1/52 = 16/52 = 4/13"
+    ],
+    "tip": "Remember to subtract the intersection (the King of Hearts) to avoid double counting."
+   },
+   {
+    "q": "A biased coin has probability 0.7 of landing on heads. It is tossed 3 times. Find the probability of getting exactly two heads.",
+    "marks": 4,
+    "model": [
+     "Successful paths: HHT, HTH, THH",
+     "Probability of one path = 0.7 * 0.7 * 0.3 = 0.147",
+     "Multiply by 3 paths: 3 * 0.147",
+     "0.441"
+    ],
+    "tip": "List all successful arrangements on a tree diagram or use binomial coefficient thinking."
+   },
+   {
+    "q": "Given P(A | B) = 0.4 and P(B) = 0.6, find P(A intersection B).",
+    "marks": 2,
+    "model": [
+     "0.4 = P(A intersection B) / 0.6",
+     "0.4 * 0.6 = 0.24"
+    ],
+    "tip": "Rearrange the conditional probability formula: P(A intersection B) = P(A | B) * P(B)."
+   },
+   {
+    "q": "A bag has x red and 4 blue counters. Two are taken without replacement. P(both red) = 1/3. Form and solve an equation for x.",
+    "marks": 5,
+    "model": [
+     "x/(x+4) * (x-1)/(x+3) = 1/3",
+     "3x(x-1) = (x+4)(x+3)",
+     "3x^2 - 3x = x^2 + 7x + 12",
+     "2x^2 - 10x - 12 = 0 -> x^2 - 5x - 6 = 0",
+     "x = 6 (reject x = -1)"
+    ],
+    "tip": "Expand algebraic fractions carefully and solve the resulting quadratic equation."
+   },
+   {
+    "q": "In a class of 30 students, 18 study History, 15 study Geography, and 5 study neither. Find the probability a student chosen at random studies both.",
+    "marks": 4,
+    "model": [
+     "Total studying at least one = 30 - 5 = 25",
+     "18 + 15 = 33",
+     "Intersection = 33 - 25 = 8",
+     "8/30 = 4/15"
+    ],
+    "tip": "Use a Venn diagram or the addition law to find the overlap in set problems."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Bag A contains 4 red and 2 green counters. Bag B contains 3 red and 5 green counters. A fair coin is flipped. If it lands on heads, a counter is drawn from Bag A. If tails, from Bag B. Find the probability of drawing a red counter.",
+    "steps": [
+     "Identify the first stage: Coin flip has P(Heads) = 1/2 and P(Tails) = 1/2.",
+     "Identify second stage probabilities: P(Red given Heads) = 4/6 = 2/3. P(Red given Tails) = 3/8.",
+     "Calculate path for Heads and Red: 1/2 * 2/3 = 2/6 = 1/3.",
+     "Calculate path for Tails and Red: 1/2 * 3/8 = 3/16.",
+     "Add the two successful branch probabilities together: 1/3 + 3/16 = 16/48 + 9/48 = 25/48."
+    ],
+    "ans": "25/48"
+   },
+   {
+    "q": "A survey of 100 students shows 60 play football, 40 play rugby, and 20 play both. Find the probability that a student chosen at random plays neither football nor rugby.",
+    "steps": [
+     "Draw a Venn diagram or use the addition formula for the union of football and rugby.",
+     "P(Football union Rugby) = P(Football) + P(Rugby) - P(Both)",
+     "Calculation: 60 + 40 - 20 = 80 students play at least one sport.",
+     "Subtract from the universal set: 100 - 80 = 20 students play neither.",
+     "Convert to probability: 20 / 100 = 1/5."
+    ],
+    "ans": "1/5 (or 0.2)"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "A comprehensive tree diagram illustrating conditional probabilities for drawing counters without replacement.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" rx=\"6\"/><line x1=\"50\" y1=\"120\" x2=\"130\" y2=\"70\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"50\" y1=\"120\" x2=\"130\" y2=\"170\" stroke=\"#1e293b\" stroke-width=\"2\"/><text x=\"75\" y=\"85\" font-size=\"11\" fill=\"#1e293b\">3/5 R</text><text x=\"75\" y=\"155\" font-size=\"11\" fill=\"#1e293b\">2/5 B</text><line x1=\"170\" y1=\"70\" x2=\"250\" y2=\"40\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"170\" y1=\"70\" x2=\"250\" y2=\"100\" stroke=\"#1e293b\" stroke-width=\"2\"/><text x=\"205\" y=\"45\" font-size=\"11\" fill=\"#1e293b\">2/4 R</text><text x=\"205\" y=\"95\" font-size=\"11\" fill=\"#1e293b\">2/4 B</text><line x1=\"170\" y1=\"170\" x2=\"250\" y2=\"140\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"170\" y1=\"170\" x2=\"250\" y2=\"200\" stroke=\"#1e293b\" stroke-width=\"2\"/><text x=\"205\" y=\"145\" font-size=\"11\" fill=\"#1e293b\">3/4 R</text><text x=\"205\" y=\"195\" font-size=\"11\" fill=\"#1e293b\">1/4 B</text><text x=\"270\" y=\"45\" font-size=\"11\" fill=\"#166534\">P(R,R) = 6/20</text><text x=\"270\" y=\"105\" font-size=\"11\" fill=\"#166534\">P(R,B) = 6/20</text><text x=\"270\" y=\"145\" font-size=\"11\" fill=\"#166534\">P(B,R) = 6/20</text><text x=\"270\" y=\"205\" font-size=\"11\" fill=\"#166534\">P(B,B) = 2/20</text></svg>"
+   }
+  ],
+  "pid": "maths_ocr_h.10.1",
+  "sid": "maths_ocr_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-16T03:42:06.460Z"
+ }
+}
