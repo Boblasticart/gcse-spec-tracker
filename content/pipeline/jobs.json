@@ -1,7 +1,13 @@
 {
- "_help": "The jobs the automatic pipeline works through, in order, every day (see docs/PIPELINE.md). kind \"notes\" = the full revision notes. kind \"custom\" = anything else: give it a prompt (placeholders {board} {subject} {code} {tier} {paper} {topic} {point} {others}), the fields the AI's JSON reply must contain, and a folder of its own under content/ to save into. Set enabled to true to switch a job on. specs / courses limit a job to those spec ids / subjects (empty = everything).",
+ "_help": "The jobs the automatic pipeline works through, in order, every day (see docs/PIPELINE.md). kind \"notes\" = the full revision notes. kind \"custom\" = anything else: give it a prompt (placeholders {board} {subject} {code} {tier} {paper} {topic} {point} {others}), the fields the AI's JSON reply must contain, and a folder of its own under content/ to save into. Set enabled to true to switch a job on. specs / courses limit a job to those spec ids / subjects (empty = everything). publish_live: true = at the end of every run, new notes are copied to the live site by themselves (only note files; nothing else goes live without the owner's OK).",
+ "publish_live": true,
  "jobs": [
-  { "id": "notes", "kind": "notes", "enabled": true, "specs": [] },
+  {
+   "id": "notes",
+   "kind": "notes",
+   "enabled": true,
+   "specs": []
+  },
   {
    "id": "flashcards",
    "kind": "custom",
@@ -10,7 +16,18 @@
    "specs": [],
    "courses": [],
    "prompt": "You are a {board} GCSE {subject} examiner. Write revision flashcards for this ONE spec point from {board} {subject} {code} ({paper} > {topic}): \"{point}\". Each card has a short question q and a precise answer a in mark-scheme wording. Cover every fact, definition and equation the point needs. Also give one sentence, summary, saying what the point is about.",
-   "fields": { "summary": { "minChars": 40 }, "cards": { "min": 8, "each": ["q", "a"] } },
+   "fields": {
+    "summary": {
+     "minChars": 40
+    },
+    "cards": {
+     "min": 8,
+     "each": [
+      "q",
+      "a"
+     ]
+    }
+   },
    "minBytes": 600,
    "maxBytes": 20000
   }
