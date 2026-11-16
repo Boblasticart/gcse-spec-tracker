@@ -5,14 +5,14 @@ Runs read **only this file and `docs/CONTEXT.md`**. Keep this file short: finish
 ## Status
 
 ```
-RUN LOCK:       running since 2026-11-16T12:50Z, session 01Sm3c8jfY1ypFSCYZak5GLh (in chat with the owner)
+RUN LOCK:       none
 CURRENT JOB:    J2b Automatic pipeline (owner asked in chat 2026-11-16: one pipeline that can make "anything I want", notes first, fully automatic)
 CURRENT STEPS:
 - [x] 1. General engine (scripts/pipeline/): any job runs on the same AI keys and limits; the notes job moved onto it; failed items retried by themselves on later days (up to 6 tries); weak models skipped; notes repaired automatically where safe; content/pipeline/STATUS.md written every run.
 - [x] 2. New kinds of content with no code: a "custom" job in content/pipeline/jobs.json (prompt + what the reply must contain + where to save). Guide in docs/PIPELINE.md.
 - [ ] 3. A real Write notes run on the new engine finishes and saves notes; then list J2b under "Ready for the owner's OK".
 (J3 Maths carries on by itself meanwhile: its steps are in the Queue below.)
-LAST RUN ENDED: 2026-11-16 02:30 UTC (writer fixed: skips unusable models, moves to the next Gemini model when one runs out, 4 Gemini requests at once, shorter diagram labels; run 43789115274 writing; 30 maths notes so far. Next run: read that run's log and raise the QA pass rate, only about 1 in 5 Gemini replies passed)
+LAST RUN ENDED: 2026-11-16 13:35 UTC, in chat with the owner (J2b built: general pipeline engine, self-retry, weak-model skipping, safe repairs, streaming replies, custom jobs, STATUS.md; run 2026-11-16d writing on the new engine, 10 of its first 15 replies passed; 137 notes. Next run: check that run finished, tick J2b step 3 and list J2b for the owner's OK)
 ```
 
 ## Queue (top = next)
@@ -87,5 +87,5 @@ Add each key as a GitHub secret: repo **Settings → Secrets and variables → A
    - Only when the owner says OK in a chat, or ticks `[x]` beside a line under "Ready for the owner's OK".
    - Then fast-forward `main` to `rebuild` (only if `main` is an ancestor and CI is green), push `main`, and remove those lines.
    - Never push to `main` otherwise.
-7. **Keep the notes coming (every run).** Since 2026-11-15 the Write notes workflow is on `main`, so its daily schedule (08:23 UTC) runs it. If no "Write notes" run has started in the last 26 hours anyway, set `"run"` in `content/notes/run-request.json` to today's date and push (that push starts it). Then read `content/notes/failures.json` and fix what it shows (prompt, models in providers.json, QA rules), never by hand-writing notes.
+7. **Check the pipeline (every run).** The pipeline (docs/PIPELINE.md) runs itself daily at 08:23 UTC and retries its own failures. Read `content/pipeline/STATUS.md` first. Only step in when: no "Write notes" run has started in the last 26 hours (set `"run"` in `content/notes/run-request.json` to today's date and push); items are listed as stuck; or a model is wasting the allowance. Fix the cause (prompt, providers.json, checks, repairs), never by hand-writing notes.
 8. **End of run.** Set RUN LOCK back to `none`, fill in LAST RUN ENDED and push. Then send the owner one short, friendly, jargon-free message saying what was done, what's next, and what they need to do.
