@@ -4524,5 +4524,396 @@
   "src": "pre",
   "by": "gemini/gemini-3-flash-preview",
   "ts": "2026-11-16T13:43:55.148Z"
+ },
+ "maths_aqa_h.2.14": {
+  "summary": "This comprehensive revision guide covers instantaneous and average rates of change via tangents and chords on curves for AQA GCSE Higher Tier. It provides step-by-step methods for estimating gradients from non-linear graphs, interpreting physical units, and understanding the limiting process behind calculus. Master these techniques to secure top Grade 9 marks on Papers 1, 2, and 3.",
+  "core": [
+   {
+    "h": "Introduction to Rates of Change",
+    "p": "A **rate of change** measures how one quantity changes in relation to another. On a straight-line graph, the rate of change is constant and equal to the gradient (change in y divided by change in x). However, on a non-linear graph representing real-world phenomena like distance-time or velocity-time, the rate of change varies continuously at every single point.",
+    "bullets": [
+     "Straight line graphs have a constant gradient, representing a uniform rate of change.",
+     "Non-linear graphs have a changing gradient, meaning the rate of change is not constant.",
+     "The horizontal axis usually represents independent variables such as time (t).",
+     "The vertical axis represents dependent variables such as distance (s) or velocity (v)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Gradient Meaning",
+      "p": "The gradient of any graph on GCSE physics or maths contexts always represents a rate of change with units of 'vertical units per horizontal unit'."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Comparing a constant rate of change (straight line) with a variable rate of change (curve).",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"200\" x2=\"50\" y2=\"30\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"350\" y=\"218\" font-size=\"12\" fill=\"#1b2540\">Time</text><text x=\"20\" y=\"40\" font-size=\"12\" fill=\"#1b2540\">Dist</text><line x1=\"50\" y1=\"190\" x2=\"330\" y2=\"70\" stroke=\"#2563eb\" stroke-width=\"2\"/><path d=\"M50 190 Q 200 180 330 60\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"220\" y=\"110\" font-size=\"12\" fill=\"#2563eb\">Constant Rate</text><text x=\"160\" y=\"150\" font-size=\"12\" fill=\"#dc2626\">Variable Rate</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Average Rate of Change over an Interval",
+    "p": "The **average rate of change** calculates the overall change in the dependent variable divided by the change in the independent variable over a specific interval. Geometrically, this is equivalent to finding the gradient of the straight **chord** connecting the two endpoints of the interval on the curve.",
+    "bullets": [
+     "Formula: Average Rate = (Change in y) / (Change in x) = (y2 - y1) / (x2 - x1).",
+     "Represented graphically by drawing a straight chord between two points on the curve.",
+     "Does not describe what happens inside the interval, only the net change from start to finish.",
+     "Units are given as [Vertical Unit] per [Horizontal Unit], e.g., meters per second."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Chord Definition",
+      "p": "A chord is a straight line segment whose endpoints both lie on the curve."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Average rate of change represented by the gradient of a chord connecting two points on a curve.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"200\" x2=\"50\" y2=\"30\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M80 180 Q 200 60 340 50\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2\"/><circle cx=\"120\" cy=\"140\" r=\"4\" fill=\"#1b2540\"/><circle cx=\"300\" cy=\"65\" r=\"4\" fill=\"#1b2540\"/><line x1=\"120\" y1=\"140\" x2=\"300\" y2=\"65\" stroke=\"#dc2626\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><text x=\"100\" y=\"160\" font-size=\"11\" fill=\"#1b2540\">P (x1, y1)</text><text x=\"280\" y=\"55\" font-size=\"11\" fill=\"#1b2540\">Q (x2, y2)</text><text x=\"170\" y=\"90\" font-size=\"11\" fill=\"#dc2626\">Chord</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Instantaneous Rate of Change at a Point",
+    "p": "The **instantaneous rate of change** measures the exact speed or rate at one precise moment in time. To find this graphically, you must construct a **tangent** line that touches the curve at that exact point and has the exact same slope as the curve at that coordinate.",
+    "bullets": [
+     "Represents the exact rate of change at a single point (e.g., speed at t = 3 seconds).",
+     "Found by drawing a tangent line touching the curve at only that specific point.",
+     "The gradient of the tangent gives the numerical value of the instantaneous rate of change.",
+     "Requires careful manual construction using a ruler so the line skims the curve symmetrically."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Tangent Definition",
+      "p": "A tangent is a straight line that touches a curve at a single point without crossing it locally."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Instantaneous rate of change found by drawing a tangent at a specific point on the curve.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"200\" x2=\"50\" y2=\"30\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M80 200 Q 200 40 340 30\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"100\" r=\"4\" fill=\"#1b2540\"/><line x1=\"110\" y1=\"160\" x2=\"290\" y2=\"40\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"210\" y=\"95\" font-size=\"11\" fill=\"#1b2540\">Point (x, y)</text><text x=\"240\" y=\"70\" font-size=\"11\" fill=\"#2563eb\">Tangent Line</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Step-by-Step Method to Draw and Measure a Tangent",
+    "p": "Examiners award marks based on the precision of your tangent construction and the points you select to calculate its gradient. Follow this rigorous protocol in every exam question requiring an instantaneous rate.",
+    "bullets": [
+     "Step 1: Locate the exact required x-value on the horizontal axis and move up to the curve.",
+     "Step 2: Place your ruler so it touches the curve at that point only, ensuring equal 'air gaps' either side.",
+     "Step 3: Draw a clear straight line extending across a substantial grid area.",
+     "Step 4: Pick two easy-to-read integer grid intersections far apart on your drawn tangent line to form a gradient triangle.",
+     "Step 5: Calculate gradient = (Change in y) / (Change in x)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Large Triangle Rule",
+      "p": "Always make your gradient triangle as large as possible. Using points far apart minimises percentage reading errors on exam paper grids."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Interpreting Distance-Time Graphs",
+    "p": "Distance-time graphs display how distance travelled changes over time. The geometric properties of these graphs map directly to kinematic quantities tested heavily across both GCSE Mathematics and GCSE Physics.",
+    "bullets": [
+     "The **gradient** of a distance-time graph at any point represents **speed** (instantaneous or average).",
+     "A straight sloping line indicates constant speed.",
+     "A horizontal line (zero gradient) indicates the object is stationary.",
+     "A curve with an increasing gradient indicates acceleration (speeding up)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Units Check",
+      "p": "If distance is in metres and time in seconds, speed is in m/s. Always check axis labels before calculating."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Interpreting Velocity-Time Graphs",
+    "p": "Velocity-time graphs display how velocity changes over time. The rate of change here has a specific physical meaning and corresponds to acceleration.",
+    "bullets": [
+     "The **gradient** of a velocity-time graph represents **acceleration**.",
+     "The **area under** a velocity-time graph represents total **displacement** or distance travelled.",
+     "A tangent drawn on a non-linear velocity-time curve gives the **instantaneous acceleration** at that exact time.",
+     "A chord drawn between two points on a velocity-time curve gives the **average acceleration** over that time interval."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Acceleration Definition",
+      "p": "Acceleration is the rate of change of velocity, measured in metres per second squared (m/s^2)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "The Limiting Process and Calculus Link",
+    "p": "At Grade 9, it is vital to understand the conceptual bridge between chords and tangents. As the interval between two points on a curve gets smaller and smaller (approaching zero), the secant chord rotates and converges directly into the tangent line at a single point.",
+    "bullets": [
+     "Average rate uses a chord spanning an interval delta x.",
+     "As delta x approaches 0, the chord becomes a tangent.",
+     "This limiting process is the foundational definition of differentiation in calculus.",
+     "Exam mark schemes credit understanding that tangent gradients estimate derivative values."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Chord vs Tangent Confusion",
+      "p": "Never use a tangent formula or method when an interval (e.g., from t = 1 to t = 4) is specified. Intervals require chords (average rate); single points require tangents (instantaneous rate)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Common Exam Command Words and Mark Schemes",
+    "p": "AQA exam questions use precise phrasing to signal whether you need an average rate (chord) or an instantaneous rate (tangent). Knowing these cues prevents costly method errors.",
+    "bullets": [
+     "'Estimate the speed at t = 2' -> Draw a tangent at t = 2 and find its gradient.",
+     "'Work out the average speed between t = 1 and t = 4' -> Draw a chord between t = 1 and t = 4 and find its gradient.",
+     "'State the units for the rate of change' -> Divide vertical axis unit by horizontal axis unit.",
+     "Mark schemes allocate method marks (M) for drawing the correct tangent/chord and accuracy marks (A) for correct gradient calculations within tolerance."
+    ],
+    "table": {
+     "head": [
+      "Term",
+      "Graphical Construct",
+      "Calculation Method"
+     ],
+     "rows": [
+      [
+       "Average Rate",
+       "Chord",
+       "(y2 - y1) / (x2 - x1)"
+      ],
+      [
+       "Instantaneous Rate",
+       "Tangent",
+       "Gradient of tangent line"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Car Journey Analogy",
+   "p": "Imagine driving a car on a road. Your speedometer tells you your instantaneous speed at any exact second (the tangent gradient). If you check your satnav at the end of a 60-mile trip that took 2 hours, your average speed is 30 mph, regardless of whether you stopped at red lights or sped on the motorway (the chord gradient over the whole interval)."
+  },
+  "terms": [
+   {
+    "t": "Rate of Change",
+    "d": "A measure of how much a quantity changes per unit of another quantity."
+   },
+   {
+    "t": "Average Rate of Change",
+    "d": "The total change in the dependent variable divided by the change in the independent variable over an interval."
+   },
+   {
+    "t": "Instantaneous Rate of Change",
+    "d": "The rate of change at one specific, precise point on a curve."
+   },
+   {
+    "t": "Tangent",
+    "d": "A straight line that touches a curve at a single point without crossing it locally."
+   },
+   {
+    "t": "Chord",
+    "d": "A straight line segment connecting two points on a curve."
+   },
+   {
+    "t": "Gradient",
+    "d": "The steepness of a line, calculated as rise over run (change in y divided by change in x)."
+   },
+   {
+    "t": "Non-linear Graph",
+    "d": "A graph in which the relationship between variables is not constant, represented by a curve."
+   },
+   {
+    "t": "Displacement",
+    "d": "Distance in a given direction, represented by the area under a velocity-time graph."
+   },
+   {
+    "t": "Acceleration",
+    "d": "The rate of change of velocity, represented by the gradient of a velocity-time graph."
+   },
+   {
+    "t": "Independent Variable",
+    "d": "The variable that is changed or controlled in a scientific or mathematical model, usually plotted on the x-axis."
+   },
+   {
+    "t": "Dependent Variable",
+    "d": "The variable being measured or tested, usually plotted on the y-axis."
+   },
+   {
+    "t": "Limiting Process",
+    "d": "The conceptual approach where an interval size approaches zero, turning a chord into a tangent."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Drawing a tangent when the question asks for the average rate over an interval.",
+    "r": "Use a chord connecting the two interval endpoints for average rate of change."
+   },
+   {
+    "w": "Using the coordinates of a point on the curve directly as the points for the gradient calculation of a tangent.",
+    "r": "Pick two points on the drawn straight tangent line, which usually do not lie on the curve itself."
+   },
+   {
+    "w": "Forgetting to include correct units in the final answer (e.g., omitting m/s).",
+    "r": "Always check axis labels and state compound units like metres per second."
+   },
+   {
+    "w": "Drawing a gradient triangle that is too small (e.g., spanning less than 2cm).",
+    "r": "Use a large gradient triangle spanning most of the tangent line to ensure high reading accuracy."
+   },
+   {
+    "w": "Confusing the x-coordinates and y-coordinates in the gradient formula (inverted fraction).",
+    "r": "Always use change in y divided by change in x: (y2 - y1) / (x2 - x1)."
+   },
+   {
+    "w": "Reading scale values incorrectly due to misinterpreting minor grid subdivisions.",
+    "r": "Carefully count how many small squares represent each major unit on the axes before reading values."
+   }
+  ],
+  "exam": [
+   {
+    "q": "The graph shows the distance of a train from a station over 10 seconds. Estimate the speed of the train at t = 4 seconds.",
+    "marks": 4,
+    "model": [
+     "Tangent drawn correctly at t = 4 touching the curve at that point only.",
+     "Clear construction of a gradient triangle using points on the tangent line.",
+     "Correct substitution into gradient formula using valid coordinates from the tangent.",
+     "Accurate numerical answer within AQA accepted tolerance with units m/s."
+    ],
+    "tip": "Ensure your ruler touches the curve precisely at t = 4 without cutting through the bend."
+   },
+   {
+    "q": "Calculate the average acceleration of a car between t = 2 and t = 6 on a given velocity-time graph.",
+    "marks": 3,
+    "model": [
+     "Identified velocity values at t = 2 and t = 6 from the curve.",
+     "Set up calculation (v2 - v1) / (t2 - t1).",
+     "Correct final value with units m/s^2."
+    ],
+    "tip": "Average rate over an interval always uses a chord, not a tangent."
+   },
+   {
+    "q": "Explain what the gradient of a distance-time graph represents.",
+    "marks": 1,
+    "model": [
+     "Speed (or velocity)."
+    ],
+    "tip": "Keep answers concise and exact for 1-mark specification recall questions."
+   },
+   {
+    "q": "A water tank drains over time. The volume V litres at time t minutes is given by a curve. Estimate the rate at which water is leaving the tank at t = 3.",
+    "marks": 4,
+    "model": [
+     "Tangent drawn at t = 3.",
+     "Gradient triangle constructed on the tangent.",
+     "Correct division of vertical change by horizontal change.",
+     "Negative rate acknowledged or correct positive magnitude with context (litres/min)."
+    ],
+    "tip": "Rates of emptying can be expressed as negative gradients or rates of flow."
+   },
+   {
+    "q": "State the geometric difference between a chord and a tangent on a circle or curve.",
+    "marks": 2,
+    "model": [
+     "A chord connects two distinct points on the curve.",
+     "A tangent touches the curve at exactly one point."
+    ],
+    "tip": "Memorise precise geometric definitions for exam command words."
+   },
+   {
+    "q": "Find the average rate of growth of a plant between day 10 and day 30.",
+    "marks": 3,
+    "model": [
+     "Located height values on day 10 and day 30.",
+     "Calculated change in height divided by change in time (30 - 10).",
+     "Correct value with units cm/day."
+    ],
+    "tip": "Check the axis scale carefully to read heights at intermediate days."
+   },
+   {
+    "q": "Why must a gradient triangle for a tangent be drawn as large as possible?",
+    "marks": 1,
+    "model": [
+     "To reduce percentage reading and rounding errors."
+    ],
+    "tip": "Examiners reward awareness of experimental and graphical precision."
+   },
+   {
+    "q": "A velocity-time graph is curved. What does the tangent at t = 5 represent?",
+    "marks": 1,
+    "model": [
+     "Instantaneous acceleration at t = 5."
+    ],
+    "tip": "Link tangents on velocity-time graphs directly to acceleration."
+   },
+   {
+    "q": "Estimate the instantaneous rate of change at x = 2 on the graph of y = x^3.",
+    "marks": 4,
+    "model": [
+     "Tangent constructed accurately at x = 2.",
+     "Valid points chosen from the tangent line.",
+     "Gradient calculated correctly.",
+     "Answer within range [10, 14] (exact derivative is 12)."
+    ],
+    "tip": "You can check your graphical tangent estimate using basic calculus if you know differentiation!"
+   }
+  ],
+  "worked": [
+   {
+    "q": "A particle's distance s (metres) from a fixed point is given by s = t^2 + 3t. Estimate the instantaneous speed of the particle at t = 3 seconds by drawing or calculation.",
+    "steps": [
+     "Step 1: Recognise that instantaneous speed is the rate of change of distance, given by the tangent gradient at t = 3.",
+     "Step 2: Find the coordinate on the curve at t = 3. Substituting t = 3 gives s = (3)^2 + 3(3) = 9 + 9 = 18. Point is (3, 18).",
+     "Step 3: Construct a tangent at (3, 18) or use calculus (derivative ds/dt = 2t + 3).",
+     "Step 4: Evaluate derivative at t = 3: 2(3) + 3 = 9."
+    ],
+    "ans": "9 m/s"
+   },
+   {
+    "q": "Find the average speed of an object between t = 1 and t = 4 seconds where distance s = 2t^3.",
+    "steps": [
+     "Step 1: Find distance at t = 1: s1 = 2(1)^3 = 2 metres. Point 1 is (1, 2).",
+     "Step 2: Find distance at t = 4: s2 = 2(4)^3 = 2(64) = 128 metres. Point 2 is (4, 128).",
+     "Step 3: Use the average rate formula (chord gradient): (Change in s) / (Change in t) = (128 - 2) / (4 - 1).",
+     "Step 4: Calculate: 126 / 3 = 42."
+    ],
+    "ans": "42 m/s"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Comprehensive diagram showing both a chord (average rate) and a tangent (instantaneous rate) on a non-linear curve.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"40\" y1=\"200\" x2=\"370\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"40\" y1=\"200\" x2=\"40\" y2=\"20\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M60 180 Q 200 40 360 30\" fill=\"none\" stroke=\"#059669\" stroke-width=\"3\"/><circle cx=\"120\" cy=\"130\" r=\"4\" fill=\"#1b2540\"/><circle cx=\"280\" cy=\"50\" r=\"4\" fill=\"#1b2540\"/><line x1=\"120\" y1=\"130\" x2=\"280\" y2=\"50\" stroke=\"#dc2626\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><line x1=\"160\" y1=\"130\" x2=\"320\" y2=\"30\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"100\" y=\"150\" font-size=\"11\" fill=\"#1b2540\">Point A</text><text x=\"270\" y=\"40\" font-size=\"11\" fill=\"#1b2540\">Point B</text><text x=\"180\" y=\"100\" font-size=\"11\" fill=\"#dc2626\">Chord</text><text x=\"240\" y=\"90\" font-size=\"11\" fill=\"#2563eb\">Tangent</text></svg>"
+   },
+   {
+    "cap": "Gradient triangle construction on a tangent line for calculating instantaneous rate of change.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"40\" y1=\"200\" x2=\"370\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"40\" y1=\"200\" x2=\"40\" y2=\"20\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M60 190 Q 180 50 360 40\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2\"/><line x1=\"100\" y1=\"160\" x2=\"300\" y2=\"60\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"140\" y1=\"140\" x2=\"260\" y2=\"140\" stroke=\"#1b2540\" stroke-width=\"1.5\" stroke-dasharray=\"2,2\"/><line x1=\"260\" y1=\"140\" x2=\"260\" y2=\"80\" stroke=\"#1b2540\" stroke-width=\"1.5\" stroke-dasharray=\"2,2\"/><text x=\"180\" y=\"155\" font-size=\"11\" fill=\"#1b2540\">Run (dx)</text><text x=\"270\" y=\"115\" font-size=\"11\" fill=\"#1b2540\">Rise (dy)</text><text x=\"220\" y=\"90\" font-size=\"11\" fill=\"#2563eb\">Tangent Line</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_h.2.14",
+  "sid": "maths_aqa_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-16T14:04:52.165Z"
  }
 }
