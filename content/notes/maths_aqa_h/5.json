@@ -1,0 +1,973 @@
+{
+ "maths_aqa_h.5.3": {
+  "summary": "Mastering the comparison of distributions requires analysing both central tendency and spread using statistical measures like the median, mean, range, and interquartile range. To achieve a grade 9, students must interpret these measures in context, compare box plots side-by-side, and explain the impact of outliers or skewed data on different averages. Every comparative statement in an exam must explicitly reference the context, giving a numerical value alongside a directional conclusion.",
+  "core": [
+   {
+    "h": "1. Foundations of Comparing Distributions",
+    "p": "Comparing two or more datasets requires looking beyond single values to understand the overall distribution of the data. A complete statistical comparison must always address two distinct features: location (where the data is centred) and spread (how spread out or consistent the data is).",
+    "bullets": [
+     "Always compare one measure of average (median or mean) and one measure of spread (range or interquartile range).",
+     "Never use vague language like 'group A is higher'; you must specify the exact metric, such as 'the median height of group A is greater'.",
+     "Every statistical comparison must include the units of measurement and be set in the context of the question.",
+     "When comparing spread, a smaller value means the data is more consistent or reliable."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "The Golden Rule of Comparison",
+      "p": "A comparison mark scheme almost always requires three elements: a numerical statement for dataset 1, a numerical statement for dataset 2, and a contextual conclusion using comparative language (e.g., 'therefore, boys scored higher on average')."
+     },
+     {
+      "k": "warn",
+      "t": "Missing Context",
+      "p": "Quoting numbers without mentioning what they represent will lose marks. Always state 'The median for Class A is 14 marks...'"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. Selecting the Right Average",
+    "p": "Choosing between the mean, median, and mode depends entirely on the shape of the distribution and whether outliers are present. The mean uses every data point, making it sensitive to extreme values, whereas the median is resistant to outliers.",
+    "bullets": [
+     "Mean: Best for symmetrical data without extreme outliers, as it accounts for every value.",
+     "Median: Best for skewed data or distributions containing extreme outliers, because extreme values do not distort it.",
+     "Mode: Useful primarily for categorical data or finding the most common discrete value.",
+     "If data is skewed, the median and interquartile range are the preferred pair of statistics to use."
+    ],
+    "table": {
+     "head": [
+      "Average",
+      "Strengths",
+      "Weaknesses"
+     ],
+     "rows": [
+      [
+       "Mean",
+       "Uses all data values; mathematically tractable",
+       "Affected heavily by extreme outliers and skewed data"
+      ],
+      [
+       "Median",
+       "Not affected by extreme outliers",
+       "Ignores the exact value of data points away from the centre"
+      ],
+      [
+       "Mode",
+       "Can be used for non-numerical data",
+       "May not exist or may not be unique"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Average",
+      "p": "A single value that is representative of a typical entry in a dataset, commonly referring to the mean, median, or mode."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "3. Selecting the Right Measure of Spread",
+    "p": "Measures of spread quantify the variability or consistency of a dataset. The range is easy to calculate but highly vulnerable to outliers, while the interquartile range focuses on the middle 50% of the data.",
+    "bullets": [
+     "Range: Calculated as maximum value minus minimum value. Uses all data points but is completely distorted by a single outlier.",
+     "Interquartile Range (IQR): Calculated as Upper Quartile (UQ) minus Lower Quartile (LQ). Measures the spread of the middle 50% of data and ignores extreme values.",
+     "Standard Deviation: Measures spread around the mean (covered fully in A-Level, but good to know conceptually for normal distributions).",
+     "A smaller spread indicates greater consistency or reliability in the data."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Outlier Resistance",
+      "p": "When comparing data with extreme values, always choose the median and IQR. Examiners reward candidates who justify their choice based on distribution shape."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Anatomy and Construction of Box Plots",
+    "p": "A box plot is a graphical representation of numerical data through five key statistics: the minimum value, lower quartile, median, upper quartile, and maximum value. It provides a visual summary of both location and spread.",
+    "bullets": [
+     "The left whisker extends from the minimum value to the lower quartile (Q1).",
+     "The box extends from the lower quartile (Q1) to the upper quartile (Q3), with a vertical line inside representing the median (Q2).",
+     "The right whisker extends from the upper quartile (Q3) to the maximum value.",
+     "Each section of a box plot (whisker, box half) contains approximately 25% of the data values."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Five-Number Summary",
+      "p": "The set of descriptive statistics comprising the minimum, lower quartile, median, upper quartile, and maximum."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A fully labelled box plot showing the five-number summary and interquartile range.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"50\" y1=\"120\" x2=\"350\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"80\" y1=\"90\" x2=\"80\" y2=\"150\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"140\" y=\"80\" width=\"140\" height=\"80\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"200\" y1=\"80\" x2=\"200\" y2=\"160\" stroke=\"#1b2540\" stroke-width=\"3\"/><line x1=\"320\" y1=\"90\" x2=\"320\" y2=\"150\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"120\" x2=\"80\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"2\" stroke-dasharray=\"4\"/><line x1=\"280\" y1=\"120\" x2=\"350\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"2\" stroke-dasharray=\"4\"/><text x=\"75\" y=\"70\" font-size=\"11\" fill=\"#1b2540\">Min</text><text x=\"135\" y=\"70\" font-size=\"11\" fill=\"#1b2540\">Q1</text><text x=\"190\" y=\"70\" font-size=\"11\" fill=\"#1b2540\">Median</text><text x=\"275\" y=\"70\" font-size=\"11\" fill=\"#1b2540\">Q3</text><text x=\"315\" y=\"70\" font-size=\"11\" fill=\"#1b2540\">Max</text><text x=\"190\" y=\"195\" font-size=\"12\" fill=\"#1b2540\" font-weight=\"bold\">IQR = Q3 - Q1</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "5. Comparing Distributions Using Box Plots",
+    "p": "When two box plots are drawn on the same scale, you can rapidly compare their central tendency and spread without calculating values from raw data. You must make two distinct comparisons: one for average and one for spread.",
+    "bullets": [
+     "Compare medians: State which box plot has a higher or lower median line and interpret in context.",
+     "Compare spread: Use either the Interquartile Range (box width) or the overall Range (total span from minimum to maximum).",
+     "Comment on skewness if visible from the relative lengths of the box halves or whiskers.",
+     "Structure your answer as two clear comparison sentences with supporting figures."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Structure for Full Marks",
+      "p": "Write: '1. On average, [Group A] has a higher median ([X] vs [Y]). 2. [Group B] has a greater spread, shown by a larger IQR ([A] vs [B]).'"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Calculating Quartiles from Cumulative Frequency",
+    "p": "To find quartiles from a cumulative frequency diagram, use the total frequency (n). The lower quartile is at n/4, the median is at 2n/4 (or n/2), and the upper quartile is at 3n/4 on the vertical axis.",
+    "bullets": [
+     "Locate n/4 on the cumulative frequency (vertical) axis, read across to the curve, and down to the horizontal axis to find Q1.",
+     "Locate n/2 on the vertical axis, read across and down to find the median (Q2).",
+     "Locate 3n/4 on the vertical axis, read across and down to find Q3.",
+     "Calculate the interquartile range using IQR = Q3 - Q1."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Forgetting the Axis",
+      "p": "Students often divide the horizontal axis value instead of the total frequency (n) when finding quartiles."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Estimating the Mean from Grouped Frequency Tables",
+    "p": "When raw data is grouped into class intervals, individual exact values are lost. To estimate the mean, you must assume all values in a class interval are located at the midpoint of that interval.",
+    "bullets": [
+     "Step 1: Find the midpoint for each class interval (lower limit + upper limit divided by 2).",
+     "Step 2: Multiply each midpoint (x) by its corresponding frequency (f) to find fx.",
+     "Step 3: Calculate the sum of all fx values (Sum of fx).",
+     "Step 4: Divide the sum of fx by the total frequency (Sum of f)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Estimated Mean Formula",
+      "p": "Estimated Mean = (Sum of fx) / (Sum of f), where x is the midpoint of the class interval and f is the frequency."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Comparing Grouped Frequency Distributions",
+    "p": "Comparing two grouped frequency tables requires calculating estimated means and estimated medians (or ranges if class boundaries permit). Care must be taken since grouped data only provides estimates.",
+    "bullets": [
+     "Calculate the estimated mean for both datasets using midpoints.",
+     "Compare the estimated means in context, noting which group achieved a higher average.",
+     "Compare the ranges using the maximum possible value of the highest interval minus the minimum possible value of the lowest interval (or stated table limits).",
+     "State limitations: calculations from grouped data yield estimates, not exact figures."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Exam Phrasing",
+      "p": "Always use the word 'estimate' when referring to the mean or median calculated from grouped frequency tables."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Skewness and Distribution Shape",
+    "p": "The shape of a distribution reveals how data points cluster. Visualising skewness helps explain why certain averages differ and dictates which statistical measures are most appropriate.",
+    "bullets": [
+     "Positive (Right) Skew: The tail stretches to the right. Mean > Median > Mode.",
+     "Negative (Left) Skew: The tail stretches to the left. Mean < Median < Mode.",
+     "Symmetrical Distribution: Mean = Median = Mode. The data is balanced on both sides.",
+     "Box plots show skewness through the relative lengths of whiskers and box sections from the median."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Positive Skew",
+      "p": "A distribution where the majority of data values are concentrated on the lower end, with a long tail extending towards higher values."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A positively skewed distribution curve showing the relative positions of the mode, median, and mean.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><path d=\"M 40 200 Q 120 200 150 120 Q 180 40 220 180 Q 260 200 360 200\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"160\" y1=\"60\" x2=\"160\" y2=\"200\" stroke=\"#b91c1c\" stroke-width=\"2\"/><line x1=\"185\" y1=\"100\" x2=\"185\" y2=\"200\" stroke=\"#15803d\" stroke-width=\"2\"/><line x1=\"215\" y1=\"150\" x2=\"215\" y2=\"200\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><text x=\"135\" y=\"50\" font-size=\"11\" fill=\"#b91c1c\">Mode</text><text x=\"165\" y=\"90\" font-size=\"11\" fill=\"#15803d\">Median</text><text x=\"195\" y=\"140\" font-size=\"11\" fill=\"#1d4ed8\">Mean</text><text x=\"260\" y=\"220\" font-size=\"12\" fill=\"#1b2540\">Positive Skew (Tail Right)</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "10. Outliers and Cleaning Data",
+    "p": "An outlier is an extreme data point that lies significantly outside the overall pattern of the distribution. Identifying outliers is crucial because they distort means and ranges.",
+    "bullets": [
+     "A common rule for outliers in box plots is any value less than Q1 - 1.5 * IQR or greater than Q3 + 1.5 * IQR.",
+     "Outliers are often represented on box plots by individual cross (x) or dot marks, with whiskers stopping at the last non-outlier data point.",
+     "When comparing distributions with outliers, mention whether the outliers increase the range significantly.",
+     "Always investigate whether an outlier is a recording error or a genuine extreme value before discarding it."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Outlier",
+      "p": "An observation that is numerically distant from the rest of the data in a dataset."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "11. Effect of Changes on Averages and Spread",
+    "p": "Exam questions frequently ask how adding, removing, or transforming data points affects the mean, median, range, and interquartile range.",
+    "bullets": [
+     "Adding a constant to every value in a dataset: Mean and median increase by that constant; range and IQR remain unchanged.",
+     "Multiplying every value in a dataset by a constant k: Mean, median, range, and IQR are all multiplied by k (or |k| for spread).",
+     "Adding a new data point equal to the mean: The mean remains unchanged, but the spread (range/standard deviation) typically decreases.",
+     "Adding an extreme outlier: The mean changes significantly; the median and IQR remain relatively stable."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Scaling Spread",
+      "p": "Remember that measures of spread (range, IQR) are never negative. If multiplying by a negative number, take the absolute value for spread."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "12. Exam Strategy and Communication",
+    "p": "Top-tier exam responses require precise statistical language. Examiners penalise loose terminology, such as confusing 'range' (a single number representing maximum minus minimum) with 'spread' (the general variability).",
+    "bullets": [
+     "Always give two distinct comparisons: one for average, one for spread.",
+     "Include units (e.g., seconds, pounds, cm) in all numerical quotations.",
+     "Use comparative adjectives: 'higher', 'lower', 'more consistent', 'greater spread'.",
+     "Check whether the question specifies mean/median or allows you to choose; choose the most appropriate one based on skewness."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Taboo Words",
+      "p": "Never write 'Group A has a higher average range'. Range is not an average; it is a measure of spread."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Archery Targets and Consistency",
+   "p": "Imagine two archers shooting arrows at a target. Archer A's arrows cluster tightly just to the left of the bullseye (low spread, biased location). Archer B's arrows are scattered all across the target, but their average position is right in the centre (high spread, accurate location on average). In statistics, comparing distributions is like deciding which archer is better: Archer A is more consistent (smaller spread/IQR), while Archer B has a better central tendency overall. This analogy breaks down because archers shoot 2D spatial coordinates, whereas statistical distributions are 1D numerical datasets ordered on a single number line."
+  },
+  "terms": [
+   {
+    "t": "Median",
+    "d": "The middle value when data is arranged in ascending order, separating the higher half from the lower half."
+   },
+   {
+    "t": "Mean",
+    "d": "The sum of all data values divided by the total number of values."
+   },
+   {
+    "t": "Range",
+    "d": "The difference between the maximum value and the minimum value in a dataset."
+   },
+   {
+    "t": "Interquartile Range (IQR)",
+    "d": "The difference between the upper quartile (Q3) and the lower quartile (Q1), representing the spread of the middle 50% of data."
+   },
+   {
+    "t": "Lower Quartile (Q1)",
+    "d": "The value that marks the 25th percentile of an ordered dataset."
+   },
+   {
+    "t": "Upper Quartile (Q3)",
+    "d": "The value that marks the 75th percentile of an ordered dataset."
+   },
+   {
+    "t": "Box Plot",
+    "d": "A graphical diagram showing the five-number summary: minimum, lower quartile, median, upper quartile, and maximum."
+   },
+   {
+    "t": "Outlier",
+    "d": "An extreme data point that lies significantly outside the overall pattern of the distribution."
+   },
+   {
+    "t": "Positive Skew",
+    "d": "A distribution where the mean is greater than the median, with a long tail extending towards higher values."
+   },
+   {
+    "t": "Negative Skew",
+    "d": "A distribution where the mean is less than the median, with a long tail extending towards lower values."
+   },
+   {
+    "t": "Cumulative Frequency",
+    "d": "The running total of frequencies up to the upper boundary of each class interval."
+   },
+   {
+    "t": "Estimated Mean",
+    "d": "An approximation of the mean calculated from grouped frequency data using class midpoints."
+   },
+   {
+    "t": "Consistency",
+    "d": "A term describing low variability or small spread within a dataset."
+   },
+   {
+    "t": "Distribution",
+    "d": "The way in which the values of a dataset are arranged or spread out."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Group A has a higher average range than Group B.",
+    "r": "Range is a measure of spread, not an average. Say 'Group A has a greater range than Group B'."
+   },
+   {
+    "w": "The median for boys is 15 and girls is 12, so boys are higher.",
+    "r": "Missing context. Must state 'The median score for boys (15 marks) is higher than for girls (12 marks)'."
+   },
+   {
+    "w": "To find the lower quartile from a cumulative frequency graph, divide the highest frequency by 2.",
+    "r": "Lower quartile is found at n/4. The median is at n/2."
+   },
+   {
+    "w": "The range is 5 to 25.",
+    "r": "The range is a single numerical value calculated as 25 - 5 = 20."
+   },
+   {
+    "w": "The mean is better because it uses all the numbers.",
+    "r": "The median is better when extreme outliers are present. Justification must relate to data shape."
+   },
+   {
+    "w": "Multiplying all values by 2 doubles the IQR and doubles the median.",
+    "r": "Correct mathematically, but students often forget to state both change proportionally."
+   },
+   {
+    "w": "The box plot whisker starts at zero.",
+    "r": "Whiskers start at the minimum data value, which is not necessarily zero."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Compare the distribution of scores for Class A and Class B given their box plots. Median A = 42, IQR A = 10. Median B = 38, IQR B = 18.",
+    "marks": 2,
+    "model": [
+     "Class A has a higher median score on average (42 compared to 38).",
+     "Class B has a greater spread of scores, shown by a larger interquartile range (18 compared to 10)."
+    ],
+    "tip": "Always give one comparison for average and one for spread with numerical backing."
+   },
+   {
+    "q": "Explain why the median is preferred over the mean when comparing house prices in a town.",
+    "marks": 2,
+    "model": [
+     "House prices have extreme outliers (very expensive mansions).",
+     "The median is not affected by extreme values, whereas the mean would be skewed upwards."
+    ],
+    "tip": "Link your justification directly to the presence of outliers or skewed data."
+   },
+   {
+    "q": "The median of 11 values is 14. Two new values, 9 and 45, are added. Find the new median.",
+    "marks": 2,
+    "model": [
+     "Total values become 13. The new median is the 7th value.",
+     "Arranging the data with the new values keeps the median at 14 (or show reasoning of positions)."
+    ],
+    "tip": "Write out ordered positions when adding values to a median problem."
+   },
+   {
+    "q": "A company compares delivery times in minutes. Branch X: median 24, IQR 6. Branch Y: median 28, IQR 14. Make two comparisons.",
+    "marks": 2,
+    "model": [
+     "Branch X has a lower median delivery time (24 minutes vs 28 minutes), so is faster on average.",
+     "Branch X has a smaller IQR (6 minutes vs 14 minutes), so its delivery times are more consistent."
+    ],
+    "tip": "Use words like 'faster on average' or 'more consistent' to bring in context."
+   },
+   {
+    "q": "Describe how to calculate an estimate for the median from a grouped frequency table.",
+    "marks": 2,
+    "model": [
+     "Find n/2 where n is the total frequency.",
+     "Use linear interpolation within the median class interval."
+    ],
+    "tip": "State linear interpolation clearly for higher tier marks on grouped median questions."
+   },
+   {
+    "q": "The lower quartile of a dataset is 12 and the upper quartile is 36. An outlier is defined as any value 1.5 * IQR below Q1 or above Q3. Is 75 an outlier?",
+    "marks": 3,
+    "model": [
+     "Calculate IQR = 36 - 12 = 24.",
+     "Calculate upper threshold = Q3 + 1.5 * IQR = 36 + 1.5(24) = 72.",
+     "Since 75 is greater than 72, yes, 75 is an outlier."
+    ],
+    "tip": "Show every step of the threshold calculation clearly."
+   },
+   {
+    "q": "State the effect on the mean and the range if 5 is added to every number in a dataset.",
+    "marks": 2,
+    "model": [
+     "The mean increases by 5.",
+     "The range remains unchanged."
+    ],
+    "tip": "Measures of spread never change when a constant is added to all values."
+   },
+   {
+    "q": "A distribution has a positive skew. State the order of the mean, median, and mode from smallest to largest.",
+    "marks": 1,
+    "model": [
+     "Mode, Median, Mean."
+    ],
+    "tip": "Remember alphabetical order: Mo, Me, Mean for positive skew (left to right)."
+   },
+   {
+    "q": "Explain why the range is considered a poor measure of spread when comparing two large datasets.",
+    "marks": 1,
+    "model": [
+     "It only uses two values (maximum and minimum) and is heavily distorted by a single extreme outlier."
+    ],
+    "tip": "Mention that it ignores 100% of the data except the extreme ends."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Boys and girls in a year group take a science test. For boys: median = 55, IQR = 12, range = 40. For girls: median = 62, IQR = 8, range = 35. Compare the performance of boys and girls.",
+    "steps": [
+     "Step 1: Compare the averages using the median values and context.",
+     "Step 2: Compare the spread using the interquartile range (or range) and context."
+    ],
+    "ans": "On average, girls performed better than boys because their median test score was higher (62 compared to 55). However, girls' scores were more consistent than boys' scores, as shown by their smaller interquartile range (8 compared to 12)."
+   },
+   {
+    "q": "Company A and Company B record daily calls received over 50 days. Company A: median = 120, Q1 = 100, Q3 = 140, min = 70, max = 190. Company B: median = 135, Q1 = 125, Q3 = 145, min = 110, max = 175. Compare the two distributions.",
+    "steps": [
+     "Step 1: Calculate IQRs: Company A IQR = 140 - 100 = 40. Company B IQR = 145 - 125 = 20.",
+     "Step 2: Compare medians for average.",
+     "Step 3: Compare IQRs and ranges for spread."
+    ],
+    "ans": "Company B received more daily calls on average, as its median is higher (135 calls compared to 120 calls). Company B's daily calls are also more consistent, having a smaller interquartile range (20 calls compared to 40 calls) and a smaller overall range (65 calls vs 120 calls)."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Comparison of two side-by-side box plots showing different medians and spreads.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><text x=\"30\" y=\"40\" font-size=\"12\" fill=\"#1b2540\" font-weight=\"bold\">Class A</text><line x1=\"60\" y1=\"60\" x2=\"280\" y2=\"60\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"80\" y1=\"45\" x2=\"80\" y2=\"75\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"110\" y=\"35\" width=\"110\" height=\"50\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"150\" y1=\"35\" x2=\"150\" y2=\"85\" stroke=\"#1b2540\" stroke-width=\"3\"/><line x1=\"280\" y1=\"45\" x2=\"280\" y2=\"75\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"30\" y=\"150\" font-size=\"12\" fill=\"#1b2540\" font-weight=\"bold\">Class B</text><line x1=\"80\" y1=\"170\" x2=\"340\" y2=\"170\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"100\" y1=\"155\" x2=\"100\" y2=\"185\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"160\" y=\"145\" width=\"120\" height=\"50\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"210\" y1=\"145\" x2=\"210\" y2=\"195\" stroke=\"#1b2540\" stroke-width=\"3\"/><line x1=\"340\" y1=\"155\" x2=\"340\" y2=\"185\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"215\" x2=\"350\" y2=\"215\" stroke=\"#1b2540\" stroke-width=\"1\"/><text x=\"190\" y=\"232\" font-size=\"11\" fill=\"#1b2540\">Scale</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_h.5.3",
+  "sid": "maths_aqa_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-16T02:45:23.225Z"
+ },
+ "maths_aqa_h.5.5": {
+  "summary": "Mastering scatter graphs requires a rigorous understanding of bivariate data, types of correlation, and the precise mechanical rules for drawing and using lines of best fit. At Grade 9 level, examiners test your ability to distinguish between causation and correlation, correctly interpret gradients and intercepts in real-world contexts, and recognise the severe dangers of extrapolation. Precision in locating the mean point (x-bar, y-bar) and maintaining a balanced distribution of points above and below the line of best fit is essential for top marks.",
+  "core": [
+   {
+    "h": "1. Introduction to Bivariate Data",
+    "p": "Bivariate data involves pairs of numerical observations collected from the same individuals or items, typically represented as coordinates (x, y). Scatter graphs are the primary visual tool used to investigate potential relationships between these two variables.",
+    "bullets": [
+     "Each individual data point is plotted as an independent (x, y) coordinate on a cartesian grid.",
+     "The independent variable (what you control or what happens first chronologically) is conventionally placed on the horizontal x-axis.",
+     "The dependent variable (what is measured as a result) is placed on the vertical y-axis.",
+     "Scatter graphs allow researchers to instantly spot trends, clusters, and anomalies that raw tables of numbers conceal."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Bivariate Data",
+      "p": "Data which has two variables recorded for each subject or observation, used to investigate if a relationship exists between them."
+     },
+     {
+      "k": "warn",
+      "t": "Axis Confusion",
+      "p": "Always check which variable is assigned to which axis in exam questions; failing to plot them correctly ruins subsequent line of best fit and interpolation marks."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Figure 1: A well-constructed scatter graph showing plotted bivariate points with correctly labelled axes.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"6\"/><line x1=\"50\" y1=\"200\" x2=\"370\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"30\" x2=\"50\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"180\" y=\"230\" font-size=\"12\" fill=\"#1b2540\">Independent Variable (x)</text><text x=\"15\" y=\"115\" font-size=\"12\" fill=\"#1b2540\" transform=\"rotate(-90 15 115)\">Dependent (y)</text><circle cx=\"80\" cy=\"170\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"110\" cy=\"150\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"140\" cy=\"135\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"170\" cy=\"110\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"200\" cy=\"95\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"230\" cy=\"80\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"270\" cy=\"60\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"320\" cy=\"45\" r=\"4\" fill=\"#2563eb\"/></svg>"
+     }
+    ]
+   },
+   {
+    "h": "2. Identifying Types of Correlation",
+    "p": "Correlation describes the strength and direction of association between two variables. It is vital to classify correlation accurately using correct mathematical terminology.",
+    "bullets": [
+     "**Positive correlation**: As the x-variable increases, the y-variable also increases (points slope upwards from left to right).",
+     "**Negative correlation**: As the x-variable increases, the y-variable decreases (points slope downwards from left to right).",
+     "**No correlation**: There is no discernible pattern or relationship between the changes in x and y.",
+     "**Strong vs Weak**: The closer the points lie to an imaginary straight line, the stronger the correlation. Highly scattered points indicate weak correlation."
+    ],
+    "table": {
+     "head": [
+      "Correlation Type",
+      "Visual Appearance",
+      "Real-World Example"
+     ],
+     "rows": [
+      [
+       "Strong Positive",
+       "Points tightly clustered rising",
+       "Revision hours vs Exam score"
+      ],
+      [
+       "Weak Negative",
+       "Points loosely scattered falling",
+       "Car age vs Fuel efficiency"
+      ],
+      [
+       "No Correlation",
+       "Random cloud of points",
+       "Shoe size vs IQ score"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Describing Correlation",
+      "p": "In exam answers, always state both the direction (positive/negative) and strength (strong/moderate/weak), or explicitly state 'no correlation'."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "3. Correlation vs Causation",
+    "p": "A common trap at GCSE and beyond is assuming that because two variables show strong correlation, one directly causes changes in the other. Correlation does not imply causation.",
+    "bullets": [
+     "**Causation** means that a change in variable x directly causes a change in variable y.",
+     "An observed correlation might be caused by a **third variable** (confounding variable) that affects both.",
+     "Coincidence (spurious correlation) can also generate strong mathematical correlation between completely unrelated datasets.",
+     "Examiners frequently award marks for stating that 'correlation does not mean causation' and asking for a potential lurking variable."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Causation Trap",
+      "p": "Never write 'X causes Y' just because there is a positive correlation on a scatter graph, unless backed by established physical or logical laws."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Rules for Drawing Lines of Best Fit",
+    "p": "A line of best fit is a straight line used to model the trend of bivariate data. Examiners enforce strict graphical conventions when assessing your ability to draw one.",
+    "bullets": [
+     "Must be a **single straight line** drawn using a long ruler and a sharp pencil.",
+     "Must follow the general trend of the plotted points.",
+     "Must have roughly an **equal number of points above and below** the line (ignoring points that lie directly on the line).",
+     "Must span a significant portion of the data range; do not draw a tiny stub of a line restricted only to the plotted points."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Examiner Tolerance",
+      "p": "Mark schemes allow a narrow tolerance band for the position and gradient of a line of best fit, but freehand curves or short lines are instantly rejected."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "5. The Mean Point (x-bar, y-bar)",
+    "p": "A rigorous geometric property of a true line of best fit is that it must pass through the mean point of the dataset, denoted as (x-bar, y-bar).",
+    "bullets": [
+     "Calculate the mean of all x-values: x-bar = sum of x / n.",
+     "Calculate the mean of all y-values: y-bar = sum of y / n.",
+     "Plot the coordinate (x-bar, y-bar) on your scatter graph as a reference anchor.",
+     "Your drawn line of best fit must pass directly through or extremely close to this mean point."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Anchor Point",
+      "p": "Using (x-bar, y-bar) as a fixed pivot point guarantees your line of best fit meets examiner criteria for correct placement and balance."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Interpolation: Principles and Reliability",
+    "p": "Interpolation is the process of estimating an unknown y-value corresponding to a given x-value that lies *within* the range of the observed data points.",
+    "bullets": [
+     "Locate the given x-value on the horizontal axis.",
+     "Move vertically up to intersect your line of best fit.",
+     "Read across horizontally to the vertical axis to find the estimated y-value.",
+     "Interpolation is generally considered **reliable** because it relies on trends observed within the bounds of actual collected data."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Interpolation",
+      "p": "Estimating a value inside the range of known data points using the line of best fit."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Extrapolation: Dangers and Unreliability",
+    "p": "Extrapolation is the process of estimating a y-value for an x-value that lies *outside* the range of the collected data points by extending the line of best fit.",
+    "bullets": [
+     "Requires extending (or projecting) the line of best fit beyond the last plotted point.",
+     "Extrapolation is **unreliable** because we have no evidence that the trend continues in the exact same manner outside our measured window.",
+     "Real-world trends often level off, curve, or reverse entirely over time (e.g., human growth curves or economic saturation).",
+     "Exam questions frequently ask whether an extrapolated estimate is dependable; always state 'No' and explain that the value is outside the range of data."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Extrapolation Trap",
+      "p": "Students lose marks by saying extrapolation is accurate if the line looks straight. Mark schemes demand recognition that conditions may change outside sampled data."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Using Equations of Lines of Best Fit",
+    "p": "At Higher tier AQA, you may be asked to find the equation of your line of best fit in the form y = mx + c and use it to calculate estimates rather than reading them off graphically.",
+    "bullets": [
+     "Find the gradient (m) by picking two points *on the line* (not necessarily data points): m = change in y / change in x.",
+     "Find the y-intercept (c) by observing where the line crosses the vertical y-axis.",
+     "Formulate the model equation: y = mx + c.",
+     "Substitute given x or y values into the equation to solve algebraically for the unknown variable with high precision."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Algebraic Precision",
+      "p": "Algebraic calculation avoids reading errors caused by thick pencil lines on printed exam paper graphs."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Figure 2: Finding gradient and intercept from a line of best fit.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"6\"/><line x1=\"50\" y1=\"200\" x2=\"370\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"30\" x2=\"50\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"70\" y1=\"180\" x2=\"350\" y2=\"50\" stroke=\"#dc2626\" stroke-width=\"2\"/><line x1=\"150\" y1=\"140\" x2=\"250\" y2=\"90\" stroke=\"#2563eb\" stroke-dasharray=\"4\"/><text x=\"160\" y=\"130\" font-size=\"10\" fill=\"#1b2540\">Change x</text><text x=\"255\" y=\"120\" font-size=\"10\" fill=\"#1b2540\">Change y</text><circle cx=\"150\" cy=\"140\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"250\" cy=\"90\" r=\"4\" fill=\"#2563eb\"/><text x=\"160\" y=\"160\" font-size=\"11\" fill=\"#1b2540\">(x1, y1)</text><text x=\"260\" y=\"85\" font-size=\"11\" fill=\"#1b2540\">(x2, y2)</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "9. Interpreting Gradient and Intercept in Context",
+    "p": "In GCSE statistics and modelling questions, numerical values of gradient (m) and intercept (c) must be explained in the exact context of the real-world scenario.",
+    "bullets": [
+     "**Gradient (m)**: Represents the average rate of change; 'for every 1 unit increase in x, y increases/decreases by m units'.",
+     "**Y-intercept (c)**: Represents the base value when x is zero; 'the expected value of y when x is 0'.",
+     "Check whether x = 0 is within the range of data; if not, the intercept might be a mathematical artifact rather than a meaningful physical state.",
+     "Always include correct units for both gradient and intercept in your written explanations."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Contextual phrasing",
+      "p": "Never give a naked number for gradient or intercept; tie it explicitly to the variables named on the axes."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Outliers in Scatter Graphs",
+    "p": "An outlier is an individual data point that does not fit the overall pattern of the rest of the bivariate dataset.",
+    "bullets": [
+     "Visually identified as a point lying far away from the main cluster and the line of best fit.",
+     "Can be caused by experimental error, measurement mistakes, recording corruption, or being a genuine anomalous individual.",
+     "When drawing a line of best fit, outliers should generally be **ignored** (omitted from balance considerations).",
+     "Exam questions may ask you to circle an outlier or explain why it was excluded from calculations."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Outlier",
+      "p": "An observation that lies an abnormal distance from other values in a random sample."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "11. Non-Linear Relationships",
+    "p": "Not all bivariate data relationships are linear. Sometimes scatter plots reveal curved trends that cannot be modelled accurately by a straight line of best fit.",
+    "bullets": [
+     "Points may follow a parabolic, exponential, or reciprocal curve.",
+     "If a relationship is non-linear, drawing a straight line of best fit is inappropriate and misleading.",
+     "At AQA Higher, you must recognise when a straight line is unsuitable and describe the relationship as non-linear.",
+     "Transformations or curved curves of best fit fall outside standard GCSE scope, but recognising non-linearity is strictly required."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Forcing Straight Lines",
+      "p": "Never force a straight line of best fit onto data that clearly curves; state that the correlation is non-linear."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Figure 3: A scatter graph displaying a non-linear (curved) relationship between variables.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"6\"/><line x1=\"50\" y1=\"200\" x2=\"370\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"30\" x2=\"50\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M 70 180 Q 200 170 340 50\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2\" stroke-dasharray=\"4\"/><circle cx=\"75\" cy=\"175\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"110\" cy=\"160\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"150\" cy=\"140\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"200\" cy=\"110\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"260\" cy=\"75\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"330\" cy=\"55\" r=\"4\" fill=\"#2563eb\"/></svg>"
+     }
+    ]
+   },
+   {
+    "h": "12. Evaluating Statistical Conclusions",
+    "p": "Top-grade questions require critical evaluation of data collection methods, sample sizes, and conclusions drawn from scatter graphs.",
+    "bullets": [
+     "Small sample sizes make correlation unreliable; conclusions drawn from fewer than 10 points should be treated with extreme caution.",
+     "Check whether the sample is biased (e.g., surveying only athletes when studying fitness and sleep).",
+     "Always evaluate whether generalising findings beyond the specific demographic sampled is valid.",
+     "Synthesise your knowledge of correlation, outliers, and extrapolation when writing extended evaluation responses."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Grade 9 Evaluation",
+      "p": "When asked to comment on the reliability of a conclusion, mention sample size, presence of outliers, and whether interpolation or extrapolation was used."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Archery Target and Wind Drift Analogy",
+   "p": "Imagine shooting arrows at a target where the distance from the target represents the independent variable and your accuracy score represents the dependent variable. Plotted points are your arrow marks. A line of best fit is like aiming down the centre of the cluster where most arrows land. Interpolation is finding the score for a distance inside your practice range, while extrapolation is guessing what your score would be if you stood a mile away outside the archery hall—where sudden crosswinds (unforeseen variables) make your prediction completely unreliable. Where the analogy breaks down is that arrows are thrown sequentially by one shooter, whereas scatter points represent distinct individuals in a population."
+  },
+  "terms": [
+   {
+    "t": "Bivariate Data",
+    "d": "Data involving two different variables recorded for each individual or item."
+   },
+   {
+    "t": "Scatter Graph",
+    "d": "A graph plotting bivariate data as coordinates to investigate relationships."
+   },
+   {
+    "t": "Positive Correlation",
+    "d": "As one variable increases, the other variable also increases."
+   },
+   {
+    "t": "Negative Correlation",
+    "d": "As one variable increases, the other variable decreases."
+   },
+   {
+    "t": "No Correlation",
+    "d": "No relationship or pattern exists between the two variables."
+   },
+   {
+    "t": "Line of Best Fit",
+    "d": "A straight line that best represents the general trend of data on a scatter graph."
+   },
+   {
+    "t": "Interpolation",
+    "d": "Estimating a value inside the range of given data points using the line of best fit."
+   },
+   {
+    "t": "Extrapolation",
+    "d": "Estimating a value outside the range of given data points by extending the line of best fit."
+   },
+   {
+    "t": "Outlier",
+    "d": "A data point that lies abnormally far from the general trend of the rest of the data."
+   },
+   {
+    "t": "Causation",
+    "d": "When a change in one variable directly causes a change in another variable."
+   },
+   {
+    "t": "Mean Point",
+    "d": "The coordinate (x-bar, y-bar) representing the mean of x and mean of y, through which the line of best fit passes."
+   },
+   {
+    "t": "Non-Linear Correlation",
+    "d": "A relationship between variables that follows a curved rather than straight path."
+   },
+   {
+    "t": "Gradient",
+    "d": "The steepness of a line, representing the rate of change between variables."
+   },
+   {
+    "t": "Y-Intercept",
+    "d": "The point where the line of best fit crosses the vertical y-axis."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Drawing a line of best fit by connecting the absolute first point to the absolute last point.",
+    "r": "A line of best fit must balance all points with roughly equal numbers above and below, not just touch the extremes."
+   },
+   {
+    "w": "Connecting all the plotted points with dot-to-dot straight line segments.",
+    "r": "A scatter graph trend is shown with a single straight line of best fit, never a polygon dot-to-dot line."
+   },
+   {
+    "w": "Stating that strong positive correlation proves that variable A causes variable B.",
+    "r": "Correlation does not imply causation; a third confounding variable may be responsible."
+   },
+   {
+    "w": "Claiming that an extrapolated estimate is reliable because the line of best fit is straight.",
+    "r": "Extrapolation is unreliable because conditions and trends may change outside the range of collected data."
+   },
+   {
+    "w": "Including an obvious outlier when calculating or drawing the line of best fit.",
+    "r": "Outliers should be ignored when positioning the line of best fit."
+   },
+   {
+    "w": "Giving a naked number for the gradient or intercept without context.",
+    "r": "Explain gradient and intercept in terms of the specific real-world units and variables on the axes."
+   },
+   {
+    "w": "Drawing a tiny line of best fit that only spans across the plotted points.",
+    "r": "Extend the line of best fit across the graph grid to allow accurate reading for interpolation."
+   }
+  ],
+  "exam": [
+   {
+    "q": "What type of correlation is shown when points on a scatter graph rise from bottom-left to top-right?",
+    "marks": 1,
+    "model": [
+     "Positive correlation"
+    ],
+    "tip": "Write both words clearly; do not just write 'positive'."
+   },
+   {
+    "q": "Explain why correlation does not necessarily mean causation.",
+    "marks": 2,
+    "model": [
+     "A change in one variable does not automatically cause a change in the other.",
+     "There could be a third confounding variable affecting both."
+    ],
+    "tip": "Mention confounding or third variables for the second mark."
+   },
+   {
+    "q": "A scatter graph investigates car engine size and fuel efficiency. State whether interpolation or extrapolation is used to estimate efficiency for an engine size outside the data range.",
+    "marks": 1,
+    "model": [
+     "Extrapolation"
+    ],
+    "tip": "Outside data range always means extrapolation."
+   },
+   {
+    "q": "Give one reason why extrapolation is unreliable.",
+    "marks": 1,
+    "model": [
+     "The trend may not continue in the same way outside the range of known data."
+    ],
+    "tip": "Keep the explanation concise and focused on changing trends."
+   },
+   {
+    "q": "A student draws a line of best fit that passes through every single data point. Explain why this is incorrect.",
+    "marks": 2,
+    "model": [
+     "Scatter graph data contains natural variation and error.",
+     "A line of best fit models the overall trend rather than forcing through every point."
+    ],
+    "tip": "Reference general trend versus individual point variation."
+   },
+   {
+    "q": "Describe the two key visual rules required when drawing a line of best fit on a scatter graph.",
+    "marks": 2,
+    "model": [
+     "It must be a single straight line drawn with a ruler.",
+     "It must have roughly an equal number of points above and below the line."
+    ],
+    "tip": "Both ruler usage and balance of points are standard mark scheme points."
+   },
+   {
+    "q": "On a scatter graph of temperature versus ice cream sales, the gradient of the line of best fit is 15. Interpret this gradient in context.",
+    "marks": 2,
+    "model": [
+     "For every 1 degree Celsius increase in temperature,",
+     "ice cream sales increase by an average of 15 units."
+    ],
+    "tip": "Always use 'for every 1 unit increase' phrasing for gradients."
+   },
+   {
+    "q": "A dataset of 8 students has an x-bar of 5 and a y-bar of 12. State a geometric property that a correct line of best fit must possess regarding this point.",
+    "marks": 1,
+    "model": [
+     "It must pass through the point (5, 12)."
+    ],
+    "tip": "Remember that the line of best fit always passes through the mean point (x-bar, y-bar)."
+   },
+   {
+    "q": "Explain how to identify an outlier on a scatter graph.",
+    "marks": 1,
+    "model": [
+     "It is a point that lies an abnormal distance away from the main trend or cluster of points."
+    ],
+    "tip": "Use terms like 'abnormal distance' or 'isolated from the general trend'."
+   },
+   {
+    "q": "A scatter graph shows points scattered in a U-shape. Explain whether a linear line of best fit is suitable.",
+    "marks": 2,
+    "model": [
+     "No, it is not suitable.",
+     "Because the relationship is non-linear (curved)."
+    ],
+    "tip": "Never apply a straight line to curved data."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A scatter graph plots revision hours (x) against exam score (y) for 10 students. The mean revision hours x-bar is 4 hours, and the mean exam score y-bar is 65%. A student draws a line of best fit with equation y = 8x + 33. (a) Verify if this line passes through the mean point. (b) Estimate the exam score for a student who revised for 6 hours. (c) State whether this estimate is reliable.",
+    "steps": [
+     "(a) Substitute x = 4 into the equation: y = 8(4) + 33 = 32 + 33 = 65. Since y matches y-bar (65), the line passes through the mean point.",
+     "(b) Substitute x = 6 into the equation: y = 8(6) + 33 = 48 + 33 = 81%.",
+     "(c) Check if x = 6 is within the data range (revision hours averaged around 4, up to a max of perhaps 7 or 8). If 6 is within the range, state reliable (interpolation); if outside, state unreliable (extrapolation). Assuming max revision in sample was 7 hours, 6 hours is within range, so it is reliable interpolation."
+    ],
+    "ans": "(a) Verified (65 = 65). (b) 81%. (c) Reliable as it is an interpolation within the data range."
+   },
+   {
+    "q": "In an experiment measuring plant height (y cm) against fertilizer amount (x grams), the line of best fit passes through coordinates (2, 10) and (6, 22). (a) Find the equation of the line of best fit in the form y = mx + c. (b) Interpret the y-intercept in context.",
+    "steps": [
+     "(a) Calculate gradient m = (22 - 10) / (6 - 2) = 12 / 4 = 3.",
+     "Use y = mx + c with point (2, 10): 10 = 3(2) + c -> 10 = 6 + c -> c = 4. Equation is y = 3x + 4.",
+     "(b) The y-intercept is 4. In context, this means a plant with 0 grams of fertilizer is expected to have a height of 4 cm."
+    ],
+    "ans": "(a) y = 3x + 4. (b) Expected plant height with 0g of fertilizer is 4 cm."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Figure 1: A well-constructed scatter graph showing plotted bivariate points with correctly labelled axes.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"6\"/><line x1=\"50\" y1=\"200\" x2=\"370\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"30\" x2=\"50\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"180\" y=\"230\" font-size=\"12\" fill=\"#1b2540\">Independent Variable (x)</text><text x=\"15\" y=\"115\" font-size=\"12\" fill=\"#1b2540\" transform=\"rotate(-90 15 115)\">Dependent (y)</text><circle cx=\"80\" cy=\"170\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"110\" cy=\"150\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"140\" cy=\"135\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"170\" cy=\"110\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"200\" cy=\"95\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"230\" cy=\"80\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"270\" cy=\"60\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"320\" cy=\"45\" r=\"4\" fill=\"#2563eb\"/></svg>"
+   },
+   {
+    "cap": "Figure 2: Finding gradient and intercept from a line of best fit.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"6\"/><line x1=\"50\" y1=\"200\" x2=\"370\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"30\" x2=\"50\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"70\" y1=\"180\" x2=\"350\" y2=\"50\" stroke=\"#dc2626\" stroke-width=\"2\"/><line x1=\"150\" y1=\"140\" x2=\"250\" y2=\"90\" stroke=\"#2563eb\" stroke-dasharray=\"4\"/><text x=\"160\" y=\"130\" font-size=\"10\" fill=\"#1b2540\">Change x</text><text x=\"255\" y=\"120\" font-size=\"10\" fill=\"#1b2540\">Change y</text><circle cx=\"150\" cy=\"140\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"250\" cy=\"90\" r=\"4\" fill=\"#2563eb\"/><text x=\"160\" y=\"160\" font-size=\"11\" fill=\"#1b2540\">(x1, y1)</text><text x=\"260\" y=\"85\" font-size=\"11\" fill=\"#1b2540\">(x2, y2)</text></svg>"
+   },
+   {
+    "cap": "Figure 3: A scatter graph displaying a non-linear (curved) relationship between variables.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"6\"/><line x1=\"50\" y1=\"200\" x2=\"370\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"30\" x2=\"50\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M 70 180 Q 200 170 340 50\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2\" stroke-dasharray=\"4\"/><circle cx=\"75\" cy=\"175\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"110\" cy=\"160\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"150\" cy=\"140\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"200\" cy=\"110\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"260\" cy=\"75\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"330\" cy=\"55\" r=\"4\" fill=\"#2563eb\"/></svg>"
+   }
+  ],
+  "pid": "maths_aqa_h.5.5",
+  "sid": "maths_aqa_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-16T02:45:49.675Z"
+ }
+}
