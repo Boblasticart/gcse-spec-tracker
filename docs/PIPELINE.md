@@ -13,7 +13,7 @@ One pipeline makes all the AI-written content for the tracker. Today it writes t
 - **Saves as it goes.** Progress is pushed every 10 items, so a run that is cut off loses nothing.
 - **Reports.** After every run it rewrites `content/pipeline/STATUS.md`: how far each job has got, what is stuck, and how each AI model is doing. If a whole run saves nothing, the run is marked failed and GitHub emails you.
 
-New content appears on the preview site. It goes live when `main` is updated (see TASKS.md, "Going live").
+**Notes go live by themselves.** At the end of every run, the new note files (and only those) are copied to `main`, which the live site is built from. To pause that, set `"publish_live": false` in `content/pipeline/jobs.json`. Everything else (code, new kinds of content) appears on the preview site and goes live only with the owner's OK (see TASKS.md, "Going live").
 
 ## Jobs
 
