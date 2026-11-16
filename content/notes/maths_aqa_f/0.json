@@ -7441,5 +7441,504 @@
   "src": "pre",
   "by": "gemini/gemini-3.6-flash",
   "ts": "2026-11-16T01:28:16.323Z"
+ },
+ "maths_aqa_f.0.12": {
+  "summary": "Mastering standard units and compound measures is essential for converting metric units of length, mass, and time, as well as calculating speed, density, and pressure. These notes explain how to multiply or divide by powers of ten for metric conversions, handle compound measure formulas using speed-distance-time triangles, and solve multi-step exam problems. Every concept is broken down step-by-step with clear rules to avoid common exam pitfalls.",
+  "core": [
+   {
+    "h": "Metric Units of Length",
+    "p": "Length measures distance in a straight line. The base SI unit is the metre, and all other metric length units are powers of ten relative to it.",
+    "bullets": [
+     "1 kilometre (km) = 1000 metres (m)",
+     "1 metre (m) = 100 centimetres (cm)",
+     "1 centimetre (cm) = 10 millimetres (mm)",
+     "To convert from a larger unit to a smaller unit, multiply.",
+     "To convert from a smaller unit to a larger unit, divide."
+    ],
+    "table": {
+     "head": [
+      "From",
+      "To",
+      "Operation"
+     ],
+     "rows": [
+      [
+       "km",
+       "m",
+       "Multiply by 1000"
+      ],
+      [
+       "m",
+       "cm",
+       "Multiply by 100"
+      ],
+      [
+       "cm",
+       "mm",
+       "Multiply by 10"
+      ],
+      [
+       "mm",
+       "cm",
+       "Divide by 10"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Conversion Rule",
+      "p": "Always ask yourself: should the number get bigger or smaller? If going from large units to small units, the number must get bigger."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Metric Units of Mass",
+    "p": "Mass measures the amount of matter in an object, commonly referred to as weight in everyday language. The standard SI unit is the kilogram.",
+    "bullets": [
+     "1 tonne (t) = 1000 kilograms (kg)",
+     "1 kilogram (kg) = 1000 grams (g)",
+     "1 gram (g) = 100 milligrams (mg)",
+     "Multiply by 1000 when moving from kilograms to grams.",
+     "Divide by 1000 when moving from grams to kilograms."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Mass Definition",
+      "p": "Mass is the quantity of matter in a physical body, measured in grams, kilograms, or tonnes at Foundation tier."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Metric Units of Capacity and Volume",
+    "p": "Capacity measures the amount of fluid a container can hold, while volume measures three-dimensional space.",
+    "bullets": [
+     "1 litre (l) = 1000 millilitres (ml)",
+     "1 litre (l) = 1000 cubic centimetres (cm cubed)",
+     "1 millilitre (ml) = 1 cubic centimetre (cm cubed)",
+     "Cubic units involve higher powers, but for simple capacity conversions, 1 litre equals 1000 millilitres."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Volume Equivalence",
+      "p": "Remember that 1 ml is exactly the same volume as 1 cm cubed. This bridges liquid capacity and solid volume."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Units of Time",
+    "p": "Time does not follow powers of ten, making time conversions a common source of calculation errors in exams.",
+    "bullets": [
+     "1 minute (min) = 60 seconds (s)",
+     "1 hour (h) = 60 minutes (min)",
+     "1 day = 24 hours",
+     "1 year = 365 days (or 366 in a leap year)",
+     "Always convert mixed time into decimal hours using minutes divided by 60 when doing speed calculations."
+    ],
+    "table": {
+     "head": [
+      "Time Unit",
+      "Equivalent",
+      "Conversion Factor"
+     ],
+     "rows": [
+      [
+       "Hours to Minutes",
+       "Multiply by 60",
+       "60"
+      ],
+      [
+       "Minutes to Seconds",
+       "Multiply by 60",
+       "60"
+      ],
+      [
+       "Minutes to Hours",
+       "Divide by 60",
+       "60"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Time Trap",
+      "p": "Do not write 3 hours 30 minutes as 3.3 hours. Half an hour is 0.5 hours, so it is 3.5 hours!"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Introduction to Compound Measures",
+    "p": "A compound measure is made by combining two or more basic measures using multiplication or division. The most common GCSE compound measures are speed, density, and pressure.",
+    "bullets": [
+     "Speed links distance and time.",
+     "Density links mass and volume.",
+     "Pressure links force and area.",
+     "The units of the compound measure always give away the formula, for example, miles per hour is miles divided by hours."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Compound Measure",
+      "p": "A measure derived from a formula involving two or more independent base quantities."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Speed, Distance and Time",
+    "p": "Speed measures how fast an object is moving. The standard formula links distance travelled with the time taken.",
+    "bullets": [
+     "Speed = Distance / Time",
+     "Distance = Speed * Time",
+     "Time = Distance / Speed",
+     "Standard units are metres per second (m/s) or kilometres per hour (km/h)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Formula Triangle",
+      "p": "Use the DST triangle with Distance at the top, Speed on the bottom left, and Time on the bottom right."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Speed, Distance and Time formula triangle layout for quick calculation reference.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><polygon points=\"200,30 100,190 300,190\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"3\"/><line x1=\"100\" y1=\"110\" x2=\"300\" y2=\"110\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"200\" y1=\"110\" x2=\"200\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"190\" y=\"85\" font-size=\"16\" fill=\"#1b2540\">Distance</text><text x=\"130\" y=\"160\" font-size=\"16\" fill=\"#1b2540\">Speed</text><text x=\"230\" y=\"160\" font-size=\"16\" fill=\"#1b2540\">Time</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Density, Mass and Volume",
+    "p": "Density describes how compact a substance is, defined as its mass per unit volume.",
+    "bullets": [
+     "Density = Mass / Volume",
+     "Mass = Density * Volume",
+     "Volume = Mass / Density",
+     "Common units are grams per cubic centimetre (g/cm cubed) or kilograms per cubic metre (kg/m cubed)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "DMV Triangle",
+      "p": "Mass sits at the top of the triangle, with Density on the bottom left and Volume on the bottom right."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Density, Mass and Volume formula triangle for rearranging equations easily.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><polygon points=\"200,30 100,190 300,190\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"3\"/><line x1=\"100\" y1=\"110\" x2=\"300\" y2=\"110\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"200\" y1=\"110\" x2=\"200\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"190\" y=\"85\" font-size=\"16\" fill=\"#1b2540\">Mass</text><text x=\"120\" y=\"160\" font-size=\"16\" fill=\"#1b2540\">Density</text><text x=\"220\" y=\"160\" font-size=\"16\" fill=\"#1b2540\">Volume</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Pressure, Force and Area",
+    "p": "Pressure measures how much force is applied over a given surface area.",
+    "bullets": [
+     "Pressure = Force / Area",
+     "Force = Pressure * Area",
+     "Area = Force / Pressure",
+     "Standard units are Newtons per square metre (N/m squared), also known as Pascals (Pa), or Newtons per square centimetre (N/cm squared)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "PFA Triangle",
+      "p": "Force sits at the top of the triangle, with Pressure on the bottom left and Area on the bottom right."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Pressure, Force and Area formula triangle for calculating physical stress.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><polygon points=\"200,30 100,190 300,190\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"3\"/><line x1=\"100\" y1=\"110\" x2=\"300\" y2=\"110\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"200\" y1=\"110\" x2=\"200\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"190\" y=\"85\" font-size=\"16\" fill=\"#1b2540\">Force</text><text x=\"120\" y=\"160\" font-size=\"16\" fill=\"#1b2540\">Pressure</text><text x=\"220\" y=\"160\" font-size=\"16\" fill=\"#1b2540\">Area</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Money and Currency Conversions",
+    "p": "Money calculations involve basic arithmetic with decimals, ensuring all amounts are aligned to two decimal places.",
+    "bullets": [
+     "1 pound (£) = 100 pence (p)",
+     "When converting currencies, multiply by the exchange rate to go from home currency to foreign currency.",
+     "Divide by the exchange rate to go from foreign currency back to home currency.",
+     "Always give money answers to 2 decimal places in currency and financial calculations."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Rounding Money",
+      "p": "Never round money midway through a calculation. Keep all decimal places until the final answer, then round to the nearest penny."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Compound Unit Conversions",
+    "p": "Converting compound units, such as changing km/h to m/s, requires converting the numerator and the denominator separately.",
+    "bullets": [
+     "To convert km/h to m/s, multiply the kilometres by 1000 and divide the hours by 3600.",
+     "Alternatively, divide km/h by 3.6 to get m/s.",
+     "To convert m/s to km/h, multiply by 3.6.",
+     "For area and volume compound measures, remember that squaring or cubing applies to the conversion factor too."
+    ],
+    "table": {
+     "head": [
+      "From",
+      "To",
+      "Operation"
+     ],
+     "rows": [
+      [
+       "km/h",
+       "m/s",
+       "Divide by 3.6"
+      ],
+      [
+       "m/s",
+       "km/h",
+       "Multiply by 3.6"
+      ],
+      [
+       "g/cm cubed",
+       "kg/m cubed",
+       "Multiply by 1000"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Golden Number 3.6",
+      "p": "The number 3.6 comes from 3600 seconds in an hour divided by 1000 metres in a kilometre."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Recipe Scaling Analogy",
+   "p": "Think of compound measures like scaling a recipe: if a cake recipe calls for 200 grams of flour per 4 portions, finding the flour needed per single portion requires dividing mass by portions, exactly like calculating density by dividing mass by volume. Where the analogy breaks down is that recipes use exact ingredient counts, whereas compound measures involve continuous physical quantities that can have decimal values at any scale."
+  },
+  "terms": [
+   {
+    "t": "Compound Measure",
+    "d": "A measure derived from a combination of two or more fundamental physical quantities."
+   },
+   {
+    "t": "Speed",
+    "d": "The rate at which an object covers distance, calculated as distance divided by time."
+   },
+   {
+    "t": "Density",
+    "d": "The mass of a substance per unit volume, calculated as mass divided by volume."
+   },
+   {
+    "t": "Pressure",
+    "d": "The force applied per unit surface area, calculated as force divided by area."
+   },
+   {
+    "t": "Metre",
+    "d": "The base SI unit of length."
+   },
+   {
+    "t": "Kilogram",
+    "d": "The base SI unit of mass."
+   },
+   {
+    "t": "Litre",
+    "d": "A metric unit of capacity equal to 1000 cubic centimetres."
+   },
+   {
+    "t": "Exchange Rate",
+    "d": "The value of one currency expressed in terms of another."
+   },
+   {
+    "t": "Pascal",
+    "d": "The SI unit of pressure, equivalent to one Newton per square metre."
+   },
+   {
+    "t": "Mass",
+    "d": "A measure of the amount of matter in an object."
+   },
+   {
+    "t": "Volume",
+    "d": "The amount of three-dimensional space occupied by an object or substance."
+   },
+   {
+    "t": "Conversion Factor",
+    "d": "A number used to multiply or divide when converting between units."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Writing 2 hours 15 minutes as 2.15 hours",
+    "r": "Convert minutes to a fraction of an hour by dividing by 60, giving 2.25 hours."
+   },
+   {
+    "w": "Dividing distance by speed to find speed",
+    "r": "Speed equals distance divided by time. To find speed, divide distance by time."
+   },
+   {
+    "w": "Multiplying by 100 when converting square centimetres to square metres",
+    "r": "Because it is area, square the conversion factor: divide by 10000 (100 squared)."
+   },
+   {
+    "w": "Rounding intermediate steps in currency calculations",
+    "r": "Keep all decimal digits on your calculator until the final answer, then round to 2 decimal places."
+   },
+   {
+    "w": "Confusing density and pressure formulas",
+    "r": "Density is mass over volume; pressure is force over area."
+   },
+   {
+    "w": "Using 100 ml as 1 litre",
+    "r": "1 litre is 1000 millilitres."
+   },
+   {
+    "w": "Multiplying by 3.6 to convert km/h to m/s",
+    "r": "Divide by 3.6 to convert from km/h to m/s."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A train travels 150 miles in 2 hours 30 minutes. Calculate the average speed of the train in miles per hour.",
+    "marks": 3,
+    "model": [
+     "Convert 2 hours 30 minutes to 2.5 hours.",
+     "Use speed equals distance divided by time: 150 / 2.5.",
+     "Answer is 60 mph."
+    ],
+    "tip": "Always convert time into decimal hours before doing speed calculations."
+   },
+   {
+    "q": "A solid metal block has a mass of 540 g and a volume of 200 cm cubed. Work out the density of the block.",
+    "marks": 2,
+    "model": [
+     "State formula: Density = Mass / Volume.",
+     "Substitute values: 540 / 200.",
+     "Answer is 2.7 g/cm cubed."
+    ],
+    "tip": "Include the correct units in your final answer for full marks."
+   },
+   {
+    "q": "Change 45 kilometres per hour into metres per second.",
+    "marks": 2,
+    "model": [
+     "Identify the conversion method: divide by 3.6.",
+     "Calculate 45 / 3.6.",
+     "Answer is 12.5 m/s."
+    ],
+    "tip": "Remember that m/s is a smaller number than km/h for the same speed."
+   },
+   {
+    "q": "A box exerts a force of 120 Newtons on a table. The area of contact is 0.4 m squared. Calculate the pressure in Pascals.",
+    "marks": 2,
+    "model": [
+     "State formula: Pressure = Force / Area.",
+     "Substitute values: 120 / 0.4.",
+     "Answer is 300 Pascals (N/m squared)."
+    ],
+    "tip": "Pressure increases when the area decreases for the same force."
+   },
+   {
+    "q": "Convert 3.5 litres into millilitres.",
+    "marks": 1,
+    "model": [
+     "Multiply by 1000.",
+     "Answer is 3500 ml."
+    ],
+    "tip": "Metric capacity units always use powers of 1000."
+   },
+   {
+    "q": "Emma changes £250 into euros. The exchange rate is £1 = €1.16. How many euros does she get?",
+    "marks": 2,
+    "model": [
+     "Multiply foreign exchange rate by pounds: 250 * 1.16.",
+     "Answer is €290."
+    ],
+    "tip": "When converting from pounds to foreign currency, multiply."
+   },
+   {
+    "q": "A car travels at an average speed of 72 km/h for 45 minutes. What distance does it travel?",
+    "marks": 3,
+    "model": [
+     "Convert 45 minutes to 0.75 hours.",
+     "Use distance equals speed multiplied by time: 72 * 0.75.",
+     "Answer is 54 km."
+    ],
+    "tip": "Check if your time unit matches the speed unit before multiplying."
+   },
+   {
+    "q": "The density of gold is 19.3 g/cm cubed. Find the mass of 50 cm cubed of gold.",
+    "marks": 2,
+    "model": [
+     "State formula: Mass = Density * Volume.",
+     "Substitute values: 19.3 * 50.",
+     "Answer is 965 g."
+    ],
+    "tip": "Rearrange the density triangle to make mass the subject."
+   },
+   {
+    "q": "Change 3500 grams into kilograms.",
+    "marks": 1,
+    "model": [
+     "Divide by 1000.",
+     "Answer is 3.5 kg."
+    ],
+    "tip": "Going from grams to kilograms means dividing by 1000."
+   },
+   {
+    "q": "A force of 500 N is applied to an area of 20 cm squared. Calculate the pressure in N/cm squared.",
+    "marks": 2,
+    "model": [
+     "State formula: Pressure = Force / Area.",
+     "Substitute values: 500 / 20.",
+     "Answer is 25 N/cm squared."
+    ],
+    "tip": "Check the required unit for area before calculating."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A cyclist travels a distance of 45 km in 1 hour 30 minutes. Calculate their average speed in km/h.",
+    "steps": [
+     "Step 1: Convert the time into decimal hours. 30 minutes is 0.5 hours, so 1 hour 30 minutes = 1.5 hours.",
+     "Step 2: Recall the speed formula: Speed = Distance / Time.",
+     "Step 3: Substitute the values into the formula: Speed = 45 / 1.5.",
+     "Step 4: Calculate the final result: 45 / 1.5 = 30."
+    ],
+    "ans": "30 km/h"
+   },
+   {
+    "q": "A liquid has a density of 0.8 g/cm cubed. Find the volume of 400 grams of this liquid.",
+    "steps": [
+     "Step 1: Identify the formula from the density triangle: Volume = Mass / Density.",
+     "Step 2: Substitute the given values: Volume = 400 / 0.8.",
+     "Step 3: Perform the division: 400 / 0.8 = 4000 / 8 = 500.",
+     "Step 4: Include the correct units for volume."
+    ],
+    "ans": "500 cm cubed"
+   }
+  ],
+  "svg": [],
+  "pid": "maths_aqa_f.0.12",
+  "sid": "maths_aqa_f",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-16T02:20:58.230Z"
  }
 }
