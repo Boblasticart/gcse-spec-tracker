@@ -45,6 +45,26 @@ function retryAfter(res: Response): number {
   return Number.isFinite(s) && s > 0 ? s * 1000 : 60_000;
 }
 
+/**
+ * Sorts a failed HTTP reply into: provider busy or out of allowance (RateLimited),
+ * this model can't be used by us (ModelUnavailable: try the next model), or null
+ * (an ordinary error, counted against the note).
+ */
+export function classifyHttpError(status: number, text: string, retryAfterMs = 60_000): Error | null {
+  if (status >= 500) return new RateLimited(`busy, HTTP ${status}: ${text.slice(0, 200)}`, false, 90_000);
+  // Groq: one request bigger than the model's per-minute token limit will never fit; move on to another model.
+  if (status === 429 && /request too large/i.test(text)) return new ModelUnavailable(`HTTP 429: ${text.slice(0, 300)}`);
+  if (status === 429) {
+    const daily = /per.?day|daily|RPD|quota.*exceeded.*day|free-models-per-day/i.test(text);
+    return new RateLimited(`429: ${text.slice(0, 300)}`, daily, retryAfterMs);
+  }
+  // 403: e.g. an OpenRouter free model only open to certain apps, or a model this key may not use.
+  if (status === 403 || status === 404 || status === 413 || (status === 400 && /model/i.test(text))) {
+    return new ModelUnavailable(`HTTP ${status}: ${text.slice(0, 300)}`);
+  }
+  return null;
+}
+
 async function post(url: string, headers: Record<string, string>, body: unknown): Promise<unknown> {
   let res: Response;
   try {
@@ -64,14 +84,8 @@ async function post(url: string, headers: Record<string, string>, body: unknown)
   } catch (e) {
     throw new RateLimited(`reply cut off: ${(e as Error).message}`, false, 60_000);
   }
-  if (res.status >= 500) throw new RateLimited(`busy, HTTP ${res.status}: ${text.slice(0, 200)}`, false, 90_000);
-  if (res.status === 429) {
-    const daily = /per.?day|daily|RPD|quota.*exceeded.*day|free-models-per-day/i.test(text);
-    throw new RateLimited(`429: ${text.slice(0, 300)}`, daily, retryAfter(res));
-  }
-  if (res.status === 404 || res.status === 413 || (res.status === 400 && /model/i.test(text))) {
-    throw new ModelUnavailable(`HTTP ${res.status}: ${text.slice(0, 300)}`);
-  }
+  const err = classifyHttpError(res.status, text, retryAfter(res));
+  if (err) throw err;
   if (!res.ok) throw new Error(`HTTP ${res.status}: ${text.slice(0, 300)}`);
   return JSON.parse(text) as unknown;
 }
@@ -99,6 +113,8 @@ export async function complete(p: ProviderConfig, key: string, prompt: string): 
     response_format: { type: "json_object" },
     max_tokens: p.maxTokens,
     temperature: 0.4,
+    // gpt-oss models "think" first; keep that short so the note itself fits in the token budget.
+    ...(/gpt-oss/.test(p.model) ? { reasoning_effort: "low" } : {}),
   })) as { choices?: { message?: { content?: string }; finish_reason?: string }[] };
   const ch = data.choices?.[0];
   const text = ch?.message?.content ?? "";
@@ -109,6 +125,17 @@ export async function complete(p: ProviderConfig, key: string, prompt: string): 
 /** The models to try for a provider. "auto-free" asks OpenRouter which free models exist today (biggest context first). */
 export async function resolveModels(p: ProviderConfig, key: string): Promise<string[]> {
   const list = p.models?.length ? p.models : [p.model];
+  if (list.includes("auto") && p.kind === "gemini") {
+    // Each Gemini model has its own free daily allowance: list the Flash models this key can use, newest first.
+    try {
+      const res = await fetch("https://generativelanguage.googleapis.com/v1beta/models?pageSize=200", { headers: { "x-goog-api-key": key }, signal: AbortSignal.timeout(30_000) });
+      const data = (await res.json()) as { models?: { name: string; supportedGenerationMethods?: string[] }[] };
+      const flash = geminiFlashModels(data.models ?? []);
+      return [...new Set(list.flatMap((m) => (m === "auto" ? flash : [m])))];
+    } catch {
+      return list.filter((m) => m !== "auto");
+    }
+  }
   if (list.includes("auto") && p.url) {
     // Ask an OpenAI-style API which chat models this key can use today.
     try {
@@ -136,4 +163,14 @@ export async function resolveModels(p: ProviderConfig, key: string): Promise<str
   } catch {
     return list.filter((m) => m !== "auto-free");
   }
+}
+
+/** Text-writing Gemini Flash models from a ListModels reply, newest version first (no image, audio, TTS, live or embedding models). */
+export function geminiFlashModels(models: readonly { name: string; supportedGenerationMethods?: string[] }[]): string[] {
+  const version = (id: string): number => Number(/gemini-(\d+(?:\.\d+)?)/.exec(id)?.[1] ?? 0);
+  return models
+    .filter((m) => m.supportedGenerationMethods?.includes("generateContent"))
+    .map((m) => m.name.replace(/^models\//, ""))
+    .filter((id) => /^gemini-.*flash/.test(id) && !/image|tts|audio|live|embed|thinking-exp|robotics|computer/i.test(id))
+    .sort((a, b) => version(b) - version(a) || Number(a.includes("lite")) - Number(b.includes("lite")) || a.length - b.length);
 }

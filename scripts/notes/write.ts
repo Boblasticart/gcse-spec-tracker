@@ -234,6 +234,14 @@ async function main(): Promise<void> {
           else queue.unshift(job.pid);
           inFlight--;
           if (e.daily) {
+            // Allowances are per model (Gemini, Groq): carry on with the next model before giving up for today.
+            if (mi + 1 < models.length) {
+              mi++;
+              stalls = 0;
+              p = { ...base, model: models[mi]! };
+              console.log(`[${p.id}] switching to ${p.model} for the rest of today`);
+              continue;
+            }
             progress.usage[p.id] = { day: today(), n: p.rpd };
             save();
             return;

@@ -1,5 +1,5 @@
 {
- "_help": "AI providers the note writer shares work between. A provider is used only if its key (env) is set as a GitHub secret. rpm/rpd = requests per minute/day this pipeline allows itself (kept under each free tier). If a model name stops working, change it here. models: tried in order when one is retired or too big for the free limits; \"auto-free\" picks OpenRouter's current free models.",
+ "_help": "AI providers the note writer shares work between. A provider is used only if its key (env) is set as a GitHub secret. rpm/rpd = requests per minute/day this pipeline allows itself (kept under each free tier). If a model name stops working, change it here. models: tried in order when one is retired or too big for the free limits; \"auto-free\" picks OpenRouter's current free models. \"auto\" for Gemini = every Flash model the key can use (each has its own daily allowance); a model that runs out for the day is swapped for the next.",
  "providers": [
   {
    "id": "gemini",
@@ -7,11 +7,12 @@
    "kind": "gemini",
    "model": "gemini-3.8-flash",
    "rpm": 8,
-   "rpd": 200,
+   "rpd": 1000,
    "maxTokens": 32000,
    "models": [
     "gemini-3.8-flash",
-    "gemini-flash-latest"
+    "gemini-flash-latest",
+    "auto"
    ]
   },
   {
