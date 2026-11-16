@@ -5,7 +5,7 @@ Runs read **only this file and `docs/CONTEXT.md`**. Keep this file short: finish
 ## Status
 
 ```
-RUN LOCK:       none
+RUN LOCK:       running since 2026-11-16T01:10Z, session 01Sm3c8jfY1ypFSCYZak5GLh
 CURRENT JOB:    J3 Maths
 CURRENT STEPS:
 - [ ] 1. Every point of maths_aqa_h, maths_aqa_f, maths_ocr_h, maths_eduqas_h, maths_eduqas_f has a note that passed QA (the Write notes workflow does this; fix whatever lands in content/notes/failures.json).
