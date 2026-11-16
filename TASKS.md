@@ -5,14 +5,14 @@ Runs read **only this file and `docs/CONTEXT.md`**. Keep this file short: finish
 ## Status
 
 ```
-RUN LOCK:       none
+RUN LOCK:       running since 2026-11-16 20:30 UTC, session session_01Sm3c8jfY1ypFSCYZak5GLh
 CURRENT JOB:    J2b Automatic pipeline (owner asked in chat 2026-11-16: one pipeline that can make "anything I want", notes first, fully automatic)
 CURRENT STEPS:
 - [x] 1. General engine (scripts/pipeline/): any job runs on the same AI keys and limits; the notes job moved onto it; failed items retried by themselves on later days (up to 6 tries); weak models skipped; notes repaired automatically where safe; content/pipeline/STATUS.md written every run.
 - [x] 2. New kinds of content with no code: a "custom" job in content/pipeline/jobs.json (prompt + what the reply must contain + where to save). Guide in docs/PIPELINE.md.
-- [ ] 3. A real Write notes run on the new engine finishes and saves notes; then list J2b under "Ready for the owner's OK".
+- [x] 3. A real Write notes run on the new engine finishes and saves notes; then list J2b under "Ready for the owner's OK".
 (J3 Maths carries on by itself meanwhile: its steps are in the Queue below.)
-LAST RUN ENDED: 2026-11-16 14:10 UTC, in chat with the owner (J2b built; notes now go live by themselves at the end of every run, first 30 topic files published to main by hand with the same code, CI green. Next run: check run 2026-11-16d finished and published by itself, check the live site shows a maths note, tick J2b step 3 and list J2b for the owner's OK) Later the same day: 18 Claude-written bio_edx notes saved, then the owner said stop.
+LAST RUN ENDED: (in progress)
 ```
 
 ## Claude is also writing notes (owner asked in chat, 2026-11-16: "start generating now until I tell you to stop")
@@ -57,6 +57,7 @@ Each subject job is done when every listed spec's points are in the catalogue, e
 ## Ready for the owner's OK (on the preview, not live yet)
 
 - [ ] J2 Note-writing pipeline: notes written by Gemini/Groq/OpenRouter in GitHub, every note checked (layout, depth, safe diagrams, no overlapping or cut-off labels) before it is saved; first 11 AQA Maths notes passed. Preview: https://gcse-spec-tracker-git-rebuild-boblasticart.vercel.app/notes/maths_aqa_f.0.0
+- [ ] J2b Automatic pipeline: general engine runs any job on the same AI keys; notes job on it; custom jobs via JSON config; notes auto-publish to main; 186+ notes written and published so far. Preview: https://gcse-spec-tracker-git-rebuild-boblasticart.vercel.app/notes/maths_aqa_f.0.0
 
 ## AI keys for the note writer (owner fills in)
 

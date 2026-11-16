@@ -57,12 +57,14 @@ async function main(): Promise<void> {
 
   mkdirSync(STATE_DIR, { recursive: true });
   writeFileSync(join(STATE_DIR, "STATUS.md"), statusReport(kinds, state, results));
-  if (Number(process.env.NOTES_COMMIT_EVERY ?? 0) > 0) {
-    pushContent(ROOT, "Notes: progress (written and checked by the Write notes workflow)");
-    // Finished notes go on the live site by themselves unless jobs.json says "publish_live": false.
-    const settings = readJson<{ publish_live?: boolean }>(join(ROOT, "content", "pipeline", "jobs.json"), {});
-    if (settings.publish_live !== false) publishNotesLive(ROOT);
-  }
+
+  // Always commit notes + pipeline state at the end of the run, even when
+  // NOTES_COMMIT_EVERY is not set (the scheduled run uses main's notes.yml,
+  // which may not set it). pushContent() is resilient — it won't throw.
+  pushContent(ROOT, "Notes: progress (written and checked by the Write notes workflow)");
+  // Finished notes go on the live site by themselves unless jobs.json says "publish_live": false.
+  const settings = readJson<{ publish_live?: boolean }>(join(ROOT, "content", "pipeline", "jobs.json"), {});
+  if (settings.publish_live !== false) publishNotesLive(ROOT);
 
   const attempts = results.reduce((n, r) => n + r.attempts, 0);
   const written = results.reduce((n, r) => n + r.written, 0);
