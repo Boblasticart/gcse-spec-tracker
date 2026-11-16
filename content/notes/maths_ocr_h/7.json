@@ -1,0 +1,493 @@
+{
+ "maths_ocr_h.7.0": {
+  "summary": "Mastering the foundational conventions, notation, and terms of basic geometry is essential for communicating mathematical arguments clearly and achieving top marks at Higher tier. This topic covers the strict symbolic language used to describe points, lines, angles, polygons, and 3D solids, including precise labeling conventions for vertices, sides, and parallel lines. Knowing these exact definitions ensures you avoid ambiguous phrasing in proofs and multi-step geometric reasoning problems.",
+  "core": [
+   {
+    "h": "Point, Line, and Plane Conventions",
+    "p": "Geometry relies on exact notation to specify locations, paths, and flat surfaces without ambiguity. A single point is denoted by a capital letter such as A. A straight line passing through points A and B is written as line AB or using a lowercase script letter. A line segment with fixed endpoints is denoted as AB with a bar above it, while the length of that segment is denoted simply as AB.",
+    "bullets": [
+     "Capital letters always represent specific points, such as vertex A of a triangle.",
+     "A line segment between P and Q has a specific measurable length denoted by PQ.",
+     "A ray starts at a fixed point and extends infinitely in one direction, written as ray AB.",
+     "Planes representing flat, two-dimensional surfaces extending infinitely are named with uppercase letters."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Line Segment",
+      "p": "A part of a straight line that is bounded by two distinct end points."
+     },
+     {
+      "k": "warn",
+      "t": "Notation Omission",
+      "p": "Do not confuse line segment notation AB with length notation AB; examiners penalize missing segment bars in vector and locus proofs."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Angle Notation and Types",
+    "p": "Angles are formed by two rays sharing a common endpoint called the vertex. In formal geometry, angles are named using three capital letters where the middle letter represents the vertex, such as angle ABC. Alternatively, a lowercase Greek letter or a number placed inside the angle arc may be used.",
+    "bullets": [
+     "Acute angles measure strictly between 0 degrees and 90 degrees.",
+     "Right angles measure exactly 90 degrees and are denoted by a square symbol in the corner.",
+     "Obtuse angles measure strictly between 90 degrees and 180 degrees.",
+     "Reflex angles measure strictly between 180 degrees and 360 degrees."
+    ],
+    "table": {
+     "head": [
+      "Angle Type",
+      "Size Range",
+      "Visual Indicator"
+     ],
+     "rows": [
+      [
+       "Acute",
+       "0° < x < 90°",
+       "Sharp corner"
+      ],
+      [
+       "Right",
+       "x = 90°",
+       "Square symbol"
+      ],
+      [
+       "Obtuse",
+       "90° < x < 180°",
+       "Wide corner"
+      ],
+      [
+       "Reflex",
+       "180° < x < 360°",
+       "Outside sweep"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Vertex Position",
+      "p": "The middle letter in a three-letter angle notation must always be the vertex where the angle is formed."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Standard angle notation showing vertex B and rays forming angle ABC.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><path d=\"M 80 180 L 250 180 L 180 80 Z\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"250\" cy=\"180\" r=\"4\" fill=\"#1b2540\"/><circle cx=\"80\" cy=\"180\" r=\"4\" fill=\"#1b2540\"/><circle cx=\"180\" cy=\"80\" r=\"4\" fill=\"#1b2540\"/><text x=\"70\" y=\"195\" font-size=\"12\" fill=\"#1b2540\">A</text><text x=\"260\" y=\"195\" font-size=\"12\" fill=\"#1b2540\">B</text><text x=\"175\" y=\"65\" font-size=\"12\" fill=\"#1b2540\">C</text><path d=\"M 220 180 A 30 30 0 0 0 200 155\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"210\" y=\"145\" font-size=\"12\" fill=\"#1b2540\">angle ABC</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Polygon Terminology and Classification",
+    "p": "Polygons are two-dimensional closed shapes made up of three or more straight line segments. They are classified by the number of sides and angles they possess. A regular polygon has all sides of equal length and all interior angles of equal size, whereas an irregular polygon does not possess this uniform symmetry.",
+    "bullets": [
+     "Triangle has 3 sides; Quadrilateral has 4 sides; Pentagon has 5 sides.",
+     "Hexagon has 6 sides; Heptagon has 7 sides; Octagon has 8 sides.",
+     "Nonagon has 9 sides; Decagon has 10 sides.",
+     "Convex polygons have all interior angles less than 180 degrees; concave polygons have a re-entrant vertex greater than 180 degrees."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Regular Polygon Rule",
+      "p": "Whenever a question states a polygon is regular, immediately note that all interior angles are equal and all exterior angles are equal."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Quadrilateral Family Tree",
+    "p": "Quadrilaterals possess specific hierarchical properties based on side lengths, parallel lines, and diagonal bisections. Understanding these relationships is vital for geometric proofs. A square is a special type of rectangle and rhombus, inheriting all their properties.",
+    "bullets": [
+     "Parallelogram: opposite sides equal and parallel, opposite angles equal.",
+     "Rhombus: all four sides equal, diagonals bisect at 90 degrees.",
+     "Trapezium: at least one pair of parallel sides.",
+     "Kite: two pairs of adjacent equal sides, diagonals intersect at 90 degrees."
+    ],
+    "table": {
+     "head": [
+      "Shape",
+      "Parallel Sides",
+      "Equal Sides",
+      "Diagonal Properties"
+     ],
+     "rows": [
+      [
+       "Parallelogram",
+       "2 pairs",
+       "Opposite",
+       "Bisect each other"
+      ],
+      [
+       "Rhombus",
+       "2 pairs",
+       "All 4",
+       "Bisect at 90°"
+      ],
+      [
+       "Trapezium",
+       "1 pair",
+       "None required",
+       "None special"
+      ],
+      [
+       "Kite",
+       "None",
+       "2 pairs adjacent",
+       "Intersect at 90°"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Trapezium Definition",
+      "p": "A quadrilateral with at least one pair of parallel sides (UK definition)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Triangle Classifications",
+    "p": "Triangles are categorized by both their side lengths and their internal angle measurements. An equilateral triangle has three equal sides and three 60-degree angles. An isosceles triangle has two equal sides and two equal base angles opposite those sides.",
+    "bullets": [
+     "Scalene triangle: all three sides and all three angles are different lengths and sizes.",
+     "Isosceles triangle: two equal sides, two equal base angles, and one line of symmetry.",
+     "Equilateral triangle: three equal sides, three 60-degree angles, and rotational symmetry of order 3.",
+     "Right-angled triangle: contains one 90-degree interior angle, enabling Pythagoras' theorem and trigonometry."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Isosceles Symmetry",
+      "p": "The equal angles in an isosceles triangle are always opposite the equal sides."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Isosceles triangle showing equal side hash marks and equal base angles.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><path d=\"M 140 200 L 260 200 L 200 60 Z\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"160\" y1=\"120\" x2=\"175\" y2=\"135\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"225\" y1=\"135\" x2=\"240\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"190\" y=\"215\" font-size=\"12\" fill=\"#1b2540\">Base</text><text x=\"120\" y=\"130\" font-size=\"12\" fill=\"#1b2540\">Equal Side</text><text x=\"250\" y=\"130\" font-size=\"12\" fill=\"#1b2540\">Equal Side</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Solid Geometry and 3D Terminology",
+    "p": "Three-dimensional solids are described using vertices, edges, and faces. A face is a flat or curved surface enclosing the solid; an edge is a line segment where two faces meet; a vertex is a corner point where three or more edges meet.",
+    "bullets": [
+     "Polyhedron: a solid bounded by flat polygonal faces.",
+     "Prism: a 3D solid with a constant cross-section along its entire length.",
+     "Pyramid: a solid with a polygonal base and triangular faces meeting at a common apex.",
+     "Sphere, cylinder, and cone involve curved surfaces and are non-polyhedral solids."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Prism",
+      "p": "A polyhedron with parallel, congruent polygonal bases connected by rectangular or parallelogram faces."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Euler's Relation for Polyhedra",
+    "p": "For any connected polyhedron that does not self-intersect, Euler's formula provides an invariant relationship between the number of vertices V, edges E, and faces F. This formula is frequently tested in structural geometry problems.",
+    "bullets": [
+     "Euler's formula is given by V plus F minus E equals 2.",
+     "Rearranging yields E equals V plus F minus 2.",
+     "A cube has 8 vertices, 6 faces, giving 8 + 6 - 2 = 12 edges.",
+     "A tetrahedron has 4 vertices, 4 faces, giving 4 + 4 - 2 = 6 edges."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Euler's Formula",
+      "p": "V + F - E = 2 (Vertices plus Faces minus Edges equals 2)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Geometric Notation for Lines and Equality",
+    "p": "Diagrams use standard hash marks and arrowheads to communicate geometric properties without writing extensive text. Single, double, or triple hash marks indicate lines of equal length. Single or double arrowheads indicate lines that are parallel.",
+    "bullets": [
+     "Matching hash marks on sides indicate that those line segments are equal in length.",
+     "Arrowheads on lines indicate that the lines are parallel and will never intersect.",
+     "A small square in a corner indicates perpendicular lines meeting at 90 degrees.",
+     "Arc marks with matching tick lines indicate equal angle sizes."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam Diagram Inspection",
+      "p": "Always scan exam diagrams for hidden hash marks and parallel arrows; they provide the essential clues for angle proofs."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Circle Terminology and Notation",
+    "p": "Circles possess precise geometric terminology to describe internal and external line segments. A chord is a line segment whose endpoints lie on the circle. A tangent is a straight line that touches the circle at exactly one point.",
+    "bullets": [
+     "Radius: distance from the center to any point on the circumference.",
+     "Diameter: a chord passing through the center, equal to twice the radius.",
+     "Arc: a connected section of the circle's circumference.",
+     "Sector: a region enclosed by two radii and an arc."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Tangent",
+      "p": "A straight line that touches a curve at a single point without crossing it."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Symmetry in Shapes",
+    "p": "Symmetry describes how a shape matches up with its transformed self under reflection or rotation. Line symmetry occurs when a shape can be folded into two identical halves along a mirror line. Rotational symmetry is the number of times a shape fits onto itself during a full 360-degree rotation.",
+    "bullets": [
+     "Equilateral triangle has 3 lines of symmetry and rotational symmetry of order 3.",
+     "Rectangle has 2 lines of symmetry and rotational symmetry of order 2.",
+     "Parallelogram has 0 lines of symmetry and rotational symmetry of order 2.",
+     "Regular n-gon has n lines of symmetry and rotational symmetry of order n."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Order of Rotational Symmetry",
+      "p": "Do not write 360 degrees as the order; rotational symmetry order is a pure integer count of how many times it fits."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Nomenclature of Angles on Lines",
+    "p": "When straight lines intersect or meet, specific angle relationships emerge by definition. Vertically opposite angles are formed by two intersecting straight lines and are equal. Adjacent angles on a straight line sum to exactly 180 degrees.",
+    "bullets": [
+     "Angles around a single point sum to exactly 360 degrees.",
+     "Vertically opposite angles are strictly equal in size.",
+     "Angles on a straight line form a supplementary pair summing to 180 degrees.",
+     "Co-interior angles between parallel lines sum to 180 degrees."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Straight Line Sum",
+      "p": "Adjacent angles on a straight line always total 180°."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Vertically opposite angles formed by two intersecting straight lines.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"80\" y1=\"60\" x2=\"320\" y2=\"180\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"80\" y1=\"180\" x2=\"320\" y2=\"60\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"190\" y=\"100\" font-size=\"12\" fill=\"#1b2540\">a</text><text x=\"190\" y=\"150\" font-size=\"12\" fill=\"#1b2540\">b</text><text x=\"140\" y=\"125\" font-size=\"12\" fill=\"#1b2540\">c</text><text x=\"240\" y=\"125\" font-size=\"12\" fill=\"#1b2540\">d</text></svg>"
+     }
+    ]
+   }
+  ],
+  "analogy": {
+   "t": "The Blueprint and Construction Site",
+   "p": "Think of geometric notation and conventions as the strict architectural blueprint symbols of a master builder. If an architect draws a dashed line, uses a square corner symbol, or writes double arrowheads, every builder across the world instantly knows the exact structural relationship without needing a paragraph of explanation. Where this analogy breaks down is that physical buildings suffer from imperfect construction tolerances, whereas mathematical geometry deals in absolute, flawless logical perfection."
+  },
+  "terms": [
+   {
+    "t": "Vertex",
+    "d": "A corner point where two or more straight lines, line segments, or edges meet."
+   },
+   {
+    "t": "Chord",
+    "d": "A straight line segment whose endpoints both lie on the circumference of a circle."
+   },
+   {
+    "t": "Tangent",
+    "d": "A straight line that touches a curve or circle at exactly one point."
+   },
+   {
+    "t": "Prism",
+    "d": "A 3D solid with identical cross-sections along its entire length and flat parallel bases."
+   },
+   {
+    "t": "Polyhedron",
+    "d": "A three-dimensional solid bound by flat polygonal faces."
+   },
+   {
+    "t": "Regular Polygon",
+    "d": "A polygon with all interior angles equal and all side lengths equal."
+   },
+   {
+    "t": "Convex Polygon",
+    "d": "A polygon in which every interior angle is strictly less than 180 degrees."
+   },
+   {
+    "t": "Reflex Angle",
+    "d": "An angle measuring strictly greater than 180 degrees and less than 360 degrees."
+   },
+   {
+    "t": "Segment",
+    "d": "A finite portion of a straight line bounded by two distinct endpoints."
+   },
+   {
+    "t": "Bisect",
+    "d": "To divide a line, angle, or shape into two parts of exactly equal size."
+   },
+   {
+    "t": "Scalene Triangle",
+    "d": "A triangle with three sides of different lengths and three different angles."
+   },
+   {
+    "t": "Trapezium",
+    "d": "A quadrilateral possessing at least one pair of parallel sides."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Calling a trapezium a shape with no parallel sides.",
+    "r": "A trapezium has at least one pair of parallel sides."
+   },
+   {
+    "w": "Writing angle BAC as angle BCA when talking about vertex A.",
+    "r": "The vertex letter must always be in the exact middle position."
+   },
+   {
+    "w": "Stating order of rotational symmetry is 360 degrees.",
+    "r": "Rotational symmetry order is a count of how many times it fits, e.g., order 4."
+   },
+   {
+    "w": "Confusing a chord with a diameter.",
+    "r": "A diameter is a special chord that passes directly through the circle center."
+   },
+   {
+    "w": "Assuming a rhombus has 90-degree interior corners.",
+    "r": "A rhombus has equal sides, but its interior angles are not 90 degrees unless it is a square."
+   },
+   {
+    "w": "Forgetting that a regular polygon requires equal angles as well as equal sides.",
+    "r": "A rhombus has equal sides but is not a regular polygon because its angles differ."
+   },
+   {
+    "w": "Counting edges of a polyhedron by guessing.",
+    "r": "Use Euler's relation V + F - E = 2 to verify edge counts."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Write down the mathematical name for a polygon with 7 sides.",
+    "marks": 1,
+    "model": [
+     "Heptagon"
+    ],
+    "tip": "Memorise polygon names from 3 to 10 sides."
+   },
+   {
+    "q": "A quadrilateral has diagonals that intersect at 90 degrees and all four sides are equal in length, but its interior angles are not 90 degrees. Name this shape.",
+    "marks": 2,
+    "model": [
+     "Rhombus",
+     "(Award 1 mark for parallelogram family if incomplete)"
+    ],
+    "tip": "Check diagonal intersection properties for rhombuses and kites."
+   },
+   {
+    "q": "Explain why a regular pentagon cannot tessellate a flat plane on its own.",
+    "marks": 2,
+    "model": [
+     "Interior angle of a regular pentagon is 108 degrees.",
+     "108 does not divide exactly into 360 degrees, leaving gaps."
+    ],
+    "tip": "Tessellation requires interior angles to sum to exactly 360 degrees around a point."
+   },
+   {
+    "q": "A polyhedron has 6 vertices and 8 faces. Calculate the number of edges it has.",
+    "marks": 2,
+    "model": [
+     "Use Euler's formula V + F - E = 2",
+     "6 + 8 - E = 2 so E = 12"
+    ],
+    "tip": "Always state Euler's formula explicitly to secure method marks."
+   },
+   {
+    "q": "State the geometric property indicated by double arrowheads placed on two line segments in a diagram.",
+    "marks": 1,
+    "model": [
+     "The lines are parallel."
+    ],
+    "tip": "Single arrowheads mean parallel; double arrowheads also mean parallel, used when multiple parallel pairs exist."
+   },
+   {
+    "q": "Name the 3D solid that has a circular base and a single vertex at the apex.",
+    "marks": 1,
+    "model": [
+     "Cone"
+    ],
+    "tip": "Do not confuse a cone with a cylinder."
+   },
+   {
+    "q": "Write down the exact order of rotational symmetry for a regular hexagon.",
+    "marks": 1,
+    "model": [
+     "6"
+    ],
+    "tip": "For any regular n-gon, the order of rotational symmetry is n."
+   },
+   {
+    "q": "Explain the difference between a chord and a secant of a circle.",
+    "marks": 2,
+    "model": [
+     "A chord is a line segment with both endpoints on the circle circumference.",
+     "A secant is a straight line that intersects a circle at two points and extends beyond them."
+    ],
+    "tip": "Note the distinction between a finite segment (chord) and an infinite line (secant)."
+   },
+   {
+    "q": "A triangle has side lengths 7 cm, 7 cm, and 10 cm. Classify the triangle by its sides.",
+    "marks": 1,
+    "model": [
+     "Isosceles triangle"
+    ],
+    "tip": "Two equal sides always denote an isosceles triangle."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A polyhedron has 12 vertices and 30 edges. Using Euler's relation, calculate the number of faces F.",
+    "steps": [
+     "State Euler's formula: V + F - E = 2.",
+     "Substitute the known values into the formula: 12 + F - 30 = 2.",
+     "Simplify the left side: F - 18 = 2.",
+     "Solve for F: F = 20."
+    ],
+    "ans": "20 faces"
+   },
+   {
+    "q": "A regular polygon has an interior angle of 144 degrees. Name the polygon by calculating the number of sides n.",
+    "steps": [
+     "Calculate the exterior angle: 180 - 144 = 36 degrees.",
+     "Recall that the sum of exterior angles of any convex polygon is 360 degrees.",
+     "Calculate the number of sides n: 360 / 36 = 10.",
+     "Name the 10-sided polygon: Decagon."
+    ],
+    "ans": "Decagon"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Geometric notation showing parallel lines with arrowheads and equal line segments with hash marks.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"50\" y1=\"80\" x2=\"350\" y2=\"80\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"160\" x2=\"350\" y2=\"160\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M 190 70 L 200 80 L 190 90\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M 190 150 L 200 160 L 190 170\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"120\" y1=\"80\" x2=\"120\" y2=\"160\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"115\" y1=\"115\" x2=\"125\" y2=\"125\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"160\" y=\"55\" font-size=\"12\" fill=\"#1b2540\">Parallel Lines</text><text x=\"135\" y=\"125\" font-size=\"12\" fill=\"#1b2540\">Equal Hash</text></svg>"
+   }
+  ],
+  "pid": "maths_ocr_h.7.0",
+  "sid": "maths_ocr_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-16T03:36:45.814Z"
+ }
+}
