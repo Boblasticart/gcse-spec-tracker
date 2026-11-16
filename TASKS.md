@@ -5,12 +5,13 @@ Runs read **only this file and `docs/CONTEXT.md`**. Keep this file short: finish
 ## Status
 
 ```
-RUN LOCK:       none
-CURRENT JOB:    J3 Maths
+RUN LOCK:       running since 2026-11-16T12:50Z, session 01Sm3c8jfY1ypFSCYZak5GLh (in chat with the owner)
+CURRENT JOB:    J2b Automatic pipeline (owner asked in chat 2026-11-16: one pipeline that can make "anything I want", notes first, fully automatic)
 CURRENT STEPS:
-- [ ] 1. Every point of maths_aqa_h, maths_aqa_f, maths_ocr_h, maths_eduqas_h, maths_eduqas_f has a note that passed QA (the Write notes workflow does this; fix whatever lands in content/notes/failures.json).
-- [ ] 2. Add OCR J560 Foundation (check which J560 lines are Higher-only in the tier columns) and let its notes be written.
-- [ ] 3. Spot-check 5 maths notes on the preview (render, accuracy against the spec), then list J3 under "Ready for the owner's OK".
+- [ ] 1. General engine (scripts/pipeline/): any job runs on the same AI keys and limits; the notes job moved onto it; failed items retried by themselves on later days (up to 6 tries); weak models skipped; notes repaired automatically where safe; content/pipeline/STATUS.md written every run.
+- [ ] 2. New kinds of content with no code: a "custom" job in content/pipeline/jobs.json (prompt + what the reply must contain + where to save). Guide in docs/PIPELINE.md.
+- [ ] 3. A real Write notes run on the new engine finishes and saves notes; then list J2b under "Ready for the owner's OK".
+(J3 Maths carries on by itself meanwhile: its steps are in the Queue below.)
 LAST RUN ENDED: 2026-11-16 02:30 UTC (writer fixed: skips unusable models, moves to the next Gemini model when one runs out, 4 Gemini requests at once, shorter diagram labels; run 43789115274 writing; 30 maths notes so far. Next run: read that run's log and raise the QA pass rate, only about 1 in 5 Gemini replies passed)
 ```
 
@@ -27,6 +28,7 @@ LAST RUN ENDED: 2026-11-16 02:30 UTC (writer fixed: skips unusable models, moves
 The spec codes below are a starting list. Check each against the board's own website, and record withdrawn or renamed specs here. Spec-point lists come from the official specification documents, read with WebFetch.
 
 2. **J3 Maths:** AQA 8300, OCR J560, Eduqas (Higher and Foundation where the spec has tiers).
+   - Steps: [ ] 1. every point of maths_aqa_h, maths_aqa_f, maths_ocr_h, maths_eduqas_h, maths_eduqas_f has a note that passed QA (the pipeline does this). [ ] 2. Add OCR J560 Foundation (needs the spec PDF from the owner). [ ] 3. Spot-check 5 maths notes on the preview, then list J3 under "Ready for the owner's OK".
    - 2026-11-15: with the owner approving the four board websites in chat, ALL specs were read in one sitting: 52 catalogue specs, about 5,200 points, in content/specs/ (sources in each file). Every subject job (J3 to J14) now only needs its notes written by the Write notes workflow, plus checks.
    - Not offered any more (skipped): Eduqas GCSE Biology/Chemistry/Physics (withdrawn), Eduqas French/Spanish (discontinued 2025), OCR French/Spanish (withdrawn 2017).
    - Still to add: Combined Science specs (AQA 8464/8465, Edexcel 1SC0, OCR J250/J260) reusing the separate-science notes; OCR J560 Foundation (tier columns unreadable).
