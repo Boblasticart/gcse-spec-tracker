@@ -1875,5 +1875,411 @@
   "src": "pre",
   "by": "gemini/gemini-3.5-flash-lite",
   "ts": "2026-11-16T03:04:17.463Z"
+ },
+ "maths_eduqas_f.3.14": {
+  "summary": "Mastering the geometry of circles and 3D solids is essential for securing top marks in Eduqas GCSE Mathematics. This guide covers calculating the circumference and area of circles, as well as the surface area and volume of spheres, pyramids, cones, and composite solids. You will learn to use formulae correctly, handle pi accurately, and break down complex shapes into simpler components.",
+  "core": [
+   {
+    "h": "Circle Formulae: Circumference and Area",
+    "p": "The perimeter of a circle is called the circumference. The distance across the circle passing through the centre is the diameter, while the distance from the centre to any point on the edge is the radius. You must memorize and apply the exact formulae for circumference and area in both calculator and non-calculator settings.",
+    "bullets": [
+     "Circumference formula: C = pi * d or C = 2 * pi * r",
+     "Area formula: A = pi * r^2",
+     "Radius is always half of the diameter (r = d / 2)",
+     "Always check whether the question asks for an exact answer in terms of pi or a rounded decimal"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Circumference",
+      "p": "The linear distance around the outer boundary of a circle."
+     },
+     {
+      "k": "key",
+      "t": "Pi button",
+      "p": "Always use the calculator's pi button rather than 3.14 or 22/7 unless explicitly told otherwise."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A circle showing radius, diameter, and centre point.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><circle cx=\"200\" cy=\"120\" r=\"80\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"120\" r=\"3\" fill=\"#1b2540\"/><line x1=\"200\" y1=\"120\" x2=\"280\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"120\" y1=\"120\" x2=\"280\" y2=\"120\" stroke=\"#ef4444\" stroke-width=\"2\" stroke-dasharray=\"4\"/><text x=\"235\" y=\"110\" font-size=\"12\" fill=\"#1b2540\">Radius (r)</text><text x=\"190\" y=\"145\" font-size=\"12\" fill=\"#1b2540\">Diameter (d)</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Surface Area of Spheres",
+    "p": "A sphere is a perfectly round three-dimensional geometrical object. The surface area of a sphere represents the total area of its outer curved surface. The formula is directly tied to the square of its radius.",
+    "bullets": [
+     "Surface area formula: SA = 4 * pi * r^2",
+     "Make sure you identify the radius, not the diameter, before substituting into the formula",
+     "Units for surface area are always squared (e.g., cm^2)",
+     "Remember that 4 * pi * r^2 is four times the area of a flat circle with the same radius"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Radius vs Diameter",
+      "p": "A common mistake is using the diameter instead of the radius in the surface area formula."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Volume of Spheres",
+    "p": "The volume of a sphere measures the three-dimensional space enclosed within its curved boundary. Foundation tier questions will provide the necessary formula or test your ability to substitute values correctly.",
+    "bullets": [
+     "Volume formula: V = (4/3) * pi * r^3",
+     "Note the power of 3 because volume is cubic units",
+     "Be careful with calculator bracket placement when cubing the radius",
+     "Check rounding instructions carefully (e.g., to 1 decimal place or 3 significant figures)"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Fraction entry",
+      "p": "When calculating, enter (4 / 3) * pi * r^3 carefully to avoid order of operations errors."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Surface Area of Pyramids",
+    "p": "A pyramid is a 3D shape with a flat polygonal base and triangular faces that meet at a common point called the apex. To find the total surface area, calculate the area of the base and add the areas of all the triangular faces.",
+    "bullets": [
+     "Total surface area = Area of base + Area of all lateral triangular faces",
+     "For a square-based pyramid, there is 1 square base and 4 identical triangles",
+     "Remember that the height of the triangular face is the slant height, not the vertical height",
+     "Draw a net if you are struggling to visualise all the individual faces"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Slant Height",
+      "p": "Always use Pythagoras' theorem to find the slant height if only the vertical height and base dimensions are given."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Volume of Pyramids",
+    "p": "The volume of any pyramid is found by taking one-third of the area of its base multiplied by its perpendicular height. This relationship holds true for square, rectangular, and triangular-based pyramids.",
+    "bullets": [
+     "Volume formula: V = (1/3) * Base Area * Height",
+     "Height must be the perpendicular (vertical) height, not the slant height",
+     "For a square-based pyramid, Base Area = base length squared",
+     "Always include cubic units for volume answers"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Perpendicular Height",
+      "p": "The shortest vertical distance from the apex straight down to the base at a 90-degree angle."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Surface Area of Cones",
+    "p": "A cone has a circular base and a smooth curved surface tapering towards a top point called the apex. The total surface area is the sum of the curved surface area and the circular base area.",
+    "bullets": [
+     "Curved surface area formula: CSA = pi * r * l (where l is the slant height)",
+     "Total surface area formula: TSA = pi * r * l + pi * r^2",
+     "The slant height (l) runs along the outside of the cone from the base edge to the apex",
+     "If slant height is missing, use Pythagoras' theorem with radius and vertical height"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Slant vs Vertical",
+      "p": "Never use the vertical height in the cone surface area formula; you must use the slant height (l)."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A cone showing radius (r), vertical height (h), and slant height (l).",
+      "svg": "<svg viewBox=\"0 0 400 240\"><ellipse cx=\"200\" cy=\"180\" rx=\"70\" ry=\"25\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"130\" y1=\"180\" x2=\"200\" y2=\"60\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"270\" y1=\"180\" x2=\"200\" y2=\"60\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"200\" y1=\"180\" x2=\"200\" y2=\"60\" stroke=\"#ef4444\" stroke-width=\"2\" stroke-dasharray=\"4\"/><line x1=\"200\" y1=\"180\" x2=\"270\" y2=\"180\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"230\" y=\"185\" font-size=\"12\" fill=\"#1b2540\">r</text><text x=\"180\" y=\"120\" font-size=\"12\" fill=\"#ef4444\">h</text><text x=\"240\" y=\"120\" font-size=\"12\" fill=\"#1b2540\">l</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Volume of Cones",
+    "p": "The volume of a cone is precisely one-third of the volume of a cylinder with the same base radius and height. This means three cones of water would fill a cylinder of identical dimensions.",
+    "bullets": [
+     "Volume formula: V = (1/3) * pi * r^2 * h",
+     "Here, h represents the vertical height, not the slant height",
+     "Substitute the radius and height directly into the formula",
+     "Ensure your final answer has correct units (e.g., cm^3)"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Cone to Cylinder ratio",
+      "p": "A cone's volume is exactly 1/3 of a cylinder's volume with matching radius and height."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Composite Solids: Combining Shapes",
+    "p": "Composite solids are made by joining two or more standard 3D shapes together, such as a cylinder topped with a hemisphere or a cone on top of a cylinder. To find total volumes, calculate the volume of each individual part and add them together.",
+    "bullets": [
+     "Break the composite shape down into familiar standard shapes",
+     "Calculate the volume or surface area of each part separately",
+     "Add volumes together for total volume",
+     "For surface area, be careful: shared internal faces where shapes touch must NOT be included in the total surface area"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Internal Faces",
+      "p": "Do not count surfaces that are hidden where two shapes are glued together when calculating total surface area."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A composite solid formed by a cylinder and a hemisphere.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><path d=\"M 140,80 A 60,60 0 0,1 260,80 Z\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"140\" y=\"80\" width=\"120\" height=\"90\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><ellipse cx=\"200\" cy=\"170\" rx=\"60\" ry=\"20\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"200\" y1=\"80\" x2=\"260\" y2=\"80\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"220\" y=\"70\" font-size=\"12\" fill=\"#1b2540\">r</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Composite Solids: Subtracting Shapes",
+    "p": "Sometimes a composite solid has a cavity or part removed from it, such as a solid cylinder with a smaller cylindrical hole drilled through the middle. In these cases, you subtract the volume of the removed part from the main body.",
+    "bullets": [
+     "Identify the outer main shape and the inner removed shape",
+     "Calculate the volume of the outer shape",
+     "Calculate the volume of the inner cavity",
+     "Subtract the inner volume from the outer volume to find the remaining volume"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Method marks",
+      "p": "Always show your working for each individual shape so examiners can award method marks even if your final arithmetic has a slip."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Building with Lego Bricks",
+   "p": "Calculating properties of composite solids is just like building with Lego. To find out how much plastic a complex model uses (volume), you calculate the pieces separately and add them up. However, if you are painting the model (surface area), you must remember that where two bricks snap together, those touching faces are hidden and do not get painted! This breaks down slightly when dealing with curved contact patches like a hemisphere on a cylinder, where exact overlapping areas require careful subtraction."
+  },
+  "terms": [
+   {
+    "t": "Circumference",
+    "d": "The distance all the way around the outer boundary of a circle."
+   },
+   {
+    "t": "Radius",
+    "d": "A straight line from the centre of a circle to any point on its circumference."
+   },
+   {
+    "t": "Diameter",
+    "d": "A straight line passing completely through the centre of a circle, connecting two points on its circumference."
+   },
+   {
+    "t": "Pi (pi)",
+    "d": "The mathematical constant representing the ratio of a circle's circumference to its diameter, approximately 3.14159."
+   },
+   {
+    "t": "Surface Area",
+    "d": "The total area of all the outer faces and surfaces of a three-dimensional object."
+   },
+   {
+    "t": "Volume",
+    "d": "The amount of three-dimensional space enclosed by a closed surface, measured in cubic units."
+   },
+   {
+    "t": "Sphere",
+    "d": "A three-dimensional geometrical object shaped like a perfectly round ball."
+   },
+   {
+    "t": "Pyramid",
+    "d": "A 3D shape with a polygonal base and triangular lateral faces meeting at a single apex."
+   },
+   {
+    "t": "Cone",
+    "d": "A 3D solid with a circular base and a smooth curved surface tapering to a point."
+   },
+   {
+    "t": "Slant Height",
+    "d": "The length measured along the lateral surface of a cone or pyramid from the base edge to the apex."
+   },
+   {
+    "t": "Perpendicular Height",
+    "d": "The vertical height measured at right angles from the base to the highest point or apex."
+   },
+   {
+    "t": "Composite Solid",
+    "d": "A geometric shape formed by combining two or more standard 3D shapes."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Using the diameter instead of the radius in circle area or sphere volume formulae",
+    "r": "Always divide the diameter by 2 first to find the radius before calculating."
+   },
+   {
+    "w": "Using the vertical height instead of the slant height in cone surface area",
+    "r": "Use slant height (l) for curved surface area of cones, and vertical height (h) for volume."
+   },
+   {
+    "w": "Including hidden touching faces when calculating composite surface area",
+    "r": "Only calculate and sum the exposed outer surfaces of the combined shape."
+   },
+   {
+    "w": "Forgetting that a sphere volume formula contains a cubed radius and 4/3 factor",
+    "r": "Learn V = (4/3)*pi*r^3 exactly and check bracket usage on your calculator."
+   },
+   {
+    "w": "Writing square units for volume and cubic units for area",
+    "r": "Remember: length is cm, area is cm^2, volume is cm^3."
+   },
+   {
+    "w": "Leaving out pi in the final answer when not required",
+    "r": "Unless an exact answer in terms of pi is requested, convert your answer to a decimal."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Calculate the circumference of a circle with a diameter of 14 cm. Use pi = 3.14.",
+    "marks": 2,
+    "model": [
+     "C = pi * d",
+     "3.14 * 14 = 43.96 cm"
+    ],
+    "tip": "Check whether the question specifies a value for pi or requires the calculator button."
+   },
+   {
+    "q": "Find the area of a circle with a radius of 6 cm. Give your answer to 1 decimal place.",
+    "marks": 2,
+    "model": [
+     "A = pi * r^2",
+     "pi * 6^2 = 113.1 cm^2"
+    ],
+    "tip": "Square the radius first before multiplying by pi."
+   },
+   {
+    "q": "Calculate the volume of a sphere with a radius of 5 cm. Give your answer to 3 significant figures.",
+    "marks": 3,
+    "model": [
+     "V = (4/3) * pi * r^3",
+     "(4/3) * pi * 5^3 = 523.598...",
+     "524 cm^3"
+    ],
+    "tip": "Use the fraction button on your calculator for 4/3 to maintain full accuracy."
+   },
+   {
+    "q": "A square-based pyramid has a base side length of 6 cm and a perpendicular height of 10 cm. Calculate its volume.",
+    "marks": 3,
+    "model": [
+     "Base area = 6 * 6 = 36",
+     "Volume = (1/3) * Base Area * Height",
+     "(1/3) * 36 * 10 = 120 cm^3"
+    ],
+    "tip": "Remember the 1/3 multiplier for pyramids and cones."
+   },
+   {
+    "q": "Calculate the curved surface area of a cone with radius 4 cm and slant height 9 cm. Give your answer in terms of pi.",
+    "marks": 2,
+    "model": [
+     "CSA = pi * r * l",
+     "pi * 4 * 9 = 36pi cm^2"
+    ],
+    "tip": "Read carefully: 'in terms of pi' means leave pi in your final answer."
+   },
+   {
+    "q": "A solid cylinder has a radius of 3 cm and a height of 10 cm. Calculate its total surface area to 1 decimal place.",
+    "marks": 4,
+    "model": [
+     "Top and bottom circles: 2 * pi * 3^2 = 56.548...",
+     "Curved surface area: 2 * pi * 3 * 10 = 188.495...",
+     "Total surface area = 56.548... + 188.495... = 245.0 cm^2"
+    ],
+    "tip": "Break the cylinder into two circular ends and one rectangular curved sheet when rolled out."
+   },
+   {
+    "q": "A composite solid is made from a hemisphere of radius 3 cm sitting on top of a cylinder of radius 3 cm and height 8 cm. Calculate the total volume of the solid to 1 decimal place.",
+    "marks": 5,
+    "model": [
+     "Volume of cylinder = pi * 3^2 * 8 = 226.19...",
+     "Volume of hemisphere = (1/2) * (4/3) * pi * 3^3 = 56.54...",
+     "Total volume = 226.19 + 56.54 = 282.7 cm^3"
+    ],
+    "tip": "Remember a hemisphere is half of a sphere, so multiply sphere volume by 0.5."
+   },
+   {
+    "q": "The circumference of a circular pond is 31.4 metres. Calculate the radius of the pond. Use pi = 3.14.",
+    "marks": 3,
+    "model": [
+     "C = 2 * pi * r",
+     "31.4 = 2 * 3.14 * r => 31.4 = 6.28 * r",
+     "r = 31.4 / 6.28 = 5 metres"
+    ],
+    "tip": "Rearrange the formula before substituting values if you find it easier to solve."
+   },
+   {
+    "q": "Find the surface area of a sphere with a diameter of 12 cm. Give your answer to 3 significant figures.",
+    "marks": 3,
+    "model": [
+     "Radius = 12 / 2 = 6 cm",
+     "SA = 4 * pi * 6^2",
+     "4 * pi * 36 = 452 cm^2"
+    ],
+    "tip": "Always check whether the question gives you the radius or the diameter."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Calculate the total surface area of a solid cone with a base radius of 5 cm and a vertical height of 12 cm. Give your answer to 1 decimal place.",
+    "steps": [
+     "Find the slant height (l) using Pythagoras' theorem: l^2 = r^2 + h^2",
+     "l^2 = 5^2 + 12^2 = 25 + 144 = 169",
+     "l = sqrt(169) = 13 cm",
+     "Calculate base area: pi * r^2 = pi * 5^2 = 25pi",
+     "Calculate curved surface area: pi * r * l = pi * 5 * 13 = 65pi",
+     "Total surface area = 25pi + 65pi = 90pi = 282.743...",
+     "Round to 1 decimal place: 282.7 cm^2"
+    ],
+    "ans": "282.7 cm^2"
+   },
+   {
+    "q": "A solid metal shape consists of a cylinder with a cone attached to one end. The cylinder and cone both have a radius of 4 cm. The cylinder has a height of 10 cm, and the cone has a slant height of 7 cm. Calculate the total surface area of this composite solid. Use pi = 3.14159.",
+    "steps": [
+     "Identify exposed surfaces: Cylinder curved area, Cylinder bottom base, Cone curved area",
+     "Cylinder curved area = 2 * pi * r * h = 2 * pi * 4 * 10 = 80pi",
+     "Cylinder bottom base area = pi * r^2 = pi * 4^2 = 16pi",
+     "Cone curved area = pi * r * l = pi * 4 * 7 = 28pi",
+     "Note: The touching circular face between cone and cylinder is internal and NOT included",
+     "Total surface area = 80pi + 16pi + 28pi = 124pi",
+     "124 * 3.14159 = 389.557...",
+     "Round to 1 decimal place: 389.6 cm^2"
+    ],
+    "ans": "389.6 cm^2"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "A sphere showing radius and diameter measurements.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><circle cx=\"200\" cy=\"120\" r=\"80\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><ellipse cx=\"200\" cy=\"120\" rx=\"80\" ry=\"30\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"1.5\" stroke-dasharray=\"4\"/><line x1=\"200\" y1=\"120\" x2=\"280\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"120\" r=\"3\" fill=\"#1b2540\"/><text x=\"230\" y=\"110\" font-size=\"12\" fill=\"#1b2540\">Radius (r)</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_f.3.14",
+  "sid": "maths_eduqas_f",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-16T03:04:45.118Z"
  }
 }

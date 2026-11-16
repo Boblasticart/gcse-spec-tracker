@@ -1,0 +1,1438 @@
+{
+ "maths_eduqas_h.0.3": {
+  "summary": "These comprehensive revision notes cover prime numbers, factors, multiples, HCF, LCM, prime factorisation and the unique factorisation theorem for Eduqas GCSE Higher Tier Mathematics. They provide step-by-step guidance on prime decomposition, Venn diagram methods, and problem-solving strategies essential for grade 9 success in both non-calculator and calculator papers. Mastering these foundational number theory concepts underpins advanced algebraic manipulation and fraction operations.",
+  "core": [
+   {
+    "h": "Prime Numbers and Composite Numbers",
+    "p": "A prime number is an integer greater than 1 that has exactly two distinct positive divisors: 1 and itself. A composite number is a positive integer greater than 1 that has more than two positive divisors. The number 1 is neither prime nor composite.",
+    "bullets": [
+     "The number 2 is the only even prime number.",
+     "All other prime numbers are odd: 3, 5, 7, 11, 13, 17, 19, 23, 29...",
+     "Composite numbers can be broken down into products of prime numbers.",
+     "Every integer greater than 1 is either a prime number itself or can be represented as a unique product of primes."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Prime Number",
+      "p": "An integer greater than 1 with no positive divisors other than 1 and itself."
+     },
+     {
+      "k": "warn",
+      "t": "Number 1",
+      "p": "Do not classify 1 as a prime number. It only has one factor, whereas primes must have exactly two distinct factors."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Factors and Multiples",
+    "p": "Factors are integers that divide evenly into another number without leaving a remainder. Multiples are the result of multiplying an integer by an integer. Understanding these foundational concepts is essential for finding common divisors and common multiples.",
+    "bullets": [
+     "Factors are always less than or equal to the number itself (except for the number itself).",
+     "Multiples are always greater than or equal to the number itself (except when multiplying by zero or negative integers, though GCSE focuses on positive integers).",
+     "Every number has a finite number of factors, but an infinite number of multiples.",
+     "The number 1 is a factor of every integer."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Factor vs Multiple",
+      "p": "Factors divide into a number (e.g., factors of 12 are 1, 2, 3, 4, 6, 12). Multiples are built by multiplying a number (e.g., multiples of 4 are 4, 8, 12, 16...)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Prime Factorisation (Prime Decomposition)",
+    "p": "Every composite integer can be expressed as a product of prime numbers. This process is called prime factorisation or prime decomposition. Using a factor tree is the standard visual method to systematically break down a number into its prime components.",
+    "bullets": [
+     "Start by dividing the number by any prime factor, typically the smallest possible prime (2, 3, 5, 7...).",
+     "Continue branching the tree until every branch ends in a prime number.",
+     "Express the final answer in index notation, writing prime factors in ascending order.",
+     "Example: 72 = 2 x 2 x 2 x 3 x 3 = 2^3 x 3^2."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Factor Trees",
+      "p": "Always circle your prime numbers as you find them so you do not accidentally split them further down the tree."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Prime factorisation of 72 using a factor tree, resulting in 2 cubed times 3 squared.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><circle cx=\"200\" cy=\"30\" r=\"20\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"200\" y=\"34\" text-anchor=\"middle\" font-size=\"14\" fill=\"#1b2540\">72</text><line x1=\"185\" y1=\"45\" x2=\"130\" y2=\"80\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"215\" y1=\"45\" x2=\"270\" y2=\"80\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"130\" cy=\"95\" r=\"18\" fill=\"#fecaca\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"130\" y=\"99\" text-anchor=\"middle\" font-size=\"14\" fill=\"#1b2540\">2</text><circle cx=\"270\" cy=\"95\" r=\"18\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"270\" y=\"99\" text-anchor=\"middle\" font-size=\"14\" fill=\"#1b2540\">36</text><line x1=\"255\" y1=\"110\" x2=\"210\" y2=\"145\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"285\" y1=\"110\" x2=\"330\" y2=\"145\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"210\" cy=\"160\" r=\"18\" fill=\"#fecaca\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"210\" y=\"164\" text-anchor=\"middle\" font-size=\"14\" fill=\"#1b2540\">2</text><circle cx=\"330\" cy=\"160\" r=\"18\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"330\" y=\"164\" text-anchor=\"middle\" font-size=\"14\" fill=\"#1b2540\">18</text><line x1=\"315\" y1=\"175\" x2=\"290\" y2=\"205\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"345\" y1=\"175\" x2=\"370\" y2=\"205\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"290\" cy=\"215\" r=\"15\" fill=\"#fecaca\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"290\" y=\"219\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">3</text><circle cx=\"370\" cy=\"215\" r=\"15\" fill=\"#fecaca\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"370\" y=\"219\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">6</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "The Unique Factorisation Theorem",
+    "p": "Also known as the Fundamental Theorem of Arithmetic, this theorem states that every integer greater than 1 either is a prime number itself or can be represented as a unique product of prime numbers, disregarding the order of the prime factors.",
+    "bullets": [
+     "This guarantees that no matter how you start your factor tree, you will always arrive at the exact same set of prime factors.",
+     "It underpins modular arithmetic, cryptography, and advanced number theory.",
+     "Allows mathematicians to treat integers as 'molecules' built from prime 'atoms'.",
+     "Essential for proving irrationality (e.g., proving that the square root of 2 is irrational)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Unique Factorisation Theorem",
+      "p": "Every integer greater than 1 has a prime factorisation that is unique, except for the order in which the prime factors are written."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Highest Common Factor (HCF)",
+    "p": "The Highest Common Factor of two or more integers is the largest positive integer that divides evenly into all of them without leaving a remainder. It can be found by listing factors, using prime factorisation, or employing a Venn diagram.",
+    "bullets": [
+     "For small numbers, listing all factors and picking the largest common one works well.",
+     "For large numbers, find the prime factorisation of each number first.",
+     "To find the HCF from prime factorisations, take the lowest power of every common prime factor.",
+     "HCF is sometimes called the Greatest Common Divisor (GCD)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "HCF Rule",
+      "p": "In prime factorisation, HCF uses the LOWEST powers of the COMMON prime factors."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Lowest Common Multiple (LCM)",
+    "p": "The Lowest Common Multiple of two or more integers is the smallest positive integer that is a multiple of each of the numbers. It represents the earliest point at which repeating cycles or intervals coincide.",
+    "bullets": [
+     "For small numbers, list successive multiples until you find the first match.",
+     "For large numbers, use the prime factorisation of each number.",
+     "To find the LCM from prime factorisations, take the highest power of every prime factor present in any of the decompositions.",
+     "LCM is crucial for adding and subtracting fractions with different denominators."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "LCM Rule",
+      "p": "In prime factorisation, LCM uses the HIGHEST powers of ALL prime factors that appear."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "HCF and LCM via Venn Diagrams",
+    "p": "Using a Venn diagram is the most foolproof method for finding both the HCF and LCM of two large numbers simultaneously. Place the prime factors of both numbers into the intersecting circles.",
+    "bullets": [
+     "Write the prime factorisations of both numbers.",
+     "Put the prime factors that appear in BOTH decompositions into the intersection (middle region).",
+     "Put the remaining unique prime factors into the outer parts of their respective circles.",
+     "Multiply the numbers in the intersection to get the HCF.",
+     "Multiply ALL numbers in the entire Venn diagram to get the LCM."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Venn Diagram Method",
+      "p": "Intersection = HCF. Union (all parts combined) = LCM."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Venn diagram showing prime factors of 72 and 120 for HCF and LCM calculations.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><circle cx=\"160\" cy=\"120\" r=\"70\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><circle cx=\"240\" cy=\"120\" r=\"70\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"3\"/><text x=\"130\" y=\"50\" font-size=\"14\" fill=\"#3b82f6\" font-weight=\"bold\">72</text><text x=\"260\" y=\"50\" font-size=\"14\" fill=\"#ef4444\" font-weight=\"bold\">120</text><text x=\"115\" y=\"125\" font-size=\"12\" fill=\"#1b2540\">2, 2, 3</text><text x=\"185\" y=\"125\" font-size=\"12\" fill=\"#1b2540\">2, 3</text><text x=\"255\" y=\"125\" font-size=\"12\" fill=\"#1b2540\">5</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "The Product Rule for HCF and LCM",
+    "p": "There is a fundamental algebraic relationship between two positive integers, a and b, and their Highest Common Factor and Lowest Common Multiple: the product of any two numbers is equal to the product of their HCF and LCM.",
+    "bullets": [
+     "Formula: a x b = HCF(a, b) x LCM(a, b).",
+     "Extremely useful in exam questions where prime factorisations are given directly without stating the original numbers.",
+     "Can be rearranged to find LCM if HCF and the two numbers are known: LCM = (a x b) / HCF.",
+     "Only works reliably for pairs of numbers; does not generalise simply to three or more numbers."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "HCF-LCM Identity",
+      "p": "For any two integers a and b, a x b = HCF x LCM."
+     },
+     {
+      "k": "warn",
+      "t": "Three Numbers",
+      "p": "Never apply the formula a x b x c = HCF x LCM for three numbers. It only works for pairs."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Problem Solving with LCM and HCF",
+    "p": "Word problems involving synchronisation, scheduling, and physical partitioning often disguise themselves as LCM or HCF questions. Recognising the verbal cues is key to grade 9 success.",
+    "bullets": [
+     "Use LCM when events repeat at different intervals and you want to know when they happen together again (e.g., flashing lights, bus timetables, runners on a track).",
+     "Use HCF when items need to be split into identical groups, packed into boxes, or cut into equal-sized pieces with no waste (e.g., cutting timber, packing gift hampers).",
+     "Always check if the answer makes logical sense in the context of the problem.",
+     "Ensure units are consistent before calculating."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam Keywords",
+      "p": "'Together', 'simultaneously', 'next meet' indicate LCM. 'Maximum size', 'equal pieces', 'largest possible' indicate HCF."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Advanced Applications and Powers",
+    "p": "Higher tier exams frequently combine prime factorisation with algebraic expressions, surds, and index laws. Understanding how prime bases behave under powers is a hallmark of top-grade candidates.",
+    "bullets": [
+     "If N = 2^3 x 3^2 x 5, then N^2 = 2^6 x 3^4 x 5^2 (multiply indices by the power).",
+     "Finding the smallest integer k such that N x k is a square number: adjust all odd index powers to the next even integer.",
+     "Finding the number of factors of an integer: add 1 to each index in its prime factorisation and multiply the results together.",
+     "Example: 72 = 2^3 x 3^2 has (3+1) x (2+1) = 4 x 3 = 12 factors."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Number of Factors Rule",
+      "p": "If N = p^a x q^b, total number of factors = (a + 1)(b + 1)."
+     },
+     {
+      "k": "tip",
+      "t": "Square Numbers",
+      "p": "A number is a square number if and only if all indices in its prime factorisation are even integers."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Building Lego Structures",
+   "p": "Imagine prime numbers are individual, indivisible Lego 'atomic' bricks (like single studs in red, blue, green). Composite numbers are complete Lego models built by snapping these atomic bricks together in fixed combinations. The Unique Factorisation Theorem tells us that no matter how you take apart a model and rebuild it, you will always use the exact same collection of atomic bricks. Finding the HCF is like finding the largest identical sub-assembly two models share, while finding the LCM is building the smallest possible combined model that can contain both original models as sub-parts. This analogy breaks down because Lego bricks can be unclicked and rearranged freely, whereas numbers have fixed mathematical relationships and infinite multiples."
+  },
+  "terms": [
+   {
+    "t": "Prime Number",
+    "d": "An integer greater than 1 with exactly two distinct positive divisors: 1 and itself."
+   },
+   {
+    "t": "Composite Number",
+    "d": "A positive integer greater than 1 that has more than two positive divisors."
+   },
+   {
+    "t": "Factor",
+    "d": "An integer that divides evenly into another integer without leaving a remainder."
+   },
+   {
+    "t": "Multiple",
+    "d": "The product of a given integer and any integer."
+   },
+   {
+    "t": "Prime Factorisation",
+    "d": "Expressing a composite integer as a product of prime numbers."
+   },
+   {
+    "t": "Unique Factorisation Theorem",
+    "d": "The property that every integer greater than 1 has a unique prime decomposition."
+   },
+   {
+    "t": "Highest Common Factor (HCF)",
+    "d": "The largest positive integer that divides evenly into two or more given integers."
+   },
+   {
+    "t": "Lowest Common Multiple (LCM)",
+    "d": "The smallest positive integer that is a multiple of two or more given integers."
+   },
+   {
+    "t": "Coprime (Relatively Prime)",
+    "d": "Two integers whose Highest Common Factor is exactly 1."
+   },
+   {
+    "t": "Index Notation",
+    "d": "A shorthand method of writing repeated multiplication using bases and exponents."
+   },
+   {
+    "t": "Fundamental Theorem of Arithmetic",
+    "d": "Alternative name for the Unique Factorisation Theorem."
+   },
+   {
+    "t": "Venn Diagram",
+    "d": "A diagram using overlapping circles to show relationships between sets of prime factors."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Writing 1 as a prime number.",
+    "r": "1 is neither prime nor composite because it has only one factor."
+   },
+   {
+    "w": "Taking the highest powers for HCF.",
+    "r": "HCF uses the lowest powers of common prime factors."
+   },
+   {
+    "w": "Taking the lowest powers for LCM.",
+    "r": "LCM uses the highest powers of all prime factors."
+   },
+   {
+    "w": "Forgetting to include prime factors that appear in only one number when finding LCM.",
+    "r": "LCM must include every prime factor present in any of the numbers."
+   },
+   {
+    "w": "Multiplying all numbers in a Venn diagram to find the HCF.",
+    "r": "HCF is found by multiplying ONLY the numbers in the intersection."
+   },
+   {
+    "w": "Assuming 2 is a composite number because it is even.",
+    "r": "2 is prime; it has exactly two factors (1 and 2)."
+   },
+   {
+    "w": "Applying the product formula a x b = HCF x LCM to three numbers.",
+    "r": "This identity is strictly valid for pairs of numbers only."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Find the Highest Common Factor (HCF) of 72 and 120 using prime factorisation.",
+    "marks": 3,
+    "model": [
+     "72 = 2^3 x 3^2",
+     "120 = 2^3 x 3 x 5",
+     "HCF = 2^3 x 3 = 24"
+    ],
+    "tip": "Write both numbers in index form first, then select the lowest power of each common prime."
+   },
+   {
+    "q": "Two light beacons flash at the same time. Beacon A flashes every 18 seconds. Beacon B flashes every 24 seconds. After how many seconds will they next flash together?",
+    "marks": 3,
+    "model": [
+     "Find LCM of 18 and 24",
+     "18 = 2 x 3^2, 24 = 2^3 x 3",
+     "LCM = 2^3 x 3^2 = 8 x 9 = 72 seconds"
+    ],
+    "tip": "Recognise this as an LCM problem involving repeating time intervals."
+   },
+   {
+    "q": "Express 540 as a product of its prime factors in index form.",
+    "marks": 3,
+    "model": [
+     "540 = 2 x 270 = 2 x 2 x 135",
+     "= 2^2 x 5 x 27",
+     "= 2^2 x 3^3 x 5"
+    ],
+    "tip": "Start with any obvious factor pair, such as 10 and 54, to simplify the factor tree."
+   },
+   {
+    "q": "The HCF of two numbers x and y is 6. Their LCM is 210. Given that x = 30, find the value of y.",
+    "marks": 2,
+    "model": [
+     "Use formula: x x y = HCF x LCM",
+     "30 x y = 6 x 210 -> 30y = 1260",
+     "y = 42"
+    ],
+    "tip": "State the product formula clearly before substituting the given values."
+   },
+   {
+    "q": "Find the Lowest Common Multiple (LCM) of 108 and 140.",
+    "marks": 3,
+    "model": [
+     "108 = 2^2 x 3^3",
+     "140 = 2^2 x 5 x 7",
+     "LCM = 2^2 x 3^3 x 5 x 7 = 3780"
+    ],
+    "tip": "Include every unique prime factor present across both numbers at its highest power."
+   },
+   {
+    "q": "N = 2^4 x 3^2 x 7. Find the smallest integer k such that N x k is a cube number.",
+    "marks": 3,
+    "model": [
+     "Indices are 4, 2, 1",
+     "To make multiples of 3, next multiples are 6, 3, 3",
+     "k = 2^(6-4) x 3^(3-2) x 7^(3-1) = 2^2 x 3^1 x 7^2 = 4 x 3 x 49 = 588"
+    ],
+    "tip": "For cube numbers, adjust every index in the prime factorisation so that it is a multiple of 3."
+   },
+   {
+    "q": "Explain why 1 is not a prime number.",
+    "marks": 1,
+    "model": [
+     "A prime number must have exactly two distinct positive factors, whereas 1 has only one factor."
+    ],
+    "tip": "Quote the precise definition of a prime number."
+   },
+   {
+    "q": "Find the total number of factors of 200.",
+    "marks": 3,
+    "model": [
+     "200 = 2^3 x 5^2",
+     "Add 1 to each index: (3 + 1) and (2 + 1)",
+     "4 x 3 = 12 factors"
+    ],
+    "tip": "Add one to each exponent in the prime factorisation and find their product."
+   },
+   {
+    "q": "Given that a = 2^4 x 3^m x 5^2 and b = 2^n x 3^2 x 5^1, the HCF is 2^2 x 3^2 x 5^1 and the LCM is 2^4 x 3^3 x 5^2. Find m and n.",
+    "marks": 4,
+    "model": [
+     "HCF takes lowest powers: min(4,n) = 2 so n = 2",
+     "HCF takes lowest powers: min(m,2) = 2 so m >= 2",
+     "LCM takes highest powers: max(m,2) = 3 so m = 3",
+     "m = 3, n = 2"
+    ],
+    "tip": "Compare the indices in the given HCF and LCM with the individual numbers using min and max rules."
+   },
+   {
+    "q": "Write down two numbers that are coprime and have a product of 77.",
+    "marks": 2,
+    "model": [
+     "Factors of 77 are 1, 7, 11, 77",
+     "Pair with HCF of 1: 7 and 11"
+    ],
+    "tip": "Coprime means their HCF is 1. Look for factor pairs of 77 that share no common factors other than 1."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Find the HCF and LCM of 196 and 300 using prime factorisation.",
+    "steps": [
+     "Step 1: Find the prime factorisation of 196. 196 = 4 x 49 = 2^2 x 7^2.",
+     "Step 2: Find the prime factorisation of 300. 300 = 3 x 100 = 3 x 10^2 = 2^2 x 3 x 5^2.",
+     "Step 3: For HCF, take the lowest power of common prime factors. Common primes are 2. Lowest power of 2 is 2^2. HCF = 4.",
+     "Step 4: For LCM, take the highest power of all prime factors: 2^2 x 3^1 x 5^2 x 7^2.",
+     "Step 5: Calculate LCM = 4 x 3 x 25 x 49 = 12 x 1225 = 14700."
+    ],
+    "ans": "HCF = 4, LCM = 14700"
+   },
+   {
+    "q": "A gardener has two ropes, one 84 cm long and the other 120 cm long. She wants to cut both ropes into smaller pieces of equal length with no rope left over. What is the length of the longest possible pieces she can cut?",
+    "steps": [
+     "Step 1: Recognise that cutting into equal pieces with no waste requires finding the Highest Common Factor (HCF) of 84 and 120.",
+     "Step 2: Find prime factorisation of 84: 84 = 4 x 21 = 2^2 x 3 x 7.",
+     "Step 3: Find prime factorisation of 120: 120 = 12 x 10 = 2^3 x 3 x 5.",
+     "Step 4: Identify common prime factors and their lowest powers: 2^2 and 3^1.",
+     "Step 5: Calculate HCF = 2^2 x 3 = 4 x 3 = 12."
+    ],
+    "ans": "12 cm"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Visual representation of HCF vs LCM using prime factor factorisations.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><rect x=\"40\" y=\"40\" width=\"140\" height=\"160\" rx=\"10\" fill=\"#dbeafe\" stroke=\"#3b82f6\" stroke-width=\"2\"/><text x=\"110\" y=\"70\" font-size=\"14\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">HCF Focus</text><text x=\"110\" y=\"110\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">Lowest Powers</text><text x=\"110\" y=\"140\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">Common Primes Only</text><text x=\"110\" y=\"170\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">Divides Both Numbers</text><rect x=\"220\" y=\"40\" width=\"140\" height=\"160\" rx=\"10\" fill=\"#fde68a\" stroke=\"#d97706\" stroke-width=\"2\"/><text x=\"290\" y=\"70\" font-size=\"14\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">LCM Focus</text><text x=\"290\" y=\"110\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">Highest Powers</text><text x=\"290\" y=\"140\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">All Primes Included</text><text x=\"290\" y=\"170\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">Multiple of Both Numbers</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_h.0.3",
+  "sid": "maths_eduqas_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-16T03:10:24.304Z"
+ },
+ "maths_eduqas_h.0.12": {
+  "summary": "Mastering standard units, compound measures and decimal quantities is essential for tackling Grade 9 Eduqas GCSE Higher tier problems. This involves converting metric units across dimensions (length, area, volume), handling compound measures like speed, density, and pressure, and manipulating rates with decimal quantities. You must handle unit consistency rigorously, manipulate algebraic formulae correctly, and interpret compound rates in practical contexts across non-calculator and calculator papers.",
+  "core": [
+   {
+    "h": "Fundamental Standard Metric Units",
+    "p": "Standard metric units form the foundation of all dimensional measurements in GCSE Mathematics. You must know the base units and the exact multiplicative relationships connecting them, especially when scaling into area and volume dimensions where scaling factors are squared or cubed.",
+    "bullets": [
+     "Length base unit is the metre (m). Common prefixes: kilo (x1000), centi (/100), milli (/1000).",
+     "Mass base unit is the kilogram (kg), though grams (g) and milligrams (mg) are frequently used.",
+     "Capacity/Volume base unit is the litre (l) or cubic metre (m³). Note that 1 ml = 1 cm³ and 1 litre = 1000 cm³.",
+     "Time base unit is the second (s), with standard conversions for minutes (60s), hours (3600s), and days."
+    ],
+    "table": {
+     "head": [
+      "Quantity",
+      "Base Unit",
+      "Common Sub-units",
+      "Key Conversion Factor"
+     ],
+     "rows": [
+      [
+       "Length",
+       "Metre (m)",
+       "km, cm, mm",
+       "1m = 100cm = 1000mm"
+      ],
+      [
+       "Mass",
+       "Kilogram (kg)",
+       "tonne, g, mg",
+       "1kg = 1000g, 1 tonne = 1000kg"
+      ],
+      [
+       "Capacity",
+       "Litre (l)",
+       "millilitres (ml)",
+       "1 litre = 1000 ml = 1000 cm³"
+      ],
+      [
+       "Time",
+       "Second (s)",
+       "minute, hour, day",
+       "1 hr = 60 min = 3600 s"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Standard Units",
+      "p": "Internationally agreed systems of measurement (SI units) used for consistency in scientific and mathematical calculations."
+     },
+     {
+      "k": "warn",
+      "t": "Area and Volume Scaling",
+      "p": "Do not multiply or divide by linear conversion factors for area and volume. If 1 m = 100 cm, then 1 m² = 10,000 cm² (100²) and 1 m³ = 1,000,000 cm³ (10³)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Converting Area and Volume Units",
+    "p": "When converting units of area or volume, applying linear conversion factors directly will lead to incorrect answers. You must square the linear conversion factor for area units and cube it for volume units, paying careful attention to decimal quantities.",
+    "bullets": [
+     "To convert cm² to m², divide by 100² (i.e., divide by 10,000).",
+     "To convert mm² to cm², divide by 10² (i.e., divide by 100).",
+     "To convert cm³ to m³, divide by 100³ (i.e., divide by 1,000,000).",
+     "Always write out the linear conversion first, then raise it to the appropriate power before applying it to the given decimal quantity."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Power Scaling Rule",
+      "p": "If the conversion factor for length is k, the conversion factor for area is k² and for volume is k³."
+     },
+     {
+      "k": "tip",
+      "t": "Index Notation",
+      "p": "Write 1 m = 100 cm, then cube both sides to get (1 m)³ = (100 cm)³, which gives 1 m³ = 1,000,000 cm³."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Compound Measures: Speed, Distance, Time",
+    "p": "Speed is a compound measure relating distance travelled to the time taken. The fundamental formula is Speed = Distance ÷ Time, which can be rearranged using standard formula triangles or algebraic balancing.",
+    "bullets": [
+     "Speed units are typically metres per second (m/s) or kilometres per hour (km/h).",
+     "Distance = Speed × Time. Ensure time units match the speed unit (e.g., hours for km/h).",
+     "Time = Distance ÷ Speed. Express fractional hours as minutes by multiplying the decimal part by 60.",
+     "Watch out for questions mixing minutes and hours; always convert time into a decimal or fraction of an hour before calculating."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Speed",
+      "p": "The rate of change of distance with respect to time, calculated as distance divided by time."
+     },
+     {
+      "k": "warn",
+      "t": "Time Decimals",
+      "p": "0.5 hours is 30 minutes, not 50 minutes. Never write 1 hour 30 mins as 1.3 hours; it is 1.5 hours."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Compound Measures: Density, Mass, Volume",
+    "p": "Density measures how tightly packed matter is within a given space. The standard formula is Density = Mass ÷ Volume, with common units including grams per cubic centimetre (g/cm³) and kilograms per cubic metre (kg/m³).",
+    "bullets": [
+     "Mass = Density × Volume. Useful when finding the weight of complex 3D shapes.",
+     "Volume = Mass ÷ Density. Essential when determining the space occupied by a given mass of material.",
+     "Ensure mass and volume units are compatible before substituting into the formula (e.g., g with cm³, or kg with m³).",
+     "Composite objects require total mass divided by total volume; never average individual densities directly."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Density",
+      "p": "Mass per unit volume of a substance, expressed in units such as g/cm³ or kg/m³."
+     },
+     {
+      "k": "tip",
+      "t": "Formula Triangle",
+      "p": "Draw the standard M over D x V triangle to quickly recall rearrangements: Mass at top, Density and Volume at bottom."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Compound Measures: Pressure, Force, Area",
+    "p": "Pressure quantifies how force is distributed over a surface area. The defining equation is Pressure = Force ÷ Area, measured in Pascals (Pa), where 1 Pa equals 1 Newton per square metre (N/m²).",
+    "bullets": [
+     "Force = Pressure × Area. Force is measured in Newtons (N).",
+     "Area = Force ÷ Pressure. Area must be in square metres (m²) if pressure is in N/m² (Pascals).",
+     "If area is given in cm², convert to m² by dividing by 10,000 before calculating pressure or force.",
+     "Examiners frequently test this by giving dimensions in cm and asking for pressure in Pascals."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Pressure",
+      "p": "The perpendicular force applied per unit area, measured in Pascals (Pa) or N/m²."
+     },
+     {
+      "k": "warn",
+      "t": "Area Unit Trap",
+      "p": "Failing to convert square centimetres to square metres is the most common zero-mark error in pressure questions."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Working with Decimal Quantities in Rates",
+    "p": "Compound measures frequently involve decimal quantities, requiring careful arithmetic (non-calculator) or precise decimal entry (calculator). Rates such as unit pricing, flow rates, and worker-hours rely on decimal scaling.",
+    "bullets": [
+     "When calculating a unit rate, divide the total quantity by the independent variable (e.g., cost per kg = total cost ÷ total mass).",
+     "Express rates per unit time or unit quantity clearly using division.",
+     "Round intermediate decimal values to at least 4 significant figures to prevent rounding errors in multi-step problems.",
+     "Convert mixed decimal units into a single consistent decimal format before performing operations."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Rate Consistency",
+      "p": "Always check that both numerator and denominator units match the required output units before final rounding."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Rates of Change from Gradients and Areas",
+    "p": "In higher tier Eduqas papers, compound measures are interpreted graphically. The gradient of a distance-time graph represents speed, while the gradient of a speed-time graph represents acceleration.",
+    "bullets": [
+     "Distance-Time Graph: Gradient = Change in vertical (distance) ÷ Change in horizontal (time) = Speed.",
+     "Speed-Time Graph: Gradient = Acceleration; Area under the graph = Total distance travelled.",
+     "Non-linear graphs require drawing a tangent at a specific point to estimate instantaneous rate of change.",
+     "Ensure scale units on axes are accounted for when calculating gradients (do not just count squares)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Rate of Change",
+      "p": "The measure of how one quantity changes in relation to another, represented graphically by the gradient of the curve."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Population Density and Environmental Rates",
+    "p": "Population density is a specialized compound measure representing the number of individuals or items per unit area. Similar ecological and financial rates follow the exact same proportional logic.",
+    "bullets": [
+     "Population Density = Total Population ÷ Total Area (e.g., people per km²).",
+     "Total Population = Population Density × Area.",
+     "Total Area = Total Population ÷ Population Density.",
+     "Be prepared to work with irregular regions by splitting them into standard geometric shapes to find the total area first."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Population Density",
+      "p": "The average number of inhabitants or units per square unit of area."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Inverse Proportions and Speed-Time-Distance Scenarios",
+    "p": "Many advanced problems link speed, distance, and time through inverse proportionality or multi-stage journeys where average speed must be calculated over total distance divided by total time.",
+    "bullets": [
+     "Average Speed = Total Distance ÷ Total Time. NEVER average two speeds by adding them and dividing by 2.",
+     "For a journey of two equal halves at speeds v1 and v2, the average speed is the harmonic mean: 2v1v2 / (v1 + v2).",
+     "Set up algebraic variables (let distance be d) when actual distances are not provided in ratio or proportion problems.",
+     "Check dimensional homogeneity across every term in complex multi-step kinematic equations."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Average Speed Trap",
+      "p": "A driver travels 50 miles at 50 mph and 50 miles at 100 mph. Average speed is NOT 75 mph. Total distance is 100, total time is 1 + 0.5 = 1.5 hours, giving 66.7 mph."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Dimensional Analysis and Unit Consistency Checks",
+    "p": "Dimensional analysis is a powerful technique at Grade 9 used to verify that algebraic formulae and compound measure calculations yield the correct unit dimensions.",
+    "bullets": [
+     "Check dimensions of every term in an equation by replacing quantities with their base SI dimensions (Length [L], Mass [M], Time [T]).",
+     "For example, Speed = [L][T]⁻¹, Acceleration = [L][T]⁻², Force = [M][L][T]⁻².",
+     "If an equation requires a volume ([L]³), terms resulting from area multiplied by length ([L]² × [L]) are dimensionally valid.",
+     "Use dimensional checks in the final minutes of an exam to verify derived algebraic formulae."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Dimensional Analysis",
+      "p": "The analysis of the relationships between different physical quantities by identifying their base dimensions."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Composite Compound Measures",
+    "p": "Some problems combine multiple materials or moving bodies, requiring simultaneous equations or weighted averages of compound measures such as density or speed.",
+    "bullets": [
+     "When mixing two substances of different densities, Total Density = Total Mass ÷ Total Volume. Find mass and volume of each part separately.",
+     "For linked journey problems, equate times or distances to form algebraic equations.",
+     "Solve for unknown speeds, times, or masses using standard linear or quadratic techniques.",
+     "Verify that the final combined compound measure lies logically between the individual component values."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Component Breakdown",
+      "p": "Always construct a clear table of Mass, Volume, and Density for each component when tackling alloy or mixture density problems."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Exam Strategy for Compound Measure Word Problems",
+    "p": "Top-grade students approach complex multi-step compound measure questions with a rigid, methodical framework to avoid common arithmetic and unit conversion traps.",
+    "bullets": [
+     "Step 1: Underline all given units and identify the required output unit immediately.",
+     "Step 2: Convert all mixed decimal quantities into a single standard unit (preferably SI base units) before calculating.",
+     "Step 3: Write down the formula in symbols before substituting any numbers.",
+     "Step 4: Check your final answer for sensible magnitude (e.g., a person cannot run at 450 m/s; a car engine block cannot weigh 0.002 kg)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Sanity Check",
+      "p": "Always perform a quick mental order-of-magnitude check on your final calculated compound measure."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Recipe Scale Analogy",
+   "p": "Imagine following a baking recipe where flour is measured in kilograms, milk in millilitres, and baking time in minutes. If you accidentally mix up grams and kilograms, your cake batter has the wrong density and ruins in the oven. Compound measures work exactly like scaling a recipe: every ingredient must be in the correct unit dimension before you combine them. The analogy breaks down because physical substances have fixed constant densities, whereas mathematical problems can alter volumes and masses independently through algebraic abstraction."
+  },
+  "terms": [
+   {
+    "t": "Compound Measure",
+    "d": "A measure derived from a combination of two or more base quantities, such as speed, density, or pressure."
+   },
+   {
+    "t": "Speed",
+    "d": "The rate of change of distance, defined as distance divided by time (m/s or km/h)."
+   },
+   {
+    "t": "Density",
+    "d": "Mass divided by volume, measuring the compactness of a substance (g/cm³ or kg/m³)."
+   },
+   {
+    "t": "Pressure",
+    "d": "Force applied per unit area, measured in Pascals (Pa) or N/m²."
+   },
+   {
+    "t": "SI Base Units",
+    "d": "The standard international system of units including metres, kilograms, seconds, and amperes."
+   },
+   {
+    "t": "Dimensional Analysis",
+    "d": "Checking the validity of an equation by comparing base unit dimensions on both sides."
+   },
+   {
+    "t": "Pascal (Pa)",
+    "d": "The SI unit of pressure, equivalent to one Newton per square metre."
+   },
+   {
+    "t": "Average Speed",
+    "d": "Total distance travelled divided by total time taken for the entire journey."
+   },
+   {
+    "t": "Population Density",
+    "d": "Number of individuals or items divided by the total surface area."
+   },
+   {
+    "t": "Harmonic Mean",
+    "d": "The reciprocal of the arithmetic mean of the reciprocals, used for calculating correct average speeds over equal distances."
+   },
+   {
+    "t": "Unit Rate",
+    "d": "A rate expressed with a denominator of one unit, such as cost per single item or distance per single hour."
+   },
+   {
+    "t": "Conversion Factor",
+    "d": "A numerical multiplier used to convert a quantity from one unit of measurement to another."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Converting area by multiplying the linear scale factor once instead of squaring it.",
+    "r": "Recognise that for area conversion factors, you must square the linear ratio (e.g., 1 m² = 100² cm²)."
+   },
+   {
+    "w": "Averaging two speeds directly to find average speed (e.g., (40 + 60) / 2 = 50).",
+    "r": "Always use Total Distance divided by Total Time for average speed problems."
+   },
+   {
+    "w": "Using time in hours and minutes as a standard decimal (e.g., writing 2 hours 30 mins as 2.3 hours).",
+    "r": "Convert minutes to a fraction or decimal of an hour by dividing by 60 (2 hours 30 mins = 2.5 hours)."
+   },
+   {
+    "w": "Failing to convert cm² or cm into m² or m when calculating pressure in Pascals.",
+    "r": "Always convert all linear dimensions into metres before calculating pressure in N/m²."
+   },
+   {
+    "w": "Confusing the positions of mass, density, and volume in the formula triangle.",
+    "r": "Remember Mass is always at the top of the triangle: Density = Mass ÷ Volume, Volume = Mass ÷ Density."
+   },
+   {
+    "w": "Rounding intermediate numbers too early in multi-step compound measure calculations.",
+    "r": "Store exact values in your calculator and round only at the final step to the required degree of accuracy."
+   },
+   {
+    "w": "Writing unit of density as g/cm² instead of g/cm³.",
+    "r": "Density is mass per unit volume, so the volume unit must be cubed (cm³ or m³)."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A solid metal cylinder has a mass of 450 grams and a density of 8.9 g/cm³. Calculate the volume of the cylinder in cm³. Give your answer to 3 significant figures.",
+    "marks": 2,
+    "model": [
+     "Volume = Mass ÷ Density",
+     "450 ÷ 8.9 = 50.561...",
+     "50.6 cm³"
+    ],
+    "tip": "Use the density formula triangle and ensure your final answer is rounded to exactly 3 significant figures."
+   },
+   {
+    "q": "A car travels 180 km at an average speed of 75 km/h. It then travels a further 120 km at an average speed of 60 km/h. Calculate the overall average speed for the entire journey.",
+    "marks": 4,
+    "model": [
+     "Time 1 = 180 ÷ 75 = 2.4 hours",
+     "Time 2 = 120 ÷ 60 = 2.0 hours",
+     "Total Distance = 180 + 120 = 300 km, Total Time = 2.4 + 2.0 = 4.4 hours",
+     "Average Speed = 300 ÷ 4.4 = 68.18... = 68.2 km/h"
+    ],
+    "tip": "Never average the speeds 75 and 60. Always find total distance divided by total time."
+   },
+   {
+    "q": "A rectangular wooden block measures 20 cm by 15 cm by 10 cm and has a mass of 2.4 kg. Calculate the pressure exerted by the block on the table when it rests on its smallest face, giving your answer in Pascals (N/m²). Take g = 10 N/kg (or Force = mass in kg × 9.8 or 10 as specified; here use weight = 2.4 × 10 = 24 N).",
+    "marks": 5,
+    "model": [
+     "Smallest face dimensions = 10 cm × 15 cm = 150 cm²",
+     "Convert area to m²: 150 ÷ 10000 = 0.015 m²",
+     "Force (Weight) = 2.4 × 9.8 = 23.52 N (or 24 N if g=10 specified)",
+     "Pressure = Force ÷ Area = 23.52 ÷ 0.015",
+     "1568 Pa"
+    ],
+    "tip": "Convert cm² to m² by dividing by 10,000. Ensure force is in Newtons."
+   },
+   {
+    "q": "Convert 4.5 m³ into cubic centimetres (cm³).",
+    "marks": 2,
+    "model": [
+     "1 m = 100 cm, so 1 m³ = 100³ cm³ = 1,000,000 cm³",
+     "4.5 × 1,000,000 = 4,500,000 cm³"
+    ],
+    "tip": "Cube the linear conversion factor (100) before multiplying by the volume in cubic metres."
+   },
+   {
+    "q": "The population of a town is 45,000 and the area is 12.5 km². Calculate the population density in people per square kilometre.",
+    "marks": 2,
+    "model": [
+     "Population Density = Total Population ÷ Area",
+     "45,000 ÷ 12.5",
+     "3,600 people/km²"
+    ],
+    "tip": "Straightforward division. Check your decimal placement when dividing by 12.5."
+   },
+   {
+    "q": "An alloy is made by mixing 200 cm³ of metal A (density 5 g/cm³) and 300 cm³ of metal B (density 8 g/cm³). Calculate the density of the alloy.",
+    "marks": 4,
+    "model": [
+     "Mass A = 200 × 5 = 1000 g",
+     "Mass B = 300 × 8 = 2400 g",
+     "Total Mass = 1000 + 2400 = 3400 g, Total Volume = 200 + 300 = 500 cm³",
+     "Density = 3400 ÷ 500 = 6.8 g/cm³"
+    ],
+    "tip": "Find total mass and total volume separately before calculating combined density."
+   },
+   {
+    "q": "A runner completes a 10 km race in 38 minutes and 15 seconds. Calculate the average speed of the runner in metres per second. Give your answer to 2 decimal places.",
+    "marks": 4,
+    "model": [
+     "Total distance in metres = 10,000 m",
+     "Total time in seconds = (38 × 60) + 15 = 2280 + 15 = 2295 seconds",
+     "Speed = 10,000 ÷ 2295",
+     "4.357... = 4.36 m/s"
+    ],
+    "tip": "Convert km to metres and total time entirely into seconds before dividing."
+   },
+   {
+    "q": "Pressure is given by P = F / A. If Force increases by 20% and Area decreases by 10%, find the percentage increase in Pressure.",
+    "marks": 4,
+    "model": [
+     "New Force = 1.2F, New Area = 0.9A",
+     "New Pressure = 1.2F / (0.9A) = (1.2 / 0.9) (F / A) = 1.333... P",
+     "Percentage increase = 33.3% (or 33.3 recurring %)"
+    ],
+    "tip": "Use multiplicative scaling factors for proportional change questions."
+   },
+   {
+    "q": "A water tank leaks at a rate of 4.5 millilitres per second. How many litres of water leak out in 2 hours?",
+    "marks": 3,
+    "model": [
+     "Time in seconds = 2 × 60 × 60 = 7200 seconds",
+     "Total volume in ml = 4.5 × 7200 = 32,400 ml",
+     "Convert ml to litres = 32,400 ÷ 1000 = 32.4 litres"
+    ],
+    "tip": "Convert time to seconds first, find total millilitres, then convert to litres by dividing by 1000."
+   },
+   {
+    "q": "The density of gold is 19.3 g/cm³. Find the mass of a gold bar measuring 20 cm by 5 cm by 4 cm, giving your answer in kilograms.",
+    "marks": 4,
+    "model": [
+     "Volume = 20 × 5 × 4 = 400 cm³",
+     "Mass = Density × Volume = 19.3 × 400 = 7720 grams",
+     "Convert grams to kg = 7720 ÷ 1000 = 7.72 kg"
+    ],
+    "tip": "Calculate volume in cm³, multiply by density to get grams, then convert to kilograms at the end."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A solid right-cylinder has radius 4 cm and height 15 cm. It is made of a material with a density of 7.2 g/cm³. Calculate the mass of the cylinder in kilograms. Give your answer to 3 significant figures.",
+    "steps": [
+     "Step 1: Calculate the volume of the cylinder using V = pi × r² × h. V = pi × 4² × 15 = pi × 16 × 15 = 240pi cm³ (approx 753.98 cm³).",
+     "Step 2: Calculate the mass in grams by multiplying volume by density: Mass = 7.2 × 240pi = 1728pi g (approx 5428.67 g).",
+     "Step 3: Convert the mass from grams to kilograms by dividing by 1000: 5428.67 ÷ 1000 = 5.42867 kg.",
+     "Step 4: Round the final answer to 3 significant figures: 5.43 kg."
+    ],
+    "ans": "5.43 kg"
+   },
+   {
+    "q": "A delivery van travels for 3 hours at an average speed of y km/h, and then for 2 hours at an average speed of (y + 15) km/h. The total distance travelled is 355 km. Set up an equation and solve it to find the value of y, then calculate the average speed for the whole journey.",
+    "steps": [
+     "Step 1: Write expression for distance 1: Distance 1 = Speed × Time = 3y.",
+     "Step 2: Write expression for distance 2: Distance 2 = 2(y + 15) = 2y + 30.",
+     "Step 3: Set up total distance equation: 3y + 2y + 30 = 355.",
+     "Step 4: Solve for y: 5y + 30 = 355 => 5y = 325 => y = 65.",
+     "Step 5: Calculate total distance and total time: Distance = 355 km, Time = 3 + 2 = 5 hours.",
+     "Step 6: Overall average speed = 355 ÷ 5 = 71 km/h."
+    ],
+    "ans": "y = 65, Overall Average Speed = 71 km/h"
+   },
+   {
+    "q": "A metal block has a mass of 5.4 kg and a volume of 600 cm³. Calculate the density of the block in g/cm³. Then, calculate the pressure in Pascals when the block rests on a base measuring 15 cm by 10 cm, taking g = 9.8 N/kg.",
+    "steps": [
+     "Step 1: Convert mass to grams: 5.4 kg = 5400 g.",
+     "Step 2: Calculate density: Density = Mass ÷ Volume = 5400 ÷ 600 = 9 g/cm³.",
+     "Step 3: Calculate weight (Force): Force = Mass (kg) × g = 5.4 × 9.8 = 52.92 N.",
+     "Step 4: Calculate base area in m²: Area = 15 cm × 10 cm = 150 cm² = 0.015 m².",
+     "Step 5: Calculate pressure: Pressure = Force ÷ Area = 52.92 ÷ 0.015 = 3528 Pascals."
+    ],
+    "ans": "Density = 9 g/cm³, Pressure = 3528 Pa"
+   },
+   {
+    "q": "Runner A runs a distance of 12 km at a speed of x km/h. Runner B runs the same 12 km at a speed that is 2 km/h faster than Runner A. Runner A takes 20 minutes longer than Runner B to complete the 12 km. Form an equation in x and solve it to find Runner A's speed.",
+    "steps": [
+     "Step 1: Time taken by Runner A = 12 / x hours. Time taken by Runner B = 12 / (x + 2) hours.",
+     "Step 2: Difference in time is 20 minutes, which is 20 / 60 = 1 / 3 of an hour.",
+     "Step 3: Form equation: (12 / x) - (12 / (x + 2)) = 1 / 3.",
+     "Step 4: Multiply through by 3x(x + 2): 36(x + 2) - 36x = x(x + 2).",
+     "Step 5: Expand and simplify: 36x + 72 - 36x = x² + 2x => x² + 2x - 72 = 0.",
+     "Step 6: Factorise quadratic: (x + 9)(x - 8) = 0. Since speed must be positive, x = 8."
+    ],
+    "ans": "Runner A's speed = 8 km/h"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Diagram illustrating the formula relationships for speed, density, and pressure compound measures.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#1b2540\" stroke-width=\"2\"/><polygon points=\"100,30 50,110 150,110\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"100\" y=\"65\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">Distance (D)</text><line x1=\"50\" y1=\"85\" x2=\"150\" y2=\"85\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"80\" y=\"102\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">Speed (S)</text><text x=\"120\" y=\"102\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">Time (T)</text><text x=\"100\" y=\"128\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">Speed = D / T</text><polygon points=\"300,30 250,110 350,110\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"300\" y=\"65\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">Mass (M)</text><line x1=\"250\" y1=\"85\" x2=\"350\" y2=\"85\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"280\" y=\"102\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">Density</text><text x=\"325\" y=\"102\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">Volume</text><text x=\"300\" y=\"128\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">Density = M / V</text><polygon points=\"200,140 150,220 250,220\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"200\" y=\"175\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">Force (F)</text><line x1=\"150\" y1=\"195\" x2=\"250\" y2=\"195\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"180\" y=\"212\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">Pressure</text><text x=\"225\" y=\"212\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">Area</text><text x=\"200\" y=\"235\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">Pressure = F / A</text></svg>"
+   },
+   {
+    "cap": "Visualizing metric volume scaling: 1 m³ contains 1,000,000 cm³ because each dimension is scaled by 100.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"40\" y=\"40\" width=\"140\" height=\"140\" fill=\"#e9d5ff\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"110\" y=\"115\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">1 m³ cube</text><text x=\"110\" y=\"135\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">100 cm × 100 cm × 100 cm</text><rect x=\"240\" y=\"80\" width=\"30\" height=\"30\" fill=\"#fecaca\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"330\" y=\"95\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">1 cm³ cube</text><path d=\"M 180 60 Q 210 50 240 85\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"1.5\" stroke-dasharray=\"4\"/><text x=\"210\" y=\"45\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Scale Factor 100</text><text x=\"210\" y=\"200\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">1 m³ = 100³ cm³ = 1,000,000 cm³</text></svg>"
+   },
+   {
+    "cap": "Graphical representation of distance-time and speed-time relationships for compound rates of change.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"190\" x2=\"180\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"190\" x2=\"50\" y2=\"60\" stroke=\"#1b2540\" stroke-width=\"2\"/><polyline points=\"50,190 120,120 160,120 180,60\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><text x=\"115\" y=\"210\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">Time</text><text x=\"30\" y=\"125\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">Dist</text><text x=\"115\" y=\"45\" font-size=\"12\" fill=\"#2563eb\" text-anchor=\"middle\">Distance-Time: Gradient = Speed</text><line x1=\"220\" y1=\"190\" x2=\"350\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"220\" y1=\"190\" x2=\"220\" y2=\"60\" stroke=\"#1b2540\" stroke-width=\"2\"/><polyline points=\"220,190 290,90 350,90\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2.5\"/><text x=\"285\" y=\"210\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">Time</text><text x=\"200\" y=\"125\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">Speed</text><text x=\"285\" y=\"45\" font-size=\"12\" fill=\"#16a34a\" text-anchor=\"middle\">Speed-Time: Area = Distance</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_h.0.12",
+  "sid": "maths_eduqas_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-16T03:11:38.451Z"
+ },
+ "maths_eduqas_h.0.13": {
+  "summary": "Mastering estimation and calculation-checking is essential for securing top marks in both non-calculator and calculator papers. This topic teaches you how to approximate complex numerical expressions by rounding every number to one significant figure, evaluate orders of magnitude, and reliably spot calculator entry errors using reverse operations and common sense.",
+  "core": [
+   {
+    "h": "The Golden Rule of Estimation",
+    "p": "To estimate the value of a complicated numerical calculation without a calculator, you must first round every individual number to one significant figure. This transforms messy, multi-digit decimals and integers into clean numbers that you can easily compute mentally.",
+    "bullets": [
+     "Always locate the first non-zero digit from the left to find the leading significant figure.",
+     "Look at the digit immediately to its right to decide whether to round up or keep the same.",
+     "Replace all subsequent integer places with zeros, and remove trailing decimal zeros.",
+     "Write your rounded approximation with an approximately equal symbol before evaluating."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "One Significant Figure",
+      "p": "Unless the question specifies otherwise, estimating an answer always demands rounding each number to 1 significant figure first."
+     },
+     {
+      "k": "tip",
+      "t": "Notation Matters",
+      "p": "Use the approximation sign (approximate equals) when writing your rounded numbers, rather than the standard equals sign."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Handling Division and Fractions",
+    "p": "When estimating the value of a fraction or division statement, round both the numerator and the denominator independently to one significant figure. Once simplified, perform the division, paying special attention when the denominator rounds to a number less than one.",
+    "bullets": [
+     "Round the top number (numerator) to 1 significant figure.",
+     "Round the bottom number (denominator) to 1 significant figure.",
+     "If the denominator rounds to a decimal between 0 and 1, division becomes multiplication by the reciprocal.",
+     "Always write out your intermediate estimated fraction before computing the final value."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Fraction Denominator Trap",
+      "p": "Dividing by a small decimal like 0.04 makes the overall answer much larger, not smaller. Do not let intuition mislead you."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Estimating Square Roots and Powers",
+    "p": "Calculations frequently incorporate surds, powers, and roots that resist direct mental arithmetic. By approximating the base numbers or finding the nearest integer square roots, you can bound your estimate within tight, accurate margins.",
+    "bullets": [
+     "Identify standard square numbers like 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144.",
+     "For non-square roots, bracket the value between the two closest integer roots.",
+     "For powers, round the base to 1 significant figure before applying the exponent.",
+     "Keep intermediate index laws clean by using rough integer approximations."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Square Root Bounding",
+      "p": "The process of identifying the lower and upper integer square roots between which a non-square number lies."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Checking Calculations via Inverse Operations",
+    "p": "Once you compute an answer, particularly in a non-calculator paper, you must verify its structural integrity using inverse operations. Addition checks with subtraction, multiplication checks with division, and powers check with roots.",
+    "bullets": [
+     "If you calculated A + B = C, check by confirming that C - B equals A.",
+     "If you multiplied two decimals, verify magnitude by checking decimal place counts.",
+     "For complex multi-step problems, work backwards through each algebraic step.",
+     "Substitute your final answer back into the original equation to test balance."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Inverse Verification",
+      "p": "Examiners award method marks for clear working, but checking via inverse operations prevents silly arithmetic slips."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Checking Calculator Inputs",
+    "p": "Technology is powerful, but syntax errors lead to catastrophic exam losses. Checking calculator answers requires mental estimation before keying numbers in, ensuring your digital result shares the same order of magnitude.",
+    "bullets": [
+     "Perform a quick 1-sig-fig mental estimate before touching your calculator.",
+     "Check that your calculator display matches the magnitude of your mental estimate.",
+     "Use brackets meticulously around numerators, denominators, and negative bases.",
+     "Re-enter calculations twice from scratch to guard against finger slips."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Syntax Disasters",
+      "p": "Entering negative numbers without brackets on calculators often yields positive outputs due to squaring rules."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Orders of Magnitude",
+    "p": "An order of magnitude refers to the power of ten scaling factor of a number. Checking an answer's order of magnitude guarantees you have not misplaced a decimal point or omitted a trailing zero during complex multi-stage computations.",
+    "bullets": [
+     "Express numbers in standard form A x 10 to the power of n to compare scale.",
+     "Check that adding two numbers of vastly different scales retains the larger magnitude.",
+     "Count decimal places carefully when multiplying numbers less than one.",
+     "Ensure word problems in context make physical sense regarding scale."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Scale Reality Check",
+      "p": "If you calculate the cost of a single apple to be £4,500, your order of magnitude is clearly flawed."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Estimating Complicated Multi-Step Expressions",
+    "p": "When faced with an expression containing mixed operations, fractions, roots, and additions, apply the order of operations strictly after rounding every individual component to one significant figure.",
+    "bullets": [
+     "Round every number in the expression to 1 significant figure first.",
+     "Apply BIDMAS/BODMAS to the newly rounded numbers.",
+     "Evaluate numerators and denominators separately before dividing.",
+     "Never round intermediate steps prematurely until the 1-sig-fig stage is set."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Order of Operations",
+      "p": "Brackets, Indices, Division, Multiplication, Addition, Subtraction still apply rigidly to estimated numbers."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Detecting Reasonable Answers in Context",
+    "p": "Applied GCSE questions set in real-world contexts demand common-sense checks. Examiners frequently penalize candidates who state impossible physical measurements or financial figures without questioning them.",
+    "bullets": [
+     "Check units carefully: are lengths in cm, m, or km?",
+     "Verify that probabilities always lie strictly between 0 and 1 inclusive.",
+     "Check that human heights, weights, and speeds align with real-world biology.",
+     "Ensure currency and financial profits match realistic business margins."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Contextual Reasonableness",
+      "p": "Evaluating whether a mathematical solution is physically and logically possible in the real-world scenario described."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Using Bounds to Check Calculations",
+    "p": "When numbers are given rounded to a specified degree of accuracy, estimation can be refined using lower and upper bounds. This guarantees that your estimated range captures the true exact value.",
+    "bullets": [
+     "Find the lower bound and upper bound for each rounded input value.",
+     "Substitute lower bounds into the expression to find the minimum possible outcome.",
+     "Substitute upper bounds into the expression to find the maximum possible outcome.",
+     "Compare your exact calculator answer against this rigorous bounding range."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Bound Substitution",
+      "p": "Remember that for division with bounds, divide the lower bound of the numerator by the upper bound of the denominator."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Checking Recurring Decimals and Fractions",
+    "p": "When verifying calculations involving fractions or recurring decimals, convert them to common fractions or terminate them to a high number of decimal places to ensure precision matches.",
+    "bullets": [
+     "Convert recurring decimals to exact fractions before entering into calculations.",
+     "Check calculator decimal outputs against fractional fraction-key equivalents.",
+     "Use fraction bars rather than rounded decimals during intermediate steps.",
+     "Verify repeating patterns align with expected fraction denominators."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Exact Form Verification",
+      "p": "Exact fraction arithmetic bypasses rounding errors entirely until the final presentation step."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Error Spotting in Exam Working",
+    "p": "Top-tier Eduqas exam questions often ask you to critique another student's faulty calculation. To score full marks, you must identify the exact mathematical error and explain why it makes the answer wrong.",
+    "bullets": [
+     "Look for premature rounding of intermediate numbers.",
+     "Check whether the student ignored the order of operations (BIDMAS).",
+     "Inspect decimal point placement in multiplication and division.",
+     "Perform your own independent estimation to prove where their calculation diverged."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Vague Critiques",
+      "p": "Writing 'the student made a mistake' gets zero marks. You must specify what rule was broken and show the correct working."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Flight Simulator and Instrument Check",
+   "p": "Estimating and checking calculations is like a pilot cross-checking flight instruments against visual landmarks and backup gauges before takeoff. Rounding to one significant figure gives you the rough compass heading (the big picture), while inverse operations and bounds act as your altimeter and horizon checks to ensure you haven't punched a stray digit into your flight computer. Where this analogy breaks down is that a flight path is continuous and dynamic, whereas mathematical calculations are discrete logical steps where a single arithmetic slip corrupts the final destination entirely."
+  },
+  "terms": [
+   {
+    "t": "Estimation",
+    "d": "Finding an approximate value for a calculation by rounding numbers to a simpler degree of accuracy, usually one significant figure."
+   },
+   {
+    "t": "Significant Figure",
+    "d": "Digits that carry meaningful contribution to the precision of a number, starting with the first non-zero digit from the left."
+   },
+   {
+    "t": "Order of Magnitude",
+    "d": "The scale of a value expressed as a power of ten, used to verify the general size of an answer."
+   },
+   {
+    "t": "Inverse Operation",
+    "d": "An operation that reverses the effect of another, such as subtraction reversing addition or square roots reversing squares."
+   },
+   {
+    "t": "Approximation",
+    "d": "A value that is nearly but not exactly correct, denoted by the wavy equals sign."
+   },
+   {
+    "t": "Lower Bound",
+    "d": "The smallest possible value that a rounded number could have taken before being rounded."
+   },
+   {
+    "t": "Upper Bound",
+    "d": "The largest possible value that a rounded number could have taken before being rounded."
+   },
+   {
+    "t": "BIDMAS",
+    "d": "The mandatory hierarchy of mathematical operations: Brackets, Indices, Division, Multiplication, Addition, Subtraction."
+   },
+   {
+    "t": "Syntax Error",
+    "d": "A mistake in how an expression is keyed into a calculator, violating mathematical grammar rules."
+   },
+   {
+    "t": "Contextual Check",
+    "d": "Verifying whether a calculated numerical result makes physical and logical sense in a real-world scenario."
+   },
+   {
+    "t": "Premature Rounding",
+    "d": "Rounding numbers too early in a multi-step calculation, which accumulates compounding errors."
+   },
+   {
+    "t": "Reciprocal",
+    "d": "The inverse of a number, calculated as one divided by that number (x to the power of negative one)."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Rounding numbers to 2 or 3 significant figures when asked to estimate an answer.",
+    "r": "Always round every number strictly to 1 significant figure unless the question explicitly asks otherwise."
+   },
+   {
+    "w": "Using a standard equals sign (=) when writing down rounded estimates.",
+    "r": "Always use the approximation symbol (approximately equal to) for estimated intermediate values."
+   },
+   {
+    "w": "Forgetting to evaluate top and bottom parts of a fraction separately before dividing.",
+    "r": "Treat the numerator and denominator as independent expressions, rounding each to 1 sig fig first."
+   },
+   {
+    "w": "Saying a calculation is correct because the calculator displayed it.",
+    "r": "Always back up calculator outputs with a mental 1-sig-fig estimate to catch input syntax errors."
+   },
+   {
+    "w": "Ignoring the order of operations when evaluating estimated multi-step expressions.",
+    "r": "Strictly apply BIDMAS to your rounded numbers in the correct hierarchical order."
+   },
+   {
+    "w": "Writing 'wrong decimal place' without showing the correct order of magnitude calculation.",
+    "r": "Show the explicit 1-sig-fig breakdown to prove why the original calculation's scale is impossible."
+   },
+   {
+    "w": "Treating a negative number squared on a calculator without brackets.",
+    "r": "Always input negative bases inside parentheses on digital devices to prevent sign errors."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Work out an estimate for the value of (41.2 x 8.9) / sqrt(48.6).",
+    "marks": 3,
+    "model": [
+     "Round 41.2 to 40",
+     "Round 8.9 to 9",
+     "Round 48.6 to 49",
+     "Evaluate sqrt(49) = 7",
+     "Calculate (40 x 9) / 7 = 360 / 7",
+     "State final estimate as 51.4 or 51 or 360/7"
+    ],
+    "tip": "Round every single number to 1 significant figure before doing any arithmetic."
+   },
+   {
+    "q": "Explain why John's calculation of 4.5 x 12.3 = 553.5 must be incorrect without working out the exact product.",
+    "marks": 2,
+    "model": [
+     "Estimate calculation as 5 x 10 = 50",
+     "State that 553.5 has an incorrect order of magnitude / is far too large"
+    ],
+    "tip": "Use 1 sig fig estimation to check scale and magnitude instantly."
+   },
+   {
+    "q": "Estimate the value of (7.8 + 12.4) squared divided by 0.19.",
+    "marks": 3,
+    "model": [
+     "Round 7.8 to 8 and 12.4 to 10",
+     "Sum numerator estimate: 8 + 10 = 18",
+     "Square numerator estimate: 18 squared = 324 (or 20 squared = 400)",
+     "Round 0.19 to 0.2",
+     "Calculate 400 / 0.2 = 2000 (or using 324 / 0.2 = 1620)"
+    ],
+    "tip": "Take care when dividing by numbers less than 1; it scales the value up."
+   },
+   {
+    "q": "A car travels 308 km in 4.2 hours. Use estimation to check if an average speed of 80 km/h is reasonable.",
+    "marks": 2,
+    "model": [
+     "Round distance to 300 km and time to 4 hours",
+     "Calculate 300 / 4 = 75 km/h",
+     "Conclude that 80 km/h is a reasonable estimate"
+    ],
+    "tip": "Link your estimated calculation explicitly back to the context of the question."
+   },
+   {
+    "q": "Work out an estimate for (0.048 x 512) / (0.91 cubed).",
+    "marks": 3,
+    "model": [
+     "Round 0.048 to 0.05",
+     "Round 512 to 500",
+     "Round 0.91 to 0.9 (or 1)",
+     "Calculate numerator: 0.05 x 500 = 25",
+     "Calculate denominator: 1 cubed = 1",
+     "State final estimate as 25"
+    ],
+    "tip": "Handle decimals carefully by converting to fractions if mental arithmetic gets tricky."
+   },
+   {
+    "q": "Sarah uses her calculator to evaluate 15 / (3 + 2). Her calculator displays 7. Explain the syntax error she made.",
+    "marks": 2,
+    "model": [
+     "Identify that Sarah omitted brackets around 3 + 2",
+     "Explain that the calculator performed (15 / 3) + 2 instead of 15 / (3 + 2)"
+    ],
+    "tip": "Always write out explicit calculator keystrokes and bracket placements in error questions."
+   },
+   {
+    "q": "Estimate the value of cube root of 65 multiplied by 9.8 squared.",
+    "marks": 3,
+    "model": [
+     "Identify cube root of 64 is 4, so round cube root of 65 to 4",
+     "Round 9.8 to 10",
+     "Square 10 to get 100",
+     "Calculate 4 x 100 = 400"
+    ],
+    "tip": "Memorize standard cube numbers (1, 8, 27, 64, 125) to spot root estimates instantly."
+   },
+   {
+    "q": "Check the calculation 3.2 x 10 to the power of 4 multiplied by 2.1 x 10 to the power of 3 by estimating in standard form.",
+    "marks": 2,
+    "model": [
+     "Round coefficients to 3 and 2",
+     "Multiply numbers: 3 x 2 = 6",
+     "Add powers of 10: 10 to the power of 7",
+     "State estimated result as 6 x 10 to the power of 7"
+    ],
+    "tip": "Standard form multiplication rules require multiplying coefficients and adding indices."
+   },
+   {
+    "q": "An ice rink floor measures 41.5 m by 19.8 m. Estimate the area of the ice rink and state whether your estimate is an underestimate or overestimate.",
+    "marks": 3,
+    "model": [
+     "Round 41.5 to 40 and 19.8 to 20",
+     "Calculate 40 x 20 = 800 square meters",
+     "Explain that both numbers were rounded down, so 800 is an underestimate"
+    ],
+    "tip": "Exam questions often award the third mark for correctly reasoning whether your estimate is high or low."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Work out an estimate for the value of (62.4 + 38.1) x 4.92 / sqrt(24.8).",
+    "steps": [
+     "Step 1: Round every number in the expression to 1 significant figure. 62.4 rounds to 60, 38.1 rounds to 40, 4.92 rounds to 5, and 24.8 rounds to 20.",
+     "Step 2: Apply BIDMAS. Evaluate the brackets first using the rounded values: 60 + 40 = 100.",
+     "Step 3: Approximate the square root. Since 24.8 rounds to 20, use the nearest square number root, which is sqrt(25) = 5.",
+     "Step 4: Substitute all approximated values back into the expression: (100 x 5) / 5.",
+     "Step 5: Compute the final evaluated estimate: 500 / 5 = 100."
+    ],
+    "ans": "100"
+   },
+   {
+    "q": "A packet of sweets weighs 48.5 grams. A box contains 39.2 packets. Work out an estimate for the total weight of 12 boxes, each containing 39.2 packets.",
+    "steps": [
+     "Step 1: Identify all quantities to be estimated. Weight per packet = 48.5g, packets per box = 39.2, number of boxes = 12.",
+     "Step 2: Round each value to 1 significant figure. 48.5 rounds to 50, 39.2 rounds to 40, and 12 rounds to 10.",
+     "Step 3: Set up the estimated multiplication: Total weight approx = 50 x 40 x 10.",
+     "Step 4: Perform the calculation systematically: 50 x 40 = 2000, then 2000 x 10 = 20000.",
+     "Step 5: Include appropriate units in context: 20,000 grams (or 20 kg)."
+    ],
+    "ans": "20,000 grams (or 20 kg)"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Figure 1: Visual breakdown of rounding numbers to one significant figure prior to estimation.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><text x=\"200\" y=\"30\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1b2540\">Steps for Estimating Calculations (1 Sig Fig)</text><rect x=\"40\" y=\"50\" width=\"320\" height=\"35\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"200\" y=\"72\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">1. Identify 1st non-zero digit from left</text><rect x=\"40\" y=\"95\" width=\"320\" height=\"35\" rx=\"6\" fill=\"#fde68a\" stroke=\"#d97706\" stroke-width=\"1.5\"/><text x=\"200\" y=\"117\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">2. Round every number independently to 1 SF</text><rect x=\"40\" y=\"140\" width=\"320\" height=\"35\" rx=\"6\" fill=\"#bbf7d0\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"200\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">3. Apply BIDMAS strictly to rounded values</text><rect x=\"40\" y=\"185\" width=\"320\" height=\"35\" rx=\"6\" fill=\"#e9d5ff\" stroke=\"#9333ea\" stroke-width=\"1.5\"/><text x=\"200\" y=\"207\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">4. Check magnitude and units in context</text></svg>"
+   },
+   {
+    "cap": "Figure 2: Checking calculation reliability using inverse operations and digital input verification.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><text x=\"200\" y=\"30\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1b2540\">Calculation Verification Methods</text><rect x=\"30\" y=\"60\" width=\"150\" height=\"130\" rx=\"8\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><text x=\"105\" y=\"85\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#991b1b\">Inverse Checks</text><text x=\"105\" y=\"115\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b2540\">Addition &lt;-&gt; Subtraction</text><text x=\"105\" y=\"140\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b2540\">Multiplication &lt;-&gt; Division</text><text x=\"105\" y=\"165\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b2540\">Powers &lt;-&gt; Roots</text><rect x=\"220\" y=\"60\" width=\"150\" height=\"130\" rx=\"8\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"295\" y=\"85\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">Calculator Checks</text><text x=\"295\" y=\"115\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b2540\">Mental 1-SF Estimate</text><text x=\"295\" y=\"140\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b2540\">Bracket Placement</text><text x=\"295\" y=\"165\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b2540\">Re-enter from Scratch</text></svg>"
+   },
+   {
+    "cap": "Figure 3: Order of magnitude scaling and decimal point placement verification.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><text x=\"200\" y=\"30\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1b2540\">Orders of Magnitude &amp; Scale</text><line x1=\"50\" y1=\"120\" x2=\"350\" y2=\"120\" stroke=\"#64748b\" stroke-width=\"2\"/><circle cx=\"80\" cy=\"120\" r=\"6\" fill=\"#2563eb\"/><text x=\"80\" y=\"150\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b2540\">0.001</text><circle cx=\"200\" cy=\"120\" r=\"6\" fill=\"#16a34a\"/><text x=\"200\" y=\"150\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b2540\">1</text><circle cx=\"320\" cy=\"120\" r=\"6\" fill=\"#dc2626\"/><text x=\"320\" y=\"150\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b2540\">1000</text><text x=\"200\" y=\"190\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\">Each step left/right scales by power of 10</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_h.0.13",
+  "sid": "maths_eduqas_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-16T03:11:55.446Z"
+ }
+}
