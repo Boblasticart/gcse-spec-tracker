@@ -120,6 +120,8 @@ export async function complete(p: ProviderConfig, key: string, prompt: string): 
   })) as { choices?: { message?: { content?: string }; finish_reason?: string }[] };
   const ch = data.choices?.[0];
   const text = ch?.message?.content ?? "";
+  // A model that spends its whole token budget thinking replies with nothing: not the note's fault, so after two of these the writer moves on to the next model.
+  if (!text && ch?.finish_reason === "length") throw new RateLimited("reply cut off: empty reply (length)", false, 5000);
   if (!text) throw new Error(`empty reply (${ch?.finish_reason ?? "no choice"})`);
   return text;
 }
