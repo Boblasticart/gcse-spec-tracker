@@ -5,14 +5,10 @@ Runs read **only this file and `docs/CONTEXT.md`**. Keep this file short: finish
 ## Status
 
 ```
-RUN LOCK:       running since 2026-11-16 20:30 UTC, session session_01Sm3c8jfY1ypFSCYZak5GLh
-CURRENT JOB:    J2b Automatic pipeline (owner asked in chat 2026-11-16: one pipeline that can make "anything I want", notes first, fully automatic)
-CURRENT STEPS:
-- [x] 1. General engine (scripts/pipeline/): any job runs on the same AI keys and limits; the notes job moved onto it; failed items retried by themselves on later days (up to 6 tries); weak models skipped; notes repaired automatically where safe; content/pipeline/STATUS.md written every run.
-- [x] 2. New kinds of content with no code: a "custom" job in content/pipeline/jobs.json (prompt + what the reply must contain + where to save). Guide in docs/PIPELINE.md.
-- [x] 3. A real Write notes run on the new engine finishes and saves notes; then list J2b under "Ready for the owner's OK".
-(J3 Maths carries on by itself meanwhile: its steps are in the Queue below.)
-LAST RUN ENDED: (in progress)
+RUN LOCK:       none
+CURRENT JOB:    none (J2b done; J3 Maths carries on by itself via the daily pipeline run)
+CURRENT STEPS:  none
+LAST RUN ENDED: 2026-11-16 20:35 UTC. Fixed a bug where the daily scheduled run wrote 9 notes but couldn't commit them (main's notes.yml didn't set NOTES_COMMIT_EVERY, so the script skipped its final commit/publish; fix: always commit at the end regardless). Ticked J2b step 3, listed J2b under "Ready for the owner's OK". CI green. Next scheduled pipeline run: 2026-11-17 08:23 UTC. 186 notes across 6 specs so far (3% of ~5,200).
 ```
 
 ## Claude is also writing notes (owner asked in chat, 2026-11-16: "start generating now until I tell you to stop")
