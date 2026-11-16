@@ -15,6 +15,12 @@ CURRENT STEPS:
 LAST RUN ENDED: 2026-11-16 14:10 UTC, in chat with the owner (J2b built; notes now go live by themselves at the end of every run, first 30 topic files published to main by hand with the same code, CI green. Next run: check run 2026-11-16d finished and published by itself, check the live site shows a maths note, tick J2b step 3 and list J2b for the owner's OK)
 ```
 
+## Claude is also writing notes (owner asked in chat, 2026-11-16: "start generating now until I tell you to stop")
+
+- This replaces the earlier "never hand-write notes" choice while the owner has spare Claude usage. Claude-written notes go through the same repairs and quality gate (`scripts/notes/add.ts`), are saved to the same files and marked `by: claude/...`; the pipeline skips points that already have a note.
+- To avoid clashing with the pipeline (which is on maths, then English), Claude works on the sciences: `bio_edx` first, then `chem_edx`, `phy_edx`, then the OCR sciences. Only topic files are touched, never progress.json / failures.json.
+- Stop as soon as the owner says stop.
+
 ## Queue (top = next)
 
 **The big goal.** The same kind of notes as the existing ones (summary, core sections, terms, mistakes, exam questions, worked examples, diagrams) for every spec point of the 15 most-entered GCSE subjects, for each board that offers them (AQA, Edexcel, OCR, Eduqas). Owner's choices on 2026-11-12:
