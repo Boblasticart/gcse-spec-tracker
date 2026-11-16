@@ -4018,5 +4018,471 @@
   "src": "pre",
   "by": "gemini/gemini-3.5-flash-lite",
   "ts": "2026-11-16T02:20:08.339Z"
+ },
+ "maths_aqa_f.3.0": {
+  "summary": "Mastering geometric terms, notation, and accurate diagram sketching is fundamental for success in AQA GCSE Maths Foundation tier. You must be able to read, write, and interpret standard geometric symbols for points, line segments, angles, parallel lines, and equal lengths. Correctly labelling triangles using capital letters for vertices and corresponding lowercase letters for opposite sides is essential for solving geometric problems and accurately constructing shapes from written descriptions.",
+  "core": [
+   {
+    "h": "Points, Line Segments, Lines, and Rays",
+    "p": "In geometry, specific terms describe 1D objects. A **point** indicates an exact location and is labelled with a single capital letter. A **line segment** is a straight path connecting two endpoints. A continuous straight **line** extends infinitely in both directions, whereas a **ray** starts at a single point and extends infinitely in one direction.",
+    "bullets": [
+     "**Point**: Single exact position, labelled with a capital letter (e.g., $P$).",
+     "**Line Segment**: Straight line between two fixed points (e.g., the segment between $A$ and $B$).",
+     "**Line**: Infinite straight path passing through points.",
+     "**Ray**: Straight path with one endpoint extending endlessly in one direction (e.g., a light beam)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Line Segment",
+      "p": "A straight part of a line bounded by two distinct endpoints."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Standard Line and Distance Notation",
+    "p": "Line segments are identified by the two capital letters corresponding to their endpoints. The distance or length of a line segment uses the same two letters. Order does not matter for length unless indicating a directional vector.",
+    "bullets": [
+     "**Naming Line Segments**: Write the endpoints together, such as $AB$ or $BA$.",
+     "**Representing Length**: Write $AB = 6\\text{ cm}$ to state that the distance between point $A$ and point $B$ is 6 centimetres.",
+     "**Midpoint**: A point $M$ that divides a line segment $AB$ into two equal lengths such that $AM = MB$."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam Tip",
+      "p": "When an exam question asks for the length of $PQ$, it simply means measure or calculate the distance from point $P$ to point $Q$."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Three-Letter Angle Notation",
+    "p": "Angles are formed where two line segments meet at a vertex. Angles are named using three capital letters, where the **middle letter always represents the vertex** where the angle is located.",
+    "bullets": [
+     "**Three-Letter Notation**: $\\angle ABC$ or $\\hat{B}$ or $ABC$ means the angle formed at vertex $B$ between line segment $AB$ and line segment $BC$.",
+     "**Vertex Position**: The vertex MUST be the middle letter. For $\\angle PQR$, point $Q$ is the vertex.",
+     "**Single Letter Notation**: Used only when there is no ambiguity (e.g., angle $A$ inside a simple triangle)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Common Mistake",
+      "p": "Writing $\\angle ACB$ when you mean the angle at vertex $B$. Always ensure the letter of the vertex where the turn happens is in the middle!"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Classifying Angles by Size",
+    "p": "Angles are classified based on their size in degrees ($^\\circ$). Recognizing these types instantly helps when estimating or checking calculated angles.",
+    "bullets": [
+     "**Acute Angle**: Greater than $0^\\circ$ and less than $90^\\circ$.",
+     "**Right Angle**: Exactly $90^\\circ$ (indicated by a small square box at the corner).",
+     "**Obtuse Angle**: Greater than $90^\\circ$ and less than $180^\\circ$.",
+     "**Straight Line Angle**: Exactly $180^\\circ$.",
+     "**Reflex Angle**: Greater than $180^\\circ$ and less than $360^\\circ$."
+    ],
+    "table": {
+     "head": [
+      "Angle Type",
+      "Size Range",
+      "Visual Feature"
+     ],
+     "rows": [
+      [
+       "Acute",
+       "0° < x < 90°",
+       "Sharp, narrow corner"
+      ],
+      [
+       "Right Angle",
+       "x = 90°",
+       "Square symbol in corner"
+      ],
+      [
+       "Obtuse",
+       "90° < x < 180°",
+       "Wide open corner"
+      ],
+      [
+       "Straight Line",
+       "x = 180°",
+       "Flat straight line"
+      ],
+      [
+       "Reflex",
+       "180° < x < 360°",
+       "Outer turn around vertex"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Parallel and Perpendicular Lines Notation",
+    "p": "Special line relationships are indicated using standardized geometric symbols on diagrams and in text.",
+    "bullets": [
+     "**Parallel Lines**: Lines that never meet and remain equi-distant. Indicated on diagrams with matching arrowheads ($>$ or $>>$). Symbol: $AB \\parallel CD$.",
+     "**Perpendicular Lines**: Lines that meet or intersect at a right angle ($90^\\circ$). Indicated with a square right-angle symbol. Symbol: $AB \\perp CD$."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Diagram Arrows vs Ticks",
+      "p": "Arrows ($>$) on lines indicate parallel directions. Matching hash marks / dashes ($|$) indicate equal lengths. Do not confuse arrows with dashes!"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Marking Equal Lengths and Angles on Diagrams",
+    "p": "Geometric diagrams use mark conventions to show equality without needing written numerical values.",
+    "bullets": [
+     "**Equal Lengths**: Short matching hatch marks/dashes across lines show equal length. A single dash ($|$) on two lines means they are equal; double dashes ($||$) show another pair of equal lines.",
+     "**Equal Angles**: Matching arc symbols inside angles show equal measure. An arc with a tick mark can distinguish different sets of equal angles."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Standard Labelling of Triangles (Vertices and Sides)",
+    "p": "Triangles follow a strict convention linking vertices and side lengths. Capital letters label vertices, and matching lowercase letters label opposite sides.",
+    "bullets": [
+     "**Vertices**: Named with capital letters $A$, $B$, and $C$.",
+     "**Opposite Sides**: Side $a$ is opposite Vertex $A$; Side $b$ is opposite Vertex $B$; Side $c$ is opposite Vertex $C$.",
+     "**Importance**: This convention is crucial for understanding formulas in trigonometry and geometry problems."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Opposite Side",
+      "p": "The side of a polygon directly across from a given vertex, not touching that vertex."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Classifying Triangles by Properties",
+    "p": "Triangles are categorized according to their side lengths and interior angle properties.",
+    "bullets": [
+     "**Equilateral Triangle**: All 3 sides equal ($a=b=c$), all 3 angles equal ($60^\\circ$ each). Has 3 lines of symmetry.",
+     "**Isosceles Triangle**: 2 sides equal, 2 base angles opposite the equal sides are equal. Has 1 line of symmetry.",
+     "**Scalene Triangle**: All 3 sides different lengths, all 3 angles different sizes. No line of symmetry.",
+     "**Right-Angled Triangle**: Contains one $90^\\circ$ angle. The side opposite the right angle is the longest side, called the **hypotenuse**."
+    ],
+    "table": {
+     "head": [
+      "Triangle Type",
+      "Equal Sides",
+      "Equal Angles",
+      "Symmetry Lines"
+     ],
+     "rows": [
+      [
+       "Equilateral",
+       "3",
+       "3 (all 60°)",
+       "3"
+      ],
+      [
+       "Isosceles",
+       "2",
+       "2",
+       "1"
+      ],
+      [
+       "Scalene",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Right-Angled",
+       "Can be 2 (Isosceles) or 0",
+       "1 angle is 90°",
+       "1 (if Isosceles) or 0"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Drawing Shapes from Descriptions: Tools & Accuracy",
+    "p": "AQA Foundation exam questions often require drawing shapes accurately from written descriptions using geometric equipment.",
+    "bullets": [
+     "**Required Tools**: Sharp pencil, ruler (cm/mm), protractor ($180^\\circ$ or $360^\\circ$).",
+     "**Exam Tolerances**: Line lengths must usually be within $\\pm 2\\text{ mm}$. Angles must be within $\\pm 2^\\circ$.",
+     "**Construction Lines**: Always leave pencil construction lines visible; do not rub them out."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam Tip",
+      "p": "Always sketch a quick rough diagram first with labels before doing your accurate final drawing!"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Step-by-Step Drawing: SAS (Side-Angle-Side) Descriptions",
+    "p": "Drawing a triangle when given two side lengths and the angle between them.",
+    "bullets": [
+     "**Step 1**: Draw the base side using a ruler to exact length (e.g., $AB = 7\\text{ cm}$). Label points $A$ and $B$.",
+     "**Step 2**: Place protractor center at vertex $A$ (or specified vertex), align zero line, measure specified angle (e.g., $45^\\circ$), and mark with a dot.",
+     "**Step 3**: Draw a straight line from the vertex through the mark using a ruler.",
+     "**Step 4**: Measure the second side length along this line and mark vertex $C$.",
+     "**Step 5**: Join vertex $C$ to vertex $B$ to complete triangle $ABC$."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Step-by-Step Drawing: ASA (Angle-Side-Angle) Descriptions",
+    "p": "Drawing a triangle when given one side length and the two angles at either end of that side.",
+    "bullets": [
+     "**Step 1**: Draw the baseline to the given length using a ruler. Label endpoints (e.g., $P$ and $Q$).",
+     "**Step 2**: Place protractor at point $P$, measure angle $\\angle QPR$, and draw a light line extending outward.",
+     "**Step 3**: Place protractor at point $Q$, measure angle $\\angle PQR$, and draw a light line extending outward.",
+     "**Step 4**: The intersection of these two lines is the third vertex $R$. Label point $R$ clearly."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Protractor Scale Confusion",
+      "p": "Check whether to use the inner or outer scale of your protractor. Always verify if the angle you are measuring is acute (< 90°) or obtuse (> 90°)."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The House Address System",
+   "p": "Think of geometric notation like postal addresses. A single letter (like 'Street A') is too vague if multiple streets share a name. Using three letters (e.g. Angle ABC) is like giving a full address: House Number (Point A), Street Name (Vertex B), and Town (Point C). The vertex is the house itself where you stand! The analogy breaks down because geometry deals with continuous spatial angles and lengths rather than discrete postal codes."
+  },
+  "terms": [
+   {
+    "t": "Vertex",
+    "d": "A point where two or more straight line segments or edges meet (plural: vertices)."
+   },
+   {
+    "t": "Line Segment",
+    "d": "A part of a straight line that is bounded by two distinct end points."
+   },
+   {
+    "t": "Ray",
+    "d": "A line with one start point that extends endlessly in one direction."
+   },
+   {
+    "t": "Parallel Lines",
+    "d": "Lines in the same plane that never intersect, remaining the same distance apart throughout."
+   },
+   {
+    "t": "Perpendicular Lines",
+    "d": "Two lines that intersect or meet at a right angle (90 degrees)."
+   },
+   {
+    "t": "Acute Angle",
+    "d": "An angle measuring strictly greater than 0° and less than 90°."
+   },
+   {
+    "t": "Obtuse Angle",
+    "d": "An angle measuring strictly greater than 90° and less than 180°."
+   },
+   {
+    "t": "Reflex Angle",
+    "d": "An angle measuring strictly greater than 180° and less than 360°."
+   },
+   {
+    "t": "Opposite Side",
+    "d": "In a triangle, the side directly across from a specified vertex, designated by the lowercase version of the vertex letter."
+   },
+   {
+    "t": "Hypotenuse",
+    "d": "The longest side of a right-angled triangle, located opposite the right angle."
+   },
+   {
+    "t": "Equilateral Triangle",
+    "d": "A triangle with three equal side lengths and three equal angles of 60°."
+   },
+   {
+    "t": "Isosceles Triangle",
+    "d": "A triangle with two equal side lengths and two equal base angles."
+   },
+   {
+    "t": "Scalene Triangle",
+    "d": "A triangle in which all three sides have different lengths and all three angles have different measurements."
+   },
+   {
+    "t": "Midpoint",
+    "d": "The point on a line segment that divides it into two equal segments."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Misidentifying the vertex letter in three-letter angle notation, e.g. saying angle ABC has vertex A.",
+    "r": "The middle letter is always the vertex where the angle is formed (vertex B for angle ABC)."
+   },
+   {
+    "w": "Confusing arrow symbols on lines for equal length indicators.",
+    "r": "Arrows on lines denote parallel lines; hatch marks (dashes) denote equal length."
+   },
+   {
+    "w": "Reading the wrong scale on a protractor (e.g. reading 130° instead of 50° for an acute angle).",
+    "r": "Check whether the angle is acute (<90°) or obtuse (>90°) to select the correct inner/outer scale."
+   },
+   {
+    "w": "Labelling triangle sides with capital letters like Side A.",
+    "r": "Vertices use capital letters (A, B, C) while opposite side lengths use matching lowercase letters (a, b, c)."
+   },
+   {
+    "w": "Calling an angle greater than 180° an obtuse angle.",
+    "r": "Angles between 180° and 360° are reflex angles. Obtuse angles are between 90° and 180°."
+   },
+   {
+    "w": "Erasing construction lines after drawing a shape from a description.",
+    "r": "Keep all light construction lines visible to demonstrate your method and secure method marks."
+   },
+   {
+    "w": "Drawing diagrams freehand when a question states 'Draw accurately'.",
+    "r": "Use a sharp pencil, ruler, and protractor within the required exam tolerances (±2 mm, ±2°)."
+   },
+   {
+    "w": "Assuming a diagram is drawn to scale when it is marked 'Not drawn accurately'.",
+    "r": "Never measure angles or lengths on diagrams marked 'Not drawn accurately'; use calculation or given facts instead."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Write down the mathematical name for an angle that is greater than 90° but less than 180°.",
+    "marks": 1,
+    "model": [
+     "Obtuse"
+    ],
+    "tip": "Memorize exact definitions: Acute (<90°), Obtuse (90°-180°), Reflex (180°-360°)."
+   },
+   {
+    "q": "In triangle ABC, angle B = 90°, AB = 5 cm and BC = 12 cm. What name is given to side AC?",
+    "marks": 1,
+    "model": [
+     "Hypotenuse"
+    ],
+    "tip": "The side opposite the 90° right angle is always called the hypotenuse."
+   },
+   {
+    "q": "Here are four angle sizes: 45°, 90°, 135°, 220°. Which of these is a reflex angle?",
+    "marks": 1,
+    "model": [
+     "220°"
+    ],
+    "tip": "Reflex angles are greater than 180°."
+   },
+   {
+    "q": "A line segment joins point P(2, 3) to point Q(8, 3). Write down the length of line segment PQ.",
+    "marks": 1,
+    "model": [
+     "6 units (8 - 2 = 6)"
+    ],
+    "tip": "Since y-coordinates are equal, subtract x-coordinates: 8 - 2 = 6."
+   },
+   {
+    "q": "Explain what the arrow symbols on two straight lines in a diagram represent.",
+    "marks": 1,
+    "model": [
+     "The lines are parallel."
+    ],
+    "tip": "Arrows mean parallel lines. Dashes/ticks mean equal lengths."
+   },
+   {
+    "q": "Triangle ABC is labelled with standard notation. Vertex A is opposite side a. If angle ABC = 60° and angle BAC = 70°, find angle ACB.",
+    "marks": 2,
+    "model": [
+     "Sum of angles in triangle = 180°",
+     "Angle ACB = 180° - (60° + 70°) = 50°"
+    ],
+    "tip": "The middle letter in ACB indicates the angle vertex is at C."
+   },
+   {
+    "q": "Accurately draw a triangle ABC where AB = 6 cm, angle CAB = 40° and AC = 5 cm.",
+    "marks": 3,
+    "model": [
+     "Draw line segment AB = 6 cm using a ruler (±2 mm)",
+     "Use a protractor at vertex A to measure angle CAB = 40° (±2°)",
+     "Draw side AC = 5 cm along the measured ray and complete triangle by connecting C to B"
+    ],
+    "tip": "Double check all lengths and angles with your ruler and protractor before finishing."
+   },
+   {
+    "q": "State the difference between isosceles and scalene triangles regarding side lengths and symmetry.",
+    "marks": 2,
+    "model": [
+     "Isosceles triangle has 2 equal side lengths and 1 line of symmetry.",
+     "Scalene triangle has 0 equal side lengths (all 3 different) and 0 lines of symmetry."
+    ],
+    "tip": "Mention both side lengths and line symmetry for full marks."
+   },
+   {
+    "q": "A student labels a triangle with vertices P, Q, R. Name the side opposite to vertex Q using standard lowercase notation.",
+    "marks": 1,
+    "model": [
+     "Side q (or PR)"
+    ],
+    "tip": "The side opposite vertex Q is labelled with lowercase 'q' or named by endpoints PR."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Accurately construct triangle XYZ given XY = 7.0 cm, angle XYZ = 55°, and YZ = 4.5 cm. Measure and write down the length of side XZ.",
+    "steps": [
+     "Step 1: Draw horizontal baseline XY = 7.0 cm accurately using a ruler.",
+     "Step 2: Place protractor crosshair at vertex Y. Measure angle of 55° from line XY upwards and mark a point.",
+     "Step 3: Draw a straight line from Y through the mark. Measure exactly 4.5 cm along this ray to locate point Z.",
+     "Step 4: Join point Z to point X using a ruler to form triangle XYZ.",
+     "Step 5: Measure distance XZ with a ruler. Measured distance XZ = 5.8 cm (acceptable range 5.6 cm to 6.0 cm)."
+    ],
+    "ans": "XZ = 5.8 cm (±0.2 cm)"
+   },
+   {
+    "q": "In the diagram below, line segment AB is parallel to line segment CD. Line segment EF intersects AB at P and CD at Q. If angle APQ = 115°, classify angle APQ by angle type and state the angle symbol for parallel lines.",
+    "steps": [
+     "Step 1: Compare angle size 115° to standard angle boundaries.",
+     "Step 2: Since 90° < 115° < 180°, angle APQ is an Obtuse angle.",
+     "Step 3: Parallel lines are represented using the parallel symbol || (e.g., AB || CD) or with matching arrows on diagrams."
+    ],
+    "ans": "Angle type: Obtuse. Notation: AB || CD (or matching arrowheads on lines)."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Standard Triangle Notation: Vertices named with capital letters A, B, C and opposite sides named with matching lowercase letters a, b, c.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><polygon points=\"70,180 330,180 200,40\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2.5\"/><circle cx=\"70\" cy=\"180\" r=\"4\" fill=\"#1b2540\"/><circle cx=\"330\" cy=\"180\" r=\"4\" fill=\"#1b2540\"/><circle cx=\"200\" cy=\"40\" r=\"4\" fill=\"#1b2540\"/><text x=\"45\" y=\"195\" fill=\"#1b2540\" font-size=\"13\" font-weight=\"bold\">Vertex A</text><text x=\"335\" y=\"195\" fill=\"#1b2540\" font-size=\"13\" font-weight=\"bold\">Vertex B</text><text x=\"190\" y=\"25\" fill=\"#1b2540\" font-size=\"13\" font-weight=\"bold\">Vertex C</text><text x=\"275\" y=\"105\" fill=\"#b91c1c\" font-size=\"13\" font-weight=\"bold\">Side a (opposite A)</text><text x=\"40\" y=\"105\" fill=\"#b91c1c\" font-size=\"13\" font-weight=\"bold\">Side b (opposite B)</text><text x=\"170\" y=\"205\" fill=\"#b91c1c\" font-size=\"13\" font-weight=\"bold\">Side c (opposite C)</text></svg>"
+   },
+   {
+    "cap": "Geometric Notation Symbols: Matching arrows show parallel lines, right angle symbol shows perpendicular lines, and dashes show equal side lengths.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><g transform=\"translate(20,20)\"><line x1=\"20\" y1=\"30\" x2=\"160\" y2=\"30\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"20\" y1=\"70\" x2=\"160\" y2=\"70\" stroke=\"#1b2540\" stroke-width=\"2\"/><polygon points=\"90,25 100,30 90,35\" fill=\"#1b2540\"/><polygon points=\"90,65 100,70 90,75\" fill=\"#1b2540\"/><text x=\"30\" y=\"15\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\">Parallel Lines (Arrows)</text></g><g transform=\"translate(20,120)\"><line x1=\"30\" y1=\"80\" x2=\"150\" y2=\"80\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"90\" y1=\"80\" x2=\"90\" y2=\"20\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"90\" y=\"65\" width=\"15\" height=\"15\" fill=\"none\" stroke=\"#b91c1c\" stroke-width=\"2\"/><text x=\"20\" y=\"100\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\">Perpendicular (90° Box)</text></g><g transform=\"translate(220,30)\"><polygon points=\"40,160 140,160 90,30\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"60\" y1=\"93\" x2=\"70\" y2=\"97\" stroke=\"#b91c1c\" stroke-width=\"2.5\"/><line x1=\"110\" y1=\"97\" x2=\"120\" y2=\"93\" stroke=\"#b91c1c\" stroke-width=\"2.5\"/><text x=\"35\" y=\"185\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\">Isosceles (Equal Ticks)</text></g></svg>"
+   },
+   {
+    "cap": "Angle Classification: Acute (<90°), Obtuse (90°-180°), and Reflex (>180°) angles clearly distinguished.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><g transform=\"translate(30,40)\"><path d=\"M 70,70 L 130,70 M 70,70 L 110,20\" stroke=\"#1b2540\" stroke-width=\"2.5\"/><path d=\"M 90,70 A 20,20 0 0,0 83,55\" fill=\"none\" stroke=\"#b91c1c\" stroke-width=\"2\"/><text x=\"40\" y=\"95\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\">Acute Angle (&lt;90°)</text></g><g transform=\"translate(220,40)\"><path d=\"M 80,70 L 140,70 M 80,70 L 20,30\" stroke=\"#1b2540\" stroke-width=\"2.5\"/><path d=\"M 100,70 A 20,20 0 0,0 60,57\" fill=\"none\" stroke=\"#b91c1c\" stroke-width=\"2\"/><text x=\"30\" y=\"95\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\">Obtuse Angle (90°-180°)</text></g><g transform=\"translate(120,140)\"><path d=\"M 80,40 L 140,40 M 80,40 L 30,70\" stroke=\"#1b2540\" stroke-width=\"2.5\"/><path d=\"M 100,40 A 20,20 0 1,1 60,58\" fill=\"none\" stroke=\"#b91c1c\" stroke-width=\"2\"/><text x=\"30\" y=\"90\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\">Reflex Angle (180°-360°)</text></g></svg>"
+   }
+  ],
+  "pid": "maths_aqa_f.3.0",
+  "sid": "maths_aqa_f",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.6-flash",
+  "ts": "2026-11-16T13:24:10.731Z"
  }
 }

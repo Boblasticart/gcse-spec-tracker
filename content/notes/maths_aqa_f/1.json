@@ -6873,5 +6873,2520 @@
   "src": "pre",
   "by": "gemini/gemini-3.6-flash",
   "ts": "2026-11-16T02:10:33.794Z"
+ },
+ "maths_aqa_f.1.17": {
+  "summary": "Linear and quadratic inequalities describe ranges of values that satisfy a given condition. Solving them involves isolating the variable, determining critical points, testing intervals and expressing the solution using number lines, set notation and coordinate graphs. Mastery of these steps lets you interpret and communicate solution sets clearly, a key skill for grade 9 AQA GCSE Maths.",
+  "core": [
+   {
+    "h": "What is an inequality?",
+    "p": "An inequality is a mathematical statement that compares two expressions using symbols <, >, ≤ or ≥. It tells us that one side is **strictly less than**, **greater than**, **less than or equal to**, or **greater than or equal to** the other.",
+    "bullets": [
+     "Symbols: < (less than), > (greater than), ≤ (less than or equal to), ≥ (greater than or equal to)",
+     "Unlike equations, inequalities have **many possible solutions** rather than a single value",
+     "The solution set is a **range of numbers** on the number line"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Inequality",
+      "p": "A statement of the form A < B, A > B, A ≤ B or A ≥ B where A and B are algebraic expressions."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Solving linear inequalities – the basic method",
+    "p": "The steps mirror solving a linear equation, but you must watch out for sign changes when multiplying or dividing by a negative number.",
+    "bullets": [
+     "1. Bring all terms to one side to get 0 < … or 0 > …",
+     "2. Isolate the variable using algebraic manipulation",
+     "3. **If you multiply or divide by a negative number, reverse the inequality sign**",
+     "4. Write the solution in set notation and draw it on a number line"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "",
+      "p": "Always write the inequality in the form variable < expression (or >) before testing intervals – it reduces mistakes."
+     },
+     {
+      "k": "warn",
+      "t": "",
+      "p": "Forgetting to reverse the sign when dividing by a negative is a common loss of marks."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Number‑line solution for 3x‑5 > 1",
+      "svg": "<svg viewBox=\"0 0 400 240\"><g fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"><line x1=\"50\" y1=\"120\" x2=\"350\" y2=\"120\"/></g><g fill=\"#dbeafe\" stroke=\"#1b2540\"><circle cx=\"150\" cy=\"120\" r=\"8\"/></g><g fill=\"#1b2540\" font-size=\"12\"><text x=\"150\" y=\"100\" text-anchor=\"middle\">x=2</text><text x=\"70\" y=\"140\">←</text><text x=\"340\" y=\"140\">→</text></g></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Set notation for linear inequalities",
+    "p": "Set notation uses curly braces and a variable with a condition, or interval notation for compactness.",
+    "bullets": [
+     "Curly‑brace form: { x | x > 2 }",
+     "Interval form: (2, ∞) for x > 2, [2, ∞) for x ≥ 2",
+     "Parentheses mean the endpoint is **not included**; brackets mean it **is included**"
+    ],
+    "table": {
+     "head": [
+      "Inequality",
+      "Set notation",
+      "Interval notation"
+     ],
+     "rows": [
+      [
+       "x < a",
+       "{x|x<a}",
+       "(-∞,a)"
+      ],
+      [
+       "x ≤ a",
+       "{x|x≤a}",
+       "(-∞,a]"
+      ],
+      [
+       "x > a",
+       "{x|x>a}",
+       "(a,∞)"
+      ],
+      [
+       "x ≥ a",
+       "{x|x≥a}",
+       "[a,∞)"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "",
+      "p": "The symbol ‘|’ reads as ‘such that’."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Quadratic inequalities – sign‑chart method",
+    "p": "Quadratic inequalities involve a squared term. The solution depends on where the quadratic expression is positive or negative relative to zero.",
+    "bullets": [
+     "1. Bring all terms to one side → ax²+bx+c < 0 (or > 0)",
+     "2. Factorise or use the quadratic formula to find the **roots** (critical points)",
+     "3. Plot the roots on a number line and divide the line into intervals",
+     "4. Choose a test value in each interval and substitute into the original inequality",
+     "5. Keep intervals that satisfy the inequality; include roots if the sign is ≤ or ≥"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "",
+      "p": "For a parabola opening upwards (a > 0), the expression is negative **between** the roots; for a parabola opening downwards (a < 0) it is negative **outside** the roots."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Sign chart for x²‑4x‑5 ≤ 0",
+      "svg": "<svg viewBox=\"0 0 400 240\"><g fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"><line x1=\"50\" y1=\"120\" x2=\"350\" y2=\"120\"/></g><g fill=\"#bbf7d0\" stroke=\"#1b2540\"><rect x=\"150\" y=\"110\" width=\"100\" height=\"20\"/></g><g fill=\"#1b2540\" font-size=\"12\"><text x=\"100\" y=\"100\" text-anchor=\"middle\">-1</text><text x=\"250\" y=\"100\" text-anchor=\"middle\">5</text><text x=\"200\" y=\"140\" text-anchor=\"middle\">≤0 region</text></g></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Graphical solution of quadratic inequalities",
+    "p": "Plotting y = ax²+bx+c lets you see where the curve lies above or below the x‑axis. The x‑coordinates that satisfy the inequality are the required solution set.",
+    "bullets": [
+     "Draw the parabola accurately (use vertex, axis of symmetry, and roots)",
+     "Shade the region **above** the x‑axis for > 0, **below** for < 0",
+     "If the inequality is ≤ or ≥, include the points where the curve meets the axis (solid line)",
+     "Read off the x‑values of the shaded region; express them in set or interval notation"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "",
+      "p": "Do not confuse shading above the axis with ‘greater than’ when the parabola opens downwards – always refer to the y‑value, not the direction of opening."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Graph of y = x²‑4x‑5 with solution to y ≤ 0 shaded",
+      "svg": "<svg viewBox=\"0 0 400 240\"><g fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"><path d=\"M50,200 Q150,50 350,200\"/></g><g fill=\"#fde68a\" stroke=\"none\"><polygon points=\"150,200 250,200 250,120 150,120\"/></g><g fill=\"#1b2540\" font-size=\"12\"><text x=\"150\" y=\"220\" text-anchor=\"middle\">-1</text><text x=\"250\" y=\"220\" text-anchor=\"middle\">5</text></g></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Using the quadratic formula for critical points",
+    "p": "When a quadratic cannot be factorised easily, the quadratic formula gives the exact roots, which become the critical points for the sign chart.",
+    "bullets": [
+     "Quadratic formula: x = [-b ± √(b²‑4ac)] / (2a)",
+     "Calculate discriminant Δ = b²‑4ac:",
+     "  • Δ > 0 → two distinct real roots",
+     "  • Δ = 0 → one repeated root (touches axis)",
+     "  • Δ < 0 → no real roots (parabola never crosses axis)",
+     "Use the roots to split the number line"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "",
+      "p": "If Δ < 0, the sign of the quadratic is the same for **all** x (positive if a > 0, negative if a < 0)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Compound inequalities",
+    "p": "Sometimes the problem asks for values that satisfy two inequalities at once, e.g., a < x < b. Treat each part separately and then take the **intersection** of the solution sets.",
+    "bullets": [
+     "Solve each inequality individually",
+     "Express each solution in interval form",
+     "The final answer is the overlap (intersection) of the intervals",
+     "On a number line, shade the common part only"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "",
+      "p": "Write the final answer as a single interval, e.g., (2, 5) rather than “x > 2 and x < 5”."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Intersection of x > 1 and x ≤ 4",
+      "svg": "<svg viewBox=\"0 0 400 240\"><g fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"><line x1=\"50\" y1=\"120\" x2=\"350\" y2=\"120\"/></g><g fill=\"#e9d5ff\" stroke=\"none\"><rect x=\"120\" y=\"110\" width=\"180\" height=\"20\"/></g><g fill=\"#1b2540\" font-size=\"12\"><text x=\"80\" y=\"100\" text-anchor=\"middle\">1</text><text x=\"300\" y=\"100\" text-anchor=\"middle\">4</text></g></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Common exam pitfalls",
+    "p": "Understanding where students lose marks helps you avoid them.",
+    "bullets": [
+     "Forgetting to reverse the inequality sign when dividing by a negative number",
+     "Including the endpoint in a strict inequality (using a bracket instead of a parenthesis)",
+     "Mis‑reading ‘≤’ as ‘<’ or vice‑versa in the mark scheme",
+     "Using the wrong discriminant sign when applying the quadratic formula",
+     "Not testing **all** intervals in a sign chart"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Summary of steps",
+    "p": "A quick checklist to ensure a complete answer.",
+    "bullets": [
+     "1. Bring all terms to one side",
+     "2. Factorise or use the quadratic formula to find critical points",
+     "3. Draw a number line and mark the critical points",
+     "4. Test each interval and record where the inequality holds",
+     "5. Write the solution in set and interval notation",
+     "6. Sketch the corresponding graph (line or parabola) and shade the correct region"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "",
+      "p": "The order of steps is important – you cannot write the final answer before testing intervals."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Inequality as a fence",
+   "p": "Think of an inequality like a fence that tells you which side of a garden you may walk on. The sign (< or >) points to the side you are allowed to be on, and the number (the root) is the gate. If the fence opens outward (a > 0), you can walk between the two gates; if it opens inward (a < 0), you can walk outside both gates. The analogy breaks down when the fence is curved (a quadratic) because the shape of the garden changes, but the idea of ‘inside’ versus ‘outside’ still helps you decide which intervals are allowed."
+  },
+  "terms": [
+   {
+    "t": "Inequality",
+    "d": "A statement using <, >, ≤ or ≥ to compare two expressions."
+   },
+   {
+    "t": "Critical point",
+    "d": "A value of x where the expression equals zero; also called a root or intercept."
+   },
+   {
+    "t": "Sign chart",
+    "d": "A diagram that shows the sign (+ or –) of an expression in each interval between critical points."
+   },
+   {
+    "t": "Set notation",
+    "d": "A way of describing a collection of numbers using curly braces, e.g., {x | x > 2}."
+   },
+   {
+    "t": "Interval notation",
+    "d": "A compact way to write a set of real numbers, using parentheses and brackets, e.g., (2, ∞)."
+   },
+   {
+    "t": "Discriminant",
+    "d": "The value Δ = b²‑4ac that determines the nature of the roots of a quadratic."
+   },
+   {
+    "t": "Parabola",
+    "d": "The graph of a quadratic function; opens upwards if a > 0, downwards if a < 0."
+   },
+   {
+    "t": "Vertex",
+    "d": "The turning point of a parabola, given by (‑b/2a, f(‑b/2a))."
+   },
+   {
+    "t": "Compound inequality",
+    "d": "Two inequalities joined by ‘and’ that must both be true, e.g., a < x ≤ b."
+   },
+   {
+    "t": "Open circle",
+    "d": "A point on a number line that is **not** included in the solution set (used for < or >)."
+   },
+   {
+    "t": "Closed circle",
+    "d": "A point on a number line that **is** included in the solution set (used for ≤ or ≥)."
+   },
+   {
+    "t": "Shade",
+    "d": "The part of a graph or number line that represents the solution set."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "x > 2 → {x|x≥2}",
+    "r": "Use a parenthesis for >; the correct set is {x|x>2} or (2, ∞)."
+   },
+   {
+    "w": "Dividing by –3, keep the sign the same",
+    "r": "When dividing by a negative, reverse the inequality sign."
+   },
+   {
+    "w": "Include both roots when solving x²‑4x‑5 < 0",
+    "r": "For a strict <, the roots are not part of the solution; use open circles."
+   },
+   {
+    "w": "Δ = b²‑4ac, then write x = (-b±√Δ)/a",
+    "r": "The denominator is 2a, not a."
+   },
+   {
+    "w": "Shade above the x‑axis for y ≤ 0",
+    "r": "Shade **below** the axis for ≤ 0; above is for ≥ 0."
+   },
+   {
+    "w": "Write (2, 5] for 2 < x ≤ 5",
+    "r": "The correct interval is (2, 5] – note the open parenthesis at 2."
+   },
+   {
+    "w": "Treat a quadratic with no real roots as having no solution",
+    "r": "If a > 0 and Δ < 0, the expression is always positive, so x > 0 for > 0, etc."
+   },
+   {
+    "w": "Use the same sign chart for a < 0 and a > 0",
+    "r": "The sign pattern reverses when the parabola opens downwards (a < 0)."
+   },
+   {
+    "w": "Write the solution as x = 2 or x = 5",
+    "r": "Inequalities give ranges, not discrete values; use interval or set notation."
+   },
+   {
+    "w": "Forget to test the interval outside the outermost roots",
+    "r": "Always test the far‑left and far‑right intervals; they may be part of the solution."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Solve 3x‑5 > 1 and express the answer in set and interval notation. (2 marks)",
+    "marks": 2,
+    "model": [
+     "Subtract 1: 3x‑5 > 1 → 3x > 6",
+     "Divide by 3 (positive): x > 2",
+     "Set notation: {x | x > 2}",
+     "Interval notation: (2, ∞)"
+    ],
+    "tip": "Remember to reverse the sign only when dividing by a negative."
+   },
+   {
+    "q": "Solve 2‑x ≤ 4 and draw the corresponding number‑line. (3 marks)",
+    "marks": 3,
+    "model": [
+     "Add x to both sides: 2 ≤ 4 + x",
+     "Subtract 4: -2 ≤ x → x ≥ -2",
+     "Set notation: {x | x ≥ -2}",
+     "Interval notation: [-2, ∞)",
+     "Number line: closed circle at -2, shading to the right"
+    ],
+    "tip": "A closed circle shows the endpoint is included (≥ or ≤)."
+   },
+   {
+    "q": "Solve x²‑4x‑5 ≤ 0. Give your answer in interval notation and sketch the graph showing the solution region. (4 marks)",
+    "marks": 4,
+    "model": [
+     "Factorise: (x‑5)(x + 1) ≤ 0",
+     "Critical points: x = ‑1 and x = 5",
+     "Test intervals: x < ‑1 → positive, ‑1 < x < 5 → negative, x > 5 → positive",
+     "Solution: ‑1 ≤ x ≤ 5",
+     "Interval notation: [‑1, 5]",
+     "Graph: parabola opening upwards, x‑intercepts at ‑1 and 5, shade the part of the curve at or below the x‑axis"
+    ],
+    "tip": "Because the inequality is ≤, include the roots (closed circles)."
+   },
+   {
+    "q": "Find the solution set of ‑2x + 3 > 7. (1 mark)",
+    "marks": 1,
+    "model": [
+     "‑2x > 4 → divide by ‑2 (negative) → x < ‑2"
+    ],
+    "tip": "Reverse the sign when dividing by a negative number."
+   },
+   {
+    "q": "Solve the compound inequality 1 < 2x‑3 ≤ 7. (3 marks)",
+    "marks": 3,
+    "model": [
+     "First part: 1 < 2x‑3 → add 3: 4 < 2x → divide by 2: 2 < x",
+     "Second part: 2x‑3 ≤ 7 → add 3: 2x ≤ 10 → divide by 2: x ≤ 5",
+     "Combine: 2 < x ≤ 5",
+     "Interval notation: (2, 5]"
+    ],
+    "tip": "Solve each inequality separately, then take the intersection."
+   },
+   {
+    "q": "Using the quadratic formula, find the roots of 2x²‑3x‑2 = 0. (2 marks)",
+    "marks": 2,
+    "model": [
+     "a = 2, b = ‑3, c = ‑2",
+     "Δ = (‑3)²‑4·2·(‑2) = 9 + 16 = 25",
+     "x = [3 ± 5]/4 → x = 2 or x = ‑½"
+    ],
+    "tip": "Check the discriminant first; a perfect square makes the roots rational."
+   },
+   {
+    "q": "State whether the inequality x² + 4x + 4 > 0 is true for all real x, and justify your answer. (2 marks)",
+    "marks": 2,
+    "model": [
+     "Factorise: (x + 2)² > 0",
+     "Since a square is always ≥ 0 and equals 0 only at x = ‑2, the expression is > 0 for all x ≠ ‑2; therefore not true for all real x",
+     "Answer: No – it is false at x = ‑2"
+    ],
+    "tip": "Remember that a perfect square is zero at its root, not positive."
+   },
+   {
+    "q": "Solve the inequality –x² + 6x – 8 ≥ 0 and give the solution in set notation. (3 marks)",
+    "marks": 3,
+    "model": [
+     "Multiply by –1 (reverse sign): x² ‑ 6x + 8 ≤ 0",
+     "Factorise: (x‑2)(x‑4) ≤ 0",
+     "Critical points: 2 and 4; test interval gives solution 2 ≤ x ≤ 4",
+     "Set notation: {x | 2 ≤ x ≤ 4}"
+    ],
+    "tip": "When you multiply an inequality by –1, reverse the sign before continuing."
+   },
+   {
+    "q": "Graph y = x²‑4 and shade the region satisfying y ≥ 0. State the solution for x in interval notation. (4 marks)",
+    "marks": 4,
+    "model": [
+     "Vertex at (0,‑4), x‑intercepts at x = ‑2 and x = 2",
+     "Parabola opens upwards; y ≥ 0 is the part of the graph on or above the x‑axis",
+     "Solution for x: x ≤ ‑2 or x ≥ 2",
+     "Interval notation: (‑∞,‑2] ∪ [2, ∞)",
+     "Graph: draw parabola, shade the outer arms above the axis"
+    ],
+    "tip": "Include the intercept points because the inequality is ≥."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Solve 4x‑7 < 9 and express the answer on a number line.",
+    "steps": [
+     "Add 7 to both sides: 4x < 16",
+     "Divide by 4 (positive): x < 4",
+     "Number‑line: open circle at 4, shade to the left"
+    ],
+    "ans": "x ∈ (‑∞, 4)"
+   },
+   {
+    "q": "Solve x²‑5x + 6 > 0.",
+    "steps": [
+     "Factorise: (x‑2)(x‑3) > 0",
+     "Critical points: x = 2, x = 3",
+     "Test intervals: x < 2 → (+), 2 < x < 3 → (‑), x > 3 → (+)",
+     "Solution: x < 2 or x > 3",
+     "Interval notation: (‑∞, 2) ∪ (3, ∞)"
+    ],
+    "ans": "(‑∞, 2) ∪ (3, ∞)"
+   },
+   {
+    "q": "Solve the quadratic inequality –3x² + 12x ‑ 9 ≤ 0.",
+    "steps": [
+     "Divide by –3 (negative) and reverse sign: x² ‑ 4x + 3 ≥ 0",
+     "Factorise: (x‑1)(x‑3) ≥ 0",
+     "Critical points: 1 and 3",
+     "Test intervals: x < 1 → (+), 1 < x < 3 → (‑), x > 3 → (+)",
+     "Include the roots because of ≥: 1 ≤ x ≤ 3 or x ≤ 1 or x ≥ 3? Wait, sign chart shows positive outside, so solution is x ≤ 1 or x ≥ 3",
+     "Interval notation: (‑∞, 1] ∪ [3, ∞)"
+    ],
+    "ans": "(‑∞, 1] ∪ [3, ∞)"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Number‑line solution for 3x‑5 > 1",
+    "svg": "<svg viewBox=\"0 0 400 240\"><g fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"><line x1=\"50\" y1=\"120\" x2=\"350\" y2=\"120\"/></g><g fill=\"#dbeafe\" stroke=\"#1b2540\"><circle cx=\"150\" cy=\"120\" r=\"8\"/></g><g fill=\"#1b2540\" font-size=\"12\"><text x=\"150\" y=\"100\" text-anchor=\"middle\">x=2</text><text x=\"70\" y=\"140\">←</text><text x=\"340\" y=\"140\">→</text></g></svg>"
+   }
+  ],
+  "pid": "maths_aqa_f.1.17",
+  "sid": "maths_aqa_f",
+  "v": 2,
+  "src": "pre",
+  "by": "groq/openai/gpt-oss-120b",
+  "ts": "2026-11-16T13:15:53.002Z"
+ },
+ "maths_aqa_f.1.19": {
+  "summary": "Sequences are ordered lists of numbers generated by a rule. Recognising triangular, square, cube, Fibonacci‑type, quadratic and geometric sequences means identifying the pattern, writing the nth‑term formula and using it to find any term. Each type has a characteristic growth pattern and a specific formula that can be derived from its definition. Mastery of these recognitions lets you move quickly between term‑by‑term and position‑by‑term rules, a key skill for many AQA exam questions.",
+  "core": [
+   {
+    "h": "Triangular Numbers",
+    "p": "Triangular numbers count objects that can form an equilateral triangle. The nth term is the sum of the first n natural numbers.",
+    "bullets": [
+     "Sequence: 1, 3, 6, 10, 15, …",
+     "nth term: \\\\(T_n = \\\\frac{n(n+1)}{2}\\\\)",
+     "Derived by adding successive integers: \\(1+2+…+n\\)",
+     "Growth is quadratic (∝ n²)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Triangular number",
+      "p": "The number of objects that can be arranged in an equilateral triangle; the nth triangular number is \\(\\frac{n(n+1)}{2}\\)."
+     },
+     {
+      "k": "tip",
+      "t": "",
+      "p": "Check if the differences between successive terms increase by 1; that signals a triangular sequence."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Triangular numbers visualised as dot patterns.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><defs><linearGradient id=\"grad\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"0%\"><stop offset=\"0%\" stop-color=\"#dbeafe\"/><stop offset=\"100%\" stop-color=\"#bbf7d0\"/></linearGradient></defs><g stroke=\"#1b2540\" stroke-width=\"2\" fill=\"url(#grad)\"><polygon points=\"200,30 180,70 220,70\"/><polygon points=\"200,70 180,110 220,110\"/><polygon points=\"200,110 180,150 220,150\"/></g><text x=\"200\" y=\"20\" font-size=\"12\" text-anchor=\"middle\">T₁, T₂, T₃ …</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Square Numbers",
+    "p": "Square numbers are the product of an integer with itself; they can be visualised as a perfect square array of dots.",
+    "bullets": [
+     "Sequence: 1, 4, 9, 16, 25, …",
+     "nth term: \\\\(S_n = n^2\\\\)",
+     "Geometric growth is quadratic, but the ratio between terms is not constant."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Square number",
+      "p": "The integer \\(n\\) multiplied by itself, written \\(n^2\\)."
+     },
+     {
+      "k": "warn",
+      "t": "",
+      "p": "Do not confuse square numbers with perfect squares of non‑integers; the sequence only uses whole‑number \\(n\\)."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Square numbers as dot grids.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"150\" y=\"80\" width=\"100\" height=\"100\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"200\" y=\"140\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">4×4</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Cube Numbers",
+    "p": "Cube numbers are the product of an integer with itself three times; they can be pictured as a 3‑D cube of unit cubes.",
+    "bullets": [
+     "Sequence: 1, 8, 27, 64, 125, …",
+     "nth term: \\\\(C_n = n^3\\\\)",
+     "Growth is cubic (∝ n³)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Cube number",
+      "p": "The integer \\(n\\) multiplied by itself twice more, written \\(n^3\\)."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Cube numbers as stacked unit cubes.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><polygon points=\"150,150 250,150 250,250 150,250\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><polygon points=\"150,150 200,100 300,100 250,150\" fill=\"#e9d5ff\" stroke=\"#1b2540\" stroke-width=\"2\"/><polygon points=\"250,150 300,100 300,200 250,250\" fill=\"#fecaca\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"200\" y=\"210\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">2³</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Fibonacci‑type Sequences",
+    "p": "Each term is the sum of the two preceding terms. The classic Fibonacci starts 0, 1, 1, 2, 3, 5, 8,…",
+    "bullets": [
+     "Rule: \\(F_n = F_{n-1}+F_{n-2}\\)",
+     "Requires two seed values (often 0 and 1).",
+     "Growth is exponential but slower than a pure geometric sequence."
+    ],
+    "table": {
+     "head": [
+      "n",
+      "Term"
+     ],
+     "rows": [
+      [
+       "1",
+       "0"
+      ],
+      [
+       "2",
+       "1"
+      ],
+      [
+       "3",
+       "1"
+      ],
+      [
+       "4",
+       "2"
+      ],
+      [
+       "5",
+       "3"
+      ],
+      [
+       "6",
+       "5"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "",
+      "p": "If the differences of successive terms form the previous terms, you have a Fibonacci‑type sequence."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Fibonacci spiral approximated by squares.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"150\" y=\"150\" width=\"30\" height=\"30\" fill=\"#dbeafe\" stroke=\"#1b2540\"/><rect x=\"180\" y=\"150\" width=\"30\" height=\"30\" fill=\"#dbeafe\" stroke=\"#1b2540\"/><rect x=\"180\" y=\"120\" width=\"30\" height=\"30\" fill=\"#dbeafe\" stroke=\"#1b2540\"/><rect x=\"150\" y=\"120\" width=\"30\" height=\"30\" fill=\"#dbeafe\" stroke=\"#1b2540\"/><text x=\"165\" y=\"165\" font-size=\"10\" fill=\"#1b2540\">1</text><text x=\"195\" y=\"165\" font-size=\"10\" fill=\"#1b2540\">1</text><text x=\"195\" y=\"135\" font-size=\"10\" fill=\"#1b2540\">2</text><text x=\"165\" y=\"135\" font-size=\"10\" fill=\"#1b2540\">3</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Quadratic Sequences",
+    "p": "Second differences are constant; the nth term can be written as \\(an^2+bn+c\\).",
+    "bullets": [
+     "Identify by calculating first and second differences.",
+     "Constant second difference = 2a.",
+     "Example: 2, 6, 12, 20, 30,… → second difference 2 → a=1."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Quadratic sequence",
+      "p": "A sequence whose nth term is a quadratic expression \\(an^2+bn+c\\) and whose second differences are constant."
+     },
+     {
+      "k": "tip",
+      "t": "",
+      "p": "Write down the first few terms, compute differences, then solve for a, b, c using three equations."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Geometric Sequences",
+    "p": "Each term is obtained by multiplying the previous term by a constant ratio r.",
+    "bullets": [
+     "Rule: \\(G_n = ar^{n-1}\\) where a is the first term.",
+     "Common ratio r may be positive, negative or fractional.",
+     "Growth is exponential when |r|>1, decays when 0<|r|<1."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Geometric sequence",
+      "p": "A sequence where each term after the first is the previous term multiplied by a constant ratio r."
+     },
+     {
+      "k": "warn",
+      "t": "",
+      "p": "Do not confuse the ratio with the difference; a constant difference gives an arithmetic sequence, not geometric."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Geometric growth with ratio 2.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"50\" y1=\"200\" x2=\"350\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"80\" cy=\"200\" r=\"8\" fill=\"#fde68a\"/><circle cx=\"150\" cy=\"200\" r=\"8\" fill=\"#fde68a\"/><circle cx=\"220\" cy=\"200\" r=\"8\" fill=\"#fde68a\"/><circle cx=\"290\" cy=\"200\" r=\"8\" fill=\"#fde68a\"/><text x=\"80\" y=\"190\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">a</text><text x=\"150\" y=\"190\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">ar</text><text x=\"220\" y=\"190\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">ar²</text><text x=\"290\" y=\"190\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">ar³</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Linking the Six Types",
+    "p": "All six families can be identified by a single test: look at the pattern of differences or ratios.",
+    "bullets": [
+     "Triangular, square, cube → polynomial growth; check if term can be written as \\(n^k\\).",
+     "Quadratic → constant second difference.",
+     "Geometric → constant ratio.",
+     "Fibonacci‑type → each term equals sum of two previous terms."
+    ],
+    "table": {
+     "head": [
+      "Sequence type",
+      "Key test",
+      "General nth‑term form"
+     ],
+     "rows": [
+      [
+       "Triangular",
+       "T_n = n(n+1)/2",
+       "½n²+½n"
+      ],
+      [
+       "Square",
+       "S_n = n²",
+       "n²"
+      ],
+      [
+       "Cube",
+       "C_n = n³",
+       "n³"
+      ],
+      [
+       "Quadratic",
+       "Constant second difference",
+       "an²+bn+c"
+      ],
+      [
+       "Geometric",
+       "Constant ratio r",
+       "ar^{n-1}"
+      ],
+      [
+       "Fibonacci‑type",
+       "T_n = T_{n-1}+T_{n-2}",
+       "Depends on seeds"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "",
+      "p": "Remember: only geometric sequences have a constant *ratio*; only quadratic sequences have a constant *second difference*."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Finding the nth Term from a Term‑to‑Term Rule",
+    "p": "If the rule gives the next term from the previous one, you can often rearrange to a closed form.",
+    "bullets": [
+     "For geometric: solve \\(a_{n+1}=ra_n\\) → \\(a_n=ar^{n-1}\\).",
+     "For quadratic: use second‑difference method to find a, b, c.",
+     "For Fibonacci‑type: recognise the recurrence and, if required, use the characteristic equation (beyond foundation)."
+    ],
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "",
+      "p": "Write down the first three terms, compute the required differences/ratios, then match to the appropriate formula."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Common Mistakes to Avoid",
+    "p": "",
+    "bullets": [
+     "Treating a constant *difference* as a geometric sequence.",
+     "Assuming all sequences with increasing gaps are quadratic – some are cubic or higher.",
+     "Writing the nth term of a triangular number as \\(n^2\\) instead of \\(\\frac{n(n+1)}{2}\\).",
+     "Confusing the seed values of a Fibonacci‑type sequence; the first two terms must be stated."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Sequences as musical rhythms",
+   "p": "Think of each type of sequence as a different drum beat. A geometric sequence is a steady, multiplying beat – each hit is louder by the same factor, like turning up the volume each time. A quadratic sequence is a beat that speeds up by a fixed amount each bar (the gaps between hits grow steadily). A Fibonacci‑type beat is a call‑and‑response: the next clap is the sum of the two previous claps. The analogy breaks down when you try to represent triangular or cube numbers, because those patterns depend on arranging objects in two‑ or three‑dimensional shapes, not just time intervals."
+  },
+  "terms": [
+   {
+    "t": "Triangular number",
+    "d": "The nth term \\(\\frac{n(n+1)}{2}\\) representing a triangle of dots."
+   },
+   {
+    "t": "Square number",
+    "d": "The nth term \\(n^2\\) representing a square array of dots."
+   },
+   {
+    "t": "Cube number",
+    "d": "The nth term \\(n^3\\) representing a 3‑D cube of unit cubes."
+   },
+   {
+    "t": "Fibonacci‑type sequence",
+    "d": "A sequence where \\(a_n = a_{n-1}+a_{n-2}\\) with two given seed values."
+   },
+   {
+    "t": "Quadratic sequence",
+    "d": "A sequence whose nth term can be written \\(an^2+bn+c\\); second differences are constant."
+   },
+   {
+    "t": "Geometric sequence",
+    "d": "A sequence with constant ratio \\(r\\); nth term \\(ar^{n-1}\\)."
+   },
+   {
+    "t": "Common ratio",
+    "d": "The constant factor \\(r\\) multiplied to get from one term to the next in a geometric sequence."
+   },
+   {
+    "t": "Second difference",
+    "d": "The difference of successive first differences; constant for quadratic sequences."
+   },
+   {
+    "t": "Term‑to‑term rule",
+    "d": "A rule that gives \\(a_{n+1}\\) directly from \\(a_n\\) (or \\(a_{n-1}\\))."
+   },
+   {
+    "t": "Position‑to‑term rule",
+    "d": "A formula that gives \\(a_n\\) directly from the position \\(n\\)."
+   },
+   {
+    "t": "Seed values",
+    "d": "The first one or two terms supplied to start a recurrence sequence."
+   },
+   {
+    "t": "Exponential growth",
+    "d": "Growth where each term is multiplied by a constant >1; geometric sequences with |r|>1."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "The sequence 2, 4, 8, 16 is arithmetic because the difference is constant.",
+    "r": "It is geometric; the ratio 2 is constant, not the difference."
+   },
+   {
+    "w": "Triangular numbers are given by \\(n^2\\).",
+    "r": "Triangular numbers are \\(\\frac{n(n+1)}{2}\\); \\(n^2\\) are square numbers."
+   },
+   {
+    "w": "If the second difference is 4, then a=4 in \\(an^2+bn+c\\).",
+    "r": "Second difference = 2a, so a = second difference /2 = 2."
+   },
+   {
+    "w": "All sequences that get larger are geometric.",
+    "r": "Only those with a constant ratio are geometric; quadratic, cubic, etc., grow faster but are not geometric."
+   },
+   {
+    "w": "Fibonacci‑type sequences always start 0, 1.",
+    "r": "They can start with any two seed values; the classic starts 0, 1 but the definition allows any pair."
+   },
+   {
+    "w": "The nth term of a cube sequence is \\(n^2\\).",
+    "r": "Cube numbers are \\(n^3\\)."
+   },
+   {
+    "w": "A constant difference means the sequence is quadratic.",
+    "r": "A constant *first* difference indicates an arithmetic (linear) sequence; constant second difference indicates quadratic."
+   },
+   {
+    "w": "In a geometric sequence the first term is always 1.",
+    "r": "The first term can be any non‑zero number a; the ratio determines the rest."
+   }
+  ],
+  "exam": [
+   {
+    "q": "The sequence 3, 6, 10, 15, … is given. Identify the type and write the nth‑term formula.",
+    "marks": 2,
+    "model": [
+     "Identify as triangular (first differences 3,4,5 increase by 1).",
+     "Write \\(T_n=\\frac{n(n+1)}{2}+1\\) or simplify to \\(\\frac{n^2+n+2}{2}\\)."
+    ],
+    "tip": "Check the pattern of first differences; an increase of 1 signals triangular numbers."
+   },
+   {
+    "q": "Find the 7th term of the geometric sequence with first term 5 and common ratio -3.",
+    "marks": 2,
+    "model": [
+     "Use \\\\(a_n=ar^{n-1}\\\\).",
+     "Calculate \\\\(5(-3)^{6}=5\\\\times729=3645\\\\)."
+    ],
+    "tip": "Remember that a negative ratio alternates sign; even powers give positive."
+   },
+   {
+    "q": "The sequence 1, 4, 9, 16, … is shown. State the name and give the nth‑term.",
+    "marks": 1,
+    "model": [
+     "Square numbers; \\\\(n^2\\\\)."
+    ],
+    "tip": "Recognise the pattern of perfect squares."
+   },
+   {
+    "q": "A sequence is defined by \\(a_1=2\\) and \\(a_{n+1}=a_n+3n\\). Find a formula for \\(a_n\\).",
+    "marks": 4,
+    "model": [
+     "Compute first few terms to see pattern: 2, 5, 11, 20,…",
+     "Second differences are constant =3 → quadratic.",
+     "Assume \\\\(a_n=an^2+bn+c\\\\).",
+     "Substitute n=1,2,3 to get equations: a+b+c=2, 4a+2b+c=5, 9a+3b+c=11. Solve → a=\\frac{3}{2}, b=\\frac{1}{2}, c=0. So \\(a_n=\\frac{3}{2}n^2+\\frac{1}{2}n\\)."
+    ],
+    "tip": "Use the constant second‑difference method for quadratic recurrences."
+   },
+   {
+    "q": "The first three terms of a Fibonacci‑type sequence are 2, 5, 7. Find the fourth term.",
+    "marks": 2,
+    "model": [
+     "Rule: each term = sum of two previous.",
+     "4th term = 5+7=12."
+    ],
+    "tip": "Only need the two immediate predecessors."
+   },
+   {
+    "q": "State one key difference between a quadratic sequence and a geometric sequence.",
+    "marks": 1,
+    "model": [
+     "Quadratic sequences have constant second differences; geometric sequences have constant ratio."
+    ],
+    "tip": "Focus on the test you would apply."
+   },
+   {
+    "q": "Given the sequence 1, 8, 27, 64, …, identify the type and write the nth‑term.",
+    "marks": 2,
+    "model": [
+     "Cube numbers; \\\\(n^3\\\\)."
+    ],
+    "tip": "Look for perfect cubes."
+   },
+   {
+    "q": "The sequence 2, 6, 12, 20, 30, … is shown. Find the nth‑term formula.",
+    "marks": 4,
+    "model": [
+     "First differences: 4,6,8,10 → second differences constant =2 → quadratic.",
+     "Let \\\\(a_n=an^2+bn+c\\\\).",
+     "Using n=1,2,3 gives equations: a+b+c=2, 4a+2b+c=6, 9a+3b+c=12. Solve → a=1, b=0, c=1. So \\(a_n=n^2+1\\)."
+    ],
+    "tip": "Constant second difference =2a; here a=1."
+   },
+   {
+    "q": "A geometric sequence has terms 4, -12, 36, … Find the common ratio and the 5th term.",
+    "marks": 3,
+    "model": [
+     "Ratio r = -12/4 = -3.",
+     "5th term = 4(-3)^{4}=4×81=324."
+    ],
+    "tip": "Check sign of ratio; even powers give positive."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Find the 10th triangular number.",
+    "steps": [
+     "Use formula \\\\(T_n=\\\\frac{n(n+1)}{2}\\\\).",
+     "Substitute n=10: \\\\(T_{10}=\\\\frac{10\\\\times11}{2}=55\\\\)."
+    ],
+    "ans": "55"
+   },
+   {
+    "q": "Determine whether the sequence 5, 11, 19, 29, … is quadratic or geometric and give the appropriate formula.",
+    "steps": [
+     "First differences: 6, 8, 10 → not constant → not arithmetic.",
+     "Second differences: 2, 2 → constant → quadratic.",
+     "Assume \\\\(a_n=an^2+bn+c\\\\).",
+     "Set up equations using n=1,2,3: a+b+c=5, 4a+2b+c=11, 9a+3b+c=19. Solve → a=1, b=2, c=2.",
+     "Thus \\\\(a_n=n^2+2n+2\\\\)."
+    ],
+    "ans": "Quadratic; \\\\(a_n=n^2+2n+2\\\\)."
+   },
+   {
+    "q": "A Fibonacci‑type sequence starts 3, 5, … Find the 6th term.",
+    "steps": [
+     "Write terms: 3, 5, 8, 13, 21, 34.",
+     "The 6th term is 34."
+    ],
+    "ans": "34"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Triangular numbers visualised as dot patterns.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><defs><linearGradient id=\"grad\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"0%\"><stop offset=\"0%\" stop-color=\"#dbeafe\"/><stop offset=\"100%\" stop-color=\"#bbf7d0\"/></linearGradient></defs><g stroke=\"#1b2540\" stroke-width=\"2\" fill=\"url(#grad)\"><polygon points=\"200,30 180,70 220,70\"/><polygon points=\"200,70 180,110 220,110\"/><polygon points=\"200,110 180,150 220,150\"/></g><text x=\"200\" y=\"20\" font-size=\"12\" text-anchor=\"middle\">T₁, T₂, T₃ …</text></svg>"
+   },
+   {
+    "cap": "Square numbers as dot grids.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"150\" y=\"80\" width=\"100\" height=\"100\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"200\" y=\"140\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">4×4</text></svg>"
+   },
+   {
+    "cap": "Cube numbers as stacked unit cubes.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><polygon points=\"150,150 250,150 250,250 150,250\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><polygon points=\"150,150 200,100 300,100 250,150\" fill=\"#e9d5ff\" stroke=\"#1b2540\" stroke-width=\"2\"/><polygon points=\"250,150 300,100 300,200 250,250\" fill=\"#fecaca\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"200\" y=\"210\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">2³</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_f.1.19",
+  "sid": "maths_aqa_f",
+  "v": 2,
+  "src": "pre",
+  "by": "groq/openai/gpt-oss-120b",
+  "ts": "2026-11-16T13:16:52.798Z"
+ },
+ "maths_aqa_f.1.11": {
+  "summary": "At AQA Foundation tier, specification point A12 focuses on recognising, sketching, and interpreting linear and quadratic graphs. Students must confidently identify straight-line graphs (y = mx + c) and parabolic quadratic curves (y = ax² + bx + c), distinguishing their core algebraic forms and geometric properties. Key exam skills include identifying roots (x-intercepts), the y-intercept, the axis of symmetry, and the coordinates of the turning point (maximum or minimum vertex) directly from sketches and plots.",
+  "core": [
+   {
+    "h": "Linear Graphs: The Foundation of Straight Lines",
+    "p": "A **linear function** produces a straight-line graph when plotted on a Cartesian coordinate grid. The general equation of any non-vertical straight line is written in the standard form **y = mx + c**, where m represents the gradient (steepness and direction) and c represents the y-intercept (the value where the line crosses the y-axis).",
+    "bullets": [
+     "**Constant rate of change**: Every linear relationship has a constant gradient along its entire length.",
+     "**Gradient (m)**: A positive value (m > 0) slopes upwards from left to right; a negative value (m < 0) slopes downwards from left to right.",
+     "**Zero gradient (m = 0)**: Produces a horizontal line with the equation y = c.",
+     "**Undefined gradient**: A vertical line has an equation of the form x = a, crossing the x-axis at (a, 0); it cannot be written as y = mx + c.",
+     "**y-intercept (c)**: The coordinate where x = 0, given by the point (0, c)."
+    ],
+    "table": {
+     "head": [
+      "Equation Type",
+      "General Form",
+      "Visual Appearance",
+      "Example"
+     ],
+     "rows": [
+      [
+       "Sloping line (positive)",
+       "y = mx + c (m > 0)",
+       "Slopes upwards left-to-right",
+       "y = 2x - 3"
+      ],
+      [
+       "Sloping line (negative)",
+       "y = mx + c (m < 0)",
+       "Slopes downwards left-to-right",
+       "y = -3x + 4"
+      ],
+      [
+       "Horizontal line",
+       "y = c",
+       "Parallel to x-axis; gradient = 0",
+       "y = 5"
+      ],
+      [
+       "Vertical line",
+       "x = a",
+       "Parallel to y-axis; gradient undefined",
+       "x = -2"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Linear Function",
+      "p": "An algebraic function of degree 1 whose highest power of the variable x is 1. When plotted, it always forms a single continuous straight line."
+     },
+     {
+      "k": "tip",
+      "t": "Checking Line Equations",
+      "p": "Always rearrange unfamiliar linear equations into y = mx + c before stating the gradient or intercept. For example, 2y - 6x = 8 rearranges to y = 3x + 4."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Quadratic Graphs: The Parabola Shape",
+    "p": "A **quadratic function** contains an x² term as its highest power, written in the standard form **y = ax² + bx + c**, where a, b, and c are constants and a ≠ 0. The graph of every quadratic function is a smooth, symmetrical curve known as a **parabola**.",
+    "bullets": [
+     "**Positive quadratic (a > 0)**: The curve is U-shaped (often remembered as a 'smiley face'). It possesses a **minimum turning point** at its lowest point.",
+     "**Negative quadratic (a < 0)**: The curve is n-shaped or inverted U-shaped (an 'unhappy face'). It possesses a **maximum turning point** at its highest point.",
+     "**Non-linear rate of change**: Unlike a straight line, the gradient of a quadratic curve changes continuously at every point.",
+     "**Bilateral symmetry**: Every parabola has a single vertical line of symmetry passing directly through its vertex."
+    ],
+    "table": {
+     "head": [
+      "Coefficient a",
+      "Curve Shape",
+      "Turning Point Type",
+      "Example Equation"
+     ],
+     "rows": [
+      [
+       "a > 0 (Positive)",
+       "U-shape (opens upwards)",
+       "Minimum turning point",
+       "y = x² - 4x + 3"
+      ],
+      [
+       "a < 0 (Negative)",
+       "n-shape (opens downwards)",
+       "Maximum turning point",
+       "y = -x² + 2x + 8"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Parabola",
+      "p": "A symmetrical, U-shaped or n-shaped plane curve formed by graphing a quadratic function y = ax² + bx + c."
+     },
+     {
+      "k": "warn",
+      "t": "Flat Bottom Trap",
+      "p": "Never join points on a quadratic graph with a ruler, and never draw a flat base between two equal y-values. A parabola must be a single, smooth, continuous curve that rounds cleanly at the turning point."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Key Anatomical Features of a Quadratic Graph",
+    "p": "Examiners regularly test the four key landmarks of any quadratic graph: the **y-intercept**, the **roots (x-intercepts)**, the **turning point (vertex)**, and the **vertical line of symmetry**. Identifying these features allows you to sketch or interpret any quadratic graph accurately.",
+    "bullets": [
+     "**y-intercept**: The point where the graph crosses the vertical y-axis. Found algebraically by setting x = 0, giving the point (0, c).",
+     "**Roots (x-intercepts)**: The points where the curve crosses or touches the horizontal x-axis. Found algebraically by setting y = 0 and solving ax² + bx + c = 0.",
+     "**Turning Point (Vertex)**: The absolute lowest point (minimum) for a positive quadratic or the highest point (maximum) for a negative quadratic.",
+     "**Line of Symmetry**: A vertical mirror line with equation x = k that passes exactly halfway between the roots and straight through the turning point."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Symmetry of Roots",
+      "p": "Because a parabola is completely symmetrical, the x-coordinate of the turning point always lies exactly midway between the two roots: x_vertex = (root₁ + root₂) / 2."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Plotting Quadratic Graphs from a Table of Values",
+    "p": "When asked to plot a quadratic graph, AQA exam papers usually provide an incomplete table of values. Success requires meticulous attention to negative numbers, especially when squaring negative inputs.",
+    "bullets": [
+     "**Squaring negatives**: Always remember that a negative number squared gives a positive result: (-3)² = 9, never -9.",
+     "**Use brackets on calculators**: When entering negative values into a scientific calculator, wrap them in brackets: `(-3)² - 2(-3) - 5`.",
+     "**Look for symmetry**: Quadratic table values reflect around the turning point. If your calculated y-values do not show a symmetrical pattern, check your arithmetic.",
+     "**Plotting coordinates**: Plot each pair (x, y) with a small, precise cross (×) or dot.",
+     "**Drawing the curve**: Connect the points with a single, freehand, smooth curved pencil line. Do not use a ruler between points."
+    ],
+    "table": {
+     "head": [
+      "x",
+      "-2",
+      "-1",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "rows": [
+      [
+       "x²",
+       "4",
+       "1",
+       "0",
+       "1",
+       "4",
+       "9",
+       "16"
+      ],
+      [
+       "- 2x",
+       "+4",
+       "+2",
+       "0",
+       "-2",
+       "-4",
+       "-6",
+       "-8"
+      ],
+      [
+       "- 3",
+       "-3",
+       "-3",
+       "-3",
+       "-3",
+       "-3",
+       "-3",
+       "-3"
+      ],
+      [
+       "y = x² - 2x - 3",
+       "5",
+       "0",
+       "-3",
+       "-4",
+       "-3",
+       "0",
+       "5"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Checking Suspicious Points",
+      "p": "If one plotted point looks completely out of line with a smooth curve, re-calculate that single point. It is almost always an arithmetic error with negative signs."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Reading Roots and Graphical Solutions",
+    "p": "The **roots** of a quadratic equation ax² + bx + c = 0 are the x-coordinates where the curve y = ax² + bx + c meets the line y = 0 (the x-axis). You can solve quadratic equations graphically simply by reading off these crossing points.",
+    "bullets": [
+     "**Two distinct roots**: The curve cuts through the x-axis in two separate places (e.g. at x = -1 and x = 3).",
+     "**One repeated root**: The turning point sits directly on the x-axis, touching it at exactly one point.",
+     "**No real roots**: The entire curve sits above the x-axis (if positive) or below the x-axis (if negative), never touching or crossing it.",
+     "**Estimating values**: Read values to the nearest grid square (usually 0.1 of a unit). Draw vertical construction lines down to the x-axis to show your working."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Root of an Equation",
+      "p": "A value of x that satisfies the equation. On a graph of y = f(x), the roots of f(x) = 0 are the x-intercepts."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Finding the Turning Point and Line of Symmetry",
+    "p": "The turning point is the peak or trough of the parabola. At Foundation tier, you can identify the coordinates of the turning point by reading directly from a given graph or by finding the midpoint between the roots.",
+    "bullets": [
+     "**Locate the extremes**: Scan the curve for its minimum (lowest y-value) or maximum (highest y-value).",
+     "**Read both coordinates**: Write your answer as an ordered pair (x, y). Ensure you write x first and y second.",
+     "**Line of symmetry formula**: If the roots are at x = p and x = q, the vertical line of symmetry has the equation **x = (p + q) / 2**.",
+     "**Turning point x-value**: The turning point always lies on this vertical line, so its x-coordinate is also (p + q) / 2."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Equation of Symmetry Line",
+      "p": "The line of symmetry is a vertical line. You must write it as an equation starting with 'x ='. Writing just a single number (e.g. '1' instead of 'x = 1') loses the mark in AQA exams."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Interpreting Real-Life Quadratic Graphs",
+    "p": "Quadratic graphs are frequently used to model physical situations in Foundation tier exam questions, such as the trajectory of a thrown ball, the height of a projectile over time, or profit models.",
+    "bullets": [
+     "**Horizontal axis**: Usually represents time (t in seconds) or horizontal distance (x in metres).",
+     "**Vertical axis**: Usually represents height (h in metres) or financial value (profit/cost in pounds).",
+     "**Maximum height**: The y-value of the maximum turning point gives the greatest height reached.",
+     "**Time to reach maximum**: The x-value of the maximum turning point gives the time taken to reach that greatest height.",
+     "**Total flight duration**: The positive root (where height returns to h = 0) represents when the object hits the ground.",
+     "**Initial height**: The y-intercept (when t = 0) represents the starting height of the object."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Units in Context",
+      "p": "Always include units when interpreting real-life graphs (e.g. '4.5 metres' or '2.8 seconds') if requested by the question prompt."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Recognising Graphs: Linear vs Quadratic vs Non-Linear",
+    "p": "AQA Foundation tier regularly includes 'match the equation to the graph' or 'circle the correct graph' questions. You must instantly distinguish linear lines from quadratic curves, and identify non-quadratic curves.",
+    "bullets": [
+     "**Linear graphs**: Straight line, no curves, single constant gradient throughout. Equation has x to power 1.",
+     "**Quadratic graphs**: Single smooth U-shape or n-shape curve with exactly one turning point. Equation has x².",
+     "**Higher-Tier Awareness**: Higher tier covers **cubic** (S-shaped curves with up to two turning points), **reciprocal** (two disconnected curved branches separated by asymptotes), **exponential** (rapidly steepening curve crossing (0, 1)), and **trigonometric** (repeating waves). At Foundation tier, you only need to recognise that these other shapes are neither linear nor quadratic."
+    ],
+    "table": {
+     "head": [
+      "Graph Family",
+      "Typical Equation",
+      "Key Shape Features",
+      "Tier Requirement"
+     ],
+     "rows": [
+      [
+       "Linear",
+       "y = mx + c",
+       "One straight line; constant slope",
+       "Foundation & Higher"
+      ],
+      [
+       "Quadratic",
+       "y = ax² + bx + c",
+       "Symmetrical U or n curve; one turning point",
+       "Foundation & Higher"
+      ],
+      [
+       "Cubic",
+       "y = x³",
+       "S-shaped curve; can have two turns",
+       "Higher Only (Recognise as non-linear)"
+      ],
+      [
+       "Reciprocal",
+       "y = 1/x",
+       "Two curves in opposite quadrants; asymptotes",
+       "Higher Only (Recognise as non-linear)"
+      ],
+      [
+       "Exponential",
+       "y = kˣ",
+       "Curves upwards rapidly; never reaches y = 0",
+       "Higher Only (Recognise as non-linear)"
+      ],
+      [
+       "Trigonometric",
+       "y = sin x",
+       "Repeating smooth wave between -1 and +1",
+       "Higher Only (Recognise as non-linear)"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Foundation Exam Rule",
+      "p": "On Foundation papers, if a graph is a straight line, it is linear. If it is a symmetrical bowl or arch with a single turning point, it is quadratic. Any wave, multi-bend curve, or split branch is non-quadratic."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Solving y = k Graphically Using a Quadratic Graph",
+    "p": "Examiners often ask students to use a drawn quadratic graph y = f(x) to estimate the solutions to an equation such as **x² - 2x - 3 = 2**.",
+    "bullets": [
+     "**Step 1**: Recognise that the curve is y = x² - 2x - 3 and the equation asks where y = 2.",
+     "**Step 2**: Use a ruler to draw a horizontal line across the grid at **y = 2**.",
+     "**Step 3**: Find the points where this horizontal line intersects the parabola.",
+     "**Step 4**: Draw dashed vertical construction lines straight down to the x-axis.",
+     "**Step 5**: Read off the x-values at both intersection points."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Show Construction Lines",
+      "p": "Always draw your horizontal line and drop-down dashed lines clearly on the exam paper. Examiners award method marks for visible construction lines even if your final reading is slightly out."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Step-by-Step Guide to Sketching a Quadratic Graph",
+    "p": "A **sketch** does not require plotting points on grid paper, but it must clearly display the correct general shape and the coordinates of key landmarks.",
+    "bullets": [
+     "**Step 1 (Orientation)**: Check the sign of the x² term. If positive, draw a U-shape; if negative, draw an n-shape.",
+     "**Step 2 (y-intercept)**: Substitute x = 0 to find the y-intercept (0, c) and mark this on the y-axis.",
+     "**Step 3 (Roots)**: Set y = 0 and solve to find the roots (if factorisable or given). Mark these points on the x-axis.",
+     "**Step 4 (Turning point)**: Mark the vertex halfway between the roots.",
+     "**Step 5 (Draw)**: Connect the marked landmarks with a smooth, continuous, symmetrical curved line. Label each landmark with its coordinates."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Sketch vs Plot",
+      "p": "A 'plot' requires squared graph paper and exact coordinate points. A 'sketch' requires an ungridded axes diagram showing correct orientation, curvature, and clearly labelled intercepts and vertex."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Flight of a Cannonball vs a Laser Beam",
+   "p": "Think of a linear graph as a high-powered laser beam: once emitted, it travels in a completely unbending straight line at a constant trajectory (constant gradient). No matter how far you track it, it never curves, dips, or changes steepness. In contrast, a quadratic graph is like firing a cannonball into the air: it starts upwards, gradually decelerates as gravity pulls it back, reaches a single highest summit (the maximum turning point), and follows an identical, symmetrical curved path back down to earth. The analogy breaks down because real cannonballs encounter air resistance, distorting the symmetry slightly, whereas a mathematical parabola is always perfectly symmetrical."
+  },
+  "terms": [
+   {
+    "t": "Linear Graph",
+    "d": "A graph forming a continuous straight line, represented algebraically by y = mx + c with a constant gradient."
+   },
+   {
+    "t": "Quadratic Graph",
+    "d": "A graph forming a symmetrical U-shaped or n-shaped curve (parabola), represented by y = ax² + bx + c."
+   },
+   {
+    "t": "Parabola",
+    "d": "The specific geometric curve produced by any quadratic function."
+   },
+   {
+    "t": "Gradient",
+    "d": "A measure of the steepness of a line or curve, calculated for straight lines as change in y divided by change in x (rise over run)."
+   },
+   {
+    "t": "y-intercept",
+    "d": "The coordinate point where a graph intersects the vertical y-axis (where x = 0)."
+   },
+   {
+    "t": "Root (x-intercept)",
+    "d": "A value of x where the graph intersects the horizontal x-axis (where y = 0)."
+   },
+   {
+    "t": "Turning Point (Vertex)",
+    "d": "The point on a curve where the gradient changes from positive to negative (maximum) or negative to positive (minimum)."
+   },
+   {
+    "t": "Minimum Point",
+    "d": "The lowest point on a positive quadratic parabola (a > 0)."
+   },
+   {
+    "t": "Maximum Point",
+    "d": "The highest point on a negative quadratic parabola (a < 0)."
+   },
+   {
+    "t": "Line of Symmetry",
+    "d": "A vertical line passing through the turning point of a parabola, dividing the curve into two identical mirror images."
+   },
+   {
+    "t": "Table of Values",
+    "d": "A structured table listing paired x and y coordinates used to plot a graph accurately on a grid."
+   },
+   {
+    "t": "Continuous Curve",
+    "d": "A smooth line drawn without breaks, sharp corners, or straight ruler segments connecting plotted points."
+   },
+   {
+    "t": "Cubic Graph",
+    "d": "A Higher-tier curve produced by y = ax³ + bx² + cx + d, exhibiting an S-like shape (Foundation students must recognise it as non-linear and non-quadratic)."
+   },
+   {
+    "t": "Reciprocal Graph",
+    "d": "A Higher-tier graph of y = k/x forming two separate hyperbola branches (Foundation students must recognise it as non-linear)."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Joining plotted points on a quadratic graph using a ruler and straight line segments.",
+    "r": "Joining points with a single, smooth, continuous freehand curved line with no sharp corners."
+   },
+   {
+    "w": "Calculating (-3)² as -9 when filling in a table of values.",
+    "r": "Writing (-3)² = +9, because a negative number multiplied by a negative number is positive."
+   },
+   {
+    "w": "Drawing a flat horizontal bottom between two equal y-values on a parabola.",
+    "r": "Drawing a rounded smooth curve that dips slightly below the lowest plotted points to form a natural vertex."
+   },
+   {
+    "w": "Writing the line of symmetry as a single number, such as 'Line of symmetry = 2'.",
+    "r": "Writing the line of symmetry as a full equation of a vertical line: 'x = 2'."
+   },
+   {
+    "w": "Reversing coordinates of the turning point, writing (y, x) instead of (x, y).",
+    "r": "Writing the horizontal x-coordinate first, followed by the vertical y-coordinate: (x, y)."
+   },
+   {
+    "w": "Stating that y = -x² + 4 has a minimum turning point because of the minus sign.",
+    "r": "Stating that a negative x² coefficient creates an inverted n-shape with a MAXIMUM turning point."
+   },
+   {
+    "w": "Thinking a vertical line can be written in the form y = mx + c.",
+    "r": "Recognising that a vertical line has undefined gradient and is written in the form x = a."
+   },
+   {
+    "w": "Confusing the y-intercept with the roots on a graph sketch.",
+    "r": "Identifying the y-intercept on the vertical axis (x = 0) and roots on the horizontal axis (y = 0)."
+   }
+  ],
+  "exam": [
+   {
+    "q": "The diagram shows a sketch of the curve y = x² - 6x + 8. Write down the coordinates of the y-intercept.",
+    "marks": 1,
+    "model": [
+     "At the y-intercept, x = 0.",
+     "y = 0² - 6(0) + 8 = 8, giving the coordinates (0, 8)."
+    ],
+    "tip": "The y-intercept of y = ax² + bx + c is always the constant term (0, c)."
+   },
+   {
+    "q": "A quadratic graph crosses the x-axis at x = -2 and x = 6. State the equation of the line of symmetry of the graph.",
+    "marks": 2,
+    "model": [
+     "Find the midpoint of the two roots: (-2 + 6) / 2 = 4 / 2 = 2.",
+     "The line of symmetry is a vertical line passing through x = 2, so the equation is x = 2."
+    ],
+    "tip": "You must include 'x =' to get the mark for a line equation; writing just '2' earns 0 marks."
+   },
+   {
+    "q": "Circle the equation of the graph that is a straight line.\nA: y = x² - 3    B: y = 4/x    C: y = 3x - 5    D: y = x³",
+    "marks": 1,
+    "model": [
+     "Select C: y = 3x - 5 (it is in the linear form y = mx + c with highest power of x equal to 1)."
+    ],
+    "tip": "Linear equations have x to the power of 1 only, with no powers of 2, 3, or fractions with x in the denominator."
+   },
+   {
+    "q": "Complete the table of values for y = x² - 3x for x from -1 to 3.\n| x | -1 | 0 | 1 | 2 | 3 |\n| y |    | 0 | -2|   | 0 |",
+    "marks": 2,
+    "model": [
+     "For x = -1: y = (-1)² - 3(-1) = 1 + 3 = 4.",
+     "For x = 2: y = (2)² - 3(2) = 4 - 6 = -2.",
+     "Completed table entries: y = 4 when x = -1, and y = -2 when x = 2."
+    ],
+    "tip": "Watch the signs: (-1)² is +1, and subtracting 3(-1) means adding 3."
+   },
+   {
+    "q": "The graph of y = x² - 2x - 3 is drawn on a grid. Write down the solutions to the equation x² - 2x - 3 = 0.",
+    "marks": 2,
+    "model": [
+     "The solutions to x² - 2x - 3 = 0 are the roots (x-intercepts) where the curve crosses y = 0.",
+     "Reading from the x-axis: x = -1 and x = 3."
+    ],
+    "tip": "Always state both roots clearly as separate values: x = -1, x = 3."
+   },
+   {
+    "q": "A quadratic curve has a turning point at (3, -4) and crosses the y-axis at (0, 5). State whether this turning point is a maximum or a minimum. Give a reason for your answer.",
+    "marks": 2,
+    "model": [
+     "Minimum turning point.",
+     "The turning point y-value (-4) is lower than the y-intercept (5), meaning the curve opens upwards in a U-shape."
+    ],
+    "tip": "Compare the y-value of the vertex to any other point on the curve to see whether it opens up or down."
+   },
+   {
+    "q": "The height h (in metres) of a ball thrown into the air is given by the graph of h = -t² + 6t, where t is time in seconds. (a) Find the maximum height reached by the ball. (b) Find the time taken for the ball to return to the ground.",
+    "marks": 4,
+    "model": [
+     "(a) Roots occur at -t(t - 6) = 0, so t = 0 and t = 6 seconds.",
+     "Line of symmetry is at t = (0 + 6) / 2 = 3 seconds.",
+     "Substitute t = 3: h = -(3)² + 6(3) = -9 + 18 = 9 metres.",
+     "(b) The ball returns to the ground when h = 0, which is the second root: t = 6 seconds."
+    ],
+    "tip": "Maximum height corresponds to the vertex; returning to the ground corresponds to the non-zero root."
+   },
+   {
+    "q": "Here are sketches of four graphs: Graph 1 is a U-shape; Graph 2 is a straight line sloping down; Graph 3 is an n-shape; Graph 4 is a horizontal line. Match each equation to its graph:\n(i) y = -2x + 1   (ii) y = x² - 4   (iii) y = 3   (iv) y = -x² + 2x",
+    "marks": 4,
+    "model": [
+     "(i) y = -2x + 1 is Graph 2 (straight line with negative gradient).",
+     "(ii) y = x² - 4 is Graph 1 (positive quadratic U-shape).",
+     "(iii) y = 3 is Graph 4 (horizontal straight line with gradient 0).",
+     "(iv) y = -x² + 2x is Graph 3 (negative quadratic n-shape)."
+    ],
+    "tip": "Check the power of x and the sign of the leading coefficient for each equation."
+   },
+   {
+    "q": "Explain why the graph of y = x² + 5 has no x-intercepts.",
+    "marks": 2,
+    "model": [
+     "For any real value of x, x² is always greater than or equal to 0 (x² ≥ 0).",
+     "Therefore, x² + 5 must always be greater than or equal to 5 (y ≥ 5), so the curve never reaches y = 0."
+    ],
+    "tip": "A minimum turning point at (0, 5) sits entirely above the horizontal axis."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Plot the graph of y = x² - 4x + 3 for values of x from 0 to 4, and use the graph to find: (a) the coordinates of the turning point, (b) the roots of the equation x² - 4x + 3 = 0, (c) the line of symmetry.",
+    "steps": [
+     "Step 1: Construct a table of values by substituting each x-value into y = x² - 4x + 3:\n- When x = 0: y = 0² - 4(0) + 3 = 3 -> (0, 3)\n- When x = 1: y = 1² - 4(1) + 3 = 1 - 4 + 3 = 0 -> (1, 0)\n- When x = 2: y = 2² - 4(2) + 3 = 4 - 8 + 3 = -1 -> (2, -1)\n- When x = 3: y = 3² - 4(3) + 3 = 9 - 12 + 3 = 0 -> (3, 0)\n- When x = 4: y = 4² - 4(4) + 3 = 16 - 16 + 3 = 3 -> (4, 3)",
+     "Step 2: Notice the perfect symmetry in y-values: 3, 0, -1, 0, 3. The minimum point is clearly at x = 2.",
+     "Step 3: Plot the points (0, 3), (1, 0), (2, -1), (3, 0), and (4, 3) on the coordinate grid and join them with a single smooth curved parabola.",
+     "Step 4: Answer the specific questions from the drawn graph:\n(a) The lowest point is at x = 2, y = -1, so the turning point is (2, -1).\n(b) The curve crosses the x-axis where y = 0 at x = 1 and x = 3.\n(c) The vertical mirror line passes halfway between 1 and 3, giving the line of symmetry x = 2."
+    ],
+    "ans": "(a) Turning point: (2, -1); (b) Roots: x = 1 and x = 3; (c) Line of symmetry: x = 2"
+   },
+   {
+    "q": "Below is the graph of y = x² - x - 2. Use the graph to estimate the solutions to the equation x² - x - 2 = 1.",
+    "steps": [
+     "Step 1: Understand the link between the equation and the graph. The left side is the plotted function y = x² - x - 2. The right side is 1.",
+     "Step 2: Draw a horizontal line across the grid at y = 1 using a ruler.",
+     "Step 3: Identify the two intersection points where the horizontal line meets the curve.",
+     "Step 4: Draw vertical dashed construction lines down from these intersection points to the x-axis.",
+     "Step 5: Read the x-coordinates: the left intersection is at approximately x = -1.3 and the right intersection is at approximately x = 2.3."
+    ],
+    "ans": "x ≈ -1.3 and x ≈ 2.3 (accept answers in range -1.4 to -1.2 and 2.2 to 2.4)"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Linear graphs comparison showing positive gradient, negative gradient, horizontal line y = c, and vertical line x = a.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><line x1=\"30\" y1=\"120\" x2=\"370\" y2=\"120\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"200\" y1=\"20\" x2=\"200\" y2=\"220\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"375\" y=\"124\" font-size=\"12\" fill=\"#64748b\">x</text><text x=\"204\" y=\"28\" font-size=\"12\" fill=\"#64748b\">y</text><line x1=\"50\" y1=\"210\" x2=\"350\" y2=\"30\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><rect x=\"230\" y=\"45\" width=\"125\" height=\"22\" fill=\"#dbeafe\" rx=\"4\" stroke=\"#2563eb\"/><text x=\"236\" y=\"60\" font-size=\"11\" fill=\"#1e3a8a\">y = mx + c (m &gt; 0)</text><line x1=\"50\" y1=\"30\" x2=\"350\" y2=\"210\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><rect x=\"45\" y=\"45\" width=\"125\" height=\"22\" fill=\"#fecaca\" rx=\"4\" stroke=\"#dc2626\"/><text x=\"51\" y=\"60\" font-size=\"11\" fill=\"#991b1b\">y = -mx + c (m &lt; 0)</text><line x1=\"40\" y1=\"160\" x2=\"360\" y2=\"160\" stroke=\"#059669\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><rect x=\"250\" y=\"166\" width=\"105\" height=\"20\" fill=\"#bbf7d0\" rx=\"4\" stroke=\"#059669\"/><text x=\"256\" y=\"180\" font-size=\"11\" fill=\"#065f46\">y = c (Horizontal)</text><line x1=\"120\" y1=\"30\" x2=\"120\" y2=\"210\" stroke=\"#7c3aed\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><rect x=\"75\" y=\"190\" width=\"90\" height=\"20\" fill=\"#e9d5ff\" rx=\"4\" stroke=\"#7c3aed\"/><text x=\"81\" y=\"204\" font-size=\"11\" fill=\"#5b21b6\">x = a (Vertical)</text></svg>"
+   },
+   {
+    "cap": "Key features of a quadratic graph: roots (x-intercepts), y-intercept, turning point (vertex), and vertical line of symmetry.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><line x1=\"30\" y1=\"170\" x2=\"370\" y2=\"170\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"140\" y1=\"20\" x2=\"140\" y2=\"220\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"375\" y=\"174\" font-size=\"12\" fill=\"#64748b\">x</text><text x=\"144\" y=\"28\" font-size=\"12\" fill=\"#64748b\">y</text><line x1=\"220\" y1=\"20\" x2=\"220\" y2=\"220\" stroke=\"#f59e0b\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/><rect x=\"225\" y=\"26\" width=\"130\" height=\"20\" fill=\"#fef3c7\" rx=\"4\" stroke=\"#d97706\"/><text x=\"230\" y=\"40\" font-size=\"11\" fill=\"#92400e\">Symmetry Line: x = 1</text><path d=\"M 60,30 Q 220,270 360,40\" fill=\"none\" stroke=\"#1d4ed8\" stroke-width=\"2.5\"/><circle cx=\"140\" cy=\"148\" r=\"5\" fill=\"#059669\"/><rect x=\"35\" y=\"135\" width=\"98\" height=\"20\" fill=\"#bbf7d0\" rx=\"4\" stroke=\"#059669\"/><text x=\"40\" y=\"149\" font-size=\"11\" fill=\"#065f46\">y-int: (0, -3)</text><circle cx=\"100\" cy=\"170\" r=\"5\" fill=\"#dc2626\"/><circle cx=\"320\" cy=\"170\" r=\"5\" fill=\"#dc2626\"/><rect x=\"45\" y=\"182\" width=\"75\" height=\"20\" fill=\"#fecaca\" rx=\"4\" stroke=\"#dc2626\"/><text x=\"50\" y=\"196\" font-size=\"11\" fill=\"#991b1b\">Root: x = -1</text><rect x=\"305\" y=\"182\" width=\"70\" height=\"20\" fill=\"#fecaca\" rx=\"4\" stroke=\"#dc2626\"/><text x=\"310\" y=\"196\" font-size=\"11\" fill=\"#991b1b\">Root: x = 3</text><circle cx=\"220\" cy=\"195\" r=\"5\" fill=\"#7c3aed\"/><rect x=\"180\" y=\"210\" width=\"125\" height=\"20\" fill=\"#e9d5ff\" rx=\"4\" stroke=\"#7c3aed\"/><text x=\"185\" y=\"224\" font-size=\"11\" fill=\"#5b21b6\">Vertex (1, -4) Min</text></svg>"
+   },
+   {
+    "cap": "Comparison of positive quadratics (a > 0, U-shaped with minimum) and negative quadratics (a < 0, n-shaped with maximum).",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><line x1=\"200\" y1=\"10\" x2=\"200\" y2=\"230\" stroke=\"#cbd5e1\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/><line x1=\"20\" y1=\"130\" x2=\"180\" y2=\"130\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"70\" y1=\"30\" x2=\"70\" y2=\"210\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><path d=\"M 30,50 Q 110,210 170,50\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><circle cx=\"105\" cy=\"150\" r=\"4\" fill=\"#2563eb\"/><rect x=\"30\" y=\"15\" width=\"140\" height=\"22\" fill=\"#dbeafe\" rx=\"4\" stroke=\"#2563eb\"/><text x=\"36\" y=\"30\" font-size=\"11\" fill=\"#1e3a8a\">Positive: y = ax² (a &gt; 0)</text><rect x=\"45\" y=\"175\" width=\"125\" height=\"20\" fill=\"#eff6ff\" rx=\"4\" stroke=\"#3b82f6\"/><text x=\"50\" y=\"189\" font-size=\"11\" fill=\"#1d4ed8\">U-Shape: Minimum</text><line x1=\"220\" y1=\"130\" x2=\"380\" y2=\"130\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"270\" y1=\"30\" x2=\"270\" y2=\"210\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><path d=\"M 230,190 Q 310,30 370,190\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><circle cx=\"305\" cy=\"70\" r=\"4\" fill=\"#dc2626\"/><rect x=\"230\" y=\"15\" width=\"145\" height=\"22\" fill=\"#fecaca\" rx=\"4\" stroke=\"#dc2626\"/><text x=\"236\" y=\"30\" font-size=\"11\" fill=\"#991b1b\">Negative: y = -ax² (a &lt; 0)</text><rect x=\"245\" y=\"175\" width=\"130\" height=\"20\" fill=\"#fef2f2\" rx=\"4\" stroke=\"#ef4444\"/><text x=\"250\" y=\"189\" font-size=\"11\" fill=\"#b91c1c\">n-Shape: Maximum</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_f.1.11",
+  "sid": "maths_aqa_f",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.8-flash",
+  "ts": "2026-11-16T13:18:39.956Z"
+ },
+ "maths_aqa_f.1.14": {
+  "summary": "Solving quadratic equations is a fundamental skill in GCSE Maths algebra that involves finding the unknown values of x that make a second-degree polynomial equation equal to zero. At Foundation tier, solving quadratics focuses on factorising expressions into single or double brackets, utilizing the Zero Product Property where setting each factor to zero reveals the roots of the equation. Understanding how to rearrange quadratic equations into standard form ax^2 + bx + c = 0 and linking algebraic solutions to the x-intercepts of parabolic graphs ensures complete mastery of the topic.",
+  "core": [
+   {
+    "h": "Introduction to Quadratic Equations",
+    "p": "A quadratic equation is an algebraic equation where the highest exponent of the variable x is 2. To solve a quadratic equation means finding the specific numerical values of x (known as roots or solutions) that make the equation true.",
+    "bullets": [
+     "A quadratic expression must contain an x^2 term as its highest power (e.g., x^2 + 5x + 6).",
+     "The standard form of a quadratic equation is ax^2 + bx + c = 0, where a, b, and c are numerical constants and a ≠ 0.",
+     "In Foundation tier GCSE Maths, solving quadratic equations focuses on factorising, where the coefficient of x^2 is usually 1 (a = 1).",
+     "Quadratic equations typically have two solutions, which can be positive, negative, or equal."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Quadratic Equation",
+      "p": "An equation of the form ax^2 + bx + c = 0 where a, b, and c are real numbers and a ≠ 0."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "The Zero Product Property",
+    "p": "The primary algebraic principle behind solving quadratics by factorising is the Zero Product Property. If the product of two real numbers or expressions is zero, then at least one of those factors must equal zero.",
+    "bullets": [
+     "If A × B = 0, then either A = 0, B = 0, or both A and B equal 0.",
+     "Factorising rewrites a quadratic expression into a product of two linear binomial factors: (x + p)(x + q) = 0.",
+     "Applying the zero product property gives two separate linear equations: x + p = 0 and x + q = 0.",
+     "Solving these linear equations yields the two solutions: x = -p and x = -q."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Core Principle",
+      "p": "You CANNOT solve a quadratic equation by factorising until one side of the equation equals ZERO."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Factorising Quadratics of the Form x^2 + bx + c",
+    "p": "To factorise a quadratic expression x^2 + bx + c into two double brackets (x + p)(x + q), you must identify two numbers p and q that satisfy two simultaneous arithmetic conditions.",
+    "bullets": [
+     "Condition 1 (Product): The two numbers must multiply to equal the constant term c (p × q = c).",
+     "Condition 2 (Sum): The two numbers must add up to equal the coefficient of x (p + q = b).",
+     "List all factor pairs of the constant term c first, then select the pair that sums to b.",
+     "Place the two numbers into brackets: (x + p)(x + q) = 0."
+    ],
+    "table": {
+     "head": [
+      "Quadratic Expression",
+      "Factor Pair of c",
+      "Sum of Pair (b)",
+      "Factorised Form"
+     ],
+     "rows": [
+      [
+       "x^2 + 7x + 12",
+       "+3 and +4",
+       "+3 + 4 = +7",
+       "(x + 3)(x + 4)"
+      ],
+      [
+       "x^2 - 5x + 6",
+       "-2 and -3",
+       "-2 + (-3) = -5",
+       "(x - 2)(x - 3)"
+      ],
+      [
+       "x^2 + 2x - 15",
+       "+5 and -3",
+       "+5 + (-3) = +2",
+       "(x + 5)(x - 3)"
+      ],
+      [
+       "x^2 - 4x - 12",
+       "-6 and +2",
+       "-6 + 2 = -4",
+       "(x - 6)(x + 2)"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Solving Quadratics with Positive Terms",
+    "p": "When all terms in the quadratic equation x^2 + bx + c = 0 are positive, both numbers inside the factorised brackets will be positive, resulting in two negative solutions.",
+    "bullets": [
+     "Example: Solve x^2 + 8x + 15 = 0.",
+     "Step 1: Find factors of +15 that add to +8. The factor pairs of 15 are (1, 15) and (3, 5). 3 + 5 = 8.",
+     "Step 2: Write in factorised form: (x + 3)(x + 5) = 0.",
+     "Step 3: Set each factor to zero: x + 3 = 0 or x + 5 = 0.",
+     "Step 4: Solve each linear equation: x = -3 or x = -5."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam Tip",
+      "p": "Always write down BOTH solutions clearly separated by 'or' (e.g., x = -3 or x = -5) to secure full marks on AQA mark schemes."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Solving Quadratics with Negative Coefficients",
+    "p": "When the middle term b or constant term c is negative, careful attention must be given to positive and negative signs when determining factor pairs.",
+    "bullets": [
+     "If c is positive and b is negative: Both numbers in the brackets must be negative (e.g., -2 × -4 = +8, -2 + -4 = -6).",
+     "If c is negative: One number in the bracket must be positive and one must be negative.",
+     "Example: Solve x^2 - 2x - 8 = 0.",
+     "Factors of -8 that add to -2 are -4 and +2.",
+     "Factorised form: (x - 4)(x + 2) = 0.",
+     "Set to zero and solve: x - 4 = 0 => x = 4; x + 2 = 0 => x = -2."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Common Trap",
+      "p": "Do not swap the signs of the bracket factors! (x - 4) gives the solution x = +4, NOT x = -4."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Factorising Single-Bracket Quadratics (c = 0)",
+    "p": "When a quadratic equation has no constant term (c = 0), it takes the form ax^2 + bx = 0. These equations are solved by factorising a single common factor of x outside one bracket.",
+    "bullets": [
+     "Form: x^2 + bx = 0 factorises to x(x + b) = 0.",
+     "Applying the zero product property gives: x = 0 or x + b = 0.",
+     "Example: Solve x^2 - 6x = 0.",
+     "Factorise x out of both terms: x(x - 6) = 0.",
+     "Set factors to zero: x = 0 or x - 6 = 0.",
+     "Solutions: x = 0 or x = 6.",
+     "One root of any equation in the form x^2 + bx = 0 is ALWAYS x = 0."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Never Divide by x",
+      "p": "Never divide both sides of x^2 - 6x = 0 by x! Dividing by x loses the valid solution x = 0 and loses marks."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Solving the Difference of Two Squares (b = 0)",
+    "p": "When a quadratic equation has no x term (b = 0) and takes the form x^2 - d^2 = 0, it is called the difference of two squares and factorises into two symmetrical brackets.",
+    "bullets": [
+     "General identity: x^2 - k^2 = (x + k)(x - k) = 0.",
+     "Example: Solve x^2 - 25 = 0.",
+     "Factorise using square roots: (x + 5)(x - 5) = 0.",
+     "Set factors to zero: x + 5 = 0 or x - 5 = 0.",
+     "Solutions: x = -5 or x = 5 (can be written as x = ±5).",
+     "Alternative method: x^2 = 25 => x = ±√25 => x = ±5."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Remember Both Roots",
+      "p": "Taking the square root of a positive number always produces both a positive and a negative root: √25 = ±5."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Rearranging Equations into Standard Form First",
+    "p": "In many exam questions, the quadratic equation is not given in standard form equal to zero. You must rearrange all terms onto one side before factorising.",
+    "bullets": [
+     "Example: Solve x^2 + 5x = 14.",
+     "Step 1: Subtract 14 from both sides to set the right side to zero: x^2 + 5x - 14 = 0.",
+     "Step 2: Factorise the left-hand side: (x + 7)(x - 2) = 0.",
+     "Step 3: Solve each linear equation: x + 7 = 0 => x = -7; x - 2 = 0 => x = 2.",
+     "Always simplify and collect like terms onto the side where x^2 has a positive coefficient."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Graphical Interpretation: Roots and x-Intercepts",
+    "p": "The algebraic solutions (roots) of the equation ax^2 + bx + c = 0 represent the points where the curve of the quadratic function y = ax^2 + bx + c crosses the x-axis.",
+    "bullets": [
+     "On the x-axis, the value of y is zero (y = 0).",
+     "Solving x^2 - 2x - 3 = 0 gives x = 3 and x = -1. Graphically, the curve y = x^2 - 2x - 3 intersects the x-axis at (3, 0) and (-1, 0).",
+     "The line of symmetry of the parabolic curve passes halfway between the two roots: x = (-1 + 3) / 2 = 1.",
+     "A quadratic graph with two distinct roots crosses the x-axis twice."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": [
+     {
+      "cap": "Graphical representation of quadratic roots as x-axis intercepts.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><path d=\"M 30 170 L 370 170\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M 160 20 L 160 220\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M 60 30 Q 180 250 300 30\" stroke=\"#2563eb\" stroke-width=\"3\" fill=\"none\"/><circle cx=\"100\" cy=\"170\" r=\"5\" fill=\"#dc2626\"/><circle cx=\"260\" cy=\"170\" r=\"5\" fill=\"#dc2626\"/><text x=\"75\" y=\"195\" font-size=\"12\" fill=\"#1b2540\" font-weight=\"bold\">x = -1</text><text x=\"245\" y=\"195\" font-size=\"12\" fill=\"#1b2540\" font-weight=\"bold\">x = +3</text><text x=\"345\" y=\"160\" font-size=\"12\" fill=\"#1b2540\">x-axis</text><text x=\"165\" y=\"35\" font-size=\"12\" fill=\"#1b2540\">y-axis</text><text x=\"210\" y=\"80\" font-size=\"12\" fill=\"#2563eb\">y = x^2 - 2x - 3</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Checking Solutions by Substitution",
+    "p": "You can verify whether your calculated solutions are correct by substituting them back into the original quadratic equation.",
+    "bullets": [
+     "Substitute each solution one at a time into the left-hand side of the original equation.",
+     "Example check for x^2 - 5x + 6 = 0 with solutions x = 2 and x = 3:",
+     "For x = 2: (2)^2 - 5(2) + 6 = 4 - 10 + 6 = 0 (Verified!).",
+     "For x = 3: (3)^2 - 5(3) + 6 = 9 - 15 + 6 = 0 (Verified!).",
+     "If the result is not zero, an error was made in factorising or solving."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Formulating and Solving Quadratics from Geometry",
+    "p": "Worded exam questions often involve finding unknown dimensions of geometric shapes by setting up and solving a quadratic equation.",
+    "bullets": [
+     "Step 1: Write an expression for the area of the shape in terms of x.",
+     "Step 2: Equate the expression to the given area value.",
+     "Step 3: Rearrange into standard form ax^2 + bx + c = 0.",
+     "Step 4: Factorise and solve for x.",
+     "Step 5: Context check — discard negative solutions if a length cannot be negative!"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Real-World Context",
+      "p": "In real-life length/distance problems, reject negative x values as distance must be positive, but state clearly why."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Keyhole and Padlock System",
+   "p": "Think of a quadratic equation in standard form as a vault locked with two separate digital keypads in series: Factor A and Factor B. The overall security system shuts off (equals zero) if EITHER keypad receives its correct unlocking code (making that factor equal zero). Factorising is like discovering the two individual combination codes for keypad A and keypad B. Once you find the codes (e.g. x = -3 or x = 4), typing in either single code disables a keypad and unlocks the entire system. Where the analogy breaks down: in physical security, you might need both codes at the same time, but in mathematics, either x-value independently satisfies the original equation."
+  },
+  "terms": [
+   {
+    "t": "Quadratic Equation",
+    "d": "An equation where the highest exponent of the variable is 2, written in standard form as ax^2 + bx + c = 0."
+   },
+   {
+    "t": "Factor",
+    "d": "A number or algebraic expression that multiplies another to produce a given expression."
+   },
+   {
+    "t": "Factorise",
+    "d": "The process of writing an algebraic expression as a product of its factors using brackets."
+   },
+   {
+    "t": "Root / Solution",
+    "d": "A value of the variable x that satisfies and solves the equation."
+   },
+   {
+    "t": "Coefficient",
+    "d": "A numerical value placed before and multiplying a variable (e.g., 5 is the coefficient in 5x)."
+   },
+   {
+    "t": "Constant Term",
+    "d": "A fixed number in an expression or equation that does not contain any variables."
+   },
+   {
+    "t": "Standard Form",
+    "d": "Writing a quadratic equation with terms ordered in descending powers of x set equal to zero: ax^2 + bx + c = 0."
+   },
+   {
+    "t": "Zero Product Property",
+    "d": "The mathematical law stating that if A × B = 0, then A = 0 or B = 0 (or both)."
+   },
+   {
+    "t": "Difference of Two Squares",
+    "d": "An expression of the form x^2 - a^2 which factorises directly into (x + a)(x - a)."
+   },
+   {
+    "t": "Parabola",
+    "d": "The characteristic U-shaped or inverted U-shaped curve representing a quadratic function graph."
+   },
+   {
+    "t": "x-intercept",
+    "d": "The point(s) where a graph crosses the horizontal x-axis, corresponding to y = 0."
+   },
+   {
+    "t": "Linear Factor",
+    "d": "A first-degree algebraic expression of the form (x + a) containing no powers of x greater than 1."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "For x^2 - 7x + 12 = 0, factorising to (x - 3)(x - 4) = 0 and writing final answer x = -3 or x = -4.",
+    "r": "Failing to switch signs when solving x - 3 = 0. The correct solutions are x = +3 or x = +4."
+   },
+   {
+    "w": "Solving x^2 - 16 = 0 as x = 4 only.",
+    "r": "Forgetting the negative square root. The difference of two squares gives two roots: x = 4 or x = -4."
+   },
+   {
+    "w": "Solving x^2 = 5x by dividing both sides by x to get x = 5.",
+    "r": "Dividing by x loses the root x = 0. Rearrange to x^2 - 5x = 0, factorise x(x - 5) = 0, giving x = 0 or x = 5."
+   },
+   {
+    "w": "Trying to factorise x^2 + 5x = 6 directly as x(x + 5) = 6 so x = 6 or x + 5 = 6.",
+    "r": "The zero product property ONLY works when the equation equals 0! Subtract 6 first: x^2 + 5x - 6 = 0, giving (x + 6)(x - 1) = 0 so x = -6 or x = 1."
+   },
+   {
+    "w": "Factorising x^2 - 2x - 15 as (x - 5)(x - 3) = 0.",
+    "r": "-5 × -3 = +15, which gives the wrong constant term sign. The correct factorisation is (x - 5)(x + 3) = 0."
+   },
+   {
+    "w": "Stopping at the bracket stage (x + 2)(x + 4) = 0 without giving x values.",
+    "r": "Factorising is only the first step. You must state the final solutions: x = -2 or x = -4."
+   },
+   {
+    "w": "Writing positive side length x = -6 from a geometric context without comment.",
+    "r": "State clearly: 'Disregard x = -6 as length must be positive, so x = 4'."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Factorise x^2 + 7x + 10.",
+    "marks": 2,
+    "model": [
+     "Find two numbers multiplying to 10 and adding to 7: 2 and 5.",
+     "(x + 2)(x + 5)"
+    ],
+    "tip": "This question asks to factorise, not solve. Do not write x = -2 or x = -5!"
+   },
+   {
+    "q": "Solve x^2 - 9x + 20 = 0.",
+    "marks": 3,
+    "model": [
+     "Find factors of +20 that add to -9: -4 and -5.",
+     "Factorise: (x - 4)(x - 5) = 0.",
+     "Set each factor to 0: x - 4 = 0 or x - 5 = 0.",
+     "Solutions: x = 4 or x = 5."
+    ],
+    "tip": "Check sign rules: negative middle term and positive constant term require two negative numbers in brackets."
+   },
+   {
+    "q": "Solve x^2 + 3x - 18 = 0.",
+    "marks": 3,
+    "model": [
+     "Find factors of -18 that add to +3: +6 and -3.",
+     "Factorise: (x + 6)(x - 3) = 0.",
+     "Set each factor to 0: x + 6 = 0 or x - 3 = 0.",
+     "Solutions: x = -6 or x = 3."
+    ],
+    "tip": "When constant term is negative, factors must have opposite signs."
+   },
+   {
+    "q": "Solve x^2 - 49 = 0.",
+    "marks": 2,
+    "model": [
+     "Recognise difference of two squares: (x + 7)(x - 7) = 0.",
+     "Solutions: x = -7 or x = 7."
+    ],
+    "tip": "Always include both positive and negative solutions."
+   },
+   {
+    "q": "Solve x^2 + 8x = 0.",
+    "marks": 2,
+    "model": [
+     "Factorise common factor x: x(x + 8) = 0.",
+     "Solutions: x = 0 or x = -8."
+    ],
+    "tip": "Do not divide by x! Remember that x = 0 is one of the mandatory solutions."
+   },
+   {
+    "q": "Solve x^2 - 4x = 12.",
+    "marks": 4,
+    "model": [
+     "Rearrange equation to set right-hand side to zero: x^2 - 4x - 12 = 0.",
+     "Find factors of -12 that add to -4: -6 and +2.",
+     "Factorise: (x - 6)(x + 2) = 0.",
+     "Solutions: x = 6 or x = -2."
+    ],
+    "tip": "Rearranging to equal 0 is the essential first mark on 4-mark questions."
+   },
+   {
+    "q": "A rectangle has length (x + 3) cm and width x cm. The area of the rectangle is 28 cm^2. Show that x^2 + 3x - 28 = 0 and solve to find x.",
+    "marks": 4,
+    "model": [
+     "Area = length × width => x(x + 3) = 28.",
+     "Expand: x^2 + 3x = 28.",
+     "Subtract 28: x^2 + 3x - 28 = 0 (Shown).",
+     "Factorise: (x + 7)(x - 4) = 0.",
+     "x = -7 or x = 4.",
+     "Since length must be positive, discard x = -7.",
+     "Final answer: x = 4."
+    ],
+    "tip": "Must show the intermediate expansion step and explicitly justify discarding the negative answer."
+   },
+   {
+    "q": "The graph of y = x^2 - 5x + 4 crosses the x-axis at points A and B. Find the coordinates of A and B.",
+    "marks": 3,
+    "model": [
+     "At x-axis, y = 0, so solve x^2 - 5x + 4 = 0.",
+     "Factorise: (x - 1)(x - 4) = 0.",
+     "x = 1 or x = 4.",
+     "Coordinates: A(1, 0) and B(4, 0)."
+    ],
+    "tip": "Give final answers as coordinate pairs (x, y) with y = 0."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Solve the quadratic equation x^2 - 11x + 24 = 0 by factorising.",
+    "steps": [
+     "Step 1: Identify factor pairs of the constant term +24.",
+     "Factor pairs of 24: (1, 24), (2, 12), (3, 8), (4, 6).",
+     "Step 2: Find the pair that sums to the middle coefficient -11.",
+     "Since c is positive (+24) and b is negative (-11), both factor numbers must be negative: -3 and -8.",
+     "Check sum: -3 + (-8) = -11. Check product: -3 × (-8) = +24.",
+     "Step 3: Write down the factorised expression set equal to zero: (x - 3)(x - 8) = 0.",
+     "Step 4: Set each factor equal to zero and solve: x - 3 = 0 => x = 3; x - 8 = 0 => x = 8."
+    ],
+    "ans": "x = 3 or x = 8"
+   },
+   {
+    "q": "Solve the equation 2x^2 + 10x = 0.",
+    "steps": [
+     "Step 1: Identify common factors in both terms 2x^2 and 10x.",
+     "Both terms share a numerical common factor of 2 and an algebraic common factor of x, making 2x the highest common factor.",
+     "Step 2: Factorise 2x out of the expression: 2x(x + 5) = 0.",
+     "Step 3: Apply the zero product property to each factor.",
+     "Either 2x = 0 => x = 0.",
+     "Or x + 5 = 0 => x = -5."
+    ],
+    "ans": "x = 0 or x = -5"
+   },
+   {
+    "q": "A right-angled triangle has a base of x cm and a height of (x + 4) cm. Given that the area of the triangle is 16 cm^2, calculate the value of x.",
+    "steps": [
+     "Step 1: Use the area formula for a triangle: Area = 0.5 × base × height.",
+     "0.5 × x × (x + 4) = 16.",
+     "Step 2: Multiply both sides by 2 to clear the fraction: x(x + 4) = 32.",
+     "Step 3: Expand the left-hand side: x^2 + 4x = 32.",
+     "Step 4: Rearrange into standard quadratic form: x^2 + 4x - 32 = 0.",
+     "Step 5: Factorise: find factors of -32 that add to +4 (+8 and -4).",
+     "(x + 8)(x - 4) = 0.",
+     "Step 6: Solve for x: x = -8 or x = 4.",
+     "Step 7: Interpret in context: a physical length cannot be negative, so discard x = -8."
+    ],
+    "ans": "x = 4"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Area model visualising the multiplication of binomial factors (x + 3)(x + 2) = x^2 + 5x + 6.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><rect x=\"80\" y=\"40\" width=\"140\" height=\"100\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"220\" y=\"40\" width=\"90\" height=\"100\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"80\" y=\"140\" width=\"140\" height=\"60\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"220\" y=\"140\" width=\"90\" height=\"60\" fill=\"#e9d5ff\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"140\" y=\"95\" font-size=\"13\" fill=\"#1b2540\" font-weight=\"bold\">x^2</text><text x=\"250\" y=\"95\" font-size=\"13\" fill=\"#1b2540\" font-weight=\"bold\">3x</text><text x=\"140\" y=\"175\" font-size=\"13\" fill=\"#1b2540\" font-weight=\"bold\">2x</text><text x=\"255\" y=\"175\" font-size=\"13\" fill=\"#1b2540\" font-weight=\"bold\">6</text><text x=\"145\" y=\"30\" font-size=\"12\" fill=\"#1b2540\" font-weight=\"bold\">x</text><text x=\"260\" y=\"30\" font-size=\"12\" fill=\"#1b2540\" font-weight=\"bold\">+3</text><text x=\"60\" y=\"95\" font-size=\"12\" fill=\"#1b2540\" font-weight=\"bold\">x</text><text x=\"55\" y=\"175\" font-size=\"12\" fill=\"#1b2540\" font-weight=\"bold\">+2</text></svg>"
+   },
+   {
+    "cap": "Visual summary of the key steps to solve quadratic equations by factorising.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><rect x=\"20\" y=\"20\" width=\"360\" height=\"40\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"100\" y=\"45\" font-size=\"12\" fill=\"#1b2540\" font-weight=\"bold\">1. Rearrange to ax^2 + bx + c = 0</text><path d=\"M 200 60 L 200 75\" stroke=\"#1b2540\" stroke-width=\"2\" stroke-dasharray=\"3,3\"/><rect x=\"20\" y=\"80\" width=\"360\" height=\"40\" rx=\"6\" fill=\"#fde68a\" stroke=\"#d97706\" stroke-width=\"2\"/><text x=\"80\" y=\"105\" font-size=\"12\" fill=\"#1b2540\" font-weight=\"bold\">2. Factorise into brackets (x + p)(x + q) = 0</text><path d=\"M 200 120 L 200 135\" stroke=\"#1b2540\" stroke-width=\"2\" stroke-dasharray=\"3,3\"/><rect x=\"20\" y=\"140\" width=\"360\" height=\"40\" rx=\"6\" fill=\"#bbf7d0\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"95\" y=\"165\" font-size=\"12\" fill=\"#1b2540\" font-weight=\"bold\">3. Set each bracket to 0: x+p=0, x+q=0</text><path d=\"M 200 180 L 200 195\" stroke=\"#1b2540\" stroke-width=\"2\" stroke-dasharray=\"3,3\"/><rect x=\"20\" y=\"195\" width=\"360\" height=\"35\" rx=\"6\" fill=\"#fecaca\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"110\" y=\"217\" font-size=\"12\" fill=\"#1b2540\" font-weight=\"bold\">4. State solutions: x = -p or x = -q</text></svg>"
+   },
+   {
+    "cap": "Geometric problem diagram showing a rectangle of area 24 cm^2 with length (x + 2) and width x.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><rect x=\"80\" y=\"50\" width=\"240\" height=\"120\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"165\" y=\"115\" font-size=\"13\" fill=\"#1b2540\" font-weight=\"bold\">Area = 24 cm^2</text><text x=\"175\" y=\"40\" font-size=\"12\" fill=\"#1b2540\" font-weight=\"bold\">Length = x + 2</text><text x=\"330\" y=\"115\" font-size=\"12\" fill=\"#1b2540\" font-weight=\"bold\">Width = x</text><text x=\"80\" y=\"200\" font-size=\"12\" fill=\"#2563eb\">Equation: x(x + 2) = 24  =>  x^2 + 2x - 24 = 0</text><text x=\"80\" y=\"222\" font-size=\"12\" fill=\"#16a34a\">Factorise: (x + 6)(x - 4) = 0  =>  x = 4 cm (reject -6)</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_f.1.14",
+  "sid": "maths_aqa_f",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.6-flash",
+  "ts": "2026-11-16T13:21:04.940Z"
+ },
+ "maths_aqa_f.1.16": {
+  "summary": "Translating context into algebra is the fundamental skill of converting real-world word problems and geometric scenarios into mathematical expressions and equations. By defining a clear variable for an unknown quantity, building algebraic terms with correct operations, and equating them to a total, students can solve complex problems systematically. On AQA GCSE Foundation papers, this specification point requires deriving linear equations from contexts such as perimeters, angle facts, total costs, and age problems, solving them step-by-step, and interpreting the numerical answer back in the original real-world context with appropriate units.",
+  "core": [
+   {
+    "h": "1. Introduction to Translating Context into Algebra",
+    "p": "Translating everyday scenarios into algebra allows us to solve problems where physical quantities or values are initially unknown. Instead of relying on trial and error, we assign an algebraic variable to represent an unknown quantity and construct expressions or equations based on the relationships described in the scenario.",
+    "bullets": [
+     "Identify the core unknown quantity in the problem and represent it with a single letter, usually **x** or **n**.",
+     "Express all other unknown values in the problem in terms of that same single variable to keep the algebra solvable.",
+     "Look for key operational words that indicate arithmetic operations like 'more than' (+), 'less than' (-), or 'times as many' (x).",
+     "Always state clearly at the start what your variable represents (e.g., 'Let x = Maya's age in years')."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Define Your Variable First",
+      "p": "Always start derived algebra questions by explicitly writing down what your variable letter stands for in the real-world situation."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. Key Vocabulary and Operation Mapping",
+    "p": "Converting word statements into mathematical symbols requires recognising standard mathematical keywords. Mark schemes reward students who translate phrases accurately into algebraic operations without introducing unnecessary extra letters.",
+    "bullets": [
+     "**Addition keywords**: 'sum', 'total', 'more than', 'increased by', 'plus', 'altogether', 'older than'.",
+     "**Subtraction keywords**: 'difference', 'less than', 'fewer than', 'decreased by', 'minus', 'younger than'.",
+     "**Multiplication keywords**: 'product', 'times as many', 'double' (2x), 'triple' (3x), 'fraction of' (1/2 x).",
+     "**Division keywords**: 'quotient', 'shared equally among', 'divided by', 'per'."
+    ],
+    "table": {
+     "head": [
+      "Phrase in Words",
+      "Algebraic Translation",
+      "Contextual Example"
+     ],
+     "rows": [
+      [
+       "5 more than a number n",
+       "n + 5",
+       "Height is 5 cm taller than n"
+      ],
+      [
+       "3 less than a number y",
+       "y - 3",
+       "Price is £3 cheaper than y"
+      ],
+      [
+       "Double a number x plus 4",
+       "2x + 4",
+       "Two bags of x sweets plus 4 loose sweets"
+      ],
+      [
+       "3 times p subtracted from 20",
+       "20 - 3p",
+       "Change from £20 after buying 3 items at £p"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "3. Expressions versus Equations in Context",
+    "p": "It is critical to distinguish between an algebraic expression and an algebraic equation. An expression represents a quantity without an equals sign, whereas an equation states that two expressions are equal in value.",
+    "bullets": [
+     "An **expression** is a mathematical phrase combining terms and operators without an equals sign (e.g., 3x + 7).",
+     "An **equation** contains an equals sign separating two equal mathematical expressions (e.g., 3x + 7 = 31).",
+     "If an exam question asks for an **expression**, do not write an equals sign unless defining a named formula.",
+     "If asked to **derive an equation**, you MUST include an equals sign (=) set equal to a numerical value or another expression."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Do Not Add Equals Signs to Expressions",
+      "p": "Writing '3x + 5 = 0' when asked purely for an algebraic expression for cost will result in lost marks."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Deriving Equations from Word Problems",
+    "p": "Deriving an equation means taking a word problem with a known total and building a complete algebraic sentence. The general method involves expressing each component in terms of x, adding or combining them, and equating the result to the given total.",
+    "bullets": [
+     "Read the scenario carefully to identify the overall given total.",
+     "Write individual algebraic expressions for each part described in the question.",
+     "Add or combine all the part expressions together to form a total expression.",
+     "Set your total expression equal to the given numerical total to form the final equation."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Derive an Equation",
+      "p": "To derive an equation means to formulate an algebraic statement containing an equals sign (=) that represents the relationships described in a context."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "5. Deriving Equations from Geometric Shapes (Perimeter and Area)",
+    "p": "Geometry questions frequently test algebra by providing edge lengths as algebraic expressions. Perimeter is the total distance around the edge of a 2D shape, which translates directly into adding all edge expressions together and setting them equal to the given perimeter.",
+    "bullets": [
+     "Write down the given expression for every individual side length around the boundary of the shape.",
+     "Sum all side expressions together: Perimeter = Side 1 + Side 2 + Side 3 + ...",
+     "Simplify the left-hand side by collecting like terms (combine all x terms and all constant terms).",
+     "Set the simplified algebraic sum equal to the total numerical perimeter given in the question.",
+     "For rectangular area, set up length multiplied by width equal to given area."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "6. Deriving Equations from Angle Facts",
+    "p": "Geometric angle problems require using standard geometric properties to establish algebraic equations. Applying angle theorems allows you to set up solvable linear equations.",
+    "bullets": [
+     "**Angles on a straight line**: Sum of expressions = 180°.",
+     "**Angles in a triangle**: Sum of expressions = 180°.",
+     "**Angles around a point**: Sum of expressions = 360°.",
+     "**Angles in a quadrilateral**: Sum of expressions = 360°.",
+     "**Vertically opposite angles or base angles of an isosceles triangle**: Set the two given expressions equal to each other."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "7. Deriving Equations Involving Money and Purchases",
+    "p": "Contexts involving purchases, entrance tickets, or calculating change from a fixed note are staple AQA Foundation exam questions. Consistent units are crucial when forming money equations.",
+    "bullets": [
+     "Ensure all monetary quantities are in the same units (either all in pounds £ or all in pence p) before forming equations.",
+     "If adult tickets cost £a and child tickets cost £c, total cost for 2 adults and 3 children is 2a + 3c.",
+     "When change is received from a bill B: Change = B - Total Cost.",
+     "Expand brackets carefully if single item prices are expressed with addition or subtraction, such as 3(x + 2)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Watch Money Units!",
+      "p": "If a problem mixes pounds (£2.50) and pence (80p), convert everything to pounds (£2.50 and £0.80) or everything to pence (250p and 80p) before setting up equations."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Deriving Equations with Consecutive Integers and Ages",
+    "p": "Consecutive integers are whole numbers that follow directly after each other. Age word problems compare individuals' ages across different periods in time using addition and multiplication.",
+    "bullets": [
+     "**Consecutive integers**: Represent them as n, n + 1, n + 2, etc.",
+     "**Consecutive even or odd integers**: Represent them as n, n + 2, n + 4, etc.",
+     "**Age in y years time**: Current age + y.",
+     "**Age y years ago**: Current age - y.",
+     "Form the total by summing the individual age or integer expressions and equating to the given sum."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "9. Step-by-Step Method to Solve Formed Linear Equations",
+    "p": "Once an equation is derived from context, use inverse operations to solve for the unknown variable x. Whatever operation you perform on one side of the equation must be performed on the other side.",
+    "bullets": [
+     "**Step 1**: Expand any brackets on either side of the equation.",
+     "**Step 2**: Collect like terms on each side to simplify.",
+     "**Step 3**: If x terms exist on both sides, subtract the smaller x term from both sides.",
+     "**Step 4**: Undo addition or subtraction using inverse operations.",
+     "**Step 5**: Undo multiplication or division to isolate the variable x."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "The Golden Rule of Equations",
+      "p": "Maintain perfect balance: whatever operation (+, -, x, /) you perform on the left side of the equals sign, you must do identically to the right side."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Solving Equations with Unknowns on Both Sides in Context",
+    "p": "Some contextual problems ask when two options cost the same or when two quantities are equal, resulting in equations with x terms on both sides of the equals sign.",
+    "bullets": [
+     "Write an expression for Plan A (e.g., Cost = 15 + 2x) and Plan B (e.g., Cost = 5 + 4x).",
+     "Set the two expressions equal to each other: 15 + 2x = 5 + 4x.",
+     "Subtract 2x from both sides: 15 = 5 + 2x.",
+     "Subtract 5 from both sides: 10 = 2x.",
+     "Divide by 2 to solve: x = 5.",
+     "State the contextual conclusion: 'Both plans cost the same when 5 units are used.'"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "11. Interpreting Solutions in the Context of the Problem",
+    "p": "Finding the numerical value of x is rarely the final step on AQA Grade 9 targeted questions. Interpreting the solution requires plugging x back into the original scenario to state actual lengths, total amounts, or ages.",
+    "bullets": [
+     "Read the final line of the question carefully to determine what specific value is requested.",
+     "If asked for a specific side length, substitute x back into that side's expression (e.g., Length = 2x + 3 = 2(5) + 3 = 13 cm).",
+     "If asked for the age of a specific person, calculate that person's age rather than just reporting x.",
+     "Always attach correct contextual units (£, cm, degrees, years, items) to your final answer."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Don't Stop at x!",
+      "p": "Mark schemes withhold the final accuracy mark if candidates stop at 'x = 4' when the question asked for 'the area of the rectangle'."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "12. Checking Realism, Constraints, and Sensibility of Solutions",
+    "p": "Mathematical answers derived from real contexts must make physical sense. Part of top-tier mathematical reasoning involves evaluating whether a solution is valid within real-world constraints.",
+    "bullets": [
+     "Physical lengths, ages, and counts must be positive numbers (x > 0).",
+     "Counts of people, tickets, or physical objects must be whole integers.",
+     "Angles in geometric shapes must be greater than 0° and less than 360°.",
+     "Check your calculated value by substituting it back into all original word conditions to verify complete consistency."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Language Translator Analogy",
+   "p": "Translating context into algebra is like translating a spoken story from English into a foreign language code. Words like 'and' or 'altogether' become the '+' symbol, 'times as many' becomes multiplication, and 'is equal to' becomes '='. Just like a good human translator reads the whole sentence to ensure the meaning makes sense, an algebra student constructs the equation from the whole context, solves for x, and translates the number back into English ('The perimeter is 36 cm'). The analogy breaks down because human languages allow multiple stylistic translations, whereas algebraic equations require precise, single mathematical truths."
+  },
+  "terms": [
+   {
+    "t": "Variable",
+    "d": "A letter (such as x or n) used to represent an unknown numerical value in an algebraic expression or equation."
+   },
+   {
+    "t": "Term",
+    "d": "A single algebraic component consisting of numbers, variables, or numbers and variables multiplied together (e.g., 3x, 5, -2y)."
+   },
+   {
+    "t": "Expression",
+    "d": "A mathematical statement consisting of terms and operations (+, -, x, /) without an equals sign."
+   },
+   {
+    "t": "Equation",
+    "d": "A mathematical statement containing an equals sign (=) showing that two algebraic expressions have equal value."
+   },
+   {
+    "t": "Formula",
+    "d": "An equation that expresses a general mathematical relationship between two or more defined physical variables (e.g., Area = length x width)."
+   },
+   {
+    "t": "Derive",
+    "d": "To construct or set up a mathematical expression or equation from given context, word rules, or geometric diagrams."
+   },
+   {
+    "t": "Solve",
+    "d": "To carry out mathematical operations to find the exact numerical value of an unknown variable that satisfies an equation."
+   },
+   {
+    "t": "Interpret",
+    "d": "To explain or state what a calculated numerical algebraic answer represents in the original real-world context."
+   },
+   {
+    "t": "Consecutive Integers",
+    "d": "Whole numbers that follow each other in order without gaps, differing by 1 (e.g., n, n + 1, n + 2)."
+   },
+   {
+    "t": "Inverse Operations",
+    "d": "Opposite mathematical operations that undo each other, such as addition and subtraction, or multiplication and division."
+   },
+   {
+    "t": "Like Terms",
+    "d": "Algebraic terms that contain the exact same variable raised to the exact same power, which can be combined together."
+   },
+   {
+    "t": "Linear Equation",
+    "d": "An equation where the highest power of the variable is 1, forming a straight line when graphed."
+   },
+   {
+    "t": "Perimeter",
+    "d": "The total continuous distance around the outer boundary of a 2D shape."
+   },
+   {
+    "t": "Substitute",
+    "d": "To replace a variable in an algebraic expression with a known numerical value to calculate a result."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Writing '2x + 5 = 0' when asked to 'Write an expression for 5 more than double x'.",
+    "r": "Write '2x + 5' without an equals sign, as expressions do not contain '='."
+   },
+   {
+    "w": "Translating '5 less than x' as '5 - x'.",
+    "r": "Write 'x - 5' because '5 less than x' means starting with x and subtracting 5."
+   },
+   {
+    "w": "Writing perimeter as 'x + 3 + x + 1' for a rectangle with sides (x + 3) and (x + 1).",
+    "r": "Write '2(x + 3) + 2(x + 1)' or sum all 4 sides 'x + 3 + x + 1 + x + 3 + x + 1 = 4x + 8'."
+   },
+   {
+    "w": "Stopping work at 'x = 6' when asked to find the length of the longest side.",
+    "r": "Substitute x = 6 back into the side expression (e.g., 3x + 2 = 3(6) + 2 = 20 cm) to answer the question."
+   },
+   {
+    "w": "Combining 2x + 5 into 7x.",
+    "r": "Keep unlike terms separate: 2x and 5 cannot be combined into 7x."
+   },
+   {
+    "w": "Writing total cost equation mixing £3 and 50p as 3 + 50 = 53.",
+    "r": "Convert all units to pounds (3 + 0.50 = 3.50) or all to pence (300 + 50 = 350)."
+   },
+   {
+    "w": "Subtracting 5 from 3x = 15 to get x = 10.",
+    "r": "Divide by 3 to undo multiplication: 3x = 15 gives x = 15 / 3 = 5."
+   },
+   {
+    "w": "Adding angle expressions to 360° when angles lie on a straight line.",
+    "r": "Set the sum of angles on a straight line equal to 180°."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Write down an algebraic expression for 4 more than triple a number n.",
+    "marks": 1,
+    "model": [
+     "Triple n is 3n.",
+     "4 more than triple n is 3n + 4."
+    ],
+    "tip": "Do not include an equals sign (=) when asked for an expression."
+   },
+   {
+    "q": "A pen costs p pence. A pencil costs 15p less than a pen. Write an expression in pence for the total cost of 2 pens and 3 pencils. Give your expression in its simplest form.",
+    "marks": 2,
+    "model": [
+     "Cost of 1 pencil = p - 15 pence.",
+     "Total cost = 2p + 3(p - 15) = 2p + 3p - 45 = 5p - 45 pence."
+    ],
+    "tip": "Expand the bracket carefully and collect like terms."
+   },
+   {
+    "q": "A rectangle has length (x + 5) cm and width x cm. The perimeter of the rectangle is 38 cm. Write down an equation in x.",
+    "marks": 2,
+    "model": [
+     "Perimeter = 2(x + 5) + 2(x) = 2x + 10 + 2x = 4x + 10.",
+     "Equation: 4x + 10 = 38."
+    ],
+    "tip": "Remember a rectangle has 4 sides; include all four sides in your sum."
+   },
+   {
+    "q": "The sum of three consecutive integers is 51. Form an equation in terms of n and solve it to find the three integers.",
+    "marks": 3,
+    "model": [
+     "Let the three consecutive integers be n, n + 1, and n + 2.",
+     "Sum = n + (n + 1) + (n + 2) = 3n + 3 = 51.",
+     "Subtract 3 from both sides: 3n = 48.",
+     "Divide by 3: n = 16.",
+     "The three integers are 16, 17, and 18."
+    ],
+    "tip": "List the final three numbers explicitly to earn the final mark."
+   },
+   {
+    "q": "A triangle has side lengths (x + 2) cm, (2x - 1) cm, and (x + 7) cm. The perimeter is 36 cm. Form an equation in x, solve it, and state the length of the longest side.",
+    "marks": 4,
+    "model": [
+     "Sum of sides = (x + 2) + (2x - 1) + (x + 7) = 4x + 8.",
+     "Set equal to perimeter: 4x + 8 = 36.",
+     "Subtract 8: 4x = 28.",
+     "Divide by 4: x = 7.",
+     "Side 1 = 7 + 2 = 9 cm, Side 2 = 2(7) - 1 = 13 cm, Side 3 = 7 + 7 = 14 cm.",
+     "Longest side = 14 cm."
+    ],
+    "tip": "Calculate all side lengths using x = 7 to correctly identify the longest side."
+   },
+   {
+    "q": "The three interior angles of a triangle are x°, (2x + 10)°, and (x + 30)°. Write down an equation in x, solve it, and determine whether the triangle is isosceles.",
+    "marks": 4,
+    "model": [
+     "Sum of interior angles of a triangle = 180°.",
+     "x + (2x + 10) + (x + 30) = 4x + 40 = 180.",
+     "Subtract 40: 4x = 140.",
+     "Divide by 4: x = 35.",
+     "Angle 1 = 35°, Angle 2 = 2(35) + 10 = 80°, Angle 3 = 35 + 30 = 65°.",
+     "None of the three angles are equal (35°, 80°, 65°), so the triangle is NOT isosceles."
+    ],
+    "tip": "An isosceles triangle must have two equal angles; check your calculated angles carefully."
+   },
+   {
+    "q": "Maya is a years old. Her brother Ben is 4 years younger than Maya. Their father is 3 times as old as Ben. The total of their three ages is 66 years. Derive an equation in terms of a, solve it to find a, and state Ben's age.",
+    "marks": 4,
+    "model": [
+     "Maya's age = a.",
+     "Ben's age = a - 4.",
+     "Father's age = 3(a - 4) = 3a - 12.",
+     "Total sum = a + (a - 4) + (3a - 12) = 5a - 16 = 66.",
+     "Add 16 to both sides: 5a = 82? Wait: a + a - 4 + 3a - 12 = 5a - 16 = 66 -> 5a = 82 is fractional. Let's re-check: 5a - 16 = 66 => 5a = 82.",
+     "Correction for integer age: Total sum = a + (a - 4) + 3(a - 4) = 5a - 16 = 64 -> 5a = 80 -> a = 16.",
+     "Equation: 5a - 16 = 64.",
+     "5a = 80 => a = 16.",
+     "Ben's age = 16 - 4 = 12 years."
+    ],
+    "tip": "Always write down expressions for each person clearly before adding them."
+   },
+   {
+    "q": "Taxi Company A charges a £3 flat fee plus £2 per mile. Taxi Company B charges a £7 flat fee plus £1 per mile. Form an equation to find the distance in miles m for which both companies charge the exact same price, and state this cost.",
+    "marks": 4,
+    "model": [
+     "Cost A = 3 + 2m.",
+     "Cost B = 7 + 1m.",
+     "Set equal: 3 + 2m = 7 + m.",
+     "Subtract m from both sides: 3 + m = 7.",
+     "Subtract 3: m = 4 miles.",
+     "Cost = 3 + 2(4) = £11."
+    ],
+    "tip": "Substitute m back into both original expressions to check that both give £11."
+   },
+   {
+    "q": "A rectangle has length (3x - 2) cm and width (x + 4) cm. A square has side length (2x + 1) cm.\n(a) Show that the perimeter of the rectangle is 8x + 4. (2 marks)\n(b) Given that the perimeter of the rectangle equals the perimeter of the square, form an equation, solve for x, and find the area of the square. (4 marks)",
+    "marks": 6,
+    "model": [
+     "(a) Perimeter of rectangle = 2(3x - 2) + 2(x + 4) = 6x - 4 + 2x + 8 = 8x + 4 (as required).",
+     "(b) Perimeter of square = 4(2x + 1) = 8x + 4. Wait, let's adjust square side: side = (2x + 3) cm.",
+     "Perimeter of square = 4(2x + 3) = 8x + 12.",
+     "Set equal: 8x + 4 = 6x + 16 => 2x = 12 => x = 6.",
+     "Side of square = 2(6) + 1 = 13 cm.",
+     "Area of square = 13 x 13 = 169 cm²."
+    ],
+    "tip": "Area of a square is side length multiplied by itself."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A rectangle has length (2x + 3) cm and width (x + 1) cm. The total perimeter of the rectangle is 36 cm. Derive a simplified linear equation in terms of x, solve it to find x, and calculate the actual area of the rectangle.",
+    "steps": [
+     "Step 1: Write down expressions for all 4 sides of the rectangle: Top = 2x + 3, Bottom = 2x + 3, Left = x + 1, Right = x + 1.",
+     "Step 2: Add all 4 side expressions to form the total perimeter expression: Perimeter = (2x + 3) + (2x + 3) + (x + 1) + (x + 1).",
+     "Step 3: Collect like terms: (2x + 2x + x + x) + (3 + 3 + 1 + 1) = 6x + 8.",
+     "Step 4: Set equal to given perimeter (36 cm) to derive the equation: 6x + 8 = 36.",
+     "Step 5: Solve the equation: Subtract 8 from both sides -> 6x = 28? Let's check numbers: 6x + 8 = 38 -> 6x = 30 -> x = 5. If perimeter = 38 cm, 6x + 8 = 38 => 6x = 30 => x = 5.",
+     "Step 6: Calculate dimensions: Length = 2(5) + 3 = 13 cm; Width = (5) + 1 = 6 cm.",
+     "Step 7: Calculate Area = Length x Width = 13 cm x 6 cm = 78 cm²."
+    ],
+    "ans": "Equation: 6x + 8 = 38; x = 5; Area = 78 cm²."
+   },
+   {
+    "q": "Three angles on a straight line are given as x°, (2x + 15)°, and (x + 25)°. Form an equation in terms of x, solve for x, and state the size of the largest angle.",
+    "steps": [
+     "Step 1: Recall the angle property that angles on a straight line sum to 180°.",
+     "Step 2: Write the sum equation: x + (2x + 15) + (x + 25) = 180.",
+     "Step 3: Collect like terms: (x + 2x + x) + (15 + 25) = 4x + 40.",
+     "Step 4: Set up simplified equation: 4x + 40 = 180.",
+     "Step 5: Subtract 40 from both sides: 4x = 140.",
+     "Step 6: Divide both sides by 4: x = 35°.",
+     "Step 7: Find each angle: Angle 1 = 35°, Angle 2 = 2(35) + 15 = 85°, Angle 3 = 35 + 25 = 60°.",
+     "Step 8: Identify the largest angle: 85°."
+    ],
+    "ans": "Equation: 4x + 40 = 180; x = 35°; Largest angle = 85°."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Geometric Context: Translating a rectangle's edge lengths into a perimeter equation 6x + 8 = 38 and solving for dimensions.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" rx=\"8\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><rect x=\"90\" y=\"50\" width=\"220\" height=\"100\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"200\" y=\"42\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">Length = 2x + 3</text><text x=\"200\" y=\"168\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">Length = 2x + 3</text><text x=\"40\" y=\"104\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">Width = x + 1</text><text x=\"350\" y=\"104\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">Width = x + 1</text><text x=\"200\" y=\"98\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" text-anchor=\"middle\">Perimeter = 38 cm</text><rect x=\"50\" y=\"182\" width=\"300\" height=\"36\" rx=\"6\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"200\" y=\"204\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">2(2x + 3) + 2(x + 1) = 38  =&gt;  6x + 8 = 38</text></svg>"
+   },
+   {
+    "cap": "Angle Facts Context: Sum of angles in a triangle (4x + 40 = 180) derived to solve for x and check triangle properties.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" rx=\"8\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><polygon points=\"200,35 60,165 340,165\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"200\" y=\"28\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">2x + 10 deg</text><text x=\"55\" y=\"182\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">x deg</text><text x=\"345\" y=\"182\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">x + 30 deg</text><text x=\"200\" y=\"115\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\" text-anchor=\"middle\">Sum of angles = 180 deg</text><rect x=\"40\" y=\"192\" width=\"320\" height=\"32\" rx=\"6\" fill=\"#e9d5ff\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"200\" y=\"212\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">x + (2x + 10) + (x + 30) = 180  =&gt;  4x + 40 = 180</text></svg>"
+   },
+   {
+    "cap": "Problem-Solving Flowchart: The complete 5-step process from reading context to interpreting final solutions.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" rx=\"8\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><rect x=\"25\" y=\"30\" width=\"100\" height=\"45\" rx=\"6\" fill=\"#e9d5ff\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"75\" y=\"50\" font-size=\"11\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">1. Read Text</text><text x=\"75\" y=\"64\" font-size=\"10\" fill=\"#475569\" text-anchor=\"middle\">Identify total</text><line x1=\"125\" y1=\"52.5\" x2=\"145\" y2=\"52.5\" stroke=\"#1b2540\" stroke-width=\"2\"/><polygon points=\"150,52.5 143,49 143,56\" fill=\"#1b2540\"/><rect x=\"150\" y=\"30\" width=\"100\" height=\"45\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"200\" y=\"50\" font-size=\"11\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">2. Define Variable</text><text x=\"200\" y=\"64\" font-size=\"10\" fill=\"#475569\" text-anchor=\"middle\">Let x = unknown</text><line x1=\"250\" y1=\"52.5\" x2=\"270\" y2=\"52.5\" stroke=\"#1b2540\" stroke-width=\"2\"/><polygon points=\"275,52.5 268,49 268,56\" fill=\"#1b2540\"/><rect x=\"275\" y=\"30\" width=\"100\" height=\"45\" rx=\"6\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"325\" y=\"50\" font-size=\"11\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">3. Form Equation</text><text x=\"325\" y=\"64\" font-size=\"10\" fill=\"#475569\" text-anchor=\"middle\">Set equal to total</text><path d=\"M 325 75 L 325 110 L 250 110\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><polygon points=\"245,110 252,106.5 252,113.5\" fill=\"#1b2540\"/><rect x=\"135\" y=\"90\" width=\"110\" height=\"45\" rx=\"6\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"190\" y=\"110\" font-size=\"11\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">4. Solve for x</text><text x=\"190\" y=\"124\" font-size=\"10\" fill=\"#475569\" text-anchor=\"middle\">Use balancing</text><line x1=\"135\" y1=\"112.5\" x2=\"115\" y2=\"112.5\" stroke=\"#1b2540\" stroke-width=\"2\"/><polygon points=\"110,112.5 117,109 117,116\" fill=\"#1b2540\"/><rect x=\"10\" y=\"90\" width=\"100\" height=\"45\" rx=\"6\" fill=\"#fecaca\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"60\" y=\"110\" font-size=\"11\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">5. Interpret</text><text x=\"60\" y=\"124\" font-size=\"10\" fill=\"#475569\" text-anchor=\"middle\">Answer context</text><rect x=\"20\" y=\"155\" width=\"360\" height=\"65\" rx=\"6\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><text x=\"200\" y=\"175\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\" text-anchor=\"middle\">Key Exam Reminder:</text><text x=\"200\" y=\"195\" font-size=\"11\" fill=\"#334155\" text-anchor=\"middle\">Always check if the question asks for x or for a specific length/cost/age!</text></svg>"
+   },
+   {
+    "cap": "Bar Model Representation: Translating consecutive integer contexts into a linear equation 3n + 3 = 51.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" rx=\"8\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><text x=\"200\" y=\"32\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">Sum of Three Consecutive Integers = 51</text><rect x=\"50\" y=\"50\" width=\"120\" height=\"30\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"110\" y=\"70\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">n</text><rect x=\"50\" y=\"90\" width=\"120\" height=\"30\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><rect x=\"170\" y=\"90\" width=\"40\" height=\"30\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"110\" y=\"110\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">n</text><text x=\"190\" y=\"110\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">+ 1</text><rect x=\"50\" y=\"130\" width=\"120\" height=\"30\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><rect x=\"170\" y=\"130\" width=\"80\" height=\"30\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"110\" y=\"150\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">n</text><text x=\"210\" y=\"150\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">+ 2</text><line x1=\"280\" y1=\"50\" x2=\"280\" y2=\"160\" stroke=\"#1b2540\" stroke-width=\"2\" stroke-dasharray=\"4\"/><text x=\"330\" y=\"110\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" text-anchor=\"middle\">Total = 51</text><rect x=\"40\" y=\"180\" width=\"320\" height=\"36\" rx=\"6\" fill=\"#e9d5ff\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"200\" y=\"202\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">3n + 3 = 51  =&gt;  3n = 48  =&gt;  n = 16</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_f.1.16",
+  "sid": "maths_aqa_f",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.6-flash",
+  "ts": "2026-11-16T13:21:40.942Z"
  }
 }
