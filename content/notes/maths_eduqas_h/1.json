@@ -1373,5 +1373,1395 @@
   "src": "pre",
   "by": "gemini/gemini-3.5-flash-lite",
   "ts": "2026-11-16T03:13:06.671Z"
+ },
+ "maths_eduqas_h.1.7": {
+  "summary": "Working with coordinates in all four quadrants underpins the entire higher tier analytical geometry syllabus in Eduqas GCSE Mathematics. This specification point requires complete fluency in plotting points, calculating exact distances, locating midpoints, and applying coordinate geometry to geometric proofs. Achieving a grade 9 depends on rigorous algebraic manipulation combined with precise spatial reasoning across the Cartesian plane.",
+  "core": [
+   {
+    "h": "1. Anatomy of the Cartesian Plane",
+    "p": "The Cartesian coordinate system divides a two-dimensional plane into four infinite quadrants using two perpendicular number lines intersecting at the origin (0, 0).",
+    "bullets": [
+     "The horizontal axis is the x-axis and the vertical axis is the y-axis.",
+     "Quadrant I: x > 0, y > 0 (top right).",
+     "Quadrant II: x < 0, y > 0 (top left).",
+     "Quadrant III: x < 0, y < 0 (bottom left).",
+     "Quadrant IV: x > 0, y < 0 (bottom right)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Cartesian Coordinate System",
+      "p": "A grid specified by an x-axis and a y-axis intersecting at right angles at the origin."
+     },
+     {
+      "k": "warn",
+      "t": "Axis Order",
+      "p": "Always write coordinates in the exact order (x, y). Writing (y, x) loses all marks instantly."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "The four quadrants of the Cartesian plane with sample points showing axis signs.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"40\" y1=\"120\" x2=\"360\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"200\" y1=\"20\" x2=\"200\" y2=\"220\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"350\" y=\"110\" font-size=\"12\" fill=\"#1b2540\">x</text><text x=\"210\" y=\"35\" font-size=\"12\" fill=\"#1b2540\">y</text><text x=\"180\" y=\"135\" font-size=\"12\" fill=\"#1b2540\">(0,0)</text><circle cx=\"280\" cy=\"70\" r=\"4\" fill=\"#2563eb\"/><text x=\"290\" y=\"70\" font-size=\"12\" fill=\"#1b2540\">(3, 5) Q1</text><circle cx=\"110\" cy=\"70\" r=\"4\" fill=\"#2563eb\"/><text x=\"60\" y=\"65\" font-size=\"12\" fill=\"#1b2540\">(-4, 5) Q2</text><circle cx=\"110\" cy=\"180\" r=\"4\" fill=\"#2563eb\"/><text x=\"50\" y=\"195\" font-size=\"12\" fill=\"#1b2540\">(-4, -3) Q3</text><circle cx=\"280\" cy=\"180\" r=\"4\" fill=\"#2563eb\"/><text x=\"290\" y=\"195\" font-size=\"12\" fill=\"#1b2540\">(3, -3) Q4</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "2. The Midpoint Formula",
+    "p": "The midpoint of a line segment joining two points is found by taking the arithmetic mean of the x-coordinates and the arithmetic mean of the y-coordinates.",
+    "bullets": [
+     "Given points (x1, y1) and (x2, y2).",
+     "Midpoint M = ((x1 + x2)/2, (y1 + y2)/2).",
+     "Derived from balancing the horizontal and vertical distances from either endpoint.",
+     "Can be applied iteratively to find division points or centres of geometric shapes."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Midpoint Formula",
+      "p": "M = ((x1 + x2) / 2, (y1 + y2) / 2)"
+     },
+     {
+      "k": "tip",
+      "t": "Negative Numbers",
+      "p": "Take extra care with negative signs when adding coordinates together in the numerator."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "3. Distance Between Two Points",
+    "p": "The straight-line distance between two points in a Cartesian plane is derived directly from Pythagoras's theorem applied to the horizontal and vertical separations.",
+    "bullets": [
+     "Given points A(x1, y1) and B(x2, y2).",
+     "Horizontal difference dx = x2 - x1.",
+     "Vertical difference dy = y2 - y1.",
+     "Distance d = sqrt((x2 - x1)^2 + (y2 - y1)^2)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Euclidean Distance",
+      "p": "The length of the shortest line segment connecting two points in a metric space."
+     },
+     {
+      "k": "warn",
+      "t": "Squaring Negatives",
+      "p": "Remember that squaring any real number always yields a positive value: (-5)^2 = 25, not -25."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Visualising distance as the hypotenuse of a right-angled triangle on the grid.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"60\" y1=\"180\" x2=\"320\" y2=\"180\" stroke=\"#94a3b8\" stroke-dasharray=\"4\"/><line x1=\"320\" y1=\"60\" x2=\"320\" y2=\"180\" stroke=\"#94a3b8\" stroke-dasharray=\"4\"/><line x1=\"60\" y1=\"180\" x2=\"320\" y2=\"60\" stroke=\"#2563eb\" stroke-width=\"2\"/><circle cx=\"60\" cy=\"180\" r=\"4\" fill=\"#1b2540\"/><circle cx=\"320\" cy=\"60\" r=\"4\" fill=\"#1b2540\"/><text x=\"45\" y=\"195\" font-size=\"12\" fill=\"#1b2540\">(x1, y1)</text><text x=\"300\" y=\"45\" font-size=\"12\" fill=\"#1b2540\">(x2, y2)</text><text x=\"180\" y=\"195\" font-size=\"12\" fill=\"#1b2540\">x2 - x1</text><text x=\"330\" y=\"120\" font-size=\"12\" fill=\"#1b2540\">y2 - y1</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "4. Gradient of a Line Segment",
+    "p": "The gradient measures the steepness and direction of a line, defined as the vertical rise divided by the horizontal run between any two distinct points.",
+    "bullets": [
+     "Gradient m = (y2 - y1) / (x2 - x1) = dy / dx.",
+     "Positive gradient: line slopes upwards from left to right.",
+     "Negative gradient: line slopes downwards from left to right.",
+     "Horizontal line: gradient is 0. Vertical line: gradient is undefined."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Gradient (m)",
+      "p": "The rate of change of y with respect to x along a linear path."
+     },
+     {
+      "k": "tip",
+      "t": "Consistent Order",
+      "p": "If you use point 1 minus point 2 for the y-coordinates, you must do the exact same order for the x-coordinates."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "5. Parallel and Perpendicular Lines",
+    "p": "The algebraic relationship between the gradients of two straight lines dictates whether they are parallel, perpendicular, or intersecting at an arbitrary angle.",
+    "bullets": [
+     "Parallel lines share the exact same gradient: m1 = m2.",
+     "Perpendicular lines have gradients that multiply to give -1: m1 * m2 = -1.",
+     "The negative reciprocal of m is -1/m.",
+     "Vertical lines (x = c) are perpendicular to horizontal lines (y = k)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Perpendicular Condition",
+      "p": "m2 = -1 / m1"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Finding the Equation of a Line",
+    "p": "To find the equation of a straight line in the form y = mx + c, you need either the gradient and one point, or two distinct points.",
+    "bullets": [
+     "Calculate the gradient m using the two given points.",
+     "Substitute m and the coordinates of one point into y = mx + c to solve for the y-intercept c.",
+     "Alternatively, use the point-slope form: y - y1 = m(x - x1).",
+     "Verify your equation by substituting the second point into it."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Substitution Check",
+      "p": "Always substitute both original coordinate pairs into your final equation to guarantee 100% accuracy."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Geometric Proofs Using Coordinates",
+    "p": "Higher tier Eduqas papers frequently test coordinate geometry through formal geometric proofs, requiring exact algebraic reasoning rather than measurement.",
+    "bullets": [
+     "To prove a quadrilateral is a parallelogram: show opposite sides have equal lengths or equal gradients.",
+     "To prove a triangle is right-angled: show two sides are perpendicular using gradient products, or apply Pythagoras's theorem.",
+     "To prove points are collinear: show that the gradient between points A and B equals the gradient between B and C."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Collinear Points",
+      "p": "Three or more points that lie on a single straight line."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Dividing a Line Segment in a Given Ratio",
+    "p": "Advanced coordinate geometry requires finding a point that partitions a line segment into a specified ratio m:n.",
+    "bullets": [
+     "Given points A(x1, y1) and B(x2, y2) divided in ratio m:n.",
+     "x-coordinate = x1 + (m / (m + n)) * (x2 - x1).",
+     "y-coordinate = y1 + (m / (m + n)) * (y2 - y1).",
+     "Alternatively, use vector step methods: add fractions of the total vector AB to position vector A."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Ratio Formula",
+      "p": "P = ( (nx1 + mx2)/(m+n) , (ny1 + my2)/(m+n) )"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Transforming Coordinates",
+    "p": "Applying algebraic rules directly to coordinate pairs transforms figures across the Cartesian plane without drawing them.",
+    "bullets": [
+     "Reflection in x-axis: (x, y) -> (x, -y).",
+     "Reflection in y-axis: (x, y) -> (-x, y).",
+     "Rotation 90 degrees clockwise about origin: (x, y) -> (y, -x).",
+     "Translation by vector (a, b): (x, y) -> (x + a, y + b)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Origin Rotation 180",
+      "p": "(x, y) -> (-x, -y)"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Loci and Regions Defined by Coordinates",
+    "p": "Inequalities involving coordinates define bounded regions or infinite half-planes on the Cartesian grid.",
+    "bullets": [
+     "Strict inequalities (<, >) are represented by dashed boundary lines.",
+     "Inclusive inequalities (<=, >=) are represented by solid boundary lines.",
+     "Test a point not on the line (such as (0, 0)) to determine which side of the boundary to shade.",
+     "Circles centred at the origin satisfy x^2 + y^2 = r^2."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Locus",
+      "p": "A set of points all of which satisfy a given geometric property or equation."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "11. Intersection of Linear and Non-Linear Graphs",
+    "p": "Finding intersection points algebraically involves simultaneous equations, tying coordinate geometry directly to algebra.",
+    "bullets": [
+     "Substitute the linear equation into the non-linear equation.",
+     "Solve the resulting quadratic or polynomial equation for x.",
+     "Substitute x-values back into the linear equation to find corresponding y-coordinates.",
+     "State intersection points clearly as coordinate pairs (x, y)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Missing Pairs",
+      "p": "Failing to find the corresponding y-values for each x-value loses the final marks."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "12. Problem Solving and Exam Strategy",
+    "p": "Grade 9 questions combine multiple coordinate geometry concepts into multi-step problems requiring clear, methodical layout.",
+    "bullets": [
+     "Always sketch a rough diagram to visualise relative positions of points and shapes. annotate all given values.",
+     "State formulas clearly before substituting numbers to secure method marks.",
+     "Leave answers in exact surd form unless decimal rounding is explicitly requested by the question."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exact Form",
+      "p": "Write sqrt(50) instead of 7.071... unless rounding is specified."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "13. Three-Dimensional Coordinates",
+    "p": "Extension to 3D Cartesian space adds a z-axis perpendicular to both x and y.",
+    "bullets": [
+     "Coordinates are written as (x, y, z).",
+     "Distance formula expands to d = sqrt((x2 - x1)^2 + (y2 - y1)^2 + (z2 - z1)^2).",
+     "Midpoint formula expands to M = ((x1 + x2)/2, (y1 + y2)/2, (z1 + z2)/2).",
+     "The xy-plane corresponds to z = 0."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "3D Cartesian Space",
+      "p": "An ordered triplet of real numbers specifying position relative to three mutually perpendicular axes."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "14. Distance from a Point to a Line",
+    "p": "The shortest distance from a given point to a line is measured along the perpendicular dropped from the point to the line.",
+    "bullets": [
+     "Find the equation of the perpendicular line passing through the given point.",
+     "Find the intersection point of the original line and the perpendicular line.",
+     "Calculate the distance between the given point and this intersection point using the distance formula."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Perpendicular Distance",
+      "p": "Shortest distance is always measured perpendicular to the line."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Navigating a City Grid",
+   "p": "Imagine a city with straight avenues running East-West (x-axis) and North-South (y-axis) intersecting at City Hall (the origin, 0,0). Every building's address is an ordered pair telling you how many blocks East/West and North/South to travel. Calculating the direct flight path between two skyscrapers is like finding the distance between two coordinate points using Pythagoras's theorem. This breaks down because real cities have winding roads and obstacles, whereas the Cartesian plane is an abstract, perfectly flat mathematical space where straight lines are always possible."
+  },
+  "terms": [
+   {
+    "t": "Cartesian Plane",
+    "d": "A plane divided into four quadrants by the intersection of a horizontal x-axis and vertical y-axis."
+   },
+   {
+    "t": "Origin",
+    "d": "The fixed point (0, 0) from which all coordinates on a Cartesian plane are measured."
+   },
+   {
+    "t": "Quadrant",
+    "d": "One of the four quarters into which the Cartesian plane is divided by the coordinate axes."
+   },
+   {
+    "t": "Coordinate",
+    "d": "An ordered pair of numbers (x, y) that specifies the precise location of a point on a grid."
+   },
+   {
+    "t": "Midpoint",
+    "d": "The exact middle point of a line segment, equidistant from both endpoints."
+   },
+   {
+    "t": "Gradient",
+    "d": "A numerical measure of the steepness and direction of a line, equal to rise over run."
+   },
+   {
+    "t": "Parallel Lines",
+    "d": "Straight lines in the same plane that never intersect and share identical gradients."
+   },
+   {
+    "t": "Perpendicular Lines",
+    "d": "Straight lines that intersect at a right angle (90 degrees), with gradients that multiply to give -1."
+   },
+   {
+    "t": "Collinear",
+    "d": "Describing three or more points that lie on the exact same straight line."
+   },
+   {
+    "t": "Locus",
+    "d": "The set of all points whose location satisfies a specified mathematical condition or equation."
+   },
+   {
+    "t": "Euclidean Distance",
+    "d": "The straight-line distance between two points in Euclidean space."
+   },
+   {
+    "t": "Intercept",
+    "d": "The point where a graph crosses the x-axis or y-axis."
+   },
+   {
+    "t": "Point-Slope Form",
+    "d": "The equation of a straight line expressed as y - y1 = m(x - x1)."
+   },
+   {
+    "t": "Negative Reciprocal",
+    "d": "The number obtained by inverting a fraction and changing its sign (e.g., 2/3 becomes -3/2)."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Writing coordinates as (y, x) instead of (x, y)",
+    "r": "Always list the horizontal x-coordinate first, followed by the vertical y-coordinate: (x, y)."
+   },
+   {
+    "w": "Forgetting that (-a)^2 is positive, writing -5^2 = -25",
+    "r": "Squaring any real number yields a positive result: (-5)^2 = +25."
+   },
+   {
+    "w": "Failing to invert and negate the gradient when finding perpendicular lines",
+    "r": "The perpendicular gradient is the negative reciprocal: if m = 3/4, perpendicular m = -4/3."
+   },
+   {
+    "w": "Using addition instead of subtraction in the distance formula",
+    "r": "Distance formula uses subtraction inside the squares: sqrt((x2 - x1)^2 + (y2 - y1)^2)."
+   },
+   {
+    "w": "Dividing by 3 instead of 2 in the midpoint formula",
+    "r": "Midpoint is an average of two points, so divide the sum of x-coordinates and y-coordinates by 2."
+   },
+   {
+    "w": "Forgetting the y-intercept c when finding the equation of a line",
+    "r": "Substitute a known coordinate point into y = mx + c after finding m to solve for c."
+   },
+   {
+    "w": "Assuming perpendicular lines have gradients that add to 0",
+    "r": "Perpendicular gradients multiply to give -1, they do not add to 0 (that is for negative inverses of addition)."
+   },
+   {
+    "w": "Leaving answers as decimals when exact surd form is required",
+    "r": "Keep square roots in surd form unless the question explicitly asks for decimal rounding."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Point A has coordinates (-2, 5) and point B has coordinates (4, -3). Calculate the exact length of line segment AB.",
+    "marks": 4,
+    "model": [
+     "State distance formula: d = sqrt((x2 - x1)^2 + (y2 - y1)^2)",
+     "Substitute values: d = sqrt((4 - (-2))^2 + (-3 - 5)^2)",
+     "Simplify: d = sqrt(6^2 + (-8)^2) = sqrt(36 + 64) = sqrt(100)",
+     "Evaluate exact length: 10"
+    ],
+    "tip": "Show all substitution steps clearly to secure method marks even if arithmetic slips."
+   },
+   {
+    "q": "Find the equation of the line perpendicular to y = 3x - 4 that passes through the point (6, 2). Give your answer in the form y = mx + c.",
+    "marks": 4,
+    "model": [
+     "Identify gradient of given line: m = 3",
+     "Determine perpendicular gradient: m_perp = -1/3",
+     "Substitute point (6, 2) and m = -1/3 into y = mx + c: 2 = (-1/3)(6) + c",
+     "Solve for c: 2 = -2 + c => c = 4, so y = (-1/3)x + 4"
+    ],
+    "tip": "Clearly state the perpendicular gradient before attempting to find c."
+   },
+   {
+    "q": "The midpoint of line segment PQ is (2, 3). If point P has coordinates (-1, 4), find the coordinates of point Q.",
+    "marks": 3,
+    "model": [
+     "Let Q be (x, y). Set up midpoint equations: (-1 + x)/2 = 2 and (4 + y)/2 = 3",
+     "Solve for x: -1 + x = 4 => x = 5",
+     "Solve for y: 4 + y = 6 => y = 2",
+     "State coordinates of Q as (5, 2)"
+    ],
+    "tip": "Setting up separate mini-equations for x and y prevents sign errors."
+   },
+   {
+    "q": "Prove algebraically that the points A(-3, 2), B(1, 4), and C(7, 7) are collinear.",
+    "marks": 4,
+    "model": [
+     "Calculate gradient of AB: (4 - 2) / (1 - (-3)) = 2 / 4 = 1/2",
+     "Calculate gradient of BC: (7 - 4) / (7 - 1) = 3 / 6 = 1/2",
+     "State that gradients are equal and point B is common to both segments",
+     "Conclude that A, B, and C are collinear"
+    ],
+    "tip": "Mentioning the shared point B is essential for a complete mathematical proof of collinearity."
+   },
+   {
+    "q": "Line L1 passes through points (2, 3) and (6, 11). Find the equation of L1.",
+    "marks": 3,
+    "model": [
+     "Calculate gradient m = (11 - 3) / (6 - 2) = 8 / 4 = 2",
+     "Substitute m = 2 and point (2, 3) into y = 2x + c: 3 = 2(2) + c",
+     "Solve for c: 3 = 4 + c => c = -1, so y = 2x - 1"
+    ],
+    "tip": "Always verify with the second point: if x=6, y=2(6)-1=11, which matches."
+   },
+   {
+    "q": "A line segment joins A(-4, 1) and B(6, 6). Find the coordinates of the point P that divides AB in the ratio 2:3.",
+    "marks": 4,
+    "model": [
+     "Calculate total horizontal change: 6 - (-4) = 10. Horizontal part = 2/5 * 10 = 4",
+     "Calculate total vertical change: 6 - 1 = 5. Vertical part = 2/5 * 5 = 2",
+     "Add parts to starting point A: x = -4 + 4 = 0, y = 1 + 2 = 3",
+     "State coordinates of P as (0, 3)"
+    ],
+    "tip": "Using vector step fractions is often faster and less prone to formula memorisation errors than the ratio formula."
+   },
+   {
+    "q": "Determine if the triangle with vertices A(1, 2), B(4, 6), and C(8, 3) is a right-angled triangle.",
+    "marks": 5,
+    "model": [
+     "Calculate lengths squared or gradients of sides. Gradient AB = (6 - 2)/(4 - 1) = 4/3",
+     "Gradient BC = (3 - 6)/(8 - 4) = -3/4",
+     "Check product of gradients: (4/3) * (-3/4) = -1",
+     "Conclude that AB is perpendicular to BC, hence triangle ABC is right-angled at B"
+    ],
+    "tip": "Using gradients is usually the quickest way to prove right angles in coordinate geometry."
+   },
+   {
+    "q": "Find the distance between the point (-2, 3) and the line 3x + 4y - 10 = 0.",
+    "marks": 5,
+    "model": [
+     "State perpendicular distance formula or method: line perp to 3x + 4y - 10 = 0 has form 4x - 3y + k = 0",
+     "Substitute (-2, 3) into perp line: 4(-2) - 3(3) + k = 0 => -8 - 9 + k = 0 => k = 17, so perp line is 4x - 3y + 17 = 0",
+     "Find intersection of 3x + 4y = 10 and 4x - 3y = -17 (solution is x = -2/5, y = 14/5)",
+     "Calculate distance from (-2, 3) to (-0.4, 2.8) to get exact distance 2"
+    ],
+    "tip": "This is a classic Grade 9 multi-step synthesis question combining lines and distance."
+   },
+   {
+    "q": "Find the coordinates of the intersection points of the line y = 2x + 1 and the circle x^2 + y^2 = 25.",
+    "marks": 5,
+    "model": [
+     "Substitute y = 2x + 1 into circle equation: x^2 + (2x + 1)^2 = 25",
+     "Expand and simplify: x^2 + 4x^2 + 4x + 1 = 25 => 5x^2 + 4x - 24 = 0",
+     "Factorise quadratic: (5x + 12)(x - 2) = 0 => x = 2 or x = -12/5",
+     "Find y-values: if x = 2, y = 5; if x = -12/5, y = -19/5. State points (2, 5) and (-2.4, -3.8)"
+    ],
+    "tip": "Simultaneous equations with circles require careful quadratic factorisation or the quadratic formula."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Find the exact midpoint and length of the line segment joining P(-5, 2) and Q(3, -4).",
+    "steps": [
+     "State midpoint formula M = ((x1 + x2)/2, (y1 + y2)/2).",
+     "Substitute coordinates into midpoint formula: M = ((-5 + 3)/2, (2 + (-4))/2).",
+     "Calculate midpoint coordinates: M = (-2/2, -2/2) = (-1, -1).",
+     "State distance formula d = sqrt((x2 - x1)^2 + (y2 - y1)^2).",
+     "Substitute coordinates into distance formula: d = sqrt((3 - (-5))^2 + (-4 - 2)^2).",
+     "Simplify inside square root: d = sqrt(8^2 + (-6)^2) = sqrt(64 + 36) = sqrt(100).",
+     "Evaluate distance: d = 10."
+    ],
+    "ans": "Midpoint = (-1, -1), Length = 10"
+   },
+   {
+    "q": "A line passes through (-1, 3) and is parallel to the line passing through (2, 5) and (6, 13). Find its equation in the form y = mx + c.",
+    "steps": [
+     "Find the gradient of the reference line passing through (2, 5) and (6, 13): m = (13 - 5) / (6 - 2) = 8 / 4 = 2.",
+     "Since parallel lines share the exact same gradient, the required line also has m = 2.",
+     "Substitute the given point (-1, 3) and gradient m = 2 into y = mx + c: 3 = 2(-1) + c.",
+     "Solve for c: 3 = -2 + c => c = 5.",
+     "Write final equation substituting m and c."
+    ],
+    "ans": "y = 2x + 5"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Coordinate geometry summary showing midpoint, distance, and perpendicular gradients in all four quadrants.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"40\" y1=\"120\" x2=\"360\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"200\" y1=\"20\" x2=\"200\" y2=\"220\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"100\" y1=\"180\" x2=\"300\" y2=\"60\" stroke=\"#2563eb\" stroke-width=\"2\"/><circle cx=\"100\" cy=\"180\" r=\"4\" fill=\"#dc2626\"/><circle cx=\"300\" cy=\"60\" r=\"4\" fill=\"#dc2626\"/><circle cx=\"200\" cy=\"120\" r=\"4\" fill=\"#16a34a\"/><text x=\"70\" y=\"195\" font-size=\"12\" fill=\"#1b2540\">P(-3, -3)</text><text x=\"285\" y=\"50\" font-size=\"12\" fill=\"#1b2540\">Q(3, 3)</text><text x=\"210\" y=\"115\" font-size=\"12\" fill=\"#16a34a\">M(0, 0)</text><text x=\"320\" y=\"110\" font-size=\"12\" fill=\"#1b2540\">x</text><text x=\"210\" y=\"35\" font-size=\"12\" fill=\"#1b2540\">y</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_h.1.7",
+  "sid": "maths_eduqas_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-16T03:13:29.909Z"
+ },
+ "maths_eduqas_h.1.15": {
+  "summary": "Mastering the geometry of circles centred at the origin and the algebraic properties of their tangents is essential for Grade 9 Eduqas Higher Mathematics. You must fluently apply Pythagoras's theorem to derive the standard circle equation $x^2 + y^2 = r^2$ and use the negative reciprocal gradient property of perpendicular radii to find equations of tangents at given coordinate points. Rigorous practice with simultaneous substitutions and exact surd forms will ensure maximum marks across both calculator and non-calculator papers.",
+  "core": [
+   {
+    "h": "1. Derivation of the Equation of a Circle",
+    "p": "The equation of a circle with its centre at the origin $(0, 0)$ is derived directly from Pythagoras's theorem applied to any arbitrary point on the circumference.",
+    "bullets": [
+     "Let $P(x, y)$ be any point on the circumference of a circle.",
+     "The distance from the origin $(0, 0)$ to point $P(x, y)$ is the radius $r$.",
+     "Form a right-angled triangle by dropping a perpendicular line from $P$ to the x-axis, with base length $x$ and height $y$.",
+     "Applying Pythagoras's theorem ($a^2 + b^2 = c^2$) gives $x^2 + y^2 = r^2$.",
+     "This formula works for any point in all four quadrants because squaring negative coordinates yields positive values."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Circle Equation (Origin)",
+      "p": "The set of all points $(x, y)$ at a constant distance $r$ from the origin satisfies $x^2 + y^2 = r^2$."
+     },
+     {
+      "k": "key",
+      "t": "Radius Squared",
+      "p": "Always ensure the right-hand side of $x^2 + y^2 = r^2$ is the square of the radius, not the radius itself."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A circle centred at the origin with radius r and a point P(x, y) on its circumference forming a right-angled triangle.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"50\" y1=\"190\" x2=\"350\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"200\" y1=\"20\" x2=\"200\" y2=\"220\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"190\" r=\"3\" fill=\"#1b2540\"/><circle cx=\"200\" cy=\"190\" r=\"100\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"200\" y1=\"190\" x2=\"270\" y2=\"120\" stroke=\"#dc2626\" stroke-width=\"2\"/><line x1=\"270\" y1=\"190\" x2=\"270\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"1\" stroke-dasharray=\"4\"/><line x1=\"200\" y1=\"190\" x2=\"270\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"1\"/><text x=\"205\" y=\"210\" fill=\"#1b2540\" font-size=\"12\">(0,0)</text><text x=\"275\" y=\"120\" fill=\"#dc2626\" font-size=\"12\">P(x, y)</text><text x=\"230\" y=\"150\" fill=\"#dc2626\" font-size=\"12\">r</text><text x=\"235\" y=\"205\" fill=\"#1b2540\" font-size=\"12\">x</text><text x=\"275\" y=\"160\" fill=\"#1b2540\" font-size=\"12\">y</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "2. Identifying Radius and Centre from Equations",
+    "p": "Examiners frequently test your ability to read off geometric properties directly from algebraic expressions or to rearrange equations into standard form.",
+    "bullets": [
+     "An equation in the form $x^2 + y^2 = k$ always represents a circle centred at $(0, 0)$.",
+     "The radius $r$ is the positive square root of the constant term: $r = \\sqrt{k}$.",
+     "If the equation has coefficients in front of $x^2$ and $y^2$ (e.g., $2x^2 + 2x^2 = 50$), divide the entire equation by that coefficient first.",
+     "Be careful not to confuse $x^2 + y^2 = r^2$ with linear equations like $y = mx + c$ or quadratic curves."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Check the Constant",
+      "p": "If the equation is $x^2 + y^2 = 49$, the radius is 7, not 49."
+     },
+     {
+      "k": "warn",
+      "t": "Negative Constant Trap",
+      "p": "An equation like $x^2 + y^2 = -9$ has no real solutions and does not represent a real circle since $r^2$ must be positive."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "3. Determining if a Point Lies on a Circle",
+    "p": "To prove algebraically whether a given coordinate point $(x_1, y_1)$ lies on a specific circle, substitute the coordinate values into the equation and verify equality.",
+    "bullets": [
+     "Substitute the x-coordinate into $x^2$ and the y-coordinate into $y^2$.",
+     "Evaluate $x_1^2 + y_1^2$.",
+     "If the sum equals $r^2$, the point lies strictly on the circumference.",
+     "If the sum is less than $r^2$, the point lies inside the circle.",
+     "If the sum is greater than $r^2$, the point lies outside the circle."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Substitution Rule",
+      "p": "Always square negative coordinates carefully: $(-3)^2$ becomes $+9$, never $-9$."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Geometric Properties of Tangents to Circles",
+    "p": "A tangent is a straight line that touches the circumference of a circle at exactly one point, known as the point of contact.",
+    "bullets": [
+     "A fundamental circle theorem states that the tangent at any point on a circle is perpendicular to the radius drawn to the point of contact.",
+     "This means the angle between the tangent line and the radius line is exactly 90 degrees.",
+     "This perpendicularity is the master key for finding the equation of a tangent in coordinate geometry problems."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Tangent Property",
+      "p": "Radius is perpendicular to the tangent at the point of contact."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A circle with a radius meeting a tangent line at 90 degrees at the point of contact P.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><circle cx=\"200\" cy=\"120\" r=\"70\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"120\" r=\"3\" fill=\"#1b2540\"/><line x1=\"200\" y1=\"120\" x2=\"260\" y2=\"170\" stroke=\"#dc2626\" stroke-width=\"2\"/><line x1=\"180\" y1=\"210\" x2=\"320\" y2=\"90\" stroke=\"#16a34a\" stroke-width=\"2\"/><circle cx=\"260\" cy=\"170\" r=\"3\" fill=\"#1b2540\"/><text x=\"210\" y=\"105\" fill=\"#1b2540\" font-size=\"12\">(0,0)</text><text x=\"270\" y=\"175\" fill=\"#dc2626\" font-size=\"12\">P(x1, y1)</text><text x=\"220\" y=\"150\" fill=\"#dc2626\" font-size=\"12\">Radius</text><text x=\"250\" y=\"100\" fill=\"#16a34a\" font-size=\"12\">Tangent</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "5. Finding the Gradient of the Radius",
+    "p": "Before finding the gradient of the tangent, you must calculate the gradient of the radius connecting the origin to the given point of contact.",
+    "bullets": [
+     "The centre of the circle is the origin $(0, 0)$.",
+     "The point of contact is given as $P(x_1, y_1)$.",
+     "Use the gradient formula $m = \\frac{y_2 - y_1}{x_2 - x_1}$.",
+     "Substituting the points gives: $m_{\\text{radius}} = \\frac{y_1 - 0}{x_1 - 0} = \\frac{y_1}{x_1}$."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Radius Gradient",
+      "p": "For a circle centred at the origin, the gradient of the radius to $(x_1, y_1)$ is simply $\\frac{y_1}{x_1}$."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Finding the Gradient of the Tangent",
+    "p": "Perpendicular lines have gradients that multiply to give $-1$. This allows you to find the exact gradient of the tangent line.",
+    "bullets": [
+     "If the gradient of the radius is $m$, the gradient of the perpendicular tangent is $-\\frac{1}{m}$.",
+     "Therefore, if $m_{\\text{radius}} = \\frac{y_1}{x_1}$, then $m_{\\text{tangent}} = -\\frac{x_1}{y_1}$.",
+     "To find $m_{\\text{tangent}}$, take the reciprocal of the radius gradient and flip its sign (positive becomes negative, negative becomes positive)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Perpendicular Gradients",
+      "p": "If $m_1 \\times m_2 = -1$, the lines are perpendicular."
+     },
+     {
+      "k": "tip",
+      "t": "Quick Neg-Reciprocal",
+      "p": "If radius gradient is $3/4$, tangent gradient is $-4/3$."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Constructing the Equation of the Tangent",
+    "p": "Once you have the gradient of the tangent and the point of contact, you can construct its full linear equation in the form $y = mx + c$ or $ax + by + c = 0$.",
+    "bullets": [
+     "Use the straight-line equation formula: $y - y_1 = m(x - x_1)$.",
+     "Substitute the tangent gradient for $m$ and the point $(x_1, y_1)$ for $x_1$ and $y_1$.",
+     "Expand brackets and rearrange into the required format specified by the exam question.",
+     "Check your answer by substituting the point $(x_1, y_1)$ back into your final equation to ensure it satisfies it."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Wrong Point Check",
+      "p": "Always substitute the point of contact $(x_1, y_1)$, never the origin $(0, 0)$, into the line equation."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Intersections of Lines and Circles",
+    "p": "Higher tier exams often combine linear equations (like tangents or secants) with circle equations, requiring simultaneous equations.",
+    "bullets": [
+     "Substitute the linear equation (e.g., $y = mx + c$) into the circle equation ($x^2 + y^2 = r^2$).",
+     "Expand and simplify to form a quadratic equation in a single variable ($ax^2 + bx + c = 0$).",
+     "Solve the quadratic by factorising, completing the square, or using the quadratic formula.",
+     "For a tangent, the resulting quadratic will have a repeated root (discriminant $b^2 - 4ac = 0$), confirming exactly one intersection point."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Discriminant Check for Tangents",
+      "p": "If a line is a tangent to a circle, solving them simultaneously yields a quadratic with $b^2 - 4ac = 0$."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Working with Surds in Circle Coordinates",
+    "p": "Grade 9 questions frequently use coordinates involving surds to test exact arithmetic skills without a calculator.",
+    "bullets": [
+     "A point might be given as $(\\sqrt{3}, \\sqrt{6})$ on the circle $x^2 + y^2 = 9$.",
+     "Squaring surds is straightforward: $(\\sqrt{3})^2 = 3$ and $(\\sqrt{6})^2 = 6$, giving $3 + 6 = 9$.",
+     "When finding gradients with surds, rationalise denominators if required by the mark scheme.",
+     "Maintain exact values throughout working; do not convert surds to decimals unless explicitly requested."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Surd Arithmetic",
+      "p": "Remember $(\\sqrt{a})^2 = a$ for any non-negative number $a$."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Finding Intersections with Axes",
+    "p": "Exam questions on circle tangents often ask where the tangent crosses the x-axis and y-axis to calculate the area of a triangle formed with the origin.",
+    "bullets": [
+     "To find the x-intercept of the tangent, set $y = 0$ in the tangent equation and solve for $x$.",
+     "To find the y-intercept of the tangent, set $x = 0$ in the tangent equation and solve for $y$.",
+     "The intercepts form vertices of a right-angled triangle with the origin $(0, 0)$.",
+     "Area of the triangle = $\\frac{1}{2} \\times \\text{base} \\times \\text{height}$, where base and height are the distances from the origin to the intercepts."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Axis Intercepts",
+      "p": "x-intercept: set $y = 0$. y-intercept: set $x = 0$."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A tangent line intersecting the coordinate axes, forming a right-angled triangle with the origin.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"50\" y1=\"190\" x2=\"350\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"200\" y1=\"20\" x2=\"200\" y2=\"220\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"100\" y1=\"40\" x2=\"320\" y2=\"210\" stroke=\"#16a34a\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"190\" r=\"3\" fill=\"#1b2540\"/><text x=\"205\" y=\"210\" fill=\"#1b2540\" font-size=\"12\">(0,0)</text><text x=\"310\" y=\"225\" fill=\"#16a34a\" font-size=\"12\">(x-int, 0)</text><text x=\"105\" y=\"35\" fill=\"#16a34a\" font-size=\"12\">(0, y-int)</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "11. Exam Strategy for 6-Mark Tangent Problems",
+    "p": "Extended response questions bring all these components together in a structured sequence of logical deductions.",
+    "bullets": [
+     "Step 1: Verify or state the radius squared $r^2$ from the given circle equation.",
+     "Step 2: Calculate the gradient of the radius using the point of contact coordinates.",
+     "Step 3: State the negative reciprocal gradient for the tangent.",
+     "Step 4: Form the equation of the tangent using $y - y_1 = m(x - x_1)$.",
+     "Step 5: Find required intercepts or secondary intersection points as demanded by the final part of the question."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Show Every Step",
+      "p": "In 6-mark questions, examiners award method marks at each clear transitional step. Never jump straight to a final answer."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Tethered Ball and Mirror",
+   "p": "Imagine a ball tethered to a fixed peg at the origin by a rigid string (the radius). If you spin the ball around, its path traces a circle. Now imagine holding a flat mirror (the tangent) pressed against the outside edge of the ball at one exact spot. The mirror sits perfectly square—at a 90-degree right angle—to the taut string. Where the mirror points across the floor gives its gradient and equation. This breaks down because a real string can sag under gravity, whereas mathematical radii and tangents are perfectly rigid and infinite straight lines."
+  },
+  "terms": [
+   {
+    "t": "Circle",
+    "d": "The locus of all points in a plane that are equidistant from a fixed point called the centre."
+   },
+   {
+    "t": "Origin",
+    "d": "The point of intersection of coordinate axes, with coordinates (0, 0)."
+   },
+   {
+    "t": "Radius",
+    "d": "A straight line segment from the centre of a circle to any point on its circumference."
+   },
+   {
+    "t": "Tangent",
+    "d": "A straight line that touches a curve at a single point without crossing it at that point."
+   },
+   {
+    "t": "Point of Contact",
+    "d": "The precise coordinate point where a tangent touches the circumference of a circle."
+   },
+   {
+    "t": "Perpendicular",
+    "d": "At an angle of 90 degrees to a given line or surface."
+   },
+   {
+    "t": "Gradient",
+    "d": "A measure of the steepness of a line, calculated as change in y divided by change in x."
+   },
+   {
+    "t": "Negative Reciprocal",
+    "d": "The result of inverting a fraction and changing its sign; multiplying a number by its negative reciprocal yields -1."
+   },
+   {
+    "t": "Simultaneous Equations",
+    "d": "A set of equations containing multiple variables that are solved together to find common coordinate values."
+   },
+   {
+    "t": "Discriminant",
+    "d": "The part of the quadratic formula (b^2 - 4ac) that determines the number of roots of a quadratic equation."
+   },
+   {
+    "t": "Intercept",
+    "d": "The coordinate point where a graph crosses the x-axis or y-axis."
+   },
+   {
+    "t": "Surd",
+    "d": "An irrational number expressed in root form, such as square root of 2."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Writing the circle equation as x + y = r",
+    "r": "x^2 + y^2 = r^2 (Pythagoras requires squared terms)"
+   },
+   {
+    "w": "Forgetting to square the radius when writing the equation",
+    "r": "If radius is 5, equation is x^2 + y^2 = 25, not x^2 + y^2 = 5"
+   },
+   {
+    "w": "Using the radius gradient as the tangent gradient",
+    "r": "Tangents are perpendicular to radii, so you must use the negative reciprocal"
+   },
+   {
+    "w": "Failing to change the sign when finding the negative reciprocal",
+    "r": "If radius gradient is 2/3, tangent gradient is -3/2, not 3/2"
+   },
+   {
+    "w": "Substituting the origin (0, 0) into the tangent line equation",
+    "r": "Substitute the given point of contact (x1, y1)"
+   },
+   {
+    "w": "Dropping negative signs when squaring coordinates like (-4)^2",
+    "r": "(-4)^2 = +16, never -16"
+   },
+   {
+    "w": "Confusing circle equations with linear equations like y = mx + c",
+    "r": "Circle equations have squared x and y terms adding to r^2"
+   }
+  ],
+  "exam": [
+   {
+    "q": "Write down the equation of a circle with centre at the origin and radius 9.",
+    "marks": 1,
+    "model": [
+     "x^2 + y^2 = 81"
+    ],
+    "tip": "Square the radius: 9 squared is 81."
+   },
+   {
+    "q": "A circle has equation x^2 + y^2 = 100. Write down the radius of the circle.",
+    "marks": 1,
+    "model": [
+     "10"
+    ],
+    "tip": "Take the square root of 100."
+   },
+   {
+    "q": "Determine whether the point (3, -4) lies on the circle x^2 + y^2 = 25.",
+    "marks": 2,
+    "model": [
+     "3^2 + (-4)^2 = 9 + 16",
+     "9 + 16 = 25, so the point lies on the circle"
+    ],
+    "tip": "Substitute x = 3 and y = -4 and check if the sum equals 25."
+   },
+   {
+    "q": "Find the gradient of the radius joining the origin to the point (4, 3).",
+    "marks": 2,
+    "model": [
+     "Gradient = (3 - 0) / (4 - 0)",
+     "3/4"
+    ],
+    "tip": "Use change in y over change in x from the origin."
+   },
+   {
+    "q": "A circle has equation x^2 + y^2 = 25. Find the gradient of the tangent to the circle at the point (3, 4).",
+    "marks": 2,
+    "model": [
+     "Gradient of radius = 4/3",
+     "Gradient of tangent = -3/4"
+    ],
+    "tip": "Find the radius gradient first, then take the negative reciprocal."
+   },
+   {
+    "q": "Find the equation of the tangent to the circle x^2 + y^2 = 13 at the point (2, 3). Give your answer in the form ax + by = c.",
+    "marks": 4,
+    "model": [
+     "Gradient of radius = 3/2",
+     "Gradient of tangent = -2/3",
+     "y - 3 = -2/3(x - 2)",
+     "2x + 3y = 13"
+    ],
+    "tip": "Rearrange carefully to clear fractions and group x and y terms."
+   },
+   {
+    "q": "The point P(sqrt(5), 2) lies on the circle x^2 + y^2 = 9. Find the equation of the tangent at P.",
+    "marks": 4,
+    "model": [
+     "Gradient of radius = 2 / sqrt(5)",
+     "Gradient of tangent = -sqrt(5) / 2",
+     "y - 2 = (-sqrt(5)/2)(x - sqrt(5))",
+     "sqrt(5)x + 2y = 9"
+    ],
+    "tip": "Handle surd squaring: (sqrt(5))^2 = 5."
+   },
+   {
+    "q": "A circle has equation x^2 + y^2 = 50. Find the coordinates of the point where the tangent at (5, 5) crosses the x-axis.",
+    "marks": 4,
+    "model": [
+     "Gradient of radius = 1, gradient of tangent = -1",
+     "Equation of tangent: y - 5 = -1(x - 5) => x + y = 10",
+     "Set y = 0 to find x-intercept",
+     "(10, 0)"
+    ],
+    "tip": "Set y to 0 for x-intercept."
+   },
+   {
+    "q": "Show that the line y = 2x + 5 does not intersect the circle x^2 + y^2 = 4.",
+    "marks": 4,
+    "model": [
+     "Substitute y = 2x + 5 into x^2 + y^2 = 4",
+     "x^2 + (2x + 5)^2 = 4 => 5x^2 + 20x + 21 = 0",
+     "Calculate discriminant: b^2 - 4ac = 20^2 - 4(5)(21) = 400 - 420 = -20",
+     "Since -20 < 0, there are no real roots, so no intersection"
+    ],
+    "tip": "Use the discriminant after substituting into the quadratic."
+   },
+   {
+    "q": "Find the area of the triangle formed by the coordinate axes and the tangent to x^2 + y^2 = 100 at the point (6, 8).",
+    "marks": 6,
+    "model": [
+     "Radius gradient = 8/6 = 4/3, tangent gradient = -3/4",
+     "Tangent equation: y - 8 = -3/4(x - 6) => 3x + 4y = 50",
+     "x-intercept: y = 0 => 3x = 50 => x = 50/3",
+     "y-intercept: x = 0 => 4y = 50 => y = 25/2",
+     "Area = 0.5 * (50/3) * (25/2)",
+     "625 / 6 or 104.17 sq units"
+    ],
+    "tip": "Find both axis intercepts first, then use 0.5 * base * height."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Find the equation of the tangent to the circle x^2 + y^2 = 25 at the point (-3, 4). Give your answer in the form y = mx + c.",
+    "steps": [
+     "Identify the point of contact as (-3, 4) and the circle centre as (0, 0).",
+     "Calculate the gradient of the radius: m_radius = (4 - 0) / (-3 - 0) = -4/3.",
+     "Calculate the gradient of the tangent using the negative reciprocal: m_tangent = -1 / (-4/3) = 3/4.",
+     "Substitute the tangent gradient and point (-3, 4) into y - y_1 = m(x - x_1): y - 4 = (3/4)(x - (-3)).",
+     "Expand and simplify: y - 4 = (3/4)x + 9/4 => y = (3/4)x + 9/4 + 16/4 => y = 0.75x + 6.25."
+    ],
+    "ans": "y = 3/4 x + 25/4"
+   },
+   {
+    "q": "A circle has equation x^2 + y^2 = 40. The tangent at the point P(2, 6) meets the x-axis at point A. Find the coordinates of A.",
+    "steps": [
+     "Check point P lies on circle: 2^2 + 6^2 = 4 + 36 = 40. Correct.",
+     "Find radius gradient: m_radius = 6 / 2 = 3.",
+     "Find tangent gradient: m_tangent = -1/3.",
+     "Find equation of tangent through (2, 6): y - 6 = -1/3(x - 2) => y = -1/3 x + 2/3 + 18/3 => y = -1/3 x + 20/3.",
+     "To find point A (x-axis intercept), set y = 0: 0 = -1/3 x + 20/3 => 1/3 x = 20/3 => x = 20.",
+     "Coordinates of A are (20, 0)."
+    ],
+    "ans": "(20, 0)"
+   }
+  ],
+  "svg": [],
+  "pid": "maths_eduqas_h.1.15",
+  "sid": "maths_eduqas_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-16T03:15:04.670Z"
+ },
+ "maths_eduqas_h.1.21": {
+  "summary": "Mastering inequalities at Grade 9 requires fluently switching between algebraic manipulation, graphical boundary shading, number line plotting with open/closed circles, and set builder notation. You must handle linear inequalities, quadratic inequalities by sketching parabola regions, and combined inequalities simultaneously with total precision. Examiners specifically test your ability to state integer solutions and manage negative coefficient reversals correctly.",
+  "core": [
+   {
+    "h": "1. Fundamental Properties of Inequalities",
+    "p": "Inequalities compare the relative size of two values using symbols that denote strictly greater than, strictly less than, or non-strict bounds. Manipulating them follows the exact same balance method as linear equations, with one crucial exception.",
+    "bullets": [
+     "Use symbols: > (greater than), < (less than), >= (greater than or equal to), <= (less than or equal to).",
+     "Golden rule: Whenever you multiply or divide both sides of an inequality by a negative number, you must reverse the inequality sign.",
+     "Always balance operations across both sides simultaneously.",
+     "Treat non-strict inequalities (>=, <=) as inclusive of the boundary value."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Reversing the Sign",
+      "p": "If -3x > 12, dividing by -3 gives x < -4. The symbol flips completely because the order of negative numbers on the number line is inverted relative to positive magnitudes."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. Solving Linear Inequalities in One Variable",
+    "p": "Linear inequalities contain variables raised only to the power of 1. You isolate the unknown by collecting variable terms on one side and constant terms on the other, applying inverse operations carefully.",
+    "bullets": [
+     "Expand brackets and collect like terms on both sides.",
+     "Move all variable terms to the side that keeps the coefficient positive to avoid sign errors.",
+     "Divide by the coefficient of the variable last.",
+     "Check your solution by substituting a number from the valid range back into the original inequality."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Avoid Negative Coefficients",
+      "p": "If you have 3x - 5 < 7x + 3, move 3x to the right to get -5 < 4x + 3. This keeps the x coefficient positive (+4), reducing the chance of forgetting to flip a sign."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "3. Representing Solution Sets on Number Lines",
+    "p": "A number line provides a clean visual representation of a continuous range of real numbers satisfying an inequality. Symbols are translated into open or closed circles joined by a solid line segment or ray.",
+    "bullets": [
+     "Use a solid/filled circle for inclusive inequalities (>= or <=) to show the endpoint is included.",
+     "Use an open/hollow circle for strict inequalities (> or <) to show the endpoint is excluded.",
+     "Draw a bold line or ray pointing in the direction of acceptable values.",
+     "For compound inequalities like -2 < x <= 5, draw a line segment connecting the two boundary circles."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Number Line Convention",
+      "p": "Solid dot means 'inclusive of this exact value'; open circle means 'exclusive of this value, but up to it'."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Number line representing the compound inequality -2 < x <= 5 with an open circle at -2 and a closed circle at 5.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"40\" y1=\"120\" x2=\"360\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"80\" y1=\"110\" x2=\"80\" y2=\"130\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"80\" y=\"150\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">-2</text><line x1=\"280\" y1=\"110\" x2=\"280\" y2=\"130\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"280\" y=\"150\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">5</text><circle cx=\"80\" cy=\"120\" r=\"6\" fill=\"#ffffff\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"280\" cy=\"120\" r=\"6\" fill=\"#1b2540\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"80\" y1=\"120\" x2=\"280\" y2=\"120\" stroke=\"#2563eb\" stroke-width=\"5\"/></svg>"
+     }
+    ]
+   },
+   {
+    "h": "4. Compound Inequalities",
+    "p": "Compound inequalities link two separate conditions on a single variable, either as a chained double inequality or as two separate inequalities joined by logical connectors.",
+    "bullets": [
+     "Write chained inequalities in the form a < x <= b, meaning x > a AND x <= b simultaneously.",
+     "When solving chained inequalities, perform inverse operations to all three parts simultaneously to keep the x isolated in the middle.",
+     "Handle 'OR' inequalities (e.g., x < -1 or x > 4) as two distinct disjoint regions on a number line.",
+     "Ensure overlap regions make logical sense; if a statement yields an impossible bound like 5 < x < 2, there are no solutions."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Splitting Chained Inequalities",
+      "p": "Never write 3 < 2x + 1 < 9 as two separate unrelated statements unless you intersect their solution sets properly. Operate on the whole chain at once."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "5. Set Notation for Inequalities",
+    "p": "At Higher tier, you must express solution sets using formal set builder notation. This notation defines a set by stating the properties that its members must satisfy.",
+    "bullets": [
+     "Standard form: {x : condition} or {x | condition}, read as 'the set of all x such that the condition holds'.",
+     "Specify the number domain, such as x \\u2208 \\u211d (real numbers) or x \\u2208 \\u2124 (integers).",
+     "Combine sets using union (\\u222a, meaning 'OR') and intersection (\\u2229, meaning 'AND').",
+     "List integer solutions explicitly inside curly brackets when restricted to integers, e.g., {-1, 0, 1, 2, 3}."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Set Builder Form",
+      "p": "{x \\u2208 \\u211d : -3 <= x < 4} represents all real numbers from -3 (inclusive) to 4 (exclusive)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Solving Quadratic Inequalities",
+    "p": "Quadratic inequalities involve a squared term, such as ax^2 + bx + c > 0. Solving them requires finding the critical roots and analyzing the shape of the parabola.",
+    "bullets": [
+     "Step 1: Rearrange the inequality so one side is zero and the quadratic is positive (e.g., ax^2 + bx + c > 0).",
+     "Step 2: Replace the inequality sign with an equals sign and solve the quadratic equation to find the critical values (roots).",
+     "Step 3: Sketch a quick mental or physical graph of the parabola opening upwards (positive x^2 coefficient).",
+     "Step 4: Determine whether the required region is 'between the roots' or 'outside the roots' based on the inequality sign."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Parabola Region Rule",
+      "p": "For ax^2 + bx + c < 0 (where a > 0), the solution is BETWEEN the roots: x_1 < x < x_2. For > 0, the solution is OUTSIDE the roots: x < x_1 or x > x_2."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Sketch of y = x^2 - 9 showing roots at x = -3 and x = 3, illustrating the region where x^2 - 9 < 0.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"40\" y1=\"180\" x2=\"360\" y2=\"180\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"200\" y1=\"30\" x2=\"200\" y2=\"210\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M 100 60 Q 200 280 300 60\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><circle cx=\"140\" cy=\"180\" r=\"5\" fill=\"#dc2626\"/><text x=\"140\" y=\"200\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">-3</text><circle cx=\"260\" cy=\"180\" r=\"5\" fill=\"#dc2626\"/><text x=\"260\" y=\"200\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">3</text><text x=\"320\" y=\"40\" font-size=\"12\" fill=\"#2563eb\">y = x^2 - 9</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "7. Graphical Representation of Linear Inequalities in Two Variables",
+    "p": "When working with two variables (x and y), inequalities define half-planes on the Cartesian coordinate plane. A boundary line splits the plane into a valid region and an invalid region.",
+    "bullets": [
+     "Replace the inequality sign with an equals sign to draw the boundary line.",
+     "Use a dashed/dotted line for strict inequalities (< or >) to show points on the line are not included.",
+     "Use a solid line for non-strict inequalities (<= or >=) to show points on the line are included.",
+     "Test a coordinate point (like origin (0,0)) not on the line to determine which side satisfies the inequality, then shade the valid region."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Testing the Origin",
+      "p": "Always test (0,0) if the boundary line does not pass through the origin. Substituting x=0, y=0 makes checking true/false incredibly fast."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Half-plane graph of y >= 2x - 1 with a solid boundary line and shaded valid region above.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"50\" y1=\"190\" x2=\"350\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"150\" y1=\"20\" x2=\"150\" y2=\"220\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><polygon points=\"150,70 330,70 330,190\" fill=\"#dbeafe\" opacity=\"0.7\"/><line x1=\"100\" y1=\"90\" x2=\"300\" y2=\"210\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><text x=\"260\" y=\"130\" font-size=\"11\" fill=\"#2563eb\">y >= 2x - 1</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "8. Regions Defined by Several Inequalities",
+    "p": "Exam questions often present a system of linear inequalities in x and y and ask you to identify or shade the region that satisfies all conditions simultaneously.",
+    "bullets": [
+     "Graph all boundary lines accurately using a ruler and proper solid/dashed conventions.",
+     "Lightly shade or label the unwanted regions so that the final unshaded region represents the target solution set, or vice versa depending on exam instructions.",
+     "Identify lattice points (integer coordinates (x, y) inside the region) when specifically requested by exam command words.",
+     "Check every boundary constraint carefully for intersection vertices."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Shading Convention",
+      "p": "Check whether the question asks you to shade the **required** region or the **unwanted** region. Misreading this loses all region-definition marks."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Integer Solutions in Restricted Domains",
+    "p": "Higher tier exams frequently couple an inequality with a statement restricting the variable to integers, natural numbers, or specific ranges.",
+    "bullets": [
+     "Solve the inequality fully to find the continuous real number range.",
+     "Scan the resulting interval for valid integer values.",
+     "Pay meticulous attention to whether boundary endpoints are included (strict vs non-strict).",
+     "List every qualifying integer explicitly when asked for 'all integer values of x'."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Integer Boundaries",
+      "p": "If -2 < x <= 3 and x is an integer, the valid values are -1, 0, 1, 2, 3. Note that -2 is excluded because the inequality is strict (<)."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Security Clearance Fence",
+   "p": "Imagine an inequality as a security fence around a building. A linear inequality is a straight fence dividing a courtyard into an allowed zone and a banned zone. A quadratic inequality is a circular or parabolic walled compound where you are allowed either inside the courtyard or strictly outside the perimeter walls, but not both. Reversing the inequality sign when multiplying by a negative is like flipping the security camera feed: left becomes right and high security becomes low security. The analogy breaks down because security fences have physical gates and finite boundaries, whereas mathematical inequalities extend infinitely into the real number line."
+  },
+  "terms": [
+   {
+    "t": "Inequality",
+    "d": "A mathematical statement comparing two expressions using symbols such as <, >, <=, >=, or \\u2260."
+   },
+   {
+    "t": "Strict Inequality",
+    "d": "An inequality using < or > where the boundary value itself is not included in the solution set."
+   },
+   {
+    "t": "Non-strict Inequality",
+    "d": "An inequality using <= or >= where the boundary value is included in the solution set."
+   },
+   {
+    "t": "Compound Inequality",
+    "d": "An inequality combining two conditions on a single variable, such as a < x <= b."
+   },
+   {
+    "t": "Critical Value",
+    "d": "A root or boundary point obtained by turning an inequality into an equation to test sign changes."
+   },
+   {
+    "t": "Set Builder Notation",
+    "d": "A formal mathematical notation for describing a set by stating the properties its members must satisfy."
+   },
+   {
+    "t": "Real Numbers",
+    "d": "The set of all rational and irrational numbers, denoted by \\u211d."
+   },
+   {
+    "t": "Integers",
+    "d": "Whole numbers including positive integers, negative integers, and zero, denoted by \\u2124."
+   },
+   {
+    "t": "Half-Plane",
+    "d": "The region of a Cartesian coordinate plane on one side of an infinite boundary line."
+   },
+   {
+    "t": "Boundary Line",
+    "d": "The line equation derived from an inequality that separates the coordinate plane into valid and invalid regions."
+   },
+   {
+    "t": "Lattice Point",
+    "d": "A point on a coordinate grid with integer coordinates (x, y)."
+   },
+   {
+    "t": "Union",
+    "d": "The combination of multiple sets, represented by \\u222a (meaning 'OR')."
+   },
+   {
+    "t": "Intersection",
+    "d": "The overlap of multiple sets, represented by \\u2229 (meaning 'AND')."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Forgetting to flip the inequality sign when dividing by a negative number.",
+    "r": "Always reverse the inequality symbol immediately upon dividing or multiplying both sides by a negative number."
+   },
+   {
+    "w": "Including boundary values for strict inequalities on number lines.",
+    "r": "Use an open circle for < and > to indicate exclusion of the boundary point."
+   },
+   {
+    "w": "Writing quadratic inequality solutions as a single interval when roots are outside.",
+    "r": "For x^2 > k^2, the solution must be written as two separate inequalities: x < -k or x > k."
+   },
+   {
+    "w": "Shading the wrong side of a boundary line in linear programming.",
+    "r": "Always substitute a test point like (0,0) to verify the valid half-plane before shading."
+   },
+   {
+    "w": "Including strict boundary integers in integer solution lists.",
+    "r": "Check strict inequalities carefully; if x > -3, then -3 is not a valid integer solution, start at -2."
+   },
+   {
+    "w": "Treating chained inequalities as separate unrelated statements.",
+    "r": "Solve a < 3x + 1 <= 10 simultaneously across all three parts of the expression."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Solve the linear inequality 3(x - 2) < 5x + 4.",
+    "marks": 3,
+    "model": [
+     "Expand brackets: 3x - 6 < 5x + 4",
+     "Rearrange terms: -10 < 2x",
+     "State final inequality: x > -5"
+    ],
+    "tip": "Always expand brackets completely before collecting variable terms."
+   },
+   {
+    "q": "Find all integer values of x that satisfy -4 <= 2x - 1 < 5.",
+    "marks": 3,
+    "model": [
+     "Add 1 to all parts: -3 <= 2x < 6",
+     "Divide all parts by 2: -1.5 <= x < 3",
+     "List valid integers: -1, 0, 1, 2"
+    ],
+    "tip": "Perform operations simultaneously across all three parts of the compound inequality."
+   },
+   {
+    "q": "Solve the quadratic inequality x^2 - 2x - 15 <= 0.",
+    "marks": 4,
+    "model": [
+     "Factorise quadratic: (x - 5)(x + 3) <= 0",
+     "Find critical values: x = 5 and x = -3",
+     "Identify region between roots",
+     "State final answer: -3 <= x <= 5"
+    ],
+    "tip": "For <= 0 with a positive x^2 coefficient, the solution is always trapped between the two roots."
+   },
+   {
+    "q": "Represent the inequality set {x \\u2208 \\u211d : -2 < x <= 4} on a number line.",
+    "marks": 2,
+    "model": [
+     "Draw number line with correct scale including -2 and 4",
+     "Place open circle at -2 and closed circle at 4",
+     "Join circles with a clear solid line segment"
+    ],
+    "tip": "Check circle types: open for <, closed for <=."
+   },
+   {
+    "q": "Solve the quadratic inequality x^2 > 16.",
+    "marks": 3,
+    "model": [
+     "Identify critical values: x = 4 and x = -4",
+     "Recognise 'greater than' condition requires outside regions",
+     "State final answer: x < -4 or x > 4"
+    ],
+    "tip": "Never write -4 < x < 4 for a 'greater than' quadratic inequality."
+   },
+   {
+    "q": "Find the set builder notation for the integers satisfying 3x + 2 > 11 and 2x - 5 <= 9.",
+    "marks": 4,
+    "model": [
+     "Solve first inequality: x > 3",
+     "Solve second inequality: x <= 7",
+     "Combine into compound range: 3 < x <= 7",
+     "Express in set builder notation: {x \\u2208 \\u2124 : 3 < x <= 7}"
+    ],
+    "tip": "Read the question carefully to see if real numbers or integers are required."
+   },
+   {
+    "q": "On the grid, shade the region that satisfies the inequalities y >= 1, x + y <= 6, and y > x - 2.",
+    "marks": 4,
+    "model": [
+     "Draw correct boundary lines for y = 1, x + y = 6, and y = x - 2",
+     "Use solid lines for non-strict and dashed for strict lines",
+     "Test points to confirm valid half-planes",
+     "Shade the correct intersecting region clearly"
+    ],
+    "tip": "Label each boundary line to avoid confusion during testing."
+   },
+   {
+    "q": "Solve -4x >= 16.",
+    "marks": 1,
+    "model": [
+     "Divide both sides by -4",
+     "Reverse inequality sign",
+     "State x <= -4"
+    ],
+    "tip": "1-mark questions on inequalities almost always test the negative sign reversal rule."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Solve the quadratic inequality 2x^2 + 5x - 12 > 0.",
+    "steps": [
+     "Step 1: Find the critical values by solving the equation 2x^2 + 5x - 12 = 0 by factorising.",
+     "Step 2: Factorise the quadratic expression: (2x - 3)(x + 4) = 0, giving critical values x = 1.5 and x = -4.",
+     "Step 3: Since the expression is > 0 and the coefficient of x^2 is positive, the solution lies outside the roots.",
+     "Step 4: Write the final solution set: x < -4 or x > 1.5."
+    ],
+    "ans": "x < -4 or x > 1.5"
+   },
+   {
+    "q": "Find the range of integer values satisfying 5x - 3 < 27 and 3x + 1 >= 10.",
+    "steps": [
+     "Step 1: Solve the first inequality: 5x < 30 => x < 6.",
+     "Step 2: Solve the second inequality: 3x >= 9 => x >= 3.",
+     "Step 3: Combine the inequalities into a compound range: 3 <= x < 6.",
+     "Step 4: Extract all integer values within this range: 3, 4, 5."
+    ],
+    "ans": "x = 3, 4, 5"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Number line showing the solution set for x < -4 or x > 1.5, with open circles and outward-pointing rays.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"40\" y1=\"120\" x2=\"360\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"100\" y1=\"110\" x2=\"100\" y2=\"130\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"100\" y=\"150\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">-4</text><line x1=\"280\" y1=\"110\" x2=\"280\" y2=\"130\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"280\" y=\"150\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">1.5</text><circle cx=\"100\" cy=\"120\" r=\"6\" fill=\"#ffffff\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"280\" cy=\"120\" r=\"6\" fill=\"#ffffff\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"40\" y1=\"120\" x2=\"100\" y2=\"120\" stroke=\"#dc2626\" stroke-width=\"4\"/><line x1=\"280\" y1=\"120\" x2=\"360\" y2=\"120\" stroke=\"#dc2626\" stroke-width=\"4\"/></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_h.1.21",
+  "sid": "maths_eduqas_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-16T03:17:38.565Z"
  }
 }
