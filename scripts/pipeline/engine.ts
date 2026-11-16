@@ -159,43 +159,54 @@ export function pushContent(root: string, message: string): void {
  * Puts finished notes on the live site (the owner asked for this on 2026-11-16).
  * The live site is built from `main`, so this copies ONLY the note files
  * (content/notes/{spec}/{topic}.json) from `rebuild` onto `main` in one commit,
- * then merges that commit back so `main` stays part of `rebuild`'s history.
- * Code and everything else still waits for the owner's OK. Returns how many
- * files were published (0 = nothing new), or -1 if it could not publish.
+ * and records that commit as merged into `rebuild`, so `main` stays part of
+ * `rebuild`'s history. Both branches are updated together or not at all. Code
+ * and everything else still waits for the owner's OK. Returns how many files
+ * were published (0 = nothing new), or -1 if it could not publish.
  */
 export function publishNotesLive(root: string): number {
   const sh = (cmd: string, cwd = root): string => execSync(cmd, { cwd, stdio: ["ignore", "pipe", "pipe"], shell: "/bin/bash" }).toString().trim();
   let tree = "";
-  try {
-    const refs = "+refs/heads/main:refs/remotes/origin/main +refs/heads/rebuild:refs/remotes/origin/rebuild";
-    // GitHub's checkout is shallow; the merge below needs the shared history.
-    sh(`if [ "$(git rev-parse --is-shallow-repository)" = true ]; then git fetch -q --unshallow origin ${refs}; else git fetch -q origin ${refs}; fi`);
-    tree = sh("mktemp -d");
-    sh(`git worktree add -q --detach "${tree}" origin/main`);
-    sh("git checkout -q origin/rebuild -- 'content/notes/*/*.json'", tree);
-    const files = sh("git diff --cached --name-only", tree).split("\n").filter(Boolean);
-    if (!files.length) return 0;
-    if (files.some((f) => !/^content\/notes\/[a-z][a-z0-9_]*\/\d+\.json$/.test(f))) throw new Error(`unexpected file: ${files.find((f) => !/^content\/notes\//.test(f)) ?? files[0]!}`);
-    sh(`git commit -q -m "Notes: publish ${files.length} topic file(s) to the live site"`, tree);
-    const sha = sh("git rev-parse HEAD", tree);
-    sh("git push -q origin HEAD:main", tree);
-    // Keep main an ancestor of rebuild, so approved work can still be fast-forwarded to main later.
-    sh(`git merge -q --no-edit -m "Merge the published notes from main" ${sha}`);
-    sh("for i in 1 2 3; do git push -q origin HEAD:rebuild && exit 0; git pull -q --no-rebase --no-edit origin rebuild; sleep 5; done; exit 1");
-    console.log(`published ${files.length} note file(s) to the live site`);
-    return files.length;
-  } catch (e) {
-    console.log(`could not publish to the live site: ${(e as Error).message.slice(0, 300)}`);
-    return -1;
-  } finally {
-    if (tree) {
-      try {
-        sh(`git worktree remove --force "${tree}"`);
-      } catch {
-        // a leftover temporary folder is harmless
-      }
+  const cleanUp = (): void => {
+    if (!tree) return;
+    try {
+      sh(`git worktree remove --force "${tree}"`);
+    } catch {
+      // a leftover temporary folder is harmless
+    }
+    tree = "";
+  };
+  let last = "";
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      if (sh("git status --porcelain --untracked-files=no")) throw new Error("there are unsaved changes");
+      // Start from the newest rebuild and main (GitHub's checkout is shallow, so only the tips are fetched there).
+      sh("git pull -q --rebase origin rebuild");
+      sh(`git fetch -q $([ "$(git rev-parse --is-shallow-repository)" = true ] && echo --depth=1) origin +refs/heads/main:refs/remotes/origin/main`);
+      const head = sh("git rev-parse HEAD");
+      tree = sh("mktemp -d");
+      sh(`git worktree add -q --detach "${tree}" origin/main`);
+      sh(`git checkout -q ${head} -- 'content/notes/*/*.json'`, tree);
+      const files = sh("git diff --cached --name-only", tree).split("\n").filter(Boolean);
+      if (!files.length) return 0;
+      const odd = files.find((f) => !/^content\/notes\/[a-z][a-z0-9_]*\/\d+\.json$/.test(f));
+      if (odd) throw new Error(`unexpected file: ${odd}`);
+      sh(`git commit -q -m "Notes: publish ${files.length} topic file(s) to the live site"`, tree);
+      const live = sh("git rev-parse HEAD", tree);
+      // A merge commit with rebuild's own files (the notes are identical on both sides): keeps main an ancestor of rebuild.
+      const merge = sh(`git commit-tree ${head}^{tree} -p ${head} -p ${live} -m "Merge the published notes from main"`);
+      sh(`git push -q --atomic origin ${live}:refs/heads/main ${merge}:refs/heads/rebuild`);
+      sh(`git reset -q --soft ${merge}`);
+      console.log(`published ${files.length} note file(s) to the live site`);
+      return files.length;
+    } catch (e) {
+      last = (e as Error).message.slice(0, 300);
+    } finally {
+      cleanUp();
     }
   }
+  console.log(`could not publish to the live site: ${last}`);
+  return -1;
 }
 
 /** Runs one job until its queue is empty, the limit or deadline is reached, or every provider is done for today. */
