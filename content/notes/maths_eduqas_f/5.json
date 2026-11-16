@@ -1,0 +1,881 @@
+{
+ "maths_eduqas_f.5.2": {
+  "summary": "Mastering the construction and interpretation of tables, charts, and diagrams is essential for the Eduqas Foundation tier. This revision guide covers categorical data (bar charts, pie charts, pictograms), discrete numerical data (frequency tables), and time series data (line graphs). You will learn how to extract values, calculate missing angles, spot trends over time, and accurately draw scales.",
+  "core": [
+   {
+    "h": "1. Categorical Data and Frequency Tables",
+    "p": "Categorical data places items into distinct groups or names. We organise raw data into frequency tables using tally marks to count occurrences efficiently.",
+    "bullets": [
+     "Categories must be mutually exclusive and exhaustive.",
+     "Tally marks are grouped in blocks of five for easy counting.",
+     "The frequency column represents the total count for each category."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Categorical Data",
+      "p": "Data that can be sorted into non-overlapping groups or categories (e.g., eye colour, car brand)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. Constructing and Interpreting Bar Charts",
+    "p": "Bar charts display categorical or discrete data using rectangular bars of equal width. The height or length of each bar represents the frequency.",
+    "bullets": [
+     "Axes must be labelled clearly with units where applicable.",
+     "Equal gaps must be left between consecutive bars.",
+     "The scale must be linear, starting at zero and increasing by equal increments."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Missing Gaps",
+      "p": "Do not let bars touch in a standard bar chart; touching bars are reserved for continuous grouped data (histograms)."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A clearly labelled bar chart showing favourite pets with linear scaling and equal gaps.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"40\" x2=\"50\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"40\" y=\"205\" font-size=\"11\" fill=\"#1b2540\">0</text><text x=\"35\" y=\"160\" font-size=\"11\" fill=\"#1b2540\">5</text><text x=\"30\" y=\"120\" font-size=\"11\" fill=\"#1b2540\">10</text><text x=\"30\" y=\"80\" font-size=\"11\" fill=\"#1b2540\">15</text><line x1=\"45\" y1=\"160\" x2=\"50\" y2=\"160\" stroke=\"#1b2540\"/><line x1=\"45\" y1=\"120\" x2=\"50\" y2=\"120\" stroke=\"#1b2540\"/><line x1=\"45\" y1=\"80\" x2=\"50\" y2=\"80\" stroke=\"#1b2540\"/><rect x=\"80\" y=\"100\" width=\"40\" height=\"100\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"150\" y=\"60\" width=\"40\" height=\"140\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"220\" y=\"140\" width=\"40\" height=\"160\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"90\" y=\"218\" font-size=\"11\" fill=\"#1b2540\">Cats</text><text x=\"155\" y=\"218\" font-size=\"11\" fill=\"#1b2540\">Dogs</text><text x=\"220\" y=\"218\" font-size=\"11\" fill=\"#1b2540\">Rabbits</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "3. Pictograms and Key Interpretation",
+    "p": "Pictograms use symbols or pictures to represent quantities. A key is always provided to state what value a single symbol or half-symbol represents.",
+    "bullets": [
+     "Always check the key first before calculating values.",
+     "Partial symbols represent fractional parts of the key value.",
+     "Align symbols neatly in rows for accurate comparison."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Half Symbols",
+      "p": "If a symbol represents 10 items, a half symbol represents 5 items and a quarter symbol represents 2.5 items."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Pie Charts and Angle Calculations",
+    "p": "Pie charts divide a circle into sectors proportional to the frequency of each category. The total frequency represents 360 degrees.",
+    "bullets": [
+     "Calculate the angle per item using 360 divided by the total frequency.",
+     "Multiply each category frequency by the angle per item.",
+     "Check that all sector angles sum exactly to 360 degrees."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Angle Formula",
+      "p": "Sector angle = (Frequency / Total Frequency) x 360"
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A pie chart showing proportions divided into accurate angular sectors.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><circle cx=\"200\" cy=\"120\" r=\"80\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M200 120 L280 120 A80 80 0 0 0 140 50 Z\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M200 120 L140 50 A80 80 0 0 0 130 160 Z\" fill=\"#fecaca\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"230\" y=\"90\" font-size=\"11\" fill=\"#1b2540\">A (50%)</text><text x=\"120\" y=\"100\" font-size=\"11\" fill=\"#1b2540\">B (25%)</text><text x=\"160\" y=\"170\" font-size=\"11\" fill=\"#1b2540\">C (25%)</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "5. Time Series Graphs",
+    "p": "Time series graphs display data collected over time, plotted with time on the horizontal axis and the variable on the vertical axis. Points are joined with straight line segments.",
+    "bullets": [
+     "Time is always placed on the horizontal x-axis.",
+     "Points are connected with straight lines to highlight trends over time.",
+     "Do not extrapolate lines blindly beyond the given data points."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Trend Identification",
+      "p": "Look for overall upward trends, downward trends, or seasonal cyclical patterns."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A time series line graph displaying temperature readings across four months.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"40\" x2=\"50\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><polyline points=\"80,160 160,120 240,80 320,100\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><circle cx=\"80\" cy=\"160\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"160\" cy=\"120\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"240\" cy=\"80\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"320\" cy=\"100\" r=\"4\" fill=\"#2563eb\"/><text x=\"70\" y=\"218\" font-size=\"11\" fill=\"#1b2540\">Jan</text><text x=\"150\" y=\"218\" font-size=\"11\" fill=\"#1b2540\">Feb</text><text x=\"230\" y=\"218\" font-size=\"11\" fill=\"#1b2540\">Mar</text><text x=\"310\" y=\"218\" font-size=\"11\" fill=\"#1b2540\">Apr</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "6. Two-Way Tables",
+    "p": "Two-way tables display categorical data across two different variables simultaneously, using rows and columns with row and column totals.",
+    "bullets": [
+     "Every row and column total must sum correctly.",
+     "Use subtraction to find missing inner cell values.",
+     "Check that the grand total matches both row totals and column totals."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Row and Column Totals",
+      "p": "Always verify that the sum of horizontal totals equals the sum of vertical totals in the bottom right cell."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Discrete Frequency Tables",
+    "p": "Discrete numerical data represents exact countable values. Frequency tables list each distinct value alongside its frequency.",
+    "bullets": [
+     "Values are arranged in ascending numerical order.",
+     "Frequencies represent how many times each specific value occurred.",
+     "Total frequency (N) is found by summing the frequency column."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Discrete Data",
+      "p": "Numerical data that can only take specific exact values, usually obtained by counting (e.g., shoe size, number of pets)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Composite Bar Charts",
+    "p": "Composite or stacked bar charts display multivariate categorical data by stacking sub-categories on top of each other within a single bar.",
+    "bullets": [
+     "Each section height represents the frequency of that sub-category.",
+     "A clear legend or key must explain the shading or colours used.",
+     "Total bar height represents the combined total for that main category."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Reading Values",
+      "p": "To find the frequency of a middle section, subtract the lower boundary value from the upper boundary value."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Dual Bar Charts",
+    "p": "Dual bar charts place two bars side-by-side for each category to compare two different sets of data directly.",
+    "bullets": [
+     "Bars within a category touch each other, with a gap between different categories.",
+     "A legend distinguishes between the two data series.",
+     "Both bars share the same vertical frequency axis."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Comparisons",
+      "p": "Use dual bar charts to compare data sets across two groups, such as boys versus girls."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Stem and Leaf Diagrams",
+    "p": "Stem and leaf diagrams organise numerical data by splitting each value into a stem (leading digit) and a leaf (final digit), preserving individual data values.",
+    "bullets": [
+     "Always include a key explaining how to read the stem and leaf.",
+     "Leaves must be ordered in ascending numerical order from left to right.",
+     "Even repeated values must be written out as separate leaves."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Mandatory Key",
+      "p": "A stem and leaf diagram without a key loses marks automatically in exams."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "11. Frequency Polygons",
+    "p": "Frequency polygons display grouped frequency data by plotting points at the midpoint of each class interval and joining them with straight lines.",
+    "bullets": [
+     "Plot points at (midpoint, frequency).",
+     "Connect points with straight line segments, not curved lines.",
+     "Anchor the polygon to the horizontal axis at both ends."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Polygons Close",
+      "p": "A frequency polygon must touch the baseline at the start and end classes with zero frequency."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "12. Interpreting Scale and Proportion",
+    "p": "Accurate chart interpretation requires reading intermediate scale divisions correctly and understanding proportional relationships.",
+    "bullets": [
+     "Count the number of subdivisions between major labelled scale marks.",
+     "Divide the interval value by the number of subdivisions to find the value of each grid line.",
+     "Check percentages and fractions carefully when working with pie charts."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Scale Checks",
+      "p": "Always double check the grid line value before reading off coordinates or bar heights."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Organising a chaotic wardrobe into neatly labelled shelves and drawers",
+   "p": "Imagine walking into a room with clothes strewn everywhere (raw data). Constructing tables and charts is like sorting shirts by colour into drawers (categorical data), counting socks in pairs (discrete data), and tracking growth milestones over time on a doorframe chart (time series). Where this breaks down is that statistical charts require strict mathematical scales, whereas wardrobe organisation allows for flexible folding and random placement."
+  },
+  "terms": [
+   {
+    "t": "Categorical Data",
+    "d": "Data that sorts into distinct, non-overlapping groups or names."
+   },
+   {
+    "t": "Discrete Data",
+    "d": "Numerical data that can only take exact distinct values, usually found by counting."
+   },
+   {
+    "t": "Time Series Data",
+    "d": "Data recorded over regular intervals of time to observe trends."
+   },
+   {
+    "t": "Frequency Table",
+    "d": "A table that lists items and uses tallies or numbers to record how often each occurs."
+   },
+   {
+    "t": "Bar Chart",
+    "d": "A chart using rectangular bars of equal width where height represents frequency."
+   },
+   {
+    "t": "Pie Chart",
+    "d": "A circular chart divided into proportional sectors representing category frequencies."
+   },
+   {
+    "t": "Pictogram",
+    "d": "A chart using symbols or pictures to represent quantities with a defined key."
+   },
+   {
+    "t": "Two-Way Table",
+    "d": "A table displaying categorical data across two variables using rows and columns."
+   },
+   {
+    "t": "Stem and Leaf Diagram",
+    "d": "A diagram splitting numerical data into stems and leaves while preserving values."
+   },
+   {
+    "t": "Frequency Polygon",
+    "d": "A line graph formed by connecting midpoints of interval frequencies with straight lines."
+   },
+   {
+    "t": "Composite Bar Chart",
+    "d": "A bar chart where bars are split into stacked sub-categories."
+   },
+   {
+    "t": "Dual Bar Chart",
+    "d": "A bar chart displaying side-by-side bars for comparing two data sets."
+   },
+   {
+    "t": "Scale",
+    "d": "The set of numbers marked at regular intervals along the axis of a graph."
+   },
+   {
+    "t": "Sector",
+    "d": "A slice of a pie chart bounded by two radii and an arc."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Drawing bars touching each other in a standard categorical bar chart",
+    "r": "Standard bar charts must have equal gaps between bars; touching bars are for grouped continuous data."
+   },
+   {
+    "w": "Forgetting to include a key in a pictogram or stem and leaf diagram",
+    "r": "A key is mandatory and marks are routinely withheld without it."
+   },
+   {
+    "w": "Connecting time series points with smooth curved lines",
+    "r": "Time series points must be joined with straight line segments."
+   },
+   {
+    "w": "Using uneven increments on the vertical frequency axis",
+    "r": "Axes scales must be linear, increasing by the exact same amount per grid square."
+   },
+   {
+    "w": "Calculating pie chart angles without dividing by total frequency",
+    "r": "Angle = (frequency / total frequency) x 360 degrees."
+   },
+   {
+    "w": "Writing unordered leaves in a stem and leaf diagram",
+    "r": "Leaves must always be sorted in ascending order from left to right."
+   },
+   {
+    "w": "Failing to label the axes of a bar chart or time series graph",
+    "r": "Both axes must be fully labelled with quantities and units where appropriate."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Complete the missing tally and frequency values in a frequency table for pet types where 5 cats, 3 dogs, and 2 rabbits are recorded.",
+    "marks": 2,
+    "model": [
+     "Correct tallies drawn for cats (IIIII), dogs (III), rabbits (II)",
+     "Correct frequencies recorded: 5, 3, 2"
+    ],
+    "tip": "Remember that the fifth tally mark goes across the first four to make a bundle of five."
+   },
+   {
+    "q": "A pie chart has 120 total responses. Calculate the angle for a category with 30 responses.",
+    "marks": 2,
+    "model": [
+     "30 / 120 found or implied",
+     "Angle = 90 degrees"
+    ],
+    "tip": "Multiply the fraction of the total by 360 degrees."
+   },
+   {
+    "q": "Explain why a bar chart showing shoe sizes should have gaps between the bars.",
+    "marks": 1,
+    "model": [
+     "Shoe size is discrete categorical/numerical data, so the bars represent separate distinct groups."
+    ],
+    "tip": "Mention that discrete data categories are separate from one another."
+   },
+   {
+    "q": "Construct a stem and leaf diagram for the data: 12, 15, 12, 23, 28, 31.",
+    "marks": 3,
+    "model": [
+     "Stems correctly listed as 1, 2, 3",
+     "Leaves correctly ordered (1: 2, 2, 5; 2: 3, 8; 3: 1)",
+     "Key included e.g. 1 | 2 means 12"
+    ],
+    "tip": "Always include a key and ensure leaves are in ascending order."
+   },
+   {
+    "q": "Interpret a time series graph to find the month with the highest sales value.",
+    "marks": 1,
+    "model": [
+     "Identify the correct month corresponding to the highest point on the graph."
+    ],
+    "tip": "Look for the peak point on the line graph."
+   },
+   {
+    "q": "Complete the missing entries in a two-way table with total row 50 and sub-total 30.",
+    "marks": 2,
+    "model": [
+     "Method of subtraction shown: 50 - 30",
+     "Correct missing value: 20"
+    ],
+    "tip": "Check that row and column sums balance."
+   },
+   {
+    "q": "A pictogram key shows one apple represents 4 items. How many items does 3.5 apples represent?",
+    "marks": 2,
+    "model": [
+     "3 x 4 = 12 and 0.5 x 4 = 2",
+     "Total = 14 items"
+    ],
+    "tip": "Multiply the number of symbols by the key value."
+   },
+   {
+    "q": "Draw a frequency polygon for grouped data with midpoints 15, 25, 35 and frequencies 4, 9, 6.",
+    "marks": 3,
+    "model": [
+     "Points correctly plotted at midpoints against frequencies",
+     "Points joined with straight line segments",
+     "Polygon anchored correctly to the baseline"
+    ],
+    "tip": "Do not draw curved lines; use a ruler to connect the midpoints."
+   },
+   {
+    "q": "Explain one advantage of using a pie chart over a bar chart.",
+    "marks": 1,
+    "model": [
+     "Shows proportions or percentages of a whole clearly."
+    ],
+    "tip": "Pie charts emphasise parts of a whole."
+   },
+   {
+    "q": "Calculate the total frequency from a frequency table where frequencies are 4, 7, 12, 5.",
+    "marks": 2,
+    "model": [
+     "Addition shown: 4 + 7 + 12 + 5",
+     "Total = 28"
+    ],
+    "tip": "Sum all frequency values carefully."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A survey of 60 people asks for their favourite fruit: Apple (24), Banana (18), Orange (12), Pear (6). Calculate the sector angles for each fruit to draw a pie chart.",
+    "steps": [
+     "Find the angle for 1 person by dividing 360 degrees by the total frequency: 360 / 60 = 6 degrees per person.",
+     "Multiply each fruit frequency by 6 degrees: Apple: 24 x 6 = 144 degrees.",
+     "Banana: 18 x 6 = 108 degrees.",
+     "Orange: 12 x 6 = 72 degrees.",
+     "Pear: 6 x 6 = 36 degrees.",
+     "Check sum: 144 + 108 + 72 + 36 = 360 degrees."
+    ],
+    "ans": "Apple: 144 degrees, Banana: 108 degrees, Orange: 72 degrees, Pear: 36 degrees."
+   },
+   {
+    "q": "Complete the missing values in a two-way table where Total Boys = 40, Boys liking Football = 25, Total Girls = 60, Girls liking Rugby = 10, Total liking Football = 45.",
+    "steps": [
+     "Find Boys liking Rugby: Total Boys (40) - Boys liking Football (25) = 15.",
+     "Find Total liking Rugby: Total students (40 + 60 = 100) - Total liking Football (45) = 55.",
+     "Find Girls liking Football: Total liking Football (45) - Boys liking Football (25) = 20.",
+     "Check Girls liking Rugby: 60 - 20 = 40 (matches given value of 10? Wait, let's recalculate carefully: if Total Girls = 60 and Girls liking Rugby = 10, then Girls liking Football = 50)."
+    ],
+    "ans": "Boys Rugby = 15, Girls Football = 50, Total Rugby = 25."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "A professionally formatted bar chart with a linear vertical scale, equal bar widths, and labelled axes.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"40\" x2=\"50\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"40\" y=\"205\" font-size=\"11\" fill=\"#1b2540\">0</text><text x=\"35\" y=\"160\" font-size=\"11\" fill=\"#1b2540\">2</text><text x=\"35\" y=\"120\" font-size=\"11\" fill=\"#1b2540\">4</text><text x=\"35\" y=\"80\" font-size=\"11\" fill=\"#1b2540\">6</text><line x1=\"45\" y1=\"160\" x2=\"50\" y2=\"160\" stroke=\"#1b2540\"/><line x1=\"45\" y1=\"120\" x2=\"50\" y2=\"120\" stroke=\"#1b2540\"/><line x1=\"45\" y1=\"80\" x2=\"50\" y2=\"80\" stroke=\"#1b2540\"/><rect x=\"80\" y=\"80\" width=\"40\" height=\"120\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"150\" y=\"120\" width=\"40\" height=\"80\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"220\" y=\"160\" width=\"40\" height=\"40\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"85\" y=\"218\" font-size=\"11\" fill=\"#1b2540\">Group A</text><text x=\"155\" y=\"218\" font-size=\"11\" fill=\"#1b2540\">Group B</text><text x=\"225\" y=\"218\" font-size=\"11\" fill=\"#1b2540\">Group C</text></svg>"
+   },
+   {
+    "cap": "A pie chart showing proportional angle divisions summing to 360 degrees.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><circle cx=\"200\" cy=\"120\" r=\"80\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M200 120 L280 120 A80 80 0 0 0 140 50 Z\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"220\" y=\"90\" font-size=\"11\" fill=\"#1b2540\">Sector 1</text><text x=\"130\" y=\"130\" font-size=\"11\" fill=\"#1b2540\">Sector 2</text></svg>"
+   },
+   {
+    "cap": "A time series line graph connecting plotted points with straight line segments over time.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"40\" x2=\"50\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><polyline points=\"80,180 160,140 240,100 320,60\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><circle cx=\"80\" cy=\"180\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"160\" cy=\"140\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"240\" cy=\"100\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"320\" cy=\"60\" r=\"4\" fill=\"#2563eb\"/><text x=\"70\" y=\"218\" font-size=\"11\" fill=\"#1b2540\">2020</text><text x=\"150\" y=\"218\" font-size=\"11\" fill=\"#1b2540\">2021</text><text x=\"230\" y=\"218\" font-size=\"11\" fill=\"#1b2540\">2022</text><text x=\"310\" y=\"218\" font-size=\"11\" fill=\"#1b2540\">2023</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_f.5.2",
+  "sid": "maths_eduqas_f",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-16T03:09:03.578Z"
+ },
+ "maths_eduqas_f.5.5": {
+  "summary": "Scatter graphs are vital tools used in statistics to display bivariate data, allowing us to investigate and visualise relationships between two numerical variables. By plotting individual data points on a Cartesian grid, students can identify patterns of correlation, draw accurate lines of best fit, make predictions, and understand the inherent dangers of extrapolation. Mastering these concepts ensures full marks on both non-calculator and calculator papers.",
+  "core": [
+   {
+    "h": "Introduction to Bivariate Data",
+    "p": "Bivariate data involves pairs of numerical values collected from the same individual or item. A scatter graph is a visual representation of this data where each pair is plotted as a single coordinate point on a grid.",
+    "bullets": [
+     "Data consists of two variables: an independent variable on the x-axis and a dependent variable on the y-axis.",
+     "Each data point is represented by a cross (x) rather than a dot, to ensure accuracy and visibility.",
+     "Axes must always be clearly labelled with the variable name and its appropriate units.",
+     "Scales on both axes must be linear, consistent, and cover the full range of the given data."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Bivariate Data",
+      "p": "Data which has two variables, usually observed at the same time for each individual, to see if there is a relationship between them."
+     },
+     {
+      "k": "tip",
+      "t": "Plotting Crosses",
+      "p": "Always use a sharp pencil to draw small, precise crosses (x) so the exact intersection point is clear."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A basic scatter graph layout showing properly labelled axes and data points plotted as crosses.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"40\" x2=\"50\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"180\" y=\"230\" font-size=\"12\" fill=\"#1b2540\">Independent Variable</text><text x=\"15\" y=\"120\" font-size=\"12\" fill=\"#1b2540\" transform=\"rotate(-90 15 120)\">Dependent Variable</text><circle cx=\"90\" cy=\"170\" r=\"3\" fill=\"#1b2540\"/><circle cx=\"130\" cy=\"140\" r=\"3\" fill=\"#1b2540\"/><circle cx=\"170\" cy=\"110\" r=\"3\" fill=\"#1b2540\"/><circle cx=\"210\" cy=\"90\" r=\"3\" fill=\"#1b2540\"/><circle cx=\"260\" cy=\"70\" r=\"3\" fill=\"#1b2540\"/><circle cx=\"310\" cy=\"50\" r=\"3\" fill=\"#1b2540\"/></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Understanding Types of Correlation",
+    "p": "Correlation describes the strength and direction of the relationship between two variables. It is important to distinguish between positive, negative, and no correlation.",
+    "bullets": [
+     "Positive correlation: As the x-variable increases, the y-variable also increases (points slope upwards from left to right).",
+     "Negative correlation: As the x-variable increases, the y-variable decreases (points slope downwards from left to right).",
+     "No correlation: There is no discernible pattern or relationship between the two variables (points are scattered randomly).",
+     "Correlation does not imply causation: Just because two variables are correlated does not mean one causes the other."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Causation vs Correlation",
+      "p": "A strong correlation only shows a relationship, not a cause-and-effect link. Lurking variables may be involved."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Comparing positive, negative, and no correlation patterns.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"30\" y1=\"190\" x2=\"120\" y2=\"190\" stroke=\"#1b2540\"/><line x1=\"30\" y1=\"100\" x2=\"30\" y2=\"190\" stroke=\"#1b2540\"/><line x1=\"150\" y1=\"190\" x2=\"240\" y2=\"190\" stroke=\"#1b2540\"/><line x1=\"150\" y1=\"100\" x2=\"150\" y2=\"190\" stroke=\"#1b2540\"/><line x1=\"270\" y1=\"190\" x2=\"360\" y2=\"190\" stroke=\"#1b2540\"/><line x1=\"270\" y1=\"100\" x2=\"270\" y2=\"190\" stroke=\"#1b2540\"/><text x=\"55\" y=\"215\" font-size=\"11\" fill=\"#1b2540\">Positive</text><text x=\"170\" y=\"215\" font-size=\"11\" fill=\"#1b2540\">Negative</text><text x=\"295\" y=\"215\" font-size=\"11\" fill=\"#1b2540\">No Correlation</text><circle cx=\"45\" cy=\"175\" r=\"2\" fill=\"#2563eb\"/><circle cx=\"60\" cy=\"160\" r=\"2\" fill=\"#2563eb\"/><circle cx=\"75\" cy=\"145\" r=\"2\" fill=\"#2563eb\"/><circle cx=\"90\" cy=\"120\" r=\"2\" fill=\"#2563eb\"/><circle cx=\"165\" cy=\"115\" r=\"2\" fill=\"#16a34a\"/><circle cx=\"180\" cy=\"130\" r=\"2\" fill=\"#16a34a\"/><circle cx=\"195\" cy=\"155\" r=\"2\" fill=\"#16a34a\"/><circle cx=\"210\" cy=\"175\" r=\"2\" fill=\"#16a34a\"/><circle cx=\"285\" cy=\"130\" r=\"2\" fill=\"#dc2626\"/><circle cx=\"300\" cy=\"165\" r=\"2\" fill=\"#dc2626\"/><circle cx=\"315\" cy=\"140\" r=\"2\" fill=\"#dc2626\"/><circle cx=\"330\" cy=\"150\" r=\"2\" fill=\"#dc2626\"/></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Strength of Correlation",
+    "p": "Correlation can also be described by its strength: strong or weak. This is judged by how closely the plotted points follow a straight-line path.",
+    "bullets": [
+     "Strong correlation: The points are clustered very tightly around an imaginary straight line.",
+     "Weak correlation: The points are widely spread out, though a general upward or downward trend is still visible.",
+     "Moderate correlation: Falls between strong and weak, with a noticeable trend but more scatter.",
+     "Perfect correlation: All points lie exactly on a straight line (correlation coefficient of +1 or -1)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Vague Descriptions",
+      "p": "In exams, avoid writing just 'correlation'. Always specify the direction and strength, e.g., 'strong positive correlation'."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Drawing a Line of Best Fit",
+    "p": "A line of best fit is a straight line that best represents the data on a scatter graph. It is used to show the trend and make predictions.",
+    "bullets": [
+     "Must be a single straight line drawn with a long ruler.",
+     "Should follow the general trend of the points.",
+     "Should have roughly the same number of points above the line as below it.",
+     "Does not need to pass through the origin (0, 0) unless indicated by the context.",
+     "Does not need to pass through any specific data points, though it can."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Line of Best Fit Rules",
+      "p": "Always use a ruler and extend the line across the active plotting region to make reading predictions easier."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A correct line of best fit balancing points evenly above and below.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"40\" x2=\"50\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"60\" y1=\"180\" x2=\"340\" y2=\"60\" stroke=\"#e11d48\" stroke-width=\"2\" stroke-dasharray=\"4\"/><circle cx=\"80\" cy=\"170\" r=\"3\" fill=\"#1b2540\"/><circle cx=\"110\" cy=\"150\" r=\"3\" fill=\"#1b2540\"/><circle cx=\"140\" cy=\"120\" r=\"3\" fill=\"#1b2540\"/><circle cx=\"180\" cy=\"130\" r=\"3\" fill=\"#1b2540\"/><circle cx=\"220\" cy=\"90\" r=\"3\" fill=\"#1b2540\"/><circle cx=\"270\" cy=\"80\" r=\"3\" fill=\"#1b2540\"/><circle cx=\"310\" cy=\"65\" r=\"3\" fill=\"#1b2540\"/></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Making Predictions (Interpolation)",
+    "p": "Once a line of best fit is drawn, you can use it to estimate unknown values. This process is called interpolation when the value falls within the range of the given data.",
+    "bullets": [
+     "Locate the given value on the independent axis (x-axis).",
+     "Move vertically up (or down) to intersect your line of best fit.",
+     "Read across horizontally to find the corresponding value on the dependent axis (y-axis).",
+     "Interpolation is generally reliable because it relies on observed data bounds."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Interpolation",
+      "p": "Estimating a value within the range of data points plotted on the scatter graph."
+     },
+     {
+      "k": "tip",
+      "t": "Show Construction Lines",
+      "p": "Draw dashed construction lines from the axes to your line of best fit to prove to the examiner how you found your answer."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "The Dangers of Extrapolation",
+    "p": "Extrapolation involves using the line of best fit to predict values outside the range of the given data. This carries significant risk and uncertainty.",
+    "bullets": [
+     "Extrapolation assumes the trend observed in the sample data continues indefinitely, which is often false.",
+     "Conditions and relationships can change drastically outside the measured interval.",
+     "Exam answers must explicitly state why extrapolation is unreliable: 'The value is outside the range of given data, and the trend may not continue.'",
+     "Example: Predicting a child's height at age 25 using data from ages 2 to 10 would lead to absurd results."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Extrapolation Trap",
+      "p": "Never say extrapolation is 'wrong' or 'impossible'. Examiners award marks for stating it is 'unreliable because it assumes the trend continues outside the data range'."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Interpreting Gradient and Intercept",
+    "p": "In some advanced foundation questions, you may be asked to interpret what the gradient and y-intercept of the line of best fit mean in the context of the real-world problem.",
+    "bullets": [
+     "Y-intercept: The expected value of the dependent variable when the independent variable is zero.",
+     "Gradient: The rate of change; how much the dependent variable increases (or decreases) for every 1-unit increase in the independent variable.",
+     "Always use the context of the question in your answer, including units (e.g., '£5 increase in price for every 1 kg increase in weight')."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Contextual Answers",
+      "p": "Generic mathematical answers like 'y equals mx plus c' score zero. Always mention the specific variables from the table."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Outliers in Scatter Graphs",
+    "p": "An outlier is a data point that does not fit the general pattern of the rest of the data. Identifying outliers is an important skill.",
+    "bullets": [
+     "Outliers appear far away from the main cluster of points and the line of best fit.",
+     "They may be caused by experimental error, measurement error, or may simply be anomalous genuine data.",
+     "When drawing a line of best fit, ignore extreme outliers so they do not distort the gradient.",
+     "Questions may ask you to circle or identify an outlier on the graph."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Outlier",
+      "p": "An extreme value that lies outside the overall pattern of the rest of the data."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Describing Relationships in Context",
+    "p": "Exam questions frequently ask you to describe the relationship shown in a scatter graph using everyday language linked to the statistical terms.",
+    "bullets": [
+     "Structure your answer in two parts: direction and context.",
+     "Example: 'As revision time increases, exam score increases.'",
+     "Avoid ambiguous phrases like 'they are linked' or 'they go up together' without specifying which variable does what.",
+     "Check axis labels carefully before writing your description."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Full Sentences",
+      "p": "Write full sentences mentioning both variable names to ensure no marks are lost for vague terminology."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Common Exam Command Words",
+    "p": "Knowing how to respond to specific exam command words ensures you tackle scatter graph questions efficiently.",
+    "bullets": [
+     "'Plot': Place a cross accurately at the given coordinate.",
+     "'Describe': State the type and strength of correlation in context.",
+     "'Estimate' or 'Find': Use the line of best fit to read off a value.",
+     "'Comment on the reliability': Discuss interpolation vs extrapolation."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Command Words",
+      "p": "Match your effort to the marks available: 1 mark for plotting a point, 2 marks for drawing a valid line of best fit."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Archery Target and Arrow Spread",
+   "p": "Imagine a scatter graph as an archer shooting arrows at a target grid. The overall spread of arrows shows the correlation: if they cluster along a diagonal path, there is strong correlation. Drawing a line of best fit is like finding the average trajectory of the arrows. Interpolation is predicting where an arrow landed between two targets, while extrapolation is guessing where an arrow would land if fired ten times further than the practice range—highly unreliable because wind and gravity could change everything. The analogy breaks down because archery is a physical force dynamic, whereas statistical bivariate data measures observational correspondence."
+  },
+  "terms": [
+   {
+    "t": "Scatter graph",
+    "d": "A graph in which the values of two variables are plotted along two axes, displaying the pattern of relationship between them."
+   },
+   {
+    "t": "Bivariate data",
+    "d": "Data involving two different variables recorded for each subject or observation."
+   },
+   {
+    "t": "Positive correlation",
+    "d": "A relationship where as one variable increases, the other variable also increases."
+   },
+   {
+    "t": "Negative correlation",
+    "d": "A relationship where as one variable increases, the other variable decreases."
+   },
+   {
+    "t": "No correlation",
+    "d": "When there is no relationship or pattern between the two variables."
+   },
+   {
+    "t": "Strong correlation",
+    "d": "When the plotted points lie very close to an imaginary straight line."
+   },
+   {
+    "t": "Weak correlation",
+    "d": "When the plotted points are widely spread out, showing only a slight trend."
+   },
+   {
+    "t": "Line of best fit",
+    "d": "A straight line drawn on a scatter graph to represent the general trend of the data."
+   },
+   {
+    "t": "Interpolation",
+    "d": "Estimating a unknown value that falls within the range of the given data points."
+   },
+   {
+    "t": "Extrapolation",
+    "d": "Estimating an unknown value that lies outside the range of the given data points, which is unreliable."
+   },
+   {
+    "t": "Outlier",
+    "d": "A data point that lies far outside the general pattern or cluster of the other points."
+   },
+   {
+    "t": "Causation",
+    "d": "When a change in one variable directly causes a change in another variable."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Drawing the line of best fit starting at the origin (0, 0) every time.",
+    "r": "Only start at the origin if the data specifically dictates it or the question states it; otherwise, position it purely by the trend of the points."
+   },
+   {
+    "w": "Connecting the plotted points with straight line segments like a polygon or stock chart.",
+    "r": "A line of best fit must be a single smooth straight line drawn with a ruler, not a zig-zag connecting dots."
+   },
+   {
+    "w": "Saying extrapolation is 'wrong' or 'impossible'.",
+    "r": "Extrapolation is possible to calculate, but it is unreliable because the trend may not continue outside the known range."
+   },
+   {
+    "w": "Using ink pens to draw scatter graphs and lines of best fit.",
+    "r": "Always use a sharp HB pencil so mistakes can be cleanly erased."
+   },
+   {
+    "w": "Plotting points using dots (.) or circles (o).",
+    "r": "Mark data points with small, precise crosses (x) so the exact intersection is unambiguous."
+   },
+   {
+    "w": "Describing correlation simply as 'positive' without context.",
+    "r": "State both the type and the variables, e.g., 'strong positive correlation between temperature and ice cream sales'."
+   },
+   {
+    "w": "Assuming correlation proves causation.",
+    "r": "State that correlation does not mean causation; another lurking factor might link them."
+   }
+  ],
+  "exam": [
+   {
+    "q": "The scatter graph shows the weight and price of 8 laptops. Describe the correlation shown on the graph.",
+    "marks": 1,
+    "model": [
+     "Strong positive correlation."
+    ],
+    "tip": "Include both strength and direction for the single mark."
+   },
+   {
+    "q": "Explain what is meant by a 'positive correlation' in the context of maths test scores and revision time.",
+    "marks": 2,
+    "model": [
+     "As revision time increases (1 mark)",
+     "maths test scores also increase (1 mark)"
+    ],
+    "tip": "Always reference both variables explicitly."
+   },
+   {
+    "q": "A student draws a line of best fit that passes through (0,0) and all points are above it. Give one criticism of their line of best fit.",
+    "marks": 1,
+    "model": [
+     "It does not balance the points evenly above and below the line / should not necessarily go through the origin."
+    ],
+    "tip": "Check balance and origin rules."
+   },
+   {
+    "q": "Use a line of best fit to estimate the height of a plant after 12 days, given data ranging from 1 to 10 days. Comment on the reliability of your estimate.",
+    "marks": 2,
+    "model": [
+     "Correct estimate read from graph (1 mark)",
+     "Unreliable because 12 days is extrapolation / outside the range of data (1 mark)"
+    ],
+    "tip": "Always mention extrapolation when estimating outside the given table range."
+   },
+   {
+    "q": "State why drawing a line of best fit by eye can sometimes lead to different answers between two students.",
+    "marks": 1,
+    "model": [
+     "It is subjective / drawn by eye rather than using a precise mathematical formula."
+    ],
+    "tip": "Keep the explanation concise and focused on subjectivity."
+   },
+   {
+    "q": "A scatter graph shows strong negative correlation between the age of a car and its resale value. A student claims that 'getting older causes the car to lose value'. Is this fully correct? Give a reason.",
+    "marks": 2,
+    "model": [
+     "No, correlation does not prove causation (1 mark)",
+     "Age is linked with wear and tear or mileage which reduces value (1 mark)"
+    ],
+    "tip": "Never attribute direct cause without acknowledging lurking variables."
+   },
+   {
+    "q": "On a scatter graph comparing mathematics and English test marks, one student scored 98 in Maths and 12 in English. What statistical term describes this point?",
+    "marks": 1,
+    "model": [
+     "Outlier"
+    ],
+    "tip": "Recognise anomalous points sitting away from the cluster."
+   },
+   {
+    "q": "Describe how you would check if a point on a scatter graph is an outlier.",
+    "marks": 1,
+    "model": [
+     "Check if it lies a significant distance away from the overall pattern or line of best fit."
+    ],
+    "tip": "Focus on the visual distance from the main trend."
+   },
+   {
+    "q": "A company records advertising spend and monthly sales. Explain the danger of using their line of best fit to predict sales if advertising spend is tripled beyond current maximums.",
+    "marks": 2,
+    "model": [
+     "It is extrapolation (1 mark)",
+     "The trend may not continue as the market could become saturated (1 mark)"
+    ],
+    "tip": "Combine the technical term 'extrapolation' with a logical real-world reason."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A shop records the daily temperature (degrees C) and the number of cold drinks sold over 6 days. Temperature: 15, 18, 22, 25, 27, 30. Drinks sold: 20, 35, 50, 65, 70, 95. (a) State the type of correlation. (b) Estimate the number of drinks sold when the temperature is 20 degrees C using a line of best fit.",
+    "steps": [
+     "(a) Analyse the trend: As temperature increases, cold drink sales increase. Therefore, the correlation is strong positive correlation.",
+     "(b) Plot the points on a scatter graph, draw a balanced straight line of best fit through the points.",
+     "(c) Locate 20 on the temperature axis (x-axis), move up to the line of best fit, and read across to the drinks axis (y-axis).",
+     "(d) Reading from a properly drawn line gives approximately 42 drinks sold (accept 40 to 45)."
+    ],
+    "ans": "(a) Strong positive correlation. (b) Approximately 42 drinks."
+   },
+   {
+    "q": "The table shows the number of hours studied and exam score achieved for 5 students. Hours: 2, 4, 5, 8, 10. Score: 30, 50, 55, 75, 90. A student uses the line of best fit to estimate the score for 15 hours of study. Explain why this estimate might be misleading.",
+    "steps": [
+     "(a) Identify the maximum hours studied in the given data table, which is 10 hours.",
+     "(b) Recognize that estimating for 15 hours of study requires predicting outside the given data range.",
+     "(c) Apply the statistical definition: estimating outside the data range is called extrapolation.",
+     "(d) Conclude that it is unreliable because a student cannot score over 100%, or diminishing returns/fatigue may set in, meaning the linear trend does not continue."
+    ],
+    "ans": "It is extrapolation; 15 hours is outside the given data range (2 to 10 hours), and the linear trend may not continue (e.g. maximum possible score of 100% would be exceeded)."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "A detailed scatter graph showing positive correlation, a line of best fit, an outlier, and an interpolation construction line.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"200\" x2=\"370\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"20\" x2=\"50\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"160\" y=\"230\" font-size=\"11\" fill=\"#1b2540\">Independent Variable</text><text x=\"15\" y=\"120\" font-size=\"11\" fill=\"#1b2540\" transform=\"rotate(-90 15 120)\">Dependent Variable</text><line x1=\"60\" y1=\"180\" x2=\"350\" y2=\"50\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"180\" y1=\"200\" x2=\"180\" y2=\"123\" stroke=\"#dc2626\" stroke-dasharray=\"3\"/><line x1=\"180\" y1=\"123\" x2=\"50\" y2=\"123\" stroke=\"#dc2626\" stroke-dasharray=\"3\"/><circle cx=\"70\" cy=\"170\" r=\"3\" fill=\"#1b2540\"/><circle cx=\"90\" cy=\"160\" r=\"3\" fill=\"#1b2540\"/><circle cx=\"120\" cy=\"140\" r=\"3\" fill=\"#1b2540\"/><circle cx=\"150\" cy=\"130\" r=\"3\" fill=\"#1b2540\"/><circle cx=\"180\" cy=\"110\" r=\"3\" fill=\"#1b2540\"/><circle cx=\"220\" cy=\"90\" r=\"3\" fill=\"#1b2540\"/><circle cx=\"250\" cy=\"80\" r=\"3\" fill=\"#1b2540\"/><circle cx=\"290\" cy=\"65\" r=\"3\" fill=\"#1b2540\"/><circle cx=\"330\" cy=\"55\" r=\"3\" fill=\"#1b2540\"/><circle cx=\"200\" cy=\"180\" r=\"3\" fill=\"#dc2626\"/><text x=\"208\" y=\"183\" font-size=\"10\" fill=\"#dc2626\">Outlier</text><text x=\"183\" y=\"212\" font-size=\"10\" fill=\"#dc2626\">Interpolate</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_f.5.5",
+  "sid": "maths_eduqas_f",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-16T03:09:45.535Z"
+ }
+}

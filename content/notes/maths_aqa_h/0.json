@@ -1071,5 +1071,1422 @@
   "src": "pre",
   "by": "groq/openai/gpt-oss-120b",
   "ts": "2026-11-15T15:45:37.627Z"
+ },
+ "maths_aqa_h.0.6": {
+  "summary": "Mastering integer and fractional indices is crucial for achieving a Grade 9 in AQA GCSE Higher Mathematics, enabling rapid simplification of complex algebraic expressions and numerical powers. This topic covers the strict laws of indices for positive, negative, zero, and rational exponents, forming the backbone of advanced algebra and surd manipulation. Students must accurately apply these rules without a calculator, interpreting negative powers as reciprocals and fractional powers as roots combined with powers.",
+  "core": [
+   {
+    "h": "1. Basics of Integer Indices and Notation",
+    "p": "An index, power, or exponent tells us how many times a base number is multiplied by itself. Understanding the structural notation of base and exponent is essential before applying algebraic rules.",
+    "bullets": [
+     "The base is the large number, and the index is the superscript number.",
+     "For any positive integer n, a^n means a multiplied by itself n times.",
+     "For example, 2^4 = 2 * 2 * 2 * 2 = 16.",
+     "Always check the base, especially when dealing with negative signs and brackets."
+    ],
+    "table": {
+     "head": [
+      "Expression",
+      "Expanded Form",
+      "Evaluated Value"
+     ],
+     "rows": [
+      [
+       "3^3",
+       "3 * 3 * 3",
+       "27"
+      ],
+      [
+       "(-2)^4",
+       "(-2) * (-2) * (-2) * (-2)",
+       "16"
+      ],
+      [
+       "-2^4",
+       "-(2 * 2 * 2 * 2)",
+       "-16"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Index Notation",
+      "p": "A mathematical shorthand representing repeated multiplication of a base number by itself."
+     },
+     {
+      "k": "warn",
+      "t": "Negative Sign Trap",
+      "p": "-2^4 means -(2 * 2 * 2 * 2) which is -16, whereas (-2)^4 means positive 16. Brackets dictate whether the negative sign is part of the base."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. Multiplication Law of Indices",
+    "p": "When multiplying two terms with the same base, you add the indices together. This law streamlines calculations and underpins algebraic simplification.",
+    "bullets": [
+     "Rule: a^m * a^n = a^(m+n).",
+     "The bases must be identical to add the powers.",
+     "Works for positive, negative, and fractional indices alike.",
+     "Example: 5^3 * 5^4 = 5^(3+4) = 5^7."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Same Base Requirement",
+      "p": "Never add indices if the bases are different (e.g., 2^3 * 3^2 cannot be simplified using this rule)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "3. Division Law of Indices",
+    "p": "When dividing two terms with the same base, you subtract the bottom index from the top index. This directly leads to negative and zero indices.",
+    "bullets": [
+     "Rule: a^m / a^n = a^(m-n).",
+     "Numerator index minus denominator index.",
+     "Example: 7^6 / 7^2 = 7^(6-2) = 7^4.",
+     "Can result in negative numbers if the denominator power is larger."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Fraction Bar as Division",
+      "p": "Treat fraction lines in index expressions as division, applying the top-minus-bottom rule directly."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Power of a Power Law",
+    "p": "Raising a power to another power requires multiplying the indices together. This frequently appears in factorising and expanding algebraic terms.",
+    "bullets": [
+     "Rule: (a^m)^n = a^(m*n).",
+     "Applies when an entire indexed term is enclosed in brackets and raised to an outer power.",
+     "Example: (2^3)^4 = 2^(3*4) = 2^12.",
+     "Crucial for working with prime factorisations raised to powers."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Adding vs Multiplying Powers",
+      "p": "Do not add powers when raising a power to a power; you must multiply them."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "5. The Zero Index Rule",
+    "p": "Any non-zero number raised to the power of zero is exactly equal to one. This is a logical consequence of the division law.",
+    "bullets": [
+     "Rule: a^0 = 1, for any a != 0.",
+     "Why? Because a^m / a^m = a^(m-m) = a^0, and any non-zero number divided by itself is 1.",
+     "0^0 is undefined in GCSE mathematics.",
+     "Example: (12345)^0 = 1."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Zero Exponent Property",
+      "p": "Any non-zero base raised to an exponent of zero yields a value of 1."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Negative Indices and Reciprocals",
+    "p": "A negative index indicates a reciprocal. It tells you to flip the base into a fraction and make the power positive.",
+    "bullets": [
+     "Rule: a^(-m) = 1 / (a^m).",
+     "Rule for fractions: (a/b)^(-m) = (b/a)^m.",
+     "Example: 3^(-2) = 1 / (3^2) = 1/9.",
+     "Example: (2/3)^(-3) = (3/2)^3 = 27/8."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Reciprocal Action",
+      "p": "A negative sign in the index does not make the number negative; it inverts the base."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Fractional Indices (Roots)",
+    "p": "Fractional indices represent roots. The denominator of the fraction becomes the root index, and the numerator remains as a standard power.",
+    "bullets": [
+     "Rule: a^(1/n) = nth root of a.",
+     "Rule for general fractions: a^(m/n) = (nth root of a)^m or nth root of (a^m).",
+     "Always apply the root first in exam calculations to keep numbers small and manageable.",
+     "Example: 8^(2/3) = (cube root of 8)^2 = 2^2 = 4."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Root First Order",
+      "p": "When evaluating a^(m/n) without a calculator, always take the root (denominator) first before applying the power (numerator)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Combining Negative and Fractional Indices",
+    "p": "Grade 9 questions often combine negative signs and fractions in a single index. Tackling these requires a step-by-step methodical approach.",
+    "bullets": [
+     "Step 1: Deal with the negative sign by taking the reciprocal of the base.",
+     "Step 2: Apply the fractional denominator as a root.",
+     "Step 3: Apply the fractional numerator as a power.",
+     "Example: 27^(-2/3) = 1 / (27^(2/3)) = 1 / ((cube root of 27)^2) = 1 / (3^2) = 1/9."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Order of Operations for Mixed Indices",
+      "p": "Handle the negative index (reciprocal) first or last, but be consistent to avoid sign and fraction inversion errors."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Solving Exponential Equations",
+    "p": "Grade 9 questions require equating indices by expressing numbers as powers of the same prime base.",
+    "bullets": [
+     "If a^x = a^y, then x = y.",
+     "Express both sides of an equation with the same base (usually 2, 3, or 5).",
+     "Example: Solve 2^x = 32. Since 32 = 2^5, x = 5.",
+     "Example: 9^x = 27^(x-1). Write as (3^2)^x = (3^3)^(x-1), so 2x = 3(x-1), giving x = 3."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Common Prime Bases",
+      "p": "Memorise powers of 2 (up 2^10 = 1024), 3 (up 3^5 = 243), 4, and 5 to instantly spot common bases in equations."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Evaluating Without a Calculator",
+    "p": "AQA Paper 1 non-calculator exams frequently test index laws using standard numerical values that must be computed mentally.",
+    "bullets": [
+     "Know your squares up to 15^2, cubes up to 6^3, and fourth powers of small integers.",
+     "Break composite numbers down using prime factorization before applying fractional powers.",
+     "Example: Evaluate 16^(3/4) * 8^(-1/3). Convert to base 2: (2^4)^(3/4) * (2^3)^(-1/3) = 2^3 * 2^(-1) = 8 * (1/2) = 4."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Prime Factorisation Strategy",
+      "p": "Rewrite non-prime bases as products of prime factors with indices before applying fractional powers."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "11. Algebraic Indices and Simplification",
+    "p": "Simplifying algebraic expressions with indices tests both number rules and algebraic fluency.",
+    "bullets": [
+     "Apply rules to coefficients and variables separately.",
+     "Example: Simplify (2x^3)^4. Cube the coefficient and multiply powers: 2^4 * x^(3*4) = 16x^12.",
+     "Example: Simplify (8a^6 b^9)^(1/3). Cube root every component: 2a^2 b^3.",
+     "Ensure all negative indices are converted if specified by the command words."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Coefficient Exponent Trap",
+      "p": "When raising a term like (3x)^2 to a power, remember the coefficient 3 is also raised to that power (9x^2, not 3x^2)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "12. Exam Strategy and Common Grade 9 Pitfalls",
+    "p": "Examiners exploit misconceptions around negative bases, brackets, and fractional orders. Precision in notation secures full marks.",
+    "bullets": [
+     "Always show intermediate working when evaluating fractional and negative indices.",
+     "Check if the final answer requires positive indices only.",
+     "Verify solutions to index equations by substituting values back in.",
+     "Be meticulous with fraction bars and grouping brackets."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Final Answer Format",
+      "p": "If an exam question states 'give your answer in the form a^k', do not evaluate the number fully; leave it as an index expression."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Elevator and Magnifying Glass Analogy",
+   "p": "Think of the base number as a person standing in an elevator. A positive index tells them how many floors up to travel by multiplying. A zero index means they stay right on the ground floor (value 1). A negative index acts like a trapdoor, dropping them down into the basement (the denominator, becoming a reciprocal). A fractional index acts like a set of lenses: the denominator is a magnifying glass that shrinks the number down to its root, and the numerator is a projector that scales it back up by a power. Where this breaks down is that elevators and lenses don't change arithmetic signs or multiply base numbers in the way algebraic indices combine under addition."
+  },
+  "terms": [
+   {
+    "t": "Base",
+    "d": "The number or variable that is being multiplied by itself according to the value of the index."
+   },
+   {
+    "t": "Index",
+    "d": "The superscript number (exponent) that indicates the power to which the base is raised."
+   },
+   {
+    "t": "Reciprocal",
+    "d": "One divided by the number; formed by swapping the numerator and denominator of a fraction."
+   },
+   {
+    "t": "Zero Index Property",
+    "d": "The rule stating that any non-zero number raised to the power of zero equals 1."
+   },
+   {
+    "t": "Fractional Index",
+    "d": "An exponent expressed as a fraction, representing roots and powers combined."
+   },
+   {
+    "t": "Root",
+    "d": "A number that, when multiplied by itself a specified number of times, yields the given value."
+   },
+   {
+    "t": "Product Law",
+    "d": "The index rule stating that a^m * a^n = a^(m+n) when multiplying identical bases."
+   },
+   {
+    "t": "Quotient Law",
+    "d": "The index rule stating that a^m / a^n = a^(m-n) when dividing identical bases."
+   },
+   {
+    "t": "Power of a Power",
+    "d": "The index rule stating that (a^m)^n = a^(m*n)."
+   },
+   {
+    "t": "Standard Form",
+    "d": "A way of writing very large or small numbers as A * 10^n where 1 <= A < 10."
+   },
+   {
+    "t": "Prime Factorisation",
+    "d": "Expressing a composite number as the product of its prime numbers."
+   },
+   {
+    "t": "Rational Expression",
+    "d": "An algebraic fraction where numerator and denominator are polynomials."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Writing 2^(-3) as -8",
+    "r": "A negative index means a reciprocal, not a negative number. It is 1 / 2^3 = 1/8."
+   },
+   {
+    "w": "Evaluating 16^(1/2) as 8",
+    "r": "A fractional power of 1/2 means square root, not dividing by 2. The square root of 16 is 4."
+   },
+   {
+    "w": "Adding indices during multiplication of different bases like 2^3 * 3^2 = 6^5",
+    "r": "Index laws only apply when the base numbers are identical."
+   },
+   {
+    "w": "Ignoring the coefficient power in (2x)^3 and writing 2x^3",
+    "r": "Everything inside the bracket is cubed: 2^3 * x^3 = 8x^3."
+   },
+   {
+    "w": "Evaluating 27^(2/3) by squaring first to get 729^(1/3)",
+    "r": "Squaring first creates large numbers; take the cube root of 27 first (3), then square to get 9."
+   },
+   {
+    "w": "Treating -5^2 as (-5) * (-5) = 25",
+    "r": "Without brackets, the negative sign is applied after squaring, resulting in -25."
+   },
+   {
+    "w": "Subtracting indices incorrectly in division like x^3 / x^(-2) = x^(3-2) = x^1",
+    "r": "It is 3 - (-2) = 5, so x^5."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Evaluate 125^(-2/3) without a calculator.",
+    "marks": 3,
+    "model": [
+     "Cube root of 125 is 5",
+     "Square 5 to get 25",
+     "Apply negative index as reciprocal to get 1/25"
+    ],
+    "tip": "Always do the root (denominator) first to keep numbers small."
+   },
+   {
+    "q": "Simplify fully (3x^2 y^4)^3.",
+    "marks": 3,
+    "model": [
+     "Cube the coefficient 3 to get 27",
+     "Multiply index 2 by 3 for x to get x^6",
+     "Multiply index 4 by 3 for y to get y^12"
+    ],
+    "tip": "Remember to apply the outer power to the coefficient as well as the variables."
+   },
+   {
+    "q": "Solve the equation 3^(2x-1) = 27.",
+    "marks": 3,
+    "model": [
+     "Write 27 as 3^3",
+     "Equate indices: 2x - 1 = 3",
+     "Solve for x: 2x = 4 so x = 2"
+    ],
+    "tip": "Make the bases match on both sides before equating the powers."
+   },
+   {
+    "q": "Evaluate (16/81)^(-3/4).",
+    "marks": 4,
+    "model": [
+     "Invert fraction for negative sign: (81/16)^(3/4)",
+     "Fourth root of 81 is 3, fourth root of 16 is 2 (giving 3/2)",
+     "Cube 3 to get 27 and 2 to get 8",
+     "Final answer 27/8 or 3.375"
+    ],
+    "tip": "Deal with the negative index first by inverting the fraction."
+   },
+   {
+    "q": "Given that 5^x = 1 / 125, find the value of x.",
+    "marks": 2,
+    "model": [
+     "Recognise 125 as 5^3",
+     "Write 1 / 125 as 5^(-3)",
+     "State x = -3"
+    ],
+    "tip": "Use negative index rules to convert fractions with denominator powers into negative exponents."
+   },
+   {
+    "q": "Simplify (a^4 b^(-2))^3 / (a^2 b)^(-1).",
+    "marks": 4,
+    "model": [
+     "Numerator becomes a^12 b^(-6)",
+     "Denominator becomes a^(-2) b^(-1)",
+     "Subtract indices: 12 - (-2) = 14 for a",
+     "Subtract indices: -6 - (-1) = -5 for b",
+     "Final answer a^14 b^(-5) or a^14 / b^5"
+    ],
+    "tip": "Expand brackets using the power of a power rule before dividing."
+   },
+   {
+    "q": "Work out the value of 64^(1/3) + 32^(2/5).",
+    "marks": 4,
+    "model": [
+     "Cube root of 64 is 4",
+     "Fifth root of 32 is 2",
+     "Square 2 to get 4",
+     "Add 4 + 4 = 8"
+    ],
+    "tip": "Evaluate each term separately before combining them with addition."
+   },
+   {
+    "q": "Express 8^(2/3) * 2^(-2) in the form 2^k.",
+    "marks": 3,
+    "model": [
+     "Convert 8 to 2^3, so (2^3)^(2/3) = 2^2 = 4",
+     "Combine with 2^(-2): 2^2 * 2^(-2)",
+     "Add indices: 2 + (-2) = 0",
+     "Answer is 2^0 (or 1)"
+    ],
+    "tip": "Convert all numbers to the same prime base before applying index laws."
+   },
+   {
+    "q": "Solve 4^x = 8^(x+1).",
+    "marks": 4,
+    "model": [
+     "Express both bases as powers of 2: (2^2)^x = (2^3)^(x+1)",
+     "Simplify indices: 2^(2x) = 2^(3x+3)",
+     "Equate powers: 2x = 3x + 3",
+     "Solve for x: x = -3"
+    ],
+    "tip": "When bases can be written using a common smaller base, use that base for both sides."
+   },
+   {
+    "q": "Evaluate 9^(0) + 9^(1/2) + 9^(-1/2).",
+    "marks": 3,
+    "model": [
+     "9^0 = 1",
+     "9^(1/2) = 3",
+     "9^(-1/2) = 1/3",
+     "Sum: 1 + 3 + 1/3 = 4 and 1/3 (or 13/3)"
+    ],
+    "tip": "Evaluate zero power, fractional root, and negative reciprocal terms individually."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Evaluate (8/27)^(-2/3) without using a calculator.",
+    "steps": [
+     "Step 1: Deal with the negative sign by reciprocating the fraction. (27/8)^(2/3).",
+     "Step 2: Apply the denominator of the fractional index (cube root) to numerator and denominator. Cube root of 27 is 3, cube root of 8 is 2, giving (3/2)^2.",
+     "Step 3: Apply the numerator of the fractional index (square). 3^2 = 9 and 2^2 = 4."
+    ],
+    "ans": "9/4 (or 2.25)"
+   },
+   {
+    "q": "Simplify fully: (25x^4)^(3/2) * x^(-2).",
+    "steps": [
+     "Step 1: Apply the fractional power (3/2) to both coefficient 25 and variable x^4. (25^(1/2))^3 * x^(4 * 3/2).",
+     "Step 2: Calculate square root of 25 (5) and cube it to get 125.",
+     "Step 3: Simplify the x power: 4 * (3/2) = 6, giving 125x^6.",
+     "Step 4: Multiply by x^(-2) by adding the indices: 6 + (-2) = 4."
+    ],
+    "ans": "125x^4"
+   },
+   {
+    "q": "Given that 3^x = 9^(y+1) and 2^(2x-y) = 32, find the values of x and y.",
+    "steps": [
+     "Step 1: Rewrite first equation with base 3: 3^x = (3^2)^(y+1) -> 3^x = 3^(2y+2), so x = 2y + 2.",
+     "Step 2: Rewrite second equation with base 2: 2^(2x-y) = 2^5, so 2x - y = 5.",
+     "Step 3: Substitute x = 2y + 2 into the second equation: 2(2y + 2) - y = 5.",
+     "Step 4: Expand and solve for y: 4y + 4 - y = 5 -> 3y = 1 -> y = 1/3.",
+     "Step 5: Find x: x = 2(1/3) + 2 = 2/3 + 6/3 = 8/3."
+    ],
+    "ans": "x = 8/3, y = 1/3"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Visualising fractional indices as roots and powers. The base 8 has a cube root of 2, which is then squared to give 4.",
+    "svg": "<svg viewBox=\"0 0 400 240\">\n  <rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"12\" />\n  <rect x=\"30\" y=\"30\" width=\"340\" height=\"180\" fill=\"#dbeafe\" rx=\"8\" stroke=\"#1b2540\" stroke-width=\"1.5\" />\n  <text x=\"50\" y=\"70\" font-size=\"14\" font-weight=\"bold\" fill=\"#1b2540\">Evaluating 8^(2/3)</text>\n  <circle cx=\"80\" cy=\"130\" r=\"30\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\" />\n  <text x=\"80\" y=\"135\" font-size=\"16\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">8</text>\n  <text x=\"80\" y=\"180\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">Start Base</text>\n  <line x1=\"120\" y1=\"130\" x2=\"160\" y2=\"130\" stroke=\"#1b2540\" stroke-width=\"2\" marker-end=\"url(#arrow)\" />\n  <circle cx=\"200\" cy=\"130\" r=\"30\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\" />\n  <text x=\"200\" y=\"135\" font-size=\"16\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">2</text>\n  <text x=\"200\" y=\"180\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">Cube Root (1/3)</text>\n  <line x1=\"240\" y1=\"130\" x2=\"280\" y2=\"130\" stroke=\"#1b2540\" stroke-width=\"2\" marker-end=\"url(#arrow)\" />\n  <circle cx=\"320\" cy=\"130\" r=\"30\" fill=\"#fecaca\" stroke=\"#1b2540\" stroke-width=\"2\" />\n  <text x=\"320\" y=\"135\" font-size=\"16\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">4</text>\n  <text x=\"320\" y=\"180\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">Squared (^2)</text>\n  <defs>\n    <marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#1b2540\" />\n    </marker>\n  </defs>\n</svg>"
+   },
+   {
+    "cap": "Negative index transformation: converting a negative power into a positive fractional reciprocal.",
+    "svg": "<svg viewBox=\"0 0 400 240\">\n  <rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"12\" />\n  <rect x=\"30\" y=\"30\" width=\"340\" height=\"180\" fill=\"#fde68a\" rx=\"8\" stroke=\"#1b2540\" stroke-width=\"1.5\" />\n  <text x=\"50\" y=\"70\" font-size=\"14\" font-weight=\"bold\" fill=\"#1b2540\">Negative Index Rule: a^(-m) = 1 / a^m</text>\n  <rect x=\"60\" y=\"100\" width=\"100\" height=\"60\" fill=\"#dbeafe\" rx=\"6\" stroke=\"#1b2540\" stroke-width=\"2\" />\n  <text x=\"110\" y=\"135\" font-size=\"16\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">3^(-2)</text>\n  <line x1=\"180\" y1=\"130\" x2=\"220\" y2=\"130\" stroke=\"#1b2540\" stroke-width=\"2\" marker-end=\"url(#arrow2)\" />\n  <rect x=\"240\" y=\"100\" width=\"100\" height=\"60\" fill=\"#bbf7d0\" rx=\"6\" stroke=\"#1b2540\" stroke-width=\"2\" />\n  <text x=\"290\" y=\"135\" font-size=\"16\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">1 / 3^2</text>\n  <text x=\"290\" y=\"185\" font-size=\"13\" fill=\"#1b2540\" text-anchor=\"middle\">Evaluates to 1/9</text>\n  <defs>\n    <marker id=\"arrow2\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#1b2540\" />\n    </marker>\n  </defs>\n</svg>"
+   },
+   {
+    "cap": "Summary of Index Laws: Multiplication, Division, Power of a Power, and Zero Index.",
+    "svg": "<svg viewBox=\"0 0 400 240\">\n  <rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"12\" />\n  <rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#e9d5ff\" rx=\"8\" stroke=\"#1b2540\" stroke-width=\"1.5\" />\n  <text x=\"40\" y=\"50\" font-size=\"14\" font-weight=\"bold\" fill=\"#1b2540\">Core Index Laws Reference Sheet</text>\n  <text x=\"40\" y=\"85\" font-size=\"13\" font-weight=\"bold\" fill=\"#1b2540\">1. Multiplication: a^m * a^n = a^(m+n)</text>\n  <text x=\"40\" y=\"120\" font-size=\"13\" font-weight=\"bold\" fill=\"#1b2540\">2. Division: a^m / a^n = a^(m-n)</text>\n  <text x=\"40\" y=\"155\" font-size=\"13\" font-weight=\"bold\" fill=\"#1b2540\">3. Power of Power: (a^m)^n = a^(m*n)</text>\n  <text x=\"40\" y=\"190\" font-size=\"13\" font-weight=\"bold\" fill=\"#1b2540\">4. Zero Index: a^0 = 1 (where a != 0)</text>\n</svg>"
+   }
+  ],
+  "pid": "maths_aqa_h.0.6",
+  "sid": "maths_aqa_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-16T02:24:10.803Z"
+ },
+ "maths_aqa_h.0.12": {
+  "summary": "Mastering standard units and compound measures is crucial for top-tier success in GCSE Mathematics. This guide covers converting metric units for length, mass, capacity, and area or volume, working with time, and applying compound measure formulas like speed, density, and pressure. You will also learn to handle non-standard or compound unit conversions systematically using algebraic substitution methods.",
+  "core": [
+   {
+    "h": "Fundamental Metric Units and Prefixes",
+    "p": "The metric system is built on decimal prefixes attached to base units: metres (m) for length, grams (g) for mass, and litres (l) or cubic metres for volume.",
+    "bullets": [
+     "Kilo (k) means multiply by 1,000 (10^3).",
+     "Centi (c) means divide by 100 (10^-2).",
+     "Milli (m) means divide by 1,000 (10^-3).",
+     "Micro (μ) means divide by 1,000,000 (10^-6)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Standard Metric Prefix",
+      "p": "A prefix placed before a unit of measurement to indicate a multiple or fraction of ten."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Converting Units of Length",
+    "p": "Length conversions rely on linear scaling factors. When moving between units, multiply when going from larger to smaller units, and divide when going from smaller to larger units.",
+    "bullets": [
+     "1 kilometre (km) = 1,000 metres (m).",
+     "1 metre (m) = 100 centimetres (cm).",
+     "1 centimetre (cm) = 10 millimetres (mm).",
+     "To convert mm to km, divide by 1,000 then divide by 100 then divide by 1,000."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Chain Conversions",
+      "p": "Write out individual conversion factors as fractions and multiply them out to prevent scale errors."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Visual breakdown of metric length conversions showing the multipliers between mm, cm, m, and km.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" /><rect x=\"30\" y=\"90\" width=\"60\" height=\"60\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#2563eb\" /><text x=\"60\" y=\"125\" text-anchor=\"middle\" font-size=\"14\" fill=\"#1e3a8a\">mm</text><line x1=\"90\" y1=\"120\" x2=\"130\" y2=\"120\" stroke=\"#475569\" stroke-width=\"2\" marker-end=\"url(#arrow)\" /><text x=\"110\" y=\"110\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\">÷10</text><rect x=\"130\" y=\"90\" width=\"60\" height=\"60\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#2563eb\" /><text x=\"160\" y=\"125\" text-anchor=\"middle\" font-size=\"14\" fill=\"#1e3a8a\">cm</text><line x1=\"190\" y1=\"120\" x2=\"230\" y2=\"120\" stroke=\"#475569\" stroke-width=\"2\" marker-end=\"url(#arrow)\" /><text x=\"210\" y=\"110\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\">÷100</text><rect x=\"230\" y=\"90\" width=\"60\" height=\"60\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#2563eb\" /><text x=\"260\" y=\"125\" text-anchor=\"middle\" font-size=\"14\" fill=\"#1e3a8a\">m</text><line x1=\"290\" y1=\"120\" x2=\"330\" y2=\"120\" stroke=\"#475569\" stroke-width=\"2\" marker-end=\"url(#arrow)\" /><text x=\"310\" y=\"110\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\">÷1000</text><rect x=\"330\" y=\"90\" width=\"60\" height=\"60\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#2563eb\" /><text x=\"360\" y=\"125\" text-anchor=\"middle\" font-size=\"14\" fill=\"#1e3a8a\">km</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Converting Units of Mass and Capacity",
+    "p": "Mass measures the amount of matter in an object, while capacity measures internal volume. Both scale by powers of 1,000 for standard SI base units.",
+    "bullets": [
+     "1 kilogram (kg) = 1,000 grams (g).",
+     "1 tonne = 1,000 kilograms (kg).",
+     "1 litre (l) = 1,000 millilitres (ml).",
+     "1 litre (l) = 1,000 cubic centimetres (cm^3)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Capacity Equivalence",
+      "p": "Remember that 1 cm^3 is exactly equal to 1 millilitre (ml), which bridges volume and capacity."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Area and Volume Unit Conversions",
+    "p": "When converting units of area or volume, you must square or cube the linear conversion factor. A common error is multiplying by the linear factor instead.",
+    "bullets": [
+     "To convert cm^2 to m^2, divide by 100^2 = 10,000.",
+     "To convert mm^2 to cm^2, divide by 10^2 = 100.",
+     "To convert m^3 to cm^3, multiply by 100^3 = 1,000,000.",
+     "To convert cm^3 to m^3, divide by 1,000,000."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Area/Volume Trap",
+      "p": "Do not just multiply by 100 when converting cm^2 to m^2. Scale the factor itself: (100 cm)^2 = 10,000 cm^2 = 1 m^2."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Time Conversions and Calculations",
+    "p": "Time is non-decimal, operating on base 60 for hours and minutes, base 24 for days, and base 365 for years. Calculations involving intervals require careful addition and subtraction.",
+    "bullets": [
+     "1 minute = 60 seconds; 1 hour = 60 minutes = 3,600 seconds.",
+     "1 day = 24 hours; 1 week = 7 days.",
+     "To convert minutes to hours, divide by 60. To convert hours to minutes, multiply by 60.",
+     "Decimal hours (e.g., 2.5 hours) mean 2 hours and 30 minutes, NOT 2 hours and 50 minutes."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Decimal Time Error",
+      "p": "0.5 hours is 30 minutes, because 0.5 x 60 = 30. Never write 2.3 hours to mean 2 hours 3 minutes."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Money and Foreign Exchange",
+    "p": "Money calculations involve standard decimal currency conversions and unitary method applications for exchange rates.",
+    "bullets": [
+     "Always give monetary answers to 2 decimal places (pennies).",
+     "When converting currency: Foreign Amount = GBP x Exchange Rate.",
+     "When converting back to GBP: GBP = Foreign Amount ÷ Exchange Rate.",
+     "Watch out for bank commission fees added to exchange transactions in word problems."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Exchange Rate Setup",
+      "p": "Set up a clear proportion: £1 = Rate Foreign Currency, then scale up or down using division or multiplication."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Compound Measures: Speed, Distance, Time",
+    "p": "Speed is a compound measure relating distance travelled to the time taken. The standard formula is Speed = Distance ÷ Time.",
+    "bullets": [
+     "Units are typically metres per second (m/s) or kilometres per hour (km/h).",
+     "Distance = Speed × Time.",
+     "Time = Distance ÷ Speed.",
+     "Ensure all units are consistent (e.g., if speed is in km/h, distance must be in km and time in hours)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Speed Formula Triangle",
+      "p": "A visual aid where Distance is at the top, and Speed and Time are at the bottom multiplied together."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Formula triangle for Speed, Distance, and Time showing correct placement of variables.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" /><polygon points=\"200,40 100,180 300,180\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"3\" /><line x1=\"100\" y1=\"110\" x2=\"300\" y2=\"110\" stroke=\"#d97706\" stroke-width=\"2\" /><line x1=\"200\" y1=\"110\" x2=\"200\" y2=\"180\" stroke=\"#d97706\" stroke-width=\"2\" /><text x=\"200\" y=\"85\" text-anchor=\"middle\" font-size=\"16\" fill=\"#78350f\">Distance</text><text x=\"150\" y=\"155\" text-anchor=\"middle\" font-size=\"16\" fill=\"#78350f\">Speed</text><text x=\"250\" y=\"155\" text-anchor=\"middle\" font-size=\"16\" fill=\"#78350f\">Time</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Compound Measures: Density, Mass, Volume",
+    "p": "Density measures how tightly packed matter is within a given space. The formula is Density = Mass ÷ Volume.",
+    "bullets": [
+     "Standard units include kg/m^3, g/cm^3, or kg/litre.",
+     "Mass = Density × Volume.",
+     "Volume = Mass ÷ Density.",
+     "Always check whether volume needs to be calculated first using geometry formulas (e.g., volume of a cylinder or sphere)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Density Formula Triangle",
+      "p": "Mass sits at the top of the triangle, with Density and Volume at the bottom."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Compound Measures: Pressure, Force, Area",
+    "p": "Pressure is the physical force applied per unit of surface area. The formula is Pressure = Force ÷ Area.",
+    "bullets": [
+     "Standard units are Pascals (Pa), where 1 Pa = 1 N/m^2, or N/cm^2.",
+     "Force = Pressure × Area.",
+     "Area = Force ÷ Pressure.",
+     "Ensure force is in Newtons (N) and area is in m^2 when calculating pressure in Pascals."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Pressure Definition",
+      "p": "The continuous physical force exerted on or against an object by something in contact with it, divided by the area of contact."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Algebraic Substitution in Compound Measures",
+    "p": "Higher tier questions often require setting up equations or substituting algebraic expressions into compound measure formulas.",
+    "bullets": [
+     "Substitute algebraic terms directly into standard formulas without panicking.",
+     "Rearrange formulas before substituting values if it makes isolating the target variable easier.",
+     "Check dimensional consistency across all terms in complex multi-step problems."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Rearranging First",
+      "p": "Make the unknown the subject of the formula algebraically before plugging in messy decimal values."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Compound Unit Conversions (e.g., km/h to m/s)",
+    "p": "To convert rates with compound units like speed or density, substitute conversion factors for each individual unit step by step.",
+    "bullets": [
+     "To convert km/h to m/s, multiply by 1,000 (meters per km) and divide by 3,600 (seconds per hour). This simplifies to dividing by 3.6.",
+     "To convert g/cm^3 to kg/m^3, multiply by 1,000.",
+     "Always write out replacement fractions explicitly to avoid upside-down division errors."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Compound Conversion Trap",
+      "p": "Never guess whether to multiply or divide by 3.6. Replace km with 1,000m and h with 3,600s to derive it."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Step-by-step unit replacement method for converting compound units like kilometres per hour to metres per second.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" /><rect x=\"30\" y=\"40\" width=\"340\" height=\"40\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#2563eb\" /><text x=\"50\" y=\"65\" font-size=\"13\" fill=\"#1e3a8a\">72 km/h = 72 × (1,000 m) ÷ (3,600 s)</text><rect x=\"30\" y=\"100\" width=\"340\" height=\"40\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#2563eb\" /><text x=\"50\" y=\"125\" font-size=\"13\" fill=\"#1e3a8a\">= 72,000 m ÷ 3,600 s</text><rect x=\"30\" y=\"160\" width=\"340\" height=\"40\" rx=\"6\" fill=\"#dcc8f8\" stroke=\"#7c3aed\" /><text x=\"50\" y=\"185\" font-size=\"13\" fill=\"#4c1d95\">= 20 m/s (divide original by 3.6)</text></svg>"
+     }
+    ]
+   }
+  ],
+  "analogy": {
+   "t": "The Recipe Scaling Analogy",
+   "p": "Converting compound units is like scaling a recipe ingredient from grams to kilograms while adjusting for serving size. Just as you cannot swap grams for kilograms without multiplying by 1,000, you cannot change speed from km/h to m/s without adjusting both the distance unit and the time unit simultaneously. Where the analogy breaks down is that recipes often allow rough estimates, whereas exam questions require exact proportional scaling factors."
+  },
+  "terms": [
+   {
+    "t": "Compound Measure",
+    "d": "A measurement calculated by combining two or more base units, such as speed, density, or pressure."
+   },
+   {
+    "t": "Density",
+    "d": "A compound measure representing mass per unit volume, calculated as mass divided by volume."
+   },
+   {
+    "t": "Pressure",
+    "d": "The force applied per unit perpendicular area, measured in Pascals (N/m^2)."
+   },
+   {
+    "t": "Speed",
+    "d": "The rate of change of distance with respect to time."
+   },
+   {
+    "t": "Unitary Method",
+    "d": "A method of solving problems by first finding the value of a single unit."
+   },
+   {
+    "t": "SI Units",
+    "d": "The international standard system of units used for science and mathematics (metres, kilograms, seconds, etc.)."
+   },
+   {
+    "t": "Capacity",
+    "d": "The maximum amount that something can contain, typically measured in litres or cubic units."
+   },
+   {
+    "t": "Mass",
+    "d": "A measure of the quantity of matter in an object, independent of gravity, measured in grams or kilograms."
+   },
+   {
+    "t": "Pascal",
+    "d": "The standard SI unit of pressure, equivalent to one Newton per square metre."
+   },
+   {
+    "t": "Exchange Rate",
+    "d": "The value of one currency for the purpose of conversion to another."
+   },
+   {
+    "t": "Conversion Factor",
+    "d": "A numerical multiplier used to express a given measurement in a different unit."
+   },
+   {
+    "t": "Dimensional Consistency",
+    "d": "Ensuring that all terms in an equation or formula share equivalent dimensional units."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Multiplying by 100 when converting square centimetres to square metres.",
+    "r": "Divide by 10,000 (100^2), because area scales quadratically."
+   },
+   {
+    "w": "Writing 3 hours 45 minutes as 3.45 hours.",
+    "r": "Write 3.75 hours, since 45 minutes is 45/60 = 0.75 of an hour."
+   },
+   {
+    "w": "Multiplying speed by time when asked to find time.",
+    "r": "Time equals distance divided by speed (T = D / S). Use the formula triangle."
+   },
+   {
+    "w": "Forgetting to convert units before substituting into compound measure formulas.",
+    "r": "Ensure all lengths are in the same unit (e.g., all metres) before calculating area or volume."
+   },
+   {
+    "w": "Dividing by 3.6 when converting m/s to km/h.",
+    "r": "Multiply by 3.6 when going from m/s to km/h, because m/s values are smaller numbers."
+   },
+   {
+    "w": "Confusing mass and weight in density calculations.",
+    "r": "Mass is measured in kg or g; weight is a force measured in Newtons."
+   },
+   {
+    "w": "Using volume in ml directly with density in kg/m^3 without proper conversion.",
+    "r": "Convert units into a consistent system (e.g., g and cm^3, or kg and m^3) first."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A car travels 180 km in 2 hours 30 minutes. Calculate the average speed of the car in km/h.",
+    "marks": 3,
+    "model": [
+     "Convert time to decimal hours: 2.5 hours",
+     "Use formula Speed = Distance ÷ Time",
+     "180 ÷ 2.5 = 72 km/h"
+    ],
+    "tip": "Always convert time into decimal hours before dividing by distance."
+   },
+   {
+    "s": null,
+    "q": "Convert an acceleration of 1,200 cm/min^2 into m/s^2. Give your answer in standard form.",
+    "marks": 4,
+    "model": [
+     "Convert cm to m: divide by 100 to get 12 m/min^2",
+     "Convert minutes squared to seconds squared: 1 minute = 60 seconds, so 1 min^2 = 3,600 s^2",
+     "Divide 12 by 3,600 to get m/s^2",
+     "Result is 1/300 = 3.33 x 10^-3 m/s^2"
+    ],
+    "tip": "Handle numerator and denominator unit conversions separately for compound rates."
+   },
+   {
+    "s": null,
+    "q": "A solid metal cylinder has a mass of 450 g and a density of 9 g/cm^3. Calculate the volume of the cylinder.",
+    "marks": 2,
+    "model": [
+     "State formula Volume = Mass ÷ Density",
+     "450 ÷ 9 = 50 cm^3"
+    ],
+    "tip": "Check that mass and density units match before dividing."
+   },
+   {
+    "s": null,
+    "q": "The pressure exerted by a box on the floor is 40 Pa. The area of contact is 0.5 m^2. Calculate the force exerted by the box in Newtons.",
+    "marks": 2,
+    "model": [
+     "State formula Force = Pressure × Area",
+     "40 × 0.5 = 20 N"
+    ],
+    "tip": "Ensure area is in m^2 and pressure is in Pascals."
+   },
+   {
+    "s": null,
+    "q": "Change a speed of 25 m/s into km/h.",
+    "marks": 2,
+    "model": [
+     "Multiply by 3.6",
+     "25 × 3.6 = 90 km/h"
+    ],
+    "tip": "Remember: m/s to km/h is multiply by 3.6; km/h to m/s is divide by 3.6."
+   },
+   {
+    "s": null,
+    "q": "A container holds 3.5 litres of water. Water leaks out at a rate of 15 cm^3 per second. How long does it take for the container to empty completely? Give your answer in seconds.",
+    "marks": 3,
+    "model": [
+     "Convert litres to cm^3: 3.5 l = 3,500 cm^3",
+     "State formula Time = Volume ÷ Rate",
+     "3,500 ÷ 15 = 233.3 seconds (or 233 1/3 s)"
+    ],
+    "tip": "1 litre = 1,000 cm^3, which equals 1,000 ml."
+   },
+   {
+    "s": null,
+    "q": "A block of lead has dimensions 5 cm by 10 cm by 20 cm. The density of lead is 11.34 g/cm^3. Calculate the mass of the block in kilograms.",
+    "marks": 4,
+    "model": [
+     "Calculate volume: 5 × 10 × 20 = 1,000 cm^3",
+     "Calculate mass: 1,000 × 11.34 = 11,340 g",
+     "Convert grams to kilograms: divide by 1,000",
+     "Mass = 11.34 kg"
+    ],
+    "tip": "Always read the required final unit carefully (kg vs g)."
+   },
+   {
+    "s": null,
+    "q": "A runner completes a 400-metre race in 50 seconds. Work out their average speed in km/h.",
+    "marks": 4,
+    "model": [
+     "Speed in m/s = 400 ÷ 50 = 8 m/s",
+     "Convert m/s to km/h by multiplying by 3.6",
+     "8 × 3.6 = 28.8 km/h"
+    ],
+    "tip": "Converting m/s to km/h via 3.6 saves time on speed conversion questions."
+   },
+   {
+    "s": null,
+    "q": "A metal cube has a density of 7.8 g/cm^3 and a mass of 1.95 kg. Work out the length of one side of the cube in cm.",
+    "marks": 4,
+    "model": [
+     "Convert mass to grams: 1.95 kg = 1,950 g",
+     "Calculate volume: Volume = Mass ÷ Density = 1,950 ÷ 7.8 = 250 cm^3",
+     "Since it is a cube, side length s satisfies s^3 = 250",
+     "s = cubic root of 250 = 6.30 cm (3 sf)"
+    ],
+    "tip": "Cube root the volume to find side lengths of 3D cubes."
+   },
+   {
+    "s": null,
+    "q": "Water flows through a pipe at a rate of 2 litres per minute. How many cubic metres of water flow through the pipe in 3 hours?",
+    "marks": 4,
+    "model": [
+     "Convert time to minutes: 3 hours = 180 minutes",
+     "Total volume in litres = 2 × 180 = 360 litres",
+     "Convert litres to cm^3: 360,000 cm^3",
+     "Convert cm^3 to m^3: divide by 1,000,000 to get 0.36 m^3"
+    ],
+    "tip": "Keep track of multiple unit conversions by breaking them down into stages."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Convert 72 km/h into metres per second (m/s).",
+    "steps": [
+     "Identify the conversion factors: 1 km = 1,000 m, and 1 hour = 3,600 s.",
+     "Set up the expression: 72 × (1,000 / 3,600).",
+     "Simplify the fraction: 1,000 / 3,600 = 1 / 3.6, or divide 72 by 3.6 directly.",
+     "Calculate final value: 72 ÷ 3.6 = 20."
+    ],
+    "ans": "20 m/s"
+   },
+   {
+    "q": "A solid cylinder has a radius of 4 cm and a height of 10 cm. The cylinder is made of material with a density of 5 g/cm^3. Calculate the mass of the cylinder in kilograms. Give your answer to 3 significant figures.",
+    "steps": [
+     "Calculate the volume of the cylinder using V = pi × r^2 × h. V = pi × 4^2 × 10 = 160pi cm^3 ≈ 502.65 cm^3.",
+     "Calculate the mass in grams using Mass = Density × Volume. Mass = 5 × 160pi = 800pi g ≈ 2,513.27 g.",
+     "Convert grams to kilograms by dividing by 1,000. Mass = 2.51327 kg.",
+     "Round to 3 significant figures."
+    ],
+    "ans": "2.51 kg"
+   },
+   {
+    "q": "A pressure of 120 kPa is exerted on a surface. The force applied is 6 kN. Calculate the area of the surface in square centimetres (cm^2).",
+    "steps": [
+     "Convert Pascals/kPa and kN into base units: 120 kPa = 120,000 N/m^2 (or Pascals), and 6 kN = 6,000 N.",
+     "Use the formula Area = Force ÷ Pressure. Area = 6,000 ÷ 120,000 = 0.05 m^2.",
+     "Convert area from m^2 to cm^2 by multiplying by 10,000 (since 1 m^2 = 10,000 cm^2).",
+     "Calculate final area in cm^2: 0.05 × 10,000 = 500 cm^2."
+    ],
+    "ans": "500 cm^2"
+   }
+  ],
+  "svg": [],
+  "pid": "maths_aqa_h.0.12",
+  "sid": "maths_aqa_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-16T02:25:08.741Z"
+ },
+ "maths_aqa_h.0.15": {
+  "summary": "Mastering limits of accuracy and upper and lower bounds is a crucial Grade 9 topic in AQA GCSE Mathematics. This guide covers how to find bounds for rounded values, calculate bounds for combined operations (addition, subtraction, multiplication, division), and apply them to complex multi-step geometric and algebraic problem solving.",
+  "core": [
+   {
+    "h": "1. Fundamental Principles of Bounds",
+    "p": "Whenever a measurement is rounded, precise information is lost, creating an interval of uncertainty. Understanding how to establish the maximum and minimum possible values before rounding is the foundation of working with limits of accuracy.",
+    "bullets": [
+     "Every rounded measurement has an upper bound and a lower bound.",
+     "The lower bound is the smallest value that would round UP to the given measurement.",
+     "The upper bound is the smallest value that would round DOWN to the next possible measurement (often expressed using recurring 9s or inequality notation).",
+     "Degree of accuracy dictates the size of the error interval: half a unit below and half a unit above."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Lower Bound",
+      "p": "The minimum possible value of a rounded number before it was rounded."
+     },
+     {
+      "k": "key",
+      "t": "The Plus/Minus Rule",
+      "p": "Bounds are calculated by finding half of the unit of accuracy, then adding it for the upper bound and subtracting it for the lower bound."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. Finding Bounds for Decimal and Integer Values",
+    "p": "The precision of the measuring instrument dictates the place value of the last significant digit given. For numbers rounded to the nearest whole number, integer, tenth, or hundredth, the error interval uses 0.5 of that place value.",
+    "bullets": [
+     "For a number rounded to the nearest whole number (unit 1), the error interval is plus or minus 0.5.",
+     "For a number rounded to the nearest 10, the unit of accuracy is 10, so bounds use plus or minus 5.",
+     "For a number rounded to two decimal places (0.01), the unit of accuracy is 0.01, so bounds use plus or minus 0.005.",
+     "Always check the context of the question to determine if numbers are discrete (integers only) or continuous (decimals allowed)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Writing Upper Bounds",
+      "p": "An upper bound like 3.5 can technically be written as 3.49 recurring (3.499...) in standard notation, but examiners accept 3.5 provided the inequality uses a strict less than (<) symbol."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Visualising the interval of accuracy on a number line for a value of 24 rounded to the nearest whole number.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"120\" x2=\"350\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"3\"/><circle cx=\"50\" cy=\"120\" r=\"6\" fill=\"#3b82f6\"/><circle cx=\"200\" cy=\"120\" r=\"8\" fill=\"#ef4444\"/><circle cx=\"350\" cy=\"120\" r=\"6\" fill=\"#3b82f6\"/><text x=\"40\" y=\"150\" font-size=\"12\" fill=\"#1b2540\">23.5 (LB)</text><text x=\"185\" y=\"90\" font-size=\"12\" fill=\"#1b2540\">24 (Value)</text><text x=\"330\" y=\"150\" font-size=\"12\" fill=\"#1b2540\">24.5 (UB)</text><line x1=\"200\" y1=\"100\" x2=\"200\" y2=\"140\" stroke=\"#ef4444\" stroke-width=\"2\" stroke-dasharray=\"4\"/></svg>"
+     }
+    ]
+   },
+   {
+    "h": "3. Inequality Notation for Bounds",
+    "p": "Examiners frequently require answers to be expressed using formal inequality notation. The lower bound uses a less than or equal to symbol, while the upper bound strictly uses a less than symbol to avoid logical paradoxes.",
+    "bullets": [
+     "Let x be the true value of a measurement.",
+     "Lower bound <= x < upper bound.",
+     "Never use <= for the upper bound when dealing with continuous decimals because numbers like 3.4999... approach the upper limit infinitely without reaching it.",
+     "Ensure variable names match those given in the examination question."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Inequality Trap",
+      "p": "Writing 23.5 <= x <= 24.5 is penalised in exams because a value cannot be equal to 24.5 if it rounds down to 24."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Bounds for Addition",
+    "p": "When adding two or more measurements together, the rules of logic dictate that to find the maximum possible total, you must add the upper bounds. To find the minimum possible total, you must add the lower bounds.",
+    "bullets": [
+     "Maximum Value = Upper Bound A + Upper Bound B",
+     "Minimum Value = Lower Bound A + Lower Bound B",
+     "Addition is straightforward because errors accumulate directly in the same direction.",
+     "Always write down the intermediate bounds of each variable before performing the calculation."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Combining Bounds Principle",
+      "p": "To maximise a sum, maximise all components. To minimise a sum, minimise all components."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "5. Bounds for Subtraction",
+    "p": "Subtraction requires careful attention because subtracting a larger number makes a result smaller, and subtracting a smaller number makes a result larger. This creates an inverse relationship for the second term.",
+    "bullets": [
+     "Maximum Difference = Upper Bound A - Lower Bound B (Largest possible start minus smallest possible take-away)",
+     "Minimum Difference = Lower Bound A - Upper Bound B (Smallest possible start minus largest possible take-away)",
+     "Never subtract upper bound from upper bound for subtraction operations.",
+     "Visualise a scale or physical balance to verify your direction of subtraction."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "The Subtraction Trap",
+      "p": "Doing Upper Bound A minus Upper Bound B is the single most common mistake on bounds subtraction questions."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Bounds for Multiplication",
+    "p": "To find the maximum possible product of two measured values, multiply their upper bounds together. To find the minimum possible product, multiply their lower bounds together, provided all numbers are strictly positive.",
+    "bullets": [
+     "Maximum Product = Upper Bound A * Upper Bound B",
+     "Minimum Product = Lower Bound A * Lower Bound B",
+     "Applies directly to area calculations (length times width).",
+     "Ensure no negative numbers are involved before using this direct multiplication rule."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Product Rule for Bounds",
+      "p": "Max product = UB(a) x UB(b); Min product = LB(a) x LB(b) for positive domains."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Visual area representation showing how upper bounds create the maximum possible rectangular area.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><rect x=\"80\" y=\"50\" width=\"240\" height=\"140\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"180\" y=\"40\" font-size=\"12\" fill=\"#1b2540\">Upper Bound Length</text><text x=\"15\" y=\"125\" font-size=\"12\" fill=\"#1b2540\" transform=\"rotate(-90 15 125)\">Upper Bound Width</text><text x=\"150\" y=\"125\" font-size=\"14\" font-weight=\"bold\" fill=\"#1b2540\">Max Area = UB L x UB W</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "7. Bounds for Division",
+    "p": "Division combines the properties of fractions and subtraction. To maximise a fraction, you must make the numerator as large as possible and the denominator as small as possible.",
+    "bullets": [
+     "Maximum Value = Upper Bound Numerator / Lower Bound Denominator",
+     "Minimum Value = Lower Bound Numerator / Upper Bound Denominator",
+     "Crucial for calculating maximum speed (Distance / Min Time) or density (Max Mass / Min Volume).",
+     "Always double-check denominator bounds as dividing by a lower bound increases the overall quotient."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Maximising Fractions",
+      "p": "Max = Top heavy (Max top, Min bottom). Min = Light top (Min top, Max bottom)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Compound Measures and Bounds",
+    "p": "Real-life contexts often combine multiple operations through compound formulas like Speed = Distance / Time or Density = Mass / Volume. Grade 9 questions require setting up the algebraic expression before substituting bounds.",
+    "bullets": [
+     "Identify the formula linking the variables. Rearrange the formula if necessary before substituting.",
+     "Substitute upper and lower bounds based on whether the variable is in the numerator or denominator.",
+     "Pay close attention to units of measurement; convert units before finding bounds if required.",
+     "State final answers to the appropriate degree of accuracy requested by the examiner."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Formula Rearrangement",
+      "p": "If asked for minimum time given distance and speed, rearrange to Time = Distance / Speed, then use Min Distance / Max Speed."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Bounds with Powers and Roots",
+    "p": "When a variable is squared, cubed, or rooted, you must treat the operation as multiplying the variable by itself or apply the power/root directly to the upper and lower bounds of the base number.",
+    "bullets": [
+     "For a positive number x, the upper bound of x squared is simply the square of the upper bound of x.",
+     "Similarly, the lower bound of x cubed is the cube of the lower bound of x.",
+     "For square roots, take the square root of the upper bound for the upper limit, and the square root of the lower bound for the lower limit.",
+     "Always ensure the domain contains strictly positive numbers when raising to fractional or negative powers."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Power Trap",
+      "p": "Do not calculate bounds of x, then square both bounds independently without considering the arithmetic properties of negative numbers if negatives are permitted."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Multi-Step Algebraic Bounds Problems",
+    "p": "Grade 9 questions often involve substituting bounds into algebraic fractions, equations, or geometric formulae involving circles, cylinders, and cones where pi is involved.",
+    "bullets": [
+     "Substitute bounds into expressions step by step using brackets to avoid sign errors.",
+     "For expressions with repeated variables (like x squared minus x), substitute bounds with extreme care or evaluate function behavior across the interval.",
+     "Calculate upper and lower bounds of compound shapes by splitting them into simpler geometric components.",
+     "Keep full calculator accuracy during intermediate steps and round only at the final stage."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Repeated Variable Rule",
+      "p": "If a variable appears more than once in an algebraic expression, evaluate the expression at the bounds of the variables or test extreme corners."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Geometric container problem showing radius and height bounds for calculating maximum volume.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><ellipse cx=\"200\" cy=\"70\" rx=\"80\" ry=\"30\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"120\" y=\"70\" width=\"160\" height=\"120\" fill=\"#dbeafe\" opacity=\"0.6\" stroke=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"120\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"280\" y1=\"70\" x2=\"280\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\"/><ellipse cx=\"200\" cy=\"190\" rx=\"80\" ry=\"30\" fill=\"#bfdbfe\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"200\" y1=\"70\" x2=\"280\" y2=\"70\" stroke=\"#ef4444\" stroke-width=\"2\"/><text x=\"225\" y=\"60\" font-size=\"12\" fill=\"#ef4444\">Radius (r)</text><text x=\"130\" y=\"135\" font-size=\"12\" fill=\"#1b2540\">Height (h)</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "11. Truncation and Error Intervals",
+    "p": "Truncation involves chopping off digits past a certain place value without rounding up. This changes the lower and upper bounds because truncated values always round down in magnitude.",
+    "bullets": [
+     "A number truncated to 1 decimal place like 4.7 means all true values lie between 4.7 and 4.8.",
+     "Lower bound for a truncated number equals the truncated number itself.",
+     "Upper bound equals the truncated number plus the place value unit.",
+     "Always read questions carefully to distinguish between rounding and truncation."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Truncation Difference",
+      "p": "Unlike rounding where bounds are plus or minus half a unit, truncation bounds are from the number itself up to one full unit higher."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Archery Target Analogy",
+   "p": "Imagine throwing darts at a target where the score given is rounded to the nearest ring. If a player scores 50 points rounded to the nearest 10, they could have hit anywhere between 45 and 55. When combining scores, finding your absolute best possible score means assuming every dart hit the outer edge of its positive error margin (upper bounds), just like climbing the highest possible mountain peak by summing all maximum altitude increments."
+  },
+  "terms": [
+   {
+    "t": "Upper Bound",
+    "d": "The maximum possible value before a number was rounded or truncated."
+   },
+   {
+    "t": "Lower Bound",
+    "d": "The minimum possible value before a number was rounded or truncated."
+   },
+   {
+    "t": "Degree of Accuracy",
+    "d": "The unit to which a value has been rounded (e.g. nearest whole number, 1 decimal place, significant figures)."
+   },
+   {
+    "t": "Error Interval",
+    "d": "The range of values within which the true measurement must lie, expressed as an inequality."
+   },
+   {
+    "t": "Truncation",
+    "d": "The process of cutting off digits of a number at a specified place value without rounding."
+   },
+   {
+    "t": "Compound Measure",
+    "d": "A measurement calculated from two or more other measurements, such as speed, density, or pressure."
+   },
+   {
+    "t": "Significant Figures",
+    "d": "Digits that carry meaning contributing to the precision of a number, starting from the first non-zero digit."
+   },
+   {
+    "t": "Discrete Data",
+    "d": "Values that can only take specific separate values, such as counts of whole objects."
+   },
+   {
+    "t": "Continuous Data",
+    "d": "Values that can take any numerical value within a continuous range, such as length, mass, or time."
+   },
+   {
+    "t": "Quotient",
+    "d": "The result obtained by dividing one quantity by another."
+   },
+   {
+    "t": "Interval",
+    "d": "A range of values between two specified limits."
+   },
+   {
+    "t": "Strict Inequality",
+    "d": "An inequality using less than (<) or greater than (>) symbols without equality."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Writing 24.5 <= x <= 25.5 for the bounds of 25 rounded to the nearest whole number.",
+    "r": "The upper bound must be strictly less than 25.5, written as 24.5 <= x < 25.5."
+   },
+   {
+    "w": "Calculating minimum subtraction by subtracting upper bounds: Upper A minus Upper B.",
+    "r": "To minimise a subtraction, subtract the largest possible value being taken away: Upper A minus Lower B."
+   },
+   {
+    "w": "Using direct multiplication rules when negative numbers are involved in bounds calculations.",
+    "r": "Bounds rules for multiplication and division assume all numbers are strictly positive; evaluate extreme corners for negatives."
+   },
+   {
+    "w": "Rounding intermediate values during multi-step bounds calculations.",
+    "r": "Keep full calculator precision for all intermediate steps and only round your final answer."
+   },
+   {
+    "w": "Forgetting to divide the unit of accuracy by 2 when finding bounds for rounded numbers.",
+    "r": "Always divide the place value unit by 2 to get the plus/minus margin."
+   },
+   {
+    "w": "Treating truncated numbers with plus or minus half a unit error margins.",
+    "r": "Truncation intervals start at the exact truncated value up to one full unit higher."
+   },
+   {
+    "w": "Failing to rearrange compound formulas before substituting upper and lower bounds.",
+    "r": "Always isolate the target variable algebraically first before substituting bounds into denominators."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A number x is rounded to 1 decimal place as 7.4. Write down the error interval for x using inequality notation.",
+    "marks": 2,
+    "model": [
+     "7.35 <= x",
+     "x < 7.45"
+    ],
+    "tip": "Divide the unit of accuracy (0.1) by 2 to get 0.05, then subtract and add to 7.4."
+   },
+   {
+    "q": "The length of a rectangle is 12 cm correct to the nearest centimetre. The width is 5 cm correct to the nearest centimetre. Calculate the upper bound for the perimeter of the rectangle.",
+    "marks": 3,
+    "model": [
+     "Length bounds: 11.5 <= L < 12.5",
+     "Width bounds: 4.5 <= W < 5.5",
+     "Perimeter upper bound = 2 * (12.5 + 5.5) = 36 cm"
+    ],
+    "tip": "Find upper bounds for both dimensions and substitute into the perimeter formula 2(L + W)."
+   },
+   {
+    "q": "Mass = 45 kg correct to the nearest kg. Volume = 9 cubic metres correct to the nearest cubic metre. Work out the upper bound for the density. Give your answer to 2 decimal places.",
+    "marks": 4,
+    "model": [
+     "Mass upper bound = 45.5",
+     "Volume lower bound = 8.5",
+     "Density upper bound = 45.5 / 8.5",
+     "5.35 kg/m^3"
+    ],
+    "tip": "To maximise density (Mass / Volume), use Max Mass divided by Min Volume."
+   },
+   {
+    "q": "A field is in the shape of a rectangle. Length = 80 m correct to the nearest 10 m. Width = 50 m correct to the nearest 10 m. Calculate the difference between the upper bound and lower bound of the area of the field.",
+    "marks": 4,
+    "model": [
+     "Length bounds: 75 <= L < 85, Width bounds: 45 <= W < 55",
+     "Upper bound area = 85 * 55 = 4675",
+     "Lower bound area = 75 * 45 = 3375",
+     "Difference = 4675 - 3375 = 1300 m^2"
+    ],
+    "tip": "Calculate max area and min area separately, then subtract the two results."
+   },
+   {
+    "q": "x = 15 correct to the nearest whole number. y = 4 correct to the nearest integer. Calculate the lower bound of x / y.",
+    "marks": 3,
+    "model": [
+     "Lower bound x = 14.5",
+     "Upper bound y = 4.5",
+     "14.5 / 4.5",
+     "3.22 (to 2 dp)"
+    ],
+    "tip": "To minimise a fraction, use Min Numerator / Max Denominator."
+   },
+   {
+    "q": "The velocity v of an object is 20 m/s correct to 1 significant figure. Calculate the lower bound for v squared.",
+    "marks": 2,
+    "model": [
+     "Lower bound v = 15",
+     "15^2 = 225"
+    ],
+    "tip": "Find the lower bound of the base number first, then square it."
+   },
+   {
+    "q": "A cylinder has radius r = 6 cm correct to the nearest cm, and height h = 10 cm correct to the nearest cm. Calculate the upper bound for the volume of the cylinder in terms of pi.",
+    "marks": 4,
+    "model": [
+     "Radius upper bound = 6.5",
+     "Height upper bound = 10.5",
+     "Volume = pi * r^2 * h = pi * (6.5)^2 * 10.5",
+     "443.625 pi cm^3"
+    ],
+    "tip": "Substitute upper bounds for both radius and height into V = pi r^2 h."
+   },
+   {
+    "q": "A number m is truncated to 2 decimal places as 3.84. Write down the error interval for m.",
+    "marks": 2,
+    "model": [
+     "3.84 <= m",
+     "m < 3.85"
+    ],
+    "tip": "Remember truncation means numbers are cut off, so the lower bound is the number itself."
+   },
+   {
+    "q": "P = 2a + 3b. a = 8 correct to the nearest whole number. b = 5 correct to the nearest whole number. Work out the minimum possible value of P.",
+    "marks": 3,
+    "model": [
+     "Lower bound a = 7.5",
+     "Lower bound b = 4.5",
+     "Min P = 2(7.5) + 3(4.5)",
+     "15 + 13.5 = 28.5"
+    ],
+    "tip": "To minimise an addition expression with positive coefficients, use the lower bounds of all variables."
+   },
+   {
+    "q": "Distance = 150 miles correct to the nearest 10 miles. Time = 3 hours correct to the nearest hour. Calculate the maximum average speed.",
+    "marks": 3,
+    "model": [
+     "Max distance = 155",
+     "Min time = 2.5",
+     "155 / 2.5 = 62 mph"
+    ],
+    "tip": "Speed = Distance / Time. Max speed = Max Distance / Min Time."
+   }
+  ],
+  "worked": [
+   {
+    "q": "The formula for kinetic energy is E = 0.5 * m * v^2. Mass m = 12 kg correct to the nearest kg. Velocity v = 8 m/s correct to the nearest m/s. Calculate the upper bound of the kinetic energy E.",
+    "steps": [
+     "Find the upper bound for mass m: 12 + 0.5 = 12.5 kg.",
+     "Find the upper bound for velocity v: 8 + 0.5 = 8.5 m/s.",
+     "Substitute upper bounds into the formula: E = 0.5 * 12.5 * (8.5)^2.",
+     "Calculate the result: 0.5 * 12.5 * 72.25 = 451.5625 Joules."
+    ],
+    "ans": "451.56 Joules (or 451.5625)"
+   },
+   {
+    "q": "A rectangular metal plate has length L = 14 cm correct to the nearest cm, and width W = 8 cm correct to the nearest cm. Calculate the lower bound for the area of the plate.",
+    "steps": [
+     "Identify the unit of accuracy: nearest cm means 1 cm, so the error margin is 0.5 cm.",
+     "Find the lower bound for length L: 14 - 0.5 = 13.5 cm.",
+     "Find the lower bound for width W: 8 - 0.5 = 7.5 cm.",
+     "Multiply the lower bounds together: 13.5 * 7.5 = 101.25 cm^2."
+    ],
+    "ans": "101.25 cm^2"
+   }
+  ],
+  "pid": "maths_aqa_h.0.15",
+  "sid": "maths_aqa_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-16T02:27:16.077Z"
  }
 }

@@ -1,0 +1,424 @@
+{
+ "maths_ocr_h.11.1": {
+  "summary": "Mastering the interpretation and representation of data at OCR GCSE Higher tier requires absolute precision in constructing and reading advanced statistical diagrams. You must fluently transition between bar charts, pie charts, dual and composite bar charts, stem-and-leaf diagrams, frequency polygons, histograms with unequal class widths, cumulative frequency diagrams, and box plots. Securing a grade 9 depends on not just drawing shapes accurately, but extracting exact statistical measures, calculating missing frequencies from density, and interpreting complex distributions under exam conditions.",
+  "core": [
+   {
+    "h": "Bar Charts and Comparative Bar Charts",
+    "p": "Bar charts display categorical or discrete data using rectangular bars where the height is proportional to the frequency. For comparing two sets of data on the same categories, dual or composite (stacked) bar charts are used.",
+    "bullets": [
+     "Bars must be of equal width with equal spaces between them on the horizontal axis.",
+     "The vertical axis must start at zero and have a linear, evenly spaced scale.",
+     "Dual bar charts place two bars side-by-side for each category with a key to distinguish them.",
+     "Composite bar charts stack data components vertically within a single bar to show totals and proportions simultaneously."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Zero Baseline",
+      "p": "Always start the frequency axis at zero. Starting higher exaggerates differences and loses marks."
+     },
+     {
+      "k": "warn",
+      "t": "Spacing Errors",
+      "p": "Forgetting to leave equal gaps between bars on discrete scales is an automatic loss of accuracy marks."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A dual bar chart comparing two groups across four categories with clear spacing and a mandatory legend.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#ffffff\"/><line x1=\"50\" y1=\"200\" x2=\"370\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"40\" x2=\"50\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"25\" y=\"200\" font-size=\"11\" fill=\"#1b2540\">0</text><text x=\"25\" y=\"140\" font-size=\"11\" fill=\"#1b2540\">10</text><text x=\"25\" y=\"80\" font-size=\"11\" fill=\"#1b2540\">20</text><line x1=\"45\" y1=\"140\" x2=\"50\" y2=\"140\" stroke=\"#1b2540\"/><line x1=\"45\" y1=\"80\" x2=\"50\" y2=\"80\" stroke=\"#1b2540\"/><rect x=\"80\" y=\"100\" width=\"20\" height=\"100\" fill=\"#dbeafe\" stroke=\"#1b2540\"/><rect x=\"103\" y=\"70\" width=\"20\" height=\"130\" fill=\"#fde68a\" stroke=\"#1b2540\"/><rect x=\"160\" y=\"120\" width=\"20\" height=\"80\" fill=\"#dbeafe\" stroke=\"#1b2540\"/><rect x=\"183\" y=\"90\" width=\"20\" height=\"110\" fill=\"#fde68a\" stroke=\"#1b2540\"/><text x=\"100\" y=\"215\" font-size=\"11\" fill=\"#1b2540\">Cat A</text><text x=\"180\" y=\"215\" font-size=\"11\" fill=\"#1b2540\">Cat B</text><rect x=\"280\" y=\"50\" width=\"90\" height=\"45\" fill=\"#f8fafc\" stroke=\"#1b2540\"/><rect x=\"290\" y=\"60\" width=\"12\" height=\"12\" fill=\"#dbeafe\" stroke=\"#1b2540\"/><text x=\"310\" y=\"70\" font-size=\"11\" fill=\"#1b2540\">Group 1</text><rect x=\"290\" y=\"78\" width=\"12\" height=\"12\" fill=\"#fde68a\" stroke=\"#1b2540\"/><text x=\"310\" y=\"88\" font-size=\"11\" fill=\"#1b2540\">Group 2</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Pie Charts",
+    "p": "Pie charts represent proportions of a whole using sectors of a circle. The angle of each sector is proportional to the frequency of that category.",
+    "bullets": [
+     "Calculate sector angles using the formula: Angle = (Frequency / Total Frequency) x 360 degrees.",
+     "Check accuracy by ensuring all sector angles sum to exactly 360 degrees.",
+     "Always label each sector clearly with its category name or percentage.",
+     "When given a pie chart with sector angles and one absolute frequency, find the multiplier 360 / Total Angle or Frequency / Angle to find other values."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Angle Verification",
+      "p": "Sum your calculated angles before drawing. If they do not equal 360, recompute immediately."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Stem-and-Leaf Diagrams",
+    "p": "Stem-and-leaf diagrams display numerical data while retaining the original data values, ordered sequentially and split into a stem and a leaf.",
+    "bullets": [
+     "A mandatory key must be included, e.g., '3 | 2 means 32'.",
+     "Leaves must be single digits, sorted in ascending order from left to right for each stem.",
+     "Stems must be consecutive integers, even if a stem has no corresponding leaves (leave the row blank).",
+     "Back-to-back stem-and-leaf diagrams allow direct visual comparison of two datasets sharing the same central stem column."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Stem-and-Leaf Key",
+      "p": "An explanatory statement defining how to read the digits, without which zero marks are awarded."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Frequency Polygons",
+    "p": "Frequency polygons connect the midpoints of the top of each class interval with straight lines to show continuous data trends and allow comparisons.",
+    "bullets": [
+     "Plot each point at the midpoint of the class interval on the x-axis and the frequency on the y-axis.",
+     "Midpoint = (Lower Bound + Upper Bound) / 2.",
+     "Connect adjacent points with straight line segments (do not draw curves).",
+     "Anchor the polygon by extending the line down to the x-axis at the midpoint of the class interval before the first data class and after the last data class."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Anchoing Error",
+      "p": "Failing to attach both ends of the frequency polygon to the baseline x-axis loses accuracy marks."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Histograms for Unequal Class Widths",
+    "p": "Histograms display continuous grouped data where the area of each bar is proportional to the frequency. They are required when class intervals are unequal.",
+    "bullets": [
+     "Frequency Density = Frequency / Class Width.",
+     "The vertical axis is always labelled 'Frequency Density', never 'Frequency'.",
+     "Class width is Upper Bound minus Lower Bound.",
+     "Area of bar = Frequency Density x Class Width = Frequency."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Area Represents Frequency",
+      "p": "In a histogram, height does not equal frequency. Frequency equals area (Height x Width)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Interpreting and Calculating from Histograms",
+    "p": "Exam questions frequently require finding missing frequencies, estimating numbers of items within a sub-interval, or reconstructing frequency tables from histograms.",
+    "bullets": [
+     "To find frequency from a given bar, calculate Area = Height (Frequency Density) x Width.",
+     "If a scale is missing on the vertical axis, use a known frequency and its bar dimensions to deduce the scale factor.",
+     "To estimate how many values lie within a partial interval, assume uniform distribution within that class interval and calculate proportional areas.",
+     "Always check boundary values carefully when intervals overlap (e.g., 10-20 and 20-30)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Scale Calibration",
+      "p": "Find the area of the easiest bar first to establish your frequency-to-square ratio."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Cumulative Frequency Tables and Curves",
+    "p": "Cumulative frequency tracks the running total of frequencies as values increase, allowing us to estimate median, quartiles, and percentiles.",
+    "bullets": [
+     "Construct a cumulative frequency column by successively adding frequencies down the table.",
+     "Always plot cumulative frequency points at the UPPER boundary of each class interval, not the midpoint.",
+     "Join the plotted points with a smooth, continuous increasing S-shaped curve (never use straight line segments between points).",
+     "Start the curve at zero cumulative frequency on the lower boundary of the first interval."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Cumulative Frequency Plotting Rule",
+      "p": "Plot at (Upper Class Boundary, Cumulative Frequency)."
+     },
+     {
+      "k": "warn",
+      "t": "Straight Line Trap",
+      "p": "Connecting cumulative frequency points with a ruler loses marks; it must be a smooth freehand curve."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A cumulative frequency S-curve showing upper boundary plotting and quartile estimation lines.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#ffffff\"/><line x1=\"50\" y1=\"200\" x2=\"370\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"40\" x2=\"50\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M 50 200 Q 150 195 210 130 T 350 45\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"50\" y1=\"120\" x2=\"205\" y2=\"120\" stroke=\"#dc2626\" stroke-dasharray=\"3,3\"/><line x1=\"205\" y1=\"200\" x2=\"205\" y2=\"120\" stroke=\"#dc2626\" stroke-dasharray=\"3,3\"/><text x=\"25\" y=\"120\" font-size=\"11\" fill=\"#1b2540\">50</text><text x=\"190\" y=\"215\" font-size=\"11\" fill=\"#1b2540\">Median</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Box Plots and Five-Figure Summaries",
+    "p": "Box plots provide a graphical summary of a dataset based on its five-figure summary: minimum, lower quartile (Q1), median (Q2), upper quartile (Q3), and maximum.",
+    "bullets": [
+     "The five-figure summary values are: Lowest value, Q1, Median, Q3, Highest value.",
+     "The box spans from Q1 to Q3, with a vertical line inside representing the median.",
+     "Whiskers extend from the ends of the box to the minimum and maximum values.",
+     "Interquartile Range (IQR) = Q3 - Q1, representing the spread of the middle 50% of data."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Reading Box Plots",
+      "p": "Be meticulous with scale divisions when reading values off the axis for Q1, median, and Q3."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Comparing Distributions Using Diagrams",
+    "p": "Higher tier OCR questions require comparing two distributions using statistical diagrams (such as box plots or cumulative frequency curves). Comparisons must reference both location and spread.",
+    "bullets": [
+     "Location comparison: Use Median or Mean. State which dataset has a higher or lower average and interpret in context.",
+     "Spread comparison: Use Interquartile Range (IQR) or Range. State which dataset is more consistent or more variable.",
+     "Never give vague statements like 'Group A is higher'; specify 'The median weight for Group A (34 kg) is greater than for Group B (28 kg)'.",
+     "Always write comparisons in the context of the question (units and variable names included)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Two-Part Rule",
+      "p": "Every comparison mark scheme requires two things: a numerical statistic and a contextual statement."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Scatter Diagrams and Bivariate Data",
+    "p": "Scatter diagrams plot pairs of numerical observations (bivariate data) on a cartesian grid to investigate potential relationships between two variables.",
+    "bullets": [
+     "One variable is on the x-axis (independent) and the other on the y-axis (dependent).",
+     "Describe correlation as positive, negative, or none, qualified by strong or moderate.",
+     "Line of best fit: A straight line that minimizes the distance of points above and below it, passing through the mean point (mean x, mean y).",
+     "Interpolation (estimating within data range) is reliable; extrapolation (estimating outside data range) is unreliable."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Causation Fallacy",
+      "p": "Correlation does not imply causation. Two variables may correlate due to a third confounding variable."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A scatter diagram showing positive correlation and a line of best fit.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#ffffff\"/><line x1=\"50\" y1=\"200\" x2=\"370\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"40\" x2=\"50\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"80\" cy=\"170\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"110\" cy=\"150\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"140\" cy=\"130\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"180\" cy=\"110\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"220\" cy=\"90\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"270\" cy=\"65\" r=\"4\" fill=\"#2563eb\"/><line x1=\"60\" y1=\"185\" x2=\"320\" y2=\"55\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"180\" y=\"230\" font-size=\"11\" fill=\"#1b2540\">Variable X</text><text x=\"15\" y=\"120\" font-size=\"11\" fill=\"#1b2540\" transform=\"rotate(-90 15 120)\">Variable Y</text></svg>"
+     }
+    ]
+   }
+  ],
+  "analogy": {
+   "t": "The Statistical Map Analogy",
+   "p": "Representing data is like creating different types of geographical maps. A bar chart is a street map showing discrete landmarks, a histogram is a topographical relief map where height and area represent density and volume of terrain, and a box plot is a geological cross-section showing key elevation strata (min, quartiles, max). Where this analogy breaks down is that geographical maps preserve actual physical space, whereas statistical diagrams distort space to encode frequency, magnitude, and probability."
+  },
+  "terms": [
+   {
+    "t": "Frequency Density",
+    "d": "Frequency divided by the class width, used as the height of bars in a histogram."
+   },
+   {
+    "t": "Cumulative Frequency",
+    "d": "The running total of frequencies up to the upper boundary of each class interval."
+   },
+   {
+    "t": "Lower Quartile (Q1)",
+    "d": "The median of the lower half of a dataset, representing the 25th percentile (n/4th value)."
+   },
+   {
+    "t": "Upper Quartile (Q3)",
+    "d": "The median of the upper half of a dataset, representing the 75th percentile (3n/4th value)."
+   },
+   {
+    "t": "Interquartile Range (IQR)",
+    "d": "The difference between the upper quartile and lower quartile (Q3 - Q1), measuring spread."
+   },
+   {
+    "t": "Five-Figure Summary",
+    "d": "The minimum, lower quartile, median, upper quartile, and maximum of a dataset."
+   },
+   {
+    "t": "Class Width",
+    "d": "The difference between the upper class boundary and the lower class boundary."
+   },
+   {
+    "t": "Frequency Polygon",
+    "d": "A line graph joining midpoints of class intervals to frequencies."
+   },
+   {
+    "t": "Stem-and-Leaf Diagram",
+    "d": "A table displaying numerical data split into leading digits (stems) and trailing digits (leaves)."
+   },
+   {
+    "t": "Bivariate Data",
+    "d": "Data involving pairs of numerical observations on two different variables."
+   },
+   {
+    "t": "Interpolation",
+    "d": "Estimating an unknown value within the range of known data points."
+   },
+   {
+    "t": "Extrapolation",
+    "d": "Estimating an unknown value outside the range of known data points, which is less reliable."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Plotting cumulative frequency points at class midpoints.",
+    "r": "Always plot cumulative frequency points at the upper class boundary."
+   },
+   {
+    "w": "Using frequency on the vertical axis of a histogram with unequal class widths.",
+    "r": "The vertical axis must be frequency density (Frequency / Class Width)."
+   },
+   {
+    "w": "Connecting cumulative frequency points with straight line segments.",
+    "r": "Draw a smooth, continuous S-shaped curve through the points."
+   },
+   {
+    "w": "Comparing datasets by mentioning only averages without discussing spread.",
+    "r": "Always compare both location (median/mean) and spread (IQR/range) with numerical values."
+   },
+   {
+    "w": "Forgetting the stem-and-leaf key.",
+    "r": "A clear key explaining what a stem and leaf represent is mandatory."
+   },
+   {
+    "w": "Anchoring frequency polygons to the origin (0,0) incorrectly.",
+    "r": "Anchor frequency polygons to the x-axis at midpoints of intervals one class below and above."
+   },
+   {
+    "w": "Stating bar chart frequency axes must start at numbers other than zero.",
+    "r": "Frequency axes on bar charts must always start at zero."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A histogram has a bar for the interval 10 <= x < 25 with a width of 15 and a height of 4. Calculate the frequency for this interval.",
+    "marks": 2,
+    "model": [
+     "Frequency = Frequency Density x Class Width",
+     "4 x 15 = 60"
+    ],
+    "tip": "Remember frequency is the area of the bar in a histogram."
+   },
+   {
+    "q": "Explain why extrapolation is less reliable than interpolation when using a scatter graph.",
+    "marks": 2,
+    "model": [
+     "Extrapolation requires estimating outside the range of known data values",
+     "There is no evidence that the established trend or correlation continues outside this range."
+    ],
+    "tip": "Learn standard definitions for interpolation and extrapolation."
+   },
+   {
+    "q": "From a cumulative frequency graph where n = 80, estimate the interquartile range.",
+    "marks": 3,
+    "model": [
+     "Find Q1 at cumulative frequency 20 and read corresponding x value",
+     "Find Q3 at cumulative frequency 60 and read corresponding x value",
+     "Calculate IQR = Q3 - Q1"
+    ],
+    "tip": "Quarterly marks are n/4 (Q1), 2n/4 (Median), and 3n/4 (Q3)."
+   },
+   {
+    "q": "Describe the comparison between two box plots representing test scores for Class A (Median 62, IQR 12) and Class B (Median 55, IQR 24).",
+    "marks": 4,
+    "model": [
+     "Class A has a higher median (62 > 55), so on average Class A scored higher.",
+     "Class A has a lower IQR (12 < 24), so Class A scores are more consistent/less spread out than Class B."
+    ],
+    "tip": "Always give one statement about average/location and one about spread/consistency, both with numbers and context."
+   },
+   {
+    "q": "A pie chart sector has an angle of 54 degrees and represents 18 students. Find the total number of students represented in the pie chart.",
+    "marks": 2,
+    "model": [
+     "360 / 54 = 6.666... or angle per student = 54 / 18 = 3 degrees per student",
+     "Total students = 360 / 3 = 120"
+    ],
+    "tip": "Find the unit value (degrees per item) to solve pie chart reverse problems quickly."
+   },
+   {
+    "q": "Construct the upper class boundary for the grouped frequency interval 20 < x <= 30 and state where to plot its cumulative frequency.",
+    "marks": 2,
+    "model": [
+     "Upper boundary is 30",
+     "Plot cumulative frequency at (30, cumulative frequency)"
+    ],
+    "tip": "Cumulative frequency is always plotted at the upper boundary."
+   },
+   {
+    "q": "State two requirements for drawing a correct bar chart for discrete data.",
+    "marks": 2,
+    "model": [
+     "Equal width of bars",
+     "Equal gaps between bars and frequency axis starting at zero"
+    ],
+    "tip": "Check that your bars do not touch unless it is a histogram or grouped bar chart."
+   },
+   {
+    "q": "A stem-and-leaf diagram has stem 4 and leaves 2, 5, 5, 8 with key '4 | 2 = 4.2 kg'. Write down the raw data values represented by this stem.",
+    "marks": 2,
+    "model": [
+     "4.2, 4.5, 4.5, 4.8",
+     "All values correctly extracted using the key"
+    ],
+    "tip": "Check decimal placement carefully using the given key."
+   },
+   {
+    "q": "Explain how to find the estimated median from a frequency table with grouped continuous data.",
+    "marks": 3,
+    "model": [
+     "Find total frequency n and divide by 2 (n/2 position)",
+     "Construct a cumulative frequency column",
+     "Identify the class interval containing the (n/2)th value"
+    ],
+    "tip": "For grouped data, we estimate the median; we do not find an exact value."
+   }
+  ],
+  "worked": [
+   {
+    "q": "The table shows the time, t minutes, taken by 100 runners to finish a race. Construct a cumulative frequency table and draw its curve to estimate the median time.",
+    "steps": [
+     "Step 1: Create cumulative frequency by adding frequencies successively: 8, 8+22=30, 30+45=75, 75+20=95, 95+5=100.",
+     "Step 2: Plot points at upper boundaries: (20,8), (30,30), (40,75), (50,95), (60,100), starting at (10,0).",
+     "Step 3: Join with a smooth S-curve.",
+     "Step 4: Find median at n/2 = 50 on cumulative frequency axis, read across to curve and down to x-axis."
+    ],
+    "ans": "Median estimated at approximately 34.5 minutes."
+   },
+   {
+    "q": "A histogram has a class 0 <= x < 10 with frequency density 3 and class 10 <= x < 25 with frequency density 2. Find the total frequency for the range 0 <= x < 25.",
+    "steps": [
+     "Step 1: Calculate frequency for first interval: Width = 10 - 0 = 10. Frequency = 3 x 10 = 30.",
+     "Step 2: Calculate frequency for second interval: Width = 25 - 10 = 15. Frequency = 2 x 15 = 30.",
+     "Step 3: Sum both frequencies to find total."
+    ],
+    "ans": "Total frequency = 30 + 30 = 60."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "A comprehensive histogram displaying unequal class widths with calculated frequency density bars.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#ffffff\"/><line x1=\"50\" y1=\"200\" x2=\"370\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"40\" x2=\"50\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"20\" y=\"200\" font-size=\"11\" fill=\"#1b2540\">0</text><text x=\"10\" y=\"120\" font-size=\"11\" fill=\"#1b2540\">FD</text><rect x=\"50\" y=\"120\" width=\"40\" height=\"80\" fill=\"#bbf7d0\" stroke=\"#1b2540\"/><rect x=\"90\" y=\"80\" width=\"80\" height=\"120\" fill=\"#fedaca\" stroke=\"#1b2540\"/><rect x=\"170\" y=\"160\" width=\"120\" height=\"40\" fill=\"#e9d5ff\" stroke=\"#1b2540\"/><text x=\"50\" y=\"215\" font-size=\"11\" fill=\"#1b2540\">0</text><text x=\"85\" y=\"215\" font-size=\"11\" fill=\"#1b2540\">10</text><text x=\"165\" y=\"215\" font-size=\"11\" fill=\"#1b2540\">30</text><text x=\"285\" y=\"215\" font-size=\"11\" fill=\"#1b2540\">60</text></svg>"
+   }
+  ],
+  "pid": "maths_ocr_h.11.1",
+  "sid": "maths_ocr_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-16T03:42:35.848Z"
+ }
+}

@@ -1,0 +1,485 @@
+{
+ "maths_ocr_h.0.2": {
+  "summary": "Mastering the order of operations for combining arithmetic operations is vital for achieving a grade 9 in OCR GCSE Mathematics. This guide covers the precise hierarchy of brackets, indices, division, multiplication, addition, and subtraction, alongside advanced techniques for handling nested groupings, fractional fraction-bars, and square roots. Precision in tracking steps avoids costly arithmetic errors in non-calculator and calculator papers.",
+  "core": [
+   {
+    "h": "1. The Hierarchy of Operations (BIDMAS / BODMAS)",
+    "p": "When evaluating numerical expressions containing multiple operations, mathematicians follow an agreed-upon hierarchy to ensure a unique, unambiguous answer. This convention is known globally as BIDMAS or BODMAS. Failing to follow this exact order results in incorrect calculations, which is heavily penalised in exams.",
+    "bullets": [
+     "B: Brackets (parentheses) must be calculated first.",
+     "I/O: Indices (powers) and Orders (roots) come second.",
+     "D/M: Division and Multiplication have equal priority and are evaluated strictly from left to right.",
+     "A/S: Addition and Subtraction have equal priority and are evaluated strictly from left to right."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Order of Operations",
+      "p": "The strict sequence in which mathematical operations must be applied to evaluate an expression: Brackets, Indices/Orders, Division/Multiplication, Addition/Subtraction."
+     },
+     {
+      "k": "warn",
+      "t": "Left-to-Right Trap",
+      "p": "Division and multiplication are co-equal. Do not automatically do multiplication before division; process them purely in the order they appear from left to right."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. Deep Dive: Brackets and Grouping Symbols",
+    "p": "Brackets act as a fence, forcing the operations inside them to be fully completed before any external operator can touch them. When multiple brackets are nested inside one another, you must start from the innermost pair and work outwards.",
+    "bullets": [
+     "Round brackets ( ) are standard grouping symbols.",
+     "Square brackets [ ] and curly braces { } are used for nesting to improve legibility.",
+     "A fraction bar acts as an invisible set of brackets around both the numerator and the denominator.",
+     "Any coefficient immediately preceding a bracket implies multiplication, e.g., 3(4 + 2) means 3 multiplied by the result of 4 + 2."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Fraction Bar Grouping",
+      "p": "In expressions like (3 + 5) / (2), the numerator and denominator are evaluated independently as if enclosed in brackets before dividing."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "3. Deep Dive: Indices and Roots",
+    "p": "Powers (indices) and roots (orders) form the second tier of the hierarchy. They must be evaluated immediately after brackets are resolved, and strictly before any multiplication, division, addition, or subtraction takes place outside of brackets.",
+    "bullets": [
+     "A square like 3^2 means 3 multiplied by itself, yielding 9.",
+     "A cube root like cube-root(27) finds the value that multiplied by itself three times gives 27.",
+     "Negative numbers raised to powers require careful bracket placement, e.g., (-2)^2 = +4, whereas -2^2 = -4.",
+     "Fractional powers and surds follow the exact same priority rules as standard integers."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Index (Power)",
+      "p": "A superscript number indicating how many times the base number is multiplied by itself."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Multiplication and Division Co-priority",
+    "p": "A common misconception at GCSE Higher tier is that multiplication always takes precedence over division. In reality, division and multiplication share the exact same precedence tier and must be evaluated strictly from left to right as you read the expression.",
+    "bullets": [
+     "In 12 / 3 x 2, you must do 12 / 3 first to get 4, then multiply by 2 to get 8. Doing 3 x 2 first is wrong.",
+     "Multiplication signs are often omitted in algebra, e.g., 5xy means 5 x x x y.",
+     "Division can be written using the obelus (÷), a forward slash (/), or a horizontal fraction bar."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Multiplication Precedence Myth",
+      "p": "Never assume multiplication comes before division. Read strictly left to right for Division and Multiplication."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "5. Addition and Subtraction Co-priority",
+    "p": "Addition and subtraction form the final tier of the operational hierarchy. Like multiplication and division, they share equal priority and must be evaluated strictly from left to right across the remaining expression.",
+    "bullets": [
+     "In 10 - 4 + 2, you must calculate 10 - 4 = 6 first, then add 2 to get 8. Doing 4 + 2 first yields a fatal error.",
+     "Subtraction of a negative number becomes addition: a - (-b) = a + b.",
+     "Combining terms with mixed signs requires keeping careful track of positive and negative results."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Final Tier Rule",
+      "p": "Addition and subtraction are processed last, strictly from left to right."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Nested Brackets and Complex Groupings",
+    "p": "When an expression contains brackets inside brackets, working from the inside out is mandatory. Mismanaging nested grouping symbols leads to severe sign errors and incorrect evaluation of indices.",
+    "bullets": [
+     "Identify the innermost pair of brackets and evaluate everything inside them first.",
+     "Rewrite the expression with the innermost brackets removed, then repeat for the next level.",
+     "Ensure any outer powers apply to the entire resulting bracketed value, not just individual terms."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Colour Coding Nested Brackets",
+      "p": "In complex non-calculator exam questions, underline or lightly highlight matching bracket pairs to avoid missing a closing parenthesis."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Fraction Bars as Implicit Brackets",
+    "p": "An OCR Higher tier exam question will frequently present division using a long horizontal fraction bar. The fraction bar acts as a grouping symbol for both the entire numerator and the entire denominator.",
+    "bullets": [
+     "Calculate the complete value of the numerator as a single entity.",
+     "Calculate the complete value of the denominator as a single entity.",
+     "Divide the final numerator value by the final denominator value last. Never cancel parts across a plus or minus sign."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Implicit Brackets",
+      "p": "Grouping implied by spatial arrangement, such as numerators and denominators of fraction bars or the radicand under a square root sign."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Operations with Negative Numbers in Powers",
+    "p": "Raising negative numbers to powers tests both arithmetic fluency and order of operations. The presence or absence of brackets entirely changes the mathematical meaning of the expression.",
+    "bullets": [
+     "(-3)^2 means (-3) x (-3) = +9 because the negative sign is inside the bracket.",
+     "-3^2 means -(3 x 3) = -9 because the exponent applies only to the 3, not the negative sign.",
+     "Odd powers of negative numbers remain negative: (-2)^3 = -8.",
+     "Even powers of negative numbers become positive: (-2)^4 = +16."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Calculator Entry Trap",
+      "p": "Typing -3^2 into a non-bracketed scientific calculator without parentheses will output -9 instead of +9. Always use brackets for negative bases."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Substitution and Order of Operations",
+    "p": "In GCSE algebra, substitution questions require you to replace variables with numbers and then strictly apply the order of operations to evaluate the resulting numerical expression.",
+    "bullets": [
+     "Always substitute negative numbers inside brackets to preserve correct sign operations.",
+     "Calculate powers and roots of substituted values before performing multiplications.",
+     "Combine terms carefully, ensuring no intermediate operations are skipped."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Substitution Brackets",
+      "p": "Write substitution values inside parentheses instantly: if x = -3, write 4x^2 as 4(-3)^2."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Scientific Calculator Syntax and Limitations",
+    "p": "Higher tier exams permit scientific calculators, but candidates must input expressions respecting mathematical syntax. Calculators use internal parsing algorithms that follow BODMAS, but ambiguous fraction entries can cause errors.",
+    "bullets": [
+     "Use the fraction template button rather than the division slash to ensure correct implicit bracketing.",
+     "Use the negative key (-) rather than the subtraction key (-) for negative numbers.",
+     "Check that exponent buttons apply to the correct terms by using arrow keys to exit exponent mode."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Calculator Verification",
+      "p": "Always re-enter complex calculations in a second step or use inverse operations to verify your non-calculator exam answers."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "11. Multi-Step Exam Style Combining Operations",
+    "p": "Grade 9 OCR questions combine fractions, surds, indices, and brackets into single expressions. Systematic, line-by-line working out is essential to secure method marks even if a minor arithmetic slip occurs near the end.",
+    "bullets": [
+     "Write out every intermediate step clearly on a new line.",
+     "Underline your final evaluated answer clearly.",
+     "Check that each line strictly adheres to the BIDMAS hierarchy."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Method Marks",
+      "p": "Examiners award method marks for correct application of BIDMAS steps even if the final arithmetic calculation has a minor slip."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "12. Common Exam Pitfalls and Examiner Reports",
+    "p": "Examiner reports consistently highlight recurring errors in order of operations, particularly ignoring left-to-right rules for division and mishandling negative powers.",
+    "bullets": [
+     "Ignoring left-to-right division/multiplication priority.",
+     "Applying addition before multiplication in unbracketed expressions.",
+     "Failing to recognise that square root symbols extend over entire compound expressions."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Examiner Warning",
+      "p": "Treat every operation symbol with strict adherence to its tier. Never rush past left-to-right rules."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Emergency Services Response Hierarchy",
+   "p": "Imagine an emergency dispatch centre handling multiple incidents. Severe emergencies (Brackets - life-threatening) are handled first before standard calls. Next come specialised tactical units (Indices/Roots - high impact). Routine patrol cars and traffic units (Division and Multiplication, then Addition and Subtraction) are dispatched strictly in the order calls arrive from left to right on the switchboard. Where the analogy breaks down is that emergency units can sometimes be redeployed simultaneously, whereas mathematical operations have a strictly enforced linear hierarchy."
+  },
+  "terms": [
+   {
+    "t": "BIDMAS",
+    "d": "Acronym for Brackets, Indices, Division, Multiplication, Addition, Subtraction defining operational priority."
+   },
+   {
+    "t": "BODMAS",
+    "d": "Alternative acronym substituting Orders for Indices."
+   },
+   {
+    "t": "Index",
+    "d": "A mathematical shorthand indicating repeated multiplication of a base number."
+   },
+   {
+    "t": "Root",
+    "d": "The inverse operation of raising a number to a power."
+   },
+   {
+    "t": "Nested Brackets",
+    "d": "Brackets placed inside other brackets requiring inside-out evaluation."
+   },
+   {
+    "t": "Implicit Brackets",
+    "d": "Grouping implied by mathematical notation such as fraction bars or radical signs."
+   },
+   {
+    "t": "Operand",
+    "d": "A quantity on which an operator acts."
+   },
+   {
+    "t": "Operator",
+    "d": "A symbol representing a mathematical operation such as +, -, x, /, or ^."
+   },
+   {
+    "t": "Radicand",
+    "d": "The number placed beneath a root symbol."
+   },
+   {
+    "t": "Numerator",
+    "d": "The top number of a fraction, implicitly grouped."
+   },
+   {
+    "t": "Denominator",
+    "d": "The bottom number of a fraction, implicitly grouped."
+   },
+   {
+    "t": "Left-to-Right Rule",
+    "d": "The convention for evaluating co-equal operations in the order they appear."
+   },
+   {
+    "t": "Substitution",
+    "d": "Replacing variables with numerical values prior to evaluation."
+   },
+   {
+    "t": "Order of Operations",
+    "d": "The universally agreed convention for evaluating mathematical expressions unambiguously."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Calculating 3 + 5 x 2 as 8 x 2 = 16",
+    "r": "Multiplication takes precedence over addition: 3 + (5 x 2) = 3 + 10 = 13."
+   },
+   {
+    "w": "Evaluating 12 / 3 x 2 as 12 / 6 = 2",
+    "r": "Division and multiplication are co-equal and processed left to right: (12 / 3) x 2 = 4 x 2 = 8."
+   },
+   {
+    "w": "Evaluating -3^2 as +9",
+    "r": "Without brackets, the exponent applies only to 3, giving -(3 x 3) = -9."
+   },
+   {
+    "w": "Calculating 10 - 4 + 2 as 10 - 6 = 4",
+    "r": "Addition and subtraction are co-equal and processed left to right: (10 - 4) + 2 = 6 + 2 = 8."
+   },
+   {
+    "w": "Evaluating (4 + 3)^2 as 4^2 + 3^2 = 25",
+    "r": "Brackets first: (7)^2 = 49. You cannot distribute exponents over addition."
+   },
+   {
+    "w": "Cancelling terms across a fraction like (2 + 4)/(2 + 1) to get 4/1",
+    "r": "Fraction bars are implicit brackets; evaluate top and bottom fully first: 6 / 3 = 2."
+   },
+   {
+    "w": "Doing addition before indices in 5 + 2^3",
+    "r": "Indices take precedence over addition: 5 + 8 = 13."
+   },
+   {
+    "w": "Treating subtraction as having higher priority than addition",
+    "r": "Addition and subtraction have equal priority and are evaluated left to right."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Evaluate 15 - 3 x (4 + 2) / 2",
+    "marks": 3,
+    "model": [
+     "Identify brackets: 4 + 2 = 6",
+     "Perform multiplication and division left to right: 3 x 6 = 18, then 18 / 2 = 9",
+     "Perform subtraction: 15 - 9 = 6"
+    ],
+    "tip": "Always complete brackets first before any multiplication or division."
+   },
+   {
+    "q": "Work out (-4)^2 - 3 x (5 - 8)",
+    "marks": 3,
+    "model": [
+     "Evaluate brackets: (5 - 8) = -3",
+     "Evaluate index: (-4)^2 = 16",
+     "Perform multiplication: 3 x (-3) = -9",
+     "Subtract: 16 - (-9) = 16 + 9 = 25"
+    ],
+    "tip": "Take extreme care with negative numbers and double negatives during subtraction."
+   },
+   {
+    "q": "Evaluate the expression (3^3 + root(16)) / (5 - 2)",
+    "marks": 4,
+    "model": [
+     "Numerator indices and roots: 3^3 = 27, root(16) = 4",
+     "Numerator addition: 27 + 4 = 31",
+     "Denominator subtraction: 5 - 2 = 3",
+     "Final division: 31 / 3 (or 10 and 1/3)"
+    ],
+    "tip": "Treat the fraction bar as an implicit bracket; evaluate numerator and denominator completely before dividing."
+   },
+   {
+    "q": "Explain why -5^2 does not equal (-5)^2",
+    "marks": 2,
+    "model": [
+     "-5^2 means -(5 x 2), which evaluates to -25 because the square applies only to the 5.",
+     "(-5)^2 means (-5) x (-5), which evaluates to +25 because the square applies to the negative sign as well."
+    ],
+    "tip": "State clearly how brackets dictate whether the negative sign is squared."
+   },
+   {
+    "q": "Work out 20 / 4 x 5",
+    "marks": 2,
+    "model": [
+     "Recognise division and multiplication have equal priority.",
+     "Process strictly left to right: 20 / 4 = 5.",
+     "5 x 5 = 25."
+    ],
+    "tip": "Never do multiplication before division unless brackets force it."
+   },
+   {
+    "q": "Calculate 8 + 2 x [12 - (3 + 2)^2] / 5",
+    "marks": 4,
+    "model": [
+     "Innermost brackets: 3 + 2 = 5",
+     "Index inside square brackets: 5^2 = 25",
+     "Square brackets: 12 - 25 = -13",
+     "Multiplication and division: 2 x (-13) / 5 = -26 / 5 = -5.2",
+     "Addition: 8 + (-5.2) = 2.8"
+    ],
+    "tip": "Work methodically from inside nested brackets outwards."
+   },
+   {
+    "q": "Insert brackets into the expression 3 + 4 x 2 - 1 to make the result equal to 13",
+    "marks": 2,
+    "model": [
+     "Test bracket placements.",
+     "(3 + 4) x 2 - 1 = 7 x 2 - 1 = 14 - 1 = 13.",
+     "Answer: (3 + 4) x 2 - 1"
+    ],
+    "tip": "Use trial and improvement with bracket placement to test possible totals."
+   },
+   {
+    "q": "Evaluate 50 - 5 x 3 + 2",
+    "marks": 2,
+    "model": [
+     "Multiplication first: 5 x 3 = 15",
+     "Expression becomes 50 - 15 + 2",
+     "Subtraction and addition left to right: 35 + 2 = 37"
+    ],
+    "tip": "Never do addition before multiplication in unbracketed strings."
+   },
+   {
+    "q": "Find the value of x^2 - 3x when x = -4",
+    "marks": 3,
+    "model": [
+     "Substitute with brackets: (-4)^2 - 3(-4)",
+     "Evaluate index: 16",
+     "Evaluate multiplication: -3 x (-4) = +12",
+     "Add: 16 + 12 = 28"
+    ],
+    "tip": "Always substitute negative numbers inside parentheses."
+   },
+   {
+    "q": "Calculate root(25 + 144) and compare it with root(25) + root(144)",
+    "marks": 3,
+    "model": [
+     "First expression: root(169) = 13",
+     "Second expression: 5 + 12 = 17",
+     "State that root(a + b) does not equal root(a) + root(b)"
+    ],
+    "tip": "Radical signs act as implicit brackets grouping the entire sum underneath."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Evaluate the complex Higher tier expression: [ 4 + 3 x (8 - 2^2) ] / [ 5^2 - 20 ]",
+    "steps": [
+     "Step 1: Inside the numerator's bracket, evaluate the index first: 2^2 = 4.",
+     "Step 2: Complete the numerator's bracket: 8 - 4 = 4.",
+     "Step 3: Perform multiplication inside the numerator: 3 x 4 = 12.",
+     "Step 4: Complete the numerator addition: 4 + 12 = 16.",
+     "Step 5: Evaluate the denominator's index: 5^2 = 25.",
+     "Step 6: Complete the denominator subtraction: 25 - 20 = 5.",
+     "Step 7: Perform final division: 16 / 5 = 3.2."
+    ],
+    "ans": "3.2 (or 16/5)"
+   },
+   {
+    "q": "Evaluate without a calculator: -6^2 + (-6)^2 - 3 x [ 4 - (2 + 1) ]",
+    "steps": [
+     "Step 1: Evaluate -6^2 without brackets: -(6 x 6) = -36.",
+     "Step 2: Evaluate (-6)^2 with brackets: (-6) x (-6) = +36.",
+     "Step 3: Evaluate the innermost bracket in the second term: 2 + 1 = 3.",
+     "Step 4: Complete the square brackets: 4 - 3 = 1.",
+     "Step 5: Perform the multiplication: 3 x 1 = 3.",
+     "Step 6: Combine all evaluated parts from left to right: -36 + 36 - 3 = 0 - 3 = -3."
+    ],
+    "ans": "-3"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Visual hierarchy pyramid of BODMAS showing strict operational tiers from brackets down to addition and subtraction.",
+    "svg": "<svg viewBox=\"0 0 400 240\">\n  <rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"12\" />\n  <polygon points=\"200,20 340,70 60,70\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\" />\n  <text x=\"200\" y=\"50\" font-size=\"12\" fill=\"#1b2540\" font-weight=\"bold\" text-anchor=\"middle\">1. Brackets ( ) [ ] { }</text>\n  <polygon points=\"60,75 340,75 320,120 80,120\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\" />\n  <text x=\"200\" y=\"101\" font-size=\"12\" fill=\"#1b2540\" font-weight=\"bold\" text-anchor=\"middle\">2. Indices ^ and Roots ( )</text>\n  <polygon points=\"80,125 320,125 300,170 100,170\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\" />\n  <text x=\"200\" y=\"151\" font-size=\"12\" fill=\"#1b2540\" font-weight=\"bold\" text-anchor=\"middle\">3. Div / Mult (Left to Right)</text>\n  <polygon points=\"100,175 300,175 280,220 120,220\" fill=\"#fecaca\" stroke=\"#1b2540\" stroke-width=\"2\" />\n  <text x=\"200\" y=\"201\" font-size=\"12\" fill=\"#1b2540\" font-weight=\"bold\" text-anchor=\"middle\">4. Add / Sub (Left to Right)</text>\n</svg>"
+   },
+   {
+    "cap": "Comparison of bracketed versus unbracketed negative powers showing why -3 squared differs from (-3) squared.",
+    "svg": "<svg viewBox=\"0 0 400 240\">\n  <rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"12\" />\n  <rect x=\"30\" y=\"30\" width=\"150\" height=\"170\" fill=\"#fecaca\" rx=\"8\" stroke=\"#1b2540\" stroke-width=\"2\" />\n  <text x=\"105\" y=\"60\" font-size=\"13\" fill=\"#1b2540\" font-weight=\"bold\" text-anchor=\"middle\">Without Brackets</text>\n  <text x=\"105\" y=\"100\" font-size=\"16\" fill=\"#1b2540\" text-anchor=\"middle\">-3^2</text>\n  <text x=\"105\" y=\"135\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">= -(3 x 3)</text>\n  <text x=\"105\" y=\"170\" font-size=\"14\" fill=\"#b91c1c\" font-weight=\"bold\" text-anchor=\"middle\">= -9</text>\n  <rect x=\"220\" y=\"30\" width=\"150\" height=\"170\" fill=\"#bbf7d0\" rx=\"8\" stroke=\"#1b2540\" stroke-width=\"2\" />\n  <text x=\"295\" y=\"60\" font-size=\"13\" fill=\"#1b2540\" font-weight=\"bold\" text-anchor=\"middle\">With Brackets</text>\n  <text x=\"295\" y=\"100\" font-size=\"16\" fill=\"#1b2540\" text-anchor=\"middle\">(-3)^2</text>\n  <text x=\"295\" y=\"135\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">= (-3) x (-3)</text>\n  <text x=\"295\" y=\"170\" font-size=\"14\" fill=\"#15803d\" font-weight=\"bold\" text-anchor=\"middle\">= +9</text>\n</svg>"
+   },
+   {
+    "cap": "Illustration of the left-to-right rule for division and multiplication in unbracketed expressions.",
+    "svg": "<svg viewBox=\"0 0 400 240\">\n  <rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"12\" />\n  <text x=\"200\" y=\"45\" font-size=\"16\" fill=\"#1b2540\" font-weight=\"bold\" text-anchor=\"middle\">Expression: 12 / 3 x 2</text>\n  <rect x=\"40\" y=\"70\" width=\"320\" height=\"50\" fill=\"#e9d5ff\" rx=\"6\" stroke=\"#1b2540\" stroke-width=\"2\" />\n  <text x=\"200\" y=\"100\" font-size=\"13\" fill=\"#1b2540\" text-anchor=\"middle\">Step 1 (Left to Right): 12 / 3 = 4</text>\n  <rect x=\"40\" y=\"140\" width=\"320\" height=\"50\" fill=\"#dbeafe\" rx=\"6\" stroke=\"#1b2540\" stroke-width=\"2\" />\n  <text x=\"200\" y=\"170\" font-size=\"13\" fill=\"#1b2540\" text-anchor=\"middle\">Step 2: 4 x 2 = 8 (Correct)</text>\n  <text x=\"200\" y=\"215\" font-size=\"11\" fill=\"#b91c1c\" font-weight=\"bold\" text-anchor=\"middle\">Warning: 3 x 2 first gives 12 / 6 = 2 (Wrong)</text>\n</svg>"
+   },
+   {
+    "cap": "Diagram showing how fraction bars act as implicit brackets separating numerators and denominators.",
+    "svg": "<svg viewBox=\"0 0 400 240\">\n  <rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"12\" />\n  <rect x=\"60\" y=\"25\" width=\"280\" height=\"60\" fill=\"#dbeafe\" rx=\"6\" stroke=\"#1b2540\" stroke-width=\"2\" />\n  <text x=\"200\" y=\"60\" font-size=\"14\" fill=\"#1b2540\" font-weight=\"bold\" text-anchor=\"middle\">Numerator: (3 + 5) = 8</text>\n  <line x1=\"80\" y1=\"100\" x2=\"320\" y2=\"100\" stroke=\"#1b2540\" stroke-width=\"4\" />\n  <text x=\"200\" y=\"120\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">Implicit Fraction Bar (Bracket Divider)</text>\n  <rect x=\"60\" y=\"140\" width=\"280\" height=\"60\" fill=\"#fde68a\" rx=\"6\" stroke=\"#1b2540\" stroke-width=\"2\" />\n  <text x=\"200\" y=\"175\" font-size=\"14\" fill=\"#1b2540\" font-weight=\"bold\" text-anchor=\"middle\">Denominator: (5 - 1) = 4</text>\n  <text x=\"200\" y=\"222\" font-size=\"12\" fill=\"#15803d\" font-weight=\"bold\" text-anchor=\"middle\">Result: 8 / 4 = 2</text>\n</svg>"
+   }
+  ],
+  "pid": "maths_ocr_h.0.2",
+  "sid": "maths_ocr_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-16T03:29:46.097Z"
+ }
+}

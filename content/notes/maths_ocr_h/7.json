@@ -1,0 +1,1914 @@
+{
+ "maths_ocr_h.7.0": {
+  "summary": "Mastering the foundational conventions, notation, and terms of basic geometry is essential for communicating mathematical arguments clearly and achieving top marks at Higher tier. This topic covers the strict symbolic language used to describe points, lines, angles, polygons, and 3D solids, including precise labeling conventions for vertices, sides, and parallel lines. Knowing these exact definitions ensures you avoid ambiguous phrasing in proofs and multi-step geometric reasoning problems.",
+  "core": [
+   {
+    "h": "Point, Line, and Plane Conventions",
+    "p": "Geometry relies on exact notation to specify locations, paths, and flat surfaces without ambiguity. A single point is denoted by a capital letter such as A. A straight line passing through points A and B is written as line AB or using a lowercase script letter. A line segment with fixed endpoints is denoted as AB with a bar above it, while the length of that segment is denoted simply as AB.",
+    "bullets": [
+     "Capital letters always represent specific points, such as vertex A of a triangle.",
+     "A line segment between P and Q has a specific measurable length denoted by PQ.",
+     "A ray starts at a fixed point and extends infinitely in one direction, written as ray AB.",
+     "Planes representing flat, two-dimensional surfaces extending infinitely are named with uppercase letters."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Line Segment",
+      "p": "A part of a straight line that is bounded by two distinct end points."
+     },
+     {
+      "k": "warn",
+      "t": "Notation Omission",
+      "p": "Do not confuse line segment notation AB with length notation AB; examiners penalize missing segment bars in vector and locus proofs."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Angle Notation and Types",
+    "p": "Angles are formed by two rays sharing a common endpoint called the vertex. In formal geometry, angles are named using three capital letters where the middle letter represents the vertex, such as angle ABC. Alternatively, a lowercase Greek letter or a number placed inside the angle arc may be used.",
+    "bullets": [
+     "Acute angles measure strictly between 0 degrees and 90 degrees.",
+     "Right angles measure exactly 90 degrees and are denoted by a square symbol in the corner.",
+     "Obtuse angles measure strictly between 90 degrees and 180 degrees.",
+     "Reflex angles measure strictly between 180 degrees and 360 degrees."
+    ],
+    "table": {
+     "head": [
+      "Angle Type",
+      "Size Range",
+      "Visual Indicator"
+     ],
+     "rows": [
+      [
+       "Acute",
+       "0° < x < 90°",
+       "Sharp corner"
+      ],
+      [
+       "Right",
+       "x = 90°",
+       "Square symbol"
+      ],
+      [
+       "Obtuse",
+       "90° < x < 180°",
+       "Wide corner"
+      ],
+      [
+       "Reflex",
+       "180° < x < 360°",
+       "Outside sweep"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Vertex Position",
+      "p": "The middle letter in a three-letter angle notation must always be the vertex where the angle is formed."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Standard angle notation showing vertex B and rays forming angle ABC.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><path d=\"M 80 180 L 250 180 L 180 80 Z\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"250\" cy=\"180\" r=\"4\" fill=\"#1b2540\"/><circle cx=\"80\" cy=\"180\" r=\"4\" fill=\"#1b2540\"/><circle cx=\"180\" cy=\"80\" r=\"4\" fill=\"#1b2540\"/><text x=\"70\" y=\"195\" font-size=\"12\" fill=\"#1b2540\">A</text><text x=\"260\" y=\"195\" font-size=\"12\" fill=\"#1b2540\">B</text><text x=\"175\" y=\"65\" font-size=\"12\" fill=\"#1b2540\">C</text><path d=\"M 220 180 A 30 30 0 0 0 200 155\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"210\" y=\"145\" font-size=\"12\" fill=\"#1b2540\">angle ABC</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Polygon Terminology and Classification",
+    "p": "Polygons are two-dimensional closed shapes made up of three or more straight line segments. They are classified by the number of sides and angles they possess. A regular polygon has all sides of equal length and all interior angles of equal size, whereas an irregular polygon does not possess this uniform symmetry.",
+    "bullets": [
+     "Triangle has 3 sides; Quadrilateral has 4 sides; Pentagon has 5 sides.",
+     "Hexagon has 6 sides; Heptagon has 7 sides; Octagon has 8 sides.",
+     "Nonagon has 9 sides; Decagon has 10 sides.",
+     "Convex polygons have all interior angles less than 180 degrees; concave polygons have a re-entrant vertex greater than 180 degrees."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Regular Polygon Rule",
+      "p": "Whenever a question states a polygon is regular, immediately note that all interior angles are equal and all exterior angles are equal."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Quadrilateral Family Tree",
+    "p": "Quadrilaterals possess specific hierarchical properties based on side lengths, parallel lines, and diagonal bisections. Understanding these relationships is vital for geometric proofs. A square is a special type of rectangle and rhombus, inheriting all their properties.",
+    "bullets": [
+     "Parallelogram: opposite sides equal and parallel, opposite angles equal.",
+     "Rhombus: all four sides equal, diagonals bisect at 90 degrees.",
+     "Trapezium: at least one pair of parallel sides.",
+     "Kite: two pairs of adjacent equal sides, diagonals intersect at 90 degrees."
+    ],
+    "table": {
+     "head": [
+      "Shape",
+      "Parallel Sides",
+      "Equal Sides",
+      "Diagonal Properties"
+     ],
+     "rows": [
+      [
+       "Parallelogram",
+       "2 pairs",
+       "Opposite",
+       "Bisect each other"
+      ],
+      [
+       "Rhombus",
+       "2 pairs",
+       "All 4",
+       "Bisect at 90°"
+      ],
+      [
+       "Trapezium",
+       "1 pair",
+       "None required",
+       "None special"
+      ],
+      [
+       "Kite",
+       "None",
+       "2 pairs adjacent",
+       "Intersect at 90°"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Trapezium Definition",
+      "p": "A quadrilateral with at least one pair of parallel sides (UK definition)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Triangle Classifications",
+    "p": "Triangles are categorized by both their side lengths and their internal angle measurements. An equilateral triangle has three equal sides and three 60-degree angles. An isosceles triangle has two equal sides and two equal base angles opposite those sides.",
+    "bullets": [
+     "Scalene triangle: all three sides and all three angles are different lengths and sizes.",
+     "Isosceles triangle: two equal sides, two equal base angles, and one line of symmetry.",
+     "Equilateral triangle: three equal sides, three 60-degree angles, and rotational symmetry of order 3.",
+     "Right-angled triangle: contains one 90-degree interior angle, enabling Pythagoras' theorem and trigonometry."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Isosceles Symmetry",
+      "p": "The equal angles in an isosceles triangle are always opposite the equal sides."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Isosceles triangle showing equal side hash marks and equal base angles.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><path d=\"M 140 200 L 260 200 L 200 60 Z\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"160\" y1=\"120\" x2=\"175\" y2=\"135\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"225\" y1=\"135\" x2=\"240\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"190\" y=\"215\" font-size=\"12\" fill=\"#1b2540\">Base</text><text x=\"120\" y=\"130\" font-size=\"12\" fill=\"#1b2540\">Equal Side</text><text x=\"250\" y=\"130\" font-size=\"12\" fill=\"#1b2540\">Equal Side</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Solid Geometry and 3D Terminology",
+    "p": "Three-dimensional solids are described using vertices, edges, and faces. A face is a flat or curved surface enclosing the solid; an edge is a line segment where two faces meet; a vertex is a corner point where three or more edges meet.",
+    "bullets": [
+     "Polyhedron: a solid bounded by flat polygonal faces.",
+     "Prism: a 3D solid with a constant cross-section along its entire length.",
+     "Pyramid: a solid with a polygonal base and triangular faces meeting at a common apex.",
+     "Sphere, cylinder, and cone involve curved surfaces and are non-polyhedral solids."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Prism",
+      "p": "A polyhedron with parallel, congruent polygonal bases connected by rectangular or parallelogram faces."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Euler's Relation for Polyhedra",
+    "p": "For any connected polyhedron that does not self-intersect, Euler's formula provides an invariant relationship between the number of vertices V, edges E, and faces F. This formula is frequently tested in structural geometry problems.",
+    "bullets": [
+     "Euler's formula is given by V plus F minus E equals 2.",
+     "Rearranging yields E equals V plus F minus 2.",
+     "A cube has 8 vertices, 6 faces, giving 8 + 6 - 2 = 12 edges.",
+     "A tetrahedron has 4 vertices, 4 faces, giving 4 + 4 - 2 = 6 edges."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Euler's Formula",
+      "p": "V + F - E = 2 (Vertices plus Faces minus Edges equals 2)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Geometric Notation for Lines and Equality",
+    "p": "Diagrams use standard hash marks and arrowheads to communicate geometric properties without writing extensive text. Single, double, or triple hash marks indicate lines of equal length. Single or double arrowheads indicate lines that are parallel.",
+    "bullets": [
+     "Matching hash marks on sides indicate that those line segments are equal in length.",
+     "Arrowheads on lines indicate that the lines are parallel and will never intersect.",
+     "A small square in a corner indicates perpendicular lines meeting at 90 degrees.",
+     "Arc marks with matching tick lines indicate equal angle sizes."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam Diagram Inspection",
+      "p": "Always scan exam diagrams for hidden hash marks and parallel arrows; they provide the essential clues for angle proofs."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Circle Terminology and Notation",
+    "p": "Circles possess precise geometric terminology to describe internal and external line segments. A chord is a line segment whose endpoints lie on the circle. A tangent is a straight line that touches the circle at exactly one point.",
+    "bullets": [
+     "Radius: distance from the center to any point on the circumference.",
+     "Diameter: a chord passing through the center, equal to twice the radius.",
+     "Arc: a connected section of the circle's circumference.",
+     "Sector: a region enclosed by two radii and an arc."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Tangent",
+      "p": "A straight line that touches a curve at a single point without crossing it."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Symmetry in Shapes",
+    "p": "Symmetry describes how a shape matches up with its transformed self under reflection or rotation. Line symmetry occurs when a shape can be folded into two identical halves along a mirror line. Rotational symmetry is the number of times a shape fits onto itself during a full 360-degree rotation.",
+    "bullets": [
+     "Equilateral triangle has 3 lines of symmetry and rotational symmetry of order 3.",
+     "Rectangle has 2 lines of symmetry and rotational symmetry of order 2.",
+     "Parallelogram has 0 lines of symmetry and rotational symmetry of order 2.",
+     "Regular n-gon has n lines of symmetry and rotational symmetry of order n."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Order of Rotational Symmetry",
+      "p": "Do not write 360 degrees as the order; rotational symmetry order is a pure integer count of how many times it fits."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Nomenclature of Angles on Lines",
+    "p": "When straight lines intersect or meet, specific angle relationships emerge by definition. Vertically opposite angles are formed by two intersecting straight lines and are equal. Adjacent angles on a straight line sum to exactly 180 degrees.",
+    "bullets": [
+     "Angles around a single point sum to exactly 360 degrees.",
+     "Vertically opposite angles are strictly equal in size.",
+     "Angles on a straight line form a supplementary pair summing to 180 degrees.",
+     "Co-interior angles between parallel lines sum to 180 degrees."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Straight Line Sum",
+      "p": "Adjacent angles on a straight line always total 180°."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Vertically opposite angles formed by two intersecting straight lines.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"80\" y1=\"60\" x2=\"320\" y2=\"180\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"80\" y1=\"180\" x2=\"320\" y2=\"60\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"190\" y=\"100\" font-size=\"12\" fill=\"#1b2540\">a</text><text x=\"190\" y=\"150\" font-size=\"12\" fill=\"#1b2540\">b</text><text x=\"140\" y=\"125\" font-size=\"12\" fill=\"#1b2540\">c</text><text x=\"240\" y=\"125\" font-size=\"12\" fill=\"#1b2540\">d</text></svg>"
+     }
+    ]
+   }
+  ],
+  "analogy": {
+   "t": "The Blueprint and Construction Site",
+   "p": "Think of geometric notation and conventions as the strict architectural blueprint symbols of a master builder. If an architect draws a dashed line, uses a square corner symbol, or writes double arrowheads, every builder across the world instantly knows the exact structural relationship without needing a paragraph of explanation. Where this analogy breaks down is that physical buildings suffer from imperfect construction tolerances, whereas mathematical geometry deals in absolute, flawless logical perfection."
+  },
+  "terms": [
+   {
+    "t": "Vertex",
+    "d": "A corner point where two or more straight lines, line segments, or edges meet."
+   },
+   {
+    "t": "Chord",
+    "d": "A straight line segment whose endpoints both lie on the circumference of a circle."
+   },
+   {
+    "t": "Tangent",
+    "d": "A straight line that touches a curve or circle at exactly one point."
+   },
+   {
+    "t": "Prism",
+    "d": "A 3D solid with identical cross-sections along its entire length and flat parallel bases."
+   },
+   {
+    "t": "Polyhedron",
+    "d": "A three-dimensional solid bound by flat polygonal faces."
+   },
+   {
+    "t": "Regular Polygon",
+    "d": "A polygon with all interior angles equal and all side lengths equal."
+   },
+   {
+    "t": "Convex Polygon",
+    "d": "A polygon in which every interior angle is strictly less than 180 degrees."
+   },
+   {
+    "t": "Reflex Angle",
+    "d": "An angle measuring strictly greater than 180 degrees and less than 360 degrees."
+   },
+   {
+    "t": "Segment",
+    "d": "A finite portion of a straight line bounded by two distinct endpoints."
+   },
+   {
+    "t": "Bisect",
+    "d": "To divide a line, angle, or shape into two parts of exactly equal size."
+   },
+   {
+    "t": "Scalene Triangle",
+    "d": "A triangle with three sides of different lengths and three different angles."
+   },
+   {
+    "t": "Trapezium",
+    "d": "A quadrilateral possessing at least one pair of parallel sides."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Calling a trapezium a shape with no parallel sides.",
+    "r": "A trapezium has at least one pair of parallel sides."
+   },
+   {
+    "w": "Writing angle BAC as angle BCA when talking about vertex A.",
+    "r": "The vertex letter must always be in the exact middle position."
+   },
+   {
+    "w": "Stating order of rotational symmetry is 360 degrees.",
+    "r": "Rotational symmetry order is a count of how many times it fits, e.g., order 4."
+   },
+   {
+    "w": "Confusing a chord with a diameter.",
+    "r": "A diameter is a special chord that passes directly through the circle center."
+   },
+   {
+    "w": "Assuming a rhombus has 90-degree interior corners.",
+    "r": "A rhombus has equal sides, but its interior angles are not 90 degrees unless it is a square."
+   },
+   {
+    "w": "Forgetting that a regular polygon requires equal angles as well as equal sides.",
+    "r": "A rhombus has equal sides but is not a regular polygon because its angles differ."
+   },
+   {
+    "w": "Counting edges of a polyhedron by guessing.",
+    "r": "Use Euler's relation V + F - E = 2 to verify edge counts."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Write down the mathematical name for a polygon with 7 sides.",
+    "marks": 1,
+    "model": [
+     "Heptagon"
+    ],
+    "tip": "Memorise polygon names from 3 to 10 sides."
+   },
+   {
+    "q": "A quadrilateral has diagonals that intersect at 90 degrees and all four sides are equal in length, but its interior angles are not 90 degrees. Name this shape.",
+    "marks": 2,
+    "model": [
+     "Rhombus",
+     "(Award 1 mark for parallelogram family if incomplete)"
+    ],
+    "tip": "Check diagonal intersection properties for rhombuses and kites."
+   },
+   {
+    "q": "Explain why a regular pentagon cannot tessellate a flat plane on its own.",
+    "marks": 2,
+    "model": [
+     "Interior angle of a regular pentagon is 108 degrees.",
+     "108 does not divide exactly into 360 degrees, leaving gaps."
+    ],
+    "tip": "Tessellation requires interior angles to sum to exactly 360 degrees around a point."
+   },
+   {
+    "q": "A polyhedron has 6 vertices and 8 faces. Calculate the number of edges it has.",
+    "marks": 2,
+    "model": [
+     "Use Euler's formula V + F - E = 2",
+     "6 + 8 - E = 2 so E = 12"
+    ],
+    "tip": "Always state Euler's formula explicitly to secure method marks."
+   },
+   {
+    "q": "State the geometric property indicated by double arrowheads placed on two line segments in a diagram.",
+    "marks": 1,
+    "model": [
+     "The lines are parallel."
+    ],
+    "tip": "Single arrowheads mean parallel; double arrowheads also mean parallel, used when multiple parallel pairs exist."
+   },
+   {
+    "q": "Name the 3D solid that has a circular base and a single vertex at the apex.",
+    "marks": 1,
+    "model": [
+     "Cone"
+    ],
+    "tip": "Do not confuse a cone with a cylinder."
+   },
+   {
+    "q": "Write down the exact order of rotational symmetry for a regular hexagon.",
+    "marks": 1,
+    "model": [
+     "6"
+    ],
+    "tip": "For any regular n-gon, the order of rotational symmetry is n."
+   },
+   {
+    "q": "Explain the difference between a chord and a secant of a circle.",
+    "marks": 2,
+    "model": [
+     "A chord is a line segment with both endpoints on the circle circumference.",
+     "A secant is a straight line that intersects a circle at two points and extends beyond them."
+    ],
+    "tip": "Note the distinction between a finite segment (chord) and an infinite line (secant)."
+   },
+   {
+    "q": "A triangle has side lengths 7 cm, 7 cm, and 10 cm. Classify the triangle by its sides.",
+    "marks": 1,
+    "model": [
+     "Isosceles triangle"
+    ],
+    "tip": "Two equal sides always denote an isosceles triangle."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A polyhedron has 12 vertices and 30 edges. Using Euler's relation, calculate the number of faces F.",
+    "steps": [
+     "State Euler's formula: V + F - E = 2.",
+     "Substitute the known values into the formula: 12 + F - 30 = 2.",
+     "Simplify the left side: F - 18 = 2.",
+     "Solve for F: F = 20."
+    ],
+    "ans": "20 faces"
+   },
+   {
+    "q": "A regular polygon has an interior angle of 144 degrees. Name the polygon by calculating the number of sides n.",
+    "steps": [
+     "Calculate the exterior angle: 180 - 144 = 36 degrees.",
+     "Recall that the sum of exterior angles of any convex polygon is 360 degrees.",
+     "Calculate the number of sides n: 360 / 36 = 10.",
+     "Name the 10-sided polygon: Decagon."
+    ],
+    "ans": "Decagon"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Geometric notation showing parallel lines with arrowheads and equal line segments with hash marks.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"50\" y1=\"80\" x2=\"350\" y2=\"80\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"160\" x2=\"350\" y2=\"160\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M 190 70 L 200 80 L 190 90\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M 190 150 L 200 160 L 190 170\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"120\" y1=\"80\" x2=\"120\" y2=\"160\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"115\" y1=\"115\" x2=\"125\" y2=\"125\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"160\" y=\"55\" font-size=\"12\" fill=\"#1b2540\">Parallel Lines</text><text x=\"135\" y=\"125\" font-size=\"12\" fill=\"#1b2540\">Equal Hash</text></svg>"
+   }
+  ],
+  "pid": "maths_ocr_h.7.0",
+  "sid": "maths_ocr_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-16T03:36:45.814Z"
+ },
+ "maths_ocr_h.7.3": {
+  "summary": "Mastering the properties of polygons requires a rigorous understanding of the classification, internal symmetry, and side-angle relationships of triangles and quadrilaterals. Grade 9 success depends not just on memorising standard definitions, but on applying geometric proofs, line and rotational symmetry properties, and vector or coordinate relationships to complex composite shapes.",
+  "core": [
+   {
+    "h": "Classification and Properties of Triangles",
+    "p": "Triangles are classified fundamentally by their side lengths and interior angles. Every triangle has an angle sum of exactly 180 degrees, a fact derived from parallel line rules.",
+    "bullets": [
+     "**Equilateral triangle**: All three sides are equal in length, and all three interior angles are exactly 60 degrees. It possesses 3 lines of reflective symmetry and rotational symmetry of order 3.",
+     "**Isosceles triangle**: Exactly two sides are equal in length, and the angles opposite those equal sides are also equal (base angles are equal). It possesses 1 line of symmetry.",
+     "**Scalene triangle**: All three sides and all three interior angles are completely different in length and magnitude. It has 0 lines of symmetry and rotational symmetry of order 1.",
+     "**Right-angled triangle**: Contains one interior angle measuring exactly 90 degrees. The side opposite the right angle is always the hypotenuse, which is the longest side governed by Pythagoras' Theorem."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Isosceles Triangle",
+      "p": "A triangle with at least two equal sides and consequently two equal interior base angles."
+     },
+     {
+      "k": "key",
+      "t": "Angle Sum",
+      "p": "The interior angles of any triangle in Euclidean space always sum to 180 degrees."
+     },
+     {
+      "k": "tip",
+      "t": "Symmetry Trap",
+      "p": "Do not assume a triangle drawn on an exam paper is isosceles or equilateral unless marked with tick dashes or given via explicit numerical values."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Comprehensive classification of triangles showing equal side tick marks and key angle properties.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><polygon points=\"50,180 110,70 170,180\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"110\" y=\"140\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">Equilateral: 60°</text><polygon points=\"230,180 290,70 350,180\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"255\" y1=\"125\" x2=\"265\" y2=\"125\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"315\" y1=\"125\" x2=\"325\" y2=\"125\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"290\" y=\"140\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">Isosceles: Base Angles Equal</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Hierarchy and Properties of Quadrilaterals",
+    "p": "Quadrilaterals are four-sided closed polygons whose interior angles sum to 360 degrees. They form a strict inclusion hierarchy based on parallel sides, equal lengths, and diagonal properties.",
+    "bullets": [
+     "**Square**: Four equal sides, four right angles, two pairs of parallel sides. Diagonals bisect each other at 90 degrees and are equal in length.",
+     "**Rectangle**: Opposite sides equal and parallel, four right angles. Diagonals are equal in length and bisect each other, but do not intersect at 90 degrees.",
+     "**Rhombus**: Four equal sides, opposite sides parallel. Opposite angles are equal, and diagonals bisect each other perpendicularly (at 90 degrees).",
+     "**Parallelogram**: Opposite sides equal and parallel. Opposite angles are equal, and consecutive interior angles sum to 180 degrees (co-interior). Diagonals bisect each other.",
+     "**Trapezium**: At least one pair of parallel sides. Often called a trapezoid in American texts, but OCR strictly uses trapezium.",
+     "**Kite**: Two pairs of adjacent sides that are equal in length. One diagonal is bisected perpendicularly by the other, and exactly one pair of opposite angles are equal."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Diagonal Properties",
+      "p": "Rhombus and square diagonals bisect at 90 degrees. Rectangle and square diagonals are equal in length."
+     },
+     {
+      "k": "warn",
+      "t": "Parallelogram Diagonals",
+      "p": "Do not state that the diagonals of a general parallelogram are equal or perpendicular; they only bisect each other."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Symmetry: Line and Rotational",
+    "p": "Symmetry describes how a shape maps onto itself after a rigid transformation such as a reflection or a rotation about a central point.",
+    "bullets": [
+     "**Line of symmetry (reflective symmetry)**: An imaginary line dividing a 2D shape into two mirror-image halves that match perfectly when folded.",
+     "**Order of rotational symmetry**: The exact number of times a shape fits onto itself during one full 360-degree rotation about its centre.",
+     "**Equilateral triangle**: 3 lines of symmetry, rotational order 3.",
+     "**Square**: 4 lines of symmetry, rotational order 4.",
+     "**Rectangle**: 2 lines of symmetry (horizontal and vertical through centres of opposite sides, NOT the diagonals), rotational order 2.",
+     "**Rhombus**: 2 lines of symmetry (along the diagonals, NOT the midpoints of sides), rotational order 2.",
+     "**Parallelogram**: 0 lines of symmetry, rotational order 2.",
+     "**Kite**: 1 line of symmetry (along the main diagonal), rotational order 1."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Rectangle Diagonals",
+      "p": "A rectangle's diagonals are NOT lines of symmetry because folding a rectangle along a diagonal does not align the outer edges."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Interior and Exterior Angles of Polygons",
+    "p": "Polygons with n sides can be broken down into triangles from a single vertex to calculate interior and exterior angle sums.",
+    "bullets": [
+     "**Sum of interior angles**: Given by the formula (n - 2) * 180 degrees, where n is the number of sides.",
+     "**Sum of exterior angles**: For any convex polygon, the sum of the exterior angles is always exactly 360 degrees, regardless of the number of sides.",
+     "**Interior and exterior relationship**: At any vertex, Interior + Exterior = 180 degrees (they form a straight line).",
+     "**Regular polygon calculations**: For a regular n-sided polygon, each interior angle is ((n - 2) * 180) / n, and each exterior angle is 360 / n."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Regular Polygon",
+      "p": "A polygon where all interior angles are equal and all side lengths are equal."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Diagonals and Polygon Decomposition",
+    "p": "A diagonal is a line segment connecting two non-adjacent vertices of a polygon. Understanding diagonals helps prove congruence and geometric relationships.",
+    "bullets": [
+     "**Number of diagonals from one vertex**: In an n-sided polygon, from any single vertex you can draw (n - 3) diagonals.",
+     "**Total number of diagonals in a polygon**: Given by the exact formula n(n - 3) / 2.",
+     "**Triangle partitioning**: Drawing all possible diagonals from a single vertex divides an n-sided polygon into (n - 2) non-overlapping triangles.",
+     "**Convex vs Concave**: A convex polygon has all interior angles less than 180 degrees and all diagonals lie entirely inside the shape. A concave polygon has at least one interior angle greater than 180 degrees (a 'cave-in') and at least one diagonal outside the shape."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Convexity",
+      "p": "GCSE higher questions almost exclusively deal with convex polygons unless explicitly specified as concave."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Advanced Quadrilateral Proofs & Coordinate Geometry",
+    "p": "At Grade 9, polygon properties are verified using analytical geometry, gradients, lengths, and vector components on a Cartesian grid.",
+    "bullets": [
+     "**Proving a parallelogram on a grid**: Show that opposite sides have equal gradients (meaning they are parallel) or show that opposite sides have equal vector lengths.",
+     "**Proving a rectangle on a grid**: Show that opposite sides are parallel and adjacent sides are perpendicular (gradient product = -1). Alternatively, show that the two diagonals are equal in length and bisect each other.",
+     "**Proving a rhombus on a grid**: Show that all four side lengths are equal using Pythagoras' Theorem, and that diagonals intersect at right angles (gradient product = -1).",
+     "**Midpoint formula**: The midpoint of vertices (x1, y1) and (x2, y2) is ((x1 + x2)/2, (y1 + y2)/2), used to prove diagonal bisection."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Perpendicular Gradients",
+      "p": "Two lines are perpendicular if and only if the product of their gradients is -1 (m1 * m2 = -1)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Special Triangles: Congruence and Similarity",
+    "p": "Triangles frequently appear in multi-step geometry proofs where congruence (identical size and shape) or similarity (proportional size) must be established.",
+    "bullets": [
+     "**Congruence criteria**: SSS, SAS, ASA, and RHS. Two triangles meeting one of these conditions are completely identical in every dimension.",
+     "**Similarity criteria**: AAA (all corresponding angles equal), SSS (all three pairs of corresponding sides in the same ratio), and SAS (two pairs of sides in the same ratio with the included angle equal).",
+     "**Isosceles triangle splitting**: Dropping a perpendicular line from the apex of an isosceles triangle to the base creates two congruent right-angled triangles, bisecting both the base and the vertical apex angle."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Apex Property",
+      "p": "In an isosceles triangle, the perpendicular bisector of the base always passes through the opposite vertex."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Properties of Kites and Trapeziums in Depth",
+    "p": "Trapeziums and kites have unique asymmetry that makes them frequent testing grounds for simultaneous equations and algebraic angle problems.",
+    "bullets": [
+     "**Trapezium area and angles**: Co-interior angles between the parallel bases sum to 180 degrees. The area is ((a + b) / 2) * h.",
+     "**Isosceles trapezium**: A trapezium where the non-parallel sides are equal in length. Base angles are equal in pairs, and diagonals are equal in length.",
+     "**Kite diagonals**: The two diagonals intersect at 90 degrees, and the longer diagonal bisects the shorter diagonal."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Trapezium Angles",
+      "p": "All four angles in a general trapezium do not sum to equal pairs; only the co-interior angles between parallel lines sum to 180 degrees."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Regular Polygon Tessellation",
+    "p": "A tessellation is a pattern of shapes that completely covers a 2D plane without any gaps or overlapping regions.",
+    "bullets": [
+     "**Tessellation condition**: At any single vertex point where shapes meet, the sum of the interior angles must equal exactly 360 degrees.",
+     "**Regular polygons that tessellate alone**: Equilateral triangles (60 * 6 = 360), squares (90 * 4 = 360), and regular hexagons (120 * 3 = 360).",
+     "**Polygons that do NOT tessellate alone**: Regular pentagons (interior angle 108 degrees, 360 / 108 = 3.333, not a whole number) and regular octagons (interior angle 135 degrees, 360 / 135 = 2.666)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Factor Rule",
+      "p": "A regular polygon tessellates alone if and only if 360 is divisible by its interior angle measure."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Vector Geometry of Polygons",
+    "p": "Higher tier exams often test polygon properties using column vectors or geometric vectors defined by letters like a and b.",
+    "bullets": [
+     "**Vector parallel condition**: Two vectors are parallel if one is a scalar multiple of the other (e.g., vector AB = 2 * vector DC).",
+     "**Vector quadrilateral proof**: To prove ABCD is a parallelogram using vectors, prove that vector AB equals vector DC and vector AD equals vector BC.",
+     "**Midpoint vector theorem**: The vector joining the midpoints of two sides of a triangle is parallel to the third side and equal to half its length."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Collinear Points",
+      "p": "Points that lie on the same straight line, proven in vectors by showing parallel direction vectors sharing a common point."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Angle Chasing in Composite Polygon Figures",
+    "p": "Grade 9 geometry questions combine polygons sharing common sides or vertices, requiring systematic angle chasing using exterior and interior angle rules.",
+    "bullets": [
+     "**Shared sides**: When a regular octagon and a regular pentagon share an edge, calculate the individual interior angles (135 and 108 degrees) to find the gap angle (360 - 135 - 108 = 117 degrees).",
+     "**Exterior angle method**: Often, converting all interior angle targets into exterior angles makes complex polygon interaction simpler because exterior angles always sum to 360 degrees."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Strategy Shift",
+      "p": "If interior angle calculations get bogged down with large numbers, switch to exterior angles."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Symmetry Groups of Polygons",
+    "p": "The full symmetry group of a regular n-sided polygon is the dihedral group of order 2n, combining n rotations and n reflections.",
+    "bullets": [
+     "**Reflections**: A regular n-sided polygon has n lines of symmetry. If n is odd, each line passes through a vertex and the midpoint of the opposite side. If n is even, there are n/2 lines passing through opposite vertices and n/2 lines passing through the midpoints of opposite sides.",
+     "**Rotations**: The rotational symmetry order is exactly equal to n, with the smallest angle of rotation being 360 / n degrees."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Dihedral Symmetry",
+      "p": "The number of lines of symmetry in a regular polygon always equals the number of sides (n)."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Family Tree of Shapes and their DNA",
+   "p": "Think of quadrilaterals as an aristocratic family tree. The Quadrilateral family patriarch has four sides and 360 degrees. As you move down the tree, children inherit all traits of their parents plus specialised mutations: a Parallelogram inherits opposite parallel sides; a Rhombus inherits parallelogram traits plus equal sides; a Square is the ultimate royal heir inheriting all traits of a rectangle and a rhombus combined. Where this analogy breaks down is that biological evolution is fluid, whereas geometric classification is strictly hierarchical and binary: a shape either satisfies all defining properties or it does not belong in that sub-category."
+  },
+  "terms": [
+   {
+    "t": "Polygon",
+    "d": "A closed 2D geometric figure bounded by three or more straight line segments."
+   },
+   {
+    "t": "Regular Polygon",
+    "d": "A polygon with all sides of equal length and all interior angles equal."
+   },
+   {
+    "t": "Convex Polygon",
+    "d": "A polygon where every interior angle is strictly less than 180 degrees and all diagonals lie inside."
+   },
+   {
+    "t": "Concave Polygon",
+    "d": "A polygon with at least one interior angle greater than 180 degrees, creating an indentation."
+   },
+   {
+    "t": "Diagonal",
+    "d": "A straight line segment connecting two non-adjacent vertices of a polygon."
+   },
+   {
+    "t": "Parallelogram",
+    "d": "A quadrilateral with two pairs of opposite sides that are parallel and equal in length."
+   },
+   {
+    "t": "Rhombus",
+    "d": "A quadrilateral with four equal sides and opposite parallel sides."
+   },
+   {
+    "t": "Trapezium",
+    "d": "A quadrilateral with at least one pair of parallel sides."
+   },
+   {
+    "t": "Kite",
+    "d": "A quadrilateral with two pairs of adjacent sides of equal length."
+   },
+   {
+    "t": "Line Symmetry",
+    "d": "A property where a shape can be folded into two identical halves along a line."
+   },
+   {
+    "t": "Rotational Symmetry",
+    "d": "The number of times a shape coincides with itself during one complete 360-degree turn."
+   },
+   {
+    "t": "Interior Angle",
+    "d": "An angle formed on the inside of a polygon by two adjacent sides."
+   },
+   {
+    "t": "Exterior Angle",
+    "d": "An angle formed between any side of a polygon and a line extended outward from the adjacent side."
+   },
+   {
+    "t": "Tessellation",
+    "d": "An arrangement of shapes tiling a plane completely with no gaps or overlaps."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Stating a rectangle has 4 lines of symmetry because of its diagonals.",
+    "r": "A rectangle has only 2 lines of symmetry (horizontal and vertical); diagonals are not lines of symmetry."
+   },
+   {
+    "w": "Saying that the diagonals of a parallelogram are equal in length.",
+    "r": "Parallelogram diagonals bisect each other, but they are not equal in length (unlike a rectangle)."
+   },
+   {
+    "w": "Dividing by n instead of (n - 2) when finding the interior angle sum.",
+    "r": "Interior angle sum formula is (n - 2) * 180. Dividing by n gives the size of a single interior angle for a regular polygon."
+   },
+   {
+    "w": "Assuming the exterior angle sum changes depending on the number of sides.",
+    "r": "The sum of exterior angles for any convex polygon is always exactly 360 degrees."
+   },
+   {
+    "w": "Calling a shape with one pair of parallel sides a trapezoid without noting OCR uses trapezium.",
+    "r": "Always use 'trapezium' in OCR written exams as specified in the marking glossary."
+   },
+   {
+    "w": "Confusing a rhombus and a kite line of symmetry placement.",
+    "r": "A rhombus has lines of symmetry along its diagonals. A kite has only 1 line of symmetry along its main diagonal."
+   },
+   {
+    "w": "Writing that a regular pentagon tessellates because 360/5 = 72.",
+    "r": "72 is the exterior angle, not the interior angle. Interior angle is 108; 360 / 108 is not a whole number so it does not tessellate."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Calculate the size of each interior angle of a regular 15-sided polygon.",
+    "marks": 3,
+    "model": [
+     "Interior angle sum = (15 - 2) * 180 = 13 * 180 = 2340 degrees",
+     "Each interior angle = 2340 / 15",
+     "Answer = 156 degrees"
+    ],
+    "tip": "Alternatively, find the exterior angle first: 360 / 15 = 24 degrees, then 180 - 24 = 156 degrees."
+   },
+   {
+    "q": "The interior angle of a regular polygon is 165 degrees. Work out the number of sides.",
+    "marks": 3,
+    "model": [
+     "Exterior angle = 180 - 165 = 15 degrees",
+     "Number of sides = 360 / 15",
+     "Answer = 24 sides"
+    ],
+    "tip": "Working with exterior angles avoids large algebraic expansions."
+   },
+   {
+    "q": "Explain why a regular octagon has rotational symmetry of order 8.",
+    "marks": 1,
+    "model": [
+     "A regular octagon fits onto itself 8 times during one complete 360-degree rotation."
+    ],
+    "tip": "State both the order number and the definition of matching during a full turn."
+   },
+   {
+    "q": "Write down the mathematical name of a quadrilateral with rotational symmetry of order 2 and no lines of symmetry.",
+    "marks": 1,
+    "model": [
+     "Parallelogram (or general parallelogram)"
+    ],
+    "tip": "Memorise the symmetry properties of all standard quadrilaterals."
+   },
+   {
+    "q": "A regular hexagon and a regular octagon share a common side. Calculate the size of the non-shared angle between them at the vertex where they meet.",
+    "marks": 4,
+    "model": [
+     "Interior angle of hexagon = (4 * 180) / 6 = 120 degrees",
+     "Interior angle of octagon = (6 * 180) / 8 = 135 degrees",
+     "Angle around a point is 360 degrees",
+     "Gap angle = 360 - 120 - 135 = 105 degrees"
+    ],
+    "tip": "Draw a clear mental or rough sketch of the meeting vertex to verify angle addition."
+   },
+   {
+    "q": "Prove algebraically that the sum of the interior angles of any n-sided polygon is (n - 2) * 180 degrees.",
+    "marks": 3,
+    "model": [
+     "Choose any single vertex in an n-sided polygon.",
+     "Draw all possible diagonals from that vertex, creating (n - 2) triangles.",
+     "Since each triangle has an angle sum of 180 degrees, the total sum is (n - 2) * 180."
+    ],
+    "tip": "Mention the triangulation method explicitly to gain full marks for geometric proof."
+   },
+   {
+    "q": "Points A(1, 2), B(5, 4), C(4, 7) and D(0, 5) form a quadrilateral ABCD. Show that ABCD is a parallelogram.",
+    "marks": 4,
+    "model": [
+     "Vector AB = (5-1, 4-2) = (4, 2)",
+     "Vector DC = (4-0, 7-5) = (4, 2)",
+     "Since Vector AB equals Vector DC, sides AB and DC are equal in length and parallel.",
+     "Conclusion: ABCD is a parallelogram because one pair of opposite sides is equal and parallel."
+    ],
+    "tip": "Vector methods or gradient checks are equally acceptable; show full working."
+   },
+   {
+    "q": "Find the number of diagonals that can be drawn from a single vertex in a dodecagon (12-sided polygon).",
+    "marks": 2,
+    "model": [
+     "Formula for diagonals from one vertex is n - 3",
+     "12 - 3 = 9 diagonals"
+    ],
+    "tip": "Remember n - 3 because a vertex cannot form a diagonal with itself or its two immediate adjacent neighbours."
+   },
+   {
+    "q": "State two geometrical properties of the diagonals of a rhombus.",
+    "marks": 2,
+    "model": [
+     "1. Diagonals bisect each other at right angles (90 degrees).",
+     "2. Diagonals bisect the interior angles of the rhombus."
+    ],
+    "tip": "Do not confuse rhombus diagonal properties with rectangle diagonal properties."
+   },
+   {
+    "q": "Three regular polygons meet at a point without gaps. Two of them are a square and a regular hexagon. Find the number of sides of the third polygon.",
+    "marks": 4,
+    "model": [
+     "Interior angle of square = 90 degrees",
+     "Interior angle of regular hexagon = 120 degrees",
+     "Sum of angles around the point = 360 degrees, so third angle = 360 - 90 - 120 = 150 degrees",
+     "Exterior angle of third polygon = 180 - 150 = 30 degrees",
+     "Number of sides = 360 / 30 = 12 sides"
+    ],
+    "tip": "Use the exterior angle method at the end to quickly find the number of sides."
+   }
+  ],
+  "worked": [
+   {
+    "q": "The interior angles of a pentagon are in the ratio 2 : 3 : 4 : 5 : 6. Find the size of the largest angle.",
+    "steps": [
+     "Step 1: Find the total sum of the interior angles for a 5-sided polygon using (n - 2) * 180.",
+     "Sum = (5 - 2) * 180 = 3 * 180 = 540 degrees.",
+     "Step 2: Add the parts of the ratio together to find total ratio shares.",
+     "Total shares = 2 + 3 + 4 + 5 + 6 = 20 parts.",
+     "Step 3: Calculate the value of one ratio share by dividing total angle sum by total shares.",
+     "1 share = 540 / 27 = wait, 2+3+4+5+6 = 20. 540 / 20 = 27 degrees per share.",
+     "Step 4: Multiply the largest ratio part (6) by the value of one share.",
+     "Largest angle = 6 * 27 = 162 degrees."
+    ],
+    "ans": "162 degrees"
+   },
+   {
+    "q": "In a regular polygon, the ratio of the interior angle to the exterior angle is 7 : 2. Calculate the number of sides of the polygon.",
+    "steps": [
+     "Step 1: Let the interior angle be 7x and the exterior angle be 2x.",
+     "Step 2: Use the rule that interior and exterior angles sum to 180 degrees.",
+     "7x + 2x = 180",
+     "9x = 180",
+     "x = 20",
+     "Step 3: Calculate the exterior angle value.",
+     "Exterior angle = 2 * 20 = 40 degrees.",
+     "Step 4: Use the formula n = 360 / exterior angle to find the number of sides.",
+     "n = 360 / 40 = 9 sides."
+    ],
+    "ans": "9 sides"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Properties of quadrilateral diagonals showing perpendicular bisectors in a rhombus and equal length diagonals in a rectangle.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"30\" y=\"40\" width=\"140\" height=\"90\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"30\" y1=\"40\" x2=\"170\" y2=\"130\" stroke=\"#e11d48\" stroke-width=\"2\" stroke-dasharray=\"4\"/><line x1=\"170\" y1=\"40\" x2=\"30\" y2=\"130\" stroke=\"#e11d48\" stroke-width=\"2\" stroke-dasharray=\"4\"/><text x=\"100\" y=\"155\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">Rectangle: Diagonals Equal</text><polygon points=\"270,30 330,80 270,130 210,80\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"210\" y1=\"80\" x2=\"330\" y2=\"80\" stroke=\"#16a34a\" stroke-width=\"2\" stroke-dasharray=\"4\"/><line x1=\"270\" y1=\"30\" x2=\"270\" y2=\"130\" stroke=\"#16a34a\" stroke-width=\"2\" stroke-dasharray=\"4\"/><text x=\"270\" y=\"155\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">Rhombus: Perpendicular Bisect</text></svg>"
+   },
+   {
+    "cap": "Interior and exterior angle relationship on a polygon vertex showing straight line supplementary sum.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><polygon points=\"80,180 200,60 320,180\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"200\" y1=\"60\" x2=\"280\" y2=\"60\" stroke=\"#e11d48\" stroke-width=\"2\" stroke-dasharray=\"4\"/><text x=\"200\" y=\"95\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">Interior</text><text x=\"245\" y=\"50\" font-size=\"12\" text-anchor=\"middle\" fill=\"#e11d48\">Exterior</text><text x=\"200\" y=\"200\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">Interior + Exterior = 180°</text></svg>"
+   }
+  ],
+  "pid": "maths_ocr_h.7.3",
+  "sid": "maths_ocr_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-16T03:37:49.412Z"
+ },
+ "maths_ocr_h.7.4": {
+  "summary": "Mastering OCR GCSE Higher circle theorems requires a rigorous understanding of standard circle definitions, precise geometric proofs, and strategic application in multi-step angle chasing problems. Grade 9 success depends on recognizing hidden cyclic quadrilaterals, constructing auxiliary radii, and articulating strict geometric reasoning using correct mathematical terminology in every single proof.",
+  "core": [
+   {
+    "h": "Circle Anatomy and Fundamental Terminology",
+    "p": "Before diving into angle relationships, you must master the precise vocabulary used to describe parts of a circle. Every mark scheme demands absolute accuracy when referencing lines and regions within a circle.",
+    "bullets": [
+     "A **radius** connects the exact centre to any point on the circumference.",
+     "A **diameter** passes through the centre, dividing the circle into two equal semicircles; its length is twice the radius.",
+     "A **chord** is a straight line joining any two points on the circumference.",
+     "An **arc** is a continuous piece of the circumference, divided into major and minor arcs.",
+     "A **sector** is bounded by two radii and an arc, shaped like a slice of pie.",
+     "A **segment** is bounded by a chord and an arc.",
+     "A **tangent** is a straight line that touches the circle at exactly one point.",
+     "A **secant** is a line that intersects a circle at exactly two points."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Chord Definition",
+      "p": "A chord is a straight line segment whose endpoints both lie on the circular arc."
+     },
+     {
+      "k": "warn",
+      "t": "Diameter vs Chord",
+      "p": "Every diameter is a chord, but not every chord is a diameter. The diameter is specifically the longest possible chord."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Basic circle anatomy showing radius, chord, diameter, and tangent.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><circle cx=\"200\" cy=\"120\" r=\"80\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"200\" y1=\"120\" x2=\"280\" y2=\"120\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"240\" y=\"112\" fill=\"#1b2540\" font-size=\"12\">Radius r</text><line x1=\"120\" y1=\"170\" x2=\"280\" y2=\"170\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"190\" y=\"185\" fill=\"#1b2540\" font-size=\"12\">Chord</text><line x1=\"120\" y1=\"70\" x2=\"280\" y2=\"170\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"180\" y=\"110\" fill=\"#1b2540\" font-size=\"12\">Diameter</text><line x1=\"360\" y1=\"120\" x2=\"280\" y2=\"120\" stroke=\"#9333ea\" stroke-width=\"2\"/><text x=\"305\" y=\"140\" fill=\"#1b2540\" font-size=\"12\">Tangent</text><circle cx=\"200\" cy=\"120\" r=\"3\" fill=\"#1b2540\"/><text x=\"205\" y=\"135\" fill=\"#1b2540\" font-size=\"12\">Centre O</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Theorem 1: Angle at Centre and Circumference",
+    "p": "The angle subtended by an arc at the centre of a circle is twice the angle subtended by the same arc at any point on the remaining circumference. This is one of the most frequently tested theorems in Higher papers.",
+    "bullets": [
+     "Let the angle at the circumference be x.",
+     "The angle at the centre subtended by the same arc is always 2x.",
+     "This relationship holds true whether the angle at the circumference is acute, obtuse, or reflex.",
+     "When constructing proofs, always draw a line from the vertex on the circumference through the centre to form isosceles triangles."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Core Statement",
+      "p": "Angle at the centre is twice the angle at the circumference."
+     },
+     {
+      "k": "tip",
+      "t": "Exam Tip",
+      "p": "Look for a bowtie or arrowhead shape pointing from the circumference to the centre."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Angle at centre is twice the angle at circumference.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><circle cx=\"200\" cy=\"120\" r=\"80\" fill=\"#fef3c7\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"120\" r=\"3\" fill=\"#1b2540\"/><text x=\"205\" y=\"115\" fill=\"#1b2540\" font-size=\"12\">O</text><line x1=\"130\" y1=\"180\" x2=\"200\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"270\" y1=\"180\" x2=\"200\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"130\" y1=\"180\" x2=\"200\" y2=\"40\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"270\" y1=\"180\" x2=\"200\" y2=\"40\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"190\" y=\"30\" fill=\"#1b2540\" font-size=\"12\">Circumference x</text><text x=\"180\" y=\"145\" fill=\"#1b2540\" font-size=\"12\">Centre 2x</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Theorem 2: Angle in a Semicircle",
+    "p": "An angle subtended at the circumference by a diameter is always a right angle (90 degrees). This is actually a special case of Theorem 1, since the angle at the centre is a straight line measuring 180 degrees.",
+    "bullets": [
+     "The diameter forms a straight line of 180 degrees at the centre.",
+     "Half of 180 degrees is 90 degrees.",
+     "Any triangle inscribed in a semicircle with the diameter as its base is a right-angled triangle.",
+     "This is extremely useful for finding hidden right angles when solving complex geometric puzzles."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Semicircle Theorem",
+      "p": "The angle in a semicircle is a right angle."
+     },
+     {
+      "k": "warn",
+      "t": "Common Error",
+      "p": "Students often assume any triangle touching the edge is right-angled; it must have the diameter as one of its sides."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Angle in a semicircle is always 90 degrees.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><path d=\"M 100 120 A 100 100 0 0 1 300 120 Z\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"100\" y1=\"120\" x2=\"300\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"100\" y1=\"120\" x2=\"220\" y2=\"30\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"300\" y1=\"120\" x2=\"220\" y2=\"30\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"212\" y=\"40\" width=\"12\" height=\"12\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"190\" y=\"135\" fill=\"#1b2540\" font-size=\"12\">Diameter</text><text x=\"212\" y=\"22\" fill=\"#1b2540\" font-size=\"12\">90 degrees</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Theorem 3: Angles in the Same Segment",
+    "p": "Angles subtended at the circumference by the same arc (or chord) in the same segment are equal. This theorem allows you to jump across the circle to find matching angles.",
+    "bullets": [
+     "If two points on the circumference share the same chord base and point in the same direction, their angles are identical.",
+     "Often referred to in exams as 'angles in the same segment are equal'.",
+     "Combined with Theorem 1, this proves that all angles subtended by the same arc at the circumference are equal."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Key Property",
+      "p": "Angles subtended by the same arc at the circumference are equal."
+     },
+     {
+      "k": "tip",
+      "t": "Visual Cue",
+      "p": "Look for 'bowtie' configurations where two triangles share the same chord base."
+     }
+    ],
+    "fig": null
+   },
+   {
+    "h": "Theorem 4: Cyclic Quadrilaterals",
+    "p": "A cyclic quadrilateral is a four-sided polygon whose four vertices all touch the circumference of a single circle. The defining property is that opposite angles always sum to 180 degrees.",
+    "bullets": [
+     "Angle A + Angle C = 180 degrees.",
+     "Angle B + Angle D = 180 degrees.",
+     "Exterior angle of a cyclic quadrilateral is equal to the interior opposite angle.",
+     "Every vertex must lie precisely on the circumference; if even one vertex is inside or outside, the theorem does not apply."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Cyclic Quad Rule",
+      "p": "Opposite angles of a cyclic quadrilateral sum to 180 degrees (supplementary)."
+     },
+     {
+      "k": "warn",
+      "t": "Trapezium Trap",
+      "p": "Do not assume any random quadrilateral inscribed in a circle is cyclic unless all four corners touch the edge."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Cyclic quadrilateral with opposite angles summing to 180 degrees.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><circle cx=\"200\" cy=\"120\" r=\"80\" fill=\"#fecaca\" stroke=\"#1b2540\" stroke-width=\"2\"/><polygon points=\"130,70 270,60 290,160 120,150\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"110\" y=\"65\" fill=\"#1b2540\" font-size=\"12\">A</text><text x=\"280\" y=\"50\" fill=\"#1b2540\" font-size=\"12\">B</text><text x=\"305\" y=\"175\" fill=\"#1b2540\" font-size=\"12\">C</text><text x=\"100\" y=\"165\" fill=\"#1b2540\" font-size=\"12\">D</text><text x=\"170\" y=\"120\" fill=\"#1b2540\" font-size=\"12\">A + C = 180</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Theorem 5: Tangent and Radius",
+    "p": "A tangent to a circle is perpendicular to the radius at the point of contact. This creates a 90-degree angle between the tangent line and the radius line drawn to the exact touch point.",
+    "bullets": [
+     "Angle between tangent and radius is always 90 degrees.",
+     "Forms right-angled triangles when combined with chords and other radii.",
+     "Essential for solving complex circle and coordinate geometry combination questions."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Perpendicular Rule",
+      "p": "Tangent is perpendicular to the radius at the point of contact (90 degrees)."
+     },
+     {
+      "k": "tip",
+      "t": "Exam Tip",
+      "p": "Whenever you see a tangent touch a circle, immediately draw the radius to that point to create a 90-degree angle."
+     }
+    ],
+    "fig": null
+   },
+   {
+    "h": "Theorem 6: Tangents from an External Point",
+    "p": "Tangents drawn from an external point to a circle are equal in length. Furthermore, the line joining the external point to the centre bisects the angle between the tangents.",
+    "bullets": [
+     "Length PA = length PB, where P is the external point and A, B are points of contact.",
+     "Connecting P to the centre O creates two congruent right-angled triangles (RHS congruence).",
+     "The angle between the line PO and chord AB is bisected."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Tangent Length Theorem",
+      "p": "Tangents from an external point to a circle are equal in length."
+     },
+     {
+      "k": "warn",
+      "t": "Symmetry Trap",
+      "p": "Remember that the triangle formed by the external point and the two contact points is isosceles."
+     }
+    ],
+    "fig": null
+   },
+   {
+    "h": "Theorem 7: Alternate Segment Theorem",
+    "p": "The angle between a tangent and a chord through the point of contact is equal to the angle in the alternate segment. This is often the hardest theorem for students to spot in exam papers.",
+    "bullets": [
+     "Look for a triangle inside the circle with one vertex at the point where a tangent touches the circle.",
+     "The acute angle between the tangent and the chord equals the angle subtended by that chord in the opposite (alternate) segment.",
+     "Always identify the touch point, the chord, and the alternate triangle."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Alternate Segment Rule",
+      "p": "Angle between tangent and chord equals the angle in the alternate segment."
+     },
+     {
+      "k": "tip",
+      "t": "Z-Shape or Arrow",
+      "p": "Trace the tangent and chord to form an acute angle, then look across the circle to find the matching angle."
+     }
+    ],
+    "fig": null
+   },
+   {
+    "h": "Theorem 8: Radius and Chord Properties",
+    "p": "A perpendicular from the centre of a circle to a chord bisects the chord. Conversely, the perpendicular bisector of any chord passes through the centre of the circle.",
+    "bullets": [
+     "Line from centre O perpendicular to chord AB divides AB into two equal halves.",
+     "Creates two congruent right-angled triangles when you connect the centre to the endpoints of the chord.",
+     "Fundamental for calculating chord lengths using Pythagoras' theorem."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Chord Bisector Rule",
+      "p": "Perpendicular from centre to chord bisects the chord."
+     },
+     {
+      "k": "tip",
+      "t": "Pythagoras Link",
+      "p": "Whenever you have a chord and a radius, draw a line from the centre perpendicular to the chord to form a right-angled triangle and use Pythagoras."
+     }
+    ],
+    "fig": null
+   },
+   {
+    "h": "Rigorous Geometric Proofs Required for Higher Tier",
+    "p": "OCR Higher tier spec explicitly requires students to understand and reproduce geometric proofs for the circle theorems. You must write step-by-step logical arguments without skipping intermediate geometric facts.",
+    "bullets": [
+     "Proof of Angle at Centre: Draw radius through centre, use exterior angle of a triangle equals sum of two interior opposite angles, and base angles of isosceles triangles are equal.",
+     "Proof of Alternate Segment: Use radii and tangent 90-degree rules combined with angle sum of a triangle (180 degrees).",
+     "Always state geometrical reasons in brackets next to every calculation step in proofs and exam answers."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Proof Standard",
+      "p": "A geometric proof must proceed via deductive steps, citing established axioms and previously proven theorems."
+     },
+     {
+      "k": "warn",
+      "t": "Circular Logic",
+      "p": "Never use the theorem you are trying to prove as part of its own proof."
+     }
+    ],
+    "fig": null
+   },
+   {
+    "h": "Strategic Problem Solving: Angle Chasing",
+    "p": "Complex circle theorem questions combine multiple theorems in a single diagram. To score full marks, follow a systematic tactical approach to angle chasing.",
+    "bullets": [
+     "Step 1: Mark all known angles and identify any diameters (look for 90 degrees in semicircles).",
+     "Step 2: Look for cyclic quadrilaterals (opposite angles sum to 180).",
+     "Step 3: Check for tangents and radii (90 degrees at contact point).",
+     "Step 4: Use isosceles triangles formed by radii (base angles equal).",
+     "Step 5: Write down every geometric reason clearly next to your working."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Methodical Marking",
+      "p": "Always write the theorem abbreviation or full name next to every angle you calculate to secure method marks."
+     }
+    ],
+    "fig": null
+   }
+  ],
+  "analogy": {
+   "t": "The Bicycle Wheel Analogy",
+   "p": "Think of a circle as a bicycle wheel. The centre axle is the anchor point (centre O). The spokes are radii connecting the axle to the rim (circumference). The outer tire is the circumference. A straight metal rod welded across the inside is a chord. A brake pad pressing against the outer tire is a tangent, touching at exactly one point at a 90-degree angle to the spoke. Where this analogy breaks down is that a real bicycle wheel has a finite thickness and a hub structure, whereas mathematical circles are infinitely thin, perfect 2D geometric loci."
+  },
+  "terms": [
+   {
+    "t": "Chord",
+    "d": "A straight line segment whose endpoints both lie on the circumference of a circle."
+   },
+   {
+    "t": "Tangent",
+    "d": "A straight line that touches a circle at exactly one point on the circumference."
+   },
+   {
+    "t": "Secant",
+    "d": "A straight line that intersects a circle at two distinct points."
+   },
+   {
+    "t": "Sector",
+    "d": "A region of a circle bounded by two radii and an arc."
+   },
+   {
+    "t": "Segment",
+    "d": "A region of a circle bounded by a chord and an arc."
+   },
+   {
+    "t": "Cyclic Quadrilateral",
+    "d": "A four-sided polygon with all four vertices lying on the circumference of a circle."
+   },
+   {
+    "t": "Subtend",
+    "d": "To create or stretch an angle from an arc or chord to a point on the circumference or centre."
+   },
+   {
+    "t": "Alternate Segment",
+    "d": "The region on the opposite side of a chord from a given angle formed by a tangent."
+   },
+   {
+    "t": "Inscribed",
+    "d": "drawn inside a shape so that it touches all vertices or sides perfectly."
+   },
+   {
+    "t": "Perpendicular Bisector",
+    "d": "A line that divides a line segment into two equal parts at a 90-degree angle."
+   },
+   {
+    "t": "Concyclic",
+    "d": "Points that all lie on the exact same circle circumference."
+   },
+   {
+    "t": "Supplementary",
+    "d": "Two angles that add up to exactly 180 degrees."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Assuming any quadrilateral in a circle is cyclic.",
+    "r": "All four vertices must touch the circumference; three touching and one inside means it is not cyclic."
+   },
+   {
+    "w": "Writing 'angles in a triangle' as the reason for cyclic quadrilateral opposite angles.",
+    "r": "Must state 'opposite angles of a cyclic quadrilateral sum to 180 degrees'."
+   },
+   {
+    "w": "Forgetting that radii are equal length, missing isosceles triangles.",
+    "r": "Always mark all radii with dash lines to spot hidden isosceles triangles immediately."
+   },
+   {
+    "w": "Confusing alternate segment theorem with alternate angles on parallel lines.",
+    "r": "Alternate segment involves a tangent and a chord; parallel lines involve two parallel lines cut by a transversal."
+   },
+   {
+    "w": "Stating angle at centre is half the angle at circumference.",
+    "r": "Angle at centre is TWICE the angle at the circumference."
+   },
+   {
+    "w": "Assuming a chord passing near the centre is a diameter.",
+    "r": "A chord is only a diameter if it is explicitly stated to pass through the centre O."
+   },
+   {
+    "w": "Writing 'radius and tangent' without specifying the 90 degrees.",
+    "r": "Must state 'tangent is perpendicular to the radius'."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A circle has centre O. Points A, B, and C lie on the circumference. Angle ABC = 54 degrees. Find angle AOC, giving a reason.",
+    "marks": 2,
+    "model": [
+     "108 degrees",
+     "Angle at the centre is twice the angle at the circumference"
+    ],
+    "tip": "Identify that AC is the shared arc subtending both angles."
+   },
+   {
+    "q": "Points P, Q, R, and S lie in order on the circumference of a circle. Angle PQR = 112 degrees. Find angle PSR.",
+    "marks": 2,
+    "model": [
+     "68 degrees",
+     "Opposite angles of a cyclic quadrilateral sum to 180 degrees (180 - 112 = 68)"
+    ],
+    "tip": "Verify all four points touch the circumference before applying the rule."
+   },
+   {
+    "q": "AB is a diameter of a circle, centre O. C is a point on the circumference. Angle CAB = 37 degrees. Find angle ACB.",
+    "marks": 2,
+    "model": [
+     "90 degrees (Angle in a semicircle)",
+     "53 degrees (Angles in a triangle sum to 180)"
+    ],
+    "tip": "Always spot the diameter first to immediately identify the 90-degree angle."
+   },
+   {
+    "q": "Line T1T2 is a tangent to a circle at point P. AB is a chord through P. Angle AP_T1 = 65 degrees. Find the angle in the alternate segment subtended by chord AB.",
+    "marks": 2,
+    "model": [
+     "65 degrees",
+     "Alternate segment theorem"
+    ],
+    "tip": "Trace the tangent and chord to locate the alternate triangle across the circle."
+   },
+   {
+    "q": "A chord of length 12 cm is 5 cm away from the centre of the circle. Calculate the radius of the circle.",
+    "marks": 4,
+    "model": [
+     "Perpendicular from centre bisects chord, so half chord = 6 cm",
+     "Forms right-angled triangle with sides 5 cm and 6 cm",
+     "Use Pythagoras: 5 squared + 6 squared = 25 + 36 = 61",
+     "Radius = square root of 61 = 7.81 cm"
+    ],
+    "tip": "Draw a clear diagram showing the radius, chord, and perpendicular distance."
+   },
+   {
+    "q": "Two tangents are drawn from an external point P to a circle, touching at A and B. Angle APB = 40 degrees. Find angle OAB where O is the centre.",
+    "marks": 4,
+    "model": [
+     "Tangents from external point are equal, triangle PAB is isosceles",
+     "Angle PAB = (180 - 40) / 2 = 70 degrees",
+     "Angle OAP = 90 degrees (tangent perpendicular to radius)",
+     "Angle OAB = 90 - 70 = 20 degrees"
+    ],
+    "tip": "Combine tangent length, isosceles triangle, and radius-tangent 90-degree rules."
+   },
+   {
+    "q": "Prove that the angle subtended by an arc at the centre is twice the angle subtended at the circumference.",
+    "marks": 5,
+    "model": [
+     "Draw a line from circumference vertex through centre O",
+     "Let angles at centre be split into two parts, using exterior angle theorem",
+     "Exterior angle of triangle equals sum of two interior opposite angles",
+     "Base angles of isosceles triangles are equal",
+     "Combine algebraic expressions to show centre angle = 2x"
+    ],
+    "tip": "Set up base angles as x and y, use isosceles triangle properties."
+   },
+   {
+    "q": "A cyclic quadrilateral ABCD has AB parallel to DC. Prove that ABCD is an isosceles trapezium.",
+    "marks": 4,
+    "model": [
+     "AB parallel to DC implies co-interior angles sum to 180",
+     "Opposite angles of cyclic quad sum to 180",
+     "Show base angles at the bottom are equal",
+     "Conclude that trapezium is isosceles"
+    ],
+    "tip": "Combine parallel line angle rules with cyclic quadrilateral rules."
+   },
+   {
+    "q": "A tangent is drawn at point X on a circle. Chord XY makes an angle of 58 degrees with the tangent. Chord YZ is drawn such that angle XYZ = 72 degrees. Find angle XZ.",
+    "marks": 4,
+    "model": [
+     "Use alternate segment theorem to find angle in alternate segment",
+     "Apply triangle angle sum rules",
+     "State all geometric reasons clearly"
+    ],
+    "tip": "Break multi-step angle chasing into separate triangle analyses."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A circle has centre O. Points A, B, C are on the circumference. AB is a diameter. Angle CAB = 28 degrees. Find angle OBC.",
+    "steps": [
+     "Identify that AB is the diameter, so angle ACB = 90 degrees (Angle in a semicircle).",
+     "In triangle ABC, angle ABC = 180 - 90 - 28 = 62 degrees.",
+     "Recognize that OB and OC are radii of the circle, making triangle OBC isosceles with OB = OC.",
+     "In isosceles triangle OBC, base angles OBC and OCB are equal.",
+     "Angle OBC = (180 - angle BOC) / 2. Alternatively, use radius and tangent or angle relationships. Since angle AOC = 2 * angle ABC (Angle at centre is twice angle at circumference), angle AOC = 2 * 28 = 56 degrees. Wait, angle subtended by AC at centre is AOC. Angle ABC subtends arc AC, so angle AOC = 2 * 28 = 56 degrees.",
+     "In isosceles triangle OBC (OB=OC), angle OBC = (180 - 56) / 2 = 124 / 2 = 62 degrees."
+    ],
+    "ans": "62 degrees"
+   },
+   {
+    "q": "A circle has a chord of length 16 cm. The radius of the circle is 10 cm. Find the perpendicular distance from the centre of the circle to the chord.",
+    "steps": [
+     "Draw a perpendicular line from the centre to the chord, which bisects the chord (Perpendicular from centre to chord bisects chord).",
+     "The length of half the chord is 16 / 2 = 8 cm.",
+     "The radius of the circle forms the hypotenuse of a right-angled triangle, so hypotenuse = 10 cm.",
+     "Let the perpendicular distance be x. Using Pythagoras' theorem: x squared + 8 squared = 10 squared.",
+     "x squared + 64 = 100",
+     "x squared = 100 - 64 = 36",
+     "x = square root of 36 = 6 cm."
+    ],
+    "ans": "6 cm"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Alternate segment theorem showing the angle between tangent and chord.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><circle cx=\"200\" cy=\"120\" r=\"70\" fill=\"#e9d5ff\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"100\" y1=\"190\" x2=\"300\" y2=\"190\" stroke=\"#9333ea\" stroke-width=\"2\"/><text x=\"305\" y=\"195\" fill=\"#1b2540\" font-size=\"12\">Tangent</text><circle cx=\"200\" cy=\"190\" r=\"3\" fill=\"#1b2540\"/><text x=\"205\" y=\"205\" fill=\"#1b2540\" font-size=\"12\">Contact P</text><line x1=\"200\" y1=\"190\" x2=\"150\" y2=\"70\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"130\" y=\"65\" fill=\"#1b2540\" font-size=\"12\">Chord</text><line x1=\"150\" y1=\"70\" x2=\"270\" y2=\"110\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"270\" y1=\"110\" x2=\"200\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"275\" y=\"115\" fill=\"#1b2540\" font-size=\"12\">Vertex</text></svg>"
+   }
+  ],
+  "pid": "maths_ocr_h.7.4",
+  "sid": "maths_ocr_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-16T03:38:03.751Z"
+ },
+ "maths_ocr_h.7.2": {
+  "summary": "Mastering the geometry of angles requires a deep understanding of foundational relationships such as angles on a straight line, at a point, and vertically opposite angles. These principles extend to parallel line geometry involving alternate, corresponding, and co-interior angles, and culminate in complex polygon interior and exterior angle theorems. A Grade 9 candidate must flawlessly combine these angle rules with algebraic reasoning to solve multi-step geometric proofs and non-routine problems.",
+  "core": [
+   {
+    "h": "1. Fundamental Angle Facts",
+    "p": "Before tackling complex geometry, you must master the fundamental angle rules that form the building blocks of all angle reasoning. Every geometric proof or multi-step calculation relies on these baseline facts.",
+    "bullets": [
+     "Angles on a straight line sum to exactly 180 degrees.",
+     "Angles around a point sum to exactly 360 degrees.",
+     "Vertically opposite angles are equal when two straight lines intersect."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Straight Line / Point Angle",
+      "p": "Angles on a straight line add up to 180 degrees. Angles around a point add up to 360 degrees."
+     },
+     {
+      "k": "tip",
+      "t": "Exam Reason",
+      "p": "Always write the exact geometric reason in exams, such as 'Angles on a straight line sum to 180°'."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. Vertically Opposite Angles",
+    "p": "When two straight lines cross, they form four angles. The angles directly opposite each other are always equal, a property derived from supplementary straight-line angles.",
+    "bullets": [
+     "Formed by the intersection of two straight lines.",
+     "Opposite angles are identical in size.",
+     "Adjacent angles on the intersecting lines sum to 180 degrees."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Vertically Opposite",
+      "p": "Angles that are opposite each other when two lines intersect. They are equal."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Vertically opposite angles are equal when two straight lines intersect.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"50\" y1=\"190\" x2=\"350\" y2=\"50\" stroke=\"#1b2540\" stroke-width=\"3\"/><line x1=\"50\" y1=\"70\" x2=\"350\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"3\"/><text x=\"190\" y=\"90\" font-size=\"12\" fill=\"#1b2540\">a</text><text x=\"240\" y=\"130\" font-size=\"12\" fill=\"#1b2540\">b</text><text x=\"150\" y=\"150\" font-size=\"12\" fill=\"#1b2540\">a</text><text x=\"110\" y=\"110\" font-size=\"12\" fill=\"#1b2540\">b</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "3. Parallel Lines and Transversals",
+    "p": "When a straight line called a transversal intersects a pair of parallel lines, specific angle relationships are created. Identifying these patterns is essential for multi-step angle chasing.",
+    "bullets": [
+     "Parallel lines are indicated by matching arrowheads on the lines.",
+     "A transversal is a line that crosses at least two other lines.",
+     "Three main angle pairs are formed: corresponding, alternate, and co-interior."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Parallel Indicator",
+      "p": "Never assume lines are parallel unless marked with arrows or stated in the question text."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Corresponding Angles (F Angles)",
+    "p": "Corresponding angles occupy the same relative position at each intersection where a straight line crosses two others. If the lines are parallel, corresponding angles are equal.",
+    "bullets": [
+     "Form an 'F' shape visually, which can be rotated or reflected.",
+     "Corresponding angles are equal.",
+     "Reason in exam: 'Corresponding angles are equal'."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Corresponding Angles",
+      "p": "Angles in matching corners when a transversal crosses parallel lines. Equal in size."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "5. Alternate Angles (Z Angles)",
+    "p": "Alternate angles lie on opposite sides of the transversal and between the two parallel lines. When the lines are parallel, alternate angles are equal.",
+    "bullets": [
+     "Form a 'Z' or reverse 'Z' shape visually.",
+     "Alternate angles are equal.",
+     "Reason in exam: 'Alternate angles are equal'."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Alternate Angles",
+      "p": "Pairs of angles on opposite sides of the transversal, between parallel lines. Equal in size."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Alternate angles form a Z shape between parallel lines.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"60\" y1=\"80\" x2=\"340\" y2=\"80\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"60\" y1=\"160\" x2=\"340\" y2=\"160\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"120\" y1=\"40\" x2=\"280\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"195\" y=\"105\" font-size=\"12\" fill=\"#1b2540\">x</text><text x=\"215\" y=\"145\" font-size=\"12\" fill=\"#1b2540\">x</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "6. Co-Interior Angles (C Angles)",
+    "p": "Co-interior angles (sometimes called allied angles) lie on the same side of the transversal and between the two parallel lines. When the lines are parallel, they sum to 180 degrees.",
+    "bullets": [
+     "Form a 'C' or 'U' shape visually.",
+     "Co-interior angles add up to 180 degrees.",
+     "Reason in exam: 'Co-interior angles sum to 180°'."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Common Error",
+      "p": "Students often treat co-interior angles as equal rather than supplementary (summing to 180°)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Polygon Interior Angles",
+    "p": "A polygon is a closed 2D shape made with straight line segments. The sum of interior angles inside any n-sided polygon depends strictly on the number of sides.",
+    "bullets": [
+     "Formula for sum of interior angles: (n - 2) * 180.",
+     "Derived by dividing an n-sided polygon into (n - 2) triangles from a single vertex.",
+     "For regular polygons, all interior angles are equal."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Interior Angle",
+      "p": "An angle inside a polygon formed by two adjacent sides."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Polygon Exterior Angles",
+    "p": "An exterior angle is formed by extending one side of a polygon past the adjacent vertex. The exterior angle and its adjacent interior angle lie on a straight line and sum to 180 degrees.",
+    "bullets": [
+     "The sum of exterior angles for any convex polygon is always 360 degrees.",
+     "Formula for one exterior angle in a regular n-sided polygon: 360 / n.",
+     "Extremely powerful for solving regular polygon questions quickly."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Exterior Sum",
+      "p": "Regardless of the number of sides, exterior angles of any convex polygon always total 360°."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Exterior angles of any convex polygon always sum to 360 degrees.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><polygon points=\"120,180 280,180 320,80 200,40 80,80\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"280\" y1=\"180\" x2=\"340\" y2=\"180\" stroke=\"#1b2540\" stroke-dasharray=\"4\"/><text x=\"295\" y=\"165\" font-size=\"12\" fill=\"#1b2540\">Ext</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "9. Regular Polygons and Symmetry",
+    "p": "Regular polygons possess rotational symmetry and line symmetry. Their equal side lengths and equal interior/exterior angles make them highly predictable in exam questions.",
+    "bullets": [
+     "Order of rotational symmetry equals the number of sides, n.",
+     "Number of lines of symmetry equals n (if n is odd) or n (if n is even, plus lines through vertices/midpoints).",
+     "Interior angle + Exterior angle = 180 degrees."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exterior Method",
+      "p": "When asked for the number of sides of a regular polygon, finding the exterior angle via 360 / exterior angle is usually faster than using interior angle formulas."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Multi-Step Angle Chasing",
+    "p": "Grade 9 questions rarely test a single rule in isolation. You must combine parallel line properties, triangle angle sums, and polygon rules in a logical sequence.",
+    "bullets": [
+     "Always annotate diagrams with calculated values as you go.",
+     "State the geometric theorem used for every single numerical step.",
+     "Check your final answer against the visual scale of the diagram."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Angle Chasing",
+      "p": "The process of systematically finding unknown angles in a diagram using known geometric theorems."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "11. Algebraic Angles and Proofs",
+    "p": "Higher tier exams frequently introduce algebraic expressions for angles (e.g., 3x + 15). You must set up and solve linear equations based on fundamental angle laws.",
+    "bullets": [
+     "Form equations using angle sums (e.g., set sum of straight line angles equal to 180).",
+     "Solve for x meticulously, showing all algebraic steps.",
+     "Substitute x back into expressions if required to find specific angle sizes."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Algebraic Setup",
+      "p": "Always write down the geometric equation before simplifying, e.g., '2x + 3x + 10 = 180'."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The City Grid and Urban Planning",
+   "p": "Think of parallel lines and transversals as a city's grid system of main avenues and cross-streets. Just as city planners use identical stoplight intervals and parallel urban planning codes to ensure traffic flows uniformly across blocks, geometric rules maintain exact angle consistency across parallel structures. Where this analogy breaks down is that physical roads can curve or have slight construction grading differences, whereas mathematical parallel lines are infinitely straight and precise."
+  },
+  "terms": [
+   {
+    "t": "Transversal",
+    "d": "A straight line that intersects two or more other straight lines."
+   },
+   {
+    "t": "Interior Angle",
+    "d": "An angle inside a shape formed by two adjacent sides."
+   },
+   {
+    "t": "Exterior Angle",
+    "d": "An angle formed outside a polygon by extending one of its sides."
+   },
+   {
+    "t": "Alternate Angles",
+    "d": "Angles on opposite sides of a transversal and between parallel lines, which are equal."
+   },
+   {
+    "t": "Corresponding Angles",
+    "d": "Angles in matching relative positions at an intersection, which are equal when lines are parallel."
+   },
+   {
+    "t": "Co-Interior Angles",
+    "d": "Angles on the same side of a transversal between parallel lines, which sum to 180 degrees."
+   },
+   {
+    "t": "Vertically Opposite",
+    "d": "Angles opposite each other when two lines cross, which are equal."
+   },
+   {
+    "t": "Supplementary",
+    "d": "Two angles whose sum is exactly 180 degrees."
+   },
+   {
+    "t": "Complementary",
+    "d": "Two angles whose sum is exactly 90 degrees."
+   },
+   {
+    "t": "Polygon",
+    "d": "A closed plane figure bounded by three or more straight line segments."
+   },
+   {
+    "t": "Regular Polygon",
+    "d": "A polygon with all sides of equal length and all interior angles equal."
+   },
+   {
+    "t": "Convex Polygon",
+    "d": "A polygon where all interior angles are less than 180 degrees and no vertices point inwards."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Assuming co-interior angles are equal.",
+    "r": "Co-interior angles sum to 180 degrees, they are not equal unless both are 90 degrees."
+   },
+   {
+    "w": "Writing 'F angles' or 'Z angles' as reasons in exams.",
+    "r": "Examiners do not accept slang terms. You must write 'Corresponding angles are equal' or 'Alternate angles are equal'."
+   },
+   {
+    "w": "Dividing by n instead of (n - 2) when finding polygon interior sums.",
+    "r": "The sum of interior angles is (n - 2) * 180, whereas 360 / n gives the exterior angle of a regular polygon."
+   },
+   {
+    "w": "Forgetting that exterior angles sum to 360 degrees for any polygon.",
+    "r": "The sum of exterior angles is always 360 degrees regardless of the number of sides."
+   },
+   {
+    "w": "Assuming lines are parallel because they look parallel.",
+    "r": "Parallel lines must be explicitly marked with arrowheads or stated in the question text."
+   },
+   {
+    "w": "Subtracting from 90 instead of 180 for straight-line angles.",
+    "r": "Angles on a straight line sum to 180 degrees."
+   },
+   {
+    "w": "Writing 'Angles in a triangle add to 360' instead of 180.",
+    "r": "Angles in any triangle always sum to 180 degrees."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Calculate the size of an interior angle in a regular 12-sided polygon.",
+    "marks": 3,
+    "model": [
+     "Exterior angle = 360 / 12 = 30",
+     "Interior angle = 180 - 30",
+     "Interior angle = 150"
+    ],
+    "tip": "Finding the exterior angle first is much faster than using the interior angle formula."
+   },
+   {
+    "q": "Two parallel lines are crossed by a transversal. One co-interior angle is 4x and the other is 5x. Find x.",
+    "marks": 3,
+    "model": [
+     "4x + 5x = 180",
+     "9x = 180",
+     "x = 20"
+    ],
+    "tip": "Remember co-interior angles sum to 180 degrees."
+   },
+   {
+    "q": "A polygon has an interior angle sum of 1980 degrees. How many sides does it have?",
+    "marks": 3,
+    "model": [
+     "(n - 2) * 180 = 1980",
+     "n - 2 = 11",
+     "n = 13"
+    ],
+    "tip": "Set the interior sum formula equal to the given value and solve for n."
+   },
+   {
+    "q": "Find angle x given a straight line with angles 3x, 2x + 10, and x + 20.",
+    "marks": 4,
+    "model": [
+     "3x + 2x + 10 + x + 20 = 180",
+     "6x + 30 = 180",
+     "6x = 150",
+     "x = 25"
+    ],
+    "tip": "Combine all like terms before solving the linear equation."
+   },
+   {
+    "q": "Explain why the exterior angles of any convex polygon always sum to 360 degrees.",
+    "marks": 2,
+    "model": [
+     "Going around the polygon once completes one full turn.",
+     "A full turn is 360 degrees."
+    ],
+    "tip": "Keep explanation concise and conceptually focused on full turns."
+   },
+   {
+    "q": "The interior angle of a regular polygon is 5 times its exterior angle. Find the number of sides.",
+    "marks": 4,
+    "model": [
+     "Let exterior angle be x, interior be 5x",
+     "x + 5x = 180 -> 6x = 180 -> x = 30",
+     "Number of sides n = 360 / 30",
+     "n = 12"
+    ],
+    "tip": "Use the fact that interior + exterior = 180 to find the exterior angle quickly."
+   },
+   {
+    "q": "Two straight lines intersect. One angle is 3x + 15 and the vertically opposite angle is 5x - 5. Find x.",
+    "marks": 3,
+    "model": [
+     "3x + 15 = 5x - 5",
+     "20 = 2x",
+     "x = 10"
+    ],
+    "tip": "Vertically opposite angles are equal, so equate the two expressions."
+   },
+   {
+    "q": "In a triangle, the angles are in the ratio 2 : 3 : 4. Find the largest angle.",
+    "marks": 3,
+    "model": [
+     "2 + 3 + 4 = 9 parts",
+     "180 / 9 = 20 degrees per part",
+     "Largest angle = 4 * 20 = 80 degrees"
+    ],
+    "tip": "Sum the ratio parts and divide 180 by that total."
+   },
+   {
+    "q": "A regular polygon has n sides. Its interior angle is 160 degrees. Find n.",
+    "marks": 3,
+    "model": [
+     "Exterior angle = 180 - 160 = 20",
+     "n = 360 / 20",
+     "n = 18"
+    ],
+    "tip": "Convert interior to exterior angle first for rapid calculation."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Find the size of angle x in a regular decagon (10 sides).",
+    "steps": [
+     "Identify number of sides: n = 10.",
+     "Calculate exterior angle using 360 / n: 360 / 10 = 36 degrees.",
+     "Calculate interior angle using 180 - exterior angle: 180 - 36 = 144 degrees."
+    ],
+    "ans": "144 degrees"
+   },
+   {
+    "q": "Two parallel lines are intersected by a transversal. Angle A is 3x + 20 and angle B is 5x - 10. If they are alternate angles, find x and the numerical size of angle A.",
+    "steps": [
+     "State that alternate angles are equal: 3x + 20 = 5x - 10.",
+     "Rearrange to solve for x: 20 + 10 = 5x - 3x -> 30 = 2x -> x = 15.",
+     "Substitute x back into angle A: 3(15) + 20 = 45 + 20 = 65 degrees."
+    ],
+    "ans": "x = 15, Angle A = 65 degrees"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Parallel lines cut by a transversal showing corresponding, alternate, and co-interior angles.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"40\" y1=\"80\" x2=\"360\" y2=\"80\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"40\" y1=\"160\" x2=\"360\" y2=\"160\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"100\" y1=\"30\" x2=\"300\" y2=\"210\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"160\" y=\"70\" font-size=\"12\" fill=\"#1b2540\">a</text><text x=\"180\" y=\"145\" font-size=\"12\" fill=\"#1b2540\">b</text><text x=\"210\" y=\"145\" font-size=\"12\" fill=\"#1b2540\">c</text></svg>"
+   }
+  ],
+  "pid": "maths_ocr_h.7.2",
+  "sid": "maths_ocr_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-16T03:39:06.236Z"
+ }
+}

@@ -1,0 +1,449 @@
+{
+ "maths_eduqas_f.4.5": {
+  "summary": "Systematic enumeration is the foundation of working out probabilities without missing any possible combinations. By learning to construct and interpret tables, grids, Venn diagrams, and tree diagrams, you can systematically list out every single outcome in an exhaustive sample space. Mastery of these four visual tools ensures full accuracy in counting outcomes for both single and combined events under the Eduqas Foundation specification.",
+  "core": [
+   {
+    "h": "1. Introduction to Systematic Enumeration",
+    "p": "Systematic listing means writing down every possible outcome in an organised way so that none are missed or repeated. In exam questions, you must show a clear method rather than guessing numbers.",
+    "bullets": [
+     "Always use a logical pattern: alphabetical, numerical, or size order.",
+     "Check your total count against multiplication rules (e.g., 3 options times 4 options = 12 outcomes).",
+     "Understand that 'enumerate' literally means to count or list one by one."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Exhaustive Lists",
+      "p": "An exhaustive list contains every single possible outcome without gaps."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. Using Tables for Two Independent Events",
+    "p": "Tables provide a two-dimensional grid where rows represent one event and columns represent another. They are perfect for tracking the outcomes of two separate actions, like spinning two spinners or rolling two dice.",
+    "bullets": [
+     "Place the outcomes of the first event along the top row.",
+     "Place the outcomes of the second event down the left-hand column.",
+     "Fill in the inner cells with combined outcomes, such as coordinate pairs or sums."
+    ],
+    "table": {
+     "head": [
+      "Spinner 1 / 2",
+      "1",
+      "2",
+      "3"
+     ],
+     "rows": [
+      [
+       "A",
+       "(A,1)",
+       "(A,2)",
+       "(A,3)"
+      ],
+      [
+       "B",
+       "(B,1)",
+       "(B,2)",
+       "(B,3)"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Grid Coordinates",
+      "p": "When listing combined outcomes in cells, keep the order consistent (e.g., always event 1 then event 2)."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A 2D probability table showing all 6 combined outcomes for a letter spinner and a number spinner.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#f8fafc\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"20\" y1=\"60\" x2=\"380\" y2=\"60\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"110\" y1=\"20\" x2=\"110\" y2=\"220\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"50\" y=\"45\" font-size=\"12\" fill=\"#1b2540\">Spin 1\\2</text><text x=\"145\" y=\"45\" font-size=\"12\" fill=\"#1b2540\">1</text><text x=\"235\" y=\"45\" font-size=\"12\" fill=\"#1b2540\">2</text><text x=\"325\" y=\"45\" font-size=\"12\" fill=\"#1b2540\">3</text><text x=\"55\" y=\"100\" font-size=\"12\" fill=\"#1b2540\">A</text><text x=\"135\" y=\"100\" font-size=\"12\" fill=\"#1b2540\">(A,1)</text><text x=\"225\" y=\"100\" font-size=\"12\" fill=\"#1b2540\">(A,2)</text><text x=\"315\" y=\"100\" font-size=\"12\" fill=\"#1b2540\">(A,3)</text><text x=\"55\" y=\"160\" font-size=\"12\" fill=\"#1b2540\">B</text><text x=\"135\" y=\"160\" font-size=\"12\" fill=\"#1b2540\">(B,1)</text><text x=\"225\" y=\"160\" font-size=\"12\" fill=\"#1b2540\">(B,2)</text><text x=\"315\" y=\"160\" font-size=\"12\" fill=\"#1b2540\">(B,3)</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "3. Grids for Possibility Spaces",
+    "p": "Possibility space grids are commonly used for games involving two dice or spinners where you calculate sums, products, or differences of the outcomes.",
+    "bullets": [
+     "Draw a standard Cartesian grid with axes labelled with the possible scores.",
+     "Calculate the required mathematical operation (like addition for dice sums) inside every cell.",
+     "Count favourable outcomes directly from the grid cells."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Identical Dice",
+      "p": "Remember (1,2) and (2,1) are distinct outcomes when rolling two separate dice, even if the numbers are the same."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Introduction to Venn Diagrams",
+    "p": "Venn diagrams use overlapping circles within a universal set rectangle to sort items into categories based on specific rules or attributes.",
+    "bullets": [
+     "The rectangle represents the universal set (denoted by the Greek letter Xi, ξ).",
+     "Each circle represents a specific set or condition (e.g., multiples of 3).",
+     "The intersection (where circles overlap) contains items that satisfy both conditions simultaneously."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Universal Set",
+      "p": "The universal set contains all the possible objects under consideration in a given problem."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A Venn diagram showing a universal set with two intersecting sets A and B.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"30\" y=\"20\" width=\"340\" height=\"200\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"45\" y=\"40\" font-size=\"12\" fill=\"#1b2540\">\\u03be</text><circle cx=\"150\" cy=\"120\" r=\"60\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\" fill-opacity=\"0.5\"/><circle cx=\"250\" cy=\"120\" r=\"60\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\" fill-opacity=\"0.5\"/><text x=\"110\" y=\"120\" font-size=\"12\" fill=\"#1b2540\">A</text><text x=\"270\" y=\"120\" font-size=\"12\" fill=\"#1b2540\">B</text><text x=\"190\" y=\"120\" font-size=\"12\" fill=\"#1b2540\">A\\u2229B</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "5. Sorting Data into Venn Diagrams",
+    "p": "When given a list of numbers or objects, sorting them into a Venn diagram requires checking each item against the criteria for each set in turn.",
+    "bullets": [
+     "Always start by placing items that belong in the intersection (middle region) first.",
+     "Next, place items that belong in just one set, crossing them off your original list.",
+     "Finally, place any remaining items that fit neither set in the outside space inside the rectangle."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Check Total Count",
+      "p": "Sum up all the numbers placed in every region of the Venn diagram; their total must equal the total items in the original list."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Interpreting Venn Diagram Regions",
+    "p": "Exam questions often ask you to shade specific regions or find probabilities based on given numbers in a completed Venn diagram.",
+    "bullets": [
+     "A union (A U B) means everything inside circle A, circle B, and their overlap.",
+     "An intersection (A \\u2229 B) means strictly the overlapping middle section.",
+     "A complement (A') means everything except circle A."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Union vs Intersection",
+      "p": "Remember 'Union' sounds like 'Unite' (everything together), while 'Intersection' is where roads cross (the overlap)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Constructing Tree Diagrams",
+    "p": "Tree diagrams map out sequential events that happen one after another. They consist of 'branches' representing the outcomes of each step.",
+    "bullets": [
+     "Draw a starting node on the left.",
+     "Draw first-generation branches for the first event.",
+     "Draw second-generation branches from the end of each first branch for the second event."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Branch",
+      "p": "A line segment on a tree diagram representing a specific outcome of an event."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A basic tree diagram structure showing two sequential events with two outcomes each.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"40\" y1=\"120\" x2=\"130\" y2=\"70\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"40\" y1=\"120\" x2=\"130\" y2=\"170\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"130\" y1=\"70\" x2=\"230\" y2=\"40\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"130\" y1=\"70\" x2=\"230\" y2=\"100\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"130\" y1=\"170\" x2=\"230\" y2=\"140\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"130\" y1=\"170\" x2=\"230\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"40\" cy=\"120\" r=\"4\" fill=\"#1b2540\"/><circle cx=\"130\" cy=\"70\" r=\"4\" fill=\"#1b2540\"/><circle cx=\"130\" cy=\"170\" r=\"4\" fill=\"#1b2540\"/><text x=\"245\" y=\"45\" font-size=\"11\" fill=\"#1b2540\">(1st, 1st)</text><text x=\"245\" y=\"105\" font-size=\"11\" fill=\"#1b2540\">(1st, 2nd)</text><text x=\"245\" y=\"145\" font-size=\"11\" fill=\"#1b2540\">(2nd, 1st)</text><text x=\"245\" y=\"205\" font-size=\"11\" fill=\"#1b2540\">(2nd, 2nd)</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "8. Listing Outcomes from Tree Diagrams",
+    "p": "At Foundation tier, tree diagrams are frequently used simply to list all possible combined outcomes by following every unique path from left to right.",
+    "bullets": [
+     "Trace the top path from start to finish and write down the combined result.",
+     "Continue tracing every branch combination systematically.",
+     "Count the final endpoints to verify the total number of combined outcomes."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Multiplication Check",
+      "p": "If event 1 has 3 outcomes and event 2 has 2 outcomes, your tree diagram must end with 3 \\u00d7 2 = 6 final outcomes."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Comparing Enumeration Methods",
+    "p": "Choosing the correct visual tool makes solving probability and counting problems much faster and prevents mistakes.",
+    "bullets": [
+     "Use tables/grids for two events with numerical or categorical outcomes.",
+     "Use Venn diagrams for classifying items that may share overlapping properties.",
+     "Use tree diagrams for events that happen in chronological sequence."
+    ],
+    "table": {
+     "head": [
+      "Method",
+      "Best Used For",
+      "Key Feature"
+     ],
+     "rows": [
+      [
+       "Table/Grid",
+       "Two simultaneous events",
+       "Rows and columns"
+      ],
+      [
+       "Venn Diagram",
+       "Classifying sets and overlaps",
+       "Overlapping circles"
+      ],
+      [
+       "Tree Diagram",
+       "Sequential events",
+       "Branches from nodes"
+      ]
+     ]
+    },
+    "callouts": null,
+    "fig": []
+   },
+   {
+    "h": "10. Solving Exam Word Problems with Systematic Lists",
+    "p": "Exam questions often present real-life scenarios like choosing outfits, meal deals, or travel routes, requiring you to list options systematically.",
+    "bullets": [
+     "Break the problem down into sequential choices (e.g., starter, main, dessert).",
+     "Use a systematic tree diagram or systematic list to show all combinations.",
+     "Read the question carefully to see if order matters or if any restrictions apply."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Missed Combinations",
+      "p": "Writing random guesses will lose marks; markers specifically look for a systematic method."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Restaurant Menu Planner",
+   "p": "Imagine you are designing a set-menu where customers choose one starter and one main course. A systematic table or tree diagram acts like the kitchen order system, ensuring every single meal combination is accounted for without the chef getting confused or missing an item. Where the analogy breaks down is that mathematical sets can overlap and share elements (like a dish that is both spicy and vegetarian), whereas menu items are usually mutually exclusive categories."
+  },
+  "terms": [
+   {
+    "t": "Systematic listing",
+    "d": "A method of writing out every possible outcome in a logical, rule-based order so none are missed."
+   },
+   {
+    "t": "Sample space",
+    "d": "The complete set of all possible outcomes of an experiment or trial."
+   },
+   {
+    "t": "Two-way table",
+    "d": "A table that displays outcomes or frequencies for two categorical variables using rows and columns."
+   },
+   {
+    "t": "Possibility space",
+    "d": "A visual grid showing all possible outcomes of a combined event."
+   },
+   {
+    "t": "Venn diagram",
+    "d": "A diagram using overlapping circles to show relationships between different sets of items."
+   },
+   {
+    "t": "Universal set",
+    "d": "The set containing all objects or elements under consideration, represented by \\u03be."
+   },
+   {
+    "t": "Intersection",
+    "d": "The overlapping region of a Venn diagram containing items that belong to multiple sets at once."
+   },
+   {
+    "t": "Union",
+    "d": "The combined region of sets in a Venn diagram containing items belonging to either set or both."
+   },
+   {
+    "t": "Complement",
+    "d": "Everything outside a given set, denoted by an apostrophe like A'."
+   },
+   {
+    "t": "Tree diagram",
+    "d": "A diagram with branches used to show outcomes of sequential events."
+   },
+   {
+    "t": "Node",
+    "d": "A point on a tree diagram where branches split into further possible outcomes."
+   },
+   {
+    "t": "Exhaustive",
+    "d": "A set of outcomes that includes every single possibility without omission."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Writing combined outcomes in random, messy orders without a pattern.",
+    "r": "Always use a strict alphabetical, numerical, or logical sequence (e.g., (1,1), (1,2), (1,3))."
+   },
+   {
+    "w": "Forgetting to include the outer region of a Venn diagram for items fitting no categories.",
+    "r": "Always check if any items from the master list do not fit inside the circles, and place them inside the universal rectangle outside the circles."
+   },
+   {
+    "w": "Drawing tree diagrams with unequal numbers of branches where categories are identical.",
+    "r": "Ensure each set of branches accurately reflects the given options for that specific stage."
+   },
+   {
+    "w": "Counting duplicate outcomes when rolling identical dice.",
+    "r": "Treat dice as distinct objects (e.g., Red die and Blue die) so (1,2) and (2,1) are counted separately."
+   },
+   {
+    "w": "Confusing union and intersection on Venn diagrams.",
+    "r": "Union is all combined elements; intersection is strictly the overlapping middle section."
+   },
+   {
+    "w": "Listing (A,B) and (B,A) as the same outcome in a two-way table.",
+    "r": "Respect the axis order; row-column coordinates represent ordered pairs."
+   },
+   {
+    "w": "Leaving out labels on tree diagram branches or Venn diagram regions.",
+    "r": "Always fully label every set, region, and branch so the examiner can follow your work."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A sandwich shop offers a choice of 3 breads (White, Brown, Wrap) and 2 fillings (Cheese, Ham). Complete a systematic list to show all possible single-filling sandwich combinations.",
+    "marks": 2,
+    "model": [
+     "White, Cheese",
+     "White, Ham",
+     "Brown, Cheese",
+     "Brown, Ham",
+     "Wrap, Cheese",
+     "Wrap, Ham"
+    ],
+    "tip": "Pair every single bread option with every single filling systematically."
+   },
+   {
+    "q": "A fair six-sided die and a fair coin are tossed together. Complete a sample space grid to show all 12 possible outcomes.",
+    "marks": 2,
+    "model": [
+     "Grid axes correctly labelled 1 to 6 and Head/Tail",
+     "All 12 coordinate pairs correctly filled in cells"
+    ],
+    "tip": "Use rows for the coin and columns for the die numbers."
+   },
+   {
+    "q": "50 students are asked if they study History (H) or Geography (G). 20 study History only, 15 study Geography only, 5 study both. Complete the Venn diagram for this information.",
+    "marks": 3,
+    "model": [
+     "5 placed in the intersection (H \\u2229 G)",
+     "20 placed in the H-only region",
+     "15 placed in the G-only region and 10 outside in \\u03be"
+    ],
+    "tip": "Always fill in the intersection first before doing subtraction for single-set regions."
+   },
+   {
+    "q": "Shade the region representing A \\u2229 B' on a two-circle Venn diagram.",
+    "marks": 2,
+    "model": [
+     "Circle A shaded entirely except the overlapping region with B"
+    ],
+    "tip": "B' means outside circle B, so shade inside A but outside the overlap."
+   },
+   {
+    "q": "A bag contains 3 red counters and 2 blue counters. A counter is taken at random, replaced, and a second counter is taken. Draw a tree diagram to represent this.",
+    "marks": 3,
+    "model": [
+     "Start node branching into Red and Blue",
+     "Correct second-generation branches from both first nodes",
+     "All branches correctly labelled with probabilities or outcomes"
+    ],
+    "tip": "Remember 'replaced' means the probabilities stay the same for the second draw."
+   },
+   {
+    "q": "Two tetrahedral (4-sided) dice numbered 1 to 4 are rolled. The scores are added together. Construct a possibility space table to find the number of ways to get a total of 5.",
+    "marks": 4,
+    "model": [
+     "4 by 4 grid drawn with headers 1,2,3,4",
+     "Cell values calculated correctly as sums",
+     "Favourable outcomes identified: (1,4), (2,3), (3,2), (4,1)",
+     "Final answer stated as 4 ways"
+    ],
+    "tip": "Carefully check every cell addition before counting your totals."
+   },
+   {
+    "q": "State what the universal set represents in a Venn diagram sorting numbers from 1 to 10.",
+    "marks": 1,
+    "model": [
+     "All integers from 1 to 10 inclusive"
+    ],
+    "tip": "Keep the definition concise and directly tied to the question context."
+   },
+   {
+    "q": "Explain why listing outcomes systematically is better than random guessing in probability exams.",
+    "marks": 2,
+    "model": [
+     "Ensures no outcomes are missed or duplicated",
+     "Guarantees full marks for a complete method"
+    ],
+    "tip": "Mention organization and completeness to secure both marks."
+   },
+   {
+    "q": "A coin is flipped 3 times. Construct a tree diagram to list all 8 possible sequences of Heads (H) and Tails (T).",
+    "marks": 4,
+    "model": [
+     "First split into H and T",
+     "Second split into H and T for each branch",
+     "Third split into H and T for each second-generation branch",
+     "8 final combined outcomes listed correctly"
+    ],
+    "tip": "Check 2 x 2 x 2 = 8 to ensure your tree is complete."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A cafe sells tea (T) or coffee (C), with a choice of milk (M) or black (B). Construct a systematic tree diagram to list all possible drink combinations and state how many there are.",
+    "steps": [
+     "Step 1: Draw a starting node and draw two branches for the first choice of drink: Tea (T) and Coffee (C).",
+     "Step 2: From the end of each drink branch, draw two further branches for milk (M) and black (B).",
+     "Step 3: Trace and list all final outcomes: (T,M), (T,B), (C,M), (C,B).",
+     "Step 4: Count the final outcomes to get the total."
+    ],
+    "ans": "4 possible combinations: Tea with milk, Tea black, Coffee with milk, Coffee black."
+   },
+   {
+    "q": "A universal set \\u03be contains integers from 1 to 10. Set A is even numbers. Set B is multiples of 3. List the numbers that belong in the intersection A \\u2229 B.",
+    "steps": [
+     "Step 1: List the elements of Set A (even numbers from 1 to 10): {2, 4, 6, 8, 10}.",
+     "Step 2: List the elements of Set B (multiples of 3 from 1 to 10): {3, 6, 9}.",
+     "Step 3: Find the numbers that appear in both lists (the intersection).",
+     "Step 4: Identify the common number: 6."
+    ],
+    "ans": "Intersection A \\u2229 B = {6}"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "A complete tree diagram showing sequential coin flips with all 4 final combined outcomes labelled clearly.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" fill=\"#f8fafc\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"120\" x2=\"150\" y2=\"70\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"120\" x2=\"150\" y2=\"170\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"150\" y1=\"70\" x2=\"260\" y2=\"40\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"150\" y1=\"70\" x2=\"260\" y2=\"100\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"150\" y1=\"170\" x2=\"260\" y2=\"140\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"150\" y1=\"170\" x2=\"260\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"50\" cy=\"120\" r=\"5\" fill=\"#1b2540\"/><circle cx=\"150\" cy=\"70\" r=\"5\" fill=\"#1b2540\"/><circle cx=\"150\" cy=\"170\" r=\"5\" fill=\"#1b2540\"/><text x=\"90\" y=\"85\" font-size=\"11\" fill=\"#1b2540\">Head</text><text x=\"90\" y=\"155\" font-size=\"11\" fill=\"#1b2540\">Tail</text><text x=\"280\" y=\"45\" font-size=\"11\" fill=\"#1b2540\">(Head, Head)</text><text x=\"280\" y=\"105\" font-size=\"11\" fill=\"#1b2540\">(Head, Tail)</text><text x=\"280\" y=\"145\" font-size=\"11\" fill=\"#1b2540\">(Tail, Head)</text><text x=\"280\" y=\"205\" font-size=\"11\" fill=\"#1b2540\">(Tail, Tail)</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_f.4.5",
+  "sid": "maths_eduqas_f",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-16T03:07:52.974Z"
+ }
+}

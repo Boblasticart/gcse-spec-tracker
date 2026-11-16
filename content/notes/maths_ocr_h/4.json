@@ -1,0 +1,574 @@
+{
+ "maths_ocr_h.4.2": {
+  "summary": "Discrete growth and decay in OCR Higher GCSE covers calculating percentage changes over multiple time periods, including simple interest, compound interest, and downward depreciation. You must master exponential growth and decay formulae of the form y = a(b)^x, distinguishing between constant addition and proportional multiplicative scaling. Top-grade questions demand reverse percentages, finding original amounts, and solving for time periods using logarithms or trial and improvement.",
+  "core": [
+   {
+    "h": "1. Simple Interest Principles",
+    "p": "Simple interest calculates the percentage addition based solely on the original principal amount for every time period. The amount added per period remains strictly constant, making it a linear progression rather than true exponential growth.",
+    "bullets": [
+     "Calculated as a fixed percentage of the initial principal sum.",
+     "Interest earned does not compound or earn further interest.",
+     "Total interest formula: I = (P * r * t) / 100 where P is principal, r is annual percentage rate, and t is time in years.",
+     "Final total amount: A = P + I or A = P * (1 + (r * t) / 100).",
+     "Graph of simple interest over time yields a straight line with a constant gradient."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Simple Interest",
+      "p": "Interest calculated on the initial principal only, ignoring any interest previously accrued over elapsed time periods."
+     },
+     {
+      "k": "warn",
+      "t": "Constant Addition Trap",
+      "p": "Do not apply simple interest formulas to savings accounts or investments unless explicitly stated; standard financial products always use compound interest."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. Compound Interest Fundamentals",
+    "p": "Compound interest applies successive percentage multipliers where interest earns additional interest in every subsequent period. This creates non-linear exponential acceleration, compounding wealth much faster than simple interest over extended horizons.",
+    "bullets": [
+     "Calculated as a percentage of the current value at the end of each period.",
+     "Multiplier for growth is always greater than 1, calculated as (1 + r / 100).",
+     "Formula for total value after n periods: A = P * (1 + r / 100)^n.",
+     "The difference between compound and simple interest grows exponentially over time.",
+     "Essential for financial literacy calculations in OCR Papers 4, 5, and 6."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Compound Multiplier",
+      "p": "An investment increasing by 3.5% per year uses the exact decimal multiplier 1.035, not 1.35 or 1 + 0.35n."
+     },
+     {
+      "k": "tip",
+      "t": "Calculator Power Button",
+      "p": "Use the exponent key (x^y or ^) to calculate multi-year compound interest efficiently without rounding intermediate values."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "3. Depreciation Mechanics",
+    "p": "Depreciation represents the loss of value over time for physical assets such as cars, machinery, or technology. It can be modelled using either a straight-line method or a reducing-balance compound method.",
+    "bullets": [
+     "Reducing-balance depreciation uses a compound decay multiplier less than 1, expressed as (1 - r / 100).",
+     "Straight-line depreciation subtracts a fixed monetary amount per year, analogous to simple interest.",
+     "Formula for reducing-balance value after n periods: V = Vo * (1 - r / 100)^n.",
+     "Residual value refers to the estimated worth of the asset at the end of its useful lifespan.",
+     "OCR Higher exams almost exclusively test reducing-balance percentage depreciation for this spec point."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Reducing-Balance Depreciation",
+      "p": "A method where an asset loses a fixed percentage of its current value each year, leading to exponential decay."
+     },
+     {
+      "k": "warn",
+      "t": "Negative Multipliers",
+      "p": "Never use a negative sign inside the multiplier formula; compute 1 minus the decimal percentage drop directly."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Exponential Formulae Structure",
+    "p": "General exponential growth and decay follow the algebraic template y = a * b^x, where a is the initial starting value, b is the growth or decay multiplier factor, and x represents the discrete time steps or independent variable.",
+    "bullets": [
+     "Parameter a represents the vertical y-intercept when x = 0.",
+     "Parameter b is the growth factor (b > 1) or decay factor (0 < b < 1).",
+     "The variable x typically represents time periods such as years, months, or hours.",
+     "The horizontal axis acts as an asymptote for exponential decay models where y approaches zero but never touches it.",
+     "Can model population growth, radioactive decay, bacterial replication, and financial investments."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Exponential Form",
+      "p": "Ensure you can instantly identify a, b, and x in expressions such as 500 * (1.04)^t."
+     },
+     {
+      "k": "tip",
+      "t": "Asymptote Awareness",
+      "p": "Decay curves get infinitely close to zero on the horizontal axis but never cross into negative values unless an offset constant is added."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Visual comparison of exponential growth and decay curves highlighting initial values and asymptotes.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"200\" x2=\"370\" y2=\"200\" stroke=\"#334155\" stroke-width=\"2\"/><line x1=\"50\" y1=\"20\" x2=\"50\" y2=\"200\" stroke=\"#334155\" stroke-width=\"2\"/><path d=\"M50 150 Q 200 140, 350 40\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><path d=\"M50 60 Q 200 180, 350 190\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"3\"/><text x=\"60\" y=\"40\" fill=\"#2563eb\" font-size=\"12\">Growth: y = a(b)^x</text><text x=\"210\" y=\"175\" fill=\"#dc2626\" font-size=\"12\">Decay: y = a(b)^x</text><text x=\"190\" y=\"220\" fill=\"#334155\" font-size=\"12\">Time periods (x)</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "5. Reverse Percentage and Original Value Problems",
+    "p": "When the final value after growth or decay is known and you need to find the initial principal amount, set up an algebraic equation or divide the final value by the cumulative compound multiplier raised to the power of n.",
+    "bullets": [
+     "Let P be the unknown original amount: P * (multiplier)^n = Final Value.",
+     "Rearrange to solve for P: P = Final Value / (multiplier)^n.",
+     "Avoid calculating single-year backward percentages by subtracting percentages sequentially; always use the total multiplier power.",
+     "Commonly tested in OCR 4-mark and 6-mark multi-step problem solving questions.",
+     "Check your answer by applying forward compound growth to your calculated original value."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Reverse Compound Calculation",
+      "p": "The mathematical process of recovering the initial principal amount prior to compound percentage increases or decreases."
+     },
+     {
+      "k": "warn",
+      "t": "Adding Percentages Back",
+      "p": "Never add the percentage back onto the final value; dividing by 1.05 is required instead of subtracting 5%."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Finding Time Periods Using Logs or Trial and Improvement",
+    "p": "Finding the unknown exponent n when given the initial value, final value, and interest rate requires either systematic trial and improvement, graphing, or algebraic logarithms for top-grade fluency.",
+    "bullets": [
+     "Set up the equation: Initial * (multiplier)^n = Target Value.",
+     "Isolate the exponent term: (multiplier)^n = Target Value / Initial Value.",
+     "Use trial and improvement by substituting integer values for n until bracketing the target.",
+     "Interpolate between integer bounds if a decimal number of years or months is requested.",
+     "Logarithms (Higher Tier extension) solve n = log(Target / Initial) / log(multiplier)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Integer Time Steps",
+      "p": "If question asks 'after how many complete years', round your final trial and improvement bound down or up based on threshold testing."
+     },
+     {
+      "k": "tip",
+      "t": "Showing Trial Evidence",
+      "p": "Always write out explicit substitution lines when using trial and improvement to secure method marks in OCR exams."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Nominal vs Effective Annual Rates",
+    "p": "Financial contexts sometimes compound interest multiple times per year (e.g., monthly, quarterly, or daily), requiring adjustments to the nominal annual interest rate and the number of compounding periods.",
+    "bullets": [
+     "If interest is compounded monthly, divide the annual rate by 12 and multiply the number of years by 12.",
+     "Formula adjustment: A = P * (1 + (r / 100) / k)^(k * t), where k is compounding frequency per year.",
+     "Effective annual rate represents the equivalent single annual compound percentage yield.",
+     "Essential higher-tier nuance tested in complex financial application problems.",
+     "Watch out for terminology like 'compounded semi-annually' (k=2) or 'quarterly' (k=4)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Compounding Frequency",
+      "p": "The number of times per year that interest is calculated and added to the principal balance."
+     },
+     {
+      "k": "warn",
+      "t": "Ignoring Frequency",
+      "p": "Using the annual rate directly without dividing by 12 for monthly compounding results in immediate loss of marks."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Exponential Growth in Population and Biology",
+    "p": "Exponential models govern population dynamics, bacterial expansion, and radioactive isotope decay where rate of change is directly proportional to the current population size.",
+    "bullets": [
+     "Population formula: P(t) = Po * e^(kt) or standard discrete form P(t) = Po * (growth factor)^t.",
+     "Doubling time is the duration required for a quantity to double in size, independent of starting scale.",
+     "Half-life is the time required for a radioactive substance or decaying quantity to reduce to half its initial value.",
+     "Graph properties feature constant proportional scaling across equal time intervals.",
+     "Directly links GCSE functions and proportionality modules."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Half-Life",
+      "p": "The time taken for the radioactivity or quantity of a specified isotope to fall to half its original value."
+     },
+     {
+      "k": "tip",
+      "t": "Logarithmic Linearization",
+      "p": "Taking logs of exponential growth data transforms curved plots into straight lines."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Visual breakdown of radioactive half-life decay showing value halving across equal time intervals.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"200\" x2=\"370\" y2=\"200\" stroke=\"#334155\" stroke-width=\"2\"/><line x1=\"50\" y1=\"20\" x2=\"50\" y2=\"200\" stroke=\"#334155\" stroke-width=\"2\"/><circle cx=\"50\" cy=\"50\" r=\"5\" fill=\"#2563eb\"/><circle cx=\"125\" cy=\"80\" r=\"5\" fill=\"#2563eb\"/><circle cx=\"200\" cy=\"125\" r=\"5\" fill=\"#2563eb\"/><circle cx=\"275\" cy=\"162\" r=\"5\" fill=\"#2563eb\"/><path d=\"M50 50 Q 87 65, 125 80 T 200 125 T 275 162 T 350 181\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"55\" y=\"40\" fill=\"#2563eb\" font-size=\"11\">(0, 100g)</text><text x=\"130\" y=\"70\" fill=\"#2563eb\" font-size=\"11\">(1, 50g)</text><text x=\"205\" y=\"115\" fill=\"#2563eb\" font-size=\"11\">(2, 25g)</text><text x=\"170\" y=\"220\" fill=\"#334155\" font-size=\"12\">Time periods (half-lives)</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "9. Comparing Linear and Exponential Models",
+    "p": "Examiners frequently test your ability to contrast linear growth (arithmetic sequences) with exponential growth (geometric sequences) through word problems, tables of values, and graphical interpretations.",
+    "bullets": null,
+    "table": {
+     "head": [
+      "Feature",
+      "Linear Growth / Simple",
+      "Exponential Growth / Compound"
+     ],
+     "rows": [
+      [
+       "Rule",
+       "Adds a fixed amount each step",
+       "Multiplies by a constant factor each step"
+      ],
+      [
+       "Sequence",
+       "Arithmetic (common difference)",
+       "Geometric (common ratio)"
+      ],
+      [
+       "Graph",
+       "Straight line (constant gradient)",
+       "J-curve (increasing gradient)"
+      ],
+      [
+       "Formula",
+       "y = mx + c",
+       "y = a(b)^x"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Arithmetic vs Geometric",
+      "p": "Linear models add a common difference; exponential models multiply by a common ratio."
+     },
+     {
+      "k": "warn",
+      "t": "Confusing Sequences",
+      "p": "Do not use nth term formulas for arithmetic sequences when a compound percentage problem demands geometric multipliers."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Multi-Stage Percentage Changes",
+    "p": "Real-world financial problems often combine consecutive percentage increases, decreases, or alternating growth and decay stages over different time durations.",
+    "bullets": [
+     "Never add percentages together (e.g., +10% then +20% is NOT a 30% total increase).",
+     "Multiply individual decimal multipliers together: Total Multiplier = M1 * M2 * M3.",
+     "Example: 10% increase followed by 20% decrease gives multiplier 1.10 * 0.80 = 0.88 (a 12% overall decrease).",
+     "Order of multipliers does not affect the final compound outcome due to commutative multiplication.",
+     "Essential for multi-part OCR Higher calculator paper questions."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Combined Multiplier",
+      "p": "The product of individual percentage multipliers applied sequentially across multiple discrete events."
+     },
+     {
+      "k": "tip",
+      "t": "Check Net Percentage",
+      "p": "Subtract the final combined multiplier from 1 (or 100%) to instantly find the net percentage gain or loss."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "11. Appreciation and Inflation Adjustments",
+    "p": "Appreciation describes assets increasing in financial value over time, while inflation measures the gradual loss of purchasing power of currency. Both are modelled using standard compound growth mathematics.",
+    "bullets": [
+     "Appreciation uses compound growth multipliers greater than 1 (e.g., house prices rising by 4% per year).",
+     "Inflation reduces the real value of money over time, calculated using compound decay multipliers.",
+     "Real value calculation: Real Value = Nominal Value / (1 + inflation rate)^n.",
+     "Examiners test whether you can distinguish between nominal cash values and real inflation-adjusted purchasing power.",
+     "Required reading for OCR financial mathematics context questions."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Inflation Rate",
+      "p": "The percentage rate at which the general level of prices for goods and services rises, eroding purchasing power."
+     },
+     {
+      "k": "warn",
+      "t": "nominal vs real",
+      "p": "A salary increase of 3% during 5% inflation results in a decrease in real purchasing power."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "12. Exam Strategy and Common Pitfalls",
+    "p": "Achieving a grade 9 on discrete growth and decay questions requires disciplined notation, meticulous handling of rounding, and rigorous checking of units and time bounds.",
+    "bullets": [
+     "Always write down the unrounded calculator display before recording final answers to 3 significant figures.",
+     "Check whether the question asks for the 'total amount' or just the 'interest earned'.",
+     "In depreciation problems, ensure the final answer represents the remaining value, not the total amount lost.",
+     "Double-check time units: if rates are annual but periods are given in months, convert months to fractional years first.",
+     "Layout every step of reverse percentage calculations explicitly to secure method marks."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Significant Figures",
+      "p": "Standard OCR rounding rule: give money to 2 decimal places and other values to 3 significant figures unless specified."
+     },
+     {
+      "k": "tip",
+      "t": "Read Final Sentence",
+      "p": "Underline what the OCR question specifically asks for (e.g., 'total interest' vs 'total account balance')."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Rolling Snowball Analogy",
+   "p": "Imagine rolling a snowball down a snowy hill. In simple interest (linear), someone adds a fixed handful of snow to your snowball every single minute, regardless of its size. In compound interest (exponential), your snowball rolls down the hill and gathers new snow proportional to its current size; as it gets bigger, it collects vastly more snow with every rotation, growing at an accelerating, explosive rate. Where this analogy breaks down is that financial compound interest compounds at discrete intervals (like annually or monthly), whereas a rolling snowball grows continuously in real-time."
+  },
+  "terms": [
+   {
+    "t": "Principal",
+    "d": "The initial sum of money lent, invested, or borrowed before any interest is added."
+   },
+   {
+    "t": "Compound Interest",
+    "d": "Interest calculated on the initial principal and also on the accumulated interest of previous periods."
+   },
+   {
+    "t": "Simple Interest",
+    "d": "Interest calculated solely on the original principal amount throughout the entire loan or investment duration."
+   },
+   {
+    "t": "Depreciation",
+    "d": "The reduction in the value of an asset over time, typically due to wear and tear or obsolescence."
+   },
+   {
+    "t": "Reducing-Balance Method",
+    "d": "A depreciation technique where a fixed percentage is deducted from the asset's current value each period."
+   },
+   {
+    "t": "Exponential Growth",
+    "d": "Mathematical growth where the rate of change is proportional to the current value, represented by y = a(b)^x with b > 1."
+   },
+   {
+    "t": "Exponential Decay",
+    "d": "Mathematical decrease where a quantity decays proportionally to its current size, with multiplier between 0 and 1."
+   },
+   {
+    "t": "Multiplier",
+    "d": "The decimal factor used to scale an amount up or down for percentage changes (e.g., 1.04 for 4% growth)."
+   },
+   {
+    "t": "Asymptote",
+    "d": "A line that a curve approaches nearer and nearer as it tends to infinity without ever touching it."
+   },
+   {
+    "t": "Nominal Rate",
+    "d": "The stated annual interest rate without taking compounding frequency within the year into account."
+   },
+   {
+    "t": "Effective Rate",
+    "d": "The true annual percentage yield when compounding frequency within the year is factored in."
+   },
+   {
+    "t": "Appreciation",
+    "d": "The increase in the monetary value of an asset or property over time."
+   },
+   {
+    "t": "Inflation",
+    "d": "The general increase in prices and fall in the purchasing value of money over time."
+   },
+   {
+    "t": "Half-Life",
+    "d": "The time required for a quantity to reduce to half of its initial initial value."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Adding percentage rates together for multi-year investments (e.g. 5% + 5% = 10% for 2 years).",
+    "r": "Always multiply successive compound multipliers: P * 1.05 * 1.05 = P * (1.05)^2."
+   },
+   {
+    "w": "Using a multiplier of 0.85 for a 15% depreciation (writing 0.85 instead of checking, or confusing 15% drop with multiplying by 1.15).",
+    "r": "A 15% decrease leaves 85% of the value, so the decay multiplier is 1 - 0.15 = 0.85. Be careful with wording like 'decreases to 85%' vs 'decreases by 15%'."
+   },
+   {
+    "w": "Finding the original price by subtracting 10% from the final sale price.",
+    "r": "Use reverse percentages by dividing the final value by the compound multiplier (e.g., Price / 1.10)."
+   },
+   {
+    "w": "Rounding intermediate calculation steps on the calculator display.",
+    "r": "Keep full calculator values stored in memory and only round the final answer to 3 significant figures or 2 decimal places."
+   },
+   {
+    "w": "Calculating simple interest when the OCR question explicitly demands compound interest.",
+    "r": "Read financial terminology carefully; modern exams almost always test compound interest unless simple interest is explicitly named."
+   },
+   {
+    "w": "Stating the total depreciation amount when the question asks for the current value of the car.",
+    "r": "Subtract the remaining value from the original price if total loss is requested, or report the multiplier result directly for current value."
+   },
+   {
+    "w": "Writing the exponential formula as y = b^ax instead of standard y = a(b)^x.",
+    "r": "Ensure initial value a is the coefficient multiplying the exponential base term."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A car is bought for 18,000 pounds. It depreciates by 12% each year. Calculate the value of the car after 3 years. Give your answer to the nearest pound.",
+    "marks": 3,
+    "model": [
+     "Identify decay multiplier: 1 - 0.12 = 0.88",
+     "Form expression: 18000 * (0.88)^3",
+     "Evaluate calculation: 12262.8864",
+     "Final rounded answer: £12,263"
+    ],
+    "tip": "Ensure you raise the multiplier to the correct power of 3 for 3 years."
+   },
+   {
+    "v": null,
+    "q": "Ali invests 4000 pounds in a savings account paying compound interest at a rate of 3.5% per complete year. Calculate the total amount in the account after 4 years.",
+    "marks": 3,
+    "model": [
+     "Identify compound growth multiplier: 1 + 3.5 / 100 = 1.035",
+     "Set up expression: 4000 * (1.035)^4",
+     "Calculate value: 4587.399...",
+     "Round to 2 decimal places: £4587.40"
+    ],
+    "tip": "Always give monetary answers to 2 decimal places unless the question states otherwise."
+   },
+   {
+    "q": "A rare painting appreciates in value by 6% every year. Its value is currently 25,000 pounds. After how many complete years will its value first exceed 35,000 pounds?",
+    "marks": 4,
+    "model": [
+     "Set up inequality or equation: 25000 * (1.06)^n > 35000",
+     "Test n = 6: 25000 * (1.06)^6 = 35461.50",
+     "Test n = 5: 25000 * (1.06)^5 = 33455.19",
+     "Conclusion: 6 complete years"
+    ],
+    "tip": "Show trial values clearly to earn method marks when solving for time using trial and improvement."
+   },
+   {
+    "q": "The population of a town increases exponentially by 4% each year. The current population is 50,000. Find the population after 5 years, giving your answer to the nearest whole number.",
+    "marks": 3,
+    "model": [
+     "State multiplier: 1.04",
+     "Set up formula: 50000 * (1.04)^5",
+     "Evaluate: 60832.64...",
+     "Round to nearest whole number: 60,833"
+    ],
+    "tip": "Population figures must always be rounded to whole numbers as you cannot have a fraction of a person."
+   },
+   {
+    "q": "A digital asset loses 20% of its value in the first year, and a further 15% of its reduced value in the second year. Calculate the overall percentage decrease over the 2-year period.",
+    "marks": 4,
+    "model": [
+     "Find individual multipliers: 0.80 and 0.85",
+     "Calculate combined multiplier: 0.80 * 0.85 = 0.68",
+     "Calculate net percentage remaining: 68%",
+     "Calculate percentage decrease: 100% - 68% = 32% decrease"
+    ],
+    "tip": "Never add percentages together; always multiply the decimal multipliers."
+   },
+   {
+    "q": "Sarah invests money in an account paying compound interest. After 2 years, the total amount is 5832 pounds. The annual interest rate is 8%. Work out the original amount invested.",
+    "marks": 3,
+    "model": [
+     "Identify multiplier: 1.08",
+     "Set up reverse equation: P * (1.08)^2 = 5832",
+     "Rearrange and solve: P = 5832 / (1.08)^2 = 5832 / 1.1664",
+     "Evaluate original principal: £5000"
+    ],
+    "tip": "For reverse percentage compound problems, divide the final amount by the squared or cubed multiplier."
+   },
+   {
+    "q": "A radioactive substance decays such that its mass halves every 8 hours. If the starting mass is 160 grams, find the mass remaining after 24 hours.",
+    "marks": 2,
+    "model": [
+     "Determine number of half-life periods: 24 / 8 = 3 periods",
+     "Apply successive halving: 160 * (0.5)^3 or 160 / 2 / 2 / 2",
+     "Evaluate final mass: 20 grams"
+    ],
+    "tip": "Check whether the time elapsed divides neatly into the half-life period."
+   },
+   {
+    "q": "An investment grows by compound interest at a rate of x% per year. After 2 years, an initial investment of 2000 pounds grows to 2163.20 pounds. Find the value of x.",
+    "marks": 4,
+    "model": [
+     "Set up equation: 2000 * (1 + x/100)^2 = 2163.20",
+     "Divide by 2000: (1 + x/100)^2 = 1.0816",
+     "Take square root: 1 + x/100 = sqrt(1.0816) = 1.04",
+     "Solve for x: x/100 = 0.04 so x = 4"
+    ],
+    "tip": "Isolate the squared bracket first by dividing before taking square roots."
+   },
+   {
+    "q": "Explain why the graph of y = 100 * (0.85)^x never intersects the horizontal axis.",
+    "marks": 2,
+    "model": [
+     "Recognise exponential decay asymptotic behaviour",
+     "As x increases towards infinity, (0.85)^x approaches zero but never reaches zero."
+    ],
+    "tip": "Use mathematical vocabulary such as 'asymptote' or 'approaches zero' to secure full marks."
+   },
+   {
+    "q": "A business purchases machinery for 45,000 pounds. It depreciates using the reducing balance method at 15% per annum. Calculate its book value after 4 years.",
+    "marks": 3,
+    "model": [
+     "Identify decay multiplier: 0.85",
+     "Form expression: 45000 * (0.85)^4",
+     "Calculate and round to 2 dp: £23,506.78"
+    ],
+    "tip": "Check depreciation rate carefully; 15% per annum gives a multiplier of 0.85."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A house is bought for 220,000 pounds. Its value appreciates by 4.5% in the first year and 3% in each subsequent year. Calculate the value of the house after 4 years, giving your answer to the nearest hundred pounds.",
+    "steps": [
+     "Step 1: Identify the multipliers for each year. Year 1 multiplier = 1.045. Years 2, 3, and 4 multiplier = 1.03.",
+     "Step 2: Combine the multipliers into a single continuous calculation: Value = 220000 * 1.045 * (1.03)^3.",
+     "Step 3: Evaluate the expression on your calculator: 220000 * 1.045 * 1.092727 = 251174.6514...",
+     "Step 4: Round the final result to the nearest hundred pounds as requested: £251,200."
+    ],
+    "ans": "£251,200"
+   },
+   {
+    "q": "James invests 8,000 pounds in an account paying r% compound interest per year. After 3 years, his investment is worth 9,272.72 pounds. Find the annual interest rate r.",
+    "steps": [
+     "Step 1: Set up the compound interest equation: 8000 * (1 + r/100)^3 = 9272.72.",
+     "Step 2: Isolate the multiplier term by dividing both sides by 8000: (1 + r/100)^3 = 9272.72 / 8000 = 1.15909.",
+     "Step 3: Take the cube root of both sides: 1 + r/100 = cube root of 1.15909 = 1.05.",
+     "Step 4: Solve for r: r/100 = 0.05, therefore r = 5."
+    ],
+    "ans": "r = 5%"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Geometric visualisation of compound growth vs simple interest divergence over 5 time periods.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"200\" x2=\"370\" y2=\"200\" stroke=\"#334155\" stroke-width=\"2\"/><line x1=\"50\" y1=\"20\" x2=\"50\" y2=\"200\" stroke=\"#334155\" stroke-width=\"2\"/><path d=\"M50 180 L 130 155 L 210 130 L 290 105 L 370 80\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><path d=\"M50 180 Q 140 160, 210 115 T 370 40\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2.5\"/><text x=\"220\" y=\"80\" fill=\"#16a34a\" font-size=\"11\">Compound (Exponential)</text><text x=\"160\" y=\"165\" fill=\"#2563eb\" font-size=\"11\">Simple (Linear)</text><text x=\"180\" y=\"225\" fill=\"#334155\" font-size=\"12\">Time (Years)</text></svg>"
+   }
+  ],
+  "pid": "maths_ocr_h.4.2",
+  "sid": "maths_ocr_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-16T03:35:05.636Z"
+ }
+}
