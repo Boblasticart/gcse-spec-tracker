@@ -9414,5 +9414,494 @@
   "src": "pre",
   "by": "gemini/gemini-3.6-flash",
   "ts": "2026-11-16T13:29:20.113Z"
+ },
+ "maths_aqa_f.3.18": {
+  "summary": "Exact trigonometric values are the precise numerical ratios for sine, cosine, and tangent for key angles (0°, 30°, 45°, 60°, and 90°) expressed as integers, fractions, or surds rather than rounded decimals. Mastering these values is essential for AQA GCSE Maths Paper 1 (Non-Calculator), where students are expected to recall or derive them instantly to solve right-angled triangle problems and evaluate non-calculator expressions. Understanding the geometric derivations from equilateral and isosceles right-angled triangles ensures long-term memory and prevents loss of marks in exam conditions.",
+  "core": [
+   {
+    "h": "Introduction to Exact Trigonometric Values",
+    "p": "In GCSE Mathematics, trigonometry links the angles of a right-angled triangle to the ratios of its side lengths. While calculators provide decimal approximations for trigonometric functions, Paper 1 requires exact values written using fractions, whole numbers, and surds.",
+    "bullets": [
+     "**Paper 1 Requirement**: You must know exact values without using a calculator.",
+     "**Key Angles**: The standard angles required by AQA Foundation tier are **0°, 30°, 45°, 60°, and 90°**.",
+     "**Exact Form**: Answers must be written as exact fractions or surds (e.g. 1/2, √3/2, 1/√2) rather than rounded decimals.",
+     "**Core Ratios**: Remember SOH CAH TOA: **sin θ = Opp/Hyp**, **cos θ = Adj/Hyp**, **tan θ = Opp/Adj**."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Exact Value",
+      "p": "An exact value is a number expressed in precise mathematical form (such as a fraction, integer, or surd) without any decimal rounding."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Exact Values for Sine (sin θ)",
+    "p": "The sine function represents the ratio of the opposite side to the hypotenuse. As the angle increases from 0° to 90°, the length of the opposite side increases relative to the hypotenuse, meaning sin θ increases from 0 to 1.",
+    "bullets": [
+     "**sin 0° = 0**: When the angle is 0°, the opposite side has length 0.",
+     "**sin 30° = 1/2** (or 0.5): A fundamental value frequently assessed on Paper 1.",
+     "**sin 45° = 1/√2** (or √2/2): Derived from an isosceles right-angled triangle.",
+     "**sin 60° = √3/2**: Derived from an equilateral triangle split in half.",
+     "**sin 90° = 1**: The opposite side equals the hypotenuse at 90°."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Sine Pattern",
+      "p": "Notice that sin 0° to sin 90° follow the pattern √(0)/2, √(1)/2, √(2)/2, √(3)/2, √(4)/2."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Exact Values for Cosine (cos θ)",
+    "p": "The cosine function represents the ratio of the adjacent side to the hypotenuse. As the angle increases from 0° to 90°, the adjacent side decreases, so cos θ decreases from 1 down to 0.",
+    "bullets": [
+     "**cos 0° = 1**: When the angle is 0°, the adjacent side equals the hypotenuse.",
+     "**cos 30° = √3/2**: Equal to sin 60° because complementary angles sum to 90°.",
+     "**cos 45° = 1/√2** (or √2/2): Equal to sin 45°.",
+     "**cos 60° = 1/2** (or 0.5): Equal to sin 30°.",
+     "**cos 90° = 0**: When the angle reaches 90°, the adjacent length becomes 0."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Symmetry between Sin and Cos",
+      "p": "The values for cosine are simply the sine values in reverse order: cos θ = sin(90° - θ)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Exact Values for Tangent (tan θ)",
+    "p": "The tangent function represents the ratio of the opposite side to the adjacent side (tan θ = sin θ / cos θ). It measures the gradient of the hypotenuse line.",
+    "bullets": [
+     "**tan 0° = 0**: Opposite side is zero, so 0 / adjacent = 0.",
+     "**tan 30° = 1/√3** (or √3/3): Opposite is shorter than adjacent.",
+     "**tan 45° = 1**: Opposite and adjacent sides are equal in length.",
+     "**tan 60° = √3**: Opposite is longer than adjacent.",
+     "**tan 90° is Undefined**: As cos 90° = 0, division by zero is impossible."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "tan 90° Trap",
+      "p": "Never write tan 90° = 0. Tan 90° is undefined because the adjacent side length becomes 0."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Master Summary Table of Exact Values",
+    "p": "Below is the complete reference table required for AQA GCSE Maths. Memorising this table completely ensures fast and accurate working in non-calculator papers.",
+    "bullets": [
+     "Learn the rows horizontally to see patterns.",
+     "Check that sin and cos values mirror each other.",
+     "Remember that tan θ can be calculated as sin θ ÷ cos θ."
+    ],
+    "table": {
+     "head": [
+      "Angle (θ)",
+      "0°",
+      "30°",
+      "45°",
+      "60°",
+      "90°"
+     ],
+     "rows": [
+      [
+       "sin θ",
+       "0",
+       "1/2",
+       "1/√2 (or √2/2)",
+       "√3/2",
+       "1"
+      ],
+      [
+       "cos θ",
+       "1",
+       "√3/2",
+       "1/√2 (or √2/2)",
+       "1/2",
+       "0"
+      ],
+      [
+       "tan θ",
+       "0",
+       "1/√3 (or √3/3)",
+       "1",
+       "√3",
+       "Undefined"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Deriving 30° and 60° Values Geometrically",
+    "p": "If you forget the values during an exam, you can derive the exact values for 30° and 60° using an equilateral triangle of side length 2.",
+    "bullets": [
+     "**Step 1**: Draw an equilateral triangle with side lengths of 2 units. All angles are 60°.",
+     "**Step 2**: Split the triangle in half with a vertical line of symmetry down the middle.",
+     "**Step 3**: This forms two congruent right-angled triangles with base = 1, hypotenuse = 2, and top angle = 30°.",
+     "**Step 4**: Use Pythagoras' theorem to find the vertical height: h = √(2² - 1²) = √3.",
+     "**Step 5**: Read off the ratios: sin 30° = 1/2, cos 30° = √3/2, tan 30° = 1/√3; sin 60° = √3/2, cos 60° = 1/2, tan 60° = √3."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Equilateral Triangle Trick",
+      "p": "Sketching a 2-2-2 equilateral triangle split in half takes only 10 seconds and guarantees 100% accurate 30° and 60° values."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Deriving 45° Values Geometrically",
+    "p": "The exact values for 45° come from an isosceles right-angled triangle with shorter side lengths of 1 unit.",
+    "bullets": [
+     "**Step 1**: Draw a right-angled triangle with two equal sides of length 1.",
+     "**Step 2**: The two non-right angles must both be 45° (since 180° - 90° = 90°, split equally).",
+     "**Step 3**: Use Pythagoras' theorem to find the hypotenuse: c = √(1² + 1²) = √2.",
+     "**Step 4**: Read off ratios: sin 45° = 1/√2, cos 45° = 1/√2, tan 45° = 1/1 = 1."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "The Left-Hand Rule Memory Technique",
+    "p": "The hand trick is a popular physical memory aid for recalling the sine and cosine values of 0°, 30°, 45°, 60°, and 90° quickly without drawing triangles.",
+    "bullets": [
+     "Hold your left palm facing you. Assign thumb = 0°, index finger = 30°, middle finger = 45°, ring finger = 60°, little finger = 90°.",
+     "To find **sin θ**: fold down the finger for angle θ. Count the number of fingers to the **LEFT** (towards thumb). Value = √(fingers) / 2.",
+     "To find **cos θ**: fold down the finger for angle θ. Count the number of fingers to the **RIGHT** (towards little finger). Value = √(fingers) / 2.",
+     "**Example**: For sin 30°, fold index finger. 1 finger to the left (thumb). sin 30° = √(1)/2 = 1/2."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Hand Trick Formula",
+      "p": "Always remember: Value = √(number of fingers) / 2. For 0 fingers, √0/2 = 0; for 4 fingers, √4/2 = 2/2 = 1."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Key Relationships and Co-Function Identities",
+    "p": "Understanding how sine, cosine, and tangent connect helps check answers and simplify algebraic expressions in non-calculator papers.",
+    "bullets": [
+     "**Complementary Angle Rule**: sin(θ) = cos(90° - θ) and cos(θ) = sin(90° - θ). For example, sin 30° = cos 60° = 0.5.",
+     "**Tangent Quotient Identity**: tan θ = sin θ / cos θ. For 45°: tan 45° = sin 45° / cos 45° = (1/√2) / (1/√2) = 1.",
+     "**Reciprocal Behavior**: As angle θ grows from 0° to 90°, sin θ increases while cos θ decreases."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Evaluating Non-Calculator Arithmetic Expressions",
+    "p": "Exam questions often require substituting exact values into arithmetic calculations, including additions, multiplications, and powers.",
+    "bullets": [
+     "**Substitution First**: Always substitute the exact numerical value first before doing arithmetic.",
+     "**Example 1**: Calculate 2 × sin 30° + cos 60° → 2 × (1/2) + (1/2) = 1 + 0.5 = 1.5.",
+     "**Example 2**: Calculate (tan 45°)² + (sin 30°)² → (1)² + (1/2)² = 1 + 1/4 = 5/4 or 1.25.",
+     "**Fractions and Decimals**: Keep values in fraction form to avoid rounding mistakes."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Order of Operations",
+      "p": "Apply BIDMAS correctly when dealing with expressions like 4 cos 60°. Work out cos 60° = 0.5 first, then multiply by 4 to get 2."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Finding Missing Side Lengths in Triangles",
+    "p": "In non-calculator questions involving right-angled triangles with angles of 30°, 45°, or 60°, you must use exact trigonometric values to solve for unknown side lengths.",
+    "bullets": [
+     "**Step 1**: Label the sides of the right-angled triangle (Opposite, Adjacent, Hypotenuse).",
+     "**Step 2**: Select the correct ratio (sin, cos, or tan) based on known and unknown sides.",
+     "**Step 3**: Substitute the angle and the known side length.",
+     "**Step 4**: Replace the trig function with its exact fractional value.",
+     "**Step 5**: Rearrange and solve for the unknown side."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Exam Tip for Side Lengths",
+      "p": "If a triangle has an angle of 30° and hypotenuse 12 cm, the opposite side is simply 12 × sin 30° = 12 × 0.5 = 6 cm."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Common Exam Scenarios and Mark Scheme Requirements",
+    "p": "AQA mark schemes strictly reward exact fractional or surd expressions in Paper 1 questions. Knowing common pitfalls ensures maximum marks.",
+    "bullets": [
+     "**Show Working**: Always write down the exact trig substitution step (e.g. 'sin 30° = 0.5') to secure method marks.",
+     "**Do Not Approximate**: Never convert surds into rounded decimals like 0.866 for √3/2 unless explicitly instructed.",
+     "**Rationalised Denominators**: Both 1/√2 and √2/2 are accepted by AQA mark schemes, but √2/2 is preferred in simplified surd form.",
+     "**Units**: Ensure final lengths include units (e.g. cm, m) if specified in the question stem."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Exact Values Keyring",
+   "p": "Think of exact trig values like standard physical key shapes on a master keyring. Each angle (0°, 30°, 45°, 60°, 90°) is a unique key cut to fit exact door locks (0, 1/2, 1/√2, √3/2, 1). Using an approximate decimal (like 0.866 instead of √3/2) is like using a bent key that almost fits but won't turn the lock. The analogy breaks down because key cuts are arbitrary, whereas trigonometric exact values are mathematically derived from geometric properties of triangles.",
+   "breakdown": "Physical keys are designed arbitrarily by locksmiths, whereas exact trig values are fixed geometric constants forced by the Pythagorean theorem and spatial properties of triangles."
+  },
+  "terms": [
+   {
+    "t": "Exact Value",
+    "d": "A number expressed in precise mathematical form without rounding, such as an integer, fraction, or surd."
+   },
+   {
+    "t": "Sine (sin)",
+    "d": "The trigonometric ratio of the length of the opposite side to the hypotenuse in a right-angled triangle."
+   },
+   {
+    "t": "Cosine (cos)",
+    "d": "The trigonometric ratio of the length of the adjacent side to the hypotenuse in a right-angled triangle."
+   },
+   {
+    "t": "Tangent (tan)",
+    "d": "The trigonometric ratio of the length of the opposite side to the adjacent side in a right-angled triangle."
+   },
+   {
+    "t": "Surd",
+    "d": "An irrational number expressed using a root symbol, such as √2 or √3."
+   },
+   {
+    "t": "Hypotenuse",
+    "d": "The longest side of a right-angled triangle, positioned opposite the 90° angle."
+   },
+   {
+    "t": "Opposite Side",
+    "d": "The side of a right-angled triangle that is directly across from the angle being considered."
+   },
+   {
+    "t": "Adjacent Side",
+    "d": "The side of a right-angled triangle that is next to the angle being considered (and not the hypotenuse)."
+   },
+   {
+    "t": "Equilateral Triangle",
+    "d": "A triangle with three equal side lengths and three equal angles of 60°."
+   },
+   {
+    "t": "Isosceles Right Triangle",
+    "d": "A right-angled triangle with two equal sides and two equal interior angles of 45°."
+   },
+   {
+    "t": "Complementary Angles",
+    "d": "Two angles that sum to 90°, such as 30° and 60°."
+   },
+   {
+    "t": "Undefined",
+    "d": "A mathematical term indicating that an expression has no valid value, such as dividing by zero (e.g. tan 90°)."
+   },
+   {
+    "t": "Rationalising the Denominator",
+    "d": "Rewriting a fraction so that the denominator contains no surds (e.g. 1/√2 = √2/2)."
+   },
+   {
+    "t": "SOH CAH TOA",
+    "d": "A mnemonic used to remember the three main trigonometric definitions: sin=O/H, cos=A/H, tan=O/A."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Writing sin 30° = 1/3",
+    "r": "sin 30° = 1/2 (or 0.5)."
+   },
+   {
+    "w": "Writing tan 90° = 0",
+    "r": "tan 90° is undefined (cos 90° = 0, so division by zero occurs)."
+   },
+   {
+    "w": "Confusing sin 60° with cos 60°",
+    "r": "sin 60° = √3/2, whereas cos 60° = 1/2."
+   },
+   {
+    "w": "Writing tan 45° = 1/2",
+    "r": "tan 45° = 1 (because opposite side = adjacent side)."
+   },
+   {
+    "w": "Writing cos 0° = 0",
+    "r": "cos 0° = 1 (the adjacent side length equals the hypotenuse)."
+   },
+   {
+    "w": "Using rounded decimals on Paper 1 (e.g., writing 0.866 for sin 60°)",
+    "r": "Write the exact surd value √3/2."
+   },
+   {
+    "w": "Mixing up opposite and adjacent sides when setting up tan 30°",
+    "r": "tan 30° = Opposite / Adjacent = 1 / √3."
+   },
+   {
+    "w": "Calculating (sin 30°)² as 1/2",
+    "r": "(sin 30°)² = (1/2)² = 1/4."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Write down the exact value of sin 30°.",
+    "marks": 1,
+    "model": [
+     "1/2 (or 0.5)"
+    ],
+    "tip": "This is a direct recall question worth 1 mark on Paper 1."
+   },
+   {
+    "q": "Write down the exact value of tan 45°.",
+    "marks": 1,
+    "model": [
+     "1"
+    ],
+    "tip": "In an isosceles right triangle, opposite = adjacent, so Opp/Adj = 1."
+   },
+   {
+    "q": "Write down the exact value of cos 60°.",
+    "marks": 1,
+    "model": [
+     "1/2 (or 0.5)"
+    ],
+    "tip": "Remember that cos 60° has the same value as sin 30°."
+   },
+   {
+    "q": "Work out the exact value of 2 × cos 60° + tan 45°.",
+    "marks": 2,
+    "model": [
+     "cos 60° = 1/2 and tan 45° = 1",
+     "2 × (1/2) + 1 = 1 + 1 = 2"
+    ],
+    "tip": "Substitute the exact values first before carrying out the addition and multiplication."
+   },
+   {
+    "q": "Work out the value of (sin 30°)² + (cos 30°)².",
+    "marks": 2,
+    "model": [
+     "sin 30° = 1/2 so (1/2)² = 1/4",
+     "cos 30° = √3/2 so (√3/2)² = 3/4",
+     "1/4 + 3/4 = 1"
+    ],
+    "tip": "The sum of (sin θ)² + (cos θ)² is always equal to 1 for any angle."
+   },
+   {
+    "q": "A right-angled triangle has a hypotenuse of length 10 cm and an angle of 30°. Calculate the length of the side opposite to the 30° angle.",
+    "marks": 2,
+    "model": [
+     "Opposite = Hypotenuse × sin(30°)",
+     "Opposite = 10 × 0.5 = 5 cm"
+    ],
+    "tip": "Identify that sin 30° = 0.5 and multiply by the hypotenuse."
+   },
+   {
+    "q": "Show clearly that sin 60° × cos 30° = 3/4.",
+    "marks": 2,
+    "model": [
+     "State sin 60° = √3/2 and cos 30° = √3/2",
+     "Multiply: (√3/2) × (√3/2) = 3/4"
+    ],
+    "tip": "Remember that √3 × √3 = 3."
+   },
+   {
+    "q": "Work out the exact value of tan 60° × tan 30°.",
+    "marks": 2,
+    "model": [
+     "tan 60° = √3 and tan 30° = 1/√3",
+     "√3 × (1/√3) = 1"
+    ],
+    "tip": "Multiplying a surd by its reciprocal gives 1."
+   },
+   {
+    "q": "In triangle ABC, angle B = 90°, angle A = 45°, and side AB = 7 cm. Calculate the exact length of side BC.",
+    "marks": 2,
+    "model": [
+     "tan 45° = BC / AB",
+     "1 = BC / 7  => BC = 7 cm"
+    ],
+    "tip": "Since angle A = 45° and angle B = 90°, angle C must also be 45°, making it an isosceles triangle."
+   },
+   {
+    "q": "Given that sin 0° = 0, cos 0° = 1, sin 90° = 1, and cos 90° = 0, evaluate: 4 × cos 0° - 3 × sin 90° + tan 0°.",
+    "marks": 2,
+    "model": [
+     "Substitute values: 4(1) - 3(1) + 0",
+     "4 - 3 + 0 = 1"
+    ],
+    "tip": "Carefully substitute each value before adding and subtracting."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A ramp is inclined at an angle of 30° to the horizontal ground. The length of the ramp (hypotenuse) is 14 metres. Calculate the vertical height of the ramp without using a calculator.",
+    "steps": [
+     "Identify the given information: Hypotenuse = 14 m, Angle θ = 30°.",
+     "Identify the unknown: Vertical height is the side Opposite to the 30° angle.",
+     "Select the correct trigonometric formula: sin θ = Opposite / Hypotenuse.",
+     "Rearrange to solve for Opposite: Height = Hypotenuse × sin(30°).",
+     "Substitute exact value sin 30° = 1/2: Height = 14 × (1/2) = 7 m."
+    ],
+    "ans": "7 m"
+   },
+   {
+    "q": "Calculate the exact value of 4 × cos 60° + (tan 45°)³ - 2 × sin 30°.",
+    "steps": [
+     "Recall exact values: cos 60° = 1/2, tan 45° = 1, sin 30° = 1/2.",
+     "Evaluate term 1: 4 × cos 60° = 4 × (1/2) = 2.",
+     "Evaluate term 2: (tan 45°)³ = 1³ = 1.",
+     "Evaluate term 3: 2 × sin 30° = 2 × (1/2) = 1.",
+     "Combine terms: 2 + 1 - 1 = 2."
+    ],
+    "ans": "2"
+   },
+   {
+    "q": "In a right-angled triangle PQR, angle Q = 90° and angle P = 60°. The adjacent side PQ = 5 cm. Find the exact length of the hypotenuse PR.",
+    "steps": [
+     "Identify sides relative to 60° angle: Adjacent PQ = 5 cm, Hypotenuse PR = ?.",
+     "Choose trig ratio involving Adjacent and Hypotenuse: cos θ = Adjacent / Hypotenuse.",
+     "Substitute knowns: cos 60° = 5 / PR.",
+     "Recall cos 60° = 1/2, so 1/2 = 5 / PR.",
+     "Cross-multiply to solve for PR: PR = 5 × 2 = 10 cm."
+    ],
+    "ans": "10 cm"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Figure 1: Deriving 30° and 60° exact values from an equilateral triangle split in half",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><polygon points=\"80,200 320,200 200,30\" fill=\"#dbeafe\" stroke=\"#1e40af\" stroke-width=\"2\"/><line x1=\"200\" y1=\"30\" x2=\"200\" y2=\"200\" stroke=\"#b91c1c\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><rect x=\"185\" y=\"185\" width=\"15\" height=\"15\" fill=\"none\" stroke=\"#b91c1c\" stroke-width=\"1.5\"/><text x=\"130\" y=\"215\" fill=\"#1e293b\" font-size=\"12\" font-weight=\"bold\">Base = 1</text><text x=\"260\" y=\"215\" fill=\"#1e293b\" font-size=\"12\" font-weight=\"bold\">Base = 1</text><text x=\"120\" y=\"110\" fill=\"#1e40af\" font-size=\"12\" font-weight=\"bold\">Hyp = 2</text><text x=\"270\" y=\"110\" fill=\"#1e40af\" font-size=\"12\" font-weight=\"bold\">Hyp = 2</text><text x=\"208\" y=\"125\" fill=\"#b91c1c\" font-size=\"12\" font-weight=\"bold\">Height = √3</text><text x=\"95\" y=\"190\" fill=\"#0f766e\" font-size=\"12\" font-weight=\"bold\">60°</text><text x=\"185\" y=\"60\" fill=\"#0f766e\" font-size=\"12\" font-weight=\"bold\">30°</text></svg>"
+   },
+   {
+    "cap": "Figure 2: Deriving 45° exact values using an isosceles right-angled triangle",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><polygon points=\"80,190 280,190 80,30\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"2\"/><rect x=\"80\" y=\"172\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"#b45309\" stroke-width=\"1.5\"/><text x=\"170\" y=\"210\" fill=\"#78350f\" font-size=\"12\" font-weight=\"bold\">Base = 1</text><text x=\"40\" y=\"120\" fill=\"#78350f\" font-size=\"12\" font-weight=\"bold\">Height = 1</text><text x=\"185\" y=\"100\" fill=\"#b45309\" font-size=\"12\" font-weight=\"bold\">Hyp = √2</text><text x=\"115\" y=\"182\" fill=\"#0f766e\" font-size=\"12\" font-weight=\"bold\">45°</text><text x=\"90\" y=\"65\" fill=\"#0f766e\" font-size=\"12\" font-weight=\"bold\">45°</text></svg>"
+   },
+   {
+    "cap": "Figure 3: Right-angled triangle problem solving with 30° angle",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><polygon points=\"60,190 320,190 320,60\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"2\"/><rect x=\"302\" y=\"172\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"#15803d\" stroke-width=\"1.5\"/><text x=\"100\" y=\"182\" fill=\"#166534\" font-size=\"12\" font-weight=\"bold\">30°</text><text x=\"170\" y=\"115\" fill=\"#1e40af\" font-size=\"12\" font-weight=\"bold\">Hypotenuse = 12 cm</text><text x=\"330\" y=\"130\" fill=\"#b91c1c\" font-size=\"12\" font-weight=\"bold\">Opp = x</text><text x=\"160\" y=\"210\" fill=\"#374151\" font-size=\"11\">sin 30° = x / 12  ⇒  x = 12 × 0.5 = 6 cm</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_f.3.18",
+  "sid": "maths_aqa_f",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.6-flash",
+  "ts": "2026-11-16T13:30:27.838Z"
  }
 }
