@@ -5255,5 +5255,2274 @@
   "src": "pre",
   "by": "gemini/gemini-3-flash-preview",
   "ts": "2026-11-16T13:42:04.237Z"
+ },
+ "maths_aqa_h.1.0": {
+  "summary": "Algebraic notation forms the universal language of mathematics, allowing us to represent unknown values, relationships, and general arithmetic rules using letters, numbers, and operational symbols. Mastering this specification point requires precise adherence to mathematical conventions, including the strict omission of multiplication and division signs in favour of juxtaposition and fractional bars, as well as the correct interpretation of multi-part algebraic terms and indices. At Grade 9, you must translate complex verbal descriptions into robust algebraic expressions while recognizing subtle structural differences that trap careless students.",
+  "core": [
+   {
+    "h": "Introduction to Algebraic Symbols and Letters",
+    "p": "Algebra uses letters (such as x, y, n, a) to represent unknown values, variables, or parameters. In higher-tier AQA papers, precision in notation is non-negotiable; every letter represents a number unless specified otherwise.",
+    "bullets": [
+     "Variables represent quantities that can change within a given problem.",
+     "Unknowns represent specific fixed numbers that we need to find.",
+     "Parameters represent constant values that define a specific function or curve.",
+     "Always define your variables clearly if a question requires you to set up an expression."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Variable",
+      "p": "A symbol, usually a letter, used to represent an unspecified number or a quantity that can vary."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Multiplication Convention: Juxtaposition",
+    "p": "In standard arithmetic, we use the cross symbol (x) for multiplication. In algebra, this symbol is strictly avoided because it is easily confused with the letter x. Instead, we use juxtaposition—placing numbers and letters directly next to each other.",
+    "bullets": [
+     "Write 3 multiplied by x as 3x, never as 3 x x.",
+     "Write a multiplied by b as ab, following alphabetical order.",
+     "A number always precedes a variable in a term, so write 5y, never y5.",
+     "Brackets indicate multiplication of a whole expression, such as 4(x + 2)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "The Variable Trap",
+      "p": "Never use the multiplication cross symbol when writing algebraic expressions in your final answers."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Division Convention: Fractional Bars",
+    "p": "Division in algebra is almost exclusively represented using horizontal fraction bars rather than the obelus symbol (÷). This convention clarifies the scope of the numerator and denominator and prevents ambiguity in complex expressions.",
+    "bullets": [
+     "Write x divided by 4 as x / 4 formatted with a horizontal line.",
+     "The fraction bar acts as a grouping symbol, implying brackets around the numerator and denominator.",
+     "Write the sum of a and b divided by 5 as (a + b) / 5.",
+     "Never use the ÷ symbol in higher-tier algebraic working or final answers."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Fraction Bar Rule",
+      "p": "Treat every horizontal fraction bar as an implicit pair of brackets around both the numerator and the denominator."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Powers, Indices, and Repeated Multiplication",
+    "p": "When a variable is multiplied by itself multiple times, we use index notation rather than writing out long strings of identical letters. Understanding the exact meaning of base and exponent is vital for algebraic manipulation.",
+    "bullets": [
+     "Write x multiplied by x as x squared, denoted x^2.",
+     "Write y multiplied by y multiplied by y as y cubed, denoted y^3.",
+     "Be careful to distinguish between 4x and x^4; the former is 4 times x, while the latter is x times x times x times x.",
+     "Coefficients apply to the entire powered term unless brackets dictate otherwise."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Index Expansion",
+      "p": "If stuck on an index law question, mentally expand the powers into repeated multiplications to see what is happening."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Terms, Coefficients, and Constants",
+    "p": "An algebraic expression is built from individual parts called terms, separated by addition or subtraction signs. Each term has specific structural components that examiners expect you to name correctly.",
+    "bullets": [
+     "A coefficient is the numerical factor multiplying a variable, such as 7 in 7xy.",
+     "A constant is a fixed numerical term with no attached variables.",
+     "Like terms share exactly the same variable components raised to the same powers.",
+     "Unlike terms cannot be combined through addition or subtraction."
+    ],
+    "table": {
+     "head": [
+      "Expression",
+      "Terms",
+      "Coefficients",
+      "Constant"
+     ],
+     "rows": [
+      [
+       "4x^2 - 5x + 9",
+       "4x^2, -5x, 9",
+       "4, -5",
+       "9"
+      ],
+      [
+       "ab + 3b - 12",
+       "ab, 3b, -12",
+       "1, 3",
+       "-12"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Coefficient",
+      "p": "A number placed before and multiplying another quantity, such as 5 in 5x."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Interpreting Verbal Statements into Algebra",
+    "p": "AQA examiners frequently test your ability to read a descriptive English sentence and translate it into precise mathematical notation. You must break sentences down into operations, quantities, and grouping phrases.",
+    "bullets": [
+     "Translate 'five less than twice x' as 2x - 5, not 5 - 2x.",
+     "Translate 'the square of the sum of a and b' as (a + b)^2.",
+     "Translate 'the sum of the squares of a and b' as a^2 + b^2.",
+     "Pay extreme attention to order words like 'from', 'than', and 'of'."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Order Reversal",
+      "p": "Phrases like 'subtract x from y' mean y - x, reversing the written order of the variables."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Implicit Operations and Grouping Symbols",
+    "p": "Brackets dictate the hierarchy of operations in algebra. An expression placed directly outside a set of brackets implies multiplication across every term inside those brackets.",
+    "bullets": [
+     "Write 3 times the quantity x plus 4 as 3(x + 4).",
+     "Nested brackets use parentheses, square brackets, and braces to show order of evaluation.",
+     "Negative signs outside brackets distribute a factor of -1 to every term within.",
+     "Fraction bars act as invisible brackets enclosing numerators and denominators."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Distributive Law",
+      "p": "a(b + c) = ab + ac. Every term inside must be multiplied by the outside factor."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Algebraic Conventions for Writing Negative Numbers",
+    "p": "Negative signs require careful placement in algebraic notation to avoid ambiguity between subtraction and negative polarity.",
+    "bullets": [
+     "A negative coefficient is written with the minus sign immediately preceding the number, as in -4x.",
+     "When substituting negative numbers, always wrap them in brackets to preserve sign rules.",
+     "Subtracting a negative term is equivalent to adding its positive counterpart.",
+     "Double negative signs must be simplified immediately to a positive sign."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Bracket Substitution",
+      "p": "Always use brackets when substituting negative values into powers to avoid sign errors."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Standard Mathematical Notation Conventions",
+    "p": "Mathematics follows strict stylistic conventions to ensure global readability. Deviating from these conventions in formal examinations can lead to lost marks or misinterpretation by markers.",
+    "bullets": [
+     "Variables within a multi-letter term should be written in alphabetical order, such as abcd instead of dcba.",
+     "Coefficients of 1 or -1 are omitted, writing x instead of 1x and -y instead of -1y.",
+     "Exponents of 1 are omitted, writing x instead of x^1.",
+     "Terms in a polynomial are traditionally written in descending order of powers."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Polynomial",
+      "p": "An expression consisting of variables and coefficients, involving only non-negative integer exponents."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Distinguishing Expressions, Formulae, and Equations",
+    "p": "A Grade 9 student must use precise terminology when referring to mathematical statements. An expression has no equals sign, an equation has an equals sign and can be solved, and a formula links two or more variables.",
+    "bullets": [
+     "An expression is a collection of terms like 3x + 5.",
+     "An equation states that two expressions are equal, such as 3x + 5 = 17.",
+     "A formula expresses a rule using mathematical symbols, such as A = pi r^2.",
+     "An identity is true for all values of the variables, denoted by the triple bar symbol."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Identity Symbol",
+      "p": "The symbol â‰¡ denotes an algebraic identity, meaning the left side equals the right side for all numbers."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Visual breakdown of an algebraic term showing coefficient, variable, exponent, and constant components.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"2\"/><text x=\"200\" y=\"60\" font-size=\"20\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#1e293b\">5x^3 - 7x + 12</text><line x1=\"80\" y1=\"75\" x2=\"80\" y2=\"110\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"80\" y=\"125\" font-size=\"12\" text-anchor=\"middle\" fill=\"#2563eb\">Coefficient (5)</text><line x1=\"150\" y1=\"75\" x2=\"150\" y2=\"110\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"150\" y=\"125\" font-size=\"12\" text-anchor=\"middle\" fill=\"#16a34a\">Variable (x)</text><line x1=\"185\" y1=\"50\" x2=\"185\" y2=\"35\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"185\" y=\"25\" font-size=\"12\" text-anchor=\"middle\" fill=\"#dc2626\">Exponent (3)</text><line x1=\"310\" y1=\"75\" x2=\"310\" y2=\"110\" stroke=\"#9333ea\" stroke-width=\"2\"/><text x=\"310\" y=\"125\" font-size=\"12\" text-anchor=\"middle\" fill=\"#9333ea\">Constant (12)</text><rect x=\"40\" y=\"150\" width=\"320\" height=\"60\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#93c5fd\" stroke-width=\"1\"/><text x=\"200\" y=\"175\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"bold\" fill=\"#1e40af\">Key Rule: Terms are separated by + and - signs</text><text x=\"200\" y=\"195\" font-size=\"11\" text-anchor=\"middle\" fill=\"#334155\">Always include the preceding sign as part of the term's value.</text></svg>"
+     }
+    ]
+   }
+  ],
+  "analogy": {
+   "t": "Algebraic notation is like chemical shorthand formulas in science.",
+   "p": "Just as H2O represents two hydrogen atoms and one oxygen atom combined without needing to draw pictures of molecules, algebraic notation uses concise letters and numbers to represent quantities and operations. A coefficient acts like a stoichiometric multiplier telling you how many molecules you have, while indices act like structural bonds. Where this analogy breaks down is that chemical formulas represent fixed physical matter, whereas algebraic variables can represent any real number, unknown value, or continuous changing quantity."
+  },
+  "terms": [
+   {
+    "t": "Algebraic Expression",
+    "d": "A combination of numbers, variables, and operational symbols with no equals sign."
+   },
+   {
+    "t": "Coefficient",
+    "d": "A numerical value written immediately in front of a variable to multiply it."
+   },
+   {
+    "t": "Constant",
+    "d": "A fixed numerical value that does not contain any variables."
+   },
+   {
+    "t": "Term",
+    "d": "A single number, variable, or product of numbers and variables separated by addition or subtraction."
+   },
+   {
+    "t": "Identity",
+    "d": "An equation that is true for all possible numerical values of its variables, denoted by â‰¡."
+   },
+   {
+    "t": "Formula",
+    "d": "A mathematical rule expressed using symbols that relates two or more quantities."
+   },
+   {
+    "t": "Equation",
+    "d": "A mathematical statement asserting that two expressions are equal, containing an equals sign."
+   },
+   {
+    "t": "Index",
+    "d": "A superscript number indicating how many times a base is multiplied by itself."
+   },
+   {
+    "t": "Base",
+    "d": "The number or variable that is being raised to a power indicated by an index."
+   },
+   {
+    "t": "Juxtaposition",
+    "d": "Placing mathematical quantities directly next to each other to denote multiplication."
+   },
+   {
+    "t": "Like Terms",
+    "d": "Terms that contain exactly the same variables raised to the same respective powers."
+   },
+   {
+    "t": "Polynomial",
+    "d": "An expression consisting of multiple terms with non-negative integer powers."
+   },
+   {
+    "t": "Variable",
+    "d": "A symbol representing a quantity that can change or take various values."
+   },
+   {
+    "t": "Unknown",
+    "d": "A specific fixed value represented by a letter that must be solved for."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Writing 3 times x as 3xx or 3 x x",
+    "r": "Write 3x using proper juxtaposition without multiplication crosses."
+   },
+   {
+    "w": "Writing x divided by 5 as x / 5 with a slanted slash without brackets",
+    "r": "Use a clear horizontal fraction bar to encompass numerators and denominators safely."
+   },
+   {
+    "w": "Translating '5 less than x' as 5 - x",
+    "r": "Write x - 5 because the subtraction is taken away from x."
+   },
+   {
+    "w": "Confusing 4x^2 with (4x)^2",
+    "r": "Recognize that 4x^2 squares only the x, whereas (4x)^2 squares both the 4 and the x to give 16x^2."
+   },
+   {
+    "w": "Writing terms in non-alphabetical order like ba instead of ab",
+    "r": "Always write multi-letter variables in standard alphabetical order."
+   },
+   {
+    "w": "Including 1 as an explicit coefficient, writing 1x or 1y^2",
+    "r": "Omit the coefficient 1, writing simply x or y^2."
+   },
+   {
+    "w": "Treating an expression like 3x + 4 as an equation and setting it to zero",
+    "r": "Expressions cannot be solved; they can only be simplified, evaluated, or manipulated."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Write down an algebraic expression for 'the sum of three consecutive integers where the smallest integer is n'.",
+    "marks": 2,
+    "model": [
+     "First integer is n.",
+     "Second integer is n + 1 and third integer is n + 2.",
+     "Sum is n + (n + 1) + (n + 2) = 3n + 3."
+    ],
+    "tip": "Consecutive integers increase by 1 each time. Ensure your final expression is fully simplified."
+   },
+   {
+    "q": "Simplify the algebraic product 3a^2 b multiplied by 4ab^3.",
+    "marks": 2,
+    "model": [
+     "Multiply coefficients: 3 * 4 = 12.",
+     "Multiply variable a terms: a^2 * a = a^3.",
+     "Multiply variable b terms: b * b^3 = b^4.",
+     "Final combined term: 12a^3 b^4."
+    ],
+    "tip": "Combine coefficients first, then apply index laws to matching base letters separately."
+   },
+   {
+    "q": "Translate the following sentence into an algebraic formula: 'The area A of a trapezium is equal to half the sum of the parallel sides a and b, multiplied by the perpendicular height h.'",
+    "marks": 2,
+    "model": [
+     "Identify half as 1/2.",
+     "Identify sum of parallel sides as (a + b).",
+     "Construct formula A = 1/2 (a + b) h."
+    ],
+    "tip": "Use brackets around sums before multiplying by fractions or heights."
+   },
+   {
+    "q": "Explain why 5x^2 and (5x)^2 are not algebraically equivalent.",
+    "marks": 2,
+    "model": [
+     "5x^2 means 5 multiplied by x squared.",
+     "(5x)^2 means 5x multiplied by 5x, which equals 25x^2.",
+     "State clearly that they yield different values for any non-zero x."
+    ],
+    "tip": "Always expand brackets fully using index laws to prove equivalence or non-equivalence."
+   },
+   {
+    "q": "Write an algebraic expression for 'seven less than the cube of x'.",
+    "marks": 1,
+    "model": [
+     "Cube of x is x^3.",
+     "Seven less than that is x^3 - 7."
+    ],
+    "tip": "Watch out for subtraction order keywords like 'less than'."
+   },
+   {
+    "q": "State the coefficient of xy in the expression 3x^2 - 5xy + 8y^2 - 12.",
+    "marks": 1,
+    "model": [
+     "Identify the term containing xy as -5xy.",
+     "State the coefficient as -5."
+    ],
+    "tip": "Always include the negative sign if the term is subtracted."
+   },
+   {
+    "q": "A rectangle has width x cm and length that is 4 cm more than three times its width. Write an expression for the perimeter of the rectangle in terms of x.",
+    "marks": 3,
+    "model": [
+     "Length = 3x + 4.",
+     "Perimeter = 2 * width + 2 * length = 2(x) + 2(3x + 4).",
+     "Expand brackets: 2x + 6x + 8.",
+     "Simplify to 8x + 8."
+    ],
+    "tip": "Remember perimeter requires adding all four sides: two widths and two lengths."
+   },
+   {
+    "q": "Which of the following is an algebraic identity? Circle your answer: A) 2x + 3 = 9, B) 5x - 2x = 3x, C) x^2 = 16, D) x + 4 > 7.",
+    "marks": 1,
+    "model": [
+     "Select B) 5x - 2x = 3x because it holds true for all real values of x."
+    ],
+    "tip": "An identity uses the equivalence property and is true for every number, whereas an equation is only true for specific solutions."
+   },
+   {
+    "q": "Write down an expression for the product of three consecutive even numbers where the middle number is 2n.",
+    "marks": 3,
+    "model": [
+     "Middle number is 2n.",
+     "Previous even number is 2n - 2 and next even number is 2n + 2.",
+     "Product expression: (2n - 2)(2n)(2n + 2)."
+    ],
+    "tip": "Even numbers increase by 2, so consecutive even numbers are represented as 2n-2, 2n, and 2n+2."
+   },
+   {
+    "q": "Interpret the notation 4(x - 3)^2 in words.",
+    "marks": 2,
+    "model": [
+     "Four times the square of the difference between x and 3."
+    ],
+    "tip": "Break complex expressions into outer operations and inner bracketed terms."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Translate the following statement into an algebraic expression: 'Subtract 4 from x, cube the result, and then divide by 5.'",
+    "steps": [
+     "Step 1: 'Subtract 4 from x' gives the expression x - 4.",
+     "Step 2: 'Cube the result' requires wrapping the expression in brackets and raising it to the power of 3, giving (x - 4)^3.",
+     "Step 3: 'Divide by 5' means placing the entire cubed expression over a horizontal fraction bar divided by 5."
+    ],
+    "ans": "(x - 4)^3 / 5"
+   },
+   {
+    "q": "Identify the number of terms, coefficients, and the constant in the algebraic expression: -3x^4 + 7xy - 9.",
+    "steps": [
+     "Step 1: Count terms separated by addition or subtraction signs. The terms are -3x^4, 7xy, and -9, making 3 terms in total.",
+     "Step 2: Identify the numerical multipliers of the variable terms. The coefficients are -3 and 7.",
+     "Step 3: Identify the standalone number with no variable attached. The constant is -9."
+    ],
+    "ans": "3 terms; coefficients are -3 and 7; constant is -9."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Comparison diagram showing the vital structural difference between an algebraic expression, an equation, and a formula.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"15\" width=\"380\" height=\"210\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"2\"/><rect x=\"30\" y=\"35\" width=\"340\" height=\"50\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#93c5fd\" stroke-width=\"1\"/><text x=\"50\" y=\"65\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\">Expression:</text><text x=\"160\" y=\"65\" font-size=\"13\" fill=\"#1e293b\">3x + 7 (No equals sign)</text><rect x=\"30\" y=\"95\" width=\"340\" height=\"50\" rx=\"6\" fill=\"#dcfce7\" stroke=\"#86efac\" stroke-width=\"1\"/><text x=\"50\" y=\"125\" font-size=\"13\" font-weight=\"bold\" fill=\"#166534\">Equation:</text><text x=\"160\" y=\"125\" font-size=\"13\" fill=\"#1e293b\">3x + 7 = 22 (Solvable for x)</text><rect x=\"30\" y=\"155\" width=\"340\" height=\"50\" rx=\"6\" fill=\"#fef9c3\" stroke=\"#fde047\" stroke-width=\"1\"/><text x=\"50\" y=\"185\" font-size=\"13\" font-weight=\"bold\" fill=\"#854d0e\">Formula:</text><text x=\"160\" y=\"185\" font-size=\"13\" fill=\"#1e293b\">y = 3x + 7 (Links variables)</text></svg>"
+   },
+   {
+    "cap": "Visual demonstration of fraction bar grouping rules versus incorrect slash notation.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"15\" width=\"380\" height=\"210\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"2\"/><rect x=\"30\" y=\"35\" width=\"340\" height=\"75\" rx=\"6\" fill=\"#dcfce7\" stroke=\"#86efac\" stroke-width=\"1\"/><text x=\"50\" y=\"60\" font-size=\"13\" font-weight=\"bold\" fill=\"#166534\">Correct Notation:</text><text x=\"180\" y=\"60\" font-size=\"16\" fill=\"#1e293b\">(a + b) / 4</text><text x=\"50\" y=\"90\" font-size=\"11\" fill=\"#334155\">Fraction bar acts as an implicit grouping bracket for the numerator.</text><rect x=\"30\" y=\"130\" width=\"340\" height=\"75\" rx=\"6\" fill=\"#fee2e2\" stroke=\"#fca5a5\" stroke-width=\"1\"/><text x=\"50\" y=\"155\" font-size=\"13\" font-weight=\"bold\" fill=\"#991b1b\">Incorrect Ambiguity:</text><text x=\"180\" y=\"155\" font-size=\"16\" fill=\"#1e293b\">a + b / 4</text><text x=\"50\" y=\"185\" font-size=\"11\" fill=\"#334155\">Slanted slash applies division only to b, failing the intended meaning.</text></svg>"
+   },
+   {
+    "cap": "Diagram illustrating how to expand products and apply correct alphabetical ordering in multi-variable terms.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"15\" width=\"380\" height=\"210\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"2\"/><text x=\"200\" y=\"45\" font-size=\"15\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#1e293b\">Multi-Variable Multiplication Rules</text><rect x=\"30\" y=\"65\" width=\"340\" height=\"45\" rx=\"6\" fill=\"#e9d5ff\" stroke=\"#d8b4fe\" stroke-width=\"1\"/><text x=\"50\" y=\"92\" font-size=\"12\" font-weight=\"bold\" fill=\"#6b21a8\">Product:</text><text x=\"140\" y=\"92\" font-size=\"14\" fill=\"#1e293b\">c multiplied by a multiplied by b</text><rect x=\"30\" y=\"125\" width=\"340\" height=\"45\" rx=\"6\" fill=\"#fef3c7\" stroke=\"#fde68a\" stroke-width=\"1\"/><text x=\"50\" y=\"152\" font-size=\"12\" font-weight=\"bold\" fill=\"#b45309\">Incorrect:</text><text x=\"140\" y=\"152\" font-size=\"14\" fill=\"#991b1b\">cba</text><rect x=\"30\" y=\"185\" width=\"340\" height=\"30\" rx=\"6\" fill=\"#dcfce7\" stroke=\"#86efac\" stroke-width=\"1\"/><text x=\"50\" y=\"205\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\">Correct:</text><text x=\"140\" y=\"205\" font-size=\"14\" fill=\"#166534\">abc (Alphabetical order)</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_h.1.0",
+  "sid": "maths_aqa_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-17T19:15:21.625Z"
+ },
+ "maths_aqa_h.1.3": {
+  "summary": "This comprehensive revision guide covers algebraic simplification and manipulation for AQA GCSE Mathematics Higher tier, spanning like terms, expanding and factorising brackets, index laws, surds, quadratics, and algebraic fractions. Mastering these foundational techniques is essential for solving complex equations and achieving a grade 9. Every rule, common trap, and systematic method required by examiners is thoroughly detailed below.",
+  "core": [
+   {
+    "h": "Like Terms and Expanding Brackets",
+    "p": "Simplifying algebraic expressions involves collecting like terms that share identical variable parts and powers. Expanding brackets requires applying the distributive law systematically to every term inside the grouping symbol.",
+    "bullets": [
+     "Collect like terms by combining coefficients of identical variable parts.",
+     "Expand single brackets by multiplying the outside term by each term inside.",
+     "Expand double brackets using FOIL or grid multiplication.",
+     "Expand triple brackets by expanding two first, then multiplying the result by the third."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Sign Control",
+      "p": "When expanding a negative bracket, pay extreme attention to changing every sign inside."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Factorising Expressions",
+    "p": "Factorising is the reverse of expanding brackets, converting a sum of terms into a product of factors. This is a crucial first step for solving equations and simplifying algebraic fractions.",
+    "bullets": [
+     "Always check for a highest common factor (HCF) first across all terms.",
+     "Factorise quadratics of the form x^2 + bx + c by finding two numbers that multiply to c and add to b.",
+     "Factorise the difference of two squares: a^2 - b^2 = (a - b)(a + b).",
+     "Factorise by grouping in pairs when dealing with four-term polynomials."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Factorising",
+      "p": "Writing an expression as a product of its factors."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Index Laws",
+    "p": "Indices govern repeated multiplication. The fundamental laws of indices must be memorized and applied fluidly when simplifying expressions involving powers and roots.",
+    "bullets": [
+     "Multiplying terms with the same base: a^m * a^n = a^(m+n).",
+     "Dividing terms with the same base: a^m / a^n = a^(m-n).",
+     "Power of a power rule: (a^m)^n = a^(m*n).",
+     "Negative and fractional indices: a^(-m) = 1 / a^m and a^(1/n) = nth root of a."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Fractional Indices",
+      "p": "The denominator of the fractional index becomes the root, and the numerator becomes the power."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Visual breakdown of index laws and root operations.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\" rx=\"10\"/><text x=\"40\" y=\"50\" font-size=\"14\" font-weight=\"bold\" fill=\"#1b2540\">Index Laws Summary</text><text x=\"40\" y=\"85\" font-size=\"12\" fill=\"#1b2540\">1. Multiplication: x^a * x^b = x^(a+b)</text><text x=\"40\" y=\"115\" font-size=\"12\" fill=\"#1b2540\">2. Division: x^a / x^b = x^(a-b)</text><text x=\"40\" y=\"145\" font-size=\"12\" fill=\"#1b2540\">3. Power of Power: (x^a)^b = x^(ab)</text><text x=\"40\" y=\"175\" font-size=\"12\" fill=\"#1b2540\">4. Negative Power: x^(-a) = 1 / (x^a)</text><text x=\"40\" y=\"205\" font-size=\"12\" fill=\"#1b2540\">5. Fractional Power: x^(1/n) = nth root of x</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Surds: Exact Values",
+    "p": "Surds are square roots that cannot be written as exact decimals, representing irrational numbers. Manipulating surds in exact form is a staple of Higher tier papers.",
+    "bullets": [
+     "Simplify surds by extracting the largest square number factor: sqrt(ab) = sqrt(a) * sqrt(b).",
+     "Add and subtract only like surds: a*sqrt(c) + b*sqrt(c) = (a+b)*sqrt(c).",
+     "Expand brackets with surds using standard algebraic expansion techniques.",
+     "Rationalise the denominator of fractions containing surds."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Rationalising Denominators",
+      "p": "Multiply numerator and denominator by the surd or conjugate surd to remove roots from the denominator."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Rationalising Denominators",
+    "p": "To remove a surd from the denominator, multiply top and bottom by an appropriate factor. For binomial denominators, use the conjugate.",
+    "bullets": [
+     "Single surd denominator: multiply top and bottom by that surd.",
+     "Binomial surd denominator (e.g., a + sqrt(b)): multiply top and bottom by the conjugate (a - sqrt(b)).",
+     "Use the difference of two squares in the denominator: (a + sqrt(b))(a - sqrt(b)) = a^2 - b.",
+     "Always simplify the resulting fraction fully."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Conjugate Error",
+      "p": "Ensure you change only the sign between the two terms when forming the conjugate."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Rationalising denominators using the conjugate surd method.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\" rx=\"10\"/><text x=\"40\" y=\"50\" font-size=\"14\" font-weight=\"bold\" fill=\"#1b2540\">Rationalising Denominators</text><text x=\"40\" y=\"90\" font-size=\"12\" fill=\"#1b2540\">Expression: 1 / (sqrt(3) + 2)</text><text x=\"40\" y=\"130\" font-size=\"12\" fill=\"#1b2540\">Multiply by conjugate: (2 - sqrt(3)) / (2 - sqrt(3))</text><text x=\"40\" y=\"170\" font-size=\"12\" fill=\"#1b2540\">Denominator simplifies to: 4 - 3 = 1</text><text x=\"40\" y=\"200\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\">Result: 2 - sqrt(3)</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Advanced Quadratic Factorisation",
+    "p": "When the coefficient of x^2 is greater than 1, standard inspection becomes difficult. Advanced methods such as grouping or the AC method ensure robust factorisation.",
+    "bullets": [
+     "For ax^2 + bx + c, find two numbers that multiply to a*c and add up to b.",
+     "Split the middle term bx into two terms using these numbers.",
+     "Factorise by grouping in pairs to find common binomial factors.",
+     "Check your expanded answer matches the original quadratic."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "AC Method",
+      "p": "Always write down a*c clearly before hunting for your factor pair."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Introduction to Algebraic Fractions",
+    "p": "Algebraic fractions obey the exact same rules as numerical fractions. To combine, simplify, or solve them, you must apply standard arithmetic principles using algebraic terms.",
+    "bullets": [
+     "Simplify algebraic fractions by factorising numerators and denominators fully first, then cancelling common factors.",
+     "Never cancel terms across a plus or minus sign; only cancel common factors.",
+     "Multiply numerators together and denominators together when multiplying fractions.",
+     "Find a common denominator when adding or subtracting fractions."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Illegal Cancelling",
+      "p": "You can never cancel terms like (x+2)/(x+3) into 2/3. Only factors can be cancelled."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Adding and Subtracting Algebraic Fractions",
+    "p": "Combining algebraic fractions requires finding a common denominator, which is often the product of distinct linear factors in the denominators.",
+    "bullets": [
+     "Find the lowest common denominator (LCD) for all fractional terms.",
+     "Convert each fraction to the common denominator.",
+     "Combine numerators over the single common denominator.",
+     "Expand and simplify the resulting numerator, leaving the denominator factorised."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Minus Signs",
+      "p": "Be extremely careful with minus signs when subtracting the second numerator."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Multiplying and Dividing Algebraic Fractions",
+    "p": "Multiplication and division of algebraic fractions rely on factorisation before operation to keep numbers and terms manageable.",
+    "bullets": [
+     "Factorise all numerators and denominators completely before multiplying or dividing.",
+     "For multiplication, multiply numerators and denominators across.",
+     "For division, keep the first fraction, change division to multiplication, and flip the second fraction (KCF).",
+     "Cancel common factors diagonally or vertically before final expansion."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Factorise First",
+      "p": "Factorising before multiplying saves you from expanding huge cubic expressions."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Complex Algebraic Manipulations",
+    "p": "Higher tier exams often test multi-step algebraic manipulation combining indices, surds, and fractions within a single proof or simplification question.",
+    "bullets": [
+     "Substitute algebraic expressions carefully when asked to show equivalence.",
+     "Combine laws of indices with fractional bases.",
+     "Rationalise denominators that contain algebraic terms or complex surds.",
+     "Check your domain restrictions (values where denominators equal zero)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Method Marks",
+      "p": "Always show every intermediate step of factorisation and expansion to secure method marks."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Building with LEGO bricks",
+   "p": "Manipulating algebra is just like sorting and rebuilding LEGO structures. Like terms are bricks of the exact same color and shape that you can click together into one pile. Factorising is taking a built wall apart into standard modular components (the factors). Algebraic fractions are multi-part assemblies where you cannot swap individual pieces unless the entire modular section matches. The analogy breaks down because algebraic variables can take infinite numerical values, whereas physical LEGO pieces have fixed, rigid dimensions."
+  },
+  "terms": [
+   {
+    "t": "Like Terms",
+    "d": "Terms that contain the exact same variables raised to the exact same powers."
+   },
+   {
+    "t": "Factorising",
+    "d": "The process of writing an expression as a product of its factors by reversing expansion."
+   },
+   {
+    "t": "Index",
+    "d": "A mathematical superscript indicating how many times a base number is multiplied by itself."
+   },
+   {
+    "t": "Surd",
+    "d": "An irrational square root that cannot be expressed as a terminating or recurring decimal."
+   },
+   {
+    "t": "Rationalising",
+    "d": "The process of removing surds from the denominator of a fraction without changing its value."
+   },
+   {
+    "t": "Conjugate",
+    "d": "A binomial surd with the middle arithmetic sign reversed, used for rationalising denominators."
+   },
+   {
+    "t": "Quadratic",
+    "d": "An expression or equation where the highest power of the variable is 2."
+   },
+   {
+    "t": "Algebraic Fraction",
+    "d": "A fraction where the numerator, denominator, or both contain algebraic expressions."
+   },
+   {
+    "t": "Lowest Common Denominator",
+    "d": "The smallest expression that is divisible by each of the given denominators without a remainder."
+   },
+   {
+    "t": "Expansion",
+    "d": "Multiplying out brackets to write an expression as a sum of individual terms."
+   },
+   {
+    "t": "HCF",
+    "d": "Highest Common Factor, the largest term that divides evenly into a set of terms."
+   },
+   {
+    "t": "Irrational",
+    "d": "A number that cannot be expressed as a simple fraction of two integers."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Cancelling terms across plus signs in fractions e.g. (x+3)/(x+4) = 3/4",
+    "r": "Only factors multiplied together can be cancelled; factorise first if possible."
+   },
+   {
+    "w": "Writing sqrt(a + b) as sqrt(a) + sqrt(b)",
+    "r": "Square roots do not distribute over addition."
+   },
+   {
+    "w": "Forgetting to change signs when expanding negative brackets e.g. -2(x - 3) = -2x - 6",
+    "r": "Multiplying by a negative gives a positive: -2 * -3 = +6."
+   },
+   {
+    "w": "Adding indices when multiplying powers with different bases",
+    "r": "Index laws only apply when the bases are identical."
+   },
+   {
+    "w": "Forgetting the negative root when simplifying surds",
+    "r": "Principal square roots are positive unless specified otherwise."
+   },
+   {
+    "w": "Multiplying denominators instead of finding the lowest common denominator",
+    "r": "Always find the simplest LCD to keep algebraic fractions manageable."
+   },
+   {
+    "w": "Dropping the denominator during equation manipulation",
+    "r": "Fractions remain fractions unless multiplied through an equation."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Simplify fully (3x^2 - 12) / (x^2 + x - 6)",
+    "marks": 3,
+    "model": [
+     "Factorise numerator: 3(x-2)(x+2)",
+     "Factorise denominator: (x+3)(x-2)",
+     "Cancel common factor (x-2) to get 3(x+2)/(x+3)"
+    ],
+    "tip": "Always fully factorise both numerator and denominator before attempting to cancel."
+   },
+   {
+    "q": "Rationalise the denominator of 6 / (sqrt(5) - sqrt(2)) and give your answer in the form a*sqrt(b) + c",
+    "marks": 4,
+    "model": [
+     "Multiply top and bottom by conjugate (sqrt(5) + sqrt(2))",
+     "Denominator becomes (sqrt(5))^2 - (sqrt(2))^2 = 5 - 2 = 3",
+     "Numerator becomes 6(sqrt(5) + sqrt(2))",
+     "Simplify to 2*sqrt(5) + 2*sqrt(2)"
+    ],
+    "tip": "Use the difference of two squares formula for the denominator."
+   },
+   {
+    "q": "Express 3 / (x + 1) + 2 / (x - 2) as a single fraction in its simplest form.",
+    "marks": 3,
+    "model": [
+     "Use common denominator (x+1)(x-2)",
+     "Numerator: 3(x-2) + 2(x+1)",
+     "Expand numerator: 3x - 6 + 2x + 2 = 5x - 4",
+     "Final fraction: (5x - 4) / ((x+1)(x-2))"
+    ],
+    "tip": "Keep the denominator in factorised form unless the question explicitly asks to expand it."
+   },
+   {
+    "q": "Simplify (25x^4 y^2)^(1/2) * (8x^3 y^6)^(-1/3)",
+    "marks": 4,
+    "model": [
+     "Apply first index law: 5x^2 y",
+     "Apply second index law: 2^(-1) x^(-1) y^(-2) = (1/2) x^(-1) y^(-2)",
+     "Multiply coefficients: 5 * (1/2) = 5/2",
+     "Combine powers of x and y: x^(2 + -1) * y^(1 + -2) = x y^(-1) = x / y"
+    ],
+    "tip": "Break down coefficients and variables separately before combining."
+   },
+   {
+    "q": "Solve the equation 2^(2x + 1) = 32",
+    "marks": 3,
+    "model": [
+     "Write 32 as a power of 2: 32 = 2^5",
+     "Equate indices: 2x + 1 = 5",
+     "Solve linear equation: 2x = 4",
+     "x = 2"
+    ],
+    "tip": "When solving exponential equations, make the bases equal."
+   },
+   {
+    "q": "Factorise completely 2x^2 + 7x + 3",
+    "marks": 2,
+    "model": [
+     "Find numbers multiplying to 6 and adding to 7: 6 and 1",
+     "Split middle term: 2x^2 + 6x + x + 3",
+     "Factorise by pairing: 2x(x + 3) + 1(x + 3)",
+     "(2x + 1)(x + 3)"
+    ],
+    "tip": "Use grouping when the coefficient of x^2 is greater than 1."
+   },
+   {
+    "q": "Simplify sqrt(75) - sqrt(12) giving your answer in the form k*sqrt(3)",
+    "marks": 2,
+    "model": [
+     "Simplify sqrt(75) to 5*sqrt(3)",
+     "Simplify sqrt(12) to 2*sqrt(3)",
+     "Subtract: 5*sqrt(3) - 2*sqrt(3) = 3*sqrt(3)"
+    ],
+    "tip": "Always look for square number factors like 4, 9, 16, 25."
+   },
+   {
+    "q": "Expand and simplify (x - 3)(x + 2)(x - 1)",
+    "marks": 4,
+    "model": [
+     "Expand first two brackets: x^2 - x - 6",
+     "Multiply by third bracket: (x^2 - x - 6)(x - 1)",
+     "Expand carefully: x^3 - x^2 - x^2 + x - 6x + 6",
+     "Simplify terms: x^3 - 2x^2 - 5x + 6"
+    ],
+    "tip": "Expand two brackets first, then multiply the trinomial by the third binomial."
+   },
+   {
+    "q": "Write (4x^(-2))^(-3/2) in the form ax^b",
+    "marks": 3,
+    "model": [
+     "Apply power of a power rule: 4^(-3/2) * x^(3)",
+     "Evaluate 4^(-3/2): (1 / sqrt(4))^3 = (1/2)^3 = 1/8",
+     "Combine: (1/8)x^3"
+    ],
+    "tip": "Deal with the fractional index (root first, then power) before the negative sign."
+   },
+   {
+    "q": "Simplify fully: (x^2 - 9) / (2x^2 + 5x - 3)",
+    "marks": 3,
+    "model": [
+     "Factorise numerator: (x - 3)(x + 3)",
+     "Factorise denominator: (2x - 1)(x + 3)",
+     "Cancel common factor (x + 3)",
+     "Result: (x - 3) / (2x - 1)"
+    ],
+    "tip": "Quadratics in denominators often share a factor with the numerator."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Simplify the algebraic fraction expression: ((x^2 - 5x + 6) / (x^2 - 4)) / ((x - 3) / (x^2 + 2x))",
+    "steps": [
+     "Factorise all quadratic expressions fully: x^2 - 5x + 6 = (x - 2)(x - 3), x^2 - 4 = (x - 2)(x + 2), x^2 + 2x = x(x + 2).",
+     "Rewrite the division as multiplication by reciprocating the second fraction: ((x - 2)(x - 3) / ((x - 2)(x + 2))) * (x(x + 2) / (x - 3)).",
+     "Cancel common factors across numerators and denominators: (x-2), (x-3), and (x+2) all cancel out.",
+     "Write the final simplified result from remaining terms."
+    ],
+    "ans": "x"
+   },
+   {
+    "q": "Rationalise the denominator and simplify: (4 + sqrt(3)) / (2 - sqrt(3))",
+    "steps": [
+     "Identify the conjugate of the denominator, which is (2 + sqrt(3)).",
+     "Multiply both numerator and denominator by the conjugate: ((4 + sqrt(3))(2 + sqrt(3))) / ((2 - sqrt(3))(2 + sqrt(3))).",
+     "Expand the numerator: 8 + 4*sqrt(3) + 2*sqrt(3) + 3 = 11 + 6*sqrt(3).",
+     "Expand the denominator using difference of two squares: 4 - 3 = 1."
+    ],
+    "ans": "11 + 6*sqrt(3)"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Overview of surd simplification rules and operations.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#e9d5ff\" stroke=\"#1b2540\" stroke-width=\"2\" rx=\"10\"/><text x=\"40\" y=\"50\" font-size=\"14\" font-weight=\"bold\" fill=\"#1b2540\">Surd Manipulation Rules</text><text x=\"40\" y=\"90\" font-size=\"12\" fill=\"#1b2540\">1. Multiplication: sqrt(a) * sqrt(b) = sqrt(ab)</text><text x=\"40\" y=\"130\" font-size=\"12\" fill=\"#1b2540\">2. Division: sqrt(a / b) = sqrt(a) / sqrt(b)</text><text x=\"40\" y=\"170\" font-size=\"12\" fill=\"#1b2540\">3. Addition: Only combine like surds</text><text x=\"40\" y=\"205\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\">Example: sqrt(50) = sqrt(25 * 2) = 5*sqrt(2)</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_h.1.3",
+  "sid": "maths_aqa_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-17T19:20:11.497Z"
+ },
+ "maths_aqa_h.1.4": {
+  "summary": "Mastering standard formulae and rearranging equations to change the subject is a fundamental algebraic skill heavily tested on AQA GCSE Higher Tier papers. Grade 9 questions frequently require factorising when the target variable appears multiple times, dealing with fractional and negative powers, and navigating complex square roots. This guide provides a complete framework covering every nuance of rearranging formulae, from basic operations to advanced multi-step algebraic manipulation.",
+  "core": [
+   {
+    "h": "1. Understanding Formulae and the Subject",
+    "p": "A formula is a mathematical rule expressed using symbols and equations that relates two or more variables. The 'subject' of a formula is the isolated variable that stands alone, usually on the left-hand side of the equals sign, with a coefficient of positive 1 and a power of 1. Changing the subject involves performing inverse operations to isolate a different variable.",
+    "bullets": [
+     "A formula contains an equals sign and multiple variables; an expression does not contain an equals sign.",
+     "The subject must be positive, single, and isolated on one side.",
+     "Every operation applied to one side must be identically applied to the other side to maintain equality."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Subject of a Formula",
+      "p": "The variable that is expressed in terms of other variables, appearing completely isolated on one side of the equals sign."
+     },
+     {
+      "k": "key",
+      "t": "Balance Rule",
+      "p": "Whatever you do to one side of an equation, you must do to the exact other side."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. Basic Inverse Operations",
+    "p": "To rearrange simple formulae, apply inverse operations in the reverse order of operations (reverse BIDMAS/BODMAS). Addition and subtraction are inverses, as are multiplication and division. Powers and roots are also inverse operations that must be handled carefully when isolating variables.",
+    "bullets": [
+     "Addition inverses to subtraction, and subtraction inverses to addition.",
+     "Multiplication inverses to division, and division inverses to multiplication.",
+     "Squaring a variable inverses to taking the principal square root, provided the domain allows."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Reverse BIDMAS",
+      "p": "When solving or rearranging, undo addition and subtraction first, then multiplication and division, then powers and roots."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "3. Dealing with Fractions",
+    "p": "When the target variable is trapped in the denominator of a fraction, you must eliminate the fraction as your very first step by multiplying both sides by the denominator. Never try to add or subtract terms across a fraction bar before clearing the denominator.",
+    "bullets": [
+     "Multiply both sides by the denominator to clear fractions immediately.",
+     "If there are multiple denominators, multiply by the lowest common multiple or cross-multiply single fractions.",
+     "Ensure terms with multiple parts in a numerator are enclosed in parentheses when multiplying out."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Denominator Trap",
+      "p": "Never attempt to isolate a variable inside a denominator without first multiplying both sides to bring it to the numerator."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Handling Roots and Powers",
+    "p": "Variables that are squared, cubed, or under radical signs require careful attention to index laws and inverse root operations. Always isolate the power or root term completely before applying the inverse power or root.",
+    "bullets": [
+     "To eliminate a square root, square both sides of the equation.",
+     "When introducing a square root during rearrangement, remember that algebraically it yields both positive and negative solutions unless contextual constraints apply.",
+     "Fractional powers are handled by raising both sides to the reciprocal power."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Root Inversion",
+      "p": "Squaring both sides eliminates a square root, but ensure the entire side is squared, not individual terms."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "5. Factorising when the Subject Appears Twice",
+    "p": "At Grade 9, a common and advanced scenario is when the target variable appears in two or more terms across the equation. You must collect all terms containing the target variable onto one side of the equation and factorise to isolate it as a single factor.",
+    "bullets": [
+     "Move all terms containing the target variable to the left-hand side (and non-target terms to the right).",
+     "Factorise out the target variable as a common factor: a x + b x = x(a + b).",
+     "Divide both sides by the entire bracket containing the other variables."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Factorisation Extraction",
+      "p": "The algebraic process of pulling a repeated variable outside a bracket so it appears only once."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Algebraic Fractions and Advanced Cross-Multiplication",
+    "p": "When formulae take the form of a single algebraic fraction equal to another single fraction, cross-multiplication provides a rapid route to clearing denominators. If fractions are added or subtracted, find a common denominator first.",
+    "bullets": [
+     "Cross-multiplication applies strictly when a single fraction equals a single fraction: a/b = c/d implies ad = bc.",
+     "Expand all brackets resulting from cross-multiplication before collecting terms.",
+     "Group like terms meticulously to avoid sign errors."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Cross-Multiplication Rule",
+      "p": "Only cross-multiply across a single equals sign when both sides are single fractions."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Negative Powers and Reciprocals",
+    "p": "Formulae sometimes feature negative indices or variables in denominators that equate to negative powers. Convert negative powers to positive indices using standard index laws before attempting to rearrange.",
+    "bullets": [
+     "Recall that x to the power of negative n equals 1 over x to the power of n.",
+     "Invert both sides of an equation if you have a single fraction equal to a single fraction.",
+     "Treat negative coefficients with extreme care during division steps."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Negative Sign Errors",
+      "p": "Dividing by a negative number requires every term on the receiving side to change its sign."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Simultaneous Rearrangement and Substitution",
+    "p": "Occasionally, exam questions ask you to substitute a rearranged formula into another equation or combine two formulae to eliminate an intermediate variable. Treat the intermediate variable using standard substitution techniques.",
+    "bullets": [
+     "Rearrange one formula to make the intermediate variable the subject. Substitute this entire expression into the second formula.",
+     "Expand and simplify the resulting expression carefully.",
+     "Check that your final formula contains only the specified input and output variables."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Chain Substitution",
+      "p": "Make the shared variable the subject in one equation and substitute directly into the other."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Common Standard Physics and Geometry Formulae",
+    "p": "AQA Higher Tier expects familiarity with standard formulae from physics and geometry, such as kinematic equations, surface area formulae, and volumetric rules. Practice rearranging these specific formulae under timed conditions.",
+    "bullets": [
+     "Kinematic formula: v squared equals u squared plus 2 as. Rearrange for a: a equals open bracket v squared minus u squared close bracket over 2s.",
+     "Volume of a sphere: V equals 4 thirds pi r cubed. Rearrange for r: r equals the cube root of 3V over 4 pi.",
+     "Sine rule and cosine rule in triangles can also appear in rearrangement contexts."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Standard Formulae",
+      "p": "Memorise common GCSE physics and geometry formulae as examiners often omit them in Higher questions."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Step-by-Step Verification and Checking",
+    "p": "To ensure your rearranged formula is correct, substitute easy numerical values into your original formula, calculate the subject value, and substitute those same values into your new rearranged formula. If both yield consistent results, your algebra is almost certainly correct.",
+    "bullets": [
+     "Choose simple integer values for all input variables, avoiding zero and one where possible.",
+     "Evaluate the original formula to find the numerical value of the subject.",
+     "Plug your input values and the resulting subject value into your new formula to check consistency."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Numerical Verification",
+      "p": "Testing an algebraic rearrangement by substituting arbitrary valid numbers into both versions."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "tTitle": "The Master Locksmith Analogy",
+   "p": "Rearranging a formula is exactly like picking a complicated lock or dismantling a nested set of Russian nesting dolls. Every operation that was applied to your target variable during its construction must be undone in the exact reverse order. If the variable was multiplied by 3 and then had 5 added to it, you must first subtract 5 and then divide by 3. Where the analogy breaks down is when the variable appears in multiple nesting dolls at once; in algebra, you cannot just reach in twice, you must pull them all together onto one workbench via factorisation before unlocking the final variable."
+  },
+  "terms": [
+   {
+    "t": "Subject",
+    "d": "The isolated variable standing alone on one side of a formula."
+   },
+   {
+    "t": "Inverse Operation",
+    "d": "An operation that reverses the effect of another operation (e.g., addition and subtraction)."
+   },
+   {
+    "t": "Factorisation",
+    "d": "The process of writing an expression as a product of its factors, essential when a subject appears multiple times."
+   },
+   {
+    "t": "Cross-Multiplication",
+    "d": "Multiplying the numerator of one fraction by the denominator of another across an equals sign."
+   },
+   {
+    "t": "Denominator",
+    "d": "The bottom number or expression of a fraction."
+   },
+   {
+    "t": "Numerator",
+    "d": "The top number or expression of a fraction."
+   },
+   {
+    "t": "Index Law",
+    "d": "Rules governing the combination and manipulation of powers."
+   },
+   {
+    "t": "Radical",
+    "d": "A mathematical expression containing a root symbol."
+   },
+   {
+    "t": "Coefficient",
+    "d": "A number placed in front of and multiplying a variable in an expression."
+   },
+   {
+    "t": "Substitution",
+    "d": "Replacing algebraic variables with known numerical values."
+   },
+   {
+    "t": "Identity",
+    "d": "An equation that is true for all possible values of the variables."
+   },
+   {
+    "t": "Literal Equation",
+    "d": "An equation consisting primarily of letters representing relationships between variables."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Dividing only one term on a side when dividing by a coefficient",
+    "r": "Divide every single term on that side of the equation by the value."
+   },
+   {
+    "w": "Attempting to cancel terms inside brackets across a fraction bar",
+    "r": "You can only cancel common multiplicative factors, never terms separated by plus or minus signs."
+   },
+   {
+    "w": "Forgetting the plus/minus sign when taking a square root",
+    "r": "Algebraically, taking an even root introduces both positive and negative branches unless constrained."
+   },
+   {
+    "w": "Trying to factorise when terms are on opposite sides of the equals sign",
+    "r": "Bring all terms containing the target variable to the exact same side before factorising."
+   },
+   {
+    "w": "Squaring individual terms instead of squaring the entire side",
+    "r": "Apply brackets to the entire side before applying a power or root."
+   },
+   {
+    "w": "Failing to invert fractions correctly when reciprocating",
+    "r": "The entire side must be reciprocated simultaneously: 1 over y equals... becomes y equals 1 over (...)."
+   },
+   {
+    "w": "Distributing a negative sign incorrectly across a bracket",
+    "r": "Multiply every term inside the bracket by the negative coefficient."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Make x the subject of the formula y = (2x + 3) / (x - 4).",
+    "marks": 4,
+    "model": [
+     "Multiply both sides by (x - 4): y(x - 4) = 2x + 3",
+     "Expand the bracket: xy - 4y = 2x + 3",
+     "Collect all x terms on one side: xy - 2x = 4y + 3",
+     "Factorise x and divide: x(y - 2) = 4y + 3, so x = (4y + 3) / (y - 2)"
+    ],
+    "tip": "When x appears in both numerator and denominator, expand, group all x terms on one side, and factorise."
+   },
+   {
+    "q": "Rearrange V = (4/3) pi r cubed to make r the subject.",
+    "marks": 3,
+    "model": [
+     "Multiply by 3: 3V = 4 pi r cubed",
+     "Divide by 4 pi: 3V / (4 pi) = r cubed",
+     "Take the cube root of both sides: r = cube root of (3V / (4 pi))"
+    ],
+    "tip": "Clear fractions and coefficients first before applying fractional or root powers."
+   },
+   {
+    "q": "Make t the subject of s = u t + (1/2) a t squared.",
+    "marks": 4,
+    "model": [
+     "Multiply by 2 to clear the fraction: 2s = 2ut + at squared",
+     "Rearrange into quadratic form: at squared + 2ut - 2s = 0",
+     "Use quadratic formula with A=a, B=2u, C=-2s",
+     "t = (-2u plus/minus root((2u) squared - 4(a)(-2s))) / (2a) which simplifies correctly"
+    ],
+    "tip": "Treat the equation as a quadratic in t if t appears to both power 1 and power 2."
+   },
+   {
+    "q": "Rearrange w = (x + y) / (x - y) to make x the subject.",
+    "marks": 4,
+    "model": [
+     "Multiply by (x - y): w(x - y) = x + y",
+     "Expand: wx - wy = x + y",
+     "Collect x terms: wx - x = wy + y",
+     "Factorise and divide: x(w - 1) = y(w + 1), x = y(w + 1) / (w - 1)"
+    ],
+    "tip": "Collect all terms containing the target variable on the left, factorise out the target variable."
+   },
+   {
+    "q": "Make p the subject of q = root((p + 3) / 5).",
+    "marks": 3,
+    "model": [
+     "Square both sides: q squared = (p + 3) / 5",
+     "Multiply by 5: 5q squared = p + 3",
+     "Subtract 3: p = 5q squared - 3"
+    ],
+    "tip": "Eliminate the square root first by squaring the entire equation before tackling fractions."
+   },
+   {
+    "q": "Rearrange a = (b + c) / d - e to make c the subject.",
+    "marks": 3,
+    "model": [
+     "Add e to both sides: a + e = (b + c) / d",
+     "Multiply by d: d(a + e) = b + c",
+     "Subtract b: c = d(a + e) - b"
+    ],
+    "tip": "Undo addition and subtraction outside the fraction before clearing the denominator."
+   },
+   {
+    "q": "Make x the subject of y = 3 / (2 - x) squared.",
+    "marks": 4,
+    "model": [
+     "Multiply by (2 - x) squared: y(2 - x) squared = 3",
+     "Divide by y: (2 - x) squared = 3 / y",
+     "Take square root: 2 - x = plus/minus root(3 / y)",
+     "Rearrange for x: x = 2 minus/plus root(3 / y)"
+    ],
+    "tip": "Isolate the squared bracket completely before taking the square root."
+   },
+   {
+    "q": "Rearrange M = (N + P) / (N - 2) to make N the subject.",
+    "marks": 4,
+    "model": [
+     "Multiply by (N - 2): M(N - 2) = N + P",
+     "Expand: MN - 2M = N + P",
+     "Collect N terms: MN - N = 2M + P",
+     "Factorise and divide: N(M - 1) = 2M + P, N = (2M + P) / (M - 1)"
+    ],
+    "tip": "Group all terms containing N on the left-hand side before factorising."
+   },
+   {
+    "q": "Make g the subject of T = 2 pi root(L / g).",
+    "marks": 3,
+    "model": [
+     "Divide by 2 pi: T / (2 pi) = root(L / g)",
+     "Square both sides: T squared / (4 pi squared) = L / g",
+     "Multiply by g and rearrange: g = 4 pi squared L / T squared"
+    ],
+    "tip": "Isolate the radical expression before squaring both sides."
+   },
+   {
+    "q": "Rearrange y = (ax + b) / (cx + d) to make x the subject.",
+    "marks": 5,
+    "model": [
+     "Multiply by (cx + d): y(cx + d) = ax + b",
+     "Expand: cxy + dy = ax + b",
+     "Collect x terms on left: cxy - ax = b - dy",
+     "Factorise x: x(cy - a) = b - dy",
+     "Divide: x = (b - dy) / (cy - a)"
+    ],
+    "tip": "This standard advanced format requires expanding, grouping all x terms, factorising, and dividing."
+   },
+   {
+    "q": "Make x the subject of y = (x squared - 1) / (x squared + 1).",
+    "marks": 5,
+    "model": [
+     "Multiply by (x squared + 1): y(x squared + 1) = x squared - 1",
+     "Expand: y x squared + y = x squared - 1",
+     "Collect x squared terms: y x squared - x squared = -y - 1",
+     "Factorise x squared: x squared (y - 1) = -(y + 1)",
+     "Divide and square root: x = root((1 + y) / (1 - y))"
+    ],
+    "tip": "Treat x squared as a single block term if necessary, factorise, then take the square root at the end."
+   },
+   {
+    "q": "Rearrange P = V squared / R to make V the subject.",
+    "marks": 2,
+    "model": [
+     "Multiply by R: PR = V squared",
+     "Take square root: V = root(PR)"
+    ],
+    "tip": "Simple two-step rearrangement involving multiplication and square root."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Rearrange the formula to make x the subject: y = (3x - 5) / (x + 2)",
+    "steps": [
+     "Multiply both sides by (x + 2) to clear the fraction: y(x + 2) = 3x - 5",
+     "Expand the brackets on the left side: xy + 2y = 3x - 5",
+     "Collect all terms containing x on the left-hand side and other terms on the right: xy - 3x = -5 - 2y",
+     "Factorise x out of the left-hand side: x(y - 3) = -2y - 5",
+     "Divide both sides by (y - 3) to fully isolate x: x = (-2y - 5) / (y - 3)"
+    ],
+    "ans": "x = (-2y - 5) / (y - 3)"
+   },
+   {
+    "q": "Make r the subject of the formula: S = 4 pi r squared + 2 pi r h",
+    "steps": [
+     "Recognize this is a quadratic equation in terms of r: 4 pi r squared + (2 pi h) r - S = 0",
+     "Apply the quadratic formula where A = 4 pi, B = 2 pi h, and C = -S",
+     "Substitute into the quadratic formula: r = (-2 pi h plus/minus root((2 pi h) squared - 4(4 pi)(-S))) / (2(4 pi))",
+     "Simplify the expression under the root: r = (-2 pi h plus/minus root(4 pi squared h squared + 16 pi S)) / (8 pi)",
+     "Factor out 4 from inside the square root: r = (-2 pi h plus/minus 2 root(pi squared h squared + 4 pi S)) / (8 pi)",
+     "Cancel the factor of 2: r = (-pi h plus/minus root(pi squared h squared + 4 pi S)) / (4 pi)"
+    ],
+    "ans": "r = (-pi h plus/minus root(pi squared h squared + 4 pi S)) / (4 pi)"
+   },
+   {
+    "q": "Rearrange to make t the subject: v = u + a t cubed",
+    "steps": [
+     "Subtract u from both sides: v - u = a t cubed",
+     "Divide both sides by a: (v - u) / a = t cubed",
+     "Take the cube root of both sides to isolate t: t = cube root of ((v - u) / a)"
+    ],
+    "ans": "t = cube root of ((v - u) / a)"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Visualising the step-by-step clearing of denominators and collecting terms for a complex algebraic rearrangement.",
+    "svg": "<svg viewBox=\"0 0 400 240\">\n  <rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\" />\n  <rect x=\"30\" y=\"20\" width=\"340\" height=\"40\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\" rx=\"6\" />\n  <text x=\"200\" y=\"45\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#1b2540\" text-anchor=\"middle\">Original: y = (2x + 3) / (x - 4)</text>\n  \n  <line x1=\"200\" y1=\"60\" x2=\"200\" y2=\"85\" stroke=\"#1b2540\" stroke-width=\"2\" marker-end=\"url(#arrow)\" />\n  \n  <rect x=\"30\" y=\"85\" width=\"340\" height=\"40\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\" rx=\"6\" />\n  <text x=\"200\" y=\"110\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#1b2540\" text-anchor=\"middle\">Multiply by (x - 4): y(x - 4) = 2x + 3</text>\n  \n  <line x1=\"200\" y1=\"125\" x2=\"200\" y2=\"150\" stroke=\"#1b2540\" stroke-width=\"2\" />\n  \n  <rect x=\"30\" y=\"150\" width=\"340\" height=\"40\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\" rx=\"6\" />\n  <text x=\"200\" y=\"175\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#1b2540\" text-anchor=\"middle\">Factorise x: x(y - 2) = 4y + 3</text>\n  \n  <text x=\"200\" y=\"215\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">Final Subject: x = (4y + 3) / (y - 2)</text>\n</svg>"
+   },
+   {
+    "cap": "Geometric illustration of manipulating formulae involving areas and squared variables.",
+    "svg": "<svg viewBox=\"0 0 400 240\">\n  <rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\" />\n  <circle cx=\"200\" cy=\"100\" r=\"60\" fill=\"#e9d5ff\" stroke=\"#1b2540\" stroke-width=\"2\" />\n  <circle cx=\"200\" cy=\"100\" r=\"5\" fill=\"#1b2540\" />\n  <line x1=\"200\" y1=\"100\" x2=\"260\" y2=\"100\" stroke=\"#1b2540\" stroke-width=\"2\" stroke-dasharray=\"4\" />\n  <text x=\"230\" y=\"92\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">r</text>\n  <text x=\"200\" y=\"185\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">Area A = pi * r squared</text>\n  <text x=\"200\" y=\"210\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">Rearranged for r: r = root(A / pi)</text>\n</svg>"
+   },
+   {
+    "cap": "Workflow diagram showing inverse operations hierarchy from addition/subtraction to powers and roots.",
+    "svg": "<svg viewBox=\"0 0 400 240\">\n  <rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\" />\n  <rect x=\"40\" y=\"20\" width=\"320\" height=\"35\" fill=\"#fecaca\" stroke=\"#1b2540\" stroke-width=\"2\" rx=\"6\" />\n  <text x=\"200\" y=\"42\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">1. Undo Addition / Subtraction first</text>\n  \n  <rect x=\"40\" y=\"75\" width=\"320\" height=\"35\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\" rx=\"6\" />\n  <text x=\"200\" y=\"97\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">2. Clear Denominators / Fractions</text>\n  \n  <rect x=\"40\" y=\"130\" width=\"320\" height=\"35\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\" rx=\"6\" />\n  <text x=\"200\" y=\"152\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">3. Factorise if variable appears twice</text>\n  \n  <rect x=\"40\" y=\"185\" width=\"320\" height=\"35\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\" rx=\"6\" />\n  <text x=\"200\" y=\"207\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">4. Apply Inverse Powers or Roots</text>\n</svg>"
+   }
+  ],
+  "pid": "maths_aqa_h.1.4",
+  "sid": "maths_aqa_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-17T19:26:47.501Z"
+ },
+ "maths_aqa_h.1.9": {
+  "summary": "Mastering the identification and interpretation of gradients and intercepts for linear functions forms the bedrock of algebraic graph theory at GCSE Higher level. You must be able to seamlessly switch between algebraic equations like y = mx + c and graphical representations to extract rates of change, initial values, and intersection points. Grade 9 questions will test your ability to handle perpendicular gradients, parameter unknowns, and real-life modelling contexts with rigorous precision.",
+  "core": [
+   {
+    "h": "1. Anatomy of the Linear Function: y = mx + c",
+    "p": "Every straight-line graph in a non-vertical orientation can be expressed in the slope-intercept form y = mx + c, where every single letter has a precise mathematical meaning. Understanding how changes to m and c physically transform the line on the Cartesian plane is essential for top-band marks.",
+    "bullets": [
+     "The variable x represents the independent input coordinate along the horizontal axis.",
+     "The variable y represents the dependent output coordinate along the vertical axis.",
+     "The parameter m represents the gradient, dictating the steepness and direction of tilt of the line.",
+     "The parameter c represents the y-intercept, giving the exact vertical height where the line crosses the y-axis."
+    ],
+    "table": {
+     "head": [
+      "Parameter",
+      "Algebraic Role",
+      "Geometrical Effect"
+     ],
+     "rows": [
+      [
+       "m (Gradient)",
+       "Coefficient of x",
+       "Controls steepness; positive climbs right, negative falls right."
+      ],
+      [
+       "c (y-intercept)",
+       "Constant term when y = 0",
+       "Shifts the entire line vertically up or down without changing tilt."
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Linear Function",
+      "p": "A function in which the highest power of the variable is 1, producing a constant rate of change and a straight-line graph."
+     },
+     {
+      "k": "warn",
+      "t": "Hidden Intercepts",
+      "p": "Do not assume c is always explicitly shown; if an equation is written as 2y + 4x = 10, you must rearrange it into y = -2x + 5 before reading off m and c."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Figure 1: Visual breakdown of gradient m and y-intercept c on a standard Cartesian plane.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"190\" x2=\"370\" y2=\"190\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"80\" y1=\"220\" x2=\"80\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"80\" y1=\"160\" x2=\"340\" y2=\"60\" stroke=\"#2563eb\" stroke-width=\"3\"/><text x=\"350\" y=\"185\" fill=\"#334155\" font-size=\"12\">x</text><text x=\"70\" y=\"25\" fill=\"#334155\" font-size=\"12\">y</text><text x=\"210\" y=\"95\" fill=\"#2563eb\" font-size=\"12\">y = mx + c</text><circle cx=\"80\" cy=\"120\" r=\"4\" fill=\"#dc2626\"/><text x=\"95\" y=\"124\" fill=\"#dc2626\" font-size=\"11\">(0, c)</text><line x1=\"150\" y1=\"133\" x2=\"210\" y2=\"133\" stroke=\"#16a34a\" stroke-dasharray=\"4\" stroke-width=\"2\"/><line x1=\"210\" y1=\"133\" x2=\"210\" y2=\"109\" stroke=\"#16a34a\" stroke-dasharray=\"4\" stroke-width=\"2\"/><text x=\"170\" y=\"148\" fill=\"#16a34a\" font-size=\"11\">1 unit</text><text x=\"220\" y=\"125\" fill=\"#16a34a\" font-size=\"11\">m units</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "2. Calculating Gradients Graphically",
+    "p": "The gradient measures the steepness of a line as the ratio of the vertical change to the horizontal change. To find this graphically, you must construct a large, clear right-angled triangle where the hypotenuse lies along the line segment.",
+    "bullets": [
+     "Select two points on the line where coordinates cross integer grid intersections cleanly.",
+     "Draw a right-angled triangle underneath or above the line segment.",
+     "Calculate the vertical height (change in y, or rise) and divide by the horizontal width (change in x, or run).",
+     "Always ensure your final fraction is simplified or converted to an exact decimal."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "The Gradient Formula",
+      "p": "Gradient m = (Change in y) / (Change in x) = (y2 - y1) / (x2 - x1)"
+     },
+     {
+      "k": "tip",
+      "t": "Choose Points Far Apart",
+      "p": "When drawing your gradient triangle on a printed exam paper, make the triangle as large as possible to minimize reading inaccuracies from grid lines."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "3. Calculating Gradients Algebraically from Two Points",
+    "p": "When you are given two coordinate points without a diagram, you apply the algebraic coordinate formula directly. This is a staple skill that bridges coordinate geometry with pure algebra.",
+    "bullets": [
+     "Label your given points clearly as (x1, y1) and (x2, y2) to avoid arithmetic sign errors.",
+     "Substitute the values into m = (y2 - y1) / (x2 - x1).",
+     "Take extreme care when subtracting negative numbers; remember that subtracting a negative is equivalent to adding a positive.",
+     "Keep fractions improper where applicable rather than rounding to decimals unless requested."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Coordinate Order Trap",
+      "p": "If you use y2 first in the numerator, you must use x2 first in the denominator. Mixing up the point order yields the negative reciprocal of the true gradient."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Figure 2: Geometric representation of rise over run between two distinct coordinate points.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"190\" x2=\"370\" y2=\"190\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"80\" y1=\"220\" x2=\"80\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"110\" y1=\"160\" x2=\"310\" y2=\"80\" stroke=\"#9333ea\" stroke-width=\"3\"/><circle cx=\"110\" cy=\"160\" r=\"4\" fill=\"#2563eb\"/><text x=\"115\" y=\"180\" fill=\"#2563eb\" font-size=\"11\">(x1, y1)</text><circle cx=\"310\" cy=\"80\" r=\"4\" fill=\"#2563eb\"/><text x=\"290\" y=\"70\" fill=\"#2563eb\" font-size=\"11\">(x2, y2)</text><line x1=\"110\" y1=\"160\" x2=\"310\" y2=\"160\" stroke=\"#64748b\" stroke-dasharray=\"3\" stroke-width=\"1.5\"/><line x1=\"310\" y1=\"160\" x2=\"310\" y2=\"80\" stroke=\"#64748b\" stroke-dasharray=\"3\" stroke-width=\"1.5\"/><text x=\"190\" y=\"175\" fill=\"#334155\" font-size=\"11\">x2 - x1</text><text x=\"320\" y=\"125\" fill=\"#334155\" font-size=\"11\">y2 - y1</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "4. Finding the Equation of a Line: Point-Gradient Form",
+    "p": "To find the complete equation of a straight line, you need two pieces of information: its gradient (m) and a point it passes through (x1, y1), or two points.",
+    "bullets": [
+     "Calculate the gradient m using the two points if necessary.",
+     "Substitute m and your chosen point (x1, y1) into the formula y - y1 = m(x - x1).",
+     "Expand the brackets and rearrange terms into the standard y = mx + c format unless otherwise specified.",
+     "Check your solution by substituting the second point back into your final equation."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Standard Form",
+      "p": "An equation written in the format y = mx + c where m and c are exact numbers or fractions."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "5. Interpreting Intercepts Algebraically",
+    "p": "Intercepts are the specific locations where a line crosses the coordinate axes. Knowing how to find them algebraically from any linear equation is a fundamental grade 7-9 requirement.",
+    "bullets": [
+     "To find the y-intercept, substitute x = 0 into the equation and solve for y.",
+     "To find the x-intercept (also known as a root or zero), substitute y = 0 into the equation and solve for x.",
+     "Always express intercepts as full coordinate pairs, such as (0, c) and (k, 0), rather than single numbers.",
+     "Special cases include horizontal lines (y = k, no x-intercept) and vertical lines (x = k, no y-intercept)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Zero Substitution Rule",
+      "p": "Remember: for the y-intercept, set x to zero. For the x-intercept, set y to zero. Memorize this inverse pairing to save time."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Parallel Lines and Gradient Relationships",
+    "p": "Parallel lines are lines that never intersect because they maintain an identical distance apart across the entire Cartesian plane. Their algebraic fingerprint is an identical gradient.",
+    "bullets": [
+     "If Line 1 has equation y = m1x + c1 and Line 2 has equation y = m2x + c2, they are parallel if and only if m1 = m2.",
+     "Parallel lines will have different y-intercepts (c1 != c2); if c1 were also equal, they would be the exact same line.",
+     "To find the equation of a line parallel to a given line passing through a new point, copy the original gradient and use the new point.",
+     "Test parallelism by rearranging mixed equations into y = mx + c form and comparing the x coefficients."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Parallel Gradient Rule",
+      "p": "m(parallel) = m(original)"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Perpendicular Lines and Negative Reciprocals",
+    "p": "Perpendicular lines intersect at a right angle (90 degrees). The relationship between their gradients is one of the most powerful and heavily examined topics in AQA Higher mathematics.",
+    "bullets": [
+     "If two lines are perpendicular, the product of their gradients is always equal to -1.",
+     "Algebraically, if a line has gradient m, the perpendicular gradient is given by the negative reciprocal: -1 / m.",
+     "To find a negative reciprocal, invert the fraction (flip numerator and denominator) and change its algebraic sign.",
+     "Example: If m = 3/4, the perpendicular gradient is -4/3. If m = -2, the perpendicular gradient is 1/2."
+    ],
+    "table": {
+     "head": [
+      "Original Gradient (m)",
+      "Negative Reciprocal (-1/m)",
+      "Product (Check)"
+     ],
+     "rows": [
+      [
+       "2",
+       "-1/2",
+       "2 * (-1/2) = -1"
+      ],
+      [
+       "-3/5",
+       "5/3",
+       "-3/5 * 5/3 = -1"
+      ],
+      [
+       "-1/4",
+       "4",
+       "-1/4 * 4 = -1"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Sign Forgetfulness",
+      "p": "Students often remember to flip the fraction for perpendicular lines but forget to change the sign. A positive gradient does not become positive again."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Figure 3: Intersecting perpendicular lines meeting at a 90-degree angle with negative reciprocal gradients.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"190\" x2=\"370\" y2=\"190\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"80\" y1=\"220\" x2=\"80\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"100\" y1=\"160\" x2=\"300\" y2=\"80\" stroke=\"#0284c7\" stroke-width=\"3\"/><line x1=\"140\" y1=\"60\" x2=\"260\" y2=\"200\" stroke=\"#ea580c\" stroke-width=\"3\"/><text x=\"220\" y=\"70\" fill=\"#0284c7\" font-size=\"11\">m1 = 2/5</text><text x=\"265\" y=\"160\" fill=\"#ea580c\" font-size=\"11\">m2 = -5/2</text><circle cx=\"200\" cy=\"120\" r=\"4\" fill=\"#0f172a\"/><text x=\"210\" y=\"115\" fill=\"#0f172a\" font-size=\"11\">90 deg</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "8. Interpreting Linear Functions in Real-Life Contexts",
+    "p": "AQA frequently sets applied modelling questions where linear functions represent real-world scenarios such as utility bills, car hire costs, temperature conversions, or kinematic motion.",
+    "bullets": [
+     "The gradient m represents the rate of change per unit of the independent variable (e.g., cost per mile, speed in meters per second).",
+     "The y-intercept c represents the initial fixed cost, starting value, or base fee when the input variable is zero.",
+     "Always include appropriate units in your final interpretations, such as 'pounds per hour' or 'degrees Celsius per minute'.",
+     "Be prepared to sketch real-life graphs where the axes may use letters other than x and y, such as t for time and C for cost."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Contextual Language",
+      "p": "When a mark scheme asks you to 'interpret the gradient', your answer must mention the rate of increase or decrease per single unit of the x-axis variable."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Horizontal and Vertical Lines",
+    "p": "Lines parallel to the coordinate axes are exceptional cases that frequently catch students out because one of the standard gradient parameters is either zero or undefined.",
+    "bullets": [
+     "Horizontal lines have an equation of the form y = k, where k is a constant. Their gradient is exactly 0 because there is no vertical change.",
+     "Vertical lines have an equation of the form x = k, where k is a constant. Their gradient is undefined (sometimes described as infinite) because the run is zero.",
+     "The y-intercept of a horizontal line is (0, k); a vertical line has no y-intercept unless k = 0 (where it is the y-axis itself).",
+     "Perpendicular check: A horizontal line (y = k) and a vertical line (x = m) are always perpendicular to each other."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Undefined Gradient Trap",
+      "p": "Never write 'm = 0' for a vertical line. Division by zero in m = (y2 - y1) / (x2 - x1) gives an undefined gradient."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Determining Unknown Constants from Geometric Conditions",
+    "p": "Higher tier exams test your algebraic fluency by embedding unknown parameters (like a, b, or k) inside coordinate points or linear equations, requiring you to set up and solve simultaneous or linear equations.",
+    "bullets": [
+     "If a point (p, q) lies on a line, substituting x = p and y = q into the line's equation must produce a true statement.",
+     "If two lines are known to be parallel, equate their algebraic gradient expressions to solve for an unknown constant.",
+     "If two lines are perpendicular, multiply their algebraic gradient expressions together and set the product equal to -1.",
+     "Use simultaneous equations if you are given two points with unknown coordinates that both lie on the same line."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Point Substitution Principle",
+      "p": "A point satisfies an equation if and only if inserting its coordinates makes the equation balance."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Mountain Hike Analogy",
+   "p": "Imagine hiking up a straight mountain path. The gradient (m) is how steep the slope is: a positive gradient means you are climbing upwards as you walk forward, while a negative gradient means you are walking downhill. The y-intercept (c) is your starting altitude above sea level measured at the trailhead where time or distance walked (x) is zero. Parallel paths climb at the exact same angle of steepness so they never meet, while perpendicular paths represent a sheer cliff face meeting the ground at a sharp 90-degree corner. Where this analogy breaks down is that mathematical lines extend infinitely in both directions, whereas a hiking trail has a finite starting point and summit."
+  },
+  "terms": [
+   {
+    "t": "Gradient",
+    "d": "A numerical measure of the steepness and direction of a line, calculated as the change in y divided by the change in x."
+   },
+   {
+    "t": "Y-intercept",
+    "d": "The point where a graph crosses the vertical y-axis, occurring where the x-coordinate is equal to zero."
+   },
+   {
+    "t": "X-intercept",
+    "d": "The point where a graph crosses the horizontal x-axis, occurring where the y-coordinate is equal to zero; also called a root."
+   },
+   {
+    "t": "Linear Function",
+    "d": "An algebraic function of the form y = mx + c whose graph is a straight line with a constant rate of change."
+   },
+   {
+    "t": "Parallel Lines",
+    "d": "Straight lines that lie in the same plane and never intersect, possessing identical gradients."
+   },
+   {
+    "t": "Perpendicular Lines",
+    "d": "Straight lines that intersect at right angles (90 degrees), with gradients that multiply to give -1."
+   },
+   {
+    "t": "Negative Reciprocal",
+    "d": "The result of inverting a fraction and reversing its sign, representing the gradient of a perpendicular line."
+   },
+   {
+    "t": "Cartesian Plane",
+    "d": "A two-dimensional coordinate system defined by a horizontal x-axis and a vertical y-axis intersecting at right angles."
+   },
+   {
+    "t": "Rise over Run",
+    "d": "A mnemonic phrase for the gradient formula: the vertical rise divided by the horizontal run."
+   },
+   {
+    "t": "Slope-Intercept Form",
+    "d": "The standard linear equation format y = mx + c that explicitly displays the gradient and y-intercept."
+   },
+   {
+    "t": "Undefined Gradient",
+    "d": "The gradient of a vertical line where the horizontal change (run) is zero, resulting in division by zero."
+   },
+   {
+    "t": "Parameter",
+    "d": "A constant term in a general equation, such as m and c in y = mx + c, that defines a specific line."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Stating that the y-intercept of y = 3x - 5 is 5.",
+    "r": "The y-intercept includes the sign: it is -5, or written as the coordinate point (0, -5)."
+   },
+   {
+    "w": "Finding the perpendicular gradient of 4 by just changing it to -4.",
+    "r": "The negative reciprocal of 4 is -1/4 (invert the fraction and negate)."
+   },
+   {
+    "w": "Calculating gradient as change in x divided by change in y.",
+    "r": "Gradient is always vertical change divided by horizontal change: change in y / change in x."
+   },
+   {
+    "w": "Leaving the equation of a line unsimplified in the form y - 3 = 2(x - 1).",
+    "r": "AQA mark schemes expect final equations of straight lines expanded and simplified into y = mx + c form unless stated otherwise."
+   },
+   {
+    "w": "Writing an x-intercept as a single number like x = 4.",
+    "r": "Intercepts are points on a graph and should be stated as coordinates, e.g., (4, 0)."
+   },
+   {
+    "w": "Assuming lines are parallel just because their constant terms (c) match.",
+    "r": "Parallel lines require identical gradients (m), not identical y-intercepts (c)."
+   },
+   {
+    "w": "Subbing x and y backwards into the gradient formula (x2 - x1) / (y2 - y1).",
+    "r": "The change in y must be in the numerator: (y2 - y1) / (x2 - x1)."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Find the gradient of the straight line passing through the points (2, 5) and (6, 17).",
+    "marks": 2,
+    "model": [
+     "Correct substitution into m = (17 - 5) / (6 - 2)",
+     "Evaluating numerator as 12 and denominator as 4, giving final gradient 3"
+    ],
+    "tip": "Always label (x1, y1) and (x2, y2) above your coordinates before substituting to prevent arithmetic slips."
+   },
+   {
+    "q": "A line has the equation 3x + 2y = 12. Find its gradient and y-intercept.",
+    "marks": 3,
+    "model": [
+     "Rearranging to 2y = -3x + 12",
+     "Dividing by 2 to get y = -1.5x + 6",
+     "Stating gradient is -1.5 (or -3/2) and y-intercept is 6 (or (0, 6))"
+    ],
+    "tip": "Do not attempt to read m and c until the equation is explicitly in the form y = mx + c."
+   },
+   {
+    "q": "Find the equation of the line that passes through the point (4, -1) and has a gradient of 3.",
+    "marks": 3,
+    "model": [
+     "Substituting into y - y1 = m(x - x1) to get y - (-1) = 3(x - 4)",
+     "Expanding brackets: y + 1 = 3x - 12",
+     "Simplifying to y = 3x - 13"
+    ],
+    "tip": "Check your answer by substituting x = 4 back in: 3(4) - 13 = 12 - 13 = -1. It matches!"
+   },
+   {
+    "q": "Line A passes through the points (-2, 3) and (4, 11). Line B is parallel to Line A and passes through the point (5, 20). Find the equation of Line B.",
+    "marks": 4,
+    "model": [
+     "Finding gradient of Line A: m = (11 - 3) / (4 - (-2)) = 8 / 6 = 4/3",
+     "Recognising Line B has the same gradient m = 4/3",
+     "Using y - 20 = (4/3)(x - 5) or substituting into y = mx + c to find c",
+     "Final equation: y = (4/3)x + 40/3 or 3y = 4x + 40"
+    ],
+    "tip": "Parallel lines share the exact same gradient. Extract it immediately from the first line."
+   },
+   {
+    "q": "Line L has the equation y = -25x + 7. Find the equation of the line perpendicular to L that passes through the origin.",
+    "marks": 3,
+    "model": [
+     "Identifying gradient of L as -2/5",
+     "Finding negative reciprocal gradient: 5/2",
+     "Recognising passing through origin means y-intercept c = 0, giving y = 5/2 x"
+    ],
+    "tip": "Passing through the origin means c = 0, which immediately eliminates the need for extra calculation."
+   },
+   {
+    "q": "The graph of y = mx + c passes through the points (0, 4) and (3, 16). Find the value of m and the value of c.",
+    "marks": 2,
+    "model": [
+     "Recognising (0, 4) gives c = 4 directly",
+     "Substituting c = 4 and point (3, 16) to find m = (16 - 4)/3 = 4"
+    ],
+    "tip": "Any point in the form (0, c) gives you the y-intercept instantly without simultaneous equations."
+   },
+   {
+    "q": "Determine whether the line passing through (-1, 4) and (3, 12) is parallel to the line 2y - 4x = 8.",
+    "marks": 3,
+    "model": [
+     "Calculating gradient of first line: (12 - 4) / (3 - (-1)) = 8 / 4 = 2",
+     "Rearranging second line 2y = 4x + 8 to y = 2x + 4",
+     "Stating gradients are equal (both are 2), therefore the lines are parallel"
+    ],
+    "tip": "Show working for both gradients explicitly and state your conclusion clearly to gain the final communication mark."
+   },
+   {
+    "q": "Find the coordinates of the x-intercept of the line 5x - 3y = 30.",
+    "marks": 2,
+    "model": [
+     "Substituting y = 0 into the equation: 5x - 3(0) = 30",
+     "Solving to get x = 6 and writing the coordinate point as (6, 0)"
+    ],
+    "tip": "Always write intercepts as coordinate pairs unless the question specifically asks 'What is the x-coordinate?'"
+   },
+   {
+    "q": "A taxi firm charges a fixed hire fee plus a constant rate per mile travelled. A journey of 4 miles costs 14 pounds, and a journey of 10 miles costs 26 pounds. Write a linear equation relating total cost C to miles travelled m.",
+    "marks": 4,
+    "model": [
+     "Formulating points as (4, 14) and (10, 26)",
+     "Calculating gradient (rate per mile): (26 - 14) / (10 - 4) = 12 / 6 = 2 pounds per mile",
+     "Substituting into C = 2m + c using point (4, 14): 14 = 2(4) + c -> c = 6",
+     "Final equation: C = 2m + 6"
+    ],
+    "tip": "Treat real-life cost problems exactly like coordinate geometry problems by assigning variables as coordinates (miles, cost)."
+   },
+   {
+    "q": "Line 1 has equation y = 3x - 2. Line 2 is perpendicular to Line 1 and intersects it at the point where x = 2. Find the equation of Line 2.",
+    "marks": 5,
+    "model": [
+     "Finding y-coordinate of intersection point by substituting x = 2 into Line 1: y = 3(2) - 2 = 4, giving point (2, 4)",
+     "Finding gradient of Line 1 as 3",
+     "Calculating perpendicular gradient for Line 2 as -1/3",
+     "Substituting m = -1/3 and point (2, 4) into equation formula: y - 4 = -1/3(x - 2)",
+     "Simplifying to y = -1/3 x + 14/3 or 3y + x = 14"
+    ],
+    "tip": "Break multi-step geometry problems down: find the intersection point first, find the new gradient second, then assemble the equation."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Find the exact equation of the line passing through (-3, 2) and perpendicular to the line 4x + 2y = 7, giving your answer in the form ax + by = c where a, b, and c are integers.",
+    "steps": [
+     "Rearrange the given line equation 4x + 2y = 7 into slope-intercept form to find its gradient. 2y = -4x + 7, so y = -2x + 3.5. The original gradient m1 is -2.",
+     "Calculate the negative reciprocal to find the perpendicular gradient m2. m2 = -1 / (-2) = 1/2.",
+     "Use the point-gradient formula with point (-3, 2) and gradient m2 = 1/2. y - 2 = (1/2)(x - (-3)) which simplifies to y - 2 = 0.5(x + 3).",
+     "Expand and rearrange into integer form: multiply through by 2 to get 2y - 4 = x + 3, leading to x - 2y = -7."
+    ],
+    "ans": "x - 2y = -7"
+   },
+   {
+    "q": "A company's profit P (in thousands of pounds) is modelled as a linear function of time t (in years since 2020). In 2021 (t = 1), the profit was 42 thousand pounds. In 2025 (t = 5), the profit was 74 thousand pounds. Interpret the gradient and y-intercept of this linear model.",
+    "steps": [
+     "Identify the coordinates from the context: (1, 42) and (5, 74).",
+     "Calculate the gradient m = (74 - 42) / (5 - 1) = 32 / 4 = 8.",
+     "Interpret the gradient: The profit increases by 8 thousand pounds (£8,000) every year.",
+     "Find the y-intercept c using y = 8t + c and point (1, 42): 42 = 8(1) + c, giving c = 34.",
+     "Interpret the y-intercept: The initial profit model value in the year 2020 (t = 0) was 34 thousand pounds (£34,000)."
+    ],
+    "ans": "Gradient = 8 (profit increases by £8,000 per year); y-intercept = 34 (initial model profit in 2020 was £34,000)."
+   }
+  ],
+  "svg": [],
+  "pid": "maths_aqa_h.1.9",
+  "sid": "maths_aqa_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-17T19:33:35.534Z"
+ },
+ "maths_aqa_h.1.22": {
+  "summary": "Mastering the generation of sequence terms from position-to-term and term-to-term rules is a cornerstone of Higher tier algebra. You must be able to fluently translate between verbal descriptions, algebraic nth term formulae, and recursive generation processes. This specification point underpins both linear and non-linear patterns, testing your precision with substitution, indices, and recurrence relations in exams.",
+  "core": [
+   {
+    "h": "Introduction to Sequences and Notation",
+    "p": "A sequence is an ordered list of numbers formed according to a specific rule. Each number in the sequence is called a term. We use subscript notation like u_n or x_n to represent the nth term, where n denotes the position or index of the term.",
+    "bullets": [
+     "A sequence has an infinite or finite set of terms following a deterministic rule.",
+     "The position number n is always a positive integer starting from 1 (n = 1, 2, 3, ...).",
+     "Term-to-term rules tell you how to get the next term from the previous term(s).",
+     "Position-to-term rules give a direct formula for the nth term using n."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Sequence Terminology",
+      "p": "The nth term is an algebraic expression that generates the term at any given position n by direct substitution."
+     },
+     {
+      "k": "key",
+      "t": "Domain of n",
+      "p": "Always substitute positive integers (1, 2, 3, ...) for n when generating sequence terms."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Position-to-Term Rules (Linear Sequences)",
+    "p": "A position-to-term rule defines the nth term directly as a function of n. For a linear (arithmetic) sequence, the nth term always takes the linear form an + b, where a is the common difference and b is the zeroth term.",
+    "bullets": [
+     "To generate terms from an nth term formula like 3n + 2, substitute n = 1, 2, 3, etc.",
+     "For n = 1: 3(1) + 2 = 5. For n = 2: 3(2) + 2 = 8. The terms are 5, 8, 11, ...",
+     "The coefficient of n (here 3) represents the constant difference between consecutive terms.",
+     "Linear sequences graph as a straight line if n is treated as a continuous variable x."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Checking Your Generation",
+      "p": "Always verify your generated terms by finding the first and second differences to ensure they match the linear rule."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Generating linear sequence terms from the formula 4n - 1 by substituting position values n.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"2\"/><line x1=\"40\" y1=\"60\" x2=\"360\" y2=\"60\" stroke=\"#94a3b8\" stroke-dasharray=\"4\"/><text x=\"50\" y=\"45\" font-size=\"12\" fill=\"#1e293b\" font-weight=\"bold\">Position (n)</text><text x=\"160\" y=\"45\" font-size=\"12\" fill=\"#1e293b\" font-weight=\"bold\">Calculation</text><text x=\"280\" y=\"45\" font-size=\"12\" fill=\"#1e293b\" font-weight=\"bold\">Term Value</text><line x1=\"40\" y1=\"90\" x2=\"360\" y2=\"90\" stroke=\"#e2e8f0\"/><text x=\"60\" y=\"80\" font-size=\"12\" fill=\"#334155\">n = 1</text><text x=\"160\" y=\"80\" font-size=\"12\" fill=\"#334155\">4(1) - 1</text><text x=\"290\" y=\"80\" font-size=\"12\" fill=\"#2563eb\" font-weight=\"bold\">3</text><line x1=\"40\" y1=\"130\" x2=\"360\" y2=\"130\" stroke=\"#e2e8f0\"/><text x=\"60\" y=\"120\" font-size=\"12\" fill=\"#334155\">n = 2</text><text x=\"160\" y=\"120\" font-size=\"12\" fill=\"#334155\">4(2) - 1</text><text x=\"290\" y=\"120\" font-size=\"12\" fill=\"#2563eb\" font-weight=\"bold\">7</text><line x1=\"40\" y1=\"170\" x2=\"360\" y2=\"170\" stroke=\"#e2e8f0\"/><text x=\"60\" y=\"160\" font-size=\"12\" fill=\"#334155\">n = 3</text><text x=\"160\" y=\"160\" font-size=\"12\" fill=\"#334155\">4(3) - 1</text><text x=\"290\" y=\"160\" font-size=\"12\" fill=\"#2563eb\" font-weight=\"bold\">11</text><text x=\"60\" y=\"205\" font-size=\"12\" fill=\"#475569\" font-style=\"italic\">Sequence generated: 3, 7, 11, 15, ...</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Position-to-Term Rules (Quadratic Sequences)",
+    "p": "Quadratic sequences have an nth term formula of the form an^2 + bn + c. To generate terms, substitute each position value n into this expression, ensuring you square n before multiplying by a.",
+    "bullets": [
+     "Example formula: T_n = 2n^2 - n + 3.",
+     "For n = 1: 2(1)^2 - 1 + 3 = 2 - 1 + 3 = 4.",
+     "For n = 2: 2(2)^2 - 2 + 3 = 2(4) - 2 + 3 = 9.",
+     "For n = 3: 2(3)^2 - 3 + 3 = 2(9) - 3 + 3 = 18.",
+     "The generated terms are 4, 9, 18, 31, ..."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Order of Operations Trap",
+      "p": "When substituting into an^2, always square n first BEFORE multiplying by coefficient a."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Position-to-Term Rules (Cubic and Higher Polynomials)",
+    "p": "Higher tier papers occasionally examine cubic sequences with the general form an^3 + bn^2 + cn + d. Generation follows the exact same substitution principle, requiring careful arithmetic with cubes and squares.",
+    "bullets": [
+     "Example formula: u_n = n^3 - 2n.",
+     "For n = 1: (1)^3 - 2(1) = 1 - 2 = -1.",
+     "For n = 2: (2)^3 - 2(2) = 8 - 4 = 4.",
+     "For n = 3: (3)^3 - 2(3) = 27 - 6 = 21.",
+     "Generated sequence: -1, 4, 21, 56, ..."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Cubic Growth",
+      "p": "Cubic sequences grow extremely rapidly because of the n^3 term."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Position-to-Term Rules (Geometric and Exponential Sequences)",
+    "p": "Geometric sequences involve multiplying by a common ratio r at each step. Their position-to-term rule takes the exponential form a * r^(n-1), where a is the first term.",
+    "bullets": [
+     "Example formula: T_n = 3 * 2^(n-1).",
+     "For n = 1: 3 * 2^(0) = 3 * 1 = 3.",
+     "For n = 2: 3 * 2^(1) = 3 * 2 = 6.",
+     "For n = 3: 3 * 2^(2) = 3 * 4 = 12.",
+     "Generated terms: 3, 6, 12, 24, ..."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Check Exponents",
+      "p": "Verify that when n = 1, your power evaluates to zero (r^0 = 1), yielding the exact first term a."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Generating geometric sequence terms using exponential position-to-term rule 5 * 2^(n-1).",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" rx=\"10\" fill=\"#fef2f2\" stroke=\"#fecaca\" stroke-width=\"2\"/><text x=\"40\" y=\"45\" font-size=\"14\" font-weight=\"bold\" fill=\"#991b1b\">Geometric Generation: T_n = 5(2)^(n-1)</text><line x1=\"40\" y1=\"60\" x2=\"360\" y2=\"60\" stroke=\"#fca5a5\"/><text x=\"40\" y=\"90\" font-size=\"12\" fill=\"#1e293b\">n = 1 : 5 * 2^0 = 5 * 1 = <tspan font-weight=\"bold\" fill=\"#dc2626\">5</tspan></text><text x=\"40\" y=\"125\" font-size=\"12\" fill=\"#1e293b\">n = 2 : 5 * 2^1 = 5 * 2 = <tspan font-weight=\"bold\" fill=\"#dc2626\">10</tspan></text><text x=\"40\" y=\"160\" font-size=\"12\" fill=\"#1e293b\">n = 3 : 5 * 2^2 = 5 * 4 = <tspan font-weight=\"bold\" fill=\"#dc2626\">20</tspan></text><text x=\"40\" y=\"195\" font-size=\"12\" fill=\"#1e293b\">n = 4 : 5 * 2^3 = 5 * 8 = <tspan font-weight=\"bold\" fill=\"#dc2626\">40</tspan></text><text x=\"240\" y=\"125\" font-size=\"12\" fill=\"#475569\" font-style=\"italic\">Common ratio r = 2</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Term-to-Term Rules (Recurrence Relations)",
+    "p": "A term-to-term rule defines the next term in a sequence using one or more preceding terms. This is expressed mathematically as a recurrence relation, such as x_(n+1) = f(x_n), requiring an initial starting value x_1.",
+    "bullets": [
+     "You must always be given the first term (or base term) to begin generating terms recursively.",
+     "Example rule: x_(n+1) = 2x_n + 3, with x_1 = 4.",
+     "To find x_2: substitute x_1 = 4 giving 2(4) + 3 = 11.",
+     "To find x_3: substitute x_2 = 11 giving 2(11) + 3 = 25.",
+     "Generated terms: 4, 11, 25, 53, ..."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Recurrence Relation",
+      "p": "An equation that defines each term of a sequence using preceding term(s) alongside a starting condition."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Fibonacci-Type Sequences (Two-Step Recurrence)",
+    "p": "A Fibonacci-type sequence uses a term-to-term rule where each term is the sum of the two preceding terms: x_n = x_(n-1) + x_(n-2). This requires two given starting values.",
+    "bullets": [
+     "Standard Fibonacci starts with 1, 1 (or 0, 1).",
+     "Rule: Add the last two terms to get the next term.",
+     "Example starting with 3 and 4: 3, 4, 3+4=7, 4+7=11, 7+11=18.",
+     "Generated sequence: 3, 4, 7, 11, 18, 29, ...",
+     "Can be combined with algebraic coefficients in Higher tier questions."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Starting Values",
+      "p": "Two-step recurrence relations require two initial values (e.g., x_1 and x_2) before generation can begin."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Fractional and Rational Sequence Rules",
+    "p": "Sequences involving fractions test your algebraic manipulation and arithmetic fluency during generation. Both position-to-term and term-to-term rules can produce fractions.",
+    "bullets": [
+     "Position-to-term example: T_n = n / (n + 1).",
+     "Generate terms: T_1 = 1/2, T_2 = 2/3, T_3 = 3/4, T_4 = 4/5.",
+     "Term-to-term example: x_(n+1) = 1 / (1 - x_n) with x_1 = 2.",
+     "Generate x_2: 1 / (1 - 2) = 1 / (-1) = -1.",
+     "Generate x_3: 1 / (1 - (-1)) = 1 / 2 = 0.5."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Fraction Arithmetic",
+      "p": "Take extreme care with negative signs and reciprocal inversions when generating recursive fractional terms."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Generating terms of the fractional sequence T_n = n / (n + 2) for the first four positions.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#bbf7d0\" stroke-width=\"2\"/><text x=\"40\" y=\"40\" font-size=\"14\" font-weight=\"bold\" fill=\"#166534\">Fractional Rule: T_n = n / (n + 2)</text><line x1=\"40\" y1=\"55\" x2=\"360\" y2=\"55\" stroke=\"#86efac\"/><text x=\"40\" y=\"85\" font-size=\"12\" fill=\"#1e293b\">n = 1 : 1 / (1 + 2) = <tspan font-weight=\"bold\" fill=\"#15803d\">1/3</tspan></text><text x=\"40\" y=\"120\" font-size=\"12\" fill=\"#1e293b\">n = 2 : 2 / (2 + 2) = 2/4 = <tspan font-weight=\"bold\" fill=\"#15803d\">1/2</tspan></text><text x=\"40\" y=\"155\" font-size=\"12\" fill=\"#1e293b\">n = 3 : 3 / (3 + 2) = <tspan font-weight=\"bold\" fill=\"#15803d\">3/5</tspan></text><text x=\"40\" y=\"190\" font-size=\"12\" fill=\"#1e293b\">n = 4 : 4 / (4 + 2) = 4/6 = <tspan font-weight=\"bold\" fill=\"#15803d\">2/3</tspan></text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Iterative and Implicit Generation",
+    "p": "Higher tier recurrence relations often link to numerical methods and iteration (A20). Generating terms iteratively allows you to observe convergence or divergence towards a limit.",
+    "bullets": [
+     "Consider x_(n+1) = sqrt(x_n + 5) with x_1 = 2.",
+     "x_2 = sqrt(2 + 5) = sqrt(7) = 2.6457...",
+     "x_3 = sqrt(2.6457 + 5) = sqrt(7.6457) = 2.7651...",
+     "Generating successive terms reveals whether the sequence approaches a fixed point (limit).",
+     "Always keep full calculator accuracy between steps when generating iterative terms."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "ANS Button",
+      "p": "Use the ANS button on your scientific calculator to generate iterative sequence terms rapidly without retyping decimals."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Special Sequences: Triangular, Square, and Cube",
+    "p": "Recognising standard number patterns and generating their terms instantly saves valuable exam time and confirms your understanding of number theory.",
+    "bullets": [
+     "Square numbers (n^2): 1, 4, 9, 16, 25, 36, ...",
+     "Cube numbers (n^3): 1, 8, 27, 64, 125, 216, ...",
+     "Triangular numbers (n(n+1)/2): 1, 3, 6, 10, 15, 21, ...",
+     "Prime numbers (not generated by simple algebraic formulas): 2, 3, 5, 7, 11, 13, ...",
+     "Geometric powers of 2: 2, 4, 8, 16, 32, 64, ..."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Triangular Numbers",
+      "p": "Triangular numbers represent dots arranged in equilateral triangles; the nth triangular number is half of n(n+1)."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Factory Assembly Line Analogy",
+   "p": "Think of generating sequence terms as an automated factory machine. A position-to-term rule is like a vending machine with buttons labelled 1, 2, 3: you press button n and instantly get the item at that exact position without needing to know what came before. In contrast, a term-to-term rule is like a relay race where runner n+1 receives the baton directly from runner n; to reach the 10th runner, you must run through every single preceding runner in order. Where this analogy breaks down is that a relay runner gets tired or changes speed, whereas mathematical rules apply with absolute, unyielding consistency forever."
+  },
+  "terms": [
+   {
+    "t": "Sequence",
+    "d": "An ordered set of numbers or objects arranged according to a specific mathematical rule."
+   },
+   {
+    "t": "Term",
+    "d": "An individual number or element within a sequence."
+   },
+   {
+    "t": "Nth term",
+    "d": "An algebraic expression that defines the value of the term at position n."
+   },
+   {
+    "t": "Position-to-term rule",
+    "d": "A formula that calculates any term directly using its position index n."
+   },
+   {
+    "t": "Term-to-term rule",
+    "d": "A rule that specifies how to find subsequent terms using one or more preceding terms."
+   },
+   {
+    "t": "Recurrence relation",
+    "d": "An equation defining each term of a sequence using preceding terms and starting values."
+   },
+   {
+    "t": "Arithmetic sequence",
+    "d": "A sequence with a constant difference between consecutive terms (linear)."
+   },
+   {
+    "t": "Geometric sequence",
+    "d": "A sequence with a constant ratio between consecutive terms (exponential)."
+   },
+   {
+    "t": "Quadratic sequence",
+    "d": "A sequence whose nth term contains an n^2 term, having a constant second difference."
+   },
+   {
+    "t": "Cubic sequence",
+    "d": "A sequence whose nth term contains an n^3 term, having a constant third difference."
+   },
+   {
+    "t": "Fibonacci sequence",
+    "d": "A sequence where each term is the sum of the two preceding terms."
+   },
+   {
+    "t": "Triangular numbers",
+    "d": "Numbers generated by the formula n(n+1)/2, representing triangular dot arrays."
+   },
+   {
+    "t": "Limit",
+    "d": "A value that the terms of a convergent sequence approach closer and closer as n increases."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Multiplying by n first when substituting into an nth term like 3n^2",
+    "r": "Always apply indices (square n) before multiplying by the coefficient a."
+   },
+   {
+    "w": "Starting a term-to-term rule from n = 0",
+    "r": "Always start term generation from n = 1 unless explicitly specified otherwise by the question."
+   },
+   {
+    "w": "Confusing position-to-term with term-to-term rules",
+    "r": "Position-to-term uses n directly; term-to-term uses previous terms like x_n."
+   },
+   {
+    "w": "Writing down only one term when asked to generate 'the first four terms'",
+    "r": "Read carefully and provide all requested terms clearly separated by commas."
+   },
+   {
+    "w": "Using the common difference as the multiplier in a geometric sequence",
+    "r": "Geometric sequences use a common ratio (multiplication), not a common difference (addition)."
+   },
+   {
+    "w": "Forgetting the starting value in a recurrence relation question",
+    "r": "A recurrence relation is mathematically incomplete without its initial term x_1."
+   },
+   {
+    "w": "Rounding intermediate decimals in iterative sequence generation",
+    "r": "Keep full calculator display values until writing down the final requested term."
+   }
+  ],
+  "exam": [
+   {
+    "q": "The nth term of a sequence is given by 3n^2 - 5. Work out the first three terms of this sequence.",
+    "marks": 2,
+    "model": [
+     "For n = 1: 3(1)^2 - 5 = -2",
+     "For n = 2: 3(2)^2 - 5 = 7",
+     "For n = 3: 3(3)^2 - 5 = 22 (-2, 7, 22)"
+    ],
+    "tip": "Substitute n = 1, 2, and 3 carefully, remembering to square n before multiplying by 3."
+   },
+   {
+    "q": "A sequence is defined by the term-to-term rule x_(n+1) = 3x_n - 2. Given that x_1 = 4, find the value of x_3.",
+    "marks": 3,
+    "model": [
+     "x_2 = 3(4) - 2 = 10",
+     "x_3 = 3(10) - 2 = 28",
+     "Final answer 28"
+    ],
+    "tip": "Calculate x_2 first because you cannot find x_3 without knowing x_2."
+   },
+   {
+    "q": "The nth term of a sequence is 5 * 2^n. Find the 4th term of the sequence.",
+    "marks": 2,
+    "model": [
+     "Substitute n = 4: 5 * 2^4",
+     "2^4 = 16, so 5 * 16 = 80",
+     "Final answer 80"
+    ],
+    "tip": "Evaluate the exponential power before performing the final multiplication."
+   },
+   {
+    "q": "A sequence is generated by the rule T_n = (n^2 + 1) / n. Find the 4th term as a fraction in its simplest form.",
+    "marks": 2,
+    "model": [
+     "Substitute n = 4: (4^2 + 1) / 4",
+     "(16 + 1) / 4 = 17/4",
+     "Final answer 17/4 (or 4.25)"
+    ],
+    "tip": "Substitute into both numerator and denominator before simplifying the resulting fraction."
+   },
+   {
+    "q": "The first two terms of a Fibonacci-type sequence are u_1 = 3 and u_2 = 5. The rule is u_n = u_(n-1) + u_(n-2). Find the 5th term.",
+    "marks": 3,
+    "model": [
+     "u_3 = 3 + 5 = 8",
+     "u_4 = 5 + 8 = 13",
+     "u_5 = 8 + 13 = 21",
+     "Final answer 21"
+    ],
+    "tip": "Generate each term sequentially up to the 5th term without skipping steps."
+   },
+   {
+    "q": "A sequence has nth term T_n = n^3 - 2n^2 + 4. Work out the difference between the 3rd term and the 4th term.",
+    "marks": 4,
+    "model": [
+     "3rd term: (3)^3 - 2(3)^2 + 4 = 27 - 18 + 4 = 13",
+     "4th term: (4)^3 - 2(4)^2 + 4 = 64 - 32 + 4 = 36",
+     "Difference: 36 - 13 = 23",
+     "Final answer 23"
+    ],
+    "tip": "Evaluate each term independently and show clear working before finding the difference."
+   },
+   {
+    "q": "A recurrence relation is given by x_(n+1) = (x_n)^2 - 3x_n with x_1 = -1. Find x_3.",
+    "marks": 3,
+    "model": [
+     "x_2 = (-1)^2 - 3(-1) = 1 + 3 = 4",
+     "x_3 = (4)^2 - 3(4) = 16 - 12 = 4",
+     "Final answer 4"
+    ],
+    "tip": "Take special care with negative signs when squaring and multiplying."
+   },
+   {
+    "q": "Find the first four terms of the sequence given by the position-to-term rule T_n = (-1)^n * 3n.",
+    "marks": 3,
+    "model": [
+     "n=1: (-1)^1 * 3(1) = -3",
+     "n=2: (-1)^2 * 3(2) = 6",
+     "n=3: (-1)^3 * 3(3) = -9",
+     "n=4: (-1)^4 * 3(4) = 12 (-3, 6, -9, 12)"
+    ],
+    "tip": "The term (-1)^n creates an alternating sign sequence. Check each sign carefully."
+   },
+   {
+    "q": "An iterative sequence is defined by x_(n+1) = 10 / (x_n + 1) with x_1 = 2. Work out the values of x_2 and x_3.",
+    "marks": 3,
+    "model": [
+     "x_2 = 10 / (2 + 1) = 10/3 = 3.333...",
+     "x_3 = 10 / (3.333... + 1) = 10 / 4.333... = 2.3076...",
+     "x_2 = 10/3 (or 3.33), x_3 = 30/13 (or 2.31)"
+    ],
+    "print": "Keep fractions exact or keep full calculator display for decimal calculations."
+   },
+   {
+    "q": "The nth term of a geometric sequence is given by T_n = 4 * (0.5)^(n-1). State whether the sequence increases or decreases as n increases, and give the first three terms.",
+    "marks": 3,
+    "model": [
+     "Terms: 4, 2, 1",
+     "Decreases as n increases",
+     "Explanation or correct terms awarded"
+    ],
+    "tip": "A common ratio less than 1 (in magnitude) causes geometric terms to decrease towards zero."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Generate the first four terms of the sequence defined by the nth term formula T_n = 2n^2 + 3n - 1.",
+    "steps": [
+     "Step 1: Substitute n = 1 into the formula. T_1 = 2(1)^2 + 3(1) - 1 = 2(1) + 3 - 1 = 4.",
+     "Step 2: Substitute n = 2 into the formula. T_2 = 2(2)^2 + 3(2) - 1 = 2(4) + 6 - 1 = 13.",
+     "Step 3: Substitute n = 3 into the formula. T_3 = 2(3)^2 + 3(3) - 1 = 2(9) + 9 - 1 = 26.",
+     "Step 4: Substitute n = 4 into the formula. T_4 = 2(4)^2 + 3(4) - 1 = 2(16) + 12 - 1 = 43."
+    ],
+    "ans": "4, 13, 26, 43"
+   },
+   {
+    "q": "A sequence is defined by the term-to-term rule x_(n+1) = 2x_n / (x_n + 1). Given that x_1 = 2, find x_2 and x_3 as exact fractions.",
+    "steps": [
+     "Step 1: Substitute x_1 = 2 to find x_2. x_2 = 2(2) / (2 + 1) = 4 / 3.",
+     "Step 2: Substitute x_2 = 4/3 to find x_3. Numerator = 2(4/3) = 8/3.",
+     "Step 3: Denominator = 4/3 + 1 = 4/3 + 3/3 = 7/3.",
+     "Step 4: Divide numerator by denominator: x_3 = (8/3) / (7/3) = 8/7."
+    ],
+    "ans": "x_2 = 4/3, x_3 = 8/7"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Visual diagram comparing linear (straight line growth) versus quadratic (curved parabolic growth) term generation.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"2\"/><line x1=\"50\" y1=\"190\" x2=\"350\" y2=\"190\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"50\" y1=\"30\" x2=\"50\" y2=\"190\" stroke=\"#475569\" stroke-width=\"2\"/><text x=\"340\" y=\"210\" font-size=\"12\" fill=\"#475569\">n</text><text x=\"30\" y=\"35\" font-size=\"12\" fill=\"#475569\">T_n</text><circle cx=\"90\" cy=\"150\" r=\"5\" fill=\"#2563eb\"/><circle cx=\"170\" cy=\"110\" r=\"5\" fill=\"#2563eb\"/><circle cx=\"250\" cy=\"70\" r=\"5\" fill=\"#2563eb\"/><line x1=\"90\" y1=\"150\" x2=\"250\" y2=\"70\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"260\" y=\"70\" font-size=\"11\" fill=\"#2563eb\">Linear: 2n + 1</text><circle cx=\"90\" cy=\"160\" r=\"5\" fill=\"#dc2626\"/><circle cx=\"170\" cy=\"130\" r=\"5\" fill=\"#dc2626\"/><circle cx=\"250\" cy=\"50\" r=\"5\" fill=\"#dc2626\"/><path d=\"M 90 160 Q 170 180 250 50\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"210\" y=\"35\" font-size=\"11\" fill=\"#dc2626\">Quadratic: n^2</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_h.1.22",
+  "sid": "maths_aqa_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-17T19:48:56.851Z"
  }
 }

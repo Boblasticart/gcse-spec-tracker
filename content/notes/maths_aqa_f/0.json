@@ -7940,5 +7940,483 @@
   "src": "pre",
   "by": "gemini/gemini-3.5-flash-lite",
   "ts": "2026-11-16T02:20:58.230Z"
+ },
+ "maths_aqa_f.0.9": {
+  "summary": "Terminating decimals are those that end after a finite number of places, and they can be written exactly as fractions whose denominators contain only the prime factors 2 and/or 5. Recurring (repeating) decimals never end but repeat a block of digits; they can be converted to fractions using algebraic manipulation. Mastering both conversions lets you move fluently between decimal and fractional forms, a skill tested throughout the AQA Foundation tier.",
+  "core": [
+   {
+    "h": "What is a terminating decimal?",
+    "p": "A terminating decimal is a decimal representation that comes to an end after a fixed number of places. It can always be expressed as a fraction whose denominator is a product of only the prime factors 2 and 5.",
+    "bullets": [
+     "Examples: 0.75, 2.5, 0.125",
+     "If a decimal terminates after *n* places, write it as an integer over 10ⁿ",
+     "Reduce the fraction to its lowest terms",
+     "The denominator after reduction will contain only 2’s and/or 5’s"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Terminating decimal",
+      "p": "A decimal that ends after a finite number of digits."
+     },
+     {
+      "k": "key",
+      "t": "",
+      "p": "Denominator of the reduced fraction contains only the primes 2 and 5."
+     },
+     {
+      "k": "tip",
+      "t": "",
+      "p": "Count the decimal places, use 10ⁿ as the denominator, then simplify."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Converting 0.375 to a fraction",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#dbeafe\" stroke=\"#1b2540\"/> <text x=\"200\" y=\"50\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b2540\">0.375 = 375/1000</text> <text x=\"200\" y=\"90\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b2540\">Simplify by dividing numerator and denominator by 125</text> <text x=\"200\" y=\"130\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b2540\">= 3/8</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "What is a recurring decimal?",
+    "p": "A recurring (repeating) decimal has one or more digits that repeat infinitely. It is written with a bar over the repeating part or parentheses.",
+    "bullets": [
+     "Example: 0.\\overline{3}=0.333…",
+     "The repeating block can be one digit (0.\\overline{7}) or several (0.\\overline{142857})",
+     "It never terminates but represents a rational number",
+     "The bar indicates the part that repeats forever"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Recurring decimal",
+      "p": "A decimal in which a digit or group of digits repeats indefinitely."
+     },
+     {
+      "k": "warn",
+      "t": "",
+      "p": "Do not treat the repeating part as if it ends; you must use algebra to convert."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Notation for a repeating block",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"30\" y=\"30\" width=\"340\" height=\"180\" fill=\"#fde68a\" stroke=\"#1b2540\"/> <text x=\"200\" y=\"80\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b2540\">0.̅ 3 (bar over 3)</text> <text x=\"200\" y=\"120\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b2540\">or 0.(3) in parentheses</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Converting a terminating decimal to a fraction",
+    "p": "Write the decimal as an integer over a power of ten, then simplify.",
+    "bullets": [
+     "Step 1: Count the number of decimal places *n*",
+     "Step 2: Write the number without the decimal point as the numerator",
+     "Step 3: Use 10ⁿ as the denominator",
+     "Step 4: Reduce the fraction by dividing by the greatest common divisor"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "",
+      "p": "The denominator after reduction will only contain 2’s and 5’s."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Converting a recurring decimal to a fraction – single‑digit repeat",
+    "p": "Use algebra: let x equal the decimal, multiply by 10 to shift the repeat, subtract, then solve for x.",
+    "bullets": [
+     "Let x = 0.\\overline{a}",
+     "Multiply by 10: 10x = a.\\overline{a}",
+     "Subtract: 10x – x = a",
+     "=> 9x = a, so x = a/9"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "",
+      "p": "For a single repeating digit, denominator will be 9."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Converting a recurring decimal – multi‑digit repeat",
+    "p": "General method: let the length of the repeating block be *k* digits. Multiply by 10ᵏ to move one full block left, then subtract.",
+    "bullets": [
+     "Let x = 0.\\overline{abc} (k=3)",
+     "Multiply by 10³: 1000x = abc.\\overline{abc}",
+     "Subtract: 1000x – x = abc",
+     "=> 999x = abc, so x = abc/999"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "",
+      "p": "Denominator is a string of 9’s equal to the number of repeating digits."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Mixed terminating and repeating decimals",
+    "p": "When a decimal has a non‑repeating part followed by a repeating part, treat the two parts separately.",
+    "bullets": [
+     "Example: 0.1\\overline{6}",
+     "Let x = 0.1\\overline{6}",
+     "Multiply by 10 to move the non‑repeating part: 10x = 1.\\overline{6}",
+     "Now multiply by 10 again (since one repeating digit): 100x = 16.\\overline{6}",
+     "Subtract: 100x – 10x = 16.\\overline{6} – 1.\\overline{6} = 15",
+     "=> 90x = 15, so x = 15/90 = 1/6"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "",
+      "p": "First shift past the non‑repeating part, then use the single‑digit repeat method."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Why only 2 and 5 in denominators for terminating decimals?",
+    "p": "Because 10 = 2 × 5. Any power of 10 only introduces these prime factors, so after reduction the denominator can contain no other primes.",
+    "bullets": [
+     "If a reduced fraction has a prime other than 2 or 5, its decimal will repeat",
+     "Conversely, if the denominator is only 2’s and 5’s, the decimal terminates"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Prime factors of 10",
+      "p": "2 and 5"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Checking your work – estimation",
+    "p": "After converting, estimate the decimal value to confirm it matches the original decimal to the required places.",
+    "bullets": [
+     "Divide the fraction using mental maths or a calculator",
+     "If the estimate differs, re‑check the reduction step"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "",
+      "p": "Rounding errors can give a wrong impression; always compare to the original decimal."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Common exam pitfalls and how to avoid them",
+    "p": "Students often forget to account for the non‑repeating part or mis‑place the decimal when forming the numerator.",
+    "bullets": [
+     "Missing the non‑repeating digits before multiplying",
+     "Using 10ⁿ instead of 10ᵏ for the repeating block length",
+     "Failing to simplify the final fraction"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "",
+      "p": "Write down each step clearly; label n (decimal places) and k (repeat length)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Link to other Number topics",
+    "p": "Understanding decimal‑fraction conversion underpins N8 (exact calculation with fractions) and N9 (standard form).",
+    "bullets": [
+     "Both rely on accurate fraction forms",
+     "Helps when dealing with percentages (N12) and ratios (N11)"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Quick reference table",
+    "p": "Summary of conversion rules",
+    "bullets": [],
+    "table": {
+     "head": [
+      "Decimal type",
+      "Denominator after conversion"
+     ],
+     "rows": [
+      [
+       "Terminating",
+       "Power of 10 → reduce; only 2’s & 5’s"
+      ],
+      [
+       "Single‑digit repeat",
+       "9"
+      ],
+      [
+       "k‑digit repeat",
+       "k 9’s (e.g., 99, 999)"
+      ],
+      [
+       "Mixed (non‑repeat + repeat)",
+       "(10ᵏ‑1)×10ⁿ where n = non‑repeat length"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Converting a decimal to a fraction is like packing a suitcase",
+   "p": "Think of the decimal places as items you need to fit into a suitcase of a fixed size (10ⁿ). You first dump everything in (write the numerator), then close the suitcase (use the power of ten as the denominator). If the suitcase only has compartments sized for 2’s and 5’s, you can close it perfectly – that’s a terminating decimal. A repeating decimal is like an endless roll of clothes that never fits; you have to cut a piece off (multiply by 10ᵏ) and compare the two halves to see exactly how many whole suitcases you need, giving you a fraction. The analogy breaks down because real suitcases can be resized, whereas the mathematical rules about prime factors are fixed."
+  },
+  "terms": [
+   {
+    "t": "Terminating decimal",
+    "d": "A decimal that ends after a finite number of digits."
+   },
+   {
+    "t": "Recurring decimal",
+    "d": "A decimal in which one or more digits repeat indefinitely."
+   },
+   {
+    "t": "Repeating block",
+    "d": "The group of digits that repeats in a recurring decimal."
+   },
+   {
+    "t": "Denominator",
+    "d": "The bottom number of a fraction; in these conversions it reflects the size of the power of ten or a string of 9’s."
+   },
+   {
+    "t": "Power of ten",
+    "d": "10ⁿ, where n is the number of decimal places."
+   },
+   {
+    "t": "Greatest common divisor (GCD)",
+    "d": "The largest number that divides both numerator and denominator exactly; used to simplify fractions."
+   },
+   {
+    "t": "Non‑repeating part",
+    "d": "Digits in a decimal that appear before the repeating block starts."
+   },
+   {
+    "t": "Standard form",
+    "d": "A×10ⁿ; useful when converting terminating decimals to fractions."
+   },
+   {
+    "t": "Prime factors of 10",
+    "d": "2 and 5; only these can appear in the denominator of a reduced terminating‑decimal fraction."
+   },
+   {
+    "t": "String of 9’s",
+    "d": "A number consisting only of the digit 9 repeated k times; used as denominator for a k‑digit repeat."
+   },
+   {
+    "t": "Algebraic substitution",
+    "d": "Setting a variable equal to the decimal to manipulate it mathematically."
+   },
+   {
+    "t": "Upper and lower bounds",
+    "d": "Limits used to check the accuracy of a converted value, especially in estimation."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "0.3̅ = 3/10",
+    "r": "0.\\overline{3}=3/9=1/3; a terminating decimal 0.3 equals 3/10, not a repeating one."
+   },
+   {
+    "w": "Using 10ⁿ for a repeating decimal with 2 repeating digits, e.g. 0.\\overline{12}=12/100",
+    "r": "For a 2‑digit repeat, denominator must be 99, so 0.\\overline{12}=12/99, which simplifies to 4/33."
+   },
+   {
+    "w": "For 0.1\\overline{6}, writing 16/100 and simplifying",
+    "r": "Correct method is (10×x=1.\\overline{6}, 100×x=16.\\overline{6}); subtract to get 90x=15, so x=1/6."
+   },
+   {
+    "w": "Leaving the repeating bar off and treating 0.142857 as terminating",
+    "r": "0.\\overline{142857}=142857/999999, not 142857/1000000."
+   },
+   {
+    "w": "Failing to simplify the final fraction",
+    "r": "Mark scheme awards points for reduction; e.g., 75/100 should be reduced to 3/4."
+   },
+   {
+    "w": "Multiplying by 10 instead of 10ᵏ for a 3‑digit repeat",
+    "r": "You must multiply by 10³=1000 to shift the entire block left."
+   },
+   {
+    "w": "Assuming any denominator that ends in 0 will give a terminating decimal",
+    "r": "Only denominators with prime factors 2 and 5 (after reduction) give terminating decimals."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Express 0.625 as a fraction in lowest terms.",
+    "marks": 2,
+    "model": [
+     "Write 0.625 = 625/1000",
+     "Simplify by dividing numerator and denominator by 125",
+     "Result 5/8"
+    ],
+    "tip": "Count the decimal places (3) → denominator 10³."
+   },
+   {
+    "q": "Write 0.\\overline{7} as a fraction in lowest terms.",
+    "marks": 2,
+    "model": [
+     "Let x = 0.\\overline{7}",
+     "10x = 7.\\overline{7}",
+     "Subtract: 10x – x = 7",
+     "=> 9x = 7, x = 7/9"
+    ],
+    "tip": "A single repeating digit gives denominator 9."
+   },
+   {
+    "q": "Convert 0.\\overline{23} to a fraction and simplify.",
+    "marks": 4,
+    "model": [
+     "Let x = 0.\\overline{23}",
+     "Multiply by 100 (two digits): 100x = 23.\\overline{23}",
+     "Subtract: 100x – x = 23",
+     "=> 99x = 23, x = 23/99 (already in lowest terms)"
+    ],
+    "tip": "Denominator is 99 for a two‑digit repeat."
+   },
+   {
+    "q": "Express 0.1\\overline{6} as a fraction in lowest terms.",
+    "marks": 4,
+    "model": [
+     "Let x = 0.1\\overline{6}",
+     "Multiply by 10 to move non‑repeat: 10x = 1.\\overline{6}",
+     "Multiply by 10 again (one repeating digit): 100x = 16.\\overline{6}",
+     "Subtract: 100x – 10x = 16.\\overline{6} – 1.\\overline{6} = 15",
+     "=> 90x = 15, x = 15/90 = 1/6"
+    ],
+    "tip": "Handle the non‑repeating part first, then the repeat."
+   },
+   {
+    "q": "A decimal terminates after 4 places and equals 0.3125. Write it as a fraction and state the prime factors of its denominator after reduction.",
+    "marks": 6,
+    "model": [
+     "0.3125 = 3125/10000",
+     "Divide numerator and denominator by 125 → 25/200",
+     "Divide by 25 → 1/8",
+     "Denominator 8 = 2³ (only prime factor 2)"
+    ],
+    "tip": "Reduce step‑by‑step; note the denominator’s prime factors."
+   },
+   {
+    "q": "Show that 0.\\overline{142857} = 1/7.",
+    "marks": 6,
+    "model": [
+     "Let x = 0.\\overline{142857}",
+     "Multiply by 10⁶: 1,000,000x = 142857.\\overline{142857}",
+     "Subtract: 1,000,000x – x = 142857",
+     "=> 999,999x = 142857",
+     "Divide both sides by 142857: x = 142857/999,999 = 1/7"
+    ],
+    "tip": "Six‑digit repeat → denominator 999,999; recognise the known cyclic number."
+   },
+   {
+    "q": "A student writes 0.3̅ = 3/10 and loses marks. Explain why this is incorrect and give the correct answer.",
+    "marks": 2,
+    "model": [
+     "0.\\overline{3} is a repeating decimal, not terminating",
+     "Using the repeat method gives 3/9 = 1/3"
+    ],
+    "tip": "Emphasise the difference between terminating and repeating."
+   },
+   {
+    "q": "Convert 0.\\overline{05} to a fraction.",
+    "marks": 4,
+    "model": [
+     "Let x = 0.\\overline{05}",
+     "Multiply by 100 (two digits): 100x = 5.\\overline{05}",
+     "Subtract: 100x – x = 5",
+     "=> 99x = 5, x = 5/99"
+    ],
+    "tip": "Leading zero in the repeat is allowed; denominator still 99."
+   },
+   {
+    "q": "If a fraction reduces to 7/40, write its decimal form and state whether it terminates or repeats.",
+    "marks": 3,
+    "model": [
+     "Denominator 40 = 2³·5, only 2 and 5 → terminates",
+     "7 ÷ 40 = 0.175"
+    ],
+    "tip": "Check prime factors of denominator."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Convert 0.875 to a fraction in lowest terms.",
+    "steps": [
+     "Count decimal places: 3 → denominator 10³ = 1000",
+     "Write 0.875 = 875/1000",
+     "Find GCD of 875 and 1000 = 125",
+     "Divide both by 125 → 7/8"
+    ],
+    "ans": "7/8"
+   },
+   {
+    "q": "Write 0.\\overline{9} as a fraction and simplify.",
+    "steps": [
+     "Let x = 0.\\overline{9}",
+     "10x = 9.\\overline{9}",
+     "Subtract: 10x – x = 9 → 9x = 9",
+     "x = 9/9 = 1"
+    ],
+    "ans": "1"
+   },
+   {
+    "q": "Express 0.2\\overline{34} as a fraction in lowest terms.",
+    "steps": [
+     "Let x = 0.2\\overline{34}",
+     "Non‑repeat length n=1, repeat length k=2",
+     "Multiply by 10ⁿ = 10: 10x = 2.\\overline{34}",
+     "Multiply by 10ᵏ = 100: 1000x = 234.\\overline{34}",
+     "Subtract: 1000x – 10x = 234.\\overline{34} – 2.\\overline{34} = 232",
+     "=> 990x = 232",
+     "Simplify: divide by 2 → 495x = 116",
+     "x = 116/495 (already lowest)"
+    ],
+    "ans": "116/495"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Converting a terminating decimal to a fraction",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#bbf7d0\" stroke=\"#1b2540\"/> <text x=\"200\" y=\"50\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b2540\">0.625 = 625/1000</text> <text x=\"200\" y=\"90\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b2540\">Divide by 125 → 5/8</text></svg>"
+   },
+   {
+    "cap": "Algebraic method for a single‑digit repeat",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"30\" y=\"30\" width=\"340\" height=\"180\" fill=\"#fde68a\" stroke=\"#1b2540\"/> <text x=\"200\" y=\"70\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b2540\">x = 0.\\overline{7}</text> <text x=\"200\" y=\"110\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b2540\">10x = 7.\\overline{7}</text> <text x=\"200\" y=\"150\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b2540\">9x = 7 → x = 7/9</text></svg>"
+   },
+   {
+    "cap": "Multi‑digit repeat conversion (0.\\overline{23})",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"25\" y=\"25\" width=\"350\" height=\"190\" fill=\"#fecaca\" stroke=\"#1b2540\"/> <text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b2540\">x = 0.\\overline{23}</text> <text x=\"200\" y=\"100\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b2540\">100x = 23.\\overline{23}</text> <text x=\"200\" y=\"140\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b2540\">99x = 23 → x = 23/99</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_f.0.9",
+  "sid": "maths_aqa_f",
+  "v": 2,
+  "src": "pre",
+  "by": "groq/openai/gpt-oss-120b",
+  "ts": "2026-11-17T17:42:42.288Z"
  }
 }

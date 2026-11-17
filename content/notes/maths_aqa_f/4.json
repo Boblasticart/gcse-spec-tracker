@@ -1489,5 +1489,923 @@
   "src": "pre",
   "by": "gemini/gemini-3.5-flash-lite",
   "ts": "2026-11-16T02:22:06.142Z"
+ },
+ "maths_aqa_f.4.5": {
+  "summary": "Systematically listing all possible outcomes is the backbone of probability work. By using tables, grids, Venn diagrams and tree diagrams you can visualise and organise the sample space, avoid missing outcomes, and make calculations of probabilities clear and error‑free. Mastery of these tools lets you move confidently from a description of an experiment to the numerical work required for AQA Foundation tier questions.",
+  "core": [
+   {
+    "h": "Why systematic enumeration matters",
+    "p": "When you enumerate a set you create a **complete and non‑overlapping list** of every possible outcome. This guarantees that probabilities add to 1 and that no outcome is double‑counted or omitted.",
+    "bullets": [
+     "Ensures exhaustive coverage of the sample space",
+     "Makes later probability calculations straightforward",
+     "Helps spot mutually exclusive events"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Exhaustive set",
+      "p": "A set that contains every possible outcome of the experiment."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Using a simple two‑way table",
+    "p": "Two‑way tables are ideal for experiments with two categorical variables, such as colour and shape of a drawn token.",
+    "bullets": [
+     "Rows represent one variable, columns the other",
+     "Fill each cell with the count or probability of that combined outcome",
+     "Totals give marginal frequencies"
+    ],
+    "table": {
+     "head": [
+      "",
+      "Red",
+      "Blue",
+      "Total"
+     ],
+     "rows": [
+      [
+       "Circle",
+       "a",
+       "b",
+       "a+b"
+      ],
+      [
+       "Square",
+       "c",
+       "d",
+       "c+d"
+      ],
+      [
+       "Total",
+       "a+c",
+       "b+d",
+       "(a+b)+(c+d)"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Two‑way table",
+      "p": "A grid that displays frequencies or probabilities for two variables simultaneously."
+     },
+     {
+      "k": "tip",
+      "t": "",
+      "p": "Check that the sum of all cells equals the total number of trials."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Two‑way table for colour (red/blue) and shape (circle/square).",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#dbeafe\" stroke=\"#1b2540\"/><text x=\"200\" y=\"40\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">Colour / Shape</text><line x1=\"20\" y1=\"80\" x2=\"380\" y2=\"80\" stroke=\"#1b2540\"/><line x1=\"200\" y1=\"20\" x2=\"200\" y2=\"220\" stroke=\"#1b2540\"/><text x=\"110\" y=\"70\" font-size=\"11\" fill=\"#1b2540\">Red</text><text x=\"290\" y=\"70\" font-size=\"11\" fill=\"#1b2540\">Blue</text><text x=\"70\" y=\"130\" font-size=\"11\" fill=\"#1b2540\">Circle</text><text x=\"70\" y=\"190\" font-size=\"11\" fill=\"#1b2540\">Square</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Grids for equally likely outcomes",
+    "p": "A rectangular grid works well when each outcome is a pair of independent choices, for example rolling a die and flipping a coin.",
+    "bullets": [
+     "Draw a grid with one variable on the x‑axis, the other on the y‑axis",
+     "Each cell represents one combined outcome",
+     "All cells are equally likely if the individual events are equally likely"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "",
+      "p": "Do not forget to label both axes – missing a label can lead to lost marks."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Grid showing outcomes of a die (1‑6) and a coin (H/T).",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"30\" y=\"30\" width=\"340\" height=\"180\" fill=\"#fde68a\" stroke=\"#1b2540\"/><text x=\"200\" y=\"20\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">Die × Coin outcomes</text><line x1=\"30\" y1=\"90\" x2=\"370\" y2=\"90\" stroke=\"#1b2540\"/><line x1=\"30\" y1=\"150\" x2=\"370\" y2=\"150\" stroke=\"#1b2540\"/><line x1=\"110\" y1=\"30\" x2=\"110\" y2=\"210\" stroke=\"#1b2540\"/><line x1=\"190\" y1=\"30\" x2=\"190\" y2=\"210\" stroke=\"#1b2540\"/><line x1=\"270\" y1=\"30\" x2=\"270\" y2=\"210\" stroke=\"#1b2540\"/><text x=\"70\" y=\"70\" font-size=\"11\" fill=\"#1b2540\">1H</text><text x=\"70\" y=\"130\" font-size=\"11\" fill=\"#1b2540\">1T</text><text x=\"150\" y=\"70\" font-size=\"11\" fill=\"#1b2540\">2H</text><text x=\"150\" y=\"130\" font-size=\"11\" fill=\"#1b2540\">2T</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Venn diagrams for overlapping sets",
+    "p": "Venn diagrams help enumerate outcomes when events are not mutually exclusive, such as drawing a card that is both a heart and a face card.",
+    "bullets": [
+     "Draw a rectangle for the universal set (all possible outcomes)",
+     "Draw circles for each event, allowing overlap",
+     "Label each region with the number of outcomes it contains"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Region",
+      "p": "A part of a Venn diagram that represents a specific combination of events."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Venn diagram for hearts (H) and face cards (F) in a standard deck.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#bbf7d0\" stroke=\"#1b2540\"/><circle cx=\"150\" cy=\"120\" r=\"80\" fill=\"#e9d5ff\" stroke=\"#1b2540\"/><circle cx=\"250\" cy=\"120\" r=\"80\" fill=\"#fecaca\" stroke=\"#1b2540\"/><text x=\"150\" y=\"115\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">H</text><text x=\"250\" y=\"115\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">F</text><text x=\"200\" y=\"140\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">H∩F</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Tree diagrams for sequential experiments",
+    "p": "Tree diagrams show each stage of a multi‑step experiment, branching out to every possible outcome at each step.",
+    "bullets": [
+     "Start with a single node representing the start of the experiment",
+     "From each node draw branches for each possible result of that step",
+     "Label branches with the outcome and its probability (or count)",
+     "The product of probabilities along a path gives the probability of the combined outcome"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "",
+      "p": "Keep the tree tidy – align branches vertically to avoid crossing lines."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Tree diagram for drawing a red marble then a blue marble without replacement.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"200\" y1=\"30\" x2=\"200\" y2=\"80\" stroke=\"#1b2540\"/><line x1=\"200\" y1=\"80\" x2=\"120\" y2=\"130\" stroke=\"#1b2540\"/><line x1=\"200\" y1=\"80\" x2=\"280\" y2=\"130\" stroke=\"#1b2540\"/><line x1=\"120\" y1=\"130\" x2=\"120\" y2=\"180\" stroke=\"#1b2540\"/><line x1=\"120\" y1=\"130\" x2=\"200\" y2=\"180\" stroke=\"#1b2540\"/><line x1=\"280\" y1=\"130\" x2=\"200\" y2=\"180\" stroke=\"#1b2540\"/><line x1=\"280\" y1=\"130\" x2=\"280\" y2=\"180\" stroke=\"#1b2540\"/><text x=\"200\" y=\"20\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">Start</text><text x=\"150\" y=\"70\" font-size=\"11\" fill=\"#1b2540\">Red</text><text x=\"250\" y=\"70\" font-size=\"11\" fill=\"#1b2540\">Blue</text><text x=\"100\" y=\"150\" font-size=\"11\" fill=\"#1b2540\">Red</text><text x=\"180\" y=\"150\" font-size=\"11\" fill=\"#1b2540\">Blue</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Step‑by‑step process for any diagram",
+    "p": "Regardless of the diagram type, follow a consistent routine to avoid mistakes.",
+    "bullets": [
+     "Identify the variables and their possible values",
+     "Choose the most suitable diagram (table, grid, Venn, tree)",
+     "Draw the skeleton first – rows/columns, circles, branches",
+     "Label every part clearly and fill in counts or probabilities",
+     "Check that the total of all entries equals the size of the sample space"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "",
+      "p": "Do not mix up counts and probabilities in the same diagram."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Link to probability calculations",
+    "p": "Once the set is enumerated, probability of an event is simply the **number of favourable outcomes divided by the total number of outcomes**.",
+    "bullets": [
+     "For equally likely outcomes use counts from the diagram",
+     "If probabilities are already on branches, multiply along a path",
+     "Add probabilities of all relevant cells/regions for compound events"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "P(E) = n(E) / n(S)",
+      "p": "Where n(E) is the number of favourable outcomes and n(S) the total number of outcomes."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Common pitfalls when enumerating",
+    "p": "Even experienced students can slip up when listing outcomes.",
+    "bullets": [
+     "Leaving out a possible outcome (incomplete set)",
+     "Counting an outcome twice (overlap without Venn diagram)",
+     "Using the wrong total when calculating probability"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "",
+      "p": "Always double‑check that the sum of all cells equals the total sample size."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Link to other specification points",
+    "p": "Systematic enumeration underpins many other probability ideas in the AQA foundation tier.",
+    "bullets": [
+     "P1 uses tables and frequency trees to record outcomes – same skill as P6",
+     "P7 and P8 rely on clear possibility spaces built with grids or trees",
+     "P9’s conditional probability often starts from a two‑way table created in P6"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Quick exam checklist",
+    "p": "Before moving on to calculations, run through this short list.",
+    "bullets": [
+     "Have I chosen the right diagram?",
+     "Are all rows/columns/circles/branches labelled?",
+     "Does every possible outcome appear exactly once?",
+     "Do the totals add up to the size of the sample space?"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "",
+      "p": "A tidy diagram often scores marks for presentation."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Enumerating outcomes is like making a detailed shopping list before a grocery trip.",
+   "p": "Each item on the list represents a possible outcome; the list ensures you don’t forget anything (no missing outcomes) and you don’t buy the same thing twice (no double‑counting). The analogy breaks down when outcomes can occur simultaneously (e.g., buying both apples and oranges at the same time) – for that you need a Venn diagram rather than a simple list."
+  },
+  "terms": [
+   {
+    "t": "Sample space",
+    "d": "The set of all possible outcomes of a probability experiment."
+   },
+   {
+    "t": "Outcome",
+    "d": "A single result of a probability experiment."
+   },
+   {
+    "t": "Exhaustive set",
+    "d": "A set that contains every possible outcome."
+   },
+   {
+    "t": "Mutually exclusive",
+    "d": "Events that cannot occur at the same time; their intersection is empty."
+   },
+   {
+    "t": "Two‑way table",
+    "d": "A grid that records frequencies or probabilities for two variables."
+   },
+   {
+    "t": "Grid (Cartesian) diagram",
+    "d": "A rectangular array where one variable is plotted on the x‑axis and another on the y‑axis."
+   },
+   {
+    "t": "Venn diagram",
+    "d": "A diagram of overlapping circles used to show relationships between sets."
+   },
+   {
+    "t": "Tree diagram",
+    "d": "A branching diagram that shows all possible outcomes of a sequential experiment."
+   },
+   {
+    "t": "Branch probability",
+    "d": "The probability attached to a single line in a tree diagram."
+   },
+   {
+    "t": "Favourable outcome",
+    "d": "An outcome that satisfies the event being considered."
+   },
+   {
+    "t": "Total outcomes",
+    "d": "The number of elements in the sample space, denoted n(S)."
+   },
+   {
+    "t": "Region (in Venn)",
+    "d": "A distinct area of a Venn diagram representing a specific combination of events."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "I counted ‘red‑circle’ twice because it appears in both the red row and the circle column of my table.",
+    "r": "Each combined outcome should appear in exactly one cell; use a two‑way table so each pair is listed only once."
+   },
+   {
+    "w": "I added the probabilities of overlapping regions in a Venn diagram.",
+    "r": "Do not double‑count overlapping areas; subtract the intersection if adding separate regions."
+   },
+   {
+    "w": "I used the total number of trials instead of the total number of possible outcomes when finding P(E).",
+    "r": "Probability uses n(S), the size of the sample space, not the number of actual trials."
+   },
+   {
+    "w": "I left a branch blank in my tree diagram because I thought it was impossible.",
+    "r": "If an outcome is possible, it must be shown, even if its probability is zero."
+   },
+   {
+    "w": "I mixed up counts and probabilities in the same table.",
+    "r": "Keep counts and probabilities separate; convert only when required for the question."
+   },
+   {
+    "w": "I drew a Venn diagram with circles that did not overlap when the events could occur together.",
+    "r": "Overlap circles only when events are not mutually exclusive."
+   },
+   {
+    "w": "I wrote ‘P(A or B)=P(A)+P(B)’ without checking if A and B are mutually exclusive.",
+    "r": "The addition rule only works directly for mutually exclusive events."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A bag contains 3 red, 2 blue and 1 green marble. List all possible outcomes when two marbles are drawn **without replacement** and represent them in a tree diagram.",
+    "marks": 4,
+    "model": [
+     "Draw first level with three branches (R,B,G) labelled with their probabilities 3/6,2/6,1/6",
+     "From each first‑level branch draw second‑level branches for the remaining colours, adjusting counts",
+     "Label each complete path (e.g., RR, RB, RG, BR, BB, BG, GR, GB, GG)",
+     "Show that the tree contains 9 leaves – the exhaustive set of outcomes"
+    ],
+    "tip": "Start by writing the counts after the first draw; this avoids forgetting the reduced numbers."
+   },
+   {
+    "q": "Complete the two‑way table for the experiment of rolling a die and flipping a coin. Use counts for 12 trials (each combination occurs once).",
+    "marks": 3,
+    "model": [
+     "Place die results 1‑6 on the rows and coin results H/T on the columns",
+     "Enter a ‘1’ in each of the 12 cells because each combination occurs once",
+     "Totals for rows and columns are each 2 and 6 respectively"
+    ],
+    "tip": "Remember there are 6×2=12 possible outcomes; the total of the table must be 12."
+   },
+   {
+    "q": "In a Venn diagram, 12 students like football, 9 like basketball and 5 like both. The total class size is 20. How many like neither sport? Show your work on the diagram.",
+    "marks": 4,
+    "model": [
+     "Write 5 in the overlap region (both)",
+     "Place 12‑5=7 in the football‑only region",
+     "Place 9‑5=4 in the basketball‑only region",
+     "Add the three regions: 7+5+4=16, subtract from 20 to get 4 who like neither"
+    ],
+    "tip": "Always subtract the overlap from each single‑sport total first."
+   },
+   {
+    "q": "Using a grid, enumerate the sample space for selecting a letter (A,B) and then a number (1,2,3). List the outcomes.",
+    "marks": 2,
+    "model": [
+     "Create a 2×3 grid with letters on the x‑axis and numbers on the y‑axis",
+     "Fill cells: A1, A2, A3, B1, B2, B3"
+    ],
+    "tip": "A grid makes it clear that there are 2×3=6 outcomes."
+   },
+   {
+    "q": "A table shows the frequency of coloured beads drawn from a bag: Red 4, Blue 3, Green 3. If two beads are drawn **with replacement**, fill a two‑way table of joint frequencies for the first and second draw.",
+    "marks": 6,
+    "model": [
+     "Total beads =10, so probabilities for each colour are 0.4,0.3,0.3",
+     "Create a 3×3 table (first draw rows, second draw columns)",
+     "Multiply the single‑draw probabilities for each cell (e.g., P(R,R)=0.4×0.4=0.16)",
+     "Enter these values in the table; each row sums to the first‑draw probability"
+    ],
+    "tip": "Because the draws are with replacement, the probabilities stay the same for both draws."
+   },
+   {
+    "q": "Explain why a tree diagram is the most suitable method for the experiment: ‘A die is rolled, then a card is drawn from a standard deck.’",
+    "marks": 2,
+    "model": [
+     "The experiment has two stages with different numbers of outcomes (6 then 52)",
+     "A tree diagram clearly shows the sequential nature and the total of 6×52=312 combined outcomes"
+    ],
+    "tip": "Mention the need to multiply probabilities along each branch."
+   },
+   {
+    "q": "List all outcomes for tossing three fair coins and represent them in a table. Then state the probability of getting exactly two heads.",
+    "marks": 4,
+    "model": [
+     "Create a table with 8 rows, each row a sequence of H/T (HHH, HHT, HTH, THH, HTT, THT, TTH, TTT)",
+     "Count the rows with exactly two H: HHT, HTH, THH – three outcomes",
+     "Probability = 3/8"
+    ],
+    "tip": "Use the systematic list to avoid missing any of the 2³=8 possibilities."
+   },
+   {
+    "q": "A Venn diagram shows two events A and B with P(A)=0.5, P(B)=0.4 and P(A∩B)=0.2. Find P(A∪B).",
+    "marks": 2,
+    "model": [
+     "Use the addition rule: P(A∪B)=P(A)+P(B)−P(A∩B)",
+     "Substitute: 0.5+0.4−0.2=0.7"
+    ],
+    "tip": "The diagram reminds you to subtract the overlap."
+   },
+   {
+    "q": "Draw a tree diagram for selecting a coloured ball (Red or Blue) from a bag, replacing it, then selecting a second ball. Show the probabilities on each branch.",
+    "marks": 4,
+    "model": [
+     "First level: two branches Red (p=R/total) and Blue (p=B/total)",
+     "Second level: from each first branch draw two branches again with the same probabilities because of replacement",
+     "Label each leaf with the product of the two branch probabilities"
+    ],
+    "tip": "Because of replacement, the second‑level probabilities are identical to the first level."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A box contains 2 red, 3 blue and 1 green ball. Two balls are drawn **without replacement**. Use a tree diagram to find the probability of drawing a red ball followed by a blue ball.",
+    "steps": [
+     "Start with total 6 balls. First branch: Red probability = 2/6.",
+     "After drawing red, 5 balls remain (1 red, 3 blue, 1 green). Second branch: Blue probability = 3/5.",
+     "Multiply along the path: (2/6) × (3/5) = 6/30 = 1/5."
+    ],
+    "ans": "1/5"
+   },
+   {
+    "q": "Complete the two‑way table for rolling a die (1‑3) and flipping a coin (H/T). List the outcomes and give the probability of getting a ‘2 and T’.",
+    "steps": [
+     "Create a 3×2 grid: rows 1,2,3; columns H,T.",
+     "Fill each cell with the outcome (e.g., 2T).",
+     "Total outcomes = 3×2 = 6, all equally likely.",
+     "Favourable outcome = 2T, so probability = 1/6."
+    ],
+    "ans": "1/6"
+   },
+   {
+    "q": "Using a Venn diagram, 20 pupils are surveyed about liking maths (M) and science (S). 12 like maths, 9 like science and 5 like both. How many like neither?",
+    "steps": [
+     "Place 5 in the overlap (M∩S).",
+     "M only = 12‑5 = 7; S only = 9‑5 = 4.",
+     "Total who like at least one = 7+5+4 = 16.",
+     "Neither = 20‑16 = 4."
+    ],
+    "ans": "4 pupils"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Two‑way table for colour (red/blue) and shape (circle/square).",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#dbeafe\" stroke=\"#1b2540\"/><text x=\"200\" y=\"40\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">Colour / Shape</text><line x1=\"20\" y1=\"80\" x2=\"380\" y2=\"80\" stroke=\"#1b2540\"/><line x1=\"200\" y1=\"20\" x2=\"200\" y2=\"220\" stroke=\"#1b2540\"/><text x=\"110\" y=\"70\" font-size=\"11\" fill=\"#1b2540\">Red</text><text x=\"290\" y=\"70\" font-size=\"11\" fill=\"#1b2540\">Blue</text><text x=\"70\" y=\"130\" font-size=\"11\" fill=\"#1b2540\">Circle</text><text x=\"70\" y=\"190\" font-size=\"11\" fill=\"#1b2540\">Square</text></svg>"
+   },
+   {
+    "cap": "Grid showing outcomes of a die (1‑6) and a coin (H/T).",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"30\" y=\"30\" width=\"340\" height=\"180\" fill=\"#fde68a\" stroke=\"#1b2540\"/><text x=\"200\" y=\"20\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">Die × Coin outcomes</text><line x1=\"30\" y1=\"90\" x2=\"370\" y2=\"90\" stroke=\"#1b2540\"/><line x1=\"30\" y1=\"150\" x2=\"370\" y2=\"150\" stroke=\"#1b2540\"/><line x1=\"110\" y1=\"30\" x2=\"110\" y2=\"210\" stroke=\"#1b2540\"/><line x1=\"190\" y1=\"30\" x2=\"190\" y2=\"210\" stroke=\"#1b2540\"/><line x1=\"270\" y1=\"30\" x2=\"270\" y2=\"210\" stroke=\"#1b2540\"/><text x=\"70\" y=\"70\" font-size=\"11\" fill=\"#1b2540\">1H</text><text x=\"70\" y=\"130\" font-size=\"11\" fill=\"#1b2540\">1T</text><text x=\"150\" y=\"70\" font-size=\"11\" fill=\"#1b2540\">2H</text><text x=\"150\" y=\"130\" font-size=\"11\" fill=\"#1b2540\">2T</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_f.4.5",
+  "sid": "maths_aqa_f",
+  "v": 2,
+  "src": "pre",
+  "by": "groq/openai/gpt-oss-120b",
+  "ts": "2026-11-17T17:43:45.315Z"
+ },
+ "maths_aqa_f.4.7": {
+  "summary": "Probability of independent and dependent combined events lets you calculate the chance of two or more actions happening together. Use tree diagrams to visualise each step, multiplying probabilities for independent events and adjusting for dependence. Recognising when events affect each other is crucial for correct calculations and for answering exam questions accurately. Mastery of these ideas underpins all later probability work in the AQA Foundation tier.",
+  "core": [
+   {
+    "h": "What are combined events?",
+    "p": "A combined event is the result of two or more simple events occurring together. In the specification this is called a *combined event* and is written using the word ‘and’ or the symbol ∧.",
+    "bullets": [
+     "Simple event – a single outcome, e.g. drawing a red ball.",
+     "Combined event – two or more simple events, e.g. drawing a red ball **and** then a blue ball.",
+     "The probability of a combined event depends on whether the simple events are independent or dependent."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Combined event",
+      "p": "An event that consists of two or more simple events occurring together."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Independent events – definition",
+    "p": "Two events are independent when the outcome of one does **not** affect the probability of the other. This is the exact wording used in the mark scheme.",
+    "bullets": [
+     "The probability of A and B occurring = P(A) × P(B).",
+     "Order does not matter for the multiplication rule, but tree diagrams keep the order clear.",
+     "Typical examples: tossing a fair coin twice, drawing a card, replacing it, then drawing again."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "",
+      "p": "P(A ∧ B) = P(A) × P(B) for independent events."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Tree diagram for two independent coin tosses.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><g fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"><line x1=\"50\" y1=\"30\" x2=\"150\" y2=\"30\"/><line x1=\"150\" y1=\"30\" x2=\"250\" y2=\"30\"/><line x1=\"250\" y1=\"30\" x2=\"350\" y2=\"30\"/><line x1=\"50\" y1=\"30\" x2=\"150\" y2=\"120\"/><line x1=\"150\" y1=\"120\" x2=\"250\" y2=\"120\"/><line x1=\"250\" y1=\"120\" x2=\"350\" y2=\"120\"/></g><g fill=\"#dbeafe\" stroke=\"#1b2540\"><rect x=\"140\" y=\"10\" width=\"20\" height=\"20\"/><rect x=\"240\" y=\"10\" width=\"20\" height=\"20\"/><rect x=\"340\" y=\"10\" width=\"20\" height=\"20\"/><rect x=\"140\" y=\"100\" width=\"20\" height=\"20\"/><rect x=\"240\" y=\"100\" width=\"20\" height=\"20\"/><rect x=\"340\" y=\"100\" width=\"20\" height=\"20\"/></g><text x=\"150\" y=\"25\" font-size=\"12\" fill=\"#1b2540\">H</text><text x=\"250\" y=\"25\" font-size=\"12\" fill=\"#1b2540\">T</text><text x=\"350\" y=\"25\" font-size=\"12\" fill=\"#1b2540\">H</text><text x=\"150\" y=\"115\" font-size=\"12\" fill=\"#1b2540\">T</text><text x=\"250\" y=\"115\" font-size=\"12\" fill=\"#1b2540\">H</text><text x=\"350\" y=\"115\" font-size=\"12\" fill=\"#1b2540\">T</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Dependent events – definition",
+    "p": "Two events are dependent when the outcome of the first changes the probability of the second. The specification uses the phrase *without replacement* for the classic example.",
+    "bullets": [
+     "The probability of A and B = P(A) × P(B|A).",
+     "P(B|A) is the conditional probability of B given A has happened.",
+     "Typical example: drawing a card from a pack and **not** replacing it before drawing a second card."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Conditional probability",
+      "p": "The probability of an event B occurring given that event A has already occurred, written P(B|A)."
+     },
+     {
+      "k": "key",
+      "t": "",
+      "p": "P(A ∧ B) = P(A) × P(B|A) for dependent events."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Tree diagram for drawing two cards without replacement.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><g fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"><line x1=\"50\" y1=\"30\" x2=\"150\" y2=\"30\"/><line x1=\"150\" y1=\"30\" x2=\"250\" y2=\"30\"/><line x1=\"250\" y1=\"30\" x2=\"350\" y2=\"30\"/><line x1=\"50\" y1=\"30\" x2=\"150\" y2=\"120\"/><line x1=\"150\" y1=\"120\" x2=\"250\" y2=\"120\"/><line x1=\"250\" y1=\"120\" x2=\"350\" y2=\"120\"/></g><g fill=\"#fde68a\" stroke=\"#1b2540\"><rect x=\"140\" y=\"10\" width=\"20\" height=\"20\"/><rect x=\"240\" y=\"10\" width=\"20\" height=\"20\"/><rect x=\"340\" y=\"10\" width=\"20\" height=\"20\"/><rect x=\"140\" y=\"100\" width=\"20\" height=\"20\"/><rect x=\"240\" y=\"100\" width=\"20\" height=\"20\"/><rect x=\"340\" y=\"100\" width=\"20\" height=\"20\"/></g><text x=\"150\" y=\"25\" font-size=\"12\" fill=\"#1b2540\">A♠</text><text x=\"250\" y=\"25\" font-size=\"12\" fill=\"#1b2540\">A♥</text><text x=\"350\" y=\"25\" font-size=\"12\" fill=\"#1b2540\">A♦</text><text x=\"150\" y=\"115\" font-size=\"12\" fill=\"#1b2540\">B♣</text><text x=\"250\" y=\"115\" font-size=\"12\" fill=\"#1b2540\">B♥</text><text x=\"350\" y=\"115\" font-size=\"12\" fill=\"#1b2540\">B♠</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Using tree diagrams – step by step",
+    "p": "A tree diagram shows every possible outcome of a combined experiment. Follow the same order as the experiment; multiply probabilities along each branch.",
+    "bullets": [
+     "Start with a single root node.",
+     "Draw branches for each possible outcome of the first event, label with their probabilities.",
+     "From each first‑level node, draw branches for the second event, using the appropriate probabilities (same for independent, conditional for dependent).",
+     "Write the product of the probabilities on each final branch – this is the probability of that combined outcome.",
+     "Add the probabilities of the branches that satisfy the question to get the required answer."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "",
+      "p": "Always keep fractions in simplest form until the final answer – it reduces arithmetic errors."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "General template of a two‑stage tree diagram.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><g fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"><line x1=\"200\" y1=\"20\" x2=\"100\" y2=\"80\"/><line x1=\"200\" y1=\"20\" x2=\"300\" y2=\"80\"/><line x1=\"100\" y1=\"80\" x2=\"50\" y2=\"140\"/><line x1=\"100\" y1=\"80\" x2=\"150\" y2=\"140\"/><line x1=\"300\" y1=\"80\" x2=\"250\" y2=\"140\"/><line x1=\"300\" y1=\"80\" x2=\"350\" y2=\"140\"/></g><text x=\"80\" y=\"70\" font-size=\"12\" fill=\"#1b2540\">A</text><text x=\"220\" y=\"70\" font-size=\"12\" fill=\"#1b2540\">B</text><text x=\"30\" y=\"150\" font-size=\"12\" fill=\"#1b2540\">C</text><text x=\"130\" y=\"150\" font-size=\"12\" fill=\"#1b2540\">D</text><text x=\"230\" y=\"150\" font-size=\"12\" fill=\"#1b2540\">E</text><text x=\"330\" y=\"150\" font-size=\"12\" fill=\"#1b2540\">F</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Calculating with independent events",
+    "p": "When events are independent, each branch at the second level uses the same probability as the first level because the first outcome does not change the second.",
+    "bullets": [
+     "Example: Two dice rolled. P(3 on first and 5 on second) = 1/6 × 1/6 = 1/36.",
+     "If the question asks for *any* of several independent combined outcomes, add the relevant branch probabilities."
+    ],
+    "table": {
+     "head": [
+      "Event",
+      "P(event)"
+     ],
+     "rows": [
+      [
+       "First toss H",
+       "½"
+      ],
+      [
+       "First toss T",
+       "½"
+      ],
+      [
+       "Second toss H|first H",
+       "½"
+      ],
+      [
+       "Second toss H|first T",
+       "½"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "",
+      "p": "Do not multiply by the number of outcomes unless the outcomes are mutually exclusive and cover the whole sample space."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Calculating with dependent events",
+    "p": "When the first outcome changes the composition of the sample space, the second‑level probabilities must be updated.",
+    "bullets": [
+     "Example: A bag contains 3 red and 2 blue balls. Draw one ball, do not replace, then draw a second.",
+     "P(first red) = 3/5.",
+     "After a red is removed, remaining balls = 2 red, 2 blue → P(second red|first red) = 2/4 = ½.",
+     "Combined probability = 3/5 × ½ = 3/10."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "",
+      "p": "Always recalculate the denominator after a removal."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Tree diagram for the red‑blue ball example.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><g fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"><line x1=\"80\" y1=\"30\" x2=\"180\" y2=\"30\"/><line x1=\"80\" y1=\"30\" x2=\"180\" y2=\"120\"/><line x1=\"180\" y1=\"30\" x2=\"280\" y2=\"30\"/><line x1=\"180\" y1=\"120\" x2=\"280\" y2=\"120\"/></g><g fill=\"#bbf7d0\" stroke=\"#1b2540\"><rect x=\"170\" y=\"10\" width=\"20\" height=\"20\"/><rect x=\"270\" y=\"10\" width=\"20\" height=\"20\"/><rect x=\"170\" y=\"100\" width=\"20\" height=\"20\"/><rect x=\"270\" y=\"100\" width=\"20\" height=\"20\"/></g><text x=\"190\" y=\"25\" font-size=\"12\" fill=\"#1b2540\">R</text><text x=\"190\" y=\"115\" font-size=\"12\" fill=\"#1b2540\">B</text><text x=\"290\" y=\"25\" font-size=\"12\" fill=\"#1b2540\">R</text><text x=\"290\" y=\"115\" font-size=\"12\" fill=\"#1b2540\">B</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "When to treat events as independent",
+    "p": "The specification states that events are independent if the experiment is *with replacement* or if the two actions are physically unrelated.",
+    "bullets": [
+     "Replacing an object restores the original sample space.",
+     "Two separate dice, two separate coin tosses, or two unrelated questions in a survey are independent.",
+     "Check the wording: ‘drawn **without** replacement’ signals dependence."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "",
+      "p": "If you can write P(B|A) = P(B), the events are independent."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "When to treat events as dependent",
+    "p": "Dependence occurs whenever the first outcome changes the composition of the set from which the second is drawn.",
+    "bullets": [
+     "Without replacement draws.",
+     "Selecting a team member then selecting a captain from the remaining members.",
+     "Any situation where the total number of favourable or total outcomes changes after the first event."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "",
+      "p": "Do not assume independence just because the numbers look similar – always verify the sample space."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Link to conditional probability (P9)",
+    "p": "The formula for dependent combined events is the same as the conditional probability formula, so the two points are linked in the spec.",
+    "bullets": [
+     "P(A ∧ B) = P(A) × P(B|A) is just the definition of P(B|A) rearranged.",
+     "Tree diagrams make the conditional step visible – the second branch shows P(B|A)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Conditional probability",
+      "p": "P(B|A) = P(A ∧ B) / P(A), provided P(A) ≠ 0."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Common exam language",
+    "p": "The mark scheme awards points for using the exact terminology listed in the specification.",
+    "bullets": [
+     "‘Independent events’, ‘dependent events’, ‘without replacement’, ‘with replacement’, ‘combined event’, ‘tree diagram’, ‘branch probability’, ‘product of probabilities’, ‘conditional probability’."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "",
+      "p": "Write P(A ∧ B) = P(A) × P(B) for independent events."
+     },
+     {
+      "k": "key",
+      "t": "",
+      "p": "Write P(A ∧ B) = P(A) × P(B|A) for dependent events."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "A two‑stage probability experiment is like a choose‑your‑own‑adventure story.",
+   "p": "The first choice (first event) opens a set of pages (branches). If the story is independent, each subsequent choice offers the same options no matter what you read first – you just multiply the chances of each page appearing. If the story is dependent, the first page removes some later options (like a character disappearing), so the probabilities on later pages change. The analogy breaks down because in maths the probabilities are exact numbers, not narrative excitement levels."
+  },
+  "terms": [
+   {
+    "t": "Combined event",
+    "d": "An event formed by two or more simple events occurring together (written with ‘and’ or ∧)."
+   },
+   {
+    "t": "Independent events",
+    "d": "Two events where the occurrence of one does not affect the probability of the other."
+   },
+   {
+    "t": "Dependent events",
+    "d": "Two events where the occurrence of the first changes the probability of the second."
+   },
+   {
+    "t": "Tree diagram",
+    "d": "A graphical representation that shows all possible outcomes of a multi‑stage experiment, with branch probabilities."
+   },
+   {
+    "t": "Branch probability",
+    "d": "The probability written on a line of a tree diagram representing one possible outcome of that stage."
+   },
+   {
+    "t": "Product rule",
+    "d": "For independent events, the probability of the combined event is the product of the individual probabilities."
+   },
+   {
+    "t": "Conditional probability",
+    "d": "The probability of an event B given that event A has occurred, written P(B|A)."
+   },
+   {
+    "t": "Without replacement",
+    "d": "A method of selection where the first chosen object is not returned to the sample space before the next selection."
+   },
+   {
+    "t": "With replacement",
+    "d": "A method of selection where the first chosen object is returned to the sample space before the next selection."
+   },
+   {
+    "t": "Sample space",
+    "d": "The set of all possible outcomes of an experiment."
+   },
+   {
+    "t": "Favourable outcomes",
+    "d": "Outcomes that satisfy the event being considered."
+   },
+   {
+    "t": "Mutually exclusive",
+    "d": "Events that cannot occur at the same time; their combined probability is the sum of the individual probabilities."
+   },
+   {
+    "t": "Exhaustive set",
+    "d": "A set of events that includes every possible outcome of the experiment."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "P(A and B)=P(A)+P(B)",
+    "r": "For independent events you must multiply, not add. Addition is only for mutually exclusive events."
+   },
+   {
+    "w": "Treating ‘without replacement’ as independent",
+    "r": "Without replacement changes the sample space, so use P(B|A) and multiply."
+   },
+   {
+    "w": "Leaving out the conditional probability symbol ‘|’",
+    "r": "The mark scheme expects P(B|A) to show dependence."
+   },
+   {
+    "w": "Adding probabilities of overlapping branches",
+    "r": "Only add probabilities of mutually exclusive final branches."
+   },
+   {
+    "w": "Using decimal probabilities in the tree then converting to fractions at the end",
+    "r": "Keep fractions throughout to avoid rounding errors and to match the mark scheme style."
+   },
+   {
+    "w": "Writing P(A∧B)=P(A)×P(B|A) for independent events",
+    "r": "For independent events P(B|A)=P(B), but you should state the simpler independent formula."
+   },
+   {
+    "w": "Omitting the final step of adding relevant branch probabilities",
+    "r": "The answer must be the sum of the probabilities of all branches that satisfy the question."
+   },
+   {
+    "w": "Confusing ‘and’ with ‘or’ in wording",
+    "r": "‘And’ means both events happen (product rule); ‘or’ means either event happens (sum rule)."
+   },
+   {
+    "w": "Using the total number of outcomes instead of the reduced number after a removal",
+    "r": "When drawing without replacement, recalculate the denominator for the second stage."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A bag contains 4 green and 3 yellow beads. Two beads are drawn **without replacement**. Find the probability that both beads are green.",
+    "marks": 2,
+    "model": [
+     "P(first green)=4/7",
+     "P(second green|first green)=3/6=1/2",
+     "Multiply: 4/7×1/2=2/7"
+    ],
+    "tip": "Write the tree diagram first – it shows the conditional probability clearly."
+   },
+   {
+    "q": "A fair die is rolled twice. What is the probability of getting a 2 on the first roll **and** a 5 on the second roll?",
+    "marks": 1,
+    "model": [
+     "P(2 on first)=1/6",
+     "P(5 on second)=1/6 (independent)",
+     "Multiply: 1/6×1/6=1/36"
+    ],
+    "tip": "State that the rolls are independent because the die is replaced after each roll."
+   },
+   {
+    "q": "From a pack of 52 cards, one card is drawn, not replaced, and a second card is drawn. Find the probability that the first card is a heart and the second card is a king.",
+    "marks": 4,
+    "model": [
+     "P(first heart)=13/52=1/4",
+     "If first is a heart and not a king, remaining kings=4 → P(second king|first heart not king)=4/51",
+     "If first is the king of hearts, remaining kings=3 → P(second king|first king of hearts)=3/51",
+     "Overall probability = (12/52)×(4/51)+(1/52)×(3/51)=48/2652+3/2652=51/2652=1/52"
+    ],
+    "tip": "Separate the two cases (king of hearts vs other heart) – they are mutually exclusive."
+   },
+   {
+    "q": "Two fair coins are tossed. Using a tree diagram, find the probability of getting at least one head.",
+    "marks": 3,
+    "model": [
+     "List final branches: HH, HT, TH, TT",
+     "P(TT)=½×½=¼",
+     "Probability of at least one head = 1‑P(TT)=1‑¼=¾"
+    ],
+    "tip": "It is quicker to use the complement rather than adding three separate branches."
+   },
+   {
+    "q": "A box contains 5 red, 4 blue and 3 white balls. Two balls are drawn **with replacement**. Find the probability that the first ball is red and the second ball is blue.",
+    "marks": 2,
+    "model": [
+     "P(first red)=5/12",
+     "P(second blue)=4/12 (replacement → same denominator)",
+     "Multiply: 5/12×4/12=20/144=5/36"
+    ],
+    "tip": "Because of replacement the second probability is unchanged."
+   },
+   {
+    "q": "A spinner is divided into 4 equal sectors labelled A, B, C and D. It is spun twice. What is the probability of obtaining A on the first spin **and** B on the second spin?",
+    "marks": 1,
+    "model": [
+     "P(A)=1/4",
+     "P(B)=1/4 (independent)",
+     "Multiply: 1/4×1/4=1/16"
+    ],
+    "tip": "State independence explicitly – the spins do not affect each other."
+   },
+   {
+    "q": "From a set of 8 cards (4 red, 4 black) two cards are drawn without replacement. Find the probability that the first card is red **or** the second card is black.",
+    "marks": 4,
+    "model": [
+     "Use complement: P(neither red first nor black second) = P(first black)×P(second red|first black)=4/8×4/7=1/2×4/7=2/7",
+     "Therefore required probability = 1‑2/7=5/7"
+    ],
+    "tip": "‘Or’ requires addition of mutually exclusive events or use of the complement rule."
+   },
+   {
+    "q": "A die is rolled. If a 6 is rolled, a second die is rolled; otherwise the experiment stops. Find the probability that exactly two dice are rolled and the second die shows a 3.",
+    "marks": 3,
+    "model": [
+     "P(first 6)=1/6",
+     "Given first 6, P(second 3)=1/6",
+     "Multiply: 1/6×1/6=1/36"
+    ],
+    "tip": "Recognise the conditional nature – the second roll only occurs if the first is a 6."
+   },
+   {
+    "q": "A jar contains 2 red, 3 green and 5 blue marbles. Two marbles are drawn without replacement. Find the probability that the first marble is green **and** the second marble is not green.",
+    "marks": 2,
+    "model": [
+     "P(first green)=3/10",
+     "After a green is removed, remaining not‑green = 7/9",
+     "Multiply: 3/10×7/9=21/90=7/30"
+    ],
+    "tip": "‘Not green’ = (total remaining – green remaining)."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A box contains 6 white and 4 black balls. Two balls are drawn **without replacement**. Find the probability that the first ball is white and the second ball is black.",
+    "steps": [
+     "P(first white)=6/10=3/5",
+     "After removing a white, remaining balls = 5 white, 4 black → P(second black|first white)=4/9",
+     "Multiply: 3/5×4/9=12/45=4/15"
+    ],
+    "ans": "4/15"
+   },
+   {
+    "q": "Two dice are rolled. Using a tree diagram, find the probability of obtaining a total of 7.",
+    "steps": [
+     "List all ordered pairs that give 7: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1)",
+     "Each pair has probability 1/6×1/6=1/36",
+     "There are 6 such pairs → total probability = 6×1/36=6/36=1/6"
+    ],
+    "ans": "1/6"
+   },
+   {
+    "q": "A deck of 52 cards is shuffled. Two cards are drawn **without replacement**. Find the probability that both cards are aces.",
+    "steps": [
+     "P(first ace)=4/52=1/13",
+     "After an ace is removed, remaining aces=3, total cards=51 → P(second ace|first ace)=3/51=1/17",
+     "Multiply: 1/13×1/17=1/221"
+    ],
+    "ans": "1/221"
+   }
+  ],
+  "pid": "maths_aqa_f.4.7",
+  "sid": "maths_aqa_f",
+  "v": 2,
+  "src": "pre",
+  "by": "groq/openai/gpt-oss-120b",
+  "ts": "2026-11-17T17:46:26.954Z"
  }
 }
