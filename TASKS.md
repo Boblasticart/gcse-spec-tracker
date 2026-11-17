@@ -5,7 +5,7 @@ Runs read **only this file and `docs/CONTEXT.md`**. Keep this file short: finish
 ## Status
 
 ```
-RUN LOCK:       none
+RUN LOCK:       running since 2026-11-17 01:11 UTC, session 01Sm3c8kagrcVGUqA76wJjSc
 CURRENT JOB:    none (J2b done; J3 Maths carries on by itself via the daily pipeline run)
 CURRENT STEPS:  none
 LAST RUN ENDED: 2026-11-16 20:35 UTC. Fixed a bug where the daily scheduled run wrote 9 notes but couldn't commit them (main's notes.yml didn't set NOTES_COMMIT_EVERY, so the script skipped its final commit/publish; fix: always commit at the end regardless). Ticked J2b step 3, listed J2b under "Ready for the owner's OK". CI green. Next scheduled pipeline run: 2026-11-17 08:23 UTC. 186 notes across 6 specs so far (3% of ~5,200).
