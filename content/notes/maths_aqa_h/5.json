@@ -969,5 +969,457 @@
   "src": "pre",
   "by": "gemini/gemini-3.5-flash-lite",
   "ts": "2026-11-16T02:45:49.675Z"
+ },
+ "maths_aqa_h.5.4": {
+  "summary": "Applying statistics to describe a population involves using sample data to estimate population parameters such as mean, median, and variance, while understanding the inherent limitations and biases. At Grade 9, you must master the mechanics of expected frequency calculations, capture-recapture methods for estimating elusive population sizes, and evaluating how sampling choices affect data reliability. Examiners test your ability to bridge sample statistics with population-wide claims while accounting for anomalies and sampling frames.",
+  "core": [
+   {
+    "h": "Foundations of Population Description",
+    "p": "In statistics, describing a population requires distinguishing between a complete census and a representative sample. Because measuring an entire population is often impossible, impractical, or destructive, statisticians calculate sample statistics to infer population parameters.",
+    "bullets": [
+     "A population is the entire set of items or individuals of interest.",
+     "A census observes every member of the population, eliminating sampling error.",
+     "A sample is a subset of the population intended to represent the whole.",
+     "Parameters describe populations (e.g., population mean $\\mu$); statistics describe samples (e.g., sample mean $\\bar{x}$)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Population Parameter",
+      "p": "A numerical characteristic or measure that describes an entire population."
+     },
+     {
+      "k": "warn",
+      "t": "Confusing Statistics and Parameters",
+      "p": "Never use $\\mu$ or $\\sigma$ when referring to sample data. Use $\\bar{x}$ and $s$ instead."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Visualising the relationship between a target population and a selected sample.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" rx=\"10\" fill=\"#f3f4f6\" stroke=\"#1b2540\" stroke-width=\"2\"/><ellipse cx=\"200\" cy=\"120\" rx=\"160\" ry=\"90\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"50\" y=\"40\" font-size=\"12\" fill=\"#1b2540\">Entire Population (N)</text><circle cx=\"200\" cy=\"130\" r=\"60\" fill=\"#fde68a\" stroke=\"#d97706\" stroke-width=\"2\"/><text x=\"165\" y=\"135\" font-size=\"12\" fill=\"#1b2540\">Sample (n)</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Expected Frequency Calculations",
+    "p": "A core application of population statistics is predicting the frequency of a particular outcome within a broader population based on sample probabilities. This assumes the sample is unbiased and representative of the wider group.",
+    "bullets": [
+     "Formula: Expected frequency = (Probability of event in sample) × (Total population size).",
+     "Always express probabilities as exact fractions or decimals before scaling up.",
+     "Remember that expected frequencies can be non-integers mathematically, though real-world counts must be contextualised.",
+     "Check whether the problem implies sampling with or without replacement."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Proportional Scaling",
+      "p": "Scaling assumes uniformity; real populations may contain hidden stratification."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "The Capture-Recapture Method",
+    "p": "When a population cannot be counted directly (such as fish in a lake or insects in a field), the capture-recapture method estimates total population size $N$ by taking two or more samples over time.",
+    "bullets": [
+     "Step 1: Capture a sample of the population, mark them harmlessly, and release them ($n_1$).",
+     "Step 2: Later, capture a second sample ($n_2$), noting how many are marked ($m_2$).",
+     "Core assumption: The proportion of marked individuals in the second sample equals the proportion of marked individuals in the total population.",
+     "Equation: $N / n_1 = n_2 / m_2$, which rearranges to $N = (n_1 \\times n_2) / m_2$."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Capture-Recapture Formula",
+      "p": "Estimated Population ($N$) = (First sample marked × Second sample total) / Number of recaptured marked animals."
+     },
+     {
+      "k": "tip",
+      "t": "Algebraic Rearrangement",
+      "p": "Memorise the proportion form: Marked in 2nd / Total in 2nd = Marked in 1st / Total Population."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Diagram illustrating the capture-recapture proportion matching process.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"30\" width=\"160\" height=\"80\" rx=\"8\" fill=\"#bbf7d0\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"35\" y=\"60\" font-size=\"12\" fill=\"#1b2540\">Sample 1: n1 marked</text><text x=\"35\" y=\"85\" font-size=\"12\" fill=\"#1b2540\">Released back to wild</text><rect x=\"220\" y=\"30\" width=\"160\" height=\"80\" rx=\"8\" fill=\"#fecaca\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"235\" y=\"60\" font-size=\"12\" fill=\"#1b2540\">Sample 2: n2 captured</text><text x=\"235\" y=\"85\" font-size=\"12\" fill=\"#1b2540\">m2 are marked</text><line x1=\"180\" y1=\"70\" x2=\"220\" y2=\"70\" stroke=\"#1b2540\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Assumptions of Capture-Recapture",
+    "p": "To earn full marks on complex AQA exam questions involving capture-recapture, you must state and evaluate the underlying assumptions that validate the mathematical model.",
+    "bullets": [
+     "No individuals have died, been born, or migrated between the sampling periods (closed population).",
+     "Marks do not rub off, wash away, or make individuals more vulnerable to predators.",
+     "All individuals have an equal chance of being captured in both samples (no trap-shyness or trap-addiction).",
+     "Sufficient time has elapsed between samples for marked individuals to mix completely back into the population."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Exam Trap",
+      "p": "If a question asks 'Explain why the estimate might not be reliable', quoting formula errors scores zero. You must cite assumption failures like migration or predation."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Evaluating Bias in Population Estimates",
+    "p": "Describing populations accurately requires identifying and mitigating various forms of statistical bias that distort sample representations.",
+    "bullets": [
+     "Sampling bias occurs when the sampling frame does not truly reflect the target population.",
+     "Self-selection bias happens when respondents choose whether to participate, often skewing results toward extreme views.",
+     "Non-response bias occurs when a significant portion of the sample fails to provide data.",
+     "Measurement bias arises from poorly worded questions or faulty measuring instruments."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Randomisation",
+      "p": "The primary defence against bias is ensuring every population member has an equal, independent chance of selection."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Stratified Sampling Mechanics",
+    "p": "When a population has distinct sub-groups (strata) with different characteristics, simple random sampling may miss minority groups. Stratified sampling guarantees proportional representation.",
+    "bullets": [
+     "Formula for stratum sample size = (Number in stratum / Total population) × Total sample size.",
+     "Ensures sub-groups such as age brackets or income tiers are represented in exact ratio to their population size.",
+     "Reduces sampling variability compared to simple random sampling when strata are internally homogeneous.",
+     "Requires complete and accurate lists of all strata members beforehand."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Stratum",
+      "p": "A sub-group of a population that shares one or more common characteristics."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Comparing Sample Means and Medians",
+    "p": "When describing populations using summary statistics, choosing between the mean and median depends heavily on data skewness and the presence of extreme outliers.",
+    "bullets": [
+     "The mean uses every data value and is sensitive to extreme values (outliers).",
+     "The median is robust against outliers, making it better for skewed distributions like income or house prices.",
+     "In a positively skewed population, Mean > Median > Mode.",
+     "In a negatively skewed population, Mean < Median < Mode."
+    ],
+    "table": {
+     "head": [
+      "Statistic",
+      "Strengths",
+      "Weaknesses"
+     ],
+     "rows": [
+      [
+       "Mean",
+       "Uses all data values",
+       "Distorted by extreme outliers"
+      ],
+      [
+       "Median",
+       "Not affected by extreme values",
+       "Ignores exact value magnitudes"
+      ],
+      [
+       "Mode",
+       "Good for categorical data",
+       "Can be non-existent or non-unique"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Interpreting Spread in Populations",
+    "p": "Measures of central tendency alone are insufficient for describing a population; you must pair them with measures of spread such as range, interquartile range (IQR), and standard deviation.",
+    "bullets": [
+     "The range is quick to calculate but highly distorted by extreme anomalies.",
+     "The IQR measures the spread of the middle 50% of data, ignoring the top and bottom quarters.",
+     "Standard deviation measures average distance from the mean; higher values indicate greater population spread.",
+     "Comparing two populations requires comparing both average (centre) and consistency (spread)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Comparative Language",
+      "p": "In exam answers, always state both the average and spread value, and interpret them in context (e.g., 'Group A has a higher median score, showing better overall performance, but a larger IQR, showing less consistency than Group B')."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Sampling Frames and Limitations",
+    "p": "The sampling frame is the actual list from which the sample is drawn. Flaws in the sampling frame directly invalidate population descriptions.",
+    "bullets": [
+     "An ideal sampling frame lists every single member of the target population exactly once.",
+     "Undercoverage occurs when members of the population are missing from the sampling frame.",
+     "Overcoverage occurs when non-members or duplicate entries appear in the sampling frame.",
+     "Substitution of missing respondents introduces bias if non-respondents differ systematically from respondents."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Sampling Frame Trap",
+      "p": "Never confuse the 'population' with the 'sampling frame'. The frame is the practical list; the population is the theoretical whole."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Reliability and Confidence in Estimates",
+    "p": "Sample statistics are estimates subject to sampling variation. Larger sample sizes reduce this variation, leading to more reliable population descriptions.",
+    "bullets": [
+     "Standard error of an estimate decreases as sample size $n$ increases (proportional to $1 / \\sqrt{n}$).",
+     "A census has zero sampling error, but non-sampling errors (such as recording mistakes) can still occur.",
+     "Pilot studies are small-scale preliminary runs used to test methodology and estimate population variance before main sampling.",
+     "Anomalies in sample data must be investigated rather than arbitrarily discarded."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Sample Size Rule",
+      "p": "Doubling sample size does not halve sampling error; quadrupling is required due to the square-root relationship."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Graph showing how sampling error decreases as sample size increases.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"50\" y1=\"200\" x2=\"350\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"40\" x2=\"50\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M 60 50 Q 150 180 340 195\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><text x=\"160\" y=\"225\" font-size=\"12\" fill=\"#1b2540\">Sample Size (n)</text><text x=\"10\" y=\"120\" font-size=\"12\" fill=\"#1b2540\" transform=\"rotate(-90 10 120)\">Sampling Error</text></svg>"
+     }
+    ]
+   }
+  ],
+  "analogy": {
+   "t": "The Soup Tasting Analogy",
+   "p": "Describing a population from a sample is like tasting a giant pot of soup. You do not need to drink the entire pot (census) to know if it has enough salt. Instead, you stir it thoroughly (randomisation) and take a single spoon (sample). If you taste only the spices floating at the very top without stirring, your description of the whole pot will be completely wrong (bias). However, the analogy breaks down because soup is homogenous when stirred, whereas human and ecological populations contain complex internal structures that require stratified sampling to capture accurately."
+  },
+  "terms": [
+   {
+    "t": "Population",
+    "d": "The entire set of items, individuals, or data points under investigation."
+   },
+   {
+    "t": "Sample",
+    "d": "A subset of a population selected to represent the characteristics of the whole."
+   },
+   {
+    "t": "Parameter",
+    "d": "A numerical value that describes a characteristic of an entire population."
+   },
+   {
+    "t": "Statistic",
+    "d": "A numerical value calculated from sample data to estimate a population parameter."
+   },
+   {
+    "t": "Sampling Frame",
+    "d": "A complete, physical or digital list of all members of a population from which a sample is drawn."
+   },
+   {
+    "t": "Capture-Recapture",
+    "d": "A statistical method used to estimate the size of an animal or mobile population through repeated sampling."
+   },
+   {
+    "t": "Stratified Sample",
+    "d": "A sample where the population is divided into sub-groups and sampled in proportion to their size."
+   },
+   {
+    "t": "Expected Frequency",
+    "d": "The predicted number of times an outcome will occur in a population based on sample probabilities."
+   },
+   {
+    "t": "Sampling Bias",
+    "d": "Systematic error introduced by choosing a non-representative sample."
+   },
+   {
+    "t": "Closed Population",
+    "d": "A population with no immigration, emigration, births, or deaths during the study period."
+   },
+   {
+    "t": "Pilot Study",
+    "d": "A small-scale preliminary study conducted to test data collection methods and estimate variance."
+   },
+   {
+    "t": "Non-sampling Error",
+    "d": "Errors caused by factors unrelated to sample selection, such as data recording mistakes or biased questions."
+   },
+   {
+    "t": "Undercoverage",
+    "d": "An error where segments of the target population are omitted from the sampling frame."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Dividing by the recaptured marked count instead of multiplying the two sample sizes in capture-recapture.",
+    "r": "Formula is $N = (n_1 \\times n_2) / m_2$. The marked recaptured count ($m_2$) goes in the denominator."
+   },
+   {
+    "w": "Stating that a census has zero errors.",
+    "r": "A census eliminates *sampling* error, but is still vulnerable to *non-sampling* errors like recording mistakes."
+   },
+   {
+    "w": "Confusing population parameters with sample statistics.",
+    "r": "Parameters describe populations (Greek letters); statistics describe samples (Roman letters)."
+   },
+   {
+    "w": "Saying capture-recapture estimates are exact.",
+    "r": "They are estimates reliant on assumptions like a closed population; they carry sampling variation."
+   },
+   {
+    "w": "Calculating stratified sample proportions using the sample size instead of the population stratum size.",
+    "r": "Proportions must reflect stratum size divided by total population size, multiplied by sample size."
+   },
+   {
+    "w": "Claiming that doubling a sample size halves the sampling error.",
+    "r": "Sampling error is inversely proportional to the square root of the sample size, so quadrupling is needed."
+   },
+   {
+    "w": "Giving a non-integer expected frequency without context.",
+    "r": "Keep exact decimals or fractions during working, but explain practical context if counting discrete items."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A biologist catches 80 fish in a lake, marks them, and releases them. Later, she catches 120 fish, of which 15 are marked. Estimate the total population of fish in the lake.",
+    "marks": 3,
+    "model": [
+     "N = (80 * 120) / 15",
+     "N = 9600 / 15",
+     "N = 640"
+    ],
+    "tip": "Use the formula N = (n1 * n2) / m2."
+   },
+   {
+    "q": "State one assumption that must be made when using the capture-recapture method to estimate an animal population.",
+    "marks": 1,
+    "model": [
+     "Any one valid assumption: No immigration/emigration, marks do not wash off, animals mix freely, or equal catchability."
+    ],
+    "tip": "Learn at least two core assumptions word for word."
+   },
+   {
+    "q": "A school has 1200 pupils. A stratified sample of 60 pupils is to be taken based on year groups. Year 10 has 300 pupils. How many Year 10 pupils should be in the sample?",
+    "marks": 2,
+    "model": [
+     "(300 / 1200) * 60",
+     "15"
+    ],
+    "tip": "Multiply the fraction of the stratum by the desired total sample size."
+   },
+   {
+    "q": "Explain why a sample taken by asking the first 50 people leaving a cinema on a Friday night might not describe the population of the town accurately.",
+    "marks": 2,
+    "model": [
+     "It is a convenience / biased sample.",
+     "Cinemagoers do not represent all age groups and demographics of the entire town."
+    ],
+    "tip": "Identify the type of bias and explain why the demographic is unrepresentative."
+   },
+   {
+    "q": "In a random sample of 200 lightbulbs from a factory producing 50,000 bulbs, 3 are found to be faulty. Estimate how many faulty bulbs are in the entire production run.",
+    "marks": 3,
+    "model": [
+     "Probability = 3 / 200 = 0.015",
+     "Expected count = (3 / 200) * 50000",
+     "750"
+    ],
+    "tip": "Calculate sample probability first, then scale up to the full population."
+   },
+   {
+    "q": "Explain the difference between a census and a sample survey.",
+    "marks": 2,
+    "model": [
+     "A census collects data from every member of the population.",
+     "A sample survey collects data from only a subset of the population."
+    ],
+    "tip": "Keep definitions crisp and precise."
+   },
+   {
+    "q": "Give two reasons why a researcher might choose to take a sample instead of conducting a census.",
+    "marks": 2,
+    "model": [
+     "Any two: Cheaper, faster, population is too large, or testing is destructive (e.g., testing fireworks)."
+    ],
+    "tip": "Mentioning 'destructive testing' is a classic mark-scheme favourite."
+   },
+   {
+    "q": "A researcher estimates a wildlife population using capture-recapture. State why the population estimate might be too high if the marked animals became trap-happy.",
+    "marks": 2,
+    "model": [
+     "If animals are trap-happy, m2 (marked in second sample) will be artificially high.",
+     "Dividing by a larger m2 makes the overall population estimate N smaller, so trap-happy makes it too low (or correct the inverse: if trap-shy, m2 is too low, making N too high)."
+    ],
+    "tip": "Trace the algebra: denominator increases -> result decreases."
+   },
+   {
+    "q": "Define the term 'sampling frame'.",
+    "marks": 1,
+    "model": [
+     "A complete list of all members of the population from which a sample can be drawn."
+    ],
+    "tip": "Must mention 'list' and 'population'."
+   },
+   {
+    "q": "A town council wants to survey residents about a new park. They pick telephone numbers from the local directory. State one limitation of this sampling frame.",
+    "marks": 2,
+    "model": [
+     "Not all residents have landlines / are in the directory (undercoverage).",
+     "Excludes younger demographics or people with only mobile phones, introducing bias."
+    ],
+    "tip": "Always link directory limits to missing demographics or undercoverage."
+   }
+  ],
+  "worked": [
+   {
+    "q": "An ecologist wants to estimate the number of beetles in a woodland. She captures 120 beetles, marks their shells with a harmless dot, and releases them. Three days later, she captures a second sample of 150 beetles. Of these, 18 are found to be marked. (a) Estimate the total beetle population. (b) State two assumptions required for this estimate to be valid.",
+    "steps": [
+     "Identify the variables: n1 = 120, n2 = 150, m2 = 18.",
+     "Apply the capture-recapture formula: N = (n1 * n2) / m2.",
+     "Calculate: N = (120 * 150) / 18 = 18000 / 18 = 1000.",
+     "List two valid assumptions: No births, deaths, or migration between samples, and marks do not wear off or affect predation risk."
+    ],
+    "ans": "(a) 1000 beetles. (b) Closed population and marks remaining visible/non-detrimental."
+   },
+   {
+    "q": "A local authority is planning a new leisure centre and needs to survey residents. The town has 45,000 residents, broken down into three age groups: Under 18 (9,000), 18 to 60 (27,000), and Over 60 (9,000). The researcher decides to take a stratified sample of 300 residents. Calculate the required sample size for each age group.",
+    "steps": [
+     "Find the total population: 9000 + 27000 + 9000 = 45000.",
+     "Calculate sampling fraction: Sample size / Total population = 300 / 45000 = 1 / 150.",
+     "Under 18 stratum: (9000 / 45000) * 300 = 60.",
+     "18 to 60 stratum: (27000 / 45000) * 300 = 180.",
+     "Over 60 stratum: (9000 / 45000) * 300 = 60.",
+     "Check sum: 60 + 180 + 60 = 300."
+    ],
+    "ans": "Under 18: 60; 18 to 60: 180; Over 60: 60."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Overview of sampling types used to represent populations in statistics.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"15\" y=\"20\" width=\"110\" height=\"90\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"25\" y=\"45\" font-size=\"11\" font-weight=\"bold\" fill=\"#1b2540\">Random Sample</text><text x=\"25\" y=\"70\" font-size=\"10\" fill=\"#1b2540\">Equal chance</text><text x=\"25\" y=\"90\" font-size=\"10\" fill=\"#1b2540\">for all items</text><rect x=\"145\" y=\"20\" width=\"110\" height=\"90\" rx=\"6\" fill=\"#bbf7d0\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"155\" y=\"45\" font-size=\"11\" font-weight=\"bold\" fill=\"#1b2540\">Stratified</text><text x=\"155\" y=\"70\" font-size=\"10\" fill=\"#1b2540\">Proportional</text><text x=\"155\" y=\"90\" font-size=\"10\" fill=\"#1b2540\">sub-groups</text><rect x=\"275\" y=\"20\" width=\"110\" height=\"90\" rx=\"6\" fill=\"#fde68a\" stroke=\"#d97706\" stroke-width=\"2\"/><text x=\"285\" y=\"45\" font-size=\"11\" font-weight=\"bold\" fill=\"#1b2540\">Systematic</text><text x=\"285\" y=\"70\" font-size=\"10\" fill=\"#1b2540\">Every kth</text><text x=\"285\" y=\"90\" font-size=\"10\" fill=\"#1b2540\">element chosen</text><rect x=\"80\" y=\"135\" width=\"240\" height=\"80\" rx=\"8\" fill=\"#f3f4f6\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"100\" y=\"160\" font-size=\"11\" font-weight=\"bold\" fill=\"#1b2540\">Goal: Unbiased Population Estimate</text><text x=\"100\" y=\"185\" font-size=\"10\" fill=\"#1b2540\">Minimise sampling error and avoid frame bias</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_h.5.4",
+  "sid": "maths_aqa_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-17T20:38:03.435Z"
  }
 }

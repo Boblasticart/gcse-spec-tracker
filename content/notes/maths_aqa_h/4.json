@@ -1,0 +1,500 @@
+{
+ "maths_aqa_h.4.4": {
+  "summary": "These revision notes cover the fundamental principle that empirical probabilities obtained from experimental trials tend to converge toward theoretical probabilities as the sample size increases. We explore the Law of Large Numbers, the difference between relative frequency and theoretical probability, and how to analyze experimental data to evaluate fairness or bias. Mastery of this concept is vital for higher-tier AQA questions involving large statistical samples and expectation calculations.",
+  "core": [
+   {
+    "h": "1. Theoretical vs Empirical Probability",
+    "p": "Probability can be approached through mathematical reasoning or through physical experimentation. Understanding the distinction and relationship between these two approaches forms the cornerstone of statistical inference in GCSE mathematics.",
+    "bullets": [
+     "Theoretical probability is calculated using equally likely outcomes without doing an experiment.",
+     "Empirical probability is based on recorded outcomes from real-world trials or experiments.",
+     "Theoretical probability uses the formula: P(A) = (Number of favorable outcomes) / (Total number of possible outcomes).",
+     "Empirical probability uses relative frequency: P(A) = (Frequency of event A) / (Total number of trials)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Theoretical Probability",
+      "p": "The exact mathematical likelihood of an event occurring, calculated purely from logic and structure."
+     },
+     {
+      "k": "tip",
+      "t": "Terminology Alert",
+      "p": "Always check whether an exam question asks for a theoretical probability or an experimental relative frequency."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. The Law of Large Numbers",
+    "p": "The Law of Large Numbers is a theorem stating that as the number of identically distributed, randomly generated trials increases, the empirical relative frequency of an event will get closer and closer to the true theoretical probability.",
+    "bullets": [
+     "Small samples exhibit high volatility and wide fluctuations due to random chance.",
+     "Large samples smooth out random anomalies, revealing the underlying theoretical distribution.",
+     "As n increases, the margin of error decreases significantly.",
+     "This principle underpins the entire insurance industry, gaming regulations, and statistical sampling."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Convergence Principle",
+      "p": "Larger sample sizes yield relative frequencies that are more reliable estimates of true theoretical probabilities."
+     },
+     {
+      "k": "warn",
+      "t": "The Gambler's Fallacy",
+      "p": "Remember that independent trials have no memory; past outcomes do not influence future random trials."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Graph showing how experimental relative frequency converges toward the theoretical probability as sample size increases.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" stroke=\"#1b2540\" stroke-width=\"1\"/><line x1=\"50\" y1=\"200\" x2=\"370\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"40\" x2=\"50\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"100\" x2=\"370\" y2=\"100\" stroke=\"#94a3b8\" stroke-width=\"1\" stroke-dasharray=\"4\"/><text x=\"25\" y=\"104\" font-size=\"11\" fill=\"#1b2540\">0.5</text><text x=\"25\" y=\"204\" font-size=\"11\" fill=\"#1b2540\">0.0</text><text x=\"180\" y=\"225\" font-size=\"11\" fill=\"#1b2540\">Sample Size (n)</text><path d=\"M50 40 Q 100 220, 160 120 T 370 102\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><text x=\"250\" y=\"85\" font-size=\"11\" fill=\"#2563eb\">Theoretical (0.5)</text><text x=\"280\" y=\"145\" font-size=\"11\" fill=\"#1b2540\">Relative Frequency</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "3. Interpreting Relative Frequency Tables",
+    "p": "Exam questions frequently present tables showing the results of experiments performed at different stages. You must be able to calculate cumulative relative frequencies and identify trends showing convergence.",
+    "bullets": [
+     "To find cumulative relative frequency, sum the frequencies across successive sample blocks.",
+     "Always check if the table gives running totals or interval totals.",
+     "Calculate relative frequency at each stage by dividing total successful outcomes by total trials so far.",
+     "Look for stabilization around a single numerical value as the table progresses."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Cumulative Data",
+      "p": "Total successes divided by total cumulative trials gives the precise running relative frequency."
+     },
+     {
+      "k": "tip",
+      "t": "Decimal Form",
+      "p": "Write probabilities as decimals or fractions in simplest form unless instructed otherwise."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Expected Frequency Calculations",
+    "p": "Given a theoretical probability and a large number of trials, you can predict the expected frequency of an event. Conversely, you can test if a biased object is present by comparing expected versus observed frequencies.",
+    "bullets": [
+     "Formula: Expected Frequency = Theoretical Probability × Total Number of Trials.",
+     "Expected frequencies do not have to be whole numbers in theory, but whole numbers are expected in physical counts.",
+     "A significant difference between observed and expected frequencies suggests bias or insufficient sample size.",
+     "Use proportions when sample sizes are scaled up."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Expected Frequency",
+      "p": "The number of times you anticipate an event to occur in a given number of trials: P(A) * N."
+     },
+     {
+      "k": "warn",
+      "t": "Rounding Expectation",
+      "p": "Do not round expected frequency values prematurely during multi-step working out."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "5. Assessing Bias in Experiments",
+    "p": "When an object is suspected of being unfair (biased), statisticians perform experiments and compare the empirical outcomes with the theoretical model to test their hypothesis.",
+    "bullets": [
+     "If a coin is fair, P(Heads) = 0.5. In 1000 flips, we expect approximately 500 heads.",
+     "If 1000 flips yield 580 heads, the large sample size indicates the coin is likely biased.",
+     "Small deviations in small samples are normal; large deviations in large samples indicate bias.",
+     "Always justify your conclusion by referencing the sample size."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Bias Detection",
+      "p": "Large sample sizes are required to prove or disprove bias with statistical confidence."
+     },
+     {
+      "k": "tip",
+      "t": "Exam Phrasing",
+      "p": "State clearly that 'because the sample size is large, the relative frequency is a reliable estimate'."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Designing Probability Experiments",
+    "p": "Exam questions sometimes test your understanding of how to conduct valid empirical experiments to approximate theoretical probabilities accurately.",
+    "bullets": [
+     "Trials must be independent and conducted under identical conditions.",
+     "The sample size must be sufficiently large (e.g., hundreds or thousands of trials).",
+     "Recording mechanisms must be unbiased and systematic.",
+     "Pooling data from multiple groups increases the effective sample size and improves accuracy."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Fair Trial Conditions",
+      "p": "Conditions where every trial has an identical probability structure without external interference."
+     },
+     {
+      "k": "tip",
+      "t": "Pooling Data",
+      "p": "When asked how to improve an experiment, always suggest increasing the sample size or pooling class results."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Limitations of Small Samples",
+    "p": "Drawing conclusions from small samples is a common statistical fallacy. Examiners test your ability to explain why small samples fail to reflect true theoretical distributions.",
+    "bullets": [
+     "A coin flipped 3 times might land on Heads 3 times (relative frequency 1.0). This does not mean P(Heads) = 1.0.",
+     "Random variation has a massive proportional impact when the denominator (sample size) is small.",
+     "Anomalous results carry equal weight in small datasets, skewing the average.",
+     "Never use a small sample to calculate definitive theoretical probabilities."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Small Sample Trap",
+      "p": "Do not state a coin is biased just because it lands on heads twice in two flips."
+     },
+     {
+      "k": "key",
+      "t": "Volatility",
+      "p": "Relative frequency fluctuates wildly when n is small and settles as n grows."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Comparison of volatility in small sample sizes versus stability in large sample sizes.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" stroke=\"#1b2540\" stroke-width=\"1\"/><text x=\"50\" y=\"35\" font-size=\"12\" fill=\"#1b2540\">Small Sample: High Volatility</text><polyline points=\"50,70 80,40 110,90 140,50 170,80\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"50\" y=\"145\" font-size=\"12\" fill=\"#1b2540\">Large Sample: Stable Convergence</text><path d=\"M50 190 Q 150 210, 250 185 T 370 187\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2.5\"/><line x1=\"50\" y1=\"187\" x2=\"370\" y2=\"187\" stroke=\"#94a3b8\" stroke-width=\"1\" stroke-dasharray=\"4\"/></svg>"
+     }
+    ]
+   },
+   {
+    "h": "8. Relative Frequency Stability Graphs",
+    "p": "A common graphical representation in AQA exams plots relative frequency on the vertical axis against the number of trials on the horizontal axis.",
+    "bullets": [
+     "The graph starts with wild oscillations.",
+     "As trials increase, the curve flattens out and forms a horizontal asymptote at the theoretical probability value.",
+     "You may be asked to read off the best estimate of the probability from the stable region of the graph.",
+     "Always choose a value from the right-hand side of the graph where the line has stabilized."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Reading Graphs",
+      "p": "Ignore the chaotic left side of a relative frequency graph; use the flattened right side for your estimate."
+     },
+     {
+      "k": "key",
+      "t": "Asymptote",
+      "p": "The theoretical probability acts as the central line toward which the experimental curve converges."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Estimating Unknown Populations",
+    "p": "Empirical samples and relative frequencies can be used to estimate unknown quantities in larger populations using capture-recapture or proportional scaling methods.",
+    "bullets": [
+     "Assume the sample proportion equals the population proportion.",
+     "Set up a ratio: (Sample successes / Sample size) = (Population successes / Total population).",
+     "Solve algebraically for the unknown population parameter.",
+     "Ensure conditions of random sampling are met for validity."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Population Estimation",
+      "p": "Using sample relative frequency as an unbiased estimator for broader population parameters."
+     },
+     {
+      "k": "tip",
+      "t": "Proportions",
+      "p": "Treat relative frequency as a scaling factor for larger numerical totals."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Evaluating Statements About Probability",
+    "p": "Higher tier AQA papers feature extended-writing or multiple-choice questions asking you to critique someone's reasoning about probability experiments.",
+    "bullets": [
+     "Critique sample size: Is it too small to be trusted?",
+     "Critique independence: Were trials affected by previous outcomes?",
+     "Critique assumptions: Does the theoretical model match the physical reality?",
+     "Structure your answer with a clear claim supported by statistical evidence from the prompt."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Vague Answers",
+      "p": "Avoid saying 'it's lucky' or 'it happened by chance' without referencing sample size and expected variation."
+     },
+     {
+      "k": "key",
+      "t": "Justification",
+      "p": "Always quote figures from the question to back up your evaluation."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "11. Experimental Probability in Games and Industry",
+    "p": "Real-world applications require understanding how empirical data drives decisions in quality assurance, risk assessment, and game design.",
+    "bullets": [
+     "Quality control inspectors test samples of manufactured items to estimate defect rates.",
+     "Casino games are mathematically structured so that empirical outcomes over millions of plays match theoretical house edges.",
+     "Medical trials use large control and experimental groups to establish empirical efficacy rates.",
+     "Data analytics relies on large datasets to minimize sampling error."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Quality Control",
+      "p": "Using sample testing to infer the quality and defect rate of an entire manufacturing batch."
+     },
+     {
+      "k": "tip",
+      "t": "Contextual Links",
+      "p": "Be ready to apply relative frequency concepts to manufacturing, sport, or finance contexts."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Dartboard and the Heatmap",
+   "p": "Imagine throwing darts at a board while blindfolded. If you throw only 3 darts, they might all land in the top left corner, giving a completely distorted impression of where you usually hit. But if you throw 1,000 darts, the cluster of marks on the board will clearly center around the bullseye, revealing your true skill distribution. The small sample gave random noise, while the large sample revealed the true underlying pattern. This breaks down because human throws are subject to fatigue and learning, whereas true mathematical random trials remain identically distributed throughout."
+  },
+  "terms": [
+   {
+    "t": "Empirical Probability",
+    "d": "A probability derived from actual experimental data and relative frequencies."
+   },
+   {
+    "t": "Theoretical Probability",
+    "d": "The exact mathematical likelihood of an event based on equally likely outcomes."
+   },
+   {
+    "t": "Law of Large Numbers",
+    "d": "The mathematical principle that relative frequency approaches theoretical probability as sample size increases."
+   },
+   {
+    "t": "Relative Frequency",
+    "d": "The ratio of the number of times an event occurs to the total number of trials performed."
+   },
+   {
+    "t": "Expected Frequency",
+    "d": "The predicted number of times an event will occur in a given number of trials."
+   },
+   {
+    "t": "Sample Size",
+    "d": "The total number of observations or trials conducted in an experiment."
+   },
+   {
+    "t": "Bias",
+    "d": "A systematic distortion in an experiment or random device favoring certain outcomes."
+   },
+   {
+    "t": "Independent Trials",
+    "d": "Trials where the outcome of one does not affect the probability of another."
+   },
+   {
+    "t": "Convergence",
+    "d": "The tendency of empirical relative frequency to settle near the theoretical probability value."
+   },
+   {
+    "t": "Volatility",
+    "d": "The degree of fluctuation in relative frequency values during early experimental trials."
+   },
+   {
+    "t": "Asymptote",
+    "d": "A line that a graph approaches as the independent variable approaches infinity."
+   },
+   {
+    "t": "Population Estimator",
+    "d": "Using sample statistics to estimate parameters of a wider population."
+   },
+   {
+    "t": "Cumulative Frequency",
+    "d": "The running total of frequencies across successive experimental trials."
+   },
+   {
+    "t": "Random Variation",
+    "d": "Unpredictable fluctuations in data caused by chance rather than underlying bias."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Stating that a coin will definitely land on heads 50 times out of 100 flips.",
+    "r": "State that you expect 50 heads on average, but actual results will vary due to random chance."
+   },
+   {
+    "w": "Claiming that after 5 tails in a row, a head is more likely on the next flip.",
+    "r": "Recognize that coin flips are independent; the probability remains 0.5."
+   },
+   {
+    "w": "Using a sample of 10 trials to calculate a definitive theoretical probability.",
+    "r": "Explain that sample sizes of 10 are far too small and subject to high volatility."
+   },
+   {
+    "w": "Saying relative frequency equals theoretical probability in every individual experiment.",
+    "r": "Clarify that relative frequency only tends towards theoretical probability as sample size increases."
+   },
+   {
+    "w": "Rounding expected frequencies to the nearest whole number in intermediate algebraic steps.",
+    "r": "Keep exact decimal or fraction values until the final answer line."
+   },
+   {
+    "w": "Interpreting the left-hand chaotic side of a relative frequency graph for a probability estimate.",
+    "r": "Always use the stabilized right-hand side of a relative frequency graph."
+   },
+   {
+    "w": "Confusing experimental probability with subjective guesses.",
+    "r": "Base experimental probability strictly on recorded relative frequency calculations."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A biased spinner has sections numbered 1, 2, and 3. Lucy spins it 20 times and gets a 1 four times. Work out the relative frequency of getting a 1.",
+    "marks": 1,
+    "model": [
+     "4 / 20 = 1/5 or 0.2"
+    ],
+    "tip": "Simplify fractions where possible, or give the decimal equivalent."
+   },
+   {
+    "mark": 2,
+    "q": "Zoe rolls a dice 300 times. She records a six 48 times. Estimate the probability of rolling a six based on Zoe's results.",
+    "model": [
+     "48 / 300",
+     "= 0.16 or 4/25"
+    ],
+    "tip": "Relative frequency is successes divided by total trials.",
+    "marks": 2
+   },
+   {
+    "mark": 4,
+    "q": "Mark says: 'I flipped a fair coin 10 times and got 8 tails. Therefore, the coin is biased towards tails.' Critique Mark's statement using probability principles.",
+    "model": [
+     "Mark's sample size is too small (only 10 trials).",
+     "Small samples have high volatility and wide random variation.",
+     "An 8 out of 10 outcome can easily happen by chance on a fair coin.",
+     "To test for bias, a much larger sample size is required."
+    ],
+    "tip": "Always attack small sample sizes in critique questions.",
+    "marks": 4
+   },
+   {
+    "mark": 2,
+    "q": "The table shows relative frequency of rolling a 6 over increasing numbers of rolls. Rolls: 50, RF: 0.12. Rolls: 500, RF: 0.162. Rolls: 5000, RF: 0.166. Based on this data, write down the best estimate for the probability of rolling a 6.",
+    "model": [
+     "0.166 or 1/6",
+     "Reason: As the sample size increases, relative frequency stabilizes."
+    ],
+    "tip": "Pick the value corresponding to the largest sample size.",
+    "marks": 2
+   },
+   {
+    "mark": 3,
+    "q": "A bag contains colored counters. A sample of 200 counters drawn with replacement yields 40 red counters. Estimate how many red counters are in a total population of 3000 counters.",
+    "model": [
+     "Relative frequency = 40 / 200 = 0.2",
+     "Calculation: 0.2 * 3000",
+     "= 600 red counters"
+    ],
+    "tip": "Use the sample relative frequency as a scaling factor for the whole population.",
+    "marks": 3
+   },
+   {
+    "mark": 2,
+    "q": "Explain why the relative frequency of an event gets closer to the theoretical probability as the number of trials increases.",
+    "model": [
+     "This is the Law of Large Numbers.",
+     "As trials increase, the impact of random variation/anomalies diminishes."
+    ],
+    "tip": "Mention the Law of Large Numbers for full credit.",
+    "marks": 2
+   },
+   {
+    "mark": 4,
+    "q": "A spinner with 4 equal sections A, B, C, D is spun 1000 times. Letter A is recorded 280 times. Calculate the expected frequency of A and comment on whether the spinner appears fair.",
+    "model": [
+     "Theoretical probability of A = 1/4 = 0.25",
+     "Expected frequency = 0.25 * 1000 = 250",
+     "Observed frequency is 280, which is close to 250 given 1000 trials.",
+     "Since 1000 is a large sample and 280 is relatively close, there is no strong evidence of bias."
+    ],
+    "tip": "Compare expected vs observed in the context of sample size.",
+    "marks": 4
+   },
+   {
+    "mark": 3,
+    "q": "State two conditions required for an experiment's relative frequency to provide a reliable estimate of theoretical probability.",
+    "model": [
+     "1. The trials must be independent (or conducted under identical conditions).",
+     "2. The sample size must be sufficiently large."
+    ],
+    "tip": "Learn standard experimental conditions: large sample and independence.",
+    "marks": 3
+   },
+   {
+    "mark": 2,
+    "q": "A card is drawn from a pack, noted, and replaced, 500 times. A club is drawn 110 times. What is the relative frequency of drawing a club?",
+    "model": [
+     "110 / 500",
+     "= 0.22"
+    ],
+    "tip": "Do not confuse with theoretical probability (0.25); the question asks for relative frequency.",
+    "marks": 2
+   }
+  ],
+  "worked": [
+   {
+    "q": "A biased coin is flipped 2000 times and lands on heads 1150 times. (a) Calculate the relative frequency of heads. (b) Explain why this relative frequency is a better estimate of the probability of heads than a result from 10 flips.",
+    "steps": [
+     "Step 1: Calculate relative frequency = Successes / Trials = 1150 / 2000.",
+     "Step 2: Simplify or convert to decimal: 1150 / 2000 = 0.575.",
+     "Step 3: For part (b), state the Law of Large Numbers. 2000 trials minimize random variation compared to 10 trials."
+    ],
+    "ans": "(a) 0.575. (b) Larger sample sizes smooth out random fluctuations and converge toward the true probability."
+   },
+   {
+    "q": "A factory tests a sample of 400 light bulbs and finds 12 are defective. (a) Estimate the probability that a randomly chosen bulb is defective. (b) If the factory produces 50,000 bulbs in a week, estimate how many defective bulbs will be produced.",
+    "steps": [
+     "Step 1: Relative frequency of defect = 12 / 400 = 0.03.",
+     "Step 2: Use this proportion to estimate for 50,000 bulbs.",
+     "Step 3: Calculation = 0.03 * 50,000 = 1500."
+    ],
+    "ans": "(a) 0.03 (or 3/100). (b) 1500 defective bulbs."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Visualizing convergence: As sample size n increases from left to right, the experimental relative frequency curves narrow down and converge onto the exact theoretical probability line.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" stroke=\"#1b2540\" stroke-width=\"1\"/><line x1=\"40\" y1=\"200\" x2=\"370\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"40\" y1=\"20\" x2=\"40\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"40\" y1=\"110\" x2=\"370\" y2=\"110\" stroke=\"#ef4444\" stroke-width=\"1.5\" stroke-dasharray=\"6\"/><text x=\"260\" y=\"98\" font-size=\"11\" fill=\"#ef4444\">Theoretical Probability</text><path d=\"M40 50 Q 120 230, 200 120 T 370 108\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><path d=\"M40 170 Q 120 10, 200 102 T 370 112\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><text x=\"160\" y=\"225\" font-size=\"11\" fill=\"#1b2540\">Sample Size Increases (n)</text><text x=\"10\" y=\"114\" font-size=\"11\" fill=\"#1b2540\">P</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_h.4.4",
+  "sid": "maths_aqa_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-17T20:24:49.149Z"
+ }
+}
