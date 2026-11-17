@@ -143,12 +143,28 @@ export function loadState(stateDir: string, seedUsage?: State["usage"]): State {
   return state;
 }
 
+/**
+ * Gives the checkout a commit name if it has none. The scheduled run uses
+ * main's notes.yml, which only sets one in its last step (after this script),
+ * so without this every commit here failed and the run's notes were lost.
+ */
+export function ensureGitIdentity(root: string): void {
+  for (const [k, v] of [["user.name", "notes-bot"], ["user.email", "notes-bot@users.noreply.github.com"]] as const) {
+    try {
+      execSync(`git config ${k}`, { cwd: root, stdio: "ignore" });
+    } catch {
+      execSync(`git config ${k} "${v}"`, { cwd: root, stdio: "ignore" });
+    }
+  }
+}
+
 /** Commits and pushes everything under content/ (used during long runs and at the end). */
 export function pushContent(root: string, message: string): void {
   try {
+    ensureGitIdentity(root);
     execSync("git add content", { cwd: root, stdio: "ignore" });
     execSync(`git diff --cached --quiet || git commit -q -m "${message}"`, { cwd: root, stdio: "ignore", shell: "/bin/bash" });
-    execSync("for i in 1 2 3; do git pull -q --rebase origin rebuild && git push -q origin HEAD:rebuild && exit 0; sleep 10; done; exit 1", { cwd: root, stdio: "ignore", shell: "/bin/bash" });
+    execSync("for i in 1 2 3; do git pull -q --rebase --autostash origin rebuild && git push -q origin HEAD:rebuild && exit 0; sleep 10; done; exit 1", { cwd: root, stdio: "ignore", shell: "/bin/bash" });
     console.log("pushed work so far");
   } catch (e) {
     console.log(`could not push yet: ${(e as Error).message.slice(0, 120)}`);
@@ -177,6 +193,11 @@ export function publishNotesLive(root: string): number {
     tree = "";
   };
   let last = "";
+  try {
+    ensureGitIdentity(root);
+  } catch {
+    // reported below by the failing commit
+  }
   for (let attempt = 1; attempt <= 3; attempt++) {
     try {
       if (sh("git status --porcelain --untracked-files=no")) throw new Error("there are unsaved changes");

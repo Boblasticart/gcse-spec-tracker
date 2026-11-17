@@ -1,4 +1,7 @@
-import { readFileSync } from "node:fs";
+import { execSync } from "node:child_process";
+import { mkdtempSync, readFileSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 
 import { describe, expect, it } from "vitest";
 
@@ -6,7 +9,7 @@ import { HTML_TAG } from "@/lib/notes/qa";
 
 import { dropFigures, figureNumbers, repairNote } from "../../scripts/notes/repair";
 import { customCheck, customJobProblems, customPrompt, type CustomJob } from "../../scripts/pipeline/custom";
-import { MAX_TRIES, isPoor, pendingItems, usableModels, type Failures, type Kind, type State } from "../../scripts/pipeline/engine";
+import { MAX_TRIES, ensureGitIdentity, isPoor, pendingItems, usableModels, type Failures, type Kind, type State } from "../../scripts/pipeline/engine";
 import { statusReport } from "../../scripts/pipeline/status";
 
 const HOUR = 3600_000;
@@ -24,6 +27,29 @@ describe("pipeline engine", () => {
     };
     expect(pendingItems(items, failures, false, now)).toEqual(["new", "old"]);
     expect(pendingItems(items, failures, true, now)).toEqual(["new", "recent", "old", "stuck"]);
+  });
+
+  it("gives a checkout with no commit name one, and keeps an existing one", () => {
+    const dir = mkdtempSync(join(tmpdir(), "idt-"));
+    const env = { ...process.env, GIT_CONFIG_GLOBAL: "/dev/null", GIT_CONFIG_NOSYSTEM: "1" };
+    const git = (c: string): string => execSync(`git ${c}`, { cwd: dir, env }).toString().trim();
+    git("init -q");
+    const saved = { g: process.env.GIT_CONFIG_GLOBAL, s: process.env.GIT_CONFIG_NOSYSTEM };
+    process.env.GIT_CONFIG_GLOBAL = "/dev/null";
+    process.env.GIT_CONFIG_NOSYSTEM = "1";
+    try {
+      ensureGitIdentity(dir);
+      expect(git("config user.name")).toBe("notes-bot");
+      git('config user.name "someone"');
+      ensureGitIdentity(dir);
+      expect(git("config user.name")).toBe("someone");
+      git("commit -q --allow-empty -m test");
+    } finally {
+      if (saved.g === undefined) delete process.env.GIT_CONFIG_GLOBAL;
+      else process.env.GIT_CONFIG_GLOBAL = saved.g;
+      if (saved.s === undefined) delete process.env.GIT_CONFIG_NOSYSTEM;
+      else process.env.GIT_CONFIG_NOSYSTEM = saved.s;
+    }
   });
 
   it("skips models that almost never pass, unless none are left", () => {
