@@ -5,7 +5,7 @@ Runs read **only this file and `docs/CONTEXT.md`**. Keep this file short: finish
 ## Status
 
 ```
-RUN LOCK:       none
+RUN LOCK:       running since 2026-11-18 01:10 UTC, session session_01Sm3c8jwBMzUUmqizqfBpGk
 CURRENT JOB:    none (J2b done; J3 Maths carries on by itself via the daily pipeline run)
 CURRENT STEPS:  none
 LAST RUN ENDED: 2026-11-17 01:40 UTC. Found yesterday's fix was incomplete: the scheduled run (main's notes.yml) has no git commit name until its last step, so the script's own commit failed silently and the run would have lost its notes again. Fixed: the script sets a commit name (notes-bot) if none is set, and pulls with --autostash (CI green, 936bc40). Pipeline otherwise healthy: last run 2026-11-16 18:41 UTC, nothing stuck; next scheduled run 2026-11-17 08:23 UTC. Next nightly run: check that run committed its notes.
