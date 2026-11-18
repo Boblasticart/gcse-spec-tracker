@@ -1421,5 +1421,444 @@
   "src": "pre",
   "by": "gemini/gemini-flash-lite-latest",
   "ts": "2026-11-17T20:38:03.435Z"
+ },
+ "maths_aqa_h.5.2": {
+  "summary": "Mastering histograms and cumulative frequency graphs is essential for securing a grade 9 in AQA GCSE Mathematics. You must instantly recognise when frequency density is required instead of simple frequency, and know how to accurately read medians, quartiles, and percentiles from smooth curves. This comprehensive guide covers unequal class widths, area scaling, frequency density formulas, cumulative frequency plotting rules, and how to estimate proportions from grouped continuous data.",
+  "core": [
+   {
+    "h": "Introduction to Histograms",
+    "p": "Histograms display continuous grouped data where the class widths are often unequal. Unlike bar charts, the **frequency** of a class is represented by the **area** of the bar, not its height.",
+    "bullets": [
+     "Used for continuous grouped data with continuous scales",
+     "Class widths can be equal or unequal",
+     "Height represents **frequency density**, not frequency",
+     "Area equals Frequency (Area = Width x Frequency Density)"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Frequency Density",
+      "p": "Frequency density is defined as the frequency divided by the class width."
+     },
+     {
+      "k": "warn",
+      "t": "Height Trap",
+      "p": "Never plot raw frequency on the vertical axis of a histogram."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A histogram showing unequal class widths where bar area equals frequency.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"200\" x2=\"350\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"50\" x2=\"50\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"50\" y=\"120\" width=\"60\" height=\"80\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"110\" y=\"80\" width=\"90\" height=\"120\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"200\" y=\"160\" width=\"150\" height=\"40\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"40\" y=\"205\" font-size=\"12\" fill=\"#1b2540\">0</text><text x=\"100\" y=\"215\" font-size=\"12\" fill=\"#1b2540\">10</text><text x=\"190\" y=\"215\" font-size=\"12\" fill=\"#1b2540\">25</text><text x=\"340\" y=\"215\" font-size=\"12\" fill=\"#1b2540\">55</text><text x=\"20\" y=\"85\" font-size=\"12\" fill=\"#1b2540\">FD</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "The Frequency Density Formula",
+    "p": "To construct or interpret a histogram, you must use the standard formula relating frequency, class width, and frequency density.",
+    "bullets": [
+     "**Frequency Density = Frequency / Class Width**",
+     "Class Width = Upper Bound - Lower Bound",
+     "Frequency = Frequency Density x Class Width",
+     "Always check if class intervals overlap or have gaps"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Proportional Scaling",
+      "p": "You can scale frequency density by any constant factor (e.g. multiplying all frequencies by 2) as long as relative areas remain correct."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Working with Unequal Class Widths",
+    "p": "When class widths vary, plotting raw frequencies creates a distorted visual representation. Dividing by class width standardises the data into areas proportional to frequencies.",
+    "bullets": [
+     "Calculate class width for each row in the frequency table",
+     "Compute frequency density for each interval",
+     "Label the vertical axis clearly as 'Frequency Density'",
+     "Check scales carefully when grid lines do not represent units of 1"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Grid Selection",
+      "p": "Choose an easy scale for the vertical axis so that decimal frequency densities can be plotted accurately."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Finding Missing Frequencies from Histograms",
+    "p": "Examiners frequently test your understanding by giving you a completed histogram or partial data and asking you to deduce frequencies or number of items in a range.",
+    "bullets": [
+     "Use the formula **Frequency = Area of Bar**",
+     "If area scaling is given (e.g. 1 square cm represents 2 items), apply the scale factor",
+     "Read bar dimensions directly from the axes",
+     "Be careful with intervals that are partially included in a question"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Partial Intervals",
+      "p": "When a question asks for the number of items between two values inside a class, assume uniform distribution across that class width."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Cumulative Frequency Basics",
+    "p": "Cumulative frequency is the running total of frequencies up to a given upper class boundary. It is used to find statistical measures like the median and quartiles.",
+    "bullets": [
+     "Always plot points at the **upper class boundary**",
+     "Start the curve at the lower boundary of the first interval with a cumulative frequency of zero",
+     "Join points with a smooth, continuous increasing curve (never straight line segments)",
+     "The vertical axis represents total cumulative frequency (n)"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Cumulative Frequency",
+      "p": "The total frequency of all values less than or equal to a given upper bound."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A cumulative frequency curve plotted at upper class boundaries with a smooth S-shape.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"200\" x2=\"350\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"30\" x2=\"50\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M50 200 Q 150 190, 220 120 T 330 45\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"50\" cy=\"200\" r=\"3\" fill=\"#1b2540\"/><circle cx=\"120\" cy=\"185\" r=\"3\" fill=\"#1b2540\"/><circle cx=\"220\" cy=\"120\" r=\"3\" fill=\"#1b2540\"/><circle cx=\"330\" cy=\"45\" r=\"3\" fill=\"#1b2540\"/><text x=\"30\" y=\"205\" font-size=\"12\" fill=\"#1b2540\">0</text><text x=\"320\" y=\"215\" font-size=\"12\" fill=\"#1b2540\">Max</text><text x=\"20\" y=\"35\" font-size=\"12\" fill=\"#1b2540\">CF</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Reading Quartiles and Median",
+    "p": "Once a cumulative frequency graph is drawn, you can extract key statistical measures to describe the spread and central tendency of grouped data.",
+    "bullets": [
+     "**Median Q2**: Read at n / 2 on the cumulative frequency axis",
+     "**Lower Quartile Q1**: Read at n / 4 on the cumulative frequency axis",
+     "**Upper Quartile Q3**: Read at 3n / 4 on the cumulative frequency axis",
+     "**Interquartile Range (IQR)** = Q3 - Q1"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Show Working",
+      "p": "Always draw dotted lines from the axis to the curve and down to the horizontal axis to prove your method to examiners."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Estimating Percentiles and Proportions",
+    "p": "Beyond quartiles, cumulative frequency graphs allow you to estimate specific percentages or numbers of items exceeding or falling below a given threshold.",
+    "bullets": [
+     "To find how many items are less than value x: locate x on the horizontal axis, go up to curve, read across to vertical axis",
+     "To find how many items are greater than value x: subtract the cumulative frequency at x from the total frequency n",
+     "To find the 90th percentile: locate 0.90 x n on the vertical axis and read across",
+     "Linear interpolation is assumed within intervals on the curve"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Read Carefully",
+      "p": "Check whether the question asks 'fewer than' or 'greater than' to avoid subtraction errors."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Comparing Distributions from Graphs",
+    "p": "Grade 9 questions often require you to compare two cumulative frequency graphs or histograms representing different samples.",
+    "bullets": [
+     "Compare averages using the **median** (higher median means generally higher values)",
+     "Compare spread or consistency using the **Interquartile Range (IQR)** or range (smaller IQR means more consistent)",
+     "Ensure comparisons are contextualised (e.g., mention specific units and scenario names)",
+     "State both numerical values and a comparative sentence (e.g., 'Dataset A is higher on average...')"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Varying Sample Sizes",
+      "p": "If sample sizes differ between two cumulative frequency graphs, you must compare percentages or proportions rather than raw totals."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Interpreting Frequency Tables with Grouped Data",
+    "p": "Before drawing graphs, you must be comfortable extracting class boundaries and calculating widths correctly from continuous grouped data.",
+    "bullets": [
+     "Watch out for gaps between continuous classes (e.g., 10-19 and 20-29 vs 10-20 and 20-30)",
+     "Continuous data uses inequality notation: 10 <= x < 20",
+     "Class width is strictly Upper Bound minus Lower Bound",
+     "Midpoints are only used for estimated mean calculations, never for cumulative frequency or histograms"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Class Boundary",
+      "p": "The true dividing line between adjacent classes in continuous data."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Histograms vs Bar Charts vs Cumulative Frequency",
+    "p": "Knowing which statistical diagram to use and how their properties differ is crucial for synoptic GCSE questions.",
+    "bullets": [
+     "**Bar chart**: Discrete data, equal widths, gaps between bars, height equals frequency",
+     "**Histogram**: Continuous grouped data, unequal widths, no gaps, area equals frequency",
+     "**Cumulative frequency**: Continuous grouped data, running total, plotted at upper boundaries with smooth curve"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Exam Distinction",
+      "p": "Never draw line segments on a cumulative frequency graph; curves are strictly required by mark schemes."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Advanced Problem Solving: Reverse Histograms",
+    "p": "Grade 9 questions may give you a histogram with a missing vertical scale or missing frequency table entries, requiring algebraic reasoning.",
+    "bullets": [
+     "Let an unknown frequency density be k or use ratio methods",
+     "Set up equations where Area = Frequency",
+     "Equate ratios of widths and frequencies to solve for unknowns",
+     "Check consistency across all completed bars"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Scale Factor Method",
+      "p": "Find one bar where both frequency and area are known to determine the exact value of 1 square unit."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Painting a Wall vs Stacking Bricks",
+   "p": "Think of a histogram like painting walls of different widths with a fixed pot of paint: if a wall is twice as wide, the layer of paint (frequency density) must be half as thick so the total amount of paint (frequency) used on that wall remains correct. A cumulative frequency graph is like building a staircase where each step adds a bit more height until you reach the total height at the top floor. Where this breaks down: walls and paint are continuous in every dimension, whereas grouped statistical data assumes uniform spread within discrete class intervals rather than continuous micro-variation."
+  },
+  "terms": [
+   {
+    "t": "Histogram",
+    "d": "A graphical display of continuous data using bars of varying width where area represents frequency."
+   },
+   {
+    "t": "Frequency Density",
+    "d": "The frequency divided by the class width, representing height on a histogram."
+   },
+   {
+    "t": "Class Width",
+    "d": "The difference between the upper class boundary and the lower class boundary."
+   },
+   {
+    "t": "Cumulative Frequency",
+    "d": "The running total of frequencies up to the upper boundary of each class interval."
+   },
+   {
+    "t": "Upper Class Boundary",
+    "d": "The maximum possible value that could fall into a class interval in continuous data."
+   },
+   {
+    "t": "Median",
+    "d": "The middle value of a data set, corresponding to the 50th percentile (n / 2 on cumulative frequency)."
+   },
+   {
+    "t": "Interquartile Range",
+    "d": "The difference between the upper quartile (Q3) and lower quartile (Q1), measuring spread."
+   },
+   {
+    "t": "Percentile",
+    "d": "A value below which a specified percentage of observations fall."
+   },
+   {
+    "t": "Continuous Data",
+    "d": "Data that can take any value within a range, measured rather than counted."
+   },
+   {
+    "t": "Frequency",
+    "d": "The number of times a particular value or data range occurs."
+   },
+   {
+    "t": "Uniform Distribution",
+    "d": "The assumption that data is spread evenly across a given class interval."
+   },
+   {
+    "t": "Linear Interpolation",
+    "d": "Estimating an intermediate value by connecting neighbouring points with a straight line."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Plotting raw frequency on the vertical axis of a histogram",
+    "r": "Must plot frequency density (Frequency / Class Width)"
+   },
+   {
+    "t": "",
+    "w": "Joining cumulative frequency points with straight line segments (dot-to-dot)",
+    "r": "Must draw a smooth, continuous increasing curve through all plotted points"
+   },
+   {
+    "t": "",
+    "w": "Plotting cumulative frequency points at class midpoints",
+    "r": "Must plot cumulative frequency strictly at the upper class boundary"
+   },
+   {
+    "t": "",
+    "w": "Stating class width as Upper Limit minus Lower Limit without considering boundaries",
+    "r": "Use correct upper and lower boundaries for continuous data intervals"
+   },
+   {
+    "t": "",
+    "w": "Reading the median at n on the vertical cumulative frequency axis",
+    "r": "Read the median at n / 2 on the cumulative frequency axis"
+   },
+   {
+    "t": "",
+    "w": "Forgetting to subtract Q1 from Q3 when asked for the IQR",
+    "r": "Interquartile range is Q3 minus Q1, not Q3 alone"
+   },
+   {
+    "t": "",
+    "w": "Assuming all bars in a histogram must have equal widths",
+    "r": "Histograms specifically handle unequal class widths via area scaling"
+   }
+  ],
+  "exam": [
+   {
+    "q": "A histogram has a bar for the interval 10 <= x < 25 with a frequency of 30. Calculate the frequency density of this bar.",
+    "marks": 2,
+    "model": [
+     "Class width = 25 - 10 = 15 [1 mark]",
+     "Frequency density = 30 / 15 = 2 [1 mark]"
+    ],
+    "tip": "Always calculate class width first before applying the density formula."
+   },
+   {
+    "q": "Explain why a cumulative frequency graph must be drawn with a smooth curve rather than straight line segments.",
+    "marks": 1,
+    "model": [
+     "Data within class intervals is grouped and assumed to change continuously rather than in sudden jumps [1 mark]"
+    ],
+    "tip": "Learn standard examiner phrasing for curve justification."
+   },
+   {
+    "q": "The lower quartile of a distribution is 24 and the upper quartile is 58. Calculate the interquartile range.",
+    "marks": 1,
+    "model": [
+     "IQR = 58 - 24 = 34 [1 mark]"
+    ],
+    "tip": "Direct subtraction of Q3 minus Q1."
+   },
+   {
+    "q": "A cumulative frequency table has a total frequency of 80. Estimate the number of values greater than the 75th percentile.",
+    "marks": 2,
+    "model": [
+     "75th percentile is 0.75 x 80 = 60th item, or use definition that 25% are greater [1 mark]",
+     "25% of 80 = 20 values [1 mark]"
+    ],
+    "tip": "Read question wording carefully: greater than vs fewer than."
+   },
+   {
+    "q": "A class interval of 30 < x <= 50 has a frequency density of 4. Find the total frequency for this class.",
+    "marks": 2,
+    "model": [
+     "Class width = 50 - 30 = 20 [1 mark]",
+     "Frequency = 20 x 4 = 80 [1 mark]"
+    ],
+    "tip": "Rearrange Frequency Density = Frequency / Width to Frequency = FD x Width."
+   },
+   {
+    "q": "Describe how to find an estimate for the median from a cumulative frequency graph where total frequency is n.",
+    "marks": 2,
+    "model": [
+     "Locate n / 2 on the vertical cumulative frequency axis [1 mark]",
+     "Read across to the curve and down to find the corresponding value on the horizontal axis [1 mark]"
+    ],
+    "tip": "Always mention both axes in your description."
+   },
+   {
+    "q": "Two sets of examination results are compared using cumulative frequency graphs. Set A has an IQR of 12 and Set B has an IQR of 25. Compare the consistency of the sets.",
+    "marks": 2,
+    "model": [
+     "Set A is more consistent than Set B [1 mark]",
+     "Because its interquartile range is smaller, showing less spread in the marks [1 mark]"
+    ],
+    "tip": "Link smaller IQR directly to greater consistency."
+   },
+   {
+    "q": "A histogram bar has width 10 and height 3. Find its frequency.",
+    "marks": 1,
+    "model": [
+     "Frequency = 10 x 3 = 30 [1 mark]"
+    ],
+    "tip": "Frequency equals area of the bar."
+   },
+   {
+    "q": "State what is represented by the vertical axis on a histogram.",
+    "marks": 1,
+    "model": [
+     "Frequency density [1 mark]"
+    ],
+    "tip": "Do not accept frequency alone."
+   },
+   {
+    "q": "A distribution has 120 items. At value 40, the cumulative frequency is 45. Estimate the percentage of items greater than 40.",
+    "marks": 3,
+    "model": [
+     "Items less than or equal to 40 = 45 [1 mark]",
+     "Items greater than 40 = 120 - 45 = 75 [1 mark]",
+     "Percentage = (75 / 120) x 100 = 62.5% [1 mark]"
+    ],
+    "tip": "Always subtract from total frequency when asked for 'greater than'."
+   }
+  ],
+  "worked": [
+   {
+    "q": "The table shows the time taken by 50 runners to finish a race. Time t minutes: 0 < t <= 10 (freq 5), 10 < t <= 25 (freq 15), 25 < t <= 30 (freq 20), 30 < t <= 50 (freq 10). Calculate the frequency densities needed to draw a histogram.",
+    "steps": [
+     "Step 1: Find the class width for each interval by subtracting the lower boundary from the upper boundary. Interval 1: 10 - 0 = 10. Interval 2: 25 - 10 = 15. Interval 3: 30 - 25 = 5. Interval 4: 50 - 30 = 20.",
+     "Step 2: Divide each frequency by its corresponding class width to find the frequency density. Interval 1: 5 / 10 = 0.5. Interval 2: 15 / 15 = 1.0. Interval 3: 20 / 5 = 4.0. Interval 4: 10 / 20 = 0.5."
+    ],
+    "ans": "Frequency densities are 0.5, 1.0, 4.0, and 0.5 respectively."
+   },
+   {
+    "q": "Using the data from the previous example with 50 runners, construct a cumulative frequency table and find the estimate for the median time.",
+    "steps": [
+     "Step 1: Calculate running totals (cumulative frequencies) for each upper boundary. Up to 10: 5. Up to 25: 5 + 15 = 20. Up to 30: 20 + 20 = 40. Up to 50: 40 + 10 = 50.",
+     "Step 2: Plot points at (10, 5), (25, 20), (30, 40), (50, 50) and join with a smooth curve starting at (0, 0).",
+     "Step 3: Locate n / 2 = 50 / 2 = 25 on the cumulative frequency axis.",
+     "Step 4: Read across to the curve and down to the horizontal axis to find the median time."
+    ],
+    "ans": "Median time is estimated at approximately 26.5 minutes."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "A comprehensive diagram showing frequency density calculation and histogram bar construction.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"40\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"40\" y1=\"30\" x2=\"40\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"40\" y=\"150\" width=\"50\" height=\"50\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"90\" y=\"100\" width=\"100\" height=\"100\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"190\" y=\"50\" width=\"120\" height=\"150\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"30\" y=\"205\" font-size=\"12\" fill=\"#1b2540\">0</text><text x=\"80\" y=\"215\" font-size=\"12\" fill=\"#1b2540\">10</text><text x=\"180\" y=\"215\" font-size=\"12\" fill=\"#1b2540\">20</text><text x=\"300\" y=\"215\" font-size=\"12\" fill=\"#1b2540\">50</text><text x=\"10\" y=\"40\" font-size=\"12\" fill=\"#1b2540\">FD</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_h.5.2",
+  "sid": "maths_aqa_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-18T19:29:48.274Z"
  }
 }

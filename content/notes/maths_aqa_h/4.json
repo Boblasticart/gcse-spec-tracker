@@ -496,5 +496,1527 @@
   "src": "pre",
   "by": "gemini/gemini-flash-lite-latest",
   "ts": "2026-11-17T20:24:49.149Z"
+ },
+ "maths_aqa_h.4.1": {
+  "summary": "Mastering randomness, fairness, and expected outcomes requires a rigorous understanding of theoretical probability models and the Law of Large Numbers. Grade 9 students must distinguish between subjective likelihood and mathematical fairness, calculate precise expected frequencies for single and repeated trials, and analyse how experimental results converge towards theoretical expectations as sample sizes grow.",
+  "core": [
+   {
+    "h": "1. Foundations of Randomness and Outcomes",
+    "p": "Randomness describes a process where individual outcomes cannot be predicted with certainty, yet long-term patterns emerge across many repetitions. Every possible result of a random process is an outcome, and the complete collection of all possible outcomes forms the sample space.",
+    "bullets": [
+     "A random event is one whose individual outcome is uncertain.",
+     "The sample space (often denoted by S or Greek letter Omega) contains every mutually exclusive outcome.",
+     "Individual outcomes in a valid sample space must be exhaustive and mutually exclusive.",
+     "Grade 9 examiners expect precise set notation when defining sample spaces, such as S = {1, 2, 3, 4, 5, 6} for a standard die."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Sample Space",
+      "p": "The complete set of all possible distinct outcomes resulting from a random experiment or trial."
+     },
+     {
+      "k": "warn",
+      "t": "Incomplete Sets",
+      "p": "Failing to list every single distinct outcome in a sample space will lose method marks in structured AQA questions."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. Defining Fairness in Probability",
+    "p": "An experiment, game, or random device is defined as fair if and only if every single outcome in the sample space has an exactly equal theoretical probability of occurring. Any asymmetry in physical construction, bias in weighting, or structural flaw renders a device unfair.",
+    "bullets": [
+     "A fair coin has P(Head) = P(Tail) = 0.5.",
+     "A fair six-sided die has P(1) = P(2) = P(3) = P(4) = P(5) = P(6) = 1/6.",
+     "Fairness is a theoretical property based on symmetry and design, not on short-term experimental results.",
+     "If probabilities are not equal across all outcomes, the trial or device is biased or unfair."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Symmetry Equals Fairness",
+      "p": "Mathematical fairness relies entirely on physical or structural symmetry giving no outcome an advantage."
+     },
+     {
+      "k": "tip",
+      "t": "Justifying Fairness",
+      "p": "In exam questions asking to prove fairness, always state that all individual outcomes have equal theoretical probability."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Visual comparison of a fair spinner with equal sectors versus an unfair biased spinner.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><circle cx=\"110\" cy=\"120\" r=\"70\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"110\" y1=\"120\" x2=\"110\" y2=\"50\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"110\" y1=\"120\" x2=\"170\" y2=\"154\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"110\" y1=\"120\" x2=\"50\" y2=\"154\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"90\" y=\"90\" font-size=\"12\" fill=\"#1b2540\">1/3</text><text x=\"130\" y=\"150\" font-size=\"12\" fill=\"#1b2540\">1/3</text><text x=\"95\" y=\"150\" font-size=\"12\" fill=\"#1b2540\">1/3</text><circle cx=\"290\" cy=\"120\" r=\"70\" fill=\"#fecaca\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"290\" y1=\"120\" x2=\"360\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"290\" y1=\"120\" x2=\"245\" y2=\"165\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"310\" y=\"100\" font-size=\"12\" fill=\"#1b2540\">1/2</text><text x=\"260\" y=\"140\" font-size=\"12\" fill=\"#1b2540\">1/4</text><text x=\"310\" y=\"150\" font-size=\"12\" fill=\"#1b2540\">1/4</text><text x=\"80\" y=\"210\" font-size=\"12\" fill=\"#1b2540\">Fair Spinner (Equal)</text><text x=\"250\" y=\"210\" font-size=\"12\" fill=\"#1b2540\">Unfair Spinner (Biased)</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "3. Equally Likely Events and Theoretical Models",
+    "p": "When every outcome in a sample space is equally likely, the theoretical probability P(A) of an event A occurring is calculated using the fundamental classical ratio: number of favorable outcomes divided by total number of possible outcomes.",
+    "bullets": [
+     "P(A) = (Number of outcomes in A) / (Total number of outcomes in S).",
+     "Probabilities always range from 0 (impossible) to 1 (certain inclusive).",
+     "Sum of probabilities of all mutually exclusive outcomes in a sample space equals 1.",
+     "Equally likely models assume no physical weighting, environmental interference, or hidden bias."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Theoretical Probability",
+      "p": "The likelihood of an event occurring based on mathematical reasoning and counting principles without running experiments."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Calculating Expected Outcomes (Expected Frequency)",
+    "p": "The expected outcome, or expected frequency, of an event is the number of times you expect that event to occur across a specified number of independent trials. It is calculated by multiplying the theoretical probability of the event by the total number of trials.",
+    "bullets": [
+     "Expected Frequency = P(Event) multiplied by Number of Trials (n).",
+     "If a coin is tossed 100 times, expected heads = 0.5 multiplied by 100 = 50.",
+     "Expected values do not have to be integers; decimals or fractions are mathematically correct.",
+     "Never state an expected frequency as an absolute guarantee; it represents a statistical expectation."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Expected Value Formula",
+      "p": "E = p times n, where p is probability and n is the total number of trials performed."
+     },
+     {
+      "k": "tip",
+      "t": "Decimal Answers",
+      "p": "If calculating expected people or items resulting in 34.2, leave the decimal unless the question specifies whole units."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "5. The Law of Large Numbers",
+    "p": "The Law of Large Numbers states that as the number of trials in an experiment increases, the experimental (relative) frequency of an event gets closer and closer to its true theoretical probability.",
+    "bullets": [
+     "Small sample sizes produce high variability and erratic experimental probabilities.",
+     "Large sample sizes smooth out random fluctuations, converging on theoretical values.",
+     "A coin tossed 10 times might yield 8 heads (80%), but tossed 10,000 times it will be extremely close to 50%.",
+     "Examiners frequently test this concept in written interpretation questions."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Law of Large Numbers",
+      "p": "Theorem stating that relative frequency approaches theoretical probability as sample size approaches infinity."
+     },
+     {
+      "k": "warn",
+      "t": "Misinterpreting Convergence",
+      "p": "Do not say experimental probability equals theoretical probability for large samples; say it gets closer or tends towards it."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Identifying Bias and Flawed Experimental Design",
+    "p": "Bias occurs when a random device or sampling method systematically favors certain outcomes over others. Detecting bias requires comparing experimental results against expected outcomes using statistical reasoning.",
+    "bullets": [
+     "If observed frequencies deviate massively from expected frequencies across large trials, the device is biased.",
+     "Manufacturing defects, asymmetrical wear, and loaded weights cause physical bias.",
+     "Unfair spinners have unequal sector angles leading to unequal probabilities.",
+     "Always cite specific numerical discrepancies between observed and expected data when asked to justify bias."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Proving Bias",
+      "p": "Significant difference between expected frequency and observed frequency in large trials proves the device is not fair."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. The Gambler's Fallacy",
+    "p": "A critical grade 9 misconception is the Gambler's Fallacy: the mistaken belief that if a particular event occurs more frequently than normal during past trials, it is less likely to happen in future trials (or vice versa).",
+    "bullets": [
+     "Coin tosses and dice rolls are independent events with memory loss.",
+     "If a fair coin lands on Heads 5 times in a row, the probability of Tails on the 6th flip remains exactly 0.5.",
+     "Past outcomes do not influence future probabilities in independent trials.",
+     "Examiners test this by asking why a player's strategy of waiting for a 'due' number is mathematically flawed."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "The 'Due' Trap",
+      "p": "Never write that a number or outcome is 'due' to happen because it hasn't appeared recently."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Expected Frequency in Games of Chance",
+    "p": "In composite games of chance, expected outcomes allow players and organizers to calculate long-term profitability, winnings, or point totals over thousands of plays.",
+    "bullets": [
+     "Calculate the expected payoff by multiplying each prize value by its probability and summing them.",
+     "Fair games have an expected net profit of zero.",
+     "Carnival or casino games are designed with negative expected player return, ensuring house profit.",
+     "Always multiply individual expected outcomes by the total number of game iterations."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Fair Game",
+      "p": "A game where the expected net winnings for all participating players equal zero."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Comparing Expected and Observed Results",
+    "p": "A standard AQA exam task involves comparing theoretical expectations with empirical data from a frequency table to determine if a trial was fair or if sample sizes were sufficient.",
+    "bullets": [
+     "Step 1: Calculate expected frequency for each category using n multiplied by P(event).",
+     "Step 2: Place expected frequencies alongside observed frequencies in a comparison table.",
+     "Step 3: Comment on whether differences are due to random sampling variation or structural bias.",
+     "Step 4: Check if the total number of trials is large enough for valid conclusions."
+    ],
+    "table": {
+     "head": [
+      "Outcome",
+      "Theoretical Prob",
+      "Expected (n=300)",
+      "Observed"
+     ],
+     "rows": [
+      [
+       "1",
+       "1/6",
+       "50",
+       "48"
+      ],
+      [
+       "2",
+       "1/6",
+       "50",
+       "52"
+      ],
+      [
+       "3",
+       "1/6",
+       "50",
+       "49"
+      ],
+      [
+       "4",
+       "1/6",
+       "50",
+       "51"
+      ],
+      [
+       "5",
+       "1/6",
+       "50",
+       "47"
+      ],
+      [
+       "6",
+       "1/6",
+       "50",
+       "53"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Structuring Comparisons",
+      "p": "Always add an 'Expected' column next to the 'Observed' column in your working out space to compare clearly."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Sample Size Adequacy and Reliability",
+    "p": "To draw valid statistical inferences about fairness or probabilities, experiments must utilize sufficiently large sample sizes. Small samples produce unreliable relative frequencies.",
+    "bullets": [
+     "An experiment with 5 trials provides virtually no reliable data about fairness.",
+     "An experiment with 1,000+ trials provides high reliability and narrow margin of fluctuation.",
+     "If asked to improve an experiment, always recommend increasing the number of trials.",
+     "Small sample variance is driven by random chance rather than systemic bias."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Improving Experiments",
+      "p": "Standard mark scheme answer for improving reliability: 'Repeat the experiment many more times' or 'Increase sample size'."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "11. Continuous vs Discrete Expected Outcomes",
+    "p": "While most GCSE expected outcome questions involve discrete counting numbers (dice, coins, counters), theoretical probability models can also apply expected values to continuous measurements or intervals.",
+    "bullets": [
+     "Discrete expected outcomes use exact counts (e.g. number of heads).",
+     "Continuous expectations often apply probability densities or uniform rectangular distributions.",
+     "For a uniform continuous distribution between a and b, expected value is the midpoint (a+b)/2.",
+     "Ensure units are maintained consistently throughout calculation steps."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Uniform Distribution",
+      "p": "A probability distribution where all intervals of the same length are equally likely."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Uniform continuous probability distribution showing equal height across interval from a to b.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"180\" x2=\"350\" y2=\"180\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"80\" y1=\"180\" x2=\"80\" y2=\"80\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"300\" y1=\"180\" x2=\"300\" y2=\"80\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"80\" y=\"80\" width=\"220\" height=\"100\" fill=\"#dbeafe\" opacity=\"0.6\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"75\" y=\"200\" font-size=\"12\" fill=\"#1b2540\">a</text><text x=\"295\" y=\"200\" font-size=\"12\" fill=\"#1b2540\">b</text><text x=\"180\" y=\"135\" font-size=\"12\" fill=\"#1b2540\">Height = 1/(b-a)</text><text x=\"50\" y=\"40\" font-size=\"12\" fill=\"#1b2540\">Probability Density Function</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "12. Advanced Problem Solving with Expected Frequencies",
+    "p": "Grade 9 examination problems often combine expected frequency calculations with algebraic unknowns, simultaneous equations, or composite probability trees.",
+    "bullets": [
+     "Let unknown probabilities be represented by variables such as x or p.",
+     "Use the rule that the sum of all probabilities in a sample space equals 1 to form equations.",
+     "Multiply algebraic expected frequencies by total trials to set up linear equations.",
+     "Verify solutions by substituting values back into the original probability model."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Algebraic Setup",
+      "p": "When probabilities are given as ratios or algebraic expressions (e.g., 2x, 3x), sum them to equal 1 first to solve for x."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Archery Target Analogy",
+   "p": "Imagine a fair game as a perfectly symmetrical archery target where every scoring ring has an area proportional to its points. Theoretical probability is the blueprint of the target, showing what should happen if wind resistance didn't exist. Running 10 trials is like shooting 10 arrows in a gale-force wind—your results will be wildly erratic and might not reflect the target's design at all. Shooting 10,000 arrows (the Law of Large Numbers) smooths out the wind gusts, and the cluster of arrows will map perfectly onto the theoretical areas of the target. Where this analogy breaks down is that arrows physically alter the target surface over time, whereas past coin flips do not wear down a coin or change its future probabilities."
+  },
+  "terms": [
+   {
+    "t": "Randomness",
+    "d": "A property of an experiment where individual outcomes are uncertain, but long-term frequencies follow predictable statistical laws."
+   },
+   {
+    "t": "Fairness",
+    "d": "A condition where every individual outcome in a sample space possesses an exactly equal theoretical probability of occurring."
+   },
+   {
+    "t": "Sample Space",
+    "d": "The complete set of all possible, mutually exclusive outcomes resulting from a random trial."
+   },
+   {
+    "t": "Equally Likely Events",
+    "d": "Outcomes that have the exact same theoretical probability of occurring as one another."
+   },
+   {
+    "t": "Theoretical Probability",
+    "d": "The mathematical likelihood of an event occurring, calculated by dividing favorable outcomes by total possible outcomes."
+   },
+   {
+    "t": "Expected Frequency",
+    "d": "The predicted number of times an event will occur in a given number of trials, calculated as probability multiplied by trials."
+   },
+   {
+    "t": "Law of Large Numbers",
+    "d": "The statistical principle stating that experimental relative frequency approaches theoretical probability as sample size increases."
+   },
+   {
+    "t": "Bias",
+    "d": "A systematic distortion or unfair weighting in a random device or sampling method favoring certain outcomes."
+   },
+   {
+    "t": "Gambler's Fallacy",
+    "d": "The false belief that past independent outcomes influence the probability of future independent trials."
+   },
+   {
+    "t": "Independent Events",
+    "d": "Events where the outcome of one trial has zero effect on the probability of another trial."
+   },
+   {
+    "t": "Relative Frequency",
+    "d": "The actual frequency of an event divided by the total number of trials conducted in an experiment."
+   },
+   {
+    "t": "Fair Game",
+    "d": "A game in which the expected net financial or point return for all participants is zero."
+   },
+   {
+    "t": "Exhaustive Events",
+    "d": "A set of outcomes encompassing every single possibility that can occur in a trial."
+   },
+   {
+    "t": "Mutually Exclusive",
+    "d": "Events that cannot both occur at the same time during a single trial."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Saying a coin is 'due' to land on tails because it landed on heads 4 times in a row.",
+    "r": "Coin tosses are independent; the probability of tails on the next flip remains exactly 0.5."
+   },
+   {
+    "w": "Stating that experimental probability equals theoretical probability when an experiment is repeated 1,000 times.",
+    "r": "Experimental probability gets closer to or tends towards theoretical probability, but rarely equals it exactly due to random variation."
+   },
+   {
+    "w": "Rounding expected frequencies to the nearest whole number automatically.",
+    "r": "Expected frequency can be left as a decimal (e.g. 14.4) unless the question specifically asks for people or whole items."
+   },
+   {
+    "w": "Believing a spinner with 3 unequal sections is fair because it has 3 sections.",
+    "r": "Fairness requires equal probability (equal sector angles/areas), not merely equal number of outcomes."
+   },
+   {
+    "w": "Writing expected frequency as a probability fraction (e.g. writing 3/10 instead of 30).",
+    "r": "Expected frequency is a count (number of times an event happens), not a probability."
+   },
+   {
+    "w": "Stating that a sample of 5 trials is sufficient to test if a die is fair.",
+    "r": "Small sample sizes are unreliable; testing fairness requires a large sample size under the Law of Large Numbers."
+   },
+   {
+    "w": "Adding probabilities together when calculating expected outcomes across multiple independent trials.",
+    "r": "Multiply the single event probability by the total number of trials (n), do not add."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A biased spinner has three sections: Red, Blue, and Green. P(Red) = 0.2 and P(Blue) = 0.45. Work out P(Green).",
+    "marks": 2,
+    "model": [
+     "1 - 0.2 - 0.45",
+     "0.35"
+    ],
+    "tip": "Remember that probabilities of exhaustive mutually exclusive outcomes must sum to 1."
+   },
+   {
+    "q": "A fair six-sided die is rolled 300 times. Work out the expected number of times a number greater than 4 is rolled.",
+    "marks": 3,
+    "model": [
+     "P(>4) = 2/6 or 1/3",
+     "1/3 multiplied by 300",
+     "100"
+    ],
+    "tip": "List outcomes greater than 4 first (5 and 6), simplify the fraction, then multiply by total trials."
+   },
+   {
+    "q": "Zoe rolls a biased die 500 times. She records a 6 on 125 occasions. Calculate the relative frequency of rolling a 6.",
+    "marks": 2,
+    "model": [
+     "125 / 500",
+     "0.25 (or 1/4)"
+    ],
+    "tip": "Relative frequency is observed successful trials divided by total trials performed."
+   },
+   {
+    "q": "Explain why rolling a 6 on a fair die is equally likely as rolling any other number.",
+    "marks": 1,
+    "model": [
+     "The die is symmetrical / has six equal faces giving each outcome a probability of 1/6."
+    ],
+    "tip": "Always refer to symmetry or equal theoretical probability in fairness questions."
+   },
+   {
+    "q": "A card is drawn from a standard deck of 52 cards, noted, and replaced. This is repeated 260 times. Calculate the expected number of times a club is drawn.",
+    "marks": 3,
+    "model": [
+     "P(Club) = 13/52 = 1/4",
+     "1/4 multiplied by 260",
+     "65"
+    ],
+    "tip": "Simplify standard probability fractions before multiplying by the trial count."
+   },
+   {
+    "q": "Mark claims that because a fair coin has landed on Heads 8 times in a row, Tails is more likely on the 9th flip. Explain why Mark is incorrect.",
+    "marks": 2,
+    "model": [
+     "Coin tosses are independent events.",
+     "The probability of Tails remains 0.5 regardless of past outcomes (Gambler's Fallacy)."
+    ],
+    "tip": "State independence explicitly and name or describe the fallacy."
+   },
+   {
+    "q": "A spinner is spun 500 times. The expected frequency of landing on section A is 100. Given the spinner has 5 sections of equal size, is the spinner fair? Explain your answer.",
+    "marks": 2,
+    "model": [
+     "Theoretical probability of section A is 1/5 = 0.2.",
+     "Expected frequency = 0.2 multiplied by 500 = 100, which matches observation, so the spinner is likely fair."
+    ],
+    "tip": "Compare calculated expected frequency directly with the experimental data provided."
+   },
+   {
+    "q": "In a game, a player rolls two fair six-sided dice and sums the scores. Work out the theoretical probability of rolling a total score of 7.",
+    "marks": 3,
+    "model": [
+     "Total possible outcomes = 36",
+     "Favourable outcomes for 7: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1) -> 6 outcomes",
+     "6/36 = 1/6"
+    ],
+    "tip": "Use a sample space grid for two dice to ensure no combinations are missed."
+   },
+   {
+    "q": "A bag contains red, blue, and yellow counters in the ratio 2 : 3 : 5. A counter is chosen at random 400 times, with replacement. Calculate the expected number of blue counters chosen.",
+    "marks": 3,
+    "model": [
+     "Total parts = 2 + 3 + 5 = 10",
+     "P(Blue) = 3/10",
+     "3/10 multiplied by 400 = 120"
+    ],
+    "tip": "Convert ratio parts to total denominator first, find the fraction, then multiply by trials."
+   },
+   {
+    "q": "Explain how the Law of Large Numbers applies to rolling a fair die 10,000 times compared to rolling it 6 times.",
+    "marks": 2,
+    "model": [
+     "10,000 rolls will produce a relative frequency very close to 1/6 for each number.",
+     "6 rolls will have high variability and may not show each number exactly once due to small sample size."
+    ],
+    "tip": "Contrast small and large sample sizes referencing convergence towards theoretical probability."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A bag contains 5 red counters, 3 blue counters, and 2 green counters. A counter is drawn at random and replaced. This experiment is repeated 450 times. Calculate the expected number of blue counters drawn.",
+    "steps": [
+     "Step 1: Find the total number of counters in the bag: 5 + 3 + 2 = 10.",
+     "Step 2: Calculate the theoretical probability of drawing a blue counter: P(Blue) = 3 / 10 = 0.3.",
+     "Step 3: Multiply the probability by the total number of trials (n = 450): Expected Frequency = 0.3 multiplied by 450.",
+     "Step 4: Compute the final value: 135."
+    ],
+    "ans": "135"
+   },
+   {
+    "q": "A biased four-sided die has outcomes 1, 2, 3, and 4. The probabilities are P(1) = 0.1, P(2) = 0.3, P(3) = 0.4, and P(4) = x. The die is rolled 800 times. Calculate the expected frequency of rolling a 4.",
+    "steps": [
+     "Step 1: Use the rule that probabilities of an exhaustive set sum to 1: 0.1 + 0.3 + 0.4 + x = 1.",
+     "Step 2: Solve for x: 0.8 + x = 1, so x = 0.2.",
+     "Step 3: Multiply P(4) by the total number of trials (800): Expected Frequency = 0.2 multiplied by 800.",
+     "Step 4: Compute the final value: 160."
+    ],
+    "ans": "160"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Diagram showing the convergence of experimental relative frequency to theoretical probability (0.5) as sample size increases under the Law of Large Numbers.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"190\" x2=\"370\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"30\" x2=\"50\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"110\" x2=\"370\" y2=\"110\" stroke=\"#ef4444\" stroke-dasharray=\"4\" stroke-width=\"2\"/><text x=\"315\" y=\"100\" font-size=\"11\" fill=\"#ef4444\">Target 0.5</text><polyline points=\"50,150 90,80 130,140 170,95 210,120 250,105 290,112 330,108 370,110\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><text x=\"160\" y=\"215\" font-size=\"12\" fill=\"#1b2540\">Number of Trials (Sample Size)</text><text x=\"10\" y=\"115\" font-size=\"12\" fill=\"#1b2540\">Prob</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_h.4.1",
+  "sid": "maths_aqa_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-18T18:29:13.347Z"
+ },
+ "maths_aqa_h.4.0": {
+  "summary": "Mastering the recording, description, and analysis of experimental outcomes through two-way tables and frequency trees is crucial for high-tier AQA GCSE Mathematics. This topic bridges practical trials with theoretical modelling, requiring students to interpret relative frequencies, track sequential pathways, and systematically deduce missing frequencies using fundamental arithmetic consistency. Achieving grade 9 proficiency relies on meticulous bookkeeping, careful structural analysis of branching processes, and understanding how sample sizes influence experimental data.",
+  "core": [
+   {
+    "h": "Introduction to Probability Experiments and Data Collection",
+    "p": "Probability experiments involve conducting physical or simulated trials to observe outcomes. Unlike theoretical probability, which is calculated based on equally likely outcomes, experimental probability relies entirely on empirical data gathered from real-world trials or given frequency tables.",
+    "bullets": [
+     "Trials represent individual runs or repetitions of a random experiment.",
+     "Outcomes are the specific results observed from a single trial.",
+     "Frequency records the exact count of how many times a particular outcome occurs.",
+     "Total frequency is the sum of all individual outcome frequencies across all trials."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Experimental Probability",
+      "p": "The ratio of the number of times a specific outcome occurs to the total number of trials performed."
+     },
+     {
+      "k": "tip",
+      "t": "Always Check Totals",
+      "p": "Always sum your frequencies to verify they match the total number of trials given in the question stem before attempting further calculations."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Recording Outcomes Using Frequency Tables",
+    "p": "Frequency tables organise raw experimental data into structured categories. They allow mathematicians and statisticians to quickly read off frequencies, calculate relative frequencies, and spot patterns or anomalies within large datasets.",
+    "bullets": [
+     "Categories must be mutually exclusive and exhaustive so every trial fits into exactly one category.",
+     "Tally marks are often used during data collection before converting to numerical frequencies.",
+     "Grouped frequency tables combine continuous or large discrete ranges of data into class intervals.",
+     "Column totals provide the crucial denominator for all subsequent probability fractions."
+    ],
+    "table": {
+     "head": [
+      "Outcome",
+      "Tally",
+      "Frequency",
+      "Relative Frequency"
+     ],
+     "rows": [
+      [
+       "Red",
+       "HH II",
+       "7",
+       "7/40"
+      ],
+      [
+       "Blue",
+       "HH HH I",
+       "11",
+       "11/40"
+      ],
+      [
+       "Green",
+       "HH III",
+       "8",
+       "8/40"
+      ],
+      [
+       "Yellow",
+       "HH HH",
+       "14",
+       "14/40"
+      ],
+      [
+       "Total",
+       "-",
+       "40",
+       "1"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Mutually Exclusive Categories",
+      "p": "Ensure outcome categories do not overlap; an outcome cannot belong to two rows simultaneously."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Describing Outcomes: Relative Frequency vs Theoretical Probability",
+    "p": "Experimental results yield relative frequencies, which serve as estimates for true underlying theoretical probabilities. As the number of trials increases, experimental relative frequency typically approaches the theoretical probability due to the law of large numbers.",
+    "bullets": [
+     "Relative frequency is calculated as (frequency of outcome) / (total number of trials).",
+     "It is always expressed as a decimal, fraction, or percentage between 0 and 1 inclusive.",
+     "Small sample sizes produce erratic relative frequencies that may deviate significantly from theory.",
+     "Large sample sizes provide much more reliable estimates of true probability."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Law of Large Numbers",
+      "p": "As sample size n increases, the relative frequency of an event converges towards its theoretical probability."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Analysing Frequency Tables for Expected Outcomes",
+    "p": "Frequency tables derived from experiments can be used to predict future occurrences in larger populations or extended trial runs. This requires scaling the observed relative frequency up by the new total number of trials.",
+    "bullets": [
+     "Multiply the experimental relative frequency by the new number of trials to find expected frequency.",
+     "Assume conditions remain identical (e.g. fair die, unbiased selection) when scaling up.",
+     "Frequencies representing physical objects or people must be whole numbers, though calculations may yield decimals that require rounding.",
+     "Check that scaled probabilities are consistent across the entire table."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Rounding Frequencies",
+      "p": "If an expected frequency calculation gives a decimal like 14.3, give your answer to the nearest whole number or leave as a decimal if specified."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Introduction to Frequency Trees",
+    "p": "Frequency trees are visual diagrams used to record and analyse the outcomes of sequential or combined events using absolute frequencies rather than probabilities. They map out pathways through hierarchical decision points.",
+    "bullets": [
+     "Every branch represents a distinct category or outcome of a sub-experiment.",
+     "The frequencies at any branching point must sum to the total frequency entering that node.",
+     "Terminal nodes at the far right represent the final combined frequencies of all sequential events.",
+     "They are especially useful for survey data involving two or three categorical variables."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Frequency Tree",
+      "p": "A diagram consisting of branches and nodes that displays absolute frequencies for sequential categorical events."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A basic frequency tree showing survey results split by gender and then by transport choice.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" fill=\"#f8fafc\" stroke=\"#1b2540\" rx=\"8\"/><text x=\"30\" y=\"35\" font-size=\"13\" font-weight=\"bold\" fill=\"#1b2540\">Frequency Tree Structure</text><line x1=\"50\" y1=\"120\" x2=\"130\" y2=\"70\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"120\" x2=\"130\" y2=\"170\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"70\" y=\"85\" font-size=\"11\" fill=\"#1b2540\">Boys (50)</text><text x=\"70\" y=\"155\" font-size=\"11\" fill=\"#1b2540\">Girls (50)</text><circle cx=\"50\" cy=\"120\" r=\"6\" fill=\"#dbeafe\" stroke=\"#1b2540\"/><line x1=\"150\" y1=\"70\" x2=\"240\" y2=\"45\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"150\" y1=\"70\" x2=\"240\" y2=\"95\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"150\" cy=\"70\" r=\"6\" fill=\"#fde68a\" stroke=\"#1b2540\"/><text x=\"175\" y=\"50\" font-size=\"11\" fill=\"#1b2540\">Walk (30)</text><text x=\"175\" y=\"95\" font-size=\"11\" fill=\"#1b2540\">Bus (20)</text><line x1=\"150\" y1=\"170\" x2=\"240\" y2=\"145\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"150\" y1=\"170\" x2=\"240\" y2=\"195\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"150\" cy=\"170\" r=\"6\" fill=\"#fde68a\" stroke=\"#1b2540\"/><text x=\"175\" y=\"150\" font-size=\"11\" fill=\"#1b2540\">Walk (15)</text><text x=\"175\" y=\"195\" font-size=\"11\" fill=\"#1b2540\">Bus (35)</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Constructing Frequency Trees from Raw Data",
+    "p": "Building a frequency tree requires systematically breaking down a total population into subgroups based on given survey statistics or experimental outcomes. Each level of the tree must preserve conservation of frequency.",
+    "bullets": [
+     "Identify the grand total and place it at the starting root node.",
+     "Split the root node into first-level branches using primary categories (e.g., adult vs child).",
+     "Subdivide each primary category into secondary branches based on the second condition.",
+     "Verify that all sub-branch frequencies sum correctly to their parent node total."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Conservation of Flow",
+      "p": "Think of frequency like water flowing through pipes: the sum of water leaving a junction must exactly equal the water entering it."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Interpreting and Completing Missing Values in Frequency Trees",
+    "p": "Exam questions frequently provide incomplete frequency trees where certain node values, branch counts, or totals are left blank. Students must use arithmetic deduction and reverse engineering to fill in the missing numbers.",
+    "bullets": [
+     "Use subtraction: (parent node frequency) - (known child frequency) = unknown child frequency.",
+     "Use addition: sum of all child branches below a node = parent node frequency.",
+     "Cross-check intermediate totals against the final sum of all terminal nodes to ensure absolute consistency.",
+     "Read intermediate branch labels carefully to distinguish between counts and probabilities."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Fractions vs Frequencies",
+      "p": "Do not write probabilities (like 3/5 or 0.6) on frequency tree branches unless the question explicitly asks for probabilities; frequency trees use whole-number counts."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Calculating Probabilities from Frequency Trees",
+    "p": "Once a frequency tree is fully completed, it can be used to calculate exact experimental or sample probabilities for combined events without needing complex formulaic probability rules.",
+    "bullets": [
+     "Identify the target terminal node or combination of terminal nodes that satisfy the given condition.",
+     "Set up a fraction with the target frequency as the numerator and the grand total (root node) as the denominator.",
+     "For 'AND' conditions along a single path, follow the branch frequencies.",
+     "For 'OR' conditions involving multiple separate paths, add the respective terminal frequencies together."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Probability Formula from Trees",
+      "p": "P(Event) = (Frequency of target path(s)) / (Total frequency at root node)"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Two-Way Frequency Tables and Contingency Tables",
+    "p": "Two-way tables display the relationship between two different categorical variables simultaneously. They allow us to cross-tabulate frequency data and perform sophisticated probability analyses on subpopulations.",
+    "bullets": [
+     "Rows represent categories of the first variable; columns represent categories of the second variable.",
+     "Internal cells show the frequency of items possessing both specific row and column characteristics.",
+     "Row totals and column totals provide marginal frequencies for individual variables.",
+     "The bottom-right grand total cell represents the sum of all rows and the sum of all columns."
+    ],
+    "table": {
+     "head": [
+      "",
+      "Pass Theory",
+      "Fail Theory",
+      "Total"
+     ],
+     "rows": [
+      [
+       "Had Lessons",
+       "42",
+       "8",
+       "50"
+      ],
+      [
+       "No Lessons",
+       "15",
+       "35",
+       "50"
+      ],
+      [
+       "Total",
+       "57",
+       "43",
+       "100"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Marginal Frequency",
+      "p": "The row or column totals in a two-way table that summarise data for a single variable independently."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Analysing Two-Way Tables for Conditional Outcomes",
+    "p": "Grade 9 analysis of two-way tables frequently involves restricted sample spaces, where a probability must be calculated given that a specific condition has already occurred.",
+    "bullets": [
+     "Identify the restricted sub-population specified by the condition (e.g. 'Given that the person failed theory...').",
+     "Use the restricted row or column total as the new denominator.",
+     "Locate the intersection of the condition and the target outcome as the numerator.",
+     "Never use the grand total as the denominator when a conditional statement restricts the sample space."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Restricted Denominator Trap",
+      "p": "When a question says 'Given that...', your denominator MUST change from the grand total to the total of that specific subgroup."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Comparing Experimental and Theoretical Models",
+    "p": "Higher tier exams require students to evaluate whether experimental data supports a theoretical model or whether a game/experiment is fair based on observed frequency counts.",
+    "bullets": [
+     "Calculate expected frequencies using theoretical probabilities and compare them directly with observed frequencies.",
+     "Significant discrepancies suggest the experiment or trial mechanism may be biased.",
+     "Discuss sample size limitations: small samples naturally exhibit high random variation.",
+     "Use ratio comparisons to justify conclusions about fairness or experimental bias."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Justification in Exams",
+      "p": "When asked 'Is the spinner biased?', always quote both your calculated expected frequency and the actual observed frequency to justify your conclusion."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Complex Multi-Stage Frequency Analysis",
+    "p": "Advanced problems combine frequency tables, frequency trees, and proportional reasoning across three or more sequential stages or interconnected populations.",
+    "bullets": [
+     "Translate worded ratios or percentages into absolute frequency counts before populating trees or tables.",
+     "Use algebraic variables (e.g., 3x and 4x) when frequencies are given in ratio form rather than exact numbers.",
+     "Check algebraic consistency by ensuring all branch splits sum correctly to the variable expressions at parent nodes.",
+     "Solve for the unknown variable before evaluating any final probability fractions."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Algebraic Frequencies",
+      "p": "Representing unknown counts with algebraic multiples allows complete analysis when only proportional data is provided."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Factory Quality Control Sorting Line",
+   "p": "Imagine a factory sorting line inspecting manufactured components. Raw parts enter the factory (the root node of a frequency tree), get sorted by machine A into 'Standard' and 'Defective' bins (first-level branches), and are then checked by inspectors B and C to be packaged or recycled (terminal nodes). Each worker keeps a tally in a two-way ledger table. Where this analogy breaks down is that physical components cannot be fractional or probabilistic halfway through the line, whereas theoretical models deal in idealised fractions; experimental data is discrete, messy, and bound by physical reality."
+  },
+  "terms": [
+   {
+    "t": "Frequency",
+    "d": "The exact count of how many times a specific outcome or event occurs in a dataset or trial."
+   },
+   {
+    "t": "Relative Frequency",
+    "d": "The ratio of the frequency of a specific outcome to the total number of trials performed."
+   },
+   {
+    "t": "Frequency Tree",
+    "d": "A hierarchical diagram using branches and absolute frequencies to track sequential categorical events."
+   },
+   {
+    "t": "Two-Way Table",
+    "d": "A contingency table displaying frequencies for two distinct categorical variables simultaneously."
+   },
+   {
+    "t": "Mutually Exclusive",
+    "d": "Events that cannot occur at the same time during a single trial."
+   },
+   {
+    "t": "Exhaustive Set",
+    "d": "A complete set of all possible outcomes for an experiment, ensuring the sum of their probabilities equals 1."
+   },
+   {
+    "t": "Empirical Probability",
+    "d": "Probability derived from actual experimental data and observation rather than theoretical calculation."
+   },
+   {
+    "t": "Expected Frequency",
+    "d": "The predicted number of times an outcome should occur based on theoretical probability and trial size."
+   },
+   {
+    "t": "Conditional Probability",
+    "d": "The probability of an event occurring given that another specific event has already occurred."
+   },
+   {
+    "t": "Sample Space",
+    "d": "The complete collection of all possible outcomes of a random experiment or trial."
+   },
+   {
+    "t": "Trial",
+    "d": "A single performance or repetition of a random experiment or observation."
+   },
+   {
+    "t": "Terminal Node",
+    "d": "An endpoint on a frequency tree representing the final combined frequency of a sequential path."
+   },
+   {
+    "t": "Marginal Frequency",
+    "d": "The row or column totals in a contingency table that summarise a single variable."
+   },
+   {
+    "t": "Law of Large Numbers",
+    "d": "The statistical principle stating that relative frequency approaches theoretical probability as trials increase."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Putting probabilities like 0.4 or 3/5 on the branches of a frequency tree.",
+    "r": "Frequency trees must use absolute whole-number counts at every node and branch unless specified otherwise."
+   },
+   {
+    "w": "Using the grand total as the denominator when calculating a conditional probability from a two-way table.",
+    "r": "Use the restricted row or column subtotal specified by the condition as the new denominator."
+   },
+   {
+    "w": "Forgetting to check that branch frequencies sum to their parent node total in a frequency tree.",
+    "r": "Always verify that the sum of child branches exactly equals the frequency entering the parent node."
+   },
+   {
+    "w": "Rounding expected frequencies to the nearest whole number before completing subsequent calculations.",
+    "r": "Keep exact decimal values during intermediate working steps and only round the final answer as requested."
+   },
+   {
+    "w": "Stating that experimental relative frequency must always equal theoretical probability.",
+    "r": "Relative frequency only approximates theoretical probability; discrepancies occur due to random variation."
+   },
+   {
+    "w": "Treating categories in a frequency table as overlapping when calculating totals.",
+    "r": "Categories in frequency tables must be mutually exclusive and exhaustive."
+   },
+   {
+    "w": "Dividing by the number of categories instead of the total frequency when finding relative frequency.",
+    "r": "Divide the outcome frequency by the total number of trials (grand total), not the number of rows."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A biased coin is flipped 200 times. It lands on heads 124 times. Find the relative frequency of getting tails.",
+    "marks": 2,
+    "model": [
+     "Calculate frequency of tails: 200 - 124 = 76",
+     "Form relative frequency fraction: 76 / 200 (or 0.38)"
+    ],
+    "tip": "Ensure you subtract correctly to find the frequency of the unmentioned outcome first."
+   },
+   {
+    "q": "A frequency tree has 150 total students branching into 90 boys and 60 girls. Of the boys, 40 walk to school. Complete the missing branch for boys who do not walk.",
+    "marks": 2,
+    "model": [
+     "Identify parent total for boys: 90",
+     "Subtract walking boys: 90 - 40 = 50 not walking"
+    ],
+    "tip": "Check that 40 + 50 equals the parent node total of 90."
+   },
+   {
+    "q": "A two-way table shows 50 people surveyed. 22 like tea, 18 like coffee, and 10 like neither. Complete the table and find the probability that a randomly chosen person likes both tea and coffee given they like tea.",
+    "marks": 4,
+    "model": [
+     "Deduce intersection or use given values correctly",
+     "Set denominator to total liking tea (22)",
+     "Identify correct numerator from intersection cell",
+     "State final simplified probability fraction"
+    ],
+    "tip": "Read conditional probability phrasing carefully to restrict your sample space denominator."
+   },
+   {
+    "q": "A spinner with 4 sections is spun 500 times. Red occurs 120 times, Blue 150 times, Green 130 times, and Yellow 100 times. Estimate the number of times Red will occur if spun 2000 times.",
+    "marks": 3,
+    "model": [
+     "Calculate relative frequency of Red: 120 / 500 = 0.24",
+     "Multiply by new trial count: 0.24 * 2000",
+     "State final expected frequency: 480"
+    ],
+    "tip": "Find the empirical probability from the first trial batch before scaling up."
+   },
+   {
+    "q": "Explain why a relative frequency of 0.52 obtained from 10 trials differs from the theoretical probability of 0.5.",
+    "marks": 2,
+    "model": [
+     "Mention small sample size / random variation",
+     "Explain that experimental results fluctuate more with fewer trials"
+    ],
+    "tip": "Reference sample size limitations explicitly to gain full marks."
+   },
+   {
+    "q": "A survey of 120 people classifies them by pet ownership. 70 own a dog, 45 own a cat, and 15 own neither. Construct and complete a two-way frequency table representing this data.",
+    "marks": 4,
+    "model": [
+     "Set up table with dog/no dog and cat/no cat headers and grand total 120",
+     "Enter given marginal totals correctly",
+     "Deduce intersection cells using logical subtraction",
+     "Ensure all row and column totals sum correctly"
+    ],
+    "tip": "Start with the grand total and marginal totals before filling in the interior cells."
+   },
+   {
+    "q": "A frequency tree shows 200 trials split into two primary branches A and B. Branch A has 120 trials, which split into 80 successes and 40 failures. Branch B splits into 50 successes and 30 failures. Calculate the overall probability of success.",
+    "marks": 4,
+    "model": [
+     "Identify success frequency from Branch A: 80",
+     "Identify success frequency from Branch B: 50",
+     "Sum total successes: 80 + 50 = 130",
+     "Divide by grand total: 130 / 200 (or 0.65)"
+    ],
+    "tip": "Sum terminal nodes across all successful branches for 'OR' combined probabilities."
+   },
+   {
+    "q": "A box contains counters of different colours. A counter is drawn and replaced 300 times. The relative frequency of drawing a red counter is 0.35. How many red counters were drawn?",
+    "marks": 2,
+    "model": [
+     "Set up multiplication: 0.35 * 300",
+     "Calculate exact frequency: 105"
+    ],
+    "tip": "Multiply the relative frequency directly by the total number of trials."
+   },
+   {
+    "q": "In a frequency table, the relative frequency of an event is given as x / 50. If the event occurred 18 times, find x.",
+    "marks": 2,
+    "model": [
+     "Equate relative frequency to observed proportion: x / 50 = 18 / 50 (or equivalent)",
+     "State value of x: 18"
+    ],
+    "tip": "Recognise that relative frequency is simply frequency divided by total trials."
+   },
+   {
+    "q": "A bag contains red and blue beads. A student takes a bead, records its colour, and replaces it. After 80 trials, they draw red 48 times. Estimate the probability of drawing a blue bead on the 81st trial.",
+    "marks": 2,
+    "model": [
+     "Calculate experimental probability of red: 48 / 80 = 0.6",
+     "Calculate experimental probability of blue: 1 - 0.6 = 0.4 (or 32 / 80)"
+    ],
+    "tip": "Probabilities of mutually exclusive exhaustive outcomes must sum to 1."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A survey of 200 students records whether they study French or German, and whether they wear glasses. 120 are boys and 80 are girls. Of the boys, 50 study French and 70 study German. 30 boys who study French wear glasses, while 10 boys who study German wear glasses. Complete a frequency tree and find the probability that a randomly chosen boy studies French and wears glasses.",
+    "steps": [
+     "Step 1: Identify the root node total as 200 students, split into 120 boys and 80 girls.",
+     "Step 2: For the boys branch (120), split into French (50) and German (70).",
+     "Step 3: Subdivide French boys (50) into Glasses (30) and No Glasses (50 - 30 = 20).",
+     "Step 4: Subdivide German boys (70) into Glasses (10) and No Glasses (70 - 10 = 60).",
+     "Step 5: Calculate the required probability using the target terminal node frequency over the grand total: 30 / 200 = 3 / 20 (0.15)."
+    ],
+    "ans": "3/20 (or 0.15)"
+   },
+   {
+    "q": "A two-way table records test results for 150 candidates. 90 candidates passed. 60 candidates attended revision classes, out of whom 50 passed. Complete the two-way table and find the probability that a candidate passed, given that they did not attend revision classes.",
+    "steps": [
+     "Step 1: Set up the table with 'Attended Revision' / 'No Revision' as rows and 'Pass' / 'Fail' as columns, with grand total 150.",
+     "Step 2: Enter given totals: Total Pass = 90, Total Attended Revision = 60.",
+     "Step 3: Enter intersection: Attended Revision and Pass = 50.",
+     "Step 4: Deduce remaining cells using row and column sums: Attended Revision Fail = 60 - 50 = 10. Total Fail = 150 - 90 = 60. No Revision Fail = 60 - 10 = 50. No Revision Pass = 90 - 50 = 40. Total No Revision = 150 - 60 = 90.",
+     "Step 5: Calculate conditional probability: Given no revision (denominator = 90), find those who passed (numerator = 40). P = 40 / 90 = 4 / 9."
+    ],
+    "ans": "4/9"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Figure 1: Complete Frequency Tree showing sequential categorical splitting with absolute whole-number frequencies.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" fill=\"#f8fafc\" stroke=\"#1b2540\" rx=\"8\"/><text x=\"30\" y=\"35\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\">Frequency Tree Analysis</text><line x1=\"60\" y1=\"120\" x2=\"140\" y2=\"70\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"60\" y1=\"120\" x2=\"140\" y2=\"170\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"60\" cy=\"120\" r=\"8\" fill=\"#dbeafe\" stroke=\"#1b2540\"/><text x=\"30\" y=\"140\" font-size=\"11\" fill=\"#1b2540\">Total (100)</text><text x=\"85\" y=\"80\" font-size=\"11\" fill=\"#1b2540\">A (60)</text><text x=\"85\" y=\"155\" font-size=\"11\" fill=\"#1b2540\">B (40)</text><line x1=\"160\" y1=\"70\" x2=\"240\" y2=\"45\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"160\" y1=\"70\" x2=\"240\" y2=\"95\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"160\" cy=\"70\" r=\"6\" fill=\"#fde68a\" stroke=\"#1b2540\"/><text x=\"180\" y=\"40\" font-size=\"11\" fill=\"#1b2540\">Win (40)</text><text x=\"180\" y=\"105\" font-size=\"11\" fill=\"#1b2540\">Lose (20)</text><line x1=\"160\" y1=\"170\" x2=\"240\" y2=\"145\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"160\" y1=\"170\" x2=\"240\" y2=\"195\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"160\" cy=\"170\" r=\"6\" fill=\"#fde68a\" stroke=\"#1b2540\"/><text x=\"180\" y=\"140\" font-size=\"11\" fill=\"#1b2540\">Win (15)</text><text x=\"180\" y=\"205\" font-size=\"11\" fill=\"#1b2540\">Lose (25)</text></svg>"
+   },
+   {
+    "cap": "Figure 2: Two-Way Contingency Table layout highlighting marginal totals and interior intersection cells.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" fill=\"#f8fafc\" stroke=\"#1b2540\" rx=\"8\"/><text x=\"30\" y=\"35\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\">Two-Way Contingency Table</text><line x1=\"30\" y1=\"60\" x2=\"370\" y2=\"60\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"30\" y1=\"100\" x2=\"370\" y2=\"100\" stroke=\"#1b2540\" stroke-width=\"1\"/><line x1=\"30\" y1=\"140\" x2=\"370\" y2=\"140\" stroke=\"#1b2540\" stroke-width=\"1\"/><line x1=\"30\" y1=\"180\" x2=\"370\" y2=\"180\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"160\" y1=\"60\" x2=\"160\" y2=\"220\" stroke=\"#1b2540\" stroke-width=\"1\"/><line x1=\"230\" y1=\"60\" x2=\"230\" y2=\"220\" stroke=\"#1b2540\" stroke-width=\"1\"/><line x1=\"300\" y1=\"60\" x2=\"300\" y2=\"220\" stroke=\"#1b2540\" stroke-width=\"1\"/><text x=\"40\" y=\"85\" font-size=\"11\" fill=\"#1b2540\">Category</text><text x=\"180\" y=\"85\" font-size=\"11\" fill=\"#1b2540\">Event X</text><text x=\"245\" y=\"85\" font-size=\"11\" fill=\"#1b2540\">Not X</text><text x=\"320\" y=\"85\" font-size=\"11\" fill=\"#1b2540\">Total</text><text x=\"40\" y=\"125\" font-size=\"11\" fill=\"#1b2540\">Group 1</text><text x=\"190\" y=\"125\" font-size=\"11\" fill=\"#1b2540\">30</text><text x=\"260\" y=\"125\" font-size=\"11\" fill=\"#1b2540\">20</text><text x=\"330\" y=\"125\" font-size=\"11\" fill=\"#1b2540\">50</text><text x=\"40\" y=\"165\" font-size=\"11\" fill=\"#1b2540\">Group 2</text><text x=\"190\" y=\"165\" font-size=\"11\" fill=\"#1b2540\">15</text><text x=\"260\" y=\"165\" font-size=\"11\" fill=\"#1b2540\">35</text><text x=\"330\" y=\"165\" font-size=\"11\" fill=\"#1b2540\">50</text><text x=\"40\" y=\"205\" font-size=\"11\" fill=\"#1b2540\">Total</text><text x=\"190\" y=\"205\" font-size=\"11\" fill=\"#1b2540\">45</text><text x=\"260\" y=\"205\" font-size=\"11\" fill=\"#1b2540\">55</text><text x=\"330\" y=\"205\" font-size=\"11\" fill=\"#1b2540\">100</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_h.4.0",
+  "sid": "maths_aqa_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-18T18:33:17.789Z"
+ },
+ "maths_aqa_h.4.3": {
+  "summary": "These revision notes explore the fundamental laws of probability for AQA GCSE Higher Tier, focusing on exhaustive sets of outcomes and mutually exclusive events. You will master the absolute rule that the sum of probabilities for all possible outcomes equals 1, and learn how to apply this to calculate unknown probabilities algebraically or logically. This core concept underpins all advanced probability, conditional probability, and algebraic problem-solving in exams.",
+  "core": [
+   {
+    "h": "1. The Probability Scale and Range",
+    "p": "Every probability must lie within a strict numerical range from 0 to 1 inclusive. A probability of 0 represents an impossible event, whilst a probability of 1 represents a certainty.",
+    "bullets": [
+     "The probability of any event A, denoted P(A), satisfies 0 <= P(A) <= 1.",
+     "Probabilities can be written as fractions, decimals, or percentages.",
+     "Percentages range from 0% to 100%, but mathematical working always uses fractions or decimals.",
+     "Negative probabilities or probabilities greater than 1 are mathematically impossible."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Probability",
+      "p": "A numerical measure of the likelihood that a particular event will occur."
+     },
+     {
+      "k": "warn",
+      "t": "Probability Format",
+      "p": "Never leave a probability greater than 1 or as a ratio like 3:5. It must be a single fraction, decimal, or percentage."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. Definition of Mutually Exclusive Events",
+    "p": "Two or more events are mutually exclusive if they cannot occur at the same time in a single trial of an experiment. The occurrence of one event automatically precludes the occurrence of the other(s).",
+    "bullets": [
+     "If event A happens, event B cannot happen.",
+     "On a Venn diagram, mutually exclusive events are represented by non-intersecting (disjoint) circles.",
+     "Rolling an even number and rolling an odd number on a standard 6-sided die are mutually exclusive.",
+     "Drawing a red card and drawing a spade from a standard deck of cards are mutually exclusive."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Mutually Exclusive",
+      "p": "Events that have no common outcomes; they cannot both happen simultaneously."
+     },
+     {
+      "k": "tip",
+      "t": "Spotting Mutually Exclusive",
+      "p": "Look for words like 'or' in single trials. If picking one outcome prevents picking another at the same time, they are mutually exclusive."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Venn diagram showing two mutually exclusive events with no intersection.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"40\" y=\"30\" width=\"320\" height=\"180\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"55\" y=\"50\" font-size=\"12\" fill=\"#1b2540\">Sample Space S</text><circle cx=\"130\" cy=\"120\" r=\"50\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"130\" y=\"125\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">Event A</text><circle cx=\"270\" cy=\"120\" r=\"50\" fill=\"#fecaca\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"270\" y=\"125\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">Event B</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "3. Addition Law for Mutually Exclusive Events",
+    "p": "When two events are mutually exclusive, the probability that either event A or event B occurs is the sum of their individual probabilities. This is the fundamental addition rule.",
+    "bullets": [
+     "Formula: P(A or B) = P(A) + P(B).",
+     "Extended to any number of mutually exclusive events: P(A or B or C) = P(A) + P(B) + P(C).",
+     "This rule only holds true if the events cannot happen together.",
+     "Examiners frequently test this by giving overlapping events and watching for incorrect application of this formula."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "The 'OR' Rule",
+      "p": "For mutually exclusive events, 'OR' means add the probabilities."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Definition of Exhaustive Sets of Outcomes",
+    "p": "A set of outcomes is exhaustive if it covers every single possible outcome that could occur in the experiment. Nothing outside of this set can possibly happen.",
+    "bullets": [
+     "The sample space of an experiment is always an exhaustive set of all possible outcomes.",
+     "When you list every possible result of a trial, the collection is exhaustive.",
+     "For example, outcomes of rolling a die: {1, 2, 3, 4, 5, 6} is an exhaustive set.",
+     "Weather outcomes: {Rain, Snow, Sunny, Cloudy} might be exhaustive depending on the model definition."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Exhaustive Set",
+      "p": "A complete collection of all possible outcomes of a random experiment."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "5. The Sum to 1 Rule for Exhaustive Mutually Exclusive Events",
+    "p": "If a set of events is both mutually exclusive and exhaustive, the sum of their individual probabilities is exactly equal to 1. This is the cornerstone of higher tier probability calculations.",
+    "bullets": [
+     "Mathematically: P(A1) + P(A2) + P(A3) + ... + P(An) = 1.",
+     "Because the events are mutually exclusive, they don't overlap.",
+     "Because the events are exhaustive, there are no missing outcomes left over.",
+     "Therefore, total certainty (1) is distributed entirely among these outcomes."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Golden Rule",
+      "p": "Sum of all probabilities in an exhaustive set = 1."
+     },
+     {
+      "k": "tip",
+      "t": "Checking Exam Answers",
+      "p": "Always sum up all given probabilities in a table question. If they don't add to 1, check for errors or missing variables."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A pie chart showing an exhaustive set of mutually exclusive outcomes summing to 1 (or 100%).",
+      "svg": "<svg viewBox=\"0 0 400 240\"><circle cx=\"200\" cy=\"120\" r=\"80\" fill=\"#e9d5ff\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M200,120 L280,120 A80,80 0 0,0 140,45 Z\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M200,120 L140,45 A80,80 0 0,0 120,160 Z\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"240\" y=\"90\" font-size=\"12\" fill=\"#1b2540\">P(A)=0.3</text><text x=\"130\" y=\"90\" font-size=\"12\" fill=\"#1b2540\">P(B)=0.5</text><text x=\"200\" y=\"180\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">P(C)=0.2</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "6. Complementary Events",
+    "p": "The complement of an event A (written as A' or A-bar) is the event that A does not happen. An event and its complement form a mutually exclusive and exhaustive set of size two.",
+    "bullets": [
+     "P(A) + P(A') = 1.",
+     "Rearranging gives P(A') = 1 - P(A).",
+     "This is heavily used in 'at least one' type questions.",
+     "Finding the probability of 'not getting a 6' is simply 1 - P(6)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Complementary Event",
+      "p": "The set of all outcomes in the sample space that do not belong to event A."
+     },
+     {
+      "k": "tip",
+      "t": "The 'Not' Shortcut",
+      "p": "Whenever you see 'at least one', calculate 1 minus the probability of 'none'."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Algebraic Probability Tables",
+    "p": "Higher tier exams frequently present probability distribution tables containing algebraic expressions (such as x, 2x, 0.3) instead of numbers. You must use the sum-to-1 rule to set up and solve equations.",
+    "bullets": [
+     "Sum all algebraic terms and numbers in the probability row.",
+     "Equate the total expression to 1.",
+     "Solve the linear equation for the unknown variable (usually x).",
+     "Substitute the value of x back into the expressions to find specific probabilities."
+    ],
+    "table": {
+     "head": [
+      "Outcome",
+      "A",
+      "B",
+      "C",
+      "D"
+     ],
+     "rows": [
+      [
+       "Probability",
+       "x",
+       "2x",
+       "0.3",
+       "0.4"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Forgetting to Finish",
+      "p": "Solving for x is rarely the final question. Substitute x back in to find the required probability value."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Multi-Step Algebraic Probability",
+    "p": "More advanced AQA questions feature ratios of probabilities or quadratic equations within exhaustive sets, requiring rigorous algebraic manipulation.",
+    "bullets": [
+     "Translate statements like 'P(A) is twice P(B)' into algebraic terms.",
+     "Ensure all expressions combine to equal exactly 1.",
+     "Watch out for quadratic equations arising from product rules combined with exhaustive sums.",
+     "Check that your solutions for x yield individual probabilities strictly between 0 and 1."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Domain Check",
+      "p": "If a quadratic gives two values for x, substitute both in. Reject any value that makes any individual probability negative or greater than 1."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Probability in Geometric Contexts",
+    "p": "Exhaustive and mutually exclusive principles apply to continuous sample spaces such as areas on a target or angles in a spinner.",
+    "bullets": [
+     "A spinner split into sectors is an exhaustive set of mutually exclusive regions.",
+     "The sum of the angles around a point is 360 degrees, mirroring the sum to 1 rule.",
+     "Probability is calculated as Area of Region / Total Area, where the total area represents certainty (1).",
+     "All sectors combined must cover the entire sample space without overlapping."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Geometric Exhaustion",
+      "p": "Non-overlapping geometric regions partitioning a total space form an exhaustive set."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Relative Frequency and Theoretical Limits",
+    "p": "As an experiment is repeated a large number of times, the relative frequency of each mutually exclusive outcome approaches its theoretical probability. The sum of relative frequencies in an exhaustive trial also equals 1.",
+    "bullets": [
+     "Relative frequency = (Frequency of event) / (Total number of trials).",
+     "Sum of relative frequencies for all exhaustive outcomes in any trial equals 1 exactly.",
+     "Experimental probabilities fluctuate in small samples but stabilize in large samples.",
+     "Exam questions may ask you to estimate missing frequencies using the sum-to-1 principle."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Relative Frequency",
+      "p": "The observed proportion of times an event occurs in an actual experiment."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Jigsaw Puzzle Analogy",
+   "p": "Imagine a complete jigsaw puzzle on a table. Every single piece represents a mutually exclusive outcome because no single piece can occupy the exact same space as another. Together, all the pieces form an exhaustive set because they make up the entire picture—nothing is missing, and there are no extra pieces left over from another box. The whole finished puzzle represents a total probability of 1. If you sum up the fractional areas of every individual piece, it will equal the whole puzzle (1). If you lose one piece, the remaining pieces sum to less than 1, and knowing the size of the missing piece lets you calculate its proportion by subtracting the others from 1."
+  },
+  "terms": [
+   {
+    "t": "Exhaustive Set",
+    "d": "A set of all possible outcomes of an experiment where every possible result is accounted for."
+   },
+   {
+    "t": "Mutually Exclusive",
+    "d": "Events that cannot occur at the same time during a single trial."
+   },
+   {
+    "t": "Sample Space",
+    "d": "The complete collection of all possible outcomes of a random experiment."
+   },
+   {
+    "t": "Complementary Event",
+    "d": "The event that a specified event does not occur, denoted by A'."
+   },
+   {
+    "t": "Probability",
+    "d": "A number between 0 and 1 indicating the likelihood of an event occurring."
+   },
+   {
+    "t": "Theoretical Probability",
+    "d": "The exact mathematical likelihood of an event occurring based on equally likely outcomes."
+   },
+   {
+    "t": "Relative Frequency",
+    "d": "The ratio of the number of times an event occurs to the total number of trials."
+   },
+   {
+    "t": "Addition Law",
+    "d": "The rule stating that P(A or B) = P(A) + P(B) for mutually exclusive events."
+   },
+   {
+    "t": "Certainty",
+    "d": "An event that is bound to happen, represented by a probability of 1."
+   },
+   {
+    "t": "Impossibility",
+    "d": "An event that cannot happen, represented by a probability of 0."
+   },
+   {
+    "t": "Probability Distribution",
+    "d": "A function or table listing all possible outcomes and their corresponding probabilities."
+   },
+   {
+    "t": "Trial",
+    "d": "A single performance of a random experiment or procedure."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Adding probabilities of events that are not mutually exclusive and getting a total greater than 1.",
+    "r": "Recognize that the sum to 1 rule only applies to exhaustive and mutually exclusive sets."
+   },
+   {
+    "w": "Stating that the sum of probabilities in any random collection of events equals 1.",
+    "r": "The sum is only 1 if the set of events is exhaustive (covers every single possible outcome)."
+   },
+   {
+    "w": "Forgetting to solve for x and stopping when the algebraic equation is set up.",
+    "r": "You must fully solve for x and substitute it back in to answer what the question asks."
+   },
+   {
+    "w": "Writing a probability as a ratio like 2:3 or a whole number like 5.",
+    "r": "Probabilities must always be expressed as fractions, decimals, or percentages between 0 and 1."
+   },
+   {
+    "w": "Assuming complementary events can both happen at the same time.",
+    "r": "An event and its complement are mutually exclusive; if one happens, the other cannot."
+   },
+   {
+    "w": "Using subtraction incorrectly when finding a complement (e.g., calculating 1 - 1.2).",
+    "r": "Ensure your subtraction starts from 1 correctly, checking decimal placement."
+   },
+   {
+    "w": "Accepting a negative value for x from a quadratic probability equation.",
+    "r": "Reject any algebraic value of x that results in a negative probability."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A biased spinner has four sections: A, B, C, and D. The probabilities of landing on A, B, and C are 0.2, 0.3, and 0.1 respectively. Calculate the probability of landing on D.",
+    "marks": 2,
+    "model": [
+     "Sum of probabilities = 1",
+     "0.2 + 0.3 + 0.1 = 0.6",
+     "1 - 0.6 = 0.4"
+    ],
+    "tip": "Subtract the sum of the known probabilities from 1."
+   },
+   {
+    "q": "Events X, Y, and Z are mutually exclusive and exhaustive. P(X) = 2x, P(Y) = 3x, and P(Z) = 0.5. Find the value of x.",
+    "marks": 3,
+    "model": [
+     "2x + 3x + 0.5 = 1",
+     "5x = 0.5",
+     "x = 0.1"
+    ],
+    "tip": "Set the sum of all expressions equal to 1 and solve linearly."
+   },
+   {
+    "q": "The probability that a football team wins a match is 0.45. The probability that they draw is 0.3. Find the probability that they do not win and do not draw.",
+    "marks": 2,
+    "model": [
+     "P(win or draw) = 0.45 + 0.3 = 0.75",
+     "P(not win and not draw) = 1 - 0.75 = 0.25"
+    ],
+    "tip": "Combine mutually exclusive outcomes using addition before subtracting from 1."
+   },
+   {
+    "q": "A bag contains red, blue, and green counters. P(red) = 1/5 and P(blue) = 3/10. What is the probability of picking a green counter?",
+    "marks": 2,
+    "model": [
+     "Convert to common denominator: 2/10 + 3/10 = 5/10",
+     "1 - 5/10 = 5/10 = 1/2"
+    ],
+    "tip": "Convert fractions to a common denominator to add easily."
+   },
+   {
+    "q": "Explain why the events 'rolling an even number' and 'rolling a prime number' on a fair 6-sided die are not mutually exclusive.",
+    "marks": 1,
+    "model": [
+     "The number 2 is both even and prime, so they can happen at the same time."
+    ],
+    "tip": "Check for any overlap between the outcomes of the two events."
+   },
+   {
+    "q": "A probability distribution table for a game has outcomes 1, 2, 3 with probabilities x^2, x, and 0.4. Given that x > 0, find x.",
+    "marks": 4,
+    "model": [
+     "x^2 + x + 0.4 = 1",
+     "x^2 + x - 0.6 = 0",
+     "(x - 0.4)(x + 1.5) = 0",
+     "x = 0.4 (since x > 0)"
+    ],
+    "tip": "Form a quadratic equation, factorise or use formula, and reject invalid roots."
+   },
+   {
+    "q": "If P(A) = 0.35, find the probability of the complement of A.",
+    "marks": 1,
+    "model": [
+     "1 - 0.35 = 0.65"
+    ],
+    "tip": "Complementary events always sum to 1."
+   },
+   {
+    "q": "A biased coin is tossed. P(Head) = p. Write down an expression for P(Tail) in terms of p.",
+    "marks": 1,
+    "model": [
+     "1 - p"
+    ],
+    "tip": "The sum of head and tail is exhaustive and mutually exclusive (1)."
+   },
+   {
+    "q": "The probabilities of a student achieving grade 7, 8, or 9 in maths are in the ratio 2 : 3 : 5. Find the probability of achieving a grade 8.",
+    "marks": 3,
+    "model": [
+     "Total ratio parts = 2 + 3 + 5 = 10",
+     "Fraction for grade 8 = 3 / 10",
+     "0.3"
+    ],
+    "tip": "Sum the ratio parts to find the denominator of the exhaustive set."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A game has three possible outcomes: Win, Draw, or Lose. The probability of winning is x, the probability of drawing is 3x, and the probability of losing is 0.4. (a) Find the value of x. (b) Find the probability of not losing.",
+    "steps": [
+     "Step 1: Recognise that Win, Draw, and Lose form an exhaustive and mutually exclusive set of outcomes, so their probabilities must sum to 1.",
+     "Step 2: Set up the equation: x + 3x + 0.4 = 1.",
+     "Step 3: Simplify and solve for x: 4x + 0.4 = 1 => 4x = 0.6 => x = 0.15.",
+     "Step 4: For part (b), 'not losing' means winning or drawing. P(not losing) = P(win) + P(draw) = x + 3x = 4x.",
+     "Step 5: Substitute x = 0.15: 4 * 0.15 = 0.6."
+    ],
+    "ans": "(a) x = 0.15, (b) 0.6"
+   },
+   {
+    "q": "A bag contains coloured counters. The table shows probabilities of picking red, blue, green, or yellow. Red: 2x, Blue: x^2, Green: 0.3, Yellow: 0.1. Find the possible values of x.",
+    "steps": [
+     "Step 1: Set up the sum of all exhaustive probabilities equal to 1: 2x + x^2 + 0.3 + 0.1 = 1.",
+     "Step 2: Rearrange into standard quadratic form: x^2 + 2x + 0.4 = 1 => x^2 + 2x - 0.6 = 0.",
+     "Step 3: Multiply by 5 to clear decimals: 5x^2 + 10x - 3 = 0.",
+     "Step 4: Use the quadratic formula x = (-b ± √(b^2 - 4ac)) / 2a where a=5, b=10, c=-3.",
+     "Step 5: Calculate roots: x = (-10 ± √(100 - 4(5)(-3))) / 10 = (-10 ± √160) / 10.",
+     "Step 6: Simplify roots: x = (-10 ± 12.649) / 10, giving x = 0.265 or x = -2.265.",
+     "Step 7: Reject x = -2.265 because probability P(red) = 2(-2.265) would be negative."
+    ],
+    "ans": "x = 0.265 (to 3 sig figs)"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Venn diagram representing an exhaustive set where event A and its complement A' partition the entire sample space.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"40\" y=\"30\" width=\"320\" height=\"180\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"55\" y=\"50\" font-size=\"12\" fill=\"#1b2540\">Sample Space (Sum = 1)</text><circle cx=\"200\" cy=\"120\" r=\"60\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"200\" y=\"125\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">Event A: P(A)</text><text x=\"300\" y=\"190\" font-size=\"12\" fill=\"#1b2540\">A': 1 - P(A)</text></svg>"
+   },
+   {
+    "cap": "Probability tree branch showing mutually exclusive and exhaustive outcomes summing to 1 at a single node.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><circle cx=\"80\" cy=\"120\" r=\"10\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"90\" y1=\"120\" x2=\"240\" y2=\"70\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"90\" y1=\"120\" x2=\"240\" y2=\"170\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"150\" y=\"85\" font-size=\"12\" fill=\"#1b2540\">P(A) = 0.7</text><text x=\"150\" y=\"160\" font-size=\"12\" fill=\"#1b2540\">P(A') = 0.3</text><text x=\"260\" y=\"75\" font-size=\"12\" fill=\"#1b2540\">Event A</text><text x=\"260\" y=\"175\" font-size=\"12\" fill=\"#1b2540\">Not A</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_h.4.3",
+  "sid": "maths_aqa_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-18T18:37:55.420Z"
  }
 }

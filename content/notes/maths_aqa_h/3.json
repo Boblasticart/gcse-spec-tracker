@@ -9226,5 +9226,739 @@
   "src": "pre",
   "by": "gemini/gemini-flash-lite-latest",
   "ts": "2026-11-17T20:31:55.166Z"
+ },
+ "maths_aqa_h.3.2": {
+  "summary": "Geometry at Grade 9 requires more than just knowing facts; it demands rigorous logical deduction and the ability to link multiple rules within complex diagrams. This section covers the fundamental building blocks of spatial reasoning, from basic linear relationships to the intricate properties of regular and irregular polygons. Mastering these rules allows for the calculation of unknown angles and the construction of formal geometric proofs, which are essential for high-mark questions on Paper 1 (non-calculator) and Papers 2 and 3. You must use the exact terminology—such as 'alternate' or 'corresponding'—to secure full marks in reasoning-based questions.",
+  "core": [
+   {
+    "h": "Angles on a Straight Line and at a Point",
+    "p": "The most fundamental rules in geometry involve the distribution of degrees around a fixed point or along a linear path. These are the starting points for almost every multi-step angle problem.",
+    "bullets": [
+     "**Angles on a straight line** sum to 180 degrees.",
+     "**Angles around a point** sum to 360 degrees.",
+     "These rules apply regardless of how many lines intersect the point or line, as long as they meet at a single vertex."
+    ],
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Reasoning Marks",
+      "p": "In 'show that' questions, always write 'Angles on a straight line sum to 180' as a full sentence. Do not just write '180'."
+     }
+    ]
+   },
+   {
+    "h": "Vertically Opposite Angles",
+    "p": "When two straight lines intersect, they create four angles. The pairs of angles that are non-adjacent (opposite each other) are known as vertically opposite angles.",
+    "bullets": [
+     "**Vertically opposite angles** are always equal.",
+     "They are formed by the intersection of two straight lines only; if the lines are not perfectly straight, this rule does not apply.",
+     "Note that adjacent angles in this intersection will sum to 180 degrees because they sit on a straight line."
+    ]
+   },
+   {
+    "h": "Parallel Lines: Corresponding Angles",
+    "p": "When a transversal line crosses two parallel lines, it creates angles in identical positions at each intersection.",
+    "bullets": [
+     "**Corresponding angles** are equal.",
+     "They are often identified by an 'F-shape', but you must never use the term 'F-shape' in your exam answer.",
+     "They exist in the same relative position at each intersection where a straight line crosses parallel lines."
+    ],
+    "fig": [
+     {
+      "cap": "Parallel lines (indicated by arrows) intersected by a transversal. Angles 'a' and 'b' are corresponding and equal.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"50\" y1=\"80\" x2=\"350\" y2=\"80\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"160\" x2=\"350\" y2=\"160\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"100\" y1=\"220\" x2=\"300\" y2=\"20\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M 240 80 L 255 80 L 250 70 Z\" fill=\"#1b2540\"/><path d=\"M 240 160 L 255 160 L 250 150 Z\" fill=\"#1b2540\"/><circle cx=\"240\" cy=\"80\" r=\"15\" fill=\"#dbeafe\" stroke=\"#1b2540\"/><circle cx=\"180\" cy=\"160\" r=\"15\" fill=\"#dbeafe\" stroke=\"#1b2540\"/><text x=\"245\" y=\"70\" fill=\"#1b2540\">a</text><text x=\"185\" y=\"150\" fill=\"#1b2540\">b</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Parallel Lines: Alternate Angles",
+    "p": "Alternate angles are found on opposite sides of the transversal line and between the two parallel lines.",
+    "bullets": [
+     "**Alternate angles** are equal.",
+     "They are often identified by a 'Z-shape', but you must use the term 'alternate' in the exam.",
+     "There are also 'alternate exterior angles' (outside the parallel lines), which are also equal, though these are less commonly tested."
+    ]
+   },
+   {
+    "h": "Parallel Lines: Allied (Co-interior) Angles",
+    "p": "Allied angles are located on the same side of the transversal line and between the two parallel lines.",
+    "bullets": [
+     "**Allied angles** (or co-interior angles) sum to 180 degrees.",
+     "They are often identified by a 'C' or 'U' shape.",
+     "This is a common way to prove lines are parallel: if the interior angles sum to 180, the lines must be parallel."
+    ]
+   },
+   {
+    "h": "Angles in Triangles",
+    "p": "The internal geometry of a triangle is governed by the sum of its three interior angles.",
+    "bullets": [
+     "**The sum of interior angles** in any triangle is 180 degrees.",
+     "In an **equilateral triangle**, all angles are 60 degrees.",
+     "In an **isosceles triangle**, the two angles opposite the equal sides are equal.",
+     "The **exterior angle** of a triangle is equal to the sum of the two opposite interior angles."
+    ],
+    "fig": [
+     {
+      "cap": "A triangle with one side extended. The exterior angle 'd' is equal to the sum of interior angles 'a' and 'b'.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><polygon points=\"100,180 300,180 200,60\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"300\" y1=\"180\" x2=\"380\" y2=\"180\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"130\" y=\"170\" fill=\"#1b2540\">a</text><text x=\"200\" y=\"90\" fill=\"#1b2540\">b</text><text x=\"260\" y=\"170\" fill=\"#1b2540\">c</text><text x=\"320\" y=\"170\" fill=\"#1b2540\">d</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Sum of Interior Angles in Polygons",
+    "p": "As the number of sides in a polygon increases, the sum of the interior angles increases in a predictable linear pattern.",
+    "bullets": [
+     "The formula for the sum of interior angles is **(n - 2) x 180**, where 'n' is the number of sides.",
+     "This works because any n-sided polygon can be split into (n - 2) triangles from a single vertex.",
+     "For a quadrilateral (n=4), the sum is 360; for a pentagon (n=5), it is 540; for a hexagon (n=6), it is 720."
+    ],
+    "table": {
+     "head": [
+      "Polygon",
+      "Sides (n)",
+      "Sum of Interior Angles"
+     ],
+     "rows": [
+      [
+       "Triangle",
+       "3",
+       "180°"
+      ],
+      [
+       "Quadrilateral",
+       "4",
+       "360°"
+      ],
+      [
+       "Pentagon",
+       "5",
+       "540°"
+      ],
+      [
+       "Hexagon",
+       "6",
+       "720°"
+      ],
+      [
+       "Octagon",
+       "8",
+       "1080°"
+      ]
+     ]
+    }
+   },
+   {
+    "h": "Exterior Angles of Polygons",
+    "p": "Exterior angles are formed by extending one side of the polygon. They represent the 'turn' required at each vertex to navigate the perimeter.",
+    "bullets": [
+     "The **sum of exterior angles** for any convex polygon is always 360 degrees.",
+     "This is true regardless of the number of sides.",
+     "At any vertex, the **Interior Angle + Exterior Angle = 180 degrees** (because they lie on a straight line)."
+    ]
+   },
+   {
+    "h": "Regular Polygons",
+    "p": "A regular polygon has all sides of equal length and all interior angles of equal size.",
+    "bullets": [
+     "**Individual Exterior Angle** = 360 / n.",
+     "**Individual Interior Angle** = 180 - (360 / n) OR ((n - 2) x 180) / n.",
+     "To find the number of sides 'n' when given an interior angle, first find the exterior angle (180 - interior) and then calculate 360 / exterior."
+    ],
+    "fig": [
+     {
+      "cap": "A regular pentagon showing the relationship between an interior angle (108°) and an exterior angle (72°).",
+      "svg": "<svg viewBox=\"0 0 400 240\"><polygon points=\"200,40 295,109 259,221 141,221 105,109\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"259\" y1=\"221\" x2=\"350\" y2=\"221\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"210\" y=\"210\" fill=\"#1b2540\">108°</text><text x=\"270\" y=\"210\" fill=\"#1b2540\">72°</text><text x=\"160\" y=\"130\" fill=\"#1b2540\">Regular Pentagon</text></svg>"
+     }
+    ]
+   }
+  ],
+  "analogy": {
+   "t": "The Polygon Walk",
+   "p": "Imagine walking around the edge of a giant park shaped like a polygon. Every time you reach a corner (vertex), you have to turn a certain amount to stay on the path. This 'turn' is the exterior angle. By the time you return to your starting point and face the original direction, you have completed one full rotation of 360 degrees. This is why exterior angles always sum to 360, no matter how many corners there are. The analogy breaks down with 'concave' polygons (where you might turn 'inward'), but for all standard AQA GCSE shapes, this rule is absolute."
+  },
+  "terms": [
+   {
+    "t": "Transversal",
+    "d": "A line that passes through two or more other lines (usually parallel lines)."
+   },
+   {
+    "t": "Supplementary",
+    "d": "Two angles that add up to 180 degrees."
+   },
+   {
+    "t": "Complementary",
+    "d": "Two angles that add up to 90 degrees."
+   },
+   {
+    "t": "Vertex",
+    "d": "A point where two or more line segments meet (a corner)."
+   },
+   {
+    "t": "Polygon",
+    "d": "A 2D shape with straight sides."
+   },
+   {
+    "t": "Regular Polygon",
+    "d": "A polygon where all sides are equal and all interior angles are equal."
+   },
+   {
+    "t": "Interior Angle",
+    "d": "An angle inside a polygon at one of its vertices."
+   },
+   {
+    "t": "Exterior Angle",
+    "d": "The angle between a side of a polygon and an adjacent side extended outwards."
+   },
+   {
+    "t": "Alternate Angles",
+    "d": "Equal angles on opposite sides of a transversal between parallel lines."
+   },
+   {
+    "t": "Corresponding Angles",
+    "d": "Equal angles in the same relative position at each intersection where a transversal cuts parallel lines."
+   },
+   {
+    "t": "Allied Angles",
+    "d": "Angles between parallel lines on the same side of the transversal that sum to 180 degrees."
+   },
+   {
+    "t": "Subtend",
+    "d": "To form an angle at a particular point by joining that point to the ends of a line segment."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Using 'Z-angles' or 'F-angles' as a reason.",
+    "r": "Use the terms 'alternate' or 'corresponding' to get the marks."
+   },
+   {
+    "w": "Thinking the sum of interior angles is always 180 or 360.",
+    "r": "Only triangles are 180; only quadrilaterals are 360. Use (n-2)x180 for others."
+   },
+   {
+    "w": "Assuming lines are parallel because they look parallel.",
+    "r": "Only assume lines are parallel if they have arrow markings or the question states it."
+   },
+   {
+    "w": "Confusing exterior angles with the reflex angle outside the shape.",
+    "r": "The exterior angle is 180 minus the interior angle (on a straight line)."
+   },
+   {
+    "w": "Dividing 360 by the interior angle to find the number of sides.",
+    "r": "You must divide 360 by the EXTERIOR angle to find the number of sides."
+   },
+   {
+    "w": "Forgetting that vertically opposite angles are equal.",
+    "r": "Identify the 'X' shape and equate the opposite angles immediately."
+   },
+   {
+    "w": "Stating allied angles are equal.",
+    "r": "Allied (co-interior) angles sum to 180 degrees; they are rarely equal."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A regular polygon has an interior angle of 144 degrees. Work out the number of sides.",
+    "marks": 3,
+    "model": [
+     "Exterior angle = 180 - 144 = 36 = 1 mark",
+     "Number of sides = 360 / 36 = 1 mark",
+     "n = 10 = 1 mark"
+    ],
+    "tip": "Always find the exterior angle first for regular polygon problems; it makes the math much simpler."
+   },
+   {
+    "q": "Explain why the sum of the interior angles of a hexagon is 720 degrees.",
+    "marks": 2,
+    "model": [
+     "A hexagon can be split into 4 triangles = 1 mark",
+     "4 x 180 = 720 = 1 mark"
+    ],
+    "tip": "Drawing the triangles from one vertex is a valid part of a geometric explanation."
+   },
+   {
+    "q": "In a triangle, the angles are x, 2x and 3x. Find the value of x.",
+    "marks": 3,
+    "model": [
+     "x + 2x + 3x = 180 = 1 mark",
+     "6x = 180 = 1 mark",
+     "x = 30 = 1 mark"
+    ],
+    "tip": "Set up an algebraic equation for any geometry problem involving variables."
+   },
+   {
+    "q": "Two parallel lines are cut by a transversal. One angle is 75 degrees. Find the size of its allied angle.",
+    "marks": 1,
+    "model": [
+     "180 - 75 = 105 = 1 mark"
+    ],
+    "tip": "Allied angles are supplementary (add to 180)."
+   },
+   {
+    "q": "A regular polygon has 12 sides. Calculate the size of each interior angle.",
+    "marks": 3,
+    "model": [
+     "Exterior angle = 360 / 12 = 30 = 1 mark",
+     "Interior angle = 180 - 30 = 1 mark",
+     "150 degrees = 1 mark"
+    ],
+    "tip": "You can also use ((12-2)x180)/12, but the exterior angle method is faster."
+   },
+   {
+    "q": "True or False: Vertically opposite angles are always supplementary.",
+    "marks": 1,
+    "model": [
+     "False (they are equal, not necessarily summing to 180) = 1 mark"
+    ],
+    "tip": "Only if the lines intersect at 90 degrees would they be both equal and supplementary."
+   },
+   {
+    "q": "The exterior angle of a regular polygon is 40 degrees. Work out the sum of the interior angles.",
+    "marks": 4,
+    "model": [
+     "Number of sides = 360 / 40 = 9 = 1 mark",
+     "Interior angle = 180 - 40 = 140 = 1 mark",
+     "Sum = 9 x 140 or (9-2) x 180 = 1 mark",
+     "1260 degrees = 1 mark"
+    ],
+    "tip": "This is a multi-step problem; keep your working clear for method marks."
+   },
+   {
+    "q": "Is it possible for a regular polygon to have an interior angle of 155 degrees? Give a reason.",
+    "marks": 2,
+    "model": [
+     "Exterior angle = 180 - 155 = 25 = 1 mark",
+     "360 / 25 = 14.4, which is not a whole number, so No = 1 mark"
+    ],
+    "tip": "The number of sides 'n' must always be an integer."
+   },
+   {
+    "q": "An isosceles triangle has one angle of 50 degrees. Write down the two possible values for the other angles.",
+    "marks": 2,
+    "model": [
+     "Case 1: 50, 65, 65 (where 50 is the vertex angle) = 1 mark",
+     "Case 2: 50, 50, 80 (where 50 is a base angle) = 1 mark"
+    ],
+    "tip": "Always consider both possibilities in isosceles triangle problems unless the diagram restricts it."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A regular octagon and a regular pentagon are joined at a side. Calculate the size of the interior angle formed between the two shapes.",
+    "steps": [
+     "Find the interior angle of the regular octagon: (8-2)x180 / 8 = 1080 / 8 = 135 degrees.",
+     "Find the interior angle of the regular pentagon: (5-2)x180 / 5 = 540 / 5 = 108 degrees.",
+     "The angle between them (if they meet at a vertex) would be the sum of these if they are adjacent, or 360 minus the sum if they are arranged around a point.",
+     "Assuming the question asks for the combined interior angle: 135 + 108 = 243 degrees."
+    ],
+    "ans": "243°"
+   },
+   {
+    "q": "Line AB is parallel to line CD. Angle AGH is 3x + 20 and angle GHD is x + 40, where GH is the transversal. If these are alternate angles, find x.",
+    "steps": [
+     "Since alternate angles are equal, set up the equation: 3x + 20 = x + 40.",
+     "Subtract x from both sides: 2x + 20 = 40.",
+     "Subtract 20 from both sides: 2x = 20.",
+     "Divide by 2: x = 10."
+    ],
+    "ans": "x = 10"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Summary of Parallel Line Rules: Angle 'a' and 'c' are alternate (equal); 'a' and 'b' are corresponding (equal); 'c' and 'd' are allied (sum to 180).",
+    "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"50\" y1=\"60\" x2=\"350\" y2=\"60\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"180\" x2=\"350\" y2=\"180\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"100\" y1=\"220\" x2=\"300\" y2=\"20\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"215\" y=\"55\" fill=\"#1b2540\">a</text><text x=\"155\" y=\"175\" fill=\"#1b2540\">b</text><text x=\"180\" y=\"75\" fill=\"#1b2540\">c</text><text x=\"190\" y=\"175\" fill=\"#1b2540\">d</text><path d=\"M 230 60 L 245 60 L 240 50 Z\" fill=\"#1b2540\"/><path d=\"M 230 180 L 245 180 L 240 170 Z\" fill=\"#1b2540\"/></svg>"
+   }
+  ],
+  "pid": "maths_aqa_h.3.2",
+  "sid": "maths_aqa_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3-flash-preview",
+  "ts": "2026-11-18T18:06:27.554Z"
+ },
+ "maths_aqa_h.3.11": {
+  "summary": "Understanding the properties of 3D shapes involves identifying and counting their faces, edges, and vertices. For polyhedra (solids with flat faces), these components are mathematically linked by Euler's Formula, which states that the number of vertices minus the number of edges plus the number of faces always equals two. Mastering these properties allows students to classify solids like prisms and pyramids and solve complex geometric problems involving spatial reasoning and visualization.",
+  "core": [
+   {
+    "h": "Defining Faces, Edges, and Vertices",
+    "p": "Every 3D solid is defined by its boundaries. In GCSE Maths, we distinguish between flat surfaces and curved surfaces to accurately describe a shape's geometry.",
+    "bullets": [
+     "**Face**: A flat surface of a 3D shape (e.g., the square side of a cube).",
+     "**Edge**: The line segment where two faces meet.",
+     "**Vertex**: A point where three or more edges meet (plural: vertices).",
+     "**Curved Surface**: A surface that is not flat, such as the side of a cylinder or the surface of a sphere."
+    ],
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Polyhedron",
+      "p": "A 3D solid with flat faces and straight edges. Prisms and pyramids are types of polyhedra."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A cuboid showing the relationship between a vertex (point), an edge (line), and a face (plane).",
+      "svg": "<svg viewBox=\"0 0 400 240\"><path d=\"M100 180 L220 180 L220 80 L100 80 Z\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M100 80 L160 40 L280 40 L220 80\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M220 180 L280 140 L280 40 L220 80\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"280\" cy=\"40\" r=\"4\" fill=\"#1b2540\"/><text x=\"290\" y=\"45\" font-size=\"12\" fill=\"#1b2540\">Vertex</text><text x=\"140\" y=\"130\" font-size=\"12\" fill=\"#1b2540\">Face</text><line x1=\"160\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#1b2540\" stroke-width=\"3\"/><text x=\"190\" y=\"35\" font-size=\"12\" fill=\"#1b2540\">Edge</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Euler's Formula for Polyhedra",
+    "p": "For any convex polyhedron, there is a fixed numerical relationship between its vertices (V), edges (E), and faces (F). This is a vital tool for checking if a shape is mathematically possible.",
+    "bullets": [
+     "The formula is: **V - E + F = 2**.",
+     "Example (Cube): 8 vertices, 12 edges, 6 faces. 8 - 12 + 6 = 2.",
+     "Example (Tetrahedron): 4 vertices, 6 edges, 4 faces. 4 - 6 + 4 = 2.",
+     "This formula does **not** apply to shapes with curved surfaces like cylinders or spheres."
+    ],
+    "callouts": [
+     {
+      "k": "key",
+      "t": "The Euler Constant",
+      "p": "The result '2' is known as the Euler characteristic for a sphere-like polyhedron."
+     }
+    ]
+   },
+   {
+    "h": "Properties of Prisms",
+    "p": "A prism is a polyhedron with two identical parallel end faces (the cross-section) and rectangular side faces.",
+    "bullets": [
+     "**Faces**: n + 2 (where n is the number of sides on the cross-section).",
+     "**Edges**: 3n (three times the number of sides on the cross-section).",
+     "**Vertices**: 2n (two sets of vertices, one for each end face).",
+     "A triangular prism (n=3) has 5 faces, 9 edges, and 6 vertices."
+    ],
+    "fig": [
+     {
+      "cap": "A triangular prism highlighting the uniform cross-section and the parallel edges connecting the two ends.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><path d=\"M80 200 L180 200 L130 100 Z\" fill=\"#fecaca\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M130 100 L250 50 L300 150 L180 200 Z\" fill=\"#e9d5ff\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M180 200 L300 150 L200 150 Z\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"80\" y1=\"200\" x2=\"200\" y2=\"150\" stroke=\"#1b2540\" stroke-dasharray=\"4\"/><line x1=\"200\" y1=\"150\" x2=\"250\" y2=\"50\" stroke=\"#1b2540\" stroke-dasharray=\"4\"/><text x=\"70\" y=\"150\" font-size=\"12\" fill=\"#1b2540\">Cross-section</text><text x=\"240\" y=\"180\" font-size=\"12\" fill=\"#1b2540\">Rectangular Face</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Properties of Pyramids",
+    "p": "A pyramid is a polyhedron with a polygonal base and triangular side faces that meet at a single point called the apex.",
+    "bullets": [
+     "**Faces**: n + 1 (the base plus n triangular sides).",
+     "**Edges**: 2n (n edges around the base and n edges leading to the apex).",
+     "**Vertices**: n + 1 (n vertices around the base plus the apex).",
+     "A square-based pyramid (n=4) has 5 faces, 8 edges, and 5 vertices."
+    ],
+    "fig": [
+     {
+      "cap": "A square-based pyramid showing the apex and the triangular faces meeting at the top.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><path d=\"M100 200 L250 200 L300 150 L150 150 Z\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"150\" y1=\"150\" x2=\"200\" y2=\"50\" stroke=\"#1b2540\" stroke-dasharray=\"4\"/><path d=\"M100 200 L200 50 L250 200 Z\" fill=\"#fde68a\" fill-opacity=\"0.6\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M250 200 L200 50 L300 150 Z\" fill=\"#dbeafe\" fill-opacity=\"0.6\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"50\" r=\"4\" fill=\"#1b2540\"/><text x=\"210\" y=\"55\" font-size=\"12\" fill=\"#1b2540\">Apex</text><text x=\"180\" y=\"220\" font-size=\"12\" fill=\"#1b2540\">Base Face</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "The Platonic Solids",
+    "p": "These are the only five regular polyhedra, where every face is an identical regular polygon and the same number of faces meet at each vertex.",
+    "table": {
+     "head": [
+      "Shape",
+      "Face Shape",
+      "Faces",
+      "Edges",
+      "Vertices"
+     ],
+     "rows": [
+      [
+       "Tetrahedron",
+       "Triangle",
+       "4",
+       "6",
+       "4"
+      ],
+      [
+       "Cube",
+       "Square",
+       "6",
+       "12",
+       "8"
+      ],
+      [
+       "Octahedron",
+       "Triangle",
+       "8",
+       "12",
+       "6"
+      ],
+      [
+       "Dodecahedron",
+       "Pentagon",
+       "12",
+       "30",
+       "20"
+      ],
+      [
+       "Icosahedron",
+       "Triangle",
+       "20",
+       "30",
+       "12"
+      ]
+     ]
+    }
+   },
+   {
+    "h": "Solids with Curved Surfaces",
+    "p": "Cylinders, cones, and spheres are not polyhedra because they have curved surfaces. Their properties are defined differently in mark schemes.",
+    "bullets": [
+     "**Cylinder**: 2 flat circular faces, 1 curved surface, 2 curved edges, 0 vertices.",
+     "**Cone**: 1 flat circular face, 1 curved surface, 1 curved edge, 1 vertex (the apex).",
+     "**Sphere**: 0 flat faces, 1 curved surface, 0 edges, 0 vertices."
+    ],
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Mark Scheme Caution",
+      "p": "Some questions ask for 'total surfaces'. For a cylinder, this is 3. If they ask for 'faces', specify if they are flat or curved to be safe."
+     }
+    ]
+   },
+   {
+    "h": "The Tetrahedron (Triangular Pyramid)",
+    "p": "The tetrahedron is unique because it is the simplest possible polyhedron.",
+    "bullets": [
+     "It is a triangular-based pyramid.",
+     "It has the minimum number of faces (4) required to enclose a 3D space.",
+     "In a **regular tetrahedron**, all 4 faces are equilateral triangles."
+    ]
+   },
+   {
+    "h": "Visualizing Hidden Edges",
+    "p": "When 3D shapes are drawn in 2D, some edges and vertices are hidden from view. Exam diagrams often use dashed lines to represent these.",
+    "bullets": [
+     "Always count the 'back' edges and 'bottom' faces that you cannot see.",
+     "For a cube, you can usually only see 3 faces, but you must know there are 6.",
+     "Practice sketching shapes to internalize where the hidden components sit."
+    ]
+   },
+   {
+    "h": "Relationship: Edges and Vertices in Prisms",
+    "p": "Prisms follow a strict pattern based on their cross-section side count (n).",
+    "bullets": [
+     "The number of edges is always a multiple of 3 because there are n edges on the top, n on the bottom, and n connecting them.",
+     "The number of vertices is always even (2n) because each corner of the top face has a corresponding corner on the bottom face."
+    ]
+   },
+   {
+    "h": "Relationship: Edges and Vertices in Pyramids",
+    "p": "Pyramids follow a pattern based on their base side count (n).",
+    "bullets": [
+     "The number of edges is always even (2n) because every edge on the base has a corresponding edge leading to the apex.",
+     "The number of faces and vertices are always equal (n + 1)."
+    ]
+   }
+  ],
+  "analogy": {
+   "t": "The Construction Site Analogy",
+   "p": "Think of a 3D shape as a building project. The **vertices** are the metal joints or 'nodes' where beams meet. The **edges** are the steel beams themselves that provide the skeleton. The **faces** are the glass or concrete panels that slot into the beams to create walls. Euler's Formula is like a safety inspector's checklist: if the number of joints, beams, and panels doesn't balance correctly (V - E + F = 2), the building is physically impossible. This analogy breaks down for curved shapes like spheres, as they are like balloons—they have a surface but no beams or joints to hold them up."
+  },
+  "terms": [
+   {
+    "t": "Face",
+    "d": "A flat surface of a three-dimensional solid."
+   },
+   {
+    "t": "Edge",
+    "d": "A line segment where two faces of a solid meet."
+   },
+   {
+    "t": "Vertex",
+    "d": "A point where three or more edges meet."
+   },
+   {
+    "t": "Polyhedron",
+    "d": "A solid with flat faces and straight edges."
+   },
+   {
+    "t": "Euler's Formula",
+    "d": "The relationship V - E + F = 2 for convex polyhedra."
+   },
+   {
+    "t": "Prism",
+    "d": "A polyhedron with two parallel, congruent bases and rectangular side faces."
+   },
+   {
+    "t": "Pyramid",
+    "d": "A polyhedron with a polygonal base and triangular faces meeting at an apex."
+   },
+   {
+    "t": "Apex",
+    "d": "The vertex at the 'tip' of a pyramid or cone, opposite the base."
+   },
+   {
+    "t": "Cross-section",
+    "d": "The shape made by cutting straight through an object."
+   },
+   {
+    "t": "Regular Polyhedron",
+    "d": "A solid where all faces are identical regular polygons."
+   },
+   {
+    "t": "Curved Surface",
+    "d": "A non-flat boundary of a solid, such as the side of a cylinder."
+   },
+   {
+    "t": "Tetrahedron",
+    "d": "A pyramid with a triangular base, having 4 faces in total."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Counting only the visible faces in a diagram.",
+    "r": "Include hidden faces (e.g., the base and back sides)."
+   },
+   {
+    "w": "Stating a cylinder has 0 edges.",
+    "r": "A cylinder has 2 curved edges where the circular faces meet the curved surface."
+   },
+   {
+    "w": "Applying Euler's Formula to a sphere or cone.",
+    "r": "Euler's Formula only applies to polyhedra with flat faces and straight edges."
+   },
+   {
+    "w": "Confusing vertices with edges.",
+    "r": "Vertices are points; edges are lines."
+   },
+   {
+    "w": "Forgetting to count the apex as a vertex.",
+    "r": "The apex is a vertex where multiple edges meet."
+   },
+   {
+    "w": "Thinking all pyramids have 5 faces.",
+    "r": "The number of faces depends on the base (e.g., a hexagonal pyramid has 7 faces)."
+   },
+   {
+    "w": "Calling a cylinder a 'circular prism'.",
+    "r": "A prism must have polygons as faces; a cylinder has curved surfaces."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A polyhedron has 10 vertices and 15 edges. How many faces does it have?",
+    "marks": 2,
+    "model": [
+     "State Euler's Formula: V - E + F = 2",
+     "Substitute values: 10 - 15 + F = 2",
+     "Simplify: -5 + F = 2",
+     "Solve: F = 7"
+    ],
+    "tip": "Always write the formula first to secure the method mark."
+   },
+   {
+    "q": "How many edges does a hexagonal prism have?",
+    "marks": 1,
+    "model": [
+     "A hexagon has 6 sides (n=6).",
+     "Edges of a prism = 3n = 3 x 6 = 18."
+    ],
+    "tip": "Remember: 3n for prism edges, 2n for pyramid edges."
+   },
+   {
+    "q": "Write down the number of faces, edges, and vertices for a square-based pyramid.",
+    "marks": 2,
+    "model": [
+     "Faces: 5 (1 square base + 4 triangular sides)",
+     "Edges: 8 (4 on base + 4 leading to apex)",
+     "Vertices: 5 (4 on base + 1 apex)"
+    ],
+    "tip": "Sketching the shape quickly can help you count accurately."
+   },
+   {
+    "q": "A 3D shape has 2 flat faces, 1 curved surface, and 2 curved edges. Name the shape.",
+    "marks": 1,
+    "model": [
+     "Cylinder"
+    ],
+    "tip": "The '2 flat faces' are the circular ends."
+   },
+   {
+    "q": "Explain why a sphere does not satisfy Euler's Formula.",
+    "marks": 2,
+    "model": [
+     "Euler's Formula (V - E + F = 2) only applies to polyhedra.",
+     "A sphere has no flat faces, straight edges, or vertices."
+    ],
+    "tip": "Mention the specific requirements for polyhedra: flat faces and straight edges."
+   },
+   {
+    "q": "A prism has 12 vertices. How many faces does it have?",
+    "marks": 2,
+    "model": [
+     "Vertices of a prism = 2n, so 2n = 12, meaning n = 6.",
+     "The prism is hexagonal.",
+     "Faces of a prism = n + 2 = 6 + 2 = 8."
+    ],
+    "tip": "Work backwards from the number of vertices to find the type of prism first."
+   },
+   {
+    "q": "Which Platonic solid has 8 faces and 6 vertices?",
+    "marks": 1,
+    "model": [
+     "Octahedron"
+    ],
+    "tip": "Memorize the 'Octa' prefix means 8 faces."
+   },
+   {
+    "q": "A pyramid has 12 edges. What is the shape of its base?",
+    "marks": 2,
+    "model": [
+     "Edges of a pyramid = 2n.",
+     "2n = 12, so n = 6.",
+     "The base is a hexagon."
+    ],
+    "tip": "The number of base edges is always half the total edges for a pyramid."
+   },
+   {
+    "q": "Compare the number of vertices in a pentagonal prism and a pentagonal pyramid.",
+    "marks": 2,
+    "model": [
+     "Pentagonal prism: 2n = 2 x 5 = 10 vertices.",
+     "Pentagonal pyramid: n + 1 = 5 + 1 = 6 vertices.",
+     "The prism has 4 more vertices."
+    ],
+    "tip": "Show the calculation for both shapes to ensure full marks."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A solid has 12 pentagonal faces and 20 vertices. Calculate the number of edges using Euler's Formula and name the shape.",
+    "steps": [
+     "Identify V = 20 and F = 12.",
+     "Use V - E + F = 2.",
+     "20 - E + 12 = 2.",
+     "32 - E = 2.",
+     "E = 30.",
+     "A shape with 12 pentagonal faces is a dodecahedron."
+    ],
+    "ans": "Edges = 30; Shape = Dodecahedron"
+   },
+   {
+    "q": "Prove that an n-gonal prism always has an even number of vertices.",
+    "steps": [
+     "A prism has a cross-section with n vertices.",
+     "It has two such identical faces (the top and the bottom).",
+     "The total number of vertices is n + n = 2n.",
+     "Any number multiplied by 2 is an even number."
+    ],
+    "ans": "Total vertices = 2n, which is always even."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Comparison of a Cylinder and a Cone, showing the difference in vertices and edges.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><ellipse cx=\"100\" cy=\"190\" rx=\"40\" ry=\"15\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M60 190 L60 70 A40 15 0 0 1 140 70 L140 190\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><ellipse cx=\"100\" cy=\"70\" rx=\"40\" ry=\"15\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"75\" y=\"230\" font-size=\"12\" fill=\"#1b2540\">Cylinder</text><ellipse cx=\"300\" cy=\"190\" rx=\"40\" ry=\"15\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M260 190 L300 50 L340 190\" fill=\"#fde68a\" fill-opacity=\"0.5\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"300\" cy=\"50\" r=\"3\" fill=\"#1b2540\"/><text x=\"285\" y=\"230\" font-size=\"12\" fill=\"#1b2540\">Cone</text><text x=\"310\" y=\"55\" font-size=\"11\" fill=\"#1b2540\">1 Vertex</text><text x=\"145\" y=\"130\" font-size=\"11\" fill=\"#1b2540\">Curved Surface</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_h.3.11",
+  "sid": "maths_aqa_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3-flash-preview",
+  "ts": "2026-11-18T18:07:02.545Z"
  }
 }

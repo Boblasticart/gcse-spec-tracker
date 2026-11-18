@@ -4974,5 +4974,1399 @@
   "src": "pre",
   "by": "gemini/gemini-flash-lite-latest",
   "ts": "2026-11-17T19:20:01.235Z"
+ },
+ "maths_aqa_h.0.9": {
+  "summary": "Terminating decimals are those that end after a finite number of places, while recurring (repeating) decimals continue indefinitely with a repeating block. Any terminating decimal can be written as a fraction whose denominator is a power of 2, 5 or their product, and any repeating decimal can be expressed as a fraction using algebraic manipulation. Mastering these conversions lets you move seamlessly between decimal and fractional forms, a skill essential for higher‑tier number work and many exam questions.",
+  "core": [
+   {
+    "h": "What is a terminating decimal?",
+    "p": "A decimal that stops after a fixed number of places. It can be written exactly as a fraction whose denominator contains only the prime factors 2 and 5.",
+    "bullets": [
+     "Examples: 0.125, 3.75, 0.2",
+     "If a decimal terminates after *n* places, write it as \\(\\frac{\\text{integer}}{10^n}\\)",
+     "Simplify the fraction; the denominator will be of the form \\(2^a5^b\\)"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Terminating decimal",
+      "p": "A decimal representation that ends after a finite number of digits."
+     },
+     {
+      "k": "key",
+      "t": "",
+      "p": "Denominator of the fraction form will only contain the primes 2 and 5."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Converting a terminating decimal to a fraction",
+    "p": "Write the decimal as an integer over the appropriate power of 10, then reduce.",
+    "bullets": [
+     "Step 1: Count the decimal places (n).",
+     "Step 2: Write \\(\\text{decimal}\\times10^n / 10^n\\).",
+     "Step 3: Simplify by dividing numerator and denominator by their HCF."
+    ],
+    "table": {
+     "head": [
+      "Decimal",
+      "Power of 10",
+      "Fraction before simplification",
+      "Simplified fraction"
+     ],
+     "rows": [
+      [
+       "0.4",
+       "10",
+       "4/10",
+       "2/5"
+      ],
+      [
+       "2.375",
+       "1000",
+       "2375/1000",
+       "19/8"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "",
+      "p": "Always check if the fraction can be reduced – the exam marks reduction."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "What is a recurring (repeating) decimal?",
+    "p": "A decimal in which a block of digits repeats infinitely, indicated by a bar or ellipsis.",
+    "bullets": [
+     "Examples: \\(0.\\overline{3}=0.333…\\), \\(1.2\\overline{45}=1.2454545…\\)",
+     "The repeating block can be one digit or many digits."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Recurring decimal",
+      "p": "A decimal that has a group of digits that repeats indefinitely."
+     },
+     {
+      "k": "warn",
+      "t": "",
+      "p": "Do not confuse a terminating decimal with a repeating decimal that ends in 0s (e.g., 0.25000… is terminating)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Algebraic method for converting a repeating decimal to a fraction",
+    "p": "Use a variable to represent the decimal, multiply to shift the repeat, subtract, and solve for the variable.",
+    "bullets": [
+     "Let \\(x = \\) the repeating decimal.",
+     "Multiply by \\(10^k\\) where *k* = number of non‑repeating digits.",
+     "Multiply again by \\(10^r\\) where *r* = length of the repeating block.",
+     "Subtract the two equations to eliminate the repeat.",
+     "Solve for \\(x\\) and simplify."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "",
+      "p": "The denominator after subtraction will be \\(10^{k+r} - 10^k\\)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Example: \\(0.\\overline{6}\\)",
+    "p": "A simple one‑digit repeat.",
+    "bullets": [
+     "Let \\(x = 0.666…\\)",
+     "Multiply by 10: \\(10x = 6.666…\\)",
+     "Subtract: \\(10x - x = 6\\)",
+     "Thus \\(9x = 6 \\Rightarrow x = \\frac{6}{9}=\\frac{2}{3}\\)"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Example: \\(1.2\\overline{45}\\)",
+    "p": "Two non‑repeating digits (1.2) followed by a two‑digit repeat (45).",
+    "bullets": [
+     "Let \\(x = 1.2454545…\\)",
+     "Multiply by 10 (one non‑repeat): \\(10x = 12.454545…\\)",
+     "Multiply by 100 (repeat length 2): \\(1000x = 1245.4545…\\)",
+     "Subtract: \\(1000x - 10x = 1245.4545… - 12.4545… = 1233\\)",
+     "Thus \\(990x = 1233 \\Rightarrow x = \\frac{1233}{990}=\\frac{137}{110}\\)"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "",
+      "p": "Always check the number of non‑repeating digits first – it determines the first multiplication factor."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Converting a fraction to a repeating decimal",
+    "p": "Long division reveals the repeating block; the length of the repeat is at most the denominator minus 1.",
+    "bullets": [
+     "Divide numerator by denominator.",
+     "When a remainder repeats, the digits between repetitions form the block.",
+     "If the division terminates, the decimal is terminating (denominator only 2s and 5s)."
+    ],
+    "table": {
+     "head": [
+      "Fraction",
+      "Division steps",
+      "Result"
+     ],
+     "rows": [
+      [
+       "1/3",
+       "1 ÷ 3 → remainder 1 repeats",
+       "0.\\overline{3}"
+      ],
+      [
+       "7/12",
+       "12 goes into 70 → 5 remainder 10; 100 ÷ 12 → 8 remainder 4; 40 ÷ 12 → 3 remainder 4 repeats",
+       "0.58\\overline{3}"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "",
+      "p": "If the denominator after removing factors 2 and 5 is 1, the decimal terminates."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Higher‑tier twist: mixed repeating and terminating parts",
+    "p": "Some numbers have a terminating part followed by a repeat, e.g., \\(0.125\\overline{7}\\). The same algebraic method works, treating the terminating part as the non‑repeating segment.",
+    "bullets": [
+     "Let \\(x = 0.125777…\\)",
+     "Three non‑repeating digits → multiply by \\(10^3 = 1000\\).",
+     "Repeat length 1 → multiply by \\(10\\) again.",
+     "Proceed with subtraction as usual."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "",
+      "p": "Do not forget the terminating digits when setting up the equations – they affect the first multiplier."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Link to other number concepts",
+    "p": "Understanding denominators of the form \\(2^a5^b\\) connects to prime factorisation (N4) and to simplifying fractions (N8). Conversions also underpin ratio work (N11) and standard form (N9).",
+    "bullets": [
+     "If a fraction reduces to a denominator with only 2s and 5s → terminating decimal.",
+     "If any other prime appears → repeating decimal.",
+     "These properties are frequently tested in multi‑step questions."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Common exam pitfalls and how to avoid them",
+    "p": "",
+    "bullets": [
+     "Leaving the repeat bar off when writing the answer – always show the bar or ellipsis.",
+     "Failing to simplify the final fraction – marks are lost.",
+     "Mixing up the number of non‑repeating digits when setting up the algebraic equation.",
+     "Assuming a decimal with a trailing 0 repeats (e.g., 0.25000… is terminating)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "",
+      "p": "Write a quick check: multiply your fraction back to a decimal using a calculator – it should match the original."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Repeating decimals are like a music loop",
+   "p": "Imagine a short musical phrase that repeats forever on a loop track – the phrase is the repeating block, and the track length is the denominator after removing 2s and 5s. Just as you can record the loop as a single file (the fraction), you can also write out the notes one after another (the decimal). The analogy breaks down when the loop contains silence (zeros) that never end – in maths that would be a terminating decimal, not a true loop."
+  },
+  "terms": [
+   {
+    "t": "Terminating decimal",
+    "d": "A decimal that ends after a finite number of digits."
+   },
+   {
+    "t": "Repeating decimal",
+    "d": "A decimal in which a block of digits repeats indefinitely, shown with a bar."
+   },
+   {
+    "t": "Repeating block",
+    "d": "The group of digits that repeats in a recurring decimal."
+   },
+   {
+    "t": "Non‑repeating part",
+    "d": "Digits before the repeating block in a mixed decimal."
+   },
+   {
+    "t": "Denominator of the form 2^a5^b",
+    "d": "A denominator containing only the prime factors 2 and 5; guarantees a terminating decimal."
+   },
+   {
+    "t": "Algebraic conversion",
+    "d": "Using equations and subtraction to turn a repeating decimal into a fraction."
+   },
+   {
+    "t": "Highest common factor (HCF)",
+    "d": "The greatest number that divides two integers; used to simplify fractions."
+   },
+   {
+    "t": "Bar notation",
+    "d": "A horizontal line placed over the repeating block of a decimal."
+   },
+   {
+    "t": "Long division",
+    "d": "The process of dividing numbers digit by digit, revealing repeating remainders."
+   },
+   {
+    "t": "Mixed repeating decimal",
+    "d": "A decimal with a terminating part followed by a repeating block."
+   },
+   {
+    "t": "Simplify fraction",
+    "d": "Reduce a fraction to its lowest terms by dividing numerator and denominator by their HCF."
+   },
+   {
+    "t": "Power of 10",
+    "d": "10, 100, 1000 … used to shift decimal places during conversion."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "0.125 = 125/1000 = 1/8",
+    "r": "Correct – but many write 125/1000 without simplifying; mark scheme expects 1/8."
+   },
+   {
+    "w": "0.3̅ = 3/10",
+    "r": "Incorrect – 0.\\overline{3}=3/9=1/3. Students often forget the subtraction step."
+   },
+   {
+    "w": "1/6 = 0.1666… so answer 0.166",
+    "r": "Incorrect – must write 0.1\\overline{6} or 0.1666…; truncating loses the repeat."
+   },
+   {
+    "w": "Convert 0.2\\overline{7} by multiplying by 10 only",
+    "r": "Incorrect – need to multiply by 100 (one non‑repeat + two repeat digits) before subtraction."
+   },
+   {
+    "w": "Denominator 20 → terminating because 20=2^2·5",
+    "r": "Correct – but some claim any denominator with 5 gives terminating; need both 2 and 5 only, no other primes."
+   },
+   {
+    "w": "0.1250 = 0.125",
+    "r": "Correct – trailing zeros do not create a repeat; students sometimes treat them as a repeat."
+   },
+   {
+    "w": "Write 0.\\overline{142857}=1/7",
+    "r": "Correct – but must show work; many just state the result without the algebraic steps."
+   },
+   {
+    "w": "0.\\overline{09}=9/99",
+    "r": "Incorrect – 0.\\overline{09}=9/99 simplifies to 1/11; students forget to simplify."
+   },
+   {
+    "w": "For 7/12 write 0.58\\overline{3} without checking remainder",
+    "r": "Partial – need to show that 3 repeats; otherwise marks lost."
+   },
+   {
+    "w": "Assume 0.\\overline{0}=0",
+    "r": "Correct – but some write 0.0̅ and lose marks for unnecessary bar."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Express 0.\\overline{7} as a fraction in lowest terms.",
+    "marks": 2,
+    "model": [
+     "Let x = 0.777…",
+     "10x = 7.777…",
+     "Subtract: 9x = 7",
+     "x = 7/9 (already lowest)"
+    ],
+    "tip": "Remember to multiply by 10 because the repeat length is 1."
+   },
+   {
+    "q": "Write 3.1\\overline{24} as a fraction in simplest form.",
+    "marks": 4,
+    "model": [
+     "Let x = 3.124242…",
+     "Multiply by 10 (one non‑repeat): 10x = 31.24242…",
+     "Multiply by 100 (repeat length 2): 1000x = 3124.24242…",
+     "Subtract: 990x = 3093",
+     "x = 3093/990",
+     "Simplify by HCF 33 → 93/30 → further by 3 → 31/10",
+     "Answer 31/10"
+    ],
+    "tip": "Check the HCF carefully; 3093 and 990 share 33."
+   },
+   {
+    "q": "Convert 5/8 into a decimal and state whether it terminates or repeats.",
+    "marks": 2,
+    "model": [
+     "Divide 5 by 8 → 0.625",
+     "Denominator 8 = 2^3 → terminating",
+     "Answer 0.625 (terminating)"
+    ],
+    "tip": "If denominator after removing 2s and 5s is 1, the decimal terminates."
+   },
+   {
+    "q": "The decimal 0.\\overline{142857} is given. Write it as a fraction and simplify.",
+    "marks": 4,
+    "model": [
+     "Let x = 0.142857142857…",
+     "Multiply by 10^6 = 1,000,000: 1,000,000x = 142857.142857…",
+     "Subtract: 999,999x = 142857",
+     "x = 142857/999,999",
+     "Simplify by 142857 → 1/7",
+     "Answer 1/7"
+    ],
+    "tip": "The repeat length is 6, so use 10^6."
+   },
+   {
+    "q": "A number is written as 0.23\\overline{5}. Find its exact fractional form.",
+    "marks": 6,
+    "model": [
+     "Let x = 0.235555…",
+     "Two non‑repeat digits → multiply by 100: 100x = 23.5555…",
+     "Repeat length 1 → multiply by 10: 1000x = 235.5555…",
+     "Subtract: 900x = 212",
+     "x = 212/900",
+     "Simplify HCF 4 → 53/225",
+     "Answer 53/225"
+    ],
+    "tip": "Count non‑repeating digits first; they determine the first power of 10."
+   },
+   {
+    "q": "State whether 7/45 terminates or repeats when written as a decimal. If it repeats, give the repeating block.",
+    "marks": 2,
+    "model": [
+     "Denominator 45 = 3^2·5 → contains prime 3 → repeats",
+     "Long division gives 0.1\\overline{5}6",
+     "Repeating block is 56"
+    ],
+    "tip": "Any prime other than 2 or 5 in the denominator forces a repeat."
+   },
+   {
+    "q": "Write 0.125 as a fraction and then convert it back to a decimal to check your answer.",
+    "marks": 2,
+    "model": [
+     "0.125 = 125/1000 = 1/8",
+     "1/8 = 0.125 (check)"
+    ],
+    "tip": "Always perform the check – it secures marks for accuracy."
+   },
+   {
+    "q": "Express 0.\\overline{09} as a fraction in lowest terms.",
+    "marks": 4,
+    "model": [
+     "Let x = 0.090909…",
+     "Multiply by 100: 100x = 9.0909…",
+     "Subtract: 99x = 9",
+     "x = 9/99 = 1/11",
+     "Answer 1/11"
+    ],
+    "tip": "Remember to simplify the final fraction."
+   },
+   {
+    "q": "A calculator shows 0.333… when dividing 1 by 3. Explain why the decimal repeats and give the fraction form.",
+    "marks": 4,
+    "model": [
+     "Denominator 3 is not 2 or 5 → repeat",
+     "1/3 = 0.\\overline{3}",
+     "Algebraic proof: let x = 0.333…, 10x = 3.333…, 9x = 3, x = 1/3"
+    ],
+    "tip": "Link the prime‑factor rule to the algebraic proof for full marks."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Convert 0.4\\overline{27} to a fraction.",
+    "steps": [
+     "Let x = 0.4272727…",
+     "Two non‑repeating digits (4) → multiply by 10: 10x = 4.272727…",
+     "Repeat length 2 → multiply by 100: 1000x = 427.272727…",
+     "Subtract: 1000x – 10x = 427.272727… – 4.272727… = 423",
+     "990x = 423 → x = 423/990",
+     "Simplify by HCF 33 → 13/30"
+    ],
+    "ans": "13/30"
+   },
+   {
+    "q": "Write 7/12 as a decimal and state the repeating part.",
+    "steps": [
+     "12 goes into 70 → 5 remainder 10 → first decimal digit 5",
+     "Bring down 0 → 100 ÷ 12 = 8 remainder 4 → second digit 8",
+     "Bring down 0 → 40 ÷ 12 = 3 remainder 4 → remainder repeats → repeat block 3",
+     "Thus 7/12 = 0.58\\overline{3}"
+    ],
+    "ans": "0.58\\overline{3}"
+   },
+   {
+    "q": "Express 0.125 as a fraction and then verify by multiplication.",
+    "steps": [
+     "0.125 = 125/1000",
+     "Simplify: divide numerator and denominator by 125 → 1/8",
+     "Check: 1 ÷ 8 = 0.125"
+    ],
+    "ans": "1/8"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Algebraic conversion of 0.\\overline{6} to 2/3",
+    "svg": "<svg viewBox=\"0 0 400 240\" fill=\"#dbeafe\" stroke=\"#1b2540\" font-size=\"12\"><g><text x=\"20\" y=\"30\">x = 0.666…</text><text x=\"20\" y=\"60\">10x = 6.666…</text><text x=\"20\" y=\"90\">10x - x = 6</text><text x=\"20\" y=\"120\">9x = 6</text><text x=\"20\" y=\"150\">x = 6/9 = 2/3</text></g></svg>"
+   },
+   {
+    "cap": "Long division showing 7/12 = 0.58\\overline{3}",
+    "svg": "<svg viewBox=\"0 0 400 240\" fill=\"#fde68a\" stroke=\"#1b2540\" font-size=\"12\"><g><text x=\"20\" y=\"30\">12|7.000</text><text x=\"120\" y=\"30\">0.5</text><text x=\"20\" y=\"60\">-60</text><text x=\"20\" y=\"90\">100</text><text x=\"120\" y=\"90\">0.8</text><text x=\"20\" y=\"120\">-96</text><text x=\"20\" y=\"150\">40</text><text x=\"120\" y=\"150\">0.3</text><text x=\"20\" y=\"180\">-36</text><text x=\"20\" y=\"210\">40 repeats → 3 repeats</text></g></svg>"
+   },
+   {
+    "cap": "Denominator prime‑factor rule for terminating vs repeating decimals",
+    "svg": "<svg viewBox=\"0 0 400 240\" fill=\"#bbf7d0\" stroke=\"#1b2540\" font-size=\"12\"><g><text x=\"20\" y=\"30\">If denominator = 2^a·5^b → terminating</text><text x=\"20\" y=\"70\">If any other prime factor → repeating</text><text x=\"20\" y=\"110\">Examples:</text><text x=\"40\" y=\"140\">8 = 2^3 → 0.125 (terminates)</text><text x=\"40\" y=\"170\">45 = 3^2·5 → 0.4\\overline{5} (repeats)</text></g></svg>"
+   }
+  ],
+  "pid": "maths_aqa_h.0.9",
+  "sid": "maths_aqa_h",
+  "v": 2,
+  "src": "pre",
+  "by": "groq/openai/gpt-oss-120b",
+  "ts": "2026-11-18T17:29:25.919Z"
+ },
+ "maths_aqa_h.0.11": {
+  "summary": "Interpreting fractions and percentages as operators means treating them as instructions that change a quantity – a fraction tells you to take a part of a whole, while a percentage tells you to take a part per hundred. This view lets you convert between fractions, percentages and decimals, apply them to numbers, and solve real‑world problems such as discounts, profit, tax and growth. Mastery of this operator perspective underpins all later work with ratios, proportional reasoning and algebraic manipulation in the AQA Higher Tier specification.",
+  "core": [
+   {
+    "h": "What does it mean to be an operator?",
+    "p": "In mathematics an operator is a symbol that tells you to perform a specific action on a number. Fractions and percentages act as operators that scale a quantity.",
+    "bullets": [
+     "A fraction a⁄b means “take a‑th part of each b‑th part”.",
+     "A percentage p % means “take p parts out of 100”.",
+     "Both can be written as a multiplier: a⁄b = a÷b, p % = p÷100."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Operator",
+      "p": "A symbol that modifies a number by performing a defined mathematical action (e.g., +, –, ×, ÷, a⁄b, p %)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Fraction as a multiplier",
+    "p": "When a fraction is placed before a quantity it multiplies that quantity.",
+    "bullets": [
+     "3⁄4 × 80 = 60 – you have taken three‑quarters of 80.",
+     "The order matters: 3⁄4 of 80 ≠ 80 of 3⁄4."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "",
+      "p": "Always read a fraction before a number as “of”."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A pie chart showing 3⁄4 shaded to illustrate taking three‑quarters of a whole.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" fill=\"#dbeafe\" stroke=\"#1b2540\"/><circle cx=\"200\" cy=\"120\" r=\"80\" fill=\"#fde68a\" stroke=\"#1b2540\"/><path d=\"M200,120 L200,40 A80,80 0 0,1 280,120 Z\" fill=\"#bbf7d0\" stroke=\"#1b2540\"/><text x=\"200\" y=\"30\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">3⁄4 of the whole</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Percentage as a multiplier",
+    "p": "A percentage converts directly to a decimal multiplier by dividing by 100.",
+    "bullets": [
+     "25 % = 25÷100 = 0.25",
+     "25 % × 200 = 0.25 × 200 = 50"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "",
+      "p": "For quick mental work, move the decimal two places left (e.g., 7.5 % → 0.075)."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Bar diagram comparing 25 % of 200 with 0.25 × 200.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"150\" width=\"160\" height=\"40\" fill=\"#e9d5ff\" stroke=\"#1b2540\"/><rect x=\"220\" y=\"150\" width=\"160\" height=\"40\" fill=\"#fecaca\" stroke=\"#1b2540\"/><text x=\"100\" y=\"145\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">25 %</text><text x=\"300\" y=\"145\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">0.25</text><text x=\"200\" y=\"200\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">200 units</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Converting between fractions, percentages and decimals",
+    "p": "The three forms are interchangeable; the choice depends on which is most convenient for the problem.",
+    "bullets": [
+     "Fraction → Percentage: multiply by 100 % (\\(\\frac{3}{5}=0.6=60 %\\)).",
+     "Percentage → Decimal: divide by 100 (\\(60 % = 0.60\\)).",
+     "Decimal → Fraction: write as a fraction of a power of 10 and simplify (\\(0.75 = \\frac{75}{100}=\\frac{3}{4}\\))."
+    ],
+    "table": {
+     "head": [
+      "Form",
+      "Example",
+      "Operator expression"
+     ],
+     "rows": [
+      [
+       "\\(\\frac{2}{5}\\)",
+       "40 % of 250",
+       "0.4 × 250"
+      ],
+      [
+       "0.125",
+       "12.5 % of 80",
+       "0.125 × 80"
+      ],
+      [
+       "30 %",
+       "\\(\\frac{3}{10}\\) of 90",
+       "0.3 × 90"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "",
+      "p": "Do not confuse “of” with “times”; the operator meaning is the same but wording matters in marks."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Applying the operator to whole numbers",
+    "p": "When the operator is a fraction or percentage, the calculation is a single multiplication step.",
+    "bullets": [
+     "Find the multiplier first, then multiply.",
+     "Keep extra decimal places until the final answer to avoid rounding errors."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "",
+      "p": "Fraction/percentage → multiplier → multiply."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Applying the operator to decimals and fractions",
+    "p": "The same rules apply; you may need to convert the operator to a compatible form first.",
+    "bullets": [
+     "12.5 % of \\(\\frac{3}{4}\\) → 0.125 × 0.75 = 0.09375.",
+     "\\(\\frac{2}{3}\\) of 0.6 → \\(\\frac{2}{3}\\) × 0.6 = 0.4."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "",
+      "p": "When both are fractions, multiply numerators and denominators directly."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Reverse operator – finding the whole",
+    "p": "If you know the part and the fraction/percentage, you can recover the whole by dividing.",
+    "bullets": [
+     "If 30 % of x = 45, then x = 45 ÷ 0.30 = 150.",
+     "If \\(\\frac{5}{8}\\) of y = 20, then y = 20 ÷ \\(\\frac{5}{8}\\) = 20 × \\(\\frac{8}{5}\\) = 32."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Inverse operator",
+      "p": "Dividing by the fraction/percentage undoes the ‘of’ operation."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Compound operator problems",
+    "p": "Multiple operators can be combined using the order of operations (BODMAS).",
+    "bullets": [
+     "Find 20 % of 50, then add 15 % of the result.",
+     "Use brackets to show each step: \\(0.20×50 + 0.15×(0.20×50)\\)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "",
+      "p": "Never treat “20 % of 50 + 15 %” as a single operator – the second percentage applies to the result of the first."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Real‑world contexts",
+    "p": "Exam questions often embed fractions/percentages in profit, discount, tax and growth scenarios.",
+    "bullets": [
+     "Discount: price after 25 % off = original price × (1‑0.25).",
+     "Profit: profit = cost × (percentage profit ÷ 100).",
+     "Tax: total = net × (1 + tax %)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "",
+      "p": "Write a clear “of” statement before converting to a multiplier."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Higher‑tier extension – fractional percentages",
+    "p": "AQA expects you to handle percentages like 2.5 % or 125 % without a calculator.",
+    "bullets": [
+     "2.5 % = 0.025; 125 % = 1.25.",
+     "Use mental tricks: 2.5 % of 80 = (1 % of 80) × 2.5 = 0.8 × 2.5 = 2.0."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "",
+      "p": "Fractional percentages are just fractions of 100."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Triple‑only content – percentages of percentages",
+    "p": "For higher tier you may be asked to find a percentage of a percentage.",
+    "bullets": [
+     "Find 30 % of 40 % of 200: multiplier = 0.30 × 0.40 = 0.12; answer = 0.12 × 200 = 24.",
+     "Interpret as successive operators."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Percentage of a percentage",
+      "p": "Multiplying two percentages gives the overall proportion."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Cooking analogy",
+   "p": "Think of a fraction or percentage as a recipe instruction: ‘add 3/4 cup of sugar’ tells you to take three‑quarters of a cup and mix it in. Just as the cup is the whole, the number you’re operating on is the whole. The analogy breaks down when the ‘whole’ changes mid‑recipe – in maths you must keep track of which quantity the operator is applied to, whereas a cook might assume the same cup size throughout."
+  },
+  "terms": [
+   {
+    "t": "Operator",
+    "d": "A symbol that modifies a number by performing a defined mathematical action."
+   },
+   {
+    "t": "Multiplier",
+    "d": "The decimal form of a fraction or percentage used to scale a quantity."
+   },
+   {
+    "t": "Of",
+    "d": "The word used in the mark scheme to indicate a fraction or percentage acting as an operator (e.g., ‘3/5 of 20’)."
+   },
+   {
+    "t": "Inverse operator",
+    "d": "Dividing by a fraction or percentage to recover the original whole."
+   },
+   {
+    "t": "Percentage",
+    "d": "A number out of 100, written with the symbol %; interpreted as a multiplier by dividing by 100."
+   },
+   {
+    "t": "Fraction",
+    "d": "A rational number expressed as a numerator over a denominator; used as a multiplier by dividing numerator by denominator."
+   },
+   {
+    "t": "Decimal",
+    "d": "A number expressed in base‑10 notation; can represent a fraction or percentage directly."
+   },
+   {
+    "t": "Compound operator",
+    "d": "A sequence of ‘of’ statements that must be evaluated using the order of operations."
+   },
+   {
+    "t": "Fractional percentage",
+    "d": "A percentage that is not a whole number (e.g., 2.5 %)."
+   },
+   {
+    "t": "Percentage of a percentage",
+    "d": "Multiplying two percentages to find the overall proportion."
+   },
+   {
+    "t": "Whole",
+    "d": "The quantity to which a fraction or percentage is applied."
+   },
+   {
+    "t": "Part",
+    "d": "The result obtained after applying the fraction/percentage operator to the whole."
+   },
+   {
+    "t": "Scale factor",
+    "d": "Another term for multiplier; the amount by which a quantity is increased or decreased."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "‘3/4 of 80 = 3 ÷ 4 × 80 = 60’ – I wrote 3 ÷ 4 × 80 as 3 ÷ (4×80).",
+    "r": "The fraction must be evaluated first: (3÷4)×80, not 3÷(4×80)."
+   },
+   {
+    "w": "Treating 25 % as 25 in calculations.",
+    "r": "Convert 25 % to 0.25 before multiplying."
+   },
+   {
+    "w": "Writing 40 % of 200 as 40×200 = 8000.",
+    "r": "Interpret ‘of’ as multiplication by the decimal 0.40, giving 80."
+   },
+   {
+    "w": "When finding the whole, I added the percentage instead of dividing.",
+    "r": "Use the inverse operator – divide the known part by the percentage as a decimal."
+   },
+   {
+    "w": "Confusing ‘percentage increase’ with ‘percentage of’ and writing 20 % increase as ×0.20.",
+    "r": "Increase means multiply by (1+0.20)=1.20."
+   },
+   {
+    "w": "Leaving a percentage in % form when the answer requires a fraction.",
+    "r": "Convert to a fraction or decimal as the mark scheme expects."
+   },
+   {
+    "w": "Using a calculator for 2.5 % of 80 and rounding too early.",
+    "r": "Do mental conversion: 1 % of 80 =0.8; 2.5 % =0.8×2.5=2.0; keep exact until final answer."
+   },
+   {
+    "w": "Assuming ‘of’ means addition in word problems.",
+    "r": "‘Of’ always indicates multiplication (operator) in this context."
+   },
+   {
+    "w": "Multiplying percentages directly without converting to decimals (e.g., 30 %×40 %).",
+    "r": "Convert each to decimal first (0.30×0.40)."
+   },
+   {
+    "w": "Writing 0.75 as 75 % instead of 75 % = 0.75 when checking work.",
+    "r": "Remember 75 % = 0.75, not the other way round."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A jacket is marked 30 % off its original price. If the discounted price is £84, what was the original price?",
+    "marks": 4,
+    "model": [
+     "Let original price = x.",
+     "Discounted price = x × (1‑0.30) = 0.70x.",
+     "0.70x = 84 → x = 84 ÷ 0.70.",
+     "x = 120."
+    ],
+    "tip": "Write the ‘off’ statement as a multiplier (1‑percentage)."
+   },
+   {
+    "q": "Find 12.5 % of \\(\\frac{3}{4}\\). Give your answer as a decimal.",
+    "marks": 2,
+    "model": [
+     "12.5 % = 0.125.",
+     "0.125 × 0.75 = 0.09375."
+    ],
+    "tip": "Convert both to decimals before multiplying."
+   },
+   {
+    "q": "A shop sells a product for £250. The profit made is 20 % of the cost price. What is the profit?",
+    "marks": 3,
+    "model": [
+     "Let cost price = C.",
+     "Profit = 0.20 × C.",
+     "Selling price = C + profit = C + 0.20C = 1.20C = £250.",
+     "C = 250 ÷ 1.20 = £208.33 (to 2 d.p.).",
+     "Profit = 0.20 × 208.33 = £41.67."
+    ],
+    "tip": "Use the relationship selling price = cost × (1 + profit %)."
+   },
+   {
+    "q": "What is 30 % of 40 % of 200?",
+    "marks": 2,
+    "model": [
+     "Convert: 0.30 × 0.40 = 0.12.",
+     "0.12 × 200 = 24."
+    ],
+    "tip": "Multiply the two percentages first."
+   },
+   {
+    "q": "A recipe requires 2⁄5 of a litre of milk. How many millilitres is this?",
+    "marks": 2,
+    "model": [
+     "2⁄5 litre = 0.4 litre.",
+     "0.4 litre × 1000 ml/litre = 400 ml."
+    ],
+    "tip": "Convert the fraction to a decimal, then use the unit conversion."
+   },
+   {
+    "q": "If 45 % of a number is 27, find the number.",
+    "marks": 3,
+    "model": [
+     "Let n be the number.",
+     "0.45 × n = 27.",
+     "n = 27 ÷ 0.45 = 60."
+    ],
+    "tip": "Use the inverse operator – divide by the decimal."
+   },
+   {
+    "q": "A discount of 15 % is applied to a price, then a further 10 % discount is applied to the reduced price. What overall percentage discount has been given?",
+    "marks": 6,
+    "model": [
+     "First multiplier = 0.85.",
+     "Second multiplier = 0.90.",
+     "Overall multiplier = 0.85 × 0.90 = 0.765.",
+     "Overall discount = 1 – 0.765 = 0.235.",
+     "Overall discount = 23.5 %."
+    ],
+    "tip": "Treat each discount as a multiplier and multiply them."
+   },
+   {
+    "q": "A student scores 18 out of 30 on a test. Express this as a percentage correct to one decimal place.",
+    "marks": 2,
+    "model": [
+     "Fraction = 18⁄30 = 0.6.",
+     "Percentage = 0.6 × 100 = 60.0 %."
+    ],
+    "tip": "Simplify the fraction first, then convert."
+   },
+   {
+    "q": "Find the original price of an item that, after a 25 % increase, costs £150.",
+    "marks": 4,
+    "model": [
+     "Let original price = x.",
+     "After 25 % increase: x × 1.25 = 150.",
+     "x = 150 ÷ 1.25 = 120."
+    ],
+    "tip": "Increase → multiplier (1 + percentage)."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A shop offers a 40 % discount on a bike. The discounted price is £210. What was the original price?",
+    "steps": [
+     "Let original price = P.",
+     "Discounted price = P × (1‑0.40) = 0.60P.",
+     "0.60P = 210.",
+     "P = 210 ÷ 0.60.",
+     "P = 350."
+    ],
+    "ans": "£350"
+   },
+   {
+    "q": "Calculate 2.5 % of 640.",
+    "steps": [
+     "2.5 % = 2.5 ÷ 100 = 0.025.",
+     "0.025 × 640 = 16."
+    ],
+    "ans": "16"
+   },
+   {
+    "q": "A quantity is increased by 12 % and then decreased by 12 %. Is the final amount the same as the original? Show why.",
+    "steps": [
+     "Let original amount = A.",
+     "After increase: A × 1.12.",
+     "After decrease: (A × 1.12) × 0.88 = A × (1.12 × 0.88).",
+     "1.12 × 0.88 = 0.9856.",
+     "Final amount = 0.9856A, which is less than A."
+    ],
+    "ans": "No – the final amount is 98.56 % of the original."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Fraction as a multiplier – shaded pie chart",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"5\" y=\"5\" width=\"390\" height=\"230\" fill=\"#dbeafe\" stroke=\"#1b2540\"/><circle cx=\"200\" cy=\"120\" r=\"80\" fill=\"#fde68a\" stroke=\"#1b2540\"/><path d=\"M200,120 L200,40 A80,80 0 0,1 280,120 Z\" fill=\"#bbf7d0\" stroke=\"#1b2540\"/><text x=\"200\" y=\"30\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">3⁄4 of the whole</text></svg>"
+   },
+   {
+    "cap": "Bar comparison of 25 % and 0.25 multipliers",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"150\" width=\"160\" height=\"40\" fill=\"#e9d5ff\" stroke=\"#1b2540\"/><rect x=\"220\" y=\"150\" width=\"160\" height=\"40\" fill=\"#fecaca\" stroke=\"#1b2540\"/><text x=\"100\" y=\"145\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">25 %</text><text x=\"300\" y=\"145\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">0.25</text><text x=\"200\" y=\"200\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">200 units</text></svg>"
+   },
+   {
+    "cap": "Two‑step discount diagram showing successive multipliers",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"50\" y=\"50\" width=\"300\" height=\"30\" fill=\"#fde68a\" stroke=\"#1b2540\"/><text x=\"200\" y=\"70\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">Original price</text><rect x=\"50\" y=\"100\" width=\"300\" height=\"30\" fill=\"#bbf7d0\" stroke=\"#1b2540\"/><text x=\"200\" y=\"120\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">After 25 % off (×0.75)</text><rect x=\"50\" y=\"150\" width=\"300\" height=\"30\" fill=\"#fecaca\" stroke=\"#1b2540\"/><text x=\"200\" y=\"170\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">After further 10 % off (×0.90)</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_h.0.11",
+  "sid": "maths_aqa_h",
+  "v": 2,
+  "src": "pre",
+  "by": "groq/openai/gpt-oss-120b",
+  "ts": "2026-11-18T17:31:25.850Z"
+ },
+ "maths_aqa_h.0.3": {
+  "summary": "Mastering prime numbers, factors, multiples, HCF, LCM, and prime factorisation provides the foundational toolkit for algebraic manipulation, fraction arithmetic, and complex problem-solving in AQA GCSE Higher Tier Mathematics. The unique factorisation theorem guarantees that every integer greater than 1 can be expressed as a unique product of prime numbers, unlocking systematic methods to find greatest common divisors and lowest common multiples. Rigorous application of Venn diagrams and index notation ensures precision, avoiding common exam traps associated with misinterpreting factor lists.",
+  "core": [
+   {
+    "h": "Prime Numbers and the Unique Factorisation Theorem",
+    "p": "A prime number is an integer strictly greater than 1 that has exactly two distinct positive divisors: 1 and itself. The Unique Factorisation Theorem, also known as the Fundamental Theorem of Arithmetic, states that every integer greater than 1 is either a prime number itself or can be represented as a unique product of prime numbers, irrespective of the order in which the prime factors are written.",
+    "bullets": [
+     "The number 1 is neither prime nor composite because it has only one positive divisor.",
+     "The number 2 is the only even prime number; all other even numbers are divisible by 2.",
+     "Prime numbers up to 50: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47.",
+     "Composite numbers have three or more positive integer factors.",
+     "Prime factorisation breaks any composite integer down into its fundamental building blocks using index notation."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Prime Number",
+      "p": "An integer greater than 1 with exactly two distinct positive integer divisors: 1 and itself."
+     },
+     {
+      "k": "warn",
+      "t": "The Number 1",
+      "p": "Never list 1 as a prime number. Examiners award 0 marks for including 1 in prime factorisations or prime lists."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Factors and Multiples",
+    "p": "Factors are positive integers that divide evenly into a given number without leaving a remainder. Multiples are the results of multiplying a given integer by any positive integer. Understanding the distinction between these two concepts is essential for solving problems involving divisibility.",
+    "bullets": [
+     "Factors are finite in number and always less than or equal to the number itself (except for the number itself).",
+     "Multiples are infinite in number and always greater than or equal to the number itself (except for multiplying by 1).",
+     "The number 1 is a factor of every integer.",
+     "Every integer is a multiple of itself.",
+     "To test for factors, use divisibility rules: divisible by 2 if ending in 0, 2, 4, 6, 8; by 3 if digit sum is divisible by 3; by 5 if ending in 0 or 5."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Factor vs Multiple",
+      "p": "Factors go IN to a number (smaller or equal). Multiples grow OUT from a number (larger or equal)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Finding Prime Factorisation via Factor Trees",
+    "p": "A factor tree is a systematic graphical method used to break down any composite integer into its prime factor components. By splitting a number into two factors repeatedly until only prime numbers remain, we obtain the complete prime decomposition.",
+    "bullets": [
+     "Start with the given composite number at the top.",
+     "Branch out into any two factors whose product equals the parent number.",
+     "Continue branching down until every branch terminates at a prime number.",
+     "Collect all prime numbers from the leaf nodes and write them in ascending order.",
+     "Express repeated prime factors using index notation (e.g., 2 x 2 x 3 becomes 2^2 x 3)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Starting Branch Choices",
+      "p": "It does not matter which two factors you choose to start a branch; the final prime factorisation will always be identical."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Factor tree for 72 showing prime factorisation 2^3 x 3^2.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" fill=\"#f8fafc\" stroke=\"#1b2540\" stroke-width=\"2\" rx=\"10\"/><text x=\"200\" y=\"35\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#1b2540\">Factor Tree for 72</text><circle cx=\"200\" cy=\"65\" r=\"18\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"200\" y=\"69\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1b2540\">72</text><line x1=\"185\" y1=\"78\" x2=\"140\" y2=\"105\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"215\" y1=\"78\" x2=\"260\" y2=\"105\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"130\" cy=\"115\" r=\"16\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"130\" y=\"119\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">8</text><circle cx=\"270\" cy=\"115\" r=\"16\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"270\" y=\"119\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">9</text><line x1=\"118\" y1=\"127\" x2=\"90\" y2=\"155\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"142\" y1=\"127\" x2=\"170\" y2=\"155\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"80\" cy=\"165\" r=\"15\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"80\" y=\"169\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">4</text><circle cx=\"180\" cy=\"165\" r=\"15\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"180\" y=\"169\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">2</text><line x1=\"70\" y1=\"178\" x2=\"50\" y2=\"205\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"90\" y1=\"178\" x2=\"110\" y2=\"205\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"45\" cy=\"212\" r=\"14\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"45\" y=\"216\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">2</text><circle cx=\"115\" cy=\"212\" r=\"14\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"115\" y=\"216\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">2</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Highest Common Factor (HCF)",
+    "p": "The Highest Common Factor of two or more integers is the largest positive integer that divides evenly into all of them. HCF is crucial for simplifying algebraic expressions, factorising brackets, and reducing fractions to their simplest form.",
+    "bullets": [
+     "List all factors of each number and identify the largest number common to all lists (efficient only for small numbers).",
+     "Use prime factorisation and index notation for large numbers.",
+     "For HCF using prime factors: find the lowest power of all common prime bases present in every number.",
+     "If numbers share no common prime factors, their HCF is 1 (they are coprime).",
+     "HCF is never larger than the smallest number in the set."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "HCF Rule",
+      "p": "Take the LOWEST power of the COMMON prime factors."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Lowest Common Multiple (LCM)",
+    "p": "The Lowest Common Multiple of two or more integers is the smallest positive integer that is a multiple of all of them. LCM is used in adding fractions with different denominators, synchronising cyclic events, and solving scheduling problems.",
+    "bullets": [
+     "List multiples of each number until you find the first common value (inefficient for large numbers).",
+     "Use prime factorisation and index notation for efficient calculation.",
+     "For LCM using prime factors: take the highest power of every prime base appearing across all numbers.",
+     "The product of two numbers equals the product of their HCF and LCM: A x B = HCF(A,B) x LCM(A,B).",
+     "LCM is never smaller than the largest number in the set."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "LCM Rule",
+      "p": "Take the HIGHEST power of ALL prime factors present."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Using Venn Diagrams for HCF and LCM",
+    "p": "Venn diagrams provide a visual, foolproof method for finding both the HCF and LCM of two numbers when their prime factorisations are known. The intersection holds the shared prime factors, while the outer regions hold the remaining unique prime factors.",
+    "bullets": [
+     "Write both numbers in prime factorised form.",
+     "Draw two intersecting circles representing Number A and Number B.",
+     "Place common prime factors in the central intersection.",
+     "Place remaining unique prime factors in the respective outer crescents.",
+     "Multiply the intersection to find the HCF; multiply ALL numbers in the entire Venn diagram to find the LCM."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Venn Diagram Check",
+      "p": "HCF is product of intersection. LCM is product of all elements in the union."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Venn diagram showing prime factors of 48 and 72.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" fill=\"#f8fafc\" stroke=\"#1b2540\" stroke-width=\"2\" rx=\"10\"/><text x=\"200\" y=\"30\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#1b2540\">Venn Diagram for 48 &amp; 72</text><circle cx=\"150\" cy=\"130\" r=\"70\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\" fill-opacity=\"0.5\"/><circle cx=\"250\" cy=\"130\" r=\"70\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\" fill-opacity=\"0.5\"/><text x=\"110\" y=\"125\" font-size=\"12\" fill=\"#1b2540\">2, 2</text><text x=\"185\" y=\"125\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\">2, 2, 3</text><text x=\"270\" y=\"125\" font-size=\"12\" fill=\"#1b2540\">3</text><text x=\"95\" y=\"60\" font-size=\"13\" font-weight=\"bold\" fill=\"#1b2540\">48 factors</text><text x=\"245\" y=\"60\" font-size=\"13\" font-weight=\"bold\" fill=\"#1b2540\">72 factors</text><text x=\"200\" y=\"215\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">HCF = 2x2x3 = 12 | LCM = 48x72/12 = 144</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "The Product Rule for HCF and LCM",
+    "p": "A powerful algebraic identity links any two integers directly to their Highest Common Factor and Lowest Common Multiple. This relationship bypasses the need for large Venn diagrams when working with two numbers.",
+    "bullets": [
+     "Equation: a x b = HCF(a, b) x LCM(a, b).",
+     "Rearranged for HCF: HCF(a, b) = (a x b) / LCM(a, b).",
+     "Rearranged for LCM: LCM(a, b) = (a x b) / HCF(a, b).",
+     "This identity only holds strictly for pairs of numbers; it does not extend directly to three or more numbers.",
+     "Examiners frequently test this formula in calculator papers with large numbers."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Three Numbers Trap",
+      "p": "Never apply the product rule formula a x b = HCF x LCM to three numbers. It only works for two numbers."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Problem Solving with LCM and HCF in Context",
+    "p": "Exam questions often disguise LCM and HCF problems inside real-world scenarios. Recognising key phrasing in word problems is the critical skill required to achieve Grade 9.",
+    "bullets": [
+     "Look for keywords like 'together', 'at the same time', 'next ring', 'simultaneous' to signal an LCM problem.",
+     "Look for keywords like 'split into equal groups', 'maximum size', 'cut into identical pieces', 'largest possible' to signal an HCF problem.",
+     "Translate word problems into mathematical statements of divisibility or multiples.",
+     "Always check whether your final answer makes sense in the context of the question."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Context Clues",
+      "p": "If the event happens MORE frequently than the individual cycles, find the LCM. If items are divided into smaller portions, find the HCF."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Advanced Prime Factorisation Applications",
+    "p": "Grade 9 questions require manipulating prime factorisations to determine properties of powers, roots, and divisibility without calculating the full integer value.",
+    "bullets": [
+     "A number is a square number if and only if all exponents in its prime factorisation are even integers.",
+     "A number is a cube number if and only if all exponents in its prime factorisation are multiples of 3.",
+     "To find the total number of factors of an integer, add 1 to each exponent in its prime factorisation and multiply the results together.",
+     "Example: 72 = 2^3 x 3^2. Number of factors = (3 + 1) x (2 + 1) = 4 x 3 = 12 factors."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Total Number of Factors",
+      "p": "Add 1 to each prime factor index and multiply them: (a+1)(b+1)(c+1)..."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Coprime Numbers and Divisibility Proofs",
+    "p": "Two numbers are defined as coprime (or relatively prime) if their highest common factor is exactly 1. This concept underpins fraction simplification, modular arithmetic, and proofs in number theory.",
+    "bullets": [
+     "If two numbers share no common prime factors, they are coprime.",
+     "Consecutive integers are always coprime.",
+     "If a number is divisible by two coprime integers m and n, it must be divisible by their product m x n.",
+     "Example: If a number is divisible by both 3 and 5, it must be divisible by 15 because 3 and 5 are coprime."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Coprime",
+      "p": "Two integers whose highest common factor is equal to 1."
+     },
+     {
+      "k": "warn",
+      "t": "Non-Coprime Divisibility",
+      "p": "If numbers are not coprime, this rule fails. E.g., divisible by 4 and 6 does not mean divisible by 24 (it could be 12)."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Building Blocks and Factory Assembly",
+   "p": "Imagine prime numbers as the raw atomic elements (like hydrogen, carbon, oxygen) of chemistry. Every molecule (composite number) in the universe is made by chemically bonding these atoms together in a specific, unique ratio (prime factorisation). When comparing two molecules to find their HCF, you are looking for the largest identical sub-assembly they both share. When finding their LCM, you are designing the smallest warehouse large enough to hold complete sets of both molecules without any leftover atoms."
+  },
+  "terms": [
+   {
+    "t": "Prime Number",
+    "d": "An integer greater than 1 with exactly two distinct positive integer divisors: 1 and itself."
+   },
+   {
+    "t": "Composite Number",
+    "d": "An integer greater than 1 that has more than two positive integer divisors."
+   },
+   {
+    "t": "Factor",
+    "d": "An integer that divides evenly into another integer without leaving a remainder."
+   },
+   {
+    "t": "Multiple",
+    "d": "The product of a given integer and any positive integer."
+   },
+   {
+    "t": "Prime Factorisation",
+    "d": "Expressing a composite integer as a product of its prime factors."
+   },
+   {
+    "t": "Unique Factorisation Theorem",
+    "d": "Theorem stating every integer greater than 1 is prime or can be written as a unique product of primes."
+   },
+   {
+    "t": "Highest Common Factor (HCF)",
+    "d": "The largest positive integer that divides evenly into two or more given integers."
+   },
+   {
+    "t": "Lowest Common Multiple (LCM)",
+    "d": "The smallest positive integer that is a multiple of two or more given integers."
+   },
+   {
+    "t": "Coprime",
+    "d": "Two integers whose highest common factor is equal to 1."
+   },
+   {
+    "t": "Index Notation",
+    "d": "A shorthand method of writing repeated multiplication using base numbers and exponents."
+   },
+   {
+    "t": "Venn Diagram",
+    "d": "A diagram using overlapping circles to show relationships between sets of numbers."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Listing 1 as a prime number.",
+    "r": "1 is neither prime nor composite; it has only one factor."
+   },
+   {
+    "w": "Finding HCF by multiplying ALL prime factors in a Venn diagram.",
+    "r": "HCF is only the intersection; multiplying all circles gives the LCM."
+   },
+   {
+    "w": "Stating that the HCF of 12 and 18 is 36.",
+    "r": "36 is the LCM. HCF must be smaller than or equal to the numbers (HCF = 6)."
+   },
+   {
+    "w": "Using the product rule a x b = HCF x LCM for three numbers.",
+    "r": "The product rule formula only works for exactly two numbers."
+   },
+   {
+    "w": "Forgetting to write prime factorisations in index notation when requested.",
+    "r": "Always use powers (e.g., 2^3 x 3^2) rather than expanded form (2 x 2 x 2 x 3 x 3) if specified."
+   },
+   {
+    "w": "Assuming consecutive numbers share common factors.",
+    "r": "Consecutive integers are always coprime; their HCF is always 1."
+   },
+   {
+    "w": "Confusing factors and multiples in word problems.",
+    "r": "Factors divide into numbers (smaller); multiples grow out of numbers (larger)."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Express 540 as a product of its prime factors in index notation.",
+    "marks": 3,
+    "model": [
+     "540 = 54 x 10 = 6 x 9 x 2 x 5",
+     "= 2 x 3 x 3 x 3 x 2 x 5",
+     "= 2^2 x 3^3 x 5"
+    ],
+    "tip": "Break the number down into any two easy factors first, then split until prime."
+   },
+   {
+    "q": "Find the Highest Common Factor (HCF) of 108 and 250 using prime factorisation.",
+    "marks": 3,
+    "model": [
+     "108 = 2^2 x 3^3",
+     "250 = 2 x 5^3",
+     "HCF = lowest power of common primes = 2^1 = 2"
+    ],
+    "tip": "Only consider prime bases that appear in BOTH prime factorisations."
+   },
+   {
+    "q": "Find the Lowest Common Multiple (LCM) of 108 and 250.",
+    "marks": 3,
+    "model": [
+     "108 = 2^2 x 3^3 and 250 = 2 x 5^3",
+     "LCM = highest power of all primes = 2^2 x 3^3 x 5^3",
+     "= 4 x 27 x 125 = 13,500"
+    ],
+    "tip": "Take the maximum exponent for every prime base present across both numbers."
+   },
+   {
+    "q": "Bus A runs every 18 minutes. Bus B runs every 24 minutes. Both buses leave the station together at 9:00 am. At what time will they next leave together?",
+    "marks": 3,
+    "model": [
+     "Recognise this is an LCM problem.",
+     "Find LCM of 18 and 24. 18 = 2 x 3^2, 24 = 2^3 x 3",
+     "LCM = 2^3 x 3^2 = 8 x 9 = 72 minutes",
+     "72 minutes = 1 hour 12 minutes. Time = 10:12 am"
+    ],
+    "tip": "Convert the final LCM time into hours and minutes before adding to the start time."
+   },
+   {
+    "q": "Two numbers, A and B, have prime factorisations A = 2^3 x 3^m x 5 and B = 2^n x 3^2 x 7. Given that the HCF of A and B is 2^2 x 3^2 and the LCM is 2^3 x 3^3 x 5 x 7, find the values of m and n.",
+    "marks": 4,
+    "model": [
+     "HCF takes lowest powers: min(3, n) = 2 so n = 2",
+     "HCF takes lowest powers: min(m, 2) = 2 so m >= 2",
+     "LCM takes highest powers: max(m, 2) = 3 so m = 3",
+     "Final values: m = 3, n = 2"
+    ],
+    "tip": "Compare the index of each prime base in A and B against the given HCF and LCM indices."
+   },
+   {
+    "q": "The HCF of two numbers is 6 and their LCM is 210. One of the numbers is 30. Find the other number.",
+    "marks": 2,
+    "model": [
+     "Use product rule: a x b = HCF x LCM",
+     "30 x b = 6 x 210",
+     "30 x b = 1260",
+     "b = 1260 / 30 = 42"
+    ],
+    "tip": "State the formula clearly before substituting values."
+   },
+   {
+    "q": "Find the total number of factors of 200.",
+    "marks": 3,
+    "model": [
+     "Find prime factorisation of 200: 200 = 2^3 x 5^2",
+     "Add 1 to each index: (3 + 1) and (2 + 1)",
+     "Calculate product: 4 x 3 = 12 factors"
+    ],
+    "tip": "Do not list all 12 factors manually; use the index addition formula for speed and accuracy."
+   },
+   {
+    "q": "Prove algebraically that the sum of any two consecutive odd integers is always a multiple of 4.",
+    "marks": 4,
+    "model": [
+     "Let first odd integer be 2n + 1",
+     "Let next consecutive odd integer be 2n + 3",
+     "Sum = (2n + 1) + (2n + 3) = 4n + 4",
+     "Factorise: 4(n + 1), which is explicitly a multiple of 4"
+    ],
+    "tip": "Set up algebraic representations for odd numbers as 2n + 1 and 2n + 3."
+   },
+   {
+    "q": "Given that 5^x = 3125, find the exact value of x without a calculator.",
+    "marks": 2,
+    "model": [
+     "Recognise powers of 5: 5^1=5, 5^2=25, 5^3=125, 5^4=625, 5^5=3125",
+     "Therefore x = 5"
+    ],
+    "tip": "Memorize standard powers of 2, 3, 4, and 5 as required by the AQA specification."
+   },
+   {
+    "q": "Explain why 1 is not classified as a prime number.",
+    "marks": 1,
+    "model": [
+     "A prime number must have exactly two distinct positive divisors, whereas 1 has only one positive divisor."
+    ],
+    "tip": "Learn this exact definition to secure the AO1 mark instantly."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Find the HCF and LCM of 84 and 90 using prime factorisation.",
+    "steps": [
+     "Find prime factorisation of 84: 84 = 2 x 42 = 2 x 2 x 21 = 2^2 x 3 x 7.",
+     "Find prime factorisation of 90: 90 = 9 x 10 = 2 x 3^2 x 5.",
+     "For HCF, take the lowest power of common prime bases: HCF = 2^1 x 3^1 = 6.",
+     "For LCM, take the highest power of all prime bases present: LCM = 2^2 x 3^2 x 5 x 7 = 4 x 9 x 5 x 7 = 1,260."
+    ],
+    "ans": "HCF = 6, LCM = 1,260."
+   },
+   {
+    "q": "A lighthouse flashes every 12 seconds, a foghorn sounds every 45 seconds, and a bell tolls every 75 seconds. All three occurred simultaneously at midnight. When is the next time all three will occur at the exact same moment?",
+    "steps": [
+     "Identify that this is an LCM problem because we are looking for a future time when events coincide.",
+     "Find prime factorisation of each time interval: 12 = 2^2 x 3, 45 = 3^2 x 5, 75 = 3 x 5^2.",
+     "Calculate LCM by taking the highest power of each prime base: LCM = 2^2 x 3^2 x 5^2 = 4 x 9 x 25 = 900 seconds.",
+     "Convert 900 seconds into minutes: 900 / 60 = 15 minutes."
+    ],
+    "ans": "15 minutes past midnight (00:15)."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Prime factorisation tree for 540 leading to 2^2 x 3^3 x 5.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" fill=\"#f8fafc\" stroke=\"#1b2540\" stroke-width=\"2\" rx=\"10\"/><text x=\"200\" y=\"35\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#1b2540\">Prime Factorisation of 540</text><circle cx=\"200\" cy=\"65\" r=\"18\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"200\" y=\"69\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1b2540\">540</text><line x1=\"185\" y1=\"78\" x2=\"130\" y2=\"105\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"215\" y1=\"78\" x2=\"270\" y2=\"105\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"120\" cy=\"115\" r=\"16\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"120\" y=\"119\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">54</text><circle cx=\"280\" cy=\"115\" r=\"16\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"280\" y=\"119\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">10</text><line x1=\"108\" y1=\"127\" x2=\"80\" y2=\"155\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"132\" y1=\"127\" x2=\"160\" y2=\"155\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"70\" cy=\"165\" r=\"15\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"70\" y=\"169\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">6</text><circle cx=\"170\" cy=\"165\" r=\"15\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"170\" y=\"169\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">9</text><text x=\"200\" y=\"215\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">Leaves: 2, 3, 3, 3, 2, 5 (2^2 x 3^3 x 5)</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_h.0.3",
+  "sid": "maths_aqa_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-18T18:01:25.696Z"
  }
 }
