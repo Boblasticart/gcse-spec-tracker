@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { AiOutputError, parseModelJson } from "@/server/ai/json";
+import { AiOutputError, fixStrayBackslashes, parseModelJson } from "@/server/ai/json";
 
 describe("parsing model replies", () => {
   it("reads plain JSON", () => {
@@ -22,4 +22,16 @@ describe("parsing model replies", () => {
     expect(() => parseModelJson('{"a": 1,,}')).toThrow(AiOutputError);
     expect(() => parseModelJson("```json\n{broken\n```")).toThrow(AiOutputError);
   });
+
+  it("keeps LaTeX written with single backslashes instead of rejecting the reply", () => {
+    const raw = String.raw`{"a":"$\sqrt{2}$, $\frac{1}{2}$ \times 3, 90^\circ, \overline{x}, \begin{cases}"}`;
+    expect(parseModelJson(raw)).toEqual({ a: String.raw`$\sqrt{2}$, $\frac{1}{2}$ \times 3, 90^\circ, \overline{x}, \begin{cases}` });
+  });
+
+  it("leaves real escapes alone", () => {
+    const ok = String.raw`{"a":"x\ny\tz \"q\" \\frac \u00e9 \neither \ne.g."}`;
+    expect(fixStrayBackslashes(ok)).toBe(ok);
+    expect(parseModelJson(ok)).toEqual({ a: "x\ny\tz \"q\" \\frac \u00e9 \neither \ne.g." });
+  });
 });
+
