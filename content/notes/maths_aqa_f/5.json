@@ -1921,5 +1921,496 @@
   "src": "pre",
   "by": "gemini/gemini-flash-lite-latest",
   "ts": "2026-11-17T18:52:43.154Z"
+ },
+ "maths_aqa_f.5.3": {
+  "summary": "Understanding how to compare distributions is essential for describing data sets. You must be able to calculate and interpret the mean, median, mode, range, quartiles and inter‑quartile range, and you should know how to read and construct box plots. These measures together show the centre, spread and shape of a distribution, allowing you to decide which data set is higher, more spread out or more symmetric. Mastery of these tools lets you answer exam questions that ask you to compare two or more groups of numbers accurately and efficiently.",
+  "core": [
+   {
+    "h": "1. What is a distribution?",
+    "p": "A distribution shows how a set of values is spread out. It can be displayed in a table, a list, a diagram or a box plot. The key is to see where the data cluster and how far they extend.",
+    "bullets": [
+     "All values belong to the same variable (e.g. test scores).",
+     "The order of the values does not matter for most measures.",
+     "A distribution can be symmetric, skewed left or skewed right."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "distribution",
+      "p": "A set of data values shown together to illustrate how they are spread."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. Mean (average)",
+    "p": "The mean is the sum of all the values divided by the number of values. It gives the *balance point* of the distribution.",
+    "bullets": [
+     "Formula: \\(\\bar{x}=\\frac{\\sum x}{n}\\)",
+     "Add all the numbers, then divide by the count.",
+     "Use a calculator for large data sets."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "",
+      "p": "The mean is sensitive to extreme values (outliers)."
+     },
+     {
+      "k": "tip",
+      "t": "",
+      "p": "Check your total before dividing – a common slip is to forget a value."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Mean as the balance point of a seesaw diagram.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"50\" y=\"100\" width=\"300\" height=\"20\" fill=\"#dbeafe\" stroke=\"#1b2540\"/><line x1=\"200\" y1=\"100\" x2=\"200\" y2=\"80\" stroke=\"#1b2540\"/><text x=\"190\" y=\"70\" font-size=\"12\" fill=\"#1b2540\">Mean</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "3. Median (second quartile)",
+    "p": "The median is the middle value when the data are ordered from smallest to largest. If there is an even number of values, the median is the average of the two central numbers.",
+    "bullets": [
+     "Arrange data in ascending order.",
+     "If n is odd, median = value at position \\((n+1)/2\\).",
+     "If n is even, median = average of values at positions \\(n/2\\) and \\(n/2+1\\)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "median",
+      "p": "The middle value of an ordered data set; 50% of the data lie below and 50% above."
+     },
+     {
+      "k": "warn",
+      "t": "",
+      "p": "Do NOT use the mean when the question asks for the median."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Box plot showing the median as the line inside the box.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"120\" y=\"100\" width=\"160\" height=\"40\" fill=\"#fde68a\" stroke=\"#1b2540\"/><line x1=\"200\" y1=\"100\" x2=\"200\" y2=\"140\" stroke=\"#1b2540\"/><text x=\"190\" y=\"95\" font-size=\"12\" fill=\"#1b2540\">Median</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "4. Mode",
+    "p": "The mode is the value(s) that occur most frequently. A distribution can have no mode, one mode (unimodal) or more than one mode (bimodal, multimodal).",
+    "bullets": [
+     "Count how many times each value occurs.",
+     "The highest frequency gives the mode.",
+     "If all frequencies are equal, there is no mode."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "mode",
+      "p": "The most frequently occurring value(s) in a data set."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "5. Range",
+    "p": "The range measures the total spread of the data. It is the difference between the largest and smallest values.",
+    "bullets": [
+     "Formula: \\\\(\\\\text{Range}=\\\\text{Maximum}-\\\\text{Minimum}\\\\)",
+     "Quick way to see how far the data extend.",
+     "Does not give any information about the values in between."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "",
+      "p": "Range is highly affected by outliers."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Number line showing minimum, maximum and the range.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"50\" y1=\"120\" x2=\"350\" y2=\"120\" stroke=\"#1b2540\"/><circle cx=\"100\" cy=\"120\" r=\"5\" fill=\"#bbf7d0\"/><circle cx=\"300\" cy=\"120\" r=\"5\" fill=\"#bbf7d0\"/><text x=\"90\" y=\"110\" font-size=\"12\" fill=\"#1b2540\">Min</text><text x=\"290\" y=\"110\" font-size=\"12\" fill=\"#1b2540\">Max</text><text x=\"200\" y=\"140\" font-size=\"12\" fill=\"#1b2540\">Range = Max‑Min</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "6. Quartiles",
+    "p": "Quartiles split an ordered data set into four equal parts. Q1 (lower quartile) is the median of the lower half, Q2 is the median of the whole set, and Q3 (upper quartile) is the median of the upper half.",
+    "bullets": [
+     "Arrange data in order.",
+     "Find the median (Q2).",
+     "For Q1, take the lower half (excluding Q2 if n is odd) and find its median.",
+     "For Q3, take the upper half and find its median.",
+     "Quartiles give a picture of the spread of the middle 50% of the data."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "quartile",
+      "p": "Values that divide an ordered data set into four equal parts."
+     },
+     {
+      "k": "warn",
+      "t": "",
+      "p": "Do not include the overall median when n is odd while finding Q1 and Q3."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Inter‑quartile range (IQR)",
+    "p": "The IQR measures the spread of the middle 50% of the data. It is the difference between the upper and lower quartiles.",
+    "bullets": [
+     "Formula: \\\\(\\\\text{IQR}=Q_3-Q_1\\\\)",
+     "Ignores extreme values, so it is robust against outliers.",
+     "Used to construct box plots and to detect outliers (values > 1.5 × IQR from the quartiles)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "",
+      "p": "IQR is the length of the box in a box plot."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Constructing a box plot (five‑number summary)",
+    "p": "A box plot visualises the minimum, Q1, median, Q3 and maximum. It shows the centre, spread and any potential outliers.",
+    "bullets": [
+     "Step 1: Order the data.",
+     "Step 2: Find the minimum, Q1, median, Q3, maximum.",
+     "Step 3: Draw a number line covering the range.",
+     "Step 4: Mark the five numbers on the line.",
+     "Step 5: Draw a box from Q1 to Q3 and a line inside at the median.",
+     "Step 6: Extend ‘whiskers’ to the minimum and maximum (or to 1.5 × IQR if outliers are to be shown)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "",
+      "p": "Label the axes clearly and use the same scale for all parts of the plot."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Complete box plot with whiskers, box and median line.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"60\" y1=\"150\" x2=\"340\" y2=\"150\" stroke=\"#1b2540\"/><line x1=\"80\" y1=\"140\" x2=\"80\" y2=\"160\" stroke=\"#1b2540\"/><line x1=\"320\" y1=\"140\" x2=\"320\" y2=\"160\" stroke=\"#1b2540\"/><rect x=\"140\" y=\"130\" width=\"120\" height=\"40\" fill=\"#fecaca\" stroke=\"#1b2540\"/><line x1=\"200\" y1=\"130\" x2=\"200\" y2=\"170\" stroke=\"#1b2540\"/><text x=\"70\" y=\"125\" font-size=\"12\" fill=\"#1b2540\">Min</text><text x=\"310\" y=\"125\" font-size=\"12\" fill=\"#1b2540\">Max</text><text x=\"190\" y=\"125\" font-size=\"12\" fill=\"#1b2540\">Q1</text><text x=\"210\" y=\"125\" font-size=\"12\" fill=\"#1b2540\">Q3</text><text x=\"195\" y=\"115\" font-size=\"12\" fill=\"#1b2540\">Median</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "9. Comparing two distributions",
+    "p": "When asked to compare, look at the five‑number summary and the mean/median. Decide which is higher, which is more spread out and whether one is more symmetric.",
+    "bullets": [
+     "Higher mean/median → higher centre.",
+     "Larger range or IQR → more spread.",
+     "If the median is close to the mean, the distribution is roughly symmetric.",
+     "Box plots make visual comparison quick."
+    ],
+    "table": {
+     "head": [
+      "Feature",
+      "Distribution A",
+      "Distribution B"
+     ],
+     "rows": [
+      [
+       "Mean",
+       "",
+       ""
+      ],
+      [
+       "Median",
+       "",
+       ""
+      ],
+      [
+       "Range",
+       "",
+       ""
+      ],
+      [
+       "IQR",
+       "",
+       ""
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "",
+      "p": "Always state which measure you are using when you say ‘higher’ or ‘more spread’."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Common exam language",
+    "p": "A‑level exam questions use precise wording. Recognise key command words and what they ask you to do.",
+    "bullets": [
+     "\"State the mean/median\" – give the numerical value.",
+     "\"Compare the spreads\" – discuss range and IQR.",
+     "\"Explain which distribution is more symmetric\" – refer to the closeness of mean and median.",
+     "\"Construct a box plot\" – follow the five‑step method."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "",
+      "p": "Do not mix up ‘range’ with ‘inter‑quartile range’; they are different measures."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Box plot as a school timetable",
+   "p": "Imagine a school timetable where the earliest lesson start time is the minimum, the latest finish time is the maximum, the lunch break marks the median, and the start and end of the morning and afternoon sessions are Q1 and Q3. The length of the lunch break (IQR) shows how much of the day is spent in the middle of the schedule. The analogy breaks down because a timetable is ordered by time, not by the size of lesson lengths, and it does not show outliers like an unexpected extra lesson."
+  },
+  "terms": [
+   {
+    "t": "mean",
+    "d": "The sum of all values divided by the number of values."
+   },
+   {
+    "t": "median",
+    "d": "The middle value of an ordered data set; 50% of the data lie below and 50% above."
+   },
+   {
+    "t": "mode",
+    "d": "The most frequently occurring value(s) in a data set."
+   },
+   {
+    "t": "range",
+    "d": "Maximum value minus minimum value."
+   },
+   {
+    "t": "quartile",
+    "d": "Values that divide an ordered data set into four equal parts (Q1, Q2, Q3)."
+   },
+   {
+    "t": "inter‑quartile range",
+    "d": "The difference between the upper and lower quartiles (Q3‑Q1)."
+   },
+   {
+    "t": "box plot",
+    "d": "A diagram showing the minimum, Q1, median, Q3 and maximum of a data set."
+   },
+   {
+    "t": "five‑number summary",
+    "d": "The set {minimum, Q1, median, Q3, maximum}."
+   },
+   {
+    "t": "outlier",
+    "d": "A value that lies more than 1.5 × IQR beyond Q1 or Q3."
+   },
+   {
+    "t": "symmetric distribution",
+    "d": "A distribution where the mean and median are close together."
+   },
+   {
+    "t": "skewed left",
+    "d": "A distribution with a longer tail on the left; median > mean."
+   },
+   {
+    "t": "skewed right",
+    "d": "A distribution with a longer tail on the right; mean > median."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Using the mean when the question asks for the median.",
+    "r": "The mark scheme expects the median; the mean is a different measure."
+   },
+   {
+    "w": "Including the overall median when calculating Q1 and Q3 for an odd‑sized data set.",
+    "r": "Do not count the median in either half when n is odd."
+   },
+   {
+    "w": "Confusing range with inter‑quartile range.",
+    "r": "Range = max‑min; IQR = Q3‑Q1."
+   },
+   {
+    "w": "Writing ‘mode is the average’.",
+    "r": "The mode is the most frequent value, not an average."
+   },
+   {
+    "w": "Leaving the whiskers of a box plot at the minimum and maximum even when outliers exist.",
+    "r": "Whiskers should stop at 1.5 × IQR; outliers are plotted separately."
+   },
+   {
+    "w": "Stating ‘higher spread’ without specifying whether you mean range or IQR.",
+    "r": "Specify the measure you are comparing."
+   },
+   {
+    "w": "Mis‑reading Q1 as the first value in the data set.",
+    "r": "Q1 is the median of the lower half, not the first data point."
+   },
+   {
+    "w": "Adding the median twice when finding the total for the mean.",
+    "r": "The median is not part of the sum for the mean."
+   },
+   {
+    "w": "Using a histogram instead of a box plot when the question asks for a box plot.",
+    "r": "Follow the required diagram type."
+   },
+   {
+    "w": "Failing to label the axes or scale on a box plot.",
+    "r": "Clear labeling is required for full marks."
+   }
+  ],
+  "exam": [
+   {
+    "q": "The test scores for Class A are: 12, 15, 15, 18, 20, 22, 24. State the mean, median and mode.",
+    "marks": 4,
+    "model": [
+     "Mean = (12+15+15+18+20+22+24)/7 = 126/7 = 18",
+     "Ordered data: 12,15,15,18,20,22,24 → median is the 4th value = 18",
+     "Mode = 15 (appears twice, more than any other value)"
+    ],
+    "tip": "Check the total carefully; the median is the centre value when n is odd."
+   },
+   {
+    "q": "For the data set {5, 7, 9, 12, 14, 16, 20, 22}, find Q1, Q2, Q3 and the inter‑quartile range.",
+    "marks": 6,
+    "model": [
+     "Ordered data already.",
+     "Median (Q2) = (12+14)/2 = 13",
+     "Lower half = {5,7,9,12} → Q1 = (7+9)/2 = 8",
+     "Upper half = {14,16,20,22} → Q3 = (16+20)/2 = 18",
+     "IQR = Q3‑Q1 = 18‑8 = 10"
+    ],
+    "tip": "When n is even, split the data into two equal halves before finding Q1 and Q3."
+   },
+   {
+    "q": "The following box plot shows the weekly hours spent on homework by two year‑12 groups. Group X: min 2, Q1 4, median 6, Q3 9, max 12. Group Y: min 3, Q1 5, median 7, Q3 8, max 10. Compare the spreads of the two groups.",
+    "marks": 4,
+    "model": [
+     "Range X = 12‑2 = 10, Range Y = 10‑3 = 7 → X has a larger range.",
+     "IQR X = 9‑4 = 5, IQR Y = 8‑5 = 3 → X is more spread in the middle 50%.",
+     "Therefore Group X is more spread overall than Group Y."
+    ],
+    "tip": "State both range and IQR to justify your comparison."
+   },
+   {
+    "q": "Construct a box plot for the data: 4, 8, 9, 11, 13, 15, 18, 22, 25.",
+    "marks": 6,
+    "model": [
+     "Ordered data given.",
+     "Minimum = 4, Maximum = 25.",
+     "Median (Q2) = 13 (5th value).",
+     "Lower half = {4,8,9,11} → Q1 = (8+9)/2 = 8.5.",
+     "Upper half = {15,18,22,25} → Q3 = (18+22)/2 = 20.",
+     "Draw number line 0‑30, mark 4, 8.5, 13, 20, 25, draw box from 8.5 to 20, line at 13, whiskers to 4 and 25."
+    ],
+    "tip": "Label each part of the box plot clearly; use the five‑number summary."
+   },
+   {
+    "q": "Explain why the mean is not always the best measure of centre for a skewed distribution.",
+    "marks": 2,
+    "model": [
+     "The mean is pulled towards the tail of a skewed distribution, so it does not represent the typical value as well as the median."
+    ],
+    "tip": "Use the terms ‘skewed’, ‘tail’ and ‘typical value’."
+   },
+   {
+    "q": "A data set has a mean of 30, a median of 28 and a mode of 25. Comment on the shape of the distribution.",
+    "marks": 3,
+    "model": [
+     "Mean > median > mode indicates a right‑skewed (positively skewed) distribution.",
+     "The tail is on the right side, pulling the mean up."
+    ],
+    "tip": "Recall the order of centre measures for skewness."
+   },
+   {
+    "q": "Identify any outliers in the data set {3, 5, 7, 9, 12, 15, 28}. Use the 1.5 × IQR rule.",
+    "marks": 4,
+    "model": [
+     "Ordered data given.",
+     "Q2 = median = 9.",
+     "Lower half {3,5,7} → Q1 = 5.",
+     "Upper half {12,15,28} → Q3 = 15.",
+     "IQR = 15‑5 = 10.",
+     "Lower bound = Q1‑1.5×IQR = 5‑15 = -10 (none).",
+     "Upper bound = Q3+1.5×IQR = 15+15 = 30 (none).",
+     "No outliers."
+    ],
+    "tip": "Show each calculation step for full marks."
+   },
+   {
+    "q": "State the five‑number summary for the data: 2, 4, 6, 8, 10, 12, 14, 16.",
+    "marks": 2,
+    "model": [
+     "Minimum = 2, Q1 = 5, Median = 9, Q3 = 13, Maximum = 16."
+    ],
+    "tip": "Remember Q1 and Q3 are medians of the lower and upper halves."
+   },
+   {
+    "q": "Two classes have the following means and ranges: Class A – mean 65, range 20; Class B – mean 68, range 12. Which class performed better overall? Justify your answer.",
+    "marks": 3,
+    "model": [
+     "Class B has a higher mean, indicating a higher overall centre.",
+     "Class A has a larger range, showing more variation.",
+     "If ‘better overall’ refers to higher achievement, Class B performed better because of the higher mean."
+    ],
+    "tip": "State which measure you are using to decide ‘better’."
+   },
+   {
+    "q": "Explain how a box plot can help you identify the symmetry of a distribution.",
+    "marks": 2,
+    "model": [
+     "If the median is centred in the box and the whiskers are of similar length, the distribution is roughly symmetric; unequal whisker lengths indicate skewness."
+    ],
+    "tip": "Mention the position of the median within the box."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Find the mean, median, mode, range and IQR for the data set: 3, 7, 7, 9, 12, 15, 18.",
+    "steps": [
+     "Order the data (already ordered).",
+     "Mean = (3+7+7+9+12+15+18)/7 = 71/7 = 10.",
+     "Median = 4th value = 9.",
+     "Mode = 7 (appears twice).",
+     "Range = 18‑3 = 15.",
+     "Q1 = median of {3,7,7} = 7.",
+     "Q3 = median of {12,15,18} = 15.",
+     "IQR = 15‑7 = 8."
+    ],
+    "ans": "Mean = 10, Median = 9, Mode = 7, Range = 15, IQR = 8"
+   },
+   {
+    "q": "Construct a box plot for the data: 5, 8, 11, 14, 18, 22, 27, 30.",
+    "steps": [
+     "Minimum = 5, Maximum = 30.",
+     "Median (Q2) = (14+18)/2 = 16.",
+     "Lower half = {5,8,11,14} → Q1 = (8+11)/2 = 9.5.",
+     "Upper half = {18,22,27,30} → Q3 = (22+27)/2 = 24.5.",
+     "Draw a number line covering 0‑35.",
+     "Mark 5, 9.5, 16, 24.5, 30.",
+     "Draw box from 9.5 to 24.5, line at 16, whiskers to 5 and 30."
+    ],
+    "ans": "Box plot with min = 5, Q1 = 9.5, median = 16, Q3 = 24.5, max = 30"
+   }
+  ],
+  "pid": "maths_aqa_f.5.3",
+  "sid": "maths_aqa_f",
+  "v": 2,
+  "src": "pre",
+  "by": "groq/openai/gpt-oss-120b",
+  "ts": "2026-11-18T17:23:45.308Z"
  }
 }

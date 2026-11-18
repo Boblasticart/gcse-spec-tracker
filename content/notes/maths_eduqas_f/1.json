@@ -3993,5 +3993,1416 @@
   "src": "pre",
   "by": "gemini/gemini-flash-lite-latest",
   "ts": "2026-11-17T21:13:11.732Z"
+ },
+ "maths_eduqas_f.1.9": {
+  "summary": "Mastering the identification and interpretation of gradients and intercepts for linear functions is essential for success in Eduqas Foundation Mathematics. Students must be able to extract these values directly from equations in the form y = mx + c and calculate them graphically or algebraically from coordinates. This topic bridges algebraic manipulation and geometric visualisation, providing vital skills for interpreting real-world straight-line graphs and relationships.",
+  "core": [
+   {
+    "h": "1. The Equation of a Straight Line",
+    "p": "Every straight line on a Cartesian grid can be described by a linear function. The standard form required by the Eduqas specification is y = mx + c, where each letter has a distinct geometric meaning that connects algebra to the visual graph.",
+    "bullets": [
+     "The letter y represents the vertical coordinate on the Cartesian grid.",
+     "The letter x represents the horizontal coordinate on the Cartesian grid.",
+     "The letter m represents the gradient or steepness of the straight line.",
+     "The letter c represents the y-intercept, which is the exact point where the line crosses the vertical y-axis."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Linear Function Equation",
+      "p": "The equation y = mx + c defines a straight line, where m is the gradient and c is the y-intercept."
+     },
+     {
+      "k": "key",
+      "t": "Standard Form",
+      "p": "Always rearrange equations into y = mx + c before attempting to read off the gradient or y-intercept directly."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. Understanding the Y-Intercept (c)",
+    "p": "The y-intercept is the point where the straight line crosses the vertical y-axis. At this specific location on the grid, the horizontal coordinate x is always equal to zero, making it very straightforward to find algebraically.",
+    "bullets": [
+     "To find the y-intercept from an equation in the form y = mx + c, simply look at the constant term c.",
+     "If an equation is written as y = 3x - 5, the y-intercept is -5, meaning the line crosses at the coordinate (0, -5).",
+     "If there is no constant term added or subtracted, such as y = 4x, the y-intercept is 0, passing directly through the origin (0, 0).",
+     "To find the y-intercept algebraically from any equation, substitute x = 0 and solve for y."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Finding C",
+      "p": "The y-coordinate of the intercept is always the number standing alone without an x attached."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A straight line graph showing the y-intercept c where x equals zero on the vertical axis.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"50\" y1=\"190\" x2=\"370\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"100\" y1=\"20\" x2=\"100\" y2=\"220\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"60\" y1=\"210\" x2=\"340\" y2=\"70\" stroke=\"#2563eb\" stroke-width=\"3\"/><circle cx=\"100\" cy=\"140\" r=\"5\" fill=\"#dc2626\"/><text x=\"112\" y=\"144\" fill=\"#1b2540\" font-size=\"12\">(0, c)</text><text x=\"345\" y=\"185\" fill=\"#1b2540\" font-size=\"12\">x</text><text x=\"85\" y=\"30\" fill=\"#1b2540\" font-size=\"12\">y</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "3. Understanding the Gradient (m)",
+    "p": "The gradient measures the steepness and direction of a straight line. It tells us how many units the line moves vertically up or down for every single horizontal unit it moves to the right.",
+    "bullets": [
+     "A positive gradient means the line slopes upwards from left to right.",
+     "A negative gradient means the line slopes downwards from left to right.",
+     "A gradient of zero produces a completely horizontal line parallel to the x-axis.",
+     "A steep line has a larger numerical value of gradient, whereas a gentle slope has a smaller numerical value."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Gradient Definition",
+      "p": "Gradient is defined as the change in y divided by the change in x, often remembered as rise over run."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Calculating Gradient from a Graph",
+    "p": "To find the numerical value of the gradient from a drawn straight line, you must construct a right-angled triangle and measure the vertical rise and the horizontal run between two clear grid intersections.",
+    "bullets": [
+     "Select two points on the line where it crosses grid intersections cleanly.",
+     "Draw a right-angled triangle underneath or above the line connecting these two points.",
+     "Count the number of grid squares for the vertical rise.",
+     "Count the number of grid squares for the horizontal run.",
+     "Calculate gradient = rise / run."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Choose Clear Points",
+      "p": "Always pick points where the line crosses grid intersections exactly, such as grid corners, to avoid estimating decimals."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Finding gradient from a graph using rise over run on a right-angled triangle.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"50\" y1=\"200\" x2=\"370\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"100\" y1=\"20\" x2=\"100\" y2=\"220\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"100\" y1=\"170\" x2=\"300\" y2=\"70\" stroke=\"#16a34a\" stroke-width=\"3\"/><line x1=\"100\" y1=\"170\" x2=\"300\" y2=\"170\" stroke=\"#dc2626\" stroke-width=\"2\" stroke-dasharray=\"4\"/><line x1=\"300\" y1=\"170\" x2=\"300\" y2=\"70\" stroke=\"#dc2626\" stroke-width=\"2\" stroke-dasharray=\"4\"/><text x=\"190\" y=\"187\" fill=\"#dc2626\" font-size=\"12\">Run = 2</text><text x=\"308\" y=\"125\" fill=\"#dc2626\" font-size=\"12\">Rise = 2</text><text x=\"345\" y=\"195\" fill=\"#1b2540\" font-size=\"12\">x</text><text x=\"85\" y=\"30\" fill=\"#1b2540\" font-size=\"12\">y</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "5. Calculating Gradient Algebraically from Coordinates",
+    "p": "When a graph is not available or not drawn to scale, you can calculate the gradient directly from any two points on the line using the standard coordinate formula.",
+    "bullets": [
+     "Label your two given points as (x1, y1) and (x2, y2).",
+     "Use the formula m = (y2 - y1) / (x2 - x1).",
+     "Ensure you keep the order of coordinates consistent in both the numerator and denominator.",
+     "Simplify the resulting fraction if possible."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Coordinate Gradient Formula",
+      "p": "m = (y2 - y1) / (x2 - x1)"
+     },
+     {
+      "k": "warn",
+      "t": "Mixing Coordinates",
+      "p": "Subtracting y values in one order but x values in the reverse order will produce an incorrect negative or positive sign."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Identifying Gradients from Rearranged Equations",
+    "p": "Exam questions often give linear equations in non-standard forms, such as ax + by = c or with brackets, requiring algebraic rearrangement before the gradient and intercept can be identified.",
+    "bullets": [
+     "To identify the gradient, make y the exact subject of the equation.",
+     "Move all x terms and constant numbers to the opposite side using inverse operations.",
+     "Divide every single term by the coefficient of y so that y has a coefficient of 1.",
+     "Read off m and c from the resulting y = mx + c form."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Coefficient of Y",
+      "p": "You can only read the gradient and y-intercept directly when the equation is explicitly in the form y = mx + c."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Interpreting Gradients in Real-World Contexts",
+    "p": "In applied GCSE questions, straight-line graphs represent real-world situations, and the gradient is never just a number; it represents a rate of change with specific units.",
+    "bullets": [
+     "The gradient tells you how much the dependent variable changes for every one unit increase in the independent variable.",
+     "Units for the gradient are always written as units of y divided by units of x, such as metres per second or pounds per item.",
+     "In a distance-time graph, the gradient represents speed.",
+     "In a cost graph, the gradient represents the unit cost per item or hourly rate."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Units Matter",
+      "p": "Always check the axis labels to determine the correct units for a real-world gradient interpretation."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Interpreting Intercepts in Real-World Contexts",
+    "p": "The y-intercept in a real-world application represents the initial value or starting condition before any time or quantity has been added or elapsed.",
+    "bullets": [
+     "The y-intercept corresponds to the value when the horizontal input x is zero.",
+     "In financial problems, it often represents a fixed fee, initial deposit, or setup cost.",
+     "In kinematic problems, it represents the starting position or initial distance from a fixed point at time t = 0.",
+     "Always state both the numerical value and its practical meaning in context."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Initial Value Meaning",
+      "p": "The y-intercept represents the starting value when the independent variable is zero."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Parallel Lines and Gradients",
+    "p": "Parallel lines are lines that never intersect because they run side by side at the exact same angle of steepness. This geometric property creates a vital algebraic rule.",
+    "bullets": [
+     "Parallel lines always have identical gradients.",
+     "If line A has an equation of y = 3x + 2, any line parallel to it will also begin with 3x.",
+     "To find the equation of a line parallel to a given line passing through a specific coordinate, use the same gradient m and substitute the coordinate to find c."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Parallel Gradient Rule",
+      "p": "m1 = m2 for any two distinct parallel straight lines."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Finding the Equation of a Line from a Graph",
+    "p": "You can determine the full equation of a straight line directly from its visual representation by finding its gradient and y-intercept from the grid.",
+    "bullets": [
+     "Locate where the line crosses the y-axis to find the value of c directly.",
+     "Pick two points on the line to calculate the gradient m using rise over run.",
+     "Substitute the values of m and c into the standard template y = mx + c.",
+     "Check your equation by testing a third point on the line."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Verification",
+      "p": "Always substitute an obvious coordinate from the line into your final equation to check that left side equals right side."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "11. Finding the Equation of a Line Given Two Points",
+    "p": "When given two coordinate points that a straight line passes through, you can find its complete equation by calculating the gradient first and then finding the y-intercept.",
+    "bullets": [
+     "Calculate the gradient m using the coordinate formula (y2 - y1) / (x2 - x1).",
+     "Substitute the gradient into y = mx + c to get y = m(x) + c.",
+     "Substitute either of the two given coordinate pairs into this partial equation for x and y.",
+     "Solve the resulting linear equation to find the value of c."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Two-Point Method",
+      "p": "Find gradient first, substitute into y = mx + c, then substitute one coordinate to find c."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "12. Recognising Horizontal and Vertical Lines",
+    "p": "Horizontal and vertical lines are special cases of linear functions that do not fit the standard y = mx + c form in the usual way, yet they have extremely simple equations.",
+    "bullets": [
+     "A horizontal line has a gradient of zero (m = 0), meaning its equation is always in the form y = a constant, such as y = 4.",
+     "Every single point on a horizontal line shares the exact same y-coordinate.",
+     "A vertical line has an undefined gradient, and its equation is always in the form x = a constant, such as x = -3.",
+     "Every single point on a vertical line shares the exact same x-coordinate."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Vertical Line Equations",
+      "p": "Never write y = 0 for a vertical line; vertical lines have equations starting with x equals."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Special cases: horizontal line y equals constant and vertical line x equals constant.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"50\" y1=\"190\" x2=\"370\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"100\" y1=\"20\" x2=\"100\" y2=\"220\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"60\" y1=\"100\" x2=\"340\" y2=\"100\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"345\" y=\"95\" fill=\"#dc2626\" font-size=\"12\">y = c</text><line x1=\"260\" y1=\"30\" x2=\"260\" y2=\"210\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"268\" y=\"40\" fill=\"#2563eb\" font-size=\"12\">x = a</text><text x=\"345\" y=\"185\" fill=\"#1b2540\" font-size=\"12\">x</text><text x=\"85\" y=\"30\" fill=\"#1b2540\" font-size=\"12\">y</text></svg>"
+     }
+    ]
+   }
+  ],
+  "analogy": {
+   "t": "The Ski Slope and Starting Gate",
+   "p": "Imagine standing on a ski resort mountain. The y-intercept is your starting altitude above sea level before you begin skiing (where time on the slope is zero). The gradient is the steepness of the ski run: how many vertical metres you drop for every horizontal metre you travel forward. If the slope goes up, gradient is positive; if it goes down, gradient is negative. Where this analogy breaks down is that real ski slopes curve and change steepness constantly, whereas a mathematical linear function maintains the exact same constant gradient and straight path forever."
+  },
+  "terms": [
+   {
+    "t": "Gradient",
+    "d": "A measure of the steepness and direction of a straight line, calculated as rise divided by run."
+   },
+   {
+    "t": "Y-Intercept",
+    "d": "The point where a graph crosses the vertical y-axis, occurring where x equals zero."
+   },
+   {
+    "t": "Linear Function",
+    "d": "An algebraic equation representing a straight line, written in the form y = mx + c."
+   },
+   {
+    "t": "Rise",
+    "d": "The vertical distance between two points on a line."
+   },
+   {
+    "t": "Run",
+    "d": "The horizontal distance between two points on a line."
+   },
+   {
+    "t": "Parallel Lines",
+    "d": "Straight lines that have the exact same gradient and never intersect."
+   },
+   {
+    "t": "Cartesian Grid",
+    "d": "A coordinate system defined by perpendicular x and y axes intersecting at the origin (0, 0)."
+   },
+   {
+    "t": "Coefficient",
+    "d": "A number placed in front of and multiplying a variable, such as m in front of x."
+   },
+   {
+    "t": "Origin",
+    "d": "The central point on a graph where both x and y coordinates are zero, written as (0, 0)."
+   },
+   {
+    "t": "Constant Term",
+    "d": "A fixed number in an expression or equation that does not contain any variables."
+   },
+   {
+    "t": "Rate of Change",
+    "d": "The ratio of the change in an output variable relative to the change in an input variable."
+   },
+   {
+    "t": "Horizontal Line",
+    "d": "A flat straight line parallel to the x-axis with a gradient of zero, in the form y = c."
+   },
+   {
+    "t": "Vertical Line",
+    "d": "A straight line parallel to the y-axis with an undefined gradient, in the form x = a."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Confusing the gradient and y-intercept in the equation y = mx + c",
+    "r": "Remember that m multiplies x as the gradient, while c stands alone as the y-intercept."
+   },
+   {
+    "w": "Writing the gradient as a coordinate pair rather than a single number",
+    "r": "Gradient is a single scalar value representing steepness, not a point (x, y)."
+   },
+   {
+    "w": "Swapping rise and run in the gradient calculation",
+    "r": "Gradient is vertical change divided by horizontal change (rise over run), never run over rise."
+   },
+   {
+    "w": "Ignoring negative signs when calculating gradients from coordinates",
+    "r": "Always carefully track negative signs when subtracting coordinates, as (y2 - y1) is sensitive to sign errors."
+   },
+   {
+    "w": "Stating the y-intercept is just a number without its coordinate form",
+    "r": "The y-intercept is officially a point on the graph, so write it as (0, c) when asked for coordinates."
+   },
+   {
+    "w": "Assuming a line starting at the origin has an intercept of something other than zero",
+    "r": "If there is no constant added to y = mx, the y-intercept is 0, passing through (0, 0)."
+   },
+   {
+    "w": "Forgetting to rearrange an equation into y = mx + c before reading the gradient",
+    "r": "Never read numbers off equations like 2y + 4x = 10 without isolating y first."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Find the gradient and y-intercept of the line with equation y = -3x + 7.",
+    "marks": 2,
+    "model": [
+     "Gradient = -3",
+     "Y-intercept = 7 (or (0, 7))"
+    ],
+    "tip": "Read coefficients directly from standard y = mx + c form."
+   },
+   {
+    "q": "Find the gradient of the straight line passing through the points (2, 3) and (6, 11).",
+    "marks": 2,
+    "model": [
+     "Use formula (11 - 3) / (6 - 2)",
+     "8 / 4 = 2"
+    ],
+    "tip": "Label your points (x1, y1) and (x2, y2) to avoid subtraction errors."
+   },
+   {
+    "q": "A line has the equation 2y - 6x = 8. Find the gradient of this line.",
+    "marks": 2,
+    "model": [
+     "Rearrange to 2y = 6x + 8",
+     "Divide by 2 to get y = 3x + 4, so gradient = 3"
+    ],
+    "tip": "Always isolate y completely before identifying the gradient."
+   },
+   {
+    "q": "Find the equation of the straight line that passes through the point (0, 4) and has a gradient of 5.",
+    "marks": 2,
+    "model": [
+     "y = mx + c template",
+     "y = 5x + 4"
+    ],
+    "tip": "Since (0, 4) is the y-intercept, c is immediately 4."
+   },
+   {
+    "q": "Write down the equation of a line that is parallel to y = -2x + 9 and passes through the origin.",
+    "marks": 2,
+    "model": [
+     "Parallel lines share the same gradient, so m = -2",
+     "Passes through origin means c = 0, giving y = -2x"
+    ],
+    "tip": "Origin intercept means no constant term is added."
+   },
+   {
+    "q": "Find the equation of the line passing through the points (1, 5) and (3, 11).",
+    "marks": 4,
+    "model": [
+     "Calculate gradient m = (11 - 5) / (3 - 1) = 6 / 2 = 3",
+     "Substitute m into y = 3x + c giving y = 3(1) + c = 5",
+     "Solve for c: 3 + c = 5 so c = 2",
+     "Final equation: y = 3x + 2"
+    ],
+    "tip": "Use one of the coordinates to solve for c after finding m."
+   },
+   {
+    "q": "A taxi firm charges a fixed booking fee plus a rate per mile. The cost C pounds for m miles is given by C = 2.5m + 4. Interpret the number 4 in this equation.",
+    "marks": 2,
+    "model": [
+     "It is the y-intercept",
+     "It represents the fixed booking fee in pounds when zero miles are travelled"
+    ],
+    "tip": "Relate the constant term to the starting value or fixed cost in context."
+   },
+   {
+    "q": "Determine if the lines y = 4x - 1 and 2y - 8x = 5 are parallel. Show your reasoning.",
+    "marks": 3,
+    "model": [
+     "Rearrange second equation to 2y = 8x + 5",
+     "Divide by 2 to get y = 4x + 2.5",
+     "Both lines have a gradient of 4, so they are parallel"
+    ],
+    "tip": "Compare gradients after putting both equations in y = mx + c form."
+   },
+   {
+    "q": "A straight line crosses the y-axis at (0, -3) and passes through the point (4, 5). Find its equation.",
+    "marks": 3,
+    "model": [
+     "y-intercept is -3, so c = -3",
+     "Calculate gradient m = (5 - (-3)) / (4 - 0) = 8 / 4 = 2",
+     "Equation is y = 2x - 3"
+    ],
+    "tip": "Identify c instantly from the given y-intercept coordinate."
+   },
+   {
+    "q": "Explain why the line represented by x = 5 does not have a gradient in the form y = mx + c.",
+    "marks": 2,
+    "model": [
+     "x = 5 is a vertical line",
+     "Vertical lines have an infinite or undefined gradient because run is zero"
+    ],
+    "tip": "Remember division by zero occurs for vertical lines in rise over run."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Find the equation of the straight line passing through the points (-2, 1) and (4, 13) in the form y = mx + c.",
+    "steps": [
+     "Step 1: Calculate the gradient using the coordinate formula m = (y2 - y1) / (x2 - x1). Substitute the points: m = (13 - 1) / (4 - (-2)) = 12 / 6 = 2.",
+     "Step 2: Substitute the gradient into the linear template, giving y = 2x + c.",
+     "Step 3: Choose one coordinate point, say (4, 13), and substitute x = 4 and y = 13 into the equation to find c. 13 = 2(4) + c.",
+     "Step 4: Solve for c: 13 = 8 + c, so c = 5. Write out the final equation: y = 2x + 5."
+    ],
+    "ans": "y = 2x + 5"
+   },
+   {
+    "q": "A car rental company uses the linear cost function C = 30d + 50, where C is the total cost in pounds and d is the number of days rented. Identify and interpret both the gradient and the y-intercept.",
+    "steps": [
+     "Step 1: Compare the equation to y = mx + c. Here, m = 30 and c = 50.",
+     "Step 2: Interpret the gradient (m = 30). The gradient is 30, which represents the daily rental charge of 30 pounds per day.",
+     "Step 3: Interpret the y-intercept (c = 50). The y-intercept is 50, which represents the initial fixed insurance or booking fee of 50 pounds when zero days are rented."
+    ],
+    "ans": "Gradient is 30 (cost per day of 30 pounds); y-intercept is 50 (fixed fee of 50 pounds)."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Cartesian grid illustrating positive gradient, negative gradient, and y-intercept c.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"50\" y1=\"190\" x2=\"370\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"100\" y1=\"20\" x2=\"100\" y2=\"220\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"60\" y1=\"210\" x2=\"340\" y2=\"70\" stroke=\"#2563eb\" stroke-width=\"3\"/><line x1=\"60\" y1=\"70\" x2=\"340\" y2=\"210\" stroke=\"#dc2626\" stroke-width=\"3\"/><circle cx=\"100\" cy=\"140\" r=\"5\" fill=\"#16a34a\"/><text x=\"112\" y=\"135\" fill=\"#1b2540\" font-size=\"12\">(0, c)</text><text x=\"345\" y=\"185\" fill=\"#1b2540\" font-size=\"12\">x</text><text x=\"85\" y=\"30\" fill=\"#1b2540\" font-size=\"12\">y</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_f.1.9",
+  "sid": "maths_eduqas_f",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-18T20:05:58.828Z"
+ },
+ "maths_eduqas_f.1.16": {
+  "summary": "Translating real-world situations into algebraic equations is a crucial skill for turning word problems into solvable mathematical statements. By defining variables clearly, setting up balanced equations, solving them systematically, and interpreting the final solution in context, you ensure complete accuracy. Mastering this process bridges the gap between abstract algebra and practical problem-solving.",
+  "core": [
+   {
+    "h": "Defining Variables",
+    "p": "Before setting up an equation, you must assign a clear letter to the unknown quantity. Always state explicitly what your letter represents to earn method marks in examinations.",
+    "bullets": [
+     "Choose a sensible letter, such as x for a missing number or p for the price of a pen.",
+     "Write a clear let statement, e.g., 'Let x be the number of apples.'",
+     "If there is a second unknown, express it in terms of the first letter rather than introducing a new variable unnecessarily at Foundation tier."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Define Every Variable",
+      "p": "Never start solving without defining your variable. Mark schemes often award the first mark purely for setting up a valid algebraic expression or definition."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Translating Key Words into Operations",
+    "p": "Word problems contain verbal clues that translate directly into mathematical operators. Recognising these trigger words allows you to construct accurate expressions and equations.",
+    "bullets": [
+     "'Sum', 'total', 'increased by', 'more than' all mean addition (+).",
+     "'Difference', 'decreased by', 'less than', 'taken away' all mean subtraction (-).",
+     "'Product', 'times', 'lots of', 'twice', 'triple' all mean multiplication (*).",
+     "'Shared equally', 'divided by', 'quotient', 'per' all mean division (/)."
+    ],
+    "table": {
+     "head": [
+      "Word Phrase",
+      "Mathematical Operation",
+      "Example"
+     ],
+     "rows": [
+      [
+       "5 more than x",
+       "Addition",
+       "x + 5"
+      ],
+      [
+       "3 less than y",
+       "Subtraction",
+       "y - 3"
+      ],
+      [
+       "Four times a number",
+       "Multiplication",
+       "4x"
+      ],
+      [
+       "Share z equally among 5",
+       "Division",
+       "z / 5"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "The 'Less Than' Trap",
+      "p": "'5 less than x' is written as x - 5, NOT 5 - x. Subtraction is not commutative."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Forming Linear Equations",
+    "p": "An equation requires an equals sign, which usually represents words like 'is', 'equals', 'results in', or 'totalling'. Combine your expressions into a balanced mathematical statement.",
+    "bullets": [
+     "Identify the total or final outcome given in the problem and place it on the right-hand side.",
+     "Set up the operational terms on the left-hand side.",
+     "Ensure units are consistent throughout the problem before forming the equation."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Check Balance",
+      "p": "Read the sentence backwards if stuck to confirm your equals sign is in the correct logical position."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Solving Equations with Brackets",
+    "p": "Many real-life scenarios involve multipliers acting across groups of items, requiring you to expand brackets before solving.",
+    "bullets": [
+     "Use the distributive law to multiply terms outside the bracket by every term inside.",
+     "Carefully manage negative signs when expanding brackets with a negative multiplier.",
+     "Collect like terms on each side of the equation after expanding."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Order of Operations",
+      "p": "Always expand brackets first before attempting to balance or isolate the unknown variable."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Equations with Unknowns on Both Sides",
+    "p": "When a problem compares two different scenarios resulting in the same value, your equation will have variables on both the left and right sides.",
+    "bullets": [
+     "Gather all variable terms onto one side by adding or subtracting.",
+     "It is usually easiest to eliminate the smaller coefficient of the variable first.",
+     "Isolate the constant terms on the opposite side."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Keep Coefficients Positive",
+      "p": "Move the smaller variable term to avoid negative coefficients and reduce calculation errors."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Perimeter and Shape Problems",
+    "p": "Geometry contexts provide excellent opportunities for forming and solving equations based on side lengths and angle rules.",
+    "bullets": [
+     "Write an expression for the perimeter by adding all outer side lengths together.",
+     "Equate your perimeter expression to the total numerical perimeter given.",
+     "Use known geometric facts, such as angles in a triangle summing to 180 degrees."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Perimeter Equation",
+      "p": "Total Perimeter = Sum of all individual algebraic side lengths set equal to the given number."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Money and Cost Problems",
+    "p": "Financial scenarios involving unit costs and fixed fees translate directly into linear equations of the form ax + b = c.",
+    "bullets": [
+     "Let x represent the number of items or hours.",
+     "Multiply the unit rate by x and add any fixed initial fee.",
+     "Set this equal to the total bill or cost."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Fixed vs Variable Costs",
+      "p": "Fixed costs appear once as constants, while variable costs are attached to your unknown variable."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Age and Relationship Problems",
+    "p": "Word problems comparing ages over time require careful translation of phrases like 'in 5 years' or 'three times as old as'.",
+    "bullets": [
+     "Let a person's current age be x.",
+     "Future ages are represented by adding the number of years, e.g., x + 5.",
+     "Past ages are represented by subtracting, e.g., x - 3."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Both Ages Change",
+      "p": "Remember that in real life, if one person ages by 5 years, the other person also ages by 5 years."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Interpreting Solutions in Context",
+    "p": "Finding the numerical value of x is only half the job. You must interpret what that number means in the original real-world scenario.",
+    "bullets": [
+     "Check if your answer makes physical sense (e.g., negative lengths or fractional people are incorrect).",
+     "Include correct units in your final answer, such as pounds, centimeters, or years.",
+     "If the question asks for 'Tom's age' and x represents Tom's age, state it clearly."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Stopping Too Soon",
+      "p": "Leaving your answer as 'x = 7' when the question asks 'How many sweets does Sarah have?' will lose accuracy marks."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Checking Answers by Substitution",
+    "p": "Verification is a powerful habit in examinations to guarantee full marks before moving on.",
+    "bullets": [
+     "Substitute your solved value of x back into the original word problem statement.",
+     "Verify that both sides of your constructed equation balance perfectly.",
+     "Check that all conditions of the original story are satisfied."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam Insurance",
+      "p": "Spend 30 seconds checking your solution; it catches arithmetic slips instantly."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Translating a recipe into cooking steps",
+   "p": "Setting up an equation from words is like reading a recipe. The words tell you what ingredients (numbers and variables) you have, how many batches to make (coefficients and brackets), and what the final dish should look like (the total on the right side). Solving it is cooking the meal step by step. Where it breaks down is that mathematics has strict rigid rules where ingredients cannot be substituted or ignored without ruining the final equation."
+  },
+  "terms": [
+   {
+    "t": "Equation",
+    "d": "A mathematical statement showing that two expressions are equal, containing an equals sign."
+   },
+   {
+    "t": "Variable",
+    "d": "An unknown quantity represented by a letter."
+   },
+   {
+    "t": "Coefficient",
+    "d": "A number written immediately in front of a variable to show multiplication."
+   },
+   {
+    "t": "Constant",
+    "d": "A fixed numerical value that does not change."
+   },
+   {
+    "t": "Expression",
+    "d": "A combination of terms, numbers, and variables without an equals sign."
+   },
+   {
+    "t": "Substitute",
+    "d": "Replacing a variable with a known numerical value."
+   },
+   {
+    "t": "Expand",
+    "d": "Multiplying out terms outside a bracket by every term inside."
+   },
+   {
+    "t": "Balance",
+    "d": "Performing the same mathematical operation on both sides of an equation to keep it equal."
+   },
+   {
+    "t": "Perimeter",
+    "d": "The total distance around the outside of a 2D shape."
+   },
+   {
+    "t": "Inverse Operation",
+    "d": "An operation that reverses the effect of another, such as subtraction reversing addition."
+   },
+   {
+    "t": "Interpret",
+    "d": "Explaining the meaning of a mathematical result within the context of a real-world problem."
+   },
+   {
+    "t": "Linear Equation",
+    "d": "An equation where the highest power of the variable is 1."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Writing '5 less than x' as 5 - x",
+    "r": "Write x - 5 because the subtraction is taken away from x."
+   },
+   {
+    "w": "Leaving the final answer as x = 4 without answering the question context",
+    "r": "Read carefully and state the final physical quantity with units."
+   },
+   {
+    "w": "Forgetting to multiply both terms inside a bracket",
+    "r": "Multiply the outside number by every term inside the parentheses."
+   },
+   {
+    "w": "Dropping the equals sign during working out",
+    "r": "Maintain an equals sign on every line of algebraic working."
+   },
+   {
+    "w": "Adding a fixed cost instead of multiplying, or vice versa",
+    "r": "Fixed costs add once; variable costs multiply by the number of units."
+   },
+   {
+    "w": "Not updating all ages in an age problem",
+    "r": "Remember that time passes equally for all people mentioned in the problem."
+   },
+   {
+    "w": "Failing to check if negative answers make sense in context",
+    "r": "Lengths, ages, and quantities of physical objects cannot be negative."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A pen costs p pence. A notebook costs 30p more than a pen. Write an expression for the cost of the notebook.",
+    "marks": 1,
+    "model": [
+     "p + 30"
+    ],
+    "tip": "Identify 'more than' as addition."
+   },
+   {
+    "q": "Ali has x marbles. Ben has twice as many marbles as Ali. Charlie has 5 fewer marbles than Ben. Write an expression for Charlie's marbles in terms of x.",
+    "marks": 2,
+    "model": [
+     "2x (for Ben's marbles)",
+     "2x - 5"
+    ],
+    "tip": "Build the expression step by step from the given information."
+   },
+   {
+    "q": "The perimeter of a rectangle is 48 cm. The length is 3 cm more than the width w. Form an equation in terms of w and solve it to find the width.",
+    "marks": 4,
+    "model": [
+     "Length = w + 3",
+     "2(w + w + 3) = 48 or 4w + 6 = 48",
+     "4w = 42",
+     "w = 10.5 cm"
+    ],
+    "tip": "Remember a rectangle has two lengths and two widths."
+   },
+   {
+    "q": "A taxi charges a fixed call-out fee of 3 pounds plus 1.50 pounds per mile travelled. Hannah's taxi fare is 18 pounds. Set up an equation and solve it to find how many miles she travelled.",
+    "marks": 4,
+    "model": [
+     "Let m be the number of miles",
+     "3 + 1.50m = 18",
+     "1.50m = 15",
+     "m = 10 miles"
+    ],
+    "tip": "Distinguish between the fixed fee and the variable rate."
+   },
+   {
+    "q": "Tom is x years old. His mother is 4 times as old as Tom. In 10 years' time, his mother will be 3 times as old as Tom will be then. Form an equation and solve it to find Tom's present age.",
+    "marks": 5,
+    "model": [
+     "Mother's current age = 4x",
+     "Tom in 10 years = x + 10, Mother in 10 years = 4x + 10",
+     "4x + 10 = 3(x + 10)",
+     "4x + 10 = 3x + 30",
+     "x = 20"
+    ],
+    "tip": "Add 10 to both ages when moving forward in time."
+   },
+   {
+    "q": "Consecutive integers add up to 75. If the smallest integer is n, write down the next two consecutive integers and form an equation to find n.",
+    "marks": 3,
+    "model": [
+     "n + (n + 1) + (n + 2) = 75",
+     "3n + 3 = 75",
+     "n = 24"
+    ],
+    "tip": "Consecutive integers follow each other, increasing by 1 each time."
+   },
+   {
+    "q": "A packet of biscuits costs x pence. A cake costs 20p more than a biscuit. Liam buys 3 packets of biscuits and 2 cakes. The total cost is 340p. Form and solve an equation to find the cost of a packet of biscuits.",
+    "marks": 4,
+    "model": [
+     "Cake cost = x + 20",
+     "3x + 2(x + 20) = 340",
+     "3x + 2x + 40 = 340 => 5x = 300",
+     "x = 60p"
+    ],
+    "tip": "Expand the bracket carefully before collecting like terms."
+   },
+   {
+    "q": "The angles in a triangle are 3x, 2x + 10, and x + 20 degrees. Set up an equation and solve it to find the size of the largest angle.",
+    "marks": 4,
+    "model": [
+     "3x + (2x + 10) + (x + 20) = 180",
+     "6x + 30 = 180",
+     "6x = 150 => x = 25",
+     "Largest angle = 3(25) = 75 degrees"
+    ],
+    "tip": "Recall that angles in a triangle always sum to 180 degrees."
+   },
+   {
+    "q": "A club charges a 25 pound membership fee plus 5 pounds per training session. Sam paid a total of 95 pounds. Translate this into an equation and find how many training sessions Sam attended.",
+    "marks": 3,
+    "model": [
+     "25 + 5s = 95",
+     "5s = 70",
+     "s = 14 sessions"
+    ],
+    "tip": "Check that your final answer is a whole number of sessions."
+   },
+   {
+    "q": "A farmer has 100 meters of fencing to enclose a rectangular vegetable patch. The length is 10 meters more than the width. Form an equation to find the dimensions.",
+    "marks": 4,
+    "model": [
+     "Perimeter formula: 2(w + w + 10) = 100",
+     "4w + 20 = 100",
+     "4w = 80 => w = 20",
+     "Width = 20m, Length = 30m"
+    ],
+    "tip": "Perimeter is the total distance around all four sides."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A box contains blue and red counters. There are 3 times as many blue counters as red counters. If there are 64 counters in total, how many red counters are there?",
+    "steps": [
+     "Let the number of red counters be r.",
+     "Since there are 3 times as many blue counters, let the number of blue counters be 3r.",
+     "Set up the equation for the total: r + 3r = 64.",
+     "Simplify and solve: 4r = 64, so r = 16.",
+     "Interpret the solution: There are 16 red counters."
+    ],
+    "ans": "16 red counters"
+   },
+   {
+    "q": "Emma is x years old. Her brother is 4 years older than Emma. Their mother is twice as old as Emma's brother. The sum of all three ages is 68. Find Emma's age.",
+    "steps": [
+     "Emma's age = x",
+     "Brother's age = x + 4",
+     "Mother's age = 2(x + 4) = 2x + 8",
+     "Sum of ages: x + (x + 4) + (2x + 8) = 68",
+     "Simplify: 4x + 12 = 68",
+     "Subtract 12: 4x = 56",
+     "Divide by 4: x = 14"
+    ],
+    "ans": "Emma is 14 years old"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Visual breakdown of translating a word problem into a linear equation, showing variables, operational clues, and the balanced total.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" rx=\"10\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"30\" y=\"35\" font-size=\"14\" font-weight=\"bold\" fill=\"#1b2540\">Translating Word Problems to Equations</text><rect x=\"30\" y=\"55\" width=\"150\" height=\"50\" rx=\"6\" fill=\"#fde68a\" stroke=\"#1b2540\"/><text x=\"40\" y=\"75\" font-size=\"12\" fill=\"#1b2540\">Let Statement</text><text x=\"40\" y=\"93\" font-size=\"11\" fill=\"#1b2540\">Let x = number of items</text><rect x=\"220\" y=\"55\" width=\"150\" height=\"50\" rx=\"6\" fill=\"#bbf7d0\" stroke=\"#1b2540\"/><text x=\"230\" y=\"75\" font-size=\"12\" fill=\"#1b2540\">Operational Clues</text><text x=\"230\" y=\"93\" font-size=\"11\" fill=\"#1b2540\">'More than' -> Add (+)</text><rect x=\"30\" y=\"125\" width=\"340\" height=\"50\" rx=\"6\" fill=\"#e9d5ff\" stroke=\"#1b2540\"/><text x=\"40\" y=\"145\" font-size=\"12\" fill=\"#1b2540\">Forming the Equation</text><text x=\"40\" y=\"163\" font-size=\"11\" fill=\"#1b2540\">3x + 5 = 20 (Left Side = Right Total)</text><text x=\"30\" y=\"205\" font-size=\"11\" font-style=\"italic\" fill=\"#1b2540\">Always define variables and equate to the given total.</text></svg>"
+   },
+   {
+    "cap": "Geometric perimeter word problem diagram illustrating how algebraic side lengths combine to form an equation equal to total perimeter.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" rx=\"10\" fill=\"#fef3c7\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"30\" y=\"35\" font-size=\"14\" font-weight=\"bold\" fill=\"#1b2540\">Perimeter Equation Setup</text><rect x=\"110\" y=\"60\" width=\"180\" height=\"100\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"175\" y=\"115\" font-size=\"12\" fill=\"#1b2540\">Rectangle</text><text x=\"170\" y=\"50\" font-size=\"11\" fill=\"#1b2540\">Width = w</text><text x=\"165\" y=\"180\" font-size=\"11\" fill=\"#1b2540\">Width = w</text><text x=\"20\" y=\"115\" font-size=\"11\" fill=\"#1b2540\">Length = w + 3</text><text x=\"300\" y=\"115\" font-size=\"11\" fill=\"#1b2540\">Length = w + 3</text><text x=\"30\" y=\"205\" font-size=\"11\" font-weight=\"bold\" fill=\"#1b2540\">Perimeter = w + w + (w + 3) + (w + 3) = Total</text></svg>"
+   },
+   {
+    "cap": "Financial model showing fixed fees versus variable rates translated into a standard linear equation format.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" rx=\"10\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"30\" y=\"35\" font-size=\"14\" font-weight=\"bold\" fill=\"#1b2540\">Cost and Fee Equations</text><rect x=\"30\" y=\"60\" width=\"340\" height=\"40\" rx=\"6\" fill=\"#ffffff\" stroke=\"#1b2540\"/><text x=\"40\" y=\"85\" font-size=\"12\" fill=\"#1b2540\">Fixed Initial Cost (Constant, e.g., £3)</text><rect x=\"30\" y=\"115\" width=\"340\" height=\"40\" rx=\"6\" fill=\"#ffffff\" stroke=\"#1b2540\"/><text x=\"40\" y=\"140\" font-size=\"12\" fill=\"#1b2540\">Variable Cost per Unit (Coefficient, e.g., £1.50x)</text><rect x=\"30\" y=\"170\" width=\"340\" height=\"40\" rx=\"6\" fill=\"#fecaca\" stroke=\"#1b2540\"/><text x=\"40\" y=\"195\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\">Equation: 1.50x + 3 = Total Bill</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_f.1.16",
+  "sid": "maths_eduqas_f",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-18T20:08:01.010Z"
+ },
+ "maths_eduqas_f.1.19": {
+  "summary": "Mastering special sequences under the Eduqas Foundation tier requires identifying the unique pattern governing each number list. You must be able to recognise triangular, square, cube, arithmetic, Fibonacci-type, simple quadratic, and geometric sequences by inspecting how terms change or how positions relate to values. Careful examination of first and second differences unlocks the underlying structure of both linear and non-linear progressions.",
+  "core": [
+   {
+    "h": "1. Introduction to Sequences",
+    "p": "A sequence is an ordered set of numbers governed by a rule. Each number in the sequence is called a term. Understanding how terms progress helps us predict future values, recognise patterns, and connect numbers to visual shapes and algebraic formulas.",
+    "bullets": [
+     "Each number in a sequence is known as a term.",
+     "The position of a term is often represented by n (n = 1, 2, 3...).",
+     "Sequences can be finite (ending) or infinite (continuing forever).",
+     "Rules can be term-to-term (how to get the next term from the previous one) or position-to-term (a formula directly linking the position n to the term value)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Sequence",
+      "p": "An ordered set of numbers formed according to a specific rule."
+     },
+     {
+      "k": "tip",
+      "t": "Always label terms",
+      "p": "Write n = 1, 2, 3... above or below the terms to keep track of your positions clearly."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. Triangular Numbers",
+    "p": "Triangular numbers represent dots arranged in equilateral triangles. As the triangle grows, another row of dots is added to the bottom, where the number of dots in the added row equals the row number. The sequence starts at 1, then adds 2, then adds 3, then adds 4, and so on.",
+    "bullets": [
+     "Visual pattern: dots forming triangles with sides increasing by 1.",
+     "The sequence of numbers is: 1, 3, 6, 10, 15, 21, ...",
+     "Term-to-term rule: Add 2, then add 3, then add 4, then add 5...",
+     "Position-to-term formula: n(n + 1) / 2"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Triangular numbers formula",
+      "p": "The nth triangular number is always given by n(n + 1) / 2."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Visual representation of the first four triangular numbers showing dot counts of 1, 3, 6, and 10.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#ffffff\"/><circle cx=\"70\" cy=\"60\" r=\"8\" fill=\"#1b2540\"/><circle cx=\"160\" cy=\"50\" r=\"8\" fill=\"#1b2540\"/><circle cx=\"145\" cy=\"75\" r=\"8\" fill=\"#1b2540\"/><circle cx=\"175\" cy=\"75\" r=\"8\" fill=\"#1b2540\"/><circle cx=\"260\" cy=\"35\" r=\"8\" fill=\"#1b2540\"/><circle cx=\"245\" cy=\"60\" r=\"8\" fill=\"#1b2540\"/><circle cx=\"275\" cy=\"60\" r=\"8\" fill=\"#1b2540\"/><circle cx=\"230\" cy=\"85\" r=\"8\" fill=\"#1b2540\"/><circle cx=\"260\" cy=\"85\" r=\"8\" fill=\"#1b2540\"/><circle cx=\"290\" cy=\"85\" r=\"8\" fill=\"#1b2540\"/><text x=\"70\" y=\"110\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">1</text><text x=\"160\" y=\"110\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">3</text><text x=\"260\" y=\"110\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">6</text><text x=\"350\" y=\"60\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">10</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "3. Square Numbers",
+    "p": "Square numbers are generated by multiplying an integer by itself (n squared, n^2). Geometrically, they represent the total number of unit squares needed to form a larger square of side length n. Recognising square numbers instantly is vital for Foundation exams.",
+    "bullets": [
+     "Sequence of numbers: 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, ...",
+     "Generated by 1x1, 2x2, 3x3, 4x4, etc.",
+     "Position-to-term rule: n^2",
+     "Differences between consecutive square numbers form the odd numbers: 3, 5, 7, 9, 11..."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Square Number",
+      "p": "A number multiplied by itself (n^2)."
+     },
+     {
+      "k": "warn",
+      "t": "Do not confuse with multiples",
+      "p": "Square numbers are powers, not times tables. 9 is a square number (3x3), not a multiple of 2."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Cube Numbers",
+    "p": "Cube numbers are formed by multiplying an integer by itself twice (n cubed, n^3). Geometrically, they represent the volume of a solid cube with side length n. Foundation tier students should memorise the first five cube numbers.",
+    "bullets": [
+     "Sequence of numbers: 1, 8, 27, 64, 125, 216, ...",
+     "Generated by 1x1x1, 2x2x2, 3x3x3, 4x4x4, etc.",
+     "Position-to-term rule: n^3",
+     "Grows much faster than linear, square, and triangular sequences."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "First five cubes",
+      "p": "1, 8, 27, 64, 125 are the essential cube numbers to recall in non-calculator papers."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "5. Arithmetic Sequences (Linear Sequences)",
+    "p": "An arithmetic sequence is a sequence where the difference between consecutive terms is constant. This constant amount is called the common difference. Because the terms increase or decrease by the exact same value each time, the graph of term versus position is a straight line.",
+    "bullets": [
+     "Example: 3, 7, 11, 15, 19 (Common difference is +4)",
+     "Example: 20, 17, 14, 11, 8 (Common difference is -3)",
+     "Term-to-term rule: Add or subtract a fixed number.",
+     "The nth term takes the linear form an + b, where a is the common difference."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Arithmetic Sequence",
+      "p": "A sequence with a constant difference between consecutive terms."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Graph of an arithmetic sequence showing a constant linear increase as n increases.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#ffffff\"/><line x1=\"50\" y1=\"190\" x2=\"370\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"30\" x2=\"50\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"90\" cy=\"150\" r=\"5\" fill=\"#2563eb\"/><circle cx=\"160\" cy=\"120\" r=\"5\" fill=\"#2563eb\"/><circle cx=\"230\" cy=\"90\" r=\"5\" fill=\"#2563eb\"/><circle cx=\"300\" cy=\"60\" r=\"5\" fill=\"#2563eb\"/><line x1=\"90\" y1=\"150\" x2=\"300\" y2=\"60\" stroke=\"#2563eb\" stroke-dasharray=\"4\" stroke-width=\"2\"/><text x=\"210\" y=\"220\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">Position (n)</text><text x=\"20\" y=\"110\" font-size=\"12\" fill=\"#1b2540\" transform=\"rotate(-90 20 110)\" text-anchor=\"middle\">Term Value</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "6. Fibonacci-type Sequences",
+    "p": "A Fibonacci-type sequence is defined by a rule where each term is found by adding the two previous terms together. The standard Fibonacci sequence starts with 1 and 1, but Fibonacci-type sequences can start with any two numbers.",
+    "bullets": [
+     "Standard Fibonacci: 1, 1, 2, 3, 5, 8, 13, 21, 34, ...",
+     "Custom start example: 3, 4, 7, 11, 18, 29, ...",
+     "Term-to-term rule: Add the previous two terms (Term(n) = Term(n-1) + Term(n-2)).",
+     "Always requires two starting numbers to generate the sequence."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Fibonacci rule",
+      "p": "Next term = sum of the preceding two terms."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Simple Quadratic Sequences",
+    "p": "A simple quadratic sequence is a non-linear sequence where the second differences between terms are constant. Unlike arithmetic sequences where first differences are constant, quadratic sequences have changing first differences, but their differences grow at a steady rate.",
+    "bullets": [
+     "Example sequence: 4, 7, 12, 19, 28",
+     "First differences: +3, +5, +7, +9 (not constant)",
+     "Second differences: +2, +2, +2 (constant second difference)",
+     "A constant second difference of 2 indicates an n^2 term in the position formula."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Quadratic Sequence",
+      "p": "A sequence whose second difference between consecutive terms is constant."
+     },
+     {
+      "tip": "Finding second differences",
+      "p": "Always write the first differences on the first row, then subtract adjacent first differences to find the second difference."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Checking first and second differences for the quadratic sequence 4, 7, 12, 19.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#ffffff\"/><text x=\"50\" y=\"50\" font-size=\"13\" fill=\"#1b2540\">Sequence: 4, 7, 12, 19</text><text x=\"50\" y=\"90\" font-size=\"12\" fill=\"#2563eb\">1st diff:   +3   +5   +7</text><text x=\"50\" y=\"130\" font-size=\"12\" fill=\"#dc2626\">2nd diff:     +2   +2</text><text x=\"50\" y=\"180\" font-size=\"12\" fill=\"#1b2540\">Constant second difference = Quadratic (n^2)</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "8. Geometric Sequences",
+    "p": "A geometric sequence is a sequence where each term is found by multiplying (or dividing) the previous term by a fixed, non-zero number called the common ratio. This creates exponential growth or decay.",
+    "bullets": [
+     "Example: 2, 6, 18, 54, 162 (Common ratio is x3)",
+     "Example: 80, 40, 20, 10, 5 (Common ratio is x0.5 or divide by 2)",
+     "Term-to-term rule: Multiply or divide by a constant factor.",
+     "Do not confuse with arithmetic sequences (which use addition/subtraction)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Geometric Sequence",
+      "p": "A sequence where each term is multiplied by a constant common ratio to get the next term."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Identifying Sequences by Inspection",
+    "p": "In exam questions, you may be presented with a mixed list of numbers and asked to name the type of sequence. Systematic checks help you identify the sequence type quickly and accurately.",
+    "bullets": [
+     "Step 1: Check if differences are constant (+ or -). If yes -> Arithmetic.",
+     "Step 2: Check if multiplying by a constant number (x or /). If yes -> Geometric.",
+     "Step 3: Check if adding the previous two terms. If yes -> Fibonacci-type.",
+     "Step 4: Check if second differences are constant. If yes -> Quadratic.",
+     "Step 5: Check if numbers match standard lists: 1, 4, 9 -> Square; 1, 8, 27 -> Cube; 1, 3, 6, 10 -> Triangular."
+    ],
+    "table": {
+     "head": [
+      "Sequence Type",
+      "Key Identifying Feature"
+     ],
+     "rows": [
+      [
+       "Arithmetic",
+       "Constant first difference (+/-)"
+      ],
+      [
+       "Geometric",
+       "Constant multiplier (x /)"
+      ],
+      [
+       "Quadratic",
+       "Constant second difference"
+      ],
+      [
+       "Fibonacci-type",
+       "Sum of previous two terms"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Process of elimination",
+      "p": "Work through arithmetic, geometric, then special number patterns in order."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Generating Terms from Rules",
+    "p": "Foundation papers often test your ability to generate the first few terms of a sequence given either a position-to-term formula or a term-to-term rule with a starting value.",
+    "bullets": [
+     "Position-to-term example: nth term = 3n + 2. Substitute n=1, 2, 3, 4 to get 5, 8, 11, 14.",
+     "Term-to-term example: Start at 5, rule is 'multiply by 2 then add 1'. Terms: 5, 11, 23, 47.",
+     "Always show your substitution clearly to secure method marks.",
+     "Check your generated terms against the rule to avoid careless arithmetic slips."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Reading rules carefully",
+      "p": "Ensure you distinguish between 'multiply position by 2' and 'multiply previous term by 2'."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "11. Summary of Special Sequences",
+    "p": "A quick-reference guide to the specific number patterns required by the Eduqas Foundation specification. Memorising these standard lists saves crucial time during exams.",
+    "bullets": [
+     "Triangular: 1, 3, 6, 10, 15, 21, ...",
+     "Square: 1, 4, 9, 16, 25, 36, ...",
+     "Cube: 1, 8, 27, 64, 125, ...",
+     "Powers of 2: 2, 4, 8, 16, 32, 64, ... (Geometric with ratio 2)"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Standard lists",
+      "p": "Recognising 1, 4, 9, 16 instantly as squares is an essential Foundation skill."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Staircase and the Footsteps",
+   "p": "Think of an arithmetic sequence like walking up a regular staircase where every step is the exact same height (constant addition). A geometric sequence is like a disease spreading or money compounding, where each day the number of cases multiplies by the same factor rather than adding a fixed amount. A Fibonacci sequence is like a rabbit population where each month's total depends on the sum of the adults and babies from the previous two months. The analogy breaks down when sequences involve negative numbers or non-integer positions, as physical objects like stairs cannot have negative heights."
+  },
+  "terms": [
+   {
+    "t": "Sequence",
+    "d": "An ordered set of numbers generated according to a specific rule."
+   },
+   {
+    "t": "Term",
+    "d": "An individual number or value within a sequence."
+   },
+   {
+    "t": "Arithmetic Sequence",
+    "d": "A sequence with a constant difference between consecutive terms."
+   },
+   {
+    "t": "Geometric Sequence",
+    "d": "A sequence where each term is multiplied by a constant common ratio."
+   },
+   {
+    "t": "Triangular Numbers",
+    "d": "Numbers representing dots in equilateral triangles: 1, 3, 6, 10, ..."
+   },
+   {
+    "t": "Square Numbers",
+    "d": "Numbers formed by multiplying an integer by itself: 1, 4, 9, 16, ..."
+   },
+   {
+    "t": "Cube Numbers",
+    "d": "Numbers formed by multiplying an integer by itself twice: 1, 8, 27, 64, ..."
+   },
+   {
+    "t": "Fibonacci Sequence",
+    "d": "A sequence where each term is the sum of the previous two terms."
+   },
+   {
+    "t": "Quadratic Sequence",
+    "d": "A sequence where the second difference between consecutive terms is constant."
+   },
+   {
+    "t": "Common Difference",
+    "d": "The fixed amount added or subtracted between consecutive terms in an arithmetic sequence."
+   },
+   {
+    "t": "Common Ratio",
+    "d": "The fixed multiplier between consecutive terms in a geometric sequence."
+   },
+   {
+    "t": "Position-to-Term Rule",
+    "d": "A formula using n that allows you to calculate any term directly from its position."
+   },
+   {
+    "t": "Term-to-Term Rule",
+    "d": "Instructions on how to get the next term from the current term."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Confusing arithmetic and geometric sequences by adding instead of multiplying.",
+    "r": "Check if terms increase by addition (arithmetic) or multiplication (geometric)."
+   },
+   {
+    "w": "Writing square numbers as multiples of 2 (e.g. 2, 4, 6, 8).",
+    "r": "Square numbers are n^2 (1, 4, 9, 16, 25)."
+   },
+   {
+    "w": "Forgetting the starting numbers for a Fibonacci-type sequence.",
+    "r": "Fibonacci sequences require two starting numbers before adding them to find the third."
+   },
+   {
+    "w": "Stopping at first differences when checking for a quadratic sequence.",
+    "r": "Always find the second differences if the first differences are not constant."
+   },
+   {
+    "w": "Stating that triangular numbers are just odd numbers.",
+    "r": "Triangular numbers increase by adding consecutive integers (+2, +3, +4...), resulting in 1, 3, 6, 10..."
+   },
+   {
+    "w": "Mixing up cube numbers with multiples of 3.",
+    "r": "Cube numbers are n^3 (1, 8, 27, 64), not 3, 6, 9, 12."
+   },
+   {
+    "w": "Assuming all sequences are linear.",
+    "r": "Check differences carefully; if they change, the sequence could be quadratic, geometric, or cubic."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Write down the next two terms of the sequence: 1, 4, 9, 16, ...",
+    "marks": 2,
+    "model": [
+     "Identifies sequence as square numbers",
+     "Writes 25 and 36"
+    ],
+    "tip": "Recognise standard square number lists instantly."
+   },
+   {
+    "q": "Here are the first four terms of a sequence: 3, 6, 11, 18, ... What type of sequence is this?",
+    "marks": 1,
+    "model": [
+     "States quadratic sequence"
+    ],
+    "tip": "Check first differences (+3, +5, +7) and second differences (+2, +2) to identify."
+   },
+   {
+    "q": "The first two terms of a Fibonacci sequence are 2 and 3. Write down the next three terms.",
+    "marks": 3,
+    "model": [
+     "Finds third term: 5",
+     "Finds fourth term: 8",
+     "Finds fifth term: 13"
+    ],
+    "tip": "Add the two preceding numbers carefully at each step."
+   },
+   {
+    "q": "Circle the geometric sequence from the options: A) 2, 4, 6, 8  B) 3, 6, 12, 24  C) 1, 4, 9, 16",
+    "marks": 1,
+    "model": [
+     "Selects B"
+    ],
+    "tip": "Look for a constant multiplier (x2 in option B)."
+   },
+   {
+    "q": "Find the 5th term of the sequence generated by the position-to-term rule: nth term = n^2 + 3.",
+    "marks": 2,
+    "model": [
+     "Substitutes n = 5 (5^2 + 3)",
+     "Evaluates correctly as 28"
+    ],
+    "tip": "Square 5 first, then add 3 according to BIDMAS."
+   },
+   {
+    "q": "The term-to-term rule of a sequence is 'multiply by 2 and add 1'. The first term is 3. Find the second and third terms.",
+    "marks": 2,
+    "model": [
+     "Second term: 3 x 2 + 1 = 7",
+     "Third term: 7 x 2 + 1 = 15"
+    ],
+    "tip": "Apply the rule step by step to the previous answer."
+   },
+   {
+    "q": "Write down the first three cube numbers.",
+    "marks": 2,
+    "model": [
+     "Writes 1",
+     "Writes 8 and 27"
+    ],
+    "tip": "Cube numbers are 1x1x1, 2x2x2, 3x3x3."
+   },
+   {
+    "q": "Explain why 1, 3, 6, 10 is an example of triangular numbers.",
+    "marks": 2,
+    "model": [
+     "Mentions dots can be arranged in equilateral triangles",
+     "Points out that differences increase by 1 each time (+2, +3, +4)"
+    ],
+    "tip": "Link the numerical pattern to its geometric shape."
+   },
+   {
+    "q": "Identify the common ratio for the geometric sequence: 5, 15, 45, 135, ...",
+    "marks": 1,
+    "model": [
+     "States 3"
+    ],
+    "tip": "Divide any term by the term immediately before it."
+   },
+   {
+    "q": "An arithmetic sequence starts 5, 9, 13, 17, ... State the common difference.",
+    "marks": 1,
+    "model": [
+     "States 4 (or +4)"
+    ],
+    "tip": "Find the difference between adjacent terms."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Classify the following sequence and state the next two terms: 2, 6, 18, 54, ...",
+    "steps": [
+     "Check term-to-term differences: 6 - 2 = 4, 18 - 6 = 12 (not arithmetic).",
+     "Check multipliers: 2 x 3 = 6, 6 x 3 = 18, 18 x 3 = 54. This is a geometric sequence with a common ratio of 3.",
+     "Calculate the next term: 54 x 3 = 162.",
+     "Calculate the following term: 162 x 3 = 486."
+    ],
+    "ans": "Geometric sequence. Next two terms are 162 and 486."
+   },
+   {
+    "q": "Find the first four terms of the quadratic sequence where the nth term rule is given as nth term = n^2 + n.",
+    "steps": [
+     "Substitute n = 1: (1^2) + 1 = 1 + 1 = 2.",
+     "Substitute n = 2: (2^2) + 2 = 4 + 2 = 6.",
+     "Substitute n = 3: (3^2) + 3 = 9 + 3 = 12.",
+     "Substitute n = 4: (4^2) + 4 = 16 + 4 = 20."
+    ],
+    "ans": "2, 6, 12, 20"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Comparison of linear (arithmetic) and non-linear (quadratic/geometric) sequence growth rates.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#ffffff\"/><line x1=\"50\" y1=\"200\" x2=\"370\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"30\" x2=\"50\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M 60 180 Q 200 160 340 50\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"3\"/><line x1=\"60\" y1=\"180\" x2=\"340\" y2=\"90\" stroke=\"#2563eb\" stroke-width=\"3\"/><text x=\"240\" y=\"110\" font-size=\"11\" fill=\"#2563eb\">Arithmetic (Linear)</text><text x=\"230\" y=\"45\" font-size=\"11\" fill=\"#dc2626\">Quadratic / Geometric</text><text x=\"210\" y=\"225\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">Position n</text></svg>"
+   },
+   {
+    "cap": "Visual layout of a Fibonacci-type sequence building process where each term is the sum of the preceding two.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#ffffff\"/><rect x=\"40\" y=\"90\" width=\"50\" height=\"50\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"65\" y=\"120\" font-size=\"14\" fill=\"#1b2540\" text-anchor=\"middle\">3</text><text x=\"105\" y=\"120\" font-size=\"14\" fill=\"#1b2540\" text-anchor=\"middle\">+</text><rect x=\"130\" y=\"90\" width=\"50\" height=\"50\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"155\" y=\"120\" font-size=\"14\" fill=\"#1b2540\" text-anchor=\"middle\">5</text><text x=\"195\" y=\"120\" font-size=\"14\" fill=\"#1b2540\" text-anchor=\"middle\">=</text><rect x=\"220\" y=\"90\" width=\"60\" height=\"50\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"250\" y=\"120\" font-size=\"14\" fill=\"#1b2540\" text-anchor=\"middle\">8</text><text x=\"200\" y=\"180\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">Fibonacci Addition Step</text></svg>"
+   },
+   {
+    "cap": "Square numbers grid representation showing 1, 4, 9, and 16 unit squares.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#ffffff\"/><rect x=\"50\" y=\"80\" width=\"30\" height=\"30\" fill=\"#fde68a\" stroke=\"#1b2540\"/><text x=\"65\" y=\"130\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">1x1=1</text><rect x=\"120\" y=\"65\" width=\"45\" height=\"45\" fill=\"#fde68a\" stroke=\"#1b2540\"/><text x=\"142\" y=\"130\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">2x2=4</text><rect x=\"200\" y=\"50\" width=\"60\" height=\"60\" fill=\"#fde68a\" stroke=\"#1b2540\"/><text x=\"230\" y=\"130\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">3x3=9</text><text x=\"200\" y=\"180\" font-size=\"12\" fill=\"#1b2540\">Square Numbers Grid Visual</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_f.1.19",
+  "sid": "maths_eduqas_f",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-18T20:09:07.282Z"
  }
 }

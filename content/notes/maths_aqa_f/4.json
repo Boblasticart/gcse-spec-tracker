@@ -2407,5 +2407,1877 @@
   "src": "pre",
   "by": "groq/openai/gpt-oss-120b",
   "ts": "2026-11-17T17:46:26.954Z"
+ },
+ "maths_aqa_f.4.4": {
+  "summary": "Empirical (experimental) probabilities are obtained by recording the outcomes of a real‑world random experiment. As the number of trials (sample size) gets larger, the proportion of each outcome – the empirical probability – becomes increasingly close to the theoretical probability predicted by the mathematical model. This tendency, called the law of large numbers, underpins why we can trust probability calculations and why larger unbiased samples give more reliable estimates of chance events.",
+  "core": [
+   {
+    "h": "What is an Empirical Probability?",
+    "p": "Empirical probability is the relative frequency of an outcome observed in a real experiment. It is calculated by dividing the number of times the outcome occurs by the total number of trials.",
+    "bullets": [
+     "Empirical probability \\(P_{e}=\\frac{\\text{favourable outcomes observed}}{\\text{total trials}}\\)",
+     "Based on actual data, not on theory",
+     "Requires an unbiased sample – each outcome must be equally likely to be selected",
+     "Denoted by \\(P_{e}\\) to distinguish from theoretical \\(P\\)"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Empirical probability",
+      "p": "The proportion of times an event occurs in a series of trials, calculated as \\(\\frac{\\text{frequency of the event}}{\\text{total number of trials}}\\)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Theoretical Probability",
+    "p": "Theoretical probability is the probability calculated from the known structure of the sample space, assuming all outcomes are equally likely.",
+    "bullets": [
+     "Calculated using \\(P=\\frac{\\text{number of favourable outcomes}}{\\text{total number of equally likely outcomes}}\\)",
+     "Does not require any experiment",
+     "Provides the ‘expected’ proportion as the number of trials approaches infinity"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Key formula",
+      "p": "\\(P=\\frac{n_{f}}{n}\\) where \\(n_{f}\\) is the number of favourable outcomes and \\(n\\) the total outcomes."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Law of Large Numbers (LLN)",
+    "p": "The LLN states that as the sample size increases, the empirical probability converges towards the theoretical probability.",
+    "bullets": [
+     "\"Tends towards\" means the difference becomes smaller, not that they become exactly equal for a finite sample",
+     "Foundation tier expects the qualitative description, not a formal proof",
+     "The LLN justifies using large unbiased samples in experiments and surveys"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam tip",
+      "p": "When asked to explain the trend, use the phrase ‘as the number of trials increases, the empirical probability gets closer to the theoretical probability.’"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Why Sample Size Matters",
+    "p": "A larger sample reduces the effect of random fluctuation, giving a more stable estimate of the true probability.",
+    "bullets": [
+     "Small samples can give extreme proportions (e.g., 3 heads in 4 flips = 0.75)",
+     "Larger samples smooth out these extremes (e.g., 500 heads in 1000 flips = 0.50)",
+     "Unbiased sampling ensures each outcome has the same chance of being selected each trial"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Common trap",
+      "p": "Do not claim the empirical probability will equal the theoretical probability after a few trials; it only approaches it as the number becomes large."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Unbiased Sample Explained",
+    "p": "An unbiased sample means every possible outcome of the experiment has an equal chance of being recorded in each trial.",
+    "bullets": [
+     "No systematic favouritism (e.g., always starting the die roll from the same side)",
+     "Random selection methods such as shuffling cards, rolling a fair die, or using a random number generator",
+     "Ensures the empirical distribution is a fair representation of the theoretical one"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Unbiased sample",
+      "p": "A set of observations where each possible outcome of the underlying experiment is equally likely to be selected."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Graphical Illustration of Convergence",
+    "p": "Plotting empirical probability against the number of trials shows a curve that settles near the theoretical value.",
+    "bullets": [
+     "X‑axis: number of trials (n)",
+     "Y‑axis: empirical probability of a chosen outcome",
+     "The curve starts erratic and flattens as n grows"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "What to sketch",
+      "p": "A line that oscillates widely for small n and narrows around the theoretical probability for large n."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Empirical probability of getting a ‘6’ on a fair die as trials increase",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"30\" y=\"30\" width=\"340\" height=\"180\" fill=\"#f8fafc\" stroke=\"#1b2540\"/><text x=\"200\" y=\"20\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">Number of trials (n)</text><text x=\"15\" y=\"120\" transform=\"rotate(-90 15,120)\" font-size=\"12\" fill=\"#1b2540\">Empirical P(6)</text><line x1=\"30\" y1=\"210\" x2=\"370\" y2=\"210\" stroke=\"#1b2540\"/><line x1=\"30\" y1=\"210\" x2=\"30\" y2=\"30\" stroke=\"#1b2540\"/><polyline points=\"30,210 60,180 90,150 120,130 150,115 180,105 210,100 240,98 270,97 300,96 330,95 360,95\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"360\" y=\"95\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"end\">Theoretical P=1/6≈0.167</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Practical Activity: Coin Toss",
+    "p": "Toss a fair coin 20 times, record heads, calculate empirical probability, then repeat to 200 tosses and compare.",
+    "bullets": [
+     "Step 1: Record each outcome in a table",
+     "Step 2: Count heads (favourable) and total tosses",
+     "Step 3: Compute \\(P_{e}=\\frac{\\text{heads}}{\\text{total}}\\)",
+     "Step 4: Observe how \\(P_{e}\\) moves closer to 0.5 as total increases"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Data handling",
+      "p": "Use a frequency tree to visualise the growing sample – it makes the convergence obvious."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Link to Other Probability Concepts",
+    "p": "Understanding P5 helps with P3 (relative expected frequency) and P4 (sum of probabilities =1) because empirical frequencies become reliable estimates of the theoretical values used in those sections.",
+    "bullets": [
+     "When empirical frequencies stabilise, they can be used to estimate expected frequencies",
+     "A stable empirical distribution respects the 0‑to‑1 scale and the rule that probabilities of exhaustive outcomes sum to 1"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Key Vocabulary Summary",
+    "p": "A quick reference of the essential terms for P5.",
+    "bullets": [
+     "Empirical probability, Theoretical probability, Unbiased sample, Sample size, Convergence, Law of Large Numbers, Relative frequency, Random experiment, Fair device, Fluctuation"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Common Misconceptions",
+    "p": "Students often confuse the direction of the relationship or over‑state certainty.",
+    "bullets": [
+     "Thinking a small sample can give an exact theoretical value",
+     "Assuming the empirical probability will *always* be higher or lower than the theoretical one",
+     "Believing bias can be corrected simply by increasing sample size"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Remember",
+      "p": "Bias affects the *direction* of the error; larger samples only reduce random error, not systematic bias."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Exam Question Strategies for P5",
+    "p": "How to maximise marks when P5 appears in a question.",
+    "bullets": [
+     "Read the question carefully – they may ask you to *explain* the trend, *predict* the effect of increasing n, or *interpret* a graph",
+     "Use the exact phrase ‘as the sample size increases, the empirical probability tends towards the theoretical probability’",
+     "If a diagram is given, comment on the narrowing spread of points",
+     "Link back to the Law of Large Numbers where appropriate"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Marking",
+      "p": "Each sentence that correctly uses the terminology can earn a mark."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Rolling a dice in a dark room",
+   "p": "Imagine you are rolling a fair die in a dark room and you can only hear the click of each roll. After a few rolls you might think the die is favouring a particular number because you heard that click more often. However, as you keep rolling and listening to many more clicks, the proportion of each number you hear settles to the expected 1/6. The analogy breaks down if the die is weighted (bias) – hearing more clicks of one number would persist no matter how many rolls you make."
+  },
+  "terms": [
+   {
+    "t": "Empirical probability",
+    "d": "The proportion of times an event occurs in a series of trials, calculated as favourable outcomes ÷ total trials."
+   },
+   {
+    "t": "Theoretical probability",
+    "d": "The probability calculated from the known sample space assuming all outcomes are equally likely."
+   },
+   {
+    "t": "Unbiased sample",
+    "d": "A set of observations where each possible outcome has an equal chance of being selected."
+   },
+   {
+    "t": "Sample size",
+    "d": "The total number of trials or observations in an experiment."
+   },
+   {
+    "t": "Convergence",
+    "d": "The process of an empirical probability approaching the theoretical probability as sample size grows."
+   },
+   {
+    "t": "Law of Large Numbers",
+    "d": "A principle stating that the average of the results obtained from a large number of trials will be close to the expected value."
+   },
+   {
+    "t": "Relative frequency",
+    "d": "The ratio of the number of times an event occurs to the total number of trials; synonymous with empirical probability."
+   },
+   {
+    "t": "Random experiment",
+    "d": "An experiment where the outcome cannot be predicted with certainty, but each outcome has a known probability."
+   },
+   {
+    "t": "Fair device",
+    "d": "A tool (die, coin, spinner) that gives each outcome an equal chance of occurring."
+   },
+   {
+    "t": "Fluctuation",
+    "d": "Random variation in empirical probabilities that diminishes with larger sample sizes."
+   },
+   {
+    "t": "Bias",
+    "d": "Systematic error that makes some outcomes more likely to be recorded than others."
+   },
+   {
+    "t": "Expected frequency",
+    "d": "The number of times an outcome would occur in a large number of trials, calculated as theoretical probability × total trials."
+   },
+   {
+    "t": "Exhaustive set",
+    "d": "A set of outcomes that includes every possible result of the experiment."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "'The empirical probability will equal the theoretical probability after 30 trials.'",
+    "r": "The mark scheme expects you to say the empirical probability *approaches* the theoretical probability as the number of trials becomes large; it does not become exactly equal after a fixed small number."
+   },
+   {
+    "w": "'Increasing sample size removes bias.'",
+    "r": "Increasing sample size only reduces random error; bias is a systematic error and must be eliminated by using a fair device or proper randomisation."
+   },
+   {
+    "w": "'The law of large numbers is a formula you can plug numbers into.'",
+    "r": "LLN is a qualitative principle, not a numerical formula; you should describe the trend, not calculate it."
+   },
+   {
+    "w": "'Empirical probability is the same as theoretical probability.'",
+    "r": "Empirical probability is derived from data; theoretical probability is derived from the model. They are only equal in the limit of infinite trials."
+   },
+   {
+    "w": "'A small sample gives a more accurate estimate because it is easier to count.'",
+    "r": "Small samples are more affected by random fluctuation, so they give less reliable estimates."
+   },
+   {
+    "w": "'If the graph is wavy, the law of large numbers does not apply.'",
+    "r": "Even with a wavy graph, the overall trend for large n should still show convergence; short‑term wiggles are normal."
+   },
+   {
+    "w": "'All outcomes must be equally likely for the law of large numbers to work.'",
+    "r": "LLN works for any distribution; it states the sample mean converges to the expected value, not that outcomes must be equally likely."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A fair die is rolled 20 times. The number of sixes observed is 5. Calculate the empirical probability of getting a six and comment on how this would change if the die were rolled 200 times.",
+    "marks": 4,
+    "model": [
+     "P_e = 5/20 = 0.25 (2 marks)",
+     "State that with 200 rolls the empirical probability would be expected to move closer to the theoretical 1/6 ≈0.167 (2 marks)"
+    ],
+    "tip": "Use the phrase ‘tends towards the theoretical probability as the number of trials increases’."
+   },
+   {
+    "q": "Explain why the empirical probability of drawing a red card from a shuffled pack of cards becomes more reliable as the number of draws (with replacement) increases.",
+    "marks": 2,
+    "model": [
+     "State that each draw is independent and the sample becomes larger, reducing random fluctuation, so the proportion of red cards approaches the theoretical 1/2 (2 marks)"
+    ],
+    "tip": "Mention ‘unbiased sample’ and ‘law of large numbers’."
+   },
+   {
+    "q": "A class records the outcomes of 30 coin tosses and finds 22 heads. What would you expect to happen to the proportion of heads if the experiment were repeated to 300 tosses?",
+    "marks": 3,
+    "model": [
+     "Calculate current empirical P(H)=22/30≈0.733 (1 mark)",
+     "Explain that with 300 tosses the proportion is expected to move towards the theoretical 0.5 (2 marks)"
+    ],
+    "tip": "Do not claim it will become exactly 0.5, only that it will move closer."
+   },
+   {
+    "q": "State the Law of Large Numbers in the context of rolling a fair die and describe one practical implication for scientists collecting data.",
+    "marks": 4,
+    "model": [
+     "State: As the number of rolls increases, the empirical probability of each face approaches 1/6 (2 marks)",
+     "Implication: Large unbiased samples give reliable estimates of probabilities, so scientists use many observations to infer population parameters (2 marks)"
+    ],
+    "tip": "Use the exact wording ‘empirical probability tends towards theoretical probability’."
+   },
+   {
+    "q": "A spinner is divided into 4 equal sectors labelled A, B, C and D. After 40 spins, sector A appeared 12 times. Predict what would happen to the empirical probability of A after 400 spins, assuming the spinner is fair.",
+    "marks": 3,
+    "model": [
+     "Current empirical P(A)=12/40=0.30 (1 mark)",
+     "Predict that with 400 spins the proportion will move nearer to the theoretical 0.25 (2 marks)"
+    ],
+    "tip": "Emphasise ‘assuming the spinner is unbiased’."
+   },
+   {
+    "q": "Why does increasing the sample size not guarantee that an empirical probability will be exactly equal to the theoretical probability?",
+    "marks": 2,
+    "model": [
+     "Because empirical probability is based on random variation; only as the number of trials approaches infinity does it converge (2 marks)"
+    ],
+    "tip": "Mention random fluctuation."
+   },
+   {
+    "q": "A student rolls a die 10 times and records 4 twos. She then rolls it another 90 times and records 18 twos. Explain which set of results gives a more reliable estimate of the theoretical probability of a two and why.",
+    "marks": 4,
+    "model": [
+     "First empirical P=4/10=0.40 (1 mark)",
+     "Second empirical P=18/100=0.18 (1 mark)",
+     "Explain that the larger sample (100 rolls) reduces random error, so it is more reliable (2 marks)"
+    ],
+    "tip": "Link to law of large numbers."
+   },
+   {
+    "q": "Sketch a graph showing how the empirical probability of getting a ‘6’ on a fair die changes as the number of rolls increases from 10 to 200. Label the axes and the theoretical probability line.",
+    "marks": 6,
+    "model": [
+     "Axes correctly labelled (2 marks)",
+     "Theoretical line at 1/6 drawn (1 mark)",
+     "Empirical points start scattered and then settle near the line (3 marks)"
+    ],
+    "tip": "Use a smooth curve that narrows as n grows."
+   },
+   {
+    "q": "Define ‘unbiased sample’ and give one example of how bias could be introduced in a probability experiment.",
+    "marks": 3,
+    "model": [
+     "Definition as per spec (2 marks)",
+     "Example of bias (e.g., not shuffling cards before drawing) (1 mark)"
+    ],
+    "tip": "Keep the definition word‑for‑word."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A fair coin is tossed 50 times and lands heads 28 times. Find the empirical probability of heads and state what would happen if the coin were tossed 500 times.",
+    "steps": [
+     "Empirical P(H)=28/50=0.56",
+     "With 500 tosses the proportion would be expected to move closer to the theoretical 0.5 because of the law of large numbers"
+    ],
+    "ans": "P(H)=0.56; with more tosses the proportion will tend towards 0.5."
+   },
+   {
+    "q": "A spinner with 5 equal sectors is spun 25 times. Sector C appears 7 times. Calculate the empirical probability of C and explain the expected change after 250 spins.",
+    "steps": [
+     "P_e(C)=7/25=0.28",
+     "After 250 spins the empirical probability should be nearer to the theoretical 1/5=0.20 as random fluctuation reduces"
+    ],
+    "ans": "P_e(C)=0.28; with 250 spins it should move closer to 0.20."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Empirical probability converging to theoretical probability for a fair die",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"30\" y=\"30\" width=\"340\" height=\"180\" fill=\"#f8fafc\" stroke=\"#1b2540\"/><text x=\"200\" y=\"20\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">Number of rolls (n)</text><text x=\"15\" y=\"120\" transform=\"rotate(-90 15,120)\" font-size=\"12\" fill=\"#1b2540\">Empirical P(6)</text><line x1=\"30\" y1=\"210\" x2=\"370\" y2=\"210\" stroke=\"#1b2540\"/><line x1=\"30\" y1=\"210\" x2=\"30\" y2=\"30\" stroke=\"#1b2540\"/><polyline points=\"30,210 60,180 90,150 120,130 150,115 180,105 210,100 240,98 270,97 300,96 330,95 360,95\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"30\" y1=\"150\" x2=\"370\" y2=\"150\" stroke=\"#bbf7d0\" stroke-dasharray=\"4 2\"/><text x=\"360\" y=\"150\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"end\">Theoretical P=1/6≈0.167</text></svg>"
+   },
+   {
+    "cap": "Frequency tree showing increasing sample size for a coin toss",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#fef3c7\" stroke=\"#1b2540\"/><text x=\"200\" y=\"15\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">Coin toss frequency tree</text><line x1=\"200\" y1=\"40\" x2=\"200\" y2=\"180\" stroke=\"#1b2540\"/><line x1=\"200\" y1=\"40\" x2=\"120\" y2=\"100\" stroke=\"#1b2540\"/><line x1=\"200\" y1=\"40\" x2=\"280\" y2=\"100\" stroke=\"#1b2540\"/><text x=\"115\" y=\"115\" font-size=\"11\" fill=\"#1b2540\">Heads (n=10)</text><text x=\"285\" y=\"115\" font-size=\"11\" fill=\"#1b2540\">Tails (n=10)</text><line x1=\"120\" y1=\"120\" x2=\"120\" y2=\"180\" stroke=\"#1b2540\"/><line x1=\"280\" y1=\"120\" x2=\"280\" y2=\"180\" stroke=\"#1b2540\"/><text x=\"120\" y=\"195\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">20 tosses</text><text x=\"280\" y=\"195\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">20 tosses</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_f.4.4",
+  "sid": "maths_aqa_f",
+  "v": 2,
+  "src": "pre",
+  "by": "groq/openai/gpt-oss-120b",
+  "ts": "2026-11-18T17:26:43.494Z"
+ },
+ "maths_aqa_f.4.3": {
+  "summary": "In AQA Foundation tier, the probabilities of all outcomes in an exhaustive set, and of any collection of mutually exclusive events, always add up to 1. This reflects the certainty that *something* will happen when an experiment is performed. Understanding why the sum is 1 lets you check work, complete probability tables, and move confidently onto more complex combined‑event calculations.",
+  "core": [
+   {
+    "h": "What is an exhaustive set of outcomes?",
+    "p": "An exhaustive set contains **every possible outcome** of a probability experiment. No outcome lies outside the set.",
+    "bullets": [
+     "The union of all outcomes equals the whole sample space \\(S\\).",
+     "If you list the outcomes in a table, the table must be complete – no missing rows.",
+     "For a fair six‑sided die, \\{1,2,3,4,5,6\\} is exhaustive."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Exhaustive set",
+      "p": "A set of outcomes that includes every possible result of the experiment."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Sample space for a six‑sided die – each face is an exhaustive outcome.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#dbeafe\" stroke=\"#1b2540\"/> <text x=\"200\" y=\"50\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b2540\">Sample Space S = {1,2,3,4,5,6}</text> <circle cx=\"80\" cy=\"130\" r=\"30\" fill=\"#fde68a\" stroke=\"#1b2540\"/> <text x=\"80\" y=\"135\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">1</text> <circle cx=\"160\" cy=\"130\" r=\"30\" fill=\"#bbf7d0\" stroke=\"#1b2540\"/> <text x=\"160\" y=\"135\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">2</text> <circle cx=\"240\" cy=\"130\" r=\"30\" fill=\"#fecaca\" stroke=\"#1b2540\"/> <text x=\"240\" y=\"135\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">3</text> <circle cx=\"320\" cy=\"130\" r=\"30\" fill=\"#e9d5ff\" stroke=\"#1b2540\"/> <text x=\"320\" y=\"135\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">4</text> <circle cx=\"120\" cy=\"180\" r=\"30\" fill=\"#bbf7d0\" stroke=\"#1b2540\"/> <text x=\"120\" y=\"185\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">5</text> <circle cx=\"280\" cy=\"180\" r=\"30\" fill=\"#fde68a\" stroke=\"#1b2540\"/> <text x=\"280\" y=\"185\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">6</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "What are mutually exclusive events?",
+    "p": "Two events are mutually exclusive when they **cannot occur together** in a single trial of the experiment.",
+    "bullets": [
+     "Their intersection is the empty set \\(\\emptyset\\).",
+     "If event A is ‘rolling an even number’, event B = ‘rolling a 3’ are mutually exclusive.",
+     "For a single die throw, A = {2,4,6} and B = {3} have no common outcome."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Mutually exclusive events",
+      "p": "Events that have no outcomes in common; their intersection is empty."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Venn diagram showing two mutually exclusive events A and B.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#dbeafe\" stroke=\"#1b2540\"/> <circle cx=\"150\" cy=\"120\" r=\"70\" fill=\"#bbf7d0\" stroke=\"#1b2540\"/> <text x=\"150\" y=\"115\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b2540\">A</text> <circle cx=\"250\" cy=\"120\" r=\"70\" fill=\"#fde68a\" stroke=\"#1b2540\"/> <text x=\"250\" y=\"115\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b2540\">B</text> <line x1=\"150\" y1=\"120\" x2=\"250\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"2\"/> <text x=\"200\" y=\"130\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b2540\">No overlap</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "The probability of an exhaustive set sums to 1",
+    "p": "Because one of the outcomes must occur, the total probability is certain, i.e. 1.",
+    "bullets": [
+     "Mathematically: \\(\\sum_{i=1}^{n} P(E_i) = 1\\) where \\(\\{E_1,…,E_n\\}\\) is exhaustive.",
+     "If any outcome is omitted, the sum will be **less than** 1.",
+     "If any probability is larger than 1, the set cannot be exhaustive."
+    ],
+    "table": {
+     "head": [
+      "Outcome",
+      "Probability"
+     ],
+     "rows": [
+      [
+       "1",
+       "1/6"
+      ],
+      [
+       "2",
+       "1/6"
+      ],
+      [
+       "3",
+       "1/6"
+      ],
+      [
+       "4",
+       "1/6"
+      ],
+      [
+       "5",
+       "1/6"
+      ],
+      [
+       "6",
+       "1/6"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "",
+      "p": "The sum of probabilities of **all** outcomes in the sample space is always 1."
+     },
+     {
+      "k": "tip",
+      "t": "",
+      "p": "Use this as a quick check: add the probabilities you have written – if you get 1, you have likely included every outcome correctly."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "The probability of mutually exclusive events also sums to 1 (if they form an exhaustive set)",
+    "p": "When a collection of mutually exclusive events together covers the whole sample space, their probabilities add to 1.",
+    "bullets": [
+     "They must be **both** mutually exclusive **and** exhaustive.",
+     "Example: For a die, events A={1,2,3} and B={4,5,6} are mutually exclusive and together exhaustive, so \\(P(A)+P(B)=1\\).",
+     "If they are not exhaustive, the sum will be **less than** 1."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "",
+      "p": "Do not assume any two exclusive events automatically sum to 1 – they must also cover every possible outcome."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Tree diagram showing two exclusive, exhaustive events from a coin toss.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#dbeafe\" stroke=\"#1b2540\"/> <line x1=\"200\" y1=\"60\" x2=\"200\" y2=\"180\" stroke=\"#1b2540\" stroke-width=\"2\"/> <line x1=\"200\" y1=\"120\" x2=\"120\" y2=\"180\" stroke=\"#1b2540\" stroke-width=\"2\"/> <line x1=\"200\" y1=\"120\" x2=\"280\" y2=\"180\" stroke=\"#1b2540\" stroke-width=\"2\"/> <text x=\"200\" y=\"50\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">Start</text> <text x=\"120\" y=\"190\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">Heads (P=0.5)</text> <text x=\"280\" y=\"190\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">Tails (P=0.5)</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Why the sum must be 1 – the certainty principle",
+    "p": "Probability is a measure of how certain we are that an event will happen. When we consider *all* possible ways something can happen, we are certain that *something* will happen, so the measure is 1.",
+    "bullets": [
+     "Think of a roulette wheel – the ball must land somewhere on the wheel; the total chance is 100 % (or 1).",
+     "If you miss an outcome, you are leaving a gap of uncertainty, so the total drops below 1."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "analogy",
+      "t": "",
+      "p": "A full jigsaw puzzle: each piece is an outcome. When you have every piece, the picture is complete – probability = 1."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Using the 1‑sum rule to find a missing probability",
+    "p": "If you know all but one probability in an exhaustive set, subtract the known sum from 1.",
+    "bullets": [
+     "Example: A die is rolled. Probabilities for 1‑5 are each 1/6. Missing probability for 6 = 1 – 5×(1/6) = 1/6.",
+     "Works for any exhaustive list – cards, coloured beads, etc."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "",
+      "p": "Write ‘Total = 1’ at the bottom of your table; fill in the unknown by rearranging."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Checking work with the 1‑sum rule",
+    "p": "After completing a probability table, always add the column of probabilities.",
+    "bullets": [
+     "If the total is exactly 1 (or 0.999… due to rounding), your table is likely correct.",
+     "If the total is >1, you have double‑counted an outcome.",
+     "If the total is <1, you have omitted an outcome or mis‑calculated a probability."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "",
+      "p": "Do not round intermediate results too early – rounding can make the final sum look like 0.99 or 1.01."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Link to other probability ideas (P3, P7)",
+    "p": "The 1‑sum rule underpins the definition of *theoretical probability* (P3) and the construction of *possibility spaces* (P7).",
+    "bullets": [
+     "Theoretical probability of an outcome = favourable outcomes ÷ total outcomes; the denominator comes from the exhaustive set.",
+     "When drawing a tree diagram, the probabilities on each branch must ultimately sum to 1 at the end of the tree."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Common notation and language",
+    "p": "Use the exact terms the mark scheme expects.",
+    "bullets": [
+     "‘Exhaustive set of outcomes’",
+     "‘Mutually exclusive events’",
+     "‘Sum of probabilities = 1’",
+     "‘The total probability of the sample space is 1’"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "",
+      "p": "Always write the symbol \\(S\\) for the sample space and state that \\(\\sum_{s\\in S} P(s)=1\\)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Practical activity – dice roll experiment",
+    "p": "Roll a fair die 60 times, record frequencies, convert to relative frequencies, and compare the sum to 1.",
+    "bullets": [
+     "Create a table with outcomes 1‑6 and count each.",
+     "Relative frequency = count ÷ 60.",
+     "Add the six relative frequencies – they should be close to 1 (empirical unbiased sample)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "",
+      "p": "If the sum is 0.95, you probably missed a count; re‑check your tally."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Jigsaw puzzle analogy",
+   "p": "Each puzzle piece represents a possible outcome. When you have every piece (an exhaustive set) the picture is complete – the certainty that the puzzle will be finished is 1. The analogy breaks down if pieces can overlap (mutually exclusive condition fails) or if some pieces are missing (the sum falls below 1)."
+  },
+  "terms": [
+   {
+    "t": "Exhaustive set of outcomes",
+    "d": "A set that contains every possible result of the experiment."
+   },
+   {
+    "t": "Mutually exclusive events",
+    "d": "Events that have no outcomes in common; their intersection is the empty set."
+   },
+   {
+    "t": "Sample space (S)",
+    "d": "The set of all possible outcomes of a probability experiment."
+   },
+   {
+    "t": "Probability (P)",
+    "d": "A number between 0 and 1 that measures how likely an event is to occur."
+   },
+   {
+    "t": "Theoretical probability",
+    "d": "Probability calculated from known equally likely outcomes: favourable ÷ total."
+   },
+   {
+    "t": "Relative frequency",
+    "d": "Observed frequency divided by total number of trials; an empirical estimate of probability."
+   },
+   {
+    "t": "Empty set (∅)",
+    "d": "A set containing no elements; used to denote no common outcomes."
+   },
+   {
+    "t": "Certain event",
+    "d": "An event that must happen; its probability is 1."
+   },
+   {
+    "t": "Impossible event",
+    "d": "An event that cannot happen; its probability is 0."
+   },
+   {
+    "t": "Sum of probabilities",
+    "d": "The total obtained by adding the probabilities of a collection of events."
+   },
+   {
+    "t": "Tree diagram",
+    "d": "A branching diagram that shows all possible outcomes and their probabilities."
+   },
+   {
+    "t": "Frequency table",
+    "d": "A table that records how many times each outcome occurs in an experiment."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "‘The probabilities of mutually exclusive events always add to 1.’",
+    "r": "Only if the mutually exclusive events also form an exhaustive set."
+   },
+   {
+    "w": "‘If the sum of probabilities is less than 1, the experiment is impossible.’",
+    "r": "A sum less than 1 means some outcomes have been omitted, not that the experiment cannot occur."
+   },
+   {
+    "w": "Using ‘>1’ as a possible probability for an outcome.",
+    "r": "Probabilities must be between 0 and 1 inclusive."
+   },
+   {
+    "w": "Adding probabilities of overlapping events without subtracting the intersection.",
+    "r": "For overlapping events you must use the inclusion‑exclusion principle, not the simple sum rule."
+   },
+   {
+    "w": "Rounding each probability before adding them together.",
+    "r": "Round only at the final step; intermediate rounding can give a total that is not 1."
+   },
+   {
+    "w": "Writing ‘P(A or B)=P(A)+P(B)’ without checking exclusivity.",
+    "r": "That formula is valid only for mutually exclusive events."
+   },
+   {
+    "w": "Confusing ‘exhaustive’ with ‘exclusive’.",
+    "r": "Exhaustive means covering all outcomes; exclusive (mutually exclusive) means no overlap."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A bag contains 4 red, 3 blue and 3 green beads. One bead is drawn at random. State the probability that the bead is red, blue or green and show that the probabilities sum to 1.",
+    "marks": 4,
+    "model": [
+     "P(red)=4/10",
+     "P(blue)=3/10",
+     "P(green)=3/10",
+     "Sum=4/10+3/10+3/10=1"
+    ],
+    "tip": "List all colours – they are exhaustive and mutually exclusive."
+   },
+   {
+    "q": "A fair six‑sided die is rolled. Write down an exhaustive set of outcomes and give the probability of each. Verify the 1‑sum rule.",
+    "marks": 3,
+    "model": [
+     "Exhaustive set: {1,2,3,4,5,6}",
+     "Each P=1/6",
+     "Sum=6×1/6=1"
+    ],
+    "tip": "Use the definition of a fair die – all faces equally likely."
+   },
+   {
+    "q": "Two cards are drawn from a standard pack without replacement. Event A = ‘first card is a heart’, event B = ‘second card is a heart’. Are A and B mutually exclusive? Explain and state the sum of their probabilities.",
+    "marks": 6,
+    "model": [
+     "A and B are not mutually exclusive – both can occur (heart then heart).",
+     "P(A)=13/52=1/4",
+     "P(B)=13/52=1/4 (before any draw).",
+     "Since they are not mutually exclusive, P(A)+P(B)≠1; the sum is 1/2."
+    ],
+    "tip": "Check whether the two events can happen together in the same trial."
+   },
+   {
+    "q": "A spinner is divided into three equal sectors labelled A, B and C. The spinner is spun once. Show that the probabilities of A, B and C form an exhaustive set and sum to 1.",
+    "marks": 2,
+    "model": [
+     "Each sector has probability 1/3",
+     "Sum=1/3+1/3+1/3=1"
+    ],
+    "tip": "Equal sectors → equally likely outcomes."
+   },
+   {
+    "q": "In a survey 40 % of students like maths, 35 % like science and 25 % like both. Are the events ‘likes maths’ and ‘likes science’ mutually exclusive? Justify.",
+    "marks": 4,
+    "model": [
+     "Not mutually exclusive because 25 % like both, so intersection ≠ ∅.",
+     "Therefore the sum of their probabilities is not 1; it is 0.40+0.35=0.75 (over‑counts the 0.25)."
+    ],
+    "tip": "Look for an overlap in the Venn diagram."
+   },
+   {
+    "q": "A coin is tossed three times. List an exhaustive set of outcomes and give the probability of each outcome occurring.",
+    "marks": 6,
+    "model": [
+     "Exhaustive set: {HHH, HHT, HTH, HTT, THH, THT, TTH, TTT}",
+     "Each has probability (1/2)^3=1/8",
+     "Sum=8×1/8=1"
+    ],
+    "tip": "Use a tree diagram to verify the eight equally likely sequences."
+   },
+   {
+    "q": "A box contains 5 black and 5 white marbles. One marble is drawn at random. State the probability of drawing a black marble and the probability of drawing a white marble. Explain why these two probabilities sum to 1.",
+    "marks": 2,
+    "model": [
+     "P(black)=5/10=1/2",
+     "P(white)=5/10=1/2",
+     "They are mutually exclusive and exhaustive, so 1/2+1/2=1."
+    ],
+    "tip": "Black and white are the only colours – exhaustive."
+   },
+   {
+    "q": "A die is rolled twice. Event A = ‘first roll is a 6’, Event B = ‘second roll is a 6’. Are A and B mutually exclusive? State the sum of their probabilities and comment.",
+    "marks": 4,
+    "model": [
+     "A and B are not mutually exclusive – both can happen (6 then 6).",
+     "P(A)=1/6, P(B)=1/6, sum=1/3 (≠1).",
+     "Since not exhaustive, sum need not be 1."
+    ],
+    "tip": "Remember the definition of mutually exclusive – cannot occur together."
+   },
+   {
+    "q": "A spinner has four equal sectors labelled 1,2,3,4. Find the probability that the spinner lands on an even number. Show that the probability of ‘even’ plus the probability of ‘odd’ equals 1.",
+    "marks": 3,
+    "model": [
+     "Even outcomes = {2,4} → P(even)=2/4=1/2",
+     "Odd outcomes = {1,3} → P(odd)=2/4=1/2",
+     "Sum=1/2+1/2=1"
+    ],
+    "tip": "Even and odd are complementary – together they are exhaustive."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A bag contains 2 red, 3 blue and 5 yellow balls. One ball is drawn at random. Find the probability of each colour and verify the 1‑sum rule.",
+    "steps": [
+     "Total balls = 2+3+5 = 10.",
+     "P(red)=2/10=0.2",
+     "P(blue)=3/10=0.3",
+     "P(yellow)=5/10=0.5",
+     "Sum = 0.2+0.3+0.5 = 1"
+    ],
+    "ans": "Probabilities: red 0.2, blue 0.3, yellow 0.5; they sum to 1."
+   },
+   {
+    "q": "A fair coin is tossed twice. List an exhaustive set of outcomes, give each probability and check the total.",
+    "steps": [
+     "Possible outcomes: HH, HT, TH, TT",
+     "Each has probability (1/2)*(1/2)=1/4",
+     "Sum = 4×1/4 = 1"
+    ],
+    "ans": "Exhaustive set {HH, HT, TH, TT}, each P=1/4, total = 1."
+   },
+   {
+    "q": "A six‑sided die is rolled. If the probability of rolling a 1,2,3,4,5 is each 1/6, find the missing probability for 6 using the 1‑sum rule.",
+    "steps": [
+     "Sum of known probabilities = 5×(1/6)=5/6",
+     "Missing probability = 1 – 5/6 = 1/6"
+    ],
+    "ans": "P(6)=1/6."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Sample space for a six‑sided die – each face is an exhaustive outcome.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#dbeafe\" stroke=\"#1b2540\"/> <text x=\"200\" y=\"50\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b2540\">Sample Space S = {1,2,3,4,5,6}</text> <circle cx=\"80\" cy=\"130\" r=\"30\" fill=\"#fde68a\" stroke=\"#1b2540\"/> <text x=\"80\" y=\"135\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">1</text> <circle cx=\"160\" cy=\"130\" r=\"30\" fill=\"#bbf7d0\" stroke=\"#1b2540\"/> <text x=\"160\" y=\"135\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">2</text> <circle cx=\"240\" cy=\"130\" r=\"30\" fill=\"#fecaca\" stroke=\"#1b2540\"/> <text x=\"240\" y=\"135\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">3</text> <circle cx=\"320\" cy=\"130\" r=\"30\" fill=\"#e9d5ff\" stroke=\"#1b2540\"/> <text x=\"320\" y=\"135\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">4</text> <circle cx=\"120\" cy=\"180\" r=\"30\" fill=\"#bbf7d0\" stroke=\"#1b2540\"/> <text x=\"120\" y=\"185\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">5</text> <circle cx=\"280\" cy=\"180\" r=\"30\" fill=\"#fde68a\" stroke=\"#1b2540\"/> <text x=\"280\" y=\"185\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">6</text></svg>"
+   },
+   {
+    "cap": "Venn diagram showing two mutually exclusive events A and B.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#dbeafe\" stroke=\"#1b2540\"/> <circle cx=\"150\" cy=\"120\" r=\"70\" fill=\"#bbf7d0\" stroke=\"#1b2540\"/> <text x=\"150\" y=\"115\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b2540\">A</text> <circle cx=\"250\" cy=\"120\" r=\"70\" fill=\"#fde68a\" stroke=\"#1b2540\"/> <text x=\"250\" y=\"115\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b2540\">B</text> <line x1=\"150\" y1=\"120\" x2=\"250\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"2\"/> <text x=\"200\" y=\"130\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b2540\">No overlap</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_f.4.3",
+  "sid": "maths_aqa_f",
+  "v": 2,
+  "src": "pre",
+  "by": "groq/openai/gpt-oss-120b",
+  "ts": "2026-11-18T17:32:27.440Z"
+ },
+ "maths_aqa_f.4.1": {
+  "summary": "Understanding randomness, fairness, and expected outcomes is fundamental to GCSE Maths probability. Randomness means individual experimental outcomes cannot be predicted with certainty, even though overall patterns emerge across large numbers of trials. Equipment or events are fair when all possible basic outcomes are equally likely, allowing theoretical probability to be calculated directly. Using the fundamental formula Expected Outcome = Probability × Number of Trials, we can calculate how many times an event is predicted to occur in a given number of repetitions.",
+  "core": [
+   {
+    "h": "The Concept of Randomness in Probability",
+    "p": "In probability, **randomness** describes a process where the result of an individual trial cannot be predicted in advance with certainty. Even when we know all possible outcomes, which exact outcome will occur on the next trial remains uncertain.",
+    "bullets": [
+     "A **trial** is a single repeat of an experiment (e.g. flipping a coin once or rolling a die once).",
+     "An **outcome** is a possible result of a trial (e.g. landing on a 4).",
+     "Randomness does **not** mean outcomes are chaotic or without rules; it means individual results are unpredictable.",
+     "Individual trials are **independent** of past results; a fair coin has no memory of landing on Heads five times in a row."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Randomness",
+      "p": "A situation where individual outcomes occur unpredictably, but follow a predictable mathematical pattern across a large number of trials."
+     },
+     {
+      "k": "warn",
+      "t": "The Gambler's Fallacy",
+      "p": "Never write that an outcome is 'due' to happen because it hasn't appeared recently. Random events do not have a memory."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Fairness and Bias in Probability Equipment",
+    "p": "Equipment used in probability experiments (such as dice, spinners, or coins) can be **fair** or **biased**. Understanding the difference is crucial for choosing the correct method to calculate probabilities.",
+    "bullets": [
+     "**Fair equipment** is constructed symmetrically so that no outcome is favoured over another.",
+     "**Biased equipment** is weighted, distorted, or unevenly divided, making some outcomes more likely than others.",
+     "A **fair coin** has exactly a 50% chance of landing on Heads and 50% on Tails.",
+     "A **fair 6-sided die** gives each number from 1 to 6 an identical probability of 1/6."
+    ],
+    "table": {
+     "head": [
+      "Feature",
+      "Fair Equipment",
+      "Biased Equipment"
+     ],
+     "rows": [
+      [
+       "Outcome Likelihood",
+       "All basic outcomes are equally likely",
+       "Some outcomes are more likely than others"
+      ],
+      [
+       "Physical Structure",
+       "Symmetrical, uniform density",
+       "Weighted, uneven surface, or unequal sectors"
+      ],
+      [
+       "Probability Method",
+       "Calculated using theoretical probability",
+       "Must be estimated using experimental data"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Fairness",
+      "p": "An experiment or device is fair if every possible basic outcome has an equal probability of occurring."
+     },
+     {
+      "k": "def",
+      "t": "Bias",
+      "p": "An unfair influence or physical imbalance that causes certain outcomes to occur more frequently than expected theoretically."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Equally Likely Events and Theoretical Probability",
+    "p": "When all outcomes of an experiment have the exact same chance of happening, we describe them as **equally likely events**. This allows us to calculate **theoretical probability** without needing to perform physical trials.",
+    "bullets": [
+     "If an experiment has $N$ equally likely outcomes, the probability of any single basic outcome is 1 / N.",
+     "The formula for theoretical probability with equally likely outcomes is: P(Event) = (Number of favourable outcomes) / (Total number of possible outcomes).",
+     "Equally likely events require that the sample space is broken down into basic, equal-sized units.",
+     "Example: Choosing a red ball from a bag containing 3 red and 7 blue identical balls means each individual ball has an equal 1/10 chance of being picked."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Theoretical Probability Formula",
+      "p": "P(Event) = Number of successful outcomes ÷ Total number of possible outcomes"
+     },
+     {
+      "k": "tip",
+      "t": "Check for Equal Sizes",
+      "p": "Always verify that items are identical in size, shape, and weight before assuming outcomes are equally likely."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Calculating Expected Outcomes (Expected Frequency)",
+    "p": "The **expected outcome** (or **expected frequency**) tells us how many times we expect a specific event to occur when an experiment is repeated a given number of times.",
+    "bullets": [
+     "Expected frequency is calculated using the formula: Expected Frequency = Probability × Total Number of Trials.",
+     "In algebraic terms: E = P × n, where P is the probability of the event and n is the total number of trials.",
+     "The expected outcome does not have to be a whole number in theoretical calculations, though in practical contexts we may round or interpret it as an average.",
+     "Example: Rolling a fair 6-sided die 60 times gives an expected frequency for rolling a 5 of (1/6) × 60 = 10 times."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Expected Outcome",
+      "p": "The theoretical average number of times a particular event will occur over a specified number of trials."
+     },
+     {
+      "k": "key",
+      "t": "Formula to Remember",
+      "p": "Expected Frequency = P(Event) × Total Trials (n)"
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Formula triangle showing the relationship between Expected Frequency (E), Probability (P), and Number of Trials (n).",
+      "svg": "<svg viewBox=\"0 0 400 240\"><polygon points=\"200,30 80,190 320,190\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"3\"/><line x1=\"140\" y1=\"115\" x2=\"260\" y2=\"115\" stroke=\"#1b2540\" stroke-width=\"3\"/><line x1=\"200\" y1=\"115\" x2=\"200\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"3\"/><text x=\"200\" y=\"85\" fill=\"#1b2540\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Expected Outcome (E)</text><text x=\"140\" y=\"160\" fill=\"#1b2540\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Probability (P)</text><text x=\"260\" y=\"160\" fill=\"#1b2540\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Trials (n)</text><text x=\"200\" y=\"220\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">Formula: E = P × n  |  P = E ÷ n  |  n = E ÷ P</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Spinners and Sector Angles",
+    "p": "Spinners are frequently used in exam questions to test fairness and equally likely outcomes. The probability of landing on a section of a circular spinner depends directly on the angle at the center of that sector.",
+    "bullets": [
+     "A spinner is **fair** if all sectors have equal angles at the center (e.g. 4 sectors of 90° each).",
+     "If sector angles are different, outcomes are **not equally likely**, making the spinner biased towards larger sectors.",
+     "The probability of landing on a sector with angle θ degrees is: P(Sector) = θ / 360°.",
+     "To find the expected outcome for a spinner, calculate: Expected Frequency = (Sector Angle / 360°) × Number of Spins."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Spinner Probability Formula",
+      "p": "P(Sector) = Angle of Sector ÷ 360°"
+     },
+     {
+      "k": "tip",
+      "t": "Full Circle Equals 360°",
+      "p": "Always check that the angles of all sectors add up to 360° before calculating probabilities."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Comparison between a fair spinner with four equal 90° sectors and a biased spinner with unequal sector angles.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><circle cx=\"110\" cy=\"110\" r=\"70\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"110\" y1=\"40\" x2=\"110\" y2=\"180\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"40\" y1=\"110\" x2=\"180\" y2=\"110\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"75\" y=\"80\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\">A (90°)</text><text x=\"130\" y=\"80\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\">B (90°)</text><text x=\"75\" y=\"145\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\">C (90°)</text><text x=\"130\" y=\"145\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\">D (90°)</text><text x=\"110\" y=\"205\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Fair Spinner (Equally Likely)</text><circle cx=\"290\" cy=\"110\" r=\"70\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M 290 110 L 290 40 A 70 70 0 1 1 220 110 Z\" fill=\"#fecaca\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"290\" y1=\"110\" x2=\"360\" y2=\"110\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"305\" y=\"135\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\">A (270°)</text><text x=\"305\" y=\"80\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\">B (90°)</text><text x=\"290\" y=\"205\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Biased Spinner (Unequal)</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Standard Probability Equipment Characteristics",
+    "p": "In exam questions, specific phrasing is used to indicate whether equipment is fair. You must recognize standard terminology and know the default theoretical probabilities.",
+    "bullets": [
+     "**Fair / Ordinary / Standard Die**: 6 faces numbered 1 to 6. P(any single face) = 1/6.",
+     "**Fair Coin**: 2 faces (Heads, Tails). P(Head) = 0.5, P(Tail) = 0.5.",
+     "**Standard Deck of Cards**: 52 cards, 4 suits (Hearts, Diamonds, Clubs, Spades) of 13 cards each. P(Red) = 26/52 = 0.5.",
+     "**Fair Spinner**: All sectors have equal angles and equal areas.",
+     "If a question describes equipment as **biased**, **weighted**, or **loaded**, you cannot assume equal probabilities."
+    ],
+    "table": {
+     "head": [
+      "Equipment",
+      "Outcomes",
+      "Fair Probability per Outcome",
+      "Exam Description"
+     ],
+     "rows": [
+      [
+       "Fair 6-sided die",
+       "{1, 2, 3, 4, 5, 6}",
+       "1/6",
+       "'Unbiased six-sided die'"
+      ],
+      [
+       "Fair coin",
+       "{Heads, Tails}",
+       "1/2 (0.5)",
+       "'Fair coin flipped'"
+      ],
+      [
+       "Standard spinner",
+       "{n equal sectors}",
+       "1/n",
+       "'Spinner split into n equal sections'"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Assumed Fairness",
+      "p": "Unless a question explicitly states a die, coin, or spinner is biased, assume it is fair and unbiased."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Short-Run Variation vs Long-Run Expectation",
+    "p": "Expected outcome is a theoretical mean over many trials. In the real world, short-run results will vary from expected values due to random chance.",
+    "bullets": [
+     "If you flip a fair coin 10 times, the expected number of Heads is 5, but getting 4, 6, or 7 Heads is very common.",
+     "Getting an outcome slightly different from expected frequency does **not** prove that a test is biased.",
+     "As the number of trials increases (large sample size), the experimental relative frequency gets closer to the theoretical expected frequency.",
+     "Small numbers of trials (e.g. 5 or 10 flips) show high random variation and cannot reliably detect bias."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Do Not Claim Bias Too Quickly",
+      "p": "A small difference between expected outcome and actual outcome in a small sample is due to natural variation, not necessarily bias."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Working Backwards: Finding Trials or Probabilities",
+    "p": "Exam questions often give the expected outcome and ask you to calculate the total number of trials or the probability of the event.",
+    "bullets": [
+     "To find the **Total Number of Trials (n)**: n = Expected Outcome ÷ Probability.",
+     "To find the **Probability (P)**: P = Expected Outcome ÷ Total Number of Trials.",
+     "Example 1: An event has a probability of 0.25 and expected outcome of 40. Total trials n = 40 ÷ 0.25 = 160 trials.",
+     "Example 2: A counter is picked 200 times and expected to be red 50 times. Probability of red P = 50 ÷ 200 = 0.25."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Rearranged Formulas",
+      "p": "Trials (n) = E ÷ P  |  Probability (P) = E ÷ n"
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Expected frequency distribution for rolling a fair 6-sided die 120 times (20 expected for each number).",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"40\" y=\"30\" width=\"330\" height=\"160\" fill=\"#f8fafc\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"40\" y1=\"70\" x2=\"370\" y2=\"70\" stroke=\"#94a3b8\" stroke-dasharray=\"4\"/><line x1=\"40\" y1=\"110\" x2=\"370\" y2=\"110\" stroke=\"#94a3b8\" stroke-dasharray=\"4\"/><line x1=\"40\" y1=\"150\" x2=\"370\" y2=\"150\" stroke=\"#94a3b8\" stroke-dasharray=\"4\"/><rect x=\"60\" y=\"70\" width=\"35\" height=\"120\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><rect x=\"110\" y=\"70\" width=\"35\" height=\"120\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><rect x=\"160\" y=\"70\" width=\"35\" height=\"120\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><rect x=\"210\" y=\"70\" width=\"35\" height=\"120\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><rect x=\"260\" y=\"70\" width=\"35\" height=\"120\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><rect x=\"310\" y=\"70\" width=\"35\" height=\"120\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"77\" y=\"208\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">1</text><text x=\"127\" y=\"208\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">2</text><text x=\"177\" y=\"208\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">3</text><text x=\"227\" y=\"208\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">4</text><text x=\"277\" y=\"208\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">5</text><text x=\"327\" y=\"208\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">6</text><text x=\"30\" y=\"75\" fill=\"#1b2540\" font-size=\"11\" text-anchor=\"end\">20</text><text x=\"30\" y=\"115\" fill=\"#1b2540\" font-size=\"11\" text-anchor=\"end\">15</text><text x=\"30\" y=\"155\" fill=\"#1b2540\" font-size=\"11\" text-anchor=\"end\">10</text><text x=\"205\" y=\"228\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Die Score (120 Total Rolls)</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Evaluating Fairness in Real-World Games",
+    "p": "In real-world contexts, decision-making relies on whether a game or mechanism is fair. A game is defined as fair if all players have an equal chance of winning, or if expected winnings equal the cost to play.",
+    "bullets": [
+     "A game costing £1 to play with a 1 in 10 chance of winning £10 has an expected return of (1/10) × £10 = £1, making it financially fair.",
+     "If expected winnings are less than the entry fee, the game is biased in favour of the organizer (e.g. lotteries, carnivals).",
+     "To decide who goes first in a game, drawing lots or flipping a fair coin provides a fair outcome because each option has equal probability.",
+     "Rolling a single die to decide between 4 people is **not fair** unless two outcomes are shared or mapped equally."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam Contexts",
+      "p": "When asked if a game is fair, show clear working for the probabilities of all outcomes before making a concluding statement."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Expected Outcomes across Combined Categories",
+    "p": "Sometimes an event includes multiple successful outcomes (e.g. rolling an even number or picking a prime number). You must first combine the probabilities before multiplying by the number of trials.",
+    "bullets": [
+     "Step 1: Identify all outcomes that satisfy the event condition.",
+     "Step 2: Add their individual probabilities to find the total probability P(Event).",
+     "Step 3: Multiply P(Event) by total trials n.",
+     "Example: Expected number of times to roll an even number (2, 4, 6) in 90 rolls: P(Even) = 3/6 = 0.5; Expected frequency = 0.5 × 90 = 45 times."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Combined Probability Rule",
+      "p": "P(A or B) = P(A) + P(B) for mutually exclusive outcomes before calculating expected outcome."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Comparing Theoretical Expectation with Experimental Results",
+    "p": "A key examiner favorite is asking students to compare predicted expected outcomes with actual experimental data to assess whether a die or spinner is biased.",
+    "bullets": [
+     "Calculate expected outcome for each result using theoretical probability.",
+     "Compare the expected outcome to the observed frequency in the table.",
+     "If experimental frequencies differ **significantly** across a large number of trials (e.g. 600 trials), bias is likely.",
+     "Always state the expected frequency explicitly when explaining your answer in an exam."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Structure Your Comparison",
+      "p": "1. Calculate theoretical expected value. 2. State observed value. 3. Compare the two values directly. 4. Write a clear conclusion."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Cake Slicing Analogy for Fairness and Expected Outcomes",
+   "p": "Imagine sharing a round birthday cake among four friends. If you slice the cake into four perfectly equal 90-degree slices, every friend gets an identical share; this represents **fairness** and **equally likely events** (each slice is 1/4 of the total). If one person gets a massive slice half the size of the cake (180 degrees) while others get tiny slices, the distribution is **biased** towards that person. If you repeat this cake party 20 times (20 trials) with fair slicing, you **expect** each friend to get 5 slices overall (1/4 × 20 = 5). The breakdown occurs because cake slices are eaten simultaneously in one event, whereas probability trials happen sequentially over time where individual random results can fluctuate around the average."
+  },
+  "terms": [
+   {
+    "t": "Randomness",
+    "d": "The property of a process where individual trial outcomes cannot be predicted with certainty."
+   },
+   {
+    "t": "Fairness",
+    "d": "A state in which all possible basic outcomes of an experiment have an equal probability of occurring."
+   },
+   {
+    "t": "Bias",
+    "d": "A systematic distortion or weight in equipment/methods causing certain outcomes to occur more or less frequently than theoretical expectation."
+   },
+   {
+    "t": "Equally Likely Events",
+    "d": "Events that have identical theoretical probabilities of occurrence."
+   },
+   {
+    "t": "Expected Outcome",
+    "d": "The predicted number of times an event will occur over a specified number of trials, calculated as P(Event) × n."
+   },
+   {
+    "t": "Theoretical Probability",
+    "d": "The probability calculated from exact mathematical analysis of symmetric outcomes without running physical experiments."
+   },
+   {
+    "t": "Trial",
+    "d": "A single performance or repeat of a probability experiment."
+   },
+   {
+    "t": "Outcome",
+    "d": "A single possible result of a trial."
+   },
+   {
+    "t": "Event",
+    "d": "A set of one or more outcomes of an experiment."
+   },
+   {
+    "t": "Sector Angle",
+    "d": "The angle formed at the center of a circular spinner, proportional to the probability of landing on that sector."
+   },
+   {
+    "t": "Sample Size (n)",
+    "d": "The total number of trials performed or planned in a probability experiment."
+   },
+   {
+    "t": "Uniform Distribution",
+    "d": "A probability distribution where every outcome has the exact same probability."
+   },
+   {
+    "t": "Unbiased Equipment",
+    "d": "Physical equipment manufactured such that no outcome is physically favoured over another."
+   },
+   {
+    "t": "Expected Frequency",
+    "d": "Another term for expected outcome: Probability multiplied by the total number of trials."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Adding the probability to the number of trials instead of multiplying (e.g., 0.2 + 50 = 50.2).",
+    "r": "Multiply probability by the number of trials: Expected Outcome = P × n (e.g., 0.2 × 50 = 10)."
+   },
+   {
+    "w": "Thinking getting 6 Heads out of 10 flips proves a coin is biased.",
+    "r": "Explain that small sample sizes show natural variation; 6 out of 10 is very close to expected 5 and does not prove bias."
+   },
+   {
+    "w": "Writing expected outcome as a fraction like 10/60 when asked for how many times an event occurs.",
+    "r": "Give expected outcome as a quantity (e.g. 10 times or 10), not as a probability fraction."
+   },
+   {
+    "w": "Assuming a spinner with 4 sections always has equal probabilities regardless of section sizes.",
+    "r": "Check sector angles; sections are only equally likely if the angles at the center are equal."
+   },
+   {
+    "w": "Claiming an outcome is 'due' to happen because it hasn't appeared in recent rolls.",
+    "r": "State that each trial is independent and random; past outcomes do not affect future probabilities."
+   },
+   {
+    "w": "Dividing the number of trials by sector angle instead of (angle / 360) × trials.",
+    "r": "Calculate probability first (Angle / 360), then multiply by number of trials."
+   },
+   {
+    "w": "Confusing theoretical expected outcome with actual experimental outcome.",
+    "r": "Expected outcome is a theoretical prediction (P × n); actual outcome comes from counting real experimental results."
+   },
+   {
+    "w": "Forgetting that probabilities of all basic outcomes must sum to 1 when checking fairness.",
+    "r": "Verify that all outcome probabilities sum to 1 and are equal to prove equipment fairness."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A fair 6-sided die is rolled 180 times. Work out the expected number of times it lands on a 4.",
+    "marks": 2,
+    "model": [
+     "P(rolling a 4) = 1/6",
+     "Expected number of 4s = (1/6) × 180 = 30"
+    ],
+    "tip": "Identify the probability of a single successful outcome first, then multiply by total rolls."
+   },
+   {
+    "q": "A fair coin is flipped 50 times. How many Heads would you expect to get?",
+    "marks": 1,
+    "model": [
+     "Expected Heads = 0.5 × 50 = 25"
+    ],
+    "tip": "A fair coin always has P(Head) = 0.5."
+   },
+   {
+    "q": "A spinner has 5 equal sectors numbered 1, 2, 3, 4, 5. The spinner is spun 250 times. Work out the expected number of times it lands on an even number.",
+    "marks": 3,
+    "model": [
+     "Even numbers on spinner = {2, 4} (2 numbers)",
+     "P(Even) = 2/5",
+     "Expected frequency = (2/5) × 250 = 100"
+    ],
+    "tip": "Count the number of successful outcomes first before finding the fraction."
+   },
+   {
+    "q": "The probability that a biased seed germinates is 0.8. A gardener plants 60 seeds. Work out the expected number of seeds that germinate.",
+    "marks": 2,
+    "model": [
+     "Expected count = 0.8 × 60",
+     "= 48"
+    ],
+    "tip": "Convert decimal probabilities easily by calculating 8 × 6 = 48."
+   },
+   {
+    "q": "A fair ordinary 6-sided die is rolled 120 times. Lucy says 'You will get exactly twenty 6s.' Is Lucy correct? Explain your answer.",
+    "marks": 2,
+    "model": [
+     "No, Lucy is not correct.",
+     "20 is the expected theoretical average, but individual trials are random so the actual number can vary slightly."
+    ],
+    "tip": "Always distinguish between exact real outcomes and theoretical expected averages."
+   },
+   {
+    "q": "A spinner is divided into three sectors: Red (180°), Blue (120°), and Yellow (60°). (a) Is this spinner fair? Explain why. (b) If spun 120 times, calculate the expected number of times it lands on Blue.",
+    "marks": 3,
+    "model": [
+     "(a) No, because the sector angles are unequal, so outcomes are not equally likely.",
+     "(b) P(Blue) = 120/360 = 1/3",
+     "Expected Blue = (1/3) × 120 = 40"
+    ],
+    "tip": "For part (a), mention 'unequal angles' or 'not equally likely'."
+   },
+   {
+    "q": "The expected number of times a counter drawn from a bag is red is 35 out of 140 draws. Calculate the probability of picking a red counter.",
+    "marks": 2,
+    "model": [
+     "Probability = Expected Outcome ÷ Total Trials",
+     "P(Red) = 35 / 140 = 1/4 (or 0.25)"
+    ],
+    "tip": "Rearrange E = P × n to P = E ÷ n."
+   },
+   {
+    "q": "Tom flips a coin 10 times and gets 8 Heads. He claims the coin is biased. Explain why Tom might be wrong.",
+    "marks": 2,
+    "model": [
+     "10 flips is a very small number of trials (small sample size).",
+     "In short-run experiments, natural random variation occurs, so getting 8 Heads does not prove bias."
+    ],
+    "tip": "Key points to mention: small sample size and natural random variation."
+   },
+   {
+    "q": "A game board has a fair spinner with numbers 1 to 8. Players win a prize if they land on a number greater than 5. The spinner is spun 400 times in a day. Calculate the expected number of prize winners.",
+    "marks": 4,
+    "model": [
+     "Numbers greater than 5 = {6, 7, 8} (3 numbers out of 8)",
+     "P(winning) = 3/8",
+     "Expected winners = (3/8) × 400",
+     "400 ÷ 8 = 50; 50 × 3 = 150 winners"
+    ],
+    "tip": "Break down fraction multiplication: divide total trials by denominator, then multiply by numerator."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A bag contains red, blue, and yellow counters. The probability of picking a red counter is 0.35, and the probability of picking a blue counter is 0.45. A counter is picked at random, its color recorded, and replaced. This is repeated 300 times. Calculate the expected number of times a yellow counter is picked.",
+    "steps": [
+     "Step 1: Find the probability of picking a yellow counter. Probabilities sum to 1.",
+     "P(Yellow) = 1 - (P(Red) + P(Blue)) = 1 - (0.35 + 0.45) = 1 - 0.80 = 0.20",
+     "Step 2: Use the expected outcome formula: Expected Frequency = P(Yellow) × Total Trials",
+     "Expected Yellow = 0.20 × 300",
+     "Step 3: Calculate the final answer.",
+     "0.20 × 300 = 60"
+    ],
+    "ans": "60 times"
+   },
+   {
+    "q": "A fair 6-sided die is rolled 600 times. The results are recorded: 1 appeared 92 times, 2 appeared 105 times, 3 appeared 98 times, 4 appeared 102 times, 5 appeared 95 times, 6 appeared 108 times. (a) Calculate the theoretical expected outcome for each number. (b) Comment on whether the die appears to be fair.",
+    "steps": [
+     "Step 1: Calculate theoretical expected frequency for a fair 6-sided die.",
+     "P(any single face) = 1/6",
+     "Expected Frequency = (1/6) × 600 = 100 times for each face.",
+     "Step 2: Compare actual frequencies with expected frequency (100).",
+     "Actual frequencies: 92, 105, 98, 102, 95, 108.",
+     "Step 3: Evaluate closeness.",
+     "All frequencies are very close to 100 over a large sample size of 600 rolls.",
+     "Conclusion: The die appears to be fair."
+    ],
+    "ans": "(a) 100 times for each number; (b) The die appears fair because all observed frequencies are close to the expected frequency of 100 over 600 trials."
+   },
+   {
+    "q": "A circular spinner is split into four sectors labeled A, B, C, D. Sector A has angle 90°, Sector B has angle 180°, and Sector C has angle 45°. (a) Find the angle for Sector D. (b) If the spinner is spun 240 times, calculate the expected number of times it lands on Sector D.",
+    "steps": [
+     "Step 1: Find the angle of Sector D. Angles in a circle sum to 360°.",
+     "Angle D = 360° - (90° + 180° + 45°) = 360° - 315° = 45°",
+     "Step 2: Calculate the theoretical probability for Sector D.",
+     "P(D) = Sector Angle ÷ 360° = 45° / 360° = 1/8",
+     "Step 3: Multiply P(D) by the total number of spins (240).",
+     "Expected D = (1/8) × 240 = 30"
+    ],
+    "ans": "(a) 45°; (b) 30 times"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Formula triangle showing the relationship between Expected Frequency (E), Probability (P), and Number of Trials (n).",
+    "svg": "<svg viewBox=\"0 0 400 240\"><polygon points=\"200,30 80,190 320,190\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"3\"/><line x1=\"140\" y1=\"115\" x2=\"260\" y2=\"115\" stroke=\"#1b2540\" stroke-width=\"3\"/><line x1=\"200\" y1=\"115\" x2=\"200\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"3\"/><text x=\"200\" y=\"85\" fill=\"#1b2540\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Expected Outcome (E)</text><text x=\"140\" y=\"160\" fill=\"#1b2540\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Probability (P)</text><text x=\"260\" y=\"160\" fill=\"#1b2540\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Trials (n)</text><text x=\"200\" y=\"220\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">Formula: E = P × n  |  P = E ÷ n  |  n = E ÷ P</text></svg>"
+   },
+   {
+    "cap": "Comparison between a fair spinner with four equal 90° sectors and a biased spinner with unequal sector angles.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><circle cx=\"110\" cy=\"110\" r=\"70\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"110\" y1=\"40\" x2=\"110\" y2=\"180\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"40\" y1=\"110\" x2=\"180\" y2=\"110\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"75\" y=\"80\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\">A (90°)</text><text x=\"130\" y=\"80\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\">B (90°)</text><text x=\"75\" y=\"145\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\">C (90°)</text><text x=\"130\" y=\"145\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\">D (90°)</text><text x=\"110\" y=\"205\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Fair Spinner (Equally Likely)</text><circle cx=\"290\" cy=\"110\" r=\"70\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M 290 110 L 290 40 A 70 70 0 1 1 220 110 Z\" fill=\"#fecaca\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"290\" y1=\"110\" x2=\"360\" y2=\"110\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"305\" y=\"135\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\">A (270°)</text><text x=\"305\" y=\"80\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\">B (90°)</text><text x=\"290\" y=\"205\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Biased Spinner (Unequal)</text></svg>"
+   },
+   {
+    "cap": "Expected frequency distribution for rolling a fair 6-sided die 120 times (20 expected for each number).",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"40\" y=\"30\" width=\"330\" height=\"160\" fill=\"#f8fafc\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"40\" y1=\"70\" x2=\"370\" y2=\"70\" stroke=\"#94a3b8\" stroke-dasharray=\"4\"/><line x1=\"40\" y1=\"110\" x2=\"370\" y2=\"110\" stroke=\"#94a3b8\" stroke-dasharray=\"4\"/><line x1=\"40\" y1=\"150\" x2=\"370\" y2=\"150\" stroke=\"#94a3b8\" stroke-dasharray=\"4\"/><rect x=\"60\" y=\"70\" width=\"35\" height=\"120\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><rect x=\"110\" y=\"70\" width=\"35\" height=\"120\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><rect x=\"160\" y=\"70\" width=\"35\" height=\"120\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><rect x=\"210\" y=\"70\" width=\"35\" height=\"120\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><rect x=\"260\" y=\"70\" width=\"35\" height=\"120\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><rect x=\"310\" y=\"70\" width=\"35\" height=\"120\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"77\" y=\"208\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">1</text><text x=\"127\" y=\"208\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">2</text><text x=\"177\" y=\"208\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">3</text><text x=\"227\" y=\"208\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">4</text><text x=\"277\" y=\"208\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">5</text><text x=\"327\" y=\"208\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">6</text><text x=\"30\" y=\"75\" fill=\"#1b2540\" font-size=\"11\" text-anchor=\"end\">20</text><text x=\"30\" y=\"115\" fill=\"#1b2540\" font-size=\"11\" text-anchor=\"end\">15</text><text x=\"30\" y=\"155\" fill=\"#1b2540\" font-size=\"11\" text-anchor=\"end\">10</text><text x=\"205\" y=\"228\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Die Score (120 Total Rolls)</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_f.4.1",
+  "sid": "maths_aqa_f",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.6-flash",
+  "ts": "2026-11-18T17:48:44.701Z"
+ },
+ "maths_aqa_f.4.2": {
+  "summary": "Mastering the probability scale from 0 to 1, theoretical probability, and relative expected frequency is essential for Foundation GCSE success. These revision notes provide a crystal-clear breakdown of how probabilities are written as fractions, decimals, and percentages, how to calculate expected outcomes from repeated trials, and how experimental results compare to theoretical models. Every definition, core rule, exam trap, and typical question type is rigorously explained to ensure complete confidence in the exam hall.",
+  "core": [
+   {
+    "h": "The Probability Scale (0 to 1)",
+    "p": "Every probability is a mathematical measure of how likely it is that an event will happen. The probability scale always runs from 0 to 1 inclusive, where 0 represents an absolute impossibility and 1 represents absolute certainty.",
+    "bullets": [
+     "Probabilities can be written as fractions, decimals, or percentages.",
+     "An event with a probability of 0 will never happen.",
+     "An event with a probability of 1 will definitely happen.",
+     "A probability of 0.5 (or 1/2 or 50%) means an event is equally likely to happen as not to happen.",
+     "Probabilities can never be negative and can never be greater than 1."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Probability Scale",
+      "p": "A numerical scale from 0 to 1 used to measure the likelihood of an event occurring."
+     },
+     {
+      "k": "warn",
+      "t": "Percentages and Fractions",
+      "p": "Never write a probability as a ratio like 1:3 or as a mark out of a total like 3 out of 10 unless explicitly asked for a ratio. Always use fractions, decimals, or percentages."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "The 0 to 1 probability scale showing equivalent fractions, decimals, and percentages.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" rx=\"8\"/><line x1=\"40\" y1=\"120\" x2=\"360\" y2=\"120\" stroke=\"#1e293b\" stroke-width=\"4\"/><circle cx=\"40\" cy=\"120\" r=\"8\" fill=\"#ef4444\"/><text x=\"30\" y=\"150\" font-size=\"12\" fill=\"#1e293b\">0 (Impossible)</text><circle cx=\"200\" cy=\"120\" r=\"8\" fill=\"#f59e0b\"/><text x=\"165\" y=\"150\" font-size=\"12\" fill=\"#1e293b\">0.5 (Even Chance)</text><circle cx=\"360\" cy=\"120\" r=\"8\" fill=\"#22c55e\"/><text x=\"330\" y=\"150\" font-size=\"12\" fill=\"#1e293b\">1 (Certain)</text><text x=\"130\" y=\"80\" font-size=\"12\" fill=\"#334155\">Fractions, Decimals or Percentages</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Representing Probability: Fractions, Decimals, Percentages",
+    "p": "Probabilities are fluidly converted between fractions, decimals, and percentages. Exam questions will often give information in one form and require your answer in another, so fluent conversion is vital for top marks.",
+    "bullets": [
+     "To convert a fraction to a decimal, divide the numerator by the denominator.",
+     "To convert a decimal to a percentage, multiply by 100.",
+     "To convert a percentage to a fraction, put the number over 100 and simplify.",
+     "Always simplify fraction answers unless the question states otherwise."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Standard Conversions",
+      "p": "1/4 = 0.25 = 25% | 1/2 = 0.5 = 50% | 3/4 = 0.75 = 75% | 1/5 = 0.2 = 20%"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Theoretical Probability Definition",
+    "p": "Theoretical probability is calculated using mathematical reasoning and logic, without needing to perform any physical experiments. It is based on the total number of equally likely outcomes possible.",
+    "bullets": [
+     "Formula: Theoretical Probability = (Number of successful outcomes) / (Total number of possible outcomes).",
+     "Assumes all individual outcomes have an equal chance of occurring.",
+     "Used when dealing with fair coins, unbiased dice, and standard spinners.",
+     "Does not change regardless of how many times you perform an experiment."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Theoretical Probability",
+      "p": "The likelihood of an event happening based on mathematical theory and equally likely outcomes."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Calculating Basic Theoretical Probability",
+    "p": "To find the theoretical probability of a single event, you count the number of outcomes that match your target event and divide by the total number of possible outcomes.",
+    "bullets": [
+     "Always write your probability as a proper fraction first before converting.",
+     "Ensure fractions are fully simplified (e.g. 2/6 simplifies to 1/3).",
+     "Identify all possible outcomes systematically before calculating.",
+     "Double-check that your numerator is smaller than or equal to your denominator."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Simplifying Fractions",
+      "p": "Mark schemes accept unsimplified fractions for some method marks, but the final accuracy mark often requires a fully simplified fraction."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Experimental vs Theoretical Probability",
+    "p": "Theoretical probability tells you what should happen in theory, while experimental probability (relative frequency) tells you what actually happened during a real trial or experiment.",
+    "bullets": [
+     "Experimental probability is calculated from trial data.",
+     "Formula: Relative Frequency = (Number of successful trials) / (Total number of trials).",
+     "Experimental results often differ from theoretical expectations due to random variation.",
+     "Small sample sizes lead to large variations from theory."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Relative Frequency",
+      "p": "An estimate of probability based on the actual results of an experiment or trial."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Expected Frequency (Number of Expected Outcomes)",
+    "p": "Expected frequency is the number of times you expect a particular event to occur if you repeat an experiment a given number of times. It is calculated by multiplying the theoretical probability by the number of trials.",
+    "bullets": [
+     "Formula: Expected Frequency = Probability times Number of Trials.",
+     "Answers can be decimals, but if the context requires whole objects or people, you may need to round appropriately.",
+     "This is an prediction, not a guarantee of exact results.",
+     "Crucial topic for 2-mark and 4-mark AQA calculator paper questions."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Expected Frequency Formula",
+      "p": "Expected Outcomes = P(Event) * Total Trials"
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Diagram illustrating how expected frequency scales up with the number of trials.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" fill=\"#f0fdf4\" stroke=\"#86efac\" rx=\"8\"/><text x=\"30\" y=\"40\" font-size=\"12\" fill=\"#166534\">If P(Win) = 1/4 and you play 100 times:</text><rect x=\"30\" y=\"70\" width=\"100\" height=\"40\" fill=\"#bbf7d0\" stroke=\"#15803d\" rx=\"4\"/><text x=\"45\" y=\"95\" font-size=\"12\" fill=\"#166534\">1/4 * 100 = 25</text><text x=\"30\" y=\"150\" font-size=\"12\" fill=\"#166534\">You expect to win 25 times.</text><text x=\"30\" y=\"180\" font-size=\"11\" fill=\"#374155\">Actual results may vary due to random chance!</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Relative Frequency as an Estimate",
+    "p": "When theoretical probability is unknown (e.g. with a biased coin or drawing pins), relative frequency from experiments is used to estimate the true probability of an event.",
+    "bullets": [
+     "More trials provide a more reliable estimate.",
+     "As sample size increases, relative frequency gets closer to the true theoretical probability.",
+     "This principle is known as the Law of Large Numbers.",
+     "Always use the total number of trials as the denominator."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Law of Large Numbers",
+      "p": "As an experiment is repeated more times, the experimental relative frequency approaches the true theoretical probability."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Evaluating Fairness and Bias",
+    "p": "Examiners often test whether an item (like a spinner or die) is fair by comparing expected outcomes with observed experimental results.",
+    "bullets": [
+     "If observed results are very close to expected results, the object is likely fair.",
+     "If there is a massive discrepancy, the object is likely biased.",
+     "Look for totals and percentages to justify your reasoning in exam answers.",
+     "State your conclusion clearly based on the data provided."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Justification Required",
+      "p": "Simply writing 'it is biased' gets zero marks without comparing the expected frequency to the actual experimental results."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Sample Size and Reliability",
+    "p": "The reliability of experimental probability depends entirely on the size of the sample. A coin flipped 10 times might land on heads 8 times, but flipped 1000 times, heads will be closer to 500.",
+    "bullets": [
+     "Small sample sizes (e.g. 5 trials) are unreliable.",
+     "Large sample sizes (e.g. 1000 trials) are reliable.",
+     "Always state that larger samples give more reliable estimates in written exam questions.",
+     "Explain that small samples are subject to fluke results or random variation."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam Command Words",
+      "p": "When asked 'Whose result is more reliable?', always pick the person with the larger number of trials and explain why."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Working with Probability Tables and Frequencies",
+    "p": "Data from experiments is frequently presented in frequency tables. You must be able to extract numbers, calculate relative frequencies, and find missing frequencies using totals.",
+    "bullets": [
+     "Check that all frequencies add up to the total number of trials.",
+     "Use relative frequency = (frequency of event) / (total frequency).",
+     "Ensure decimals sum to 1.0 or percentages sum to 100% where appropriate.",
+     "Watch out for incomplete tables where one frequency is missing."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Table Totals",
+      "p": "The sum of all individual outcome frequencies must always equal the total sample size (N)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Probabilities in Word Problems",
+    "p": "AQA exam questions often embed probabilities within real-life scenarios, such as quality control in factories or weather forecasts.",
+    "bullets": [
+     "Translate wording like 'unlikely' or 'evens' into numerical values (0, 0.5, etc.).",
+     "Identify the key numbers: target outcomes and total pool.",
+     "Set up your fraction clearly before doing any calculator work.",
+     "Check if the question asks for a fraction, decimal, or percentage."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Reading Carefully",
+      "p": "Underline key phrases like 'not a red counter' or 'at least 3' to avoid missing crucial details in the question text."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Exam Strategy for Probability Questions",
+    "p": "Maximise your marks in probability by laying out your working clearly, leaving fractions unsimplified in intermediate steps, and checking that all probabilities lie between 0 and 1.",
+    "bullets": [
+     "Never write a probability greater than 1.",
+     "Show your substitution into formulas before calculating.",
+     "Check whether your answer is logical in the context of the question.",
+     "Write fractions in the form a/b unless a decimal is requested."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Probability Greater Than 1",
+      "p": "If your calculation results in 1.4 or 5/4, check your fraction immediately. Probabilities can NEVER exceed 1."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Weather Forecast Analogy",
+   "p": "Think of theoretical probability like a meteorologist's climate model for a city: it predicts that July has a 20% chance of rain based on decades of data. Relative expected frequency is like tracking the actual rainfall over 50 days in July to see how many days it actually rained. The model (theory) gives you the baseline, but reality (experiment) shows what actually happened. The analogy breaks down because weather systems are chaotic and influenced by changing external variables, whereas rolling a fair die is completely independent on every single roll."
+  },
+  "terms": [
+   {
+    "t": "Probability",
+    "d": "A numerical measure of the likelihood that an event will occur, ranging from 0 to 1."
+   },
+   {
+    "t": "Theoretical Probability",
+    "d": "The likelihood of an event occurring based on mathematical expectation and equally likely outcomes."
+   },
+   {
+    "t": "Relative Frequency",
+    "d": "The probability of an event calculated from the actual results of a scientific or statistical experiment."
+   },
+   {
+    "t": "Expected Frequency",
+    "d": "The number of times a specific event is expected to occur in a given number of trials."
+   },
+   {
+    "t": "Fair",
+    "d": "Describing an object (like a coin or die) where all outcomes have an exactly equal theoretical probability."
+   },
+   {
+    "t": "Biased",
+    "d": "Describing an object where outcomes do not have an equal probability, skewing results."
+   },
+   {
+    "t": "Trial",
+    "d": "A single performance of a random experiment, such as rolling a die once."
+   },
+   {
+    "t": "Outcome",
+    "d": "A possible result of a trial or experiment."
+   },
+   {
+    "t": "Event",
+    "d": "A collection of one or more outcomes from an experiment."
+   },
+   {
+    "t": "Sample Space",
+    "d": "The complete set of all possible outcomes of an experiment."
+   },
+   {
+    "t": "Law of Large Numbers",
+    "d": "The theory that as a sample size grows, its experimental mean gets closer to the theoretical average."
+   },
+   {
+    "t": "Random",
+    "d": "Describing a process where every outcome is equally likely and unpredictable in the short term."
+   },
+   {
+    "t": "Impossibility",
+    "d": "An event that cannot possibly happen, represented by a probability of 0."
+   },
+   {
+    "t": "Certainty",
+    "d": "An event that will definitely happen, represented by a probability of 1."
+   },
+   {
+    "t": "Experimental Probability",
+    "d": "Another term for relative frequency, based on observed data."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Writing a probability as 3 out of 5 (using the word 'out of' or a colon).",
+    "r": "Always write probabilities as proper fractions (3/5), decimals (0.6), or percentages (60%)."
+   },
+   {
+    "w": "Stating that a probability is 120% or 1.2 because it happened often.",
+    "r": "Probabilities can never exceed 1 or 100%. Check your fraction numerator and denominator."
+   },
+   {
+    "w": "Assuming a coin will land on heads 5 times if flipped 10 times because the probability is 0.5.",
+    "r": "Expected outcomes are averages over many trials; short-term results often deviate due to chance."
+   },
+   {
+    "w": "Failing to simplify fractions in the final answer.",
+    "r": "Always cancel fractions down to their simplest form unless told otherwise."
+   },
+   {
+    "w": "Using relative frequency as the exact theoretical probability from a small trial.",
+    "r": "Small samples are unreliable; relative frequency only approximates probability well when trials are large."
+   },
+   {
+    "w": "Calculating expected frequency by dividing instead of multiplying.",
+    "r": "Multiply the probability by the number of trials to find the expected frequency."
+   },
+   {
+    "w": "Forgetting to add up all frequencies to find the total number of trials.",
+    "r": "Always sum the frequency column to find the correct denominator for relative frequency."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A bag contains 5 red counters, 3 blue counters, and 2 green counters. A counter is chosen at random. What is the probability that it is blue?",
+    "marks": 1,
+    "model": [
+     "Total counters = 5 + 3 + 2 = 10",
+     "Probability = 3/10"
+    ],
+    "tip": "Always find the total number of items first to use as your denominator."
+   },
+   {
+    "q": "Mark rolls a biased die 200 times. He rolls a six 50 times. Work out the relative frequency of rolling a six. Give your answer as a decimal.",
+    "marks": 2,
+    "model": [
+     "50 / 200",
+     "0.25"
+    ],
+    "tip": "Divide the successful outcomes by the total number of trials and convert to a decimal."
+   },
+   {
+    "q": "The probability that a biased spinner lands on red is 0.35. Sarah spins the spinner 300 times. Work out the expected number of times it lands on red.",
+    "marks": 2,
+    "model": [
+     "0.35 * 300",
+     "105"
+    ],
+    "tip": "Multiply the given probability by the total number of spins."
+   },
+   {
+    "q": "A football team has a probability of 0.2 of winning any match. They play 40 matches in a season. How many matches are they expected to win?",
+    "marks": 2,
+    "model": [
+     "0.2 * 40",
+     "8 matches"
+    ],
+    "tip": "Ensure your final answer includes the context (matches) if appropriate, though the number is key."
+   },
+   {
+    "q": "A coin is biased. The probability of getting heads is 0.6. If the coin is flipped 500 times, how many tails are expected?",
+    "marks": 3,
+    "model": [
+     "P(Tails) = 1 - 0.6 = 0.4",
+     "0.4 * 500",
+     "200"
+    ],
+    "tip": "Find the probability of the complementary event (tails) first before multiplying by the trials."
+   },
+   {
+    "q": "A bag has red and blue marbles. The probability of picking a red marble is 3/8. If there are 24 marbles in total in the bag, how many red marbles are there?",
+    "marks": 2,
+    "model": [
+     "(3/8) * 24",
+     "9 red marbles"
+    ],
+    "tip": "Treat this as finding a fraction of a quantity."
+   },
+   {
+    "q": "Explain why relative frequency from 10 trials of a coin toss might not equal the theoretical probability of 0.5.",
+    "marks": 1,
+    "model": [
+     "Small sample size means random variation can cause large differences from theory."
+    ],
+    "tip": "Mention sample size and random variation for the mark."
+   },
+   {
+    "q": "A box contains chocolates. The probability of picking a dark chocolate is 0.2. There are 50 chocolates in the box. Work out the number of milk chocolates.",
+    "marks": 3,
+    "model": [
+     "P(dark) = 0.2, so dark = 0.2 * 50 = 10",
+     "Milk chocolates = 50 - 10 = 40"
+    ],
+    "tip": "Read carefully: the question asks for milk chocolates, not dark chocolates!"
+   },
+   {
+    "q": "A spinner has 4 equal sections numbered 1, 2, 3, 4. James spins it 500 times. Explain approximately how many times you would expect it to land on 3.",
+    "marks": 2,
+    "model": [
+     "P(3) = 1/4 = 0.25",
+     "0.25 * 500 = 125 times"
+    ],
+    "tip": "Calculate the theoretical probability first, then multiply by the total trials."
+   },
+   {
+    "q": "In a survey, 45 out of 150 people preferred tea over coffee. Estimate the probability that a randomly chosen person prefers tea. Give your fraction in its simplest form.",
+    "marks": 2,
+    "model": [
+     "45 / 150",
+     "3/10"
+    ],
+    "tip": "Simplify the fraction fully by dividing numerator and denominator by 15."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A fair six-sided die is rolled 450 times. Calculate the expected number of times a number greater than 4 is rolled.",
+    "steps": [
+     "Step 1: Identify the numbers on a die that are greater than 4. These are 5 and 6 (2 successful outcomes).",
+     "Step 2: Calculate the theoretical probability of rolling a number greater than 4. P(>4) = 2/6 = 1/3.",
+     "Step 3: Multiply the theoretical probability by the total number of trials (450). Expected frequency = (1/3) * 450 = 150."
+    ],
+    "ans": "150 times"
+   },
+   {
+    "q": "A bag contains red, green, and blue counters. A counter is chosen at random and replaced 200 times. Red was chosen 80 times, green was chosen 70 times, and blue was chosen 50 times. (a) Work out the relative frequency of choosing a green counter. (b) Is the bag likely to be fair? Explain your answer.",
+    "steps": [
+     "Step 1 (Part a): Relative frequency of green = (Number of green picks) / (Total trials) = 70 / 200.",
+     "Step 2 (Part a): Simplify the fraction to 7/20 or convert to decimal 0.35.",
+     "Step 3 (Part b): For the bag to be fair, all three colours should have roughly equal probabilities (around 1/3 or 66/200 each).",
+     "Step 4 (Part b): Here, green is 70, red is 80, but blue is only 50. Since the counts vary significantly across 200 trials, the bag is likely biased."
+    ],
+    "ans": "(a) 7/20 (or 0.35) (b) No, the bag is likely biased because the frequencies differ significantly from an even distribution."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Diagram illustrating the relationship between theoretical probability and experimental relative frequency as sample size increases.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" rx=\"8\"/><line x1=\"50\" y1=\"200\" x2=\"370\" y2=\"200\" stroke=\"#334155\" stroke-width=\"2\"/><line x1=\"50\" y1=\"30\" x2=\"50\" y2=\"200\" stroke=\"#334155\" stroke-width=\"2\"/><line x1=\"50\" y1=\"100\" x2=\"370\" y2=\"100\" stroke=\"#ef4444\" stroke-dasharray=\"4\" stroke-width=\"2\"/><text x=\"55\" y=\"95\" font-size=\"11\" fill=\"#ef4444\">Theoretical Probability (0.5)</text><polyline points=\"50,180 90,60 130,140 170,110 210,95 250,105 290,101 330,99 370,100\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><text x=\"200\" y=\"220\" font-size=\"11\" fill=\"#334155\">Number of Trials (Increases ->)</text></svg>"
+   },
+   {
+    "cap": "Venn-style conceptual map showing the boundaries of the 0 to 1 probability scale.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" fill=\"#eff6ff\" stroke=\"#93c5fd\" rx=\"8\"/><rect x=\"30\" y=\"40\" width=\"340\" height=\"160\" fill=\"#dbeafe\" stroke=\"#3b82f6\" rx=\"6\"/><text x=\"50\" y=\"70\" font-size=\"13\" fill=\"#1e3a8a\" font-weight=\"bold\">Valid Probability Range</text><text x=\"50\" y=\"105\" font-size=\"12\" fill=\"#1e293b\">Minimum = 0 (Impossible)</text><text x=\"50\" y=\"135\" font-size=\"12\" fill=\"#1e293b\">Maximum = 1 (Certain)</text><text x=\"50\" y=\"165\" font-size=\"12\" fill=\"#1e293b\">Fractions, Decimals, Percentages only!</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_f.4.2",
+  "sid": "maths_aqa_f",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-18T17:59:33.403Z"
  }
 }
