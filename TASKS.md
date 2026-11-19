@@ -5,7 +5,7 @@ Runs read **only this file and `docs/CONTEXT.md`**. Keep this file short: finish
 ## Status
 
 ```
-RUN LOCK:       none
+RUN LOCK:       running since 2026-11-19 01:10 UTC, session 01Sm3c8gHQB57Gg1nA6GvVyh
 CURRENT JOB:    none (J2b done; J3 Maths carries on by itself via the daily pipeline run)
 CURRENT STEPS:  none
 LAST RUN ENDED: 2026-11-18 01:26 UTC. Yesterday's fix confirmed: the scheduled Write notes run (started late, 17:41 UTC, by GitHub) committed its notes and published 16 topic files (224 of 5168 done). Found most items waiting for a retry (about 130 of 216, nearly all maths) failed with "did not return JSON" because models write LaTeX like \sqrt with one backslash; the JSON reader now keeps those (CI green, d205160). Next nightly run: check the retry count dropped and maths notes are saving more often; the next biggest failure is notes with only 2 diagrams.
