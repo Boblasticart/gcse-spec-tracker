@@ -481,5 +481,911 @@
   "src": "pre",
   "by": "gemini/gemini-3.5-flash-lite",
   "ts": "2026-11-16T03:29:46.097Z"
+ },
+ "maths_ocr_h.0.1": {
+  "summary": "Mastering whole number theory forms the bedrock of Higher GCSE Mathematics, bridging fundamental arithmetic with advanced algebraic problem-solving. This unit covers the precise definitions of primes, factors, and multiples, alongside algorithmic methods like prime factorisation, the ladder method, and Venn diagrams for finding HCF and LCM. Excelling at Grade 9 requires deep fluency in these multiplicative structures to tackle complex worded and algebraic scenarios seamlessly.",
+  "core": [
+   {
+    "h": "1. Multiples and Factors",
+    "p": "Understanding the fundamental building blocks of integers begins with distinguishing between what divides a number and what a number generates through multiplication.",
+    "bullets": [
+     "A multiple of a number is obtained by multiplying that integer by any positive integer.",
+     "A factor is a whole number that divides evenly into another number without leaving a remainder.",
+     "Every integer greater than 1 has at least two factors: 1 and itself.",
+     "Factors come in pairs; finding them systematically prevents missing any."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Factor",
+      "p": "A factor is an integer that divides completely into a given number with no remainder."
+     },
+     {
+      "k": "key",
+      "t": "Zero Multiple",
+      "p": "While 0 is technically a multiple of any integer (n x 0 = 0), GCSE questions usually focus on positive multiples."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. Prime Numbers",
+    "p": "Prime numbers are the atoms of arithmetic. Every integer greater than 1 is either a prime number itself or can be uniquely factored into primes.",
+    "bullets": [
+     "A prime number is an integer greater than 1 that has exactly two distinct positive divisors: 1 and itself.",
+     "The number 1 is neither prime nor composite because it has only one factor.",
+     "The number 2 is the only even prime number; all other even numbers are divisible by 2.",
+     "Primes up to 50 to memorise: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Prime Number",
+      "p": "An integer greater than 1 with no positive divisors other than 1 and itself."
+     },
+     {
+      "k": "warn",
+      "t": "The Number 1",
+      "p": "Never list 1 as a prime number in exam questions. It fails the definition of having two distinct factors."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Visualising why 2 is prime (two arrangements) versus 4 being composite (multiple arrangements).",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" rx=\"8\"/><text x=\"30\" y=\"40\" font-size=\"14\" font-weight=\"bold\" fill=\"#1b2540\">Prime Number: 2</text><circle cx=\"60\" cy=\"80\" r=\"12\" fill=\"#bbf7d0\" stroke=\"#166534\" stroke-width=\"2\"/><circle cx=\"90\" cy=\"80\" r=\"12\" fill=\"#bbf7d0\" stroke=\"#166534\" stroke-width=\"2\"/><text x=\"30\" y=\"140\" font-size=\"14\" font-weight=\"bold\" fill=\"#1b2540\">Composite Number: 4</text><circle cx=\"60\" cy=\"180\" r=\"10\" fill=\"#fecaca\" stroke=\"#991b1b\" stroke-width=\"2\"/><circle cx=\"90\" cy=\"180\" r=\"10\" fill=\"#fecaca\" stroke=\"#991b1b\" stroke-width=\"2\"/><circle cx=\"60\" cy=\"210\" r=\"10\" fill=\"#fecaca\" stroke=\"#991b1b\" stroke-width=\"2\"/><circle cx=\"90\" cy=\"210\" r=\"10\" fill=\"#fecaca\" stroke=\"#991b1b\" stroke-width=\"2\"/><text x=\"200\" y=\"85\" font-size=\"12\" fill=\"#334155\">Only 1 x 2 factor pair</text><text x=\"200\" y=\"195\" font-size=\"12\" fill=\"#334155\">Factor pairs: 1 x 4 and 2 x 2</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "3. Prime Factorisation",
+    "p": "Expressing any composite number as a product of prime numbers is a fundamental technique required across algebra, number theory, and fraction manipulation.",
+    "bullets": [
+     "Use a factor tree to break down a number by finding any factor pair, then continuing until all endpoints are prime.",
+     "Always write your final answer in index form using powers where prime factors repeat (e.g., 2^3 x 3^2).",
+     "The Fundamental Theorem of Arithmetic states that every integer greater than 1 is either a prime or can be represented as a unique product of primes.",
+     "Check your final prime factorisation by multiplying the powers back together to verify it equals the original number."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Index Form Requirement",
+      "p": "If an exam question asks for prime factorisation, always write it with exponents (powers) unless stated otherwise."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A factor tree breaking down 72 into its prime components: 2 x 2 x 2 x 3 x 3.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" rx=\"8\"/><text x=\"180\" y=\"35\" font-size=\"14\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">72</text><line x1=\"180\" y1=\"45\" x2=\"130\" y2=\"80\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"180\" y1=\"45\" x2=\"230\" y2=\"80\" stroke=\"#64748b\" stroke-width=\"2\"/><text x=\"130\" y=\"95\" font-size=\"13\" fill=\"#1b2540\" text-anchor=\"middle\">8</text><text x=\"230\" y=\"95\" font-size=\"13\" fill=\"#1b2540\" text-anchor=\"middle\">9</text><line x1=\"130\" y1=\"105\" x2=\"100\" y2=\"140\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"130\" y1=\"105\" x2=\"160\" y2=\"140\" stroke=\"#64748b\" stroke-width=\"2\"/><text x=\"100\" y=\"155\" font-size=\"13\" fill=\"#1b2540\" text-anchor=\"middle\">2 (Prime)</text><text x=\"160\" y=\"155\" font-size=\"13\" fill=\"#1b2540\" text-anchor=\"middle\">4</text><line x1=\"160\" y1=\"165\" x2=\"140\" y2=\"195\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"160\" y1=\"165\" x2=\"180\" y2=\"195\" stroke=\"#64748b\" stroke-width=\"2\"/><text x=\"140\" y=\"210\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">2 (P)</text><text x=\"180\" y=\"210\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">2 (P)</text><line x1=\"230\" y1=\"105\" x2=\"210\" y2=\"140\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"230\" y1=\"105\" x2=\"250\" y2=\"140\" stroke=\"#64748b\" stroke-width=\"2\"/><text x=\"210\" y=\"155\" font-size=\"13\" fill=\"#1b2540\" text-anchor=\"middle\">3 (P)</text><text x=\"250\" y=\"155\" font-size=\"13\" fill=\"#1b2540\" text-anchor=\"middle\">3 (P)</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "4. Highest Common Factor (HCF)",
+    "p": "The Highest Common Factor is the largest integer that divides evenly into two or more given numbers without leaving a remainder.",
+    "bullets": [
+     "List method: Write out all factors of each number and pick the largest one that appears in both lists.",
+     "Prime factorisation method: Express numbers in index form, take the lowest power of each common prime factor, and multiply them.",
+     "Venn diagram method: Place prime factors in respective circles, and the intersection (middle) gives the HCF.",
+     "Crucial application: Simplifying fractions to their lowest terms and factorising algebraic expressions."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "HCF Rule",
+      "p": "For HCF using prime factorisation, take the LOWEST power of common prime factors."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "5. Lowest Common Multiple (LCM)",
+    "p": "The Lowest Common Multiple is the smallest positive integer that is a multiple of two or more given numbers.",
+    "bullets": [
+     "List method: Write out the first few multiples of each number until you find the smallest one they share.",
+     "Prime factorisation method: Express numbers in index form, take the highest power of every prime factor present, and multiply them.",
+     "Venn diagram method: Multiply all numbers across the entire Venn diagram (intersection and both unique sections).",
+     "Crucial application: Adding or subtracting fractions with different denominators by finding a common denominator."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "LCM Rule",
+      "p": "For LCM using prime factorisation, take the HIGHEST power of every prime factor present."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Venn Diagrams for HCF and LCM",
+    "p": "Venn diagrams provide a visual, foolproof method for finding both the HCF and LCM of two large numbers simultaneously.",
+    "bullets": [
+     "Step 1: Find the prime factorisation of both numbers in index form.",
+     "Step 2: Identify the prime factors shared by both numbers and place them in the central intersection.",
+     "Step 3: Place the remaining prime factors unique to each number in their respective outer regions.",
+     "Step 4: Multiply the intersection values to find the HCF, and multiply ALL values in the Venn diagram to find the LCM."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Venn Mastery",
+      "p": "Always check that the product of circle A equals your first number, and circle B equals your second number."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Venn diagram showing prime factors of 72 and 120. HCF is product of intersection; LCM is product of all regions.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" rx=\"8\"/><circle cx=\"160\" cy=\"120\" r=\"75\" fill=\"#dbeafe\" stroke=\"#1e40af\" stroke-width=\"2\" fill-opacity=\"0.5\"/><circle cx=\"240\" cy=\"120\" r=\"75\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"2\" fill-opacity=\"0.5\"/><text x=\"110\" y=\"110\" font-size=\"13\" fill=\"#1e40af\" font-weight=\"bold\">2, 2</text><text x=\"255\" y=\"110\" font-size=\"13\" fill=\"#b45309\" font-weight=\"bold\">3, 5</text><text x=\"185\" y=\"110\" font-size=\"13\" fill=\"#1b2540\" font-weight=\"bold\">2, 3</text><text x=\"130\" y=\"45\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e40af\">72</text><text x=\"260\" y=\"45\" font-size=\"14\" font-weight=\"bold\" fill=\"#b45309\">120</text><text x=\"150\" y=\"215\" font-size=\"11\" fill=\"#334155\">HCF = 2 x 2 x 3 = 12</text><text x=\"230\" y=\"215\" font-size=\"11\" fill=\"#334155\">LCM = Product of all</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "7. The Product Rule: HCF x LCM = a x b",
+    "p": "A powerful algebraic identity links two integers directly to their Highest Common Factor and Lowest Common Multiple.",
+    "bullets": [
+     "For any two positive integers a and b, the product of their HCF and LCM is always equal to the product of the numbers themselves: HCF(a, b) x LCM(a, b) = a x b.",
+     "This identity saves immense time when one value is missing and finding it via prime factorisation is tedious.",
+     "Works reliably for pairs of numbers, but does NOT extend directly to three or more numbers.",
+     "Frequently examined in Grade 7-9 questions involving unknown algebraic constants or reverse-engineered prime factorisations."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Product Identity",
+      "p": "HCF(a,b) x LCM(a,b) = a x b. Memorise this formula for quick marks."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Problem Solving with HCF and LCM",
+    "p": "Worded problems in GCSE exams disguise HCF and LCM scenarios behind real-world contexts involving timing, grouping, and synchronization.",
+    "bullets": [
+     "HCF Contexts: Dividing items into identical groups, cutting lengths of material into equal maximum-sized pieces, distributing items equally with nothing left over.",
+     "LCM Contexts: Events happening simultaneously, flashing lights, running laps on a track, buses leaving a station together, minimum tile dimensions to form a square.",
+     "Always translate the wording: 'greatest/largest/maximum equal groups' points to HCF; 'next time together/simultaneous/smallest square' points to LCM.",
+     "Show full working by stating the prime factorisation or listing method clearly before writing the final conclusion."
+    ],
+    "table": {
+     "head": [
+      "Scenario Clue",
+      "Mathematical Operation",
+      "Key Word"
+     ],
+     "rows": [
+      [
+       "Splitting into equal piles",
+       "HCF",
+       "Greatest / Maximum"
+      ],
+      [
+       "Events syncing together",
+       "LCM",
+       "Lowest / Next time"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Context Decoding",
+      "p": "Ask yourself: Is the answer smaller than the numbers given (HCF) or larger (LCM)?"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Coprime Numbers",
+    "p": "Two numbers are coprime (or relatively prime) if their Highest Common Factor is exactly 1.",
+    "bullets": [
+     "Coprime numbers do not need to be prime numbers themselves; they simply share no common factors other than 1.",
+     "Example: 8 and 15 are coprime because the factors of 8 are {1, 2, 4, 8} and factors of 15 are {1, 3, 5, 15}, sharing only 1.",
+     "Any two consecutive integers are always coprime.",
+     "Crucial in fraction simplification and modular arithmetic contexts."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Coprime",
+      "p": "Two integers a and b are coprime if HCF(a, b) = 1."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Proofs and Algebraic Number Theory",
+    "p": "Higher tier exams test deeper reasoning by combining number theory with simple algebraic proofs about even and odd numbers.",
+    "bullets": [
+     "Represent any even integer as 2n and any odd integer as 2n + 1, where n is an integer.",
+     "The sum or product of even and odd numbers follows strict rules that can be proven algebraically.",
+     "Example: Prove the sum of two consecutive integers is always odd -> n + (n + 1) = 2n + 1, which is definitionally odd.",
+     "Always explicitly state your assumptions and conclude with a summarizing sentence."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Algebraic Proof Trap",
+      "p": "Never use the same letter for two different unknown integers in a proof unless they are explicitly stated to be equal."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Clockwork Factory Analogy",
+   "p": "Imagine two gears in a factory clock: Gear A has 12 teeth and Gear B has 18 teeth. If they start spinning together, finding when they align again at their starting tooth is finding the Lowest Common, Multiple (LCM = 36). Conversely, if you have 12 apples and 18 oranges and want to pack them into identical gift baskets with zero fruit left over, finding the maximum number of baskets is finding the Highest Common Factor (HCF = 6). The analogy breaks down because physical gears have friction and wear out, whereas mathematical multiples and factors are infinite and exact."
+  },
+  "terms": [
+   {
+    "t": "Factor",
+    "d": "An integer that divides evenly into another integer without leaving a remainder."
+   },
+   {
+    "t": "Multiple",
+    "d": "The product of a given integer and any other integer."
+   },
+   {
+    "t": "Prime Number",
+    "d": "An integer greater than 1 with exactly two distinct positive divisors: 1 and itself."
+   },
+   {
+    "t": "Composite Number",
+    "d": "An integer greater than 1 that has more than two positive divisors."
+   },
+   {
+    "t": "Prime Factorisation",
+    "d": "Expressing a composite number as the product of its prime factor powers."
+   },
+   {
+    "t": "Highest Common Factor (HCF)",
+    "d": "The largest positive integer that is a factor of two or more given integers."
+   },
+   {
+    "t": "Lowest Common Multiple (LCM)",
+    "d": "The smallest positive integer that is a multiple of two or more given integers."
+   },
+   {
+    "t": "Coprime",
+    "d": "Two integers whose Highest Common Factor is equal to 1."
+   },
+   {
+    "t": "Index Form",
+    "d": "Writing numbers using base values and exponents (powers)."
+   },
+   {
+    "t": "Fundamental Theorem of Arithmetic",
+    "d": "The theorem stating every integer greater than 1 is prime or a unique product of primes."
+   },
+   {
+    "t": "Venn Diagram",
+    "d": "A diagram using overlapping circles to show relationships between sets of numbers."
+   },
+   {
+    "t": "Product Identity",
+    "d": "The rule stating that for two numbers a and b, HCF x LCM = a x b."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Stating that 1 is a prime number.",
+    "r": "1 is neither prime nor composite because it has only one factor."
+   },
+   {
+    "w": "Confusing HCF and LCM rules in prime factorisation.",
+    "r": "HCF uses the lowest power of common primes; LCM uses the highest power of all primes."
+   },
+   {
+    "w": "Forgetting to write prime factorisation in index form.",
+    "r": "Always use powers (e.g., 2^3 x 3^2) unless explicitly told not to."
+   },
+   {
+    "w": "Listing 0 as a positive multiple in sequence questions.",
+    "r": "GCSE questions expect positive multiples starting from the number itself."
+   },
+   {
+    "w": "Assuming two numbers are coprime because they are both odd.",
+    "r": "Check factors: 9 and 15 are both odd but share a factor of 3, so they are not coprime."
+   },
+   {
+    "w": "Multiplying the numbers and dividing by the LCM when looking for HCF incorrectly.",
+    "r": "Use the exact identity HCF x LCM = a x b correctly rearranged."
+   },
+   {
+    "w": "Writing factor trees that end in composite numbers.",
+    "r": "Every branch tip of a factor tree must be a prime number."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Express 360 as a product of prime factors in index form.",
+    "marks": 3,
+    "model": [
+     "Start factor tree or division: 360 = 36 x 10",
+     "Break down into primes: 36 = 2^2 x 3^2, 10 = 2 x 5",
+     "Combine in index form: 2^3 x 3^2 x 5"
+    ],
+    "tip": "Always check your powers by multiplying back out: 8 x 9 x 5 = 360."
+   },
+   {
+    "q": "Find the Highest Common Factor (HCF) of 72 and 120.",
+    "marks": 2,
+    "model": [
+     "72 = 2^3 x 3^2 and 120 = 2^3 x 3 x 5",
+     "HCF = lowest powers of common primes: 2^3 x 3",
+     "HCF = 24"
+    ],
+    "tip": "Use the Venn diagram or index form comparison method for speed."
+   },
+   {
+    "q": "Find the Lowest Common Multiple (LCM) of 72 and 120.",
+    "marks": 2,
+    "model": [
+     "72 = 2^3 x 3^2 and 120 = 2^3 x 3 x 5",
+     "LCM = highest powers of all primes: 2^3 x 3^2 x 5",
+     "LCM = 360"
+    ],
+    "tip": "Remember: LCM takes the highest power of every prime present."
+   },
+   {
+    "q": "Bus A leaves every 15 minutes. Bus B leaves every 20 minutes. They leave together at 9:00 am. When is the next time they leave together?",
+    "marks": 3,
+    "model": [
+     "Recognise this is an LCM problem: find LCM of 15 and 20",
+     "Multiples of 15: 15, 30, 45, 60... Multiples of 20: 20, 40, 60...",
+     "LCM = 60 minutes = 1 hour, so next time is 10:00 am"
+    ],
+    "tip": "Convert your final minutes into hours and minutes if the question requires a time of day."
+   },
+   {
+    "q": "Given that a = 2^3 x 3^2 x 7 and b = 2^2 x 3 x 5^2, find the HCF of a and b.",
+    "marks": 2,
+    "model": [
+     "Identify common prime bases: 2 and 3",
+     "Take lowest powers: 2^2 and 3^1",
+     "HCF = 2^2 x 3 = 12"
+    ],
+    "tip": "Ignore prime factors that do not appear in both numbers when finding HCF."
+   },
+   {
+    "q": "The HCF of two numbers is 6 and their LCM is 210. One of the numbers is 30. Find the other number.",
+    "marks": 2,
+    "model": [
+     "Use formula: HCF x LCM = a x b",
+     "6 x 210 = 30 x b",
+     "1260 = 30 x b -> b = 42"
+    ],
+    "tip": "State the formula clearly at the start of your working for method marks."
+   },
+   {
+    "q": "Explain why 97 is a prime number.",
+    "marks": 2,
+    "model": [
+     "Test division by primes up to sqrt(97) (which is approx 9.8: test 2, 3, 5, 7)",
+     "Not divisible by 2, 3, 5 or 7, so it has no positive divisors other than 1 and itself."
+    ],
+    "tip": "You only need to test prime numbers up to the square root of the number."
+   },
+   {
+    "q": "Find two numbers that have a product of 300 and a Highest Common Factor of 10.",
+    "marks": 3,
+    "model": [
+     "Let numbers be 10x and 10y where x and y are coprime.",
+     "Product of numbers = (10x)(10y) = 100xy = 300, so xy = 3",
+     "Coprime factors of 3 are 1 and 3, giving numbers 10 x 1 = 10 and 10 x 3 = 30."
+    ],
+    "tip": "Express numbers as HCF multiplied by coprime variables: ax and ay."
+   },
+   {
+    "q": "Prove algebraically that the sum of two consecutive odd numbers is always a multiple of 4.",
+    "marks": 3,
+    "model": [
+     "Let first odd number be 2n + 1 and the next consecutive odd number be 2n + 3.",
+     "Sum = (2n + 1) + (2n + 3) = 4n + 4",
+     "Factorise: 4(n + 1), which is a multiple of 4 because 4 is a factor."
+    ],
+    "tip": "Always define your algebraic terms clearly at the beginning of proof questions."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Find the HCF and LCM of 108 and 140 using prime factorisation.",
+    "steps": [
+     "Find prime factorisation of 108: 108 = 4 x 27 = 2^2 x 3^3.",
+     "Find prime factorisation of 140: 140 = 4 x 35 = 2^2 x 5 x 7.",
+     "Calculate HCF by taking the lowest power of common prime factors: 2^2 = 4.",
+     "Calculate LCM by taking the highest power of all prime factors present: 2^2 x 3^3 x 5 x 7 = 4 x 27 x 35 = 3780."
+    ],
+    "ans": "HCF = 4, LCM = 3780"
+   },
+   {
+    "q": "Two alarm clocks ring together at 7:00 am. Clock A rings every 12 minutes. Clock B rings every 18 minutes. At what time will they next ring together?",
+    "steps": [
+     "Recognise this requires finding the Lowest Common Multiple (LCM) of 12 and 18.",
+     "Find prime factorisation: 12 = 2^2 x 3 and 18 = 2 x 3^2.",
+     "Calculate LCM: take highest powers -> 2^2 x 3^2 = 4 x 9 = 36 minutes.",
+     "Add 36 minutes to 7:00 am to get the target time."
+    ],
+    "ans": "7:36 am"
+   }
+  ],
+  "svg": [],
+  "pid": "maths_ocr_h.0.1",
+  "sid": "maths_ocr_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-19T20:27:42.911Z"
+ },
+ "maths_ocr_h.0.3": {
+  "summary": "Inverse operations form the foundational mechanism for reversing mathematical processes, checking calculations, and solving complex algebraic equations on the OCR GCSE Higher tier specification. By systematically applying opposite operations in reverse order, students can isolate unknown variables, verify arithmetic accuracy, and transform expressions safely. Mastering inverses bridges basic arithmetic structures with advanced algebraic manipulation.",
+  "core": [
+   {
+    "h": "Definition of Inverse Operations",
+    "p": "An inverse operation is an action that exactly undoes what another operation has done, returning you to the original starting value. In mathematics, operations are paired as mutual inverses, allowing us to travel forwards and backwards across equations.",
+    "bullets": [
+     "Addition (+) and subtraction (-) are inverse operations.",
+     "Multiplication (x) and division (/) are inverse operations.",
+     "Squaring (x^2) and square rooting (sqrt) are restricted inverse operations.",
+     "Cube rooting (cbrt) is the precise inverse of cubing (x^3)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Inverse Operation",
+      "p": "An operation that reverses the effect of another operation, restoring a value to its original state."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Reversing Single-Step Calculations",
+    "p": "When a single arithmetic rule has been applied to a starting number to reach an output, applying the exact inverse operation to the output recovers the input. This is the simplest application of backtracking.",
+    "bullets": [
+     "If 7 is added to a number to get 15, subtract 7 from 15 to find the number (8).",
+     "If a number is multiplied by 4 to get 36, divide 36 by 4 to find the number (9).",
+     "Always identify the final operation performed to target the first inverse step.",
+     "Direction matters: reverse both the operation type and the sequence."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Single Step Rule",
+      "p": "To undo an operation, perform its direct opposite on the result."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Function Machines and Flow Diagrams",
+    "p": "Function machines represent mathematical operations as a sequence of steps. To construct an inverse machine, you must reverse both the order of the operations and the operations themselves.",
+    "bullets": [
+     "Forward machine: Input -> Multiply by 3 -> Add 5 -> Output.",
+     "Backward machine: Output -> Subtract 5 -> Divide by 3 -> Input.",
+     "If the forward machine yields an output of 26, calculate: (26 - 5) / 3 = 7.",
+     "Essential technique for solving linear equations visually and numerically."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Function Order",
+      "p": "When reversing a function machine, read the steps from right to left while changing signs."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Converting a forward function machine into its inverse machine.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"40\" width=\"100\" height=\"50\" fill=\"#dbeafe\" stroke=\"#1b2540\" rx=\"5\"/><text x=\"70\" y=\"70\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">x 4</text><line x1=\"120\" y1=\"65\" x2=\"160\" y2=\"65\" stroke=\"#1b2540\" marker-end=\"url(#arrow)\"/><rect x=\"160\" y=\"40\" width=\"100\" height=\"50\" fill=\"#dbeafe\" stroke=\"#1b2540\" rx=\"5\"/><text x=\"210\" y=\"70\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">+ 3</text><rect x=\"20\" y=\"150\" width=\"100\" height=\"50\" fill=\"#fecaca\" stroke=\"#1b2540\" rx=\"5\"/><text x=\"70\" y=\"180\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">/ 4</text><line x1=\"120\" y1=\"175\" x2=\"160\" y2=\"175\" stroke=\"#1b2540\"/><rect x=\"160\" y=\"150\" width=\"100\" height=\"50\" fill=\"#fecaca\" stroke=\"#1b2540\" rx=\"5\"/><text x=\"210\" y=\"180\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">- 3</text><text x=\"200\" y=\"25\" font-size=\"12\" fill=\"#1b2540\">Forward vs Inverse Flow</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Checking Calculations and Estimation",
+    "p": "In examinations, checking your work using inverse operations prevents careless arithmetic errors. If you evaluate 458 + 367 = 825, verify by computing 825 - 367 = 458.",
+    "bullets": [
+     "Use subtraction to check addition results.",
+     "Use division to check multiplication results (taking care with zero divisors).",
+     "Use square roots or powers to check exponential evaluations.",
+     "Estimation should always accompany inverse checks to ensure magnitude is correct."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Division Check Trap",
+      "p": "When checking division with a remainder, ensure the remainder is added back before concluding."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Solving Linear Equations with Inverses",
+    "p": "Algebraic equations are solved by isolating the unknown letter using inverse operations applied to both sides to maintain equivalence.",
+    "bullets": [
+     "Solve 3x + 5 = 20 by first subtracting 5 from both sides (3x = 15).",
+     "Next, divide both sides by 3 to get x = 5.",
+     "Always perform operations on both sides simultaneously to preserve balance.",
+     "Check substitution: 3(5) + 5 = 15 + 5 = 20."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Equation Balance",
+      "p": "Whatever operation is performed on one side of an equation must be performed on the other."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Dealing with Brackets and Powers",
+    "p": "When equations or expressions contain brackets or powers, the order of inverse operations must mirror the reverse of BIDMAS/PEMDAS.",
+    "bullets": [
+     "To solve 2(x + 4) = 18, either expand brackets first or divide by 2 first.",
+     "Dividing by 2 first gives x + 4 = 9, then subtract 4 to get x = 5.",
+     "For powers: if x^2 = 49, apply square root to both sides: x = +7 or -7.",
+     "Never forget the negative root when inverting even powers."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Plus or Minus Root",
+      "p": "Taking an even root introduces both positive and negative valid mathematical solutions."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Rearranging Formulae (Subject of Formula)",
+    "p": "Higher tier OCR papers frequently require rearranging complex formulae. This is identical to solving equations, where the target variable is isolated using inverse operations.",
+    "bullets": [
+     "Make x the subject of y = mx + c: subtract c (y - c = mx), then divide by m.",
+     "Result: x = (y - c) / m.",
+     "For denominators: multiply both sides by the denominator to clear fractions first.",
+     "For squared terms: take the square root as the final step."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Target Variable",
+      "p": "Keep your eyes fixed on the letter you are making the subject and strip away everything else."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Inverse Operations with Fractions and Reciprocals",
+    "p": "Fractions introduce multiplicative inverses, also known as reciprocals. Multiplying a number by its reciprocal is the inverse of multiplying by the fraction.",
+    "bullets": [
+     "The reciprocal of a/b is b/a.",
+     "To solve (2/3)x = 10, multiply by the reciprocal (3/2) or divide by 2/3.",
+     "Multiplying by 3/2 gives x = (10 * 3) / 2 = 15.",
+     "Any non-zero number multiplied by its reciprocal equals 1."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Reciprocal",
+      "p": "The multiplicative inverse of a number, calculated as 1 divided by that number."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Inverse Trigonometric Functions",
+    "p": "In higher tier geometry and trigonometry, finding an angle given a side ratio requires inverse trigonometric functions (sin^-1, cos^-1, tan^-1).",
+    "bullets": [
+     "If sin(theta) = 0.5, then theta = sin^-1(0.5) = 30 degrees.",
+     "Inverse trig functions undo the ratio mapping performed by standard trig functions.",
+     "Ensure your calculator is in the correct mode (degrees unless specified otherwise).",
+     "The notation sin^-1(x) means arcsine, not 1 / sin(x)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Notation Confusion",
+      "p": "Never confuse sin^-1(x) with the reciprocal 1/sin(x) (which is cosec x)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Exponential and Logarithmic Inverses",
+    "p": "For advanced higher tier work, exponential functions (like 10^x or e^x) are inverted using logarithmic functions (log and ln).",
+    "bullets": [
+     "If 10^x = 1000, take log base 10 of both sides to get x = 3.",
+     "Natural logarithm (ln) is the inverse of exponential function e^x.",
+     "If e^x = 5, then x = ln(5).",
+     "Logarithms allow us to solve for unknowns trapped in exponents."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Exponential Inverse",
+      "p": "Logarithms are the inverse operations of exponentiation."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Graphical Interpretation of Inverses",
+    "p": "On a Cartesian coordinate grid, the graph of an inverse function is a reflection of the original function in the straight line y = x.",
+    "bullets": [
+     "If a function maps point (a, b), its inverse maps point (b, a).",
+     "Switch x and y coordinates to find points on the inverse graph.",
+     "Reflecting the line y = 2x + 1 gives the inverse graph.",
+     "Inverses of many-to-one functions require restricted domains to remain valid functions."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Line of Reflection",
+      "p": "Always visualize folding the graph paper along the diagonal line y = x."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Graphical representation of a function and its inverse reflected in y = x.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"40\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"60\" y1=\"220\" x2=\"60\" y2=\"20\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"60\" y1=\"200\" x2=\"300\" y2=\"20\" stroke=\"#94a3b8\" stroke-dasharray=\"4\"/><path d=\"M 60 200 Q 120 180 280 60\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><path d=\"M 60 200 Q 180 140 280 60\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"310\" y=\"30\" font-size=\"11\" fill=\"#1b2540\">y = x</text><text x=\"290\" y=\"55\" font-size=\"11\" fill=\"#2563eb\">f(x)</text><text x=\"190\" y=\"120\" font-size=\"11\" fill=\"#dc2626\">f^-1(x)</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Composite Functions and Inverses",
+    "p": "A function followed by its inverse returns the original input unchanged. This is written formally as f^-1(f(x)) = x.",
+    "bullets": [
+     "Applying a function and then its inverse is an identity operation.",
+     "To find an inverse algebraically: replace f(x) with y, swap x and y, then make y the subject.",
+     "Let f(x) = 3x - 2. Swap to get x = 3y - 2.",
+     "Rearrange to y = (x + 2) / 3, so f^-1(x) = (x + 2) / 3."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Inverse Function",
+      "p": "A function f^-1(x) that reverses the mapping of function f(x)."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Putting on Shoes and Socks vs Taking Them Off",
+   "p": "Imagine getting dressed: first you put on your socks, then your shoes. To reverse this process (inverse operations), you must take off your shoes first, and then take off your socks. If you tried to take off your socks while wearing shoes, the process would break down. This mirrors mathematical inverse operations where both the operations and their precise sequence must be reversed."
+  },
+  "terms": [
+   {
+    "t": "Inverse Operation",
+    "d": "An operation that reverses the effect of another operation."
+   },
+   {
+    "t": "Reciprocal",
+    "d": "The multiplicative inverse of a number, found by 1 divided by the number."
+   },
+   {
+    "t": "Subject of a Formula",
+    "d": "The variable that is isolated on one side of an equation."
+   },
+   {
+    "t": "Function Machine",
+    "d": "A diagram representing mathematical operations applied sequentially to an input."
+   },
+   {
+    "t": "Inverse Function",
+    "d": "A function that undoes the mapping of another function, denoted f^-1(x)."
+   },
+   {
+    "t": "Identity Operation",
+    "d": "An operation that leaves an input completely unchanged."
+   },
+   {
+    "t": "Backtracking",
+    "d": "Working backwards from an output using inverse operations to find the input."
+   },
+   {
+    "t": "Equation Balancing",
+    "d": "Maintaining equality by performing identical inverse operations on both sides."
+   },
+   {
+    "t": "Trigonometric Inverse",
+    "d": "Functions like sin^-1 used to calculate angles from side ratios."
+   },
+   {
+    "t": "Logarithm",
+    "d": "The inverse operation to exponentiation."
+   },
+   {
+    "t": "Domain",
+    "d": "The complete set of possible input values for a function."
+   },
+   {
+    "t": "Range",
+    "d": "The complete set of possible output values resulting from a function."
+   },
+   {
+    "t": "Reflection",
+    "d": "A geometric transformation mirroring a graph across the line y = x."
+   },
+   {
+    "t": "Algebraic Isolation",
+    "d": "Using inverses to get an unknown variable by itself."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Subtracting when you should add during equation solving",
+    "r": "Always apply the direct opposite sign of the operation present."
+   },
+   {
+    "w": "Forgetting to reverse the order of operations when backtracking",
+    "r": "Reverse both the operations and their sequence (right to left)."
+   },
+   {
+    "w": "Confusing sin^-1(x) with 1/sin(x)",
+    "r": "sin^-1(x) is the inverse trig function, not the reciprocal."
+   },
+   {
+    "w": "Applying an operation to only one side of an equation",
+    "r": "Whatever you do to one side, you must do to the exact other side."
+   },
+   {
+    "w": "Omitting the negative root when taking a square root",
+    "r": "Even powers yield both positive and negative inverse solutions (+ and -)."
+   },
+   {
+    "w": "Dividing by a fraction incorrectly when finding a reciprocal",
+    "r": "Multiply by the flipped fraction (reciprocal)."
+   },
+   {
+    "w": "Failing to swap x and y when finding an algebraic inverse function",
+    "r": "Swap x and y variables before making y the subject."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Use inverse operations to find the input value if a number is multiplied by 5 and then 7 is added to give an output of 42.",
+    "marks": 2,
+    "model": [
+     "Subtract 7 from 42 to get 35",
+     "Divide 35 by 5 to get 7"
+    ],
+    "tip": "Work backwards from the output."
+   },
+   {
+    "q": "Solve the linear equation 4x - 3 = 17.",
+    "marks": 2,
+    "model": [
+     "Add 3 to both sides: 4x = 20",
+     "Divide by 4: x = 5"
+    ],
+    "tip": "Isolate the term with x first before dividing."
+   },
+   {
+    "q": "Rearrange the formula y = 2x + k to make x the subject.",
+    "marks": 2,
+    "model": [
+     "Subtract k from both sides: y - k = 2x",
+     "Divide by 2: x = (y - k) / 2"
+    ],
+    "tip": "Treat the letter k like a number."
+   },
+   {
+    "q": "Find the inverse function f^-1(x) where f(x) = (x + 3) / 2.",
+    "marks": 3,
+    "model": [
+     "Write as y = (x + 3) / 2",
+     "Swap x and y: x = (y + 3) / 2",
+     "Multiply by 2 and subtract 3: y = 2x - 3"
+    ],
+    "tip": "Always swap x and y before rearranging."
+   },
+   {
+    "q": "Solve x^2 + 5 = 41.",
+    "marks": 2,
+    "model": [
+     "Subtract 5: x^2 = 36",
+     "Take square root: x = +6 or -6"
+    ],
+    "tip": "Remember both positive and negative roots."
+   },
+   {
+    "q": "Check the calculation 348 + 576 = 924 using an inverse operation.",
+    "marks": 1,
+    "model": [
+     "Calculate 924 - 576 = 348 (or 924 - 348 = 576)"
+    ],
+    "tip": "Use subtraction to check addition."
+   },
+   {
+    "q": "Solve 3(2x - 4) = 30 using inverse operations.",
+    "marks": 3,
+    "model": [
+     "Divide by 3: 2x - 4 = 10",
+     "Add 4: 2x = 14",
+     "Divide by 2: x = 7"
+    ],
+    "tip": "Dividing the bracket first avoids messy expansions."
+   },
+   {
+    "q": "Given that sin(theta) = 0.8, find theta to 1 decimal place.",
+    "marks": 2,
+    "model": [
+     "Apply inverse sine: theta = sin^-1(0.8)",
+     "theta = 53.1 degrees"
+    ],
+    "tip": "Check calculator is in degree mode."
+   },
+   {
+    "q": "Rearrange a = (v - u) / t to make u the subject.",
+    "marks": 3,
+    "model": [
+     "Multiply by t: at = v - u",
+     "Add u: at + u = v",
+     "Subtract at: u = v - at"
+    ],
+    "tip": "Clear fractions first by multiplying by t."
+   },
+   {
+    "q": "A number is squared and then 11 is subtracted, resulting in 25. Find the original positive number.",
+    "marks": 3,
+    "model": [
+     "Add 11 to 25: 36",
+     "Square root 36: 6",
+     "State positive answer 6"
+    ],
+    "tip": "Read the question carefully for positive constraints."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Solve the algebraic equation 5(x - 2) + 3 = 28 using inverse operations.",
+    "steps": [
+     "Subtract 3 from both sides: 5(x - 2) = 25",
+     "Divide both sides by 5: x - 2 = 5",
+     "Add 2 to both sides: x = 7"
+    ],
+    "ans": "x = 7"
+   },
+   {
+    "q": "Find the inverse function of f(x) = (4x + 1) / 3.",
+    "steps": [
+     "Replace f(x) with y: y = (4x + 1) / 3",
+     "Swap x and y variables: x = (4y + 1) / 3",
+     "Multiply by 3: 3x = 4y + 1",
+     "Subtract 1: 3x - 1 = 4y",
+     "Divide by 4: y = (3x - 1) / 4"
+    ],
+    "ans": "f^-1(x) = (3x - 1) / 4"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Visual breakdown of a two-step calculation and its inverse reversal.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"30\" width=\"80\" height=\"40\" fill=\"#dbeafe\" stroke=\"#1b2540\" rx=\"5\"/><text x=\"60\" y=\"55\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">Start: 6</text><line x1=\"100\" y1=\"50\" x2=\"150\" y2=\"50\" stroke=\"#1b2540\"/><text x=\"125\" y=\"42\" font-size=\"10\" text-anchor=\"middle\" fill=\"#1b2540\">x 3</text><rect x=\"150\" y=\"30\" width=\"80\" height=\"40\" fill=\"#dbeafe\" stroke=\"#1b2540\" rx=\"5\"/><text x=\"190\" y=\"55\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">18</text><line x1=\"230\" y1=\"50\" x2=\"280\" y2=\"50\" stroke=\"#1b2540\"/><text x=\"255\" y=\"42\" font-size=\"10\" text-anchor=\"middle\" fill=\"#1b2540\">+ 4</text><rect x=\"280\" y=\"30\" width=\"90\" height=\"40\" fill=\"#dbeafe\" stroke=\"#1b2540\" rx=\"5\"/><text x=\"325\" y=\"55\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">Output: 22</text><rect x=\"280\" y=\"150\" width=\"90\" height=\"40\" fill=\"#fecaca\" stroke=\"#1b2540\" rx=\"5\"/><text x=\"325\" y=\"175\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">Output: 22</text><line x1=\"280\" y1=\"170\" x2=\"230\" y2=\"170\" stroke=\"#1b2540\"/><text x=\"255\" y=\"162\" font-size=\"10\" text-anchor=\"middle\" fill=\"#1b2540\">- 4</text><rect x=\"150\" y=\"150\" width=\"80\" height=\"40\" fill=\"#fecaca\" stroke=\"#1b2540\" rx=\"5\"/><text x=\"190\" y=\"175\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">18</text><line x1=\"150\" y1=\"170\" x2=\"100\" y2=\"170\" stroke=\"#1b2540\"/><text x=\"125\" y=\"162\" font-size=\"10\" text-anchor=\"middle\" fill=\"#1b2540\">/ 3</text><rect x=\"20\" y=\"150\" width=\"80\" height=\"40\" fill=\"#fecaca\" stroke=\"#1b2540\" rx=\"5\"/><text x=\"60\" y=\"175\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">Start: 6</text><text x=\"200\" y=\"110\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\" font-weight=\"bold\">Inverse Route Backtracking</text></svg>"
+   }
+  ],
+  "pid": "maths_ocr_h.0.3",
+  "sid": "maths_ocr_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-19T20:28:08.504Z"
  }
 }

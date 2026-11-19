@@ -1390,5 +1390,1320 @@
   "src": "pre",
   "by": "gemini/gemini-flash-lite-latest",
   "ts": "2026-11-18T20:38:18.818Z"
+ },
+ "maths_eduqas_f.4.3": {
+  "summary": "These revision notes cover the fundamental probability rule that the sum of probabilities for an exhaustive set of mutually exclusive outcomes always equals exactly 1. You will learn how to identify exhaustive events, find missing probabilities by subtracting known values from 1, and apply this principle across various real-world scenarios in both calculator and non-calculator papers.",
+  "core": [
+   {
+    "h": "1. Introduction to Probability Scale",
+    "p": "Probability is the numerical measure of how likely an event is to happen. Every probability must lie on a strict scale from 0 to 1 inclusive.",
+    "bullets": [
+     "A probability of 0 means the event is completely impossible.",
+     "A probability of 1 means the event is certain to happen.",
+     "Probabilities can be written as fractions, decimals, or percentages.",
+     "Negative probabilities or probabilities greater than 1 are completely impossible."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "The Probability Limits",
+      "p": "0 <= P(Event) <= 1. Always check that your final probability never exceeds 1 or falls below 0."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "The standard probability number line showing impossible, even chance, and certain.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" rx=\"8\"/><line x1=\"60\" y1=\"130\" x2=\"340\" y2=\"130\" stroke=\"#334155\" stroke-width=\"3\"/><circle cx=\"60\" cy=\"130\" r=\"6\" fill=\"#ef4444\"/><circle cx=\"200\" cy=\"130\" r=\"6\" fill=\"#3b82f6\"/><circle cx=\"340\" cy=\"130\" r=\"6\" fill=\"#22c55e\"/><text x=\"60\" y=\"160\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1e293b\">0 (Impossible)</text><text x=\"200\" y=\"160\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1e293b\">0.5 (Even chance)</text><text x=\"340\" y=\"160\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1e293b\">1 (Certain)</text><text x=\"200\" y=\"70\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\">The Probability Scale</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "2. Defining Exhaustive Events",
+    "p": "An exhaustive set of outcomes means a list of all possible things that can happen when an experiment is performed. Nothing else is left out.",
+    "bullets": [
+     "If you roll a standard 6-sided die, the exhaustive outcomes are 1, 2, 3, 4, 5, and 6.",
+     "If you look at the weather tomorrow, an exhaustive list might be: Rain, Snow, Sun, Cloud.",
+     "If an event has outcomes that do not cover every possibility, the set is not exhaustive.",
+     "Exhaustive sets guarantee that at least one of the listed outcomes will definitely occur."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Exhaustive Set",
+      "p": "A complete list of all possible outcomes for an event where no other outcome is possible."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "3. The Core Rule: Sum to One",
+    "p": "When you list every single possible outcome of an event (an exhaustive set), the sum of all their individual probabilities must always equal 1.",
+    "bullets": [
+     "P(Outcome 1) + P(Outcome 2) + ... + P(Outcome n) = 1",
+     "This is a fundamental axiom in probability theory.",
+     "Examiners frequently test this by giving you all probabilities except one and asking you to find the missing value.",
+     "Applies to spinners, dice, coloured counters in a bag, and survey outcomes."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Sum to 1 Formula",
+      "p": "Sum of all outcomes = 1"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Finding Missing Probabilities",
+    "p": "Because all probabilities in an exhaustive list add up to 1, you can easily calculate a missing probability if you know all the others.",
+    "bullets": [
+     "Step 1: Add up all the known probabilities given in the question.",
+     "Step 2: Subtract this total from 1.",
+     "Step 3: The result is the probability of the missing outcome.",
+     "Always double-check your addition and subtraction."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Working with Decimals",
+      "p": "Line up decimal points carefully when adding numbers like 0.2, 0.35, and 0.15."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "5. Working with Fractions",
+    "p": "Probabilities are often given as fractions. To find a missing probability, you must add fractions with a common denominator and subtract from 1 (or 1 written as a fraction).",
+    "bullets": [
+     "Find a common denominator before adding fraction probabilities.",
+     "Remember that 1 can be written as n/n (e.g., 5/5 or 8/8).",
+     "Simplify your final fraction if the question requires it, though unsimplified fractions usually gain method marks.",
+     "Check that the numerator equals the denominator in your final sum check."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Adding Denominators",
+      "p": "Never add denominators together when adding fractions! Only add the numerators."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Working with Percentages",
+    "p": "Sometimes probabilities are expressed as percentages. An exhaustive set of percentage probabilities must sum to 100%.",
+    "bullets": [
+     "Convert percentages to decimals or fractions if you prefer working with them, or keep them as percentages.",
+     "Sum of percentage outcomes = 100%.",
+     "Subtract the sum of known percentages from 100% to find the missing percentage.",
+     "Remember 100% represents the whole (1)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Percentage Equivalent",
+      "p": "100% is identical to a probability of 1."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Relative Frequency Tables",
+    "p": "Exam questions often present probabilities in a frequency or probability table where one entry is missing or represented by a variable like x.",
+    "bullets": [
+     "Look across the row of probabilities.",
+     "Set up an equation equating the sum of all entries to 1.",
+     "Solve for the unknown variable if necessary.",
+     "Ensure all table entries are valid probabilities between 0 and 1."
+    ],
+    "table": {
+     "head": [
+      "Outcome",
+      "A",
+      "B",
+      "C",
+      "D"
+     ],
+     "rows": [
+      [
+       "Probability",
+       "0.1",
+       "0.4",
+       "0.3",
+       "x"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "8. Solving Algebraic Probabilities",
+    "p": "Foundation tier exams occasionally test algebra combined with probability by using algebraic expressions for the probabilities of exhaustive outcomes.",
+    "bullets": [
+     "Sum all the algebraic terms and numbers.",
+     "Set the expression equal to 1.",
+     "Solve the linear equation to find the value of x.",
+     "Substitute x back into the expression if asked for the probability of a specific outcome."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Algebra Check",
+      "p": "After finding x, substitute it back into every outcome and check that they all sum to exactly 1."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Mutually Exclusive Events",
+    "p": "Events are mutually exclusive if they cannot happen at the same time. An exhaustive set is made of mutually exclusive outcomes.",
+    "bullets": [
+     "Rolling a 2 and rolling a 5 on a single die are mutually exclusive.",
+     "For mutually exclusive events, the 'OR' rule applies (you add their individual probabilities).",
+     "Because the list is exhaustive, the total 'OR' sum of everything is 1.",
+     "Mutually exclusive means zero overlap on a Venn diagram."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Mutually Exclusive",
+      "p": "Events that cannot occur at the same time in a single trial."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A Venn diagram showing mutually exclusive events inside a universal set summing to 1.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#f1f5f9\" stroke=\"#64748b\" rx=\"8\"/><text x=\"30\" y=\"40\" font-size=\"12\" fill=\"#475569\">S (Total = 1)</text><circle cx=\"140\" cy=\"120\" r=\"50\" fill=\"#bfdbfe\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><circle cx=\"260\" cy=\"120\" r=\"50\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"2\"/><text x=\"140\" y=\"125\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1e3a8a\">Event A</text><text x=\"260\" y=\"125\" text-anchor=\"middle\" font-size=\"12\" fill=\"#713f12\">Event B</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "10. Common Exam Traps to Avoid",
+    "p": "Examiners design specific traps to catch students who do not fully understand the 'sum to one' rule.",
+    "bullets": [
+     "Trap 1: Assuming outcomes are exhaustive when they are not (e.g., outcomes: Red, Blue. What about Green?).",
+     "Trap 2: Forgetting to check if fractions have common denominators before adding.",
+     "Trap 3: Leaving a probability answer greater than 1 without realising the error.",
+     "Trap 4: Writing probability as a ratio (e.g., 2:3) instead of a fraction, decimal, or percentage."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Ratios vs Probabilities",
+      "p": "Probabilities are never written as ratios like 1:4. Always use fractions (1/5), decimals (0.2), or percentages (20%)."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Pizza Analogy",
+   "p": "Imagine a whole pizza representing a probability of 1. If you slice the pizza into different sized pieces (outcomes), every single slice put back together must make the exact whole pizza. If you know the size of 3 out of 4 slices, you can easily figure out the size of the missing slice by seeing how much space is left in the pizza box. This analogy breaks down because real pizza slices can be eaten or dropped, whereas mathematical probabilities are abstract numbers locked permanently between 0 and 1."
+  },
+  "terms": [
+   {
+    "t": "Probability",
+    "d": "A numerical measure between 0 and 1 of the likelihood that an event will occur."
+   },
+   {
+    "t": "Exhaustive Set",
+    "d": "A complete list of all possible outcomes for an experiment where no outcome is omitted."
+   },
+   {
+    "t": "Mutually Exclusive",
+    "d": "Events that cannot happen at the same time."
+   },
+   {
+    "t": "Trial",
+    "d": "A single performance of a random experiment or procedure."
+   },
+   {
+    "t": "Outcome",
+    "d": "A possible result of a trial or experiment."
+   },
+   {
+    "t": "Relative Frequency",
+    "d": "The number of times an outcome occurs divided by the total number of trials."
+   },
+   {
+    "t": "Theoretical Probability",
+    "d": "The expected probability of an event based on mathematical reasoning and equal likelihood."
+   },
+   {
+    "t": "Sample Space",
+    "d": "The complete set of all possible outcomes of an experiment."
+   },
+   {
+    "t": "Numerator",
+    "d": "The top number in a fraction representing the chosen parts."
+   },
+   {
+    "t": "Denominator",
+    "d": "The bottom number in a fraction representing the total possible equal parts."
+   },
+   {
+    "t": "Complementary Event",
+    "d": "The event that does not happen, where P(not A) = 1 - P(A)."
+   },
+   {
+    "t": "Bias",
+    "d": "When an experiment or object is not fair, causing certain outcomes to occur more often than others."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Adding the denominators of fractions when summing probabilities.",
+    "r": "Always find a common denominator before adding fraction numerators."
+   },
+   {
+    "w": "Stating that probabilities sum to 100 instead of 1.",
+    "r": "Probabilities are expressed on a 0 to 1 scale (or percentages summing to 100%)."
+   },
+   {
+    "w": "Writing a probability as a ratio like 3:5.",
+    "r": "Probabilities must be single numbers: fractions, decimals, or percentages."
+   },
+   {
+    "w": "Assuming any list of outcomes is exhaustive.",
+    "r": "Check that all possible real-world results are included before applying the sum to 1 rule."
+   },
+   {
+    "w": "Writing a probability greater than 1, such as 5/4 or 1.2.",
+    "r": "Probabilities can never exceed 1."
+   },
+   {
+    "w": "Forgetting to subtract the total from 1 when finding a missing probability.",
+    "r": "Subtract the sum of known probabilities from 1 to find the missing value."
+   },
+   {
+    "w": "Leaving algebraic equations unsolved when finding a missing probability variable.",
+    "r": "Form an equation equal to 1 and solve for x fully."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A biased spinner has four sections: A, B, C, and D. The table shows the probabilities of landing on A, B, and C. Work out the probability of landing on D.",
+    "marks": 2,
+    "model": [
+     "0.2 + 0.35 + 0.15 = 0.7",
+     "1 - 0.7 = 0.3"
+    ],
+    "tip": "Add the given decimals first, then subtract from 1."
+   },
+   {
+    "q": "The probabilities that a biased die lands on 1, 2, 3, 4, 5 are 0.1, 0.2, 0.15, 0.25, and 0.1 respectively. Calculate the probability that it lands on 6.",
+    "marks": 2,
+    "model": [
+     "0.1 + 0.2 + 0.15 + 0.25 + 0.1 = 0.8",
+     "1 - 0.8 = 0.2"
+    ],
+    "tip": "Ensure all five decimals are added accurately before subtracting from 1."
+   },
+   {
+    "q": "A bag contains red, blue, and green counters. The probability of picking a red counter is 1/4 and the probability of picking a blue counter is 1/2. What is the probability of picking a green counter?",
+    "marks": 2,
+    "model": [
+     "1/4 + 1/2 = 3/4",
+     "1 - 3/4 = 1/4"
+    ],
+    "tip": "Convert 1/2 to 2/4 so you have a common denominator."
+   },
+   {
+    "q": "In a game, the probability of winning is 0.3 and the probability of drawing is 0.15. If the game cannot end in any other way, find the probability of losing.",
+    "marks": 2,
+    "model": [
+     "0.3 + 0.15 = 0.45",
+     "1 - 0.45 = 0.55"
+    ],
+    "tip": "The phrasing 'cannot end in any other way' confirms the set of outcomes is exhaustive."
+   },
+   {
+    "q": "A probability table has outcomes X, Y, and Z with probabilities 2x, 3x, and 5x. Find the value of x.",
+    "marks": 2,
+    "model": [
+     "2x + 3x + 5x = 10x",
+     "10x = 1 so x = 0.1"
+    ],
+    "tip": "Set the sum of the algebraic terms equal to 1."
+   },
+   {
+    "q": "The probability of rain tomorrow is 3/10 and the probability of snow is 1/5. Assuming no other weather type is possible, calculate the probability of neither rain nor snow.",
+    "marks": 3,
+    "model": [
+     "1/5 = 2/10",
+     "3/10 + 2/10 = 5/10",
+     "1 - 5/10 = 5/10 (or 1/2)"
+    ],
+    "tip": "Convert fractions to a common denominator before adding."
+   },
+   {
+    "q": "A football team can win, draw, or lose a match. The probability they win is 0.45 and the probability they draw is 0.3. Work out the probability they do not win.",
+    "marks": 2,
+    "model": [
+     "Probability of not winning includes draw and lose (0.3 + 0.25 = 0.55) or 1 - 0.45",
+     "Answer: 0.55"
+    ],
+    "tip": "Read carefully: 'not winning' means anything other than a win."
+   },
+   {
+    "q": "Explain why the numbers 0.4, 0.3, and 0.5 cannot represent the complete set of probabilities for an exhaustive list of outcomes.",
+    "marks": 1,
+    "model": [
+     "0.4 + 0.3 + 0.5 = 1.2, which is greater than 1."
+    ],
+    "tip": "Exhaustive probabilities must sum to exactly 1."
+   },
+   {
+    "q": "A spinner has 5 equally likely sections numbered 1 to 5. What is the sum of the probabilities of landing on each of the 5 sections?",
+    "marks": 1,
+    "model": [
+     "1 (or 5/5)"
+    ],
+    "tip": "Any exhaustive set of outcomes always sums to 1."
+   },
+   {
+    "q": "The probability that a bus is late is 2/9, and the probability that it is early is 1/3. If it is either late, early, or on time, find the probability that the bus is on time.",
+    "marks": 3,
+    "model": [
+     "1/3 = 3/9",
+     "2/9 + 3/9 = 5/9",
+     "1 - 5/9 = 4/9"
+    ],
+    "tip": "Write 1/3 with denominator 9 to combine easily with 2/9."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A bag contains blue, green, yellow, and white counters. The probabilities of picking each counter are given in the table below. Find the missing probability x.\nBlue: 0.2\nGreen: 0.35\nYellow: 0.1\nWhite: x",
+    "steps": [
+     "Step 1: Identify that the set of counters is exhaustive, so all probabilities must sum to 1.",
+     "Step 2: Add the known probabilities together: 0.2 + 0.35 + 0.1 = 0.65.",
+     "Step 3: Subtract this sum from 1: 1 - 0.65 = 0.35."
+    ],
+    "ans": "x = 0.35"
+   },
+   {
+    "q": "A biased coin is tossed. The probability of getting a Head is 5/8. What is the probability of getting a Tails?",
+    "steps": [
+     "Step 1: Recognise that Head and Tails form an exhaustive set of outcomes for a single coin toss.",
+     "Step 2: State the rule: P(Head) + P(Tails) = 1.",
+     "Step 3: Substitute the known value: 5/8 + P(Tails) = 1.",
+     "Step 4: Subtract 5/8 from 1 (written as 8/8): 8/8 - 5/8 = 3/8."
+    ],
+    "ans": "3/8"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Visual representation of an exhaustive spinner divided into four sections whose probabilities sum to 1.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" rx=\"8\"/><circle cx=\"200\" cy=\"120\" r=\"80\" fill=\"#e2e8f0\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"200\" y1=\"40\" x2=\"200\" y2=\"200\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"120\" y1=\"120\" x2=\"280\" y2=\"120\" stroke=\"#475569\" stroke-width=\"2\"/><text x=\"160\" y=\"90\" font-size=\"12\" fill=\"#1e293b\">0.1</text><text x=\"240\" y=\"90\" font-size=\"12\" fill=\"#1e293b\">0.3</text><text x=\"160\" y=\"160\" font-size=\"12\" fill=\"#1e293b\">0.4</text><text x=\"240\" y=\"160\" font-size=\"12\" fill=\"#1e293b\">0.2</text><text x=\"200\" y=\"25\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\">Exhaustive Spinner Sum = 1</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_f.4.3",
+  "sid": "maths_eduqas_f",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-19T18:52:08.897Z"
+ },
+ "maths_eduqas_f.4.4": {
+  "summary": "These revision notes explore how empirical unbiased samples tend towards theoretical probability as sample size increases, a core concept in Eduqas GCSE Foundation probability. We cover relative frequency, experimental trials, the Law of Large Numbers, and how to analyze data tables to evaluate bias and fairness. Mastering these concepts ensures full marks on experimental probability questions in both non-calculator and calculator papers.",
+  "core": [
+   {
+    "h": "1. Theoretical vs Experimental Probability",
+    "p": "In probability, we study two fundamentally different ways to find the chance of an event occurring: looking at the math beforehand, or running trials in the real world.",
+    "bullets": [
+     "Theoretical probability is calculated mathematically using equally likely outcomes without doing any experiments.",
+     "Experimental (empirical) probability is calculated from the results of actual physical trials or real-world observations.",
+     "Theoretical formula: P(event) = (Number of successful outcomes) / (Total number of possible equally likely outcomes).",
+     "Experimental formula: Relative Frequency = (Number of times an event occurs) / (Total number of trials carried out)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Experimental Probability",
+      "p": "A probability based on frequency data collected from actual experiments or surveys, also known as relative frequency."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. What is an Unbiased Sample?",
+    "p": "For experimental results to be meaningful and comparable to theoretical expectations, the sample must be truly unbiased and representative.",
+    "bullets": [
+     "An unbiased sample means every trial has an equal opportunity to produce any of the valid outcomes without unfair favoritism.",
+     "A biased coin might be weighted on one side, making experimental results permanently skewed away from theory.",
+     "Unbiased data collection requires random selection and identical conditions for every single test or trial.",
+     "If a die has an indentation or uneven weight, it is biased and its empirical data will never match the theoretical expectation of 1/6."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Assuming Fairness",
+      "p": "Never assume an object is unbiased unless stated in the question or proven by large sample data."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "3. The Effect of Increasing Sample Size",
+    "p": "The heart of this specification point is the relationship between how many times you run an experiment and how close your results get to the truth.",
+    "bullets": [
+     "Small sample sizes produce wild, unreliable fluctuations and high variability.",
+     "As the sample size increases, the relative frequency settles down and stabilizes.",
+     "Larger samples smooth out random chance anomalies and luck.",
+     "An experiment with 10 coin flips might give 80% heads, but 10,000 flips will get extremely close to 50%."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Core Rule",
+      "p": "Empirical unbiased samples tend towards theoretical probability as the sample size increases."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Figure 1: Relative frequency converging towards the theoretical probability of 0.5 as sample size increases from 10 to 1000.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"190\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" rx=\"6\"/><line x1=\"50\" y1=\"120\" x2=\"360\" y2=\"120\" stroke=\"#94a3b8\" stroke-dasharray=\"4\"/><text x=\"55\" y=\"112\" fill=\"#64748b\" font-size=\"11\">Theory: 0.5</text><path d=\"M 60 60 L 90 180 L 120 90 L 160 140 L 210 110 L 270 125 L 350 121\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><circle cx=\"60\" cy=\"60\" r=\"4\" fill=\"#dc2626\"/><circle cx=\"350\" cy=\"121\" r=\"4\" fill=\"#dc2626\"/><text x=\"190\" y=\"225\" fill=\"#1e293b\" font-size=\"11\">Sample Size (Number of Trials)</text><text x=\"15\" y=\"120\" fill=\"#1e293b\" font-size=\"11\" transform=\"rotate(-90 15 120)\">Rel Freq</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "4. Recording Frequency Data in Tables",
+    "p": "Examiners frequently test your ability to read trial data tables and calculate relative frequencies across different numbers of trials.",
+    "bullets": [
+     "Tables typically show outcomes, tally marks or frequencies, and running totals.",
+     "Always check the column headers to ensure you are dividing the frequency of a specific outcome by the cumulative total trials.",
+     "Be prepared to calculate relative frequency as a fraction, decimal, or percentage depending on exam wording.",
+     "Look for columns showing cumulative totals to evaluate how relative frequency changes as trials accumulate."
+    ],
+    "table": {
+     "head": [
+      "Number of Trials",
+      "Frequency of 'Six'",
+      "Relative Frequency"
+     ],
+     "rows": [
+      [
+       "10",
+       "4",
+       "4/10 = 0.4"
+      ],
+      [
+       "100",
+       "19",
+       "19/100 = 0.19"
+      ],
+      [
+       "1000",
+       "168",
+       "168/1000 = 0.168"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Decimal Form",
+      "p": "Decimals between 0 and 1 are usually the easiest format to compare against theoretical probabilities like 1/6 = 0.166..."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "5. Law of Large Numbers",
+    "p": "In probability theory, the principle that describes this convergence behavior is formally known as the Law of Large Numbers.",
+    "bullets": [
+     "States that as a sample size grows, its mean gets closer to the expected value of the whole population.",
+     "Explains why casinos and insurance companies always make money over millions of customers despite individual random losses.",
+     "Guarantees predictability in the long run even when individual events are completely unpredictable.",
+     "Forms the scientific bridge between theoretical math models and messy physical reality."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Law of Large Numbers",
+      "p": "A theorem stating that the relative frequency obtained from a large number of trials tends to approach the theoretical probability."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Identifying Bias from Small vs Large Samples",
+    "p": "Exam questions often present two sets of data: a small sample and a large sample, asking you to explain which one is more reliable.",
+    "bullets": [
+     "Small samples are heavily distorted by chance variation and luck.",
+     "A large sample provides overwhelming evidence of the true underlying probability or bias.",
+     "If a coin flipped 20 times gives 15 heads, it could easily be a normal unbiased coin due to chance.",
+     "If a coin flipped 10,000 times gives 7,500 heads, it is definitely biased because large samples do not fluctuate that far from 0.5 by pure chance."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "The Small Sample Trap",
+      "p": "Never conclude a dice or coin is biased based on fewer than 30 trials; the sample size is simply too small."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Estimating Expected Outcomes",
+    "p": "You can use experimental relative frequency or theoretical probability to predict future outcomes in large trials.",
+    "bullets": [
+     "Formula: Estimated number of successes = (Probability) x (Total number of planned trials).",
+     "If the relative frequency of rolling a 3 is 0.18 over 500 rolls, estimate how many times a 3 appears in 2000 rolls by scaling up.",
+     "Calculation: 0.18 x 2000 = 360 expected times.",
+     "Always state clearly whether you are using theoretical probability or experimental relative frequency for your estimate."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Scaling Up",
+      "p": "Multiply the probability by the new total number of trials directly."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Evaluating Fairness of Games",
+    "p": "Exam tasks often ask you to assess whether a game or spinner is fair using experimental data.",
+    "bullets": [
+     "A fair spinner with 4 equal sections has a theoretical probability of 0.25 for each color.",
+     "Compare each experimental relative frequency to the expected theoretical probability of 0.25.",
+     "If all experimental values are reasonably close in a large sample, the game is fair.",
+     "If one outcome dominates persistently across a large sample, the game is unfair (biased)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Fairness Check",
+      "p": "Look for closeness between relative frequency and theoretical probability in large sample tables."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Figure 2: Comparing experimental relative frequencies of a 4-section spinner with the theoretical fair probability line at 0.25.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"190\" fill=\"#fef3c7\" stroke=\"#f59e0b\" rx=\"6\"/><line x1=\"50\" y1=\"100\" x2=\"350\" y2=\"100\" stroke=\"#b45309\" stroke-dasharray=\"5\"/><text x=\"260\" y=\"92\" fill=\"#b45309\" font-size=\"11\">Fair Probability (0.25)</text><rect x=\"70\" y=\"110\" width=\"40\" height=\"80\" fill=\"#93c5fd\"/><rect x=\"130\" y=\"130\" width=\"40\" height=\"60\" fill=\"#93c5fd\"/><rect x=\"190\" y=\"95\" width=\"40\" height=\"95\" fill=\"#93c5fd\"/><rect x=\"250\" y=\"115\" width=\"40\" height=\"75\" fill=\"#93c5fd\"/><text x=\"80\" y=\"205\" fill=\"#1e293b\" font-size=\"11\">Red</text><text x=\"135\" y=\"205\" fill=\"#1e293b\" font-size=\"11\">Blue</text><text x=\"190\" y=\"205\" fill=\"#1e293b\" font-size=\"11\">Green</text><text x=\"250\" y=\"205\" fill=\"#1e293b\" font-size=\"11\">Yellow</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "9. Improving Reliability of Experiments",
+    "p": "Examiners love asking written questions about how to improve experimental probability investigations.",
+    "bullets": [
+     "Increase the number of trials (roll more times, flip more times).",
+     "Ensure the equipment used (coins, dice, spinners) is tested for unbiased construction.",
+     "Combine results from multiple independent groups to pool data into a much larger sample size.",
+     "Eliminate human error in recording and tallying outcomes."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Reliability",
+      "p": "The quality of experimental results being trustworthy and consistent, achieved primarily through large sample sizes."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Relative Frequency Graphs and Trends",
+    "p": "Visualizing relative frequency on a line graph demonstrates the convergence property instantly.",
+    "bullets": [
+     "The x-axis represents the number of trials; the y-axis represents relative frequency (from 0 to 1).",
+     "At the start (low trial count), the line swings up and down dramatically.",
+     "As trials increase towards the right of the graph, the line flattens out horizontally close to the theoretical probability value.",
+     "Always identify the horizontal asymptote as representing the true theoretical probability."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Reading Graphs",
+      "p": "When asked 'Which estimate is best?', always pick the one corresponding to the largest number of trials."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Figure 3: Relative frequency stabilization curve showing wild fluctuations at low trial numbers and smooth convergence at high trial numbers.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"190\" fill=\"#e0f2fe\" stroke=\"#0284c7\" rx=\"6\"/><line x1=\"40\" y1=\"140\" x2=\"360\" y2=\"140\" stroke=\"#0369a1\" stroke-dasharray=\"3\"/><text x=\"280\" y=\"132\" fill=\"#0369a1\" font-size=\"11\">Target Prob (0.4)</text><path d=\"M 40 40 L 70 200 L 110 80 L 160 170 L 220 130 L 290 145 L 360 139\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"40\" y=\"225\" fill=\"#0f172a\" font-size=\"11\">Few Trials (Unstable)</text><text x=\"240\" y=\"225\" fill=\"#0f172a\" font-size=\"11\">Many Trials (Stable)</text></svg>"
+     }
+    ]
+   }
+  ],
+  "analogy": {
+   "t": "The Weather Forecast vs Daily Weather",
+   "p": "Imagine trying to predict whether it will rain on a specific Tuesday next month (small sample / individual trial)—it is unpredictable and volatile. However, if you look at climate data over 50 years of Julys (large sample), the overall average rainfall percentage becomes extremely stable and predictable. Where the analogy breaks down: climate patterns can actually change over decades due to global shifts, whereas mathematical probability constants like coin flip odds never change."
+  },
+  "terms": [
+   {
+    "t": "Theoretical Probability",
+    "d": "The mathematical likelihood of an event occurring, calculated without experiments using equally likely outcomes."
+   },
+   {
+    "t": "Experimental Probability",
+    "d": "The likelihood of an event occurring based on actual trial data, expressed as a relative frequency."
+   },
+   {
+    "t": "Relative Frequency",
+    "d": "The ratio of the number of times an event occurs to the total number of trials performed."
+   },
+   {
+    "t": "Law of Large Numbers",
+    "d": "The mathematical principle stating that experimental relative frequency approaches theoretical probability as sample size increases."
+   },
+   {
+    "t": "Unbiased Sample",
+    "d": "A data collection sample where every outcome has a fair, equal chance of occurring without systematic favoritism."
+   },
+   {
+    "t": "Biased",
+    "d": "Unfairly weighted or skewed towards favoring certain outcomes over others."
+   },
+   {
+    "t": "Sample Size",
+    "d": "The total number of trials, observations, or tests conducted in an experiment."
+   },
+   {
+    "t": "Convergence",
+    "d": "The process where experimental relative frequency values settle closer and closer to a single fixed theoretical value."
+   },
+   {
+    "t": "Expected Frequency",
+    "d": "The predicted number of times an event should occur in a given number of trials based on probability."
+   },
+   {
+    "t": "Trial",
+    "d": "A single performance of an experiment or random test, such as rolling a die or flipping a coin."
+   },
+   {
+    "t": "Frequency",
+    "d": "The exact count of how many times a particular outcome occurs in an experiment."
+   },
+   {
+    "t": "Reliability",
+    "d": "The degree to which experimental data can be trusted as accurate, heavily dependent on large trial counts."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Saying that 10 coin flips guaranteeing 5 heads proves the law of large numbers.",
+    "r": "Small samples fluctuate wildly; 10 flips is far too small to demonstrate reliable convergence."
+   },
+   {
+    "w": "Adding the frequencies from different trial sizes together into a single sum without dividing by total trials.",
+    "r": "Always calculate relative frequency as frequency divided by the corresponding total trials for that experiment."
+   },
+   {
+    "w": "Believing a coin 'remembers' previous flips (Gambler's Fallacy).",
+    "r": "Each trial is independent; past coin flips do not influence future coin flips."
+   },
+   {
+    "w": "Stating that experimental probability always equals theoretical probability exactly.",
+    "r": "Experimental probability only tends towards or approximates theoretical probability as sample size increases."
+   },
+   {
+    "w": "Choosing a small sample result as the 'best estimate' because it was the first trial.",
+    "r": "The best estimate is always derived from the largest sample size available."
+   },
+   {
+    "w": "Writing relative frequency as a ratio like 3:7 instead of a fraction, decimal, or percentage.",
+    "r": "Relative frequency must be expressed as a fraction, decimal, or percentage between 0 and 1."
+   },
+   {
+    "w": "Assuming a spinner is fair immediately without checking frequency data.",
+    "r": "Fairness must be evaluated by comparing experimental frequencies to expected theoretical values."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A biased spinner has four sections: A, B, C, and D. Sarah spins it 500 times. Section A occurs 200 times. Work out the relative frequency of spinning A.",
+    "marks": 2,
+    "model": [
+     "200 / 500",
+     "0.4 or 2/5 or 40%"
+    ],
+    "tip": "Put the frequency of the successful outcome over the total number of trials."
+   },
+   {
+    "q": "Explain why 500 spins gives a more reliable estimate of probability than 5 spins.",
+    "marks": 1,
+    "model": [
+     "Larger sample sizes reduce the impact of random chance and experimental variation / tend closer to theoretical probability."
+    ],
+    "tip": "Use key phrases like 'larger sample size' and 'reduces chance variation'."
+   },
+   {
+    "q": "Liam rolls a biased die 50 times and gets a six 15 times. Estimate the probability of rolling a six based on Liam's results.",
+    "marks": 2,
+    "model": [
+     "15 / 50",
+     "0.3 (or equivalent fraction/percentage)"
+    ],
+    "tip": "Experimental probability uses the trials performed, not the theoretical 1/6."
+   },
+   {
+    "q": "A coin is flipped 1000 times and lands on heads 512 times. Does this prove the coin is biased? Explain your answer.",
+    "marks": 2,
+    "model": [
+     "No, it does not prove bias.",
+     "512 out of 1000 is very close to 500 (0.5), which is expected due to natural sample variation."
+    ],
+    "tip": "Large samples allow small deviations from 0.5 simply due to random chance."
+   },
+   {
+    "q": "The relative frequency of scoring a goal for a hockey player is 0.35 over 200 shots. Estimate how many goals she will score in 1000 shots.",
+    "marks": 2,
+    "model": [
+     "0.35 * 1000",
+     "350 goals"
+    ],
+    "tip": "Multiply the relative frequency by the new number of total trials."
+   },
+   {
+    "q": "State what happens to the relative frequency of an event as the number of unbiased trials increases.",
+    "marks": 1,
+    "model": [
+     "It tends towards / gets closer to the theoretical probability."
+    ],
+    "tip": "Learn this exact specification phrasing for full marks."
+   },
+   {
+    "q": "A bag contains coloured counters. Priya takes a counter, notes the colour, and replaces it. Table: 50 trials = 12 reds; 500 trials = 135 reds. Which relative frequency is the better estimate for picking a red counter? Give a reason.",
+    "marks": 2,
+    "model": [
+     "The estimate from 500 trials (135/500 = 0.27).",
+     "Because a larger sample size is more reliable / closer to the true probability."
+    ],
+    "tip": "Always select the larger sample size and justify with sample size reasoning."
+   },
+   {
+    "q": "Complete the sentence: As the sample size increases, empirical unbiased samples tend towards __________ probability.",
+    "marks": 1,
+    "model": [
+     "theoretical"
+    ],
+    "tip": "Fill-in-the-blank specification terminology."
+   },
+   {
+    "q": "A spinner is spun 200 times. It lands on blue 80 times. Calculate the relative frequency of blue as a decimal.",
+    "marks": 2,
+    "model": [
+     "80 / 200",
+     "0.4"
+    ],
+    "tip": "Simplify 80/200 to 8/20 then 4/10 = 0.4."
+   },
+   {
+    "q": "Give one reason why an experimental probability might differ from a theoretical probability when only 10 trials are carried out.",
+    "marks": 1,
+    "model": [
+     "Due to chance variation / small sample size / fluke results."
+    ],
+    "tip": "Mention small sample size or random variation."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A football team records their penalty shootout results across different numbers of attempts. \n- After 50 attempts: 32 successful. \n- After 500 attempts: 340 successful. \n(a) Calculate the relative frequency of success for 50 attempts and 500 attempts. \n(b) Explain which figure gives a better estimate of the true probability of scoring a penalty and why.",
+    "steps": [
+     "(a) For 50 attempts: 32 / 50 = 0.64 (or 64%).",
+     "(a) For 500 attempts: 340 / 500 = 0.68 (or 68%).",
+     "(b) The 500 attempts figure is a better estimate.",
+     "(b) Reason: Larger sample sizes reduce the effect of random variation and tend closer to the true theoretical probability."
+    ],
+    "ans": "(a) 0.64 and 0.68. (b) 500 attempts because larger sample sizes are more reliable."
+   },
+   {
+    "q": "A student tests a six-sided die by rolling it 600 times. The number 5 appears 120 times. \n(a) What is the theoretical probability of rolling a 5 on a fair die? \n(b) What is the experimental relative frequency of rolling a 5 in this experiment? \n(c) Based on the 600 rolls, does the die appear to be fair or biased towards rolling a 5? Explain.",
+    "steps": [
+     "(a) Theoretical probability = 1/6 (approx 0.167).",
+     "(b) Experimental relative frequency = 120 / 600 = 1/5 = 0.20.",
+     "(c) Compare 0.20 to 0.167. 0.20 is higher than expected.",
+     "(c) With a large sample of 600 rolls, a relative frequency of 0.20 suggests the die is biased towards rolling a 5."
+    ],
+    "ans": "(a) 1/6 (0.167). (b) 0.20. (c) Biased towards 5, because 0.20 is noticeably higher than 1/6 in a large sample."
+   }
+  ],
+  "svg": [],
+  "pid": "maths_eduqas_f.4.4",
+  "sid": "maths_eduqas_f",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-19T18:54:27.124Z"
+ },
+ "maths_eduqas_f.4.7": {
+  "summary": "Mastering tree diagrams is essential for calculating probabilities of combined events at Foundation tier. Independent events have no effect on each other, meaning probabilities stay constant across trials, while dependent events change based on prior outcomes. By multiplying along branches and adding across paths, students can systematically solve complex two-stage probability problems.",
+  "core": [
+   {
+    "h": "1. Introduction to Combined Events and Tree Diagrams",
+    "p": "Combined events involve two or more sequential or simultaneous trials, such as rolling a die twice or taking two counters from a bag. A tree diagram is a visual tool that maps out all possible outcomes and their respective probabilities across successive stages. Every branch represents a specific outcome, and the structure ensures no path is missed.",
+    "bullets": [
+     "Shows the sequence of two or more independent or dependent events",
+     "Consists of main branches for the first event and sub-branches for the second event",
+     "Helps organise outcomes systematically to calculate combined probabilities",
+     "Crucial for both non-calculator and calculator papers in Eduqas GCSE"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Tree Diagram",
+      "p": "A diagram used to show the probabilities of combined events, consisting of branches labelled with probabilities."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Basic tree diagram structure showing first and second events",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><line x1=\"60\" y1=\"120\" x2=\"150\" y2=\"70\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"60\" y1=\"120\" x2=\"150\" y2=\"170\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"150\" y1=\"70\" x2=\"240\" y2=\"40\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"150\" y1=\"70\" x2=\"240\" y2=\"100\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"150\" y1=\"170\" x2=\"240\" y2=\"140\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"150\" y1=\"170\" x2=\"240\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"40\" y=\"125\" font-size=\"12\" fill=\"#1b2540\">Start</text><text x=\"165\" y=\"60\" font-size=\"11\" fill=\"#1b2540\">Branch A</text><text x=\"165\" y=\"160\" font-size=\"11\" fill=\"#1b2540\">Branch B</text><text x=\"260\" y=\"45\" font-size=\"11\" fill=\"#1b2540\">Outcome 1</text><text x=\"260\" y=\"105\" font-size=\"11\" fill=\"#1b2540\">Outcome 2</text><text x=\"260\" y=\"145\" font-size=\"11\" fill=\"#1b2540\">Outcome 3</text><text x=\"260\" y=\"205\" font-size=\"11\" fill=\"#1b2540\">Outcome 4</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "2. The Golden Rule: Probabilities Add to 1",
+    "p": "At any given point on a tree diagram where branches split from a single node, the sum of all probabilities must equal exactly 1. This rule applies to every single set of branching paths and acts as a built-in check for your working. If your branch probabilities do not sum to 1, an error has been made.",
+    "bullets": [
+     "Every set of branching outcomes from a single point sums to 1",
+     "Applies to both first-stage and second-stage branches",
+     "If one probability is known, the other can be found by subtracting from 1",
+     "Essential for verifying fractions or decimals before multiplying"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Branch Sum Rule",
+      "p": "P(A) + P(not A) = 1 for any single set of branching choices."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "3. Independent Events",
+    "p": "Independent events are those where the outcome of the first event has **no effect** upon the outcome of the second event. Examples include spinning a spinner twice or rolling a standard six-sided die twice. Because the conditions do not change, the probabilities on the second set of branches remain identical to the first set.",
+    "bullets": [
+     "The second event is completely unaffected by the first event",
+     "Probabilities on the second set of branches stay the same",
+     "Example: replacing a counter after taking it out (replacement)",
+     "Example: tossing a fair coin multiple times"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Independent Events",
+      "p": "Events where the outcome of one event does not affect the probability of another event occurring."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Tree diagram for independent events with constant probabilities",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><line x1=\"50\" y1=\"120\" x2=\"150\" y2=\"60\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"120\" x2=\"150\" y2=\"180\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"150\" y1=\"60\" x2=\"250\" y2=\"30\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"150\" y1=\"60\" x2=\"250\" y2=\"90\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"150\" y1=\"180\" x2=\"250\" y2=\"150\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"150\" y1=\"180\" x2=\"250\" y2=\"210\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"90\" y=\"80\" font-size=\"11\" fill=\"#1b2540\">3/5</text><text x=\"90\" y=\"155\" font-size=\"11\" fill=\"#1b2540\">2/5</text><text x=\"190\" y=\"38\" font-size=\"11\" fill=\"#1b2540\">3/5</text><text x=\"190\" y=\"85\" font-size=\"11\" fill=\"#1b2540\">2/5</text><text x=\"190\" y=\"155\" font-size=\"11\" fill=\"#1b2540\">3/5</text><text x=\"190\" y=\"215\" font-size=\"11\" fill=\"#1b2540\">2/5</text><text x=\"270\" y=\"34\" font-size=\"11\" fill=\"#1b2540\">Red, Red</text><text x=\"270\" y=\"94\" font-size=\"11\" fill=\"#1b2540\">Red, Blue</text><text x=\"270\" y=\"154\" font-size=\"11\" fill=\"#1b2540\">Blue, Red</text><text x=\"270\" y=\"214\" font-size=\"11\" fill=\"#1b2540\">Blue, Blue</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "4. Dependent Events and Without Replacement",
+    "p": "Dependent events occur when the outcome of the first event **does affect** the probability of the second event. The classic GCSE scenario is selecting items from a bag **without replacement**. When a counter or marble is removed and not put back, the total number of items decreases by 1, and the number of specific items may also decrease by 1.",
+    "bullets": [
+     "The outcome of the first event changes the denominator (total)",
+     "Numerator may also decrease if a matching item was removed",
+     "Example: taking two counters from a bag without replacement",
+     "Probabilities on second-stage branches must be carefully recalculated"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Dependent Events",
+      "p": "Events where the outcome of the first event affects the probability of the second event."
+     },
+     {
+      "k": "warn",
+      "t": "Without Replacement",
+      "p": "Always remember to reduce both the numerator and the denominator for the second set of branches if an item is not replaced."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "5. Multiplying Along Branches (The AND Rule)",
+    "p": "To find the probability of a combined sequence of events occurring together (along a specific path), you must **multiply** the probabilities along those branches. This is known as the multiplicative rule or the AND rule in probability. For example, the probability of getting Red AND Red is P(Red) multiplied by P(Red given Red).",
+    "bullets": [
+     "Multiply probabilities along the branches (left to right)",
+     "P(A and B) = P(A) x P(B given A)",
+     "Fractions: multiply numerators together and denominators together",
+     "Decimals: use standard decimal multiplication methods"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "The AND Rule",
+      "p": "Multiply probabilities along the branches for combined sequential events."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Adding Across Paths (The OR Rule)",
+    "p": "When a question asks for an outcome that can happen in **more than one way** (e.g., 'one red and one blue' can be Red then Blue OR Blue then Red), you calculate the probability of each path separately and then **add** those probabilities together. This is the additive rule or the OR rule.",
+    "bullets": [
+     "Calculate the final probability for each valid path by multiplying",
+     "Add the outcomes of the separate paths together",
+     "P(A or B) = P(A) + P(B) for mutually exclusive paths",
+     "Ensure fractions share a common denominator before adding if non-calculator"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "The OR Rule",
+      "p": "Add the probabilities of different mutually exclusive paths that satisfy the required outcome."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Constructing Tree Diagrams Step-by-Step",
+    "p": "To construct an accurate tree diagram in an exam, follow a clear method. First, identify all possible outcomes for the first event and draw branches with their probabilities. Next, for each first-stage branch, draw the second-stage branches reflecting whether the events are independent or dependent. Finally, label all branches clearly with fractions or decimals.",
+    "bullets": [
+     "Read the question carefully to check for replacement ('with' or 'without')",
+     "Draw neat lines using a ruler and label all nodes clearly",
+     "Write fraction probabilities in their simplest form where appropriate",
+     "Check that branches originating from the same point add up to 1"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Neatness Matters",
+      "p": "Keep your tree diagram large and well-spaced so you have plenty of room to write fractions clearly on every branch."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Calculating Final Outcomes and Checksums",
+    "p": "At the end of every branch path, write the combined outcome (e.g., RR, RB, BR, BB) and calculate its probability. To ensure complete accuracy, you can add up all the final path probabilities on your diagram. They **must sum to exactly 1**. If they do not, an arithmetic or fraction error has occurred in your working.",
+    "bullets": [
+     "List every final combined outcome at the right-hand side of the diagram",
+     "Multiply across each path to find the exact final fraction or decimal",
+     "Sum all final outcome probabilities to verify they equal 1",
+     "Use this check to catch silly mistakes before moving on"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Exhaustive Check",
+      "p": "The sum of all final path probabilities at the end of a tree diagram is always exactly 1."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Working with Decimals and Fractions",
+    "p": "Exam questions may present probabilities as fractions, decimals, or occasionally percentages. Fractions must be multiplied by multiplying numerators and denominators. Decimals can be multiplied using standard methods (ignoring decimal points first, then adjusting). Ensure consistency; do not mix fractions and decimals on the same tree diagram.",
+    "bullets": [
+     "Fractions: multiply tops together, bottoms together (simplify at the end if needed)",
+     "Decimals: count total decimal places in the question to check your answer",
+     "Percentages: convert to decimals (divide by 100) or fractions before calculating",
+     "Never mix representations on the same tree diagram"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Fraction Simplification",
+      "p": "It is often easier *not* to simplify fractions on intermediate branches, as keeping a common denominator makes adding final paths much easier."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. 'At Least One' Probability Questions",
+    "p": "A common grade 9 style question asks for the probability of getting **'at least one'** of a specific outcome across multiple trials (e.g., 'at least one six in two rolls'). While you could add up all paths containing at least one six, it is much faster and less prone to error to use the **complementary probability** method: 1 minus the probability of getting *none*.",
+    "bullets": [
+     "Identify all paths that contain zero instances of the target outcome",
+     "Calculate the probability of that single path (e.g., None AND None)",
+     "Subtract that result from 1: P(at least one) = 1 - P(none)",
+     "Saves significant time and reduces risk of missing a path"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "At Least One Rule",
+      "p": "P(at least one) = 1 - P(none)"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "11. Non-Calculator vs Calculator Techniques",
+    "p": "In Paper 1 (non-calculator), tree diagram probabilities will usually be simple fractions (e.g., halves, thirds, quarters, fifths) where arithmetic is straightforward. In Paper 2 (calculator), probabilities may be given as decimals or more complex fractions, allowing you to use decimal multiplication and division efficiently.",
+    "bullets": [
+     "Paper 1: leave fractions unsimplified during working to keep common denominators",
+     "Paper 2: decimals are fully acceptable; use your calculator carefully",
+     "Always write down the full decimal or fraction calculation before evaluating",
+     "Check rounding instructions if decimals do not terminate"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Calculator Check",
+      "p": "Always re-enter multiplication of fractions or decimals into your calculator twice to prevent slip-up errors."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "12. Common Exam Traps and Examiner Expectations",
+    "p": "Examiners frequently penalise students who forget to change denominators in 'without replacement' scenarios, or who add probabilities along branches instead of multiplying them. Always show full working: write down the multiplication expression for the path and the addition expression for combined paths to secure method marks even if arithmetic slips.",
+    "bullets": [
+     "Never add probabilities along a branch (always multiply)",
+     "Never multiply probabilities of separate paths when combining (always add)",
+     "In dependent events, make sure the second denominator decreases",
+     "Always write down your intermediate fraction/decimal products"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Method Marks",
+      "p": "Examiners award method marks for correct multiplication along branches, even if the final addition has an arithmetic error."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Forked Mountain Path Analogy",
+   "p": "Imagine hiking down a mountain where every path splits into two distinct trails: a left trail and a right trail. If you flip a coin at each junction to decide which way to go, the chance of choosing a specific sequence of turns depends entirely on whether someone is tampering with your map (dependent) or not (independent). To find your final destination hut, you multiply the fraction chance of taking each turn along your specific route. If two different routes lead to the same mountain hut, you add their separate route chances together to find the total probability of ending up there."
+  },
+  "terms": [
+   {
+    "t": "Tree Diagram",
+    "d": "A graphical representation showing all possible outcomes of combined events and their probabilities."
+   },
+   {
+    "t": "Independent Events",
+    "d": "Events where the outcome of the first event does not affect the probability of the second event."
+   },
+   {
+    "t": "Dependent Events",
+    "d": "Events where the outcome of the first event changes the probability of the second event."
+   },
+   {
+    "t": "Without Replacement",
+    "d": "A sampling method where selected items are not put back, changing subsequent probabilities."
+   },
+   {
+    "t": "With Replacement",
+    "d": "A sampling method where selected items are put back, keeping probabilities independent."
+   },
+   {
+    "t": "AND Rule",
+    "d": "The rule stating that the probability of sequential independent or dependent events is found by multiplying along the branches."
+   },
+   {
+    "t": "OR Rule",
+    "d": "The rule stating that the probability of mutually exclusive alternative paths is found by adding their probabilities together."
+   },
+   {
+    "t": "Complementary Probability",
+    "d": "The probability of an event not occurring, equal to 1 minus the probability of the event occurring."
+   },
+   {
+    "t": "Mutually Exclusive",
+    "d": "Events that cannot happen at the same time."
+   },
+   {
+    "t": "Outcome",
+    "d": "A possible result of an experiment or trial."
+   },
+   {
+    "t": "Branch",
+    "d": "A line on a tree diagram representing a specific event outcome and its probability."
+   },
+   {
+    "t": "Node",
+    "d": "A starting or splitting point on a tree diagram where branches originate."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Adding probabilities along a branch (e.g., 1/3 + 1/3 = 2/3)",
+    "r": "Probabilities along branches must always be multiplied, never added."
+   },
+   {
+    "w": "Multiplying probabilities across different paths together",
+    "r": "Probabilities of separate successful paths must be added together, not multiplied."
+   },
+   {
+    "w": "Forgetting to decrease the denominator in 'without replacement' questions",
+    "r": "When an item is removed, the total number of items (denominator) decreases by 1 for the next stage."
+   },
+   {
+    "w": "Forgetting to decrease the numerator when a specific item is removed",
+    "r": "If a red counter is removed, the number of red counters available for the second draw must also decrease by 1."
+   },
+   {
+    "w": "Writing branch probabilities that do not sum to 1",
+    "r": "All branches splitting from a single node must add up to exactly 1."
+   },
+   {
+    "w": "Mixing fractions and decimals on the same tree diagram",
+    "r": "Keep all probabilities on a single diagram in the same format (either all fractions or all decimals)."
+   },
+   {
+    "w": "Not showing the multiplication calculation for individual paths",
+    "r": "Always write out full fraction/decimal products to secure method marks."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A bag contains 3 red counters and 2 blue counters. A counter is taken at random, its colour is noted, and it is NOT replaced. A second counter is taken. Draw a tree diagram to represent this.",
+    "marks": 3,
+    "model": [
+     "First stage branches labelled 3/5 (Red) and 2/5 (Blue)",
+     "Second stage branches correctly dependent (e.g., 2/4 and 3/4 or 1/4 and 2/4)",
+     "All branches correctly labelled with fractions summing to 1 at each node"
+    ],
+    "tip": "Remember that 'not replaced' means denominators become 4 instead of 5."
+   },
+   {
+    "q": "A bag contains 3 red counters and 2 blue counters. A counter is taken, not replaced, and a second counter is taken. Calculate the probability that both counters are red.",
+    "marks": 2,
+    "model": [
+     "3/5 x 2/4 (seen or implied)",
+     "6/20 or 3/10 or 0.3"
+    ],
+    "tip": "Multiply along the top red-red branch."
+   },
+   {
+    "q": "A bag contains 3 red counters and 2 blue counters. A counter is taken, not replaced, and a second counter is taken. Calculate the probability that the two counters are different colours.",
+    "marks": 4,
+    "model": [
+     "P(Red then Blue) = 3/5 x 2/4 = 6/20",
+     "P(Blue then Red) = 2/5 x 3/4 = 6/20",
+     "6/20 + 6/20",
+     "12/20 = 3/5 or 0.6"
+    ],
+    "tip": "Find both paths (RB and BR) and add their probabilities."
+   },
+   {
+    "q": "Two independent spinners each have numbers 1 to 4. Spinner A lands on an even number with probability 1/2. Spinner B lands on a 4 with probability 1/4. Calculate the probability that both happen.",
+    "marks": 2,
+    "model": [
+     "1/2 x 1/4",
+     "1/8"
+    ],
+    "tip": "Independent events mean you simply multiply their probabilities directly."
+   },
+   {
+    "q": "A coin is biased. The probability of getting a Head is 0.7. The coin is flipped twice. Calculate the probability of getting at least one Tail.",
+    "marks": 3,
+    "model": [
+     "P(Two Heads) = 0.7 x 0.7 = 0.49",
+     "1 - 0.49",
+     "0.51"
+    ],
+    "tip": "Use the 'at least one' rule: 1 minus the probability of getting two Heads."
+   },
+   {
+    "q": "Box A contains 4 white and 2 black counters. Box B contains 3 white and 3 black counters. A box is chosen at random (probability 1/2 each), and a counter is drawn. Calculate the probability of drawing a white counter.",
+    "marks": 4,
+    "model": [
+     "P(Box A and White) = 1/2 x 4/6 = 4/12",
+     "P(Box B and White) = 1/2 x 3/6 = 3/12",
+     "4/12 + 3/12",
+     "7/12"
+    ],
+    "tip": "Tree diagrams can also handle choosing between different boxes with equal or unequal probabilities."
+   },
+   {
+    "q": "A football team wins with probability 0.6, draws with probability 0.3, and loses with probability 0.1. They play two matches. Calculate the probability that they win both matches.",
+    "marks": 2,
+    "model": [
+     "0.6 x 0.6",
+     "0.36"
+    ],
+    "tip": "Multiply along the win-win branch for independent matches."
+   },
+   {
+    "q": "A football team wins with probability 0.6, draws with probability 0.3, and loses with probability 0.1. They play two matches. Calculate the probability that they do not lose either match.",
+    "marks": 4,
+    "model": [
+     "P(Win or Draw) = 0.9 for each match OR find P(at least one loss) and subtract",
+     "0.9 x 0.9",
+     "0.81"
+    ],
+    "tip": "Alternative method: subtract the probability of losing at least one match from 1."
+   },
+   {
+    "q": "Bag X has 5 red and 3 green counters. A counter is chosen at random and put back. A second counter is chosen. Explain why the events are independent.",
+    "marks": 1,
+    "model": [
+     "Because the counter is replaced, the total number of counters and proportion of colours remains unchanged for the second draw."
+    ],
+    "tip": "Replacement always guarantees independence."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A bag contains 5 red counters and 3 blue counters. A counter is taken at random and NOT replaced. A second counter is taken. Find the probability that the two counters are the same colour.",
+    "steps": [
+     "Step 1: Identify the initial probabilities for the first draw. Total counters = 8. P(Red) = 5/8, P(Blue) = 3/8.",
+     "Step 2: Calculate second stage dependent probabilities. If Red first: 4 red, 3 blue left (total 7). P(R|R) = 4/7, P(B|R) = 3/7. If Blue first: 5 red, 2 blue left (total 7). P(R|B) = 5/7, P(B|B) = 2/7.",
+     "Step 3: Identify paths for same colour (Red then Red, OR Blue then Blue). P(R and R) = 5/8 x 4/7 = 20/56. P(B and B) = 3/8 x 2/7 = 6/56.",
+     "Step 4: Add the probabilities of the two paths together. 20/56 + 6/56 = 26/56. Simplify to 13/28."
+    ],
+    "ans": "13/28"
+   },
+   {
+    "q": "A game uses two independent spinners. Spinner 1 lands on green with probability 2/5. Spinner 2 lands on green with probability 3/4. Both spinners are spun once. Find the probability that exactly one spinner lands on green.",
+    "steps": [
+     "Step 1: Identify probabilities of not landing on green. Spinner 1 not green = 3/5. Spinner 2 not green = 1/4.",
+     "Step 2: Identify paths for exactly one green (Spinner 1 Green AND Spinner 2 Not Green, OR Spinner 1 Not Green AND Spinner 2 Green).",
+     "Step 3: Calculate Path 1 (G then NG): 2/5 x 1/4 = 2/20.",
+     "Step 4: Calculate Path 2 (NG then G): 3/5 x 3/4 = 9/20.",
+     "Step 5: Add the two paths together: 2/20 + 9/20 = 11/20."
+    ],
+    "ans": "11/20"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Tree diagram showing dependent events without replacement from a bag of counters",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><line x1=\"40\" y1=\"120\" x2=\"150\" y2=\"60\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"40\" y1=\"120\" x2=\"150\" y2=\"180\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"150\" y1=\"60\" x2=\"260\" y2=\"30\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"150\" y1=\"60\" x2=\"260\" y2=\"90\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"150\" y1=\"180\" x2=\"260\" y2=\"150\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"150\" y1=\"180\" x2=\"260\" y2=\"210\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"75\" y=\"78\" font-size=\"11\" fill=\"#1b2540\">3/5</text><text x=\"75\" y=\"155\" font-size=\"11\" fill=\"#1b2540\">2/5</text><text x=\"195\" y=\"38\" font-size=\"11\" fill=\"#1b2540\">2/4</text><text x=\"195\" y=\"92\" font-size=\"11\" fill=\"#1b2540\">2/4</text><text x=\"195\" y=\"150\" font-size=\"11\" fill=\"#1b2540\">3/4</text><text x=\"195\" y=\"215\" font-size=\"11\" fill=\"#1b2540\">1/4</text><text x=\"280\" y=\"34\" font-size=\"11\" fill=\"#1b2540\">Red, Red</text><text x=\"280\" y=\"94\" font-size=\"11\" fill=\"#1b2540\">Red, Blue</text><text x=\"280\" y=\"154\" font-size=\"11\" fill=\"#1b2540\">Blue, Red</text><text x=\"280\" y=\"214\" font-size=\"11\" fill=\"#1b2540\">Blue, Blue</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_f.4.7",
+  "sid": "maths_eduqas_f",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-19T18:55:56.458Z"
  }
 }

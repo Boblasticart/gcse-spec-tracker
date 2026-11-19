@@ -6368,5 +6368,604 @@
   "src": "pre",
   "by": "gemini/gemini-3.5-flash-lite",
   "ts": "2026-11-18T18:01:25.696Z"
+ },
+ "maths_aqa_h.0.14": {
+  "summary": "Specification point N15 covers rounding to decimal places, significant figures, and context-dependent units, alongside finding error intervals arising from both rounding and truncation. For any rounded value, the error interval is expressed using formal inequality notation as Lower Bound ≤ x < Upper Bound, where the lower bound is inclusive and the upper bound is strictly exclusive. Truncation discards digits rather than rounding to the nearest value, creating an asymmetric interval spanning from the truncated value up to, but not including, the next place-value increment.",
+  "core": [
+   {
+    "h": "The Mechanics of Rounding: Decimal Places and Significant Figures",
+    "p": "Rounding replaces a number with a simpler approximation that sits closest to it on a continuous number line. In AQA examinations, questions specify accuracy either by decimal places (counting columns to the right of the decimal point) or by significant figures (counting from the first non-zero digit regardless of the decimal point).",
+    "bullets": [
+     "**Decimal Places (d.p.)**: Locate the target column after the decimal point; inspect the decider digit immediately to its right. If the decider is 5, 6, 7, 8, or 9, round up by adding 1 to the target digit; if 0, 1, 2, 3, or 4, leave the target digit unchanged.",
+     "**Significant Figures (s.f.)**: The most significant figure is the first non-zero digit reading left to right. Leading zeros (e.g. the zeros in 0.00408) are never significant; embedded zeros (e.g. 408) and trailing zeros after a decimal point (e.g. 4.80) are always significant.",
+     "**Trailing Zeroes Matter**: Writing 3.40 to 2 d.p. is mathematically required; omitting the zero to write 3.4 forfeits the accuracy mark because 3.4 implies rounding to 1 d.p. or tenths.",
+     "**Cascading Nines**: Rounding 0.0996 to 2 s.f. requires the decider 6 to round the second 9 up to 10, carrying over to the first 9, producing 0.10. Both digits after the decimal point must be written."
+    ],
+    "table": {
+     "head": [
+      "Original Value",
+      "Target Degree",
+      "Decider Digit",
+      "Correct Result",
+      "Examiner Note"
+     ],
+     "rows": [
+      [
+       "45.982",
+       "1 decimal place",
+       "8 (≥ 5)",
+       "46.0",
+       "The trailing zero must be shown."
+      ],
+      [
+       "0.003407",
+       "2 significant figures",
+       "0 (< 5)",
+       "0.0034",
+       "Leading zeros set place value only."
+      ],
+      [
+       "17 995",
+       "3 significant figures",
+       "9 (≥ 5)",
+       "18 000",
+       "Placeholders needed up to the decimal."
+      ],
+      [
+       "3.0049",
+       "3 decimal places",
+       "9 (≥ 5)",
+       "3.005",
+       "Decider is the 4th decimal digit (9)."
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Zero as a Significant Figure",
+      "p": "A zero is significant if it sits between two non-zero digits (e.g. 503 has 3 s.f.) or if it is at the end of a decimal number after the decimal point (e.g. 7.50 has 3 s.f.). Zeros that purely locate the decimal point (e.g. 0.002 or 400 with no stated degree) are not inherently significant."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Truncation: Process and Differences from Rounding",
+    "p": "Truncation is the mathematical operation of cutting off digits past a chosen column without adjusting the retained digits. It differs fundamentally from rounding because values just below the next step are never rounded up; they are simply cut.",
+    "bullets": [
+     "**Definition**: To truncate a real number x to n decimal places or a specific place value, all digits appearing after that place value are discarded (replaced by zero if to the left of the decimal point).",
+     "**Directional Bias**: Rounding produces a balanced error of ±0.5 units of the target place value. Truncation produces a purely one-sided error ranging from 0 up to almost 1 full unit of that place value.",
+     "**Example**: Truncating 5.79 to 1 d.p. yields 5.7, whereas rounding 5.79 to 1 d.p. yields 5.8.",
+     "**Calculators and Computers**: Computer processors naturally truncate intermediate floating-point calculations unless explicit rounding routines are invoked."
+    ],
+    "table": {
+     "head": [
+      "Number x",
+      "Condition",
+      "Rounded Output",
+      "Truncated Output"
+     ],
+     "rows": [
+      [
+       "8.68",
+       "to 1 decimal place",
+       "8.7",
+       "8.6"
+      ],
+      [
+       "29.99",
+       "to 1 significant figure",
+       "30",
+       "20"
+      ],
+      [
+       "0.419",
+       "to 2 decimal places",
+       "0.42",
+       "0.41"
+      ],
+      [
+       "999",
+       "to 2 significant figures",
+       "1000",
+       "990"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Do Not Round Before Truncating",
+      "p": "Never round a number prior to truncation. Truncating 3.49 to 1 d.p. gives 3.4. If you incorrectly round to 3.5 first and then truncate, you introduce an unrecoverable error."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Error Intervals from Rounding",
+    "p": "When a value is rounded, the original unrounded value could have been anywhere within a specific interval called the error interval. The lower bound is the minimum value that rounds up, and the upper bound is the boundary that rounds to the next value up.",
+    "bullets": [
+     "**Unit of Accuracy (U)**: Identify the place value to which the number was rounded (e.g. nearest 10 means U = 10; 1 d.p. means U = 0.1; 3 s.f. for 4.50 means U = 0.01).",
+     "**Half-Unit Rule**: Calculate the maximum variation as half the unit of accuracy: h = U / 2.",
+     "**Lower Bound (LB)**: LB = Rounded Value − h.",
+     "**Upper Bound (UB)**: UB = Rounded Value + h.",
+     "**Strict Notation Rule**: An error interval MUST always be written using inequality notation as LB ≤ x < UB. Writing LB ≤ x ≤ UB will lose marks on AQA Higher papers because UB would round up to the next step under standard rounding rules."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Error Interval (Rounding)",
+      "p": "For a value y rounded to a given unit of accuracy U with half-step h = U / 2, the error interval for the original value x is: y − h ≤ x < y + h."
+     },
+     {
+      "k": "tip",
+      "t": "Why the Upper Inequality is Strict",
+      "p": "Consider 4.5 rounded to the nearest whole number. 4.5 rounds UP to 5. Therefore, if a number x rounds to 4, x cannot equal 4.5. It must be strictly less than 4.5 (x < 4.5). Even 4.4999... rounds to 4, so the boundary value is exactly 4.5, but excluded."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Error Intervals from Truncation",
+    "p": "Because truncation discards all succeeding digits without rounding up, the original value cannot be smaller than the truncated value, but it can be almost one full unit larger.",
+    "bullets": [
+     "**Lower Bound for Truncation**: The truncated value itself is the lowest possible value of the original quantity: LB = Truncated Value.",
+     "**Upper Bound for Truncation**: The upper bound is the truncated value plus one FULL unit of accuracy: UB = Truncated Value + U.",
+     "**Asymmetry**: Unlike rounded intervals where the stated number sits in the exact middle, a truncated interval starts AT the stated number.",
+     "**Inequality Form**: For a number truncated to value T with place value U: T ≤ x < T + U."
+    ],
+    "table": {
+     "head": [
+      "Stated Value",
+      "Degree of Accuracy",
+      "Process",
+      "Error Interval"
+     ],
+     "rows": [
+      [
+       "6.3",
+       "1 decimal place (U = 0.1)",
+       "Rounded",
+       "6.25 ≤ x < 6.35"
+      ],
+      [
+       "6.3",
+       "1 decimal place (U = 0.1)",
+       "Truncated",
+       "6.3 ≤ x < 6.4"
+      ],
+      [
+       "400",
+       "1 significant figure (U = 100)",
+       "Rounded",
+       "350 ≤ x < 450"
+      ],
+      [
+       "400",
+       "1 significant figure (U = 100)",
+       "Truncated",
+       "400 ≤ x < 500"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Spotting Truncation in AQA Questions",
+      "p": "Look carefully for the keyword 'truncated'. If a question states: 'A number y is truncated to 1 decimal place. The result is 7.4', write 7.4 ≤ y < 7.5. Do NOT write 7.35 ≤ y < 7.45."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Significant Figure Error Intervals: The Place Value Shift",
+    "p": "Determining error intervals for numbers rounded to a given number of significant figures requires identifying the place value of the final significant figure. This depends entirely on the magnitude of the number.",
+    "bullets": [
+     "**Locate the Last Stated Significant Figure**: In 0.082 (2 s.f.), the last significant figure is 2, which occupies the thousandths place (0.001).",
+     "**Find the Unit U**: For 0.082, U = 0.001. Therefore h = U / 2 = 0.0005. The interval is 0.0815 ≤ x < 0.0825.",
+     "**Large Numbers**: In 45 000 rounded to 2 s.f., the second significant figure is 5, in the thousands column (U = 1000). Thus h = 500. The interval is 44 500 ≤ x < 45 500.",
+     "**Powers of Ten Boundary Crossings**: Extra care is required when the rounded value is a power of 10. For instance, 100 rounded to 1 s.f. gives U = 100, h = 50, yielding 50 ≤ x < 150. However, 100 rounded to 2 s.f. gives U = 10, h = 5, yielding 95 ≤ x < 105."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Examiner Check on Number of Figures",
+      "p": "If the exam asks: 'v = 60 to 1 s.f.', U = 10, so 55 ≤ v < 65. If it says 'v = 60 to 2 s.f.', U = 1, so 59.5 ≤ v < 60.5. Always check whether trailing zeros are part of the stated precision."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Error Intervals for Continuous vs Discrete Data",
+    "p": "While measurement data (mass, time, length) is inherently continuous, some counting scenarios involve discrete quantities that have been rounded or estimated, requiring precise interpretation of inequalities.",
+    "bullets": [
+     "**Continuous Data**: Real measurements can take any real value on a continuum. The error interval strictly follows LB ≤ x < UB where UB has the strict inequality '<'.",
+     "**Discrete Data Rounded to Multiples**: If an attendance figure is rounded to the nearest 100 and reported as 4200, the true continuous boundary is 4150 ≤ x < 4250. Because people are discrete integers, the actual integer count n satisfies 4150 ≤ n ≤ 4249.",
+     "**Mark Scheme Conventions**: On AQA GCSE papers, even for discrete scenarios, writing the continuous interval 4150 ≤ n < 4250 is universally accepted and strongly advised to avoid off-by-one errors with discrete endpoints."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Do Not Write 4249.999...",
+      "p": "Never write 4150 ≤ x ≤ 4249.99 or 4150 ≤ x ≤ 4249.9 recurring. AQA mark schemes penalise recurring decimals or truncated decimals in bound questions. Use the exact strict inequality with the clean half-unit: 4150 ≤ x < 4250."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Determining an Appropriate Degree of Accuracy",
+    "p": "Grade 9 questions often ask you to perform a calculation with upper and lower bounds, and then state your final answer to 'an appropriate degree of accuracy', justifying your choice.",
+    "bullets": [
+     "**Calculate Both Extreme Bounds**: Compute the minimum possible answer (Lower Bound of calculation) and the maximum possible answer (Upper Bound of calculation) using appropriate combinations of component bounds.",
+     "**Compare Decimal Columns**: Write both bounds side by side and inspect them digit by digit from left to right.",
+     "**Identify the Point of Agreement**: Round both bounds to various degrees of accuracy (e.g. 1 s.f., 2 s.f., 3 s.f., etc.) until you find the highest degree of accuracy where both the lower bound and upper bound round to the EXACT SAME number.",
+     "**Provide the Mandatory Justification**: You must state both rounded bounds to show they agree, and explain that any higher degree of accuracy would yield conflicting digits."
+    ],
+    "table": {
+     "head": [
+      "Degree Tested",
+      "LB Rounded",
+      "UB Rounded",
+      "Do They Agree?",
+      "Decision"
+     ],
+     "rows": [
+      [
+       "1 significant figure",
+       "0.04",
+       "0.04",
+       "Yes",
+       "Too coarse; check higher"
+      ],
+      [
+       "2 significant figures",
+       "0.042",
+       "0.042",
+       "Yes",
+       "Candidate for final answer"
+      ],
+      [
+       "3 significant figures",
+       "0.0418",
+       "0.0423",
+       "No (different)",
+       "Cannot claim 3 s.f."
+      ],
+      [
+       "Final Conclusion",
+       "-",
+       "-",
+       "-",
+       "Quote 0.042 as both bounds round to 0.042"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "The Golden Rule of Justification",
+      "p": "Full marks require explicit evidence: state 'LB = 14.28... rounds to 14 to 2 s.f., and UB = 14.41... rounds to 14 to 2 s.f. Since both round to 14 to 2 s.f., but differ at 3 s.f. (14.3 vs 14.4), the appropriate answer is 14'."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Context-Dependent Rounding: Real-World Constraints",
+    "p": "In real-world contexts, standard mathematical rounding rules (round half up) must sometimes be overridden by physical or logical constraints.",
+    "bullets": [
+     "**Always Round UP (Ceiling Function)**: When determining quantities required to cover a need (e.g. tins of paint, tiles, coaches, shipping containers), any remainder requires an extra full unit. For example, 14.1 coaches means 15 coaches are needed to seat everyone.",
+     "**Always Round DOWN (Floor Function)**: When determining how many complete items can be made from a limited resource (e.g. cakes from 500 g flour, books purchased with £50), discard any fractional remainder. If you can afford 8.9 books, you can only buy 8 books.",
+     "**Money Convention**: Currency calculations in pounds must always be given to exactly 2 decimal places (e.g. £14.50, never £14.5 or £14.502) unless whole pounds are explicitly demanded by the question."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Context Trumps Mathematics",
+      "p": "Read the question carefully. If a question asks 'How many complete boxes can be filled?', 23.85 boxes means 23 complete boxes, not 24. Automatic half-up rounding will score zero for the final answer."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Step-by-Step Algorithm: Constructing Any Error Interval",
+    "p": "Follow this robust four-step routine to guarantee maximum marks on any error interval question across Papers 1, 2, and 3.",
+    "bullets": [
+     "**Step 1: Identify the variable and place value**: State the variable symbol (e.g. x, m, t) and determine the place value U of the final digit or specified rounding unit.",
+     "**Step 2: Check the operation (Rounding vs Truncating)**: If rounded, halve the place value: h = U / 2. If truncated, use h = U directly on the upper side, with 0 on the lower side.",
+     "**Step 3: Calculate the boundaries**: For rounding: LB = Value − h; UB = Value + h. For truncation: LB = Value; UB = Value + U.",
+     "**Step 4: Assemble the inequality**: Write LB ≤ variable < UB. Verify that the lower inequality has the bar (≤) and the upper inequality does not (<)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Standard Interval Notation",
+      "p": "AQA mark schemes demand the form a ≤ x < b. If the question uses a letter such as p or y, you must use that letter, not x."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Combined Error Intervals in Calculations",
+    "p": "While limits of accuracy in multi-step formulas are formally treated under N16, N15 requires understanding how errors propagate to establish the error interval of a calculated quantity.",
+    "bullets": [
+     "**Addition (x = a + b)**: LB(x) = LB(a) + LB(b); UB(x) = UB(a) + UB(b).",
+     "**Subtraction (x = a − b)**: LB(x) = LB(a) − UB(b); UB(x) = UB(a) − LB(b).",
+     "**Multiplication (x = a × b)** (for positive values): LB(x) = LB(a) × LB(b); UB(x) = UB(a) × UB(b).",
+     "**Division (x = a / b)** (for positive values): To make a fraction as small as possible, minimise the numerator and maximise the denominator: LB(x) = LB(a) / UB(b). To maximise: UB(x) = UB(a) / LB(b)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Subtractions and Divisions Invert Bounds",
+      "p": "To find the lower bound of a difference or quotient, you must use the upper bound of the subtracted or dividing term. Using Lower/Lower or Upper/Upper is the single most common grade 7-8 error."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Post Office Parcel Scale vs The Guillotine Paper Cutter",
+   "p": "Rounding is like a modern digital parcel scale programmed with rounding brackets: any parcel weighing between 4.5 kg and 5.499 kg snaps to the nearest whole weight marker at 5 kg. The scale looks both left and right, grouping weights symmetrically around the central value of 5 kg. Truncation, by contrast, is like a mechanical guillotine paper cutter set firmly at 5.0 metres. Any paper strip measuring between 5.00 m and 5.99 m is simply lopped off at the 5-metre line; the excess is swept into the bin without any regard to how close it came to 6.0 metres. The analogy breaks down because physical scales must eventually handle the boundary value 4.50000... kg by an arbitrary manufacturer tie-break rule, whereas in pure mathematics, 4.5 is strictly defined to round up to 5, leaving the lower boundary permanently closed and the upper boundary permanently open."
+  },
+  "terms": [
+   {
+    "t": "Rounding",
+    "d": "Replacing a numerical value with an approximation that is closest to it according to a chosen place value or significant figure standard."
+   },
+   {
+    "t": "Truncation",
+    "d": "Dropping all digits past a designated decimal place or significant position without adjusting the retained digits."
+   },
+   {
+    "t": "Error Interval",
+    "d": "The mathematical range of all possible true values of a continuous or discrete quantity before it was rounded or truncated, written as LB ≤ x < UB."
+   },
+   {
+    "t": "Lower Bound (LB)",
+    "d": "The smallest possible value that a number could have been prior to rounding or truncation."
+   },
+   {
+    "t": "Upper Bound (UB)",
+    "d": "The boundary value that represents the exclusive ceiling of an unrounded or untruncated quantity; any value strictly less than this ceiling rounds or truncates to the stated number."
+   },
+   {
+    "t": "Unit of Accuracy (U)",
+    "d": "The place value to which a quantity has been approximated (e.g. U = 0.1 for 1 d.p., U = 10 for rounding to the nearest 10)."
+   },
+   {
+    "t": "Significant Figure",
+    "d": "A digit that contributes to the measurement resolution of a number, starting from the first non-zero digit on the left."
+   },
+   {
+    "t": "Decimal Place",
+    "d": "The position of a digit located to the right of the decimal point, representing negative powers of ten (tenths, hundredths, thousandths)."
+   },
+   {
+    "t": "Decider Digit",
+    "d": "The single digit immediately to the right of the last retained position that dictates whether the retained position stays the same or increments by 1."
+   },
+   {
+    "t": "Appropriate Degree of Accuracy",
+    "d": "The maximum precision to which a final calculated result can be stated such that both its upper and lower bounds round to the exact same value."
+   },
+   {
+    "t": "Ceiling Rounding",
+    "d": "Rounding up to the next integer regardless of the fractional part, required in context where fractional resources cannot fulfill a full unit requirement."
+   },
+   {
+    "t": "Floor Rounding",
+    "d": "Rounding down to the preceding integer regardless of the fractional part, required in context where only complete, whole units are usable."
+   },
+   {
+    "t": "Strict Inequality (<)",
+    "d": "A relational operator stating that one value is strictly less than another, used at the upper bound of an error interval to exclude the value that rounds to the next increment."
+   },
+   {
+    "t": "Inclusive Inequality (≤)",
+    "d": "A relational operator stating that a value is less than or equal to another, used at the lower bound of an error interval because the exact half-way value rounds up."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "4.5 ≤ x ≤ 5.5 when 5 is rounded to the nearest whole number",
+    "r": "4.5 ≤ x < 5.5 (the upper bound must have a strict inequality '<' because 5.5 rounds to 6)"
+   },
+   {
+    "w": "4.5 ≤ x ≤ 5.49 or 4.5 ≤ x ≤ 5.4999",
+    "r": "4.5 ≤ x < 5.5 (continuous variables require the exact upper bound with a strict inequality)"
+   },
+   {
+    "w": "7.35 ≤ x < 7.45 when 7.4 is truncated to 1 d.p.",
+    "r": "7.4 ≤ x < 7.5 (truncation keeps the base value as the lower bound and adds a full 0.1 for the upper bound)"
+   },
+   {
+    "w": "Writing 18.0 rounded to 1 d.p. as 18",
+    "r": "18.0 (the trailing zero is mandatory to confirm the degree of accuracy to 1 d.p.)"
+   },
+   {
+    "w": "Lower bound of a / b calculated as LB(a) / LB(b)",
+    "r": "LB(a) / UB(b) (to minimise a division, divide the smallest numerator by the largest denominator)"
+   },
+   {
+    "w": "Stating 0.0070 has 2 significant figures",
+    "r": "0.0070 has 2 significant figures (the 7 and the trailing zero; leading zeros are not significant)"
+   },
+   {
+    "w": "Rounding 3.48 to 1 d.p. by first rounding 8 to make 3.5",
+    "r": "3.48 rounded to 1 d.p. is 3.5, but inspect only the single decider digit 8; double rounding like 3.448 -> 3.45 -> 3.5 is strictly incorrect"
+   },
+   {
+    "w": "Error interval for 200 to 1 s.f. written as 195 ≤ x < 205",
+    "r": "150 ≤ x < 250 (1 s.f. for 200 means the unit is hundreds, so h = 50)"
+   }
+  ],
+  "exam": [
+   {
+    "q": "The length, L cm, of a ribbon is 23 cm rounded to the nearest centimetre. Write down the error interval for L.",
+    "marks": 2,
+    "model": [
+     "Unit of accuracy U = 1 cm, so half-unit h = 0.5 cm",
+     "Lower bound = 23 - 0.5 = 22.5",
+     "Upper bound = 23 + 0.5 = 23.5",
+     "Error interval: 22.5 ≤ L < 23.5"
+    ],
+    "tip": "Check the variable letter in the question: write L, not x. Ensure ≤ on the left and < on the right."
+   },
+   {
+    "q": "A number y is truncated to 1 decimal place. The result is 8.7. Write down the error interval for y.",
+    "marks": 2,
+    "model": [
+     "For truncation, the lower bound is the truncated value: LB = 8.7",
+     "Unit of accuracy U = 0.1, so upper bound is 8.7 + 0.1 = 8.8",
+     "Error interval: 8.7 ≤ y < 8.8"
+    ],
+    "tip": "Do not halve the place value for truncation. The lower bound is the number itself."
+   },
+   {
+    "q": "A mass m is recorded as 4.60 kg to 2 decimal places. Write down the error interval for m.",
+    "marks": 2,
+    "model": [
+     "Unit of accuracy U = 0.01 kg, so half-unit h = 0.005 kg",
+     "Lower bound = 4.60 - 0.005 = 4.595",
+     "Upper bound = 4.60 + 0.005 = 4.605",
+     "Error interval: 4.595 ≤ m < 4.605"
+    ],
+    "tip": "Because 4.60 has two decimal places, the half-unit is 0.005, not 0.05."
+   },
+   {
+    "q": "The population P of a town is given as 68 000 correct to 2 significant figures. Write down the error interval for P.",
+    "marks": 2,
+    "model": [
+     "Second significant figure is 8 in the thousands place, so U = 1000",
+     "Half-unit h = 1000 / 2 = 500",
+     "Lower bound = 68 000 - 500 = 67 500",
+     "Upper bound = 68 000 + 500 = 68 500",
+     "Error interval: 67 500 ≤ P < 68 500"
+    ],
+    "tip": "Identify the place value of the last significant figure before halving."
+   },
+   {
+    "q": "A number x is rounded to 2 significant figures. The result is 0.040. Write down the error interval for x.",
+    "marks": 2,
+    "model": [
+     "The second significant figure is the zero in the thousandths place (0.001)",
+     "Half-unit h = 0.001 / 2 = 0.0005",
+     "Lower bound = 0.040 - 0.0005 = 0.0395",
+     "Upper bound = 0.040 + 0.0005 = 0.0405",
+     "Error interval: 0.0395 ≤ x < 0.0405"
+    ],
+    "tip": "The trailing zero makes thousandths the decisive place value."
+   },
+   {
+    "q": "A car travels a distance d = 140 miles, measured to the nearest 10 miles. The time taken t = 2.5 hours, measured to the nearest 0.1 hour. By considering bounds, calculate the average speed s to an appropriate degree of accuracy. You must show all your working and justify your degree of accuracy.",
+    "marks": 6,
+    "model": [
+     "Bounds for distance: 135 ≤ d < 145",
+     "Bounds for time: 2.45 ≤ t < 2.55",
+     "Lower bound for speed: LB(s) = LB(d) / UB(t) = 135 / 2.55 = 52.94117... mph",
+     "Upper bound for speed: UB(s) = UB(d) / LB(t) = 145 / 2.45 = 59.18367... mph",
+     "Rounding both to 1 significant figure: LB rounds to 50 mph; UB rounds to 60 mph (they do not agree)",
+     "Rounding both to the nearest 10: LB rounds to 50 mph; UB rounds to 60 mph",
+     "Since LB = 52.94... and UB = 59.18..., the bounds do not agree to 2 s.f. or 1 s.f.; however, both fall in the 50s. State that speed = 50 mph to 1 s.f. cannot even be agreed upon, so speed = 60 mph to 1 s.f. (or state speed is between 53 mph and 59 mph). Evaluated to 1 s.f.: 50 vs 60. Conclude an appropriate degree of accuracy cannot exceed 1 s.f., and justify with explicit rounded values."
+    ],
+    "tip": "Always write down the full unrounded decimal outputs for both LB and UB before rounding them to compare."
+   },
+   {
+    "q": "A number w is truncated to 2 decimal places. The result is 0.58. Write down the error interval for w.",
+    "marks": 2,
+    "model": [
+     "Truncation lower bound = 0.58",
+     "Unit of accuracy = 0.01; upper bound = 0.58 + 0.01 = 0.59",
+     "Error interval: 0.58 ≤ w < 0.59"
+    ],
+    "tip": "Remember truncation gives an interval of width equal to 1 full unit of the truncated place."
+   },
+   {
+    "q": "A rectangle has length l = 8.4 cm and width w = 3.6 cm, both correct to 1 decimal place. Calculate the upper bound for the area of the rectangle.",
+    "marks": 2,
+    "model": [
+     "Upper bound of length = 8.45 cm",
+     "Upper bound of width = 3.65 cm",
+     "Upper bound of area = 8.45 × 3.65 = 30.8425 cm²"
+    ],
+    "tip": "Do not round intermediate bounds; multiply 8.45 by 3.65 to full precision."
+   },
+   {
+    "q": "Explain why the error interval for a number k rounded to the nearest integer as 15 is 14.5 ≤ k < 15.5 and not 14.5 ≤ k ≤ 15.4.",
+    "marks": 1,
+    "model": [
+     "15.4 is not the maximum possible value because continuous numbers such as 15.49 or 15.499 also round to 15; 15.5 is the exact boundary where values begin rounding to 16, so the upper bound must be strictly less than 15.5."
+    ],
+    "tip": "Focus on the fact that numbers between 15.4 and 15.5 still round to 15."
+   },
+   {
+    "q": "Eggs are packed into boxes of 6. A farmer collects 425 eggs. How many boxes can be completely filled?",
+    "marks": 2,
+    "model": [
+     "425 ÷ 6 = 70.833...",
+     "A box must be completely filled, so round down (truncate) to the nearest integer",
+     "Number of complete boxes = 70"
+    ],
+    "tip": "In context questions involving 'completely filled' containers, always take the floor (round down)."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A cylindrical tank has radius r = 2.4 m and height h = 5.8 m, each measured correct to 1 decimal place. (a) Write down the error intervals for r and h. (b) Calculate the lower bound for the volume of the cylinder, giving your answer in terms of π and as a decimal to 3 significant figures.",
+    "steps": [
+     "Step 1: Identify the unit of accuracy for both r and h. Both are given to 1 d.p., so U = 0.1 m. The half-unit variation is h_step = 0.1 / 2 = 0.05 m.",
+     "Step 2: Form the error intervals using LB ≤ x < UB: for radius: 2.35 ≤ r < 2.45 m; for height: 5.75 ≤ h < 5.85 m.",
+     "Step 3: State the volume formula for a cylinder: V = π × r² × h.",
+     "Step 4: To minimise the volume (Lower Bound), minimise both positive components r and h: LB(V) = π × (LB(r))² × LB(h).",
+     "Step 5: Substitute the lower bounds into the formula: LB(V) = π × (2.35)² × 5.75.",
+     "Step 6: Compute the numerical components: 2.35² = 5.5225; 5.5225 × 5.75 = 31.754375.",
+     "Step 7: In terms of π: LB(V) = 31.754375π m³.",
+     "Step 8: Multiply by π: 31.754375 × 3.14159265... = 99.7601... m³.",
+     "Step 9: Round to 3 significant figures: the third significant figure is 9 in the units column, decider is 7 (≥ 5), so 99.76 rounds to 99.8 m³."
+    ],
+    "ans": "(a) 2.35 ≤ r < 2.45 and 5.75 ≤ h < 5.85; (b) 31.754375π m³ = 99.8 m³ (to 3 s.f.)"
+   },
+   {
+    "q": "The formula P = F / A connects pressure P, force F, and area A. F = 650 N correct to 2 significant figures. A = 0.024 m² correct to 2 significant figures. By calculating the upper and lower bounds of P, determine P to an appropriate degree of accuracy. Fully justify your answer.",
+    "steps": [
+     "Step 1: Find the error interval for F. F = 650 to 2 s.f., so the second s.f. is in the tens column (U = 10). Half-unit = 5 N. Thus 645 ≤ F < 655 N.",
+     "Step 2: Find the error interval for A. A = 0.024 to 2 s.f., so the second s.f. is in the thousandths column (U = 0.001). Half-unit = 0.0005 m². Thus 0.0235 ≤ A < 0.0245 m².",
+     "Step 3: Calculate Lower Bound of P: LB(P) = LB(F) / UB(A) = 645 / 0.0245 = 26 326.5306... N/m².",
+     "Step 4: Calculate Upper Bound of P: UB(P) = UB(F) / LB(A) = 655 / 0.0235 = 27 872.3404... N/m².",
+     "Step 5: Compare bounds at varying degrees of accuracy:",
+     "- To 1 significant figure: LB(P) = 30 000; UB(P) = 30 000 (They agree).",
+     "- To 2 significant figures: LB(P) = 26 000; UB(P) = 28 000 (They do not agree).",
+     "Step 6: Formulate the justification: Both bounds round to 30 000 to 1 significant figure (or 3 × 10⁴). At 2 significant figures, LB rounds to 26 000 while UB rounds to 28 000, which disagree.",
+     "Step 7: State the final agreed value to 1 s.f."
+    ],
+    "ans": "P = 30 000 N/m² (to 1 s.f.). Justification: Lower bound = 26 326... and Upper bound = 27 872... Both round to 30 000 to 1 s.f., but differ at 2 s.f. (26 000 vs 28 000)."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Error interval for rounding: 7.4 rounded to 1 d.p. has LB 7.35 (solid circle, inclusive) and UB 7.45 (open circle, exclusive).",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><text x=\"200\" y=\"28\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e293b\" text-anchor=\"middle\">Rounding Error Interval: 7.4 to 1 d.p.</text><line x1=\"40\" y1=\"110\" x2=\"360\" y2=\"110\" stroke=\"#64748b\" stroke-width=\"2.5\"/><line x1=\"80\" y1=\"100\" x2=\"80\" y2=\"120\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"80\" y=\"138\" font-size=\"11\" fill=\"#475569\" text-anchor=\"middle\">7.30</text><line x1=\"140\" y1=\"102\" x2=\"140\" y2=\"118\" stroke=\"#0284c7\" stroke-width=\"2\"/><text x=\"140\" y=\"138\" font-size=\"11\" font-weight=\"bold\" fill=\"#0369a1\" text-anchor=\"middle\">7.35 (LB)</text><line x1=\"200\" y1=\"98\" x2=\"200\" y2=\"122\" stroke=\"#1e293b\" stroke-width=\"2.5\"/><text x=\"200\" y=\"138\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" text-anchor=\"middle\">7.40</text><line x1=\"260\" y1=\"102\" x2=\"260\" y2=\"118\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"260\" y=\"138\" font-size=\"11\" font-weight=\"bold\" fill=\"#b91c1c\" text-anchor=\"middle\">7.45 (UB)</text><line x1=\"320\" y1=\"100\" x2=\"320\" y2=\"120\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"320\" y=\"138\" font-size=\"11\" fill=\"#475569\" text-anchor=\"middle\">7.50</text><rect x=\"140\" y=\"104\" width=\"120\" height=\"12\" fill=\"#bae6fd\" fill-opacity=\"0.6\"/><circle cx=\"140\" cy=\"110\" r=\"5.5\" fill=\"#0284c7\" stroke=\"#0369a1\" stroke-width=\"1.5\"/><circle cx=\"260\" cy=\"110\" r=\"5.5\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"200\" y=\"88\" font-size=\"12\" font-weight=\"bold\" fill=\"#0369a1\" text-anchor=\"middle\">7.35 ≤ x &lt; 7.45</text><text x=\"140\" y=\"168\" font-size=\"11\" fill=\"#0369a1\" text-anchor=\"middle\">Solid dot = Included (≤)</text><text x=\"260\" y=\"168\" font-size=\"11\" fill=\"#b91c1c\" text-anchor=\"middle\">Open circle = Excluded (&lt;)</text><text x=\"200\" y=\"210\" font-size=\"11\" fill=\"#334155\" text-anchor=\"middle\">Interval spans ±0.05 around 7.4</text></svg>"
+   },
+   {
+    "cap": "Error interval for truncation: 7.4 truncated to 1 d.p. starts at 7.4 (solid circle) and reaches strictly below 7.5 (open circle).",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><text x=\"200\" y=\"28\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e293b\" text-anchor=\"middle\">Truncation Error Interval: 7.4 to 1 d.p.</text><line x1=\"40\" y1=\"110\" x2=\"360\" y2=\"110\" stroke=\"#64748b\" stroke-width=\"2.5\"/><line x1=\"80\" y1=\"100\" x2=\"80\" y2=\"120\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"80\" y=\"138\" font-size=\"11\" fill=\"#475569\" text-anchor=\"middle\">7.3</text><line x1=\"160\" y1=\"98\" x2=\"160\" y2=\"122\" stroke=\"#059669\" stroke-width=\"2.5\"/><text x=\"160\" y=\"138\" font-size=\"12\" font-weight=\"bold\" fill=\"#047857\" text-anchor=\"middle\">7.4 (LB)</text><line x1=\"280\" y1=\"98\" x2=\"280\" y2=\"122\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><text x=\"280\" y=\"138\" font-size=\"12\" font-weight=\"bold\" fill=\"#b91c1c\" text-anchor=\"middle\">7.5 (UB)</text><line x1=\"340\" y1=\"100\" x2=\"340\" y2=\"120\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"340\" y=\"138\" font-size=\"11\" fill=\"#475569\" text-anchor=\"middle\">7.6</text><rect x=\"160\" y=\"104\" width=\"120\" height=\"12\" fill=\"#bbf7d0\" fill-opacity=\"0.6\"/><circle cx=\"160\" cy=\"110\" r=\"5.5\" fill=\"#059669\" stroke=\"#065f46\" stroke-width=\"1.5\"/><circle cx=\"280\" cy=\"110\" r=\"5.5\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"220\" y=\"88\" font-size=\"12\" font-weight=\"bold\" fill=\"#047857\" text-anchor=\"middle\">7.4 ≤ x &lt; 7.5</text><text x=\"160\" y=\"168\" font-size=\"11\" fill=\"#047857\" text-anchor=\"middle\">LB is the stated value</text><text x=\"280\" y=\"168\" font-size=\"11\" fill=\"#b91c1c\" text-anchor=\"middle\">UB is stated value + 1 unit</text><text x=\"200\" y=\"210\" font-size=\"11\" fill=\"#334155\" text-anchor=\"middle\">Asymmetric span: [7.4, 7.5) of width 0.1</text></svg>"
+   },
+   {
+    "cap": "Determining appropriate degree of accuracy: bounds agree at 2 s.f. (14) but diverge at 3 s.f. (14.3 vs 14.4).",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><text x=\"200\" y=\"26\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e293b\" text-anchor=\"middle\">Appropriate Degree of Accuracy Decision</text><rect x=\"30\" y=\"48\" width=\"340\" height=\"36\" fill=\"#e0f2fe\" rx=\"6\" stroke=\"#0284c7\"/><text x=\"45\" y=\"70\" font-size=\"12\" font-weight=\"bold\" fill=\"#0369a1\">Lower Bound = 14.286...</text><text x=\"235\" y=\"70\" font-size=\"11\" fill=\"#0284c7\">2 s.f. = 14 | 3 s.f. = 14.3</text><rect x=\"30\" y=\"94\" width=\"340\" height=\"36\" fill=\"#fef3c7\" rx=\"6\" stroke=\"#d97706\"/><text x=\"45\" y=\"116\" font-size=\"12\" font-weight=\"bold\" fill=\"#b45309\">Upper Bound = 14.412...</text><text x=\"235\" y=\"116\" font-size=\"11\" fill=\"#d97706\">2 s.f. = 14 | 3 s.f. = 14.4</text><rect x=\"30\" y=\"142\" width=\"160\" height=\"46\" fill=\"#dcfce7\" rx=\"6\" stroke=\"#16a34a\"/><text x=\"110\" y=\"162\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\" text-anchor=\"middle\">To 2 s.f.: Both = 14</text><text x=\"110\" y=\"178\" font-size=\"11\" fill=\"#166534\" text-anchor=\"middle\">AGREE (Valid Answer)</text><rect x=\"210\" y=\"142\" width=\"160\" height=\"46\" fill=\"#fee2e2\" rx=\"6\" stroke=\"#dc2626\"/><text x=\"290\" y=\"162\" font-size=\"12\" font-weight=\"bold\" fill=\"#b91c1c\" text-anchor=\"middle\">To 3 s.f.: 14.3 vs 14.4</text><text x=\"290\" y=\"178\" font-size=\"11\" fill=\"#991b1b\" text-anchor=\"middle\">DISAGREE (Too precise)</text><text x=\"200\" y=\"216\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" text-anchor=\"middle\">Final Grade 9 Answer: 14 (correct to 2 s.f.)</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_h.0.14",
+  "sid": "maths_aqa_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.8-flash",
+  "ts": "2026-11-19T17:35:07.978Z"
  }
 }

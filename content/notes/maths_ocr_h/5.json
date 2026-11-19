@@ -1059,5 +1059,460 @@
   "src": "pre",
   "by": "gemini/gemini-3.5-flash-lite",
   "ts": "2026-11-16T03:35:02.718Z"
+ },
+ "maths_ocr_h.5.4": {
+  "summary": "Mastering functions at the OCR GCSE Higher tier means treating mathematical operations as input-output machines. You must be completely fluent in function notation, finding inverse functions by swapping variables, and combining functions into composite functions. These concepts form a vital bridge between algebraic manipulation and graphical transformations, frequently appearing in high-tariff questions at grade 9.",
+  "core": [
+   {
+    "h": "1. Understanding Function Notation and Terminology",
+    "p": "A function is a rule that maps each element in its domain to a unique element in its range. In OCR Higher Maths, functions are denoted using letters like f, g, or h, combined with variable inputs such as x.",
+    "bullets": [
+     "Written as f(x) = ... or as a mapping rule f : x |-> ...",
+     "The input x belongs to the domain (all permissible values).",
+     "The output f(x) belongs to the range (all achievable values).",
+     "Evaluating a function means substituting a given value for x."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Function Definition",
+      "p": "A function is a relation that assigns to each element in the domain exactly one element in the range."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. Evaluating and Substituting Functions",
+    "p": "When evaluating functions for numerical or algebraic inputs, follow standard order of operations strictly. Substitute values using parentheses to avoid sign errors.",
+    "bullets": [
+     "For f(x) = 3x^2 - 5, find f(-2) by calculating 3(-2)^2 - 5.",
+     "Substitute (-2)^2 = 4, then 3(4) = 12, giving 12 - 5 = 7.",
+     "For algebraic inputs like f(x + 1), replace every instance of x with (x + 1).",
+     "Expand and simplify fully unless instructed otherwise."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Parentheses Rule",
+      "p": "Always wrap negative numbers and algebraic expressions in brackets when substituting into functions."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "3. Composite Functions: The Chain Reaction",
+    "p": "A composite function applies one function to the result of another. The notation fg(x) means apply g first, then apply f to that result. Always work from the inside out.",
+    "bullets": [
+     "Written as fg(x) or f(g(x)).",
+     "Never calculate fg as f times g unless explicitly defined as point-wise multiplication.",
+     "Evaluate the inner function first: find g(x), then substitute that expression into f(x).",
+     "Be careful with order: fg(x) is generally not equal to gf(x)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Order Trap",
+      "p": "fg(x) means f(g(x)), so g acts first on x. Read from right to left!"
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Visualising composite functions as two sequential mapping machines.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"20\" width=\"380\" height=\"200\" fill=\"#f8fafc\" rx=\"10\" stroke=\"#cbd5e1\"/><text x=\"30\" y=\"50\" font-size=\"14\" fill=\"#1e293b\" font-weight=\"bold\">Input x</text><rect x=\"90\" y=\"70\" width=\"80\" height=\"80\" fill=\"#dbeafe\" rx=\"6\" stroke=\"#2563eb\"/><text x=\"110\" y=\"115\" font-size=\"14\" fill=\"#1e293b\">g(x)</text><line x1=\"70\" y1=\"110\" x2=\"90\" y2=\"110\" stroke=\"#475569\" stroke-width=\"2\"/><polygon points=\"90,110 82,106 82,114\" fill=\"#475569\"/><rect x=\"230\" y=\"70\" width=\"80\" height=\"80\" fill=\"#bbf7d0\" rx=\"6\" stroke=\"#16a34a\"/><text x=\"245\" y=\"115\" font-size=\"14\" fill=\"#1e293b\">f(g(x))</text><line x1=\"170\" y1=\"110\" x2=\"230\" y2=\"110\" stroke=\"#475569\" stroke-width=\"2\"/><polygon points=\"230,110 222,106 222,114\" fill=\"#475569\"/><line x1=\"310\" y1=\"110\" x2=\"350\" y2=\"110\" stroke=\"#475569\" stroke-width=\"2\"/><polygon points=\"350,110 342,106 342,114\" fill=\"#475569\"/><text x=\"330\" y=\"50\" font-size=\"14\" fill=\"#1e293b\" font-weight=\"bold\">Output</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "4. Algebraic Composite Functions",
+    "p": "To find a simplified algebraic expression for a composite function, substitute the formula of the inner function into the variable of the outer function.",
+    "bullets": [
+     "Let f(x) = 2x + 3 and g(x) = x^2.",
+     "To find fg(x), substitute g(x) into f: f(x^2) = 2(x^2) + 3.",
+     "To find gf(x), substitute f(x) into g: g(2x + 3) = (2x + 3)^2.",
+     "Expand brackets and simplify to give a final algebraic expression."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Non-Commutative",
+      "p": "fg(x) != gf(x) in almost all standard algebraic functions."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "5. Inverse Functions: Undoing the Process",
+    "p": "An inverse function reverses the effect of the original function. If f maps x to y, then the inverse function f^(-1) maps y back to x.",
+    "bullets": [
+     "Written as f^(-1)(x).",
+     "Only one-to-one functions possess a valid inverse across their entire domain.",
+     "Graphically, the inverse is a reflection of the function in the line y = x.",
+     "The domain of f(x) becomes the range of f^(-1)(x), and vice versa."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Inverse Property",
+      "p": "ff^(-1)(x) = f^(-1)f(x) = x for all x in the valid domain."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Method for Finding Inverse Functions",
+    "p": "A reliable algebraic algorithm is required to find the inverse of any function given as an algebraic formula.",
+    "bullets": [
+     "Step 1: Replace f(x) with y.",
+     "Step 2: Rearrange the equation to make x the subject.",
+     "Step 3: Swap x and y everywhere in the equation.",
+     "Step 4: Replace y with the inverse notation f^(-1)(x)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Check Your Work",
+      "p": "Test your inverse by substituting a number: if f(3) = 11, then f^(-1)(11) must equal 3."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Geometric relationship between a function and its inverse reflection in y = x.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"20\" width=\"380\" height=\"200\" fill=\"#f8fafc\" rx=\"10\" stroke=\"#cbd5e1\"/><line x1=\"50\" y1=\"200\" x2=\"350\" y2=\"40\" stroke=\"#94a3b8\" stroke-dasharray=\"4\"/><text x=\"310\" y=\"35\" font-size=\"12\" fill=\"#64748b\">y = x</text><path d=\"M 60 190 Q 150 190 200 120 T 340 50\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><text x=\"210\" y=\"105\" font-size=\"12\" fill=\"#2563eb\">f(x)</text><path d=\"M 60 190 Q 190 150 190 60 T 340 50\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"3\"/><text x=\"130\" y=\"180\" font-size=\"12\" fill=\"#dc2626\">f⁻¹(x)</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "7. Domain and Range Restrictions",
+    "p": "Some functions require restricted domains so that they remain one-to-one and have a well-defined inverse function.",
+    "bullets": [
+     "Quadratic functions like f(x) = x^2 are many-to-one over all real numbers.",
+     "To find an inverse for f(x) = x^2, the domain must be restricted, e.g., x >= 0.",
+     "The range of the original function sets the domain of the inverse function.",
+     "Always state domain restrictions when requested in exam mark schemes."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Domain Omission",
+      "p": "Failing to state domain restrictions for inverses of quadratics loses final accuracy marks."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Solving Equations Involving Functions",
+    "p": "Higher tier exams frequently combine functions with algebraic equation solving, requiring you to equate composite or inverse functions.",
+    "bullets": [
+     "Solve equations of the form f(x) = g(x) by equating algebraic expressions.",
+     "Solve fg(x) = 15 by substituting g into f and setting equal to 15.",
+     "Solve f^(-1)(x) = 4 by either finding f^(-1)(x) first or evaluating f(4).",
+     "Check solutions against original domain restrictions."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Inverse Shortcut",
+      "p": "f^(-1)(a) = b is identical to solving f(b) = a. Avoids finding the algebraic inverse!"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Self-Inverse Functions",
+    "p": "Certain special functions are their own inverse, meaning applying the function twice returns the original input.",
+    "bullets": [
+     "A function f(x) is self-inverse if f(f(x)) = x.",
+     "Examples include f(x) = 1/x (for x != 0) and f(x) = a - x.",
+     "Testing a self-inverse function: show that f^(-1)(x) simplifies to f(x).",
+     "Graphs of self-inverse functions possess line symmetry along y = x."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Self-Inverse",
+      "p": "f(x) is self-inverse if f^(-1)(x) = f(x)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Graphical Interpretation of Functions",
+    "p": "Understanding functions graphically connects algebra to geometry, helping visualise composite transformations and roots.",
+    "bullets": [
+     "The roots of f(x) = 0 are the x-intercepts of the graph y = f(x).",
+     "Y-intercept occurs at (0, f(0)).",
+     "Solutions to f(x) = g(x) are the x-coordinates of the intersection points of both graphs.",
+     "Composite functions correspond to functional composition of transformations."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Graph Intersections",
+      "p": "Use sketch graphs to estimate or verify solutions to function equations."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Intersection of two functions representing solutions to f(x) = g(x).",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"20\" width=\"380\" height=\"200\" fill=\"#f8fafc\" rx=\"10\" stroke=\"#cbd5e1\"/><line x1=\"50\" y1=\"200\" x2=\"350\" y2=\"200\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"80\" y1=\"220\" x2=\"80\" y2=\"40\" stroke=\"#475569\" stroke-width=\"2\"/><path d=\"M 80 180 Q 200 40 320 180\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"280\" y=\"70\" font-size=\"12\" fill=\"#2563eb\">y = f(x)</text><path d=\"M 80 80 L 320 160\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"280\" y=\"135\" font-size=\"12\" fill=\"#16a34a\">y = g(x)</text><circle cx=\"140\" cy=\"100\" r=\"5\" fill=\"#dc2626\"/><circle cx=\"270\" cy=\"143\" r=\"5\" fill=\"#dc2626\"/><text x=\"130\" y=\"85\" font-size=\"11\" fill=\"#dc2626\">Intersection</text></svg>"
+     }
+    ]
+   }
+  ],
+  "analogy": {
+   "t": "The Assembly Line Factory Analogy",
+   "p": "Think of a function f(x) as a specialised factory machine. You feed raw material x into the hopper, the machine performs a strict set of operations (doubling, squaring, adding 3), and outputs a finished product f(x). A composite function fg(x) is two factories linked by a conveyor belt: raw material goes into machine g, and its output instantly feeds directly into machine f. An inverse function f^(-1)(x) is the factory running in reverse: it takes the finished product, feeds it back through backwards gears, and reconstructs the exact original raw material. This analogy breaks down because real factory machines often lose heat or have friction, whereas mathematical functions are perfectly reversible (if one-to-one) and deterministic without loss."
+  },
+  "terms": [
+   {
+    "t": "Function",
+    "d": "A rule that maps each element of a domain to a unique element of a range."
+   },
+   {
+    "t": "Domain",
+    "d": "The complete set of all possible input values (x-values) for a function."
+   },
+   {
+    "t": "Range",
+    "d": "The complete set of all possible output values generated by a function."
+   },
+   {
+    "t": "Composite Function",
+    "d": "The combination of two or more functions where the output of one becomes the input of another."
+   },
+   {
+    "t": "Inverse Function",
+    "d": "A function that reverses the operation of another given function, denoted f^(-1)(x)."
+   },
+   {
+    "t": "One-to-One",
+    "d": "A function where each output corresponds to exactly one unique input."
+   },
+   {
+    "t": "Many-to-One",
+    "d": "A function where multiple distinct inputs can produce the same output value."
+   },
+   {
+    "t": "Mapping",
+    "d": "The process of associating elements of one set with elements of another set."
+   },
+   {
+    "t": "Self-Inverse",
+    "d": "A function that is equal to its own inverse, so f(f(x)) = x."
+   },
+   {
+    "t": "Identity Function",
+    "d": "A function that returns its own input unchanged, denoted I(x) = x."
+   },
+   {
+    "t": "Restriction",
+    "d": "Limiting the domain of a function to ensure it is one-to-one and invertible."
+   },
+   {
+    "t": "Evaluation",
+    "d": "Finding the numerical output of a function for a specified input value."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Multiplying f and g together when asked for fg(x).",
+    "r": "Recognising that fg(x) means substitution and composition, not algebraic multiplication f(x) * g(x)."
+   },
+   {
+    "w": "Evaluating composite functions from left to right, calculating f(g) then applying g.",
+    "r": "Always evaluating composite functions from right to left: fg(x) means apply g first, then f."
+   },
+   {
+    "w": "Forgetting to swap x and y when finding an algebraic inverse function.",
+    "r": "Strictly following the four-step method: replace with y, make x the subject, swap x and y, write f^(-1)."
+   },
+   {
+    "w": "Writing f^-1(x) as 1 / f(x).",
+    "r": "Understanding that the superscript -1 in function notation denotes an inverse function, not a reciprocal."
+   },
+   {
+    "w": "Omitting domain restrictions when finding the inverse of a many-to-one function like a quadratic.",
+    "r": "Explicitly stating the restricted domain (e.g., x >= 0) required for the inverse to be a valid function."
+   },
+   {
+    "w": "Expanding composite brackets incorrectly, e.g., (2x + 1)^2 = 4x^2 + 1.",
+    "r": "Fully expanding brackets as (2x + 1)(2x + 1) = 4x^2 + 4x + 1."
+   },
+   {
+    "w": "Equating fg(x) and gf(x) assuming function composition is commutative.",
+    "r": "Proving or testing compositions separately, as fg(x) != gf(x) in general."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Given f(x) = 4x - 5, find f(3).",
+    "marks": 2,
+    "model": [
+     "Substitute 3 into the function: 4(3) - 5",
+     "Calculate 12 - 5 = 7",
+     "Answer: 7"
+    ],
+    "tip": "Show your substitution step clearly to pick up method marks if arithmetic slips."
+   },
+   {
+    "q": "Given f(x) = 3x + 2 and g(x) = x^2 - 1, find fg(4).",
+    "marks": 3,
+    "model": [
+     "Find g(4): 4^2 - 1 = 15",
+     "Substitute into f: f(15) = 3(15) + 2",
+     "Calculate final value: 47"
+    ],
+    "tip": "Always evaluate the inner function first before moving outward."
+   },
+   {
+    "q": "Find an algebraic expression for fg(x) given f(x) = 2x + 1 and g(x) = 3x - 4.",
+    "marks": 3,
+    "model": [
+     "Substitute g(x) into f: 2(3x - 4) + 1",
+     "Expand brackets: 6x - 8 + 1",
+     "Simplify to 6x - 7"
+    ],
+    "tip": "Take care with negative signs when expanding brackets."
+   },
+   {
+    "q": "Given f(x) = (5x + 1) / 2, find the inverse function f^(-1)(x).",
+    "marks": 4,
+    "model": [
+     "Set up equation: y = (5x + 1) / 2",
+     "Rearrange for x: 2y = 5x + 1 => 5x = 2y - 1 => x = (2y - 1) / 5",
+     "Swap variables: y = (2x - 1) / 5",
+     "State f^(-1)(x) = (2x - 1) / 5"
+    ],
+    "tip": "Check your inverse by testing a number from the original function."
+   },
+   {
+    "q": "Functions f and g are defined as f(x) = x^2 + 3 and g(x) = x - 2. Solve fg(x) = gf(x).",
+    "marks": 5,
+    "model": [
+     "Find fg(x): (x - 2)^2 + 3 = x^2 - 4x + 4 + 3 = x^2 - 4x + 7",
+     "Find gf(x): (x^2 + 3) - 2 = x^2 + 1",
+     "Set them equal: x^2 - 4x + 7 = x^2 + 1",
+     "Solve for x: -4x = -6 => x = 1.5"
+    ],
+    "tip": "Equate the fully expanded expressions and solve algebraically."
+   },
+   {
+    "q": "The function f(x) = 3 / (x - 2) where x != 2. Find f^(-1)(4).",
+    "marks": 3,
+    "model": [
+     "Method 1: Solve f(x) = 4, so 3 / (x - 2) = 4",
+     "3 = 4(x - 2) => 3 = 4x - 8 => 4x = 11",
+     "x = 11/4 (or 2.75)"
+    ],
+    "tip": "Using the shortcut f^(-1)(a) = b <=> f(b) = a saves time and reduces algebraic errors."
+   },
+   {
+    "q": "Given f(x) = 2x^2 - 3 for x >= 0, find f^(-1)(x) and state its domain.",
+    "marks": 4,
+    "model": [
+     "Set y = 2x^2 - 3",
+     "Rearrange for x: x^2 = (y + 3) / 2 => x = sqrt((y + 3) / 2)",
+     "Swap variables: f^(-1)(x) = sqrt((x + 3) / 2)",
+     "State domain: x >= -3"
+    ],
+    "tip": "Remember that the domain of the inverse is the range of the original function."
+   },
+   {
+    "q": "Prove that the function f(x) = (2 - x) / x (for x != 0) is self-inverse.",
+    "marks": 4,
+    "model": [
+     "Show that f(f(x)) = x, or find f^(-1)(x) and show it equals f(x)",
+     "Find f(f(x)): (2 - ((2-x)/x)) / ((2-x)/x)",
+     "Simplify numerator: (2x - 2 + x) / x = (3x - 2) / x",
+     "Divide by ((2-x)/x): ((3x-2)/x) * (x/(2-x)) - check alternative: find inverse f^(-1)(x) = 2 / (x + 1) which equals f(x) when simplified."
+    ],
+    "tip": "Finding f^(-1)(x) explicitly is often cleaner than nesting f(f(x)) for rational functions."
+   },
+   {
+    "q": "Given f(x) = 5^x, find f(-2).",
+    "marks": 2,
+    "model": [
+     "Substitute -2: 5^(-2)",
+     "Evaluate negative power: 1 / 5^2",
+     "Answer: 1 / 25"
+    ],
+    "tip": "Negative indices mean reciprocal: a^(-n) = 1 / a^n."
+   },
+   {
+    "q": "The function h(x) = x^2 - 4x has domain x >= 2. Find h^(-1)(5).",
+    "marks": 4,
+    "model": [
+     "Let h(x) = 5, so x^2 - 4x = 5",
+     "Rearrange into quadratic: x^2 - 4x - 5 = 0",
+     "Factorise: (x - 5)(x + 1) = 0",
+     "Select positive root due to domain x >= 2: x = 5"
+    ],
+    "tip": "Always use domain restrictions to discard invalid quadratic roots."
+   },
+   {
+    "q": "Given f(x) = sin(x) and g(x) = 2x, evaluate fg(30 degrees).",
+    "marks": 3,
+    "model": [
+     "Evaluate inner function: g(30) = 2(30) = 60 degrees",
+     "Substitute into outer function: f(60) = sin(60)",
+     "Exact value: sqrt(3) / 2"
+    ],
+    "tip": "Combine function notation with exact trigonometric values where required."
+   },
+   {
+    "q": "Find the value of x for which f^(-1)(x) = 0, given f(x) = 3x^2 + 7 for x >= 0.",
+    "marks": 3,
+    "model": [
+     "Recognise that f^(-1)(0) = k means f(k) = 0",
+     "Set f(k) = 3k^2 + 7 = 0",
+     "3k^2 = -7 => k^2 = -7/3",
+     "No real solution (or explain that 0 is outside the range of f(x))"
+    ],
+    "tip": "Check ranges carefully; outputs of the original function cannot fall below minimum turning points."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Given the functions f(x) = 3x - 2 and g(x) = x^2 + 5, find an algebraic expression for gf(x) and evaluate gf(3).",
+    "steps": [
+     "Step 1: Understand the composition order. gf(x) means substitute f(x) into g(x).",
+     "Step 2: Substitute f(x) into g: g(3x - 2) = (3x - 2)^2 + 5.",
+     "Step 3: Expand the brackets: (3x - 2)(3x - 2) = 9x^2 - 6x - 6x + 4 = 9x^2 - 12x + 4.",
+     "Step 4: Add 5 to complete the expression: gf(x) = 9x^2 - 12x + 9.",
+     "Step 5: Evaluate gf(3) by substituting x = 3 into the expression: 9(3)^2 - 12(3) + 9.",
+     "Step 6: Calculate numerical value: 9(9) - 36 + 9 = 81 - 36 + 9 = 54."
+    ],
+    "ans": "gf(x) = 9x^2 - 12x + 9 and gf(3) = 54."
+   },
+   {
+    "q": "Find the inverse function of f(x) = (2x + 3) / (x - 1) where x != 1.",
+    "steps": [
+     "Step 1: Replace f(x) with y: y = (2x + 3) / (x - 1).",
+     "Step 2: Multiply both sides by (x - 1) to clear the fraction: y(x - 1) = 2x + 3.",
+     "Step 3: Expand brackets: xy - y = 2x + 3.",
+     "Step 4: Collect all terms containing x on one side: xy - 2x = y + 3.",
+     "Step 5: Factorise x out on the left hand side: x(y - 2) = y + 3.",
+     "Step 6: Make x the subject by dividing: x = (y + 3) / (y - 2).",
+     "Step 7: Swap x and y, and write in inverse notation: f^(-1)(x) = (x + 3) / (x - 2)."
+    ],
+    "ans": "f^(-1)(x) = (x + 3) / (x - 2)"
+   }
+  ],
+  "pid": "maths_ocr_h.5.4",
+  "sid": "maths_ocr_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-19T20:34:46.896Z"
  }
 }

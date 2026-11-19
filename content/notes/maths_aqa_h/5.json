@@ -1860,5 +1860,1179 @@
   "src": "pre",
   "by": "gemini/gemini-flash-lite-latest",
   "ts": "2026-11-18T19:29:48.274Z"
+ },
+ "maths_aqa_h.5.0": {
+  "summary": "Sampling allows statisticians to infer properties of an entire population without the time, expense, and logistical challenges of conducting a full census. To make valid inferences about population parameters—such as totals, means, or population size—a sample must be representative and free from sampling bias. Understanding techniques like simple random sampling, stratified selection, and capture-recapture, alongside their limitations and underlying assumptions, is essential for critically evaluating statistical data in AQA GCSE Higher tier Mathematics.",
+  "core": [
+   {
+    "h": "Populations, Samples, and Censuses",
+    "p": "In statistics, the **population** refers to the complete set of items, individuals, or events that you wish to study. A **census** is a survey that collects data from every single member of the population. While a census provides complete accuracy, it is often impractical due to high costs, time constraints, or destructive testing conditions. A **sample** is a subset of the population chosen to represent the whole.",
+    "bullets": [
+     "**Population**: The entire target group under investigation (e.g., all Year 11 students in the UK).",
+     "**Census**: Data collected from every member of the population. Gives 100% accurate parameters but is expensive and slow.",
+     "**Sample**: A smaller selection taken from the population to make inferences.",
+     "**Parameter vs Statistic**: A **parameter** is a numerical measure describing a population (e.g., true population mean $\\mu$), whereas a **statistic** is calculated from a sample (e.g., sample mean $\\bar{x}$)."
+    ],
+    "table": {
+     "head": [
+      "Feature",
+      "Census",
+      "Sample"
+     ],
+     "rows": [
+      [
+       "Accuracy",
+       "100% accurate (no sampling error)",
+       "Estimate (subject to sampling variation)"
+      ],
+      [
+       "Cost & Time",
+       "Very expensive and time-consuming",
+       "Cheap, quick, and manageable"
+      ],
+      [
+       "Destructive Testing",
+       "Impossible (destroys whole population)",
+       "Possible (only destroys sample subset)"
+      ],
+      [
+       "Data Processing",
+       "Handles huge volume of data",
+       "Handles smaller, manageable dataset"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Population and Sample",
+      "p": "A **population** is the entire group of items or individuals being investigated. A **sample** is a selection of units taken from the population to represent it."
+     },
+     {
+      "k": "warn",
+      "t": "Destructive Testing Trap",
+      "p": "If testing involves destroying the item (e.g., testing the lifespan of lightbulbs or crash-testing cars), a census CANNOT be used because it would destroy the entire population."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Sampling Frames and Sampling Bias",
+    "p": "To select a sample, researchers usually require a **sampling frame**—a complete, numbered list of all members of the population from which the sample is drawn. If the sampling frame is incomplete or flawed, the resulting sample will suffer from **sampling bias**, meaning certain members of the population have a higher or lower probability of selection than others.",
+    "bullets": [
+     "**Sampling Frame**: A complete list of all items/people in the population (e.g., a school register, a electoral roll).",
+     "**Sampling Bias**: Occurs when a sample systematically over-represents or under-represents certain groups within the population.",
+     "**Unrepresentative Sample**: A sample whose characteristics do not match the population, making inferences invalid.",
+     "**Common Sources of Bias**: Sampling at specific times of day (e.g., surveying people at a shopping center at 10 AM misses working adults), self-selection/voluntary response bias, and incomplete lists."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Sampling Frame",
+      "p": "A **sampling frame** is a definitive list of all items or individuals in the population used as the source for selecting a sample."
+     },
+     {
+      "k": "tip",
+      "t": "Exam Strategy for Spotting Bias",
+      "p": "When asked to criticize a sampling method, check three things: **Location** (is it restricted?), **Time** (does it exclude certain groups?), and **Method** (is participation voluntary or self-selected?)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Simple Random Sampling (SRS)",
+    "p": "In a **simple random sample**, every member of the population has an **equal chance** of being selected, and every possible sample of a given size has an equal probability of selection. This eliminates researcher bias and ensures the sample is mathematically objective.",
+    "bullets": [
+     "**Method**: Assign a unique number from 1 to $N$ to every item in the sampling frame. Use a random number generator (or lottery method) to pick distinct numbers. Ignore duplicates.",
+     "**Advantages**: Completely unbiased; every member has equal probability ($1/N$).",
+     "**Disadvantages**: Requires a full, up-to-date sampling frame before starting; can be impractical for large or widespread populations.",
+     "**Equal Opportunity**: Ensures selection is strictly independent of any human judgement."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Required Steps for Random Sampling Questions",
+      "p": "To score full marks on how to select a random sample: 1. Assign numbers to all items in a list. 2. Use a random number generator. 3. Ignore/discard duplicate numbers until the required sample size is met."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Stratified Sampling and Proportional Selection",
+    "p": "When a population contains distinct non-overlapping subgroups called **strata** (e.g., age groups, school year groups, gender), a **stratified sample** ensures each stratum is represented in the exact same proportion as it exists in the population.",
+    "bullets": [
+     "**Stratum**: A subgroup of the population sharing a common characteristic.",
+     "**Proportional Formula**: $\\text{Sample size of stratum} = \\frac{\\text{Stratum size}}{\\text{Population size}} \\times \\text{Total sample size}$.",
+     "**Rounding Rule**: Calculate exact values first. If rounding is needed, adjust the rounded values so their sum equals the target sample size.",
+     "**Advantage**: Ensures small subgroups are not accidentally left out of the sample."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Stratified Sampling",
+      "p": "A sampling method where the population is divided into mutually exclusive strata, and the number of items selected from each stratum is proportional to the size of that stratum in the population."
+     },
+     {
+      "k": "tip",
+      "t": "Checking Stratified Calculations",
+      "p": "Always sum your final stratum sample sizes! The total MUST equal the specified target sample size given in the question."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Other Sampling Methods: Systematic, Quota, and Convenience",
+    "p": "Beyond simple random and stratified sampling, other sampling methods exist with varying degrees of practicality and bias risk. GCSE Higher questions frequently ask you to compare these methods or identify why a given method introduces bias.",
+    "bullets": [
+     "**Systematic Sampling**: Select items at regular intervals from an ordered list (e.g., every $k$-th item, where $k = N/n$). Requires a random starting point between 1 and $k$.",
+     "**Quota Sampling**: An interviewer selects participants matching specific quota targets (e.g., 20 males under 30). Non-random because selection within quotas is down to the interviewer.",
+     "**Convenience / Opportunity Sampling**: Selecting subjects who are easiest to reach (e.g., first 50 people walking past a shop). Highly prone to bias."
+    ],
+    "table": {
+     "head": [
+      "Method",
+      "Random?",
+      "Requires Sampling Frame?",
+      "Main Advantage",
+      "Main Limitation"
+     ],
+     "rows": [
+      [
+       "Simple Random",
+       "Yes",
+       "Yes",
+       "Unbiased; equal chances",
+       "Needs full list; can be slow"
+      ],
+      [
+       "Stratified",
+       "Yes",
+       "Yes",
+       "Guarantees proportional subgroup representation",
+       "Needs full list with subgroup data"
+      ],
+      [
+       "Systematic",
+       "No (Interval)",
+       "Yes",
+       "Quick and easy to execute evenly",
+       "Can be biased if periodic pattern exists"
+      ],
+      [
+       "Quota",
+       "No",
+       "No",
+       "Quick; no list required",
+       "Interviewer bias in selection"
+      ],
+      [
+       "Convenience",
+       "No",
+       "No",
+       "Fastest and cheapest",
+       "High risk of unrepresentative sample"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Inferring Population Parameters (Means and Totals)",
+    "p": "Once a representative sample is collected, sample statistics can be scaled up to **estimate properties of the full population**. Proportion calculations form the core of population inference at GCSE Higher level.",
+    "bullets": [
+     "**Estimating Population Total**: Multiply the sample mean by the total population size ($N$): $\\text{Estimated Total} = \\bar{x} \\times N$.",
+     "**Estimating Subgroup Count**: Multiply the sample proportion by total population size: $\\text{Estimated Count} = \\left(\\frac{\\text{Number in sample with attribute}}{\\text{Total sample size}}\\right) \\times N$.",
+     "**Scale Factor Method**: Find the scale factor $\\text{Scale Factor} = \\frac{\\text{Population Size}}{\\text{Sample Size}}$ and multiply sample counts by it.",
+     "**Reliability**: Inferences assume the sample is representative. Unrepresentative samples produce invalid estimates."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Sample-to-Population Proportion Rule",
+      "p": "$$\\frac{\\text{Estimated Population Quantity}}{\\text{Total Population Size}} = \\frac{\\text{Sample Quantity}}{\\text{Total Sample Size}}$$"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Estimating Population Size: Capture-Recapture Method",
+    "p": "When it is impossible to count a population directly (e.g., fish in a lake, wild animals in a forest), ecological statisticians use the **Capture-Recapture** method to estimate the total population size $N$.",
+    "bullets": [
+     "**Step 1 (Capture & Mark)**: Capture a sample of $M$ individuals, mark/tag them safely, and release them back into the population.",
+     "**Step 2 (Mixing)**: Allow sufficient time for marked individuals to randomly mix back into the overall population.",
+     "**Step 3 (Recapture)**: Capture a second sample of $n$ individuals. Count how many of these ($m$) are marked.",
+     "**Formula**: Assuming equal proportions: $\\frac{M}{N} = \\frac{m}{n} \\implies N = \\frac{M \\times n}{m}$."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Capture-Recapture Formula",
+      "p": "$$N = \\frac{M \\times n}{m}$$ where $N = \\text{estimated population}$, $M = \\text{number tagged in first sample}$, $n = \\text{total in second sample}$, and $m = \\text{number tagged in second sample}$."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Assumptions and Limitations of Capture-Recapture",
+    "p": "Capture-recapture does NOT give an exact count; it produces an **estimate**. AQA exam mark schemes award specific marks for stating the mathematical and physical assumptions required for this estimate to be valid.",
+    "bullets": [
+     "**Assumption 1**: The population size remains constant (no births, deaths, immigration, or emigration during the study).",
+     "**Assumption 2**: The tags/marks do not fall off, fade, or become hidden.",
+     "**Assumption 3**: The tags/marks do not affect an individual's chance of survival or capture (e.g., tags don't make prey easier for predators to see).",
+     "**Assumption 4**: Sufficient time is provided between samples to allow thorough, random mixing of tagged and untagged individuals.",
+     "**Assumption 5**: Every member of the population has an equal chance of being captured in both samples."
+    ],
+    "table": {
+     "head": [
+      "Assumption",
+      "If Assumption Fails...",
+      "Impact on Population Estimate ($N$)"
+     ],
+     "rows": [
+      [
+       "Tags fall off / disappear",
+       "$m$ (recaptured tagged) is artificially low",
+       "$N = \\frac{M \\cdot n}{m}$ will OVERESTIMATE $N$"
+      ],
+      [
+       "Births / Immigration occur",
+       "Population size increases between samples",
+       "Estimate reflects average/changed size"
+      ],
+      [
+       "Tagged animals become easy targets for predators",
+       "Tagged animals die, $m$ decreases",
+       "Overestimates true population"
+      ],
+      [
+       "Tagged animals become 'trap shy'",
+       "$m$ is artificially lower than random",
+       "Overestimates true population"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Mark Scheme Exact Wording",
+      "p": "When writing limitations for capture-recapture, use precise phrases: **'No births or deaths'**, **'No migration'**, **'Marks do not fall off'**, and **'Equal chance of capture'**."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "The Effect of Sample Size on Reliability",
+    "p": "Sample size directly influences the **reliability** and **precision** of an estimate. Larger samples reduce the impact of random variation and outliers, making sample statistics closer to the true population parameters.",
+    "bullets": [
+     "**Small Sample Size**: High variability; single outliers heavily distort results; higher risk of an unrepresentative sample.",
+     "**Large Sample Size**: Decreases sample variance; closer to true population parameter (Law of Large Numbers).",
+     "**Diminishing Returns**: Increasing sample size improves accuracy, but increases cost and time. Double the sample size does not mean double the accuracy.",
+     "**Key Distinction**: A large sample does NOT fix a biased sampling method! A biased sample of 10,000 people is still inaccurate."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Size vs Bias Trap",
+      "p": "A larger sample size reduces **random sampling error**, but it does NOT remove **systematic sampling bias**. Asking 5,000 people at a gym about fitness habits is still a biased sample."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Evaluating and Critiquing Real-World Sampling Designs",
+    "p": "AQA GCSE Higher papers frequently present a scenario or student experiment and ask you to evaluate the method, spot errors, or explain why conclusions are invalid.",
+    "bullets": [
+     "**Check 1: Sample Location**: Is the sample collected in one place only? (e.g., outside a train station).",
+     "**Check 2: Sample Time**: Is the timing restrictive? (e.g., Sunday morning, rush hour).",
+     "**Check 3: Sample Size**: Is $n$ too small (e.g., $n = 10$) to draw meaningful inferences about thousands of items?",
+     "**Check 4: Data Type / Questions**: Are survey questions leading or ambiguous?",
+     "**Check 5: Capture-Recapture Mechanics**: Was enough time given for mixing? Did the marking harm the subjects?"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Structuring Evaluation Answers",
+      "p": "Structure your criticism in two clear parts: 1. Identify the specific flaw (e.g. 'Data collected only at 9am'). 2. Explain the direct consequence (e.g. 'Excludes people who work night shifts, making the sample unrepresentative')."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Soup Tasting Analogy",
+   "p": "Imagine trying to determine if a massive 50-liter pot of soup needs more salt without drinking the whole pot.\n\n- **Population**: The entire 50-liter pot of soup.\n- **Census**: Drinking all 50 liters of soup to evaluate every drop (impossible and wasteful).\n- **Sample**: Taking a single spoon of soup to taste.\n- **Random Sampling / Mixing**: Stirring the pot thoroughly before taking your spoonful. Stirring ensures every ingredient is evenly spread so any spoonful gives a true representation of the whole pot.\n- **Sampling Bias**: Taking a spoon from the top without stirring when all the salt has settled at the bottom. Your sample will taste bland, leading to the false conclusion that the whole pot needs salt.\n- **Sample Size**: Taking a tiny teardrop on your finger vs. a proper tablespoon. A tiny drop might miss floating herbs or meat, while a tablespoon gives a clear picture.\n\n**Where the analogy breaks down**: Soup components mix continuously and fluidly, whereas human or animal populations have complex spatial, behavioral, and temporal distributions that cannot simply be 'stirred' into perfect uniform randomness.",
+   "breakdown": "Soup is homogeneous when stirred; human and ecological populations have complex, non-fluid distributions and behavioral patterns."
+  },
+  "terms": [
+   {
+    "t": "Population",
+    "d": "The complete collection of all elements, items, or individuals under study."
+   },
+   {
+    "t": "Sample",
+    "d": "A selection of items taken from a population used to investigate characteristics of the population."
+   },
+   {
+    "t": "Census",
+    "d": "An investigation that collects data from every single member of a population."
+   },
+   {
+    "t": "Sampling Frame",
+    "d": "A list of all items or individuals in the population from which a sample is drawn."
+   },
+   {
+    "t": "Sampling Bias",
+    "d": "Systematic error introduced into sampling when certain members of a population are more or less likely to be selected than others."
+   },
+   {
+    "t": "Representative Sample",
+    "d": "A sample that accurately reflects the proportions and characteristics of the entire population."
+   },
+   {
+    "t": "Simple Random Sample",
+    "d": "A sampling method where every member of the population has an equal probability of selection."
+   },
+   {
+    "t": "Stratified Sampling",
+    "d": "A sampling method where the population is split into subgroups (strata) and sample sizes per stratum are proportional to stratum sizes in the population."
+   },
+   {
+    "t": "Systematic Sampling",
+    "d": "A sampling method where members are chosen at regular numerical intervals from an ordered list."
+   },
+   {
+    "t": "Capture-Recapture",
+    "d": "A technique used to estimate total population size by capturing, marking, releasing, and recapturing a sample of individuals."
+   },
+   {
+    "t": "Parameter",
+    "d": "A numerical characteristic describing an entire population (e.g., true population mean)."
+   },
+   {
+    "t": "Statistic",
+    "d": "A numerical characteristic calculated from a sample used to estimate a population parameter."
+   },
+   {
+    "t": "Non-response Bias",
+    "d": "Bias that occurs when individuals chosen for a sample fail or refuse to respond, altering sample characteristics."
+   },
+   {
+    "t": "Quota Sampling",
+    "d": "A non-random sampling technique where interviewers fill pre-set quotas for specific population subgroups."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Stating that capture-recapture gives the 'exact' population size.",
+    "r": "Capture-recapture gives an ESTIMATE of the population size, not an exact count."
+   },
+   {
+    "w": "Writing 'the sample size is too small' without further explanation in an evaluation question.",
+    "r": "State 'the sample size of [X] is too small to be representative of the large population of [Y], leading to unreliable conclusions'."
+   },
+   {
+    "w": "Forgetting to round stratum sizes to whole numbers or failing to check that rounded stratum sample sizes sum to the total sample size.",
+    "r": "Calculate exact values, round appropriately, and verify that the sum of all stratum sample sizes equals the required total sample size."
+   },
+   {
+    "w": "Assuming a large sample size eliminates sampling bias.",
+    "r": "Explain that increasing sample size reduces random variability, but does NOT remove systematic sampling bias caused by a flawed sampling frame or method."
+   },
+   {
+    "w": "Omitting the condition 'ignore duplicates' when explaining how to select a simple random sample using random numbers.",
+    "r": "Explicitly state: 'Generate random numbers and IGNORE/DISCARD any repeated numbers until the required sample size is reached'."
+   },
+   {
+    "w": "For capture-recapture limitations, writing generic terms like 'animals died' without linking to immigration/emmigration or mark retention.",
+    "r": "Use standard mark scheme terminology: 'Assumes no births, deaths, immigration, or emigration between samples' or 'Assumes marks do not fall off'."
+   },
+   {
+    "w": "Multiplying by the sample fraction instead of dividing/scaling when calculating total population estimates.",
+    "r": "Use clear proportional ratios: Estimated Population = (Sample Count / Sample Total) * Total Population."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A researcher wants to take a sample of 80 students from a school of 600 students, stratified by year group. There are 150 students in Year 11. Calculate how many Year 11 students should be in the sample.",
+    "marks": 2,
+    "model": [
+     "Calculation: (150 / 600) * 80",
+     "Answer: 20 students"
+    ],
+    "tip": "Use the formula (Stratum Size / Total Population) * Total Sample Size. Always check if rounding is needed."
+   },
+   {
+    "q": "Describe how a random sample of 50 workers should be selected from a numbered company list of 400 workers.",
+    "marks": 3,
+    "model": [
+     "Assign each worker a unique number from 1 to 400 (or use existing list numbers).",
+     "Use a random number generator to produce numbers between 1 and 400.",
+     "Ignore any duplicate numbers and repeat until 50 distinct workers are selected."
+    ],
+    "tip": "You must state three key steps: number list, random generator, ignore duplicates."
+   },
+   {
+    "q": "A scientist uses capture-recapture to estimate the number of beetles in a wood. She captures 60 beetles, marks them, and releases them. The next day, she captures 40 beetles and finds that 12 of them are marked. Estimate the total beetle population.",
+    "marks": 2,
+    "model": [
+     "Formula: N = (M * n) / m",
+     "Calculation: N = (60 * 40) / 12 = 2400 / 12",
+     "Answer: 200 light/beetles (200 beetles)"
+    ],
+    "tip": "State N = (M * n) / m clearly. Double check arithmetic."
+   },
+   {
+    "q": "State two assumptions made when using the capture-recapture method to estimate population size.",
+    "marks": 2,
+    "model": [
+     "Assumption 1: No births, deaths, immigration, or emigration occurred between samples (population size is constant).",
+     "Assumption 2: Marks/tags do not fall off, rub off, or fade, and do not affect survival/capture chances."
+    ],
+    "tip": "Learn the standard AQA mark scheme phrases: no migration/births/deaths and marks remain intact."
+   },
+   {
+    "q": "A survey about public transport usage is conducted by interviewing people at a train station at 8:30 AM on a Monday. Give two reasons why this sample may be biased.",
+    "marks": 2,
+    "model": [
+     "Reason 1: Timing/Location targets commuters travelling to work, ignoring non-working residents, students, or leisure travellers.",
+     "Reason 2: Excludes people who do not use train stations (e.g. drivers, bus users, or people working from home)."
+    ],
+    "tip": "Identify specific excluded groups based on location and time."
+   },
+   {
+    "q": "A sample of 40 salmon from a fish farm had a mean mass of 2.5 kg. The fish farm contains 1200 salmon in total. Estimate the total mass of all salmon in the farm.",
+    "marks": 2,
+    "model": [
+     "Calculation: Estimated Total = Sample Mean * Total Population",
+     "Calculation: 2.5 * 1200 = 3000 kg"
+    ],
+    "tip": "Total Estimate = Mean * Total Population Size."
+   },
+   {
+    "q": "A student wants to estimate the total number of weeds in a rectangular field measuring 30 m by 50 m. She places five 1 m by 1 m quadrat frames randomly in the field. The counts of weeds in the quadrats are 4, 7, 5, 3, and 6. Estimate the total number of weeds in the field.",
+    "marks": 4,
+    "model": [
+     "Area of field = 30 * 50 = 1500 m²",
+     "Total area sampled = 5 * (1 m * 1 m) = 5 m²",
+     "Mean number of weeds per quadrat (1 m²) = (4 + 7 + 5 + 3 + 6) / 5 = 25 / 5 = 5 weeds/m²",
+     "Estimated total weeds = Mean per m² * Total Area = 5 * 1500 = 7500 weeds"
+    ],
+    "tip": "Find the sample mean per unit area first, then scale up to the total area of the region."
+   },
+   {
+    "q": "Explain why taking a larger sample size improves the estimation of a population parameter, but does not correct for a biased sampling frame.",
+    "marks": 3,
+    "model": [
+     "A larger sample size reduces random variability/sampling error, making sample statistics more consistent and precise.",
+     "However, if the sampling frame is biased, it systematically excludes certain groups of the population.",
+     "Increasing sample size in a biased frame simply collects more data from an unrepresentative subset, maintaining the systematic bias."
+    ],
+    "tip": "Distinguish clearly between random sampling error (reduced by sample size) and systematic bias (caused by bad sampling frame/method)."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A school has 900 pupils across three key stages as shown in the table below:\n- Key Stage 3: 450 pupils\n- Key Stage 4: 300 pupils\n- Key Stage 5: 150 pupils\n\nA headteacher wants to take a stratified sample of 60 pupils.\n(a) Calculate the number of pupils to select from each Key Stage.\n(b) Explain why a simple random sample of 60 pupils might be less appropriate than a stratified sample.",
+    "steps": [
+     "Step 1: Calculate the total population N = 450 + 300 + 150 = 900 pupils. Total sample size n = 60.",
+     "Step 2: Calculate Key Stage 3 stratum size: (450 / 900) * 60 = 0.5 * 60 = 30 pupils.",
+     "Step 3: Calculate Key Stage 4 stratum size: (300 / 900) * 60 = (1/3) * 60 = 20 pupils.",
+     "Step 4: Calculate Key Stage 5 stratum size: (150 / 900) * 60 = (1/6) * 60 = 10 pupils.",
+     "Step 5: Check total sum: 30 + 20 + 10 = 60 pupils. Match verified.",
+     "Step 6: Answer part (b): A simple random sample could by chance under-represent or completely omit smaller groups (like Key Stage 5), whereas stratified sampling guarantees exact proportional representation of every year group."
+    ],
+    "ans": "(a) KS3: 30 pupils, KS4: 20 pupils, KS5: 10 pupils.\n(b) Simple random sampling could accidentally under-represent or exclude Key Stage 5 pupils due to random chance, whereas stratified sampling guarantees proportional representation of all key stages."
+   },
+   {
+    "q": "An ecologist wants to estimate the number of trout in a lake.\nOn Monday, she catches 80 trout, tags them with harmless red tags, and releases them back into the lake.\nOn Thursday, she catches 110 trout and finds that 16 of them have red tags.\n\n(a) Estimate the total number of trout in the lake.\n(b) On Friday, the ecologist notices that the tags used were prone to slipping off in fast currents. State how this would affect the population estimate in part (a).",
+    "steps": [
+     "Step 1: Identify given variables for capture-recapture formula:\n- M (initial tagged) = 80\n- n (second sample size) = 110\n- m (recaptured tagged) = 16",
+     "Step 2: Apply formula N = (M * n) / m:\nN = (80 * 110) / 16",
+     "Step 3: Simplify calculation: 80 / 16 = 5. Then 5 * 110 = 550. Estimated population N = 550 trout.",
+     "Step 4: Analyze part (b): If tags slip off, the number of recaptured tagged fish (m) will be smaller than it should be.",
+     "Step 5: Inspect the formula N = (M * n) / m. As denominator m decreases, the resulting estimate N increases.",
+     "Step 6: Conclude effect: The calculated population of 550 is an OVERESTIMATE of the true population."
+    ],
+    "ans": "(a) Estimated population = 550 trout.\n(b) If tags fell off, the number of recaptured tagged fish (m) is recorded as lower than it actually is. Because m is in the denominator of N = (M * n) / m, a smaller m causes the population to be OVERESTIMATED."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Figure 1: Comparison between an Unbiased Representative Sample and a Biased Sample drawn from a heterogeneous population.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"15\" y=\"15\" width=\"170\" height=\"210\" rx=\"8\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"100\" y=\"35\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">Target Population</text><circle cx=\"45\" cy=\"65\" r=\"8\" fill=\"#3b82f6\"/><circle cx=\"80\" cy=\"60\" r=\"8\" fill=\"#ef4444\"/><circle cx=\"120\" cy=\"70\" r=\"8\" fill=\"#3b82f6\"/><circle cx=\"155\" cy=\"65\" r=\"8\" fill=\"#ef4444\"/><circle cx=\"40\" cy=\"105\" r=\"8\" fill=\"#ef4444\"/><circle cx=\"75\" cy=\"110\" r=\"8\" fill=\"#3b82f6\"/><circle cx=\"115\" cy=\"105\" r=\"8\" fill=\"#3b82f6\"/><circle cx=\"150\" cy=\"115\" r=\"8\" fill=\"#ef4444\"/><circle cx=\"50\" cy=\"155\" r=\"8\" fill=\"#3b82f6\"/><circle cx=\"85\" cy=\"150\" r=\"8\" fill=\"#ef4444\"/><circle cx=\"125\" cy=\"155\" r=\"8\" fill=\"#3b82f6\"/><circle cx=\"160\" cy=\"160\" r=\"8\" fill=\"#ef4444\"/><text x=\"100\" y=\"195\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">50% Blue (A) / 50% Red (B)</text><rect x=\"215\" y=\"15\" width=\"170\" height=\"95\" rx=\"8\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"300\" y=\"35\" font-size=\"11\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">Representative Sample</text><circle cx=\"250\" cy=\"60\" r=\"7\" fill=\"#3b82f6\"/><circle cx=\"280\" cy=\"60\" r=\"7\" fill=\"#ef4444\"/><circle cx=\"310\" cy=\"60\" r=\"7\" fill=\"#3b82f6\"/><circle cx=\"340\" cy=\"60\" r=\"7\" fill=\"#ef4444\"/><text x=\"300\" y=\"90\" font-size=\"11\" fill=\"#15803d\" text-anchor=\"middle\">Unbiased Ratio (1:1)</text><rect x=\"215\" y=\"125\" width=\"170\" height=\"100\" rx=\"8\" fill=\"#fecaca\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"300\" y=\"145\" font-size=\"11\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">Biased Sample</text><circle cx=\"250\" cy=\"170\" r=\"7\" fill=\"#ef4444\"/><circle cx=\"280\" cy=\"170\" r=\"7\" fill=\"#ef4444\"/><circle cx=\"310\" cy=\"170\" r=\"7\" fill=\"#ef4444\"/><circle cx=\"340\" cy=\"170\" r=\"7\" fill=\"#3b82f6\"/><text x=\"300\" y=\"205\" font-size=\"11\" fill=\"#b91c1c\" text-anchor=\"middle\">Over-represents Red (3:1)</text><path d=\"M 185 65 L 215 65\" stroke=\"#1b2540\" stroke-width=\"1.5\" marker-end=\"url(#arrow)\"/><path d=\"M 185 165 L 215 165\" stroke=\"#1b2540\" stroke-width=\"1.5\" marker-end=\"url(#arrow)\"/></svg>"
+   },
+   {
+    "cap": "Figure 2: Stratified Sampling process showing population divided into strata and proportionally sampled.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"20\" y=\"20\" width=\"160\" height=\"95\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"100\" y=\"40\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">Stratum A (60%)</text><text x=\"100\" y=\"60\" font-size=\"11\" fill=\"#1e40af\" text-anchor=\"middle\">600 Members</text><circle cx=\"50\" cy=\"85\" r=\"6\" fill=\"#2563eb\"/><circle cx=\"75\" cy=\"85\" r=\"6\" fill=\"#2563eb\"/><circle cx=\"100\" cy=\"85\" r=\"6\" fill=\"#2563eb\"/><circle cx=\"125\" cy=\"85\" r=\"6\" fill=\"#2563eb\"/><circle cx=\"150\" cy=\"85\" r=\"6\" fill=\"#2563eb\"/><rect x=\"20\" y=\"125\" width=\"160\" height=\"95\" rx=\"6\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"100\" y=\"145\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">Stratum B (40%)</text><text x=\"100\" y=\"165\" font-size=\"11\" fill=\"#b45309\" text-anchor=\"middle\">400 Members</text><circle cx=\"60\" cy=\"190\" r=\"6\" fill=\"#d97706\"/><circle cx=\"85\" cy=\"190\" r=\"6\" fill=\"#d97706\"/><circle cx=\"110\" cy=\"190\" r=\"6\" fill=\"#d97706\"/><circle cx=\"135\" cy=\"190\" r=\"6\" fill=\"#d97706\"/><path d=\"M 180 65 L 230 65\" stroke=\"#1b2540\" stroke-width=\"1.5\" stroke-dasharray=\"4\"/><path d=\"M 180 170 L 230 170\" stroke=\"#1b2540\" stroke-width=\"1.5\" stroke-dasharray=\"4\"/><rect x=\"235\" y=\"40\" width=\"145\" height=\"160\" rx=\"8\" fill=\"#e9d5ff\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"307\" y=\"65\" font-size=\"12\" font-weight=\"bold\" fill=\"#581c87\" text-anchor=\"middle\">Total Sample (n=50)</text><text x=\"307\" y=\"105\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Stratum A: 30 (60%)</text><circle cx=\"267\" cy=\"125\" r=\"6\" fill=\"#2563eb\"/><circle cx=\"287\" cy=\"125\" r=\"6\" fill=\"#2563eb\"/><circle cx=\"307\" cy=\"125\" r=\"6\" fill=\"#2563eb\"/><circle cx=\"327\" cy=\"125\" r=\"6\" fill=\"#2563eb\"/><circle cx=\"347\" cy=\"125\" r=\"6\" fill=\"#2563eb\"/><text x=\"307\" y=\"160\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Stratum B: 20 (40%)</text><circle cx=\"277\" cy=\"180\" r=\"6\" fill=\"#d97706\"/><circle cx=\"297\" cy=\"180\" r=\"6\" fill=\"#d97706\"/><circle cx=\"317\" cy=\"180\" r=\"6\" fill=\"#d97706\"/><circle cx=\"337\" cy=\"180\" r=\"6\" fill=\"#d97706\"/></svg>"
+   },
+   {
+    "cap": "Figure 3: Step-by-step visual summary of the Capture-Recapture Method formula and mechanics.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"15\" y=\"20\" width=\"110\" height=\"130\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"70\" y=\"40\" font-size=\"11\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">1. First Sample</text><text x=\"70\" y=\"60\" font-size=\"11\" fill=\"#1e40af\" text-anchor=\"middle\">Capture &amp; Tag M</text><circle cx=\"45\" cy=\"90\" r=\"7\" fill=\"#ef4444\"/><circle cx=\"70\" cy=\"90\" r=\"7\" fill=\"#ef4444\"/><circle cx=\"95\" cy=\"90\" r=\"7\" fill=\"#ef4444\"/><circle cx=\"55\" cy=\"120\" r=\"7\" fill=\"#ef4444\"/><circle cx=\"85\" cy=\"120\" r=\"7\" fill=\"#ef4444\"/><text x=\"70\" y=\"142\" font-size=\"11\" font-weight=\"bold\" fill=\"#b91c1c\" text-anchor=\"middle\">M tagged</text><rect x=\"145\" y=\"20\" width=\"110\" height=\"130\" rx=\"6\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"200\" y=\"40\" font-size=\"11\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">2. Mixing</text><text x=\"200\" y=\"60\" font-size=\"11\" fill=\"#15803d\" text-anchor=\"middle\">Release into Lake</text><circle cx=\"170\" cy=\"90\" r=\"6\" fill=\"#ef4444\"/><circle cx=\"220\" cy=\"85\" r=\"6\" fill=\"#94a3b8\"/><circle cx=\"185\" cy=\"115\" r=\"6\" fill=\"#94a3b8\"/><circle cx=\"225\" cy=\"120\" r=\"6\" fill=\"#ef4444\"/><text x=\"200\" y=\"142\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Random mix</text><rect x=\"275\" y=\"20\" width=\"110\" height=\"130\" rx=\"6\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"330\" y=\"40\" font-size=\"11\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">3. Recapture</text><text x=\"330\" y=\"60\" font-size=\"11\" fill=\"#b45309\" text-anchor=\"middle\">Second Sample n</text><circle cx=\"305\" cy=\"90\" r=\"7\" fill=\"#ef4444\"/><circle cx=\"330\" cy=\"90\" r=\"7\" fill=\"#94a3b8\"/><circle cx=\"355\" cy=\"90\" r=\"7\" fill=\"#94a3b8\"/><circle cx=\"317\" cy=\"120\" r=\"7\" fill=\"#ef4444\"/><circle cx=\"343\" cy=\"120\" r=\"7\" fill=\"#94a3b8\"/><text x=\"330\" y=\"142\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">m marked of n</text><rect x=\"15\" y=\"165\" width=\"370\" height=\"60\" rx=\"6\" fill=\"#e9d5ff\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"200\" y=\"188\" font-size=\"12\" font-weight=\"bold\" fill=\"#581c87\" text-anchor=\"middle\">Proportion Rule: M / N = m / n</text><text x=\"200\" y=\"210\" font-size=\"13\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">Population Estimate: N = (M × n) / m</text></svg>"
+   },
+   {
+    "cap": "Figure 4: Impact of Sample Size on Estimate Variance and Accuracy.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><line x1=\"50\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"30\" x2=\"50\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"205\" y=\"230\" font-size=\"11\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">Sample Size (n)</text><text x=\"20\" y=\"115\" font-size=\"11\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\" transform=\"rotate(-90 20 115)\">Estimate Spread</text><line x1=\"50\" y1=\"115\" x2=\"360\" y2=\"115\" stroke=\"#ef4444\" stroke-width=\"1.5\" stroke-dasharray=\"4\"/><text x=\"350\" y=\"105\" font-size=\"11\" fill=\"#ef4444\" text-anchor=\"end\">True Parameter (μ)</text><path d=\"M 50 40 Q 120 100 200 112 T 360 115\" stroke=\"#2563eb\" stroke-width=\"2.5\" fill=\"none\"/><path d=\"M 50 190 Q 120 130 200 118 T 360 115\" stroke=\"#2563eb\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"100\" y=\"60\" font-size=\"11\" fill=\"#b91c1c\">High Variance</text><text x=\"100\" y=\"180\" font-size=\"11\" fill=\"#b91c1c\">(Small n)</text><text x=\"300\" y=\"85\" font-size=\"11\" fill=\"#15803d\">High Precision</text><text x=\"300\" y=\"145\" font-size=\"11\" fill=\"#15803d\">(Large n)</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_h.5.0",
+  "sid": "maths_aqa_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.6-flash",
+  "ts": "2026-11-19T17:55:56.025Z"
+ },
+ "maths_aqa_h.5.1": {
+  "summary": "Statistical representation forms the backbone of data analysis at Higher GCSE Maths, transforming raw data into clear, interpretable visual forms. This topic covers the construction, interpretation, and critical evaluation of two-way tables, frequency trees, pie charts, stem-and-leaf diagrams, dual/composite bar charts, and time series graphs. Master Grade 9 candidates must excel not only at plotting precise values and calculating moving averages or sector angles, but also at extracting conditional probabilities and identifying misleading statistical distortions.",
+  "core": [
+   {
+    "h": "Two-Way Tables and Frequency Trees",
+    "p": "Two-way tables and frequency trees organize categorical data split across two or more sub-categories. They enable quick calculation of missing frequencies and straightforward identification of totals for conditional probability calculations.",
+    "bullets": [
+     "**Two-way tables** display data grouped by two variables: one along the rows and one along the columns, with row and column totals acting as internal consistency checks.",
+     "Every row total and column total must sum to the **grand total** in the bottom-right cell.",
+     "**Frequency trees** split a total sample size into sub-groups using branching branches; each set of branches from a single node must sum to that node's frequency.",
+     "Frequency trees display **raw frequencies**, not probabilities, on their branches, whereas tree diagrams in probability show fractional or decimal probabilities.",
+     "To find missing values, work systematically from nodes or rows with only one unknown."
+    ],
+    "table": {
+     "head": [
+      "Category",
+      "Group A",
+      "Group B",
+      "Total"
+     ],
+     "rows": [
+      [
+       "Option 1",
+       "18",
+       "27",
+       "45"
+      ],
+      [
+       "Option 2",
+       "32",
+       "23",
+       "55"
+      ],
+      [
+       "Total",
+       "50",
+       "50",
+       "100"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Frequency Tree",
+      "p": "A structure showing how a population frequency is partitioned sequentially into mutually exclusive categories using connected branches."
+     },
+     {
+      "k": "warn",
+      "t": "Frequency vs Probability Trees",
+      "p": "Do not write fractions or decimals on frequency tree branches unless specifically asked for a probability tree. Frequency trees require integers representing counts."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Pie Charts: Construction & Sector Calculations",
+    "p": "Pie charts represent proportion using sectors of a circle. The central angle of each sector is directly proportional to the frequency of the category it represents.",
+    "bullets": [
+     "The **multiplier** (angle per unit of data) is calculated as **360 degrees divided by total frequency**.",
+     "Sector Angle = **(Frequency / Total Frequency) * 360**.",
+     "The sum of all calculated sector angles must equal exactly **360 degrees**.",
+     "When drawing pie charts, draw a vertical radius to start, measure angles accurately using a protractor (within +/- 1 degree tolerance), and label each sector clearly.",
+     "Sectors show **relative proportions**, not absolute numbers, unless the total sample size is provided."
+    ],
+    "table": {
+     "head": [
+      "Item",
+      "Frequency",
+      "Calculation",
+      "Angle"
+     ],
+     "rows": [
+      [
+       "Red",
+       "15",
+       "(15/60) * 360",
+       "90°"
+      ],
+      [
+       "Blue",
+       "25",
+       "(25/60) * 360",
+       "150°"
+      ],
+      [
+       "Green",
+       "20",
+       "(20/60) * 360",
+       "120°"
+      ],
+      [
+       "Total",
+       "60",
+       "(60/60) * 360",
+       "360°"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Angle Check",
+      "p": "Always sum your calculated angles before drawing. If they sum to 359° or 361° due to rounding, re-check rounding on your largest or recurring decimal sectors."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Comparing Pie Charts and Sample Size Pitfalls",
+    "p": "A common Grade 9 exam scenario involves comparing two pie charts representing different total populations.",
+    "bullets": [
+     "A larger angle in Pie Chart A compared to Pie Chart B does **not** mean a larger frequency unless total sample sizes are equal.",
+     "If pie charts represent different sample sizes, the area of the pie chart should be proportional to the total frequency.",
+     "Since **Area = pi * r^2**, the ratio of radii must satisfy **(r1 / r2)^2 = Total Frequency 1 / Total Frequency 2**.",
+     "If sample sizes are unknown, you can only compare **proportions or percentages**, never raw frequencies."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Comparing Absolute Numbers",
+      "p": "Never state 'Group A has more people who chose X than Group B' based on sector angles alone without checking the total frequencies of both groups."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Stem-and-Leaf Diagrams (Single & Back-to-Back)",
+    "p": "Stem-and-leaf diagrams display discrete or continuous numerical data while retaining the exact original data values in an ordered display.",
+    "bullets": [
+     "Each data value is split into a **stem** (leading digit/digits) and a **leaf** (last trailing single digit).",
+     "Leaves within each row **must be arranged in ascending order** with equal horizontal spacing.",
+     "A **key** is mandatory in every AQA question (e.g., '2 | 5 means 25 kg' or '12 | 3 means 12.3 cm').",
+     "**Back-to-back stem-and-leaf diagrams** compare two distributions sharing a central stem. Left leaves read outwards (increasing leftwards), while right leaves read outwards (increasing rightwards).",
+     "Finding averages: count total data items n, then find the median at position **(n + 1) / 2**."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Key in Stem-and-Leaf",
+      "p": "A essential statement explaining how stem and leaf digits combine, including units (e.g., 4 | 1 = 4.1 seconds)."
+     },
+     {
+      "k": "warn",
+      "t": "Reversing Back-to-Back Leaves",
+      "p": "On the left side of a back-to-back stem-and-leaf diagram, leaves increase from right to left (smallest leaf closest to the central stem)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Time Series Graphs & Trend Identification",
+    "p": "Time series line graphs plot data collected at sequential time intervals to observe variations, trends, and seasonal patterns.",
+    "bullets": [
+     "Time is strictly plotted on the horizontal **x-axis** (independent variable), while measured data goes on the vertical **y-axis**.",
+     "Data points are joined using **straight line segments** (do not draw smooth curves).",
+     "**General trend** describes the long-term direction of the data: upward trend (positive), downward trend (negative), or stable/horizontal trend.",
+     "**Seasonal variation** refers to regular, repeating patterns over predictable fixed intervals (e.g., higher ice cream sales every summer quarter).",
+     "To describe a trend, quote overall values from start to finish alongside qualitative descriptions."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Straight Lines Only",
+      "p": "In AQA time series graphs, connect consecutive points with straight lines using a ruler. Do not draw curves."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Moving Averages for Time Series Smoothing",
+    "p": "Moving averages smooth short-term seasonal fluctuations to highlight underlying long-term trends in time series data.",
+    "bullets": [
+     "An **n-point moving average** is the mean of n consecutive data values.",
+     "For a 4-point moving average, sum 4 successive values and divide by 4: **MA = (x1 + x2 + x3 + x4) / 4**.",
+     "**Plotting position**: A moving average is plotted at the **midpoint of the time interval** it covers.",
+     "For an odd-point moving average (e.g., 3-point), the value aligns directly with the middle time period.",
+     "For an even-point moving average (e.g., 4-point), the value sits between periods (e.g., between Q2 and Q3), requiring centered moving averages if plotting precise trend lines."
+    ],
+    "table": {
+     "head": [
+      "Quarter",
+      "Sales (£k)",
+      "4-Point Sum",
+      "4-Point Moving Average"
+     ],
+     "rows": [
+      [
+       "Q1",
+       "12",
+       "-",
+       "-"
+      ],
+      [
+       "Q2",
+       "18",
+       "-",
+       "-"
+      ],
+      [
+       "Q3",
+       "24",
+       "-",
+       "-"
+      ],
+      [
+       "Q4",
+       "10",
+       "64",
+       "16.0 (plotted between Q2 & Q3)"
+      ],
+      [
+       "Q1 (Yr 2)",
+       "14",
+       "66",
+       "16.5 (plotted between Q3 & Q4)"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Trend Line from Moving Averages",
+      "p": "When asked to draw a line of best fit for time series data, draw it through the plotted moving average points, not the raw fluctuating data points."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Dual, Composite, and Grouped Bar Charts",
+    "p": "Bar charts present categorical data cleanly, using separate rectangular bars whose lengths are proportional to frequencies.",
+    "bullets": [
+     "**Vertical line charts** are used for discrete quantitative data where bars are represented by thin vertical lines.",
+     "**Dual (side-by-side) bar charts** place bars for two different sets of data side by side for each category, requiring a key.",
+     "**Composite (stacked) bar charts** stack sub-categories within a single vertical bar, showing both sub-totals and overall total heights.",
+     "In all bar charts, maintain **equal bar widths** and **equal gaps** between categories.",
+     "The vertical axis must start at zero and have a uniform scale to prevent visual distortion."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Bar Spacing Rules",
+      "p": "Histograms have continuous data with touching bars of variable width; bar charts have discrete/categorical data with clear gaps between distinct categories."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Vertical Line Diagrams for Discrete Data",
+    "p": "Vertical line diagrams are used to represent small discrete datasets where using thick bars would create unnecessary visual clutter.",
+    "bullets": [
+     "Used primarily for **discrete numerical data** (e.g., number of pets, shoe sizes).",
+     "Lines are drawn vertically above each discrete value on the x-axis, extending up to the frequency on the y-axis.",
+     "Lines have **zero width**; they are drawn using single straight ruler lines.",
+     "Mode can be read directly from the tallest vertical line.",
+     "Median is determined by accumulating line frequencies from left to right."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Vertical Line Chart",
+      "p": "A chart using line segments of height equal to frequency above discrete data points on a calibrated axis."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Pictograms and Key Conventions",
+    "p": "Pictograms use repeated symbols or icons to represent data counts.",
+    "bullets": [
+     "A **key** is compulsory; it defines the numeric value of one full icon (e.g., 1 circle = 8 items).",
+     "Partial counts are shown using fractional icons: half an icon = half value, quarter icon = quarter value.",
+     "All symbols must be drawn identical in size and spaced evenly in rows or columns.",
+     "Pictograms can lead to inaccuracies if partial symbols cannot be drawn or read precisely."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Choosing Key Values",
+      "p": "Choose key values that divide easily by 2 and 4 (such as 4, 8, 10, 20) so half and quarter icons are clean and clear."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Spotting Misleading Statistical Visualizations",
+    "p": "Graphs can intentionally or unintentionally misrepresent statistics by manipulating axes, dimensions, or scales.",
+    "bullets": [
+     "**Truncated y-axis (broken axis)**: Not starting the vertical axis at zero visually exaggerates minor differences between categories.",
+     "**Unequal or non-linear scaling**: Axis intervals changing size distort trend slopes and category comparisons.",
+     "**3D charts and area/volume distortion**: Scaling an icon's height and width by a factor k increases its area by k^2 and volume by k^3, grossly exaggerating magnitude.",
+     "**Missing labels or keys**: Charts lacking axes units or category labels make numeric values uninterpretable."
+    ],
+    "table": {
+     "head": [
+      "Distortion Feature",
+      "Visual Impact",
+      "How to Fix"
+     ],
+     "rows": [
+      [
+       "Non-zero axis origin",
+       "Exaggerates tiny differences",
+       "Start y-axis at zero or mark break clearly"
+      ],
+      [
+       "2D Icon area scaling",
+       "Area increases by square of scale",
+       "Use uniform-width bars or 1D height scaling"
+      ],
+      [
+       "Irregular scale ticks",
+       "Distorts line gradients",
+       "Use strictly uniform grid intervals"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Exam Evaluation Questions",
+      "p": "When asked 'Give two reasons why this graph is misleading', state specific technical flaws like 'The y-axis does not start at 0' or 'The picture area increases faster than frequency'."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Conditional Probabilities from Tables & Trees",
+    "p": "Two-way tables and frequency trees allow rapid evaluation of conditional probabilities P(A | B) by restricting the sample space.",
+    "bullets": [
+     "**P(A given B)** restricts the denominator strictly to the total of sub-group B.",
+     "Formula: **P(A | B) = Number in both A and B / Total in category B**.",
+     "Always identify the 'given' condition first—this forms the denominator of your fraction.",
+     "Express final probabilities as simplified fractions, decimals, or percentages.",
+     "Example: In a group of 100 people where 40 are male and 10 males wear glasses, P(Glasses | Male) = 10 / 40 = 1/4."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Identifying Denominators",
+      "p": "'Given that the person is female...' means the denominator MUST be the total number of females, NOT the grand total."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Selecting the Correct Visual Representation",
+    "p": "Matching data types to appropriate diagrams is a core Grade 9 statistical skill tested in conceptual AQA questions.",
+    "bullets": [
+     "**Categorical data** (non-numerical groups): Bar chart, Pie chart, Pictogram.",
+     "**Discrete numerical data**: Vertical line chart, Stem-and-leaf diagram.",
+     "**Continuous numerical data**: Histogram, Cumulative frequency diagram.",
+     "**Time-dependent data**: Time series line graph with optional moving averages.",
+     "**Paired bivariate data**: Scatter graph."
+    ],
+    "table": {
+     "head": [
+      "Data Type",
+      "Recommended Diagram",
+      "Key Requirement"
+     ],
+     "rows": [
+      [
+       "Categorical",
+       "Pie chart / Bar chart",
+       "Proportion or distinct gaps"
+      ],
+      [
+       "Discrete quantitative",
+       "Vertical line graph / Stem-and-leaf",
+       "Preserves exact values or distinct points"
+      ],
+      [
+       "Continuous quantitative",
+       "Histogram",
+       "Area proportional to frequency"
+      ],
+      [
+       "Time-series",
+       "Line graph",
+       "Time on horizontal axis, straight line segments"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Decision Framework",
+      "p": "Always identify if the variable is discrete or continuous, and whether time sequence matters, before choosing a graphical representation."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Financial Dashboard Analogy",
+   "p": "Statistical charts act like a car dashboard or business financial tracker. Pie charts function like a budget split wheel, showing what fraction of money goes where. Time series graphs act like a live stock ticker, tracking ups and downs over months to reveal long-term growth versus temporary holiday booms. Stem-and-leaf diagrams work like filing cabinets: they organize receipts in numerical order by row, keeping every single original receipt readable. This analogy breaks down when 3D graphics or misleading scales distort the data—a broken speedo axis would show a car speeding up tenfold when it only gained 2 mph!"
+  },
+  "terms": [
+   {
+    "t": "Two-Way Table",
+    "d": "A grid table used to organize data according to two distinct categorical variables simultaneously."
+   },
+   {
+    "t": "Frequency Tree",
+    "d": "A branching diagram used to show how a total population count is split into sub-categories."
+   },
+   {
+    "t": "Pie Chart",
+    "d": "A circular chart divided into sectors where each sector angle is proportional to the category frequency."
+   },
+   {
+    "t": "Sector Angle",
+    "d": "The interior central angle of a pie chart sector, calculated as (Frequency / Total Frequency) * 360 degrees."
+   },
+   {
+    "t": "Stem-and-Leaf Diagram",
+    "d": "A display method for quantitative data that retains raw values by splitting numbers into stems and leaves."
+   },
+   {
+    "t": "Back-to-Back Stem-and-Leaf",
+    "d": "A dual stem-and-leaf diagram comparing two distributions sharing a single central stem."
+   },
+   {
+    "t": "Key",
+    "d": "An essential reference note detailing how symbols, stems, or leaves represent actual numeric data values and units."
+   },
+   {
+    "t": "Time Series Graph",
+    "d": "A line graph plotting observations ordered chronologically along the horizontal axis."
+   },
+   {
+    "t": "General Trend",
+    "d": "The underlying overall direction (upward, downward, or constant) of time series data over time."
+   },
+   {
+    "t": "Seasonal Variation",
+    "d": "Regular, predictable repeating fluctuations in time series data within specific time cycles."
+   },
+   {
+    "t": "Moving Average",
+    "d": "An average calculated from successive overlapping subsets of time series data to smooth short-term noise."
+   },
+   {
+    "t": "Composite Bar Chart",
+    "d": "A bar chart where individual bars are subdivided vertically to show multiple sub-categories stacked together."
+   },
+   {
+    "t": "Dual Bar Chart",
+    "d": "A bar chart presenting side-by-side comparative bars for two or more categories."
+   },
+   {
+    "t": "Vertical Line Chart",
+    "d": "A chart using line segments above discrete x-axis values to represent discrete frequency data."
+   },
+   {
+    "t": "Truncated Axis",
+    "d": "An axis that does not start at zero, potentially exaggerating visual differences between data points."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Drawing pie chart sectors without measuring angles using a protractor.",
+    "r": "Calculate precise sector angles using (freq/total)*360 and draw them within a 1-degree tolerance using a protractor."
+   },
+   {
+    "w": "Forgetting to write a Key for stem-and-leaf diagrams.",
+    "r": "Always write a key stating what stem | leaf represents, including units (e.g., 3 | 2 = 3.2 kg)."
+   },
+   {
+    "w": "Joining points on a time series graph with a smooth hand-drawn curve.",
+    "r": "Connect consecutive data points on a time series graph using straight line segments drawn with a ruler."
+   },
+   {
+    "w": "Comparing raw frequencies of two pie charts of different sizes based only on sector angles.",
+    "r": "Recognize that pie charts show proportions; compare absolute frequencies only when total population counts are known."
+   },
+   {
+    "w": "Writing leaves out of numerical order in a stem-and-leaf diagram.",
+    "r": "Always write leaves in ascending numerical order from left to right (or right to left on the left stem of back-to-back charts)."
+   },
+   {
+    "w": "Plotting moving averages at the end of the time period instead of the midpoint.",
+    "r": "Plot moving averages precisely at the central midpoint of the time interval spanned by the averaged data."
+   },
+   {
+    "w": "Using total sample size instead of conditional subgroup total in conditional probability.",
+    "r": "For P(A given B), set the denominator strictly equal to the frequency of sub-group B."
+   },
+   {
+    "w": "Writing fractional probabilities on the branches of a frequency tree.",
+    "r": "Write whole integer counts (frequencies) on frequency tree branches, not probabilities."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A school has 120 students in Year 11. 70 are boys. 45 students study History, of which 20 are boys. Complete a two-way table and find the probability that a randomly chosen girl does NOT study History.",
+    "marks": 4,
+    "model": [
+     "Boys: History = 20, Total Boys = 70 => Boys No History = 50",
+     "Total Girls = 120 - 70 = 50",
+     "Girls History = 45 - 20 = 25 => Girls No History = 50 - 25 = 25",
+     "P(Girl No History | Girl) = 25 / 50 = 1/2 (or 0.5)"
+    ],
+    "tip": "Check that the denominator is the number of girls (50), not total students (120)."
+   },
+   {
+    "q": "The frequency of a category in a pie chart is 18 out of a total frequency of 90. Calculate the angle of this sector.",
+    "marks": 2,
+    "model": [
+     "Angle multiplier = 360 / 90 = 4 degrees per item",
+     "Sector angle = 18 * 4 = 72 degrees"
+    ],
+    "tip": "Always divide 360 by the total frequency first."
+   },
+   {
+    "q": "Construct a stem-and-leaf diagram for the following test marks: 24, 31, 12, 28, 35, 24, 19, 40. Include a key.",
+    "marks": 3,
+    "model": [
+     "Order numbers: 12, 19, 24, 24, 28, 31, 35, 40",
+     "Stems: 1, 2, 3, 4",
+     "Leaves: 1 | 2 9; 2 | 4 4 8; 3 | 1 5; 4 | 0",
+     "Key: 2 | 4 represents 24 marks"
+    ],
+    "tip": "Ensure leaves are ordered and evenly spaced. Do not forget the key!"
+   },
+   {
+    "q": "Explain why a pie chart with a sector angle of 60 degrees for Category X does not necessarily mean it has fewer items than another pie chart with a sector angle of 80 degrees for Category X.",
+    "marks": 2,
+    "model": [
+     "Pie charts show proportions/percentages, not absolute numbers.",
+     "The pie chart with 60 degrees could have a much larger total sample size than the one with 80 degrees."
+    ],
+    "tip": "Angles represent proportions; total sample size is required to compare raw amounts."
+   },
+   {
+    "q": "The quarterly ice cream sales (in £1000s) for a year are Q1: 4, Q2: 16, Q3: 28, Q4: 8. Calculate the 4-point moving average for this year and state where it should be plotted.",
+    "marks": 3,
+    "model": [
+     "Sum = 4 + 16 + 28 + 8 = 56",
+     "4-point moving average = 56 / 4 = 14 (i.e. £14,000)",
+     "Plotting position: mid-way between Q2 and Q3 (or at end of month 6)"
+    ],
+    "tip": "Even-point moving averages plot between periods."
+   },
+   {
+    "q": "State two ways in which a bar chart can be drawn to make it visually misleading.",
+    "marks": 2,
+    "model": [
+     "The vertical axis does not start at zero (truncated y-axis).",
+     "The vertical axis scale intervals are non-linear or irregular."
+    ],
+    "tip": "Be specific about axis flaws, zero baselines, or 3D volume distortions."
+   },
+   {
+    "q": "A back-to-back stem-and-leaf diagram compares scores of Class A and Class B. Class A stem has leaves reading 8, 5, 2 to the left of stem 3. What values do these represent?",
+    "marks": 1,
+    "model": [
+     "32, 35, 38"
+    ],
+    "tip": "Leaves on the left increase from right to left away from the stem."
+   },
+   {
+    "q": "Describe the trend shown by a time series graph where quarterly values increase year-on-year despite seasonal dips.",
+    "marks": 2,
+    "model": [
+     "General trend: Positive / upward overall trend over the period.",
+     "Variation: Pronounced quarterly seasonal variation."
+    ],
+    "tip": "Separate the long-term trend description from short-term seasonal fluctuations."
+   },
+   {
+    "q": "80 people are surveyed about car ownership. 50 own a car. Of those who own a car, 35 drive to work. Of those who do not own a car, 10 drive to work. Draw a complete frequency tree for this data.",
+    "marks": 4,
+    "model": [
+     "Root node = 80",
+     "First branch split: Own Car = 50, No Car = 30",
+     "From Own Car: Drive = 35, Not Drive = 15",
+     "From No Car: Drive = 10, Not Drive = 20"
+    ],
+    "tip": "Check that each pair of branches sums to the value at the preceding node."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A surveyor records the colours of 120 cars entering a car park: 45 Red, 30 Silver, 27 Black, 18 White. Calculate all sector angles and explain how to construct the pie chart.",
+    "steps": [
+     "Step 1: Calculate the total frequency = 45 + 30 + 27 + 18 = 120 cars.",
+     "Step 2: Calculate multiplier = 360 / 120 = 3 degrees per car.",
+     "Step 3: Calculate individual sector angles:",
+     "Red angle = 45 * 3 = 135°",
+     "Silver angle = 30 * 3 = 90°",
+     "Black angle = 27 * 3 = 81°",
+     "White angle = 18 * 3 = 54°",
+     "Step 4: Check total sum of angles = 135 + 90 + 81 + 54 = 360°.",
+     "Step 5: Draw a circle, draw a vertical line from center to top (12 o'clock radius). Measure 135° clockwise using a protractor for Red, then measure 90° from that line for Silver, 81° for Black, leaving 54° for White. Label sectors clearly."
+    ],
+    "ans": "Sector angles: Red = 135°, Silver = 90°, Black = 81°, White = 54°."
+   },
+   {
+    "q": "Below are the quarterly sales of a company over two years in thousands of pounds:\nYear 1: Q1=20, Q2=32, Q3=48, Q4=24\nYear 2: Q1=24, Q2=36, Q3=56, Q4=28\nCalculate the first two 4-point moving averages and state their exact plotting positions.",
+    "steps": [
+     "Step 1: Calculate First 4-point moving average (covering Y1 Q1 to Y1 Q4):",
+     "Sum 1 = 20 + 32 + 48 + 24 = 124",
+     "MA 1 = 124 / 4 = 31 (representing £31,000)",
+     "Plot position 1: Midpoint of Y1 Q1 to Y1 Q4, which is between Q2 and Q3 of Year 1.",
+     "Step 2: Calculate Second 4-point moving average (covering Y1 Q2 to Y2 Q1):",
+     "Sum 2 = 32 + 48 + 24 + 24 = 128",
+     "MA 2 = 128 / 4 = 32 (representing £32,000)",
+     "Plot position 2: Midpoint of Y1 Q2 to Y2 Q1, which is between Q3 and Q4 of Year 1."
+    ],
+    "ans": "First MA = 31 (£31k) plotted between Y1 Q2 & Q3; Second MA = 32 (£32k) plotted between Y1 Q3 & Q4."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Figure 1: Time series graph showing quarterly sales with seasonal fluctuations and an upward trend line plotted through moving averages.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#ffffff\"/><line x1=\"50\" y1=\"200\" x2=\"370\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"20\" x2=\"50\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"200\" y=\"232\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">Time (Quarter / Year)</text><text x=\"15\" y=\"110\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\" transform=\"rotate(-90 15 110)\" text-anchor=\"middle\">Sales (£1000s)</text><path d=\"M 60 170 L 100 80 L 140 40 L 180 140 L 220 150 L 260 60 L 300 30 L 340 120\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/><circle cx=\"60\" cy=\"170\" r=\"3\" fill=\"#3b82f6\"/><circle cx=\"100\" cy=\"80\" r=\"3\" fill=\"#3b82f6\"/><circle cx=\"140\" cy=\"40\" r=\"3\" fill=\"#3b82f6\"/><circle cx=\"180\" cy=\"140\" r=\"3\" fill=\"#3b82f6\"/><circle cx=\"220\" cy=\"150\" r=\"3\" fill=\"#3b82f6\"/><circle cx=\"260\" cy=\"60\" r=\"3\" fill=\"#3b82f6\"/><circle cx=\"300\" cy=\"30\" r=\"3\" fill=\"#3b82f6\"/><circle cx=\"340\" cy=\"120\" r=\"3\" fill=\"#3b82f6\"/><line x1=\"70\" y1=\"135\" x2=\"330\" y2=\"75\" stroke=\"#ef4444\" stroke-width=\"2\" stroke-dasharray=\"5,5\"/><circle cx=\"120\" cy=\"122\" r=\"4\" fill=\"#ef4444\"/><circle cx=\"200\" cy=\"102\" r=\"4\" fill=\"#ef4444\"/><circle cx=\"280\" cy=\"85\" r=\"4\" fill=\"#ef4444\"/><rect x=\"230\" y=\"165\" width=\"135\" height=\"30\" fill=\"#fde68a\" stroke=\"#1b2540\" rx=\"4\"/><text x=\"235\" y=\"183\" fill=\"#1b2540\" font-size=\"10\" font-weight=\"bold\">-- General Trend Line</text></svg>"
+   },
+   {
+    "cap": "Figure 2: Back-to-back stem-and-leaf diagram comparing test scores for Group A and Group B with complete key.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#ffffff\"/><rect x=\"170\" y=\"20\" width=\"60\" height=\"160\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"170\" y1=\"20\" x2=\"170\" y2=\"180\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"230\" y1=\"20\" x2=\"230\" y2=\"180\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"100\" y=\"35\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Group A</text><text x=\"200\" y=\"35\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Stem</text><text x=\"300\" y=\"35\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Group B</text><line x1=\"40\" y1=\"45\" x2=\"360\" y2=\"45\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"200\" y=\"70\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">1</text><text x=\"200\" y=\"100\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">2</text><text x=\"200\" y=\"130\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">3</text><text x=\"200\" y=\"160\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">4</text><text x=\"150\" y=\"70\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"end\">8  5  2</text><text x=\"150\" y=\"100\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"end\">9  4  1  0</text><text x=\"150\" y=\"130\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"end\">7  3</text><text x=\"150\" y=\"160\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"end\">2</text><text x=\"250\" y=\"70\" fill=\"#1b2540\" font-size=\"12\">3  6  9</text><text x=\"250\" y=\"100\" fill=\"#1b2540\" font-size=\"12\">2  5  5  8</text><text x=\"250\" y=\"130\" fill=\"#1b2540\" font-size=\"12\">1  4  6  8  9</text><text x=\"250\" y=\"160\" fill=\"#1b2540\" font-size=\"12\">0  3</text><rect x=\"70\" y=\"195\" width=\"260\" height=\"35\" fill=\"#bbf7d0\" stroke=\"#1b2540\" rx=\"5\"/><text x=\"200\" y=\"217\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">Key: 4 | 2 | 5  means  24 for A and 25 for B</text></svg>"
+   },
+   {
+    "cap": "Figure 3: Frequency tree structure depicting sequential subgroup breakdown of a total population of 100 items.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#ffffff\"/><circle cx=\"50\" cy=\"120\" r=\"22\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"50\" y=\"124\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">100</text><line x1=\"70\" y1=\"110\" x2=\"160\" y2=\"65\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"70\" y1=\"130\" x2=\"160\" y2=\"175\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"180\" cy=\"65\" r=\"20\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"180\" y=\"69\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">60</text><text x=\"120\" y=\"75\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\">Pass</text><circle cx=\"180\" cy=\"175\" r=\"20\" fill=\"#fecaca\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"180\" y=\"179\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">40</text><text x=\"120\" y=\"170\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\">Fail</text><line x1=\"200\" y1=\"55\" x2=\"280\" y2=\"30\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"200\" y1=\"75\" x2=\"280\" y2=\"100\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"300\" cy=\"30\" r=\"18\" fill=\"#e9d5ff\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"300\" y=\"34\" fill=\"#1b2540\" font-size=\"11\" text-anchor=\"middle\">45</text><text x=\"330\" y=\"34\" fill=\"#1b2540\" font-size=\"11\">Merit</text><circle cx=\"300\" cy=\"100\" r=\"18\" fill=\"#e9d5ff\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"300\" y=\"104\" fill=\"#1b2540\" font-size=\"11\" text-anchor=\"middle\">15</text><text x=\"330\" y=\"104\" fill=\"#1b2540\" font-size=\"11\">Pass</text><line x1=\"200\" y1=\"165\" x2=\"280\" y2=\"140\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"200\" y1=\"185\" x2=\"280\" y2=\"210\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"300\" cy=\"140\" r=\"18\" fill=\"#e9d5ff\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"300\" y=\"144\" fill=\"#1b2540\" font-size=\"11\" text-anchor=\"middle\">10</text><text x=\"330\" y=\"144\" fill=\"#1b2540\" font-size=\"11\">Retake</text><circle cx=\"300\" cy=\"210\" r=\"18\" fill=\"#e9d5ff\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"300\" y=\"214\" fill=\"#1b2540\" font-size=\"11\" text-anchor=\"middle\">30</text><text x=\"330\" y=\"214\" fill=\"#1b2540\" font-size=\"11\">Exit</text></svg>"
+   },
+   {
+    "cap": "Figure 4: Pie chart sector construction showing central angles proportional to category frequencies.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#ffffff\"/><path d=\"M 150 120 L 150 30 A 90 90 0 0 1 240 120 Z\" fill=\"#3b82f6\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><path d=\"M 150 120 L 240 120 A 90 90 0 0 1 150 210 Z\" fill=\"#10b981\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><path d=\"M 150 120 L 150 210 A 90 90 0 0 1 60 120 Z\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><path d=\"M 150 120 L 60 120 A 90 90 0 0 1 150 30 Z\" fill=\"#ef4444\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><circle cx=\"150\" cy=\"120\" r=\"3\" fill=\"#1b2540\"/><rect x=\"270\" y=\"40\" width=\"120\" height=\"140\" fill=\"#f8fafc\" stroke=\"#1b2540\" rx=\"5\"/><rect x=\"280\" y=\"55\" width=\"14\" height=\"14\" fill=\"#3b82f6\" stroke=\"#1b2540\"/><text x=\"302\" y=\"67\" fill=\"#1b2540\" font-size=\"11\">A: 90° (25%)</text><rect x=\"280\" y=\"85\" width=\"14\" height=\"14\" fill=\"#10b981\" stroke=\"#1b2540\"/><text x=\"302\" y=\"97\" fill=\"#1b2540\" font-size=\"11\">B: 90° (25%)</text><rect x=\"280\" y=\"115\" width=\"14\" height=\"14\" fill=\"#fde68a\" stroke=\"#1b2540\"/><text x=\"302\" y=\"127\" fill=\"#1b2540\" font-size=\"11\">C: 90° (25%)</text><rect x=\"280\" y=\"145\" width=\"14\" height=\"14\" fill=\"#ef4444\" stroke=\"#1b2540\"/><text x=\"302\" y=\"157\" fill=\"#1b2540\" font-size=\"11\">D: 90° (25%)</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_h.5.1",
+  "sid": "maths_aqa_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.6-flash",
+  "ts": "2026-11-19T17:59:50.171Z"
  }
 }

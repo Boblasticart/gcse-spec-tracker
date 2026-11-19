@@ -1,0 +1,905 @@
+{
+ "maths_eduqas_h.4.5": {
+  "summary": "Mastering the systematic enumeration of sets and combinations is a fundamental Grade 9 requirement for Eduqas GCSE Higher Mathematics. This topic integrates tables, coordinate grids, two-way grids, Venn diagrams using exact set notation, and tree diagrams to track complex sample spaces without omissions. Success depends on rigorous notation, careful counting principles, and precise conditional constraint handling across all exam components.",
+  "core": [
+   {
+    "h": "1. Systematic Enumeration Fundamentals",
+    "p": "Systematic listing ensures that no outcomes are missed when counting combinations or sample spaces. For complex experiments, order and structure are essential to avoid double-counting or missing possibilities.",
+    "bullets": [
+     "Use the fundamental counting principle: if an event can happen in m ways and a second independent event can happen in n ways, both can happen in m times n ways.",
+     "Always work in a logical sequence, such as alphabetical order, ascending numerical order, or tree-branch paths.",
+     "Distinguish carefully between combinations (order does not matter) and permutations (order matters).",
+     "Keep track of constraints, such as without replacement versus with replacement."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Sample Space",
+      "p": "The set of all possible outcomes of a single or combined experiment."
+     },
+     {
+      "k": "tip",
+      "t": "Exam Strategy",
+      "p": "Always check whether items are replaced after selection; this alters the denominator and independence."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. Two-Way Tables and Grids",
+    "p": "Two-way tables and coordinate grids display the intersection of two independent or dependent sets of discrete outcomes. They form the bedrock of non-calculator probability enumeration.",
+    "bullets": [
+     "Use a grid where the horizontal axis represents the first event and the vertical axis represents the second event.",
+     "Plot coordinate points or write ordered pairs in each cell of the grid.",
+     "Count the total number of valid intersections to establish the denominator of the probability fraction.",
+     "Shire or circle required regions directly on the grid to visualize conditions clearly."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Axis Confusion",
+      "p": "Ensure you do not swap the independent and dependent variables on grid axes when coordinates represent ordered pairs."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A 6x6 sample space grid showing outcomes of rolling two fair six-sided dice, with the region X+Y > 8 highlighted.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"100\" y1=\"30\" x2=\"340\" y2=\"30\" stroke=\"#1b2540\" stroke-width=\"1\"/><line x1=\"100\" y1=\"66\" x2=\"340\" y2=\"66\" stroke=\"#1b2540\" stroke-width=\"1\"/><line x1=\"100\" y1=\"102\" x2=\"340\" y2=\"102\" stroke=\"#1b2540\" stroke-width=\"1\"/><line x1=\"100\" y1=\"138\" x2=\"340\" y2=\"138\" stroke=\"#1b2540\" stroke-width=\"1\"/><line x1=\"100\" y1=\"174\" x2=\"340\" y2=\"174\" stroke=\"#1b2540\" stroke-width=\"1\"/><line x1=\"100\" y1=\"210\" x2=\"340\" y2=\"210\" stroke=\"#1b2540\" stroke-width=\"1\"/><line x1=\"100\" y1=\"30\" x2=\"100\" y2=\"210\" stroke=\"#1b2540\" stroke-width=\"1\"/><line x1=\"140\" y1=\"30\" x2=\"140\" y2=\"210\" stroke=\"#1b2540\" stroke-width=\"1\"/><line x1=\"180\" y1=\"30\" x2=\"180\" y2=\"210\" stroke=\"#1b2540\" stroke-width=\"1\"/><line x1=\"220\" y1=\"30\" x2=\"220\" y2=\"210\" stroke=\"#1b2540\" stroke-width=\"1\"/><line x1=\"260\" y1=\"30\" x2=\"260\" y2=\"210\" stroke=\"#1b2540\" stroke-width=\"1\"/><line x1=\"300\" y1=\"30\" x2=\"300\" y2=\"210\" stroke=\"#1b2540\" stroke-width=\"1\"/><line x1=\"340\" y1=\"30\" x2=\"340\" y2=\"210\" stroke=\"#1b2540\" stroke-width=\"1\"/><rect x=\"260\" y=\"138\" width=\"80\" height=\"72\" fill=\"#bbf7d0\" opacity=\"0.5\"/><rect x=\"220\" y=\"174\" width=\"120\" height=\"36\" fill=\"#bbf7d0\" opacity=\"0.5\"/><text x=\"70\" y=\"50\" fill=\"#1b2540\" font-size=\"11\">Die 1</text><text x=\"110\" y=\"20\" fill=\"#1b2540\" font-size=\"11\">1</text><text x=\"150\" y=\"20\" fill=\"#1b2540\" font-size=\"11\">2</text><text x=\"190\" y=\"20\" fill=\"#1b2540\" font-size=\"11\">3</text><text x=\"230\" y=\"20\" fill=\"#1b2540\" font-size=\"11\">4</text><text x=\"270\" y=\"20\" fill=\"#1b2540\" font-size=\"11\">5</text><text x=\"310\" y=\"20\" fill=\"#1b2540\" font-size=\"11\">6</text><text x=\"70\" y=\"120\" fill=\"#1b2540\" font-size=\"11\">Die 2</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "3. Venn Diagrams and Set Notation",
+    "p": "Venn diagrams use geometric regions to categorize elements into sets. Eduqas examinations demand absolute precision with set notation symbols: union, intersection, complement, and subset.",
+    "bullets": [
+     "Universal set (symbol: epsilon or U) is represented by a enclosing rectangle.",
+     "Sets (e.g., A, B) are represented by overlapping circles inside the universal set.",
+     "Intersection (A intersect B, upside-down U) denotes elements in both A and B.",
+     "Union (A union B, U shape) denotes elements in A, or in B, or in both.",
+     "Complement (A apostrophe or A prime) denotes elements not in A."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Mutually Exclusive",
+      "p": "Events that cannot occur at the same time, meaning their intersection is empty (P(A intersect B) = 0)."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A two-set Venn diagram showing universal set U, sets A and B, and the intersection region A intersect B.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" rx=\"6\" fill=\"#f8fafc\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"350\" y=\"40\" fill=\"#1b2540\" font-size=\"12\">ε</text><circle cx=\"160\" cy=\"120\" r=\"70\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\" opacity=\"0.6\"/><circle cx=\"240\" cy=\"120\" r=\"70\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\" opacity=\"0.6\"/><text x=\"120\" y=\"120\" fill=\"#1b2540\" font-size=\"12\">A</text><text x=\"280\" y=\"120\" fill=\"#1b2540\" font-size=\"12\">B</text><text x=\"190\" y=\"120\" fill=\"#1b2540\" font-size=\"11\">A∩B</text><text x=\"40\" y=\"45\" fill=\"#1b2540\" font-size=\"11\">Region outside circles is (A∪B)'</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "4. Populating Venn Diagrams from Algebraic Information",
+    "p": "Higher tier exam questions frequently provide algebraic expressions for subsets and require students to solve for x before calculating probabilities.",
+    "bullets": [
+     "Let the unknown value in the absolute intersection be x.",
+     "Express all other region parts in terms of x by subtracting x from the given total set frequencies.",
+     "Form an equation by summing all disjoint regions inside the universal set and equating to the total frequency.",
+     "Solve for x, substitute back into regions, and answer the specific probability question asked."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Disjoint Regions",
+      "p": "Always ensure the four regions of a two-set Venn diagram (only A, only B, both, neither) sum exactly to the total frequency."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "5. Tree Diagrams for Sequential Events",
+    "p": "Tree diagrams map out sequential experiments branch by branch. They handle both independent events (with replacement) and dependent events (without replacement).",
+    "bullets": [
+     "Each set of branches represents a stage of the experiment, and their probabilities must sum to 1.",
+     "Multiply probabilities along the branches (the AND rule, P(A and B) = P(A) * P(B given A)).",
+     "Add probabilities of different combined paths that satisfy the target condition (the OR rule).",
+     "Check that the sum of all final outcome probabilities at the end of the tree equals 1."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Fraction Simplification",
+      "p": "Do not simplify fractions midway through tree diagram calculations; keeping a common denominator makes addition easier at the end."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A tree diagram representing two dependent draws without replacement from a bag containing red and blue counters.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"120\" x2=\"150\" y2=\"70\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"120\" x2=\"150\" y2=\"170\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"150\" y1=\"70\" x2=\"260\" y2=\"40\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"150\" y1=\"70\" x2=\"260\" y2=\"100\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"150\" y1=\"170\" x2=\"260\" y2=\"140\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"150\" y1=\"170\" x2=\"260\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"90\" y=\"85\" fill=\"#1b2540\" font-size=\"11\">3/5</text><text x=\"90\" y=\"155\" fill=\"#1b2540\" font-size=\"11\">2/5</text><text x=\"165\" y=\"65\" fill=\"#1b2540\" font-size=\"11\">Red</text><text x=\"165\" y=\"185\" fill=\"#1b2540\" font-size=\"11\">Blue</text><text x=\"200\" y=\"45\" fill=\"#1b2540\" font-size=\"10\">2/4</text><text x=\"200\" y=\"90\" fill=\"#1b2540\" font-size=\"10\">2/4</text><text x=\"200\" y=\"150\" fill=\"#1b2540\" font-size=\"10\">3/4</text><text x=\"200\" y=\"195\" fill=\"#1b2540\" font-size=\"10\">1/4</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "6. Set Notation Mastery and Region Interpretation",
+    "p": "Examiners test your ability to translate complex set notation into shaded regions on Venn diagrams or descriptive statements.",
+    "bullets": [
+     "(A union B)' represents everything outside the combined circles of A and B.",
+     "A intersect B' represents elements in A that are not in B (the crescent moon shape).",
+     "Understand the distributive laws: A intersect (B union C) equals (A intersect B) union (A intersect C).",
+     "De Morgan's Laws: (A union B)' equals A' intersect B', and (A intersect B)' equals A' union B'."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "De Morgan's Laws",
+      "p": "Fundamental logical equivalences that relate set unions and intersections through their complements."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Conditional Probability from Enumerated Sets",
+    "p": "Conditional probability restricts the sample space to a specific subset. When using Venn diagrams or two-way tables, this means changing the denominator from the universal set to the given condition's total.",
+    "bullets": [
+     "P(A given B) is calculated as P(A intersect B) divided by P(B).",
+     "In a Venn diagram, ignore all regions outside set B; the new denominator is n(B).",
+     "In a two-way table, restrict your view to the specific row or column representing the given condition.",
+     "Verify that the numerator is strictly a subset of the new restricted denominator."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Conditional Formula",
+      "p": "P(A|B) = n(A ∩ B) / n(B) or P(A ∩ B) / P(B)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Multi-Stage Experiments and Frequency Trees",
+    "p": "Frequency trees record exact numbers of items passing through sequential branches rather than theoretical probabilities.",
+    "bullets": [
+     "Every node branches out into mutually exclusive outcomes whose frequencies sum to the node total.",
+     "Use frequency trees to reverse-engineer probabilities or solve complex inverse percentage problems.",
+     "Combine counts from final branches to populate two-way tables or Venn diagrams.",
+     "Ensure intermediate branch frequencies are integers where items are discrete objects."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Integer Check",
+      "p": "Frequencies in frequency trees must be whole numbers when counting discrete real-world objects."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Combinations and the Multiplication Principle",
+    "p": "When selecting multiple items without replacement from large sets, combinatorial notation (nCr) or systematic lists are required.",
+    "bullets": [
+     "The number of ways to choose r items from n without regard to order is given by n! / (r! (n - r)!).",
+     "Use systematic listing when n is small (e.g., selecting 2 letters from {A, B, C, D}).",
+     "Multiply independent choices together when creating passwords, menus, or outfits.",
+     "Subtract unwanted arrangements from the total sample space when dealing with 'at least' constraints."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Order Matters Trap",
+      "p": "Be careful: selecting a committee of 2 people is a combination (nCr), but assigning 2 distinct roles (President and Treasurer) is a permutation (nPr)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Solving 'At Least' and 'At Most' Problems",
+    "p": "Many Grade 9 questions involve thresholds like 'at least 2 heads' or 'at most 1 defective item'. Systematic enumeration prevents calculation errors.",
+    "bullets": [
+     "Translate 'at least one' as 1 minus P(none).",
+     "List all mutually exclusive pathways that satisfy the inequality condition (e.g., exactly 2 OR exactly 3).",
+     "Sum the probabilities of these qualifying independent pathways.",
+     "Use binomial expansion coefficients or tree diagrams for repeated trials."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Complement Rule for At Least",
+      "p": "P(at least one) = 1 - P(none)."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Sorting items in a large warehouse inventory using different filing systems",
+   "p": "Imagine a warehouse where items are sorted into physical shelving units (two-way tables), categorized by colored tags with overlapping categories (Venn diagrams), or packed sequentially down a conveyor belt with quality control checks at each machine station (tree diagrams). Each tool is just a different filing system designed to ensure no item is counted twice and no item is left behind. However, the analogy breaks down because warehouse items can physically deteriorate, get lost, or change attributes over time, whereas mathematical sample spaces are perfectly static, abstract, and closed."
+  },
+  "terms": [
+   {
+    "t": "Sample Space",
+    "d": "The complete set of all possible outcomes resulting from a random experiment."
+   },
+   {
+    "t": "Venn Diagram",
+    "d": "A diagram using overlapping geometric shapes to illustrate relationships between sets."
+   },
+   {
+    "t": "Union",
+    "d": "The set containing all elements that belong to set A, set B, or both (symbol: cup)."
+   },
+   {
+    "t": "Intersection",
+    "d": "The set containing all elements that belong to both set A and set B simultaneously (symbol: cap)."
+   },
+   {
+    "t": "Complement",
+    "d": "The set of all elements in the universal set that do not belong to the given set."
+   },
+   {
+    "t": "Mutually Exclusive",
+    "d": "Events that cannot occur at the same time."
+   },
+   {
+    "t": "Exhaustive Set",
+    "d": "A set of outcomes covering every possible result of an experiment, summing to 1."
+   },
+   {
+    "t": "Tree Diagram",
+    "d": "A branching diagram showing all possible outcomes of sequential combined events."
+   },
+   {
+    "t": "Conditional Probability",
+    "d": "The probability of an event occurring given that another event has already occurred."
+   },
+   {
+    "t": "Fundamental Counting Principle",
+    "d": "If there are a ways to do one thing and b ways to do another, there are a times b ways to do both."
+   },
+   {
+    "t": "Independent Events",
+    "d": "Events where the outcome of the first does not affect the probability of the second."
+   },
+   {
+    "t": "Dependent Events",
+    "d": "Events where the outcome of the first affects the probability of the second."
+   },
+   {
+    "t": "Subset",
+    "d": "A set whose elements are all contained within another larger set."
+   },
+   {
+    "t": "Universal Set",
+    "d": "The set containing all possible objects under consideration in a given context."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Adding probabilities along tree branches instead of multiplying them.",
+    "r": "Multiply probabilities along branches (AND rule), and add probabilities down separate valid pathways (OR rule)."
+   },
+   {
+    "w": "Forgetting to reduce the denominator in tree diagrams for dependent events without replacement.",
+    "r": "Decrease both the numerator and the denominator by 1 for subsequent dependent stages."
+   },
+   {
+    "w": "Including the intersection twice when calculating the union of two sets in a Venn diagram.",
+    "r": "Subtract the intersection once when using the formula P(A union B) = P(A) + P(B) - P(A intersect B)."
+   },
+   {
+    "w": "Writing P(A|B) as P(B intersect A) divided by P(A).",
+    "r": "The condition is the given event in the denominator: P(A|B) = P(A intersect B) / P(B)."
+   },
+   {
+    "w": "Assuming 'at least one' means calculating for exactly one.",
+    "r": "'At least one' means 1 minus the probability of zero occurrences."
+   },
+   {
+    "w": "Leaving Venn diagram region values as algebraic expressions instead of calculating numerical frequencies.",
+    "r": "Solve the algebraic equation for x first, then substitute x back into every region."
+   },
+   {
+    "w": "Treating selection without replacement as having constant probabilities.",
+    "r": "Always adjust remaining totals in the bag or sample space after each selection."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A bag contains 5 red counters and 3 blue counters. Two counters are taken at random without replacement. Calculate the probability that both counters are the same color.",
+    "marks": 4,
+    "model": [
+     "P(Red then Red) = (5/8) * (4/7) = 20/56",
+     "P(Blue then Blue) = (3/8) * (2/7) = 6/56",
+     "Sum probabilities: 20/56 + 6/56 = 26/56",
+     "Simplified fraction: 13/28"
+    ],
+    "tip": "Identify that 'without replacement' means denominators decrease by 1 for the second draw."
+   },
+   {
+    "q": "Given that n(U) = 50, n(A) = 30, n(B) = 25, and n(A intersect B) = 10, find the number of elements in (A union B)'.",
+    "marks": 3,
+    "model": [
+     "n(A union B) = n(A) + n(B) - n(A intersect B) = 30 + 25 - 10 = 45",
+     "n((A union B)') = n(U) - n(A union B)",
+     "50 - 45 = 5"
+    ],
+    "tip": "Use the standard union inclusion-exclusion formula before subtracting from the universal set."
+   },
+   {
+    "q": "Two fair six-sided dice are rolled. Find the probability that the sum of the scores is a prime number.",
+    "marks": 4,
+    "model": [
+     "Identify prime sums possible: 2, 3, 5, 7, 11",
+     "Count favorable outcomes: Sum 2: (1,1); Sum 3: (1,2),(2,1); Sum 5: (1,4),(2,3),(3,2),(4,1); Sum 7: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1); Sum 11: (5,6),(6,5)",
+     "Total favorable = 1 + 2 + 4 + 6 + 2 = 15",
+     "Probability = 15/36 = 5/12"
+    ],
+    "tip": "Systematically list outcomes by the sum value rather than raw coordinates to avoid missing pairs."
+   },
+   {
+    "q": "A survey of 100 students shows 60 study French, 50 study Spanish, and 20 study neither. Draw and label a Venn diagram to find how many study both languages.",
+    "marks": 4,
+    "model": [
+     "Total studying at least one language = 100 - 20 = 80",
+     "Using union formula: 60 + 50 - x = 80",
+     "110 - x = 80",
+     "x = 30 students study both"
+    ],
+    "tip": "Subtract the 'neither' count from the universal set first to find the exact size of the set union."
+   },
+   {
+    "q": "In a game, a spinner has sectors numbered 1, 2, 3. The spinner is spun twice. Construct a sample space grid and find the probability of getting an even total score.",
+    "marks": 3,
+    "model": [
+     "Construct 3x3 grid with coordinates (1,1) through (3,3)",
+     "Identify even sums: (1,1), (1,3), (2,2), (3,1), (3,3)",
+     "Count favorable outcomes = 5",
+     "Probability = 5/9"
+    ],
+    "tip": "A grid for a 3x3 game has 9 total outcomes; check every cell systematically."
+   },
+   {
+    "q": "Bag A contains 4 white and 2 black counters. Bag B contains 3 white and 5 black counters. A fair coin is flipped; if heads, a counter is drawn from Bag A; if tails, from Bag B. Find the probability of drawing a white counter.",
+    "marks": 5,
+    "model": [
+     "P(Head) = 1/2, P(Tail) = 1/2",
+     "P(White given Head) = 4/6 = 2/3",
+     "P(White given Tail) = 3/8",
+     "Total P(White) = (1/2 * 2/3) + (1/2 * 3/8) = 1/3 + 3/16",
+     "Common denominator 48: 16/48 + 9/48 = 25/48"
+    ],
+    "tip": "Multiply the branch probabilities for the coin flip and the chosen bag, then add the two valid branches."
+   },
+   {
+    "q": "Sets A and B are such that x is in the intersection. If n(A only) = 3x, n(B only) = 2x, and n(A union B) = 24, find the value of x.",
+    "marks": 3,
+    "model": [
+     "Sum of disjoint regions equals union: 3x + x + 2x = 24",
+     "6x = 24",
+     "x = 4"
+    ],
+    "tip": "Split the Venn diagram into three disjoint parts: only A, intersection, and only B."
+   },
+   {
+    "q": "A card is drawn from a standard deck of 52 playing cards, replaced, and a second card is drawn. Find the probability of drawing two face cards.",
+    "marks": 3,
+    "model": [
+     "Number of face cards in a deck = 12",
+     "Probability of face card on first draw = 12/52 = 3/13",
+     "Due to replacement, probability on second draw is also 3/13",
+     "Combined probability = (3/13) * (3/13) = 9/169"
+    ],
+    "tip": "Replacement means independent events; multiply the individual probabilities directly."
+   },
+   {
+    "q": "Explain why two events A and B cannot be both mutually exclusive and independent, assuming neither has a probability of zero.",
+    "marks": 2,
+    "model": [
+     "If mutually exclusive, P(A intersect B) = 0",
+     "If independent, P(A intersect B) = P(A) * P(B). Since neither probability is zero, this product is non-zero, creating a contradiction."
+    ],
+    "tip": "Use the mathematical definitions of mutual exclusivity (zero intersection) and independence (product rule)."
+   },
+   {
+    "q": "A committee of 3 people is chosen from 5 men and 4 women. Find the probability that the committee consists entirely of women.",
+    "marks": 4,
+    "model": [
+     "Total ways to choose 3 people from 9 = 9C3 = 84",
+     "Ways to choose 3 women from 4 = 4C3 = 4",
+     "Probability = 4/84",
+     "Simplified fraction = 1/21"
+    ],
+    "tip": "Use combination notation nCr for selections where order does not matter."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A box contains 7 red pens and 3 blue pens. Two pens are drawn at random without replacement. Using a tree diagram or systematic enumeration, calculate the probability that the pens are of different colors.",
+    "steps": [
+     "Step 1: Identify the two successful pathways for different colors: (Red then Blue) and (Blue then Red).",
+     "Step 2: Calculate P(Red then Blue) = (7/10) * (3/9) = 21/90.",
+     "Step 3: Calculate P(Blue then Red) = (3/10) * (7/9) = 21/90.",
+     "Step 4: Add the probabilities of the two pathways: 21/90 + 21/90 = 42/90.",
+     "Step 5: Simplify the fraction by dividing numerator and denominator by 6 to get 7/15."
+    ],
+    "ans": "7/15"
+   },
+   {
+    "q": "In a class of 40 students, 24 study History, 18 study Geography, and 6 study neither subject. Find the probability that a student chosen at random studies Geography given that they study History.",
+    "steps": [
+     "Step 1: Find the total number of students studying at least one subject: 40 - 6 = 34.",
+     "Step 2: Use the union formula to find the intersection (both subjects): 24 + 18 - x = 34.",
+     "Step 3: Solve for x: 42 - x = 34, so x = 8 students study both History and Geography.",
+     "Step 4: Apply conditional probability formula P(G given H) = n(H intersect G) / n(H).",
+     "Step 5: Calculate 8 / 24, which simplifies to 1/3."
+    ],
+    "ans": "1/3"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "A fully labelled Venn diagram representing universal set U=50, subsets A and B, and their respective disjoint region frequencies.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" rx=\"6\" fill=\"#f8fafc\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"350\" y=\"40\" fill=\"#1b2540\" font-size=\"12\">ε = 50</text><circle cx=\"150\" cy=\"120\" r=\"70\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\" opacity=\"0.5\"/><circle cx=\"250\" cy=\"120\" r=\"70\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\" opacity=\"0.5\"/><text x=\"110\" y=\"120\" fill=\"#1b2540\" font-size=\"12\">15</text><text x=\"200\" y=\"120\" fill=\"#1b2540\" font-size=\"12\">10</text><text x=\"290\" y=\"120\" fill=\"#1b2540\" font-size=\"12\">12</text><text x=\"50\" y=\"200\" fill=\"#1b2540\" font-size=\"12\">3</text><text x=\"130\" y=\"50\" fill=\"#1b2540\" font-size=\"12\">Set A</text><text x=\"240\" y=\"50\" fill=\"#1b2540\" font-size=\"12\">Set B</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_h.4.5",
+  "sid": "maths_eduqas_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-19T20:24:02.933Z"
+ },
+ "maths_eduqas_h.4.8": {
+  "summary": "Conditional probability restricts the sample space to a reduced pool given that a prior condition has occurred, calculated mathematically as P(A given B) = P(A intersect B) / P(B). At the Grade 9 level, examiners test your ability to synthesize this rule across multi-stage dependent events represented via tree diagrams, two-way frequency tables, and partitioned Venn diagrams. Mastering these structures allows you to seamlessly invert probabilities, manage sample space reductions, and extract expected frequencies from conditional populations.",
+  "core": [
+   {
+    "h": "Foundations of Conditional Probability",
+    "p": "Conditional probability calculates the likelihood of an event occurring given that another event has already taken place. This fundamentally alters our sample space from the universal set down to a specific restricted subset.",
+    "bullets": [
+     "Denoted mathematically as P(A | B), read as the probability of A given B.",
+     "The formula is P(A | B) = P(A intersection B) divided by P(B).",
+     "It applies exclusively when events are dependent or when information is revealed sequentially.",
+     "The denominator changes because the condition B acts as our new 100 percent boundary."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Conditional Probability Definition",
+      "p": "The probability of an event A occurring given the condition that event B has already occurred, denoted P(A | B)."
+     },
+     {
+      "k": "key",
+      "t": "Denominator Shift",
+      "p": "Always ensure your denominator reflects the reduced sample space of the given condition rather than the total original population."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Conditional Probability via Two-Way Tables",
+    "p": "Two-way frequency tables sort data across two categorical variables simultaneously. They provide an explicit grid layout where conditional probabilities can be read directly by restricting rows or columns.",
+    "bullets": [
+     "Rows represent one category and columns represent another category.",
+     "Total cells give the marginal frequencies used as denominators for conditional probabilities.",
+     "To find P(A | B), locate the row or column for B and use its total as your denominator.",
+     "Locate the intersection cell of A and B for your numerator."
+    ],
+    "table": {
+     "head": [
+      "Category",
+      "Pass (P)",
+      "Fail (F)",
+      "Total"
+     ],
+     "rows": [
+      [
+       "Revised (R)",
+       "45",
+       "5",
+       "50"
+      ],
+      [
+       "Did Not Revise (N)",
+       "15",
+       "35",
+       "50"
+      ],
+      [
+       "Total",
+       "60",
+       "40",
+       "100"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Table Reading Strategy",
+      "p": "Cover up the rest of the table with your finger except for the row or column specified by the condition before reading the numbers."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Conditional Probability via Venn Diagrams",
+    "p": "Venn diagrams display sets as intersecting geometric shapes inside a universal box. When calculating conditional probability from a Venn diagram, frequencies or probabilities inside the intersecting regions are constrained to the target set.",
+    "bullets": [
+     "P(A | B) is calculated as the intersection frequency divided by the total frequency of set B.",
+     "Ensure you include the entire circle of the conditioning set B in your denominator, not just the exclusive region.",
+     "Probabilities can be converted to absolute frequencies if total population values are provided.",
+     "Mutually exclusive events have a conditional probability of zero unless the condition is the empty set."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Venn Intersection Rule",
+      "p": "P(A | B) = n(A intersect B) / n(B) using raw frequencies from region counts."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Venn diagram showing two intersecting sets A and B within universal set U, illustrating the reduced sample space B.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" rx=\"8\" fill=\"#f8fafc\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"25\" y=\"30\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\">U</text><circle cx=\"160\" cy=\"120\" r=\"70\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\" fill-opacity=\"0.6\"/><circle cx=\"240\" cy=\"120\" r=\"70\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\" fill-opacity=\"0.6\"/><text x=\"120\" y=\"120\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\">A only</text><text x=\"200\" y=\"120\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\">A ∩ B</text><text x=\"270\" y=\"120\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\">B only</text><text x=\"330\" y=\"210\" fill=\"#1b2540\" font-size=\"11\">Region B total</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Conditional Probability via Tree Diagrams",
+    "p": "Tree diagrams map sequential combined events where branches represent probabilities. For dependent events, the second-stage branches are conditional probabilities that depend directly on the outcome of the first stage.",
+    "bullets": [
+     "First-stage branches sum to 1.",
+     "Second-stage branches are conditional: P(B2 | B1).",
+     "Multiply along branches to find combined path probabilities: P(A and B) = P(A) x P(B | A).",
+     "Add probabilities across mutually exclusive paths that satisfy the target condition."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Ignoring Dependency",
+      "p": "Never use the same fraction denominators on the second set of branches if items are sampled without replacement."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Two-stage dependent tree diagram showing conditional probability branches and multiplied path outcomes.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"40\" y1=\"120\" x2=\"130\" y2=\"60\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"40\" y1=\"120\" x2=\"130\" y2=\"180\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"70\" y=\"80\" fill=\"#1b2540\" font-size=\"11\">P(A)</text><text x=\"70\" y=\"160\" fill=\"#1b2540\" font-size=\"11\">P(A')</text><line x1=\"130\" y1=\"60\" x2=\"230\" y2=\"30\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"130\" y1=\"60\" x2=\"230\" y2=\"90\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"170\" y=\"40\" fill=\"#1b2540\" font-size=\"11\">P(B|A)</text><text x=\"165\" y=\"90\" fill=\"#1b2540\" font-size=\"11\">P(B'|A)</text><line x1=\"130\" y1=\"180\" x2=\"230\" y2=\"150\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"130\" y1=\"180\" x2=\"230\" y2=\"210\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"165\" y=\"150\" fill=\"#1b2540\" font-size=\"11\">P(B|A')</text><text x=\"165\" y=\"205\" fill=\"#1b2540\" font-size=\"11\">P(B'|A')</text><circle cx=\"40\" cy=\"120\" r=\"5\" fill=\"#1b2540\"/><circle cx=\"130\" cy=\"60\" r=\"5\" fill=\"#1b2540\"/><circle cx=\"130\" cy=\"180\" r=\"5\" fill=\"#1b2540\"/></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Expected Frequencies with Conditional Probabilities",
+    "p": "Expected frequency scales a theoretical probability up to a larger population size by multiplying the probability by the total number of trials or items.",
+    "bullets": [
+     "Formula: Expected Frequency = Probability x Number of Trials.",
+     "When conditions apply, restrict your probability calculation first before multiplying by the subset population.",
+     "Always round expected frequency answers sensibly in context (e.g., discrete objects must be whole numbers, though decimal answers are accepted if requested or representing statistical expectation).",
+     "Verify that your scaling factor matches the exact size of the subgroup specified by the condition."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Integer Responses",
+      "p": "If a question asks for the number of people, ensure you state an integer unless decimal expectation is explicitly expected."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Sampling Without Replacement",
+    "p": "Sampling without replacement is the classic source of dependent events in GCSE mathematics. Each time an item is removed, the total population decreases by one, and the count of the specific category removed decreases by one.",
+    "bullets": [
+     "First draw denominators equal total items; second draw denominators equal total items minus one.",
+     "If a red counter is taken, the numerator for red counters drops by 1 for the next branch.",
+     "If a non-red counter is taken, the numerator for red counters remains unchanged, but total items drops by 1.",
+     "Always double-check that branch probabilities at each node sum to 1."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Denominator Trap",
+      "p": "Forgetting to reduce the denominator on the second draw is the most common mark loss in tree diagram questions."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Inverting Conditional Probabilities",
+    "p": "Grade 9 extension questions often provide P(B | A) and require you to find the inverse condition P(A | B). This requires utilizing the multiplication law to equate intersections.",
+    "bullets": [
+     "Since P(A intersection B) = P(A) x P(B | A) and also equals P(B) x P(A | B), we can equate them.",
+     "Rearrange to solve for the inverse: P(A | B) = [P(B | A) x P(A)] / P(B).",
+     "Use a tree diagram or two-way table to populate all joint frequencies if algebraic formulas feel abstract.",
+     "Calculate total P(B) using the law of total probability: P(B) = P(B and A) + P(B and A')."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Bayes' Foundation",
+      "p": "This inversion technique is the discrete foundation of Bayes' theorem tested at GCSE Higher tier."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "The Law of Total Probability",
+    "p": "The law of total probability allows you to calculate the overall probability of an event by summing its conditional probabilities across all possible mutually exclusive partitions of the sample space.",
+    "bullets": [
+     "Formula: P(B) = P(B | A) x P(A) + P(B | A') x P(A').",
+     "Essential for finding the overall denominator or marginal probability when direct counts are missing.",
+     "Visually represented by summing all branches in a tree diagram that lead to outcome B.",
+     "Applies universally to any partition of the universal set into exhaustive and mutually exclusive subsets."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "def": {
+       "t": "Law of Total Probability",
+       "p": "P(B) = Sum over all i of P(B | Ai) x P(Ai) where Ai partition the sample space."
+      }
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Algebraic Conditional Probability",
+    "p": "Higher tier exams frequently combine algebra with probability, defining event probabilities in terms of an unknown variable x within Venn diagrams or frequency tables.",
+    "bullets": [
+     "Express all distinct regions of a Venn diagram or table using algebraic expressions in x.",
+     "Use the rule that all probabilities in an exhaustive set sum to 1, or all frequencies sum to the total population N.",
+     "Form an equation, solve for x, and substitute back to find specific conditional probabilities.",
+     "Reject invalid values of x (e.g., negative probabilities or values that make a region count negative)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Checking Region Bounds",
+      "p": "Ensure every region expression yields a value between 0 and 1 inclusive once x is solved."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Proof of Independence Using Conditionals",
+    "p": "Conditional probability provides the definitive mathematical test for statistical independence. Events are independent if and only if the conditioning does not change the probability.",
+    "bullets": [
+     "Events A and B are independent if P(A | B) = P(A).",
+     "Equivalently, P(B | A) = P(B), or the multiplication rule simplifies to P(A intersection B) = P(A) x P(B).",
+     "If P(A | B) does not equal P(A), the events are dependent.",
+     "Always state your conclusion clearly by comparing the calculated conditional probability to the unconditional probability."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Independence Condition",
+      "p": "Events A and B are independent if and only if P(A | B) = P(A)."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Restaurant Buffet Analogy",
+   "p": "Imagine a restaurant buffet with a total of 100 dishes. 40 are spicy, and 30 are vegetarian. If someone asks for the probability of picking a spicy dish at random, your denominator is 100. But if they say 'Given that you have already chosen a vegetarian dish, what is the probability it is spicy?', your universe shrinks instantly: you now only look at the 30 vegetarian dishes, ignoring all meat dishes completely. The denominator drops from 100 to 30. Conditional probability is simply shrinking your room size to fit only the people who meet the condition."
+  },
+  "terms": [
+   {
+    "t": "Conditional Probability",
+    "d": "The probability of an event occurring given that another event has already occurred."
+   },
+   {
+    "t": "Sample Space",
+    "d": "The complete set of all possible outcomes of a random experiment."
+   },
+   {
+    "t": "Reduced Sample Space",
+    "d": "A restricted subset of the universal sample space created by a given condition."
+   },
+   {
+    "t": "Sampling Without Replacement",
+    "d": "Selecting items from a pool where each chosen item is not returned, altering subsequent probabilities."
+   },
+   {
+    "t": "Expected Frequency",
+    "d": "The number of times an outcome is predicted to occur based on its theoretical probability."
+   },
+   {
+    "t": "Dependent Events",
+    "d": "Events where the outcome of the first event affects the probability of the second event."
+   },
+   {
+    "t": "Independent Events",
+    "d": "Events where the outcome of the first event has no effect on the probability of the second event."
+   },
+   {
+    "t": "Two-Way Table",
+    "d": "A statistical table that displays frequency data for two categorical variables."
+   },
+   {
+    "t": "Intersection",
+    "d": "The overlapping region of sets containing elements belonging to both sets simultaneously."
+   },
+   {
+    "t": "Law of Total Probability",
+    "d": "A rule expressing the total probability of an outcome through conditional probabilities across partitions."
+   },
+   {
+    "t": "Mutually Exclusive",
+    "d": "Events that cannot occur at the same time in a single trial."
+   },
+   {
+    "t": "Exhaustive Set",
+    "d": "A set of outcomes that encompasses every possible result of an experiment, summing to 1."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Keeping the denominator the same on the second draw when sampling without replacement.",
+    "r": "Reduce both the numerator and the denominator by 1 for dependent second-stage branches."
+   },
+   {
+    "w": "Dividing the intersection by the total universal population instead of the conditioning set's total.",
+    "r": "Divide strictly by the total of the given condition P(B), making it the denominator."
+   },
+   {
+    "w": "Confusing P(A | B) with P(B | A).",
+    "r": "Recognize that the event following the vertical bar symbol is always the given condition (the denominator)."
+   },
+   {
+    "w": "Multiplying unconditional probabilities when events are dependent.",
+    "r": "Use conditional probabilities on second-stage branches for dependent combined events."
+   },
+   {
+    "w": "Forgetting to include the intersection region when summing probabilities for total probability.",
+    "r": "Ensure all mutually exclusive paths leading to the target event are added together."
+   },
+   {
+    "w": "Rounding expected frequency to a whole number when the question allows decimals.",
+    "r": "Read the question carefully; exact decimal values or rounded integers may be required depending on context."
+   },
+   {
+    "w": "Assuming events are independent just because they are from different experiments.",
+    "r": "Verify independence mathematically using P(A | B) = P(A) before applying product rules."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A bag contains 5 red counters and 3 blue counters. Two counters are taken at random without replacement. Calculate the probability that both counters are red.",
+    "marks": 3,
+    "model": [
+     "First draw probability for red is 5/8.",
+     "Second draw conditional probability for red is 4/7.",
+     "Multiply fractions: (5/8) x (4/7) = 20/56 = 5/14."
+    ],
+    "tip": "Always show your unsimplified multiplied fraction before reducing to simplest form."
+   },
+   {
+    "q": "In a class of 50 students, 30 study History, 25 study Geography, and 10 study both. Given that a randomly chosen student studies History, find the probability that they also study Geography.",
+    "marks": 3,
+    "model": [
+     "Identify conditioning set denominator: n(History) = 30.",
+     "Identify intersection numerator: n(History and Geography) = 10.",
+     "Calculate conditional probability: 10/30 = 1/3."
+    ],
+    "tip": "History is the condition, so 30 must be your denominator."
+   },
+   {
+    "q": "Events A and B are such that P(A) = 0.4, P(B) = 0.5, and P(A U B) = 0.7. Find P(A | B).",
+    "marks": 4,
+    "model": [
+     "Use addition law to find intersection: P(A inter B) = P(A) + P(B) - P(A U B) = 0.4 + 0.5 - 0.7 = 0.2.",
+     "Apply conditional formula: P(A | B) = P(A inter B) / P(B).",
+     "Substitute values: 0.2 / 0.5 = 2/5 or 0.4."
+    ],
+    "tip": "Find the intersection first using the general addition law whenever it is missing."
+   },
+   {
+    "q": "A factory tests 200 components. 120 are from machine A, 80 from machine B. Machine A has a 5% failure rate; machine B has a 10% failure rate. Given that a tested component is faulty, find the probability it came from machine A.",
+    "marks": 5,
+    "model": [
+     "Find number of faulty from A: 120 x 0.05 = 6.",
+     "Find number of faulty from B: 80 x 0.10 = 8.",
+     "Find total faulty components: 6 + 8 = 14.",
+     "Calculate conditional probability: 6/14 = 3/7."
+    ],
+    "tip": "Use raw frequencies from a quick two-way table or tree breakdown to avoid decimal errors."
+   },
+   {
+    "q": "Determine whether events X and Y are independent, given P(X) = 0.6, P(Y) = 0.3, and P(X | Y) = 0.6.",
+    "marks": 2,
+    "model": [
+     "State condition for independence: P(X | Y) must equal P(X).",
+     "Compare values: P(X | Y) = 0.6 and P(X) = 0.6, so they are independent."
+    ],
+    "tip": "Explicitly state the comparison between P(X | Y) and P(X) to gain the justification mark."
+   },
+   {
+    "q": "A box has 4 white and 6 black balls. Two are drawn without replacement. Find the probability that the second ball is white, given the first was black.",
+    "marks": 3,
+    "model": [
+     "First ball black means remaining pool has 4 white and 5 black balls (total 9).",
+     "Target is drawing white on the second draw.",
+     "Probability = 4/9."
+    ],
+    "tip": "Adjust counts immediately after reading the given condition."
+   },
+   {
+    "q": "Using a Venn diagram with sets P and Q, n(P) = 20, n(Q) = 25, n(P inter Q) = 8, and n(U) = 50. Find P(P' | Q).",
+    "marks": 3,
+    "model": [
+     "Identify conditioning denominator n(Q) = 25.",
+     "Identify numerator for P' and Q: elements in Q that are not in P, which is 25 - 8 = 17.",
+     "Calculate probability: 17/25."
+    ],
+    "tip": "P' intersect Q means elements inside circle Q that lie outside circle P."
+   },
+   {
+    "q": "A game uses a biased coin with P(Head) = 0.7. If a head appears, a die is rolled with 4 winning faces out of 6. If a tail appears, a die is rolled with 2 winning faces out of 6. Given that a player wins, find the probability that a head was flipped.",
+    "marks": 5,
+    "model": [
+     "Path Head and Win: 0.7 x (4/6) = 2.8 / 6 = 14/30.",
+     "Path Tail and Win: 0.3 x (2/6) = 0.6 / 6 = 3/30.",
+     "Total winning probability: 14/30 + 3/30 = 17/30.",
+     "Conditional probability P(Head | Win) = (14/30) / (17/30) = 14/17."
+    ],
+    "tip": "Keep fractions over a common denominator throughout to simplify the final division."
+   },
+   {
+    "q": "250 people are surveyed about driving a car and owning a bicycle. 150 drive cars, 100 own bicycles, and 50 do neither. Find the expected number of bicycle owners among car drivers if 500 car drivers are sampled.",
+    "marks": 4,
+    "model": [
+     "Find intersection using total: 150 + 100 + 50 - 250 = 50 both.",
+     "Calculate conditional probability P(Bicycle | Car) = 50 / 150 = 1/3.",
+     "Multiply by new sample size: (1/3) x 500 = 500 / 3 = 166.67.",
+     "State expected frequency: 166.7 (or 166)."
+    ],
+    "tip": "Always check whether the population scale factor applies to the whole group or a conditional subset."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A bag contains 3 red marbles and 5 blue marbles. Two marbles are drawn without replacement. Find the probability that the second marble is blue, given that the first marble was red.",
+    "steps": [
+     "Identify the initial state: 3 red and 5 blue marbles (total 8).",
+     "Apply the condition: The first marble drawn is red, so 1 red marble is removed.",
+     "Determine the new pool of marbles: 2 red and 5 blue marbles remain (total 7).",
+     "Calculate the conditional probability of drawing a blue marble from this reduced pool: 5/7."
+    ],
+    "ans": "5/7"
+   },
+   {
+    "q": "In a group of 80 students, 50 play football, 40 play rugby, and 10 play neither. Find the probability that a randomly chosen student plays rugby, given that they play football.",
+    "steps": [
+     "Use the universal set formula to find the intersection of football and rugby: n(F union R)' = 10, so n(F union R) = 70.",
+     "Apply the addition law: n(F inter R) = n(F) + n(R) - n(F union R) = 50 + 40 - 70 = 20.",
+     "Identify the conditioning denominator n(Football) = 50.",
+     "Calculate P(Rugby | Football) = n(Football inter Rugby) / n(Football) = 20 / 50 = 2/5."
+    ],
+    "ans": "2/5 (or 0.4)"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Probability tree diagram for drawing colored counters without replacement, illustrating conditional probability branches.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" rx=\"8\" fill=\"#f8fafc\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"120\" x2=\"150\" y2=\"70\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"120\" x2=\"150\" y2=\"170\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"80\" y=\"85\" fill=\"#1b2540\" font-size=\"11\">3/5 Red</text><text x=\"75\" y=\"155\" fill=\"#1b2540\" font-size=\"11\">2/5 Blue</text><line x1=\"150\" y1=\"70\" x2=\"270\" y2=\"35\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"150\" y1=\"70\" x2=\"270\" y2=\"105\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"195\" y=\"40\" fill=\"#1b2540\" font-size=\"11\">2/4 Red</text><text x=\"195\" y=\"100\" fill=\"#1b2540\" font-size=\"11\">2/4 Blue</text><line x1=\"150\" y1=\"170\" x2=\"270\" y2=\"135\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"150\" y1=\"170\" x2=\"270\" y2=\"205\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"195\" y=\"145\" fill=\"#1b2540\" font-size=\"11\">3/4 Red</text><text x=\"195\" y=\"205\" fill=\"#1b2540\" font-size=\"11\">1/4 Blue</text><circle cx=\"50\" cy=\"120\" r=\"4\" fill=\"#1b2540\"/><circle cx=\"150\" cy=\"70\" r=\"4\" fill=\"#1b2540\"/><circle cx=\"150\" cy=\"170\" r=\"4\" fill=\"#1b2540\"/></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_h.4.8",
+  "sid": "maths_eduqas_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-19T20:29:00.016Z"
+ }
+}

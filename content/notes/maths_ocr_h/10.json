@@ -456,5 +456,409 @@
   "src": "pre",
   "by": "gemini/gemini-3.5-flash-lite",
   "ts": "2026-11-16T03:42:06.460Z"
+ },
+ "maths_ocr_h.10.0": {
+  "summary": "Master the fundamental principles of probability, from the theoretical scale running strictly from 0 to 1 to the empirical nature of relative frequency. Understand how to calculate exact probabilities for equally likely outcomes and appreciate how experimental data converges toward theoretical expectation as sample sizes increase. These core concepts form the absolute bedrock for tackling complex combined events, tree diagrams, and conditional probability in higher papers.",
+  "core": [
+   {
+    "h": "1. The Probability Scale",
+    "p": "The probability of any event occurring is always measured on a strict numerical scale between 0 and 1 inclusive. A probability of 0 represents an impossibility, while a probability of 1 represents absolute certainty.",
+    "bullets": [
+     "Expressed as fractions, decimals, or percentages.",
+     "Fractions must be simplified where possible.",
+     "Probabilities can never be negative or exceed 1."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Probability Scale",
+      "p": "A numerical measure of the likelihood of an event occurring, ranging from 0 (impossible) to 1 (certain)."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "The standard probability scale from 0 to 1 with common fractions and percentages.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#f8fafc\" stroke=\"#1b2540\" rx=\"10\"/><line x1=\"50\" y1=\"120\" x2=\"350\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"4\"/><circle cx=\"50\" cy=\"120\" r=\"6\" fill=\"#1b2540\"/><circle cx=\"200\" cy=\"120\" r=\"6\" fill=\"#1b2540\"/><circle cx=\"350\" cy=\"120\" r=\"6\" fill=\"#1b2540\"/><text x=\"50\" y=\"90\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">0 (0% / 0)</text><text x=\"200\" y=\"90\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">0.5 (50% / 1/2)</text><text x=\"350\" y=\"90\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">1 (100% / 1)</text><text x=\"50\" y=\"150\" text-anchor=\"middle\" font-size=\"11\" fill=\"#64748b\">Impossible</text><text x=\"200\" y=\"150\" text-anchor=\"middle\" font-size=\"11\" fill=\"#64748b\">Evens</text><text x=\"350\" y=\"150\" text-anchor=\"middle\" font-size=\"11\" fill=\"#64748b\">Certain</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "2. Theoretical Probability",
+    "p": "Theoretical probability is calculated using mathematical reasoning without performing any physical experiments. It relies on knowing all the possible outcomes of an event beforehand.",
+    "bullets": [
+     "Assumes all individual outcomes are equally likely.",
+     "Calculated using the standard ratio formula.",
+     "Expressed as a proper fraction, decimal, or percentage."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Theoretical Probability Formula",
+      "p": "P(A) = (Number of favorable outcomes) / (Total number of equally likely outcomes)"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "3. Equally Likely Outcomes",
+    "p": "Outcomes are described as equally likely when each individual result has the exact same chance of occurring upon a single trial. Recognizing symmetry and fairness in objects like dice and coins is essential.",
+    "bullets": [
+     "A fair six-sided die has six equally likely outcomes.",
+     "A biased die does not have equally likely outcomes.",
+     "Always check for phrasing like 'fair' or 'unbiased' in exam questions."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Biased Assumptions",
+      "p": "Never assume outcomes are equally likely unless stated as 'fair' or 'unbiased'."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Sum of Probabilities",
+    "p": "The sum of the probabilities of all mutually exclusive and exhaustive outcomes in any given sample space is always exactly equal to 1. This rule is frequently used to find the probability of an event NOT happening.",
+    "bullets": [
+     "P(Event A) + P(Not A) = 1",
+     "Rearranging gives P(Not A) = 1 - P(A).",
+     "Applies to all possible outcomes combined."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Complementary Events",
+      "p": "The complement of an event A is the event that A does not occur, denoted as A' or Not A."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "5. Experimental Probability (Relative Frequency)",
+    "p": "Experimental probability, also known as relative frequency, is calculated based on the actual results of an experiment or trial. It is empirical rather than theoretical.",
+    "bullets": [
+     "Calculated after conducting physical trials.",
+     "Depends entirely on observed data.",
+     "Can change if a different set of trials is performed."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Relative Frequency Formula",
+      "p": "Relative Frequency = (Number of successful trials) / (Total number of trials performed)"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Estimating Expected Frequency",
+    "p": "We can use a known probability (theoretical or relative frequency) to estimate how many times a particular outcome will occur over a larger number of repeated trials.",
+    "bullets": [
+     "Multiply the probability by the total number of future trials.",
+     "Assumes the underlying probability remains constant.",
+     "Results are estimates, not exact guarantees."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Expected Frequency Calculation",
+      "p": "Expected frequency = Probability × Total number of trials."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Law of Large Numbers",
+    "p": "As the number of trials in an experiment increases, the relative frequency of an event gets closer and closer to its true theoretical probability. Small sample sizes often yield misleading experimental results.",
+    "bullets": [
+     "Small samples show high variability due to random chance.",
+     "Large samples smooth out random fluctuations.",
+     "Examiners test your understanding of why relative frequency approaches theoretical probability."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Sample Size Impact",
+      "p": "More trials produce more reliable experimental probability estimates."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Graph showing how relative frequency converges to theoretical probability as trials increase.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#f8fafc\" stroke=\"#1b2540\" rx=\"10\"/><line x1=\"50\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"40\" x2=\"50\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"100\" x2=\"360\" y2=\"100\" stroke=\"#94a3b8\" stroke-dasharray=\"4\"/><text x=\"30\" y=\"104\" font-size=\"10\" fill=\"#64748b\">0.5</text><path d=\"M 50 160 Q 100 60 150 110 T 250 95 T 350 99\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><text x=\"200\" y=\"220\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b2540\">Number of Trials (Increasing)</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "8. Identifying Bias from Data",
+    "p": "Examiners often present relative frequency data from a large number of trials to test whether an object (like a spinner or die) is fair or biased.",
+    "bullets": [
+     "Compare experimental probabilities with expected theoretical probabilities.",
+     "If relative frequencies diverge significantly across a large sample, the object is likely biased.",
+     "Look for consistent discrepancies in frequency tables."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Small Sample Trap",
+      "p": "Do not declare an object biased based on a small number of trials (e.g., 10 rolls of a die)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Designing Experiments and Simulations",
+    "p": "Sometimes probability experiments involve simulating real-world scenarios using random number generators, spinners, or dice to model complex probabilities.",
+    "bullets": [
+     "Ensure the model has the same proportional outcomes as the real scenario.",
+     "State assumptions clearly when setting up a simulation.",
+     "Count outcomes accurately using tally charts."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Simulation",
+      "p": "An experiment that models a real-life situation using random chance devices."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Sample Space Basics",
+    "p": "A sample space is the complete collection of all possible distinct outcomes of a random experiment. Listing them systematically ensures no outcomes are missed.",
+    "bullets": [
+     "Can be listed as sets, tables, or grid diagrams.",
+     "Every possible outcome must be mutually exclusive.",
+     "Forms the denominator for theoretical probability calculations."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Sample Space Notation",
+      "p": "Usually denoted with curly brackets, e.g., S = {1, 2, 3, 4, 5, 6}."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Sample space representation for rolling a single fair six-sided die.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#f8fafc\" stroke=\"#1b2540\" rx=\"10\"/><rect x=\"50\" y=\"40\" width=\"300\" height=\"40\" fill=\"#dbeafe\" stroke=\"#1b2540\" rx=\"6\"/><text x=\"200\" y=\"65\" text-anchor=\"middle\" font-size=\"14\" fill=\"#1b2540\" font-weight=\"bold\">Sample Space: {1, 2, 3, 4, 5, 6}</text><circle cx=\"80\" cy=\"140\" r=\"20\" fill=\"#bbf7d0\" stroke=\"#1b2540\"/><text x=\"80\" y=\"144\" text-anchor=\"middle\" font-size=\"14\" fill=\"#1b2540\">1</text><circle cx=\"130\" cy=\"140\" r=\"20\" fill=\"#bbf7d0\" stroke=\"#1b2540\"/><text x=\"130\" y=\"144\" text-anchor=\"middle\" font-size=\"14\" fill=\"#1b2540\">2</text><circle cx=\"180\" cy=\"140\" r=\"20\" fill=\"#bbf7d0\" stroke=\"#1b2540\"/><text x=\"180\" y=\"144\" text-anchor=\"middle\" font-size=\"14\" fill=\"#1b2540\">3</text><circle cx=\"230\" cy=\"140\" r=\"20\" fill=\"#bbf7d0\" stroke=\"#1b2540\"/><text x=\"230\" y=\"144\" text-anchor=\"middle\" font-size=\"14\" fill=\"#1b2540\">4</text><circle cx=\"280\" cy=\"140\" r=\"20\" fill=\"#bbf7d0\" stroke=\"#1b2540\"/><text x=\"280\" y=\"144\" text-anchor=\"middle\" font-size=\"14\" fill=\"#1b2540\">5</text><circle cx=\"330\" cy=\"140\" r=\"20\" fill=\"#bbf7d0\" stroke=\"#1b2540\"/><text x=\"330\" y=\"144\" text-anchor=\"middle\" font-size=\"14\" fill=\"#1b2540\">6</text></svg>"
+     }
+    ]
+   }
+  ],
+  "analogy": {
+   "t": "The Weather Forecast vs. Actual Rainfall",
+   "p": "Imagine weather forecasters giving a 70% chance of rain (theoretical probability based on atmospheric models). If you walk outside 10 times and it rains 6 times, your experimental relative frequency is 6/10 or 60%. The analogy breaks down because weather systems change over time, whereas mathematical objects like dice possess fixed, unchanging theoretical probabilities."
+  },
+  "terms": [
+   {
+    "t": "Probability",
+    "d": "A numerical measure between 0 and 1 of the likelihood that an event will occur."
+   },
+   {
+    "t": "Theoretical Probability",
+    "d": "The likelihood of an event occurring based on logical reasoning and equally likely outcomes."
+   },
+   {
+    "t": "Experimental Probability",
+    "d": "The relative frequency of an event calculated from actual trial results."
+   },
+   {
+    "t": "Relative Frequency",
+    "d": "The ratio of the number of successful trials to the total number of trials."
+   },
+   {
+    "t": "Equally Likely",
+    "d": "Outcomes that have the exact same mathematical chance of occurring."
+   },
+   {
+    "t": "Sample Space",
+    "d": "The complete set of all possible outcomes of a random experiment."
+   },
+   {
+    "t": "Complementary Event",
+    "d": "The event that occurs when a specified event does not occur, summing to 1."
+   },
+   {
+    "t": "Mutually Exclusive",
+    "d": "Events that cannot both occur at the same time during a single trial."
+   },
+   {
+    "t": "Biased",
+    "d": "Describing an object where outcomes are not equally likely."
+   },
+   {
+    "t": "Fair",
+    "d": "Describing an object where all outcomes are equally likely."
+   },
+   {
+    "t": "Law of Large Numbers",
+    "d": "The principle that relative frequency approaches theoretical probability as trials increase."
+   },
+   {
+    "t": "Expected Frequency",
+    "d": "The number of times an outcome is predicted to occur in a given number of trials."
+   },
+   {
+    "t": "Trial",
+    "d": "A single performance of a random experiment or procedure."
+   },
+   {
+    "t": "Outcome",
+    "d": "A possible result of a trial or experiment."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Writing probabilities as ratios like 3:5.",
+    "r": "Probabilities must be written as fractions (3/5), decimals (0.6), or percentages (60%)."
+   },
+   {
+    "w": "Saying a probability is 1.5 because it is very likely.",
+    "r": "Probabilities can never exceed 1 or 100%."
+   },
+   {
+    "w": "Concluding a coin is biased after getting 3 heads in 3 flips.",
+    "r": "Small sample sizes do not prove bias; results are due to random variation."
+   },
+   {
+    "w": "Forgetting to subtract the probability from 1 when finding 'Not A'.",
+    "r": "P(Not A) = 1 - P(A); always ensure probabilities sum to 1."
+   },
+   {
+    "w": "Using the number of successful outcomes as the denominator.",
+    "r": "The denominator is always the total number of possible outcomes."
+   },
+   {
+    "w": "Adding relative frequencies when finding expected values instead of multiplying.",
+    "r": "Multiply the probability by the number of trials to find expected frequency."
+   },
+   {
+    "w": "Assuming all spinners are fair regardless of sector sizes.",
+    "r": "Check if sector angles or areas are equal before assuming equally likely outcomes."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A bag contains 5 red counters, 3 blue counters, and 2 green counters. A counter is chosen at random. Find the probability that it is not blue.",
+    "marks": 2,
+    "model": [
+     "Total counters = 5 + 3 + 2 = 10",
+     "P(Blue) = 3/10, so P(Not Blue) = 1 - 3/10 = 7/10"
+    ],
+    "tip": "Use the complement rule: 1 minus the probability of the event occurring."
+   },
+   {
+    "q": "A biased spinner has four sections: A, B, C, and D. The probability of landing on A is 0.25, B is 0.3, and C is 0.35. Find the probability of landing on D.",
+    "marks": 2,
+    "model": [
+     "Sum of probabilities equals 1",
+     "0.25 + 0.3 + 0.35 = 0.9",
+     "1 - 0.9 = 0.1"
+    ],
+    "tip": "All mutually exclusive outcomes must sum to exactly 1."
+   },
+   {
+    "q": "A football team plays 50 matches. They win 30 matches, draw 12, and lose 8. Estimate the probability that they win their next match based on these results.",
+    "marks": 2,
+    "model": [
+     "Relative frequency = Successful outcomes / Total trials",
+     "30 / 50",
+     "3/5 or 0.6"
+    ],
+    "tip": "Use experimental relative frequency when theoretical probabilities are unknown."
+   },
+   {
+    "q": "Mark rolls a biased die 200 times. A six is recorded 50 times. Calculate the relative frequency of rolling a six.",
+    "marks": 1,
+    "model": [
+     "50 / 200",
+     "1/4 or 0.25"
+    ],
+    "tip": "Simplify your fraction or write as a decimal."
+   },
+   {
+    "q": "A spinner is spun 500 times and lands on red 125 times. Explain whether the spinner is likely to be fair if it has 4 equal sections.",
+    "marks": 2,
+    "model": [
+     "Theoretical probability for a fair 4-section spinner is 1/4 or 0.25",
+     "Experimental probability is 125/500 = 0.25, which matches, so it is likely fair"
+    ],
+    "tip": "Compare experimental relative frequency directly with the expected theoretical probability."
+   },
+   {
+    "q": "The probability that a train is late is 0.15. Out of 400 journeys, calculate the expected number of late journeys.",
+    "marks": 2,
+    "model": [
+     "Expected frequency = Probability × Total trials",
+     "0.15 × 400",
+     "60"
+    ],
+    "tip": "Multiply the probability by the total number of trials given."
+   },
+   {
+    "q": "Explain why the relative frequency of getting a head when tossing a coin might be 0.7 after 10 flips, but closer to 0.5 after 1000 flips.",
+    "marks": 2,
+    "model": [
+     "Reference to the Law of Large Numbers",
+     "Small samples have high random variation; large samples smooth this out to true probability"
+    ],
+    "tip": "Mention sample size and random variation for full marks."
+   },
+   {
+    "q": "A card is drawn at random from a standard deck of 52 playing cards. Find the probability of drawing a red face card.",
+    "marks": 2,
+    "model": [
+     "Total face cards = 12 (6 red face cards)",
+     "6 / 52 = 3 / 26"
+    ],
+    "tip": "Remember red face cards are Jacks, Queens, and Kings of Hearts and Diamonds."
+   },
+   {
+    "q": "Two fair six-sided dice are rolled. Write down the size of the sample space.",
+    "marks": 1,
+    "model": [
+     "6 × 6 = 36",
+     "36"
+    ],
+    "tip": "Multiply the number of outcomes on each independent event."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A bag contains 4 red, 3 green, and 2 yellow counters. A counter is taken at random, its color is recorded, and it is replaced. This is done 180 times. Calculate the expected number of times a green counter is chosen.",
+    "steps": [
+     "Find the total number of counters in the bag: 4 + 3 + 2 = 9.",
+     "Calculate the theoretical probability of choosing a green counter: P(Green) = 3/9 = 1/3.",
+     "Multiply the probability by the total number of trials: (1/3) × 180 = 60."
+    ],
+    "ans": "60 times"
+   },
+   {
+    "q": "A spinner has three sections numbered 1, 2, and 3. In 250 trials, it lands on 1 exactly 100 times, on 2 exactly 75 times, and on 3 exactly 75 times. State the relative frequency of landing on 1 and comment on whether the spinner is fair.",
+    "steps": [
+     "Calculate the relative frequency for landing on 1: 100 / 250 = 2/5 or 0.4.",
+     "Compare with the theoretical probability for a fair 3-section spinner, which is 1/3 (~0.333).",
+     "Since 0.4 differs from 0.333 over a large sample of 250 trials, the spinner is likely biased."
+    ],
+    "ans": "Relative frequency is 0.4; the spinner is likely biased."
+   }
+  ],
+  "pid": "maths_ocr_h.10.0",
+  "sid": "maths_ocr_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-19T20:41:51.673Z"
  }
 }

@@ -2412,5 +2412,943 @@
   "src": "pre",
   "by": "groq/openai/gpt-oss-120b",
   "ts": "2026-11-18T17:23:45.308Z"
+ },
+ "maths_aqa_f.5.5": {
+  "summary": "Scatter graphs display the relationship between two variables, allowing us to see patterns of correlation. A line of best fit summarises the trend and can be used to estimate values within the data range (interpolation) or beyond it (extrapolation), though extrapolation is less reliable. Understanding the strength and direction of correlation, recognising outliers, and distinguishing correlation from causation are essential for interpreting real-world data accurately. These skills are tested across all three AQA Foundation papers with a focus on plotting, describing, and making justified predictions. ",
+  "core": [
+   {
+    "h": "What is a scatter graph?",
+    "p": "A scatter graph (or scatter diagram) plots **bivariate data** as points on a coordinate grid. Each point represents one observation with two measured variables: the independent variable on the x‑axis and the dependent variable on the y‑axis. The pattern of points reveals whether the variables are linked.",
+    "bullets": [
+     "Axes must be labelled with variable names and units.",
+     "Scales must be linear and consistent; choose a scale that uses most of the grid.",
+     "Points are plotted with a sharp pencil as small crosses or dots.",
+     "A title describing the context is good practice but not required for marks."
+    ],
+    "table": {
+     "head": [
+      "Feature",
+      "Requirement"
+     ],
+     "rows": [
+      [
+       "Axes labels",
+       "Variable name + units"
+      ],
+      [
+       "Scale",
+       "Equal intervals, no breaks"
+      ],
+      [
+       "Plotting",
+       "Crosses or dots, accurate to ±1 mm"
+      ],
+      [
+       "Title",
+       "Optional but recommended"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Scatter graph",
+      "p": "A graph on which pairs of values for two variables are plotted as points to show any relationship between them."
+     },
+     {
+      "k": "tip",
+      "t": "Plotting accuracy",
+      "p": "Examiners allow ±1 mm tolerance. Use a sharp pencil and check each point against both axes before moving on."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Positive correlation scatter graph with line of best fit",
+      "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><line x1='50' y1='190' x2='350' y2='190' stroke='#1b2540' stroke-width='2'/><line x1='50' y1='190' x2='50' y2='50' stroke='#1b2540' stroke-width='2'/><line x1='60' y1='180' x2='340' y2='60' stroke='#1b2540' stroke-width='2'/><circle cx='60' cy='180' r='4' fill='#dbeafe' stroke='#1b2540'/><circle cx='100' cy='150' r='4' fill='#dbeafe' stroke='#1b2540'/><circle cx='140' cy='130' r='4' fill='#dbeafe' stroke='#1b2540'/><circle cx='180' cy='110' r='4' fill='#dbeafe' stroke='#1b2540'/><circle cx='220' cy='90' r='4' fill='#dbeafe' stroke='#1b2540'/><circle cx='260' cy='80' r='4' fill='#dbeafe' stroke='#1b2540'/><circle cx='300' cy='70' r='4' fill='#dbeafe' stroke='#1b2540'/><circle cx='340' cy='60' r='4' fill='#dbeafe' stroke='#1b2540'/><text x='380' y='200' font-size='12' fill='#1b2540'>x</text><text x='30' y='30' font-size='12' fill='#1b2540'>y</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Types of correlation",
+    "p": "Correlation describes the **direction** of a relationship. **Positive correlation**: as one variable increases, the other tends to increase. **Negative correlation**: as one increases, the other tends to decrease. **No correlation**: no discernible pattern; points appear randomly scattered.",
+    "bullets": [
+     "Positive: points trend from bottom‑left to top‑right.",
+     "Negative: points trend from top‑left to bottom‑right.",
+     "No correlation: points form a roughly circular or horizontal cloud.",
+     "Always describe correlation in context, e.g. 'As height increases, weight tends to increase.'"
+    ],
+    "table": {
+     "head": [
+      "Correlation type",
+      "Pattern",
+      "Example"
+     ],
+     "rows": [
+      [
+       "Positive",
+       "Upward trend",
+       "Height vs weight"
+      ],
+      [
+       "Negative",
+       "Downward trend",
+       "Age of car vs value"
+      ],
+      [
+       "None",
+       "Random scatter",
+       "Shoe size vs IQ"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Correlation",
+      "p": "A measure of how closely two variables are related; can be positive, negative, or zero."
+     },
+     {
+      "k": "key",
+      "t": "Direction words",
+      "p": "Use 'tends to' or 'generally' – correlation is not a perfect rule for every individual point."
+     },
+     {
+      "k": "warn",
+      "t": "No correlation ≠ no relationship",
+      "p": "A curved relationship (e.g. parabola) shows no linear correlation but a clear non‑linear pattern. Foundation tier only assesses linear correlation."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Negative correlation scatter graph",
+      "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><line x1='50' y1='190' x2='350' y2='190' stroke='#1b2540' stroke-width='2'/><line x1='50' y1='190' x2='50' y2='50' stroke='#1b2540' stroke-width='2'/><line x1='60' y1='60' x2='340' y2='180' stroke='#1b2540' stroke-width='2'/><circle cx='60' cy='60' r='4' fill='#fde68a' stroke='#1b2540'/><circle cx='100' cy='90' r='4' fill='#fde68a' stroke='#1b2540'/><circle cx='140' cy='110' r='4' fill='#fde68a' stroke='#1b2540'/><circle cx='180' cy='130' r='4' fill='#fde68a' stroke='#1b2540'/><circle cx='220' cy='150' r='4' fill='#fde68a' stroke='#1b2540'/><circle cx='260' cy='160' r='4' fill='#fde68a' stroke='#1b2540'/><circle cx='300' cy='170' r='4' fill='#fde68a' stroke='#1b2540'/><circle cx='340' cy='180' r='4' fill='#fde68a' stroke='#1b2540'/><text x='380' y='200' font-size='12' fill='#1b2540'>x</text><text x='30' y='30' font-size='12' fill='#1b2540'>y</text></svg>"
+     },
+     {
+      "cap": "No correlation scatter graph",
+      "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><line x1='50' y1='190' x2='350' y2='190' stroke='#1b2540' stroke-width='2'/><line x1='50' y1='190' x2='50' y2='50' stroke='#1b2540' stroke-width='2'/><circle cx='80' cy='160' r='4' fill='#e9d5ff' stroke='#1b2540'/><circle cx='120' cy='80' r='4' fill='#e9d5ff' stroke='#1b2540'/><circle cx='160' cy='140' r='4' fill='#e9d5ff' stroke='#1b2540'/><circle cx='200' cy='100' r='4' fill='#e9d5ff' stroke='#1b2540'/><circle cx='240' cy='170' r='4' fill='#e9d5ff' stroke='#1b2540'/><circle cx='280' cy='70' r='4' fill='#e9d5ff' stroke='#1b2540'/><circle cx='320' cy='130' r='4' fill='#e9d5ff' stroke='#1b2540'/><circle cx='340' cy='90' r='4' fill='#e9d5ff' stroke='#1b2540'/><text x='380' y='200' font-size='12' fill='#1b2540'>x</text><text x='30' y='30' font-size='12' fill='#1b2540'>y</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Strength of correlation",
+    "p": "Beyond direction, we describe **how tightly** the points cluster around a straight line. **Strong correlation**: points lie very close to a straight line. **Weak correlation**: points are more spread out but still show a general trend. **Moderate correlation**: in between. Strength is judged by eye at Foundation level; no numerical coefficient (like r) is required.",
+    "bullets": [
+     "Strong: you could draw a line that almost all points touch.",
+     "Weak: a line fits the general direction but many points are far from it.",
+     "Always pair strength with direction: 'strong positive', 'weak negative'.",
+     "Outliers can make a strong correlation look weaker if ignored."
+    ],
+    "table": {
+     "head": [
+      "Strength",
+      "Visual clue",
+      "Description phrase"
+     ],
+     "rows": [
+      [
+       "Strong",
+       "Points hug a line",
+       "Strong positive correlation"
+      ],
+      [
+       "Moderate",
+       "Clear trend but some scatter",
+       "Moderate negative correlation"
+      ],
+      [
+       "Weak",
+       "Trend barely visible",
+       "Weak positive correlation"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Foundation only",
+      "p": "You never calculate a correlation coefficient. Describe strength qualitatively using 'strong', 'moderate', 'weak'."
+     },
+     {
+      "k": "tip",
+      "t": "Use a ruler",
+      "p": "Place a ruler along the trend to help judge strength. If the ruler covers most points, it's strong."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Drawing a line of best fit",
+    "p": "A **line of best fit** (or trend line) is a single straight line that best represents the trend of the data. It should follow the general direction of the points and have roughly equal numbers of points above and below it. It does **not** have to pass through the origin or any specific point.",
+    "bullets": [
+     "Use a long ruler and a sharp pencil.",
+     "Line should extend across the whole range of x‑values (or slightly beyond).",
+     "Balance points above and below – count them if unsure.",
+     "Ignore obvious outliers when positioning the line.",
+     "Line must be straight; do not join points dot‑to‑dot."
+    ],
+    "table": {
+     "head": [
+      "Do",
+      "Don't"
+     ],
+     "rows": [
+      [
+       "Use a ruler",
+       "Join points with line segments"
+      ],
+      [
+       "Balance points above/below",
+       "Force line through (0,0) unless it fits"
+      ],
+      [
+       "Extend across data range",
+       "Stop at first/last point"
+      ],
+      [
+       "Ignore outliers",
+       "Let an outlier pull the line"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Line of best fit",
+      "p": "A straight line drawn through a scatter graph to show the general trend of the data, with roughly equal numbers of points on each side."
+     },
+     {
+      "k": "warn",
+      "t": "Dot‑to‑dot loses marks",
+      "p": "Connecting points with straight segments is a common error. The line must be a single straight line."
+     },
+     {
+      "k": "tip",
+      "t": "Check balance",
+      "p": "After drawing, count points above and below. If 6 above and 2 below, adjust the line."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Interpolation – estimating within the data range",
+    "p": "**Interpolation** uses the line of best fit to estimate a value for the dependent variable given an independent variable value **within** the range of the plotted data. Because the estimate is based on the observed trend, it is generally reliable.",
+    "bullets": [
+     "Read across from the x‑value to the line, then down/up to the y‑axis.",
+     "Always state the estimated value with units.",
+     "Interpolation is safer than extrapolation because it stays within known data.",
+     "Mark schemes award marks for correct reading from the line, not the exact true value."
+    ],
+    "table": {
+     "head": [
+      "Step",
+      "Action"
+     ],
+     "rows": [
+      [
+       "1",
+       "Locate given x on horizontal axis"
+      ],
+      [
+       "2",
+       "Draw vertical line to line of best fit"
+      ],
+      [
+       "3",
+       "Draw horizontal line to vertical axis"
+      ],
+      [
+       "4",
+       "Read y value and include units"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Interpolation",
+      "p": "Estimating a value within the range of the data using the line of best fit."
+     },
+     {
+      "k": "key",
+      "t": "Reliability",
+      "p": "Interpolation is considered reliable because it uses the trend where data exists."
+     },
+     {
+      "k": "tip",
+      "t": "Show construction lines",
+      "p": "Draw faint vertical and horizontal lines to the axes; examiners look for these to award method marks."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Extrapolation – estimating beyond the data range",
+    "p": "**Extrapolation** uses the line of best fit to predict values **outside** the range of the plotted data. It assumes the current trend continues unchanged, which is often unrealistic. Extrapolation is **less reliable** and the further you go beyond the data, the greater the uncertainty.",
+    "bullets": [
+     "Same reading method as interpolation but x‑value is outside plotted points.",
+     "Always add a warning: 'Extrapolation may be unreliable because the trend might change.'",
+     "Exam questions often ask: 'Why might this estimate be unreliable?' – answer: 'It is extrapolation.'",
+     "Do not extrapolate too far; a short distance just beyond the last point is sometimes acceptable."
+    ],
+    "table": {
+     "head": [
+      "Aspect",
+      "Interpolation",
+      "Extrapolation"
+     ],
+     "rows": [
+      [
+       "x‑value location",
+       "Within data range",
+       "Outside data range"
+      ],
+      [
+       "Reliability",
+       "Generally reliable",
+       "Less reliable"
+      ],
+      [
+       "Assumption",
+       "Trend holds locally",
+       "Trend continues indefinitely"
+      ],
+      [
+       "Exam warning needed",
+       "No",
+       "Yes, always"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Extrapolation",
+      "p": "Estimating a value outside the range of the data using the line of best fit."
+     },
+     {
+      "k": "warn",
+      "t": "Never extrapolate without comment",
+      "p": "If a question asks for an estimate outside the range, you must state it is extrapolation and therefore unreliable."
+     },
+     {
+      "k": "key",
+      "t": "Mark scheme phrase",
+      "p": "'Unreliable because it is extrapolation' or 'trend may not continue' are standard acceptable answers."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Outliers and anomalies",
+    "p": "An **outlier** (or anomaly) is a point that does not fit the general pattern. It may be due to a measurement error, a special circumstance, or natural variation. When drawing the line of best fit, **ignore outliers** – they should not pull the line towards them. In context, you may be asked to identify an outlier and suggest a reason.",
+    "bullets": [
+     "Circle the outlier lightly and label 'outlier' if asked.",
+     "Do not let the outlier influence the line of best fit.",
+     "Possible reasons: recording error, unusual conditions, different population.",
+     "If asked to 'describe the correlation', mention the outlier separately: 'Strong positive correlation apart from one outlier.'"
+    ],
+    "table": {
+     "head": [
+      "Outlier action",
+      "Reason"
+     ],
+     "rows": [
+      [
+       "Ignore when drawing line",
+       "Prevents distortion of trend"
+      ],
+      [
+       "Identify in description",
+       "Shows you have noticed it"
+      ],
+      [
+       "Suggest cause",
+       "Context‑specific: e.g. 'measurement error'"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Outlier",
+      "p": "A data point that lies far from the general pattern of the other points."
+     },
+     {
+      "k": "tip",
+      "t": "Circle it",
+      "p": "Use a small circle around the point; examiners expect you to visibly identify it."
+     },
+     {
+      "k": "warn",
+      "t": "Don't remove it from the graph",
+      "p": "The point stays plotted; you just don't let it affect the line."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Correlation does not imply causation",
+    "p": "A correlation between two variables **does not prove** that one causes the other. There may be a **third variable** (confounding factor) influencing both, or the link may be coincidental. At Foundation tier, you must recognise this distinction and avoid causal language unless the context explicitly supports it.",
+    "bullets": [
+     "Positive correlation between ice cream sales and drowning does not mean ice cream causes drowning; temperature drives both.",
+     "Use phrases: 'associated with', 'linked to', 'tends to increase with' – not 'causes'.",
+     "Exam questions often test this: 'Does the graph show that A causes B?' Answer: 'No, correlation does not imply causation.'"
+    ],
+    "table": {
+     "head": [
+      "Statement",
+      "Correct?"
+     ],
+     "rows": [
+      [
+       "As temperature rises, ice cream sales increase.",
+       "Yes – plausible causation"
+      ],
+      [
+       "As ice cream sales rise, drowning increases.",
+       "No – third variable (temperature)"
+      ],
+      [
+       "Strong correlation means one causes the other.",
+       "False"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Must‑know phrase",
+      "p": "'Correlation does not imply causation' – write this verbatim if asked to explain why a causal claim is not justified."
+     },
+     {
+      "k": "warn",
+      "t": "Causal language loses marks",
+      "p": "Avoid 'because', 'causes', 'leads to' when describing correlation. Use 'is associated with'."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Describing a scatter graph in context",
+    "p": "Full descriptions require: **direction** (positive/negative/none), **strength** (strong/moderate/weak), **contextual interpretation**, and **any outliers**. Example: 'The scatter graph shows a strong positive correlation between hours of revision and exam score. As revision hours increase, exam scores tend to increase. There is one outlier at (5, 40) which may be a student who revised inefficiently.'",
+    "bullets": [
+     "Always mention both variables by name.",
+     "Include strength and direction together.",
+     "Interpret in words: 'As X increases, Y tends to increase.'",
+     "Note outliers separately.",
+     "Do not describe the line of best fit unless asked."
+    ],
+    "table": {
+     "head": [
+      "Component",
+      "Example phrase"
+     ],
+     "rows": [
+      [
+       "Direction",
+       "positive correlation"
+      ],
+      [
+       "Strength",
+       "strong"
+      ],
+      [
+       "Interpretation",
+       "As hours of revision increase, exam scores tend to increase."
+      ],
+      [
+       "Outlier",
+       "One outlier at (5,40) – possible recording error."
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Structure your answer",
+      "p": "Follow the order: direction + strength → interpretation → outlier (if any). This matches mark scheme expectations."
+     },
+     {
+      "k": "key",
+      "t": "Keywords for marks",
+      "p": "Mark schemes look for 'positive/negative', 'strong/weak', 'tends to', 'outlier'."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Using the line of best fit to find an equation (Foundation: estimate gradient/intercept)",
+    "p": "At Foundation tier you are **not** required to find the exact equation y = mx + c. However, you may be asked to **estimate the gradient** (rate of change) or **y‑intercept** from the line of best fit. Gradient = change in y / change in x using two points **on the line** (not data points). Intercept is where the line crosses the y‑axis (x=0).",
+    "bullets": [
+     "Pick two widely spaced points **on the line** (e.g. where it crosses grid lines).",
+     "Gradient = (y2 - y1) / (x2 - x1). Include units: e.g. '£ per year'.",
+     "Intercept: read y‑value where line meets y‑axis; check if x=0 is within the graph.",
+     "If x=0 is not shown, you cannot reliably read the intercept."
+    ],
+    "table": {
+     "head": [
+      "Quantity",
+      "How to find",
+      "Units"
+     ],
+     "rows": [
+      [
+       "Gradient",
+       "Two points on line → Δy/Δx",
+       "y‑units per x‑unit"
+      ],
+      [
+       "y‑intercept",
+       "Read y where line crosses y‑axis",
+       "y‑units"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Don't use data points for gradient",
+      "p": "Data points scatter; the line represents the trend. Using data points gives a different gradient."
+     },
+     {
+      "k": "tip",
+      "t": "Choose easy coordinates",
+      "p": "Select points where the line crosses grid intersections for simple arithmetic."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Comparing two scatter graphs",
+    "p": "Questions may show two scatter graphs (e.g. for two different groups) and ask you to compare. Compare **direction**, **strength**, **spread**, and **any outliers**. Use comparative language: 'Graph A shows a stronger positive correlation than Graph B.'",
+    "bullets": [
+     "Look at both graphs side by side.",
+     "Comment on correlation type and strength for each.",
+     "Note differences in spread (tighter cluster = stronger).",
+     "Mention if one has outliers and the other doesn't.",
+     "Relate back to context: 'Group A's results are more consistent.'"
+    ],
+    "table": {
+     "head": [
+      "Feature",
+      "Graph A",
+      "Graph B",
+      "Comparison phrase"
+     ],
+     "rows": [
+      [
+       "Correlation",
+       "Positive",
+       "Positive",
+       "Both show positive correlation"
+      ],
+      [
+       "Strength",
+       "Strong",
+       "Weak",
+       "Graph A has a stronger correlation"
+      ],
+      [
+       "Outliers",
+       "None",
+       "One",
+       "Graph B has an outlier"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Use comparative adjectives",
+      "p": "Stronger, weaker, more spread, less consistent – these trigger marks."
+     },
+     {
+      "k": "key",
+      "t": "Context is king",
+      "p": "Always tie comparison to the variables: 'The correlation between height and weight is stronger for adults than for children.'"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Limitations of scatter graphs and lines of best fit",
+    "p": "Scatter graphs only show **linear** relationships. Curved patterns may appear as 'no correlation'. The line of best fit is a **model** – it simplifies reality. It assumes the trend is constant across the range, which may not be true. Extrapolation is especially risky. Sample size matters: a graph with only 5 points gives a less reliable line than one with 50.",
+    "bullets": [
+     "Only detects linear trends.",
+     "Outliers can distort if not ignored.",
+     "Small samples → unreliable line.",
+     "Extrapolation assumes trend continues.",
+     "Correlation ≠ causation."
+    ],
+    "table": {
+     "head": [
+      "Limitation",
+      "Impact"
+     ],
+     "rows": [
+      [
+       "Linear only",
+       "Misses curved relationships"
+      ],
+      [
+       "Sample size",
+       "Small samples give unreliable trends"
+      ],
+      [
+       "Extrapolation",
+       "Unreliable predictions"
+      ],
+      [
+       "Outliers",
+       "Can mislead if included in line"
+      ],
+      [
+       "Causation",
+       "Cannot prove cause and effect"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Exam language",
+      "p": "'The line of best fit is only an estimate' or 'The sample size is small' are standard limitation statements."
+     },
+     {
+      "k": "warn",
+      "t": "Don't overclaim",
+      "p": "Never say 'the line proves that...' – always use 'suggests', 'indicates', 'estimates'."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Exam technique checklist for scatter graph questions",
+    "p": "Follow this routine in the exam to maximise marks:",
+    "bullets": [
+     "1. Read the question: identify variables, units, and what is asked (plot, describe, estimate, compare).",
+     "2. Check axes: labels, scales, orientation – are they already drawn? If you must draw, choose sensible scales.",
+     "3. Plot points accurately: use a sharp pencil, crosses, ±1 mm.",
+     "4. Draw line of best fit: ruler, balance points, ignore outliers, extend across range.",
+     "5. For estimates: show construction lines, read from line, give units.",
+     "6. For descriptions: direction + strength + context + outlier.",
+     "7. For extrapolation: give estimate then add 'unreliable because extrapolation'.",
+     "8. For causation questions: state 'correlation does not imply causation'.",
+     "9. Review: have you answered every part? Check marks allocated."
+    ],
+    "table": {
+     "head": [
+      "Task",
+      "Key action",
+      "Common pitfall"
+     ],
+     "rows": [
+      [
+       "Plotting",
+       "Sharp pencil, crosses",
+       "Dots too large or misaligned"
+      ],
+      [
+       "Line of best fit",
+       "Ruler, balance points",
+       "Dot‑to‑dot or forced through origin"
+      ],
+      [
+       "Interpolation",
+       "Construction lines",
+       "Reading from data points not line"
+      ],
+      [
+       "Extrapolation",
+       "Warning statement",
+       "Missing unreliability comment"
+      ],
+      [
+       "Description",
+       "Direction, strength, context",
+       "Missing strength or outlier"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Marks for method",
+      "p": "Even if your final reading is slightly off, showing correct construction lines earns method marks."
+     },
+     {
+      "k": "warn",
+      "t": "Pen vs pencil",
+      "p": "Always use pencil for graphs; you may need to erase and adjust."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Scatter graphs are like a detective's evidence board",
+   "p": "Imagine a detective pinning photos of suspects (data points) on a board. The **line of best fit** is the string they stretch to show the general direction the evidence points. **Interpolation** is guessing where a missing photo would sit along the string – a safe guess because it's within the existing photos. **Extrapolation** is stretching the string beyond the last photo to predict where the next suspect might be – risky because the pattern could change. **Outliers** are photos that don't fit the pattern – maybe a red herring. **Correlation vs causation**: just because two clues appear together doesn't mean one caused the other. The analogy breaks down because real data has measurement error and the 'string' is a mathematical model, not a physical string the detective can move at will."
+  },
+  "terms": [
+   {
+    "t": "Scatter graph",
+    "d": "A graph plotting pairs of values for two variables to show their relationship."
+   },
+   {
+    "t": "Bivariate data",
+    "d": "Data consisting of pairs of linked numerical observations."
+   },
+   {
+    "t": "Independent variable",
+    "d": "The variable plotted on the x‑axis; the one you control or choose."
+   },
+   {
+    "t": "Dependent variable",
+    "d": "The variable plotted on the y‑axis; the one you measure in response."
+   },
+   {
+    "t": "Correlation",
+    "d": "A description of the direction and strength of a linear relationship between two variables."
+   },
+   {
+    "t": "Positive correlation",
+    "d": "As one variable increases, the other tends to increase."
+   },
+   {
+    "t": "Negative correlation",
+    "d": "As one variable increases, the other tends to decrease."
+   },
+   {
+    "t": "No correlation",
+    "d": "No discernible linear pattern between the variables."
+   },
+   {
+    "t": "Strong correlation",
+    "d": "Points lie very close to a straight line."
+   },
+   {
+    "t": "Weak correlation",
+    "d": "Points are widely scattered around a general trend."
+   },
+   {
+    "t": "Line of best fit",
+    "d": "A straight line drawn through a scatter graph to represent the trend, with roughly equal points on each side."
+   },
+   {
+    "t": "Interpolation",
+    "d": "Estimating a value within the range of the data using the line of best fit."
+   },
+   {
+    "t": "Extrapolation",
+    "d": "Estimating a value outside the range of the data using the line of best fit; less reliable."
+   },
+   {
+    "t": "Outlier",
+    "d": "A data point that does not fit the general pattern; an anomaly."
+   },
+   {
+    "t": "Causation",
+    "d": "A relationship where one variable directly causes a change in another; not proven by correlation alone."
+   },
+   {
+    "t": "Gradient",
+    "d": "The rate of change of y with respect to x; calculated as Δy/Δx from two points on the line of best fit."
+   },
+   {
+    "t": "Y‑intercept",
+    "d": "The value of y where the line of best fit crosses the y‑axis (x = 0)."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Joining the points with straight line segments (dot‑to‑dot).",
+    "r": "Draw a single straight line of best fit using a ruler."
+   },
+   {
+    "w": "Forcing the line of best fit through the origin (0,0).",
+    "r": "The line should balance points; it only goes through the origin if the data trend supports it."
+   },
+   {
+    "w": "Reading interpolation/extrapolation values from the data points instead of the line of best fit.",
+    "r": "Always read from the line of best fit; show construction lines."
+   },
+   {
+    "w": "Describing correlation as 'strong' without mentioning direction (positive/negative).",
+    "r": "Always give both: e.g. 'strong positive correlation'."
+   },
+   {
+    "w": "Saying 'correlation means causation' or 'X causes Y'.",
+    "r": "State 'correlation does not imply causation'; use 'associated with'."
+   },
+   {
+    "w": "Not mentioning an outlier when describing the graph.",
+    "r": "Identify any outlier and comment on it separately."
+   },
+   {
+    "w": "Extrapolating without stating it is unreliable.",
+    "r": "Always add: 'This is extrapolation, so the estimate may be unreliable because the trend might not continue.'"
+   },
+   {
+    "w": "Using the original data points to calculate the gradient of the line of best fit.",
+    "r": "Choose two points **on the line** (where it crosses grid lines) to calculate gradient."
+   },
+   {
+    "w": "Drawing the line of best fit too short (stopping at first/last point).",
+    "r": "Extend the line across the whole range of x‑values (or slightly beyond)."
+   },
+   {
+    "w": "Confusing 'no correlation' with 'negative correlation' because points slope down slightly.",
+    "r": "No correlation means no clear linear trend; points form a random cloud."
+   }
+  ],
+  "exam": [
+   {
+    "q": "The scatter graph shows the height and weight of 10 students. Describe the correlation.",
+    "marks": 2,
+    "model": [
+     "Positive correlation",
+     "Strong (or moderate/weak as appropriate)"
+    ],
+    "tip": "Always give direction and strength; use context words like 'As height increases, weight tends to increase'."
+   },
+   {
+    "q": "Draw a line of best fit on the scatter graph.",
+    "marks": 2,
+    "model": [
+     "Single straight line drawn with ruler",
+     "Roughly equal numbers of points above and below the line",
+     "Line extends across the range of data"
+    ],
+    "tip": "Ignore any obvious outlier; count points above/below to check balance."
+   },
+   {
+    "q": "Use your line of best fit to estimate the weight of a student of height 165 cm.",
+    "marks": 2,
+    "model": [
+     "Correct reading from line at 165 cm (vertical line to line, horizontal to axis)",
+     "Answer with units (kg)"
+    ],
+    "tip": "Show construction lines; they earn method marks even if reading is slightly off."
+   },
+   {
+    "q": "A student of height 190 cm weighs 95 kg. The scatter graph only goes up to 180 cm. Estimate the weight for 190 cm and comment on reliability.",
+    "marks": 3,
+    "model": [
+     "Estimate read from line at 190 cm",
+     "Statement: 'This is extrapolation'",
+     "Statement: 'Unreliable because the trend may not continue beyond the data range'"
+    ],
+    "tip": "Always include the warning phrase for extrapolation questions."
+   },
+   {
+    "q": "The scatter graph shows a positive correlation between ice cream sales and temperature. Does this prove that higher temperatures cause higher ice cream sales? Explain.",
+    "marks": 2,
+    "model": [
+     "No",
+     "Correlation does not imply causation / there may be other factors"
+    ],
+    "tip": "Use the exact phrase 'correlation does not imply causation'."
+   },
+   {
+    "q": "Identify the outlier on the scatter graph and suggest a possible reason for it.",
+    "marks": 2,
+    "model": [
+     "Point circled/identified correctly",
+     "Plausible reason in context (e.g. recording error, unusual circumstance)"
+    ],
+    "tip": "Circle the point clearly; reason must fit the scenario."
+   },
+   {
+    "q": "Estimate the gradient of the line of best fit. Give the units.",
+    "marks": 3,
+    "model": [
+     "Two points selected on the line (not data points)",
+     "Correct calculation of Δy/Δx",
+     "Units given as y‑units per x‑unit"
+    ],
+    "tip": "Pick points where the line crosses grid lines for easy arithmetic."
+   },
+   {
+    "q": "Compare the correlation shown in Graph A and Graph B.",
+    "marks": 4,
+    "model": [
+     "Graph A: positive correlation, strong",
+     "Graph B: positive correlation, weak",
+     "Graph A has less scatter / points closer to line",
+     "Contextual comparison: e.g. 'Graph A shows a more consistent relationship'"
+    ],
+    "tip": "Use comparative words: stronger, weaker, more spread, tighter cluster."
+   },
+   {
+    "q": "The table shows data for 8 cars: age and value. Plot the data on the grid.",
+    "marks": 3,
+    "model": [
+     "Axes labelled with variables and units",
+     "Sensible linear scales using most of grid",
+     "All 8 points plotted accurately (±1 mm)"
+    ],
+    "tip": "Choose scales that make plotting easy (e.g. 1 cm = 1 year, 1 cm = £1000)."
+   },
+   {
+    "q": "Why might a line of best fit drawn on a scatter graph with only 5 points be unreliable?",
+    "marks": 2,
+    "model": [
+     "Small sample size",
+     "Line may not represent the true trend / one outlier has large influence"
+    ],
+    "tip": "Mention sample size and sensitivity to outliers."
+   }
+  ],
+  "worked": [
+   {
+    "q": "The scatter graph shows the number of hours of revision (x) and exam score (y) for 9 students. The line of best fit has been drawn. (a) Describe the correlation. (b) Estimate the exam score for a student who revised for 5 hours. (c) A student revised for 12 hours. Explain why using the line to estimate their score may be unreliable.",
+    "steps": [
+     "(a) Observe the points: they trend upward and are close to the line. → Strong positive correlation. As revision hours increase, exam score tends to increase.",
+     "(b) Locate 5 on x‑axis, draw vertical line to line of best fit, then horizontal to y‑axis. Read value ≈ 68. → Estimated score = 68 marks.",
+     "(c) The data only goes up to 10 hours. 12 hours is outside the range → extrapolation. The trend may not continue (e.g. diminishing returns). → Unreliable because it is extrapolation."
+    ],
+    "ans": "(a) Strong positive correlation. (b) 68 marks. (c) Extrapolation; unreliable because trend may not continue beyond 10 hours."
+   },
+   {
+    "q": "A scatter graph shows the age of cars (years) and their value (£). The line of best fit passes through (2, 12000) and (8, 4000). (a) Calculate the gradient of the line. (b) Interpret the gradient in context. (c) The line crosses the y‑axis at 14000. What does this represent?",
+    "steps": [
+     "(a) Gradient = (4000 - 12000) / (8 - 2) = (-8000) / 6 = -1333.33... → -1333 £ per year (approx).",
+     "(b) Gradient is negative: as age increases by 1 year, value decreases by about £1333.",
+     "(c) y‑intercept at 14000 → value when age = 0 (new car). Represents estimated value of a brand‑new car."
+    ],
+    "ans": "(a) -1333 £/year. (b) Value drops £1333 per year. (c) Estimated value of a new car (£14000)."
+   },
+   {
+    "q": "Two scatter graphs show the relationship between hours of exercise per week and resting heart rate for Group A (trained athletes) and Group B (sedentary adults). Graph A shows a strong negative correlation; Graph B shows a weak negative correlation. Compare the two graphs.",
+    "steps": [
+     "Both show negative correlation: as exercise increases, resting heart rate tends to decrease.",
+     "Graph A (athletes) has strong correlation – points tightly clustered around line.",
+     "Graph B (sedentary) has weak correlation – points widely scattered.",
+     "Graph A suggests a more consistent relationship for athletes; Graph B shows more variation among sedentary adults.",
+     "Possible outlier in Graph B? Not mentioned, but if present note it."
+    ],
+    "ans": "Both graphs show negative correlation. Graph A shows a strong negative correlation (tight cluster), indicating a consistent relationship for athletes. Graph B shows a weak negative correlation (wide scatter), indicating less consistency for sedentary adults."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Positive correlation scatter graph with line of best fit",
+    "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><line x1='50' y1='190' x2='350' y2='190' stroke='#1b2540' stroke-width='2'/><line x1='50' y1='190' x2='50' y2='50' stroke='#1b2540' stroke-width='2'/><line x1='60' y1='180' x2='340' y2='60' stroke='#1b2540' stroke-width='2'/><circle cx='60' cy='180' r='4' fill='#dbeafe' stroke='#1b2540'/><circle cx='100' cy='150' r='4' fill='#dbeafe' stroke='#1b2540'/><circle cx='140' cy='130' r='4' fill='#dbeafe' stroke='#1b2540'/><circle cx='180' cy='110' r='4' fill='#dbeafe' stroke='#1b2540'/><circle cx='220' cy='90' r='4' fill='#dbeafe' stroke='#1b2540'/><circle cx='260' cy='80' r='4' fill='#dbeafe' stroke='#1b2540'/><circle cx='300' cy='70' r='4' fill='#dbeafe' stroke='#1b2540'/><circle cx='340' cy='60' r='4' fill='#dbeafe' stroke='#1b2540'/><text x='380' y='200' font-size='12' fill='#1b2540'>x</text><text x='30' y='30' font-size='12' fill='#1b2540'>y</text></svg>"
+   },
+   {
+    "cap": "Negative correlation scatter graph",
+    "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><line x1='50' y1='190' x2='350' y2='190' stroke='#1b2540' stroke-width='2'/><line x1='50' y1='190' x2='50' y2='50' stroke='#1b2540' stroke-width='2'/><line x1='60' y1='60' x2='340' y2='180' stroke='#1b2540' stroke-width='2'/><circle cx='60' cy='60' r='4' fill='#fde68a' stroke='#1b2540'/><circle cx='100' cy='90' r='4' fill='#fde68a' stroke='#1b2540'/><circle cx='140' cy='110' r='4' fill='#fde68a' stroke='#1b2540'/><circle cx='180' cy='130' r='4' fill='#fde68a' stroke='#1b2540'/><circle cx='220' cy='150' r='4' fill='#fde68a' stroke='#1b2540'/><circle cx='260' cy='160' r='4' fill='#fde68a' stroke='#1b2540'/><circle cx='300' cy='170' r='4' fill='#fde68a' stroke='#1b2540'/><circle cx='340' cy='180' r='4' fill='#fde68a' stroke='#1b2540'/><text x='380' y='200' font-size='12' fill='#1b2540'>x</text><text x='30' y='30' font-size='12' fill='#1b2540'>y</text></svg>"
+   },
+   {
+    "cap": "No correlation scatter graph",
+    "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><line x1='50' y1='190' x2='350' y2='190' stroke='#1b2540' stroke-width='2'/><line x1='50' y1='190' x2='50' y2='50' stroke='#1b2540' stroke-width='2'/><circle cx='80' cy='160' r='4' fill='#e9d5ff' stroke='#1b2540'/><circle cx='120' cy='80' r='4' fill='#e9d5ff' stroke='#1b2540'/><circle cx='160' cy='140' r='4' fill='#e9d5ff' stroke='#1b2540'/><circle cx='200' cy='100' r='4' fill='#e9d5ff' stroke='#1b2540'/><circle cx='240' cy='170' r='4' fill='#e9d5ff' stroke='#1b2540'/><circle cx='280' cy='70' r='4' fill='#e9d5ff' stroke='#1b2540'/><circle cx='320' cy='130' r='4' fill='#e9d5ff' stroke='#1b2540'/><circle cx='340' cy='90' r='4' fill='#e9d5ff' stroke='#1b2540'/><text x='380' y='200' font-size='12' fill='#1b2540'>x</text><text x='30' y='30' font-size='12' fill='#1b2540'>y</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_f.5.5",
+  "sid": "maths_aqa_f",
+  "v": 2,
+  "src": "pre",
+  "by": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+  "ts": "2026-11-19T18:14:26.812Z"
  }
 }

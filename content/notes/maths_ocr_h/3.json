@@ -1,0 +1,475 @@
+{
+ "maths_ocr_h.3.0": {
+  "summary": "Mastering approximation, estimation, and bounds is essential for securing a grade 9 in OCR GCSE Mathematics. This topic requires precise control of rounding accuracy, mental arithmetic strategies using significant figures, and the propagation of errors when calculating with rounded values. By rigorously applying truncation rules, identifying maximum and minimum limits, and managing compound error in complex formulae, students can reliably solve advanced multi-step exam problems.",
+  "core": [
+   {
+    "h": "1. Decimal Places and Significant Figures",
+    "p": "Rounding to a given number of decimal places or significant figures controls the precision of a numerical value. Significant figures start from the first non-zero digit.",
+    "bullets": [
+     "Locate the required digit: count decimal places from the decimal point, and significant figures from the first non-zero digit.",
+     "Look at the digit immediately to the right of the target digit.",
+     "If this following digit is 5 or more, round up by increasing the target digit by 1.",
+     "If this following digit is 4 or less, round down by leaving the target digit unchanged.",
+     "Fill trailing placeholder zeros only when necessary before the decimal point to preserve magnitude."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "First Significant Figure",
+      "p": "The first significant figure of any number is never a leading zero. In 0.00456, the first significant figure is 4."
+     },
+     {
+      "k": "warn",
+      "t": "Placeholder Zeros",
+      "p": "Do not drop trailing zeros when rounding to significant figures if they are needed to maintain the correct place value magnitude."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Visual guide to identifying significant figures in decimals and integers.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><rect x=\"40\" y=\"30\" width=\"320\" height=\"170\" rx=\"10\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"60\" y=\"65\" font-size=\"14\" font-weight=\"bold\" fill=\"#1b2540\">Number: 0.0 3 4 5 6</text><line x1=\"165\" y1=\"75\" x2=\"165\" y2=\"115\" stroke=\"#ef4444\" stroke-width=\"2\"/><text x=\"130\" y=\"135\" font-size=\"12\" fill=\"#ef4444\">1st sig fig (3)</text><line x1=\"195\" y1=\"75\" x2=\"195\" y2=\"115\" stroke=\"#3b82f6\" stroke-width=\"2\"/><text x=\"170\" y=\"155\" font-size=\"12\" fill=\"#3b82f6\">2nd sig fig (4)</text><line x1=\"225\" y1=\"75\" x2=\"225\" y2=\"115\" stroke=\"#10b981\" stroke-width=\"2\"/><text x=\"205\" y=\"175\" font-size=\"12\" fill=\"#10b981\">3rd sig fig (5)</text><text x=\"60\" y=\"200\" font-size=\"11\" fill=\"#475569\">Leading zeros are never counted as significant figures.</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "2. Estimation Using Significant Figures",
+    "p": "Estimation allows us to check calculations or find approximate answers quickly without a calculator by rounding every number in the expression to 1 significant figure first.",
+    "bullets": [
+     "Write down the original expression clearly.",
+     "Round every independent number in the calculation to 1 significant figure.",
+     "Perform the arithmetic operations carefully using mental math techniques.",
+     "State your estimated answer clearly, often using the approx symbol (~).",
+     "Check if the estimated answer is sensible in the context of the question."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Fraction Estimations",
+      "p": "When estimating fractions like (38.2 x 4.9) / 1.95, round 38.2 to 40, 4.9 to 5, and 1.95 to 2 to simplify division."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "3. Understanding Error Intervals and Bounds",
+    "p": "When a number is rounded or measured, the true value lies within a range known as the error interval, bounded by upper and lower limits.",
+    "bullets": [
+     "The lower bound is the smallest value that would round up to the given rounded value.",
+     "The upper bound is the smallest value that would round *up* to the *next* possible rounded category.",
+     "Bounds are conventionally written using strict inequalities (<) for the upper bound and inclusive inequalities (<=) for the lower bound.",
+     "For a number rounded to the nearest integer (unit = 1), the error interval uses +/- 0.5.",
+     "For a number rounded to 1 decimal place (unit = 0.1), the error interval uses +/- 0.05."
+    ],
+    "table": {
+     "head": [
+      "Rounded Value",
+      "Accuracy / Unit",
+      "Lower Bound",
+      "Upper Bound"
+     ],
+     "rows": [
+      [
+       "45 (nearest 10)",
+       "10",
+       "40",
+       "50"
+      ],
+      [
+       "7.2 (1 d.p.)",
+       "0.1",
+       "7.15",
+       "7.25"
+      ],
+      [
+       "300 (nearest 100)",
+       "100",
+       "250",
+       "350"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Upper Bound Definition",
+      "p": "The upper bound is half a unit above the rounded value, representing the strict supremum limit of the rounding interval."
+     },
+     {
+      "warn": "The 9 recurring trap",
+      "t": "Strict Inequality",
+      "p": "Always use < for the upper bound. For example, if x = 7.2 rounded to 1 d.p., write 7.15 <= x < 7.25, never <= 7.25."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Calculating with Bounds: Addition and Multiplication",
+    "p": "To find the maximum and minimum possible values of a calculated result, we must combine the upper and lower bounds of the individual components correctly.",
+    "bullets": [
+     "To maximize a sum (A + B), use the upper bound of A and the upper bound of B.",
+     "To minimize a sum (A - B), use the lower bound of A and the upper bound of B.",
+     "To maximize a product (A x B), use the upper bound of A and the upper bound of B.",
+     "To minimize a product (A x B), use the lower bound of A and the lower bound of B.",
+     "Always define your variables and write down their bounds clearly before performing calculations."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Operation Rule of Thumb",
+      "p": "For addition and multiplication, maximums use upper bounds, and minimums use lower bounds (except when subtracting)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "5. Calculating with Bounds: Subtraction and Division",
+    "p": "Subtraction and division require cross-combining bounds because subtracting or dividing by a larger number yields a smaller result, and vice versa.",
+    "bullets": [
+     "To maximize a difference (A - B), take the upper bound of A and subtract the lower bound of B.",
+     "To minimize a difference (A - B), take the lower bound of A and subtract the upper bound of B.",
+     "To maximize a quotient (A / B), take the upper bound of the numerator (A) and divide by the lower bound of the denominator (B).",
+     "To minimize a quotient (A / B), take the lower bound of the numerator (A) and divide by the upper bound of the denominator (B).",
+     "Never subtract lower bound from lower bound when finding maximum difference."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "warn": "Division Trap",
+      "p": "Dividing by a lower bound gives a larger answer. To get the maximum quotient, you must divide by the smallest possible denominator."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Truncation vs Rounding",
+    "p": "Truncation cuts off a decimal number at a specific place value without rounding up or down, effectively discarding all digits beyond that point.",
+    "bullets": [
+     "Truncating 3.879 to 1 decimal place gives 3.8, not 3.9.",
+     "Truncating 45.99 to the nearest integer gives 45.",
+     "Error intervals for truncated numbers have different boundaries compared to rounded numbers.",
+     "If a positive number is truncated to 1 decimal place (e.g. 5.4), its error interval is 5.4 <= x < 5.5.",
+     "Always read exam questions carefully to distinguish between 'correct to' and 'truncated to'."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Truncation",
+      "p": "The process of shortening a number by deleting digits past a specified place value without rounding."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Upper and Lower Bounds in Perimeter and Area",
+    "p": "Geometry problems frequently test bounds by giving dimensions measured to a certain degree of accuracy and asking for maximum or minimum perimeter and area.",
+    "bullets": [
+     "For a rectangle with length L and width W, Maximum Perimeter = 2 * (Upper Bound L + Upper Bound W).",
+     "Minimum Area = Lower Bound L * Lower Bound W.",
+     "Maximum Area = Upper Bound L * Upper Bound W.",
+     "Check whether dimensions are given to the nearest integer, nearest 10, or 1 decimal place before finding bounds.",
+     "Include correct units in your final bounds statements."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Area Bounds",
+      "p": "To find the maximum area of any standard 2D shape, always multiply or combine the upper bounds of all linear dimensions."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Rectangle with dimensions defined by upper and lower bounds.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><rect x=\"100\" y=\"60\" width=\"200\" height=\"120\" fill=\"#fef3c7\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"160\" y=\"45\" font-size=\"13\" fill=\"#1b2540\">Length L = 12 cm (nearest cm)</text><text x=\"315\" y=\"125\" font-size=\"13\" fill=\"#1b2540\">W = 5 cm</text><text x=\"145\" y=\"125\" font-size=\"14\" font-weight=\"bold\" fill=\"#1b2540\">Max Area = 12.5 x 5.5</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "8. Upper and Lower Bounds in Compound Measures",
+    "p": "Compound measures like speed (Speed = Distance / Time) and density (Density = Mass / Volume) require strict application of bounds rules for division and multiplication.",
+    "bullets": [
+     "Speed = Distance / Time. Maximum Speed = Max Distance / Min Time.",
+     "Minimum Speed = Min Distance / Max Time.",
+     "Density = Mass / Volume. Maximum Density = Max Mass / Min Volume.",
+     "Ensure all time units are consistent (e.g. converting minutes to hours or seconds) before calculating bounds.",
+     "Always write out the algebraic formula before substituting upper and lower bound values."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Speed Formula Bounds",
+      "p": "To drive as fast as possible, you want the longest distance in the shortest time (Max D / Min T)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Upper and Lower Bounds in Algebraic Expressions",
+    "p": "Grade 9 questions require substituting bounds into complex algebraic fractions, equations, or quadratic formulas.",
+    "bullets": [
+     "Substitute lower bounds and upper bounds into algebraic expressions to find range limits.",
+     "For expressions like a / b where a and b can be positive or negative, evaluate all extreme combinations.",
+     "Ensure denominator bounds do not include zero, which would cause undefined division.",
+     "Factorise or rearrange algebraic expressions before bound substitution if it simplifies calculation.",
+     "State the exact range of the resulting expression using inequalities."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "warn": "Repeated Variables",
+      "p": "If a variable appears more than once in an algebraic expression (e.g., x^2 + 2x), do not substitute independent bounds separately if x is the same physical measurement; use interval analysis or calculus for advanced optimization."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Limits of Accuracy in Practical Contexts",
+    "p": "Real-world measurements carry inherent uncertainty. Interpreting statement limits like 'correct to 3 significant figures' establishes rigorous safety margins in engineering and science.",
+    "bullets": [
+     "Mass measured as 250g to the nearest 10g has bounds 245g <= m < 255g.",
+     "Capacity of a container rounded to 2 significant figures requires calculating 5% or equivalent half-unit tolerances.",
+     "Tolerance limits in manufacturing use upper and lower bounds to determine whether a product passes quality assurance.",
+     "Understand phrases like 'at least', 'maximum possible', and 'lower limit' in context.",
+     "Express final answers with appropriate degrees of accuracy supported by working."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Manufacturing Tolerances",
+      "p": "If a bolt length is specified as 50mm +/- 0.2mm, the lower bound is 49.8mm and the upper bound is 50.2mm directly."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Archery Target Analogy",
+   "p": "Imagine you are an archer shooting at a target, but the target board has been blurred by mist so you can only read measurements to the nearest whole ring. If you measure an arrow's distance as 10 metres to the nearest metre, the true position could be anywhere in a misty zone from 9.5 metres to just under 10.5 metres. When calculating the total distance of two arrows combined, combining your worst-case shortest positions gives the absolute lower limit, while combining your farthest possible positions gives the upper limit. The analogy breaks down because real physical measurements have continuous probability distributions, whereas GCSE bounds assume a uniform, hard cutoff at exactly half a unit."
+  },
+  "terms": [
+   {
+    "t": "Significant Figure",
+    "d": "Digits that carry meaning contributing to the precision of a number, starting from the first non-zero digit."
+   },
+   {
+    "t": "Decimal Place",
+    "d": "The position of a digit to the right of the decimal point."
+   },
+   {
+    "t": "Estimation",
+    "d": "Finding an approximate value for a calculation by rounding numbers to 1 significant figure."
+   },
+   {
+    "t": "Error Interval",
+    "d": "The range of values within which a true measurement lies, defined by lower and upper bounds."
+   },
+   {
+    "t": "Lower Bound",
+    "d": "The smallest value that would round up to a given rounded number."
+   },
+   {
+    "t": "Upper Bound",
+    "d": "The smallest value that would round up to the next rounded category, forming the strict upper limit."
+   },
+   {
+    "t": "Truncation",
+    "d": "Cutting off a decimal number at a specified place value without rounding."
+   },
+   {
+    "t": "Tolerance",
+    "d": "The permitted variation in a measurement or physical dimension."
+   },
+   {
+    "t": "Compound Measure",
+    "d": "A measure derived from a combination of fundamental quantities, such as speed, density, or pressure."
+   },
+   {
+    "t": "Quotient",
+    "d": "The result obtained by dividing one quantity by another."
+   },
+   {
+    "t": "Strict Inequality",
+    "d": "An inequality using < or > symbols where the boundary value is excluded."
+   },
+   {
+    "t": "Inclusive Inequality",
+    "d": "An inequality using <= or >= symbols where the boundary value is included."
+   },
+   {
+    "t": "Propagation of Error",
+    "d": "The effect of rounding errors compounding through mathematical operations."
+   },
+   {
+    "t": "Supremum",
+    "d": "The least upper bound of a set."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Writing 7.2 <= upper bound <= 7.25",
+    "r": "Must use strict inequality: 7.15 <= x < 7.25 because 7.25 rounds up to 7.3."
+   },
+   {
+    "w": "Using lower bound divided by lower bound to find minimum quotient",
+    "r": "To minimize a fraction, use lower bound of numerator divided by upper bound of denominator."
+   },
+   {
+    "w": "Rounding 0.00456 to 1 sig fig as 0.0",
+    "r": "The first significant figure is 4, so it rounds to 0.005."
+   },
+   {
+    "w": "Subtracting lower bound from lower bound for maximum difference",
+    "r": "To maximize A - B, use upper bound of A minus lower bound of B."
+   },
+   {
+    "w": "Forgetting units when calculating bounds of area or perimeter",
+    "r": "Always check units and convert consistency before applying bounds."
+   },
+   {
+    "w": "Treating truncated numbers the same as rounded numbers for error intervals",
+    "r": "Truncated 5.4 to 1 d.p. has interval 5.4 <= x < 5.5, whereas rounded 5.4 has 5.35 <= x < 5.45."
+   },
+   {
+    "w": "Rounding intermediate estimation steps",
+    "r": "Round each number to 1 significant figure at the very start of an estimation, not midway."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Work out an estimate for (39.8 x 2.05) / 4.92",
+    "marks": 2,
+    "model": [
+     "Round 39.8 to 40, 2.05 to 2, and 4.92 to 5",
+     "Evaluate (40 x 2) / 5 = 80 / 5 = 16"
+    ],
+    "tip": "Always show your rounded 1 s.f. values clearly before calculating."
+   },
+   {
+    "q": "The number x is rounded to 1 decimal place to give 8.4. Write down the error interval for x.",
+    "marks": 2,
+    "model": [
+     "Lower bound = 8.35",
+     "Upper bound = 8.45, written as 8.35 <= x < 8.45"
+    ],
+    "tip": "Remember to use <= for the lower bound and < for the upper bound."
+   },
+   {
+    "q": "A rectangle has length 12 cm correct to the nearest cm, and width 5 cm correct to the nearest cm. Calculate the upper bound for the area of the rectangle.",
+    "marks": 3,
+    "model": [
+     "Upper bound for length = 12.5 cm",
+     "Upper bound for width = 5.5 cm",
+     "Maximum area = 12.5 x 5.5 = 68.75 cm^2"
+    ],
+    "tip": "To maximize area, multiply the upper bound of length by the upper bound of width."
+   },
+   {
+    "q": "The mass of a solid block is 340g, correct to the nearest 10g. Its volume is 45 cm^3, correct to the nearest cm^3. Calculate the lower bound for the density of the block. Give your answer to 2 decimal places.",
+    "marks": 4,
+    "model": [
+     "Mass bounds: 335 <= M < 345",
+     "Volume bounds: 44.5 <= V < 45.5",
+     "Min density = Min Mass / Max Volume = 335 / 45.5",
+     "= 7.3626... so 7.36 g/cm^3"
+    ],
+    "tip": "Density = Mass / Volume. Minimum density requires the smallest mass divided by the largest volume."
+   },
+   {
+    "q": "A number y is truncated to 2 decimal places to give 6.48. Write down the error interval for y.",
+    "marks": 2,
+    "model": [
+     "Lower bound = 6.48",
+     "Upper bound = 6.49, written as 6.48 <= y < 6.49"
+    ],
+    "tip": "Truncation error intervals do not extend half a unit either side; they start at the truncated value."
+   },
+   {
+    "q": "Simplify and estimate sqrt(81.4 + 17.8^2) / 3.02",
+    "marks": 3,
+    "model": [
+     "Round 81.4 to 80, 17.8 to 20, 3.02 to 3",
+     "Substitute into expression: sqrt(80 + 20^2) / 3",
+     "Evaluate sqrt(80 + 400) / 3 = sqrt(480) / 3 approx sqrt(400)/3 or approx 22 / 3 = 7.33"
+    ],
+    "tip": "Round each number inside complex expressions to 1 significant figure before evaluating."
+   },
+   {
+    "q": "The speed v of a car is given by v = d / t. Distance d = 250 miles to the nearest 10 miles. Time t = 4 hours to the nearest hour. Calculate the maximum possible speed.",
+    "marks": 3,
+    "model": [
+     "Upper bound for distance = 255 miles",
+     "Lower bound for time = 3.5 hours",
+     "Max speed = 255 / 3.5 = 72.857... miles per hour"
+    ],
+    "tip": "Maximum speed requires maximum distance divided by minimum time."
+   },
+   {
+    "q": "Write 0.003456 to 2 significant figures.",
+    "marks": 1,
+    "model": [
+     "0.0035"
+    ],
+    "tip": "Leading zeros are not significant figures. Start counting from the first non-zero digit (3)."
+   },
+   {
+    "q": "A metallic rod has length L = 15.2 cm correct to 1 decimal place. 4 rods are laid end to end. Find the upper bound for the total length.",
+    "marks": 2,
+    "model": [
+     "Upper bound for single rod = 15.25 cm",
+     "Total upper bound = 4 x 15.25 = 61.0 cm"
+    ],
+    "tip": "You can find the bounds of a single item first and multiply, or find bounds after multiplying."
+   },
+   {
+    "q": "Given a = 8.4 and b = 2.1, both rounded to 1 decimal place. Calculate the upper bound for a - b.",
+    "marks": 3,
+    "model": [
+     "Upper bound for a = 8.45",
+     "Lower bound for b = 2.05",
+     "Max difference = 8.45 - 2.05 = 6.4"
+    ],
+    "tip": "To maximize a subtraction (A - B), take the upper bound of A and subtract the lower bound of B."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A piece of wire has length L = 8.6 cm, correct to 1 decimal place. It is cut into 3 equal pieces. Calculate the lower bound for the length of each piece.",
+    "steps": [
+     "Identify the error interval for the total length L: Lower bound = 8.55 cm, Upper bound = 8.65 cm.",
+     "Set up the division for the length of each piece: Length = L / 3.",
+     "To find the lower bound of the result, divide the lower bound of L by 3.",
+     "Calculation: 8.55 / 3 = 2.85 cm."
+    ],
+    "ans": "2.85 cm"
+   },
+   {
+    "q": "The formula for kinetic energy is E = 0.5 * m * v^2. Mass m = 12 kg correct to the nearest kg. Velocity v = 20 m/s correct to the nearest 10 m/s. Calculate the upper bound for E.",
+    "steps": [
+     "Find bounds for mass m: 11.5 <= m < 12.5. Upper bound of m = 12.5.",
+     "Find bounds for velocity v (nearest 10): 15 <= v < 25. Upper bound of v = 25.",
+     "Substitute upper bounds into the formula: Max E = 0.5 * (Upper bound m) * (Upper bound v)^2.",
+     "Calculation: 0.5 * 12.5 * (25^2) = 0.5 * 12.5 * 625 = 3906.25 Joules."
+    ],
+    "ans": "3906.25 Joules"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Visualizing upper and lower bounds for compound area calculations.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><rect x=\"60\" y=\"50\" width=\"280\" height=\"140\" rx=\"8\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"130\" y=\"30\" font-size=\"13\" font-weight=\"bold\" fill=\"#1b2540\">Area Bounds Principle</text><text x=\"80\" y=\"90\" font-size=\"12\" fill=\"#1b2540\">Min Area = LB(length) x LB(width)</text><text x=\"80\" y=\"130\" font-size=\"12\" fill=\"#1b2540\">Max Area = UB(length) x UB(width)</text><text x=\"80\" y=\"170\" font-size=\"11\" fill=\"#475569\">Never mix upper and lower bounds when multiplying dimensions.</text></svg>"
+   }
+  ],
+  "pid": "maths_ocr_h.3.0",
+  "sid": "maths_ocr_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-19T20:33:36.162Z"
+ }
+}
