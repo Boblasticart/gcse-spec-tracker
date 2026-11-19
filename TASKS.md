@@ -5,10 +5,10 @@ Runs read **only this file and `docs/CONTEXT.md`**. Keep this file short: finish
 ## Status
 
 ```
-RUN LOCK:       running since 2026-11-19 01:10 UTC, session 01Sm3c8gHQB57Gg1nA6GvVyh
+RUN LOCK:       none
 CURRENT JOB:    none (J2b done; J3 Maths carries on by itself via the daily pipeline run)
 CURRENT STEPS:  none
-LAST RUN ENDED: 2026-11-18 01:26 UTC. Yesterday's fix confirmed: the scheduled Write notes run (started late, 17:41 UTC, by GitHub) committed its notes and published 16 topic files (224 of 5168 done). Found most items waiting for a retry (about 130 of 216, nearly all maths) failed with "did not return JSON" because models write LaTeX like \sqrt with one backslash; the JSON reader now keeps those (CI green, d205160). Next nightly run: check the retry count dropped and maths notes are saving more often; the next biggest failure is notes with only 2 diagrams.
+LAST RUN ENDED: 2026-11-19 01:25 UTC. Pipeline healthy: the 18 Nov run (17:22-20:54 UTC) saved 43 notes (267 of 5168 done) and the retry list fell from about 216 to 173; the JSON fix worked (no new "did not return JSON" from the big models). Found 435 of Gemini's 1000 self-allowed daily requests went on "model overloaded" (HTTP 503) refusals, which ended the run early; those refusals no longer count against the allowance (b456600, CI green after one re-run of a flaky offline e2e test). Next nightly run: check Gemini saved more notes per run and the old maths_eduqas_h / maths_ocr_h retries (waiting since 16 Nov because they sit later in the queue) are being reached; next biggest failure is notes with only 2 diagrams.
 ```
 
 ## Claude is also writing notes (owner asked in chat, 2026-11-16: "start generating now until I tell you to stop")
