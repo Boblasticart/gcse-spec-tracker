@@ -9047,5 +9047,1817 @@
   "src": "pre",
   "by": "gemini/gemini-3-flash-preview",
   "ts": "2026-11-18T18:10:50.965Z"
+ },
+ "maths_aqa_h.1.14": {
+  "summary": "In A15 you must be able to find the exact gradient of any curve at a point using differentiation, estimate gradients from a graph by reading tangents, calculate the area under a curve using definite integrals or geometry, and interpret what these numbers mean in real‑world contexts. Mastery of these skills links algebra, calculus and data interpretation, which is essential for the higher‑tier exam and for achieving a grade 9.",
+  "core": [
+   {
+    "h": "What is a gradient?",
+    "p": "The gradient (or slope) of a straight line measures its steepness – the ratio of vertical change to horizontal change. For curves the gradient at a point is the instantaneous rate of change, found using calculus.",
+    "bullets": [
+     "Gradient = rise/run = Δy/Δx",
+     "For a line y=mx+c, m is the constant gradient",
+     "For a curve y=f(x), gradient at x=a is f'(a)"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Gradient",
+      "p": "The rate of change of y with respect to x, expressed as dy/dx."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Calculating exact gradients – differentiation",
+    "p": "To find the exact gradient of a curve at a specific x‑value you differentiate the function and substitute the x‑value into the derivative.",
+    "bullets": [
+     "Differentiate using power rule, product rule, quotient rule, chain rule",
+     "Write f'(x) then evaluate f'(a)",
+     "Remember to simplify before substitution"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Power rule",
+      "p": "d/dx[x^n]=n·x^{n‑1}"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Estimating gradients from a graph",
+    "p": "When a function is not differentiable analytically, you can estimate the gradient by drawing a tangent and using the rise‑over‑run method.",
+    "bullets": [
+     "Choose two points on the tangent line close to the point of interest",
+     "Count squares on the graph paper or use the scale",
+     "Gradient ≈ Δy/Δx"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "",
+      "p": "Use a ruler to ensure the tangent is as straight as possible."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Exact area under a curve – definite integrals",
+    "p": "The area between a curve y=f(x), the x‑axis and the vertical lines x=a and x=b is given by the definite integral ∫_a^b f(x)dx.",
+    "bullets": [
+     "Find an antiderivative F(x) such that F'(x)=f(x)",
+     "Apply the Fundamental Theorem of Calculus: Area = F(b)‑F(a)",
+     "If the curve crosses the x‑axis, split the integral at the intercepts and take absolute values where required"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Definite integral",
+      "p": "The signed area under a curve between two x‑values."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Estimating area – geometry & rectangles",
+    "p": "When the function is irregular or only a sketch is given, approximate the area using shapes (triangles, rectangles, trapezia).",
+    "bullets": [
+     "Count full squares under the curve",
+     "Add half‑squares for partial coverage",
+     "Use trapezium rule for better accuracy"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "",
+      "p": "Do not forget to include units (e.g. cm²)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Interpreting gradients – rate of change",
+    "p": "A gradient tells you how quickly the dependent variable changes per unit change in the independent variable.",
+    "bullets": [
+     "Positive gradient → increasing function",
+     "Negative gradient → decreasing function",
+     "Zero gradient → stationary point (possible maximum/minimum)"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Stationary point",
+      "p": "A point where the gradient is zero."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Interpreting area – accumulated quantity",
+    "p": "The area under a graph often represents a total accumulated quantity such as distance, work done or total cost.",
+    "bullets": [
+     "If y is speed (m s⁻¹) and x is time (s), area gives distance (m)",
+     "If y is power (W) and x is time (s), area gives energy (J)"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "",
+      "p": "Check the units of both axes to deduce the unit of the area."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Gradient of a straight‑line segment on a curve",
+    "p": "Even on a curved graph you may be asked for the gradient of the straight line joining two points – this is the average rate of change.",
+    "bullets": [
+     "Gradient = (y₂‑y₁)/(x₂‑x₁)",
+     "Useful for checking work on differentiation"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Average rate of change",
+      "p": "Change in y divided by change in x over an interval."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Using gradients to find equations of tangents",
+    "p": "A tangent line at x=a has equation y = f'(a)(x‑a) + f(a).",
+    "bullets": [
+     "Find f'(a) – the gradient",
+     "Use point‑slope form with point (a,f(a))"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Tangent line",
+      "p": "A line that touches the curve at exactly one point and has the same gradient as the curve there."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Common exam pitfalls and how to avoid them",
+    "p": "Mark‑scheme points are strict – missing a sign, unit or a step can lose marks.",
+    "bullets": [
+     "Always state the derivative before substituting",
+     "When splitting integrals, show each part clearly",
+     "Write units for both gradient and area",
+     "Check whether the area required is signed or absolute"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "",
+      "p": "Do not assume the area is positive unless the question says ‘total area’. "
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Worked example – gradient of a cubic",
+    "p": "Find the gradient of y = 2x³‑3x²+4 at x = 1.5 and interpret its meaning.",
+    "bullets": [
+     "Differentiate: dy/dx = 6x²‑6x",
+     "Substitute x=1.5: 6(2.25)‑6(1.5)=13.5‑9=4.5",
+     "Gradient 4.5 means y increases by 4.5 units for each 1‑unit increase in x at that point"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Worked example – area under a quadratic",
+    "p": "Calculate the area between y = x² and the x‑axis from x = 0 to x = 3.",
+    "bullets": [
+     "Antiderivative: ∫x²dx = x³/3",
+     "Evaluate: (3³/3)‑(0)=27/3=9",
+     "Area = 9 square units (the curve is above the axis)"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Gradient as a hill’s steepness",
+   "p": "Imagine driving up a hill. The gradient tells you how steep the road is at any point – a gentle slope (small gradient) means you barely need to press the accelerator, a steep slope (large gradient) means you need a lot of power. The area under a speed‑time graph is like the total distance you travel – the steeper the speed curve, the farther you go in the same time. The analogy breaks down when the road curves back on itself (negative gradient) or when the speed graph goes below the axis (negative area), which have no real‑world analogue in simple hill‑climbing."
+  },
+  "terms": [
+   {
+    "t": "Gradient",
+    "d": "The rate of change of y with respect to x, dy/dx."
+   },
+   {
+    "t": "Derivative",
+    "d": "The function that gives the gradient of the original function at each point."
+   },
+   {
+    "t": "Definite integral",
+    "d": "The signed area under a curve between two x‑values."
+   },
+   {
+    "t": "Tangent",
+    "d": "A line that touches a curve at one point and has the same gradient as the curve there."
+   },
+   {
+    "t": "Stationary point",
+    "d": "A point where the gradient (derivative) is zero."
+   },
+   {
+    "t": "Average rate of change",
+    "d": "Change in the dependent variable divided by change in the independent variable over an interval."
+   },
+   {
+    "t": "Antiderivative",
+    "d": "A function whose derivative is the given function."
+   },
+   {
+    "t": "Signed area",
+    "d": "Area counted positive above the x‑axis and negative below."
+   },
+   {
+    "t": "Total area",
+    "d": "The sum of the absolute values of signed areas, always positive."
+   },
+   {
+    "t": "Slope‑intercept form",
+    "d": "y = mx + c, where m is the gradient and c the y‑intercept."
+   },
+   {
+    "t": "Power rule",
+    "d": "d/dx[xⁿ] = n·xⁿ⁻¹ for any real n."
+   },
+   {
+    "t": "Fundamental Theorem of Calculus",
+    "d": "If F'(x)=f(x) then ∫_a^b f(x)dx = F(b)‑F(a)."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "I just read the gradient from the curve without drawing a tangent.",
+    "r": "You must draw a clear tangent and use rise/run or differentiate the function to obtain the exact gradient."
+   },
+   {
+    "w": "I added the areas above and below the x‑axis directly.",
+    "r": "Split the integral at each x‑intercept; take absolute values if the question asks for total area."
+   },
+   {
+    "w": "I wrote the gradient as Δx/Δy.",
+    "r": "Gradient is Δy/Δx (rise over run)."
+   },
+   {
+    "w": "I omitted units for the area.",
+    "r": "Always include the correct unit (e.g., cm², m²) as the mark scheme awards marks for correct units."
+   },
+   {
+    "w": "I used the average gradient when the question asked for the instantaneous gradient.",
+    "r": "Use differentiation for instantaneous gradient; average gradient is only for a straight‑line segment."
+   },
+   {
+    "w": "I forgot to state the antiderivative before evaluating the definite integral.",
+    "r": "Show the antiderivative step; the mark scheme expects this to earn the method marks."
+   },
+   {
+    "w": "I assumed the area was positive even when the curve was below the axis.",
+    "r": "Check the wording – ‘area’ vs ‘signed area’ – and treat negative regions accordingly."
+   },
+   {
+    "w": "I wrote the gradient as a decimal when the mark scheme expected a fraction.",
+    "r": "Present the answer in the simplest exact form unless the question specifies a decimal."
+   },
+   {
+    "w": "I used the product rule incorrectly on 2x³‑3x²+4.",
+    "r": "Apply the product rule only when terms are multiplied; here use the power rule for each term."
+   }
+  ],
+  "exam": [
+   {
+    "q": "The graph of y = 2x²‑4x+1 is shown. Estimate the gradient at x = 1 using a tangent. (2 marks)",
+    "marks": 2,
+    "model": [
+     "Draw a clear tangent at x=1",
+     "Read rise and run from the graph and calculate Δy/Δx",
+     "State the estimated gradient"
+    ],
+    "tip": "Use the nearest grid lines and keep the tangent as straight as possible."
+   },
+   {
+    "q": "Find the exact gradient of y = 3x³‑5x at x = 2. (3 marks)",
+    "marks": 3,
+    "model": [
+     "Differentiate: dy/dx = 9x²‑5",
+     "Substitute x=2: 9·4‑5 = 31",
+     "State gradient = 31"
+    ],
+    "tip": "Show the differentiation step before substitution."
+   },
+   {
+    "q": "Calculate the area between y = x³ and the x‑axis from x = 0 to x = 2. (4 marks)",
+    "marks": 4,
+    "model": [
+     "Find antiderivative: ∫x³dx = x⁴/4",
+     "Evaluate: (2⁴/4)‑(0) = 16/4 = 4",
+     "State area = 4 units²",
+     "Mention that the curve is above the axis so signed = total area"
+    ],
+    "tip": "Write the antiderivative clearly; check the curve’s position."
+   },
+   {
+    "q": "A speed‑time graph shows a car accelerating from rest to 20 m s⁻¹ in 5 s, then moving at constant speed for 10 s. Find the total distance travelled. (6 marks)",
+    "marks": 6,
+    "model": [
+     "Area under acceleration phase: triangle (½·5·20)=50 m",
+     "Area under constant phase: rectangle (10·20)=200 m",
+     "Total distance = 50+200 = 250 m",
+     "State units",
+     "Explain why triangle and rectangle are appropriate",
+     "Show a labelled diagram"
+    ],
+    "tip": "Label the two sections of the graph before calculating each area."
+   },
+   {
+    "q": "The curve y = √x is plotted. Find the gradient of the tangent at x = 4. (2 marks)",
+    "marks": 2,
+    "model": [
+     "Differentiate: dy/dx = 1/(2√x)",
+     "Substitute x=4: 1/(2·2)=1/4",
+     "State gradient = 1/4"
+    ],
+    "tip": "Simplify the derivative before substituting."
+   },
+   {
+    "q": "Given the graph of y = sin x between 0 and π, estimate the total area under the curve. (3 marks)",
+    "marks": 3,
+    "model": [
+     "Recognise the curve is above the axis throughout",
+     "Approximate using trapezium rule or count squares",
+     "Give an estimated value (≈2)"
+    ],
+    "tip": "Use symmetry of the sine curve to check your estimate."
+   },
+   {
+    "q": "Find the equation of the tangent to y = x³‑3x at x = 1. (4 marks)",
+    "marks": 4,
+    "model": [
+     "Differentiate: dy/dx = 3x²‑3",
+     "Gradient at x=1: 3·1‑3 = 0",
+     "Point on curve: (1, 1‑3 = –2)",
+     "Tangent equation: y‑(‑2)=0(x‑1) → y = –2"
+    ],
+    "tip": "Even if gradient is zero, write the line in standard form."
+   },
+   {
+    "q": "A graph shows a linear relationship between cost (£) and quantity produced. The gradient is 2.5. Interpret this gradient. (2 marks)",
+    "marks": 2,
+    "model": [
+     "State that each additional unit produced increases cost by £2.5",
+     "Explain that gradient represents marginal cost"
+    ],
+    "tip": "Link the gradient directly to the real‑world meaning."
+   },
+   {
+    "q": "The curve y = x²‑4x+3 crosses the x‑axis at x=1 and x=3. Find the total area between the curve and the x‑axis from x=0 to x=4. (6 marks)",
+    "marks": 6,
+    "model": [
+     "Split integral at x=1 and x=3",
+     "∫_0^1 (x²‑4x+3)dx = … = 1/3",
+     "∫_1^3 (x²‑4x+3)dx = … = –4/3 (negative area)",
+     "∫_3^4 (x²‑4x+3)dx = … = 1/3",
+     "Total area = 1/3 + 4/3 + 1/3 = 2 units²",
+     "Show work for each part and take absolute value of middle part"
+    ],
+    "tip": "Draw a quick sketch to see where the curve is above/below the axis."
+   },
+   {
+    "q": "Using the graph of y = 2x+1, find the gradient by two different methods and comment on the results. (4 marks)",
+    "marks": 4,
+    "model": [
+     "Method 1: From equation, gradient m = 2",
+     "Method 2: Choose two points, e.g., (0,1) and (2,5); gradient = (5‑1)/(2‑0)=2",
+     "Comment: Both give the same value, confirming consistency",
+     "State that for straight lines the gradient is constant"
+    ],
+    "tip": "Clearly label the points used in the second method."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Find the gradient of y = 4x³‑6x²+2 at x = 2 and interpret it.",
+    "steps": [
+     "Differentiate: dy/dx = 12x²‑12x",
+     "Substitute x=2: 12·4‑12·2 = 48‑24 = 24",
+     "Gradient 24 means the curve is rising very steeply – for each 1‑unit increase in x, y increases by 24 units at that point."
+    ],
+    "ans": "24"
+   },
+   {
+    "q": "Calculate the area under y = 3x² from x = 0 to x = 2.",
+    "steps": [
+     "Antiderivative: ∫3x²dx = x³",
+     "Evaluate: (2)³‑(0)³ = 8",
+     "Area = 8 square units (curve lies above the axis)."
+    ],
+    "ans": "8"
+   },
+   {
+    "q": "A graph shows a line with gradient 5 and y‑intercept –3. Find the gradient at x = 4 and the area between the line and the x‑axis from x = 0 to x = 5.",
+    "steps": [
+     "Gradient of a straight line is constant: m = 5",
+     "Equation: y = 5x‑3",
+     "Find x‑intercept: set y=0 → 5x‑3=0 → x=0.6",
+     "Area = area of triangle with base 5 and height at x=5: y=5·5‑3=22 → triangle area = ½·5·22 = 55",
+     "State gradient = 5 and area = 55 units²."
+    ],
+    "ans": "Gradient = 5; Area = 55"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Estimating gradient on a curve – draw a tangent and use rise/run",
+    "svg": "<svg viewBox=\"0 0 400 240\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#dbeafe\"/><path d=\"M60 180 L340 60\" stroke=\"#1b2540\"/> <!-- curve --> <path d=\"M200 120 L260 80\" stroke=\"#1b2540\"/> <!-- tangent --> <line x1=\"200\" y1=\"120\" x2=\"260\" y2=\"80\" stroke=\"#1b2540\"/> <text x=\"210\" y=\"110\" font-size=\"12\" fill=\"#1b2540\">Tangent</text><text x=\"250\" y=\"70\" font-size=\"12\" fill=\"#1b2540\">Δy</text><text x=\"190\" y=\"130\" font-size=\"12\" fill=\"#1b2540\">Δx</text></svg>"
+   },
+   {
+    "cap": "Area under a quadratic curve using integration",
+    "svg": "<svg viewBox=\"0 0 400 240\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"><rect x=\"30\" y=\"30\" width=\"340\" height=\"180\" fill=\"#fde68a\"/><path d=\"M30 150 Q200 30 370 150\" fill=\"#bbf7d0\"/> <!-- curve --> <line x1=\"30\" y1=\"150\" x2=\"370\" y2=\"150\" stroke=\"#1b2540\"/> <!-- x‑axis --> <text x=\"200\" y=\"20\" font-size=\"12\" fill=\"#1b2540\">y = x²</text><text x=\"20\" y=\"155\" font-size=\"12\" fill=\"#1b2540\">0</text><text x=\"380\" y=\"155\" font-size=\"12\" fill=\"#1b2540\">3</text></svg>"
+   },
+   {
+    "cap": "Speed‑time graph showing distance as area",
+    "svg": "<svg viewBox=\"0 0 400 240\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"><rect x=\"40\" y=\"40\" width=\"320\" height=\"160\" fill=\"#e9d5ff\"/><polygon points=\"40,200 140,200 140,100 260,100 260,200 380,200\" fill=\"#fecaca\"/> <!-- areas --> <line x1=\"40\" y1=\"200\" x2=\"380\" y2=\"200\" stroke=\"#1b2540\"/> <!-- time axis --> <line x1=\"40\" y1=\"200\" x2=\"40\" y2=\"40\" stroke=\"#1b2540\"/> <!-- speed axis --> <text x=\"210\" y=\"180\" font-size=\"12\" fill=\"#1b2540\">Accelerating</text><text x=\"210\" y=\"130\" font-size=\"12\" fill=\"#1b2540\">Constant speed</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_h.1.14",
+  "sid": "maths_aqa_h",
+  "v": 2,
+  "src": "pre",
+  "by": "groq/openai/gpt-oss-120b",
+  "ts": "2026-11-19T17:33:59.256Z"
+ },
+ "maths_aqa_h.1.10": {
+  "summary": "Quadratic graphs form smooth symmetrical curves known as parabolas, governed by the equation y = ax^2 + bx + c. A Grade 9 mathematician must seamlessly connect algebraic representations to graphical features: determining roots by setting y = 0, finding the y-intercept by setting x = 0, and locating turning points (minima or maxima) by completing the square into vertex form y = a(x + p)^2 + q. Understanding the line of symmetry x = -p and interpreting the nature of turning points enables rigorous curve sketching and the deduction of function properties.",
+  "core": [
+   {
+    "h": "Anatomy of a Quadratic Parabola",
+    "p": "Every quadratic function of the form y = ax^2 + bx + c produces a characteristic symmetrical U-shaped or inverted U-shaped curve termed a parabola. The coefficient of x^2 dictates the global orientation of the curve, while the constant c dictates its vertical displacement on the coordinate plane.",
+    "bullets": [
+     "If **a > 0**, the curve opens upwards ('U-shaped'), possessing a **global minimum** turning point.",
+     "If **a < 0**, the curve opens downwards ('n-shaped'), possessing a **global maximum** turning point.",
+     "The curve is strictly symmetrical about a vertical line called the **axis of symmetry**.",
+     "A parabola can intersect the x-axis twice, touch it once, or never intersect it at all."
+    ],
+    "table": {
+     "head": [
+      "Feature",
+      "Algebraic Condition",
+      "Graphical Meaning"
+     ],
+     "rows": [
+      [
+       "y-intercept",
+       "x = 0",
+       "Where the curve crosses the vertical axis: (0, c)"
+      ],
+      [
+       "x-intercepts (Roots)",
+       "y = 0",
+       "Solutions to ax^2 + bx + c = 0 where the curve crosses/touches the horizontal axis"
+      ],
+      [
+       "Turning Point (Vertex)",
+       "Completed square form: a(x + p)^2 + q",
+       "The absolute lowest (a > 0) or highest (a < 0) point on the curve: (-p, q)"
+      ],
+      [
+       "Axis of Symmetry",
+       "x = -p or x = -b / (2a)",
+       "Vertical mirror line bisecting the parabola through the turning point"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Smooth Profiles Required",
+      "p": "Examiners heavily penalise sharp 'V'-shaped bases or flat bottoms. A parabola must be drawn as a single, continuous, smooth curve."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "The y-Intercept: Setting x = 0",
+    "p": "The y-intercept represents the coordinate point where the quadratic graph crosses the vertical y-axis. Because the vertical axis is defined by the line x = 0, calculating this value requires substituting zero into the function.",
+    "bullets": [
+     "Substitute x = 0 into y = ax^2 + bx + c: y = a(0)^2 + b(0) + c = c.",
+     "The coordinate pair must always be written in full coordinate format **(0, c)** when asked for an intercept.",
+     "If the quadratic is in factorised form y = (x - r)(x - s), expand or substitute x = 0: y = (-r)(-s) = rs.",
+     "If in vertex form y = a(x + p)^2 + q, substitute x = 0: y = a(p^2) + q."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Intercept Coordinate Form",
+      "p": "If a mark scheme demands the 'coordinates of the intercept', writing simply 'c' or 'y = c' risks losing the accuracy mark. State (0, c)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Roots and x-Intercepts: Setting y = 0",
+    "p": "The roots of a quadratic function are the values of x that satisfy the equation y = 0. Graphically, roots represent the points where the curve intersects or makes contact with the horizontal x-axis.",
+    "bullets": [
+     "To find roots algebraically, set ax^2 + bx + c = 0 and solve via factorising, completing the square, or the quadratic formula.",
+     "If factorised as y = a(x - x_1)(x - x_2), the curve crosses the x-axis at **(x_1, 0)** and **(x_2, 0)**.",
+     "If factorised as y = a(x - x_1)^2, the curve touches the x-axis tangentially at a **repeated root** (x_1, 0), which is also the turning point.",
+     "If ax^2 + bx + c = 0 has no real solutions, the graph does not cross or touch the x-axis."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Definition: Root",
+      "p": "A root is a value of the independent variable x for which the output of the function f(x) equals zero."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "The Discriminant and Graph Intersections",
+    "p": "The discriminant expression, derived from the quadratic formula as b^2 - 4ac, acts as an algebraic diagnostic tool determining the number of x-intercepts without drawing the curve.",
+    "bullets": [
+     "**b^2 - 4ac > 0**: Two distinct real roots; the curve intersects the x-axis at two distinct points.",
+     "**b^2 - 4ac = 0**: Exactly one repeated real root; the turning point of the curve sits directly on the x-axis.",
+     "**b^2 - 4ac < 0**: No real roots; the entire curve sits strictly above the x-axis (if a > 0) or strictly below (if a < 0)."
+    ],
+    "table": {
+     "head": [
+      "Discriminant Value",
+      "Roots Present",
+      "Visual Position on x-axis"
+     ],
+     "rows": [
+      [
+       "b^2 - 4ac > 0",
+       "Two distinct real roots",
+       "Crosses twice at two distinct coordinate points"
+      ],
+      [
+       "b^2 - 4ac = 0",
+       "One repeated real root",
+       "Touches tangentially at exactly one point (the vertex)"
+      ],
+      [
+       "b^2 - 4ac < 0",
+       "Zero real roots",
+       "Completely disjoint from the axis (floats above or sinks below)"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Grade 9 Justification Questions",
+      "p": "When asked to 'show that the curve y = 2x^2 + 3x + 5 never crosses the x-axis', calculate b^2 - 4ac = 9 - 40 = -31, then explicitly state: 'Since -31 < 0, there are no real roots, so the graph does not cross the x-axis.'"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "The Axis of Symmetry",
+    "p": "Due to the bilateral symmetry of every parabola, the vertical line passing directly through the turning point acts as a mirror line. Points at identical heights on the curve lie equidistant from this line.",
+    "bullets": [
+     "If a quadratic has real roots x_1 and x_2, the axis of symmetry is the midpoint: **x = (x_1 + x_2) / 2**.",
+     "Expressed in standard coefficients, the line of symmetry is given by **x = -b / (2a)**.",
+     "In completed square form y = a(x + p)^2 + q, the axis of symmetry is always **x = -p**.",
+     "The axis of symmetry must always be written as a full linear equation of a vertical line, 'x = constant', never as a bare number."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Equation Format",
+      "p": "Writing 'the line of symmetry is 3' scores zero on AQA papers. It MUST be written as an equation: 'x = 3'."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Turning Points: Minimum vs Maximum",
+    "p": "The turning point (or vertex) is the critical location where the gradient of the curve transitions from negative to positive (minimum) or positive to negative (maximum).",
+    "bullets": [
+     "**Minimum Turning Point**: Occurs when a > 0. The curve decreases, reaches a global minimum value, and subsequently increases.",
+     "**Maximum Turning Point**: Occurs when a < 0. The curve increases, reaches a global maximum value, and subsequently decreases.",
+     "At the turning point itself, the instantaneous tangent to the curve is completely horizontal (gradient = 0).",
+     "The y-coordinate of the turning point represents the absolute minimum or maximum value of the function."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Turning Point Coordinates vs Value",
+      "p": "If a question asks for the 'minimum value of the function', give the y-coordinate. If it asks 'for what value of x does the minimum occur', give the x-coordinate. If it asks for the 'turning point', state the full coordinate pair (x, y)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Completing the Square for Monic Quadratics (a = 1)",
+    "p": "To express x^2 + bx + c in vertex form (x + p)^2 + q, we manipulate the linear and quadratic terms into a perfect square minus a corrective constant.",
+    "bullets": [
+     "Step 1: Halve the coefficient of x to find p: **p = b / 2**.",
+     "Step 2: Write down the squared bracket: (x + b/2)^2.",
+     "Step 3: Subtract the square of this new value: - (b/2)^2.",
+     "Step 4: Append the original constant c and simplify: **(x + b/2)^2 - (b/2)^2 + c**.",
+     "Resulting form: (x + p)^2 + q, where p = b/2 and q = c - (b/2)^2."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Signs Inside the Bracket",
+      "p": "The sign inside the bracket always matches the sign of b. For x^2 - 10x + 7, p is -5, giving (x - 5)^2 - 25 + 7 = (x - 5)^2 - 18."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Deducing Turning Points from Completed Square Form",
+    "p": "The vertex form y = (x + p)^2 + q reveals the turning point directly through algebraic reasoning about real squares.",
+    "bullets": [
+     "For any real number x, the squared expression **(x + p)^2 >= 0**.",
+     "The smallest possible value of (x + p)^2 is exactly 0, which occurs when x + p = 0, giving **x = -p**.",
+     "When (x + p)^2 = 0, the function achieves its minimum value: y = 0 + q = **q**.",
+     "Therefore, the turning point coordinates are strictly **(-p, q)**.",
+     "Notice the crucial sign reversal: if y = (x - 4)^2 + 9, the turning point is **(4, 9)**, NOT (-4, 9)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Vertex Rule",
+      "p": "For any quadratic expressed in the form y = a(x + p)^2 + q, the vertex (turning point) has coordinates (-p, q)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Completing the Square for Non-Monic Quadratics (a != 1)",
+    "p": "When the coefficient of x^2 is not equal to 1, factorise the coefficient a out of the first two terms before completing the square inside an inner bracket.",
+    "bullets": [
+     "Step 1: Factorise a out of the x^2 and x terms: y = a[x^2 + (b/a)x] + c.",
+     "Step 2: Complete the square inside the bracket: x^2 + (b/a)x = [x + b/(2a)]^2 - [b/(2a)]^2.",
+     "Step 3: Expand the outer factor a across both terms inside the bracket: y = a[x + b/(2a)]^2 - a[b/(2a)]^2 + c.",
+     "Step 4: Combine numerical constants to achieve the canonical form: **y = a(x + p)^2 + q**.",
+     "The turning point remains at **(-p, q)**; its nature is a minimum if a > 0 and a maximum if a < 0."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Distributing the Factor 'a'",
+      "p": "The most common Grade 9 error is forgetting to multiply the subtracted square by 'a' when expanding the square brackets. Watch: 2[ (x+3)^2 - 9 ] becomes 2(x+3)^2 - 18, NOT -9."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Negative Quadratics and Maximum Turning Points",
+    "p": "When a < 0, parabolas possess an inverted profile with a maximum turning point. Algebraic manipulation requires vigilant sign tracking.",
+    "bullets": [
+     "For y = -x^2 + 6x - 2, factorise -1 from the variable terms: y = -[x^2 - 6x] - 2.",
+     "Complete the square inside: y = -[(x - 3)^2 - 9] - 2.",
+     "Carefully expand the negative sign: y = -(x - 3)^2 + 9 - 2 = **-(x - 3)^2 + 7**.",
+     "Alternative display format: y = 7 - (x - 3)^2.",
+     "Since (x - 3)^2 >= 0, subtracting it means y achieves its **maximum value of 7** when x = 3, yielding turning point **(3, 7)**."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Inverted Forms",
+      "p": "In expressions formatted as y = q - (x + p)^2, the maximum value is clearly q, occurring when x = -p."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Step-by-Step Protocol for Sketching Quadratics",
+    "p": "AQA exam questions asking to 'sketch the curve' require an unruled coordinate sketch displaying four essential features accurately positioned relative to the origin.",
+    "bullets": [
+     "**1. Shape**: Check sign of a to determine whether curve is U-shaped (a > 0) or n-shaped (a < 0).",
+     "**2. y-Intercept**: Calculate f(0) = c and clearly label (0, c) on the vertical axis.",
+     "**3. x-Intercepts (Roots)**: Solve f(x) = 0. If real roots exist, mark and label them on the horizontal axis.",
+     "**4. Turning Point**: Complete the square or use symmetry to find (-p, q). Mark and label coordinates clearly.",
+     "**5. Symmetry**: Ensure the turning point sits horizontally midway between the two roots."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Sketch vs Plot",
+      "p": "'Plot' requires accurate graph paper and plotted points. 'Sketch' requires a smooth freehand curve showing only the key intersections and vertex labelled with their coordinates."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Deducing Quadratic Equations from Given Graphical Features",
+    "p": "Grade 9 questions often reverse the process: given specific graphical features such as the vertex or roots alongside another point, deduce the equation in the standard form y = ax^2 + bx + c.",
+    "bullets": [
+     "**Given Turning Point (h, k) and a point (x_0, y_0)**: Write y = a(x - h)^2 + k, substitute (x_0, y_0) to find a, then expand.",
+     "**Given Roots r_1, r_2 and a point (x_0, y_0)**: Write y = a(x - r_1)(x - r_2), substitute (x_0, y_0) to solve for a, then expand.",
+     "**Given Symmetrical Points**: If f(2) = 8 and f(6) = 8, the axis of symmetry is x = (2 + 6)/2 = 4."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Never Assume a = 1",
+      "p": "Unless explicitly stated, do not assume a = 1. Always include 'a' as an unknown scale factor when setting up vertex or root form."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Projectile Cannon and the Valley Path",
+   "p": "Imagine firing a cannon ball into the air (a negative quadratic, a < 0). It launches from the ground or a cliff edge (the y-intercept), climbs to its apex where its vertical climb pauses for an instant (the maximum turning point), and falls back to hit the ground (the root). Conversely, a skateboarder dropping into a smooth half-pipe or valley (a positive quadratic, a > 0) plunges downwards from the rim, touches the absolute bottom (the minimum turning point), and rises symmetrically up the opposite wall. The breakdown occurs because physical projectiles encounter air resistance, distorting the trajectory into an asymmetric path, whereas an algebraic quadratic parabola remains immutably symmetrical about its central vertical axis."
+  },
+  "terms": [
+   {
+    "t": "Parabola",
+    "d": "The characteristic smooth, symmetrical, curved planar graph generated by a quadratic function y = ax^2 + bx + c."
+   },
+   {
+    "t": "Root",
+    "d": "A solution to the equation f(x) = 0; geometrically, the x-coordinate where the function graph meets the x-axis."
+   },
+   {
+    "t": "x-Intercept",
+    "d": "The point(s) where a graph crosses or touches the horizontal x-axis, having coordinates (x, 0)."
+   },
+   {
+    "t": "y-Intercept",
+    "d": "The point where a graph crosses the vertical y-axis, obtained by setting x = 0, having coordinates (0, c)."
+   },
+   {
+    "t": "Turning Point",
+    "d": "The vertex of a parabola where the gradient changes sign, representing the local and global minimum or maximum."
+   },
+   {
+    "t": "Minimum Point",
+    "d": "The lowest point on a parabola, occurring when the leading coefficient a is positive (a > 0)."
+   },
+   {
+    "t": "Maximum Point",
+    "d": "The highest point on a parabola, occurring when the leading coefficient a is negative (a < 0)."
+   },
+   {
+    "t": "Axis of Symmetry",
+    "d": "The vertical line passing through the turning point with equation x = -p or x = -b/(2a), bisecting the parabola."
+   },
+   {
+    "t": "Completing the Square",
+    "d": "The algebraic procedure of rewriting ax^2 + bx + c into vertex form a(x + p)^2 + q."
+   },
+   {
+    "t": "Vertex Form",
+    "d": "The quadratic format y = a(x + p)^2 + q from which the turning point (-p, q) is directly identified."
+   },
+   {
+    "t": "Discriminant",
+    "d": "The expression b^2 - 4ac, which determines the number of real roots and graphical x-axis intersections."
+   },
+   {
+    "t": "Repeated Root",
+    "d": "A single root of multiplicity two occurring when b^2 - 4ac = 0, where the curve touches the x-axis tangentially."
+   },
+   {
+    "t": "Monic Quadratic",
+    "d": "A quadratic expression or equation where the leading coefficient of x^2 is equal to 1."
+   },
+   {
+    "t": "Non-monic Quadratic",
+    "d": "A quadratic expression or equation where the leading coefficient of x^2 is not equal to 1 (a != 1)."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "For y = (x - 5)^2 + 3, the turning point is (-5, 3).",
+    "r": "The turning point is (5, 3). The squared term (x - 5)^2 reaches zero when x = 5, not -5."
+   },
+   {
+    "w": "Writing x^2 + 8x + 5 = (x + 4)^2 + 16 + 5.",
+    "r": "You must SUBTRACT the square of half the linear coefficient: (x + 4)^2 - 16 + 5 = (x + 4)^2 - 11."
+   },
+   {
+    "w": "Writing 2x^2 + 12x + 7 = 2(x + 3)^2 - 9 + 7.",
+    "r": "When factorising out 2, the subtracted 9 is inside the bracket: 2[(x + 3)^2 - 9] + 7 = 2(x + 3)^2 - 18 + 7 = 2(x + 3)^2 - 11."
+   },
+   {
+    "w": "The line of symmetry is 4.",
+    "r": "The axis of symmetry is a vertical line and must be written as an equation: x = 4."
+   },
+   {
+    "w": "The curve y = 6 - (x + 2)^2 has a minimum value of 6.",
+    "r": "Because -(x + 2)^2 is subtracted, it is a MAXIMUM value of 6 occurring at x = -2."
+   },
+   {
+    "w": "Giving 'x = 3 and x = -1' when asked for coordinates of the x-intercepts.",
+    "r": "Coordinates must be written as ordered pairs: (3, 0) and (-1, 0)."
+   },
+   {
+    "w": "Assuming a graph with no real roots cannot be sketched.",
+    "r": "A quadratic with b^2 - 4ac < 0 still has a y-intercept and a turning point; it is drawn completely above or below the x-axis."
+   },
+   {
+    "w": "Drawing a parabola with a pointed V-shape at the turning point.",
+    "r": "Draw a smooth, rounded U-shaped curve showing zero instantaneous gradient at the vertex."
+   }
+  ],
+  "exam": [
+   {
+    "q": "The curve C has equation y = (x - 3)^2 + 7. Write down the coordinates of the turning point of C.",
+    "marks": 1,
+    "model": [
+     "State coordinates directly: (3, 7)"
+    ],
+    "tip": "Remember to invert the sign of the number inside the bracket: x - 3 = 0 gives x = 3."
+   },
+   {
+    "q": "A curve has equation y = x^2 - 6x - 16. Find the coordinates of: (a) the y-intercept, (b) the x-intercepts.",
+    "marks": 3,
+    "model": [
+     "For y-intercept: substitute x = 0 to get y = -16, yielding (0, -16)",
+     "For x-intercepts: set x^2 - 6x - 16 = 0",
+     "Factorise: (x - 8)(x + 2) = 0",
+     "State coordinates: (8, 0) and (-2, 0)"
+    ],
+    "tip": "Always write intercepts as full coordinates (x, y) rather than single numbers."
+   },
+   {
+    "q": "By completing the square, find the coordinates of the turning point of y = x^2 + 10x + 19. State whether it is a maximum or a minimum.",
+    "marks": 3,
+    "model": [
+     "Complete the square: (x + 5)^2 - 5^2 + 19",
+     "Simplify: (x + 5)^2 - 25 + 19 = (x + 5)^2 - 6",
+     "Identify vertex: Turning point is (-5, -6)",
+     "Identify nature: Since coefficient of x^2 is positive (+1), it is a minimum"
+    ],
+    "tip": "Ensure you explicitly state 'minimum' alongside the coordinates."
+   },
+   {
+    "q": "The curve y = x^2 + bx + c has a turning point at (4, -5). Find the values of b and c.",
+    "marks": 3,
+    "model": [
+     "Write curve in vertex form: y = (x - 4)^2 - 5",
+     "Expand the bracket: y = x^2 - 8x + 16 - 5",
+     "Simplify: y = x^2 - 8x + 11",
+     "Equate coefficients: b = -8, c = 11"
+    ],
+    "tip": "Working backwards from the vertex form is vastly quicker than solving simultaneous equations."
+   },
+   {
+    "q": "Write 2x^2 + 16x - 7 in the form a(x + p)^2 + q where a, p and q are integers. Hence state the equation of the line of symmetry of the graph y = 2x^2 + 16x - 7.",
+    "marks": 4,
+    "model": [
+     "Factorise 2 from the variable terms: 2[x^2 + 8x] - 7",
+     "Complete the square inside bracket: 2[(x + 4)^2 - 16] - 7",
+     "Expand across inner terms: 2(x + 4)^2 - 32 - 7",
+     "Simplify to vertex form: 2(x + 4)^2 - 39 (a = 2, p = 4, q = -39)",
+     "Write equation of line of symmetry: x = -4"
+    ],
+    "tip": "Line of symmetry is always x = -p. Writing just '-4' loses the final mark."
+   },
+   {
+    "q": "A quadratic graph has equation y = 14 - 6x - x^2. (a) Express the equation in the form q - (x + p)^2. (b) Hence state the maximum value of y and the value of x at which it occurs.",
+    "marks": 4,
+    "model": [
+     "Rearrange and factorise negative sign: y = 14 - (x^2 + 6x)",
+     "Complete the square: y = 14 - [(x + 3)^2 - 9]",
+     "Expand and simplify: y = 14 - (x + 3)^2 + 9 = 23 - (x + 3)^2",
+     "Maximum value of y is 23",
+     "Occurs when x = -3"
+    ],
+    "tip": "Be extremely careful distributing the negative sign across -9 to make +9."
+   },
+   {
+    "q": "Sketch the curve y = x^2 - 4x - 12. Clearly label the coordinates of the turning point and all points of intersection with the coordinate axes.",
+    "marks": 4,
+    "model": [
+     "Find y-intercept: x = 0 gives (0, -12)",
+     "Find roots: x^2 - 4x - 12 = 0 => (x - 6)(x + 2) = 0, giving (-2, 0) and (6, 0)",
+     "Find turning point: y = (x - 2)^2 - 4 - 12 = (x - 2)^2 - 16, giving (2, -16)",
+     "Draw a smooth, positive U-shaped parabola through (-2, 0), (0, -12), (2, -16), and (6, 0) with all four points clearly labelled."
+    ],
+    "tip": "Make sure the turning point (2, -16) is drawn in the fourth quadrant and lies midway between x = -2 and x = 6."
+   },
+   {
+    "q": "A quadratic curve has a turning point at (-2, 18) and passes through the point (1, 0). Determine the equation of the curve in the form y = ax^2 + bx + c.",
+    "marks": 4,
+    "model": [
+     "Use vertex form: y = a(x + 2)^2 + 18",
+     "Substitute point (1, 0): 0 = a(1 + 2)^2 + 18",
+     "Solve for a: 0 = 9a + 18 => 9a = -18 => a = -2",
+     "Expand equation: y = -2(x^2 + 4x + 4) + 18",
+     "Simplify: y = -2x^2 - 8x - 8 + 18 = -2x^2 - 8x + 10"
+    ],
+    "tip": "Do not forget the scale factor 'a'; assuming a = 1 or a = -1 without checking fails."
+   },
+   {
+    "q": "Prove algebraically that the turning point of the graph y = 3x^2 - 12x + 17 lies strictly above the x-axis, and explain what this indicates about the roots of 3x^2 - 12x + 17 = 0.",
+    "marks": 3,
+    "model": [
+     "Factorise 3: y = 3[x^2 - 4x] + 17 = 3[(x - 2)^2 - 4] + 17",
+     "Expand: y = 3(x - 2)^2 - 12 + 17 = 3(x - 2)^2 + 5",
+     "Turning point is (2, 5). Since the minimum y-value is 5 > 0, the entire curve lies strictly above the x-axis.",
+     "This indicates that 3x^2 - 12x + 17 = 0 has no real roots (the graph has no x-intercepts)."
+    ],
+    "tip": "You can also verify with b^2 - 4ac = 144 - 4(3)(17) = 144 - 204 = -60 < 0."
+   },
+   {
+    "q": "The graph of y = ax^2 + bx + c crosses the x-axis at (-1, 0) and (5, 0). The minimum value of the curve is -18. Find the equation of the curve in standard form.",
+    "marks": 4,
+    "model": [
+     "By symmetry, the x-coordinate of the minimum is the midpoint: x = (-1 + 5)/2 = 2",
+     "Therefore the turning point is (2, -18)",
+     "Write in vertex form: y = a(x - 2)^2 - 18",
+     "Substitute one known root (5, 0): 0 = a(5 - 2)^2 - 18 => 9a = 18 => a = 2",
+     "Expand: y = 2(x^2 - 4x + 4) - 18 = 2x^2 - 8x + 8 - 18 = 2x^2 - 8x - 10"
+    ],
+    "tip": "Symmetry gives the x-coordinate of the vertex immediately without knowing a, b, or c first."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Given the quadratic curve y = x^2 - 6x + 5, determine: (a) the y-intercept, (b) the x-intercepts, (c) the coordinates of the turning point by completing the square, and (d) sketch the curve.",
+    "steps": [
+     "Step 1 (y-intercept): Set x = 0. y = (0)^2 - 6(0) + 5 = 5. Coordinates are (0, 5).",
+     "Step 2 (x-intercepts): Set y = 0. x^2 - 6x + 5 = 0. Factorise: (x - 1)(x - 5) = 0. Hence x = 1 or x = 5. Coordinates are (1, 0) and (5, 0).",
+     "Step 3 (Turning point): Complete the square on x^2 - 6x + 5. Halve -6 to get -3: (x - 3)^2 - (-3)^2 + 5 = (x - 3)^2 - 9 + 5 = (x - 3)^2 - 4.",
+     "Step 4 (Extract vertex): The minimum value is y = -4, which occurs when x - 3 = 0 => x = 3. Turning point coordinates are (3, -4).",
+     "Step 5 (Check consistency): Midpoint of roots is (1 + 5)/2 = 3. Line of symmetry is x = 3. Everything matches perfectly."
+    ],
+    "ans": "y-intercept: (0, 5); x-intercepts: (1, 0) and (5, 0); turning point: (3, -4)."
+   },
+   {
+    "q": "Express y = -2x^2 + 12x - 10 in the form a(x + p)^2 + q. State the coordinates and nature of the turning point, the axis of symmetry, and the coordinates of the x-intercepts.",
+    "steps": [
+     "Step 1 (Factorise leading coefficient): Factorise -2 from the variable terms: y = -2(x^2 - 6x) - 10.",
+     "Step 2 (Complete square inside): x^2 - 6x = (x - 3)^2 - 9. Substitute back: y = -2[(x - 3)^2 - 9] - 10.",
+     "Step 3 (Expand): y = -2(x - 3)^2 + 18 - 10 = -2(x - 3)^2 + 8.",
+     "Step 4 (Identify turning point): Form is a(x + p)^2 + q with a = -2, p = -3, q = 8. Since a < 0, it is a MAXIMUM turning point at (3, 8).",
+     "Step 5 (Line of symmetry): The vertical line through the vertex is x = 3.",
+     "Step 6 (Find x-intercepts): Set y = 0: -2(x - 3)^2 + 8 = 0 => 2(x - 3)^2 = 8 => (x - 3)^2 = 4 => x - 3 = ±2 => x = 5 or x = 1. Intercepts are (1, 0) and (5, 0)."
+    ],
+    "ans": "Form: -2(x - 3)^2 + 8; Turning point: Maximum at (3, 8); Axis of symmetry: x = 3; x-intercepts: (1, 0) and (5, 0)."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Key features of a positive parabola: y-intercept (0, c), roots (r1, 0) and (r2, 0), axis of symmetry x = h, and minimum vertex (h, k).",
+    "svg": "<svg viewBox=\"0 0 400 240\"><defs><marker id=\"arr\" markerWidth=\"6\" markerHeight=\"6\" refX=\"3\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 Z\" fill=\"#1b2540\"/></marker></defs><line x1=\"20\" y1=\"170\" x2=\"380\" y2=\"170\" stroke=\"#1b2540\" stroke-width=\"1.5\" marker-end=\"url(#arr)\"/><line x1=\"70\" y1=\"220\" x2=\"70\" y2=\"20\" stroke=\"#1b2540\" stroke-width=\"1.5\" marker-end=\"url(#arr)\"/><text x=\"385\" y=\"174\" font-size=\"12\" fill=\"#1b2540\">x</text><text x=\"74\" y=\"24\" font-size=\"12\" fill=\"#1b2540\">y</text><line x1=\"210\" y1=\"20\" x2=\"210\" y2=\"225\" stroke=\"#93c5fd\" stroke-width=\"1.5\" stroke-dasharray=\"4,3\"/><text x=\"216\" y=\"35\" font-size=\"11\" fill=\"#1e40af\">x = h</text><path d=\"M 40 40 Q 210 320 360 40\" fill=\"none\" stroke=\"#1d4ed8\" stroke-width=\"2.5\"/><circle cx=\"70\" cy=\"80\" r=\"4\" fill=\"#f59e0b\" stroke=\"#1b2540\"/><text x=\"78\" y=\"83\" font-size=\"11\" fill=\"#b45309\">(0, c)</text><circle cx=\"126\" cy=\"170\" r=\"4\" fill=\"#10b981\" stroke=\"#1b2540\"/><text x=\"95\" y=\"162\" font-size=\"11\" fill=\"#047857\">(r1, 0)</text><circle cx=\"294\" cy=\"170\" r=\"4\" fill=\"#10b981\" stroke=\"#1b2540\"/><text x=\"298\" y=\"162\" font-size=\"11\" fill=\"#047857\">(r2, 0)</text><circle cx=\"210\" cy=\"205\" r=\"4\" fill=\"#ef4444\" stroke=\"#1b2540\"/><text x=\"165\" y=\"222\" font-size=\"11\" fill=\"#b91c1c\">Vertex (h, k)</text></svg>"
+   },
+   {
+    "cap": "The three discriminant cases: b^2 - 4ac > 0 (two roots), b^2 - 4ac = 0 (one repeated root at vertex), and b^2 - 4ac < 0 (no real roots).",
+    "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"15\" y1=\"150\" x2=\"385\" y2=\"150\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"20\" y1=\"220\" x2=\"20\" y2=\"20\" stroke=\"#1b2540\" stroke-width=\"1\"/><text x=\"380\" y=\"145\" font-size=\"11\" fill=\"#1b2540\">x</text><path d=\"M 35 70 Q 85 220 135 70\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><circle cx=\"55\" cy=\"150\" r=\"3.5\" fill=\"#2563eb\"/><circle cx=\"115\" cy=\"150\" r=\"3.5\" fill=\"#2563eb\"/><text x=\"40\" y=\"55\" font-size=\"11\" fill=\"#1d4ed8\">b² - 4ac &gt; 0</text><text x=\"42\" y=\"190\" font-size=\"11\" fill=\"#1d4ed8\">2 roots</text><path d=\"M 160 70 Q 210 230 260 70\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2\" transform=\"translate(0,-10)\"/><circle cx=\"210\" cy=\"150\" r=\"3.5\" fill=\"#059669\"/><text x=\"170\" y=\"45\" font-size=\"11\" fill=\"#047857\">b² - 4ac = 0</text><text x=\"172\" y=\"180\" font-size=\"11\" fill=\"#047857\">1 root (touches)</text><path d=\"M 285 45 Q 335 170 385 45\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2\" transform=\"translate(0,-10)\"/><text x=\"295\" y=\"35\" font-size=\"11\" fill=\"#b91c1c\">b² - 4ac &lt; 0</text><text x=\"300\" y=\"120\" font-size=\"11\" fill=\"#b91c1c\">0 real roots</text></svg>"
+   },
+   {
+    "cap": "An inverted parabola (a < 0) showing a maximum turning point (-p, q) and the axis of symmetry x = -p.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><defs><marker id=\"arr2\" markerWidth=\"6\" markerHeight=\"6\" refX=\"3\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 Z\" fill=\"#1b2540\"/></marker></defs><line x1=\"20\" y1=\"190\" x2=\"380\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"1.5\" marker-end=\"url(#arr2)\"/><line x1=\"70\" y1=\"220\" x2=\"70\" y2=\"20\" stroke=\"#1b2540\" stroke-width=\"1.5\" marker-end=\"url(#arr2)\"/><text x=\"385\" y=\"194\" font-size=\"12\" fill=\"#1b2540\">x</text><text x=\"74\" y=\"24\" font-size=\"12\" fill=\"#1b2540\">y</text><line x1=\"220\" y1=\"20\" x2=\"220\" y2=\"225\" stroke=\"#f87171\" stroke-width=\"1.5\" stroke-dasharray=\"4,3\"/><text x=\"226\" y=\"35\" font-size=\"11\" fill=\"#b91c1c\">x = -p</text><path d=\"M 80 210 Q 220 -80 360 210\" fill=\"none\" stroke=\"#7c3aed\" stroke-width=\"2.5\"/><circle cx=\"220\" cy=\"52\" r=\"4\" fill=\"#ef4444\" stroke=\"#1b2540\"/><text x=\"165\" y=\"46\" font-size=\"11\" fill=\"#5b21b6\">Max: (-p, q)</text><circle cx=\"70\" cy=\"185\" r=\"4\" fill=\"#f59e0b\" stroke=\"#1b2540\"/><text x=\"25\" y=\"175\" font-size=\"11\" fill=\"#b45309\">(0, c)</text><circle cx=\"105\" cy=\"190\" r=\"4\" fill=\"#10b981\" stroke=\"#1b2540\"/><text x=\"95\" y=\"206\" font-size=\"11\" fill=\"#047857\">r1</text><circle cx=\"335\" cy=\"190\" r=\"4\" fill=\"#10b981\" stroke=\"#1b2540\"/><text x=\"330\" y=\"206\" font-size=\"11\" fill=\"#047857\">r2</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_h.1.10",
+  "sid": "maths_aqa_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-latest",
+  "ts": "2026-11-19T17:49:31.641Z"
+ },
+ "maths_aqa_h.1.2": {
+  "summary": "A3 requires you to recognise and name the building blocks of algebra: expressions, equations, formulae, identities, inequalities, terms and factors. You must distinguish them by their symbols and structure, know that an equation asserts equality for specific values while an identity holds for all values, and be able to identify terms (parts separated by + or -) and factors (parts multiplied together). This vocabulary underpins every later algebraic manipulation, proof and problem‑solving task.",
+  "core": [
+   {
+    "h": "1. Definitions and Symbols",
+    "p": "The specification lists six algebraic objects. Each has a precise symbol or phrase that examiners expect you to use. An **expression** is a combination of numbers, variables and operations without an equality sign. An **equation** contains an equals sign (=) and is true only for certain values of the variable(s). A **formula** is an equation that shows a relationship between quantities, often used to calculate one from the others. An **identity** uses the identity symbol (≡) and is true for all permissible values of the variables. An **inequality** uses <, >, ≤ or ≥ to compare two expressions. A **term** is a single part of an expression separated by + or −. A **factor** is a quantity multiplied with others to form a term.",
+    "bullets": [
+     "Expression: 3x^2 + 5x − 7",
+     "Equation: 3x^2 + 5x − 7 = 0",
+     "Formula: A = πr^2",
+     "Identity: (x+1)^2 ≡ x^2 + 2x + 1",
+     "Inequality: 3x^2 + 5x − 7 > 0",
+     "Term examples: 3x^2, 5x, −7",
+     "Factor examples of 6xy: 6, x, y"
+    ],
+    "table": {
+     "head": [
+      "Object",
+      "Symbol",
+      "Truth condition"
+     ],
+     "rows": [
+      [
+       "Expression",
+       "none",
+       "No truth claim"
+      ],
+      [
+       "Equation",
+       "=",
+       "True for specific values"
+      ],
+      [
+       "Formula",
+       "=",
+       "Relationship between quantities"
+      ],
+      [
+       "Identity",
+       "≡",
+       "True for all values"
+      ],
+      [
+       "Inequality",
+       "<, >, ≤, ≥",
+       "True for a range of values"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Expression",
+      "p": "A combination of numbers, variables and operations without an equality or inequality sign."
+     },
+     {
+      "k": "def",
+      "t": "Equation",
+      "p": "A statement that two expressions are equal for particular values of the variable(s)."
+     },
+     {
+      "k": "def",
+      "t": "Formula",
+      "p": "An equation that expresses a rule linking physical or mathematical quantities."
+     },
+     {
+      "k": "def",
+      "t": "Identity",
+      "p": "A statement that two expressions are equivalent for all values of the variables; denoted by ≡."
+     },
+     {
+      "k": "def",
+      "t": "Inequality",
+      "p": "A statement comparing two expressions using <, >, ≤ or ≥."
+     },
+     {
+      "k": "key",
+      "t": "Identity symbol",
+      "p": "Always write ≡ (three horizontal lines) not = when proving an identity."
+     },
+     {
+      "k": "tip",
+      "t": "Exam language",
+      "p": "If a question says ‘show that … is an identity’, you must end with ≡ and a statement like ‘true for all x’."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. Terms – Identification and Classification",
+    "p": "A term is any part of an expression that is added or subtracted. Terms can be constant (numbers only), variable (contain letters), like (same variables to same powers) or unlike. Recognising like terms is essential for collecting them in A4. The coefficient is the numerical factor of a term; the variable part is the literal factor.",
+    "bullets": [
+     "Constant term: 7",
+     "Variable term: −4x^3y",
+     "Like terms: 3x^2 and −5x^2",
+     "Unlike terms: 2x and 2x^2",
+     "Coefficient of −4x^3y is −4",
+     "Literal factor of −4x^3y is x^3y"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Term",
+      "p": "A single number, variable, or product of numbers and variables separated by + or − signs."
+     },
+     {
+      "k": "key",
+      "t": "Like terms",
+      "p": "Only like terms can be added or subtracted; their variable parts must be identical."
+     },
+     {
+      "k": "warn",
+      "t": "Sign errors",
+      "p": "The sign in front of a term belongs to that term. −3x + 5 has terms −3x and +5."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "3. Factors – Multiplicative Building Blocks",
+    "p": "Factors are the quantities multiplied together to make a term. A term can be broken down into its numerical factor (coefficient) and its variable factors. Factorising an expression (A4) is the reverse of expanding: writing a sum of terms as a product of factors. Understanding factors helps with simplifying algebraic fractions and solving equations.",
+    "bullets": [
+     "Term 12x^2y has factors 12, x, x, y",
+     "Factor pair of 6x^2: (2x)(3x) or (6)(x^2)",
+     "Common factor of 4x^3 + 8x^2 is 4x^2",
+     "Prime factorisation of coefficient aids HCF/LCM"
+    ],
+    "table": {
+     "head": [
+      "Term",
+      "Numerical factor",
+      "Variable factors"
+     ],
+     "rows": [
+      [
+       "12x^2y",
+       "12",
+       "x, x, y"
+      ],
+      [
+       "−5ab^2",
+       "−5",
+       "a, b, b"
+      ],
+      [
+       "7",
+       "7",
+       "none"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Factor",
+      "p": "A quantity that multiplies with others to give a product; in a term, the numbers and variables that are multiplied together."
+     },
+     {
+      "k": "key",
+      "t": "Common factor",
+      "p": "The greatest common factor (GCF) of all terms is taken out when factorising."
+     },
+     {
+      "k": "tip",
+      "t": "Check by expanding",
+      "p": "After factorising, expand mentally to ensure you retrieve the original expression."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Equations vs Identities – The Critical Difference",
+    "p": "An equation is a conditional statement: it asks for the values that make it true. An identity is universally true. In exams you may be asked to ‘prove the identity’ or ‘solve the equation’. The method differs: solving uses inverse operations; proving uses algebraic manipulation to transform one side into the other, ending with ≡.",
+    "bullets": [
+     "Equation example: 2x + 3 = 7 → x = 2",
+     "Identity example: (x+2)^2 ≡ x^2 + 4x + 4",
+     "Solving: isolate x",
+     "Proving: expand, simplify, match both sides",
+     "Never write ‘=’ in a proof; finish with ‘≡’"
+    ],
+    "table": {
+     "head": [
+      "Task",
+      "Goal",
+      "Final symbol"
+     ],
+     "rows": [
+      [
+       "Solve equation",
+       "Find specific value(s)",
+       "="
+      ],
+      [
+       "Prove identity",
+       "Show equivalence for all values",
+       "≡"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Identity proof",
+      "p": "Work on one side only (usually the more complex) until it matches the other; then write ≡."
+     },
+     {
+      "k": "warn",
+      "t": "Mixing = and ≡",
+      "p": "Using = in an identity proof loses marks; the mark scheme requires ≡ and a concluding statement."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "5. Inequalities – Symbols and Solution Sets",
+    "p": "Inequalities compare expressions. The solution is a range of values, not a single number. You must represent solutions on a number line (open circle for < or >, closed for ≤ or ≥), in set notation {x : x > 3} and on a graph (shaded region). Multiplying or dividing by a negative number reverses the inequality sign – a frequent exam trap.",
+    "bullets": [
+     "x > 3 → open circle at 3, arrow right",
+     "x ≤ −2 → closed circle at −2, arrow left",
+     "Set notation: {x | x > 3}",
+     "Graph: shade region above line y = 2x + 1 for y > 2x + 1",
+     "Reverse sign when multiplying/dividing by negative"
+    ],
+    "table": {
+     "head": [
+      "Inequality",
+      "Number line",
+      "Set notation"
+     ],
+     "rows": [
+      [
+       "x < 5",
+       "open circle at 5, left arrow",
+       "{x | x < 5}"
+      ],
+      [
+       "x ≥ −1",
+       "closed circle at −1, right arrow",
+       "{x | x ≥ −1}"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Solution set",
+      "p": "The collection of all values that satisfy the inequality."
+     },
+     {
+      "k": "key",
+      "t": "Sign reversal",
+      "p": "If you multiply or divide both sides by a negative number, you must flip < to > and ≤ to ≥."
+     },
+     {
+      "k": "tip",
+      "t": "Double‑check",
+      "p": "Test a value from your solution set in the original inequality to verify."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Formulae – Recognising and Using Standard Forms",
+    "p": "A formula is an equation that models a real‑world or mathematical relationship. You must recognise common formulae (area, volume, Pythagoras, compound interest) and be able to substitute values (A2) and rearrange them (A5). The specification expects you to state the formula in words and symbols.",
+    "bullets": [
+     "Area of circle: A = πr^2",
+     "Volume of cylinder: V = πr^2h",
+     "Pythagoras: a^2 + b^2 = c^2",
+     "Compound interest: A = P(1 + r/100)^n",
+     "Speed: v = d/t"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Formula",
+      "p": "An equation that expresses a rule linking two or more quantities."
+     },
+     {
+      "k": "key",
+      "t": "Subject of formula",
+      "p": "The variable written alone on one side; rearranging changes the subject."
+     },
+     {
+      "k": "tip",
+      "t": "Units",
+      "p": "Always check that units are consistent before substituting."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Language of Algebra – Key Vocabulary",
+    "p": "Examiners reward precise language. You must distinguish between ‘simplify’, ‘expand’, ‘factorise’, ‘solve’, ‘prove’, ‘rearrange’. Each verb triggers a specific procedure. Misreading the command word leads to wrong method and lost marks.",
+    "bullets": [
+     "Simplify: collect like terms, reduce fractions",
+     "Expand: multiply out brackets",
+     "Factorise: write as product of factors",
+     "Solve: find value(s) of variable",
+     "Prove: show identity with ≡",
+     "Rearrange: change subject of formula"
+    ],
+    "table": {
+     "head": [
+      "Command",
+      "Action"
+     ],
+     "rows": [
+      [
+       "Simplify",
+       "Combine like terms, cancel"
+      ],
+      [
+       "Expand",
+       "Distribute multiplication over addition"
+      ],
+      [
+       "Factorise",
+       "Extract common factor or use quadratic patterns"
+      ],
+      [
+       "Solve",
+       "Apply inverse operations"
+      ],
+      [
+       "Prove",
+       "Transform one side to match the other"
+      ],
+      [
+       "Rearrange",
+       "Isolate the required variable"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Command words",
+      "p": "Learn the exact meaning of each; they are not interchangeable."
+     },
+     {
+      "k": "warn",
+      "t": "‘Show that’ vs ‘Prove’",
+      "p": "‘Show that’ may allow numeric verification; ‘Prove’ requires algebraic reasoning for all values."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Structure of an Algebraic Argument",
+    "p": "A high‑grade response lays out steps logically: state what you are doing, show each manipulation, justify with a rule (e.g., ‘add 3 to both sides’), and conclude with the required symbol (= or ≡). Mark schemes award marks for each correct step and for the final statement.",
+    "bullets": [
+     "Write ‘Let …’ or ‘We need to show …’",
+     "Line up equals signs vertically",
+     "Annotate each step: ‘+3 both sides’, ‘factorise’",
+     "End with ‘Therefore … ≡ …’ for identities",
+     "For equations end with ‘x = …’"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Layout",
+      "p": "Use a new line for each algebraic step; examiners can follow your reasoning easily."
+     },
+     {
+      "k": "warn",
+      "t": "Missing conclusion",
+      "p": "Even if all steps are correct, omitting the final ‘x = …’ or ‘≡’ loses the last mark."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Common Misconceptions and How to Avoid Them",
+    "p": "Students often confuse terms with factors, treat identities as equations, forget to reverse inequality signs, or misuse the equals sign in proofs. Awareness of these pitfalls lets you self‑check during the exam.",
+    "bullets": [
+     "Thinking 3x + 2x = 5x^2 (adding coefficients but keeping power)",
+     "Writing (x+1)^2 = x^2 + 1 (missing 2x)",
+     "Using = instead of ≡ in identity proof",
+     "Forgetting to flip inequality when dividing by −2",
+     "Calling a formula an equation without context"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Term vs factor",
+      "p": "Terms are added; factors are multiplied. 3x + 4y has two terms; 3x has factors 3 and x."
+     },
+     {
+      "k": "warn",
+      "t": "Identity sign",
+      "p": "Never write ‘=’ when the statement is true for all x; always use ≡."
+     },
+     {
+      "k": "tip",
+      "t": "Self‑check",
+      "p": "After each manipulation ask: ‘Is this step reversible? Does it preserve the truth of the statement?’"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Higher‑Tier Extensions – Algebraic Fractions and Proof",
+    "p": "At Higher tier you must handle algebraic fractions as expressions, simplify them by factorising numerator and denominator, and use them in identities and equations. You may be asked to prove an identity involving fractions, e.g. (x/(x+1)) + (1/(x+1)) ≡ 1. The same vocabulary applies but the manipulation is more demanding.",
+    "bullets": [
+     "Simplify (x^2−4)/(x−2) → x+2 (x≠2)",
+     "Add fractions: common denominator",
+     "Prove identity with fractions: combine to single fraction",
+     "State restrictions (values that make denominator zero)"
+    ],
+    "table": {
+     "head": [
+      "Task",
+      "Key step"
+     ],
+     "rows": [
+      [
+       "Simplify algebraic fraction",
+       "Factorise numerator and denominator, cancel common factors"
+      ],
+      [
+       "Add/subtract fractions",
+       "Find LCM of denominators"
+      ],
+      [
+       "Prove fraction identity",
+       "Combine to one fraction, simplify numerator"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Algebraic fraction",
+      "p": "A fraction whose numerator and/or denominator are algebraic expressions."
+     },
+     {
+      "k": "key",
+      "t": "Restrictions",
+      "p": "Always state values that make any denominator zero; they are excluded from the domain."
+     },
+     {
+      "k": "tip",
+      "t": "Check by substitution",
+      "p": "Pick a permissible value, evaluate both sides of the identity to verify."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "11. Exam Technique – Mark‑Scheme Language",
+    "p": "Mark schemes use phrases like ‘M1 for correct method’, ‘A1 for correct answer’, ‘B1 for correct statement’. Knowing these helps you structure answers to gain maximum marks. For A3 questions, marks are often awarded for: identifying the object type, writing the correct symbol, stating the condition (e.g., ‘for all x’), and giving a correct example.",
+    "bullets": [
+     "M1: correct first step (e.g., expand bracket)",
+     "A1: accurate final expression or value",
+     "B1: correct definition or classification",
+     "C1: correct conclusion symbol (= or ≡)",
+     "E1: correct explanation or reasoning"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Show working",
+      "p": "Even a 1‑mark ‘state the term’ question may give a mark for writing the term explicitly."
+     },
+     {
+      "k": "warn",
+      "t": "No working, no marks",
+      "p": "If the question says ‘show that’, you must display algebraic steps; a bare answer scores zero."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "12. Quick‑Reference Cheat Sheet",
+    "p": "A one‑page summary you can memorise. It lists the six objects, their symbols, truth conditions, and the key verbs. Keep it handy while practising past papers.",
+    "bullets": [
+     "Expression – no symbol – no truth claim",
+     "Equation – = – true for specific values",
+     "Formula – = – relationship between quantities",
+     "Identity – ≡ – true for all values",
+     "Inequality – < > ≤ ≥ – true for a range",
+     "Term – part separated by +/−",
+     "Factor – multiplied part of a term"
+    ],
+    "table": {
+     "head": [
+      "Object",
+      "Symbol",
+      "Truth",
+      "Example"
+     ],
+     "rows": [
+      [
+       "Expression",
+       "–",
+       "None",
+       "3x+2"
+      ],
+      [
+       "Equation",
+       "=",
+       "Specific",
+       "3x+2=11"
+      ],
+      [
+       "Formula",
+       "=",
+       "Relationship",
+       "A=πr^2"
+      ],
+      [
+       "Identity",
+       "≡",
+       "All values",
+       "(x+1)^2≡x^2+2x+1"
+      ],
+      [
+       "Inequality",
+       "<,>,≤,≥",
+       "Range",
+       "3x+2>5"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Memorise symbols",
+      "p": "The three‑line ≡ is unique to identities; never replace with =."
+     },
+     {
+      "k": "tip",
+      "t": "Flashcards",
+      "p": "Make cards for each object with symbol, definition, and example."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Algebra as a Language",
+   "p": "Think of algebra as a language: expressions are phrases, equations are complete sentences that can be true or false, identities are tautologies (always true, like ‘a bachelor is an unmarried man’), inequalities are comparisons (‘taller than’), terms are words, and factors are the letters that build a word. The analogy breaks down because in language words have fixed meanings, whereas algebraic terms change value with the variable; also, you can’t ‘solve’ a phrase, but you can solve an equation."
+  },
+  "terms": [
+   {
+    "t": "Expression",
+    "d": "A combination of numbers, variables and operations without an equality or inequality sign."
+   },
+   {
+    "t": "Equation",
+    "d": "A statement that two expressions are equal for particular values of the variable(s)."
+   },
+   {
+    "t": "Formula",
+    "d": "An equation that expresses a rule linking two or more quantities."
+   },
+   {
+    "t": "Identity",
+    "d": "A statement that two expressions are equivalent for all permissible values of the variables; denoted by ≡."
+   },
+   {
+    "t": "Inequality",
+    "d": "A statement comparing two expressions using <, >, ≤ or ≥."
+   },
+   {
+    "t": "Term",
+    "d": "A single number, variable, or product of numbers and variables separated by + or − signs."
+   },
+   {
+    "t": "Factor",
+    "d": "A quantity that multiplies with others to give a product; in a term, the numbers and variables that are multiplied together."
+   },
+   {
+    "t": "Coefficient",
+    "d": "The numerical factor of a term."
+   },
+   {
+    "t": "Like terms",
+    "d": "Terms that have exactly the same variable part (same variables to the same powers)."
+   },
+   {
+    "t": "Solution set",
+    "d": "The collection of all values that satisfy an equation or inequality."
+   },
+   {
+    "t": "Subject of a formula",
+    "d": "The variable written alone on one side of the formula."
+   },
+   {
+    "t": "Algebraic fraction",
+    "d": "A fraction whose numerator and/or denominator are algebraic expressions."
+   },
+   {
+    "t": "Restriction",
+    "d": "A value that makes a denominator zero and is therefore excluded from the domain."
+   },
+   {
+    "t": "Command word",
+    "d": "A verb in a question (e.g., simplify, solve, prove) that dictates the required procedure."
+   },
+   {
+    "t": "Mark scheme",
+    "d": "The official guide used by examiners to allocate marks for each step of an answer."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Writing 3x + 2x = 5x^2",
+    "r": "3x + 2x = 5x (add coefficients, keep variable part unchanged)"
+   },
+   {
+    "w": "Using = in an identity proof",
+    "r": "Use ≡ and conclude ‘true for all x’"
+   },
+   {
+    "w": "Forgetting to reverse inequality when dividing by −2",
+    "r": "Flip the sign: −2x > 6 → x < −3"
+   },
+   {
+    "w": "Calling a formula an equation without context",
+    "r": "State ‘formula’ when it shows a general relationship, ‘equation’ when solving for a specific value"
+   },
+   {
+    "w": "Treating terms as factors (e.g., saying 3x+4y has factors 3, x, 4, y)",
+    "r": "Identify terms: 3x and 4y; factors of 3x are 3 and x"
+   },
+   {
+    "w": "Omitting the final conclusion symbol in ‘show that’ questions",
+    "r": "End with ‘= …’ for equations or ‘≡ …’ for identities"
+   },
+   {
+    "w": "Not stating domain restrictions for algebraic fractions",
+    "r": "Write ‘x ≠ 2’ (or similar) after simplifying"
+   },
+   {
+    "w": "Misreading ‘prove’ as ‘show with numbers’",
+    "r": "Provide algebraic manipulation valid for all values, not just a numeric check"
+   }
+  ],
+  "exam": [
+   {
+    "q": "State whether each of the following is an expression, equation, formula, identity or inequality: (a) 5x−3 (b) 2x+7=15 (c) A=πr^2 (d) (x+2)^2≡x^2+4x+4 (e) 3x−4>2",
+    "marks": 5,
+    "model": [
+     "(a) Expression – no equality/inequality sign",
+     "(b) Equation – contains = and is true for a specific x",
+     "(c) Formula – relates area and radius",
+     "(d) Identity – uses ≡ and holds for all x",
+     "(e) Inequality – uses >"
+    ],
+    "tip": "Memorise the five symbols and their names; one mark each."
+   },
+   {
+    "q": "Identify the terms and factors in the expression 6x^2y − 9xy + 4.",
+    "marks": 3,
+    "model": [
+     "Terms: 6x^2y, −9xy, 4",
+     "Factors of 6x^2y: 6, x, x, y",
+     "Factors of −9xy: −9, x, y"
+    ],
+    "tip": "Separate by +/− for terms; then break each term into multiplied parts."
+   },
+   {
+    "q": "Prove the identity (x+3)(x−3) ≡ x^2−9.",
+    "marks": 4,
+    "model": [
+     "Expand left side: x·x + x·(−3) + 3·x + 3·(−3)",
+     "Simplify: x^2 − 3x + 3x − 9",
+     "Collect like terms: x^2 − 9",
+     "Conclude: (x+3)(x−3) ≡ x^2−9 (true for all x)"
+    ],
+    "tip": "Work on one side only; line up equals signs; finish with ≡."
+   },
+   {
+    "q": "Solve the inequality 2(3x−4) ≤ 5x+1. Represent the solution on a number line and in set notation.",
+    "marks": 5,
+    "model": [
+     "Expand: 6x−8 ≤ 5x+1",
+     "Subtract 5x: x−8 ≤ 1",
+     "Add 8: x ≤ 9",
+     "Number line: closed circle at 9, arrow left",
+     "Set notation: {x | x ≤ 9}"
+    ],
+    "tip": "Remember to keep the inequality direction; only reverse if you multiply/divide by a negative."
+   },
+   {
+    "q": "Rearrange the formula V = (1/3)πr^2h to make h the subject.",
+    "marks": 3,
+    "model": [
+     "Multiply both sides by 3: 3V = πr^2h",
+     "Divide by πr^2: h = 3V/(πr^2)",
+     "State restriction: r ≠ 0"
+    ],
+    "tip": "Perform the same operation on both sides; keep πr^2 together."
+   },
+   {
+    "q": "Simplify the algebraic fraction (x^2−9)/(x^2−6x+9). State any restrictions.",
+    "marks": 4,
+    "model": [
+     "Factor numerator: (x−3)(x+3)",
+     "Factor denominator: (x−3)^2",
+     "Cancel common factor (x−3): (x+3)/(x−3)",
+     "Restriction: x ≠ 3"
+    ],
+    "tip": "Always factorise fully before cancelling; note values that make the original denominator zero."
+   },
+   {
+    "q": "Explain the difference between an equation and an identity. Give one example of each.",
+    "marks": 4,
+    "model": [
+     "Equation: true only for specific values, e.g. 2x+1=5 → x=2",
+     "Identity: true for all permissible values, e.g. (x+1)^2≡x^2+2x+1",
+     "Equation uses =, identity uses ≡",
+     "Identity holds universally; equation is conditional"
+    ],
+    "tip": "Use the words ‘conditional’ and ‘universally true’; mention the symbols."
+   },
+   {
+    "q": "The formula for the period of a pendulum is T = 2π√(L/g). Make L the subject.",
+    "marks": 4,
+    "model": [
+     "Divide by 2π: T/(2π) = √(L/g)",
+     "Square both sides: T^2/(4π^2) = L/g",
+     "Multiply by g: L = gT^2/(4π^2)",
+     "State restriction: g>0, L≥0"
+    ],
+    "tip": "Deal with the square root by squaring; keep π together."
+   },
+   {
+    "q": "Given the inequality −3x+7 > 1, solve for x and show the solution on a number line.",
+    "marks": 3,
+    "model": [
+     "Subtract 7: −3x > −6",
+     "Divide by −3 (reverse sign): x < 2",
+     "Number line: open circle at 2, arrow left"
+    ],
+    "tip": "Dividing by a negative flips the inequality; many forget this."
+   },
+   {
+    "q": "Prove that (x/(x+1)) + (1/(x+1)) ≡ 1 for all x ≠ −1.",
+    "marks": 5,
+    "model": [
+     "Combine fractions: (x+1)/(x+1)",
+     "Cancel common factor (x+1): 1",
+     "State restriction: x ≠ −1",
+     "Conclude: (x/(x+1)) + (1/(x+1)) ≡ 1 (true for all x ≠ −1)"
+    ],
+    "tip": "Show the common denominator step; always mention the excluded value."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Classify each: 4x^2+7, 3y=12, V=lwh, (a+b)^2≡a^2+2ab+b^2, 5−2k≥1.",
+    "steps": [
+     "4x^2+7 has no relation symbol → Expression",
+     "3y=12 contains = and asks for a specific y → Equation",
+     "V=lwh relates volume, length, width, height → Formula",
+     "(a+b)^2≡a^2+2ab+b^2 uses ≡ and holds for all a,b → Identity",
+     "5−2k≥1 uses ≥ → Inequality"
+    ],
+    "ans": "Expression, Equation, Formula, Identity, Inequality"
+   },
+   {
+    "q": "Find the terms, coefficients and factors of −8a^3b + 12ab^2 − 5.",
+    "steps": [
+     "Terms are separated by +/−: −8a^3b, +12ab^2, −5",
+     "Coefficient of −8a^3b is −8; of 12ab^2 is 12; of −5 is −5",
+     "Factors of −8a^3b: −8, a, a, a, b",
+     "Factors of 12ab^2: 12, a, b, b",
+     "Factors of −5: −5 (no variable factors)"
+    ],
+    "ans": "Terms: −8a^3b, 12ab^2, −5. Coefficients: −8, 12, −5. Factors as listed."
+   },
+   {
+    "q": "Solve 2(x−3) = 4x+6 and state the solution set.",
+    "steps": [
+     "Expand left: 2x−6 = 4x+6",
+     "Subtract 2x: −6 = 2x+6",
+     "Subtract 6: −12 = 2x",
+     "Divide by 2: x = −6",
+     "Solution set: {−6}"
+    ],
+    "ans": "x = −6; solution set {−6}"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Diagram breaking a term into its coefficient and variable factors.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><defs><linearGradient id=\"t1\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"0%\"><stop offset=\"0%\" stop-color=\"#dbeafe\"/><stop offset=\"100%\" stop-color=\"#bfdbfe\"/></linearGradient><linearGradient id=\"t2\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"0%\"><stop offset=\"0%\" stop-color=\"#bbf7d0\"/><stop offset=\"100%\" stop-color=\"#86efac\"/></linearGradient></defs><rect x=\"30\" y=\"30\" width=\"340\" height=\"60\" fill=\"url(#t1)\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"200\" y=\"65\" text-anchor=\"middle\" font-size=\"14\" fill=\"#1b2540\">Term: −12x^2y</text><line x1=\"30\" y1=\"110\" x2=\"370\" y2=\"110\" stroke=\"#1b2540\" stroke-width=\"1\" stroke-dasharray=\"4,2\"/><rect x=\"30\" y=\"120\" width=\"80\" height=\"40\" fill=\"url(#t2)\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"70\" y=\"145\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">Coefficient</text><text x=\"70\" y=\"160\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">−12</text><rect x=\"130\" y=\"120\" width=\"80\" height=\"40\" fill=\"url(#t2)\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"170\" y=\"145\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">Factor</text><text x=\"170\" y=\"160\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">x</text><rect x=\"230\" y=\"120\" width=\"80\" height=\"40\" fill=\"url(#t2)\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"270\" y=\"145\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">Factor</text><text x=\"270\" y=\"160\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">x</text><rect x=\"330\" y=\"120\" width=\"80\" height=\"40\" fill=\"url(#t2)\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"370\" y=\"145\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">Factor</text><text x=\"370\" y=\"160\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">y</text><text x=\"200\" y=\"200\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b2540\">Product of coefficient and factors gives the term</text></svg>"
+   },
+   {
+    "cap": "Number line showing solution of inequality x ≤ 4 with closed circle.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><defs><linearGradient id=\"nl\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"0%\"><stop offset=\"0%\" stop-color=\"#fde68a\"/><stop offset=\"100%\" stop-color=\"#fcd34d\"/></linearGradient></defs><line x1=\"40\" y1=\"120\" x2=\"360\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"3\"/><circle cx=\"200\" cy=\"120\" r=\"8\" fill=\"#1b2540\"/><polygon points=\"200,108 192,120 208,120\" fill=\"#1b2540\"/><line x1=\"200\" y1=\"120\" x2=\"40\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"3\" marker-end=\"url(#larrow)\"/><defs><marker id=\"larrow\" markerWidth=\"10\" markerHeight=\"10\" refX=\"2\" refY=\"5\" orient=\"auto\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#1b2540\"/></marker></defs><text x=\"200\" y=\"90\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">x ≤ 4</text><text x=\"40\" y=\"145\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b2540\">0</text><text x=\"200\" y=\"145\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b2540\">4</text><text x=\"360\" y=\"145\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b2540\">8</text><text x=\"200\" y=\"180\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b2540\">Closed circle at 4, arrow left</text></svg>"
+   },
+   {
+    "cap": "Flowchart distinguishing equation solving from identity proof.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><defs><linearGradient id=\"f1\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"0%\"><stop offset=\"0%\" stop-color=\"#dbeafe\"/><stop offset=\"100%\" stop-color=\"#bfdbfe\"/></linearGradient><linearGradient id=\"f2\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"0%\"><stop offset=\"0%\" stop-color=\"#bbf7d0\"/><stop offset=\"100%\" stop-color=\"#86efac\"/></linearGradient></defs><rect x=\"30\" y=\"20\" width=\"150\" height=\"50\" fill=\"url(#f1)\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"105\" y=\"50\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b2540\">Equation</text><rect x=\"220\" y=\"20\" width=\"150\" height=\"50\" fill=\"url(#f2)\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"295\" y=\"50\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b2540\">Identity</text><line x1=\"105\" y1=\"70\" x2=\"105\" y2=\"110\" stroke=\"#1b2540\" stroke-width=\"2\" marker-end=\"url(#darrow)\"/><line x1=\"295\" y1=\"70\" x2=\"295\" y2=\"110\" stroke=\"#1b2540\" stroke-width=\"2\" marker-end=\"url(#darrow)\"/><defs><marker id=\"darrow\" markerWidth=\"10\" markerHeight=\"10\" refX=\"5\" refY=\"5\" orient=\"auto\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#1b2540\"/></marker></defs><rect x=\"30\" y=\"120\" width=\"150\" height=\"50\" fill=\"#fff\" stroke=\"#1b2540\" stroke-width=\"1\"/><text x=\"105\" y=\"145\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b2540\">Use inverse ops\nFind specific x</text><rect x=\"220\" y=\"120\" width=\"150\" height=\"50\" fill=\"#fff\" stroke=\"#1b2540\" stroke-width=\"1\"/><text x=\"295\" y=\"145\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b2540\">Transform one side\nEnd with ≡</text><line x1=\"105\" y1=\"170\" x2=\"105\" y2=\"210\" stroke=\"#1b2540\" stroke-width=\"2\" marker-end=\"url(#darrow)\"/><line x1=\"295\" y1=\"170\" x2=\"295\" y2=\"210\" stroke=\"#1b2540\" stroke-width=\"2\" marker-end=\"url(#darrow)\"/><text x=\"105\" y=\"230\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b2540\">Solution set {x}</text><text x=\"295\" y=\"230\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b2540\">True ∀x</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_h.1.2",
+  "sid": "maths_aqa_h",
+  "v": 2,
+  "src": "pre",
+  "by": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+  "ts": "2026-11-19T18:12:10.161Z"
  }
 }

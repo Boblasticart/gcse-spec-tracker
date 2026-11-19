@@ -413,5 +413,909 @@
   "src": "pre",
   "by": "gemini/gemini-3.5-flash-lite",
   "ts": "2026-11-16T03:35:32.979Z"
+ },
+ "maths_ocr_h.6.1": {
+  "summary": "Mastering straight line graphs is fundamental for OCR GCSE Higher tier maths, connecting algebraic equations directly to geometric representations on a Cartesian plane. This topic covers calculating gradients, finding intercepts, rearranging equations into y = mx + c form, determining equations from points, and analysing parallel and perpendicular lines. Achieving a grade 9 requires advanced fluency in establishing algebraic relationships for line segments, finding lengths, and tackling complex tangents to circles.",
+  "core": [
+   {
+    "h": "1. Equation of a Straight Line and y = mx + c",
+    "p": "Every straight line can be represented algebraically in the form y = mx + c, where m is the gradient and c is the y-intercept. Understanding what each parameter represents visually is the core foundation for graphing linear equations.",
+    "bullets": [
+     "The letter m represents the gradient or steepness of the line.",
+     "The letter c represents the y-intercept, which is the exact coordinate where the line crosses the vertical y-axis at (0, c).",
+     "If an equation is given in an implicit form like 2x + 4y = 8, it must be rearranged algebraically to make y the subject before reading off m and c.",
+     "A positive gradient slopes upwards from left to right, while a negative gradient slopes downwards."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Linear Equation",
+      "p": "An equation of the first degree, whose graph on the Cartesian plane is a straight line."
+     },
+     {
+      "k": "key",
+      "t": "Intercept Form",
+      "p": "In y = mx + c, substituting x = 0 automatically yields y = c."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. Calculating Gradient from Two Points",
+    "p": "The gradient measures the rate of change of y with respect to x. When given two distinct coordinates on a line, a standard algebraic formula calculates this steepness precisely.",
+    "bullets": [
+     "The gradient formula is m = (y2 - y1) / (x2 - x1), representing 'change in y over change in x' or 'rise over run'.",
+     "Order of coordinates matters: always keep point 1 (x1, y1) and point 2 (x2, y2) consistent across both numerators and denominators.",
+     "A horizontal line has a gradient of 0 because change in y is zero.",
+     "A vertical line has an undefined or infinite gradient because change in x is zero."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Coordinate Order",
+      "p": "Label your points clearly as (x1, y1) and (x2, y2) before substituting into the formula to avoid sign errors."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Visual representation of rise over run between two coordinates on a straight line.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"50\" y1=\"190\" x2=\"350\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"30\" x2=\"50\" y2=\"210\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M 80 160 L 320 60\" stroke=\"#2563eb\" stroke-width=\"3\"/><circle cx=\"120\" cy=\"143.33\" r=\"4\" fill=\"#dc2626\"/><circle cx=\"260\" cy=\"85\" r=\"4\" fill=\"#dc2626\"/><line x1=\"120\" y1=\"143.33\" x2=\"260\" y2=\"143.33\" stroke=\"#64748b\" stroke-dasharray=\"4\"/><line x1=\"260\" y1=\"143.33\" x2=\"260\" y2=\"85\" stroke=\"#64748b\" stroke-dasharray=\"4\"/><text x=\"175\" y=\"158\" font-size=\"11\" fill=\"#1b2540\">Run = x2 - x1</text><text x=\"268\" y=\"118\" font-size=\"11\" fill=\"#1b2540\">Rise = y2 - y1</text><text x=\"100\" y=\"130\" font-size=\"11\" fill=\"#dc2626\">(x1, y1)</text><text x=\"225\" y=\"75\" font-size=\"11\" fill=\"#dc2626\">(x2, y2)</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "3. Finding the Equation of a Line",
+    "p": "To find the complete equation of a straight line, you need either two points on the line, or one point and the gradient. Substituting known values allows you to determine the unknown intercept c.",
+    "bullets": [
+     "Method 1: If you know gradient m and a point (x, y), substitute them into y = mx + c and solve directly for c.",
+     "Method 2: Use the point-gradient formula y - y1 = m(x - x1), which is extremely efficient for higher-tier questions.",
+     "Method 3: Find the gradient from two points first, then substitute one point into y = mx + c to find c.",
+     "Always write your final answer in the requested format, typically y = mx + c or in general integer form ax + by + c = 0."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Unsimplified Fractions",
+      "p": "Leave gradients as exact top-heavy fractions unless decimal form is explicitly requested by the exam paper."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Parallel Lines",
+    "p": "Parallel lines are lines that never intersect and remain equidistant at all points. Their defining geometric property is that they share the exact same steepness.",
+    "bullets": [
+     "If two lines are parallel, their gradients are identical: m1 = m2.",
+     "Given a line with equation y = 3x + 5, any line parallel to it must start with y = 3x + ...",
+     "To find a parallel line passing through a specific coordinate, use the given gradient and substitute the coordinate to find the new intercept c.",
+     "Never change the coefficient of x when creating a parallel line equation."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Parallel Gradients",
+      "p": "Equal gradients guarantee parallel lines."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Two parallel lines showing identical gradients but different y-intercepts.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"50\" y1=\"190\" x2=\"350\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"30\" x2=\"50\" y2=\"210\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M 70 170 L 330 70\" stroke=\"#2563eb\" stroke-width=\"3\"/><path d=\"M 70 120 L 330 20\" stroke=\"#16a34a\" stroke-width=\"3\"/><text x=\"200\" y=\"100\" font-size=\"12\" fill=\"#2563eb\">y = 2x + 3</text><text x=\"160\" y=\"55\" font-size=\"12\" fill=\"#16a34a\">y = 2x + 8</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "5. Perpendicular Lines",
+    "p": "Perpendicular lines intersect at a right angle (90 degrees). Their gradients possess a specific negative reciprocal relationship which is heavily tested at Higher tier.",
+    "bullets": [
+     "If two lines are perpendicular, the product of their gradients is -1: m1 * m2 = -1.",
+     "To find a perpendicular gradient, flip the fraction upside down and change its sign (the negative reciprocal).",
+     "Example: If m = 2/3, the perpendicular gradient is -3/2.",
+     "Example: If m = -4, the perpendicular gradient is 1/4."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Negative Reciprocal",
+      "p": "The negative reciprocal of a number a/b is -b/a, such that their product equals -1."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Perpendicular lines intersecting at ninety degrees with negative reciprocal gradients.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"50\" y1=\"190\" x2=\"350\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"30\" x2=\"50\" y2=\"210\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M 80 180 L 320 60\" stroke=\"#2563eb\" stroke-width=\"3\"/><path d=\"M 100 60 L 300 200\" stroke=\"#9333ea\" stroke-width=\"3\"/><text x=\"230\" y=\"100\" font-size=\"12\" fill=\"#2563eb\">y = 0.5x + 2</text><text x=\"120\" y=\"130\" font-size=\"12\" fill=\"#9333ea\">y = -2x + 10</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "6. Length and Midpoint of a Line Segment",
+    "p": "Grade 9 geometry questions often combine straight line equations with coordinate geometry calculations, specifically finding the exact distance between two points and the coordinate halfway between them.",
+    "bullets": [
+     "The midpoint formula between (x1, y1) and (x2, y2) is ((x1 + x2)/2, (y1 + y2)/2).",
+     "The length (distance) formula is derived directly from Pythagoras theorem: d = sqrt((x2 - x1)^2 + (y2 - y1)^2).",
+     "Always keep answers in exact surd form unless a decimal approximation is requested.",
+     "Check your midpoint by verifying its distance to both endpoints is equal."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Pythagoras Link",
+      "p": "The distance formula is literally c = sqrt(a^2 + b^2) applied to horizontal and vertical legs of a right triangle."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Tangents to Circles",
+    "p": "A tangent is a straight line that touches a curve at exactly one single point without crossing it. At Higher tier, you must apply circle theorems involving tangents and radii.",
+    "bullets": [
+     "The golden rule of circle geometry: A tangent to a circle is always perpendicular to the radius at the point of contact.",
+     "To find the equation of a tangent to a circle x^2 + y^2 = r^2 at a given point (x1, y1): first find the gradient of the radius joining the origin to the point.",
+     "Calculate the negative reciprocal of this radius gradient to get the gradient of the tangent.",
+     "Use the gradient and the point of contact in y - y1 = m(x - x1) to find the equation of the tangent."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Radius-Tangent Theorem",
+      "p": "Angle between radius and tangent is always 90 degrees."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Circle showing a tangent line perpendicular to the radius at the point of contact.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><circle cx=\"200\" cy=\"120\" r=\"60\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"200\" y1=\"120\" x2=\"260\" y2=\"80\" stroke=\"#dc2626\" stroke-width=\"2\"/><line x1=\"190\" y1=\"10\" x2=\"330\" y2=\"150\" stroke=\"#16a34a\" stroke-width=\"3\"/><circle cx=\"260\" cy=\"80\" r=\"4\" fill=\"#1b2540\"/><text x=\"215\" y=\"95\" font-size=\"11\" fill=\"#dc2626\">Radius</text><text x=\"280\" y=\"115\" font-size=\"11\" fill=\"#16a34a\">Tangent</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "8. Horizontal and Vertical Lines",
+    "p": "Special straight lines have constant x or y coordinates across the entire plane. Students frequently confuse their equations.",
+    "bullets": [
+     "A horizontal line has equation y = a constant (e.g., y = 4), where the gradient is 0.",
+     "A vertical line has equation x = a constant (e.g., x = -3), where the gradient is undefined.",
+     "The x-axis has the equation y = 0.",
+     "The y-axis has the equation x = 0."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Axis Equations",
+      "p": "Remember that the equation of the x-axis is y = 0, not x = 0."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Graphical Interpretation of Simultaneous Equations",
+    "p": "Solving linear simultaneous equations algebraically corresponds geometrically to finding the exact point of intersection between two straight lines.",
+    "bullets": [
+     "The coordinates (x, y) where two straight lines cross represent the simultaneous solution to their equations.",
+     "If two lines are parallel, they never intersect, meaning the simultaneous equations have no solutions.",
+     "If two lines are identical, they intersect everywhere, meaning infinite solutions.",
+     "Graphical verification is a robust checking method in exams."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Intersection Point",
+      "p": "The unique coordinate pair that satisfies both linear equations simultaneously."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Real-World Applications and Rates of Change",
+    "p": "Straight line graphs model direct proportion and constant rates of change in real-world contexts, such as cost structures, conversion graphs, and motion.",
+    "bullets": [
+     "The y-intercept often represents a fixed initial cost or starting value.",
+     "The gradient represents a unit rate or cost per item (e.g., pounds per hour, metres per second).",
+     "Formula links: C = mx + c where C is total cost, m is cost per unit, x is number of units, and c is fixed fee.",
+     "Always include appropriate units in your interpretations."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Contextual Meaning",
+      "p": "Always relate mathematical gradient and intercept back to the wording of the real-world problem."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Ski Slope Analogy",
+   "p": "Imagine a straight line as a ski slope descending a mountain. The gradient (m) is how steep the slope drops for every metre you ski forward: a steep drop is a high number, flat snow is zero, and a cliff is undefined. The y-intercept (c) is your starting altitude when you step onto the mountain directly above the base marker (the y-axis). Parallel slopes run right alongside each other without ever meeting because they share the exact same steepness. A perpendicular path is a ski jump ramp built at an exact 90-degree right angle to your downhill trajectory. This breaks down when dealing with curved roads or non-linear functions, where the steepness changes constantly at every single step."
+  },
+  "terms": [
+   {
+    "t": "Gradient",
+    "d": "A numerical measure of the steepness and direction of a line, calculated as change in y divided by change in x."
+   },
+   {
+    "t": "y-intercept",
+    "d": "The point where a graph crosses the vertical y-axis, expressed as a coordinate (0, c)."
+   },
+   {
+    "t": "x-intercept",
+    "d": "The point where a graph crosses the horizontal x-axis, where y = 0."
+   },
+   {
+    "t": "Parallel lines",
+    "d": "Straight lines that are equidistant from each other and have identical gradients."
+   },
+   {
+    "t": "Perpendicular lines",
+    "d": "Straight lines that intersect at a right angle (90 degrees) with negative reciprocal gradients."
+   },
+   {
+    "t": "Negative reciprocal",
+    "d": "A number flipped upside down and multiplied by -1, such that multiplying it by the original number yields -1."
+   },
+   {
+    "t": "Tangent",
+    "d": "A straight line that touches a curve or circle at exactly one point without cutting through it."
+   },
+   {
+    "t": "Midpoint",
+    "d": "The exact middle point of a line segment, equidistant from both endpoints."
+   },
+   {
+    "t": "Length of line segment",
+    "d": "The shortest straight-line distance between two points, found using Pythagoras theorem."
+   },
+   {
+    "t": "Point-gradient form",
+    "d": "The equation format y - y1 = m(x - x1) used to find a line equation from a gradient and a point."
+   },
+   {
+    "t": "Direct proportion",
+    "d": "A relationship between two variables where the ratio is constant, represented by y = mx with c = 0."
+   },
+   {
+    "t": "Cartesian plane",
+    "d": "A coordinate system defined by an x-axis and a y-axis intersecting at right angles at the origin (0, 0)."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Writing the gradient as 'rise over run' with y and x swapped, e.g., delta x over delta y.",
+    "r": "Gradient is always change in y divided by change in x (rise over run)."
+   },
+   {
+    "w": "Stating that lines with gradients 2 and -2 are perpendicular.",
+    "r": "Perpendicular gradients must multiply to give -1. The negative reciprocal of 2 is -0.5."
+   },
+   {
+    "w": "Assuming the y-intercept is just the number at the end of an equation without rearranging into y = mx + c first.",
+    "r": "The equation must have y as the exact single positive subject before reading off c."
+   },
+   {
+    "w": "Forgetting the negative sign when finding a negative reciprocal.",
+    "r": "Flipping a fraction is only the reciprocal; you must also change its sign."
+   },
+   {
+    "w": "Stating the equation of the x-axis is x = 0.",
+    "r": "The x-axis has y = 0 everywhere along its length."
+   },
+   {
+    "w": "Mixing up the coordinates in the midpoint formula by subtracting instead of adding.",
+    "r": "Midpoint uses the average of the coordinates: ((x1 + x2)/2, (y1 + y2)/2)."
+   },
+   {
+    "w": "Using the radius gradient directly as the tangent gradient in circle questions.",
+    "r": "The tangent is perpendicular to the radius, so you must use the negative reciprocal."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Find the equation of the line passing through (2, 5) and (4, 11) in the form y = mx + c.",
+    "marks": 3,
+    "model": [
+     "Calculate gradient m = (11 - 5) / (4 - 2) = 6 / 2 = 3",
+     "Substitute m = 3 and point (2, 5) into y = 3x + c -> 5 = 3(2) + c",
+     "Solve for c -> c = -1",
+     "Final equation: y = 3x - 1"
+    ],
+    "tip": "Always substitute the simpler coordinate into y = mx + c to minimise arithmetic errors when finding c."
+   },
+   {
+    "q": "Line A has the equation 3x + 4y = 12. Find the equation of the line parallel to Line A that passes through the point (8, -2). Give your answer in the form ax + by + c = 0.",
+    "marks": 4,
+    "model": [
+     "Rearrange Line A to find gradient: 4y = -3x + 12 -> y = -0.75x + 3",
+     "Identify parallel gradient m = -3/4",
+     "Substitute m = -3/4 and point (8, -2) into y - y1 = m(x - x1) -> y - (-2) = -0.75(x - 8)",
+     "Expand and rearrange into integer form: 4y + 8 = -3x + 24 -> 3x + 4y - 16 = 0"
+    ],
+    "tip": "Clearing fractions early by multiplying out the denominator makes integer form rearrangements much easier."
+   },
+   {
+    "q": "Line L passes through the points (-2, 3) and (4, -1). Find the equation of the line perpendicular to L that passes through the midpoint of L.",
+    "marks": 5,
+    "model": [
+     "Calculate gradient of L: m = (-1 - 3) / (4 - (-2)) = -4 / 6 = -2/3",
+     "Find perpendicular gradient: negative reciprocal of -2/3 is 3/2",
+     "Find midpoint of L: ((-2 + 4)/2, (3 + (-1))/2) = (1, 1)",
+     "Substitute gradient 3/2 and midpoint (1, 1) into y = mx + c -> 1 = (3/2)(1) + c",
+     "Solve for c -> c = -0.5",
+     "Final equation: y = 1.5x - 0.5"
+    ],
+    "tip": "Break multi-step coordinate geometry questions into distinct stages: gradient first, perpendicular second, midpoint third."
+   },
+   {
+    "q": "A circle has equation x^2 + y^2 = 25. Find the equation of the tangent to the circle at the point (3, 4).",
+    "marks": 4,
+    "model": [
+     "Identify radius gradient from origin (0, 0) to (3, 4): m = (4 - 0) / (3 - 0) = 4/3",
+     "Calculate perpendicular gradient for the tangent: -3/4",
+     "Substitute m = -3/4 and point (3, 4) into y - 4 = (-3/4)(x - 3)",
+     "Rearrange to standard form: 4y - 16 = -3x + 9 -> 3x + 4y = 25"
+    ],
+    "tip": "For circles centred at the origin, the radius gradient is simply y1 divided by x1."
+   },
+   {
+    "q": "The point P divides the line segment joining A(1, 2) and B(7, 14) in the ratio 1:2. Find the coordinates of P.",
+    "marks": 3,
+    "model": [
+     "Determine fraction along the line segment: 1 / (1 + 2) = 1/3",
+     "Calculate x-coordinate: 1 + (1/3)*(7 - 1) = 1 + 2 = 3",
+     "Calculate y-coordinate: 2 + (1/3)*(14 - 2) = 2 + 4 = 6",
+     "Coordinates of P are (3, 6)"
+    ],
+    "tip": "Ratio division along a line uses fractional additions of vector steps from start to end."
+   },
+   {
+    "q": "Prove algebraically whether the points A(-1, 4), B(2, 5) and C(5, 6) lie on the exact same straight line.",
+    "marks": 3,
+    "model": [
+     "Calculate gradient AB: (5 - 4) / (2 - (-1)) = 1 / 3",
+     "Calculate gradient BC: (6 - 5) / (5 - 2) = 1 / 3",
+     "State conclusion: Since gradients are equal and they share a common point B, the points are collinear (lie on the same straight line)."
+    ],
+    "tip": "Collinear proof requires showing equal gradients between adjacent pairs of points sharing a vertex."
+   },
+   {
+    "q": "Find the exact length of the line segment joining the points (-3, 2) and (5, -4).",
+    "marks": 3,
+    "model": [
+     "State distance formula: d = sqrt((x2 - x1)^2 + (y2 - y1)^2)",
+     "Substitute coordinates: d = sqrt((5 - (-3))^2 + (-4 - 2)^2)",
+     "Evaluate squares: d = sqrt(8^2 + (-6)^2) = sqrt(64 + 36)",
+     "Simplify surd: d = sqrt(100) = 10"
+    ],
+    "tip": "Negative coordinate values squared always become positive; take care with brackets."
+   },
+   {
+    "q": "Line 1 has equation 2y - 5x = 8. Line 2 passes through (1, -3) and is perpendicular to Line 1. Find the y-intercept of Line 2.",
+    "marks": 3,
+    "model": [
+     "Rearrange Line 1: 2y = 5x + 8 -> y = 2.5x + 4, so gradient is 5/2",
+     "Perpendicular gradient = -2/5 = -0.4",
+     "Substitute m = -0.4 and (1, -3) into y = mx + c -> -3 = (-0.4)(1) + c",
+     "Solve for y-intercept c = -2.6"
+    ],
+    "tip": "Read the final question requirement carefully: it asks specifically for the y-intercept value c, not the full equation."
+   },
+   {
+    "q": "Find the coordinates of the intersection point of the two straight lines y = 2x + 1 and 3x + y = 16.",
+    "marks": 4,
+    "model": [
+     "Substitute y = 2x + 1 into the second equation: 3x + (2x + 1) = 16",
+     "Simplify and solve for x: 5x + 1 = 16 -> 5x = 15 -> x = 3",
+     "Substitute x = 3 back into y = 2x + 1: y = 2(3) + 1 = 7",
+     "Intersection coordinate: (3, 7)"
+    ],
+    "tip": "Substitution method is fastest when one equation already has y as the subject."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A straight line passes through the points A(-2, 1) and B(4, 9). (a) Find the equation of the line. (b) Find the length of AB. (c) Find the coordinates of the midpoint of AB.",
+    "steps": [
+     "Step 1: Calculate the gradient m using the gradient formula m = (y2 - y1) / (x2 - x1). Substitute m = (9 - 1) / (4 - (-2)) = 8 / 6 = 4/3.",
+     "Step 2: Substitute gradient m = 4/3 and point (4, 9) into y = mx + c to find the y-intercept c. 9 = (4/3)(4) + c -> 9 = 16/3 + c -> c = 9 - 16/3 = 11/3. Equation: y = (4/3)x + 11/3.",
+     "Step 3: Calculate the length of AB using distance formula d = sqrt((x2 - x1)^2 + (y2 - y1)^2). d = sqrt((4 - (-2))^2 + (9 - 1)^2) = sqrt(6^2 + 8^2) = sqrt(36 + 64) = sqrt(100) = 10.",
+     "Step 4: Calculate the midpoint using ((x1 + x2)/2, (y1 + y2)/2). Midpoint = ((-2 + 4)/2, (1 + 9)/2) = (2/2, 10/2) = (1, 5)."
+    ],
+    "ans": "(a) y = (4/3)x + 11/3 (or 4x - 3y + 11 = 0), (b) 10, (c) (1, 5)"
+   },
+   {
+    "q": "Line 1 has the equation 5x - 2y = 10. Line 2 is perpendicular to Line 1 and passes through the x-intercept of Line 1. Find the equation of Line 2.",
+    "steps": [
+     "Step 1: Find the x-intercept of Line 1 by setting y = 0. 5x - 2(0) = 10 -> 5x = 10 -> x = 2. The coordinate is (2, 0).",
+     "Step 2: Rearrange Line 1 into y = mx + c form to find its gradient. 5x - 10 = 2y -> y = 2.5x - 5. Gradient m1 = 5/2.",
+     "Step 3: Find the perpendicular gradient for Line 2 by taking the negative reciprocal of 5/2. m2 = -2/5.",
+     "Step 4: Use the point-gradient formula with m = -2/5 and point (2, 0). y - 0 = (-2/5)(x - 2).",
+     "Step 5: Expand and simplify into standard integer form. y = -0.4x + 0.8 -> 5y = -2x + 4 -> 2x + 5y = 4."
+    ],
+    "ans": "2x + 5y = 4 (or y = -0.4x + 0.8)"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Cartesian grid showing positive and negative gradients with labeled intercepts.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"50\" y1=\"120\" x2=\"350\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"200\" y1=\"20\" x2=\"200\" y2=\"220\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M 80 40 L 320 200\" stroke=\"#dc2626\" stroke-width=\"3\"/><path d=\"M 80 200 L 320 40\" stroke=\"#2563eb\" stroke-width=\"3\"/><text x=\"260\" y=\"35\" font-size=\"11\" fill=\"#2563eb\">y = -0.75x + c</text><text x=\"260\" y=\"195\" font-size=\"11\" fill=\"#dc2626\">y = 0.75x + c</text><circle cx=\"200\" cy=\"120\" r=\"4\" fill=\"#1b2540\"/><text x=\"210\" y=\"135\" font-size=\"11\" fill=\"#1b2540\">(0, 0)</text></svg>"
+   }
+  ],
+  "pid": "maths_ocr_h.6.1",
+  "sid": "maths_ocr_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-19T20:36:54.897Z"
+ },
+ "maths_ocr_h.6.3": {
+  "summary": "Mastering real-world graphs requires understanding that the gradient represents a rate of change and the area under the curve represents a cumulative accumulation. On distance-time and velocity-time graphs, these geometrical properties translate directly into speed, acceleration, and total distance travelled. Grade 9 success depends on rigorous unit analysis, careful treatment of non-linear curves using tangent lines or counting squares, and precise interpretation of context.",
+  "core": [
+   {
+    "h": "Introduction to Real-World Graphs",
+    "p": "Real-world graphs model physical situations where axes represent measurable quantities with physical units rather than abstract mathematical variables. Understanding these graphs requires interpreting how changes in one variable affect another over time, distance, or other physical parameters.",
+    "bullets": [
+     "Axes always have physical units such as metres, seconds, metres per second, or kilograms.",
+     "The **independent variable** (usually time) is plotted on the horizontal x-axis.",
+     "The **dependent variable** (such as distance, velocity, or cost) is plotted on the vertical y-axis.",
+     "Shape and steepness immediately reveal qualitative properties of the event being modelled."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Axis Labels",
+      "p": "Always include units in your working and final answers; examiners frequently penalise missing or incorrect unit notation."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Gradients as Rates of Change",
+    "p": "The gradient of a straight-line graph or the tangent to a curved graph measures how fast the dependent variable changes with respect to the independent variable. This is known as the **rate of change**.",
+    "bullets": [
+     "Calculated using change in y divided by change in x (rise over run).",
+     "Units of the gradient are always (units of y) per (units of x).",
+     "A steeper positive gradient indicates a faster rate of increase.",
+     "A horizontal line has a gradient of zero, meaning the rate of change is zero."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Rate of Change",
+      "p": "The measure of how much a dependent variable changes per unit change in the independent variable, given mathematically by the gradient."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A linear graph showing gradient as vertical change divided by horizontal change.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#ffffff\"/><line x1=\"50\" y1=\"190\" x2=\"370\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"190\" x2=\"50\" y2=\"30\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"170\" x2=\"330\" y2=\"70\" stroke=\"#2563eb\" stroke-width=\"3\"/><line x1=\"50\" y1=\"170\" x2=\"250\" y2=\"170\" stroke=\"#dc2626\" stroke-dasharray=\"4\" stroke-width=\"2\"/><line x1=\"250\" y1=\"170\" x2=\"250\" y2=\"120\" stroke=\"#dc2626\" stroke-dasharray=\"4\" stroke-width=\"2\"/><text x=\"130\" y=\"160\" fill=\"#1b2540\" font-size=\"12\">Run (Delta x)</text><text x=\"260\" y=\"150\" fill=\"#1b2540\" font-size=\"12\">Rise (Delta y)</text><text x=\"340\" y=\"210\" fill=\"#1b2540\" font-size=\"12\">Time</text><text x=\"20\" y=\"40\" fill=\"#1b2540\" font-size=\"12\">Distance</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Distance-Time Graphs",
+    "p": "Distance-time graphs plot distance travelled on the vertical axis against time on the horizontal axis. They allow us to visualise journeys, stops, and changing speeds instantly.",
+    "bullets": [
+     "The gradient of a distance-time graph represents **speed**.",
+     "A straight diagonal line represents travel at a constant speed.",
+     "A horizontal line (gradient equals zero) represents a stationary object (resting).",
+     "A curved line indicates acceleration or deceleration."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Curved Distance-Time Graphs",
+      "p": "Do not use simple rise-over-run triangles across the whole curve to find speed; you must draw a tangent at a specific point to find instantaneous speed."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Velocity-Time Graphs",
+    "p": "Velocity-time graphs plot velocity (speed in a given direction) on the vertical axis against time on the horizontal axis. They are essential for analysing motion under varying forces.",
+    "bullets": [
+     "The gradient of a velocity-time graph represents **acceleration**.",
+     "A horizontal line indicates motion at a constant velocity (zero acceleration).",
+     "A negative gradient represents deceleration (slowing down).",
+     "Velocity below the time axis indicates motion in the opposite direction."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Units of Acceleration",
+      "p": "Acceleration is measured in metres per second squared, written as m/s^2."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Velocity-time graph showing acceleration, constant velocity, and deceleration.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#ffffff\"/><line x1=\"50\" y1=\"190\" x2=\"370\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"190\" x2=\"50\" y2=\"30\" stroke=\"#1b2540\" stroke-width=\"2\"/><polyline points=\"50,170 150,90 250,90 350,190\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"3\"/><text x=\"340\" y=\"210\" fill=\"#1b2540\" font-size=\"12\">Time (s)</text><text x=\"10\" y=\"40\" fill=\"#1b2540\" font-size=\"12\">Velocity</text><text x=\"180\" y=\"80\" fill=\"#1b2540\" font-size=\"12\">Constant speed</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Area Under a Graph",
+    "p": "The area enclosed between the graph curve and the horizontal axis represents the product of the two axis quantities. In physical contexts, this calculates the cumulative total of the dependent variable.",
+    "bullets": [
+     "On a velocity-time graph, the area under the graph represents **total distance travelled**.",
+     "Calculated by splitting the region into standard geometric shapes: rectangles, triangles, and trapezia.",
+     "Area below the time axis counts as negative displacement when calculating overall position.",
+     "Units of the area are the product of the x and y axis units (e.g., m/s multiplied by s equals m)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Area Under Graph",
+      "p": "The definite integral of the function represented by the curve, found geometrically or via calculus."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Calculating Distance from Velocity-Time Graphs",
+    "p": "To find the distance travelled from a velocity-time graph, compute the total area between the velocity line and the time axis. Complex shapes must be broken down into familiar geometric components.",
+    "bullets": [
+     "Area of a rectangle = base × height.",
+     "Area of a triangle = 0.5 × base × height.",
+     "Area of a trapezium = 0.5 × (a + b) × h, where a and b are parallel sides.",
+     "Always check grid scale values carefully before computing areas."
+    ],
+    "table": {
+     "head": [
+      "Shape",
+      "Formula",
+      "Application"
+     ],
+     "rows": [
+      [
+       "Rectangle",
+       "base × height",
+       "Constant velocity sections"
+      ],
+      [
+       "Triangle",
+       "0.5 × base × height",
+       "Uniform acceleration from rest"
+      ],
+      [
+       "Trapezium",
+       "0.5 × (a + b) × h",
+       "Combined acceleration and constant speed"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Estimating Gradients of Non-Linear Graphs",
+    "p": "When a real-world graph is curved, the rate of change is not constant. To find the rate of change at a specific exact instant, you must draw a tangent line.",
+    "bullets": [
+     "Mark the exact point on the curve specified in the question.",
+     "Use a ruler to draw a straight line that just touches the curve at that point without cutting through it.",
+     "Ensure the angle between the curve and the tangent is balanced on both sides.",
+     "Choose two points on your tangent line that lie on grid intersections to calculate the gradient accurately."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Drawing Tangents",
+      "p": "Extend your tangent line across a wide span of graph paper to minimise rounding errors when reading coordinates for gradient calculation."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Drawing a tangent to a curved graph at a specific point to find instantaneous rate of change.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#ffffff\"/><line x1=\"50\" y1=\"190\" x2=\"370\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"190\" x2=\"50\" y2=\"30\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M 60 170 Q 150 170 300 60\" fill=\"none\" stroke=\"#9333ea\" stroke-width=\"3\"/><line x1=\"110\" y1=\"130\" x2=\"270\" y2=\"70\" stroke=\"#dc2626\" stroke-width=\"2\"/><circle cx=\"180\" cy=\"105\" r=\"4\" fill=\"#1b2540\"/><text x=\"340\" y=\"210\" fill=\"#1b2540\" font-size=\"12\">Time</text><text x=\"10\" y=\"40\" fill=\"#1b2540\" font-size=\"12\">Value</text><text x=\"200\" y=\"60\" fill=\"#dc2626\" font-size=\"12\">Tangent</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Estimating Areas Under Non-Linear Graphs",
+    "p": "When a curve is non-linear, finding the area under it requires numerical integration techniques, most commonly the trapezium rule or counting grid squares.",
+    "bullets": [
+     "**Trapezium rule**: splits the area under a curve into vertical strips of equal width h, forming trapezia.",
+     "Formula: area approx 0.5h * (y_0 + 2(y_1 + y_2 + ... + y_{n-1}) + y_n).",
+     "Grid square counting: count full squares and estimate fractions of partial squares, multiplying by the area represented by a single square.",
+     "More strips or smaller grid squares yield a more accurate estimate."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Trapezium Rule Over/Under Estimation",
+      "p": "If the curve is concave downwards (curves like a hill), the trapezium rule underestimates the true area because the straight tops cut under the curve."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Real-World Contexts: Financial and Economic Graphs",
+    "p": "Graphs are heavily used in finance to model depreciation, inflation, cost functions, and revenue. Interpreting these requires understanding financial terminology linked to graph features.",
+    "bullets": [
+     "Initial investment or fixed cost corresponds to the **y-intercept**.",
+     "Rate of profit or depreciation corresponds to the **gradient**.",
+     "Break-even point occurs where cost and revenue graphs intersect.",
+     "Total profit is represented by the area between revenue and cost curves over time."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Real-World Contexts: Exponential Growth and Decay",
+    "p": "Many natural processes, such as population growth, radioactive decay, or cooling liquids, follow exponential curves rather than straight lines.",
+    "bullets": [
+     "Exponential growth graphs curve upwards steeply; the gradient increases over time.",
+     "Exponential decay graphs curve downwards, flattening out towards an asymptote; the gradient decreases in magnitude.",
+     "Half-life or doubling time can be read directly by finding coordinates on the vertical axis.",
+     "Tangent lines at early versus late points show drastically different rates of change."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Asymptotes",
+      "p": "An asymptote is a line that the graph gets closer and closer to but never touches or crosses."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Exam Strategy for Graph Interpretation Questions",
+    "p": "OCR Higher tier papers test graph interpretation through multi-step problem solving. Method marks depend heavily on clear annotations on the printed figures.",
+    "bullets": [
+     "Always draw construction lines on graphs when reading values to show the examiner your method.",
+     "Check axis scales carefully; do not assume each grid square equals 1.",
+     "Include appropriate units in every intermediate and final numerical answer.",
+     "For 'explain' questions, explicitly link mathematical features (gradient, area) to physical context (speed, distance)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Show Working",
+      "p": "Even if your final calculated number is slightly off due to a reading error, clear construction lines and formula citations secure method marks."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Driving a Car on a Journey",
+   "p": "Imagine driving a car where the speedometer needle moves constantly. Your distance-time graph is the GPS tracking your total journey length over time, where resting at traffic lights shows a flat line. Your speedometer shows your velocity at any exact second (velocity-time graph), and if you multiply your average speed by time, or find the area under that speed curve, you get the exact distance your odometer reads at the end of the trip. The analogy breaks down because real-world driving involves traffic friction and sudden jerks, whereas mathematical graphs assume smooth continuous functions."
+  },
+  "terms": [
+   {
+    "t": "Rate of Change",
+    "d": "The ratio of the change in the dependent variable to the change in the independent variable, represented by the gradient."
+   },
+   {
+    "t": "Distance-Time Graph",
+    "p": "",
+    "d": "A graph plotting distance against time, where the gradient represents speed."
+   },
+   {
+    "t": "Velocity-Time Graph",
+    "d": "A graph plotting velocity against time, where the gradient represents acceleration and the area represents distance."
+   },
+   {
+    "t": "Acceleration",
+    "d": "The rate of change of velocity, measured in metres per second squared (m/s^2)."
+   },
+   {
+    "t": "Deceleration",
+    "d": "Negative acceleration; slowing down, represented by a negative gradient on a velocity-time graph."
+   },
+   {
+    "t": "Tangent",
+    "d": "A straight line that touches a curve at a single point without crossing it, used to find instantaneous gradients."
+   },
+   {
+    "t": "Trapezium Rule",
+    "d": "A numerical method for estimating the area under a curve by dividing the region into trapezia."
+   },
+   {
+    "t": "Displacement",
+    "d": "Distance in a given direction from a fixed origin, accounting for positive and negative regions on a graph."
+   },
+   {
+    "t": "Instantaneous Speed",
+    "d": "The speed of an object at a specific exact moment in time, found using the gradient of the tangent."
+   },
+   {
+    "t": "Average Speed",
+    "d": "Total distance divided by total time, represented by the gradient of the straight chord connecting start and end points."
+   },
+   {
+    "t": "Asymptote",
+    "d": "A line that a curve approaches continuously as it heads towards infinity, without ever intersecting."
+   },
+   {
+    "t": "Independent Variable",
+    "d": "The variable that is changed or controlled in a scientific or mathematical model, plotted on the x-axis."
+   },
+   {
+    "t": "Dependent Variable",
+    "d": "The variable being tested and measured, whose value depends on the independent variable, plotted on the y-axis."
+   },
+   {
+    "t": "Cumulative Frequency",
+    "d": "The running total of frequencies, used in statistical graphs to estimate medians and quartiles."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Using the formula distance = speed × time on a velocity-time graph when acceleration is variable.",
+    "r": "Recognising that speed × time only works for constant speed, and finding the area under the graph for variable acceleration."
+   },
+   {
+    "w": "Calculating gradient on a distance-time curve by doing total distance divided by total time at a curved section.",
+    "r": "Drawing a tangent at the exact required point and finding the gradient of that straight tangent line."
+   },
+   {
+    "w": "Forgetting to include units or using incorrect units such as m/s instead of m/s^2 for acceleration.",
+    "r": "Checking axis labels and applying correct compound units for rates of change and areas."
+   },
+   {
+    "w": "Assuming the y-intercept of a distance-time graph is always zero.",
+    "r": "Realising the y-intercept represents the initial starting position away from the reference point at time zero."
+   },
+   {
+    "w": "Treating area below the time axis on a velocity-time graph as positive distance.",
+    "r": "Recognising that velocity below the axis is negative displacement, which subtracts from total forward distance."
+   },
+   {
+    "w": "Drawing a tangent that cuts through the curve instead of skimming it at a single point.",
+    "r": "Ensuring the tangent touches the curve at only one point with equal visible space either side."
+   },
+   {
+    "w": "Reading coordinate values straight from graph grid squares without checking the scale factor.",
+    "r": "Calculating the value of a single grid square by dividing interval range by number of subdivisions."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A car accelerates uniformly from rest to 20 m/s in 5 seconds. It then travels at this constant speed for 10 seconds before decelerating uniformly to rest in a further 5 seconds. Draw or describe the shape of this velocity-time graph.",
+    "marks": 2,
+    "model": [
+     "Straight line from (0, 0) to (5, 20)",
+     "Horizontal line from (5, 20) to (15, 20) and straight line down to (20, 0)"
+    ],
+    "tip": "Plot key coordinate turning points clearly before joining with straight lines."
+   },
+   {
+    "q": "Using the journey described in the previous question, calculate the total distance travelled by the car.",
+    "marks": 4,
+    "model": [
+     "Recognise shape is a trapezium with parallel sides 10 and 20, height 20",
+     "Area = 0.5 × (10 + 20) × 20",
+     "Calculation: 0.5 × 30 × 20 = 300",
+     "300 metres"
+    ],
+    "tip": "Splitting into triangle, rectangle and triangle yields the exact same answer if trapezium formula is forgotten."
+   },
+   {
+    "q": "Explain what the gradient of a distance-time graph represents.",
+    "marks": 1,
+    "model": [
+     "Speed (or velocity)"
+    ],
+    "tip": "Keep one-mark definitions precise and direct without unnecessary filler."
+   },
+   {
+    "q": "A cyclist's journey is modelled by the equation s = 3t^2 + 2t. Find the speed of the cyclist at t = 4 seconds.",
+    "marks": 4,
+    "model": [
+     "Speed is the rate of change of distance (derivative ds/dt = 6t + 2)",
+     "Substitute t = 4 into the derivative expression",
+     "6(4) + 2 = 24 + 2",
+     "26 m/s"
+    ],
+    "tip": "Even if calculus is OCR Additional/A-Level content, rate of change of polynomial curves appears on Higher GCSE via tangents or algebraic differentiation."
+   },
+   {
+    "q": "Describe the motion of an object when the distance-time graph is a horizontal straight line.",
+    "marks": 1,
+    "model": [
+     "Stationary (or stopped / speed is zero)"
+    ],
+    "tip": "Distinguish carefully between distance-time graphs (flat = stopped) and velocity-time graphs (flat = constant speed)."
+   },
+   {
+    "q": "A water tank drains such that the volume V litres remaining after t minutes is given by a curved graph. Explain how to estimate the rate at which water is leaving the tank at t = 3 minutes.",
+    "marks": 3,
+    "model": [
+     "Mark t = 3 on the horizontal axis and locate the corresponding point on the curve",
+     "Draw a tangent to the curve at that exact point",
+     "Calculate the gradient of the tangent (change in V divided by change in t)"
+    ],
+    "tip": "Mentioning both drawing the tangent and calculating its gradient hits all marking points."
+   },
+   {
+    "q": "A velocity-time graph has a section where the line goes below the horizontal time axis. What does this indicate about the motion?",
+    "marks": 2,
+    "model": [
+     "The object has reversed direction",
+     "Travelling backwards"
+    ],
+    "tip": "Velocity is a vector quantity incorporating direction; negative sign denotes reverse travel."
+   },
+   {
+    "q": "Estimate the area under a non-linear speed-time graph using 4 strips of equal width h = 2.",
+    "marks": 4,
+    "model": [
+     "State trapezium rule formula correctly",
+     "Substitute correct y-ordinate values into formula",
+     "Evaluate inner bracket correctly",
+     "Final correct area with units"
+    ],
+    "tip": "List your y-values clearly in a column before substituting to prevent arithmetic slips."
+   },
+   {
+    "q": "The graph shows the population of bacteria over 24 hours. State whether the rate of population growth is higher at hour 2 or hour 10, giving a reason based on the graph.",
+    "marks": 2,
+    "model": [
+     "Hour 10",
+     "The graph is steeper at hour 10, meaning the gradient (rate of change) is greater"
+    ],
+    "tip": "Link steepness directly to gradient and rate of change in your justification."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A particle starts from rest and accelerates at 3 m/s^2 for 4 seconds, travels at constant speed for 6 seconds, then decelerates at 2 m/s^2 until it stops. Calculate the total distance travelled.",
+    "steps": [
+     "Stage 1 (Acceleration): reaches velocity v = u + at = 0 + (3 × 4) = 12 m/s. Time = 4 s. Shape is triangle. Area = 0.5 × 4 × 12 = 24 metres.",
+     "Stage 2 (Constant Speed): velocity = 12 m/s, time = 6 s. Shape is rectangle. Area = 6 × 12 = 72 metres.",
+     "Stage 3 (Deceleration): starts at 12 m/s, deceleration = 2 m/s^2, so time taken = 12 / 2 = 6 s. Shape is triangle. Area = 0.5 × 6 × 12 = 36 metres.",
+     "Total distance = 24 + 72 + 36 = 132 metres."
+    ],
+    "ans": "132 metres"
+   },
+   {
+    "q": "A runner's distance s metres after t seconds is given by s = t^3 - 6t^2 + 15t. Find the minimum speed of the runner during the first 4 seconds.",
+    "steps": [
+     "Find the velocity function by differentiating distance with respect to time: v = ds/dt = 3t^2 - 12t + 15.",
+     "To find minimum velocity, complete the square or differentiate velocity to find acceleration: dv/dt = 6t - 12.",
+     "Set acceleration to zero to find the turning point: 6t - 12 = 0, so t = 2 seconds.",
+     "Substitute t = 2 back into the velocity equation: v = 3(2)^2 - 12(2) + 15 = 12 - 24 + 15 = 3 m/s."
+    ],
+    "ans": "3 m/s"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Distance-time graph demonstrating stationary periods, steady speed, and return journeys.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#ffffff\"/><line x1=\"50\" y1=\"190\" x2=\"370\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"190\" x2=\"50\" y2=\"30\" stroke=\"#1b2540\" stroke-width=\"2\"/><polyline points=\"50,170 130,90 210,90 330,190\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><text x=\"340\" y=\"210\" fill=\"#1b2540\" font-size=\"12\">Time</text><text x=\"10\" y=\"40\" fill=\"#1b2540\" font-size=\"12\">Distance</text><text x=\"140\" y=\"80\" fill=\"#1b2540\" font-size=\"12\">Resting</text></svg>"
+   },
+   {
+    "cap": "Velocity-time graph showing calculation of total distance via geometric shape areas.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#ffffff\"/><line x1=\"50\" y1=\"190\" x2=\"370\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"190\" x2=\"50\" y2=\"30\" stroke=\"#1b2540\" stroke-width=\"2\"/><polygon points=\"50,190 50,110 130,110 210,190\" fill=\"#dbeafe\"/><polyline points=\"50,190 130,110 210,110 210,190\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><text x=\"110\" y=\"160\" fill=\"#1b2540\" font-size=\"12\">Area = Distance</text><text x=\"340\" y=\"210\" fill=\"#1b2540\" font-size=\"12\">Time</text><text x=\"10\" y=\"40\" fill=\"#1b2540\" font-size=\"12\">Velocity</text></svg>"
+   },
+   {
+    "cap": "Exponential decay curve modelling real-world depreciation or radioactive cooling.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#ffffff\"/><line x1=\"50\" y1=\"190\" x2=\"370\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"190\" x2=\"50\" y2=\"30\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M 60 50 Q 150 180 350 185\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"3\"/><line x1=\"50\" y1=\"190\" x2=\"370\" y2=\"190\" stroke=\"#94a3b8\" stroke-dasharray=\"4\" stroke-width=\"2\"/><text x=\"340\" y=\"210\" fill=\"#1b2540\" font-size=\"12\">Time</text><text x=\"10\" y=\"40\" fill=\"#1b2540\" font-size=\"12\">Value</text><text x=\"240\" y=\"160\" fill=\"#1b2540\" font-size=\"12\">Asymptote</text></svg>"
+   }
+  ],
+  "pid": "maths_ocr_h.6.3",
+  "sid": "maths_ocr_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-19T20:38:56.172Z"
  }
 }

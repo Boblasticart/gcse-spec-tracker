@@ -5587,5 +5587,2190 @@
   "src": "pre",
   "by": "gemini/gemini-flash-lite-latest",
   "ts": "2026-11-18T20:33:29.342Z"
+ },
+ "maths_eduqas_f.3.4": {
+  "summary": "Congruence describes the relationship between two geometric figures that are identical in every way—size, shape, and angles. In the Eduqas GCSE, proving two triangles are congruent requires identifying one of four specific sets of matching information: SSS, SAS, ASA, or RHS. Understanding these criteria allows students to solve complex geometric problems by proving that unknown lengths or angles in one triangle must match those in another, even if the shapes have been rotated or reflected.",
+  "core": [
+   {
+    "h": "The Definition of Congruence",
+    "p": "Two shapes are congruent if they are exactly the same size and shape. If you were to cut one out, it would fit perfectly over the other.",
+    "bullets": [
+     "Congruent shapes have equal corresponding side lengths.",
+     "Congruent shapes have equal corresponding interior angles.",
+     "Shapes can be rotated, reflected, or translated and still remain congruent.",
+     "The symbol for congruence is three horizontal lines (≡), though 'is congruent to' is used in most Foundation questions."
+    ],
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Congruent",
+      "p": "Identical in shape and size, such that all corresponding sides and angles are equal."
+     }
+    ]
+   },
+   {
+    "h": "SSS: Side-Side-Side",
+    "p": "If all three sides of one triangle are equal to the three sides of another triangle, the triangles must be congruent.",
+    "bullets": [
+     "This is the simplest criterion to identify.",
+     "You do not need to know any angles to use SSS.",
+     "If the sides are the same, the angles are automatically forced to be the same."
+    ],
+    "fig": [
+     {
+      "cap": "SSS Criterion: Both triangles have sides of 6cm, 8cm, and 10cm. They are congruent.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><path d=\"M50,180 L150,180 L50,80 Z\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"80\" y=\"195\" fill=\"#1b2540\">8cm</text><text x=\"20\" y=\"135\" fill=\"#1b2540\">6cm</text><text x=\"105\" y=\"125\" fill=\"#1b2540\">10cm</text><path d=\"M250,50 L350,150 L250,150 Z\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"280\" y=\"165\" fill=\"#1b2540\">8cm</text><text x=\"220\" y=\"105\" fill=\"#1b2540\">6cm</text><text x=\"310\" y=\"95\" fill=\"#1b2540\">10cm</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "SAS: Side-Angle-Side",
+    "p": "Two triangles are congruent if two sides and the included angle of one are equal to two sides and the included angle of the other.",
+    "bullets": [
+     "The 'Included Angle' is the angle trapped between the two known sides.",
+     "If the angle is not between the two sides, congruence is not guaranteed (this is the SSA trap).",
+     "SAS ensures the third side must be the same length."
+    ],
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "The SAS Trap",
+      "p": "Always check that the angle is 'sandwiched' between the two sides. If the angle is elsewhere, the triangles might not be identical."
+     }
+    ]
+   },
+   {
+    "h": "ASA: Angle-Side-Angle",
+    "p": "Two triangles are congruent if two angles and the side between them are equal in both triangles.",
+    "bullets": [
+     "The side must be the one connecting the two angles.",
+     "In some cases, AAS (Angle-Angle-Side) is also accepted because if two angles are known, the third is fixed by the 180-degree rule.",
+     "ASA is often found in problems involving parallel lines and transversals."
+    ],
+    "fig": [
+     {
+      "cap": "ASA Criterion: Two angles and the side connecting them are identical.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><path d=\"M50,180 L200,180 L120,80 Z\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"60\" y=\"175\" fill=\"#1b2540\">40°</text><text x=\"160\" y=\"175\" fill=\"#1b2540\">65°</text><text x=\"110\" y=\"195\" fill=\"#1b2540\">12cm</text><path d=\"M250,100 L350,200 L250,200 Z\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"260\" y=\"195\" fill=\"#1b2540\">40°</text><text x=\"310\" y=\"195\" fill=\"#1b2540\">65°</text><text x=\"305\" y=\"150\" fill=\"#1b2540\">12cm</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "RHS: Right-angle, Hypotenuse, Side",
+    "p": "This is a special case for right-angled triangles. They are congruent if they share the same hypotenuse and one other side.",
+    "bullets": [
+     "The 'H' stands for Hypotenuse, which is the longest side opposite the right angle.",
+     "The 'S' can be either of the other two shorter sides.",
+     "You must explicitly state there is a right angle to use this criterion."
+    ],
+    "callouts": [
+     {
+      "k": "key",
+      "t": "RHS Requirement",
+      "p": "RHS only works for right-angled triangles. If the triangle is not right-angled, you cannot use this rule."
+     }
+    ]
+   },
+   {
+    "h": "Why AAA is Not a Congruence Criterion",
+    "p": "Angle-Angle-Angle (AAA) proves that two triangles are the same shape, but not necessarily the same size.",
+    "bullets": [
+     "Triangles with the same angles are called 'Similar'.",
+     "One could be a magnification of the other.",
+     "To be congruent, at least one side length must be known and matched."
+    ],
+    "fig": [
+     {
+      "cap": "AAA shows Similarity, not Congruence. The angles are the same, but the sizes differ.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><path d=\"M40,180 L120,180 L80,120 Z\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"70\" y=\"160\" fill=\"#1b2540\">60°</text><path d=\"M200,180 L360,180 L280,60 Z\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"270\" y=\"160\" fill=\"#1b2540\">60°</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "The 'Included Angle' Rule",
+    "p": "In SAS, the angle must be 'included'. This means it is the vertex where the two known sides meet.",
+    "bullets": [
+     "If you know sides A and B, the angle must be the one between A and B.",
+     "If the angle is elsewhere, you could potentially draw two different triangles with that information (the ambiguous case)."
+    ]
+   },
+   {
+    "h": "Corresponding Sides and Angles",
+    "p": "When stating congruence, the order of letters usually matters to show which parts match.",
+    "bullets": [
+     "If triangle ABC is congruent to triangle DEF, then side AB = DE, BC = EF, and AC = DF.",
+     "Angle A = Angle D, Angle B = Angle E, and Angle C = Angle F.",
+     "Identifying corresponding parts is key to finding missing values in exam questions."
+    ]
+   },
+   {
+    "h": "Congruence in Proofs",
+    "p": "In a formal proof, you must list three facts and then state the criterion used.",
+    "bullets": [
+     "Step 1: State the first pair of equal sides/angles and give a reason (e.g., 'Given' or 'Common side').",
+     "Step 2: State the second pair and reason.",
+     "Step 3: State the third pair and reason.",
+     "Step 4: Conclude with the criterion (e.g., 'Therefore congruent by SSS')."
+    ]
+   },
+   {
+    "h": "Common Geometric Contexts",
+    "p": "Congruence often appears hidden inside other shapes like parallelograms or kites.",
+    "bullets": [
+     "A diagonal in a parallelogram creates two congruent triangles (ASA or SSS).",
+     "The line of symmetry in an isosceles triangle creates two congruent right-angled triangles (RHS or SAS).",
+     "In a circle, two radii and a chord form an isosceles triangle; splitting this creates congruent triangles."
+    ]
+   }
+  ],
+  "analogy": {
+   "t": "The Flat-Pack Furniture Analogy",
+   "p": "Imagine two people buy the exact same model of a flat-pack chair. If the instructions specify the lengths of three wooden struts (SSS), both people must build the exact same chair. If the instructions specify two struts and the exact angle to join them (SAS), the chairs will be identical. However, if the instructions only give the angles (AAA), one person could build a miniature model and the other a giant version—they look the same, but they aren't congruent. The analogy breaks down because in geometry, lines have no thickness and connections are perfect, whereas in real life, manufacturing tolerances mean no two chairs are truly congruent."
+  },
+  "terms": [
+   {
+    "t": "Congruent",
+    "d": "Exactly the same shape and size."
+   },
+   {
+    "t": "SSS",
+    "d": "Side-Side-Side: all three sides are equal."
+   },
+   {
+    "t": "SAS",
+    "d": "Side-Angle-Side: two sides and the included angle are equal."
+   },
+   {
+    "t": "ASA",
+    "d": "Angle-Side-Angle: two angles and the side between them are equal."
+   },
+   {
+    "t": "RHS",
+    "d": "Right-angle, Hypotenuse, Side: specific to right-angled triangles."
+   },
+   {
+    "t": "Hypotenuse",
+    "d": "The longest side of a right-angled triangle, opposite the 90° angle."
+   },
+   {
+    "t": "Included Angle",
+    "d": "The angle located between two specific sides of a polygon."
+   },
+   {
+    "t": "Similar",
+    "d": "Shapes that are the same shape but different sizes (angles are equal, sides are in proportion)."
+   },
+   {
+    "t": "Corresponding",
+    "d": "Parts (sides or angles) that occupy the same relative position in congruent figures."
+   },
+   {
+    "t": "Vertex",
+    "d": "A corner point where two or more lines meet."
+   },
+   {
+    "t": "Transversal",
+    "d": "A line that crosses at least two other lines, often used to find equal angles for ASA."
+   },
+   {
+    "t": "Identity",
+    "d": "A mathematical relationship where two things are identical (congruence is a geometric identity)."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Using AAA to prove triangles are congruent.",
+    "r": "AAA only proves similarity. You must have at least one side length to prove congruence."
+   },
+   {
+    "w": "Writing SSA or ASS as a criterion.",
+    "r": "SSA is not a valid criterion because it can result in two different triangles (the ambiguous case)."
+   },
+   {
+    "w": "Forgetting that the angle in SAS must be the 'included' angle.",
+    "r": "The angle must be between the two known sides."
+   },
+   {
+    "w": "Assuming triangles are congruent because they 'look' the same.",
+    "r": "You must use one of the four criteria (SSS, SAS, ASA, RHS) with evidence."
+   },
+   {
+    "w": "Using RHS on a triangle that doesn't have a 90-degree angle.",
+    "r": "RHS is strictly for right-angled triangles."
+   },
+   {
+    "w": "Confusing the hypotenuse with the base in RHS.",
+    "r": "The hypotenuse is always the longest side, opposite the right angle."
+   },
+   {
+    "w": "Not providing reasons for each step in a proof.",
+    "r": "Each statement (e.g., AB = XY) needs a reason (e.g., 'given in diagram')."
+   },
+   {
+    "w": "Thinking reflected shapes cannot be congruent.",
+    "r": "Congruent shapes can be flipped (reflected) or turned (rotated)."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Two triangles have sides of 5cm, 7cm and 9cm. State the criterion that proves they are congruent.",
+    "marks": 1,
+    "model": [
+     "SSS (Side-Side-Side)"
+    ],
+    "tip": "If only sides are given, it's always SSS."
+   },
+   {
+    "q": "Explain why knowing that three angles of one triangle are equal to three angles of another triangle is not enough to prove congruence.",
+    "marks": 2,
+    "model": [
+     "The triangles could be different sizes.",
+     "This proves similarity, not congruence."
+    ],
+    "tip": "Think of a small equilateral triangle and a large one; angles are the same, but they aren't congruent."
+   },
+   {
+    "q": "Triangle ABC has AB=6cm, BC=8cm and angle B=40°. Triangle DEF has DE=6cm, EF=8cm and angle E=40°. Are they congruent? Give a reason.",
+    "marks": 2,
+    "model": [
+     "Yes, they are congruent.",
+     "Reason: SAS (Side-Angle-Side) as the angle is between the two sides."
+    ],
+    "tip": "Check if the letter of the angle (B) is the same as the shared letter of the sides (AB and BC)."
+   },
+   {
+    "q": "In a right-angled triangle, the hypotenuse is 13cm and one side is 5cm. Another right-angled triangle has the same measurements. Which criterion proves congruence?",
+    "marks": 1,
+    "model": [
+     "RHS (Right-angle, Hypotenuse, Side)"
+    ],
+    "tip": "Always look for the right angle first."
+   },
+   {
+    "q": "Triangle PQR is congruent to triangle XYZ. If PQ = 10cm and angle Q = 30°, what is the length of XY and the size of angle Y?",
+    "marks": 2,
+    "model": [
+     "XY = 10cm",
+     "Angle Y = 30°"
+    ],
+    "tip": "Corresponding parts of congruent triangles are equal."
+   },
+   {
+    "q": "State the four criteria for triangle congruence.",
+    "marks": 2,
+    "model": [
+     "SSS, SAS, ASA, RHS"
+    ],
+    "tip": "Memorize these as a list; they are easy marks."
+   },
+   {
+    "q": "A rectangle ABCD is split into two triangles by a diagonal AC. Prove that triangle ABC is congruent to triangle ADC.",
+    "marks": 4,
+    "model": [
+     "AB = CD (opposite sides of a rectangle are equal)",
+     "BC = DA (opposite sides of a rectangle are equal)",
+     "AC is a common side to both triangles",
+     "Therefore, congruent by SSS"
+    ],
+    "tip": "You could also use SAS using the 90-degree corners."
+   },
+   {
+    "q": "Why is 'SSA' not a valid congruence criterion?",
+    "marks": 2,
+    "model": [
+     "It is possible to draw two different triangles with the same two sides and a non-included angle.",
+     "This is known as the ambiguous case."
+    ],
+    "tip": "If the angle isn't 'trapped', the shape isn't 'locked'."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Triangle ABC has angles 50° and 60°, and the side between them is 7cm. Triangle PQR has angles 50° and 60°, and the side between them is 7cm. Prove they are congruent.",
+    "steps": [
+     "Identify the known information: Two angles and the side between them.",
+     "Check if the side is 'included' (between the angles): Yes, it is.",
+     "Select the criterion: ASA (Angle-Side-Angle).",
+     "Write the conclusion: The triangles are congruent by ASA."
+    ],
+    "ans": "Congruent by ASA"
+   },
+   {
+    "q": "A kite has sides of 5cm, 5cm, 8cm, and 8cm. A diagonal is drawn between the vertices where the 5cm and 8cm sides meet. Show that the two triangles formed are congruent.",
+    "steps": [
+     "The first triangle has sides 5cm and 8cm.",
+     "The second triangle has sides 5cm and 8cm.",
+     "The diagonal is a 'common side' shared by both triangles.",
+     "Both triangles have three sides: 5cm, 8cm, and the diagonal length.",
+     "Conclusion: The triangles are congruent by SSS."
+    ],
+    "ans": "Congruent by SSS"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "RHS Criterion: Right-angle, Hypotenuse (10cm), and one Side (6cm) are matched.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><path d=\"M50,200 L50,100 L130,200 Z\" fill=\"#fecaca\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"50\" y=\"185\" width=\"15\" height=\"15\" fill=\"none\" stroke=\"#1b2540\"/><text x=\"25\" y=\"150\" fill=\"#1b2540\">6cm</text><text x=\"95\" y=\"145\" fill=\"#1b2540\">10cm</text><path d=\"M250,200 L330,200 L330,100 Z\" fill=\"#fecaca\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"315\" y=\"185\" width=\"15\" height=\"15\" fill=\"none\" stroke=\"#1b2540\"/><text x=\"340\" y=\"150\" fill=\"#1b2540\">6cm</text><text x=\"265\" y=\"145\" fill=\"#1b2540\">10cm</text></svg>"
+   },
+   {
+    "cap": "SAS Criterion: Two sides (7cm, 5cm) and the included angle (45°) are matched.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><path d=\"M50,180 L150,180 L120,100 Z\" fill=\"#e9d5ff\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"90\" y=\"195\" fill=\"#1b2540\">7cm</text><text x=\"140\" y=\"140\" fill=\"#1b2540\">5cm</text><text x=\"115\" y=\"175\" fill=\"#1b2540\">45°</text><path d=\"M250,100 L350,100 L320,180 Z\" fill=\"#e9d5ff\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"290\" y=\"90\" fill=\"#1b2540\">7cm</text><text x=\"340\" y=\"150\" fill=\"#1b2540\">5cm</text><text x=\"315\" y=\"115\" fill=\"#1b2540\">45°</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_f.3.4",
+  "sid": "maths_eduqas_f",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3-flash-preview",
+  "ts": "2026-11-19T18:12:51.785Z"
+ },
+ "maths_eduqas_f.3.0": {
+  "summary": "Mastering conventional geometric terms and notation is foundational for success in Eduqas GCSE Mathematics. This topic covers the precise language used to label points, lines, angles, and triangles, as well as the rules for accurately interpreting and drawing geometrical diagrams from written instructions. Precision in notation ensures clear communication of mathematical reasoning in both calculator and non-calculator papers.",
+  "core": [
+   {
+    "h": "Conventional Points and Lines Notation",
+    "p": "In geometry, precision is essential. We use capital letters to name specific points and lowercase letters or pairs of capital letters to name lines and line segments.",
+    "bullets": [
+     "A single capital letter, such as A, represents a single fixed point.",
+     "A line segment connecting two points A and B is written as AB or BA.",
+     "The length of a line segment is denoted simply as AB without bars or arrows.",
+     "A line extending infinitely in both directions can be named using two points on it with a double-headed arrow above, or a lowercase letter like l."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Line Segment",
+      "p": "A part of a straight line that is bounded by two distinct end points."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Angle Notation and Naming",
+    "p": "Angles are formed by two intersecting lines or rays. To avoid ambiguity when multiple angles share a vertex, a strict three-letter naming convention is used.",
+    "bullets": [
+     "An angle can be named with a single capital letter at its vertex, such as angle B, but only if there is no ambiguity.",
+     "The three-letter notation, such as angle ABC, specifies the angle with the vertex at the middle letter (B), formed by the rays from A to B and B to C.",
+     "The symbol for an angle is a stylized '<', written as angle symbol followed by the letters.",
+     "Angles are measured in degrees, denoted by the degree symbol (°)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Middle Letter Rule",
+      "p": "The middle letter in a three-letter angle notation must always be the vertex where the angle is located."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Labelling Triangles and Polygons",
+    "p": "Triangles and other polygons are labelled using capital letters placed at each vertex, typically written in alphabetical order in a clockwise or anti-clockwise direction around the perimeter.",
+    "bullets": [
+     "A triangle with vertices A, B, and C is written as triangle ABC.",
+     "Sides of a triangle are often labelled with the lowercase letter corresponding to the opposite vertex (e.g., side a is opposite vertex A).",
+     "Hash marks on sides indicate equal length (congruent sides).",
+     "Arcs inside the vertices indicate angles; single, double, or triple arcs show which angles are equal."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Consistent Labelling",
+      "p": "Always follow the perimeter round in one direction when naming polygon vertices unless specified otherwise."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A clearly labelled triangle showing vertices with capital letters, sides with lowercase letters, and angle arcs.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><polygon points=\"80,200 320,200 200,60\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"70\" y=\"215\" font-size=\"14\" fill=\"#1b2540\">A</text><text x=\"330\" y=\"215\" font-size=\"14\" fill=\"#1b2540\">B</text><text x=\"195\" y=\"45\" font-size=\"14\" fill=\"#1b2540\">C</text><text x=\"190\" y=\"140\" font-size=\"14\" fill=\"#1b2540\">c</text><text x=\"130\" y=\"115\" font-size=\"14\" fill=\"#1b2540\">b</text><text x=\"260\" y=\"115\" font-size=\"14\" fill=\"#1b2540\">a</text><path d=\"M 95 185 Q 100 175 110 180\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"105\" y=\"170\" font-size=\"12\" fill=\"#1b2540\">A</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Parallel and Perpendicular Notation",
+    "p": "Special relationships between lines are communicated using standard geometric symbols embedded in diagrams and written descriptions.",
+    "bullets": [
+     "Parallel lines are indicated in diagrams by matching arrowheads on the lines.",
+     "In text, parallel lines are denoted using the symbol '||', such as AB || CD.",
+     "Perpendicular lines meet at a right angle (90°). This is shown by a square symbol at the intersection.",
+     "In text, perpendicular lines use the symbol '⊥', such as AB ⊥ CD."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Perpendicular Lines",
+      "p": "Two lines that intersect at an exact angle of 90 degrees."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Drawing Diagrams from Written Descriptions",
+    "p": "Examiners frequently test your ability to translate a word description into an accurate, fully labelled sketch or precise geometric drawing.",
+    "bullets": [
+     "Read the entire description first to get an overview of the shape or arrangement.",
+     "Identify key fixed measurements, such as side lengths in centimetres or angle sizes in degrees.",
+     "Identify geometric properties mentioned, such as isosceles, right-angled, parallel, or bisected.",
+     "Always use a sharp pencil and a straight edge (ruler) for drawing straight lines."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Freehand vs Accurate",
+      "p": "Check whether the question asks for a 'sketch' (rough freehand drawing showing details) or an 'accurate drawing' (using ruler, protractor, and compasses)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Interpreting Scale and Dimensions",
+    "p": "When drawing from written descriptions, you must often interpret dimensions and scale factors correctly to ensure the representation is mathematically valid.",
+    "bullets": [
+     "Pay careful attention to units (millimetres, centimetres, metres).",
+     "Convert units before drawing if dimensions are mixed within the same problem.",
+     "Check that rough sketches maintain relative proportions even if not drawn strictly to scale.",
+     "Label all given lengths and angles clearly on your finished diagram."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Check Your Labels",
+      "p": "Every vertex mentioned in the text must appear on your drawn diagram with the exact corresponding letter."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Special Quadrilateral Notation",
+    "p": "Quadrilaterals have specific labelling conventions that highlight their symmetrical and parallel properties.",
+    "bullets": [
+     "Rectangles and squares show right-angle symbols at all four corners.",
+     "Parallelograms and rhombuses use matching double arrows on opposite sides to show parallel pairs.",
+     "Hash marks on sides indicate equal lengths across pairs of sides or all four sides.",
+     "Diagonals are often dashed lines connecting opposite vertices, labelled like AC and BD."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Cyclic Order",
+      "p": "Always label quadrilateral vertices in continuous rotational order around the perimeter (e.g., ABCD starting top-left and going clockwise)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Right-Angled Triangle Convention",
+    "p": "Right-angled triangles are central to trigonometry and Pythagoras' theorem. Their notation includes a specific box symbol for the 90° angle and distinct names for the sides.",
+    "bullets": [
+     "The right angle is always marked with a square box in the corner.",
+     "The side opposite the right angle is always the hypotenuse (the longest side).",
+     "Vertices are labelled with capital letters, commonly ABC with B or C at the right angle.",
+     "Sides are referred to by their endpoints or lowercase letters."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Hypotenuse",
+      "p": "The longest side of a right-angled triangle, situated directly opposite the right angle."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Bisectors and Midpoints Notation",
+    "p": "Written descriptions often require you to understand and draw lines that split angles or line segments into two equal parts.",
+    "bullets": [
+     "A midpoint divides a line segment into two equal halves; hash marks on both halves show equality.",
+     "An angle bisector splits an angle into two equal smaller angles, indicated by matching arcs with cross-slashes.",
+     "Perpendicular bisector means a line that cuts a line segment in half at 90°.",
+     "Notation for a midpoint M on line AB is often stated in text as 'M is the midpoint of AB'."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Bisector Confusion",
+      "p": "Do not confuse an angle bisector (splits an angle) with a perpendicular bisector (splits a line segment at 90 degrees)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Reading and Constructing Bearings",
+    "p": "Geometrical descriptions in navigation involve bearings, which have strict notation rules that must be followed without exception.",
+    "bullets": [
+     "Bearings are always measured clockwise from the North direction.",
+     "Bearings are always written using exactly three digits (e.g., 045° or 009°).",
+     "A bearing description usually starts with 'The bearing of B from A is...'.",
+     "North is always represented as pointing straight up the page or coordinate grid."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Three-Digit Rule",
+      "p": "Never write a bearing as just 45° or 8°; it must always be formatted as three digits like 045° or 008°."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Step-by-Step Diagram Construction Guide",
+    "p": "When given a complex multi-sentence written description, break it down into sequential construction steps to build an accurate diagram.",
+    "bullets": [
+     "Step 1: Draw the base line segment with the correct length using a ruler.",
+     "Step 2: Use a protractor to measure and draw any given angles from the endpoints.",
+     "Step 3: Measure other specified side lengths along the drawn ray lines.",
+     "Step 4: Connect the final vertices and check all labels match the text description."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Pencil Sharpness",
+      "p": "A blunt pencil can easily introduce errors of 1 to 2 millimetres or degrees. Keep your pencil needle-sharp."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Common Geometric Symbols Summary",
+    "p": "Examiner mark schemes rely on correct interpretation of standard shorthand symbols used in geometry questions.",
+    "bullets": [
+     "triangle ABC: triangle symbol followed by ABC",
+     "angle ABC: angle symbol followed by ABC",
+     "AB = CD: line segment AB is equal in length to line segment CD",
+     "AB || CD: line AB is parallel to line CD",
+     "AB ⊥ CD: line AB is perpendicular to line CD"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Congruent",
+      "p": "Identical in shape and size; corresponding sides and angles are equal."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Reading Architectural Blueprints",
+   "p": "Think of geometrical notation and drawing from descriptions like reading and following architectural blueprints. Every symbol (like a door swing or a wall thickness mark) has a precise, agreed-upon meaning that allows a builder to construct the exact house the architect designed without guessing. If you misinterpret a symbol or ignore a label, the resulting wall ends up in the wrong place. Where the analogy breaks down is that mathematical diagrams are abstract models governed by strict logical proofs, whereas blueprints represent physical buildings subject to real-world construction tolerances."
+  },
+  "terms": [
+   {
+    "t": "Vertex",
+    "d": "A point where two or more straight lines, edges, or rays meet."
+   },
+   {
+    "t": "Line Segment",
+    "d": "A part of a straight line that is bounded by two distinct end points."
+   },
+   {
+    "t": "Ray",
+    "d": "A line with a single endpoint that extends infinitely in one direction."
+   },
+   {
+    "t": "Hypotenuse",
+    "d": "The longest side of a right-angled triangle, opposite the right angle."
+   },
+   {
+    "t": "Parallel Lines",
+    "d": "Straight lines that are always the same distance apart and never meet."
+   },
+   {
+    "t": "Perpendicular Lines",
+    "d": "Lines that intersect at an angle of exactly 90 degrees."
+   },
+   {
+    "t": "Angle Bisector",
+    "d": "A line that divides an angle into two equal smaller angles."
+   },
+   {
+    "t": "Midpoint",
+    "d": "The point exactly halfway between the endpoints of a line segment."
+   },
+   {
+    "t": "Bearing",
+    "d": "An angle measured clockwise from the North direction, written in three digits."
+   },
+   {
+    "t": "Polygon",
+    "d": "A 2D shape bounded by three or more straight line segments."
+   },
+   {
+    "t": "Equilateral Triangle",
+    "d": "A triangle with three equal sides and three equal 60° angles."
+   },
+   {
+    "t": "Isosceles Triangle",
+    "d": "A triangle with two equal sides and two equal base angles."
+   },
+   {
+    "t": "Scalene Triangle",
+    "d": "A triangle with all sides and all angles of different lengths and sizes."
+   },
+   {
+    "t": "Congruent",
+    "d": "Having exactly the same shape and size."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Naming an angle using just the vertex letter when multiple angles share that vertex.",
+    "r": "Must use the precise three-letter notation (e.g., angle ABC) to avoid ambiguity."
+   },
+   {
+    "w": "Writing a bearing as 45 degrees or 45.",
+    "r": "Bearings must always be written with exactly three digits: 045°."
+   },
+   {
+    "w": "Measuring a bearing anti-clockwise from North.",
+    "r": "Bearings are strictly measured in a clockwise direction from North."
+   },
+   {
+    "w": "Confusing parallel line arrows with length hash marks.",
+    "r": "Arrows on lines indicate parallel directions; single/double dashes across lines indicate equal lengths."
+   },
+   {
+    "w": "Labelling polygon vertices in a zig-zag or random order.",
+    "r": "Vertices must be labelled in consecutive rotational order around the perimeter."
+   },
+   {
+    "w": "Omitting the right-angle square symbol in a right-angled triangle.",
+    "r": "The 90° corner must be clearly marked with the square box symbol."
+   },
+   {
+    "w": "Using lowercase letters for points and uppercase letters for side lengths.",
+    "r": "Points and vertices use capital letters (A, B); side lengths use lowercase letters (a, b) or point pairs (AB)."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Write down the three-letter notation for the angle marked at vertex B between lines AB and BC.",
+    "marks": 1,
+    "model": [
+     "angle ABC (or angle CBA)"
+    ],
+    "tip": "Ensure the middle letter is always the vertex B."
+   },
+   {
+    "q": "State the geometric term for a line segment that divides an angle into two equal halves.",
+    "marks": 1,
+    "model": [
+     "Angle bisector"
+    ],
+    "tip": "Learn standard definitions word for word."
+   },
+   {
+    "q": "Explain what the symbol '||' indicates when placed between two line notations such as AB || CD.",
+    "marks": 1,
+    "model": [
+     "The lines AB and CD are parallel"
+    ],
+    "tip": "Parallel means they never intersect and maintain a constant distance."
+   },
+   {
+    "q": "A triangle has vertices P, Q, and R. Side PQ is 7 cm, side QR is 5 cm, and angle PQR is 60°. Draw a sketch of this triangle and label all given dimensions.",
+    "marks": 2,
+    "model": [
+     "Correct triangle shape drawn with labelled vertices P, Q, R",
+     "Sides PQ = 7 cm and QR = 5 cm, with angle Q = 60° correctly indicated"
+    ],
+    "tip": "Check that your sketch roughly reflects the angle size (60° is acute)."
+   },
+   {
+    "q": "Write the bearing of 7 degrees in correct standard three-digit notation.",
+    "marks": 1,
+    "model": [
+     "007°"
+    ],
+    "tip": "Bearings always require three digits, padding with leading zeros."
+   },
+   {
+    "q": "Draw a quadrilateral ABCD where AB is parallel to DC, AD is parallel to BC, and angle DAB is 70°.",
+    "marks": 3,
+    "model": [
+     "Correct parallelogram shape drawn",
+     "Vertices labelled in correct clockwise or anti-clockwise order A, B, C, D",
+     "Angle DAB marked as 70° and parallel indicators shown"
+    ],
+    "tip": "Recognise the description defines a parallelogram."
+   },
+   {
+    "q": "What is the specific name given to the longest side of a right-angled triangle?",
+    "marks": 1,
+    "model": [
+     "Hypotenuse"
+    ],
+    "tip": "Always opposite the 90-degree right angle."
+   },
+   {
+    "q": "Explain the difference between a line segment and a ray.",
+    "marks": 2,
+    "model": [
+     "A line segment has two distinct endpoints",
+     "A ray has one endpoint and extends infinitely in one direction"
+    ],
+    "tip": "Use clear comparative statements for 2-mark definition questions."
+   },
+   {
+    "q": "In triangle XYZ, side XY is equal in length to side XZ. State the specific type of triangle XYZ.",
+    "marks": 1,
+    "model": [
+     "Isosceles triangle"
+    ],
+    "tip": "Triangles with two equal sides are always isosceles."
+   },
+   {
+    "q": "The bearing of town X from town Y is 135°. Write down the bearing of town Y from town X.",
+    "marks": 2,
+    "model": [
+     "Recognises alternate interior angle / co-interior angle rule or draws sketch showing North lines (1 mark)",
+     "Correct calculation: 135° + 180° = 315° (1 mark)"
+    ],
+    "tip": "For reverse bearings, add or subtract 180° depending on whether the angle is less than or greater than 180°."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A description reads: 'Construct triangle DEF where DE = 8 cm, angle EDF = 50°, and angle DEF = 65°.' Describe the steps required and sketch the final labelled diagram.",
+    "steps": [
+     "Step 1: Draw the base line segment DE of length 8 cm using a ruler and label endpoints D and E.",
+     "Step 2: At point D, use a protractor to measure an angle of 50° and draw a ray extending from D.",
+     "Step 3: At point E, use a protractor to measure an angle of 65° and draw a ray extending from E.",
+     "Step 4: Mark the intersection of the two rays as vertex F and complete the triangle, labelling all sides and angles."
+    ],
+    "ans": "Triangle DEF fully constructed with DE = 8 cm, angle D = 50°, angle E = 65°."
+   },
+   {
+    "q": "A ship sails from port A on a bearing of 052° for 10 km to port B, then on a bearing of 142° for 10 km to port C. Sketch the journey labelling all points, lines, and bearing angles.",
+    "steps": [
+     "Step 1: Mark starting point A with a North line pointing straight up.",
+     "Step 2: Measure 052° clockwise from North at A and draw a line segment of length 10 cm representing AB. Label end point B.",
+     "Step 3: At point B, draw a new North line. Measure 142° clockwise from North at B and draw a line segment of length 10 cm representing BC. Label end point C.",
+     "Step 4: Verify all labels (A, B, C, AB = 10 km, BC = 10 km, bearings 052° and 142°) are clearly indicated."
+    ],
+    "ans": "Accurate route sketch showing ports A, B, and C with correct bearings and side lengths."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Figure 1: Standard triangle labelling showing vertices with capital letters, side lengths with lowercase letters, and angle notation.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><polygon points=\"100,200 300,200 200,50\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"85\" y=\"215\" font-size=\"14\" fill=\"#1b2540\" font-weight=\"bold\">A</text><text x=\"310\" y=\"215\" font-size=\"14\" fill=\"#1b2540\" font-weight=\"bold\">B</text><text x=\"195\" y=\"35\" font-size=\"14\" fill=\"#1b2540\" font-weight=\"bold\">C</text><text x=\"190\" y=\"135\" font-size=\"14\" fill=\"#1b2540\">c</text><text x=\"130\" y=\"115\" font-size=\"14\" fill=\"#1b2540\">b</text><text x=\"260\" y=\"115\" font-size=\"14\" fill=\"#1b2540\">a</text><path d=\"M 120 200 Q 125 185 135 190\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"130\" y=\"175\" font-size=\"12\" fill=\"#1b2540\">angle A</text></svg>"
+   },
+   {
+    "cap": "Figure 2: Parallel lines and perpendicular lines notation with standard symbols and arrow indicators.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"50\" y1=\"70\" x2=\"350\" y2=\"70\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"120\" x2=\"350\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M 190 65 L 200 70 L 190 75\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M 190 115 L 200 120 L 190 125\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"60\" y=\"60\" font-size=\"12\" fill=\"#1b2540\">Line L1</text><text x=\"60\" y=\"110\" font-size=\"12\" fill=\"#1b2540\">Line L2</text><line x1=\"250\" y1=\"160\" x2=\"250\" y2=\"220\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"220\" y1=\"190\" x2=\"280\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"250\" y=\"180\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"255\" y=\"235\" font-size=\"12\" fill=\"#1b2540\">Perpendicular (90 deg)</text></svg>"
+   },
+   {
+    "cap": "Figure 3: Bearing notation showing measurement clockwise from North in a three-digit format.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><circle cx=\"200\" cy=\"120\" r=\"80\" fill=\"#e9d5ff\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"200\" y1=\"30\" x2=\"200\" y2=\"210\" stroke=\"#64748b\" stroke-width=\"1\" stroke-dasharray=\"4\"/><line x1=\"110\" y1=\"120\" x2=\"290\" y2=\"120\" stroke=\"#64748b\" stroke-width=\"1\" stroke-dasharray=\"4\"/><text x=\"192\" y=\"25\" font-size=\"12\" fill=\"#1b2540\" font-weight=\"bold\">N</text><line x1=\"200\" y1=\"120\" x2=\"260\" y2=\"60\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M 200 90 A 30 30 0 0 1 230 105\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"215\" y=\"80\" font-size=\"12\" fill=\"#1b2540\">045 deg</text><text x=\"265\" y=\"55\" font-size=\"12\" fill=\"#1b2540\">B</text><text x=\"190\" y=\"135\" font-size=\"12\" fill=\"#1b2540\">A</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_f.3.0",
+  "sid": "maths_eduqas_f",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-19T18:13:01.714Z"
+ },
+ "maths_eduqas_f.3.13": {
+  "summary": "Mastering the area of 2D shapes and the volume of 3D prisms is essential for Foundation tier success in Eduqas Components 1 and 2. This revision note covers exact formulas for triangles, parallelograms, and trapezia, as well as calculating the volume of cuboids and right prisms using cross-sections and lengths. Students must learn to identify perpendicular heights, substitute correctly into algebraic formulas, and ensure unit consistency across all calculations.",
+  "core": [
+   {
+    "h": "1. Area of a Triangle",
+    "p": "The area of any triangle is found by multiplying its base by its perpendicular height and dividing by 2. The height must always form a right angle with the chosen base.",
+    "bullets": [
+     "Formula: Area = 0.5 x base x perpendicular height",
+     "Always use the vertical height, never a slanted side length",
+     "Base and height must be in the same units of measurement"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Triangle Area Formula",
+      "p": "Area = 1/2 x b x h, where b is the base and h is the perpendicular height."
+     },
+     {
+      "k": "warn",
+      "t": "Slanted Side Trap",
+      "p": "Do not use the length of a slanted side as the height h in calculations."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A right-angled triangle showing base and perpendicular height labelled clearly.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><polygon points=\"80,190 320,190 80,70\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"80\" y=\"170\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"190\" y=\"210\" fill=\"#1b2540\" font-size=\"12\">base = 12 cm</text><text x=\"45\" y=\"135\" fill=\"#1b2540\" font-size=\"12\">height = 8 cm</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "2. Area of a Parallelogram",
+    "p": "A parallelogram is a four-sided shape with opposite sides parallel and equal in length. Its area is calculated by multiplying the base length by the perpendicular height.",
+    "bullets": [
+     "Formula: Area = base x perpendicular height",
+     "Written algebraically as Area = b x h",
+     "Do not multiply adjacent side lengths together unless it is a rectangle"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Parallel Opposites",
+      "p": "Opposite sides are parallel, but the height is measured straight up between parallel bases."
+     }
+    ],
+    "fig": null
+   },
+   {
+    "h": "3. Area of a Trapezium",
+    "p": "A trapezium is a quadrilateral with at least one pair of parallel sides. The area is found by adding the two parallel sides together, multiplying by the perpendicular height between them, and dividing by 2.",
+    "bullets": [
+     "Formula: Area = 0.5 x (a + b) x h",
+     "a and b are the lengths of the parallel sides",
+     "h is the perpendicular distance between a and b"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Trapezium Area Formula",
+      "p": "Area = 1/2(a + b)h, where a and b are parallel sides and h is height."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A trapezium showing parallel sides a and b with perpendicular height h.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><polygon points=\"100,160 300,160 250,80 150,80\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"200\" y1=\"80\" x2=\"200\" y2=\"160\" stroke=\"#1b2540\" stroke-width=\"2\" stroke-dasharray=\"4\"/><text x=\"185\" y=\"120\" fill=\"#1b2540\" font-size=\"12\">h = 6 cm</text><text x=\"190\" y=\"175\" fill=\"#1b2540\" font-size=\"12\">b = 10 cm</text><text x=\"190\" y=\"65\" fill=\"#1b2540\" font-size=\"12\">a = 6 cm</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "4. Understanding Perpendicular Heights",
+    "p": "In all 2D shape area formulas, the height must be perpendicular to the base. Examiners frequently include extra side lengths on diagrams to test whether candidates can select the correct vertical height.",
+    "bullets": [
+     "Look for the square symbol indicating a 90-degree angle",
+     "Ignore extra sloping side lengths when calculating area",
+     "For trapezia and parallelograms, extend the base mentally if needed to find the height"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Spot the Right Angle",
+      "p": "Always search for the right-angle symbol before starting any area calculation."
+     }
+    ],
+    "fig": null
+   },
+   {
+    "h": "5. Volume of Cuboids",
+    "p": "A cuboid is a 3D box with rectangular faces. Its volume is found by multiplying its length, width, and height together in any order.",
+    "bullets": [
+     "Formula: Volume = length x width x height",
+     "Written compactly as V = l x w x h",
+     "Units of volume are always cubed, such as cm3 or m3"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Cuboid Volume",
+      "p": "Volume = lwh, measuring space inside a rectangular three-dimensional block."
+     }
+    ],
+    "fig": null
+   },
+   {
+    "h": "6. Introduction to Right Prisms",
+    "p": "A right prism is a 3D solid that has a constant cross-section right along its length. The faces connecting the ends are rectangles.",
+    "bullets": [
+     "Examples include triangular prisms, cuboids, and cylinders",
+     "The uniform cross-section is the shape cut straight through the prism",
+     "Faces are parallel polygons at both ends"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Uniform Cross-Section",
+      "p": "If you slice a prism anywhere parallel to its end face, you see the exact same shape and area."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A triangular prism showing uniform cross-section and length.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><polygon points=\"60,160 180,160 120,80\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><polygon points=\"220,130 340,130 280,50\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"60\" y1=\"160\" x2=\"220\" y2=\"130\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"180\" y1=\"160\" x2=\"340\" y2=\"130\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"120\" y1=\"80\" x2=\"280\" y2=\"50\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"240\" y=\"100\" fill=\"#1b2540\" font-size=\"12\">length = 10 cm</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "7. Volume of Right Prisms",
+    "p": "The general rule for the volume of any right prism is to calculate the area of the uniform cross-section and multiply it by the length or depth of the prism.",
+    "bullets": [
+     "Formula: Volume = area of cross-section x length",
+     "Works for triangular prisms, cylinders, and complex cross-sections",
+     "Always find the 2D area first before multiplying by the 3D length"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "General Prism Volume",
+      "p": "Volume = Cross-Sectional Area x Length"
+     }
+    ],
+    "fig": null
+   },
+   {
+    "h": "8. Triangular Prisms in Detail",
+    "p": "A triangular prism has a triangle as its cross-section. To find its volume, first find the area of the triangular end and then multiply by the prism's length.",
+    "bullets": [
+     "Step 1: Area of triangle = 0.5 x base x height",
+     "Step 2: Volume = Triangle Area x prism length",
+     "Check that the triangle base and height are perpendicular"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Two-Stage Working",
+      "p": "Always write down the area of the cross-section clearly before calculating the final volume."
+     }
+    ],
+    "fig": null
+   },
+   {
+    "h": "9. Working Backwards: Finding Missing Lengths",
+    "p": "Sometimes exam questions provide the volume or area and ask you to find a missing length, height, or base by reversing the standard formula.",
+    "bullets": [
+     "Substitute known values into the area or volume formula",
+     "Solve the resulting linear equation to find the unknown",
+     "Check units match throughout your working"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Equation Rearrangement",
+      "p": "Do not guess values; set up an equation like Area = 0.5 x b x h and solve."
+     }
+    ],
+    "fig": null
+   },
+   {
+    "h": "10. Compound 2D Shapes for Areas",
+    "p": "Complex shapes can be split into rectangles, triangles, or trapezia. Find the area of each separate section and add them together.",
+    "bullets": [
+     "Split composite shapes using dotted construction lines",
+     "Calculate areas of individual standard shapes",
+     "Sum all partial areas to get the total area"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Decomposition",
+      "p": "Break complex compound shapes into familiar standard shapes before calculating."
+     }
+    ],
+    "fig": null
+   },
+   {
+    "h": "11. Units and Conversions in Area and Volume",
+    "p": "Converting units for area and volume differs from length conversions because scaling factors are squared or cubed.",
+    "bullets": [
+     "1 cm = 10 mm, so 1 cm2 = 100 mm2",
+     "1 m = 100 cm, so 1 m2 = 10,000 cm2",
+     "1 cm3 = 1000 mm3 and 1 m3 = 1,000,000 cm3"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Unit Squaring Trap",
+      "p": "Do not just multiply by 10 when converting cm2 to mm2; multiply by 100."
+     }
+    ],
+    "fig": null
+   }
+  ],
+  "analogy": {
+   "t": "The Loaf of Bread Analogy",
+   "p": "Think of a right prism like a loaf of sliced bread. Every single slice (cross-section) has the exact same face area. To find the total volume of the loaf, you take the area of one slice and multiply it by how many slices deep the loaf goes (the length). Where this breaks down is that mathematical prisms have perfectly uniform rigid shapes, whereas real bread slices might vary slightly in thickness and shape."
+  },
+  "terms": [
+   {
+    "t": "Area",
+    "d": "The measure of the amount of space inside a two-dimensional flat surface, measured in square units."
+   },
+   {
+    "t": "Volume",
+    "d": "The amount of three-dimensional space enclosed by a closed surface, measured in cubic units."
+   },
+   {
+    "t": "Perpendicular Height",
+    "d": "The vertical distance measured at right angles from the base to the highest point of a shape."
+   },
+   {
+    "t": "Cross-Section",
+    "d": "The 2D shape exposed by making a straight cut right through a 3D object parallel to its end faces."
+   },
+   {
+    "t": "Prism",
+    "d": "A 3D geometric solid with flat parallel ends of the same shape and size and rectangular sides."
+   },
+   {
+    "t": "Trapezium",
+    "d": "A quadrilateral with at least one pair of parallel sides of different lengths."
+   },
+   {
+    "t": "Parallelogram",
+    "d": "A quadrilateral with two pairs of parallel sides and opposite equal angles."
+   },
+   {
+    "t": "Cuboid",
+    "d": "A box-shaped 3D solid bounded by six rectangular faces meeting at right angles."
+   },
+   {
+    "t": "Base",
+    "d": "The bottom side or face of a geometric shape used as a reference for measuring height."
+   },
+   {
+    "t": "Compound Shape",
+    "d": "A shape made up of two or more simple geometric figures combined together."
+   },
+   {
+    "t": "Square Units",
+    "d": "Units used to measure area, such as square centimeters (cm2) or square meters (m2)."
+   },
+   {
+    "t": "Cubic Units",
+    "d": "Units used to measure volume, such as cubic centimeters (cm3) or cubic meters (m3)."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Multiplying all three side lengths of a triangle to find its area.",
+    "r": "Only multiply the base by the perpendicular height and divide by 2."
+   },
+   {
+    "w": "Forgetting to divide by 2 when calculating the area of a triangle or trapezium.",
+    "r": "Always remember the division by 2 in triangle (1/2 bh) and trapezium (1/2(a+b)h) formulas."
+   },
+   {
+    "w": "Using a slanted side length as the height in area and volume calculations.",
+    "r": "Height must always be perpendicular (at 90 degrees) to the base."
+   },
+   {
+    "w": "Adding parallel sides together in a parallelogram instead of multiplying base by height.",
+    "r": "Parallelogram area is base multiplied by perpendicular height."
+   },
+   {
+    "w": "Multiplying length by width by height for a triangular prism volume.",
+    "r": "Find the area of the triangular cross-section first, then multiply by the length."
+   },
+   {
+    "w": "Converting cm2 to mm2 by multiplying by 10 instead of 100.",
+    "r": "Square the linear scale factor: 1 cm = 10 mm, so 1 cm2 = 10 x 10 = 100 mm2."
+   },
+   {
+    "w": "Including outer perimeter lengths when asked for area or volume.",
+    "r": "Select only the dimensions required by the specific formula."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Calculate the area of a triangle with a base of 12 cm and a perpendicular height of 7 cm.",
+    "marks": 2,
+    "model": [
+     "State formula: Area = 0.5 x base x height",
+     "Substitute values: 0.5 x 12 x 7",
+     "Calculate correct answer: 42 cm2"
+    ],
+    "tip": "Remember to include square units in your final answer."
+   },
+   {
+    "q": "A parallelogram has a base of 15 cm and a perpendicular height of 8 cm. Find its area.",
+    "marks": 2,
+    "model": [
+     "State formula: Area = base x height",
+     "Substitute values: 15 x 8",
+     "Calculate correct answer: 120 cm2"
+    ],
+    "tip": "Ignore any sloping side lengths given on the diagram."
+   },
+   {
+    "q": "Calculate the area of a trapezium with parallel sides 6 cm and 10 cm, and a perpendicular height of 5 cm.",
+    "marks": 3,
+    "model": [
+     "State formula: Area = 0.5 x (a + b) x h",
+     "Substitute values: 0.5 x (6 + 10) x 5 = 0.5 x 16 x 5",
+     "Calculate correct answer: 40 cm2"
+    ],
+    "tip": "Add the parallel sides together first before multiplying by the height."
+   },
+   {
+    "q": "Find the volume of a cuboid measuring 5 cm by 4 cm by 10 cm.",
+    "marks": 2,
+    "model": [
+     "State formula: Volume = length x width x height",
+     "Substitute values: 5 x 4 x 10",
+     "Calculate correct answer: 200 cm3"
+    ],
+    "tip": "Make sure your volume units are cubed (cm3)."
+   },
+   {
+    "work_units": "cm3",
+    "q": "A triangular prism has a cross-sectional triangle with a base of 8 cm and a height of 5 cm. The length of the prism is 12 cm. Calculate the volume of the prism.",
+    "marks": 4,
+    "model": [
+     "Calculate triangle area: 0.5 x 8 x 5 = 20 cm2",
+     "State prism volume formula: Area of cross-section x length",
+     "Substitute values: 20 x 12",
+     "Calculate correct answer: 240 cm3"
+    ],
+    "tip": "Calculate the area of the 2D cross-section first as a separate step."
+   },
+   {
+    "q": "The area of a triangle is 30 cm2. Its base is 10 cm. Calculate its perpendicular height.",
+    "marks": 2,
+    "model": [
+     "Set up equation: 0.5 x 10 x h = 30",
+     "Simplify: 5h = 30",
+     "Calculate correct height: h = 6 cm"
+    ],
+    "tip": "Work backwards by setting up an equation and solving for the unknown."
+   },
+   {
+    "q": "A compound shape consists of a rectangle measuring 6 cm by 4 cm and a triangle with a base of 6 cm and height 3 cm attached to the top. Find the total area.",
+    "marks": 4,
+    "model": [
+     "Calculate rectangle area: 6 x 4 = 24 cm2",
+     "Calculate triangle area: 0.5 x 6 x 3 = 9 cm2",
+     "Add areas together: 24 + 9",
+     "State final answer: 33 cm2"
+    ],
+    "tip": "Break the compound shape into two distinct parts and add their areas."
+   },
+   {
+    "q": "Convert 4.5 m2 into square centimeters.",
+    "marks": 2,
+    "model": [
+     "State conversion factor: 1 m = 100 cm, so 1 m2 = 10,000 cm2",
+     "Multiply: 4.5 x 10,000",
+     "State final answer: 45,000 cm2"
+    ],
+    "tip": "Square the conversion factor for area: 100 squared is 10,000."
+   },
+   {
+    "q": "A right prism has a cross-sectional area of 25 cm2 and a volume of 300 cm3. Find the length of the prism.",
+    "marks": 2,
+    "model": [
+     "State formula: Volume = Cross-Sectional Area x length",
+     "Set up equation: 25 x length = 300",
+     "Calculate length: 300 / 25 = 12 cm"
+    ],
+    "tip": "Divide the total volume by the cross-sectional area."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Calculate the volume of a triangular prism where the triangular cross-section has sides 6 cm, 8 cm, 10 cm (right-angled) and the prism length is 15 cm.",
+    "steps": [
+     "Step 1: Identify the perpendicular base and height of the right-angled triangular cross-section as 6 cm and 8 cm (the hypotenuse 10 cm is not needed for area).",
+     "Step 2: Calculate the area of the triangle: Area = 0.5 x 6 x 8 = 24 cm2.",
+     "Step 3: Calculate the volume of the prism by multiplying the cross-sectional area by the prism length: Volume = 24 x 15 = 360 cm3."
+    ],
+    "ans": "360 cm3"
+   },
+   {
+    "q": "Find the area of a trapezium with parallel sides 7 cm and 13 cm, and a perpendicular height of 6 cm.",
+    "steps": [
+     "Step 1: Recall the trapezium area formula: Area = 0.5 x (a + b) x h.",
+     "Step 2: Substitute the given values: Area = 0.5 x (7 + 13) x 6.",
+     "Step 3: Evaluate inside the brackets: 7 + 13 = 20.",
+     "Step 4: Complete the calculation: 0.5 x 20 x 6 = 10 x 6 = 60 cm2."
+    ],
+    "ans": "60 cm2"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "A right-angled triangle with base 6 cm and perpendicular height 8 cm.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><polygon points=\"100,180 300,180 100,60\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"100\" y=\"160\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"190\" y=\"200\" fill=\"#1b2540\" font-size=\"12\">base = 6 cm</text><text x=\"55\" y=\"125\" fill=\"#1b2540\" font-size=\"12\">height = 8 cm</text></svg>"
+   },
+   {
+    "cap": "A parallelogram showing base and perpendicular height.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><polygon points=\"120,160 280,160 320,80 160,80\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"160\" y1=\"80\" x2=\"160\" y2=\"160\" stroke=\"#1b2540\" stroke-width=\"2\" stroke-dasharray=\"4\"/><text x=\"190\" y=\"175\" fill=\"#1b2540\" font-size=\"12\">base = 10 cm</text><text x=\"130\" y=\"125\" fill=\"#1b2540\" font-size=\"12\">h = 5 cm</text></svg>"
+   },
+   {
+    "cap": "A cuboid showing length, width, and height dimensions.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"80\" y=\"100\" width=\"160\" height=\"100\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><polygon points=\"80,100 140,50 300,50 240,100\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><polygon points=\"240,100 300,50 300,150 240,200\" fill=\"#fecaca\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"150\" y=\"220\" fill=\"#1b2540\" font-size=\"12\">length = 8 cm</text><text x=\"265\" y=\"130\" fill=\"#1b2540\" font-size=\"12\">width = 4 cm</text><text x=\"50\" y=\"155\" fill=\"#1b2540\" font-size=\"12\">height = 5 cm</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_f.3.13",
+  "sid": "maths_eduqas_f",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-19T18:26:04.031Z"
+ },
+ "maths_eduqas_f.3.15": {
+  "summary": "This revision module covers arc lengths, sector angles, and sector areas for the Eduqas GCSE Foundation tier. It explains how to calculate fractional parts of a full circle's circumference and area using the central angle. Mastering these concepts allows you to tackle non-calculator and calculator exam questions with confidence.",
+  "core": [
+   {
+    "h": "Introduction to Arcs and Sectors",
+    "p": "An arc is a connected piece of the circumference of a circle, while a sector is a region bounded by two radii and an intercepted arc. To find fractional parts of a circle, we compare the given angle to the full 360 degrees around a point.",
+    "bullets": [
+     "A full circle contains exactly 360 degrees around its center.",
+     "An arc is a curved line segment forming part of the circle boundary.",
+     "A sector resembles a slice of pizza or pie, bounded by two radii and an arc.",
+     "The fraction of the circle is always given by the ratio angle / 360."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Sector",
+      "p": "A region of a circle enclosed by two radii and their intercepted arc."
+     },
+     {
+      "k": "key",
+      "t": "Full Rotation",
+      "p": "Always remember that the total angle around a center point is 360 degrees."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A circle showing a sector with angle theta, radius r, and boundary arc length.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><circle cx=\"200\" cy=\"120\" r=\"80\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"200\" y1=\"120\" x2=\"265\" y2=\"65\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"200\" y1=\"120\" x2=\"120\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"160\" y=\"110\" font-size=\"12\" fill=\"#1b2540\">r</text><text x=\"240\" y=\"90\" font-size=\"12\" fill=\"#1b2540\">r</text><text x=\"215\" y=\"105\" font-size=\"12\" fill=\"#1b2540\">theta</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Formula for Arc Length",
+    "p": "The length of an arc is a fraction of the total circumference of the circle. We multiply the full circumference formula by the fraction of the circle represented by the sector angle.",
+    "bullets": [
+     "Full circumference formula is C = pi * d or C = 2 * pi * r.",
+     "Arc length formula is Arc Length = (theta / 360) * 2 * pi * r.",
+     "Ensure you use radius r in the calculation, or diameter if given.",
+     "Units for arc length are linear units such as cm, m, or mm."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Arc Length Formula",
+      "p": "Arc Length = (theta / 360) * pi * d"
+     },
+     {
+      "warn": "Radius vs Diameter",
+      "p": "Check whether you are given the radius or diameter before substituting into the formula."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Formula for Area of a Sector",
+    "p": "The area of a sector is a fraction of the total area of the circle. We multiply the full circle area formula by the fractional turn of the central angle.",
+    "bullets": [
+     "Full circle area formula is Area = pi * r squared.",
+     "Sector area formula is Area = (theta / 360) * pi * r squared.",
+     "Always square the radius before multiplying by pi and the fraction.",
+     "Units for sector area are square units such as cm squared or m squared."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Sector Area Formula",
+      "p": "Area = (theta / 360) * pi * r^2"
+     },
+     {
+      "tip": "Non-Calculator Papers",
+      "p": "In non-calculator Eduqas papers, leave your final answer in terms of pi unless instructed otherwise."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Working with Fractions of a Circle",
+    "p": "Some standard sector angles appear frequently and can be simplified into easy fractions before calculating. Recognizing these saves valuable time in examinations.",
+    "bullets": [
+     "A 180 degree sector is a semicircle, representing 1/2 of a circle.",
+     "A 90 degree sector is a quarter circle, representing 1/4 of a circle.",
+     "A 60 degree sector represents 1/6 of a circle since 60 / 360 simplifies to 1/6.",
+     "Always simplify the fraction theta / 360 if working without a calculator."
+    ],
+    "table": {
+     "head": [
+      "Angle",
+      "Fraction",
+      "Simplified"
+     ],
+     "rows": [
+      [
+       "180 degrees",
+       "180 / 360",
+       "1 / 2"
+      ],
+      [
+       "90 degrees",
+       "90 / 360",
+       "1 / 4"
+      ],
+      [
+       "60 degrees",
+       "60 / 360",
+       "1 / 6"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "tip": "Simplifying Fractions",
+      "p": "Cancel down zeros first, e.g., 90/360 becomes 9/36 which simplifies to 1/4."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Perimeter of a Sector",
+    "p": "Students often confuse arc length with the total perimeter of a sector. The perimeter includes the curved arc length plus the two straight radii meeting at the center.",
+    "bullets": [
+     "Perimeter of sector = Arc Length + radius + radius.",
+     "Perimeter = Arc Length + 2 * r.",
+     "Do not forget to add the two straight edges when asked for the total perimeter.",
+     "Check units remain consistent throughout the question."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "warn": "Missing Straight Edges",
+      "p": "Finding only the arc length when asked for the perimeter is a very common exam trap."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A sector highlighting that the perimeter is the arc plus two straight radii.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><path d=\"M200 120 L270 80 A80 80 0 0 0 130 80 Z\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"160\" y=\"85\" font-size=\"12\" fill=\"#1b2540\">Radius</text><text x=\"220\" y=\"85\" font-size=\"12\" fill=\"#1b2540\">Radius</text><text x=\"180\" y=\"150\" font-size=\"12\" fill=\"#1b2540\">Arc Length</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Finding an Unknown Angle",
+    "p": "Sometimes exam questions provide the arc length or sector area and ask you to work backwards to find the central angle theta. This requires setting up and solving a simple linear equation.",
+    "bullets": [
+     "Start with the standard formula, for example: Arc Length = (theta / 360) * pi * d.",
+     "Substitute known values for arc length and diameter or radius.",
+     "Rearrange the equation to isolate theta by multiplying and dividing.",
+     "Check your answer by substituting theta back into the original formula."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "key": "Working Backwards",
+      "p": "Theta = (Arc Length * 360) / (pi * d)"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Finding an Unknown Radius",
+    "p": "In more demanding Foundation questions, you may be given the sector area or arc length along with the angle, and asked to find the radius of the circle.",
+    "bullets": [
+     "Write down the formula containing the unknown radius r.",
+     "Substitute the given angle and area or arc length.",
+     "Isolate r squared or r by reversing operations.",
+     "Take the square root if working with sector area."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "tip": "Square Roots",
+      "p": "Remember to use the positive square root for length since negative lengths do not exist."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Non-Calculator Strategies with Pi",
+    "p": "Eduqas non-calculator papers test your ability to manipulate expressions containing pi without evaluating decimals. Leave pi as the symbol pi in your working.",
+    "bullets": [
+     "Keep pi as the symbol pi throughout intermediate steps.",
+     "Cancel common factors in numerators and denominators where possible.",
+     "State units clearly in terms of pi, e.g., 6pi cm.",
+     "Double-check fraction simplification before final multiplication."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "tip": "Exact Answers",
+      "p": "Writing an answer as 12pi cm is more accurate than 37.699 cm and earns full marks."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Calculator Techniques and Rounding",
+    "p": "When using a calculator, enter expressions carefully and pay strict attention to rounding instructions given in the examination paper.",
+    "bullets": [
+     "Use the dedicated pi button on your calculator rather than 3.14 or 3.14159.",
+     "Write down your unrounded calculator display before rounding.",
+     "Check if the question asks for decimal places or significant figures.",
+     "Common rounding errors lose the final accuracy mark."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "warn": "Premature Rounding",
+      "p": "Never round numbers halfway through a calculation; store values or write at least 4 decimal places."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Composite Shapes Involving Sectors",
+    "p": "Foundation exam papers frequently combine sectors with rectangles, triangles, or semicircles to form composite shapes requiring multi-step problem solving.",
+    "bullets": [
+     "Break the composite shape down into familiar standard components.",
+     "Calculate the area or perimeter of each separate part carefully.",
+     "Add or subtract parts depending on whether regions are combined or cut out.",
+     "Show clear working for each individual stage to pick up method marks."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "key": "Method Marks",
+      "p": "Even if your final answer is wrong, clear working for each sub-shape secures method marks."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A composite shape formed by a rectangle attached to a semicircular top.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"130\" y=\"100\" width=\"140\" height=\"90\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M130 100 A70 70 0 0 1 270 100 Z\" fill=\"#e9d5ff\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"180\" y=\"150\" font-size=\"12\" fill=\"#1b2540\">Rectangle</text><text x=\"185\" y=\"70\" font-size=\"12\" fill=\"#1b2540\">Semicircle</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Contextual Problems and Real-Life Applications",
+    "p": "Arc length and sector calculations appear in everyday contexts such as garden designs, pizza slices, running tracks, and machinery parts.",
+    "bullets": [
+     "Read the question carefully to identify whether length, perimeter, or area is required.",
+     "Translate real-world descriptions into geometric diagrams if none are provided.",
+     "Check whether units need converting before starting calculations.",
+     "Ensure final answers make logical sense in the given context."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "tip": "Sketching",
+      "p": "Always sketch a quick diagram if a word problem does not include one."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Pizza Slice Analogy",
+   "p": "Think of a circle as a whole pizza and a sector as a single slice cut from it. The crust of your slice is the arc length, and the top surface of the slice is the sector area. If you cut the pizza into 6 equal slices of 60 degrees each, every slice is 60/360 or 1/6 of the whole pizza. Where this breaks down is that real pizza crusts have a thickness, whereas mathematical arcs are infinitely thin lines."
+  },
+  "terms": [
+   {
+    "t": "Arc",
+    "d": "A connected piece of the circumference of a circle."
+   },
+   {
+    "t": "Sector",
+    "d": "A region of a circle bounded by two radii and an intercepted arc."
+   },
+   {
+    "t": "Central Angle",
+    "d": "The angle formed at the center of a circle by two radii meeting the arc."
+   },
+   {
+    "t": "Circumference",
+    "d": "The total perimeter distance around a circle."
+   },
+   {
+    "t": "Radius",
+    "d": "A straight line segment from the center of a circle to any point on its boundary."
+   },
+   {
+    "t": "Diameter",
+    "d": "A straight line passing through the center connecting two points on the circle boundary."
+   },
+   {
+    "t": "Semicircle",
+    "d": "Half of a circle, formed by a central angle of 180 degrees."
+   },
+   {
+    "t": "Quarter Circle",
+    "d": "A sector with a central angle of 90 degrees."
+   },
+   {
+    "t": "Perimeter",
+    "d": "The total distance around the outside edge of a 2D shape."
+   },
+   {
+    "t": "Composite Shape",
+    "d": "A shape made up of two or more basic geometric shapes combined together."
+   },
+   {
+    "t": "Pi",
+    "d": "The mathematical constant representing the ratio of a circle's circumference to its diameter."
+   },
+   {
+    "t": "Exact Value",
+    "d": "An answer left in terms of pi or as a fraction rather than a rounded decimal."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Using the circle area formula pi * r squared when asked to find arc length.",
+    "r": "Arc length is a linear measure using circumference (2 * pi * r), not area."
+   },
+   {
+    "w": "Forgetting to add the two radii when calculating the total perimeter of a sector.",
+    "r": "The perimeter of a sector is the arc length plus two straight radii."
+   },
+   {
+    "w": "Dividing by 180 instead of 360 when finding fractional parts.",
+    "r": "A full circle contains 360 degrees, so the fraction is always angle / 360."
+   },
+   {
+    "w": "Using diameter instead of radius when calculating sector area.",
+    "r": "Sector area requires radius squared (pi * r squared); halve the diameter first if given."
+   },
+   {
+    "w": "Rounding intermediate steps too early in calculator questions.",
+    "r": "Keep full calculator accuracy until the final step of your working."
+   },
+   {
+    "w": "Leaving out units or writing square units for arc length.",
+    "r": "Arc length is a length (cm), whereas sector area is square units (cm squared)."
+   },
+   {
+    "w": "Confusing minor and major sectors when the angle is reflex.",
+    "r": "Check whether the angle given corresponds to the sector you are asked to find."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Calculate the arc length of a sector with radius 6 cm and central angle 60 degrees. Give your answer in terms of pi.",
+    "marks": 2,
+    "model": [
+     "Correct fraction: 60 / 360 = 1 / 6",
+     "Substitution into formula: (1 / 6) * 2 * pi * 6",
+     "Correct evaluation: 2pi cm"
+    ],
+    "tip": "Simplify 60/360 immediately to make non-calculator arithmetic easier."
+   },
+   {
+    "q": "A sector has a radius of 10 cm and a central angle of 90 degrees. Calculate the area of the sector. Give your answer to 1 decimal place.",
+    "marks": 3,
+    "model": [
+     "Fraction: 90 / 360 = 1 / 4",
+     "Area formula: (1 / 4) * pi * 10 squared",
+     "Correct evaluation: 78.5 cm squared"
+    ],
+    "tip": "Remember to square the radius before multiplying by pi and the fraction."
+   },
+   {
+    "q": "Calculate the total perimeter of a semicircle with diameter 14 cm. Take pi as 3.14.",
+    "marks": 3,
+    "model": [
+     "Radius = 7 cm",
+     "Arc length = 0.5 * 3.14 * 14 = 21.98 cm",
+     "Perimeter = 21.98 + 7 + 7 = 35.98 cm"
+    ],
+    "tip": "A semicircle perimeter includes the curved arc plus the straight diameter edge."
+   },
+   {
+    "q": "The area of a sector with angle 45 degrees is 8pi cm squared. Find the radius of the sector.",
+    "marks": 4,
+    "model": [
+     "Fraction: 45 / 360 = 1 / 8",
+     "Equation setup: (1 / 8) * pi * r squared = 8pi",
+     "Multiply by 8: pi * r squared = 64pi",
+     "Radius r = 8 cm"
+    ],
+    "tip": "Cancel pi from both sides of the equation to simplify the algebra."
+   },
+   {
+    "q": "An arc length is 5pi cm and the radius of the circle is 12 cm. Calculate the central angle of the sector.",
+    "marks": 3,
+    "model": [
+     "Circumference = 2 * pi * 12 = 24pi",
+     "Fraction of circle = 5pi / 24pi = 5 / 24",
+     "Angle = (5 / 24) * 360 = 75 degrees"
+    ],
+    "tip": "Set up a fraction comparing the given arc length to the total circumference."
+   },
+   {
+    "q": "A garden lawn is in the shape of a sector with radius 8 m and angle 120 degrees. Calculate the area of the lawn. Give your answer correct to 3 significant figures.",
+    "marks": 3,
+    "model": [
+     "Fraction: 120 / 360 = 1 / 3",
+     "Area calculation: (1 / 3) * pi * 8 squared = 67.020...",
+     "Rounded answer: 67.0 m squared"
+    ],
+    "tip": "Check significant figure counting carefully from the first non-zero digit."
+   },
+   {
+    "q": "A sector has radius 5 cm and arc length 4 cm. Calculate the perimeter of the sector.",
+    "marks": 2,
+    "model": [
+     "Identify components: Arc length + radius + radius",
+     "Calculation: 4 + 5 + 5 = 14 cm"
+    ],
+    "tip": "Do not recalculate the arc length; it is already given in the question."
+   },
+   {
+    "q": "A shape consists of a rectangle measuring 10 cm by 6 cm, with a semicircle of diameter 6 cm attached to one end. Calculate the total area of the shape. Give your answer in terms of pi.",
+    "marks": 4,
+    "model": [
+     "Rectangle area = 10 * 6 = 60 cm squared",
+     "Semicircle radius = 3 cm",
+     "Semicircle area = 0.5 * pi * 3 squared = 4.5pi cm squared",
+     "Total area = 60 + 4.5pi cm squared"
+    ],
+    "tip": "Calculate sub-shapes separately before combining your final answers."
+   },
+   {
+    "q": "The perimeter of a quarter circle is 25.7 cm. Work out the radius of the circle. Take pi as 3.14.",
+    "marks": 4,
+    "model": [
+     "Perimeter = Arc length + 2r",
+     "Arc length of quarter circle = 0.25 * 2 * pi * r = 1.57r",
+     "Total perimeter expression: 1.57r + 2r = 3.57r",
+     "Radius = 25.7 / 3.57 = 7 cm"
+    ],
+    "tip": "Express the entire perimeter in terms of r before solving."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Find the arc length of a sector with radius 9 cm and angle 40 degrees. Give your answer in terms of pi.",
+    "steps": [
+     "Write down the arc length formula: Arc Length = (theta / 360) * 2 * pi * r.",
+     "Substitute the given values: (40 / 360) * 2 * pi * 9.",
+     "Simplify the fraction: 40 / 360 simplifies to 1 / 9.",
+     "Calculate: (1 / 9) * 18 * pi = 2pi cm."
+    ],
+    "ans": "2pi cm"
+   },
+   {
+    "q": "Calculate the area of a sector with radius 12 cm and angle 150 degrees. Give your answer as a decimal correct to 1 decimal place.",
+    "steps": [
+     "Write down the sector area formula: Area = (theta / 360) * pi * r squared.",
+     "Substitute the values: (150 / 360) * pi * 12 squared.",
+     "Simplify fraction and square radius: (5 / 12) * pi * 144.",
+     "Multiply out: 5 * 12 * pi = 60pi = 188.495... cm squared.",
+     "Round to 1 decimal place: 188.5 cm squared."
+    ],
+    "ans": "188.5 cm squared"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Diagram illustrating a sector with radius r, central angle theta, and intercepted arc length.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><circle cx=\"200\" cy=\"120\" r=\"80\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"200\" y1=\"120\" x2=\"265\" y2=\"65\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"200\" y1=\"120\" x2=\"120\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"160\" y=\"110\" font-size=\"12\" fill=\"#1b2540\">r</text><text x=\"240\" y=\"90\" font-size=\"12\" fill=\"#1b2540\">r</text><text x=\"215\" y=\"105\" font-size=\"12\" fill=\"#1b2540\">theta</text></svg>"
+   },
+   {
+    "cap": "Diagram showing that a sector perimeter consists of the arc length plus two straight radii.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><path d=\"M200 120 L270 80 A80 80 0 0 0 130 80 Z\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"160\" y=\"85\" font-size=\"12\" fill=\"#1b2540\">Radius</text><text x=\"220\" y=\"85\" font-size=\"12\" fill=\"#1b2540\">Radius</text><text x=\"180\" y=\"150\" font-size=\"12\" fill=\"#1b2540\">Arc Length</text></svg>"
+   },
+   {
+    "cap": "Composite shape combining a rectangle and a semicircle.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"130\" y=\"100\" width=\"140\" height=\"90\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M130 100 A70 70 0 0 1 270 100 Z\" fill=\"#e9d5ff\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"180\" y=\"150\" font-size=\"12\" fill=\"#1b2540\">Rectangle</text><text x=\"185\" y=\"70\" font-size=\"12\" fill=\"#1b2540\">Semicircle</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_f.3.15",
+  "sid": "maths_eduqas_f",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-19T18:46:52.339Z"
+ },
+ "maths_eduqas_f.3.20": {
+  "summary": "Vectors represent both magnitude (length) and direction, allowing us to describe movements in a 2D plane. We can write vectors as column matrices or represent them visually as directed line segments with arrows. Mastering vector addition, subtraction, and scalar multiplication is essential for navigating geometry on Foundation tier papers without a calculator.",
+  "core": [
+   {
+    "h": "Introduction to Vectors",
+    "p": "A vector is a quantity that has both magnitude and direction, unlike a scalar which has magnitude only. On a diagram, a vector is shown as a straight line segment with an arrow indicating its direction.",
+    "bullets": [
+     "Magnitude is the length of the vector line.",
+     "Direction is shown by the arrowhead.",
+     "Vectors can be written in bold lowercase letters like **a**, or using starting and ending points with an arrow on top, such as AB with an arrow.",
+     "Equal vectors have the exact same magnitude and direction, regardless of their starting position on the grid."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Vector",
+      "p": "A quantity possessing both magnitude and direction."
+     },
+     {
+      "k": "key",
+      "t": "Equal Vectors",
+      "p": "Vectors are equal if they have the same column vector components."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A directed line segment showing a vector from point A to point B.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><defs><marker id=\"arrow\" markerWidth=\"10\" markerHeight=\"10\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 Z\" fill=\"#1b2540\"/></marker></defs><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"80\" y1=\"160\" x2=\"280\" y2=\"80\" stroke=\"#1b2540\" stroke-width=\"3\" marker-end=\"url(#arrow)\"/><text x=\"75\" y=\"180\" font-size=\"14\" fill=\"#1b2540\">A</text><text x=\"290\" y=\"75\" font-size=\"14\" fill=\"#1b2540\">B</text><text x=\"160\" y=\"110\" font-size=\"14\" fill=\"#2563eb\">Vector a</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Column Vector Representation",
+    "p": "Column vectors express movements on a coordinate grid using two numbers stacked vertically inside brackets. The top number represents horizontal movement, and the bottom number represents vertical movement.",
+    "bullets": [
+     "Top number: positive moves right, negative moves left.",
+     "Bottom number: positive moves up, negative moves down.",
+     "Written vertically as a 2 by 1 matrix without a fraction line.",
+     "Example: vector (3, -2) means 3 units right and 2 units down."
+    ],
+    "table": {
+     "head": [
+      "Movement",
+      "Sign",
+      "Example Component"
+     ],
+     "rows": [
+      [
+       "Right",
+       "Positive",
+       "+4"
+      ],
+      [
+       "Left",
+       "Negative",
+       "-4"
+      ],
+      [
+       "Up",
+       "Positive",
+       "+2"
+      ],
+      [
+       "Down",
+       "Negative",
+       "-2"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Column format",
+      "p": "Always write column vectors with large round brackets and no horizontal fraction line."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Adding Vectors Diagrammatically",
+    "p": "To add two vectors visually, use the triangle or polygon law. Place the tail of the second vector at the tip of the first vector, and the resultant vector goes directly from the starting point to the final finish point.",
+    "bullets": [
+     "Known as the 'tip-to-tail' method.",
+     "The resultant vector closes the triangle.",
+     "Order does not matter for addition: a plus b equals b plus a.",
+     "The resultant represents the combined journey."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Tip-to-Tail",
+      "p": "Connect the start of the second vector to the end of the first vector."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Adding vector a and vector b tip-to-tail to form the resultant vector a + b.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"10\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 Z\" fill=\"#1b2540\"/></marker></defs><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"180\" x2=\"150\" y2=\"120\" stroke=\"#2563eb\" stroke-width=\"3\" marker-end=\"url(#arr)\"/><text x=\"90\" y=\"140\" font-size=\"14\" fill=\"#2563eb\">a</text><line x1=\"150\" y1=\"120\" x2=\"280\" y2=\"150\" stroke=\"#16a34a\" stroke-width=\"3\" marker-end=\"url(#arr)\"/><text x=\"205\" y=\"145\" font-size=\"14\" fill=\"#16a34a\">b</text><line x1=\"50\" y1=\"180\" x2=\"280\" y2=\"150\" stroke=\"#dc2626\" stroke-width=\"3\" marker-end=\"url(#arr)\"/><text x=\"150\" y=\"190\" font-size=\"14\" fill=\"#dc2626\">a + b</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Adding Column Vectors",
+    "p": "Adding column vectors algebraically is straightforward. You simply add the top components together and then add the bottom components together.",
+    "bullets": [
+     "Add horizontal components: x1 + x2.",
+     "Add vertical components: y1 + y2.",
+     "Keep the result inside a single column vector format.",
+     "Example: (2, 3) + (4, -1) = (2 + 4, 3 + -1) = (6, 2)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Component mixing",
+      "p": "Never add a horizontal component to a vertical component. Top adds to top, bottom adds to bottom."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Subtracting Vectors Diagrammatically",
+    "p": "Subtracting a vector is the same as adding its negative. The negative of a vector has the exact same magnitude and length, but points in the exact opposite direction.",
+    "bullets": [
+     "Reversing the direction multiplies the vector by minus one.",
+     "To find vector a minus vector b, add vector a to negative vector b.",
+     "On a diagram, follow vector a, then travel backwards along vector b.",
+     "The negative vector flips both column signs."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Negative Vector",
+      "p": "A vector with the same magnitude as the original, but opposite direction."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Subtracting Column Vectors",
+    "p": "To subtract column vectors, subtract the components of the second vector from the components of the first vector in matching rows.",
+    "bullets": [
+     "Subtract top components: x1 minus x2.",
+     "Subtract bottom components: y1 minus y2.",
+     "Watch out for negative number arithmetic traps.",
+     "Example: (5, 2) - (2, 5) = (5 - 2, 2 - 5) = (3, -3)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Double negatives",
+      "p": "Be extremely careful when subtracting a negative component: subtracting negative 3 becomes plus 3."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Multiplying Vectors by a Scalar",
+    "p": "A scalar is a regular single number, like 2, -3, or one half. Multiplying a vector by a scalar changes its length by that scale factor without changing its basic orientation angle.",
+    "bullets": [
+     "Multiply both the top and bottom components of a column vector by the scalar.",
+     "If the scalar is positive, the direction stays the same.",
+     "If the scalar is negative, the direction reverses entirely.",
+     "Parallel vectors are exact scalar multiples of one another."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Parallel Condition",
+      "p": "Vector p is parallel to vector q if p equals a scalar multiple k times q."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Vector a and its scalar multiple 2a, showing double length and parallel direction.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><defs><marker id=\"arr2\" markerWidth=\"10\" markerHeight=\"10\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 Z\" fill=\"#1b2540\"/></marker></defs><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"60\" y1=\"90\" x2=\"160\" y2=\"90\" stroke=\"#2563eb\" stroke-width=\"3\" marker-end=\"url(#arr2)\"/><text x=\"105\" y=\"80\" font-size=\"14\" fill=\"#2563eb\">a</text><line x1=\"60\" y1=\"150\" x2=\"260\" y2=\"150\" stroke=\"#16a34a\" stroke-width=\"3\" marker-end=\"url(#arr2)\"/><text x=\"150\" y=\"140\" font-size=\"14\" fill=\"#16a34a\">2a</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Combining Operations: Mixed Expressions",
+    "p": "Foundation exam questions frequently ask you to evaluate mixed vector expressions involving both scalar multiplication and addition or subtraction in a single step.",
+    "bullets": [
+     "Perform scalar multiplications before carrying out any additions or subtractions.",
+     "Apply standard order of operations rules to vector components.",
+     "Example: evaluate 3a + 2b where a = (1, 2) and b = (4, -1).",
+     "Step one: 3(1, 2) = (3, 6) and 2(4, -1) = (8, -2). Step two: (3 + 8, 6 + -2) = (11, 4)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Expand first",
+      "p": "Always multiply out the scalars inside parentheses before combining column vectors."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Geometric Proofs and Paths",
+    "p": "In geometry questions, you often have to find a route across a grid or shape using given vector labels. You must travel along known sides, even if it means going backwards against an arrow.",
+    "bullets": [
+     "Going against an arrow introduces a negative sign.",
+     "Alternative paths between the same two points must always yield the exact same resultant vector.",
+     "Use ratio information to split vectors into fractional parts, such as half of a.",
+     "Always state your route clearly, e.g., vector AB = AO + OB."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Route finding",
+      "p": "To get from X to Y, sum all vectors along any continuous path from X to Y."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Finding a route across a triangle path using vectors a and b.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><defs><marker id=\"arr3\" markerWidth=\"10\" markerHeight=\"10\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 Z\" fill=\"#1b2540\"/></marker></defs><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><polygon points=\"80,180 320,180 200,60\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"80\" y1=\"180\" x2=\"200\" y2=\"60\" stroke=\"#2563eb\" stroke-width=\"3\" marker-end=\"url(#arr3)\"/><text x=\"120\" y=\"110\" font-size=\"14\" fill=\"#2563eb\">a</text><line x1=\"80\" y1=\"180\" x2=\"320\" y2=\"180\" stroke=\"#16a34a\" stroke-width=\"3\" marker-end=\"url(#arr3)\"/><text x=\"190\" y=\"200\" font-size=\"14\" fill=\"#16a34a\">b</text><line x1=\"200\" y1=\"60\" x2=\"320\" y2=\"180\" stroke=\"#dc2626\" stroke-width=\"3\" marker-end=\"url(#arr3)\"/><text x=\"270\" y=\"115\" font-size=\"14\" fill=\"#dc2626\">c</text><text x=\"70\" y=\"200\" font-size=\"14\" fill=\"#1b2540\">O</text><text x=\"330\" y=\"200\" font-size=\"14\" fill=\"#1b2540\">B</text><text x=\"190\" y=\"50\" font-size=\"14\" fill=\"#1b2540\">A</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Common Exam Traps with Vectors",
+    "p": "Examiners design specific pitfalls to catch students who rely on guesswork rather than strict vector rules. Be alert to coordinate confusion and bracket notation errors.",
+    "bullets": [
+     "Confusing coordinates with column vectors: coordinates use commas and parentheses, column vectors use vertical stacks without commas.",
+     "Forgetting to distribute the scalar to both numbers in the column.",
+     "Dropping negative signs when reversing a vector direction along a geometric path.",
+     "Writing final column vectors horizontally instead of vertically."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Coordinates vs Vectors",
+      "p": "Point (3, 4) is a fixed location in space, whereas vector (3, 4) is a movement of 3 right and 4 up."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "City Navigation and Delivery Drones",
+   "p": "Think of a vector as a set of delivery instructions given to a drone pilot: 'fly 4 blocks east and 3 blocks north'. If you multiply that instruction by 2, the drone flies twice as far along the exact same compass bearing. If you add two journeys together, you simply perform the first delivery trip followed immediately by the second delivery trip, resulting in a single net journey from start to finish. The analogy breaks down because vectors can represent abstract mathematical forces and velocities that do not involve physical flying paths, and negative vectors simply mean travelling backwards along the exact same track."
+  },
+  "terms": [
+   {
+    "t": "Vector",
+    "d": "A mathematical quantity that has both magnitude (size) and direction."
+   },
+   {
+    "t": "Scalar",
+    "d": "A single numerical value that has magnitude only, with no direction."
+   },
+   {
+    "t": "Column Vector",
+    "d": "A way of writing a vector using two numbers stacked vertically inside brackets, representing horizontal and vertical displacement."
+   },
+   {
+    "t": "Magnitude",
+    "d": "The length or size of a vector."
+   },
+   {
+    "t": "Negative Vector",
+    "d": "A vector with the same magnitude as the original, but pointing in the exact opposite direction."
+   },
+   {
+    "t": "Parallel Vectors",
+    "d": "Vectors that have the same or exact opposite direction, where one is a scalar multiple of the other."
+   },
+   {
+    "t": "Tip-to-Tail Method",
+    "d": "A graphical method of adding vectors by placing the starting point of the second vector at the end point of the first."
+   },
+   {
+    "t": "Displacement",
+    "d": "The straight-line distance and direction from a starting point to a finishing point."
+   },
+   {
+    "t": "Component",
+    "d": "The individual horizontal or vertical part of a column vector."
+   },
+   {
+    "t": "Equal Vectors",
+    "d": "Vectors that possess both the exact same magnitude and the exact same direction."
+   },
+   {
+    "t": "Zero Vector",
+    "d": "A vector with zero magnitude and no specific direction, written as (0, 0)."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Writing column vectors as coordinates like (3, 4) with a comma.",
+    "r": "Write column vectors vertically without a comma inside brackets, e.g., top 3, bottom 4."
+   },
+   {
+    "w": "Multiplying only the top number by a scalar and forgetting the bottom number.",
+    "r": "Multiply both the top and bottom components of the column vector by the scalar number."
+   },
+   {
+    "w": "Forgetting to flip the sign of a vector when going against the arrow direction.",
+    "r": "Travelling against a vector arrow reverses its sign for both components."
+   },
+   {
+    "w": "Adding horizontal components to vertical components during vector addition.",
+    "r": "Add top components together and bottom components together separately."
+   },
+   {
+    "w": "Treating a vector as a fixed point in space rather than a movement.",
+    "r": "Understand that vectors represent relative movements or displacements."
+   },
+   {
+    "w": "Writing the final answer horizontally like [3 4].",
+    "r": "Use proper vertical column bracket notation."
+   },
+   {
+    "w": "Failing to simplify negative number arithmetic when subtracting vectors.",
+    "r": "Carefully evaluate subtractions involving negative numbers, e.g., 2 - (-5) = 7."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Work out the column vector sum: (3, 4) + (2, -1)",
+    "marks": 2,
+    "model": [
+     "Add top numbers: 3 + 2 = 5",
+     "Add bottom numbers: 4 + (-1) = 3",
+     "Correct column vector format (5, 3) written vertically"
+    ],
+    "tip": "Keep top with top and bottom with bottom."
+   },
+   {
+    "q": "Given vector a = (4, -3), find the column vector for 3a.",
+    "marks": 2,
+    "model": [
+     "Multiply top component by 3: 3 x 4 = 12",
+     "Multiply bottom component by 3: 3 x (-3) = -9",
+     "Correct column vector (12, -9)"
+    ],
+    "tip": "Apply the scalar multiplier to both components."
+   },
+   {
+    "q": "Calculate (7, 5) - (2, 8) as a single column vector.",
+    "marks": 2,
+    "model": [
+     "Subtract top components: 7 - 2 = 5",
+     "Subtract bottom components: 5 - 8 = -3",
+     "Correct column vector (5, -3)"
+    ],
+    "tip": "Subtract the second vector from the first in respective rows."
+   },
+   {
+    "q": "Vector p = (3, 2) and vector q = (-1, 5). Work out 2p + 3q.",
+    "marks": 4,
+    "model": [
+     "Calculate 2p = 2(3, 2) = (6, 4)",
+     "Calculate 3q = 3(-1, 5) = (-3, 15)",
+     "Add the resulting column vectors: (6 + -3, 4 + 15)",
+     "Final column vector (3, 19)"
+    ],
+    "tip": "Always perform scalar multiplications before adding vectors together."
+   },
+   {
+    "q": "Explain why vector (4, 6) is parallel to vector (2, 3).",
+    "marks": 2,
+    "model": [
+     "State that one vector is a scalar multiple of the other",
+     "Show that (4, 6) = 2(2, 3), proving parallel status"
+    ],
+    "tip": "Check if dividing components by a common factor produces identical ratios."
+   },
+   {
+    "q": "Vector x = (5, -2) and vector y = (1, 4). Find 4x - 2y.",
+    "marks": 4,
+    "model": [
+     "Calculate 4x = (20, -8)",
+     "Calculate 2y = (2, 8)",
+     "Subtract components: 20 - 2 and -8 - 8",
+     "Final column vector (18, -16)"
+    ],
+    "tip": "Take care with negative number subtraction on the bottom row."
+   },
+   {
+    "q": "On a grid, vector a is represented by a movement of 3 right and 4 up. Write a as a column vector.",
+    "marks": 1,
+    "model": [
+     "Correct column vector (3, 4)"
+    ],
+    "tip": "Horizontal movement goes on top, vertical movement on the bottom."
+   },
+   {
+    "q": "Find the negative of vector v = (-4, 7) as a column vector.",
+    "marks": 2,
+    "model": [
+     "Multiply both components by -1",
+     "Correct column vector (4, -7)"
+    ],
+    "tip": "The negative of a vector flips the signs of both components."
+   },
+   {
+    "q": "Triangle ABC has vector AB = (3, 2) and vector BC = (4, -5). Find vector AC.",
+    "marks": 2,
+    "model": [
+     "Recognise that AC = AB + BC",
+     "Add (3, 2) + (4, -5) to get (7, -3)"
+    ],
+    "tip": "Use triangle path addition rules."
+   },
+   {
+    "q": "Evaluate minus half multiplied by column vector (6, -8).",
+    "marks": 2,
+    "model": [
+     "Multiply top component by -0.5 to get -3",
+     "Multiply bottom component by -0.5 to get 4",
+     "Correct column vector (-3, 4)"
+    ],
+    "tip": "Negative scalar multiplier flips the signs of both components."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Given vector u = (3, -4) and vector v = (-2, 5), calculate the column vector for 3u - 2v.",
+    "steps": [
+     "Step 1: Multiply vector u by scalar 3. 3 times (3, -4) = (9, -12).",
+     "Step 2: Multiply vector v by scalar 2. 2 times (-2, 5) = (-4, 10).",
+     "Step 3: Subtract the second result from the first. (9 - (-4), -12 - 10).",
+     "Step 4: Simplify the arithmetic. 9 - (-4) = 13, and -12 - 10 = -22."
+    ],
+    "ans": "(13, -22)"
+   },
+   {
+    "q": "Find the resultant vector when adding vector a = (-5, 2) to vector b = (3, -7), and then find the scalar multiple half of the result.",
+    "steps": [
+     "Step 1: Add a and b together: (-5 + 3, 2 + (-7)).",
+     "Step 2: Calculate the sum vector: (-2, -5).",
+     "Step 3: Multiply the sum vector by the scalar half: (0.5 times -2, 0.5 times -5).",
+     "Step 4: Write the final decimal or fractional column vector: (-1, -2.5)."
+    ],
+    "ans": "(-1, -2.5)"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Visualising vector addition using the tip-to-tail method on a coordinate grid.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><defs><marker id=\"arr4\" markerWidth=\"10\" markerHeight=\"10\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 Z\" fill=\"#1b2540\"/></marker></defs><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"190\" x2=\"170\" y2=\"130\" stroke=\"#2563eb\" stroke-width=\"3\" marker-end=\"url(#arr4)\"/><text x=\"100\" y=\"150\" font-size=\"14\" fill=\"#2563eb\">(3, 2)</text><line x1=\"170\" y1=\"130\" x2=\"290\" y2=\"170\" stroke=\"#16a34a\" stroke-width=\"3\" marker-end=\"url(#arr4)\"/><text x=\"215\" y=\"135\" font-size=\"14\" fill=\"#16a34a\">(2, -1)</text><line x1=\"50\" y1=\"190\" x2=\"290\" y2=\"170\" stroke=\"#dc2626\" stroke-width=\"3\" marker-end=\"url(#arr4)\"/><text x=\"160\" y=\"210\" font-size=\"14\" fill=\"#dc2626\">Resultant (5, 1)</text></svg>"
+   },
+   {
+    "cap": "Demonstrating scalar multiplication where vector b is equal to 3 times vector a.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><defs><marker id=\"arr5\" markerWidth=\"10\" markerHeight=\"10\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 Z\" fill=\"#1b2540\"/></marker></defs><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"80\" x2=\"150\" y2=\"80\" stroke=\"#2563eb\" stroke-width=\"3\" marker-end=\"url(#arr5)\"/><text x=\"90\" y=\"70\" font-size=\"14\" fill=\"#2563eb\">a = (2, 0)</text><line x1=\"50\" y1=\"160\" x2=\"350\" y2=\"160\" stroke=\"#16a34a\" stroke-width=\"3\" marker-end=\"url(#arr5)\"/><text x=\"180\" y=\"150\" font-size=\"14\" fill=\"#16a34a\">3a = (6, 0)</text></svg>"
+   },
+   {
+    "cap": "Showing a vector and its negative counterpart pointing in the opposite direction.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><defs><marker id=\"arr6\" markerWidth=\"10\" markerHeight=\"10\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 Z\" fill=\"#1b2540\"/></marker></defs><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"80\" y1=\"100\" x2=\"240\" y2=\"100\" stroke=\"#2563eb\" stroke-width=\"3\" marker-end=\"url(#arr6)\"/><text x=\"150\" y=\"90\" font-size=\"14\" fill=\"#2563eb\">v</text><line x1=\"280\" y1=\"160\" x2=\"120\" y2=\"160\" stroke=\"#dc2626\" stroke-width=\"3\" marker-end=\"url(#arr6)\"/><text x=\"190\" y=\"180\" font-size=\"14\" fill=\"#dc2626\">-v</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_f.3.20",
+  "sid": "maths_eduqas_f",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-19T18:53:00.255Z"
  }
 }

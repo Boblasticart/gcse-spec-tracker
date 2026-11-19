@@ -1,0 +1,908 @@
+{
+ "maths_ocr_h.9.2": {
+  "summary": "Mastering area calculations across 2D geometries requires precise identification of standard formulae and strategic decomposition of composite regions. Higher tier OCR assessments demand fluency with perpendicular heights, exact trigonometric triangle areas, and fractional sector sweeps. Success hinges on working algebraically to preserve exact values before final rounding.",
+  "core": [
+   {
+    "h": "Standard Rectilinear Areas: Rectangles, Parallelograms, and Trapezia",
+    "p": "Rectilinear shapes form the building blocks of 2D mensuration. The area of a rectangle is length times width. For a parallelogram, you must use the perpendicular height, not the slanted side length. A trapezium requires the average of the parallel sides multiplied by the perpendicular distance between them.",
+    "bullets": [
+     "Rectangle area = length x width. Always ensure units are consistent before multiplying.",
+     "Parallelogram area = base x perpendicular height. Do not use the oblique side length.",
+     "Trapezium area = 0.5 x (a + b) x h, where a and b are the parallel sides.",
+     "The perpendicular height must meet the base at a 90-degree angle."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Trapezium Area",
+      "p": "Area = 0.5(a + b)h where a and b are parallel sides and h is perpendicular height."
+     },
+     {
+      "k": "warn",
+      "t": "Slanted Heights",
+      "p": "Using the slanted side of a parallelogram or trapezium instead of the perpendicular height is the single most common deduction trap."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Dimensions for a parallelogram and trapezium showing perpendicular heights.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><polygon points=\"50,160 150,160 180,80 80,80\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"110\" y1=\"80\" x2=\"110\" y2=\"160\" stroke=\"#ef4444\" stroke-dash5=\"4\" stroke-width=\"2\"/><text x=\"115\" y=\"125\" fill=\"#ef4444\" font-size=\"12\">h</text><text x=\"100\" y=\"175\" fill=\"#1b2540\" font-size=\"12\">base</text><polygon points=\"240,160 360,160 340,90 260,90\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"260\" y1=\"90\" x2=\"260\" y2=\"160\" stroke=\"#ef4444\" stroke-dash5=\"4\" stroke-width=\"2\"/><text x=\"245\" y=\"125\" fill=\"#ef4444\" font-size=\"12\">h</text><text x=\"290\" y=\"175\" fill=\"#1b2540\" font-size=\"12\">a</text><text x=\"290\" y=\"82\" fill=\"#1b2540\" font-size=\"12\">b</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Triangle Area via Base and Perpendicular Height",
+    "p": "The fundamental formula for any triangle is half the base multiplied by the perpendicular height. This applies to acute, obtuse, and right-angled triangles. For obtuse triangles, the perpendicular height may fall outside the physical boundary of the triangle onto an extended base line.",
+    "bullets": [
+     "Triangle area = 0.5 x base x perpendicular height.",
+     "The height must always be perpendicular to the chosen base.",
+     "For obtuse triangles, extend the base line to locate the perpendicular height outside the shape.",
+     "Right-angled triangles can use the two perpendicular sides as base and height directly."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Obtuse Triangles",
+      "p": "Do not panic if the height line is outside the triangle; the formula remains identical."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Non-Right-Angled Triangle Area using Trigonometry",
+    "p": "When you know two sides and the included angle, you can calculate the area of any triangle without needing the perpendicular height. The formula utilizes the sine function of the included angle.",
+    "bullets": [
+     "Area = 0.5 x a x b x sin(C).",
+     "Sides a and b must enclose the angle C.",
+     "This formula is derived from splitting a triangle using a perpendicular height equal to b sin(C).",
+     "Ensure your calculator is set to degrees."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Trigonometric Triangle Area",
+      "p": "Area = 0.5ab sin(C) where C is the angle between sides a and b."
+     },
+     {
+      "k": "tip",
+      "t": "Exam Strategy",
+      "p": "If given three sides, use the cosine rule first to find an angle, then apply 0.5ab sin(C)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Circles: Area and Radius-Diameter Relations",
+    "p": "The area of a circle is proportional to the square of its radius. You must be careful to convert diameters to radii before applying the formula. Exact answers often require leaving pi in the expression.",
+    "bullets": [
+     "Circle area = pi x r squared.",
+     "Radius is always half of the diameter (r = d / 2).",
+     "Never use pi = 3.14 unless explicitly told; use the calculator pi button for maximum accuracy.",
+     "Exact area answers are written as a multiple of pi, e.g., 25pi cm squared."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Squaring Mistake",
+      "p": "Students frequently multiply the radius by 2 instead of squaring it. Remember: square the radius first, then multiply by pi."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A circle of radius r showing diameter and area relationship.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><circle cx=\"200\" cy=\"120\" r=\"80\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"200\" y1=\"120\" x2=\"280\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"120\" r=\"3\" fill=\"#1b2540\"/><text x=\"235\" y=\"112\" fill=\"#1b2540\" font-size=\"12\">radius r</text><line x1=\"120\" y1=\"120\" x2=\"280\" y2=\"120\" stroke=\"#64748b\" stroke-dash5=\"4\" stroke-width=\"1\"/><text x=\"180\" y=\"145\" fill=\"#64748b\" font-size=\"12\">diameter</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Sectors of Circles: Fractional Areas",
+    "p": "A sector is a slice of a circle bounded by two radii and an arc. Its area is a direct fraction of the full circle area, determined by the central angle out of 360 degrees.",
+    "bullets": [
+     "Sector area = (theta / 360) x pi x r squared.",
+     "Theta represents the interior angle at the centre of the circle.",
+     "A semicircle is a sector of 180 degrees; a quadrant is 90 degrees.",
+     "Keep pi in your working until the final rounding step to avoid premature rounding errors."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Sector Area Formula",
+      "p": "Area = (theta / 360) * pi * r^2 where theta is the central angle."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Composite Shapes: Splitting and Combining Regions",
+    "p": "Composite shapes are formed by joining or overlapping standard geometric figures. To find the total area, partition the shape into recognizable components like rectangles, triangles, and sectors, then sum their individual areas.",
+    "bullets": [
+     "Read the question carefully to identify sub-shapes.",
+     "Draw clear partition lines on your diagram to show your method.",
+     "For shapes with holes or cut-outs, calculate the main area and subtract the missing section.",
+     "Double-check that all missing side lengths are deduced using parallel or perpendicular properties."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Subtraction Method",
+      "p": "If a shape has a circular hole cut out, write Area = Area(Outer) - Area(Inner) explicitly to gain method marks."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Shaded Region Problems",
+    "p": "Shaded region problems combine composite shape logic with subtraction. You calculate the area of the bounding outer shape and subtract the unshaded internal shapes.",
+    "bullets": [
+     "Identify the outer boundary shape.",
+     "Identify all unshaded inner shapes.",
+     "Calculate each area separately, keeping exact values.",
+     "Subtract inner areas from outer area and round appropriately."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Unit Consistency",
+      "p": "Ensure all measurements are in the same units (e.g., all in cm or all in m) before performing subtraction."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Algebraic Areas and Forming Equations",
+    "p": "Higher tier OCR papers frequently test areas where dimensions are given as algebraic expressions. You must expand brackets and simplify polynomials correctly when equating areas.",
+    "bullets": [
+     "Substitute algebraic expressions into standard area formulae.",
+     "Expand brackets carefully, watching out for negative signs and squared binomials.",
+     "Quadratic areas often require factorisation or the quadratic formula to solve for x.",
+     "Check that your solved value of x results in positive physical lengths."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Positive Lengths",
+      "p": "If an algebraic solution for x gives a negative side length, reject that solution immediately."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Exact Trig Areas in Multi-Step Problems",
+    "p": "Higher tier multi-step geometry questions combine triangle trigonometry areas with sectors or polygons. You may need to use Pythagoras or sine/cosine rules to find missing sides before calculating the final area.",
+    "bullets": [
+     "Construct a plan before starting calculations.",
+     "Use exact surds or trigonometric values in intermediate steps.",
+     "Only round your final answer to the requested degree of accuracy (usually 3 significant figures).",
+     "State units clearly as squared units (e.g., cm squared)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Accuracy Retention",
+      "p": "Store intermediate answers in your calculator memory rather than re-typing rounded decimals."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Exam Technique and Common Traps",
+    "p": "Examiners penalise missing units, premature rounding, and incorrect formula selection. Always show your method clearly, even on 1-mark questions, to secure partial credit if an arithmetic error occurs.",
+    "bullets": [
+     "Always write down the formula you are using before substituting numbers.",
+     "Check whether the question asks for exact form (in terms of pi or surds) or 3 s.f.",
+     "Ensure final units are squared (e.g., m^2, cm^2).",
+     "Read whether dimensions are given in cm or mm and convert if necessary."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Premature Rounding",
+      "p": "Rounding numbers to 1 decimal place midway through a 5-mark question will ruin your final accuracy mark."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Painting a Floor",
+   "p": "Calculating area is identical to buying tins of paint to cover a irregularly shaped room. You break the room into rectangular zones, alcoves (trapezia), and circular bay windows, calculate the square metres for each, and add them up. If there is a brick pillar in the middle, you calculate its area and subtract it. The analogy breaks down because real paint must account for overlapping strokes and texture waste, whereas mathematical area is perfectly planar and exact."
+  },
+  "terms": [
+   {
+    "t": "Area",
+    "d": "The measure of the amount of space inside a 2D boundary, measured in square units."
+   },
+   {
+    "t": "Perpendicular Height",
+    "d": "A height line that meets the base at exactly 90 degrees."
+   },
+   {
+    "t": "Sector",
+    "d": "A region of a circle bounded by two radii and an arc."
+   },
+   {
+    "t": "Trapezium",
+    "d": "A quadrilateral with at least one pair of parallel sides."
+   },
+   {
+    "t": "Composite Shape",
+    "d": "A complex shape made up of two or more standard geometric shapes."
+   },
+   {
+    "t": "Pi",
+    "d": "The mathematical constant representing the ratio of a circle's circumference to its diameter, approximately 3.14159."
+   },
+   {
+    "t": "Radius",
+    "d": "The distance from the centre of a circle to any point on its circumference."
+   },
+   {
+    "t": "Diameter",
+    "d": "A straight line passing from side to side through the centre of a circle."
+   },
+   {
+    "t": "Included Angle",
+    "d": "The angle located directly between two known side lengths in a triangle."
+   },
+   {
+    "t": "Exact Value",
+    "d": "An answer expressed using fractions, surds, or multiples of pi rather than a rounded decimal."
+   },
+   {
+    "t": "Polygon",
+    "d": "A plane figure with at least three straight sides and angles."
+   },
+   {
+    "t": "Semicircle",
+    "d": "Half of a circle, formed by a diameter and a 180-degree arc."
+   },
+   {
+    "t": "Quadrand",
+    "d": "A quarter of a circle, formed by two perpendicular radii and a 90-degree arc."
+   },
+   {
+    "t": "Hypotenuse",
+    "d": "The longest side of a right-angled triangle, opposite the right angle."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Using the slanted side length of a parallelogram as its height.",
+    "r": "Always use the perpendicular height measured at 90 degrees to the base."
+   },
+   {
+    "w": "Multiplying the circle radius by 2 instead of squaring it in pi r squared.",
+    "r": "Square the radius first (r * r), then multiply by pi."
+   },
+   {
+    "w": "Forgetting to divide by 2 when calculating triangle or trapezium areas.",
+    "r": "Always include the factor of 0.5 for triangles (0.5bh) and trapezia (0.5(a+b)h)."
+   },
+   {
+    "w": "Leaving answers in decimals when the question asks for exact form in terms of pi.",
+    "r": "Leave pi in your final expression, e.g., 12pi cm squared."
+   },
+   {
+    "w": "Adding all sides together when asked for the area of a composite shape.",
+    "r": "Adding side lengths gives perimeter; calculate internal spaces for area."
+   },
+   {
+    "w": "Using the diameter instead of the radius in circle area calculations.",
+    "r": "Halve the diameter to find the radius before squaring."
+   },
+   {
+    "w": "Rounding intermediate calculator values to 1 decimal place.",
+    "r": "Keep full calculator accuracy until the final answer line."
+   },
+   {
+    "w": "Failing to convert units, e.g., mixing cm and mm in the same formula.",
+    "r": "Convert all dimensions to the same unit before starting calculations."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Calculate the area of a trapezium with parallel sides 7 cm and 11 cm, and a perpendicular height of 5 cm.",
+    "marks": 2,
+    "model": [
+     "0.5 * (7 + 11) * 5",
+     "= 45 cm squared"
+    ],
+    "tip": "State the formula 0.5(a+b)h first."
+   },
+   {
+    "q": "A triangle has sides of length 8 cm and 11 cm, with an included angle of 30 degrees. Calculate its area.",
+    "marks": 2,
+    "model": [
+     "Area = 0.5 * 8 * 11 * sin(30)",
+     "= 22 cm squared"
+    ],
+    "tip": "Check that your calculator is in degree mode."
+   },
+   {
+    "q": "Calculate the area of a sector with radius 6 cm and central angle 70 degrees. Give your answer to 3 significant figures.",
+    "marks": 3,
+    "model": [
+     "Area = (70 / 360) * pi * 6^2",
+     "= (7/36) * 36pi = 7pi",
+     "= 21.9911... = 22.0 cm squared"
+    ],
+    "tip": "Simplify fractions before rounding if possible."
+   },
+   {
+    "q": "A rectangle has length (x + 3) cm and width (x - 2) cm. Its area is 36 cm squared. Form an equation and solve for x.",
+    "marks": 4,
+    "model": [
+     "(x + 3)(x - 2) = 36",
+     "x^2 + x - 6 = 36 => x^2 + x - 42 = 0",
+     "(x + 7)(x - 6) = 0",
+     "x = 6 (since x must be positive)"
+    ],
+    "tip": "Expand brackets and rearrange into standard quadratic form."
+   },
+   {
+    "q": "Calculate the area of a parallelogram with base 12 cm and perpendicular height 7.5 cm.",
+    "marks": 2,
+    "model": [
+     "Area = base * perpendicular height",
+     "= 12 * 7.5 = 90 cm squared"
+    ],
+    "tip": "Ignore any given slanted side lengths."
+   },
+   {
+    "q": "A composite shape consists of a rectangle measuring 10 cm by 6 cm surmounted by a semicircle on the 10 cm edge. Calculate the total area to 1 significant figure.",
+    "marks": 4,
+    "model": [
+     "Rectangle area = 10 * 6 = 60",
+     "Semicircle radius = 5 cm, Area = 0.5 * pi * 5^2 = 12.5pi = 39.26",
+     "Total area = 60 + 39.26 = 99.26",
+     "= 100 cm squared"
+    ],
+    "tip": "Be careful with rounding instructions like 1 significant figure."
+   },
+   {
+    "q": "Find the area of an equilateral triangle with side length 8 cm. Give your answer in the form a root b.",
+    "marks": 4,
+    "model": [
+     "Perpendicular height = 8 * sin(60) = 4 root 3",
+     "Area = 0.5 * 8 * 4 root 3",
+     "= 16 root 3 cm squared",
+     "Alternatively use 0.5 * 8 * 8 * sin(60) = 16 root 3"
+    ],
+    "tip": "Equilateral triangles have interior angles of 60 degrees."
+   },
+   {
+    "q": "A shaded region consists of a square of side 10 cm with four identical quarter circles of radius 3 cm removed from each corner. Calculate the shaded area.",
+    "marks": 4,
+    "model": [
+     "Square area = 10 * 10 = 100",
+     "Four quarter circles = one full circle of radius 3",
+     "Circle area = pi * 3^2 = 9pi",
+     "Shaded area = 100 - 9pi = 71.7 cm squared"
+    ],
+    "tip": "Four quarter circles make one complete circle."
+   },
+   {
+    "q": "The area of a sector is 15pi cm squared. If the radius is 6 cm, find the exact angle of the sector.",
+    "marks": 3,
+    "model": [
+     "(theta / 360) * pi * 6^2 = 15pi",
+     "(theta / 360) * 36 = 15",
+     "theta / 10 = 15 => theta = 150 degrees"
+    ],
+    "tip": "Cancel pi from both sides to simplify solving."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Calculate the area of a trapezium-based composite shape where the parallel sides are 12 cm and 18 cm, the height of the trapezium is 8 cm, and a semi-circle of diameter 6 cm is cut out from the bottom base.",
+    "steps": [
+     "Step 1: Calculate the area of the full trapezium using A = 0.5(a + b)h. Here a = 12, b = 18, h = 8. Area = 0.5 * (12 + 18) * 8 = 0.5 * 30 * 8 = 120 cm squared.",
+     "Step 2: Calculate the area of the semi-circle cut-out. The diameter is 6 cm, so the radius r = 3 cm. Area of semi-circle = 0.5 * pi * r^2 = 0.5 * pi * 3^2 = 4.5pi cm squared.",
+     "Step 3: Subtract the semi-circle area from the trapezium area. Total Area = 120 - 4.5pi = 120 - 14.137... = 105.862... cm squared."
+    ],
+    "ans": "105.9 cm squared (to 1 decimal place)"
+   },
+   {
+    "q": "A triangle has sides AB = 9 cm, AC = 12 cm, and angle A = 55 degrees. Calculate its area, giving your answer to 3 significant figures.",
+    "steps": [
+     "Step 1: Identify the relevant formula for triangle area with two sides and included angle: Area = 0.5 * a * b * sin(C).",
+     "Step 2: Substitute the known values into the formula: Area = 0.5 * 9 * 12 * sin(55).",
+     "Step 3: Evaluate the expression: 0.5 * 108 * sin(55) = 54 * 0.81915... = 44.234... cm squared."
+    ],
+    "ans": "44.2 cm squared (to 3 s.f.)"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Diagram showing a sector of a circle with radius r and angle theta.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><path d=\"M200,120 L280,120 A80,80 0 0,0 150,55 Z\" fill=\"#e9d5ff\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"120\" r=\"3\" fill=\"#1b2540\"/><text x=\"235\" y=\"110\" fill=\"#1b2540\" font-size=\"12\">r</text><text x=\"190\" y=\"95\" fill=\"#1b2540\" font-size=\"12\">theta</text></svg>"
+   }
+  ],
+  "pid": "maths_ocr_h.9.2",
+  "sid": "maths_ocr_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-19T20:41:22.686Z"
+ },
+ "maths_ocr_h.9.4": {
+  "summary": "Mastering non-right-angled and right-angled triangle mensuration is essential for solving complex geometric problems in OCR Higher tier exams. You must fluently apply Pythagoras' theorem, SOHCAHTOA trigonometry, exact trigonometric values, the sine rule, the cosine rule, and the 0.5 ab sin C area formula. High grade success relies on knowing when to deploy each tool and maintaining absolute accuracy through multi-step calculations without premature rounding.",
+  "core": [
+   {
+    "h": "1. Pythagoras' Theorem",
+    "p": "Pythagoras' theorem is the fundamental rule relating the lengths of the three sides in any right-angled triangle. It states that the square of the hypotenuse is equal to the sum of the squares of the other two shorter sides.",
+    "bullets": [
+     "Formula: a squared + b squared = c squared, where c is always the hypotenuse (the longest side opposite the right angle).",
+     "To find the hypotenuse (c), add the squares of the two shorter sides and take the square root.",
+     "To find a shorter side (a or b), subtract the square of the known shorter side from the square of the hypotenuse, then take the square root.",
+     "Always keep values in your calculator and only round at the very final step to avoid rounding errors."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "The Hypotenuse",
+      "p": "The hypotenuse is always the side directly opposite the right angle. It is always the longest side of a right-angled triangle."
+     },
+     {
+      "k": "warn",
+      "t": "Premature Rounding",
+      "p": "Do not round intermediate answers on your calculator display. Write down at least 4 significant figures if you must write them down."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Right-angled triangle demonstrating Pythagoras' theorem with sides a, b and hypotenuse c.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><polygon points=\"80,180 300,180 300,60\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"280\" y=\"160\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"190\" y=\"205\" font-size=\"12\" fill=\"#1b2540\">a (base)</text><text x=\"315\" y=\"120\" font-size=\"12\" fill=\"#1b2540\">b (height)</text><text x=\"180\" y=\"110\" font-size=\"12\" fill=\"#1b2540\">c (hypotenuse)</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "2. Right-Angled Triangle Trigonometry (SOHCAHTOA)",
+    "p": "Trigonometric ratios connect the angles of a right-angled triangle to the ratios of its side lengths. SOHCAHTOA is the mnemonic used to recall these three core definitions.",
+    "bullets": [
+     "Sine (sin): Opposite divided by Hypotenuse (SOH).",
+     "Cosine (cos): Adjacent divided by Hypotenuse (CAH).",
+     "Tangent (tan): Opposite divided by Adjacent (TOA).",
+     "Use inverse trigonometric functions (sin minus 1, cos minus 1, tan minus 1) when finding an unknown angle."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "SOHCAHTOA",
+      "p": "sin(theta) = Opp / Hyp, cos(theta) = Adj / Hyp, tan(theta) = Opp / Adj."
+     },
+     {
+      "k": "tip",
+      "t": "Calculator Mode",
+      "p": "Always ensure your calculator is set to 'Deg' (Degrees) mode before starting any exam paper."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "3. Exact Trigonometric Values",
+    "p": "OCR Higher tier exams require instant recall of exact trigonometric values for key angles: 0, 30, 45, 60, and 90 degrees. You must not use decimal approximations for these values.",
+    "bullets": [
+     "sin(0) = 0, sin(30) = 1/2, sin(45) = root(2)/2, sin(60) = root(3)/2, sin(90) = 1.",
+     "cos(0) = 1, cos(30) = root(3)/2, cos(45) = root(2)/2, cos(60) = 1/2, cos(90) = 0.",
+     "tan(0) = 0, tan(30) = 1/root(3), tan(45) = 1, tan(60) = root(3), tan(90) = undefined.",
+     "Memorise the equilateral triangle split in half (for 30 and 60) and the isosceles right triangle (for 45)."
+    ],
+    "table": {
+     "head": [
+      "Angle (deg)",
+      "sin(theta)",
+      "cos(theta)",
+      "tan(theta)"
+     ],
+     "rows": [
+      [
+       "0",
+       "0",
+       "1",
+       "0"
+      ],
+      [
+       "30",
+       "1/2",
+       "root(3)/2",
+       "1/root(3)"
+      ],
+      [
+       "45",
+       "root(2)/2",
+       "root(2)/2",
+       "1"
+      ],
+      [
+       "60",
+       "root(3)/2",
+       "1/2",
+       "root(3)"
+      ],
+      [
+       "90",
+       "1",
+       "0",
+       "Undefined"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Rationalising Denominators",
+      "p": "1/root(3) can also be written as root(3)/3. Both forms are accepted in OCR mark schemes."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Area of a Triangle Using Sine",
+    "p": "When you do not know the perpendicular height of a triangle, you can still find its area using two sides and the included angle.",
+    "bullets": [
+     "Formula: Area = 0.5 * a * b * sin(C).",
+     "Sides a and b must be the two sides that sandwich the known angle C.",
+     "This formula derives from 0.5 * base * height, where height is calculated as a * sin(C).",
+     "Works for any triangle where two side lengths and the enclosed angle are known."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Included Angle",
+      "p": "The included angle is the angle formed directly between the two given side lengths."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "5. The Sine Rule",
+    "p": "The sine rule is used for non-right-angled triangles when you have a matching pair of an opposite side and angle, and another side or angle to find.",
+    "bullets": [
+     "Formula for sides: a / sin(A) = b / sin(B) = c / sin(C).",
+     "Formula for angles: sin(A) / a = sin(B) / b = sin(C) / c.",
+     "Use the side formula when you are trying to find an unknown length.",
+     "Use the angle formula when you are trying to find an unknown angle."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "The Ambiguous Case of Sine",
+      "p": "Be careful when finding an obtuse angle using the sine rule, as sin(theta) = sin(180 - theta). OCR usually sets acute triangles or provides clear context."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Triangle labelled with standard convention: vertices A, B, C and opposite sides a, b, c.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><polygon points=\"100,200 320,180 200,50\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"85\" y=\"210\" font-size=\"12\" fill=\"#1b2540\">A</text><text x=\"330\" y=\"190\" font-size=\"12\" fill=\"#1b2540\">B</text><text x=\"195\" y=\"35\" font-size=\"12\" fill=\"#1b2540\">C</text><text x=\"210\" y=\"120\" font-size=\"12\" fill=\"#1b2540\">c</text><text x=\"140\" y=\"100\" font-size=\"12\" fill=\"#1b2540\">b</text><text x=\"200\" y=\"200\" font-size=\"12\" fill=\"#1b2540\">a</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "6. The Cosine Rule",
+    "p": "The cosine rule is used for non-right-angled triangles when dealing with three sides and one angle. It is an extension of Pythagoras' theorem.",
+    "bullets": [
+     "To find a side: a squared = b squared + c squared - 2bc * cos(A).",
+     "To find an angle: cos(A) = (b squared + c squared - a squared) / (2bc).",
+     "Use the cosine rule to find a side when you are given two sides and the included angle (SAS).",
+     "Use the cosine rule to find an angle when you are given all three sides (SSS)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Choosing Sine vs Cosine Rule",
+      "p": "Use Cosine Rule for SSS and SAS. Use Sine Rule for AAS, ASA, or SSA (matching pair)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Bearings and Trigonometry",
+    "p": "Bearings combine angle rules with triangle mensuration. A bearing is a three-digit clockwise angle measured from North.",
+    "bullets": [
+     "Always draw a North line at every point where a direction changes.",
+     "Use alternate interior angles (Z-angles) to find interior angles inside triangles formed by bearings.",
+     "Apply sine or cosine rules to calculate distances and new positions.",
+     "Ensure final bearings are written with exactly three digits (e.g., 045 degrees)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "North Lines",
+      "p": "Draw parallel North lines at every vertex. This unlocks co-interior and alternate angle properties."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. 3D Pythagoras",
+    "p": "Extending Pythagoras theorem to three dimensions allows you to find the length of internal diagonals inside cuboids, pyramids, and prisms.",
+    "bullets": [
+     "Formula for a cuboid internal diagonal: d squared = x squared + y squared + z squared.",
+     "Alternatively, apply 2D Pythagoras twice: first find the diagonal of the base face, then use that in a vertical right-angled triangle.",
+     "Identify the right-angled triangle hidden inside the 3D shape before attempting calculations.",
+     "Clearly state which plane or face you are working on in your exam working out."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Space Diagonal",
+      "p": "The straight line connecting a bottom corner of a 3D box to the opposite top corner."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. 3D Trigonometry",
+    "p": "Three-dimensional trigonometry involves finding angles between lines and planes, or between two planes, inside 3D solids.",
+    "bullets": [
+     "To find the angle between a line and a plane, drop a perpendicular line from the end of the line to the plane.",
+     "Extract the right-angled triangle containing the required angle onto your page as a 2D sketch.",
+     "Use SOHCAHTOA within the extracted right-angled triangle.",
+     "Watch out for shared edges between different faces of pyramids and cones."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Misidentifying Angles",
+      "p": "Make sure the angle you calculate is actually the angle requested between the line and the plane, not another angle in the triangle."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Multi-Step Triangle Problems",
+    "p": "Grade 9 questions often combine multiple rules in a single problem, such as using right-angled trigonometry to find a shared side, then applying the sine rule in an adjacent triangle.",
+    "bullets": [
+     "Break complex composite shapes into individual triangles.",
+     "Label all intermediate calculated values on your diagram.",
+     "Check whether triangles share a common side or angle.",
+     "Plan your route through the problem before pressing calculator buttons."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Strategic Planning",
+      "p": "Work backwards from what the question asks you to find: ask yourself 'what do I need to know in order to calculate that final value?'"
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Master Toolkit Analogy",
+   "p": "Think of triangle mensuration as a mechanic's toolbox. Pythagoras and SOHCAHTOA are your standard spanners for right-angled triangles—quick and reliable when a 90-degree corner is present. The Sine and Cosine rules are your heavy-duty hydraulic lifts required when the workshop floor isn't square (non-right-angled triangles). If you try to use a standard spanner on a non-right-angled triangle, nothing fits and you strip the thread. The analogy breaks down because in mathematics, if you drop a tool or apply a formula incorrectly, the universe doesn't break—you just get zero marks on page 6 of your OCR paper."
+  },
+  "terms": [
+   {
+    "t": "Hypotenuse",
+    "d": "The longest side of a right-angled triangle, situated directly opposite the right angle."
+   },
+   {
+    "t": "SOHCAHTOA",
+    "d": "Mnemonic for sine = opp/hyp, cosine = adj/hyp, tangent = opp/adj in right-angled triangles."
+   },
+   {
+    "t": "Sine Rule",
+    "d": "The rule stating that a / sin(A) = b / sin(B) = c / sin(C) for any triangle."
+   },
+   {
+    "t": "Cosine Rule",
+    "d": "The rule stating a squared = b squared + c squared - 2bc cos(A) for any triangle."
+   },
+   {
+    "t": "Included Angle",
+    "d": "The angle positioned directly between two known side lengths."
+   },
+   {
+    "t": "Exact Value",
+    "d": "A mathematical representation using fractions and surds rather than a decimal approximation."
+   },
+   {
+    "t": "Bearing",
+    "d": "A three-digit clockwise angle measured from the North direction."
+   },
+   {
+    "t": "Space Diagonal",
+    "d": "A line passing through the interior of a 3D solid connecting opposite vertices."
+   },
+   {
+    "t": "Angle of Elevation",
+    "d": "The angle looking upwards from the horizontal plane to an object."
+   },
+   {
+    "t": "Angle of Depression",
+    "d": "The angle looking downwards from the horizontal plane to an object."
+   },
+   {
+    "t": "Surd",
+    "d": "An irrational square root left in exact form, such as root(2)."
+   },
+   {
+    "t": "Adjacent",
+    "d": "The side next to the reference angle in a right-angled triangle, not including the hypotenuse."
+   },
+   {
+    "t": "Opposite",
+    "d": "The side directly across from the reference angle in a right-angled triangle."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Using SOHCAHTOA on a non-right-angled triangle.",
+    "r": "Recognise that SOHCAHTOA only works when there is a 90-degree angle. Use Sine or Cosine rule instead."
+   },
+   {
+    "w": "Forgetting to square root at the end of Pythagoras theorem calculation.",
+    "r": "Remember that a squared + b squared equals c squared, so you must take the square root to find c."
+   },
+   {
+    "w": "Subtracting instead of adding when finding the hypotenuse in Pythagoras.",
+    "r": "Add the squares to find the hypotenuse; subtract the shorter side squared from the hypotenuse squared to find a shorter side."
+   },
+   {
+    "w": "Rounding intermediate steps to 1 decimal place.",
+    "r": "Keep full calculator accuracy throughout and round only the final answer."
+   },
+   {
+    "w": "Forgetting the 2bc term in the cosine rule.",
+    "r": "The cosine rule ends with minus 2bc times cos(A). Never omit the 2 coefficient."
+   },
+   {
+    "w": "Writing a bearing with only two digits, e.g., 45 degrees.",
+    "r": "Bearings must always be written as three digits: 045 degrees."
+   },
+   {
+    "w": "Confusing sin(30) and cos(30) exact values.",
+    "r": "sin(30) = 1/2, whereas cos(30) = root(3)/2. Learn the standard table thoroughly."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Calculate the exact value of sin(60) multiplied by cos(30).",
+    "marks": 2,
+    "model": [
+     "sin(60) = root(3)/2",
+     "cos(30) = root(3)/2",
+     "(root(3)/2) * (root(3)/2) = 3/4"
+    ],
+    "tip": "Substitute exact values directly without converting to decimals."
+   },
+   {
+    "q": "A right-angled triangle has hypotenuse 13 cm and base 5 cm. Calculate the height.",
+    "marks": 2,
+    "model": [
+     "13 squared - 5 squared = 169 - 25 = 144",
+     "root(144) = 12 cm"
+    ],
+    "tip": "Since you are finding a shorter side, subtract the square of the base from the square of the hypotenuse."
+   },
+   {
+    "q": "Triangle ABC has side a = 7 cm, b = 10 cm, and angle C = 40 degrees. Calculate the area of the triangle.",
+    "marks": 3,
+    "model": [
+     "Area = 0.5 * 7 * 10 * sin(40)",
+     "35 * 0.64278...",
+     "22.5 cm squared (to 3 sf)"
+    ],
+    "tip": "Ensure the two sides sandwich the given angle."
+   },
+   {
+    "q": "In triangle PQR, angle P = 50 degrees, angle Q = 70 degrees, and side p = 8 cm. Calculate side q.",
+    "marks": 3,
+    "model": [
+     "q / sin(70) = 8 / sin(50)",
+     "q = (8 * sin(70)) / sin(50)",
+     "10.0 cm (to 3 sf)"
+    ],
+    "tip": "Match opposite pairs: side over sine of opposite angle."
+   },
+   {
+    "q": "Find the largest angle in a triangle with sides 6 cm, 8 cm, and 11 cm.",
+    "marks": 4,
+    "model": [
+     "Largest angle is opposite the longest side (11 cm)",
+     "cos(A) = (6 squared + 8 squared - 11 squared) / (2 * 6 * 8)",
+     "cos(A) = (36 + 64 - 121) / 96 = -21 / 96",
+     "A = 102.7 degrees (to 1 dp)"
+    ],
+    "tip": "The largest angle is always opposite the longest side."
+   },
+   {
+    "q": "A ship sails 50 km on a bearing of 040 degrees, then 80 km on a bearing of 130 degrees. Calculate the direct distance from its starting point.",
+    "marks": 5,
+    "model": [
+     "Recognise right-angle between bearings: 130 - 040 = 90 degrees",
+     "Use Pythagoras: distance squared = 50 squared + 80 squared",
+     "distance squared = 2500 + 6400 = 8900",
+     "distance = root(8900) = 94.3 km"
+    ],
+    "tip": "Subtract bearings to find the angle between them; check if it creates a right-angled triangle."
+   },
+   {
+    "q": "Calculate the angle between the diagonal of the base of a cuboid measuring 4cm by 3cm and the space diagonal when the height is 12cm.",
+    "marks": 4,
+    "model": [
+     "Base diagonal = root(4 squared + 3 squared) = 5 cm",
+     "Space diagonal triangle has base 5 and height 12",
+     "tan(theta) = 12 / 5",
+     "theta = 67.4 degrees"
+    ],
+    "tip": "Extract the 2D right-angled triangle from inside the 3D solid."
+   },
+   {
+    "q": "Solve for x: sin(x) = 0.5 for 0 <= x <= 360.",
+    "marks": 2,
+    "model": [
+     "x = 30 degrees",
+     "Second solution: x = 180 - 30 = 150 degrees"
+    ],
+    "tip": "Remember the sine graph symmetry: sin(x) = sin(180 - x)."
+   },
+   {
+    "q": "A ladder 6 m long leans against a vertical wall making an angle of 55 degrees with the ground. How far up the wall does the ladder reach?",
+    "marks": 2,
+    "model": [
+     "sin(55) = height / 6",
+     "height = 6 * sin(55) = 4.91 m"
+    ],
+    "tip": "Draw a clear diagram identifying the hypotenuse as the ladder."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Calculate the unknown side x in a triangle where side a = 9 cm, b = 12 cm, and the included angle C = 65 degrees.",
+    "steps": [
+     "Identify that this is a Side-Angle-Side (SAS) scenario, so the Cosine Rule must be used.",
+     "Write down the cosine rule formula: x squared = a squared + b squared - 2ab * cos(C).",
+     "Substitute the values: x squared = 9 squared + 12 squared - (2 * 9 * 12 * cos(65)).",
+     "Evaluate the expression: x squared = 81 + 144 - (216 * 0.4226) = 225 - 91.29 = 133.71.",
+     "Take the square root: x = root(133.71) = 11.6 cm (to 3 sf)."
+    ],
+    "ans": "11.6 cm"
+   },
+   {
+    "q": "Find all possible angles x between 0 and 360 degrees where cos(x) = -0.7071.",
+    "steps": [
+     "Use the inverse cosine function on your calculator: cos minus 1(-0.7071) = 135 degrees.",
+     "Recall the symmetry properties of the cosine graph (cast diagram or graph symmetry).",
+     "The second solution for cosine is 360 minus the acute/principal angle, or 360 - 135 = 225 degrees (or negative angle symmetry).",
+     "Verify both values: cos(135) = -0.707 and cos(225) = -0.707.",
+     "State final answers clearly: 135 degrees and 225 degrees."
+    ],
+    "ans": "135 degrees and 225 degrees"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Comprehensive overview diagram showing right-angled triangle trig ratios (SOHCAHTOA), non-right-angled sine rule, and cosine rule components.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><polygon points=\"40,200 160,200 160,110\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"140\" y=\"180\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"95\" y=\"215\" font-size=\"11\" fill=\"#1b2540\">Adj</text><text x=\"168\" y=\"155\" font-size=\"11\" fill=\"#1b2540\">Opp</text><text x=\"90\" y=\"145\" font-size=\"11\" fill=\"#1b2540\">Hyp</text><polygon points=\"240,200 380,180 300,80\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"290\" y=\"150\" font-size=\"11\" fill=\"#1b2540\">Non-Right Triangle</text><text x=\"50\" y=\"40\" font-size=\"13\" font-weight=\"bold\" fill=\"#1b2540\">Triangle Mensuration Toolkit</text></svg>"
+   }
+  ],
+  "pid": "maths_ocr_h.9.4",
+  "sid": "maths_ocr_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-19T20:41:28.618Z"
+ }
+}

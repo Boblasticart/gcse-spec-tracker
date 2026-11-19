@@ -9960,5 +9960,1539 @@
   "src": "pre",
   "by": "gemini/gemini-3-flash-preview",
   "ts": "2026-11-18T18:07:02.545Z"
+ },
+ "maths_aqa_h.3.20": {
+  "summary": "Exact trigonometric values are the precise surd and fractional representations of sin, cos, and tan for key angles (0°, 30°, 45°, 60°, and 90°). Mastering these values is essential for Paper 1 (Non-Calculator) questions involving right-angled trigonometry, non-right-angled geometry (Sine and Cosine rules), and trigonometric equations. Grade 9 students must know how to derive these values using geometric proofs, manipulate them fluently using surd arithmetic, and extend them into obtuse and negative angles using wave symmetry.",
+  "core": [
+   {
+    "h": "Exact Trigonometric Values Overview",
+    "p": "In GCSE Mathematics, trigonometric functions of arbitrary angles usually give non-terminating, non-recurring decimals requiring a calculator. However, for specific benchmark angles (**0°, 30°, 45°, 60°, and 90°**), the values of **sin**, **cos**, and **tan** can be written as exact integers, fractions, or surds.",
+    "bullets": [
+     "**Exact Form**: Expressing answers using square roots (surds) and simplified fractions rather than rounded decimals.",
+     "**Non-Calculator Requirement**: Spec point G21 requires memorisation or rapid geometric derivation for Paper 1.",
+     "**Grade 9 Context**: Questions often combine exact trig values with surd simplification, algebraic expansion, area formulas, and 3D trigonometry.",
+     "**Primary Angles**: $0^\\circ, 30^\\circ, 45^\\circ, 60^\\circ, 90^\\circ$."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Why Exact Values Matter",
+      "p": "Giving a decimal approximation like 0.866 instead of the exact surd sqrt(3)/2 in a non-calculator exam will lose final accuracy marks."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Derivation 1: The 45°-45°-90° Triangle",
+    "p": "The exact values for **45°** are derived from an **isosceles right-angled triangle** with equal perpendicular side lengths of **1 unit**.",
+    "bullets": [
+     "Construct an isosceles right-angled triangle with sides of length **1** and **1**.",
+     "Apply Pythagoras' theorem to find the hypotenuse: $h^2 = 1^2 + 1^2 = 2 \\implies h = \\sqrt{2}$.",
+     "Both acute angles are **45°** because the angle sum of a triangle is 180° and $(180^\\circ - 90^\\circ) / 2 = 45^\\circ$.",
+     "Using SOH CAH TOA: $\\sin(45^\\circ) = \\frac{\\text{Opposite}}{\\text{Hypotenuse}} = \\frac{1}{\\sqrt{2}} = \\frac{\\sqrt{2}}{2}$.",
+     "$\\cos(45^\\circ) = \\frac{\\text{Adjacent}}{\\text{Hypotenuse}} = \\frac{1}{\\sqrt{2}} = \\frac{\\sqrt{2}}{2}$.",
+     "$\\tan(45^\\circ) = \\frac{\\text{Opposite}}{\\text{Adjacent}} = \\frac{1}{1} = 1$."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Rationalising the Denominator",
+      "p": "1/sqrt(2) is multiplied by sqrt(2)/sqrt(2) to yield the standard rationalised form sqrt(2)/2."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Derivation 2: The 30°-60°-90° Triangle",
+    "p": "The exact values for **30°** and **60°** are derived from an **equilateral triangle** of side length **2 units**, bisected down its line of symmetry.",
+    "bullets": [
+     "Start with an equilateral triangle with all side lengths equal to **2** and all angles equal to **60°**.",
+     "Drop a perpendicular bisector from the top vertex to the base. This splits the base into two segments of length **1** and splits the top angle into two **30°** angles.",
+     "Use Pythagoras' theorem to find the perpendicular height $h$: $1^2 + h^2 = 2^2 \\implies 1 + h^2 = 4 \\implies h = \\sqrt{3}$.",
+     "**For 30°**: Opposite = 1, Adjacent = $\\sqrt{3}$, Hypotenuse = 2.",
+     "$\\sin(30^\\circ) = \\frac{1}{2}$, $\\cos(30^\\circ) = \\frac{\\sqrt{3}}{2}$, $\\tan(30^\\circ) = \\frac{1}{\\sqrt{3}} = \\frac{\\sqrt{3}}{3}$.",
+     "**For 60°**: Opposite = $\\sqrt{3}$, Adjacent = 1, Hypotenuse = 2.",
+     "$\\sin(60^\\circ) = \\frac{\\sqrt{3}}{2}$, $\\cos(60^\\circ) = \\frac{1}{2}$, $\\tan(60^\\circ) = \\frac{\\sqrt{3}}{1} = \\sqrt{3}$."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Reconstructing in the Exam",
+      "p": "If you forget any value during Paper 1, sketch the 1-1-sqrt(2) and 1-sqrt(3)-2 triangles in the margin. It takes less than 15 seconds!"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Boundary Values: 0° and 90°",
+    "p": "The values for **0°** and **90°** represent boundary conditions that can be understood using unit circle definitions or graph limits as the right-angled triangle collapses.",
+    "bullets": [
+     "**As $\\theta \\to 0^\\circ$**: The opposite side shrinks to length **0** while the adjacent side approaches the hypotenuse length **1**.",
+     "$\\sin(0^\\circ) = \\frac{0}{1} = 0$.",
+     "$\\cos(0^\\circ) = \\frac{1}{1} = 1$.",
+     "$\\tan(0^\\circ) = \\frac{0}{1} = 0$.",
+     "**As $\\theta \\to 90^\\circ$**: The adjacent side shrinks to length **0** while the opposite side reaches the hypotenuse length **1**.",
+     "$\\sin(90^\\circ) = \\frac{1}{1} = 1$.",
+     "$\\cos(90^\\circ) = \\frac{0}{1} = 0$.",
+     "$\\tan(90^\\circ) = \\frac{1}{0}$, which is **undefined** (approaches infinity, creating a vertical asymptote on the graph)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Division by Zero",
+      "p": "tan(90°) is undefined because cos(90°) = 0, and tan(theta) = sin(theta)/cos(theta). Never write tan(90°) = 0."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Complete Exact Values Summary Table",
+    "p": "This master reference table displays all required exact values for AQA GCSE Higher tier.",
+    "bullets": [
+     "Notice the complementary angle identity: $\\sin(\\theta) = \\cos(90^\\circ - \\theta)$.",
+     "Notice that $\\tan(\\theta) = \\frac{\\sin(\\theta)}{\\cos(\\theta)}$ for all defined values."
+    ],
+    "table": {
+     "head": [
+      "Angle (θ)",
+      "0°",
+      "30°",
+      "45°",
+      "60°",
+      "90°"
+     ],
+     "rows": [
+      [
+       "sin(θ)",
+       "0",
+       "1/2",
+       "sqrt(2)/2",
+       "sqrt(3)/2",
+       "1"
+      ],
+      [
+       "cos(θ)",
+       "1",
+       "sqrt(3)/2",
+       "sqrt(2)/2",
+       "1/2",
+       "0"
+      ],
+      [
+       "tan(θ)",
+       "0",
+       "sqrt(3)/3",
+       "1",
+       "sqrt(3)",
+       "Undefined"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Patterns and Memory Tricks",
+    "p": "Systematic patterns exist across the sine and cosine values that eliminate the need for rote memorisation.",
+    "bullets": [
+     "**The Square-Root Sequence for Sine**: $\\sin(\\theta) = \\frac{\\sqrt{n}}{2}$ where $n$ goes from 0 to 4.",
+     "$\\sin(0^\\circ) = \\frac{\\sqrt{0}}{2} = 0$",
+     "$\\sin(30^\\circ) = \\frac{\\sqrt{1}}{2} = \\frac{1}{2}$",
+     "$\\sin(45^\\circ) = \\frac{\\sqrt{2}}{2}$",
+     "$\\sin(60^\\circ) = \\frac{\\sqrt{3}}{2}$",
+     "$\\sin(90^\\circ) = \\frac{\\sqrt{4}}{2} = \\frac{2}{2} = 1$",
+     "**The Reversed Sequence for Cosine**: $\\cos(\\theta) = \\frac{\\sqrt{n}}{2}$ where $n$ counts backwards from 4 down to 0.",
+     "**The Division Rule for Tangent**: Divide the numerator of the sine surd by the numerator of the cosine surd: $\\tan(\\theta) = \\frac{\\sqrt{n_{\\text{sin}}}}{\\sqrt{n_{\\text{cos}}}} = \\frac{\\sqrt{n}}{\\sqrt{4-n}}$."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "The Hand Trick",
+      "p": "Hold up your left hand. Fold down a finger for 0°, 30°, 45°, 60°, or 90°. The number of fingers below is n for sine; the number above is n for cosine. Calculate sqrt(n)/2."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Rationalising Denominators in Exact Trig",
+    "p": "AQA mark schemes strictly penalise un-rationalised denominators in final answers unless explicitly permitted.",
+    "bullets": [
+     "$\\frac{1}{\\sqrt{2}}$ must be written as $\\frac{1 \\times \\sqrt{2}}{\\sqrt{2} \\times \\sqrt{2}} = \\frac{\\sqrt{2}}{2}$.",
+     "$\\frac{1}{\\sqrt{3}}$ must be written as $\\frac{1 \\times \\sqrt{3}}{\\sqrt{3} \\times \\sqrt{3}} = \\frac{\\sqrt{3}}{3}$.",
+     "When performing multi-step algebraic operations, rationalise at the final step to keep working clean.",
+     "Example: $\\frac{6}{\\tan(30^\\circ)} = \\frac{6}{\\frac{1}{\\sqrt{3}}} = 6\\sqrt{3}$."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Evaluating Arithmetic and Algebraic Trig Expressions",
+    "p": "Paper 1 grade 8-9 questions frequently require evaluating expressions containing powers, products, and sums of exact values.",
+    "bullets": [
+     "**Notation**: $\\sin^2(\\theta)$ means $(\\sin(\\theta))^2$.",
+     "**Pythagorean Identity**: $\\sin^2(\\theta) + \\cos^2(\\theta) = 1$ for any angle $\\theta$.",
+     "Example calculation: Evaluate $\\sin^2(60^\\circ) + \\tan^2(30^\\circ)$.",
+     "$\\sin(60^\\circ) = \\frac{\\sqrt{3}}{2} \\implies \\sin^2(60^\\circ) = \\left(\\frac{\\sqrt{3}}{2}\\right)^2 = \\frac{3}{4}$.",
+     "$\\tan(30^\\circ) = \\frac{\\sqrt{3}}{3} \\implies \\tan^2(30^\\circ) = \\left(\\frac{\\sqrt{3}}{3}\\right)^2 = \\frac{3}{9} = \\frac{1}{3}$.",
+     "$\\frac{3}{4} + \\frac{1}{3} = \\frac{9}{12} + \\frac{4}{12} = \\frac{13}{12} = 1\\frac{1}{12}$."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Order of Operations Trap",
+      "p": "sin(60°)^2 means calculate sin(60°) first, then square the result. Do NOT square 60° to get sin(3600°)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Non-Calculator Right-Angled Geometry",
+    "p": "Using exact values to find unknown side lengths or angles in right-angled triangles without a calculator.",
+    "bullets": [
+     "Identify given angle $\\theta$ and given side.",
+     "Choose standard SOH CAH TOA ratio.",
+     "Substitute the exact trigonometric fraction/surd.",
+     "Rearrange to solve for the missing side.",
+     "Example: Triangle with angle 30°, adjacent side $6\\text{ cm}$, find hypotenuse $x$.",
+     "$\\cos(30^\\circ) = \\frac{\\text{Adjacent}}{\\text{Hypotenuse}} \\implies \\frac{\\sqrt{3}}{2} = \\frac{6}{x} \\implies x = \\frac{12}{\\sqrt{3}} = \\frac{12\\sqrt{3}}{3} = 4\\sqrt{3}\\text{ cm}$."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Exact Values in Non-Right-Angled Geometry",
+    "p": "Combining exact trig values with the Sine Rule, Cosine Rule, and Area of a Triangle formula $\\frac{1}{2}ab\\sin C$.",
+    "bullets": [
+     "**Area of Triangle**: $\\text{Area} = \\frac{1}{2} a b \\sin C$. If $a=8, b=5, C=60^\\circ$, then $\\text{Area} = \\frac{1}{2} \\times 8 \\times 5 \\times \\frac{\\sqrt{3}}{2} = 10\\sqrt{3}\\text{ cm}^2$.",
+     "**Sine Rule**: $\\frac{a}{\\sin A} = \\frac{b}{\\sin B}$. Solve for side $a = \\frac{b \\sin A}{\\sin B}$ using exact fractions.",
+     "**Cosine Rule**: $c^2 = a^2 + b^2 - 2ab \\cos C$. Requires substituting exact values of $\\cos(30^\\circ)$, $\\cos(45^\\circ)$, or $\\cos(60^\\circ)$ and simplifying surds."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Multi-Step Grade 9 Questions",
+      "p": "Grade 9 non-calculator questions often require using the Cosine Rule with exact values to find a side length in exact surd form, followed by finding the perimeter or area."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Obtuse and Reflex Angles (Wave Symmetry)",
+    "p": "Exact values extend to angles beyond 90° using graph symmetry and ASTC quadrant rules.",
+    "bullets": [
+     "**Sine Symmetry**: $\\sin(180^\\circ - \\theta) = \\sin(\\theta)$. E.g., $\\sin(120^\\circ) = \\sin(60^\\circ) = \\frac{\\sqrt{3}}{2}$, $\\sin(135^\\circ) = \\sin(45^\\circ) = \\frac{\\sqrt{2}}{2}$, $\\sin(150^\\circ) = \\sin(30^\\circ) = \\frac{1}{2}$.",
+     "**Cosine Symmetry**: $\\cos(180^\\circ - \\theta) = -\\cos(\\theta)$. E.g., $\\cos(120^\\circ) = -\\cos(60^\\circ) = -\\frac{1}{2}$, $\\cos(135^\\circ) = -\\frac{\\sqrt{2}}{2}$, $\\cos(150^\\circ) = -\\frac{\\sqrt{3}}{2}$.",
+     "**Tangent Symmetry**: $\\tan(180^\\circ - \\theta) = -\\tan(\\theta)$. E.g., $\\tan(120^\\circ) = -\\sqrt{3}$, $\\tan(135^\\circ) = -1$, $\\tan(150^\\circ) = -\\frac{\\sqrt{3}}{3}$."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Solving Non-Calculator Trigonometric Equations",
+    "p": "Finding all solutions in a given interval (e.g., $0^\\circ \\le \\theta \\le 360^\\circ$) for exact ratio values.",
+    "bullets": [
+     "Identify the primary reference acute angle $\\theta_1 = \\arcsin(x)$, $\\arccos(x)$, or $\\arctan(x)$ using exact value knowledge.",
+     "Use symmetry relations to find secondary solutions:",
+     "For $\\sin(\\theta) = k$: $\\theta_1$ and $\\theta_2 = 180^\\circ - \\theta_1$.",
+     "For $\\cos(\\theta) = k$: $\\theta_1$ and $\\theta_2 = 360^\\circ - \\theta_1$.",
+     "For $\\tan(\\theta) = k$: $\\theta_1$ and $\\theta_2 = 180^\\circ + \\theta_1$.",
+     "If $k$ is negative, find the reference angle for $|k|$ first, then apply sign quadrant rules."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Check Solution Range",
+      "p": "Always double-check the interval specified in the question (e.g. 0° <= θ <= 360° or -180° <= θ <= 180°) to capture all valid roots."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Musical Scale Key Signature Analogy",
+   "p": "Exact trigonometric values are like the standard notes of a musical scale (C, D, E, F, G). Just as a pianist knows the exact frequencies of these primary notes without having to tune or guess, a mathematician knows the exact surd values of 30°, 45°, and 60° without needing a digital calculator. Using a calculator decimal like 0.866 is like playing an out-of-tune instrument—it is only an approximation. The breakdown of this analogy occurs because while musical notes can be transposed continuously, trigonometric values are rigidly locked to absolute geometric ratios defined by invariant spatial properties of triangles.",
+   "breakdown": "Where the analogy breaks: Musical notes can be retuned to different pitch standards (e.g. 432 Hz vs 440 Hz), but geometric exact values are mathematical absolute truths that cannot change under any system."
+  },
+  "terms": [
+   {
+    "t": "Exact Value",
+    "d": "A numerical value expressed precisely as an integer, fraction, or surd without rounding or decimal approximation."
+   },
+   {
+    "t": "Surd",
+    "d": "An irrational root of a number (such as sqrt(2) or sqrt(3)) that cannot be simplified to a rational fraction."
+   },
+   {
+    "t": "Rationalising the Denominator",
+    "d": "The process of eliminating a surd from the denominator of a fraction by multiplying top and bottom by a suitable surd expression."
+   },
+   {
+    "t": "Hypotenuse",
+    "d": "The longest side of a right-angled triangle, opposite the 90° angle."
+   },
+   {
+    "t": "Opposite Side",
+    "d": "The side of a right-angled triangle across from the angle of interest (θ)."
+   },
+   {
+    "t": "Adjacent Side",
+    "d": "The side of a right-angled triangle next to the angle of interest (θ), which is not the hypotenuse."
+   },
+   {
+    "t": "Sine (sin)",
+    "d": "The ratio of the length of the opposite side to the length of the hypotenuse in a right-angled triangle."
+   },
+   {
+    "t": "Cosine (cos)",
+    "d": "The ratio of the length of the adjacent side to the length of the hypotenuse in a right-angled triangle."
+   },
+   {
+    "t": "Tangent (tan)",
+    "d": "The ratio of the length of the opposite side to the length of the adjacent side in a right-angled triangle."
+   },
+   {
+    "t": "Perpendicular Bisector",
+    "d": "A line drawn at 90° to a segment that divides it into two equal halves."
+   },
+   {
+    "t": "Isosceles Right Triangle",
+    "d": "A triangle with one 90° angle and two equal 45° angles, with side ratios 1 : 1 : sqrt(2)."
+   },
+   {
+    "t": "Equilateral Triangle",
+    "d": "A triangle with three equal side lengths and three 60° angles."
+   },
+   {
+    "t": "Unit Circle",
+    "d": "A circle of radius 1 centered at the origin of a Cartesian coordinate system, used to define trig functions for any real angle."
+   },
+   {
+    "t": "Asymptote",
+    "d": "A line that a graph approaches closer and closer but never touches (e.g. the vertical asymptote at θ = 90° for tan θ)."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Writing sin(60°) = 0.866",
+    "r": "Write sqrt(3)/2. Non-calculator questions require exact surd form; decimal approximations lose final marks."
+   },
+   {
+    "w": "Confusing sin(30°) and cos(30°), writing sin(30°) = sqrt(3)/2",
+    "r": "sin(30°) = 1/2 and cos(30°) = sqrt(3)/2. Remember sine increases from 0 to 1 as angle increases from 0° to 90°."
+   },
+   {
+    "w": "Writing 1/sqrt(2) as the final answer for sin(45°)",
+    "r": "Rationalise the denominator to give sqrt(2)/2 unless the question explicitly accepts un-rationalised surds."
+   },
+   {
+    "w": "Writing tan(90°) = 0",
+    "r": "tan(90°) is undefined (or infinite). tan(0°) = 0, but tan(90°) involves dividing by cos(90°) which is 0."
+   },
+   {
+    "w": "Writing cos(120°) = 1/2",
+    "r": "cos(120°) = -1/2. Cosine is negative in the second quadrant (between 90° and 180°)."
+   },
+   {
+    "w": "Evaluating (sin(60°))^2 as sin(3600°)",
+    "r": "sin^2(60°) means (sin(60°))^2 = (sqrt(3)/2)^2 = 3/4. Do not square the angle!"
+   },
+   {
+    "w": "Calculating Area = 1/2 * a * b * cos(C) instead of 1/2 * a * b * sin(C)",
+    "r": "Area formula uses sine: Area = 1/2 * a * b * sin(C)."
+   },
+   {
+    "w": "Simplifying sqrt(3)/3 to 1",
+    "r": "sqrt(3)/3 cannot be simplified to 1. sqrt(3)/3 = 1/sqrt(3). Only 3/3 = 1."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Write down the exact value of sin(60°).",
+    "marks": 1,
+    "model": [
+     "sqrt(3)/2"
+    ],
+    "tip": "This is a direct recall question. Double check you haven't swapped it with cos(60°) = 1/2."
+   },
+   {
+    "q": "Show that tan(30°) + tan(60°) = (4*sqrt(3))/3.",
+    "marks": 3,
+    "model": [
+     "Substitute exact values: tan(30°) = sqrt(3)/3 and tan(60°) = sqrt(3)",
+     "Find a common denominator: sqrt(3)/3 + (3*sqrt(3))/3",
+     "Combine numerators: (1*sqrt(3) + 3*sqrt(3))/3 = (4*sqrt(3))/3"
+    ],
+    "tip": "Express both terms with a common denominator of 3 before adding."
+   },
+   {
+    "q": "Triangle ABC has AB = 6 cm, AC = 10 cm and angle BAC = 30°. Calculate the exact area of triangle ABC.",
+    "marks": 2,
+    "model": [
+     "Use area formula: Area = 1/2 * b * c * sin(A) = 1/2 * 6 * 10 * sin(30°)",
+     "Substitute sin(30°) = 1/2: Area = 1/2 * 60 * 1/2 = 15 cm²"
+    ],
+    "tip": "Remember area units (cm²) and don't forget the factor of 1/2."
+   },
+   {
+    "q": "A right-angled triangle has an angle of 45° and an adjacent side of length 8 cm. Find the exact length of the hypotenuse, giving your answer in the form a*sqrt(b) where a and b are integers.",
+    "marks": 3,
+    "model": [
+     "Use cos(45°) = Adjacent / Hypotenuse",
+     "cos(45°) = 8 / x => sqrt(2)/2 = 8 / x",
+     "Rearrange: x = 16 / sqrt(2) = (16*sqrt(2)) / 2 = 8*sqrt(2) cm"
+    ],
+    "tip": "Multiply top and bottom by sqrt(2) to rationalise the denominator."
+   },
+   {
+    "q": "Solve sin(x) = -sqrt(3)/2 for 0° <= x <= 360°.",
+    "marks": 3,
+    "model": [
+     "Find base acute angle: sin(θ) = sqrt(3)/2 => θ = 60°",
+     "Since sin(x) is negative, solutions are in 3rd and 4th quadrants",
+     "x = 180° + 60° = 240° and x = 360° - 60° = 300°"
+    ],
+    "tip": "Use ASTC or sine wave symmetry to find both angles where sine is negative."
+   },
+   {
+    "q": "Calculate the exact value of (cos(30°) * tan(60°)) / sin(45°). Write your answer in the form (a*sqrt(b))/c.",
+    "marks": 4,
+    "model": [
+     "Substitute exact values: cos(30°) = sqrt(3)/2, tan(60°) = sqrt(3), sin(45°) = sqrt(2)/2",
+     "Calculate numerator: (sqrt(3)/2) * sqrt(3) = 3/2",
+     "Divide by denominator: (3/2) / (sqrt(2)/2) = (3/2) * (2/sqrt(2)) = 3/sqrt(2)",
+     "Rationalise: (3 * sqrt(2)) / 2"
+    ],
+    "tip": "Work systematically: numerator first, then invert and multiply for division, then rationalise."
+   },
+   {
+    "q": "In triangle PQR, PQ = 4 cm, QR = 6 cm and angle PQR = 120°. Work out the exact length of PR in the form sqrt(n).",
+    "marks": 4,
+    "model": [
+     "Use Cosine Rule: PR² = PQ² + QR² - 2(PQ)(QR)cos(120°)",
+     "Substitute values: PR² = 4² + 6² - 2(4)(6)cos(120°)",
+     "Recall cos(120°) = -cos(60°) = -1/2",
+     "PR² = 16 + 36 - 48(-1/2) = 52 + 24 = 76",
+     "PR = sqrt(76) cm"
+    ],
+    "tip": "Be extremely careful with double negatives: -2ab * (-1/2) becomes positive +ab."
+   },
+   {
+    "q": "Prove geometrically that sin(45°) = sqrt(2)/2.",
+    "marks": 3,
+    "model": [
+     "Draw an isosceles right-angled triangle with shorter sides 1 and 1.",
+     "By Pythagoras, hypotenuse = sqrt(1² + 1²) = sqrt(2). Both acute angles are (180°-90°)/2 = 45°.",
+     "Using SOH: sin(45°) = Opposite / Hypotenuse = 1 / sqrt(2) = (1*sqrt(2))/(sqrt(2)*sqrt(2)) = sqrt(2)/2."
+    ],
+    "tip": "You must state side lengths, use Pythagoras to find hypotenuse, and show the rationalisation step."
+   },
+   {
+    "q": "Express (sin²(60°) + cos²(30°)) / tan(45°) as an exact fraction in its simplest form.",
+    "marks": 3,
+    "model": [
+     "sin(60°) = sqrt(3)/2 => sin²(60°) = 3/4",
+     "cos(30°) = sqrt(3)/2 => cos²(30°) = 3/4",
+     "tan(45°) = 1 => Numerator = 3/4 + 3/4 = 6/4 = 3/2; Denominator = 1 => Result = 3/2"
+    ],
+    "tip": "Simplifying 6/4 to 3/2 gives final mark."
+   }
+  ],
+  "worked": [
+   {
+    "q": "In triangle XYZ, side XY = 2*sqrt(3) cm, side YZ = 5 cm, and angle XYZ = 150°. Calculate the exact area of triangle XYZ and the exact length of XZ.",
+    "steps": [
+     "Step 1: Calculate the exact area using Area = 1/2 * a * b * sin(C).",
+     "Substitute a = 2*sqrt(3), b = 5, C = 150°.",
+     "Note that sin(150°) = sin(180° - 150°) = sin(30°) = 1/2.",
+     "Area = 1/2 * (2*sqrt(3)) * 5 * (1/2) = (5*sqrt(3)) / 2 cm².",
+     "Step 2: Calculate the length of XZ using the Cosine Rule: XZ² = XY² + YZ² - 2(XY)(YZ)cos(150°).",
+     "Calculate XY² = (2*sqrt(3))² = 4 * 3 = 12.",
+     "Calculate YZ² = 5² = 25.",
+     "Note that cos(150°) = -cos(30°) = -sqrt(3)/2.",
+     "Substitute into rule: XZ² = 12 + 25 - 2(2*sqrt(3))(5)(-sqrt(3)/2).",
+     "Simplify product: 2 * 2*sqrt(3) * 5 * (sqrt(3)/2) = 2 * 2 * 5 * 3 / 2 = 30.",
+     "Since cos(150°) is negative, minus minus becomes plus: XZ² = 37 + 30 = 67.",
+     "XZ = sqrt(67) cm."
+    ],
+    "ans": "Area = (5*sqrt(3))/2 cm², XZ = sqrt(67) cm"
+   },
+   {
+    "q": "Solve the non-calculator trigonometric equation 2*cos(x) + 1 = 0 for the domain 0° <= x <= 360°.",
+    "steps": [
+     "Step 1: Rearrange the equation to isolate cos(x).",
+     "2*cos(x) = -1 => cos(x) = -1/2.",
+     "Step 2: Find the reference acute angle θ by ignoring the negative sign.",
+     "cos(θ) = 1/2 => θ = 60°.",
+     "Step 3: Determine which quadrants cosine is negative in.",
+     "Cosine is positive in Quadrants 1 & 4, and negative in Quadrants 2 & 3.",
+     "Step 4: Apply quadrant symmetry rules for Quadrants 2 and 3.",
+     "Quadrant 2: x = 180° - 60° = 120°.",
+     "Quadrant 3: x = 180° + 60° = 240°."
+    ],
+    "ans": "x = 120° and x = 240°"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Figure 1: The 45°-45°-90° Isosceles Right Triangle used to derive exact values for 45°.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><polygon points=\"80,190 260,190 80,30\" fill=\"#dbeafe\" stroke=\"#1e40af\" stroke-width=\"3\"/><rect x=\"80\" y=\"170\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"#1e40af\" stroke-width=\"2\"/><path d=\"M 120,190 A 40,40 0 0,0 108,162\" fill=\"none\" stroke=\"#b91c1c\" stroke-width=\"2\"/><text x=\"125\" y=\"180\" fill=\"#b91c1c\" font-weight=\"bold\" font-size=\"13\">45°</text><path d=\"M 80,60 A 30,30 0 0,1 100,50\" fill=\"none\" stroke=\"#b91c1c\" stroke-width=\"2\"/><text x=\"90\" y=\"75\" fill=\"#b91c1c\" font-weight=\"bold\" font-size=\"13\">45°</text><text x=\"165\" y=\"212\" fill=\"#1b2540\" font-weight=\"bold\" font-size=\"13\">Adjacent = 1</text><text x=\"20\" y=\"115\" fill=\"#1b2540\" font-weight=\"bold\" font-size=\"13\">Opp = 1</text><text x=\"180\" y=\"100\" fill=\"#1e40af\" font-weight=\"bold\" font-size=\"13\">Hyp = √2</text></svg>"
+   },
+   {
+    "cap": "Figure 2: Equilateral Triangle of side 2 split to derive 30° and 60° exact trigonometric ratios.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><polygon points=\"200,30 80,200 320,200\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><polygon points=\"200,30 80,200 200,200\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"3\"/><line x1=\"200\" y1=\"30\" x2=\"200\" y2=\"200\" stroke=\"#15803d\" stroke-width=\"2\" stroke-dasharray=\"3,3\"/><rect x=\"180\" y=\"180\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"#15803d\" stroke-width=\"2\"/><text x=\"125\" y=\"220\" fill=\"#15803d\" font-weight=\"bold\" font-size=\"12\">Base = 1</text><text x=\"245\" y=\"220\" fill=\"#d97706\" font-weight=\"bold\" font-size=\"12\">Base = 1</text><text x=\"210\" y=\"120\" fill=\"#15803d\" font-weight=\"bold\" font-size=\"13\">Height = √3</text><text x=\"110\" y=\"105\" fill=\"#15803d\" font-weight=\"bold\" font-size=\"13\">Hyp = 2</text><text x=\"105\" y=\"190\" fill=\"#b91c1c\" font-weight=\"bold\" font-size=\"12\">60°</text><text x=\"185\" y=\"65\" fill=\"#b91c1c\" font-weight=\"bold\" font-size=\"12\">30°</text></svg>"
+   },
+   {
+    "cap": "Figure 3: Wave symmetry of sin(θ) showing exact values across acute and obtuse angles.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><line x1=\"40\" y1=\"180\" x2=\"360\" y2=\"180\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"40\" y1=\"20\" x2=\"40\" y2=\"210\" stroke=\"#64748b\" stroke-width=\"2\"/><path d=\"M 40,180 Q 120,40 200,180 Q 280,320 360,180\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><circle cx=\"93\" cy=\"110\" r=\"4\" fill=\"#dc2626\"/><circle cx=\"147\" cy=\"110\" r=\"4\" fill=\"#dc2626\"/><line x1=\"93\" y1=\"110\" x2=\"147\" y2=\"110\" stroke=\"#dc2626\" stroke-width=\"1.5\" stroke-dasharray=\"3,3\"/><text x=\"75\" y=\"200\" fill=\"#1e293b\" font-size=\"11\" font-weight=\"bold\">30°</text><text x=\"135\" y=\"200\" fill=\"#1e293b\" font-size=\"11\" font-weight=\"bold\">150°</text><text x=\"190\" y=\"200\" fill=\"#1e293b\" font-size=\"11\" font-weight=\"bold\">180°</text><text x=\"10\" y=\"115\" fill=\"#dc2626\" font-size=\"11\" font-weight=\"bold\">1/2</text><text x=\"10\" y=\"45\" fill=\"#2563eb\" font-size=\"11\" font-weight=\"bold\">1</text><line x1=\"35\" y1=\"40\" x2=\"45\" y2=\"40\" stroke=\"#2563eb\" stroke-width=\"2\"/></svg>"
+   },
+   {
+    "cap": "Figure 4: Summary visual mapping of the exact values for 0°, 30°, 45°, 60°, and 90°.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#ffffff\" stroke=\"#cbd5e1\" rx=\"6\"/><line x1=\"20\" y1=\"60\" x2=\"380\" y2=\"60\" stroke=\"#cbd5e1\" stroke-width=\"2\"/><line x1=\"20\" y1=\"110\" x2=\"380\" y2=\"110\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"20\" y1=\"160\" x2=\"380\" y2=\"160\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"90\" y1=\"20\" x2=\"90\" y2=\"220\" stroke=\"#cbd5e1\" stroke-width=\"2\"/><line x1=\"150\" y1=\"20\" x2=\"150\" y2=\"220\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"210\" y1=\"20\" x2=\"210\" y2=\"220\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"270\" y1=\"20\" x2=\"270\" y2=\"220\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"330\" y1=\"20\" x2=\"330\" y2=\"220\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><text x=\"40\" y=\"45\" fill=\"#0f172a\" font-weight=\"bold\" font-size=\"13\">θ</text><text x=\"112\" y=\"45\" fill=\"#0f172a\" font-weight=\"bold\" font-size=\"12\">0°</text><text x=\"170\" y=\"45\" fill=\"#0f172a\" font-weight=\"bold\" font-size=\"12\">30°</text><text x=\"230\" y=\"45\" fill=\"#0f172a\" font-weight=\"bold\" font-size=\"12\">45°</text><text x=\"290\" y=\"45\" fill=\"#0f172a\" font-weight=\"bold\" font-size=\"12\">60°</text><text x=\"348\" y=\"45\" fill=\"#0f172a\" font-weight=\"bold\" font-size=\"12\">90°</text><text x=\"35\" y=\"90\" fill=\"#2563eb\" font-weight=\"bold\" font-size=\"12\">sin θ</text><text x=\"115\" y=\"90\" fill=\"#1e293b\" font-size=\"11\">0</text><text x=\"170\" y=\"90\" fill=\"#1e293b\" font-size=\"11\">1/2</text><text x=\"225\" y=\"90\" fill=\"#1e293b\" font-size=\"11\">√2/2</text><text x=\"285\" y=\"90\" fill=\"#1e293b\" font-size=\"11\">√3/2</text><text x=\"353\" y=\"90\" fill=\"#1e293b\" font-size=\"11\">1</text><text x=\"35\" y=\"140\" fill=\"#059669\" font-weight=\"bold\" font-size=\"12\">cos θ</text><text x=\"115\" y=\"140\" fill=\"#1e293b\" font-size=\"11\">1</text><text x=\"167\" y=\"140\" fill=\"#1e293b\" font-size=\"11\">√3/2</text><text x=\"225\" y=\"140\" fill=\"#1e293b\" font-size=\"11\">√2/2</text><text x=\"290\" y=\"140\" fill=\"#1e293b\" font-size=\"11\">1/2</text><text x=\"353\" y=\"140\" fill=\"#1e293b\" font-size=\"11\">0</text><text x=\"35\" y=\"190\" fill=\"#d97706\" font-weight=\"bold\" font-size=\"12\">tan θ</text><text x=\"115\" y=\"190\" fill=\"#1e293b\" font-size=\"11\">0</text><text x=\"167\" y=\"190\" fill=\"#1e293b\" font-size=\"11\">√3/3</text><text x=\"232\" y=\"190\" fill=\"#1e293b\" font-size=\"11\">1</text><text x=\"292\" y=\"190\" fill=\"#1e293b\" font-size=\"11\">√3</text><text x=\"345\" y=\"190\" fill=\"#dc2626\" font-weight=\"bold\" font-size=\"10\">Undef</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_h.3.20",
+  "sid": "maths_aqa_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.6-flash",
+  "ts": "2026-11-19T17:47:07.983Z"
+ },
+ "maths_aqa_h.3.17": {
+  "summary": "A sector is a fraction of a circle bounded by two radii and an arc, similar to a slice of a circular pie. Topic G18 requires mastering calculations for arc length, sector area, subtended angle, radius, total sector perimeter, and segment areas across both non-calculator and calculator papers. Achieving Grade 9 performance requires fluent integration of advanced trigonometry (such as 1/2 ab sin C and the Cosine Rule) alongside algebraic manipulation when sector dimensions are given as algebraic expressions.",
+  "core": [
+   {
+    "h": "1. Anatomy of a Sector and Angle Fractions",
+    "p": "A circle represents a full turn of 360°. Any sector is simply a proportional fraction of the whole circle defined by the subtended angle θ at the centre. Understanding how to express this fraction is the foundation of all sector calculations.",
+    "bullets": [
+     "**Sector Definition**: A region bounded by two radii and an arc.",
+     "**Subtended Angle (θ)**: The angle formed at the centre O between the two radii.",
+     "**Fraction of a Circle**: The proportion of the total circle occupied by the sector is given by the fraction **θ / 360**.",
+     "**Minor Sector**: A sector where the subtended angle θ is less than 180°.",
+     "**Major Sector**: A sector where the subtended angle θ is greater than 180° (calculated as 360° - minor angle)."
+    ],
+    "table": {
+     "head": [
+      "Sector Type",
+      "Angle Condition (θ)",
+      "Fraction of Circle"
+     ],
+     "rows": [
+      [
+       "Semicircle",
+       "θ = 180°",
+       "180 / 360 = 1/2"
+      ],
+      [
+       "Quadrant",
+       "θ = 90°",
+       "90 / 360 = 1/4"
+      ],
+      [
+       "Minor Sector",
+       "0° < θ < 180°",
+       "θ / 360 < 1/2"
+      ],
+      [
+       "Major Sector",
+       "180° < θ < 360°",
+       "θ / 360 > 1/2"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Sector",
+      "p": "A sector is the portion of a disk enclosed by two radii and an arc connecting their outer endpoints."
+     },
+     {
+      "k": "warn",
+      "t": "Major vs Minor Trap",
+      "p": "Always read the question carefully to see if it asks for the minor or major sector. If given a minor angle of 60°, the major sector angle is 360° - 60° = 300°."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Anatomy of a minor sector showing radius r, angle θ at origin O, arc length, and sector area.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><defs><linearGradient id=\"secGrad\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#dbeafe\"/><stop offset=\"100%\" stop-color=\"#93c5fd\"/></linearGradient></defs><path d=\"M 200 190 L 96 90 A 140 140 0 0 1 304 90 Z\" fill=\"url(#secGrad)\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M 200 190 L 96 90\" stroke=\"#1b2540\" stroke-width=\"2.5\"/><path d=\"M 200 190 L 304 90\" stroke=\"#1b2540\" stroke-width=\"2.5\"/><path d=\"M 175 166 A 35 35 0 0 1 225 166\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\"/><path d=\"M 96 90 A 140 140 0 0 1 304 90\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"4\"/><circle cx=\"200\" cy=\"190\" r=\"4\" fill=\"#1b2540\"/><text x=\"195\" y=\"210\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\">O</text><text x=\"130\" y=\"150\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\">r</text><text x=\"260\" y=\"150\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\">r</text><text x=\"194\" y=\"155\" font-size=\"13\" font-weight=\"bold\" fill=\"#ef4444\">θ</text><text x=\"175\" y=\"65\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">Arc Length</text><text x=\"168\" y=\"120\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">Sector Area</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "2. Arc Length: Formula and Standard Calculations",
+    "p": "An arc is a curved portion of the circle's circumference. The length of an arc is calculated by multiplying the full circumference (2πr or πd) by the angle fraction (θ / 360).",
+    "bullets": [
+     "**Arc Length Formula**: Arc Length = (θ / 360) × 2πr = (θ / 360) × πd",
+     "**Radius vs Diameter**: Ensure you use the radius (r) when using 2πr, or diameter (d) when using πd.",
+     "**Units**: Arc length is a 1D measure of distance, expressed in linear units such as cm, m, or mm.",
+     "**Calculator Strategy**: Calculate (θ / 360) × 2 × π × r, keeping exact values in memory before rounding.",
+     "**Non-Calculator Strategy**: Simplify the fraction θ/360 first, then multiply by 2πr to express in terms of π."
+    ],
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Arc Length Formula",
+      "p": "Arc Length = (θ / 360) × 2πr"
+     },
+     {
+      "k": "tip",
+      "t": "Fraction Simplification",
+      "p": "Common angle fractions to memorise: 30° = 1/12, 45° = 1/8, 60° = 1/6, 72° = 1/5, 90° = 1/4, 120° = 1/3, 135° = 3/8, 180° = 1/2, 240° = 2/3, 270° = 3/4."
+     }
+    ]
+   },
+   {
+    "h": "3. Sector Area: Formula and Standard Calculations",
+    "p": "The area of a sector is the two-dimensional region enclosed within the arc and the two radii. It is found by multiplying the full area of the circle (πr²) by the angle fraction (θ / 360).",
+    "bullets": [
+     "**Sector Area Formula**: Sector Area = (θ / 360) × πr²",
+     "**Order of Operations**: Square the radius first, then multiply by π and the angle fraction θ/360.",
+     "**Units**: Sector area is a 2D measure, expressed in square units such as cm², m², or mm².",
+     "**Major Sector Area**: Use (360 - θ) / 360 × πr² or subtract the minor sector area from the total circle area (πr²)."
+    ],
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Sector Area Formula",
+      "p": "Sector Area = (θ / 360) × πr²"
+     },
+     {
+      "k": "warn",
+      "t": "Square the Radius Only",
+      "p": "Never multiply π by r before squaring. The formula is π × (r²), not (π × r)²."
+     }
+    ]
+   },
+   {
+    "h": "4. Finding the Subtended Angle (Reversing Formulas)",
+    "p": "When given the arc length or sector area alongside the radius, you must rearrange the formulas to calculate the central angle θ.",
+    "bullets": [
+     "**From Arc Length**: Rearrange Arc = (θ / 360) × 2πr to get **θ = (Arc Length × 360) / (2πr)**.",
+     "**From Sector Area**: Rearrange Area = (θ / 360) × πr² to get **θ = (Sector Area × 360) / (πr²)**.",
+     "**Step-by-Step Rearrangement**: Multiply both sides by 360, then divide by the circle metric (2πr or πr²).",
+     "**Checking Sanity**: If the sector looks minor, θ must be between 0° and 180°. If θ > 180°, check if you calculated the major angle."
+    ],
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Rearranging Angle Formulas",
+      "p": "To find θ from Sector Area: θ = 360 × Area / (πr²). Always compute the denominator (πr²) completely before dividing!"
+     }
+    ]
+   },
+   {
+    "h": "5. Finding the Radius or Diameter from Sector Data",
+    "p": "Calculating the radius when given the sector area or arc length and the angle θ requires careful algebraic isolation of r.",
+    "bullets": [
+     "**Radius from Arc Length**: Arc = (θ / 360) × 2πr  =>  **r = (Arc Length × 360) / (2πθ)**",
+     "**Radius from Sector Area**: Area = (θ / 360) × πr²  =>  r² = (Area × 360) / (πθ)  =>  **r = √[ (Area × 360) / (πθ) ]**",
+     "**Grade 9 Precision**: Do not round intermediate values on your calculator when taking the square root."
+    ],
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Don't Forget the Square Root",
+      "p": "When solving for radius from sector area, finding r² is only halfway! Always take the positive square root at the final step."
+     }
+    ]
+   },
+   {
+    "h": "6. Perimeter of a Sector: The Essential Extra Step",
+    "p": "The perimeter of a sector is the total distance around its outer boundary. A very common exam error is writing down just the arc length and forgetting to add the two bounding radii.",
+    "bullets": [
+     "**Sector Perimeter Formula**: **Perimeter = Arc Length + 2r = (θ / 360) × 2πr + 2r**",
+     "**Boundary Analysis**: A closed sector shape consists of 3 edges: 1 curved arc and 2 straight radii.",
+     "**Exact Form**: Express as aπ + b, where a is the arc coefficient and b is 2r.",
+     "**Algebraic Questions**: Be ready to factorise: Perimeter = r × [ (θπ / 180) + 2 ]."
+    ],
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Perimeter of a Sector",
+      "p": "Perimeter = Arc Length + Radius + Radius = (θ / 360) × 2πr + 2r"
+     },
+     {
+      "k": "warn",
+      "t": "The Missing Radii Trap",
+      "p": "Arc length is NOT the perimeter! Mark schemes penalise students up to 2 marks for failing to add 2r."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Perimeter components of a sector: Curved Arc Length plus two straight Radii (r + r).",
+      "svg": "<svg viewBox=\"0 0 400 240\"><path d=\"M 200 200 L 96 100 A 140 140 0 0 1 304 100 Z\" fill=\"#fef3c7\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><path d=\"M 200 200 L 96 100\" stroke=\"#ef4444\" stroke-width=\"3.5\" stroke-dasharray=\"6,3\"/><path d=\"M 200 200 L 304 100\" stroke=\"#ef4444\" stroke-width=\"3.5\" stroke-dasharray=\"6,3\"/><path d=\"M 96 100 A 140 140 0 0 1 304 100\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"4\"/><circle cx=\"200\" cy=\"200\" r=\"4\" fill=\"#1b2540\"/><text x=\"195\" y=\"220\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\">O</text><text x=\"125\" y=\"160\" font-size=\"12\" font-weight=\"bold\" fill=\"#ef4444\">+ Radius (r)</text><text x=\"215\" y=\"160\" font-size=\"12\" font-weight=\"bold\" fill=\"#ef4444\">+ Radius (r)</text><text x=\"145\" y=\"75\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">Arc Length (L)</text><rect x=\"70\" y=\"15\" width=\"260\" height=\"35\" rx=\"6\" fill=\"#ffffff\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"80\" y=\"38\" font-size=\"13\" font-weight=\"bold\" fill=\"#1b2540\">Perimeter = Arc Length + r + r</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "7. Area of a Segment: Sector Area minus Triangle Area",
+    "p": "A segment is the region bounded by a chord and an arc. Calculating segment area is a classic Grade 8/9 question that combines circle formulas with non-right-angled triangle trigonometry.",
+    "bullets": [
+     "**Segment Area Formula**: **Area of Segment = Area of Sector - Area of Triangle**",
+     "**Triangle Area Formula**: Since the triangle formed by two radii is isosceles with sides r and r and included angle θ, use **Area of Triangle = 1/2 r² sin(θ)**.",
+     "**Full Expanded Formula**: **Area of Segment = (θ / 360) × πr² - 1/2 r² sin(θ)**",
+     "**Factorised Form**: Area of Segment = 1/2 r² [ (θπ / 180) - sin(θ) ]",
+     "**Major Segment Area**: Major Segment Area = Area of Circle - Minor Segment Area, or Sector Area (major) + Triangle Area."
+    ],
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Segment Area Formula",
+      "p": "Area of Segment = (θ / 360) × πr² - 1/2 r² sin(θ)"
+     },
+     {
+      "k": "tip",
+      "t": "Calculator Mode",
+      "p": "Ensure your scientific calculator is set to DEGREES (D mode), not Radians (R mode), when evaluating sin(θ)."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Decomposition of a Segment: Area of Sector minus Area of Triangle OAB equals Area of Segment (shaded red).",
+      "svg": "<svg viewBox=\"0 0 400 240\"><path d=\"M 200 190 L 96 90 A 140 140 0 0 1 304 90 Z\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><path d=\"M 96 90 A 140 140 0 0 1 304 90 Z\" fill=\"#fecaca\" stroke=\"#ef4444\" stroke-width=\"2\"/><line x1=\"96\" y1=\"90\" x2=\"304\" y2=\"90\" stroke=\"#1b2540\" stroke-width=\"2.5\" stroke-dasharray=\"4,3\"/><line x1=\"200\" y1=\"190\" x2=\"96\" y2=\"90\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"200\" y1=\"190\" x2=\"304\" y2=\"90\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"190\" r=\"4\" fill=\"#1b2540\"/><text x=\"195\" y=\"210\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\">O</text><text x=\"82\" y=\"88\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\">A</text><text x=\"310\" y=\"88\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\">B</text><text x=\"180\" y=\"75\" font-size=\"11\" font-weight=\"bold\" fill=\"#b91c1c\">Segment</text><text x=\"165\" y=\"135\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\">Triangle OAB</text><text x=\"185\" y=\"40\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\">Chord AB</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "8. Perimeter of a Segment: Arc Length plus Chord Length",
+    "p": "Finding the perimeter of a segment requires calculating both the curved arc length and the straight chord length connecting the two endpoints.",
+    "bullets": [
+     "**Perimeter Formula**: **Perimeter of Segment = Arc Length + Chord Length**",
+     "**Chord Length using Cosine Rule**: In triangle OAB with sides r, r and angle θ, **c² = r² + r² - 2(r)(r)cos(θ) = 2r²(1 - cos(θ))**.",
+     "**Alternative Right-Angled Trig**: Split the isosceles triangle in half to get **Chord Length = 2 × r × sin(θ / 2)**.",
+     "**Combined Expression**: Perimeter = (θ / 360) × 2πr + 2r sin(θ / 2)."
+    ],
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Chord Length Formulas",
+      "p": "Chord Length = 2r sin(θ / 2)  OR  c = √(2r² - 2r² cos θ)"
+     }
+    ]
+   },
+   {
+    "h": "9. Working in Terms of Pi (Non-Calculator Paper 1)",
+    "p": "On Paper 1 (Non-Calculator), questions frequently instruct: 'Give your answer in terms of π' or 'in the form aπ + b'. You must simplify fractions cleanly without converting π to decimals.",
+    "bullets": [
+     "**Simplifying Angles**: Cancel θ/360 to its simplest fraction before multiplying.",
+     "**Example**: θ = 60°, r = 6 cm. Sector Area = (60/360) × π × 6² = (1/6) × 36π = 6π cm².",
+     "**Perimeter in Exact Form**: Arc = 60/360 × 2π(6) = 2π. Bounding radii = 6 + 6 = 12. Total Perimeter = 2π + 12 cm.",
+     "**Algebraic Exact Form**: Do not substitute 3.14 or 22/7 unless explicitly told to do so."
+    ],
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Paper 1 Exact Answers",
+      "p": "Treat π like an algebraic variable (such as x). Keep terms with π separate from rational numbers (e.g., 4π + 10)."
+     }
+    ]
+   },
+   {
+    "h": "10. Compound Sector Shapes and Annulus Rings",
+    "p": "Compound shapes involving sectors include truncated sectors (annulus sectors/washers), keyholes, running tracks, and overlapping sectors.",
+    "bullets": [
+     "**Truncated Sector (Annulus Sector)**: Formed by subtracting a smaller concentric sector of radius r from a larger sector of radius R.",
+     "**Annulus Sector Area**: **Area = (θ / 360) × π(R² - r²)**",
+     "**Annulus Sector Perimeter**: Outer Arc + Inner Arc + 2 × (R - r).",
+     "**Composite Area Addition**: Total Area = Area of Rectangle/Triangle + Area of Sector.",
+     "**Composite Area Subtraction**: Remaining Area = Outer Shape Area - Sector Area."
+    ],
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Annulus Sector Area",
+      "p": "Area = (θ / 360) × π × (R² - r²)"
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Annulus Sector (Truncated Sector): Region between outer radius R and inner radius r with angle θ.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><defs><linearGradient id=\"annGrad\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#e9d5ff\"/><stop offset=\"100%\" stop-color=\"#c084fc\"/></linearGradient></defs><path d=\"M 200 210 L 105 115 A 135 135 0 0 1 295 115 L 245 165 A 65 65 0 0 0 155 165 Z\" fill=\"url(#annGrad)\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"200\" y1=\"210\" x2=\"155\" y2=\"165\" stroke=\"#1b2540\" stroke-width=\"1.5\" stroke-dasharray=\"3,3\"/><line x1=\"200\" y1=\"210\" x2=\"245\" y2=\"165\" stroke=\"#1b2540\" stroke-width=\"1.5\" stroke-dasharray=\"3,3\"/><circle cx=\"200\" cy=\"210\" r=\"4\" fill=\"#1b2540\"/><text x=\"196\" y=\"226\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\">O</text><text x=\"165\" y=\"190\" font-size=\"11\" font-weight=\"bold\" fill=\"#6b21a8\">r</text><text x=\"120\" y=\"145\" font-size=\"11\" font-weight=\"bold\" fill=\"#6b21a8\">R</text><text x=\"170\" y=\"135\" font-size=\"12\" font-weight=\"bold\" fill=\"#581c87\">Annulus Sector Area</text><text x=\"120\" y=\"95\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\">Outer Arc</text><text x=\"165\" y=\"175\" font-size=\"10\" font-weight=\"bold\" fill=\"#2563eb\">Inner Arc</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "11. Grade 9 Problem Solving: Combining Sectors with Trigonometry",
+    "p": "Top-tier AQA questions link sector formulas with exact trigonometric values, the Sine Rule, Cosine Rule, or Pythagoras' Theorem in multi-step geometric proofs.",
+    "bullets": [
+     "**Exact Trig Values**: Memorise exact values for sin, cos, tan of 30°, 45°, 60° (e.g. sin 60° = √3/2, sin 30° = 1/2, cos 60° = 1/2).",
+     "**Equilateral Triangles**: If θ = 60°, the triangle OAB is equilateral, so chord AB = r.",
+     "**Right-Angled Sectors**: If θ = 90°, triangle OAB is a right-angled isosceles triangle; chord length = r√2, area = 1/2 r².",
+     "**Shaded Regions**: Always write an overall strategy line first, e.g., 'Shaded Area = Sector Area - Right-Angled Triangle Area'."
+    ],
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Grade 9 Proof Strategy",
+      "p": "When asked to prove an expression in terms of π and √3, substitute exact trigonometric ratios like sin(60°) = √3 / 2 into the segment formula."
+     }
+    ]
+   },
+   {
+    "h": "12. Algebraic Sector Equations and Multi-Step Proofs",
+    "p": "Grade 9 questions often express dimensions algebraically (e.g., radius = (x + 3) cm, angle = (2x)°) and require forming and solving quadratic or simultaneous equations.",
+    "bullets": [
+     "**Setting up Equations**: Equate the sector formula expression to the given numerical value or second algebraic expression.",
+     "**Eliminating Denominators**: Multiply by 360 to clear fractions early in your algebraic manipulation.",
+     "**Forming Quadratics**: Expand brackets, collect like terms into ax² + bx + c = 0, and solve via factorisation or the quadratic formula.",
+     "**Rejecting Invalid Solutions**: Radius and arc length must be strictly positive; discard negative roots of x with clear geometric reasoning."
+    ],
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Discard Negative Roots",
+      "p": "If a quadratic yields x = 5 or x = -8 for a physical radius length, explicitly state 'Since length > 0, x = 5'."
+     }
+    ]
+   }
+  ],
+  "analogy": {
+   "t": "The Circular Pizza Slice Analogy",
+   "p": "Imagine a large circular pizza sliced into unequal portions from the centre. The central angle θ determines what fraction of the entire pizza you get (θ / 360). The outer crust of your slice represents the arc length (a fraction of the full circumference). The total area of cheese on your slice represents the sector area (a fraction of the full circle area). The two straight cut edges are the radii. The total boundary of your slice (crust plus both straight cut sides) is the sector perimeter. This model breaks down when considering segments: a segment is like cutting straight across the crust with a single straight knife stroke (a chord), cutting off a triangular piece of pizza and leaving only the curved crust edge."
+  },
+  "terms": [
+   {
+    "t": "Arc",
+    "d": "A continuous portion of the circumference of a circle."
+   },
+   {
+    "t": "Arc Length",
+    "d": "The linear distance along the curved edge of a sector, calculated as (θ/360) × 2πr."
+   },
+   {
+    "t": "Sector",
+    "d": "A region bounded by two radii of a circle and the arc connecting them."
+   },
+   {
+    "t": "Minor Sector",
+    "d": "A sector with a central subtended angle θ strictly less than 180°."
+   },
+   {
+    "t": "Major Sector",
+    "d": "A sector with a central subtended angle θ strictly greater than 180°."
+   },
+   {
+    "t": "Subtended Angle (θ)",
+    "d": "The central angle formed at the origin O between the two radii of a sector."
+   },
+   {
+    "t": "Segment",
+    "d": "The region bounded by a chord and the arc subtended by the chord."
+   },
+   {
+    "t": "Chord",
+    "d": "A straight line segment connecting two points on the circumference of a circle."
+   },
+   {
+    "t": "Perimeter of Sector",
+    "d": "The total boundary distance of a sector, equal to Arc Length + 2 × Radius."
+   },
+   {
+    "t": "Perimeter of Segment",
+    "d": "The total boundary distance of a segment, equal to Arc Length + Chord Length."
+   },
+   {
+    "t": "Annulus Sector",
+    "d": "A truncated sector region between two concentric circles with radii R and r subtending the same central angle."
+   },
+   {
+    "t": "Exact Form in terms of π",
+    "d": "Expressing an answer containing the constant π precisely without rounding to decimals."
+   },
+   {
+    "t": "Subtend",
+    "d": "To extend under or opposite to an angle (e.g., an arc subtends an angle at the centre)."
+   },
+   {
+    "t": "Isosceles Triangle of a Sector",
+    "d": "The triangle formed by connecting the centre O to the two arc endpoints A and B, having two equal sides of length r."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Perimeter of sector = (60/360) × 2 × π × 6 = 2π cm.",
+    "r": "Perimeter of sector = Arc length + 2r = 2π + 2(6) = 2π + 12 cm. (Must add the two radii!)."
+   },
+   {
+    "w": "Sector Area = (60/360) × 2 × π × r.",
+    "r": "Sector Area = (θ/360) × π × r². (Confusing circumference formula with area formula)."
+   },
+   {
+    "w": "Using minor angle 60° when asked for the major sector area.",
+    "r": "Use major angle θ = 360° - 60° = 300° in the sector area formula."
+   },
+   {
+    "w": "Area of segment = Sector Area - (1/2 × base × height) without a right angle.",
+    "r": "Area of segment = Sector Area - 1/2 r² sin(θ). (Use 1/2 ab sin C for non-right angled triangles)."
+   },
+   {
+    "w": "Calculating (π × r)² instead of π × (r²).",
+    "r": "Square only the radius r first, then multiply by π and the angle fraction."
+   },
+   {
+    "w": "Leaving negative values of radius after solving quadratic equations for r.",
+    "r": "State explicitly that radius must be positive (r > 0) and discard the negative solution."
+   },
+   {
+    "w": "Chord length = Radius.",
+    "r": "Chord length = 2r sin(θ/2) or via Cosine Rule. (Chord equals radius only when θ = 60°)."
+   },
+   {
+    "w": "Rounding π to 3.14 on Paper 1 non-calculator questions.",
+    "r": "Keep π as a symbol in the final answer (e.g., 12π + 5)."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A sector of a circle has radius 9 cm and central angle 40°. Calculate the arc length. Give your answer in terms of π.",
+    "marks": 2,
+    "model": [
+     "Arc Length = (θ / 360) × 2πr",
+     "Arc Length = (40 / 360) × 2 × π × 9 = (1 / 9) × 18π = 2π cm"
+    ],
+    "tip": "Simplify 40/360 to 1/9 first. 1/9 of 18π is 2π."
+   },
+   {
+    "q": "A sector has radius 12 cm and central angle 150°. Calculate the area of the sector. Give your answer to 3 significant figures.",
+    "marks": 2,
+    "model": [
+     "Sector Area = (150 / 360) × π × 12²",
+     "Sector Area = (5 / 12) × 144π = 60π = 188.495... ≈ 188 cm² (3 s.f.)"
+    ],
+    "tip": "Ensure calculator is in degree mode and round to 3 s.f. at the very end."
+   },
+   {
+    "q": "The perimeter of a sector of radius 8 cm is (4π + 16) cm. Find the size of the central angle θ.",
+    "marks": 3,
+    "model": [
+     "Perimeter = Arc Length + 2r",
+     "4π + 16 = Arc Length + 2(8)  =>  Arc Length = 4π",
+     "Arc Length = (θ / 360) × 2π(8) = 4π",
+     "(16πθ) / 360 = 4π  =>  16θ / 360 = 4",
+     "θ = (4 × 360) / 16 = 90°"
+    ],
+    "tip": "Subtract 2r (16) from total perimeter first to isolate the arc length."
+   },
+   {
+    "q": "A sector has an area of 25π cm² and a central angle of 100°. Calculate the radius of the sector.",
+    "marks": 3,
+    "model": [
+     "Sector Area = (θ / 360) × πr² = 25π",
+     "(100 / 360) × πr² = 25π",
+     "Divide by π: (5 / 18) r² = 25",
+     "r² = 25 × (18 / 5) = 90",
+     "r = √90 = 3√10 ≈ 9.49 cm (3 s.f.)"
+    ],
+    "tip": "Cancel π from both sides of the equation immediately."
+   },
+   {
+    "q": "OAB is a sector of a circle with centre O and radius 6 cm. Angle AOB = 60°. Calculate the exact area of the segment enclosed by the chord AB and the arc AB. Give your answer in the form aπ - b√c.",
+    "marks": 4,
+    "model": [
+     "Area of Sector = (60 / 360) × π × 6² = (1 / 6) × 36π = 6π cm²",
+     "Area of Triangle OAB = 1/2 × 6 × 6 × sin(60°)",
+     "Since sin(60°) = √3 / 2, Area of Triangle = 18 × (√3 / 2) = 9√3 cm²",
+     "Area of Segment = Area of Sector - Area of Triangle = 6π - 9√3 cm²"
+    ],
+    "tip": "Recall exact value sin(60°) = √3 / 2 for Paper 1 non-calculator questions."
+   },
+   {
+    "q": "The arc length of a sector is 5π cm and its area is 30π cm². Calculate the radius r and the angle θ.",
+    "marks": 4,
+    "model": [
+     "Arc Length L = (θ / 360) × 2πr = 5π  =>  (θ / 360) × πr = 2.5",
+     "Sector Area A = (θ / 360) × πr² = 30π",
+     "Divide Area equation by Arc equation: [ (θ/360)πr² ] / [ (θ/360)2πr ] = 30π / 5π",
+     "r / 2 = 6  =>  r = 12 cm",
+     "Substitute r = 12 into Arc equation: (θ / 360) × 24π = 5π  =>  θ / 15 = 5  =>  θ = 75°"
+    ],
+    "tip": "Dividing Sector Area by Arc Length yields r / 2 directly!"
+   },
+   {
+    "q": "A shape consists of a square ABCD of side 10 cm and a sector of a circle with centre A and radius 10 cm subtending an angle of 90° outside the square. Calculate the total area of the shape. Give your answer to 1 decimal place.",
+    "marks": 3,
+    "model": [
+     "Area of Square = 10 × 10 = 100 cm²",
+     "Area of Sector = (90 / 360) × π × 10² = (1 / 4) × 100π = 25π cm²",
+     "Total Area = 100 + 25π = 100 + 78.5398... = 178.5 cm² (1 d.p.)"
+    ],
+    "tip": "Identify composite shapes and sum individual area components clearly."
+   },
+   {
+    "q": "A sector has radius (x + 2) cm and central angle 90°. Given that the area of the sector is 9π cm², form an equation in x and solve it to find the value of x.",
+    "marks": 4,
+    "model": [
+     "Sector Area = (90 / 360) × π × (x + 2)² = 9π",
+     "(1 / 4) × π × (x + 2)² = 9π",
+     "Divide by π and multiply by 4: (x + 2)² = 36",
+     "Take square root: x + 2 = 6 (since length x + 2 > 0)",
+     "x = 4 cm"
+    ],
+    "tip": "Taking the square root of both sides is quicker than expanding the quadratic."
+   },
+   {
+    "q": "The diagram shows a sector OAB of radius r cm and angle 120°. The length of chord AB is 6√3 cm. Show that r = 6 cm and calculate the perimeter of the sector in terms of π.",
+    "marks": 5,
+    "model": [
+     "Using Cosine Rule on triangle OAB: AB² = r² + r² - 2(r)(r)cos(120°)",
+     "Since cos(120°) = -0.5: AB² = 2r² - 2r²(-0.5) = 3r²",
+     "(6√3)² = 36 × 3 = 108 = 3r²  =>  r² = 36  =>  r = 6 cm (shown)",
+     "Arc Length = (120 / 360) × 2 × π × 6 = (1 / 3) × 12π = 4π cm",
+     "Perimeter = Arc Length + 2r = 4π + 2(6) = 4π + 12 cm"
+    ],
+    "tip": "Be careful with cos(120°) = -0.5: subtracting a negative term becomes addition!"
+   },
+   {
+    "q": "An annulus sector is formed between two concentric circles with radii 5 cm and 9 cm and central angle 80°. Calculate the area of the shaded region. Give your answer to 3 significant figures.",
+    "marks": 3,
+    "model": [
+     "Outer Sector Area = (80 / 360) × π × 9² = (2 / 9) × 81π = 18π cm²",
+     "Inner Sector Area = (80 / 360) × π × 5² = (2 / 9) × 25π = (50 / 9)π cm²",
+     "Shaded Region Area = 18π - (50 / 9)π = (112 / 9)π ≈ 39.1 cm² (3 s.f.)"
+    ],
+    "tip": "Factorise formula as (θ/360) × π × (R² - r²) to save calculator keystrokes."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Non-Calculator (Paper 1): A sector has radius 10 cm and angle 72°. Find (a) the arc length, (b) the sector area, and (c) the total perimeter of the sector. Give all answers in exact form in terms of π.",
+    "steps": [
+     "Step 1: Simplify the angle fraction θ / 360 = 72 / 360 = 1 / 5.",
+     "Step 2: Calculate Arc Length = (1 / 5) × 2 × π × 10 = (1 / 5) × 20π = 4π cm.",
+     "Step 3: Calculate Sector Area = (1 / 5) × π × 10² = (1 / 5) × 100π = 20π cm².",
+     "Step 4: Calculate Sector Perimeter = Arc Length + 2 × radius = 4π + 2(10) = (4π + 20) cm."
+    ],
+    "ans": "Arc Length = 4π cm, Sector Area = 20π cm², Total Perimeter = 4π + 20 cm."
+   },
+   {
+    "q": "Grade 9 Calculator Problem: A sector OAB has radius 14 cm and central angle θ = 110°. Calculate the area and perimeter of the segment bounded by chord AB and arc AB. Give answers to 3 significant figures.",
+    "steps": [
+     "Step 1 (Sector Area): Sector Area = (110 / 360) × π × 14² = (11 / 36) × 196π ≈ 188.146 cm².",
+     "Step 2 (Triangle Area): Area of triangle OAB = 1/2 × 14 × 14 × sin(110°) = 98 × sin(110°) ≈ 92.089 cm².",
+     "Step 3 (Segment Area): Segment Area = Sector Area - Triangle Area = 188.146 - 92.089 = 96.057... ≈ 96.1 cm².",
+     "Step 4 (Arc Length): Arc Length = (110 / 360) × 2 × π × 14 ≈ 26.878 cm.",
+     "Step 5 (Chord Length via Cosine Rule): Chord² = 14² + 14² - 2(14)(14)cos(110°) = 196 + 196 - 392 × (-0.34202) = 392 + 134.072 = 526.072 => Chord = √526.072 ≈ 22.936 cm.",
+     "Step 6 (Segment Perimeter): Perimeter = Arc Length + Chord Length = 26.878 + 22.936 = 49.814... ≈ 49.8 cm."
+    ],
+    "ans": "Segment Area = 96.1 cm², Segment Perimeter = 49.8 cm (3 s.f.)."
+   },
+   {
+    "q": "Algebraic Proof: A sector has radius r and central angle θ. Given that the numerical value of its sector area is equal to three times the numerical value of its arc length, prove that r = 6, regardless of the angle θ.",
+    "steps": [
+     "Step 1: Write down the given equality: Sector Area = 3 × Arc Length.",
+     "Step 2: Substitute the standard formulas: (θ / 360) × π × r² = 3 × [ (θ / 360) × 2 × π × r ].",
+     "Step 3: Divide both sides by (θ / 360): π × r² = 3 × (2 × π × r) = 6 × π × r.",
+     "Step 4: Divide both sides by π × r (since r > 0 and π ≠ 0): r = 6."
+    ],
+    "ans": "Proven: r = 6."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Summary of Sector and Segment key dimensions: Radii, Arc, Chord, Sector Region and Segment Region.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><path d=\"M 200 180 L 100 80 A 141 141 0 0 1 300 80 Z\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><path d=\"M 100 80 A 141 141 0 0 1 300 80 Z\" fill=\"#fecaca\" stroke=\"#ef4444\" stroke-width=\"2\"/><line x1=\"100\" y1=\"80\" x2=\"300\" y2=\"80\" stroke=\"#10b981\" stroke-width=\"2.5\"/><circle cx=\"200\" cy=\"180\" r=\"4\" fill=\"#1b2540\"/><text x=\"195\" y=\"200\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\">O</text><text x=\"135\" y=\"140\" font-size=\"11\" font-weight=\"bold\" fill=\"#1b2540\">Radius r</text><text x=\"215\" y=\"140\" font-size=\"11\" font-weight=\"bold\" fill=\"#1b2540\">Radius r</text><text x=\"180\" y=\"72\" font-size=\"11\" font-weight=\"bold\" fill=\"#10b981\">Chord Length</text><text x=\"175\" y=\"45\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">Arc Length</text><text x=\"175\" y=\"110\" font-size=\"11\" font-weight=\"bold\" fill=\"#b91c1c\">Segment Area</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_h.3.17",
+  "sid": "maths_aqa_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.6-flash",
+  "ts": "2026-11-19T17:48:11.778Z"
+ },
+ "maths_aqa_h.3.23": {
+  "summary": "A translation is a rigid transformation that slides every point of a shape by a fixed distance in a specified direction without turning, flipping, or resizing it. In AQA GCSE Maths Higher Tier, translations are formally described using 2D column vectors in the form **(x over y)**, where the top number represents horizontal movement (positive for right, negative for left) and the bottom number represents vertical movement (positive for up, negative for down). Full marks in exam questions require both the word **Translation** and the correct 2D column vector, ensuring no fraction line is drawn between the vector components. Master this concept to connect geometric shifts on coordinate planes with vector arithmetic and algebraic function transformations.",
+  "core": [
+   {
+    "h": "1. Fundamentals of Translation as a Rigid Transformation",
+    "p": "A **translation** is a type of geometric transformation where an object is moved from one position to another on a plane without any rotation, reflection, or change in size. Because the original object (the precursor or object) and its final image are identical in shape and size, translation is classified as an **isometry** or **congruence transformation**.",
+    "bullets": [
+     "**Preservation of Orientation**: Unlike reflections, the orientation of vertices remains unchanged (e.g., if vertices A, B, C go clockwise in the object, they remain clockwise in the image).",
+     "**Preservation of Lengths and Angles**: All side lengths, interior angles, and parallel lines are preserved, ensuring the object and image are strictly **congruent** ($A \\cong A'$).",
+     "**Uniform Shift**: Every single point on the shape moves by the exact same distance and in the exact same direction."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Translation",
+      "p": "A transformation that moves every point of a shape by a specified distance in a specified direction without rotating, reflecting, or altering the size of the shape."
+     },
+     {
+      "k": "warn",
+      "t": "Avoid informal language",
+      "p": "Never use non-mathematical terms such as 'slide', 'move', or 'shift' when describing a transformation. The required keyword is always **Translation**."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. Representing Translations using 2D Column Vector Notation",
+    "p": "In 2D coordinate geometry, a vector that describes a translation is written in **column vector notation**. A column vector consists of two stacked numbers enclosed within large round brackets, representing displacement along the Cartesian axes.",
+    "bullets": [
+     "**Top Entry (x-component)**: Represents horizontal displacement along the x-axis.",
+     "**Bottom Entry (y-component)**: Represents vertical displacement along the y-axis.",
+     "**Notation Format**: $\\begin{pmatrix} x \\\\ y \\end{pmatrix}$ where $x$ and $y$ are real numbers (integers, fractions, or decimals).",
+     "**Crucial Distinction**: A column vector is **NOT** a fraction. Never draw a horizontal fraction line between $x$ and $y$; doing so will result in a complete loss of marks on AQA mark schemes."
+    ],
+    "table": {
+     "head": [
+      "Vector Component",
+      "Sign",
+      "Direction of Movement"
+     ],
+     "rows": [
+      [
+       "x (Top)",
+       "Positive (+)",
+       "Right"
+      ],
+      [
+       "x (Top)",
+       "Negative (-)",
+       "Left"
+      ],
+      [
+       "y (Bottom)",
+       "Positive (+)",
+       "Up"
+      ],
+      [
+       "y (Bottom)",
+       "Negative (-)",
+       "Down"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam Notation Rule",
+      "p": "Always write column vectors vertically inside curved brackets $\\begin{pmatrix} x \\\\ y \\end{pmatrix}$. Avoid writing coordinates $(x, y)$ when asked for a vector."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "3. Direction and Sign Rules for Column Vectors",
+    "p": "Understanding the sign convention is essential for correctly translating coordinates and shapes. The signs of the components in $\\begin{pmatrix} x \\\\ y \\end{pmatrix}$ act as instructions on a grid relative to the origin or a starting point.",
+    "bullets": [
+     "$\\begin{pmatrix} +a \\\\ +b \\end{pmatrix}$: Move $a$ units to the **RIGHT** and $b$ units **UP**.",
+     "$\\begin{pmatrix} -a \\\\ +b \\end{pmatrix}$: Move $a$ units to the **LEFT** and $b$ units **UP**.",
+     "$\\begin{pmatrix} +a \\\\ -b \\end{pmatrix}$: Move $a$ units to the **RIGHT** and $b$ units **DOWN**.",
+     "$\\begin{pmatrix} -a \\\\ -b \\end{pmatrix}$: Move $a$ units to the **LEFT** and $b$ units **DOWN**."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Vector Directions",
+      "p": "Top number controls horizontal movement (Left/Right). Bottom number controls vertical movement (Down/Up). Think: 'x before y, across then vertical'."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Translating a 2D Shape on a Coordinate Grid",
+    "p": "To translate a 2D shape on a coordinate grid by a vector $\\begin{pmatrix} x \\\\ y \\end{pmatrix}$, translate each vertex individually and then reconnect them to form the image.",
+    "bullets": [
+     "**Step 1**: Pick one vertex of the object shape and note its coordinates $(x_1, y_1)$.",
+     "**Step 2**: Apply the column vector to calculate the new coordinates: $(x_1 + x, y_1 + y)$.",
+     "**Step 3**: Plot the new image vertex $(x_1', y_1')$.",
+     "**Step 4**: Repeat the process for all remaining vertices of the object shape.",
+     "**Step 5**: Join the new vertices with straight lines to draw the translated image shape.",
+     "**Step 6**: Check for congruence: ensure the image has the exact same dimensions and orientation as the object."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Verification Strategy",
+      "p": "Choose a key landmark on the shape (e.g., the bottom-left right-angled corner) and trace its vector move directly. Check that every vertex follows the exact same vector path."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "5. Fully Describing a Single Transformation as a Translation",
+    "p": "When an exam question presents two shapes on a coordinate grid (Object $A$ and Image $B$) and asks you to 'Describe fully the single transformation that maps $A$ onto $B$', you must provide exactly two key pieces of information to gain full marks.",
+    "bullets": [
+     "**1. Name of Transformation**: The word **Translation** (worth 1 mark).",
+     "**2. Column Vector**: The correct 2D vector $\\begin{pmatrix} x \\\\ y \\end{pmatrix}$ mapping $A$ onto $B$ (worth 1 mark).",
+     "**Direction of Mapping**: Pay close attention to whether the question asks for $A \\rightarrow B$ or $B \\rightarrow A$. Mapping $A$ to $B$ requires vector $\\vec{v}$, whereas mapping $B$ to $A$ requires the opposite vector $-\\vec{v}$."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "The Single Transformation Rule",
+      "p": "If you write more than one transformation type (e.g., 'Translation by vector $\\begin{pmatrix} 3 \\\\ 2 \\end{pmatrix}$ and then reflection'), you will score **ZERO** marks for the entire question."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Performing Vector Addition for Successive Translations",
+    "p": "When a shape undergoes multiple successive translations, the overall combined translation can be determined by adding the individual column vectors together using vector arithmetic.",
+    "bullets": [
+     "If a shape is translated first by vector $\\vec{u} = \\begin{pmatrix} a \\\\ b \\end{pmatrix}$ and then by vector $\\vec{v} = \\begin{pmatrix} c \\\\ d \\end{pmatrix}$, the combined single translation vector $\\vec{w}$ is given by:",
+     "$$\\vec{w} = \\vec{u} + \\vec{v} = \\begin{pmatrix} a \\\\ b \\end{pmatrix} + \\begin{pmatrix} c \\\\ d \\end{pmatrix} = \\begin{pmatrix} a + c \\\\ b + d \\end{pmatrix}$$",
+     "**Commutative Property**: Vector addition is commutative, meaning $\\vec{u} + \\vec{v} = \\vec{v} + \\vec{u}$. Order of successive translations does not alter the final position."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Vector Addition Rule",
+      "p": "Add top numbers together to find the overall horizontal shift. Add bottom numbers together to find the overall vertical shift."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Inverse Translations and Reverse Vectors",
+    "p": "An **inverse translation** undoes a previous translation, returning the shape back to its original position.",
+    "bullets": [
+     "If translation $T$ is defined by vector $\\vec{v} = \\begin{pmatrix} x \\\\ y \\end{pmatrix}$, then the inverse translation $T^{-1}$ is defined by the negative vector:",
+     "$$-\\vec{v} = -\\begin{pmatrix} x \\\\ y \\end{pmatrix} = \\begin{pmatrix} -x \\\\ -y \\end{pmatrix}$$",
+     "**Geometric Meaning**: The negative vector has the same magnitude (distance) but points in the exact opposite direction.",
+     "**Applying Inverse Translations**: If mapping shape $P$ to shape $Q$ uses $\\begin{pmatrix} 4 \\\\ -7 \\end{pmatrix}$, then mapping $Q$ back to $P$ uses vector $\\begin{pmatrix} -4 \\\\ 7 \\end{pmatrix}$."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam Vector Negation",
+      "p": "To find the vector mapping Image $B$ back to Object $A$, simply change the sign of both the top and bottom components of the vector mapping $A$ to $B$."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Vector Translations with Position Vectors and Coordinates",
+    "p": "Translations can be defined algebraically by treating coordinates of points as **position vectors** relative to the origin $O(0,0)$.",
+    "bullets": [
+     "Let point $A$ have coordinates $(x_A, y_A)$. Its position vector is $\\vec{OA} = \\begin{pmatrix} x_A \\\\ y_A \\end{pmatrix}$.",
+     "If point $A$ is translated by vector $\\vec{v} = \\begin{pmatrix} a \\\\ b \\end{pmatrix}$ to image point $A'$, the position vector of $A'$ is given by:",
+     "$$\\vec{OA'} = \\vec{OA} + \\vec{v} = \\begin{pmatrix} x_A \\\\ y_A \\end{pmatrix} + \\begin{pmatrix} a \\\\ b \\end{pmatrix} = \\begin{pmatrix} x_A + a \\\\ y_A + b \\end{pmatrix}$$",
+     "Hence, the coordinates of $A'$ are $(x_A + a, y_A + b)$.",
+     "To find the vector $\\vec{AB}$ between two points $A(x_A, y_A)$ and $B(x_B, y_B)$, calculate:",
+     "$$\\vec{AB} = \\vec{OB} - \\vec{OA} = \\begin{pmatrix} x_B - x_A \\\\ y_B - y_A \\end{pmatrix}$$"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Position Vector",
+      "p": "A vector starting at the origin $O(0,0)$ and terminating at a specific point $P(x,y)$, written as $\\vec{OP} = \\begin{pmatrix} x \\\\ y \\end{pmatrix}$."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Connection to Graph Transformations and Function Notation",
+    "p": "At Grade 9 level, translations are closely linked to graph transformations in algebra using function notation $y = f(x)$.",
+    "bullets": [
+     "Translating a curve $y = f(x)$ by the vector $\\begin{pmatrix} a \\\\ 0 \\end{pmatrix}$ (horizontal shift) yields the new equation $y = f(x - a)$.",
+     "Translating a curve $y = f(x)$ by the vector $\\begin{pmatrix} 0 \\\\ b \\end{pmatrix}$ (vertical shift) yields the new equation $y = f(x) + b$.",
+     "**Combined Graph Translation**: Translating $y = f(x)$ by vector $\\begin{pmatrix} a \\\\ b \\end{pmatrix}$ yields the equation:",
+     "$$y = f(x - a) + b$$",
+     "**Counter-intuitive Horizontal Shift**: A translation by vector $\\begin{pmatrix} +3 \\\\ 0 \\end{pmatrix}$ changes $f(x)$ to $f(x - 3)$ (subtract inside the bracket), whereas vector $\\begin{pmatrix} -3 \\\\ 0 \\end{pmatrix}$ changes $f(x)$ to $f(x + 3)$."
+    ],
+    "table": {
+     "head": [
+      "Vector Translation",
+      "Function Notation",
+      "Effect on Graph"
+     ],
+     "rows": [
+      [
+       "\\begin{pmatrix} a \\\\ 0 \\end{pmatrix}",
+       "y = f(x - a)",
+       "Shift right by a units"
+      ],
+      [
+       "\\begin{pmatrix} -a \\\\ 0 \\end{pmatrix}",
+       "y = f(x + a)",
+       "Shift left by a units"
+      ],
+      [
+       "\\begin{pmatrix} 0 \\\\ b \\end{pmatrix}",
+       "y = f(x) + b",
+       "Shift up by b units"
+      ],
+      [
+       "\\begin{pmatrix} 0 \\\\ -b \\end{pmatrix}",
+       "y = f(x) - b",
+       "Shift down by b units"
+      ],
+      [
+       "\\begin{pmatrix} a \\\\ b \\end{pmatrix}",
+       "y = f(x - a) + b",
+       "Shift right a, up b"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Sign Flip in Function Brackets",
+      "p": "Horizontal translation vector $\\begin{pmatrix} a \\\\ 0 \\end{pmatrix}$ becomes $(x - a)$ inside the function argument. Do not mix up the positive vector component with a positive sign inside the function bracket!"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Solving Problem-Solving Coordinate Vector Equations",
+    "p": "Grade 9 AQA examination questions often combine 2D translation vectors with algebra, requiring students to set up linear equations to find unknown vector components or coordinate values.",
+    "bullets": [
+     "**Problem Type 1**: Given initial point $P(x, y)$, target point $Q(x', y')$, and vector $\\begin{pmatrix} 2k \\\\ k - 3 \\end{pmatrix}$, solve for $k$.",
+     "**Problem Type 2**: Given multi-step translations where a shape is translated by $\\begin{pmatrix} a \\\\ b \\end{pmatrix}$, then $\\begin{pmatrix} 3a \\\\ -2b \\end{pmatrix}$, resulting in a net movement of $\\begin{pmatrix} 12 \\\\ -5 \\end{pmatrix}$. Set up simultaneous equations: $a + 3a = 12 \\implies 4a = 12 \\implies a = 3$, and $b - 2b = -5 \\implies -b = -5 \\implies b = 5$.",
+     "**Geometric Reasoning**: Equal vectors indicate parallel line segments of equal length and direction."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Algebraic Vector Strategy",
+      "p": "Equate top components to form an x-equation, and equate bottom components to form an independent y-equation."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The GPS Sat-Nav Instructions",
+   "p": "Think of a 2D column vector as a set of direct instructions given by a GPS system to a pedestrian. The top number tells you how many blocks to walk East (positive) or West (negative). The bottom number tells you how many blocks to walk North (positive) or South (negative). Regardless of where you start on the city grid, following the vector instruction $\\begin{pmatrix} 4 \\\\ -2 \\end{pmatrix}$ will always take you 4 blocks East and 2 blocks South.\n\n**Where the analogy breaks down**: A GPS system might instruct a pedestrian to turn or walk along specific curved roads to avoid obstacles. A vector translation, however, is a direct, single linear displacement of every point in space simultaneously—there are no paths, obstacles, or turning involved."
+  },
+  "terms": [
+   {
+    "t": "Translation",
+    "d": "A transformation that moves every point of a geometric figure by the same distance in the same direction without rotation, reflection, or resizing."
+   },
+   {
+    "t": "2D Vector",
+    "d": "A mathematical quantity having both magnitude and direction in a two-dimensional plane, commonly represented as a column vector."
+   },
+   {
+    "t": "Column Vector",
+    "d": "A two-row, one-column matrix notation used to specify 2D movement, written as $\\begin{pmatrix} x \\\\ y \\end{pmatrix}$."
+   },
+   {
+    "t": "x-component",
+    "d": "The top entry in a 2D column vector representing horizontal displacement along the x-axis."
+   },
+   {
+    "t": "y-component",
+    "d": "The bottom entry in a 2D column vector representing vertical displacement along the y-axis."
+   },
+   {
+    "t": "Object",
+    "d": "The original geometric shape before a transformation is applied."
+   },
+   {
+    "t": "Image",
+    "d": "The resulting geometric shape after a transformation has been applied."
+   },
+   {
+    "t": "Congruence",
+    "d": "The property of geometric shapes being identical in both shape and size, with corresponding side lengths and angles equal."
+   },
+   {
+    "t": "Isometry",
+    "d": "A distance-preserving transformation between metric spaces; translation is an isometric transformation."
+   },
+   {
+    "t": "Position Vector",
+    "d": "A vector $\\vec{OP} = \\begin{pmatrix} x \\\\ y \\end{pmatrix}$ that represents the location of a point $P(x,y)$ relative to the origin $O(0,0)$."
+   },
+   {
+    "t": "Displacement Vector",
+    "d": "A vector $\\vec{AB}$ representing the change in position from a starting point $A$ to an ending point $B$."
+   },
+   {
+    "t": "Inverse Vector",
+    "d": "The vector $-\\vec{v} = \\begin{pmatrix} -x \\\\ -y \\end{pmatrix}$ that completely reverses the direction of vector $\\vec{v} = \\begin{pmatrix} x \\\\ y \\end{pmatrix}$."
+   },
+   {
+    "t": "Vector Addition",
+    "d": "The operation of adding corresponding components of two vectors: $\\begin{pmatrix} a \\\\ b \\end{pmatrix} + \\begin{pmatrix} c \\\\ d \\end{pmatrix} = \\begin{pmatrix} a+c \\\\ b+d \\end{pmatrix}$."
+   },
+   {
+    "t": "Scalar Multiplication",
+    "d": "Multiplying a vector by a real number $k$, resulting in $k\\begin{pmatrix} x \\\\ y \\end{pmatrix} = \\begin{pmatrix} kx \\\\ ky \\end{pmatrix}$."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Writing the vector with a fraction line, like \\begin{pmatrix} 3 / 4 \\end{pmatrix} or a line separating top and bottom.",
+    "r": "Write the vector purely as a column vector with a top and bottom number enclosed in brackets: \\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix} without any fraction line."
+   },
+   {
+    "w": "Writing vector components horizontally as coordinates (3, 4) when describing a translation.",
+    "r": "Write the translation as a vertical column vector \\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix}."
+   },
+   {
+    "w": "Describing the transformation as 'moved 3 right and 4 up' or 'shifted by (3, 4)'.",
+    "r": "State the single word 'Translation' followed by the column vector \\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix}."
+   },
+   {
+    "w": "Giving two transformations (e.g. 'Translation by vector \\begin{pmatrix} 3 \\\\ 0 \\end{pmatrix} then moved up 4').",
+    "r": "Specify only ONE transformation type: 'Translation' and provide the single combined column vector \\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix}."
+   },
+   {
+    "w": "Reversing the top and bottom components (putting vertical move on top and horizontal move on bottom).",
+    "r": "Put the horizontal move (x-axis) on top and vertical move (y-axis) on the bottom."
+   },
+   {
+    "w": "Getting the vector signs backwards when describing the mapping from Object A to Image B.",
+    "r": "Measure direction FROM Object A TO Image B. Moving left is negative, moving right is positive, moving down is negative, moving up is positive."
+   },
+   {
+    "w": "Misidentifying the direction when asked to map Image B back onto Object A.",
+    "r": "Reverse the signs of the components of the vector mapping A to B to find the vector mapping B to A."
+   },
+   {
+    "w": "Adding a fraction bar or writing vector entries in reverse order when applying graph transformations y = f(x - a) + b.",
+    "r": "Remember that y = f(x - a) shifts the graph RIGHT by vector \\begin{pmatrix} a \\\\ 0 \\end{pmatrix}."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Shape A is translated to shape B by the vector \\begin{pmatrix} -4 \\\\ 7 \\end{pmatrix}. Describe fully the single transformation that maps shape B onto shape A.",
+    "marks": 2,
+    "model": [
+     "Translation",
+     "Vector \\begin{pmatrix} 4 \\\\ -7 \\end{pmatrix}"
+    ],
+    "tip": "Mapping B back onto A is the inverse transformation. Reverse both signs in the vector!"
+   },
+   {
+    "q": "Point P has coordinates (-3, 8). Point P is translated by the vector \\begin{pmatrix} 5 \\\\ -11 \\end{pmatrix} to give point Q. Work out the coordinates of point Q.",
+    "marks": 2,
+    "model": [
+     "x-coordinate: -3 + 5 = 2",
+     "y-coordinate: 8 + (-11) = -3",
+     "Coordinates of Q = (2, -3)"
+    ],
+    "tip": "Add the x-component to the x-coordinate and the y-component to the y-coordinate. Express final answer as coordinates (x,y)."
+   },
+   {
+    "q": "Triangle T has vertices at (1, 2), (4, 2) and (1, 6). Triangle T is translated to Triangle U by vector \\begin{pmatrix} 3 \\\\ -5 \\end{pmatrix}. Triangle U is then translated to Triangle V by vector \\begin{pmatrix} -7 \\\\ 2 \\end{pmatrix}. Work out the column vector for the single transformation that maps Triangle T to Triangle V.",
+    "marks": 2,
+    "model": [
+     "Combined vector = \\begin{pmatrix} 3 \\\\ -5 \\end{pmatrix} + \\begin{pmatrix} -7 \\\\ 2 \\end{pmatrix}",
+     "Top component: 3 + (-7) = -4",
+     "Bottom component: -5 + 2 = -3",
+     "Vector = \\begin{pmatrix} -4 \\\\ -3 \\end{pmatrix}"
+    ],
+    "tip": "Add vector components together to find the overall single translation vector."
+   },
+   {
+    "q": "Describe fully the single transformation that maps shape P with vertex at (2, 5) onto shape Q with corresponding vertex at (-3, 1).",
+    "marks": 2,
+    "model": [
+     "Translation",
+     "Vector \\begin{pmatrix} -5 \\\\ -4 \\end{pmatrix}"
+    ],
+    "tip": "Find horizontal change: -3 - 2 = -5. Vertical change: 1 - 5 = -4. Always write 'Translation' and the vector."
+   },
+   {
+    "q": "A curve with equation y = f(x) has its minimum point at (4, -1). The curve is translated by the vector \\begin{pmatrix} -6 \\\\ 5 \\end{pmatrix}. Write down the coordinates of the minimum point on the translated curve.",
+    "marks": 2,
+    "model": [
+     "New x-coordinate = 4 + (-6) = -2",
+     "New y-coordinate = -1 + 5 = 4",
+     "Coordinates = (-2, 4)"
+    ],
+    "tip": "Translate minimum/maximum points by applying the translation vector directly to their coordinates."
+   },
+   {
+    "q": "The vector \\begin{pmatrix} 2a \\\\ b+1 \\end{pmatrix} translates point A(3, -2) to point B(11, 4). Find the values of a and b.",
+    "marks": 4,
+    "model": [
+     "Horizontal shift equation: 3 + 2a = 11",
+     "2a = 8 => a = 4",
+     "Vertical shift equation: -2 + (b + 1) = 4",
+     "b - 1 = 4 => b = 5"
+    ],
+    "tip": "Set up separate equations for top (x) and bottom (y) vector components."
+   },
+   {
+    "q": "Shape A is translated to shape B by vector \\vec{u} = \\begin{pmatrix} 3 \\\\ -2 \\end{pmatrix}. Shape B is translated to shape C by vector \\vec{v}. The single vector mapping shape A to shape C is \\begin{pmatrix} 1 \\\\ 4 \\end{pmatrix}. Find vector \\vec{v}.",
+    "marks": 2,
+    "model": [
+     "\\vec{u} + \\vec{v} = \\begin{pmatrix} 1 \\\\ 4 \\end{pmatrix}",
+     "\\begin{pmatrix} 3 \\\\ -2 \\end{pmatrix} + \\vec{v} = \\begin{pmatrix} 1 \\\\ 4 \\end{pmatrix}",
+     "\\vec{v} = \\begin{pmatrix} 1 - 3 \\\\ 4 - (-2) \\end{pmatrix} = \\begin{pmatrix} -2 \\\\ 6 \\end{pmatrix}"
+    ],
+    "tip": "Subtract vector u from the final vector to find vector v."
+   },
+   {
+    "q": "The graph of y = x^2 is translated by vector \\begin{pmatrix} 3 \\\\ -4 \\end{pmatrix}. Write down the equation of the translated graph in the form y = ax^2 + bx + c.",
+    "marks": 4,
+    "model": [
+     "Apply function transformation: y = (x - 3)^2 - 4",
+     "Expand (x - 3)^2: x^2 - 6x + 9",
+     "Subtract 4: y = x^2 - 6x + 9 - 4",
+     "Final equation: y = x^2 - 6x + 5"
+    ],
+    "tip": "Substitute (x - 3) into the function for horizontal shift, then subtract 4 for vertical shift before expanding."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Shape P has vertices A(1, 4), B(3, 4), and C(1, 1). Shape P is translated by vector \\begin{pmatrix} 4 \\\\ -3 \\end{pmatrix} to form Shape Q. State the coordinates of vertices A', B', and C' of Shape Q, and describe the vector that maps Shape Q back to Shape P.",
+    "steps": [
+     "Step 1: Calculate coordinates of A' by adding vector \\begin{pmatrix} 4 \\\\ -3 \\end{pmatrix} to A(1, 4):\n   x = 1 + 4 = 5, y = 4 + (-3) = 1. A' = (5, 1).",
+     "Step 2: Calculate coordinates of B' by adding vector \\begin{pmatrix} 4 \\\\ -3 \\end{pmatrix} to B(3, 4):\n   x = 3 + 4 = 7, y = 4 + (-3) = 1. B' = (7, 1).",
+     "Step 3: Calculate coordinates of C' by adding vector \\begin{pmatrix} 4 \\\\ -3 \\end{pmatrix} to C(1, 1):\n   x = 1 + 4 = 5, y = 1 + (-3) = -2. C' = (5, -2).",
+     "Step 4: Determine reverse vector mapping Q back to P by negating vector components:\n   -\\begin{pmatrix} 4 \\\\ -3 \\end{pmatrix} = \\begin{pmatrix} -4 \\\\ 3 \\end{pmatrix}."
+    ],
+    "ans": "A' = (5, 1), B' = (7, 1), C' = (5, -2). Reverse vector from Q to P is \\begin{pmatrix} -4 \\\\ 3 \\end{pmatrix}."
+   },
+   {
+    "q": "The translation vector \\vec{T} = \\begin{pmatrix} 3x + y \\\\ 2x - 4y \\end{pmatrix} maps the point P(2, 5) onto point Q(13, 3). Find the scalar values of x and y.",
+    "steps": [
+     "Step 1: Set up displacement equation: \\vec{PQ} = \\vec{OQ} - \\vec{OP} = \\begin{pmatrix} 13 \\\\ 3 \\end{pmatrix} - \\begin{pmatrix} 2 \\\\ 5 \\end{pmatrix} = \\begin{pmatrix} 11 \\\\ -2 \\end{pmatrix}.",
+     "Step 2: Equate vector components:\n   (1) Top: 3x + y = 11\n   (2) Bottom: 2x - 4y = -2",
+     "Step 3: Solve simultaneous equations. Multiply equation (1) by 4:\n   12x + 4y = 44",
+     "Step 4: Add modified equation (1) to equation (2):\n   (12x + 4y) + (2x - 4y) = 44 + (-2)\n   14x = 42 => x = 3",
+     "Step 5: Substitute x = 3 into equation (1):\n   3(3) + y = 11 => 9 + y = 11 => y = 2."
+    ],
+    "ans": "x = 3, y = 2"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Diagram 1: Translation of point A(1, 4) to A'(5, 1) using column vector (4 over -3), showing horizontal and vertical components.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 1 L 10 5 L 0 9 z\" fill=\"#1b2540\"/></marker><marker id=\"arrow-red\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 1 L 10 5 L 0 9 z\" fill=\"#dc2626\"/></marker></defs><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><path d=\"M 40 30 L 40 210 M 80 30 L 80 210 M 120 30 L 120 210 M 160 30 L 160 210 M 200 30 L 200 210 M 240 30 L 240 210 M 280 30 L 280 210 M 320 30 L 320 210 M 360 30 L 360 210\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><path d=\"M 30 40 L 370 40 M 30 80 L 370 80 M 30 120 L 370 120 M 30 160 L 370 160 M 30 200 L 370 200\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"80\" y1=\"30\" x2=\"80\" y2=\"210\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"30\" y1=\"200\" x2=\"370\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"70\" y=\"215\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\">0</text><text x=\"120\" y=\"215\" fill=\"#1b2540\" font-size=\"11\">1</text><text x=\"160\" y=\"215\" fill=\"#1b2540\" font-size=\"11\">2</text><text x=\"200\" y=\"215\" fill=\"#1b2540\" font-size=\"11\">3</text><text x=\"240\" y=\"215\" fill=\"#1b2540\" font-size=\"11\">4</text><text x=\"280\" y=\"215\" fill=\"#1b2540\" font-size=\"11\">5</text><text x=\"65\" y=\"164\" fill=\"#1b2540\" font-size=\"11\">1</text><text x=\"65\" y=\"124\" fill=\"#1b2540\" font-size=\"11\">2</text><text x=\"65\" y=\"84\" fill=\"#1b2540\" font-size=\"11\">3</text><text x=\"65\" y=\"44\" fill=\"#1b2540\" font-size=\"11\">4</text><line x1=\"120\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#2563eb\" stroke-width=\"2\" stroke-dasharray=\"4,4\" marker-end=\"url(#arrow)\"/><text x=\"180\" y=\"32\" fill=\"#2563eb\" font-size=\"12\" font-weight=\"bold\">+4 (Right)</text><line x1=\"280\" y1=\"40\" x2=\"280\" y2=\"160\" stroke=\"#2563eb\" stroke-width=\"2\" stroke-dasharray=\"4,4\" marker-end=\"url(#arrow)\"/><text x=\"290\" y=\"105\" fill=\"#2563eb\" font-size=\"12\" font-weight=\"bold\">-3 (Down)</text><line x1=\"120\" y1=\"40\" x2=\"280\" y2=\"160\" stroke=\"#dc2626\" stroke-width=\"3\" marker-end=\"url(#arrow-red)\"/><circle cx=\"120\" cy=\"40\" r=\"5\" fill=\"#dc2626\"/><text x=\"100\" y=\"30\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\">A (1, 4)</text><circle cx=\"280\" cy=\"160\" r=\"5\" fill=\"#dc2626\"/><text x=\"290\" y=\"175\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\">A&apos; (5, 1)</text><rect x=\"15\" y=\"90\" width=\"45\" height=\"50\" fill=\"#dbeafe\" stroke=\"#2563eb\" rx=\"4\"/><text x=\"25\" y=\"110\" fill=\"#1b2540\" font-size=\"13\" font-weight=\"bold\">v =</text><text x=\"42\" y=\"110\" fill=\"#1b2540\" font-size=\"13\" font-weight=\"bold\">4</text><text x=\"40\" y=\"130\" fill=\"#1b2540\" font-size=\"13\" font-weight=\"bold\">-3</text></svg>"
+   },
+   {
+    "cap": "Diagram 2: 2D translation of Shape P to Shape Q on a coordinate plane by vector (-5 over 2), highlighting corresponding vertex displacement vectors.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"arr-green\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 1 L 10 5 L 0 9 z\" fill=\"#16a34a\"/></marker></defs><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><path d=\"M 30 20 L 370 20 M 30 60 L 370 60 M 30 100 L 370 100 M 30 140 L 370 140 M 30 180 L 370 180 M 30 220 L 370 220\" stroke=\"#f1f5f9\" stroke-width=\"1\"/><path d=\"M 50 10 L 50 230 M 110 10 L 110 230 M 170 10 L 170 230 M 230 10 L 230 230 M 290 10 L 290 230 M 350 10 L 350 230\" stroke=\"#f1f5f9\" stroke-width=\"1\"/><polygon points=\"290,140 350,140 290,60\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"305\" y=\"110\" fill=\"#1e40af\" font-size=\"13\" font-weight=\"bold\">Shape P</text><polygon points=\"140,100 200,100 140,20\" fill=\"#bbf7d0\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"155\" y=\"70\" fill=\"#15803d\" font-size=\"13\" font-weight=\"bold\">Shape Q</text><line x1=\"290\" y1=\"140\" x2=\"140\" y2=\"100\" stroke=\"#16a34a\" stroke-width=\"2\" stroke-dasharray=\"4,4\" marker-end=\"url(#arr-green)\"/><line x1=\"350\" y1=\"140\" x2=\"200\" y2=\"100\" stroke=\"#16a34a\" stroke-width=\"2\" stroke-dasharray=\"4,4\" marker-end=\"url(#arr-green)\"/><line x1=\"290\" y1=\"60\" x2=\"140\" y2=\"20\" stroke=\"#16a34a\" stroke-width=\"2\" stroke-dasharray=\"4,4\" marker-end=\"url(#arr-green)\"/><rect x=\"220\" y=\"170\" x2=\"360\" y2=\"225\" fill=\"#ffffff\" stroke=\"#1b2540\" rx=\"4\"/><text x=\"230\" y=\"190\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\">Translation Vector:</text><text x=\"230\" y=\"212\" fill=\"#16a34a\" font-size=\"13\" font-weight=\"bold\">Vector = (-5 over 2)</text></svg>"
+   },
+   {
+    "cap": "Diagram 3: Vector addition showing successive translations u (3 over 1) and v (2 over -4) resulting in combined translation w = u + v = (5 over -3).",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"arr-b\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 1 L 10 5 L 0 9 z\" fill=\"#2563eb\"/></marker><marker id=\"arr-p\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 1 L 10 5 L 0 9 z\" fill=\"#9333ea\"/></marker><marker id=\"arr-o\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 1 L 10 5 L 0 9 z\" fill=\"#ea580c\"/></marker></defs><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"140\" x2=\"170\" y2=\"100\" stroke=\"#2563eb\" stroke-width=\"3\" marker-end=\"url(#arr-b)\"/><text x=\"95\" y=\"110\" fill=\"#2563eb\" font-size=\"12\" font-weight=\"bold\">u = (3 over 1)</text><line x1=\"170\" y1=\"100\" x2=\"250\" y2=\"200\" stroke=\"#9333ea\" stroke-width=\"3\" marker-end=\"url(#arr-p)\"/><text x=\"220\" y=\"145\" fill=\"#9333ea\" font-size=\"12\" font-weight=\"bold\">v = (2 over -4)</text><line x1=\"50\" y1=\"140\" x2=\"250\" y2=\"200\" stroke=\"#ea580c\" stroke-width=\"3\" stroke-dasharray=\"6,4\" marker-end=\"url(#arr-o)\"/><text x=\"100\" y=\"190\" fill=\"#ea580c\" font-size=\"12\" font-weight=\"bold\">w = u + v = (5 over -3)</text><circle cx=\"50\" cy=\"140\" r=\"4\" fill=\"#1b2540\"/><text x=\"25\" y=\"145\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\">Start</text><circle cx=\"170\" cy=\"100\" r=\"4\" fill=\"#1b2540\"/><circle cx=\"250\" cy=\"200\" r=\"4\" fill=\"#1b2540\"/><text x=\"260\" y=\"205\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\">End</text><rect x=\"270\" y=\"25\" width=\"120\" height=\"80\" fill=\"#ffffff\" stroke=\"#cbd5e1\" rx=\"6\"/><text x=\"280\" y=\"45\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\">Vector Arithmetic:</text><text x=\"280\" y=\"65\" fill=\"#2563eb\" font-size=\"11\">u = (3 over 1)</text><text x=\"280\" y=\"80\" fill=\"#9333ea\" font-size=\"11\">v = (2 over -4)</text><text x=\"280\" y=\"95\" fill=\"#ea580c\" font-size=\"11\">u+v = (5 over -3)</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_h.3.23",
+  "sid": "maths_aqa_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.6-flash",
+  "ts": "2026-11-19T17:53:03.972Z"
  }
 }

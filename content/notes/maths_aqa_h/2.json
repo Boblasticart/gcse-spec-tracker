@@ -6245,5 +6245,521 @@
   "src": "pre",
   "by": "gemini/gemini-3-flash-preview",
   "ts": "2026-11-18T18:06:56.541Z"
+ },
+ "maths_aqa_h.2.1": {
+  "summary": "Scale factors, scale diagrams, and maps link geometric representations on paper to real-world objects and landscapes through precise multiplicative relationships. A ratio scale of 1 : n means one unit on the diagram represents n identical units in reality, requiring robust fluency in metric conversions between centimetres, metres, and kilometres. Grade 9 mastery demands not only linear conversions and compass bearings on scale charts, but also understanding how linear scale factors square for map areas, interpreting measurement bounds within examiner tolerances, and setting up multi-step geometric locus problems.",
+  "core": [
+   {
+    "h": "Principles of Scale and Ratio Notation",
+    "p": "A scale establishes a proportional equivalence between a model or drawing and the physical object it represents. When written in ratio notation as 1 : n, both numbers represent the exact same unit of measurement. Because the units match, the ratio itself is dimensionless.",
+    "bullets": [
+     "A scale of **1 : 50 000** means 1 mm on paper represents 50 000 mm in reality, 1 cm represents 50 000 cm, and 1 m represents 50 000 m.",
+     "Ratios in maps must always be simplified to the standard form **1 : n** or **n : 1** (for magnifications/microscopic models).",
+     "The number **n** is the linear scale factor of enlargement from the drawing to reality; the factor from reality to the drawing is the reciprocal, **1/n**.",
+     "Word descriptions such as '1 cm represents 2 km' are practical statements, but must be converted into standard ratio notation 1 : 200 000 before executing formal algebraic manipulations."
+    ],
+    "table": {
+     "head": [
+      "Written Description",
+      "Ratio Form (1 : n)",
+      "1 cm on Map Equals",
+      "10 cm on Map Equals"
+     ],
+     "rows": [
+      [
+       "1 cm to 1 m",
+       "1 : 100",
+       "1 m",
+       "10 m"
+      ],
+      [
+       "1 cm to 5 m",
+       "1 : 500",
+       "5 m",
+       "50 m"
+      ],
+      [
+       "1 cm to 250 m",
+       "1 : 25 000",
+       "250 m (0.25 km)",
+       "2.5 km"
+      ],
+      [
+       "1 cm to 500 m",
+       "1 : 50 000",
+       "500 m (0.5 km)",
+       "5 km"
+      ],
+      [
+       "1 cm to 1 km",
+       "1 : 100 000",
+       "1 km (1 000 m)",
+       "10 km"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Scale Factor",
+      "p": "The constant multiplier used to enlarge or reduce linear dimensions between a scale diagram and the real-world object."
+     },
+     {
+      "k": "warn",
+      "t": "Unitless Ratio Trap",
+      "p": "Never write units in a formal ratio. 1 cm : 1 km is not in standard ratio form. You must write 1 : 100 000."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "The Metric Conversion Bridge",
+    "p": "Scale calculations break down most frequently during metric unit conversions. Map measurements are almost universally taken in millimetres or centimetres, whereas real-world answers require metres or kilometres. Committing the multi-step bridge to memory eliminates factor-of-ten calculation errors.",
+    "bullets": [
+     "**1 cm = 10 mm** (multiply by 10 to convert cm to mm; divide by 10 for mm to cm).",
+     "**1 m = 100 cm = 1 000 mm** (multiply by 100 to convert m to cm).",
+     "**1 km = 1 000 m = 100 000 cm = 1 000 000 mm**.",
+     "Direct conversion rule for kilometres: to convert **cm to km**, divide by **100 000** (shift 5 decimal places left).",
+     "To convert **km to cm**, multiply by **100 000** (shift 5 decimal places right)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "The 100 000 Factor",
+      "p": "1 km = 1 000 m and each metre has 100 cm. Therefore, 1 km = 1 000 x 100 = 100 000 cm. In a 1 : 50 000 map, every 2 cm represents exactly 1 km."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Calculating Real Distances from Map Measurements",
+    "p": "To find a real distance from a diagram, first measure the line segment using an accurate ruler (recording to the nearest millimetre), apply the multiplication by the scale factor n, and then convert into the required real-world metric units.",
+    "bullets": [
+     "**Step 1:** Measure the distance on the diagram in centimetres (e.g. 7.4 cm).",
+     "**Step 2:** Multiply by the scale factor n: Real distance in cm = 7.4 x n.",
+     "**Step 3:** Divide by 100 to obtain metres, or divide by 100 000 to obtain kilometres.",
+     "**Alternative Unit-First Method:** If the scale is 1 : 25 000, recognise immediately that 1 cm = 250 m = 0.25 km, then calculate 7.4 x 0.25 km = 1.85 km.",
+     "Always read the question prompt carefully to supply the final answer in the requested units (m or km)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Examiner Measurement Accuracy",
+      "p": "On printed AQA examination papers, line lengths must be measured to within +/- 2 mm tolerance. Always align the 0 mark of the ruler precisely with the centre of the point or cross."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Calculating Diagram Lengths from Real-World Dimensions",
+    "p": "Drawing scale plans or calculating the length of a line representing a known physical feature requires the inverse operation: converting the real dimension into diagram units by dividing by the scale factor.",
+    "bullets": [
+     "**Step 1:** Convert the real measurement into the target drawing unit (almost always centimetres).",
+     "For example, convert 4.5 km to centimetres: 4.5 x 100 000 = 450 000 cm.",
+     "**Step 2:** Divide the real measurement by the ratio denominator n.",
+     "Using 1 : 50 000: Diagram length = 450 000 / 50 000 = 9 cm.",
+     "Alternatively, divide real metres by the number of metres 1 cm represents: 4 500 m / 500 m per cm = 9 cm.",
+     "Ensure drawings in exams are rendered with sharp, thin pencil lines (HB grade) to avoid line-thickness penalties."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Deriving an Unknown Scale Ratio",
+    "p": "When given both a drawing measurement and its corresponding real dimension, examiners expect you to construct the simplified ratio 1 : n. Both components must be converted into the same unit before simplifying.",
+    "bullets": [
+     "**Step 1:** Write the scale relationship as an unsimplified ratio with units: `Map Length : Real Length`.",
+     "**Step 2:** Convert both sides to the smaller unit (usually cm or mm) so that units cancel out entirely.",
+     "**Step 3:** Divide both sides by the map quantity to reduce the left-hand term to strictly 1.",
+     "Example: A bridge measuring 4.8 cm on a plan is 120 m long in reality. Ratio = 4.8 cm : 12 000 cm. Divide both by 4.8: 1 : (12 000 / 4.8) = 1 : 2 500.",
+     "Check that n is an integer or sensible terminating decimal; scale ratios in GCSE maths almost never have recurring non-terminating denominators."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Never Divide Inconsistent Units",
+      "p": "Dividing 120 m by 4.8 cm gives 25, leading to the erroneous scale 1 : 25. Units must be identical before dividing."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Bearings and Navigation on Scale Diagrams",
+    "p": "Map questions at the Higher tier routinely combine linear scale measurements with three-figure bearings. A bearing defines direction as an angle measured clockwise from true North.",
+    "bullets": [
+     "**Rule 1 (North Line):** Always draw an accurate, vertical North arrow upwards from the starting reference point ('from' location).",
+     "**Rule 2 (Clockwise):** Measure the angle strictly clockwise from the North line using a 360-degree or 180-degree protractor.",
+     "**Rule 3 (Three Figures):** Bearings under 100 degrees must include leading zeros: 47 degrees is written strictly as **047°**, not 47°.",
+     "**Back Bearings:** The reverse bearing from point B back to point A differs by exactly 180 degrees. If the bearing of B from A is theta, the bearing of A from B is theta + 180° (if theta < 180°) or theta - 180° (if theta >= 180°).",
+     "Exam questions often require you to mark a new point C that is a specified distance and bearing away from a known point."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Identify the Anchor Point",
+      "p": "Look for the word 'FROM'. 'The bearing of B from A' means you place your protractor centre at A and draw North at A."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Architectural Plans, Elevations, and Scale Models",
+    "p": "Scale diagrams extend to architectural blueprints and engineering orthographic projections (plans, front elevations, and side elevations). Models and plans typically use smaller scale factors such as 1 : 20, 1 : 50, or 1 : 100.",
+    "bullets": [
+     "**Plan view:** A bird's-eye view looking vertically down from above (shows width and length/depth).",
+     "**Front elevation:** The vertical projection looking directly at the front face (shows width and height).",
+     "**Side elevation:** The vertical projection looking from one side (shows length/depth and height).",
+     "Compound shapes on plans (e.g. L-shaped rooms) require decomposing the layout into standard rectangles to calculate floor perimeters and floor coverings.",
+     "Scale models (3D) preserve linear scale factor k across all individual edge lengths: `Model length = Real length / k`."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Loci and Geometric Regions on Scale Maps",
+    "p": "Higher-tier questions regularly merge scale factor calculations with geometric loci constructions. Boundary limits or coverage zones are plotted using compasses and straight edges on a scale map.",
+    "bullets": [
+     "**Points at a fixed distance from a point:** Represented by a circle of radius `r = (real distance) / scale factor`.",
+     "**Points equidistant from two points A and B:** The perpendicular bisector of the line segment joining A and B.",
+     "**Points at a fixed distance from a line segment:** A stadium/capsule shape composed of parallel lines connected by semicircular ends.",
+     "**Points equidistant from two intersecting paths/boundaries:** The angle bisector of the intersection.",
+     "Shading regions: Always shade clearly and check boundary constraints ('less than 5 km from town A AND closer to road X than road Y')."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Construction Arcs Required",
+      "p": "Never freehand locus boundaries or erase your construction arcs. AQA mark schemes allocate standalone method marks for visible compass construction arcs."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Area Scale Factors on Maps and Plans",
+    "p": "A critical Grade 8/9 distinction is the relationship between linear scale factor k and area scale factor k squared. While lengths scale by n, surface areas scale by the square of that factor.",
+    "bullets": [
+     "If the linear scale is **1 : n**, then 1 cm on the map represents n cm in reality.",
+     "Therefore, an area of **1 cm²** on the map represents **n² cm²** in reality.",
+     "To find real-world area from map area: `Real Area = Map Area x n²`.",
+     "**Conversion of square units:** 1 m² = 100 cm x 100 cm = 10 000 cm² (10⁴ cm²).",
+     "**Conversion for square kilometres:** 1 km² = 1 000 m x 1 000 m = 1 000 000 m² = 10 000 000 000 cm² (10¹⁰ cm²).",
+     "Example: On a 1 : 25 000 map, 1 cm² represents 25 000² cm² = 625 000 000 cm². Converting to m² (divide by 10 000) gives 62 500 m². Converting to km² (divide by 1 000 000) gives 0.0625 km².",
+     "Shortcut: If 1 cm represents 0.25 km, then 1 cm² represents (0.25 km)² = 0.0625 km²."
+    ],
+    "table": {
+     "head": [
+      "Linear Scale",
+      "1 cm Represents",
+      "1 cm² Represents",
+      "Map Area of 4 cm² Represents"
+     ],
+     "rows": [
+      [
+       "1 : 100",
+       "1 m",
+       "1 m²",
+       "4 m²"
+      ],
+      [
+       "1 : 500",
+       "5 m",
+       "25 m²",
+       "100 m²"
+      ],
+      [
+       "1 : 25 000",
+       "250 m (0.25 km)",
+       "62 500 m² (0.0625 km²)",
+       "250 000 m² (0.25 km²)"
+      ],
+      [
+       "1 : 50 000",
+       "500 m (0.5 km)",
+       "250 000 m² (0.25 km²)",
+       "1 000 000 m² (1.0 km²)"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "The Common Linear Trap",
+      "p": "Do NOT simply multiply an area by n. A forest with an area of 6 cm² on a 1 : 50 000 map does not have a real area of 6 x 50 000 cm². It is 6 x (50 000)² cm²."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Measurement Errors, Bounds, and Exam Tolerances",
+    "p": "Real examination papers acknowledge physical measuring limitations. AQA mark schemes use explicit tolerance bands (+/- 2 mm for lengths, +/- 2 degrees for angles). However, when real dimensions are given with stated degree of accuracy, upper and lower bounds must be applied.",
+    "bullets": [
+     "**Drawing Tolerance:** A calculated distance of 5.6 cm will typically be accepted between 5.4 cm and 5.8 cm.",
+     "**Angle Tolerance:** A measured bearing of 068° is normally credited if within 066° to 070°.",
+     "**Bounds in Scale Calculations:** If a real distance of 14 km is rounded to the nearest km, its bounds are 13.5 km <= d < 14.5 km.",
+     "On a 1 : 20 000 map, the minimum drawn length is `13.5 km / 0.2 km/cm = 67.5 cm` and the maximum drawn length is `14.5 km / 0.2 km/cm = 72.5 cm`.",
+     "Always state bounds calculations explicitly when questions ask for 'minimum/maximum possible scale distance'."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Showing Working for Tolerances",
+      "p": "Even if your ruler measurement is slightly off, showing the exact value you read followed by multiplying by the scale factor earns the method marks."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Multi-Step Applications: Journeys, Speed, and Cost",
+    "p": "Grade 9 exam questions routinely embed scale map interpretations within wider compound measure contexts, such as journey times, average speeds, fuel consumption, and tiling/flooring costs.",
+    "bullets": [
+     "**Composite Routes:** When measuring a curved road or irregular hiking route, break the path into a sequence of short straight chords, sum the lengths in cm, and then convert once using the scale.",
+     "**Speed-Distance-Time Integration:** After finding the real distance d from the map, use `Time = Distance / Speed`. Watch out for decimal time conversions (e.g. 2.4 hours = 2 hours 24 minutes, NOT 2 hours 40 minutes).",
+     "**Rate calculations:** Real costs (e.g. £14.50 per metre of fencing) require calculating actual real-world perimeters from blueprints before multiplying by unit cost.",
+     "Always execute scale conversions first before entering finance or compound measure formulas to prevent exponent errors."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Digital Zoom and Pixel Resolution Analogy",
+   "p": "Imagine viewing a 4K digital photograph of a city on your phone screen. When you zoom out so the entire city fits on a 15 cm screen, each single millimetre of screen width corresponds to several city blocks. The mathematical relationship between the pixel coordinate on the screen and the physical GPS coordinate on the Earth is identical to a map scale ratio. However, the analogy breaks down because digital displays can continuously change their zoom level (variable scale), whereas a printed physical map or blueprint possesses an absolute, fixed scale factor that cannot change without physically redrawing every element."
+  },
+  "terms": [
+   {
+    "t": "Scale",
+    "d": "The constant ratio comparing the dimensions of a drawing, map, or model to the corresponding dimensions of the actual object."
+   },
+   {
+    "t": "Scale Factor (k)",
+    "d": "The linear multiplier relating original lengths to enlarged or reduced lengths in similar figures or scale drawings."
+   },
+   {
+    "t": "Representative Ratio",
+    "d": "A scale expressed in dimensionless format 1 : n, where both terms share identical units."
+   },
+   {
+    "t": "Three-Figure Bearing",
+    "d": "An angle measured in degrees clockwise from true North, always written using three digits (000° to 360°)."
+   },
+   {
+    "t": "North Line",
+    "d": "A reference line drawn vertically upwards (000°) from a given location on a scale diagram or map."
+   },
+   {
+    "t": "Back Bearing",
+    "d": "The reciprocal direction from the target back to the starting point, differing from the forward bearing by exactly 180°."
+   },
+   {
+    "t": "Plan View",
+    "d": "An orthographic drawing showing the horizontal layout of a structure viewed directly from above."
+   },
+   {
+    "t": "Elevation",
+    "d": "A scaled 2D orthographic drawing showing the vertical face of an object viewed from the front or side."
+   },
+   {
+    "t": "Locus (plural Loci)",
+    "d": "The path or set of all points that satisfy a specified geometric condition or set of rules."
+   },
+   {
+    "t": "Area Scale Factor (k²)",
+    "d": "The multiplier used to scale 2D surfaces, equal to the square of the linear scale factor."
+   },
+   {
+    "t": "Tolerance",
+    "d": "The permissible range of variation from a specified dimension accepted by exam mark schemes (typically +/- 2 mm or +/- 2°)."
+   },
+   {
+    "t": "Chord Approximation",
+    "d": "Measuring an irregular curved path on a map by approximating it with a chain of short, straight line segments."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Scale 1 : 25 000 means 1 cm represents 25 km.",
+    "r": "1 cm represents 25 000 cm = 250 m = 0.25 km. Remember there are 100 000 cm in 1 km, not 1 000."
+   },
+   {
+    "w": "Converting a 6 cm² area on a 1 : 50 scale plan gives 6 x 50 = 300 cm² in real life.",
+    "r": "Areas scale by k². Real area = 6 x 50² = 6 x 2 500 = 15 000 cm² = 1.5 m²."
+   },
+   {
+    "w": "Measuring a bearing of 52° and recording it as 52°.",
+    "r": "Bearings must be written with three digits: 052°."
+   },
+   {
+    "w": "Measuring an angle anticlockwise from North or measuring clockwise from an east-west line.",
+    "r": "Bearings are strictly measured starting from the North line and rotating clockwise."
+   },
+   {
+    "w": "Converting 3.5 km to cm by multiplying by 1 000 to get 3 500 cm.",
+    "r": "Multiplying by 1 000 converts km to m. To get cm, multiply by another 100, giving 350 000 cm."
+   },
+   {
+    "w": "Writing a scale ratio with mixed units, e.g. 1 cm : 5 m.",
+    "r": "Simplify to identical units: 1 cm : 500 cm, which reduces to the unitless ratio 1 : 500."
+   },
+   {
+    "w": "Measuring the bearing of A from B by centering the protractor at A.",
+    "r": "The bearing of A 'from B' requires drawing the North line and measuring the angle at point B."
+   },
+   {
+    "w": "Calculating time = 45 km / 30 km/h = 1.5 hours, then writing the answer as 1 hour 50 minutes.",
+    "r": "0.5 hours is 30 minutes; the correct time is 1 hour 30 minutes."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A map has a scale of 1 : 40 000. On the map, the distance between two villages is 6.5 cm. Calculate the actual distance between the villages in kilometres.",
+    "marks": 2,
+    "model": [
+     "Map distance x scale: 6.5 x 40 000 = 260 000 cm",
+     "Convert cm to km: 260 000 / 100 000 = 2.6 km"
+    ],
+    "tip": "Alternatively, note that 1 cm = 400 m = 0.4 km, then calculate 6.5 x 0.4 = 2.6 km."
+   },
+   {
+    "q": "The actual length of a runway is 2.8 km. On an airport plan, the runway is drawn with a length of 14 cm. Work out the scale of the plan in the form 1 : n.",
+    "marks": 2,
+    "model": [
+     "Convert 2.8 km to cm: 2.8 x 100 000 = 280 000 cm",
+     "Form ratio and divide by 14: 14 : 280 000 = 1 : 20 000"
+    ],
+    "tip": "Ensure both sides have the same units before dividing down to 1 : n."
+   },
+   {
+    "q": "The bearing of ship Q from port P is 074°. Work out the bearing of port P from ship Q.",
+    "marks": 2,
+    "model": [
+     "Back bearing = 074° + 180°",
+     "Bearing = 254°"
+    ],
+    "tip": "Co-interior angles between parallel North lines sum to 180°, so 180° - 74° = 106°, and 360° - 106° = 254°."
+   },
+   {
+    "q": "On a map with scale 1 : 20 000, a nature reserve has an area of 18 cm². Calculate the actual area of the reserve in square metres.",
+    "marks": 3,
+    "model": [
+     "Area scale factor = 20 000² = 400 000 000",
+     "Real area in cm² = 18 x 400 000 000 = 7 200 000 000 cm²",
+     "Convert cm² to m²: divide by 10 000 (since 1 m² = 10 000 cm²) = 720 000 m²"
+    ],
+    "tip": "Shortcut: 1 cm represents 200 m, so 1 cm² represents 200² = 40 000 m². Then 18 x 40 000 = 720 000 m²."
+   },
+   {
+    "q": "Town X is 18 km due North of Town Y. Town Z is 24 km due East of Town Y. Using a scale of 1 cm represents 3 km: (a) Draw a scale diagram showing positions X, Y, and Z. (b) Find the bearing of Town Z from Town X by measurement or calculation.",
+    "marks": 4,
+    "model": [
+     "(a) Correct lengths: YX = 18 / 3 = 6 cm vertically up, YZ = 24 / 3 = 8 cm horizontally right",
+     "Right-angled triangle drawn with Y at right angle and vertices correctly labelled",
+     "(b) Angle YXZ = arctan(8 / 6) = arctan(1.333...) = 53.13°",
+     "Bearing from North = 180° - 53.13° = 126.87° (or measured to tolerance 126° - 128°), written as 127°"
+    ],
+    "tip": "Notice that from X, South is 180°. Moving towards Z means rotating towards the east, so the bearing is 180° - angle YXZ."
+   },
+   {
+    "q": "A cyclist rides from town A to town B along a route that measures 16.4 cm on a map with scale 1 : 50 000. The cyclist maintains an average speed of 20.5 km/h. Work out the journey time in hours and minutes.",
+    "marks": 4,
+    "model": [
+     "Real distance in km = 16.4 x 0.5 km = 8.2 km (or 16.4 x 50 000 / 100 000)",
+     "Time = Distance / Speed = 8.2 / 20.5 = 0.4 hours",
+     "Convert decimal hours to minutes: 0.4 x 60 = 24 minutes",
+     "Journey time = 0 hours 24 minutes (or 24 minutes)"
+    ],
+    "tip": "0.4 hours is often mistakenly written as 40 minutes. Always multiply the decimal fraction by 60."
+   },
+   {
+    "q": "The distance between two lighthouses is measured as 8.0 cm correct to 2 significant figures on a 1 : 25 000 map. Calculate the lower bound of the actual distance between the lighthouses in metres.",
+    "marks": 3,
+    "model": [
+     "Lower bound of measured length = 7.95 cm",
+     "Lower bound actual distance in cm = 7.95 x 25 000 = 198 750 cm",
+     "Convert to metres: 198 750 / 100 = 1 987.5 m"
+    ],
+    "tip": "8.0 cm to 2 s.f. has an error interval of +/- 0.05 cm. Lower bound is 7.95 cm."
+   },
+   {
+    "q": "A blueprint of a rectangular sports hall has a scale of 1 : 75. The floor on the plan measures 32 cm by 18 cm. Polishing the wooden floor costs £4.50 per square metre. Calculate the total cost to polish the hall floor.",
+    "marks": 4,
+    "model": [
+     "Real dimensions: Length = 32 x 0.75 m = 24 m; Width = 18 x 0.75 m = 13.5 m",
+     "Real area = 24 x 13.5 = 324 m² (or Plan Area = 576 cm²; Real Area = 576 x 75² / 10 000 = 324 m²)",
+     "Total cost = 324 x £4.50",
+     "Total cost = £1 458"
+    ],
+    "tip": "Converting dimensions to metres first before finding the area simplifies calculations and prevents conversion errors."
+   },
+   {
+    "q": "On a map with scale 1 : 100 000, two radio masts A and B are 9 cm apart. A mobile phone can receive a signal if it is within 6 km of mast A and within 5 km of mast B. (a) Calculate the radius in centimetres of the boundary circle needed around mast A. (b) Calculate the radius in centimetres around mast B. (c) Describe the region of signal reception.",
+    "marks": 3,
+    "model": [
+     "(a) Radius A = 6 km / 1 km per cm = 6 cm",
+     "(b) Radius B = 5 km / 1 km per cm = 5 cm",
+     "(c) The overlapping intersection region of the two circular disks (where the two circles overlap)"
+    ],
+    "tip": "At 1 : 100 000, exactly 1 cm represents 1 km. Since 6 + 5 = 11 cm > 9 cm, the circles intersect."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A rectangular lake has an actual area of 0.45 km². On an Ordnance Survey map, the scale is 1 : 25 000. Calculate the area of the lake on the map in square centimetres (cm²).",
+    "steps": [
+     "Step 1: Determine what 1 cm on the map represents in real units. At 1 : 25 000, 1 cm represents 25 000 cm = 250 m = 0.25 km.",
+     "Step 2: Calculate the area scale factor in terms of km² per cm². 1 cm² represents (0.25 km)² = 0.0625 km².",
+     "Step 3: Divide the real area by the area represented by 1 cm²: Map Area = 0.45 / 0.0625.",
+     "Step 4: Compute: 0.45 / (1/16) = 0.45 x 16 = 7.2 cm².",
+     "Alternative Verification: Convert 0.45 km² to cm². 0.45 x 1 000 000 m² = 450 000 m² = 4 500 000 000 cm². Divide by 25 000² (625 000 000): 4 500 000 000 / 625 000 000 = 45 / 6.25 = 7.2 cm²."
+    ],
+    "ans": "7.2 cm²"
+   },
+   {
+    "q": "A hiker walks from Camp C on a bearing of 058° for a real-world distance of 4.2 km to Lookout L. From Lookout L, the hiker walks due South for 3.0 km to Shelter S. (a) Using a scale of 1 cm : 500 m, construct an accurate scale drawing showing C, L, and S. (b) Find the direct distance and bearing of Shelter S from Camp C.",
+    "steps": [
+     "Step 1: Convert all distances using the scale 1 cm = 500 m = 0.5 km.",
+     "Distance C to L = 4.2 km / 0.5 km/cm = 8.4 cm.",
+     "Distance L to S = 3.0 km / 0.5 km/cm = 6.0 cm.",
+     "Step 2: Draw a vertical North line at point C. Using a protractor, measure an angle of 058° clockwise from North. Draw a line segment 8.4 cm long to locate point L.",
+     "Step 3: At point L, draw a vertical line directly downwards (bearing 180°, due South) measuring exactly 6.0 cm to locate Shelter S.",
+     "Step 4: Join C to S with a straight line. Measure the length CS: length = 7.2 cm (tolerance +/- 0.2 cm).",
+     "Step 5: Convert length CS back to real distance: 7.2 cm x 0.5 km/cm = 3.6 km (accepted range: 3.5 km to 3.7 km).",
+     "Step 6: Measure the angle clockwise from the North line at C to line CS: angle = 100° (tolerance 098° to 102°)."
+    ],
+    "ans": "Direct distance = 3.6 km (accept 3.5 to 3.7 km); Bearing = 100° (accept 098° to 102°)"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "The Metric Conversion Bridge: step-by-step factors connecting map centimetres to real-world kilometres.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"20\" y=\"90\" width=\"70\" height=\"50\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#1e3a8a\" stroke-width=\"2\"/><text x=\"55\" y=\"120\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\" text-anchor=\"middle\">cm</text><rect x=\"165\" y=\"90\" width=\"70\" height=\"50\" rx=\"6\" fill=\"#fde68a\" stroke=\"#854d0e\" stroke-width=\"2\"/><text x=\"200\" y=\"120\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#854d0e\" text-anchor=\"middle\">m</text><rect x=\"310\" y=\"90\" width=\"70\" height=\"50\" rx=\"6\" fill=\"#bbf7d0\" stroke=\"#166534\" stroke-width=\"2\"/><text x=\"345\" y=\"120\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#166534\" text-anchor=\"middle\">km</text><path d=\"M 90 105 L 165 105\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"2\" marker-end=\"url(#arr)\"/><text x=\"127\" y=\"98\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#1e293b\" text-anchor=\"middle\">÷ 100</text><path d=\"M 165 125 L 90 125\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"2\"/><text x=\"127\" y=\"139\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#1e293b\" text-anchor=\"middle\">× 100</text><path d=\"M 235 105 L 310 105\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"2\"/><text x=\"272\" y=\"98\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#1e293b\" text-anchor=\"middle\">÷ 1000</text><path d=\"M 310 125 L 235 125\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"2\"/><text x=\"272\" y=\"139\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#1e293b\" text-anchor=\"middle\">× 1000</text><path d=\"M 55 70 C 130 15 270 15 345 70\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2\" stroke-dasharray=\"4\"/><text x=\"200\" y=\"32\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\" text-anchor=\"middle\">Direct: ÷ 100 000 (cm to km)</text><path d=\"M 345 160 C 270 215 130 215 55 160\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\" stroke-dasharray=\"4\"/><text x=\"200\" y=\"205\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\" text-anchor=\"middle\">Direct: × 100 000 (km to cm)</text></svg>"
+   },
+   {
+    "cap": "Scale map bearing construction from Point P to Point Q with North lines and back bearing.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><line x1=\"80\" y1=\"190\" x2=\"80\" y2=\"50\" stroke=\"#dc2626\" stroke-width=\"2\"/><polygon points=\"80,45 76,55 84,55\" fill=\"#dc2626\"/><text x=\"80\" y=\"38\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\" text-anchor=\"middle\">North</text><line x1=\"280\" y1=\"110\" x2=\"280\" y2=\"20\" stroke=\"#dc2626\" stroke-width=\"2\"/><polygon points=\"280,15 276,25 284,25\" fill=\"#dc2626\"/><text x=\"280\" y=\"12\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\" text-anchor=\"middle\">North</text><line x1=\"80\" y1=\"190\" x2=\"280\" y2=\"110\" stroke=\"#1e293b\" stroke-width=\"2.5\"/><circle cx=\"80\" cy=\"190\" r=\"4\" fill=\"#1e3a8a\"/><text x=\"68\" y=\"205\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\">P</text><circle cx=\"280\" cy=\"110\" r=\"4\" fill=\"#1e3a8a\"/><text x=\"295\" y=\"115\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\">Q</text><path d=\"M 80 130 A 60 60 0 0 1 133 169\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"120\" y=\"145\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">068°</text><text x=\"195\" y=\"170\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#475569\" text-anchor=\"middle\">Map distance = 8.0 cm</text><text x=\"195\" y=\"186\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#166534\" text-anchor=\"middle\">Scale 1 : 25 000 (Real = 2.0 km)</text><path d=\"M 280 50 A 60 60 0 1 1 227 131\" fill=\"none\" stroke=\"#d97706\" stroke-width=\"2\"/><text x=\"330\" y=\"80\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#d97706\">248° (Back)</text></svg>"
+   },
+   {
+    "cap": "Floor plan of an L-shaped room at 1 : 50 scale, comparing plan centimetres to actual metres.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><polygon points=\"80,40 280,40 280,110 180,110 180,200 80,200\" fill=\"#e0e7ff\" stroke=\"#1e293b\" stroke-width=\"2.5\"/><text x=\"180\" y=\"30\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#1e293b\" text-anchor=\"middle\">10.0 cm [Actual 5.0 m]</text><text x=\"290\" y=\"80\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#1e293b\">3.5 cm [1.75 m]</text><text x=\"230\" y=\"125\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#1e293b\" text-anchor=\"middle\">5.0 cm [2.5 m]</text><text x=\"190\" y=\"160\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#1e293b\">4.5 cm [2.25 m]</text><text x=\"130\" y=\"215\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#1e293b\" text-anchor=\"middle\">5.0 cm [2.5 m]</text><text x=\"30\" y=\"125\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#1e293b\">8.0 cm [4.0 m]</text><rect x=\"230\" y=\"150\" width=\"140\" height=\"60\" rx=\"6\" fill=\"#fef3c7\" stroke=\"#b45309\" stroke-width=\"1.5\"/><text x=\"300\" y=\"170\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#b45309\" text-anchor=\"middle\">Scale 1 : 50</text><text x=\"300\" y=\"186\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#92400e\" text-anchor=\"middle\">1 cm represents 0.5 m</text><text x=\"300\" y=\"200\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#92400e\" text-anchor=\"middle\">Area factor = 50² = 2500</text></svg>"
+   },
+   {
+    "cap": "Visual proof of the Area Scale Factor relationship: doubling side lengths quadruples the enclosed area.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"40\" y=\"70\" width=\"60\" height=\"60\" fill=\"#dbeafe\" stroke=\"#1e40af\" stroke-width=\"2\"/><text x=\"70\" y=\"105\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\" text-anchor=\"middle\">1 cm²</text><text x=\"70\" y=\"60\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#1e40af\" text-anchor=\"middle\">1 cm</text><text x=\"28\" y=\"105\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#1e40af\" text-anchor=\"middle\">1 cm</text><text x=\"70\" y=\"150\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e293b\" text-anchor=\"middle\">Map Area</text><text x=\"70\" y=\"166\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#64748b\" text-anchor=\"middle\">Scale 1 : n</text><rect x=\"210\" y=\"40\" width=\"120\" height=\"120\" fill=\"#fde68a\" stroke=\"#854d0e\" stroke-width=\"2\"/><line x1=\"270\" y1=\"40\" x2=\"270\" y2=\"160\" stroke=\"#b45309\" stroke-width=\"1.5\" stroke-dasharray=\"3\"/><line x1=\"210\" y1=\"100\" x2=\"330\" y2=\"100\" stroke=\"#b45309\" stroke-width=\"1.5\" stroke-dasharray=\"3\"/><text x=\"270\" y=\"30\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#854d0e\" text-anchor=\"middle\">n cm (Length x n)</text><text x=\"195\" y=\"105\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#854d0e\" text-anchor=\"middle\">n cm</text><text x=\"240\" y=\"75\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#854d0e\" text-anchor=\"middle\">1 unit</text><text x=\"300\" y=\"75\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#854d0e\" text-anchor=\"middle\">2 units</text><text x=\"240\" y=\"135\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#854d0e\" text-anchor=\"middle\">3 units</text><text x=\"300\" y=\"135\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#854d0e\" text-anchor=\"middle\">4 units</text><text x=\"270\" y=\"185\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e293b\" text-anchor=\"middle\">Real Area = n² cm²</text><text x=\"270\" y=\"201\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#dc2626\" text-anchor=\"middle\">Area scales by k², NEVER by k!</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_h.2.1",
+  "sid": "maths_aqa_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.8-flash",
+  "ts": "2026-11-19T17:40:38.270Z"
  }
 }

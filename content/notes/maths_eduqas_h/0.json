@@ -2819,5 +2819,466 @@
   "src": "pre",
   "by": "gemini/gemini-flash-lite-latest",
   "ts": "2026-11-18T20:53:56.309Z"
+ },
+ "maths_eduqas_h.0.1": {
+  "summary": "This topic covers the essential foundational arithmetic required across both non-calculator and calculator papers for Eduqas GCSE Higher Tier. Students must master formal written methods for addition, subtraction, multiplication, and division with integers and decimals, alongside precise fraction and mixed number operations. Place value forms the structural bedrock, dictating magnitude and alignment in every single calculation.",
+  "core": [
+   {
+    "h": "1. Fundamental Place Value",
+    "p": "Place value is the value of a digit depending on its position in a number relative to the decimal point. Each column is a power of ten larger than the column immediately to its right.",
+    "bullets": [
+     "Whole number columns: Units (10^0), Tens (10^1), Hundreds (10^2), Thousands (10^3).",
+     "Decimal columns: Tenths (10^-1 or 0.1), Hundredths (10^-2 or 0.01), Thousandths (10^-3 or 0.001).",
+     "Multiplying by 10^n shifts every digit n places to the left, making the number larger.",
+     "Dividing by 10^n shifts every digit n places to the right, making the number smaller."
+    ],
+    "table": {
+     "head": [
+      "Number",
+      "Thousands",
+      "Units",
+      "Tenths",
+      "Hundredths"
+     ],
+     "rows": [
+      [
+       "43.82",
+       "0",
+       "43",
+       "8",
+       "2"
+      ],
+      [
+       "509.1",
+       "0",
+       "509",
+       "1",
+       "0"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Place Value",
+      "p": "The numerical value that a digit has by virtue of its position in a number."
+     },
+     {
+      "k": "warn",
+      "t": "Decimal Alignment",
+      "p": "Never align numbers by their right-hand edge when adding or subtracting; always align the decimal points."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Visualising decimal place value columns around the decimal point anchor.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" fill=\"#f8fafc\" stroke=\"#1b2540\" stroke-width=\"2\" rx=\"8\"/><text x=\"200\" y=\"40\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#1b2540\">Place Value Grid</text><rect x=\"30\" y=\"70\" width=\"60\" height=\"50\" fill=\"#dbeafe\" stroke=\"#1b2540\"/><text x=\"60\" y=\"100\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">Hundreds</text><rect x=\"100\" y=\"70\" width=\"60\" height=\"50\" fill=\"#dbeafe\" stroke=\"#1b2540\"/><text x=\"130\" y=\"100\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">Tens</text><rect x=\"170\" y=\"70\" width=\"60\" height=\"50\" fill=\"#dbeafe\" stroke=\"#1b2540\"/><text x=\"200\" y=\"100\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">Units</text><circle cx=\"240\" cy=\"95\" r=\"4\" fill=\"#1b2540\"/><rect x=\"250\" y=\"70\" width=\"60\" height=\"50\" fill=\"#fde68a\" stroke=\"#1b2540\"/><text x=\"280\" y=\"100\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">Tenths</text><rect x=\"320\" y=\"70\" width=\"50\" height=\"50\" fill=\"#fde68a\" stroke=\"#1b2540\"/><text x=\"345\" y=\"100\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">Hundredths</text><rect x=\"170\" y=\"140\" width=\"60\" height=\"50\" fill=\"#ffffff\" stroke=\"#1b2540\"/><text x=\"200\" y=\"170\" font-size=\"16\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#b91c1c\">4</text><circle cx=\"240\" cy=\"165\" r=\"4\" fill=\"#b91c1c\"/><rect x=\"250\" y=\"140\" width=\"60\" height=\"50\" fill=\"#ffffff\" stroke=\"#1b2540\"/><text x=\"280\" y=\"170\" font-size=\"16\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#b91c1c\">7</text><rect x=\"320\" y=\"140\" width=\"50\" height=\"50\" fill=\"#ffffff\" stroke=\"#1b2540\"/><text x=\"345\" y=\"170\" font-size=\"16\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#b91c1c\">2</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "2. Formal Addition of Integers and Decimals",
+    "p": "Column addition requires strict alignment of place value columns and decimal points. Carry over values must be clearly noted to prevent arithmetic slips.",
+    "bullets": [
+     "Write numbers vertically, aligning decimal points directly underneath each other.",
+     "Pad empty decimal places with trailing zeros if necessary (e.g., 4.2 becomes 4.20).",
+     "Add digits column by column starting from the rightmost column.",
+     "If a column sum is 10 or greater, write down the units digit and carry the tens digit to the next column on the left."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Decimal Alignment",
+      "p": "The decimal point is the anchor. Line it up and never move it sideways."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "3. Formal Subtraction of Integers and Decimals",
+    "p": "Column subtraction relies on the same vertical alignment as addition. When a top digit is smaller than the bottom digit, formal exchange (borrowing) is required.",
+    "bullets": [
+     "Align decimal points vertically and pad with trailing zeros so both numbers have the same decimal length.",
+     "Work from right to left column by column.",
+     "If the top digit is smaller than the bottom digit, exchange 1 from the immediate left column, reducing that column by 1 and adding 10 to the current digit.",
+     "Check your answer by adding the result to the subtracted number to recover the starting value."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Exchange Errors",
+      "p": "When exchanging across a zero, remember that a zero becomes a 9 when you borrow from it to pass to the next column."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Formal Multiplication (Column and Grid Methods)",
+    "p": "Multiplication requires careful tracking of place value. In formal column multiplication, multiply by each digit of the multiplier separately, accounting for its place value.",
+    "bullets": [
+     "Ignore decimal points initially to multiply the numbers as if they were integers.",
+     "Count the total number of decimal places in both original numbers.",
+     "Insert the decimal point into the final product so it has that same total number of decimal places.",
+     "Use column multiplication with placeholders (zeros) for each new row of the multiplier."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Decimal Place Check",
+      "p": "Always estimate your answer first (e.g., 3.9 x 4.1 is roughly 4 x 4 = 16) to verify your decimal point placement."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "5. Formal Division (Bus Stop Method)",
+    "p": "Short division (the bus stop method) is used when dividing a number by a single-digit integer. Long division is required for two-digit divisors.",
+    "bullets": [
+     "Place the dividend inside the bus stop bracket and the divisor on the outside left.",
+     "Divide the first digit by the divisor; write the quotient above and carry any remainder to the next digit.",
+     "If a remainder remains after the final whole digit, add a decimal point and trailing zeros inside the bracket to continue dividing.",
+     "For long division, write out multiples of the divisor on the side (chunking or standard algorithm) to manage larger numbers."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Dividend and Divisor",
+      "p": "Dividend is the number being divided; divisor is the number you are dividing by."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Operations with Fractions: Addition and Subtraction",
+    "p": "To add or subtract fractions, they must share a common denominator. The lowest common multiple (LCM) of the denominators is used.",
+    "bullets": [
+     "Find the LCM of the denominators to serve as the common denominator.",
+     "Convert each fraction into an equivalent fraction with the common denominator by multiplying numerator and denominator by the same factor.",
+     "Add or subtract the numerators while keeping the denominator unchanged.",
+     "Simplify the resulting fraction to its lowest terms."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Adding Denominators",
+      "p": "Never add denominators together (e.g., 1/3 + 1/4 is NOT 2/7)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Operations with Fractions: Multiplication and Division",
+    "p": "Multiplying and dividing fractions does not require a common denominator. Multiplication is straightforward numerator-times-numerator, while division uses the reciprocal.",
+    "bullets": [
+     "Multiplication: Multiply numerators together and denominators together: (a/b) x (c/d) = (ac)/(bd).",
+     "Cancel common factors diagonally before multiplying to keep numbers small.",
+     "Division: Keep the first fraction, Change division to multiplication, and Flip the second fraction (KCF / Multiply by the reciprocal).",
+     "Division rule: (a/b) / (c/d) = (a/b) x (d/c) = (ad)/(bc)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Reciprocal",
+      "p": "The reciprocal of a fraction a/b is b/a. A number multiplied by its reciprocal equals 1."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Operations with Mixed Numbers",
+    "p": "Mixed numbers consist of an integer and a proper fraction. For reliable calculation in formal assessments, convert them into improper fractions first.",
+    "bullets": [
+     "Convert mixed number to improper fraction: multiply whole number by denominator, add numerator, place over original denominator (e.g., 2 3/4 = (2x4+3)/4 = 11/4).",
+     "Perform the requested operation using fraction rules.",
+     "Convert the final improper fraction back into a mixed number if requested by dividing numerator by denominator.",
+     "Alternatively, whole numbers and fractional parts can be operated on separately for addition and subtraction, but improper fractions are safer for multiplication and division."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Mixed Number Multiplications",
+      "p": "Always convert mixed numbers to improper fractions before multiplying or dividing. Doing otherwise leads to severe algebraic errors."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Combining Operations and Place Value Scaling",
+    "p": "Higher tier questions often test fluency by combining decimal scaling with fraction arithmetic in multi-step contexts without a calculator.",
+    "bullets": [
+     "Use fraction-decimal equivalents to simplify mixed expressions (e.g., convert 0.75 to 3/4).",
+     "Factorise numbers or adjust decimal points using powers of 10 to make mental or written arithmetic cleaner.",
+     "Maintain strict tracking of order of operations (BIDMAS/BODMAS) when mixing integers, decimals, and fractions.",
+     "Check intermediate steps to ensure no place value shifts were lost."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Scaling Consistency",
+      "p": "If you multiply the divisor by 10 to make it an integer, you must also multiply the dividend by 10."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Calculator Competency and Error Checking",
+    "p": "On Component 2 (calculator paper), correct button keystrokes and bracket usage are vital when entering complex fraction and decimal expressions.",
+    "bullets": [
+     "Use the dedicated fraction button (a b/c or template) for mixed numbers and fractions.",
+     "Always wrap negative numbers and complex numerators/denominators in brackets.",
+     "Use inverse operations and estimation to check calculator outputs.",
+     "Recognize standard display formats (e.g., SD button for converting between decimals and fractions)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Calculator Syntax",
+      "p": "Entering -3^2 without brackets evaluates as -(3^2) = -9 rather than (-3)^2 = 9."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Scaled Blueprint and Metric Grid",
+   "p": "Imagine an architect drafting a skyscraper on high-precision graph paper. Each grid line represents a place value column: shifting a wall one square to the left multiplies its structural weight and value by ten. Fractions act like proportional blueprints where every measurement must share the same scale (common denominator) before pieces can be bolted together. Where this breaks down is that physical buildings cannot be 'flipped' like reciprocal fractions or easily turned from mixed timber lengths into improper single units."
+  },
+  "terms": [
+   {
+    "t": "Place Value",
+    "d": "The value represented by a digit based on its position within a number."
+   },
+   {
+    "t": "Integer",
+    "d": "A whole number that can be positive, negative, or zero."
+   },
+   {
+    "t": "Decimal",
+    "d": "A number that uses a decimal point to show values smaller than one (tenths, hundredths, etc.)."
+   },
+   {
+    "t": "Proper Fraction",
+    "d": "A fraction where the numerator is strictly smaller than the denominator."
+   },
+   {
+    "t": "Improper Fraction",
+    "d": "A fraction where the numerator is greater than or equal to the denominator."
+   },
+   {
+    "t": "Mixed Number",
+    "d": "A number consisting of an integer combined with a proper fraction."
+   },
+   {
+    "t": "Numerator",
+    "d": "The top number in a fraction, representing how many parts are taken."
+   },
+   {
+    "t": "Denominator",
+    "d": "The bottom number in a fraction, representing total equal parts in a whole."
+   },
+   {
+    "t": "Reciprocal",
+    "d": "The inverse of a number, obtained by swapping its numerator and denominator (1 divided by the number)."
+   },
+   {
+    "t": "Lowest Common Denominator",
+    "d": "The lowest common multiple of the denominators of a set of fractions."
+   },
+   {
+    "t": "Dividend",
+    "d": "The number that is being divided in a division operation."
+   },
+   {
+    "t": "Divisor",
+    "d": "The number by which another number is divided."
+   },
+   {
+    "t": "Quotient",
+    "d": "The result obtained by dividing one quantity by another."
+   },
+   {
+    "t": "Remainder",
+    "d": "The amount left over after division when the dividend is not evenly divisible by the divisor."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Adding numerators and denominators straight across: 1/3 + 1/4 = 2/7",
+    "r": "Find a common denominator: 4/12 + 3/12 = 7/12"
+   },
+   {
+    "w": "Aligning decimals by right-hand edge: 3.2 + 14.56 becomes 17.76 incorrectly aligned",
+    "r": "Align decimal points vertically: 3.20 + 14.56 = 17.76"
+   },
+   {
+    "w": "Forgetting to count total decimal places in multiplication: 0.2 x 0.3 = 0.6",
+    "r": "Count total decimal places (1 + 1 = 2): 0.2 x 0.3 = 0.06"
+   },
+   {
+    "w": "Inverting the first fraction instead of the second when dividing: (1/2) / (3/4) = (2/1) x (3/4)",
+    "r": "Only invert the second fraction (the divisor): (1/2) x (4/3) = 4/6 = 2/3"
+   },
+   {
+    "w": "Adding whole numbers and fractions separately in multiplication: 2 x (1/3) = 2 1/3",
+    "r": "Convert to improper fractions first: 2/1 x 1/3 = 2/3"
+   },
+   {
+    "w": "Dropping the remainder in short division without adding decimal zeros",
+    "r": "Add a decimal point and trailing zeros to continue dividing until the remainder is zero or terminates"
+   },
+   {
+    "w": "Borrowing incorrectly across zeros in subtraction",
+    "r": "Pass the exchange across intermediate zeros, turning them into 9s until reaching the target digit"
+   }
+  ],
+  "exam": [
+   {
+    "q": "Work out 45.6 + 3.82 - 12.4. You must show all your working.",
+    "marks": 3,
+    "model": [
+     "Align decimal points for addition: 45.60 + 3.82 = 49.42",
+     "Align decimal points for subtraction: 49.42 - 12.40",
+     "Correct evaluation: 37.02"
+    ],
+    "tip": "Pad all numbers with trailing zeros so they have the same number of decimal places before calculating."
+   },
+   {
+    "q": "Work out 3.4 x 5.25. Do not use a calculator.",
+    "marks": 3,
+    "model": [
+     "Multiply as integers: 34 x 525 = 17850",
+     "Count total decimal places in original numbers: 1 + 2 = 3 decimal places",
+     "Correct placement of decimal point: 17.85"
+    ],
+    "tip": "Estimate 3 x 5 = 15 to check that 17.85 is reasonable."
+   },
+   {
+    "q": "Work out 3 1/4 - 1 5/6. Give your answer as a mixed number in its simplest form.",
+    "marks": 4,
+    "model": [
+     "Convert to improper fractions: 13/4 and 11/6",
+     "Find common denominator (12): 39/12 and 22/12",
+     "Subtract numerators: (39 - 22) / 12 = 17/12",
+     "Convert back to mixed number: 1 5/12"
+    ],
+    "tip": "Converting mixed numbers to improper fractions is the safest method for fraction subtraction."
+   },
+   {
+    "q": "Work out 2/3 x 4/5 / (1/2). Give your answer as a fraction in its simplest form.",
+    "marks": 4,
+    "model": [
+     "Perform multiplication first or deal with division: (2/3 x 4/5) = 8/15",
+     "Division by 1/2 is multiplication by 2/1: 8/15 x 2/1",
+     "Evaluate: 16/15",
+     "Leave as improper fraction or convert to 1 1/15 as requested."
+    ],
+    "tip": "Remember BIDMAS: multiplication and division have equal precedence and are evaluated left to right."
+   },
+   {
+    "q": "A piece of wood is 8.4 metres long. It is cut into 6 equal pieces. What is the length of each piece?",
+    "marks": 2,
+    "model": [
+     "Set up division: 8.4 / 6",
+     "Evaluate using bus stop method: 1.4 metres"
+    ],
+    "tip": "Ensure units are stated in the final answer if required."
+   },
+   {
+    "q": "Work out 4.5 / 0.05. You must show your working.",
+    "marks": 3,
+    "model": [
+     "Scale both numbers by multiplying by 100 to make the divisor an integer: 450 / 5",
+     "Perform division: 450 / 5",
+     "Correct answer: 90"
+    ],
+    "tip": "Scaling both dividend and divisor by the same power of 10 keeps the ratio and final answer identical."
+   },
+   {
+    "q": "Evaluate 2 1/3 + 1 3/4 x 2/7. Give your answer as a fraction in its simplest form.",
+    "marks": 4,
+    "model": [
+     "Apply BIDMAS: calculate multiplication first: 1 3/4 = 7/4",
+     "Multiply: 7/4 x 2/7 = 2/4 = 1/2",
+     "Add to 2 1/3 (7/3): 7/3 + 1/2",
+     "Common denominator (6): 14/6 + 3/6 = 17/6 (or 2 5/6)"
+    ],
+    "tip": "Always perform multiplication before addition according to order of operations."
+   },
+   {
+    "q": "Calculate 56.4 / 0.12. Show your working clearly.",
+    "marks": 3,
+    "model": [
+     "Multiply dividend and divisor by 100: 5640 / 12",
+     "Perform long division or short division: 5640 / 12",
+     "Correct answer: 470"
+    ],
+    "tip": "Eliminate decimals in the divisor before attempting long division."
+   },
+   {
+    "q": "Work out the exact value of (3/5)^2 + sqrt(0.16).",
+    "marks": 3,
+    "model": [
+     "Evaluate square of fraction: 9/25",
+     "Evaluate square root of decimal: sqrt(16/100) = 4/10 = 2/5",
+     "Convert to common denominator (25): 9/25 + 10/25 = 19/25"
+    ],
+    "tip": "Convert decimals inside roots to fractions to make non-calculator evaluation easier."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Work out 5.27 x 3.6 without using a calculator. Show all working.",
+    "steps": [
+     "Ignore decimal points and multiply 527 by 36 using column multiplication.",
+     "Calculate 527 x 6 = 3162.",
+     "Calculate 527 x 30 = 15810.",
+     "Add results: 3162 + 15810 = 18972.",
+     "Count total decimal places in 5.27 (2) and 3.6 (1), giving 3 decimal places in total.",
+     "Insert decimal point: 18.972."
+    ],
+    "ans": "18.972"
+   },
+   {
+    "q": "Evaluate 2 2/3 - 1 1/4 + 5/6. Give your answer as a fraction in its simplest form.",
+    "steps": [
+     "Convert mixed numbers to improper fractions: 2 2/3 = 8/3, 1 1/4 = 5/4.",
+     "Expression becomes: 8/3 - 5/4 + 5/6.",
+     "Find the lowest common multiple for denominators 3, 4, and 6, which is 12.",
+     "Convert each fraction: 8/3 = 32/12, 5/4 = 15/12, 5/6 = 10/12.",
+     "Combine numerators: (32 - 15 + 10) / 12 = 27/12.",
+     "Simplify by dividing numerator and denominator by 3: 9/4 (or 2 1/4)."
+    ],
+    "ans": "9/4 (or 2 1/4)"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Column multiplication layout and decimal place accumulation.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#f8fafc\" stroke=\"#1b2540\" stroke-width=\"2\" rx=\"6\"/><text x=\"200\" y=\"45\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#1b2540\">Formal Column Multiplication</text><text x=\"240\" y=\"80\" font-size=\"16\" font-family=\"monospace\" fill=\"#1b2540\">5 . 2  7</text><text x=\"240\" y=\"105\" font-size=\"16\" font-family=\"monospace\" fill=\"#1b2540\">  × 3 . 6</text><line x1=\"160\" y1=\"115\" x2=\"280\" y2=\"115\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"240\" y=\"140\" font-size=\"16\" font-family=\"monospace\" fill=\"#2563eb\">3 1 6 2</text><text x=\"240\" y=\"165\" font-size=\"16\" font-family=\"monospace\" fill=\"#2563eb\">1 5 8 1 0</text><line x1=\"160\" y1=\"175\" x2=\"280\" y2=\"175\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"240\" y=\"200\" font-size=\"16\" font-weight=\"bold\" font-family=\"monospace\" fill=\"#b91c1c\">1 8 9 7 2</text><text x=\"50\" y=\"90\" font-size=\"12\" fill=\"#475569\">2 dec places</text><text x=\"50\" y=\"110\" font-size=\"12\" fill=\"#475569\">1 dec place</text><path d=\"M120 100 L150 100\" stroke=\"#475569\" stroke-width=\"1.5\" marker-end=\"url(#arrow)\"/></svg>"
+   },
+   {
+    "cap": "Fraction addition via common denominator transformation.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#f8fafc\" stroke=\"#1b2540\" stroke-width=\"2\" rx=\"6\"/><text x=\"200\" y=\"45\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#1b2540\">Common Denominator Method</text><rect x=\"40\" y=\"70\" width=\"120\" height=\"60\" fill=\"#dbeafe\" stroke=\"#1b2540\" rx=\"4\"/><text x=\"100\" y=\"95\" font-size=\"16\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#1b2540\">1 / 3</text><text x=\"100\" y=\"118\" font-size=\"12\" text-anchor=\"middle\" fill=\"#475569\">= 4 / 12</text><text x=\"185\" y=\"105\" font-size=\"20\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#1b2540\">+</text><rect x=\"220\" y=\"70\" width=\"120\" height=\"60\" fill=\"#fde68a\" stroke=\"#1b2540\" rx=\"4\"/><text x=\"280\" y=\"95\" font-size=\"16\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#1b2540\">1 / 4</text><text x=\"280\" y=\"118\" font-size=\"12\" text-anchor=\"middle\" fill=\"#475569\">= 3 / 12</text><line x1=\"80\" y1=\"150\" x2=\"320\" y2=\"150\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"130\" y=\"165\" width=\"140\" height=\"45\" fill=\"#bbf7d0\" stroke=\"#1b2540\" rx=\"4\"/><text x=\"200\" y=\"193\" font-size=\"16\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#1b2540\">7 / 12</text></svg>"
+   },
+   {
+    "cap": "Bus stop short division method with decimal remainder continuation.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#f8fafc\" stroke=\"#1b2540\" stroke-width=\"2\" rx=\"6\"/><text x=\"200\" y=\"45\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#1b2540\">Short Division (Bus Stop)</text><text x=\"210\" y=\"85\" font-size=\"18\" font-family=\"monospace\" font-weight=\"bold\" fill=\"#b91c1c\">1 . 4</text><path d=\"M 110 135 L 125 135 L 135 95 L 310 95\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2.5\"/><text x=\"90\" y=\"135\" font-size=\"18\" font-weight=\"bold\" fill=\"#1b2540\">6</text><text x=\"145\" y=\"135\" font-size=\"18\" font-family=\"monospace\" fill=\"#1b2540\">8</text><circle cx=\"170\" cy=\"130\" r=\"3\" fill=\"#1b2540\"/><text x=\"185\" y=\"135\" font-size=\"18\" font-family=\"monospace\" fill=\"#1b2540\">4</text><text x=\"215\" y=\"135\" font-size=\"18\" font-family=\"monospace\" fill=\"#b91c1c\">0</text><text x=\"145\" y=\"170\" font-size=\"12\" fill=\"#475569\">Rem 2</text><text x=\"185\" y=\"170\" font-size=\"12\" fill=\"#475569\">Rem 4</text><text x=\"200\" y=\"200\" font-size=\"13\" font-weight=\"bold\" fill=\"#1b2540\">Result: 1.4</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_h.0.1",
+  "sid": "maths_eduqas_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-19T18:54:38.166Z"
  }
 }
