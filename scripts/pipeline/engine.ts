@@ -120,6 +120,16 @@ export function pendingItems(items: readonly { id: string; done: boolean }[], fa
   return out;
 }
 
+/**
+ * Did this failed request use up part of our own daily allowance? A provider that is
+ * overloaded (HTTP 5xx, "high demand") answered nothing, so the request is given back;
+ * otherwise a busy day spends most of the allowance on refusals (2026-11-18: 435 of 1000).
+ * Real daily limits are still caught by the provider's own 429 replies.
+ */
+export function countsAgainstAllowance(e: { message: string; daily: boolean }): boolean {
+  return e.daily || !/^busy\b/.test(e.message);
+}
+
 /** True when a model has been tried enough and almost never passes the checks. */
 export function isPoor(h: { ok: number; bad: number } | undefined): boolean {
   if (!h) return false;
@@ -354,6 +364,7 @@ export async function runJob(kind: Kind, opts: RunOptions, state: State, limit: 
         if (e instanceof RateLimited) {
           console.log(`[${p.id}] rate limited${e.daily ? " for today" : ""}: ${e.message.slice(0, 120)}`);
           putBack();
+          if (!countsAgainstAllowance(e)) state.usage[p.id] = { day: today(), n: Math.max(0, used(p) - 1) };
           // A model that keeps not answering (common with free models) is swapped for the next one.
           stalls = /no reply|cut off/.test(e.message) ? stalls + 1 : 0;
           if (stalls >= 2) nextModel("not answering");

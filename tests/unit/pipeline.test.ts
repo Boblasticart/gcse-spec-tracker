@@ -7,9 +7,10 @@ import { describe, expect, it } from "vitest";
 
 import { HTML_TAG } from "@/lib/notes/qa";
 
+import { classifyHttpError, RateLimited } from "../../scripts/notes/providers";
 import { dropFigures, figureNumbers, repairNote } from "../../scripts/notes/repair";
 import { customCheck, customJobProblems, customPrompt, type CustomJob } from "../../scripts/pipeline/custom";
-import { MAX_TRIES, ensureGitIdentity, isPoor, pendingItems, usableModels, type Failures, type Kind, type State } from "../../scripts/pipeline/engine";
+import { MAX_TRIES, countsAgainstAllowance, ensureGitIdentity, isPoor, pendingItems, usableModels, type Failures, type Kind, type State } from "../../scripts/pipeline/engine";
 import { statusReport } from "../../scripts/pipeline/status";
 
 const HOUR = 3600_000;
@@ -50,6 +51,16 @@ describe("pipeline engine", () => {
       if (saved.s === undefined) delete process.env.GIT_CONFIG_NOSYSTEM;
       else process.env.GIT_CONFIG_NOSYSTEM = saved.s;
     }
+  });
+
+  it("gives back requests the provider refused because it was overloaded", () => {
+    const busy = classifyHttpError(503, '{"code":503,"message":"high demand"}');
+    expect(busy).toBeInstanceOf(RateLimited);
+    expect(countsAgainstAllowance(busy as RateLimited)).toBe(false);
+    expect(countsAgainstAllowance(new RateLimited('busy, reply cut off: {"code":503}', false, 90_000))).toBe(false);
+    expect(countsAgainstAllowance(new RateLimited("reply cut off: empty reply (length)", false, 5000))).toBe(true);
+    expect(countsAgainstAllowance(new RateLimited("no reply: fetch failed", false, 60_000))).toBe(true);
+    expect(countsAgainstAllowance(new RateLimited("busy, HTTP 503", true, 0))).toBe(true);
   });
 
   it("skips models that almost never pass, unless none are left", () => {
