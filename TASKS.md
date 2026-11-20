@@ -5,10 +5,10 @@ Runs read **only this file and `docs/CONTEXT.md`**. Keep this file short: finish
 ## Status
 
 ```
-RUN LOCK:       running since 2026-11-20 01:10 UTC, session 01Sm3c8hMXWExECqdbGYesyV
+RUN LOCK:       none
 CURRENT JOB:    none (J2b done; J3 Maths carries on by itself via the daily pipeline run)
 CURRENT STEPS:  none
-LAST RUN ENDED: 2026-11-19 01:25 UTC. Pipeline healthy: the 18 Nov run (17:22-20:54 UTC) saved 43 notes (267 of 5168 done) and the retry list fell from about 216 to 173; the JSON fix worked (no new "did not return JSON" from the big models). Found 435 of Gemini's 1000 self-allowed daily requests went on "model overloaded" (HTTP 503) refusals, which ended the run early; those refusals no longer count against the allowance (b456600, CI green after one re-run of a flaky offline e2e test). Next nightly run: check Gemini saved more notes per run and the old maths_eduqas_h / maths_ocr_h retries (waiting since 16 Nov because they sit later in the queue) are being reached; next biggest failure is notes with only 2 diagrams.
+LAST RUN ENDED: 2026-11-20 01:25 UTC. Pipeline healthy and faster: the 19 Nov run saved 78 notes (345 of 5168 done; was 43 the day before), maths_eduqas_h (46/99) and maths_ocr_h (23/45) are now being reached, retry list 173 -> 95; it stopped when Gemini's real daily quota ran out. Biggest failure: 50 of the 95 retries are gemini-flash-lite-latest "did not return JSON". Fix 137527b (CI green): replies with raw line breaks/tabs inside strings are now repaired, and unreadable replies now say why they stopped (MAX_TOKENS/RECITATION/SAFETY) and their length. Next nightly run: read the new failure messages in content/notes/failures.json and fix that cause; next after that is notes with too few diagrams (16).
 ```
 
 ## Claude is also writing notes (owner asked in chat, 2026-11-16: "start generating now until I tell you to stop")
