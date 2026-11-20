@@ -19,6 +19,8 @@ export interface ProviderConfig {
   maxTokens: number;
   /** How many notes to ask this provider for at once (replies take minutes, so this is what fills the per-minute allowance). Default 1. */
   parallel?: number;
+  /** false = don't ask the provider for JSON mode (its own JSON check is stricter than our repairs). Default true. */
+  json?: boolean;
 }
 
 /** Thrown when a provider says we've hit its limit; `daily` = done for today. */
@@ -147,6 +149,9 @@ async function post(url: string, headers: Record<string, string>, body: unknown)
   const chunks = parseSse(text);
   // A provider that fails part-way through a stream reports it inside the stream.
   const failed = chunks.find((c) => !!c && typeof c === "object" && "error" in c) as { error?: unknown } | undefined;
+  // Groq checks the JSON itself and stops the stream when the model's JSON is broken: that is this note failing, not the
+  // provider being busy (counted as busy, two of these used to switch off Groq's only good model for the whole day).
+  if (failed && /failed to (generate|validate) json/i.test(JSON.stringify(failed.error))) throw new AiOutputError("The reply failed the provider's JSON check.");
   if (failed) throw new RateLimited(`busy, reply cut off: ${JSON.stringify(failed.error).slice(0, 200)}`, false, 90_000);
   return chunks;
 }
@@ -170,7 +175,8 @@ export async function complete(p: ProviderConfig, key: string, prompt: string): 
   const chunks = await post(p.url ?? "", { authorization: `Bearer ${key}` }, {
     model: p.model,
     messages: [{ role: "user", content: prompt }],
-    response_format: { type: "json_object" },
+    // json: false = let the model reply freely and repair the JSON here (Groq's own check rejects LaTeX backslashes we can fix).
+    ...(p.json === false ? {} : { response_format: { type: "json_object" } }),
     max_tokens: p.maxTokens,
     temperature: 0.4,
     stream: true,

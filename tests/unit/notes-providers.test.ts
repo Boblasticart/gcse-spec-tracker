@@ -58,4 +58,8 @@ describe("note writer: provider replies", () => {
     expect(() => checkFinished('{"a":"half', "MAX_TOKENS", "STOP")).toThrow(/stopped early \(MAX_TOKENS\) after 10 characters/);
     expect(() => checkFinished('{"a":"half', "length", "stop")).toThrow(AiOutputError);
   });
+
+  it("doesn't treat Groq's failed JSON check as a provider error", () => {
+    expect(classifyHttpError(400, '{"error":{"message":"Failed to generate JSON. Please adjust your prompt."}}')).toBeNull();
+  });
 });
