@@ -5,17 +5,19 @@ Runs read **only this file and `docs/CONTEXT.md`**. Keep this file short: finish
 ## Status
 
 ```
-RUN LOCK:       running since 2026-11-20 23:23 UTC, session 01Sm3c8hMXWExECqdbGYesyV (owner in chat)
+RUN LOCK:       none
 CURRENT JOB:    none (J2b done; J3 Maths carries on by itself via the daily pipeline run)
 CURRENT STEPS:  none
-LAST RUN ENDED: 2026-11-20 01:25 UTC. Pipeline healthy and faster: the 19 Nov run saved 78 notes (345 of 5168 done; was 43 the day before), maths_eduqas_h (46/99) and maths_ocr_h (23/45) are now being reached, retry list 173 -> 95; it stopped when Gemini's real daily quota ran out. Biggest failure: 50 of the 95 retries are gemini-flash-lite-latest "did not return JSON". Fix 137527b (CI green): replies with raw line breaks/tabs inside strings are now repaired, and unreadable replies now say why they stopped (MAX_TOKENS/RECITATION/SAFETY) and their length. Next nightly run: read the new failure messages in content/notes/failures.json and fix that cause; next after that is notes with too few diagrams (16).
+LAST RUN ENDED: 2026-11-20 23:50 UTC (owner in chat). Owner set a goal of ~500 notes/day by Fri 27 Nov (see "Claude is also writing notes"). Fixed Groq stopping after 8 requests a day (b0df3cb, CI green): its own JSON check was treated as "not answering" and switched off gpt-oss-120b; Groq now runs without JSON mode. Claude wrote 12 more bio_edx notes. Started an extra Write notes run (run-request 2026-11-20b) to use Groq tonight. Next nightly run: check Groq made far more requests, read the new "stopped early" failure messages and fix that cause, then write notes with the rest of the usage.
 ```
 
-## Claude is also writing notes (owner asked in chat, 2026-11-16: "start generating now until I tell you to stop")
+## Claude is also writing notes (owner asked in chat, 2026-11-16; restarted 2026-11-20: "lets utilise groq key more until limit and well let you write notes lets aim for 500 every day")
 
-- This replaces the earlier "never hand-write notes" choice while the owner has spare Claude usage. Claude-written notes go through the same repairs and quality gate (`scripts/notes/add.ts`), are saved to the same files and marked `by: claude/...`; the pipeline skips points that already have a note.
+- **Goal set by the owner (2026-11-20): about 500 new notes a day, wanted by Friday 27 Nov.** Pipeline plus Claude together. If that isn't reachable, the owner will get more AI keys: say plainly in each message how many were made and how far short of 500 it is.
+- **Every nightly run, after the pipeline check, writes notes with the rest of its usage.** Claude-written notes go through the same repairs and quality gate (`scripts/notes/add.ts`), are saved to the same files and marked `by: claude/...`; the pipeline skips points that already have a note.
+- How: list missing points (kind.items() where !done), then hand 3 points each to a few general-purpose subagents in parallel: each runs `tsx scripts/notes/add.ts prompt <id>`, writes `<id>.json` in the scratchpad, runs `add.ts check <file> <okdir>` and fixes until OK. Then `tsx scripts/notes/add.ts save <okdir> claude/<model>`, commit, push. About 35k tokens per note. The check needs Playwright: if `@playwright/test` is missing, make a stand-in package that re-exports /opt/npm-tools/node_modules/playwright and set `PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers`.
 - To avoid clashing with the pipeline (which is on maths, then English), Claude works on the sciences: `bio_edx` first, then `chem_edx`, `phy_edx`, then the OCR sciences. Only topic files are touched, never progress.json / failures.json.
-- **Paused by the owner on 2026-11-16** ("stop now... next session will be at scheduled time"). 18 Edexcel Biology notes were saved (bio_edx topics 0 to 2, part). Do not start again in a nightly run unless the owner asks; if they do, carry on with the bio_edx points that have no note yet.
+- Done so far: 18 bio_edx notes (16 Nov) + 12 (20 Nov: bio_edx 0.2, 0.3, 0.6, 0.7, 0.10, 0.11, 1.0, 1.3, 1.4, 1.7, 1.8, 1.11). Stop when the owner says stop.
 
 ## Queue (top = next)
 
