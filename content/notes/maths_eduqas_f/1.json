@@ -9014,5 +9014,567 @@
   "src": "pre",
   "by": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
   "ts": "2026-11-19T18:22:37.292Z"
+ },
+ "maths_eduqas_f.1.14": {
+  "summary": "In Eduqas GCSE Maths Foundation tier, solving quadratic equations of the form x² + bx + c = 0 requires student mastery of both algebraic factorising and graphical interpretation. Factorising relies on finding two numbers that multiply to give the constant term c and add to give the x-coefficient b, using the zero-product property to determine the roots. Graphically, the solutions correspond to the x-intercepts where y = 0, or the x-coordinates where the curve y = x² + bx + c intersects a horizontal line y = k. Mastery of sign rules, proper equation rearrangement, and exact graphical reading ensures full marks across both Component 1 (non-calculator) and Component 2 (calculator) papers.",
+  "core": [
+   {
+    "h": "Understanding Quadratic Equations in Standard Form",
+    "p": "A quadratic equation is an algebraic equation in which the highest power of the unknown variable is 2. The standard form for a quadratic equation at Foundation tier is x² + bx + c = 0, where b and c are integer constants.",
+    "bullets": [
+     "**Expression vs Equation**: x² + bx + c is a quadratic expression, whereas x² + bx + c = 0 is a quadratic equation that can be solved.",
+     "**Standard Form Requirement**: Before factorising or reading solutions, the equation MUST be set to equal zero (x² + bx + c = 0).",
+     "**Meaning of Roots**: The solutions (also called roots or zeros) are the specific numerical values of x that make the equation true.",
+     "**Number of Solutions**: A quadratic equation can have up to two real solutions."
+    ],
+    "table": {
+     "head": [
+      "Form",
+      "Example",
+      "Is it ready to factorise?"
+     ],
+     "rows": [
+      [
+       "Standard Form",
+       "x² + 5x + 6 = 0",
+       "Yes, equals zero"
+      ],
+      [
+       "Non-Standard Form",
+       "x² + 5x = -6",
+       "No, must add 6 to both sides first"
+      ],
+      [
+       "Missing Linear Term",
+       "x² - 9 = 0",
+       "Yes (b = 0), difference of two squares"
+      ],
+      [
+       "Missing Constant Term",
+       "x² + 4x = 0",
+       "Yes (c = 0), factorises into single bracket"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Quadratic Equation",
+      "p": "An equation of the form ax² + bx + c = 0, where a ≠ 0. At Foundation tier, the coefficient of x² is almost always 1 (a = 1)."
+     },
+     {
+      "k": "warn",
+      "t": "Never divide by x",
+      "p": "If faced with x² + 5x = 0, do not divide both sides by x! Dividing by x loses the solution x = 0. Always factorise instead: x(x + 5) = 0."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Factorising x² + bx + c into Double Brackets",
+    "p": "Factorising a quadratic expression x² + bx + c means putting it into two linear brackets of the form (x + p)(x + q). Expanding (x + p)(x + q) gives x² + (p + q)x + pq.",
+    "bullets": [
+     "**Product Rule**: The two numbers p and q must multiply together to give the constant term c (p × q = c).",
+     "**Sum Rule**: The two numbers p and q must add together to give the coefficient of x (p + q = b).",
+     "**Systematic Strategy**: Always list all factor pairs of the absolute value of c first, then test their sum/difference to match b.",
+     "**Order Does Not Matter**: (x + p)(x + q) is mathematically identical to (x + q)(x + p)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "The Golden Rule of Factorising",
+      "p": "Multiply to give c, add to give b. Keep this phrase at the front of your mind whenever expanding or factorising quadratics."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Mastering the Four Sign Cases for Factorising",
+    "p": "The positive or negative signs of b and c dictate the signs inside the two brackets (x + p)(x + q). Memorising the sign behavior speeds up factorisation and eliminates errors.",
+    "bullets": [
+     "**Case 1: Both Positive (x² + bx + c)**: Both numbers p and q are positive. Example: x² + 7x + 12 = (x + 3)(x + 4).",
+     "**Case 2: Positive c, Negative b (x² - bx + c)**: Both numbers p and q are negative. Example: x² - 7x + 12 = (x - 3)(x - 4).",
+     "**Case 3: Negative c, Positive b (x² + bx - c)**: One number is positive, one is negative. The larger absolute value is POSITIVE. Example: x² + 2x - 15 = (x + 5)(x - 3).",
+     "**Case 4: Negative c, Negative b (x² - bx - c)**: One number is positive, one is negative. The larger absolute value is NEGATIVE. Example: x² - 2x - 15 = (x - 5)(x + 3)."
+    ],
+    "table": {
+     "head": [
+      "Signs of (b, c)",
+      "Bracket Signs",
+      "Example",
+      "Factorised Form"
+     ],
+     "rows": [
+      [
+       "+b, +c",
+       "(+)(+)",
+       "x² + 8x + 15",
+       "(x + 3)(x + 5)"
+      ],
+      [
+       "-b, +c",
+       "(-)(-)",
+       "x² - 8x + 15",
+       "(x - 3)(x - 5)"
+      ],
+      [
+       "+b, -c",
+       "(+)(-), larger is +",
+       "x² + 2x - 15",
+       "(x + 5)(x - 3)"
+      ],
+      [
+       "-b, -c",
+       "(+)(-), larger is -",
+       "x² - 2x - 15",
+       "(x - 5)(x + 3)"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Checking your work",
+      "p": "Always re-expand your double brackets using FOIL (First, Outside, Inside, Last) to ensure you get back to the original expression before attempting to solve."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Summary of double bracket factorisation and solving using the Zero Product Property.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"20\" y=\"20\" width=\"360\" height=\"45\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"200\" y=\"47\" fill=\"#1b2540\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Quadratic: x² + 5x + 6 = 0</text><path d=\"M 140 70 L 90 105\" stroke=\"#3b82f6\" stroke-width=\"2\" marker-end=\"none\"/><path d=\"M 260 70 L 310 105\" stroke=\"#3b82f6\" stroke-width=\"2\" fill=\"none\"/><rect x=\"30\" y=\"110\" width=\"140\" height=\"40\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"100\" y=\"134\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Factor pair: 2 × 3 = 6</text><rect x=\"230\" y=\"110\" width=\"140\" height=\"40\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"300\" y=\"134\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Sum pair: 2 + 3 = 5</text><rect x=\"60\" y=\"170\" width=\"280\" height=\"50\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"200\" y=\"192\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">(x + 2)(x + 3) = 0</text><text x=\"200\" y=\"210\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Roots: x = -2  OR  x = -3</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Solving using the Zero Product Property",
+    "p": "Once a quadratic equation is factorised into (x + p)(x + q) = 0, we apply the zero product property to find the solutions for x.",
+    "bullets": [
+     "**Zero Product Logic**: If two numbers or expressions multiply to equal zero (A × B = 0), then either A = 0 or B = 0 (or both).",
+     "**Setting Brackets to Zero**: For (x + p)(x + q) = 0, set x + p = 0 and x + q = 0.",
+     "**Solving for x**: Solving x + p = 0 gives x = -p; solving x + q = 0 gives x = -q.",
+     "**Sign Flipping**: Notice that positive constants in brackets produce negative roots, and negative constants in brackets produce positive roots."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Zero Product Property",
+      "p": "If A × B = 0, then A = 0 or B = 0. This allows us to break one quadratic equation into two linear equations."
+     },
+     {
+      "k": "warn",
+      "t": "Don't stop at factorising!",
+      "p": "A common student mistake in exam questions that say 'Solve x² + 5x + 6 = 0' is writing (x + 2)(x + 3) and stopping. You must state x = -2, x = -3 to get the final answer mark."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Rearranging Quadratic Equations Before Factorising",
+    "p": "Exam questions frequently present quadratic equations that are not set to equal zero. Rearranging the equation into standard form x² + bx + c = 0 is an essential first step.",
+    "bullets": [
+     "**Moving Terms Across Equals**: Add or subtract terms on both sides so that one side becomes exactly 0.",
+     "**Example 1**: x² + 6x = 7 → Subtract 7 from both sides → x² + 6x - 7 = 0.",
+     "**Example 2**: x² = 4x + 12 → Subtract 4x and subtract 12 → x² - 4x - 12 = 0.",
+     "**Example 3**: x² - 10 = 3x → Rearrange into descending powers of x → x² - 3x - 10 = 0."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Keep x² Positive",
+      "p": "Always rearrange terms so that the x² coefficient remains positive (+1). If you have -x², move everything to the other side or multiply the entire equation by -1."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Special Case 1: Difference of Two Squares (b = 0)",
+    "p": "When a quadratic equation has no x-term (b = 0), it takes the form x² - a² = 0. This special expression is known as the Difference of Two Squares.",
+    "bullets": [
+     "**Pattern Rule**: x² - a² = (x - a)(x + a) = 0.",
+     "**Solving Method**: Set (x - a) = 0 and (x + a) = 0 to get x = a and x = -a.",
+     "**Example**: Solve x² - 25 = 0 → (x - 5)(x + 5) = 0 → x = 5 or x = -5.",
+     "**Alternative Method**: x² = 25 → x = ±√25 → x = ±5. (Remember both positive and negative roots!)"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Don't forget the negative root!",
+      "p": "When solving x² = 49, writing only x = 7 loses 1 mark. The full answer must include x = -7 as well (x = ±7)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Special Case 2: Missing Constant Term (c = 0)",
+    "p": "When a quadratic equation has no constant term (c = 0), it takes the form x² + bx = 0. This does NOT require double brackets; it factorises using a single bracket.",
+    "bullets": [
+     "**Factorising**: Take out the common factor of x → x(x + b) = 0.",
+     "**Applying Zero Product**: Either x = 0 or x + b = 0.",
+     "**Roots**: Solutions are x = 0 and x = -b.",
+     "**Example**: Solve x² - 6x = 0 → x(x - 6) = 0 → x = 0 or x = 6."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Zero is a valid root",
+      "p": "For any equation of the form x² + bx = 0, x = 0 is ALWAYS one of the two solutions."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Key Features of Quadratic Graphs (Parabolas)",
+    "p": "The graph of a quadratic function y = x² + bx + c is a smooth U-shaped curve called a parabola. Understanding its features connects algebra to graphs.",
+    "bullets": [
+     "**Symmetry**: A parabola is symmetrical about a vertical line called the axis of symmetry passing through its turning point.",
+     "**y-Intercept**: The curve crosses the y-axis at (0, c), where x = 0.",
+     "**x-Intercepts (Roots)**: The curve crosses the x-axis where y = 0. The x-coordinates of these points are the solutions to x² + bx + c = 0.",
+     "**Turning Point (Vertex)**: The lowest point (minimum) of a U-shaped parabola."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Parabola & Roots",
+      "p": "A parabola is the characteristic U-shaped curve of a quadratic graph. The roots of x² + bx + c = 0 are the x-coordinates of the points where y = x² + bx + c intersects the line y = 0 (the x-axis)."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Annotated quadratic graph y = x² - 2x - 3 showing roots, y-intercept, and turning point.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><line x1=\"40\" y1=\"160\" x2=\"360\" y2=\"160\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"120\" y1=\"20\" x2=\"120\" y2=\"220\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"365\" y=\"164\" fill=\"#1b2540\" font-size=\"11\">x</text><text x=\"124\" y=\"32\" fill=\"#1b2540\" font-size=\"11\">y</text><path d=\"M 60 40 Q 170 240 320 40\" stroke=\"#2563eb\" stroke-width=\"2.5\" fill=\"none\"/><circle cx=\"80\" cy=\"160\" r=\"4\" fill=\"#ef4444\"/><circle cx=\"260\" cy=\"160\" r=\"4\" fill=\"#ef4444\"/><text x=\"40\" y=\"150\" fill=\"#ef4444\" font-size=\"11\" font-weight=\"bold\">Root: x = -1</text><text x=\"265\" y=\"150\" fill=\"#ef4444\" font-size=\"11\" font-weight=\"bold\">Root: x = 3</text><circle cx=\"120\" y=\"190\" r=\"4\" fill=\"#10b981\"/><text x=\"130\" y=\"194\" fill=\"#10b981\" font-size=\"11\" font-weight=\"bold\">y-intercept (0, -3)</text><circle cx=\"170\" y=\"200\" r=\"4\" fill=\"#8b5cf6\"/><text x=\"180\" y=\"215\" fill=\"#8b5cf6\" font-size=\"11\" font-weight=\"bold\">Turning Point (1, -4)</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Approximating Solutions to x² + bx + c = 0 Graphically",
+    "p": "When given a graph of y = x² + bx + c, you can estimate or read exact solutions to x² + bx + c = 0 directly from the x-axis.",
+    "bullets": [
+     "**Step 1**: Locate the x-axis (where y = 0).",
+     "**Step 2**: Find the points where the curve crosses the x-axis.",
+     "**Step 3**: Read the x-values of these intersection points carefully using the grid scale.",
+     "**Tolerance**: Eduqas mark schemes usually allow a tolerance of ±0.1 or ±0.05 depending on the grid scale."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Reading Grid Scales Accurately",
+      "p": "Count the number of small squares between major grid numbers. For instance, if 10 small squares represent 1 unit, each small square is 0.1."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Approximating Solutions to x² + bx + c = k Graphically",
+    "p": "To solve an equation like x² + bx + c = k graphically (where k is a constant non-zero number), locate where the curve meets the line y = k.",
+    "bullets": [
+     "**Step 1**: Draw or locate the horizontal line y = k across the grid.",
+     "**Step 2**: Mark the points where the line y = k intersects the quadratic curve y = x² + bx + c.",
+     "**Step 3**: Drop vertical dashed lines down to the x-axis from these intersection points.",
+     "**Step 4**: Read the corresponding values on the x-axis. These are your approximate solutions."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Intersection Principle",
+      "p": "The solutions to f(x) = k are always the x-coordinates of the points where the graph y = f(x) intersects the horizontal straight line y = k."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Graphical estimation of x² - 2x - 3 = 2 by finding intersections with the line y = 2.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><line x1=\"40\" y1=\"180\" x2=\"360\" y2=\"180\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"100\" y1=\"20\" x2=\"100\" y2=\"220\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"365\" y=\"184\" fill=\"#1b2540\" font-size=\"11\">x</text><text x=\"104\" y=\"32\" fill=\"#1b2540\" font-size=\"11\">y</text><path d=\"M 50 30 Q 180 240 330 30\" stroke=\"#2563eb\" stroke-width=\"2.5\" fill=\"none\"/><line x1=\"40\" y1=\"100\" x2=\"360\" y2=\"100\" stroke=\"#dc2626\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><text x=\"310\" y=\"92\" fill=\"#dc2626\" font-size=\"11\" font-weight=\"bold\">Line y = 2</text><circle cx=\"75\" cy=\"100\" r=\"4\" fill=\"#dc2626\"/><circle cx=\"285\" cy=\"100\" r=\"4\" fill=\"#dc2626\"/><line x1=\"75\" y1=\"100\" x2=\"75\" y2=\"180\" stroke=\"#dc2626\" stroke-width=\"1.5\" stroke-dasharray=\"2,2\"/><line x1=\"285\" y1=\"100\" x2=\"285\" y2=\"180\" stroke=\"#dc2626\" stroke-width=\"1.5\" stroke-dasharray=\"2,2\"/><text x=\"45\" y=\"198\" fill=\"#dc2626\" font-size=\"11\" font-weight=\"bold\">x ≈ -1.4</text><text x=\"270\" y=\"198\" fill=\"#dc2626\" font-size=\"11\" font-weight=\"bold\">x ≈ 3.4</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Component 1 (Non-Calculator) vs Component 2 (Calculator)",
+    "p": "Both Eduqas papers test quadratic equations, but the expectations and numerical styles differ slightly between Component 1 and Component 2.",
+    "bullets": [
+     "**Component 1 (Non-Calculator)**: Factorisation will involve small integer factor pairs (e.g. factors of 6, 12, 24, 36). Mental arithmetic must be accurate.",
+     "**Component 2 (Calculator)**: You can use your calculator to check factor pairs or calculate grid values, but working out MUST still be shown for algebraic factorising marks.",
+     "**Graphical Questions**: Both papers can ask you to estimate solutions from a grid; ensure pencil marks and construction lines (like drawing y = k) are clearly visible."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Verification by Substitution",
+      "p": "Always substitute your calculated x-values back into the original equation x² + bx + c. If the result is 0, your answers are guaranteed 100% correct!"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Geometric and Real-Life Contexts (Problem Solving)",
+    "p": "Eduqas often sets word problems involving rectangle areas or right-angled triangles that lead to a quadratic equation requiring factorisation.",
+    "bullets": [
+     "**Forming the Equation**: Express area as Area = length × width, e.g., (x + 3)(x + 1) = 24.",
+     "**Expanding and Rearranging**: Expand x² + 4x + 3 = 24, then subtract 24 to get x² + 4x - 21 = 0.",
+     "**Factorising**: (x + 7)(x - 3) = 0, giving x = -7 or x = 3.",
+     "**Contextual Selection**: Since a physical length cannot be negative, discard x = -7 and select x = 3 as the valid length solution."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Rejecting Negative Lengths",
+      "p": "In real-life / geometry contexts, always explicitly state that you reject the negative root because side lengths must be positive."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Two-Key Padlock and Map Coordinates",
+   "p": "Solving a quadratic equation algebraically is like opening a box with a two-key combination padlock: (x + p)(x + q) = 0. The box opens if either key is turned to zero (either x + p = 0 or x + q = 0). Finding solutions from a graph is like finding where a rollercoaster track touches sea level (y = 0) on a grid map. The analogy breaks down because sea level on a map is a physical height line, whereas graphic solutions can represent abstract variables like time or temperature.",
+   "breakdown": "A physical padlock requires both keys simultaneously, whereas the Zero Product Property requires AT LEAST ONE factor to equal zero."
+  },
+  "terms": [
+   {
+    "t": "Quadratic Equation",
+    "d": "An equation containing a polynomial of degree 2, typically written in the form x² + bx + c = 0."
+   },
+   {
+    "t": "Factorising",
+    "d": "The process of writing a quadratic expression as a product of its factors, such as (x + p)(x + q)."
+   },
+   {
+    "t": "Roots",
+    "d": "The values of x that satisfy the quadratic equation x² + bx + c = 0 (the x-intercepts of the graph)."
+   },
+   {
+    "t": "Zero Product Property",
+    "d": "The algebraic property stating that if A × B = 0, then A = 0 or B = 0."
+   },
+   {
+    "t": "Parabola",
+    "d": "The U-shaped symmetrical curve formed by plotting a quadratic function y = x² + bx + c."
+   },
+   {
+    "t": "x-intercept",
+    "d": "The point(s) where a graph crosses the x-axis, corresponding to y = 0."
+   },
+   {
+    "t": "y-intercept",
+    "d": "The point where a graph crosses the y-axis, corresponding to x = 0 (the value of c)."
+   },
+   {
+    "t": "Turning Point (Vertex)",
+    "d": "The minimum or maximum point of a parabola where the gradient changes direction."
+   },
+   {
+    "t": "Difference of Two Squares",
+    "d": "An expression of the form x² - a², which factorises directly into (x - a)(x + a)."
+   },
+   {
+    "t": "Standard Form",
+    "d": "Arranging an equation so that terms are in descending powers of x and set equal to 0 (x² + bx + c = 0)."
+   },
+   {
+    "t": "Coefficient",
+    "d": "The numerical multiplier of a variable term, e.g. b in bx."
+   },
+   {
+    "t": "Constant Term",
+    "d": "The number without a variable in an expression or equation, e.g. c in x² + bx + c."
+   },
+   {
+    "t": "Axis of Symmetry",
+    "d": "The vertical line passing through the turning point that divides the parabola into two symmetrical halves."
+   },
+   {
+    "t": "Graphical Approximation",
+    "d": "Estimating equation solutions by reading coordinates from a graph intersection."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Stopping at factorisation: writing (x + 2)(x + 4) without giving x = -2 and x = -4.",
+    "r": "Always state the final values of x: x = -2 and x = -4."
+   },
+   {
+    "w": "Forgetting to invert signs when solving from brackets, e.g., (x + 5)(x - 3) = 0 leading to x = 5 and x = -3.",
+    "r": "Solve x + 5 = 0 → x = -5, and x - 3 = 0 → x = 3."
+   },
+   {
+    "w": "Attempting to factorise x² + 5x = 14 directly without rearranging to x² + 5x - 14 = 0.",
+    "r": "Always rearrange the equation to equal 0 before factorising."
+   },
+   {
+    "w": "Dividing x² + 4x = 0 by x to get x + 4 = 0 → x = -4, missing the solution x = 0.",
+    "r": "Factorise single bracket x(x + 4) = 0 to get BOTH solutions: x = 0 and x = -4."
+   },
+   {
+    "w": "Writing only the positive square root when solving x² = 36, giving x = 6.",
+    "r": "Give both roots: x = 6 and x = -6 (x = ±6)."
+   },
+   {
+    "w": "Misreading graph scale when approximating solutions, e.g. taking each small square as 0.1 when 5 squares = 1 unit (0.2 per square).",
+    "r": "Calculate scale per square first: 1 ÷ 5 = 0.2 per square."
+   },
+   {
+    "w": "Selecting factor pairs that add to c and multiply to b instead of multiplying to c and adding to b.",
+    "r": "Verify product = c and sum = b."
+   },
+   {
+    "w": "Including a negative length in a real-life context answer (e.g., width = -7 cm).",
+    "r": "Explicitly state: 'Length must be positive, so reject x = -7; width = 3 cm'."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Solve x² + 7x + 10 = 0 by factorising.",
+    "marks": 3,
+    "model": [
+     "Find factor pair of +10 that sums to +7: 2 and 5.",
+     "Factorise into double brackets: (x + 2)(x + 5) = 0.",
+     "Set each bracket to zero and solve: x = -2 or x = -5."
+    ],
+    "tip": "Check: (-2)² + 7(-2) + 10 = 4 - 14 + 10 = 0. Correct!"
+   },
+   {
+    "q": "Solve x² - 9x + 20 = 0 by factorising.",
+    "marks": 3,
+    "model": [
+     "Find factor pair of +20 that sums to -9: -4 and -5.",
+     "Factorise into double brackets: (x - 4)(x - 5) = 0.",
+     "Solve for x: x = 4 or x = 5."
+    ],
+    "tip": "When c is positive and b is negative, both bracket signs must be negative."
+   },
+   {
+    "q": "Solve x² - 3x - 18 = 0.",
+    "marks": 3,
+    "model": [
+     "Find factor pair of -18 that sums to -3: -6 and +3.",
+     "Factorise: (x - 6)(x + 3) = 0.",
+     "Solve: x = 6 or x = -3."
+    ],
+    "tip": "When c is negative, one factor is positive and one is negative."
+   },
+   {
+    "q": "Solve x² + 2x = 15.",
+    "marks": 3,
+    "model": [
+     "Rearrange to equal 0: x² + 2x - 15 = 0.",
+     "Factorise: (x + 5)(x - 3) = 0.",
+     "Solve: x = -5 or x = 3."
+    ],
+    "tip": "Rearranging to standard form is required before factorising."
+   },
+   {
+    "q": "Solve x² - 49 = 0.",
+    "marks": 2,
+    "model": [
+     "Recognise difference of two squares: (x - 7)(x + 7) = 0.",
+     "Solve: x = 7 or x = -7."
+    ],
+    "tip": "Do not omit the negative root!"
+   },
+   {
+    "q": "Solve x² - 8x = 0.",
+    "marks": 2,
+    "model": [
+     "Factorise single bracket: x(x - 8) = 0.",
+     "Solve: x = 0 or x = 8."
+    ],
+    "tip": "Do not divide by x; factorise out x."
+   },
+   {
+    "q": "The graph of y = x² - 4x + 3 is drawn. Use the graph to state the solutions to x² - 4x + 3 = 0.",
+    "marks": 2,
+    "model": [
+     "Identify the x-intercepts of the curve where y = 0.",
+     "Read x-values: x = 1 and x = 3."
+    ],
+    "tip": "Solutions to y = 0 are simply the x-axis crossing points."
+   },
+   {
+    "q": "Use the graph of y = x² - 2x - 3 to approximate the solutions to x² - 2x - 3 = 2.",
+    "marks": 2,
+    "model": [
+     "Draw horizontal line y = 2 across the grid.",
+     "Read x-coordinates of intersection points: x ≈ -1.4 and x ≈ 3.4."
+    ],
+    "tip": "Draw the line y = 2 clearly on the graph for method marks."
+   },
+   {
+    "q": "A rectangle has length (x + 4) cm and width (x + 1) cm. The area of the rectangle is 18 cm². Show that x² + 5x - 14 = 0 and solve to find x.",
+    "marks": 4,
+    "model": [
+     "Set up area equation: (x + 4)(x + 1) = 18.",
+     "Expand: x² + 5x + 4 = 18.",
+     "Subtract 18: x² + 5x - 14 = 0 (Shown).",
+     "Factorise: (x + 7)(x - 2) = 0 → x = -7 or x = 2.",
+     "State that length must be positive, so x = 2 cm."
+    ],
+    "tip": "Always conclude with the valid positive value for side length questions."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Solve the quadratic equation x² - 11x + 24 = 0 by factorising.",
+    "steps": [
+     "Step 1: Identify b = -11 and c = 24.",
+     "Step 2: List factor pairs of 24: (1, 24), (2, 12), (3, 8), (4, 6).",
+     "Step 3: Since c is +24 and b is -11, both numbers must be negative. Test sums: (-3) + (-8) = -11.",
+     "Step 4: Write in factorised form: (x - 3)(x - 8) = 0.",
+     "Step 5: Apply zero product property: x - 3 = 0 or x - 8 = 0.",
+     "Step 6: State roots: x = 3 or x = 8."
+    ],
+    "ans": "x = 3 or x = 8"
+   },
+   {
+    "q": "Solve the equation x² = 3x + 28.",
+    "steps": [
+     "Step 1: Rearrange into standard form x² + bx + c = 0 by subtracting 3x and 28 from both sides.",
+     "Result: x² - 3x - 28 = 0.",
+     "Step 2: Find two numbers multiplying to -28 and adding to -3. The numbers are -7 and +4.",
+     "Step 3: Factorise: (x - 7)(x + 4) = 0.",
+     "Step 4: Solve: x - 7 = 0 → x = 7; x + 4 = 0 → x = -4."
+    ],
+    "ans": "x = 7 or x = -4"
+   },
+   {
+    "q": "A curve has equation y = x² - 6x + 8. (a) Find the coordinates where the curve crosses the x-axis. (b) Find the y-intercept.",
+    "steps": [
+     "Part (a): At the x-axis, y = 0, so set x² - 6x + 8 = 0.",
+     "Factorise: (x - 2)(x - 4) = 0.",
+     "Solve: x = 2 or x = 4.",
+     "Coordinates on x-axis: (2, 0) and (4, 0).",
+     "Part (b): At the y-intercept, x = 0. Substitute x = 0 into y = x² - 6x + 8 → y = 8.",
+     "Coordinates on y-axis: (0, 8)."
+    ],
+    "ans": "(a) (2, 0) and (4, 0); (b) (0, 8)"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Summary of double bracket factorisation and solving using the Zero Product Property.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"20\" y=\"20\" width=\"360\" height=\"45\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"200\" y=\"47\" fill=\"#1b2540\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Quadratic: x² + 5x + 6 = 0</text><path d=\"M 140 70 L 90 105\" stroke=\"#3b82f6\" stroke-width=\"2\" fill=\"none\"/><path d=\"M 260 70 L 310 105\" stroke=\"#3b82f6\" stroke-width=\"2\" fill=\"none\"/><rect x=\"30\" y=\"110\" width=\"140\" height=\"40\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"100\" y=\"134\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Factor pair: 2 × 3 = 6</text><rect x=\"230\" y=\"110\" width=\"140\" height=\"40\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"300\" y=\"134\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Sum pair: 2 + 3 = 5</text><rect x=\"60\" y=\"170\" width=\"280\" height=\"50\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"200\" y=\"192\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">(x + 2)(x + 3) = 0</text><text x=\"200\" y=\"210\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Roots: x = -2  OR  x = -3</text></svg>"
+   },
+   {
+    "cap": "Annotated quadratic graph y = x² - 2x - 3 showing roots, y-intercept, and turning point.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><line x1=\"40\" y1=\"160\" x2=\"360\" y2=\"160\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"120\" y1=\"20\" x2=\"120\" y2=\"220\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"365\" y=\"164\" fill=\"#1b2540\" font-size=\"11\">x</text><text x=\"124\" y=\"32\" fill=\"#1b2540\" font-size=\"11\">y</text><path d=\"M 60 40 Q 170 240 320 40\" stroke=\"#2563eb\" stroke-width=\"2.5\" fill=\"none\"/><circle cx=\"80\" cy=\"160\" r=\"4\" fill=\"#ef4444\"/><circle cx=\"260\" cy=\"160\" r=\"4\" fill=\"#ef4444\"/><text x=\"40\" y=\"150\" fill=\"#ef4444\" font-size=\"11\" font-weight=\"bold\">Root: x = -1</text><text x=\"265\" y=\"150\" fill=\"#ef4444\" font-size=\"11\" font-weight=\"bold\">Root: x = 3</text><circle cx=\"120\" y=\"190\" r=\"4\" fill=\"#10b981\"/><text x=\"130\" y=\"194\" fill=\"#10b981\" font-size=\"11\" font-weight=\"bold\">y-intercept (0, -3)</text><circle cx=\"170\" y=\"200\" r=\"4\" fill=\"#8b5cf6\"/><text x=\"180\" y=\"215\" fill=\"#8b5cf6\" font-size=\"11\" font-weight=\"bold\">Turning Point (1, -4)</text></svg>"
+   },
+   {
+    "cap": "Graphical estimation of x² - 2x - 3 = 2 by finding intersections with the line y = 2.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><line x1=\"40\" y1=\"180\" x2=\"360\" y2=\"180\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"100\" y1=\"20\" x2=\"100\" y2=\"220\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"365\" y=\"184\" fill=\"#1b2540\" font-size=\"11\">x</text><text x=\"104\" y=\"32\" fill=\"#1b2540\" font-size=\"11\">y</text><path d=\"M 50 30 Q 180 240 330 30\" stroke=\"#2563eb\" stroke-width=\"2.5\" fill=\"none\"/><line x1=\"40\" y1=\"100\" x2=\"360\" y2=\"100\" stroke=\"#dc2626\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><text x=\"310\" y=\"92\" fill=\"#dc2626\" font-size=\"11\" font-weight=\"bold\">Line y = 2</text><circle cx=\"75\" cy=\"100\" r=\"4\" fill=\"#dc2626\"/><circle cx=\"285\" cy=\"100\" r=\"4\" fill=\"#dc2626\"/><line x1=\"75\" y1=\"100\" x2=\"75\" y2=\"180\" stroke=\"#dc2626\" stroke-width=\"1.5\" stroke-dasharray=\"2,2\"/><line x1=\"285\" y1=\"100\" x2=\"285\" y2=\"180\" stroke=\"#dc2626\" stroke-width=\"1.5\" stroke-dasharray=\"2,2\"/><text x=\"45\" y=\"198\" fill=\"#dc2626\" font-size=\"11\" font-weight=\"bold\">x ≈ -1.4</text><text x=\"270\" y=\"198\" fill=\"#dc2626\" font-size=\"11\" font-weight=\"bold\">x ≈ 3.4</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_f.1.14",
+  "sid": "maths_eduqas_f",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.6-flash",
+  "ts": "2026-11-20T17:15:49.802Z"
  }
 }

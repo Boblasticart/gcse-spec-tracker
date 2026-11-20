@@ -7772,5 +7772,1608 @@
   "src": "pre",
   "by": "gemini/gemini-flash-lite-latest",
   "ts": "2026-11-19T18:53:00.255Z"
+ },
+ "maths_eduqas_f.3.5": {
+  "summary": "Deriving side lengths and angles in geometric figures requires combining key properties of isosceles triangles with Pythagoras' theorem (a^2 + b^2 = c^2). An isosceles triangle has two equal sides and two equal base angles; drawing its line of symmetry drops a perpendicular line to the base, splitting it into two congruent right-angled triangles. By using this height, you can calculate missing lengths, perimeters, and areas, as well as test if a triangle contains a right angle using the converse of Pythagoras' theorem. Proving geometric results at Foundation level involves writing clear, step-by-step mathematical reasoning supported by standard angle and length facts.",
+  "core": [
+   {
+    "h": "Properties of Isosceles Triangles",
+    "p": "An isosceles triangle is a three-sided flat shape defined by having at least two sides of equal length and two interior angles of equal size. Recognising these symmetry properties is essential before performing any side or angle calculations.",
+    "bullets": [
+     "**Two Equal Sides**: Marked with matching dash symbols (ticks) on diagrams.",
+     "**Two Equal Base Angles**: The angles opposite the equal sides are always equal in size.",
+     "**Apex Angle**: The angle formed where the two equal sides meet.",
+     "**Angle Sum**: All three interior angles sum to 180°.",
+     "**Calculating Base Angles**: Base Angle = (180° - Apex Angle) / 2.",
+     "**Calculating Apex Angle**: Apex Angle = 180° - (2 × Base Angle)."
+    ],
+    "table": {
+     "head": [
+      "Property",
+      "Description",
+      "Mathematical Expression"
+     ],
+     "rows": [
+      [
+       "Equal Sides",
+       "Two sides have identical length",
+       "Side AB = Side AC"
+      ],
+      [
+       "Base Angles",
+       "Angles at the foot of equal sides are equal",
+       "Angle ABC = Angle ACB"
+      ],
+      [
+       "Sum of Interior Angles",
+       "Total degrees inside any triangle",
+       "Angle A + Angle B + Angle C = 180°"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Isosceles Triangle Definition",
+      "p": "A triangle with two sides of equal length and two equal interior base angles."
+     },
+     {
+      "k": "warn",
+      "t": "Exam Trap: Base Angles position",
+      "p": "Base angles are not always at the bottom of the page! They are always the angles opposite the two marked equal sides, regardless of how the triangle is rotated."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "The Perpendicular Bisector as a Line of Symmetry",
+    "p": "Dropping a vertical line from the apex of an isosceles triangle perpendicular to the base creates a line of symmetry. This line bisects the base and splits the shape into two identical right-angled triangles.",
+    "bullets": [
+     "**Perpendicular**: Meets the base at an exact 90° angle.",
+     "**Bisector**: Cuts the base exactly in half into two equal lengths.",
+     "**Apex Angle Bisector**: Cuts the top angle into two equal halves.",
+     "**Congruent Triangles**: The left half and right half are congruent (identical in shape and size) right-angled triangles."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Must-Know Fact",
+      "p": "The height line (perpendicular bisector) splits an isosceles triangle with base b into two right-angled triangles, each having a base length of b / 2."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Figure 1: An isosceles triangle split by its line of symmetry into two congruent right-angled triangles with base halves b/2 and height h.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><polygon points=\"80,200 320,200 200,40\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"2.5\"/><line x1=\"200\" y1=\"40\" x2=\"200\" y2=\"200\" stroke=\"#dc2626\" stroke-width=\"2\" stroke-dasharray=\"6,4\"/><rect x=\"186\" y=\"186\" width=\"14\" height=\"14\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><path d=\"M 100,200 A 20,20 0 0,0 108,186\" fill=\"none\" stroke=\"#1e40af\" stroke-width=\"2\"/><path d=\"M 300,200 A 20,20 0 0,1 292,186\" fill=\"none\" stroke=\"#1e40af\" stroke-width=\"2\"/><line x1=\"130\" y1=\"112\" x2=\"138\" y2=\"124\" stroke=\"#1d4ed8\" stroke-width=\"2.5\"/><line x1=\"270\" y1=\"112\" x2=\"262\" y2=\"124\" stroke=\"#1d4ed8\" stroke-width=\"2.5\"/><text x=\"125\" y=\"100\" fill=\"#1e3a8a\" font-size=\"13\" font-weight=\"bold\">Side c</text><text x=\"260\" y=\"100\" fill=\"#1e3a8a\" font-size=\"13\" font-weight=\"bold\">Side c</text><text x=\"208\" y=\"120\" fill=\"#dc2626\" font-size=\"13\" font-weight=\"bold\">Height (h)</text><text x=\"130\" y=\"220\" fill=\"#1e40af\" font-size=\"12\">b / 2</text><text x=\"250\" y=\"220\" fill=\"#1e40af\" font-size=\"12\">b / 2</text><text x=\"108\" y=\"180\" fill=\"#1e40af\" font-size=\"11\">x°</text><text x=\"280\" y=\"180\" fill=\"#1e40af\" font-size=\"11\">x°</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Fundamentals of Pythagoras' Theorem",
+    "p": "Pythagoras' theorem states the relationship between the three sides of any right-angled triangle. It allows us to calculate an unknown side length when two sides are known.",
+    "bullets": [
+     "**Formula**: a^2 + b^2 = c^2, where c is the hypotenuse.",
+     "**Hypotenuse (c)**: The longest side, directly opposite the 90° right angle.",
+     "**Shorter Sides (a and b)**: The two sides that meet to form the 90° angle.",
+     "**Finding the Hypotenuse**: c = √(a^2 + b^2).",
+     "**Finding a Shorter Side**: a = √(c^2 - b^2) or b = √(c^2 - a^2)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam Tip for Operation Selection",
+      "p": "Always check: Are you finding the longest side (hypotenuse)? ADD the squares. Are you finding a shorter side? SUBTRACT the squares."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Deriving the Perpendicular Height of an Isosceles Triangle",
+    "p": "To find the height of an isosceles triangle when only side lengths are given, use the perpendicular bisector to set up a right-angled triangle, then apply Pythagoras' theorem.",
+    "bullets": [
+     "**Step 1**: Identify the base length (b) and equal slanted side length (c).",
+     "**Step 2**: Divide the base length by 2 to get the base of one right-angled triangle: base_half = b / 2.",
+     "**Step 3**: Set up Pythagoras' theorem with hypotenuse c, base base_half, and unknown height h.",
+     "**Step 4**: Calculate height using: h = √(c^2 - (b / 2)^2).",
+     "**Step 5**: Write down the answer with correct units (e.g. cm)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Common Mark Scheme Deduction",
+      "p": "Students frequently forget to halve the base of the isosceles triangle before using Pythagoras. Using the full base length in a^2 + b^2 = c^2 gives an incorrect answer!"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Calculating Area and Perimeter from Derived Lengths",
+    "p": "Once the perpendicular height of an isosceles triangle is derived, you can calculate both its total area and its perimeter.",
+    "bullets": [
+     "**Area Formula**: Area = 0.5 × base × height = 0.5 × b × h.",
+     "**Perimeter Formula**: Perimeter = sum of all 3 outer sides = b + c + c = b + 2c.",
+     "**Crucial Rule**: Always use the perpendicular height (h) for area, NEVER the slanted side length (c)."
+    ],
+    "table": {
+     "head": [
+      "Measurement",
+      "Formula",
+      "Key Input Required"
+     ],
+     "rows": [
+      [
+       "Perimeter",
+       "P = b + 2c",
+       "Full base length and equal side length"
+      ],
+      [
+       "Area",
+       "A = 0.5 × b × h",
+       "Full base length and perpendicular height h"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Equilateral Triangles as Special Isosceles Triangles",
+    "p": "An equilateral triangle has three equal sides and three equal interior angles of 60°. It is a special isosceles triangle where all three sides match.",
+    "bullets": [
+     "**Interior Angles**: Every angle equals 180° / 3 = 60°.",
+     "**Perpendicular Height**: Dropping a perpendicular from any vertex splits the equilateral triangle into two identical 30°-60°-90° right-angled triangles.",
+     "**Height Derivation**: For side length s, base half is s / 2. Height h = √(s^2 - (s / 2)^2).",
+     "**Symmetry**: Has 3 lines of symmetry and rotational symmetry of order 3."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Equilateral Height Formula",
+      "p": "For an equilateral triangle with side length s, h^2 = s^2 - (0.5s)^2 = 0.75 s^2. Thus h = √(0.75 s^2)."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Figure 2: Equilateral triangle with side 10 cm, split into two right-angled triangles with base 5 cm and height h.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><polygon points=\"80,200 320,200 200,30\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"2.5\"/><line x1=\"200\" y1=\"30\" x2=\"200\" y2=\"200\" stroke=\"#dc2626\" stroke-width=\"2\" stroke-dasharray=\"5,5\"/><rect x=\"186\" y=\"186\" width=\"14\" height=\"14\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><text x=\"115\" y=\"110\" fill=\"#92400e\" font-size=\"13\" font-weight=\"bold\">10 cm</text><text x=\"265\" y=\"110\" fill=\"#92400e\" font-size=\"13\" font-weight=\"bold\">10 cm</text><text x=\"208\" y=\"115\" fill=\"#dc2626\" font-size=\"13\" font-weight=\"bold\">h</text><text x=\"130\" y=\"218\" fill=\"#92400e\" font-size=\"12\" font-weight=\"bold\">5 cm</text><text x=\"250\" y=\"218\" fill=\"#92400e\" font-size=\"12\" font-weight=\"bold\">5 cm</text><text x=\"95\" y=\"190\" fill=\"#b45309\" font-size=\"11\">60°</text><text x=\"285\" y=\"190\" fill=\"#b45309\" font-size=\"11\">60°</text><text x=\"175\" y=\"55\" fill=\"#b45309\" font-size=\"10\">30°</text><text x=\"210\" y=\"55\" fill=\"#b45309\" font-size=\"10\">30°</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "The Converse of Pythagoras' Theorem (Testing for Right Angles)",
+    "p": "The converse of Pythagoras' theorem allows us to prove whether a given triangle contains a right angle by testing its three side lengths in the formula.",
+    "bullets": [
+     "**Rule**: If a^2 + b^2 = c^2 (where c is the longest side), the triangle IS right-angled.",
+     "**Rule**: If a^2 + b^2 ≠ c^2, the triangle is NOT right-angled.",
+     "**Pythagorean Triples**: Whole number sets satisfying the rule, such as (3, 4, 5), (5, 12, 13), and (8, 15, 17).",
+     "**Proof Structure**: Calculate a^2 + b^2 separately from c^2, compare the two values, and write a clear conclusion."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam Proof Technique",
+      "p": "Always evaluate left-hand side (a^2 + b^2) and right-hand side (c^2) separately before stating 'Since LHS = RHS, the triangle is right-angled at...'."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Figure 3: Testing a triangle with side lengths 5 cm, 12 cm, and 13 cm using the converse of Pythagoras' theorem.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><polygon points=\"70,190 330,190 70,50\" fill=\"#bbf7d0\" stroke=\"#16a34a\" stroke-width=\"2.5\"/><rect x=\"70\" y=\"176\" width=\"14\" height=\"14\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"40\" y=\"125\" fill=\"#15803d\" font-size=\"13\" font-weight=\"bold\">5 cm</text><text x=\"180\" y=\"212\" fill=\"#15803d\" font-size=\"13\" font-weight=\"bold\">12 cm</text><text x=\"200\" y=\"110\" fill=\"#15803d\" font-size=\"13\" font-weight=\"bold\">13 cm</text><text x=\"240\" y=\"50\" fill=\"#166534\" font-size=\"12\">5² + 12² = 25 + 144 = 169</text><text x=\"240\" y=\"70\" fill=\"#166534\" font-size=\"12\">13² = 169</text><text x=\"240\" y=\"90\" fill=\"#166534\" font-size=\"12\" font-weight=\"bold\">169 = 169  Right-angled!</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Deriving Angles using Combined Isosceles and Triangle Angle Rules",
+    "p": "Geometrical problems often require finding unknown angles by combining isosceles triangle properties with basic angle facts.",
+    "bullets": [
+     "**Angles on a Straight Line**: Add up to 180°.",
+     "**Angles around a Point**: Add up to 360°.",
+     "**Vertically Opposite Angles**: Are equal.",
+     "**Isosceles Angle Strategy**: Identify equal side marks, locate the equal base angles, and use the 180° triangle sum rule."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Composite Shapes Involving Isosceles Triangles",
+    "p": "Exam questions frequently attach an isosceles triangle to a rectangle, square, or right-angled triangle to form a composite polygon (such as a house facade or pentagon).",
+    "bullets": [
+     "**Step 1**: Identify shared side lengths between the basic shapes.",
+     "**Step 2**: Transfer known lengths across symmetrical or rectangular sections.",
+     "**Step 3**: Split the isosceles portion down its line of symmetry if height or slanted length is needed.",
+     "**Step 4**: Sum up individual areas or add outer boundary lengths for perimeter."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Perimeter Trap",
+      "p": "Do NOT include internal shared boundaries when calculating the total perimeter of a composite shape!"
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Figure 4: A composite house shape built from a 16 cm by 8 cm rectangle topped with an isosceles roof of side length 10 cm.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"100\" y=\"120\" width=\"200\" height=\"90\" fill=\"#e9d5ff\" stroke=\"#7e22ce\" stroke-width=\"2.5\"/><polygon points=\"100,120 300,120 200,40\" fill=\"#fde68a\" stroke=\"#d97706\" stroke-width=\"2.5\"/><line x1=\"200\" y1=\"40\" x2=\"200\" y2=\"120\" stroke=\"#dc2626\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><text x=\"130\" y=\"75\" fill=\"#b45309\" font-size=\"12\" font-weight=\"bold\">10 cm</text><text x=\"250\" y=\"75\" fill=\"#b45309\" font-size=\"12\" font-weight=\"bold\">10 cm</text><text x=\"190\" y=\"228\" fill=\"#6b21a8\" font-size=\"12\" font-weight=\"bold\">16 cm</text><text x=\"75\" y=\"170\" fill=\"#6b21a8\" font-size=\"12\" font-weight=\"bold\">8 cm</text><text x=\"206\" y=\"85\" fill=\"#dc2626\" font-size=\"11\">h = 6 cm</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Simple Geometric Proofs: Structure and Terminology",
+    "p": "A geometric proof requires a logical chain of statements, each supported by a valid mathematical reason. Guessing or writing answers without justification receives zero marks.",
+    "bullets": [
+     "**Clear Steps**: Lay out each calculation on a new line.",
+     "**Reasons Column**: Write the geometric rule next to every step (e.g. 'Base angles of an isosceles triangle are equal').",
+     "**Standard Terminology**: Use exact terms like 'angles on a straight line add up to 180°' or 'Pythagoras' theorem'.",
+     "**Final Statement**: Conclude with a clear statement summarizing what was proven."
+    ],
+    "table": {
+     "head": [
+      "Statement",
+      "Required Geometric Reason"
+     ],
+     "rows": [
+      [
+       "Angle ABC = Angle ACB",
+       "Base angles of an isosceles triangle are equal"
+      ],
+      [
+       "Angle A + Angle B + Angle C = 180°",
+       "Angles in a triangle add up to 180°"
+      ],
+      [
+       "a^2 + b^2 = c^2",
+       "Pythagoras' theorem in a right-angled triangle"
+      ],
+      [
+       "Angle ABD = 180° - 110° = 70°",
+       "Angles on a straight line add up to 180°"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Mathematical Proof",
+      "p": "A logical sequence of justified mathematical statements leading from given facts to a definitive conclusion."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Eduqas Exam Tips and Command Words",
+    "p": "Understanding how Eduqas mark schemes award method and communication marks will maximize your overall grade on non-calculator and calculator papers.",
+    "bullets": [
+     "**'Show that' Questions**: You must show EVERY intermediate step. Do not skip calculations even if they seem obvious.",
+     "**'Give a reason'**: Must write explicit English geometric reasons. Numbers alone get 0 reasoning marks.",
+     "**Non-Calculator Paper (Component 1)**: Expect easy squares (e.g. 5^2, 12^2, 6^2 + 8^2 = 100 → √100 = 10).",
+     "**Calculator Paper (Component 2)**: Keep full calculator precision in working out before rounding at the final step."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Symmetrical Roof Truss",
+   "p": "Imagine a symmetrical triangular roof truss supporting a house. The two sloping timber rafters form the equal sides of an isosceles triangle, and the ceiling beam forms the base. A central vertical support beam acts as the line of symmetry, dropping straight down at a 90° angle to bisect the ceiling beam into two equal halves. This creates two identical right-angled ladder frames where Pythagoras' theorem applies to calculate the length of the sloping rafters or central post.\n\n**Where the analogy breaks down**: Real wooden roof trusses have joint thicknesses, timber flex, and structural overlaps, whereas geometric triangles are perfect two-dimensional abstractions governed by exact mathematical equations."
+  },
+  "terms": [
+   {
+    "t": "Isosceles Triangle",
+    "d": "A triangle with at least two sides of equal length and two equal interior base angles."
+   },
+   {
+    "t": "Hypotenuse",
+    "d": "The longest side of a right-angled triangle, located opposite the 90° right angle."
+   },
+   {
+    "t": "Base Angles",
+    "d": "The two equal interior angles located at the base of an isosceles triangle opposite the equal sides."
+   },
+   {
+    "t": "Apex Angle",
+    "d": "The interior angle enclosed by the two equal sides of an isosceles triangle."
+   },
+   {
+    "t": "Perpendicular Bisector",
+    "d": "A straight line that cuts another line segment into two equal halves at a 90° right angle."
+   },
+   {
+    "t": "Line of Symmetry",
+    "d": "A line dividing a shape into two congruent halves that are mirror images of each other."
+   },
+   {
+    "t": "Pythagoras' Theorem",
+    "d": "The geometric theorem stating that in any right-angled triangle, a^2 + b^2 = c^2."
+   },
+   {
+    "t": "Converse of Pythagoras",
+    "d": "The theorem stating that if side lengths satisfy a^2 + b^2 = c^2, the triangle must be right-angled."
+   },
+   {
+    "t": "Congruent",
+    "d": "Identical in shape and size, with corresponding sides and angles equal."
+   },
+   {
+    "t": "Perpendicular Height",
+    "d": "The distance measured at right angles (90°) from the base of a shape to its highest apex."
+   },
+   {
+    "t": "Equilateral Triangle",
+    "d": "A triangle with three equal side lengths and three equal interior angles of 60°."
+   },
+   {
+    "t": "Composite Shape",
+    "d": "A 2D shape made up of two or more simple geometric shapes combined."
+   },
+   {
+    "t": "Pythagorean Triple",
+    "d": "A set of three positive integers a, b, and c that satisfy a^2 + b^2 = c^2."
+   },
+   {
+    "t": "Geometric Proof",
+    "d": "A logical sequence of justified steps proving a geometrical fact or relationship."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Using the full base of an isosceles triangle directly in Pythagoras' theorem (e.g. h = √(10^2 - 12^2)).",
+    "r": "Halve the base first to find the base of one right-angled triangle (e.g. base half = 6, so h = √(10^2 - 6^2))."
+   },
+   {
+    "w": "Adding the squares of sides when calculating the perpendicular height (h^2 = 10^2 + 6^2).",
+    "r": "Subtract the squared base half from the squared hypotenuse (h^2 = c^2 - a^2 = 10^2 - 6^2)."
+   },
+   {
+    "w": "Using the slanted side of an isosceles triangle as the height when calculating area (Area = 0.5 × 12 × 10 = 60).",
+    "r": "Calculate the perpendicular height first (h = 8), then use Area = 0.5 × base × height (Area = 0.5 × 12 × 8 = 48)."
+   },
+   {
+    "w": "Forgetting to take the square root at the final step of Pythagoras (leaving h^2 = 64 as the answer).",
+    "r": "Always calculate the square root: h = √64 = 8 cm."
+   },
+   {
+    "w": "Writing angle values in a proof without giving written geometric reasons.",
+    "r": "State the standard geometric reason for every step (e.g. 'Base angles of an isosceles triangle are equal')."
+   },
+   {
+    "w": "Assuming a triangle is right-angled just because it looks like one in the diagram.",
+    "r": "Prove it using the converse of Pythagoras (a^2 + b^2 = c^2) or angle calculation rules."
+   },
+   {
+    "w": "Including internal shared lines when calculating the perimeter of a composite shape.",
+    "r": "Add only the outer boundary lengths surrounding the composite shape."
+   },
+   {
+    "w": "Rounding intermediate numbers early in multi-step Pythagoras calculations.",
+    "r": "Keep full precision or exact surd forms until writing down the final answer."
+   }
+  ],
+  "exam": [
+   {
+    "q": "State the geometric term for the line that divides an isosceles triangle into two congruent right-angled triangles.",
+    "marks": 1,
+    "model": [
+     "Perpendicular bisector (or line of symmetry / altitude)"
+    ],
+    "tip": "Eduqas mark schemes accept 'line of symmetry' or 'perpendicular bisector'."
+   },
+   {
+    "q": "An isosceles triangle has an apex angle of 40°. Calculate the size of one of its base angles. Give a reason for your answer.",
+    "marks": 2,
+    "model": [
+     "(180° - 40°) / 2 = 70°",
+     "Reason: Angles in a triangle add up to 180° AND base angles of an isosceles triangle are equal"
+    ],
+    "tip": "Ensure you state BOTH reasons to secure full marks."
+   },
+   {
+    "q": "A right-angled triangle has shorter sides of length 6 cm and 8 cm. Calculate the length of the hypotenuse.",
+    "marks": 2,
+    "model": [
+     "c^2 = 6^2 + 8^2 = 36 + 64 = 100",
+     "c = √100 = 10 cm"
+    ],
+    "tip": "Show the squaring and addition clearly before square-rooting."
+   },
+   {
+    "q": "A right-angled triangle has a hypotenuse of 13 cm and one side of 5 cm. Calculate the length of the remaining side.",
+    "marks": 3,
+    "model": [
+     "a^2 = 13^2 - 5^2",
+     "a^2 = 169 - 25 = 144",
+     "a = √144 = 12 cm"
+    ],
+    "tip": "Remember to subtract when finding a shorter side."
+   },
+   {
+    "q": "An isosceles triangle ABC has side lengths AB = 10 cm, AC = 10 cm, and BC = 12 cm. Work out the perpendicular height of the triangle.",
+    "marks": 3,
+    "model": [
+     "Halve the base BC: 12 / 2 = 6 cm",
+     "Apply Pythagoras: h^2 = 10^2 - 6^2 = 100 - 36 = 64",
+     "h = √64 = 8 cm"
+    ],
+    "tip": "Halving the base first is the key step that secures the first method mark."
+   },
+   {
+    "q": "Calculate the area of an isosceles triangle with side lengths 13 cm, 13 cm, and base 10 cm.",
+    "marks": 4,
+    "model": [
+     "Half base = 10 / 2 = 5 cm",
+     "h^2 = 13^2 - 5^2 = 169 - 25 = 144",
+     "h = √144 = 12 cm",
+     "Area = 0.5 × 10 × 12 = 60 cm^2"
+    ],
+    "tip": "Make sure to use the full base (10 cm) in the final area formula, not the half base."
+   },
+   {
+    "q": "A triangle has side lengths 9 cm, 12 cm, and 15 cm. Show that this triangle is right-angled.",
+    "marks": 3,
+    "model": [
+     "Calculate LHS: 9^2 + 12^2 = 81 + 144 = 225",
+     "Calculate RHS: 15^2 = 225",
+     "Since 9^2 + 12^2 = 15^2 (225 = 225), by the converse of Pythagoras' theorem, the triangle is right-angled"
+    ],
+    "tip": "A full conclusion comparing LHS and RHS is required for the final mark."
+   },
+   {
+    "q": "A composite shape consists of a rectangle measuring 16 cm wide by 8 cm high, topped by an isosceles triangle roof with slanted sides of 10 cm. Calculate the total perimeter of the composite shape.",
+    "marks": 4,
+    "model": [
+     "Identify outer sides: bottom rectangle side (16 cm), two rectangle vertical sides (8 cm + 8 cm)",
+     "Identify roof outer sides: two slanted sides (10 cm + 10 cm)",
+     "Sum outer boundary lengths: 16 + 8 + 8 + 10 + 10",
+     "Total perimeter = 52 cm"
+    ],
+    "tip": "Do NOT include the shared 16 cm roof base inside the shape."
+   },
+   {
+    "q": "An equilateral triangle has a side length of 8 cm. Calculate its perpendicular height, leaving your answer in the form a√b where a and b are integers.",
+    "marks": 4,
+    "model": [
+     "Base half = 8 / 2 = 4 cm",
+     "h^2 = 8^2 - 4^2 = 64 - 16 = 48",
+     "h = √48",
+     "Simplify surd: √48 = √(16 × 3) = 4√3 cm"
+    ],
+    "tip": "Break 48 down into its largest square factor (16 × 3)."
+   },
+   {
+    "q": "In triangle PQR, PQ = PR. The exterior angle at Q is 115°. Show that angle QPR = 50°. Give reasons for each step.",
+    "marks": 4,
+    "model": [
+     "Interior angle PQR = 180° - 115° = 65° (Angles on a straight line add up to 180°)",
+     "Angle PRQ = 65° (Base angles of an isosceles triangle are equal)",
+     "Angle QPR = 180° - (65° + 65°) = 180° - 130° = 50°",
+     "Reason: Angles in a triangle add up to 180°"
+    ],
+    "tip": "Layout each step clearly with calculation on left and geometric reason on right."
+   }
+  ],
+  "worked": [
+   {
+    "q": "An isosceles triangle has side lengths of 13 cm, 13 cm, and a base of 10 cm. Derive its perpendicular height and calculate its area.",
+    "steps": [
+     "Step 1: Identify the line of symmetry. The perpendicular bisector splits the base of 10 cm into two equal halves of 5 cm.",
+     "Step 2: Form a right-angled triangle with base = 5 cm, hypotenuse = 13 cm, and height = h.",
+     "Step 3: Apply Pythagoras' theorem: h^2 + 5^2 = 13^2.",
+     "Step 4: Rearrange to solve for height: h^2 = 169 - 25 = 144.",
+     "Step 5: Take the square root: h = √144 = 12 cm.",
+     "Step 6: Calculate total area: Area = 0.5 × base × height = 0.5 × 10 cm × 12 cm = 60 cm^2."
+    ],
+    "ans": "Perpendicular height = 12 cm, Area = 60 cm^2"
+   },
+   {
+    "q": "A sign is shaped like an equilateral triangle with side lengths of 12 cm. Find the perpendicular height of the sign and calculate its total area. Give your answer to 1 decimal place.",
+    "steps": [
+     "Step 1: Recognize an equilateral triangle has 3 equal sides of 12 cm.",
+     "Step 2: Drop a perpendicular bisector to split the base of 12 cm into 6 cm.",
+     "Step 3: Set up Pythagoras: h^2 = 12^2 - 6^2.",
+     "Step 4: Calculate squares: h^2 = 144 - 36 = 108.",
+     "Step 5: Find height: h = √108 ≈ 10.3923 cm.",
+     "Step 6: Calculate total area: Area = 0.5 × 12 × 10.3923 = 62.3538 cm^2.",
+     "Step 7: Round to 1 decimal place: 62.4 cm^2."
+    ],
+    "ans": "Height = 10.4 cm, Area = 62.4 cm^2"
+   },
+   {
+    "q": "In the diagram below, triangle XYZ has side lengths XY = 7 cm, YZ = 24 cm, and XZ = 25 cm. Prove that triangle XYZ is right-angled and state which angle is 90°.",
+    "steps": [
+     "Step 1: Identify the longest side (potential hypotenuse), XZ = 25 cm.",
+     "Step 2: Calculate the sum of squares of the two shorter sides: XY^2 + YZ^2 = 7^2 + 24^2 = 49 + 576 = 625.",
+     "Step 3: Calculate the square of the longest side: XZ^2 = 25^2 = 625.",
+     "Step 4: Compare values: Since 7^2 + 24^2 = 25^2 (625 = 625), the side lengths satisfy Pythagoras' theorem.",
+     "Step 5: Conclude using the converse of Pythagoras' theorem that triangle XYZ is right-angled.",
+     "Step 6: The right angle is opposite the hypotenuse XZ, so angle XYZ = 90°."
+    ],
+    "ans": "Triangle XYZ is right-angled at angle XYZ (90°) because 7^2 + 24^2 = 25^2 (625 = 625)."
+   }
+  ],
+  "svg": [],
+  "pid": "maths_eduqas_f.3.5",
+  "sid": "maths_eduqas_f",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.6-flash",
+  "ts": "2026-11-20T17:19:19.564Z"
+ },
+ "maths_eduqas_f.3.9": {
+  "summary": "This topic covers the fundamental 3D geometric shapes required for Eduqas GCSE Maths Foundation tier: cubes, cuboids, prisms, cylinders, pyramids, cones, and spheres. Students must identify and count flat faces, curved surfaces, straight edges, curved edges, and vertices (corners/apex) for each shape. Understanding the distinction between polyhedra (shapes with flat polygonal faces) and curved 3D solids is essential, as is applying Euler's Formula (Faces + Vertices - Edges = 2) to check properties of polyhedra.",
+  "core": [
+   {
+    "h": "1. Key Definitions: Faces, Surfaces, Edges, and Vertices",
+    "p": "3D shapes exist in three dimensions: length, width, and height. To describe and classify 3D shapes accurately, we count their structural features using precise mathematical vocabulary.",
+    "bullets": [
+     "**Face**: A flat surface on a 3D shape bounded by straight line edges (e.g., a square face on a cube).",
+     "**Curved Surface**: A smooth, non-flat outer boundary of a shape (e.g., the side of a cylinder or cone, or the outer boundary of a sphere).",
+     "**Edge**: A line segment where two faces meet (straight edge) or where a flat face meets a curved surface (curved edge).",
+     "**Vertex** (plural **Vertices**): A point or corner where three or more edges meet. On cones, the single top point is called the **apex** (also counted as a vertex in GCSE maths)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Polyhedron",
+      "p": "A 3D solid bounded entirely by flat polygonal faces. Cubes, prisms, and pyramids are polyhedra. Cylinders, cones, and spheres are NOT polyhedra because they have curved surfaces."
+     },
+     {
+      "k": "warn",
+      "t": "Exam Terminology",
+      "p": "Always read exam questions carefully: if asked for 'flat faces', do not count curved surfaces. If asked for 'total surfaces', add flat faces and curved surfaces together."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. Cubes and Cuboids",
+    "p": "Cubes and cuboids are six-sided polyhedra with right-angled corners. A cube is a special type of cuboid where all six faces are identical squares.",
+    "bullets": [
+     "**Cube**: 6 identical flat square faces, 12 straight edges of equal length, 8 vertices.",
+     "**Cuboid**: 6 flat rectangular faces (opposite faces are identical and parallel; some cuboids may have up to 2 square faces), 12 straight edges, 8 vertices.",
+     "Every corner angle between adjacent edges is a right angle (90°)."
+    ],
+    "table": {
+     "head": [
+      "Shape",
+      "Flat Faces",
+      "Curved Surfaces",
+      "Edges (Total)",
+      "Vertices"
+     ],
+     "rows": [
+      [
+       "Cube",
+       "6 (squares)",
+       "0",
+       "12 (straight)",
+       "8"
+      ],
+      [
+       "Cuboid",
+       "6 (rectangles)",
+       "0",
+       "12 (straight)",
+       "8"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Cube Edge Symmetry",
+      "p": "In a cube, all 12 edges are equal in length. In a general cuboid, there are 3 sets of 4 parallel edges of equal length (length, width, height)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "3. Understanding Prisms and Cross-Sections",
+    "p": "A **prism** is a polyhedron with two identical (congruent) parallel polygonal ends, connected by rectangular side faces. It has a uniform cross-section along its entire length.",
+    "bullets": [
+     "**Uniform Cross-Section**: If you slice a prism parallel to its ends anywhere along its length, the cross-sectional shape is always identical.",
+     "The shape of the cross-section gives the prism its name (e.g., triangular cross-section = triangular prism; pentagonal cross-section = pentagonal prism).",
+     "For an n-sided prism (where the cross-section has n sides): **Faces = n + 2**, **Vertices = 2n**, **Edges = 3n**."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "General Rule for Prisms",
+      "p": "Memorise the general formulas for an n-sided end prism: Faces = n + 2 (2 identical ends + n rectangular sides); Vertices = 2n (n at each end); Edges = 3n (n at top end + n at bottom end + n joining sides)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Specific Prisms: Triangular and Hexagonal Prisms",
+    "p": "Eduqas questions frequently ask for the exact count of faces, edges, and vertices of specific prisms like triangular and hexagonal prisms.",
+    "bullets": [
+     "**Triangular Prism**: Cross-section is a triangle (3 sides). It has 2 triangular end faces and 3 rectangular side faces.",
+     "Total faces = 2 + 3 = 5 faces. Total edges = 3 x 3 = 9 straight edges. Total vertices = 2 x 3 = 6 vertices.",
+     "**Hexagonal Prism**: Cross-section is a hexagon (6 sides). It has 2 hexagonal end faces and 6 rectangular side faces.",
+     "Total faces = 2 + 6 = 8 faces. Total edges = 3 x 6 = 18 straight edges. Total vertices = 2 x 6 = 12 vertices."
+    ],
+    "table": {
+     "head": [
+      "Prism Type",
+      "Base/End Shape (n)",
+      "Flat Faces (n+2)",
+      "Edges (3n)",
+      "Vertices (2n)"
+     ],
+     "rows": [
+      [
+       "Triangular Prism",
+       "Triangle (3)",
+       "5 (2 triangles, 3 rectangles)",
+       "9",
+       "6"
+      ],
+      [
+       "Cuboid / Rectangular Prism",
+       "Rectangle (4)",
+       "6 (6 rectangles)",
+       "12",
+       "8"
+      ],
+      [
+       "Pentagonal Prism",
+       "Pentagon (5)",
+       "7 (2 pentagons, 5 rectangles)",
+       "15",
+       "10"
+      ],
+      [
+       "Hexagonal Prism",
+       "Hexagon (6)",
+       "8 (2 hexagons, 6 rectangles)",
+       "18",
+       "12"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "5. Cylinders: Properties and Curved Surfaces",
+    "p": "A **cylinder** is a 3D solid with two parallel congruent circular bases connected by a single curved surface.",
+    "bullets": [
+     "**Flat Faces**: 2 circular flat faces (top and bottom).",
+     "**Curved Surface**: 1 smooth curved surface wrapping around the side.",
+     "**Edges**: 2 curved edges (where each circular face meets the curved surface). 0 straight edges.",
+     "**Vertices**: 0 vertices (there are no sharp corners where straight edges meet)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Is a Cylinder a Prism?",
+      "p": "Although a cylinder has a uniform circular cross-section, mathematically it is NOT classified as a polyhedron or true prism because its base is a circle (a curved shape), not a polygon with straight sides."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Pyramids: Structure and Apex",
+    "p": "A **pyramid** is a polyhedron formed by connecting a polygonal base to a single top point called the **apex** via triangular side faces.",
+    "bullets": [
+     "The base can be any polygon (triangle, square, rectangle, pentagon, hexagon, etc.).",
+     "All side faces are triangles that meet at the shared top point (the apex).",
+     "For an n-sided base pyramid: **Faces = n + 1**, **Vertices = n + 1**, **Edges = 2n**."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "General Rule for Pyramids",
+      "p": "Memorise the pyramid formulas: Faces = n + 1 (1 base + n triangular sides); Vertices = n + 1 (n base corners + 1 apex); Edges = 2n (n base edges + n side edges leading to apex)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Specific Pyramids: Triangular and Square-Based Pyramids",
+    "p": "Two of the most common pyramids tested in GCSE non-calculator and calculator papers are the square-based pyramid and the triangular pyramid (tetrahedron).",
+    "bullets": [
+     "**Square-Based Pyramid**: Base is a square (4 sides). Faces = 1 square + 4 triangles = 5 faces. Vertices = 4 base + 1 apex = 5 vertices. Edges = 4 base + 4 slanted = 8 edges.",
+     "**Triangular Pyramid (Tetrahedron)**: Base is a triangle (3 sides). Faces = 1 triangle base + 3 triangular sides = 4 faces. Vertices = 3 base + 1 apex = 4 vertices. Edges = 3 base + 3 slanted = 6 edges.",
+     "**Regular Tetrahedron**: A triangular pyramid where all 4 faces are identical equilateral triangles."
+    ],
+    "table": {
+     "head": [
+      "Pyramid Type",
+      "Base Shape (n)",
+      "Flat Faces (n+1)",
+      "Edges (2n)",
+      "Vertices (n+1)"
+     ],
+     "rows": [
+      [
+       "Triangular Pyramid (Tetrahedron)",
+       "Triangle (3)",
+       "4 (4 triangles)",
+       "6",
+       "4"
+      ],
+      [
+       "Square-Based Pyramid",
+       "Square (4)",
+       "5 (1 square, 4 triangles)",
+       "8",
+       "5"
+      ],
+      [
+       "Pentagonal Pyramid",
+       "Pentagon (5)",
+       "6 (1 pentagon, 5 triangles)",
+       "10",
+       "6"
+      ],
+      [
+       "Hexagonal Pyramid",
+       "Hexagon (6)",
+       "7 (1 hexagon, 6 triangles)",
+       "12",
+       "7"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "8. Cones: Base, Curved Surface, and Apex",
+    "p": "A **cone** is a 3D solid with a circular base that tapers smoothly to a single point called the apex.",
+    "bullets": [
+     "**Flat Faces**: 1 circular flat face (the base).",
+     "**Curved Surface**: 1 curved surface tapering from the circular base to the apex.",
+     "**Edges**: 1 curved edge (around the circular base). 0 straight edges.",
+     "**Vertices**: 1 vertex (the apex at the top)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Apex of a Cone",
+      "p": "The apex is the top point of a cone directly opposite the circular base. In GCSE mark schemes, this point is counted as 1 vertex."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Spheres: Complete Curved Surface Properties",
+    "p": "A **sphere** is a perfectly round 3D solid where every point on the surface is at an equal distance (the radius) from its central point.",
+    "bullets": [
+     "**Flat Faces**: 0 flat faces.",
+     "**Curved Surface**: 1 continuous curved surface.",
+     "**Edges**: 0 edges (no lines where faces meet).",
+     "**Vertices**: 0 vertices (no sharp corners or points)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Hemisphere Properties",
+      "p": "A hemisphere (half a sphere) has 1 flat circular face, 1 curved surface (total 2 surfaces), 1 curved edge, and 0 vertices."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Euler's Formula for Polyhedra (F + V - E = 2)",
+    "p": "For any 3D polyhedron (a solid with only flat polygonal faces), the relationship between the number of Faces (F), Vertices (V), and Edges (E) is given by **Euler's Formula**.",
+    "bullets": [
+     "**Euler's Formula**: **F + V - E = 2** or written as **F + V = E + 2**.",
+     "Example - Cube: F = 6, V = 8, E = 12. Calculation: 6 + 8 - 12 = 2 (Correct).",
+     "Example - Triangular Prism: F = 5, V = 6, E = 9. Calculation: 5 + 6 - 9 = 2 (Correct).",
+     "Example - Square-Based Pyramid: F = 5, V = 5, E = 8. Calculation: 5 + 5 - 8 = 2 (Correct)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Curved Solids Limitation",
+      "p": "Euler's Formula ONLY applies to polyhedra (flat-faced shapes). Do NOT attempt to apply F + V - E = 2 to cylinders, cones, or spheres!"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "11. Comprehensive 3D Shape Summary Comparison",
+    "p": "Use this master comparison table to revise all required Eduqas 3D shape properties at a glance before your examination.",
+    "bullets": [
+     "Check whether a shape has straight edges or curved edges.",
+     "Remember that cubes, cuboids, prisms, and pyramids have only flat faces and straight edges.",
+     "Cylinders, cones, and spheres feature curved surfaces."
+    ],
+    "table": {
+     "head": [
+      "Shape Name",
+      "Flat Faces",
+      "Curved Surfaces",
+      "Edges (Straight / Curved)",
+      "Vertices"
+     ],
+     "rows": [
+      [
+       "Cube",
+       "6",
+       "0",
+       "12 (straight)",
+       "8"
+      ],
+      [
+       "Cuboid",
+       "6",
+       "0",
+       "12 (straight)",
+       "8"
+      ],
+      [
+       "Triangular Prism",
+       "5",
+       "0",
+       "9 (straight)",
+       "6"
+      ],
+      [
+       "Hexagonal Prism",
+       "8",
+       "0",
+       "18 (straight)",
+       "12"
+      ],
+      [
+       "Tetrahedron (Tri. Pyramid)",
+       "4",
+       "0",
+       "6 (straight)",
+       "4"
+      ],
+      [
+       "Square-Based Pyramid",
+       "5",
+       "0",
+       "8 (straight)",
+       "5"
+      ],
+      [
+       "Cylinder",
+       "2",
+       "1",
+       "2 (curved)",
+       "0"
+      ],
+      [
+       "Cone",
+       "1",
+       "1",
+       "1 (curved)",
+       "1"
+      ],
+      [
+       "Sphere",
+       "0",
+       "1",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Cardboard Box and Party Hat Analogy",
+   "p": "Think of polyhedra (cubes, prisms, pyramids) like cardboard boxes folded from flat cardboard sheets. Every cardboard panel is a flat face, every folded border where two panels meet is a straight edge, and every corner where sticky tape connects three folds is a vertex. In contrast, think of a cylinder as a tin can (two circular metal lids plus a curved metal wrapper) and a cone as a party hat (a flat circular bottom plus a rolled curved wrapper tapering to a top apex point). This analogy breaks down for spheres, as a sphere cannot be made by rolling flat sheets without stretching or distorting the material."
+  },
+  "terms": [
+   {
+    "t": "Face",
+    "d": "A flat polygon surface on a three-dimensional solid."
+   },
+   {
+    "t": "Curved Surface",
+    "d": "A non-flat, smooth boundary surface on a 3D solid such as a cylinder, cone, or sphere."
+   },
+   {
+    "t": "Edge",
+    "d": "A line segment where two faces meet on a polyhedron, or the boundary where a flat face meets a curved surface."
+   },
+   {
+    "t": "Vertex",
+    "d": "A point or corner where three or more edges intersect on a 3D shape (plural: vertices)."
+   },
+   {
+    "t": "Apex",
+    "d": "The single top point of a pyramid or cone where all side edges or curved surfaces meet."
+   },
+   {
+    "t": "Polyhedron",
+    "d": "A 3D solid bounded entirely by flat polygonal faces with straight edges."
+   },
+   {
+    "t": "Prism",
+    "d": "A polyhedron with two identical parallel end faces (cross-section) connected by rectangular side faces."
+   },
+   {
+    "t": "Pyramid",
+    "d": "A polyhedron with a polygonal base and triangular sides that meet at a shared apex point."
+   },
+   {
+    "t": "Tetrahedron",
+    "d": "A triangular pyramid composed of four triangular faces, six edges, and four vertices."
+   },
+   {
+    "t": "Uniform Cross-Section",
+    "d": "A slice through a solid parallel to its end face that produces an identical shape along its whole length."
+   },
+   {
+    "t": "Cylinder",
+    "d": "A 3D solid with two congruent parallel circular bases and one curved surface connecting them."
+   },
+   {
+    "t": "Cone",
+    "d": "A 3D solid with a circular base, one curved surface tapering to an apex, and one curved edge."
+   },
+   {
+    "t": "Sphere",
+    "d": "A completely round 3D solid bounded by one continuous curved surface where all points are equidistant from the centre."
+   },
+   {
+    "t": "Euler's Formula",
+    "d": "The mathematical relation F + V - E = 2 connecting faces, vertices, and edges for any 3D polyhedron."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Saying a cylinder has 3 flat faces",
+    "r": "A cylinder has 2 flat circular faces and 1 curved surface."
+   },
+   {
+    "w": "Counting the apex of a square-based pyramid as a face",
+    "r": "The apex is a point (vertex), not a face. A square-based pyramid has 5 faces and 5 vertices."
+   },
+   {
+    "w": "Stating that a triangular prism has 6 edges",
+    "r": "A triangular prism has 9 edges (3 on top triangle, 3 on bottom triangle, 3 connecting them). A triangular pyramid has 6 edges."
+   },
+   {
+    "w": "Confusing a triangular prism with a triangular pyramid",
+    "r": "A triangular prism has 5 faces and 2 triangular ends with rectangular sides. A triangular pyramid (tetrahedron) has 4 triangular faces meeting at an apex."
+   },
+   {
+    "w": "Thinking a cone has 0 vertices",
+    "r": "In Eduqas GCSE mark schemes, the apex of a cone is counted as 1 vertex."
+   },
+   {
+    "w": "Using Euler's Formula (F + V - E = 2) for a cylinder or sphere",
+    "r": "Euler's Formula only works for polyhedra (solids made entirely of flat faces). It does not apply to shapes with curved surfaces."
+   },
+   {
+    "w": "Writing that a cube has 8 edges and 12 vertices",
+    "r": "A cube has 12 edges and 8 vertices (do not swap the counts of edges and vertices)."
+   },
+   {
+    "w": "Assuming all sides of a prism must be squares",
+    "r": "The side faces of a right prism are rectangles (which can occasionally be squares, but are generally rectangles)."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Write down the number of faces, edges, and vertices of a standard cube.",
+    "marks": 2,
+    "model": [
+     "Faces = 6",
+     "Edges = 12",
+     "Vertices = 8"
+    ],
+    "tip": "Make sure not to confuse edges (12) with vertices (8)."
+   },
+   {
+    "q": "A 3D solid has 2 flat circular faces, 1 curved surface, 2 curved edges, and 0 vertices. Name this solid.",
+    "marks": 1,
+    "model": [
+     "Cylinder"
+    ],
+    "tip": "Circular ends plus a curved surface uniquely identifies a cylinder."
+   },
+   {
+    "q": "State the number of faces, edges, and vertices for a triangular prism.",
+    "marks": 2,
+    "model": [
+     "Faces = 5",
+     "Edges = 9",
+     "Vertices = 6"
+    ],
+    "tip": "Recall that a prism has 2 identical end faces and n rectangular side faces."
+   },
+   {
+    "q": "A pyramid has a square base. (a) How many vertices does it have? (b) How many edges does it have?",
+    "marks": 2,
+    "model": [
+     "(a) 5 vertices (4 base corners + 1 apex)",
+     "(b) 8 edges (4 base edges + 4 slant edges)"
+    ],
+    "tip": "For an n-sided pyramid, Vertices = n + 1 and Edges = 2n."
+   },
+   {
+    "q": "Explain the difference in properties between a cone and a sphere.",
+    "marks": 2,
+    "model": [
+     "A cone has 1 flat circular face, 1 curved surface, 1 curved edge, and 1 vertex (apex).",
+     "A sphere has 0 flat faces, 1 curved surface, 0 edges, and 0 vertices."
+    ],
+    "tip": "Mention both flat faces/edges/vertices to get full comparison marks."
+   },
+   {
+    "q": "A polyhedron has 8 faces and 12 vertices. Use Euler's Formula to calculate the number of edges this solid has.",
+    "marks": 2,
+    "model": [
+     "Euler's Formula: F + V - E = 2",
+     "8 + 12 - E = 2",
+     "20 - E = 2",
+     "E = 18 edges"
+    ],
+    "tip": "Show substitution clearly into F + V - E = 2."
+   },
+   {
+    "q": "Here is a list of 3D shapes: Cube, Cylinder, Hexagonal Prism, Cone, Sphere. (a) Write down all shapes from the list that are polyhedra. (b) Write down the shape with exactly 1 flat face and 1 curved surface.",
+    "marks": 2,
+    "model": [
+     "(a) Polyhedra: Cube, Hexagonal Prism",
+     "(b) Shape with 1 flat face and 1 curved surface: Cone"
+    ],
+    "tip": "Polyhedra must have only flat polygonal faces, so exclude cylinder, cone, and sphere."
+   },
+   {
+    "q": "A shape is a regular tetrahedron. Complete the sentence: A regular tetrahedron has ____ identical faces, where each face is an ____________ triangle.",
+    "marks": 2,
+    "model": [
+     "First blank: 4",
+     "Second blank: equilateral"
+    ],
+    "tip": "A tetrahedron is a triangular pyramid; 'regular' means all faces are congruent equilateral triangles."
+   },
+   {
+    "q": "An octagonal prism has an 8-sided base. Calculate: (a) the number of faces, (b) the number of vertices, (c) the number of edges.",
+    "marks": 3,
+    "model": [
+     "(a) Faces = 8 + 2 = 10",
+     "(b) Vertices = 2 x 8 = 16",
+     "(c) Edges = 3 x 8 = 24"
+    ],
+    "tip": "Use n-sided prism general rules with n = 8: Faces = n+2, Vertices = 2n, Edges = 3n."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A 3D solid is a pentagonal pyramid. Identify: (a) the number and shape of its faces, (b) the total number of edges, and (c) the total number of vertices. Verify your answer using Euler's Formula.",
+    "steps": [
+     "Step 1: Identify the base polygon. It is a pentagon, so n = 5.",
+     "Step 2: Calculate faces: 1 pentagonal base + 5 triangular side faces = 6 faces (1 pentagon, 5 triangles).",
+     "Step 3: Calculate edges: 5 base edges + 5 slant edges meeting at apex = 10 edges.",
+     "Step 4: Calculate vertices: 5 base corners + 1 apex = 6 vertices.",
+     "Step 5: Verify using Euler's Formula (F + V - E = 2): 6 + 6 - 10 = 2. The formula holds true."
+    ],
+    "ans": "Faces = 6 (1 pentagon, 5 triangles), Edges = 10, Vertices = 6. Verification: 6 + 6 - 10 = 2."
+   },
+   {
+    "q": "Compare a cylinder and a triangular prism by giving the number of flat faces, curved surfaces, edges, and vertices for each shape.",
+    "steps": [
+     "Step 1: Analyse the cylinder: It has 2 flat circular faces, 1 curved surface, 2 curved edges, and 0 vertices.",
+     "Step 2: Analyse the triangular prism: It has 5 flat faces (2 triangles, 3 rectangles), 0 curved surfaces, 9 straight edges, and 6 vertices.",
+     "Step 3: State the contrast clearly: The prism is a polyhedron with 5 flat faces and 9 straight edges, whereas the cylinder has curved surfaces and curved edges with 0 vertices."
+    ],
+    "ans": "Cylinder: 2 flat faces, 1 curved surface, 2 curved edges, 0 vertices. Triangular Prism: 5 flat faces, 0 curved surfaces, 9 straight edges, 6 vertices."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Cube featuring 6 flat square faces, 12 straight edges, and 8 vertices.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><g stroke=\"#1e293b\" stroke-width=\"2\" fill=\"none\"><polygon points=\"120,80 220,80 220,180 120,180\" fill=\"#dbeafe\" opacity=\"0.7\"/><polygon points=\"220,80 280,40 280,140 220,180\" fill=\"#bfdbfe\" opacity=\"0.7\"/><polygon points=\"120,80 180,40 280,40 220,80\" fill=\"#93c5fd\" opacity=\"0.7\"/><line x1=\"120\" y1=\"180\" x2=\"180\" y2=\"140\" stroke-dasharray=\"4,4\" stroke=\"#64748b\"/><line x1=\"180\" y1=\"140\" x2=\"280\" y2=\"140\" stroke-dasharray=\"4,4\" stroke=\"#64748b\"/><line x1=\"180\" y1=\"140\" x2=\"180\" y2=\"40\" stroke-dasharray=\"4,4\" stroke=\"#64748b\"/></g><circle cx=\"280\" cy=\"40\" r=\"5\" fill=\"#ef4444\"/><circle cx=\"220\" cy=\"80\" r=\"5\" fill=\"#ef4444\"/><circle cx=\"120\" cy=\"80\" r=\"5\" fill=\"#ef4444\"/><circle cx=\"180\" cy=\"40\" r=\"5\" fill=\"#ef4444\"/><circle cx=\"120\" cy=\"180\" r=\"5\" fill=\"#ef4444\"/><circle cx=\"220\" cy=\"180\" r=\"5\" fill=\"#ef4444\"/><circle cx=\"280\" cy=\"140\" r=\"5\" fill=\"#ef4444\"/><circle cx=\"180\" cy=\"140\" r=\"5\" fill=\"#ef4444\"/><text x=\"290\" y=\"42\" fill=\"#991b1b\" font-size=\"12\" font-weight=\"bold\">Vertex (1 of 8)</text><text x=\"160\" y=\"70\" fill=\"#1e40af\" font-size=\"12\" font-weight=\"bold\">Flat Face (1 of 6)</text><line x1=\"170\" y1=\"180\" x2=\"170\" y2=\"210\" stroke=\"#059669\" stroke-width=\"1.5\"/><text x=\"130\" y=\"225\" fill=\"#065f46\" font-size=\"12\" font-weight=\"bold\">Straight Edge (1 of 12)</text></svg>"
+   },
+   {
+    "cap": "Triangular Prism showing uniform triangular cross-section, 5 faces, 9 edges, and 6 vertices.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><polygon points=\"80,170 160,170 120,70\" fill=\"#bbf7d0\" stroke=\"#166534\" stroke-width=\"2\" opacity=\"0.8\"/><polygon points=\"160,170 300,130 260,30 120,70\" fill=\"#86efac\" stroke=\"#166534\" stroke-width=\"2\" opacity=\"0.6\"/><polygon points=\"120,70 260,30 220,130 80,170\" fill=\"#4ade80\" stroke=\"#166534\" stroke-width=\"2\" opacity=\"0.4\"/><line x1=\"80\" y1=\"170\" x2=\"220\" y2=\"130\" stroke=\"#166534\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><line x1=\"220\" y1=\"130\" x2=\"300\" y2=\"130\" stroke=\"#166534\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><line x1=\"220\" y1=\"130\" x2=\"260\" y2=\"30\" stroke=\"#166534\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><circle cx=\"120\" cy=\"70\" r=\"5\" fill=\"#dc2626\"/><text x=\"40\" y=\"65\" fill=\"#991b1b\" font-size=\"12\" font-weight=\"bold\">Vertex (1 of 6)</text><text x=\"100\" y=\"140\" fill=\"#14532d\" font-size=\"12\" font-weight=\"bold\">Triangular End</text><text x=\"210\" y=\"75\" fill=\"#14532d\" font-size=\"12\" font-weight=\"bold\">Rectangular Side</text><text x=\"240\" y=\"190\" fill=\"#166534\" font-size=\"12\" font-weight=\"bold\">Edges = 9 | Faces = 5</text></svg>"
+   },
+   {
+    "cap": "Square-Based Pyramid illustrating 1 square base, 4 triangular faces, 8 edges, 5 vertices, and the apex.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><polygon points=\"100,170 240,170 200,40\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"2\" opacity=\"0.7\"/><polygon points=\"240,170 310,130 200,40\" fill=\"#fcd34d\" stroke=\"#b45309\" stroke-width=\"2\" opacity=\"0.7\"/><line x1=\"100\" y1=\"170\" x2=\"170\" y2=\"130\" stroke=\"#b45309\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><line x1=\"170\" y1=\"130\" x2=\"310\" y2=\"130\" stroke=\"#b45309\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><line x1=\"170\" y1=\"130\" x2=\"200\" y2=\"40\" stroke=\"#b45309\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><circle cx=\"200\" cy=\"40\" r=\"5\" fill=\"#dc2626\"/><text x=\"212\" y=\"38\" fill=\"#991b1b\" font-size=\"12\" font-weight=\"bold\">Apex (Top Vertex)</text><text x=\"140\" y=\"120\" fill=\"#78350f\" font-size=\"12\" font-weight=\"bold\">Triangular Face</text><text x=\"170\" y=\"190\" fill=\"#78350f\" font-size=\"12\" font-weight=\"bold\">Square Base</text><text x=\"20\" y=\"215\" fill=\"#b45309\" font-size=\"12\" font-weight=\"bold\">Faces = 5 | Vertices = 5 | Edges = 8</text></svg>"
+   },
+   {
+    "cap": "Comparison of Cylinder and Cone showing curved surfaces, flat circular bases, and apex.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><g opacity=\"0.85\"><ellipse cx=\"100\" cy=\"60\" rx=\"50\" ry=\"18\" fill=\"#e9d5ff\" stroke=\"#6b21a8\" stroke-width=\"2\"/><path d=\"M 50,60 L 50,160 A 50 18 0 0 0 150,160 L 150,60 Z\" fill=\"#f3e8ff\" stroke=\"#6b21a8\" stroke-width=\"2\"/><ellipse cx=\"100\" cy=\"160\" rx=\"50\" ry=\"18\" fill=\"none\" stroke=\"#6b21a8\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/></g><text x=\"65\" y=\"25\" fill=\"#581c87\" font-size=\"12\" font-weight=\"bold\">Cylinder</text><text x=\"65\" y=\"115\" fill=\"#6b21a8\" font-size=\"11\">Curved Surface</text><g opacity=\"0.85\"><path d=\"M 260,50 L 320,160 A 60 18 0 0 1 200,160 Z\" fill=\"#fecaca\" stroke=\"#991b1b\" stroke-width=\"2\"/><ellipse cx=\"260\" cy=\"160\" rx=\"60\" ry=\"18\" fill=\"none\" stroke=\"#991b1b\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/></g><circle cx=\"260\" cy=\"50\" r=\"5\" fill=\"#dc2626\"/><text x=\"270\" y=\"45\" fill=\"#991b1b\" font-size=\"12\" font-weight=\"bold\">Apex</text><text x=\"240\" y=\"25\" fill=\"#991b1b\" font-size=\"12\" font-weight=\"bold\">Cone</text><text x=\"225\" y=\"115\" fill=\"#991b1b\" font-size=\"11\">Curved Surface</text><text x=\"40\" y=\"215\" fill=\"#581c87\" font-size=\"11\">2 Flat Faces, 1 Curved Surface</text><text x=\"220\" y=\"215\" fill=\"#991b1b\" font-size=\"11\">1 Flat Face, 1 Curved Surface</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_f.3.9",
+  "sid": "maths_eduqas_f",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.6-flash",
+  "ts": "2026-11-20T17:19:25.916Z"
+ },
+ "maths_eduqas_f.3.19": {
+  "summary": "A translation is a geometric transformation that slides a 2D shape to a new position on a grid without rotating, reflecting, or changing its size. In Eduqas GCSE Mathematics, every translation must be described using a 2D column vector, which consists of two numbers placed vertically inside tall brackets. The top number dictates horizontal movement (right or left), while the bottom number dictates vertical movement (up or down). Mastering translation vectors is essential for identifying single transformations, transforming coordinate points, and performing vector operations on both non-calculator and calculator papers.",
+  "core": [
+   {
+    "h": "1. Understanding Translation as a Transformation",
+    "p": "In GCSE Geometry, a translation is one of the four basic 2D transformations, alongside reflection, rotation, and enlargement. A translation slides every point of an object by the exact same distance and in the exact same direction to form an image.",
+    "bullets": [
+     "The original starting shape is called the **object**.",
+     "The resulting shape after the slide is called the **image**.",
+     "During a translation, the shape's orientation does not turn, flip, or resize.",
+     "The object and image are strictly **congruent** (identical in side lengths and interior angles).",
+     "Every vertex (corner) of the shape moves along parallel paths of equal length."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Translation",
+      "p": "A transformation that shifts every point of a shape by the same distance in a specified direction without turning or flipping the shape."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. Structure and Notation of a 2D Column Vector",
+    "p": "A 2D column vector is the official mathematical notation used to define a translation. It is written as two numbers arranged vertically inside tall brackets.",
+    "bullets": [
+     "The top number is the **horizontal component** ($x$-displacement).",
+     "The bottom number is the **vertical component** ($y$-displacement).",
+     "Column vectors do **not** have a comma between the numbers.",
+     "Column vectors do **not** have a fraction line separating the top and bottom numbers.",
+     "Written conceptually as a top number $x$ over a bottom number $y$ inside tall brackets."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "2D Column Vector",
+      "p": "A pair of numbers stacked vertically inside brackets representing horizontal displacement (top) and vertical displacement (bottom)."
+     },
+     {
+      "k": "warn",
+      "t": "Do Not Write Vectors as Coordinates!",
+      "p": "Writing a vector horizontally with a comma like (4, -3) will lose marks on Eduqas exam papers. Always write vectors vertically!"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "3. The Horizontal Component (Top Number)",
+    "p": "The top number of a column vector controls movement parallel to the horizontal $x$-axis. It tells you how far to move right or left.",
+    "bullets": [
+     "**Positive top number (+x)**: Move the shape to the **RIGHT**.",
+     "**Negative top number (-x)**: Move the shape to the **LEFT**.",
+     "**Zero top number (0)**: No horizontal movement occurs.",
+     "Always count grid units (squares), never grid line boundaries."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Memory Trick for Horizontal First",
+      "p": "Remember: 'Walk through the front door first (horizontal), then go up or down the stairs (vertical)'."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. The Vertical Component (Bottom Number)",
+    "p": "The bottom number of a column vector controls movement parallel to the vertical $y$-axis. It tells you how far to move up or down.",
+    "bullets": [
+     "**Positive bottom number (+y)**: Move the shape **UP**.",
+     "**Negative bottom number (-y)**: Move the shape **DOWN**.",
+     "**Zero bottom number (0)**: No vertical movement occurs.",
+     "A vector with top 0 and bottom 0 means zero movement (the shape stays identical)."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "5. Sign Rules Summary Table",
+    "p": "Use this quick-reference table to connect positive and negative signs in vector components with grid movement directions.",
+    "bullets": [
+     "Check the sign of both numbers before moving any points.",
+     "Pay special attention to negative signs on axes with negative coordinate values."
+    ],
+    "table": {
+     "head": [
+      "Vector Component",
+      "Positive Value (+)",
+      "Negative Value (-)"
+     ],
+     "rows": [
+      [
+       "Top Number (x-axis)",
+       "Move RIGHT",
+       "Move LEFT"
+      ],
+      [
+       "Bottom Number (y-axis)",
+       "Move UP",
+       "Move DOWN"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Direction Matrix",
+      "p": "Top = Right/Left (+/-). Bottom = Up/Down (+/-)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. How to Fully Describe a Translation in Eduqas Exams",
+    "p": "When an Eduqas exam question asks you to 'Describe fully the single transformation that maps Shape A onto Shape B', you must provide exactly two key pieces of information to gain full marks.",
+    "bullets": [
+     "**Requirement 1**: State the key mathematical word **'Translation'** (worth 1 mark).",
+     "**Requirement 2**: Give the exact **column vector** (worth 1 mark).",
+     "Do not use descriptive non-mathematical words like 'slide', 'shift', or 'move'.",
+     "Do not mention any extra transformations (e.g. 'translated and rotated'), or you will score zero marks for contradiction."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "The Contradiction Rule",
+      "p": "If you write 'Translation and reflection', the examiner will award ZERO marks overall. Always give only ONE single transformation when requested."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Step-by-Step Guide: Finding the Vector Between Two Shapes",
+    "p": "To determine the vector mapping Shape A (object) onto Shape B (image), follow this reliable vertex-matching process.",
+    "bullets": [
+     "**Step 1**: Pick one clear vertex (corner) on the original Shape A.",
+     "**Step 2**: Locate the exact **corresponding** vertex on the target Shape B.",
+     "**Step 3**: Count the horizontal squares from Shape A's vertex to Shape B's vertex (Right = positive, Left = negative). Place this value on top.",
+     "**Step 4**: Count the vertical squares from Shape A's vertex to Shape B's vertex (Up = positive, Down = negative). Place this value on the bottom.",
+     "**Step 5**: Write the final vector in tall vertical brackets."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Avoid Vertex Errors!",
+      "p": "Always check that you are measuring from the top-left corner of Shape A to the top-left corner of Shape B, not to a different corner!"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Translating Points and Shapes using Coordinates",
+    "p": "You can perform translations algebraically without drawing by applying column vector components directly to coordinate points.",
+    "bullets": [
+     "To find the image coordinate: add the top vector component to the $x$-coordinate, and add the bottom vector component to the $y$-coordinate.",
+     "Formula: Starting point $(x, y)$ + vector (a / b) = Image point $(x + a, y + b)$.",
+     "Example: Translating point $(3, -2)$ by vector $(4 / -5)$ yields $(3 + 4, -2 + (-5)) = (7, -7)$."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Coordinate Translation Rule",
+      "p": "New x = Old x + Top vector component. New y = Old y + Bottom vector component."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Reversing Translations (Inverse Vectors)",
+    "p": "An inverse translation moves a shape back from its translated position to its original position.",
+    "bullets": [
+     "If a translation from Shape A to Shape B is given by vector (a / b), then the inverse translation from Shape B back to Shape A is given by vector (-a / -b).",
+     "To invert a vector, simply **flip the sign** of both the top and bottom components.",
+     "Example: If vector A to B is (-3 / 7), then vector B to A is (3 / -7)."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "10. Combining (Adding) Consecutive Translations",
+    "p": "When a shape undergoes multiple translations one after another, the single overall translation is found by adding the column vectors.",
+    "bullets": [
+     "Add the top components together to find total horizontal shift.",
+     "Add the bottom components together to find total vertical shift.",
+     "If Vector 1 = (u / v) and Vector 2 = (w / z), Combined Vector = (u + w / v + z)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Combining Vectors Shortcut",
+      "p": "Instead of redrawing the shape twice on a grid, just add the two vectors together component by component!"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "11. Key Differences: Vectors vs Coordinates",
+    "p": "Understanding how column vectors differ from coordinates prevents fundamental errors on Eduqas exam scripts.",
+    "bullets": [
+     "Coordinates specify a fixed location; column vectors specify a movement.",
+     "Coordinates use horizontal layout with a comma; column vectors use vertical layout without a comma."
+    ],
+    "table": {
+     "head": [
+      "Feature",
+      "Coordinates",
+      "Column Vector"
+     ],
+     "rows": [
+      [
+       "Format",
+       "(x, y) - Horizontal with comma",
+       "(top x / bottom y) - Vertical without comma"
+      ],
+      [
+       "Meaning",
+       "Fixed position on a grid",
+       "Displacement / movement vector"
+      ],
+      [
+       "First / Top Value",
+       "x-position",
+       "Horizontal shift (Right/Left)"
+      ],
+      [
+       "Second / Bottom Value",
+       "y-position",
+       "Vertical shift (Up/Down)"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Grid City Navigation Analogy",
+   "p": "Imagine walking through a city built on a strict square grid system. A coordinate like (3, 5) is like an exact house address at 3rd Avenue and 5th Street. A translation vector is like a set of GPS walking directions given to move between two locations: 'Walk 4 blocks East (Right), then 2 blocks South (Down)'. The top number gives the East/West movement, and the bottom number gives the North/South movement. No matter where you start in the city, following that exact vector instruction will move you by the exact same distance and direction.\n\n**Where the analogy breaks down**: In a city, you walk along street lines one after the other around buildings. In geometry, a translation vector slides every single point of a 2D shape simultaneously across the plane along direct parallel lines."
+  },
+  "terms": [
+   {
+    "t": "Translation",
+    "d": "A transformation that shifts every point of a shape by a given distance in a given direction without rotating or flipping it."
+   },
+   {
+    "t": "2D Column Vector",
+    "d": "A pair of numbers stacked vertically inside brackets, where the top number represents horizontal movement and the bottom represents vertical movement."
+   },
+   {
+    "t": "Horizontal Component",
+    "d": "The top number of a column vector indicating movement parallel to the x-axis (positive = right, negative = left)."
+   },
+   {
+    "t": "Vertical Component",
+    "d": "The bottom number of a column vector indicating movement parallel to the y-axis (positive = up, negative = down)."
+   },
+   {
+    "t": "Object",
+    "d": "The original shape on a coordinate grid before any transformation is applied."
+   },
+   {
+    "t": "Image",
+    "d": "The resulting shape on a coordinate grid after a transformation has taken place."
+   },
+   {
+    "t": "Congruent",
+    "d": "Having identical size and shape, with equal corresponding side lengths and equal corresponding angles."
+   },
+   {
+    "t": "Transformation",
+    "d": "A change in the position, size, or orientation of a geometric shape on a grid."
+   },
+   {
+    "t": "Inverse Vector",
+    "d": "A vector that reverses the movement of a given translation, obtained by negating both components."
+   },
+   {
+    "t": "Vertex",
+    "d": "A point where two or more line segments meet to form a corner of a 2D shape (plural: vertices)."
+   },
+   {
+    "t": "Corresponding Points",
+    "d": "Points or corners on an image shape that match the exact position of points on the original object shape."
+   },
+   {
+    "t": "Displacement",
+    "d": "The straight-line distance and direction from a starting point to an ending point."
+   },
+   {
+    "t": "Vector Addition",
+    "d": "Combining two or more column vectors by adding their top components together and their bottom components together."
+   },
+   {
+    "t": "Scalar Multiplication",
+    "d": "Multiplying both top and bottom components of a column vector by a single number."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Writing a vector horizontally like (4, -3) or using a comma inside the brackets.",
+    "r": "Write column vectors vertically inside tall brackets without any comma."
+   },
+   {
+    "w": "Swapping the components: putting vertical movement on top and horizontal movement on the bottom.",
+    "r": "Top number is ALWAYS horizontal (x), bottom number is ALWAYS vertical (y)."
+   },
+   {
+    "w": "Omitting the word 'Translation' when asked to fully describe a single transformation.",
+    "r": "State both the word 'Translation' (1 mark) AND the correct column vector (1 mark)."
+   },
+   {
+    "w": "Writing a fraction line between top and bottom vector components.",
+    "r": "Do not write a dividing line; a column vector is not a fraction."
+   },
+   {
+    "w": "Counting grid lines instead of counting grid units (squares).",
+    "r": "Count the number of square steps taken horizontally and vertically between corresponding vertices."
+   },
+   {
+    "w": "Measuring vector displacement from non-corresponding vertices (e.g. top-left corner of A to bottom-right corner of B).",
+    "r": "Measure movement between identical matching corners on the object and image."
+   },
+   {
+    "w": "Writing multiple transformations like 'Translation and Shift'.",
+    "r": "Write ONLY the word 'Translation' along with the vector. Adding extra words causes loss of marks for contradiction."
+   },
+   {
+    "w": "Getting signs reversed (e.g. writing +3 for moving left instead of -3).",
+    "r": "Remember: Right = +, Left = -; Up = +, Down = -."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Write down the translation vector that represents moving 4 units to the right and 3 units down.",
+    "marks": 1,
+    "model": [
+     "Column vector with top number 4 and bottom number -3"
+    ],
+    "tip": "Right is positive 4, down is negative 3. Stack them vertically without commas."
+   },
+   {
+    "q": "Shape A is mapped onto Shape B by a translation. Shape A has a vertex at (1, 5) and the corresponding vertex on Shape B is at (6, 2). Write down the column vector for this translation.",
+    "marks": 2,
+    "model": [
+     "Horizontal shift: 6 - 1 = 5",
+     "Vertical shift: 2 - 5 = -3",
+     "Column vector with top component 5 and bottom component -3"
+    ],
+    "tip": "Subtract starting coordinates from target coordinates: (x2 - x1, y2 - y1)."
+   },
+   {
+    "q": "Point P has coordinates (-2, 4). Point P is translated by the vector (5 / -6) to give point Q. Write down the coordinates of point Q.",
+    "marks": 2,
+    "model": [
+     "x-coordinate: -2 + 5 = 3",
+     "y-coordinate: 4 + (-6) = -2",
+     "Point Q = (3, -2)"
+    ],
+    "tip": "Answer for point Q must be written in coordinate format (x, y) with a comma!"
+   },
+   {
+    "q": "Describe fully the single transformation that maps Shape P onto Shape Q, where Shape P is translated 3 units left and 5 units up to form Shape Q.",
+    "marks": 2,
+    "model": [
+     "Translation [1 mark]",
+     "Vector with top component -3 and bottom component 5 [1 mark]"
+    ],
+    "tip": "You need both the word 'Translation' and the correct column vector to get 2 marks."
+   },
+   {
+    "q": "The vector mapping Shape X onto Shape Y is (-4 / 7). Write down the vector that maps Shape Y back onto Shape X.",
+    "marks": 1,
+    "model": [
+     "Column vector with top component 4 and bottom component -7"
+    ],
+    "tip": "Reverse the sign of both numbers to get the inverse vector."
+   },
+   {
+    "q": "Shape A is translated by vector v1 = (2 / -1) to give Shape B. Shape B is then translated by vector v2 = (-5 / 4) to give Shape C. (a) Find the single vector that maps Shape A onto Shape C. (b) If Shape A has a vertex at (3, 1), find the coordinates of this vertex on Shape C.",
+    "marks": 4,
+    "model": [
+     "(a) Combined top: 2 + (-5) = -3 [1 mark]",
+     "(a) Combined bottom: -1 + 4 = 3 [1 mark]",
+     "(a) Vector = (-3 / 3) [1 mark]",
+     "(b) Coordinates on C: (3 - 3, 1 + 3) = (0, 4) [1 mark]"
+    ],
+    "tip": "Add vectors component by component, then apply the result to the original coordinate."
+   },
+   {
+    "q": "Which of the following column vectors represents a translation of 6 units left and 2 units up? Select the correct option: A: (6 / 2), B: (-6 / -2), C: (-6 / 2), D: (2 / -6).",
+    "marks": 1,
+    "model": [
+     "Option C: (-6 / 2)"
+    ],
+    "tip": "Left means -6 on top, up means +2 on the bottom."
+   },
+   {
+    "q": "Triangle T has vertices at (1, 1), (1, 4), and (3, 1). Triangle T is translated by the vector (-4 / -2) to form Triangle T'. (a) Write down the coordinates of the vertices of Triangle T'. (b) State whether Triangle T and Triangle T' are congruent.",
+    "marks": 4,
+    "model": [
+     "Vertex 1: (1 - 4, 1 - 2) = (-3, -1) [1 mark]",
+     "Vertex 2: (1 - 4, 4 - 2) = (-3, 2) [1 mark]",
+     "Vertex 3: (3 - 4, 1 - 2) = (-1, -1) [1 mark]",
+     "(b) Yes, they are congruent because translations preserve size and shape [1 mark]"
+    ],
+    "tip": "Subtract 4 from every x-coordinate and subtract 2 from every y-coordinate."
+   },
+   {
+    "q": "A student describes a transformation mapping Shape A to Shape B as 'Shifted right 3 and down 2'. Explain why this answer would not receive full marks in an Eduqas exam, and write the response that achieves full marks.",
+    "marks": 3,
+    "model": [
+     "'Shifted' is non-mathematical terminology; Eduqas requires the key word 'Translation' [1 mark]",
+     "Written movements must be expressed as a column vector [1 mark]",
+     "Full mark answer: Translation by vector (3 / -2) [1 mark]"
+    ],
+    "tip": "Always use standard mathematical terms and vector notation."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Shape A has corners at A(2, 3), B(5, 3), and C(2, 7). Shape A is translated to Shape B using the column vector (-4 / 2). Find the coordinates of the corners of Shape B and fully describe the reverse transformation from Shape B to Shape A.",
+    "steps": [
+     "Step 1: Apply the vector (-4 / 2) to vertex A(2, 3): New x = 2 + (-4) = -2, New y = 3 + 2 = 5. Image A' = (-2, 5).",
+     "Step 2: Apply the vector to vertex B(5, 3): New x = 5 + (-4) = 1, New y = 3 + 2 = 5. Image B' = (1, 5).",
+     "Step 3: Apply the vector to vertex C(2, 7): New x = 2 + (-4) = -2, New y = 7 + 2 = 9. Image C' = (-2, 9).",
+     "Step 4: Find the reverse transformation from Shape B to Shape A by inverting the vector components. Inverse of (-4 / 2) is (4 / -2).",
+     "Step 5: Write the full description: Translation by column vector (4 / -2)."
+    ],
+    "ans": "Vertices of Shape B are (-2, 5), (1, 5), and (-2, 9). Reverse transformation: Translation by column vector (4 / -2)."
+   },
+   {
+    "q": "On a coordinate grid, Shape P is translated by vector (3 / -5) to form Shape Q. Shape Q is then translated by vector (2 / 8) to form Shape R. (a) Find the single vector that maps Shape P directly onto Shape R. (b) If a point on Shape R has coordinates (7, 4), find its original coordinates on Shape P.",
+    "steps": [
+     "Step 1: Add the two translation vectors together to get the direct vector P to R.",
+     "Top component: 3 + 2 = 5.",
+     "Bottom component: -5 + 8 = 3.",
+     "Direct vector P to R = (5 / 3).",
+     "Step 2: To find the starting coordinate on Shape P from Shape R, apply the inverse vector (-5 / -3) to (7, 4).",
+     "Original x: 7 - 5 = 2.",
+     "Original y: 4 - 3 = 1.",
+     "Original coordinate on Shape P = (2, 1)."
+    ],
+    "ans": "(a) Direct vector = (5 / 3). (b) Original coordinate on Shape P = (2, 1)."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Figure 1: Translation of Shape A to Shape B on a coordinate grid by column vector (4 / -3).",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><path d=\"M 40,20 L 40,210 M 80,20 L 80,210 M 120,20 L 120,210 M 160,20 L 160,210 M 200,20 L 200,210 M 240,20 L 240,210 M 280,20 L 280,210 M 320,20 L 320,210 M 360,20 L 360,210\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><path d=\"M 30,30 L 370,30 M 30,60 L 370,60 M 30,90 L 370,90 M 30,120 L 370,120 M 30,150 L 370,150 M 30,180 L 370,180 M 30,210 L 370,210\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"40\" y1=\"210\" x2=\"370\" y2=\"210\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"40\" y1=\"20\" x2=\"40\" y2=\"210\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"365\" y=\"225\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\">x</text><text x=\"25\" y=\"30\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\">y</text><polygon points=\"80,120 80,60 160,120\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"95\" y=\"100\" fill=\"#1e40af\" font-size=\"12\" font-weight=\"bold\">Shape A</text><polygon points=\"240,210 240,150 320,210\" fill=\"#bbf7d0\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"255\" y=\"190\" fill=\"#166534\" font-size=\"12\" font-weight=\"bold\">Shape B</text><path d=\"M 80,60 L 240,60 L 240,150\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><text x=\"130\" y=\"52\" fill=\"#dc2626\" font-size=\"12\" font-weight=\"bold\">+4 right (x = 4)</text><text x=\"246\" y=\"110\" fill=\"#dc2626\" font-size=\"12\" font-weight=\"bold\">-3 down (y = -3)</text><rect x=\"270\" y=\"30\" width=\"110\" height=\"55\" rx=\"6\" fill=\"#fde68a\" stroke=\"#d97706\" stroke-width=\"1.5\"/><text x=\"278\" y=\"50\" fill=\"#92400e\" font-size=\"12\" font-weight=\"bold\">Vector = ( 4 )</text><text x=\"328\" y=\"70\" fill=\"#92400e\" font-size=\"12\" font-weight=\"bold\">( -3 )</text></svg>"
+   },
+   {
+    "cap": "Figure 2: Structure and anatomy of a 2D column vector, highlighting component rules.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"135\" y=\"25\" width=\"130\" height=\"185\" rx=\"12\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"2\"/><text x=\"142\" y=\"145\" fill=\"#1b2540\" font-size=\"110\" font-family=\"sans-serif\">(</text><text x=\"235\" y=\"145\" fill=\"#1b2540\" font-size=\"110\" font-family=\"sans-serif\">)</text><text x=\"182\" y=\"95\" fill=\"#2563eb\" font-size=\"36\" font-weight=\"bold\">x</text><text x=\"182\" y=\"165\" fill=\"#16a34a\" font-size=\"36\" font-weight=\"bold\">y</text><rect x=\"12\" y=\"35\" width=\"110\" height=\"65\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"18\" y=\"55\" fill=\"#1e40af\" font-size=\"11\" font-weight=\"bold\">Top Component</text><text x=\"18\" y=\"72\" fill=\"#1e3a8a\" font-size=\"11\">x: Move Right (+)</text><text x=\"18\" y=\"88\" fill=\"#1e3a8a\" font-size=\"11\"> or Move Left (-)</text><rect x=\"12\" y=\"135\" width=\"110\" height=\"65\" rx=\"6\" fill=\"#bbf7d0\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"18\" y=\"155\" fill=\"#166534\" font-size=\"11\" font-weight=\"bold\">Bottom Component</text><text x=\"18\" y=\"172\" fill=\"#14532d\" font-size=\"11\">y: Move Up (+)</text><text x=\"18\" y=\"188\" fill=\"#14532d\" font-size=\"11\"> or Move Down (-)</text><line x1=\"122\" y1=\"70\" x2=\"172\" y2=\"80\" stroke=\"#2563eb\" stroke-width=\"2\" stroke-dasharray=\"3,3\"/><line x1=\"122\" y1=\"165\" x2=\"172\" y2=\"155\" stroke=\"#16a34a\" stroke-width=\"2\" stroke-dasharray=\"3,3\"/><rect x=\"278\" y=\"75\" width=\"110\" height=\"75\" rx=\"6\" fill=\"#fecaca\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><text x=\"285\" y=\"96\" fill=\"#991b1b\" font-size=\"12\" font-weight=\"bold\">Exam Rules:</text><text x=\"285\" y=\"116\" fill=\"#991b1b\" font-size=\"11\">NO Commas!</text><text x=\"285\" y=\"134\" fill=\"#991b1b\" font-size=\"11\">NO Fraction Line!</text></svg>"
+   },
+   {
+    "cap": "Figure 3: Inverse translations demonstrating how reversing direction negates vector signs.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"45\" y=\"130\" width=\"65\" height=\"65\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\" rx=\"6\"/><text x=\"70\" y=\"168\" fill=\"#1e40af\" font-size=\"16\" font-weight=\"bold\">P</text><rect x=\"275\" y=\"35\" width=\"65\" height=\"65\" fill=\"#e9d5ff\" stroke=\"#9333ea\" stroke-width=\"2\" rx=\"6\"/><text x=\"300\" y=\"73\" fill=\"#6b21a8\" font-size=\"16\" font-weight=\"bold\">Q</text><path d=\"M 115,135 Q 185,60 265,65\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\" stroke-dasharray=\"5,5\"/><polygon points=\"265,65 253,58 256,70\" fill=\"#2563eb\"/><rect x=\"135\" y=\"40\" width=\"115\" height=\"36\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1\"/><text x=\"142\" y=\"62\" fill=\"#1e40af\" font-size=\"12\" font-weight=\"bold\">P to Q: vector ( 5 / 3 )</text><path d=\"M 270,105 Q 195,185 120,165\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><polygon points=\"120,165 130,172 127,160\" fill=\"#dc2626\"/><rect x=\"135\" y=\"160\" width=\"125\" height=\"36\" rx=\"6\" fill=\"#fecaca\" stroke=\"#dc2626\" stroke-width=\"1\"/><text x=\"140\" y=\"182\" fill=\"#991b1b\" font-size=\"12\" font-weight=\"bold\">Q to P: vector ( -5 / -3 )</text><text x=\"80\" y=\"222\" fill=\"#475569\" font-size=\"11\" font-weight=\"bold\">Inverse vector negates both horizontal and vertical values</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_f.3.19",
+  "sid": "maths_eduqas_f",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.6-flash",
+  "ts": "2026-11-20T17:20:58.729Z"
  }
 }

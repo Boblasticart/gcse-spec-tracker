@@ -904,5 +904,888 @@
   "src": "pre",
   "by": "gemini/gemini-flash-lite-latest",
   "ts": "2026-11-19T20:41:28.618Z"
+ },
+ "maths_ocr_h.9.0": {
+  "summary": "Mastering units and measurement for OCR GCSE Higher tier requires absolute fluency in converting metric dimensions, areas, and volumes, alongside handling compound units and map scales. You must seamlessly convert square and cubic units by squaring and cubing the linear scale factor, perform rigorous dimensional analysis for compound measures like speed, density, and pressure, and interpret ratio scales accurately. Grade 9 success depends on setting out multi-step unit conversions systematically and retaining full accuracy until the final step.",
+  "core": [
+   {
+    "h": "1. Metric Linear, Area and Volume Unit Conversions",
+    "p": "Converting between metric units of length, area, and volume is a foundational skill that frequently trips up students who memorize rules blindly. Linear dimensions scale by a factor k, area dimensions scale by k-squared, and volume dimensions scale by k-cubed.",
+    "bullets": [
+     "Length units: 1 cm = 10 mm, 1 m = 100 cm, 1 km = 1000 m.",
+     "Area units: 1 cm2 = 100 mm2 (since 10 x 10), 1 m2 = 10,000 cm2 (100 x 100).",
+     "Volume units: 1 cm3 = 1,000 mm3 (10 x 10 x 10), 1 m3 = 1,000,000 cm3 (100 x 100 x 100).",
+     "Capacity link: 1 litre = 1000 cm3, and 1 m3 = 1000 litres."
+    ],
+    "table": {
+     "head": [
+      "Dimension",
+      "Base Conversion",
+      "Square Conversion",
+      "Cubic Conversion"
+     ],
+     "rows": [
+      [
+       "cm to mm",
+       "x 10",
+       "x 100",
+       "x 1,000"
+      ],
+      [
+       "m to cm",
+       "x 100",
+       "x 10,000",
+       "x 1,000,000"
+      ],
+      [
+       "km to m",
+       "x 1,000",
+       "x 1,000,000",
+       "x 1,000,000,000"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Common Area/Volume Trap",
+      "p": "Do not multiply m2 to cm2 by 100. Always square the linear multiplier: (100)2 = 10,000."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. Standard Compound Units",
+    "p": "Compound units are formed by multiplying or dividing base units. You must know how to manipulate formulas involving speed, density, pressure, and acceleration, and convert their units cleanly.",
+    "bullets": [
+     "Speed = Distance / Time (units: m/s or km/h).",
+     "Density = Mass / Volume (units: g/cm3 or kg/m3).",
+     "Pressure = Force / Area (units: N/m2 or Pascals, Pa).",
+     "To convert km/h to m/s, divide by 3.6. To convert m/s to km/h, multiply by 3.6."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Density Quick Fact",
+      "p": "1 g/cm3 is exactly equal to 1,000 kg/m3 because 1 kg = 1,000 g and 1 m3 = 1,000,000 cm3."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "3. Dimensional Analysis",
+    "p": "Dimensional analysis is the mathematical checking of algebraic dimensions in an equation to ensure physical consistency. Every term in an added or subtracted expression must share identical dimensions.",
+    "bullets": [
+     "Treat units algebraically: treat cm3 / cm as cm2.",
+     "Check whether an algebraic formula represents a length, an area, or a volume.",
+     "If a formula yields units of m2 when looking for a volume, the formula is instantly incorrect.",
+     "Use fraction bars for unit cancellation during complex multi-step conversions."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam Check",
+      "p": "If stuck on what formula to use, check the units of the answer box (e.g., kg/m3 tells you Mass divided by Volume)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Maps and Scale Drawings: Ratio and Representative Fractions",
+    "p": "Maps and scale drawings use ratios to relate drawing dimensions to real-world dimensions. A scale can be written as a ratio without units, or as a statement like 1 cm represents 5 km.",
+    "bullets": [
+     "Representative Fraction (RF): Written as a ratio like 1 : 25,000.",
+     "Both sides of the ratio must be in the exact same unit before simplifying.",
+     "Example: 1 cm to 5 km becomes 1 cm to 500,000 cm, giving a scale of 1 : 500,000.",
+     "The scale factor is dimensionless because units cancel out."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Representative Fraction",
+      "p": "A map scale expressed as a ratio 1 : n where both quantities use identical units."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "5. Working with Map Distances and Real Distances",
+    "p": "To find real distances from map measurements, multiply the map distance by the scale factor. To find map distances from real distances, divide by the scale factor.",
+    "bullets": [
+     "Real Distance = Map Distance x Scale Factor.",
+     "Map Distance = Real Distance / Scale Factor.",
+     "Always convert final real-world distances into sensible units (metres or kilometres rather than centimetres).",
+     "Remember that 100,000 cm = 1 km."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Unit Clash",
+      "p": "Never multiply a cm map measurement directly by a km figure without converting units first."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Scale Areas on Maps",
+    "p": "When a map has a linear scale of 1 : n, areas on the map scale according to the square of that ratio. This is a common trap on Higher Tier papers.",
+    "bullets": [
+     "If linear scale is 1 : n, then the area scale is 1 : n^2.",
+     "If 1 cm represents 2 km, then 1 cm2 on the map represents 2^2 = 4 km2 in real life.",
+     "To find real area, multiply map area by n^2.",
+     "To find map area, divide real area by n^2."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Area Scale Rule",
+      "p": "Area scale factor = (Linear scale factor)^2."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Scale Volumes in Models and Containers",
+    "p": "Similar to areas, volumes scale cubically. If a scale model or map has a 3D volumetric context with a linear scale factor of k, the volume scales by k cubed.",
+    "bullets": [
+     "If linear scale is 1 : n, then the volume scale is 1 : n^3.",
+     "If a model has scale 1 : 10, a volume of 5 cm3 on the model equals 5 x 10^3 = 5,000 cm3 in reality.",
+     "Essential for containers, architectural models, and engineering prototypes.",
+     "Always write out the linear scale first before cubing it."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Memorise Powers",
+      "p": "Linear = power 1, Area = power 2, Volume = power 3. Write this down in exam margins."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Bearings and Scale Drawings",
+    "p": "Scale drawings in OCR papers often combine lengths with three-figure bearings, requiring a sharp pencil, a ruler, and a protractor.",
+    "bullets": [
+     "Bearings are measured clockwise from North, always written with 3 figures (e.g., 045 degrees).",
+     "Use the specified scale (e.g., 1 cm = 10 m) to convert real lengths to drawing lengths accurately.",
+     "Construct North lines at every point where a new bearing is measured.",
+     "Measure angles precisely to within +/- 2 degrees tolerance allowed by OCR mark schemes."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Protractor Error",
+      "p": "Ensure you read the correct scale on your protractor (inner vs outer scale) starting from the North line."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Upper and Lower Bounds in Measurement",
+    "p": "All measurements are approximations constrained by the degree of accuracy. Upper and lower bounds affect compound units, particularly when calculating maximum or minimum values.",
+    "bullets": [
+     "A value rounded to the nearest integer has a bound of +/- 0.5.",
+     "To find maximum speed, use Maximum Distance / Minimum Time.",
+     "To find minimum density, use Minimum Mass / Maximum Volume.",
+     "Always state bounds using inequality notation (e.g., 5.5 <= x < 6.5)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Compound Bounds Rule",
+      "p": "Max value = max numerator / min denominator. Min value = min numerator / max denominator."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Significant Figures and Standard Form in Measurements",
+    "p": "Calculations involving very large or very small measurements require standard form and strict adherence to significant figures.",
+    "bullets": [
+     "Standard form is written as A x 10^n where 1 <= A < 10 and n is an integer.",
+     "When rounding to s.f., start counting from the first non-zero digit.",
+     "Retain all digits in your calculator intermediate steps, rounding only on the final answer line.",
+     "Check that your final measurement units match the demands of the question."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Rounding Trap",
+      "p": "If an exam question asks for 3 significant figures, do not round intermediate values or you will lose accuracy marks."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Photocopying Machine Analogy",
+   "p": "Imagine shrinking a photograph on a photocopier to 50% scale (scale factor 0.5). A single straight line shrinks to half its length (multiplied by 0.5). But a square photo does not just shrink in area by half—its width and height both shrink by 0.5, meaning its total area shrinks by 0.5 x 0.5 = 0.25 (one quarter). If you had a 3D box, its volume would shrink by 0.5 x 0.5 x 0.5 = 0.125 (one eighth). This breaks down only if the object changes shape during scaling, but mathematical scale drawings maintain strict geometric similarity."
+  },
+  "terms": [
+   {
+    "t": "Compound Unit",
+    "d": "A unit derived from a combination of base units using multiplication or division, such as m/s or kg/m3."
+   },
+   {
+    "t": "Representative Fraction",
+    "d": "A map scale expressed as a dimensionless ratio comparing map distance to actual distance."
+   },
+   {
+    "t": "Scale Factor",
+    "d": "The multiplier used to scale linear, area, or volumetric dimensions between a model and reality."
+   },
+   {
+    "t": "Bearing",
+    "d": "An angle measured clockwise from North, expressed using three figures."
+   },
+   {
+    "t": "Upper Bound",
+    "d": "The highest value that a rounded measurement could possibly have been before rounding."
+   },
+   {
+    "t": "Lower Bound",
+    "d": "The lowest value that a rounded measurement could possibly have been before rounding."
+   },
+   {
+    "t": "Dimensional Analysis",
+    "d": "Checking the algebraic consistency of units within a mathematical formula or expression."
+   },
+   {
+    "t": "Standard Form",
+    "d": "A system of writing numbers as A x 10^n where 1 <= A < 10 and n is an integer."
+   },
+   {
+    "t": "Density",
+    "d": "A compound measure of mass per unit volume, measured in kg/m3 or g/cm3."
+   },
+   {
+    "t": "Pressure",
+    "d": "A compound measure of force per unit area, measured in N/m2 or Pascals."
+   },
+   {
+    "t": "Significant Figures",
+    "d": "Digits that carry meaning contributing to the precision of a number, starting from the first non-zero digit."
+   },
+   {
+    "t": "Metric System",
+    "d": "A decimal system of measurement based on powers of ten for length, mass, and capacity."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Multiplying square meters by 100 to convert to square centimeters.",
+    "r": "Multiply by 10,000 because (100)2 = 10,000."
+   },
+   {
+    "w": "Multiplying map area by the linear scale factor instead of squaring it.",
+    "r": "Square the linear scale factor to get the area scale factor (n^2)."
+   },
+   {
+    "w": "Using max time and max distance to find maximum speed.",
+    "r": "Max speed requires max distance divided by min time."
+   },
+   {
+    "w": "Writing a bearing as 45 degrees instead of 045 degrees.",
+    "r": "Bearings must always be written with exactly three figures."
+   },
+   {
+    "w": "Forgetting to convert units to be identical before setting up a map ratio.",
+    "r": "Convert both sides to the same unit (usually cm) before simplifying."
+   },
+   {
+    "w": "Rounding intermediate calculation steps to 2 decimal places.",
+    "r": "Keep full calculator accuracy throughout and round only the final answer."
+   },
+   {
+    "w": "Stating the lower bound of 50 (rounded to nearest 10) as 49.",
+    "r": "The lower bound is 45 because 45 rounds up to 50."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Convert 4.5 m2 into cm2.",
+    "marks": 2,
+    "model": [
+     "Recognise that 1 m = 100 cm, so 1 m2 = 10,000 cm2",
+     "4.5 x 10,000 = 45,000 cm2"
+    ],
+    "tip": "Always square the conversion multiplier for area."
+   },
+   {
+    "q": "On a map with a scale of 1 : 50,000, the distance between two towns is 6.4 cm. Calculate the real distance in kilometres.",
+    "marks": 3,
+    "model": [
+     "6.4 x 50,000 = 320,000 cm",
+     "320,000 / 100 = 3,200 m",
+     "3,200 / 1,000 = 3.2 km"
+    ],
+    "tip": "Convert centimetres to metres then kilometres at the end."
+   },
+   {
+    "q": "A model of a statue has a height of 15 cm and a volume of 350 cm3. The real statue has a height of 6 m. Calculate the volume of the real statue in cubic metres.",
+    "marks": 4,
+    "model": [
+     "Linear scale factor = 600 cm / 15 cm = 40",
+     "Volume scale factor = 40^3 = 64,000",
+     "Real volume = 350 x 64,000 = 22,400,000 cm3",
+     "Convert to m3 by dividing by 1,000,000: 22.4 m3"
+    ],
+    "tip": "Cube the linear scale factor for volume calculations."
+   },
+   {
+    "q": "A map has a scale of 1 cm represents 4 km. A lake on the map has an area of 3.2 cm2. Work out the actual area of the lake in km2.",
+    "marks": 3,
+    "model": [
+     "Linear scale factor is 1 cm : 400,000 cm, or 1 cm represents 4 km",
+     "Area scale factor = 4^2 = 16 km2 per cm2",
+     "Actual area = 3.2 x 16 = 51.2 km2"
+    ],
+    "tip": "Square the number of kilometres per centimetre."
+   },
+   {
+    "q": "A car travels 180 km in 2 hours 15 minutes. Calculate the average speed in m/s.",
+    "marks": 4,
+    "model": [
+     "Convert time to hours: 2 hours 15 mins = 2.25 hours",
+     "Speed in km/h = 180 / 2.25 = 80 km/h",
+     "Convert km/h to m/s by dividing by 3.6",
+     "80 / 3.6 = 22.2 m/s (to 3 s.f.)"
+    ],
+    "tip": "Remember 15 minutes is 0.25 hours, not 0.15."
+   },
+   {
+    "q": "The mass of a solid cylinder is 450 g, correct to the nearest 10 g. Its volume is 120 cm3, correct to the nearest 10 cm3. Calculate the upper bound for the density of the cylinder.",
+    "marks": 4,
+    "model": [
+     "Max mass = 455 g",
+     "Min volume = 115 cm3",
+     "Max density = Max mass / Min volume",
+     "455 / 115 = 3.96 g/cm3 (to 3 s.f.)"
+    ],
+    "tip": "To maximise a fraction, maximise the numerator and minimise the denominator."
+   },
+   {
+    "q": "A metal block has a density of 7.8 g/cm3. What is this density in kg/m3?",
+    "marks": 3,
+    "model": [
+     "1 g = 0.001 kg, so 7.8 g = 0.0078 kg",
+     "1 cm3 = 0.000001 m3",
+     "0.0078 / 0.000001 = 7,800 kg/m3"
+    ],
+    "tip": "Alternatively, multiply g/cm3 by 1,000 to get kg/m3."
+   },
+   {
+    "q": "Construct a scale drawing of a triangle ABC where AB = 8 cm (bearing 060 degrees) and BC = 6 cm (bearing 140 degrees) from B. Use a scale of 1 cm to 5 m.",
+    "marks": 5,
+    "model": [
+     "Draw line AB of length 8 cm at bearing 060 from North at A",
+     "At point B, construct a North line and measure bearing 140",
+     "Draw line BC of length 6 cm along the bearing",
+     "Connect A to C to complete the triangle",
+     "All lines and angles within tolerance (+/- 2 degrees, +/- 2 mm)"
+    ],
+    "tip": "Always draw a clear North line at every turning point."
+   },
+   {
+    "q": "A container holds 4.5 litres of water. Water leaks out at a rate of 15 cm3 per second. How many minutes does it take for the container to empty completely?",
+    "marks": 3,
+    "model": [
+     "Convert litres to cm3: 4.5 litres = 4,500 cm3",
+     "Time in seconds = 4,500 / 15 = 300 seconds",
+     "Convert seconds to minutes: 300 / 60 = 5 minutes"
+    ],
+    "tip": "1 litre = 1,000 cm3 is a fact you must memorise."
+   },
+   {
+    "q": "Explain why the expression pi x r^2 x h + 4 x r represents a volume.",
+    "marks": 2,
+    "model": [
+     "The first term (pi r^2 h) has dimensions of length cubed (m3)",
+     "The second term (4r) has dimensions of length (m), so the expression is dimensionally inconsistent and cannot represent a volume"
+    ],
+    "tip": "Every term in an added expression must have the exact same dimensions."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A swimming pool is 50 m long and 25 m wide. On a scale drawing, the pool has a length of 10 cm. (a) Find the representative fraction scale. (b) Find the area of the pool on the drawing in cm2.",
+    "steps": [
+     "(a) Match real length and map length in the same units: Real length = 50 m = 5,000 cm. Map length = 10 cm.",
+     "Set up ratio map : real = 10 : 5,000.",
+     "Simplify by dividing both sides by 10 to get 1 : 500.",
+     "(b) Linear scale is 1 : 500. Area scale factor = 500^2 = 250,000.",
+     "Real area of pool = 50 m x 25 m = 1,250 m2.",
+     "Convert real area to cm2: 1,250 x 10,000 = 12,500,000 cm2.",
+     "Map area = Real area / Area scale factor = 12,500,000 / 250,000 = 50 cm2. (Alternative: map length = 10 cm, map width = 25 m / 500 = 0.05 m = 5 cm, so 10 x 5 = 50 cm2)."
+    ],
+    "ans": "(a) 1 : 500 (b) 50 cm2"
+   },
+   {
+    "q": "A solid metal sphere has a radius of 6 cm, correct to the nearest cm. The density of the metal is 8.5 g/cm3, correct to 1 decimal place. Calculate the lower bound for the mass of the sphere in kilograms.",
+    "steps": [
+     "Identify bounds for radius: r = 6 cm to nearest cm, so lower bound r_min = 5.5 cm, upper bound r_max = 6.5 cm.",
+     "Identify bounds for density: d = 8.5 g/cm3 to 1 d.p., so lower bound d_min = 8.45 g/cm3.",
+     "Recall volume of a sphere formula: V = (4/3) x pi x r^3.",
+     "To find the lower bound for mass, use minimum density and minimum volume: Mass_min = d_min x V_min.",
+     "Calculate minimum volume using r_min: V_min = (4/3) x pi x (5.5)^3 = (4/3) x pi x 166.375 = 696.91 cm3.",
+     "Calculate minimum mass: Mass_min = 8.45 x 696.91 = 5,888.9 g.",
+     "Convert grams to kilograms by dividing by 1,000: 5,888.9 / 1,000 = 5.89 kg (to 3 s.f.)."
+    ],
+    "ans": "5.89 kg"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Visualising unit scaling: 1 cm linear gives 1 cm2 in area (100 mm2) and 1 cm3 in volume (1,000 mm3). Notice how area scales by k^2 and volume by k^3.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"40\" width=\"80\" height=\"80\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"60\" y=\"85\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">1 cm</text><text x=\"60\" y=\"135\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">Linear (x1)</text><rect x=\"140\" y=\"40\" width=\"80\" height=\"80\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"180\" y=\"85\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">1 cm2</text><text x=\"180\" y=\"135\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">Area (x100 mm2)</text><rect x=\"260\" y=\"30\" width=\"90\" height=\"90\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M260 30 L290 10 L380 10 L350 30 Z\" fill=\"#e9d5ff\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M350 30 L380 10 L380 100 L350 120 Z\" fill=\"#fecaca\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"305\" y=\"75\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">1 cm3</text><text x=\"305\" y=\"145\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">Volume (x1000 mm3)</text><text x=\"200\" y=\"200\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">Linear x1 | Area x100 | Volume x1000</text></svg>"
+   },
+   {
+    "cap": "A bearing scale drawing example: Point B is located at a bearing of 060 degrees from North at A, with a scale of 1 cm representing 5 metres.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"60\" y1=\"180\" x2=\"60\" y2=\"110\" stroke=\"#64748b\" stroke-dasharray=\"4\" stroke-width=\"2\"/><text x=\"60\" y=\"100\" font-size=\"11\" text-anchor=\"middle\" fill=\"#64748b\">North</text><circle cx=\"60\" cy=\"180\" r=\"4\" fill=\"#1b2540\"/><text x=\"50\" y=\"195\" font-size=\"12\" fill=\"#1b2540\">A</text><path d=\"M60 150 A30 30 0 0 1 80 155\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"95\" y=\"150\" font-size=\"11\" fill=\"#2563eb\">060 deg</text><line x1=\"60\" y1=\"180\" x2=\"220\" y2=\"80\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"145\" y=\"120\" font-size=\"12\" fill=\"#1b2540\">8 cm (40 m real)</text><circle cx=\"220\" cy=\"80\" r=\"4\" fill=\"#1b2540\"/><text x=\"230\" y=\"80\" font-size=\"12\" fill=\"#1b2540\">B</text><text x=\"200\" y=\"215\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">Scale: 1 cm = 5 m</text></svg>"
+   },
+   {
+    "cap": "Compound unit conversion triangle: Speed equals Distance divided by Time. Cover the variable you want to find to reveal the formula.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><polygon points=\"200,30 100,180 300,180\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"3\"/><line x1=\"100\" y1=\"110\" x2=\"300\" y2=\"110\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"200\" y1=\"110\" x2=\"200\" y2=\"180\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"200\" y=\"80\" font-size=\"16\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#1b2540\">Distance</text><text x=\"150\" y=\"155\" font-size=\"16\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#1b2540\">Speed</text><text x=\"250\" y=\"155\" font-size=\"16\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#1b2540\">Time</text><text x=\"200\" y=\"215\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">Speed = Distance / Time</text></svg>"
+   }
+  ],
+  "pid": "maths_ocr_h.9.0",
+  "sid": "maths_ocr_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-20T18:39:28.077Z"
+ },
+ "maths_ocr_h.9.1": {
+  "summary": "Mastering perimeter calculations requires a rigorous understanding of linear boundaries, ranging from straightforward linear polygons to curved circular paths including circumferences and fractional arc lengths. At the Grade 9 level, examiners expect seamless handling of compound composite shapes, exact algebraic forms involving pi, and multi-step reverse problems where linear dimensions must be extracted from given areas or perimeters. Precision in retaining intermediate values and applying correct rounding is essential for full marks.",
+  "core": [
+   {
+    "h": "Basic Perimeter Principles",
+    "p": "Perimeter is the total continuous distance around the outside of a closed two-dimensional shape. For standard polygons, it is calculated by summing the lengths of all outer boundary sides.",
+    "bullets": [
+     "Always ensure all dimensions are converted to the same unit of length before adding.",
+     "Look out for missing side lengths that must be deduced using parallel side properties.",
+     "Perimeter is a one-dimensional measure, so units remain linear (e.g., cm, m)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Perimeter",
+      "p": "The continuous linear distance around the outer boundary of a closed two-dimensional figure."
+     },
+     {
+      "k": "warn",
+      "t": "Internal Lines",
+      "p": "Never add internal construction or grid lines when calculating the outer perimeter of a shape."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A rectilinear composite shape showing clearly labelled outer edge dimensions.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"50\" y=\"40\" width=\"300\" height=\"160\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><polygon points=\"50,40 200,10 350,40\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"190\" y=\"28\" fill=\"#1b2540\" font-size=\"12\">Base 300</text><text x=\"15\" y=\"125\" fill=\"#1b2540\" font-size=\"12\">Height 160</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Circle Circumference Formula",
+    "p": "The circumference of a circle is the linear distance around its outer edge. It is directly proportional to its diameter through the mathematical constant pi.",
+    "bullets": [
+     "The fundamental formula is C = pi * d, or equivalently C = 2 * pi * r.",
+     "Always use the calculator value of pi unless the question explicitly asks for an exact answer.",
+     "For exact answers, leave pi as a symbol in your final expression, such as 12pi cm."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Pi Constant",
+      "p": "Pi is the ratio of a circle's circumference to its diameter, approximately 3.14159."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Exact Form Calculations",
+    "p": "Grade 9 questions frequently require answers in exact form, avoiding decimal approximations until the very end, or retaining pi throughout.",
+    "bullets": [
+     "Treat pi like an algebraic variable such as x when combining like terms.",
+     "Multiply exact fractions of pi by simplifying numerators and denominators.",
+     "State units clearly alongside the exact pi notation, e.g., 14pi m."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exact Form",
+      "p": "If a non-calculator section or exact form is requested, never write 3.14 or 3.1416; keep pi."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Arc Length of a Sector",
+    "p": "An arc is a connected section of the circumference of a circle. The length of an arc depends on the angle subtended at the centre by its bounding radii.",
+    "bullets": [
+     "The formula for arc length is Arc Length = (theta / 360) * 2 * pi * r.",
+     "Here, theta represents the interior angle of the sector in degrees.",
+     "Ensure you identify whether the minor or major arc length is required."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Arc Length",
+      "p": "A fractional proportion of the total circumference of a circle, determined by its central angle."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A circular sector highlighting radius r and central angle theta.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><path d=\"M 200 120 L 320 120 A 120 120 0 0 0 140 20 Z\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"120\" r=\"4\" fill=\"#1b2540\"/><text x=\"240\" y=\"105\" fill=\"#1b2540\" font-size=\"12\">Radius r</text><text x=\"215\" y=\"135\" fill=\"#1b2540\" font-size=\"12\">theta</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Perimeter of Sectors and Semicircles",
+    "p": "The perimeter of a sector or semicircle is not just the arc length; it includes all straight edges making up the boundary.",
+    "bullets": [
+     "For a full sector with angle theta, perimeter = (theta / 360) * 2 * pi * r + 2 * r.",
+     "For a semicircle, perimeter = (pi * d / 2) + d, which simplifies to pi * r + 2 * r.",
+     "Always double-check if the bounding straight radii must be added to the curved arc."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Missing Straight Edges",
+      "p": "Forgetting to add the two straight radii when calculating the total perimeter of a sector is a very common exam error."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Composite Shapes Involving Circles",
+    "p": "Many advanced OCR questions combine rectilinear shapes with semicircles, quadrants, or custom circular arcs.",
+    "bullets": [
+     "Break the composite boundary down into clearly labelled linear segments and curved arcs.",
+     "Deduce hidden lengths using symmetry, parallel lines, or right-angled triangle properties.",
+     "Sum all distinct outer boundary components carefully to find the total perimeter."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Boundary Trace",
+      "p": "Trace the exact outer boundary with your pencil to ensure no internal lines are included and no outer sections are missed."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Perimeter from Area Reverse Problems",
+    "p": "Higher tier examinations often test your ability to work backwards from a given area to find the perimeter.",
+    "bullets": [
+     "Use the area formula (e.g., A = pi * r^2) to solve for the radius r.",
+     "Substitute the derived radius into the perimeter or circumference formula.",
+     "Retain full calculator accuracy during intermediate steps to prevent rounding errors."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Reverse Working",
+      "p": "Always find the fundamental radius or linear dimension first before attempting perimeter calculations from area."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Semicircular and Quadrant Combinations",
+    "p": "Complex shapes often feature multiple touching or overlapping circular components.",
+    "bullets": [
+     "Identify whether boundaries are shared internally and thus excluded from the outer perimeter.",
+     "Calculate individual arc lengths using standard fractional multipliers.",
+     "Combine simplified exact terms before converting to decimals."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Shared Edges",
+      "p": "Internal boundaries where shapes touch do not contribute to the outer perimeter."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Perimeter of Compound Rectilinear Shapes",
+    "p": "Rectilinear composite shapes require careful tracking of horizontal and vertical offsets.",
+    "bullets": [
+     "Sum of all horizontal projecting faces equals the total base width.",
+     "Sum of all vertical rising faces equals the total vertical height.",
+     "Use this symmetry rule to quickly find missing side lengths without full algebra."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Rectilinear Shape",
+      "p": "A polygon whose edges all meet at right angles."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Contextual Real-Life Applications",
+    "p": "Perimeter calculations appear in practical contexts such as fencing, running tracks, framing, and manufacturing tolerances.",
+    "bullets": [
+     "Pay close attention to rounding instructions, such as giving answers to an appropriate degree of accuracy.",
+     "Consider whether material needs to be bought in whole units or standard lengths.",
+     "Interpret contextual constraints correctly, such as ignoring gates or doorways."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Rounding Rules",
+      "p": "Always write down your unrounded calculator answer before writing your final rounded answer to secure method marks."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A running track shape composed of two straight parallel segments and two semicircular ends.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"100\" y=\"60\" width=\"200\" height=\"120\" fill=\"#fecaca\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M 100 60 A 60 60 0 0 0 100 180 Z\" fill=\"#fecaca\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M 300 180 A 60 60 0 0 0 300 60 Z\" fill=\"#fecaca\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"180\" y=\"125\" fill=\"#1b2540\" font-size=\"12\">Length 100m</text></svg>"
+     }
+    ]
+   }
+  ],
+  "analogy": {
+   "t": "The Running Track Fence Analogy",
+   "p": "Imagine walking along the exact outside edge of a running track or garden boundary. You are laying a continuous string along every outer turn and straightaway. If two garden plots share a fence in the middle, that middle fence is inside your property, so it does not count when you walk around the very outside edge. The analogy breaks down when dealing with exact pi values, as physical string cannot easily represent irrational numbers."
+  },
+  "terms": [
+   {
+    "t": "Perimeter",
+    "d": "The total continuous linear distance around the outside of a closed two-dimensional shape."
+   },
+   {
+    "t": "Circumference",
+    "d": "The linear distance around the outer boundary of a circle."
+   },
+   {
+    "t": "Arc",
+    "d": "A connected portion of the circumference of a circle."
+   },
+   {
+    "t": "Sector",
+    "d": "A region of a circle enclosed by two radii and their intercepted arc."
+   },
+   {
+    "t": "Pi",
+    "d": "The mathematical constant representing the ratio of a circle's circumference to its diameter."
+   },
+   {
+    "t": "Radius",
+    "d": "A straight line segment from the centre of a circle to any point on its circumference."
+   },
+   {
+    "t": "Diameter",
+    "d": "A straight line passing through the centre of a circle whose endpoints lie on the circumference."
+   },
+   {
+    "t": "Semicircle",
+    "d": "Half of a circle, bounded by a diameter and a semicircular arc."
+   },
+   {
+    "t": "Quadrant",
+    "d": "A quarter of a circle, bounded by two perpendicular radii and a 90-degree arc."
+   },
+   {
+    "t": "Exact Form",
+    "d": "An answer expressed using mathematical constants like pi or radicals without decimal rounding."
+   },
+   {
+    "t": "Rectilinear",
+    "d": "Formed by straight lines, typically meeting at right angles in polygon problems."
+   },
+   {
+    "t": "Subtend",
+    "d": "To extend under or span an angle, such as an arc subtending a central angle."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Using the area formula pi * r^2 when asked for circumference.",
+    "r": "Always use C = 2 * pi * r for linear boundary circumference calculations."
+   },
+   {
+    "w": "Forgetting to add the two straight radii when calculating the perimeter of a sector.",
+    "r": "Total sector perimeter is arc length plus two times the radius."
+   },
+   {
+    "w": "Adding internal construction lines into the perimeter calculation.",
+    "r": "Perimeter strictly includes only the external bounding edges of the composite shape."
+   },
+   {
+    "w": "Rounding intermediate steps too early in multi-step perimeter problems.",
+    "r": "Keep full calculator precision and only round the final stated answer."
+   },
+   {
+    "w": "Using diameter instead of radius (or vice versa) in circle formulas.",
+    "r": "Double-check whether the diagram gives the radius r or diameter d before calculating."
+   },
+   {
+    "w": "Incorrectly converting units of length to area units for perimeter.",
+    "r": "Perimeter is strictly one-dimensional, so units remain linear (cm, m, km)."
+   },
+   {
+    "w": "Treating pi as 3.14 when an exact answer in terms of pi is requested.",
+    "r": "Leave pi as the symbol pi in your final expression."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Calculate the exact circumference of a circle with a diameter of 14 cm.",
+    "marks": 2,
+    "model": [
+     "State formula C = pi * d",
+     "Substitute 14 to get 14pi cm"
+    ],
+    "tip": "Leave pi in the answer for exact form."
+   },
+   {
+    "q": "A semicircle has a radius of 6 cm. Calculate its total perimeter in terms of pi.",
+    "marks": 3,
+    "model": [
+     "Arc length is half circumference: pi * 6 = 6pi",
+     "Add diameter: 6pi + 12",
+     "Final exact perimeter is 6pi + 12 cm"
+    ],
+    "tip": "Do not forget the straight diameter edge."
+   },
+   {
+    "q": "Find the arc length of a sector with radius 10 cm and central angle 72 degrees. Give your answer to 1 decimal place.",
+    "marks": 3,
+    "model": [
+     "State formula (72 / 360) * 2 * pi * 10",
+     "Evaluate expression to get 12.566...",
+     "Round correctly to 12.6 cm"
+    ],
+    "tip": "Show unrounded decimal before final rounding."
+   },
+   {
+    "q": "The perimeter of a square is equal to the circumference of a circle. The square has a side length of 11 cm. Calculate the radius of the circle.",
+    "marks": 4,
+    "model": [
+     "Perimeter of square = 4 * 11 = 44 cm",
+     "Set circumference equal: 2 * pi * r = 44",
+     "Rearrange for r = 44 / (2 * pi)",
+     "Evaluate r = 7.00 cm"
+    ],
+    "tip": "Set up a clear equation equating the two boundary lengths."
+   },
+   {
+    "q": "A shape is made from a rectangle of length 12 cm and width 8 cm, surmounted by a semicircle on the 12 cm edge. Calculate the total perimeter of the shape.",
+    "marks": 4,
+    "model": [
+     "Identify outer straight edges: 8 + 12 + 8 = 28 cm",
+     "Calculate semicircular arc length: pi * 12 / 2 = 6pi cm",
+     "Sum total perimeter: 28 + 6pi",
+     "Evaluate to 46.8 cm"
+    ],
+    "tip": "Trace the outer boundary carefully to avoid missing the vertical sides of the rectangle."
+   },
+   {
+    "q": "An arc of a circle has length 5pi cm and subtends an angle of 50 degrees at the centre. Calculate the radius of the circle.",
+    "marks": 4,
+    "model": [
+     "Set up equation: (50 / 360) * 2 * pi * r = 5pi",
+     "Divide both sides by pi: (5 / 36) * 2 * r = 5",
+     "Simplify and solve for r",
+     "r = 18 cm"
+    ],
+    "tip": "Cancel pi from both sides early to simplify algebra."
+   },
+   {
+    "q": "A running track consists of two straight sections of 80 m and two semicircular ends of radius 35 m. Calculate the total perimeter of the track.",
+    "marks": 4,
+    "model": [
+     "Straight sections total = 2 * 80 = 160 m",
+     "Two semicircles form one full circle circumference: 2 * pi * 35 = 70pi",
+     "Total perimeter = 160 + 70pi",
+     "Evaluate to 379.9 m"
+    ],
+    "tip": "Recognise that two identical semicircles combine to make one full circle."
+   },
+   {
+    "q": "The area of a circle is 81pi cm^2. Calculate the exact circumference of the circle.",
+    "marks": 4,
+    "model": [
+     "Use area formula pi * r^2 = 81pi",
+     "Find radius r = 9 cm",
+     "Calculate circumference C = 2 * pi * 9",
+     "Final exact circumference = 18pi cm"
+    ],
+    "tip": "Work backwards from area to radius first."
+   },
+   {
+    "q": "A sector has radius 15 cm and perimeter 48 cm. Calculate the size of the central angle.",
+    "marks": 4,
+    "model": [
+     "Perimeter = arc length + 2 * 15 = 48",
+     "Arc length = 48 - 30 = 18 cm",
+     "Set up arc formula: (theta / 360) * 2 * pi * 15 = 18",
+     "Solve for theta to get 68.8 degrees"
+    ],
+    "tip": "Subtract the two straight radii from the total perimeter to find the arc length first."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Calculate the total perimeter of a sector of a circle with radius 12 cm and central angle 140 degrees. Give your answer to 1 decimal place.",
+    "steps": [
+     "Identify all components of the sector perimeter: one arc length and two straight radii.",
+     "Calculate the arc length using the formula: Arc Length = (140 / 360) * 2 * pi * 12.",
+     "Evaluate the arc length: (7 / 18) * 24 * pi = (28 / 3) * pi = 29.3215 cm.",
+     "Add the two straight radii: Perimeter = 29.3215 + 12 + 12 = 53.3215 cm.",
+     "Round to 1 decimal place to obtain the final answer."
+    ],
+    "ans": "53.3 cm"
+   },
+   {
+    "q": "A composite shape is formed by a square of side 10 cm with a semicircle attached to one of its sides pointing outwards. Calculate the total perimeter of this composite shape.",
+    "steps": [
+     "List all outer boundary segments: three sides of the square and one semicircular arc.",
+     "Three outer sides of the square: 3 * 10 = 30 cm.",
+     "The fourth side is covered by the semicircle attachment, so it is an internal boundary and excluded.",
+     "The diameter of the semicircle is equal to the side of the square, so d = 10 cm (radius r = 5 cm).",
+     "Calculate the semicircular arc length: (pi * 10) / 2 = 5pi = 15.7079 cm.",
+     "Sum the outer straight sides and the arc length: Perimeter = 30 + 15.7079 = 45.7079 cm.",
+     "Round appropriately to 45.7 cm."
+    ],
+    "ans": "45.7 cm"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Diagram of a sector showing radius 12 cm and central angle 140 degrees.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><path d=\"M 200 130 L 300 60 A 110 110 0 1 0 240 230 Z\" fill=\"#e9d5ff\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"130\" r=\"4\" fill=\"#1b2540\"/><text x=\"220\" y=\"100\" fill=\"#1b2540\" font-size=\"12\">Radius 12cm</text><text x=\"240\" y=\"150\" fill=\"#1b2540\" font-size=\"12\">140 degrees</text></svg>"
+   }
+  ],
+  "pid": "maths_ocr_h.9.1",
+  "sid": "maths_ocr_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-20T18:39:28.091Z"
  }
 }

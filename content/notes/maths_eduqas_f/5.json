@@ -1866,5 +1866,932 @@
   "src": "pre",
   "by": "gemini/gemini-flash-lite-latest",
   "ts": "2026-11-18T20:44:40.168Z"
+ },
+ "maths_eduqas_f.5.0": {
+  "summary": "Inferring properties of populations from samples allows statisticians to draw reliable conclusions about large groups without the cost, time, or impracticality of surveying every member in a full census. To ensure predictions are valid, samples must be representative and unbiased, commonly achieved using simple random sampling techniques. Small sample sizes or biased sampling locations lead to errors, so understanding both scaling calculations and sampling limitations is essential for accurate statistical analysis.",
+  "core": [
+   {
+    "h": "Population versus Sample: Basic Definitions",
+    "p": "In statistics, understanding the distinction between a population and a sample is fundamental. A population represents every single item or individual in a group, while a sample is a smaller subset selected from that population.",
+    "bullets": [
+     "**Population**: The complete set of all items, people, or measurements being studied (e.g., all students in a school, all lightbulbs produced in a factory).",
+     "**Sample**: A selection of items taken from the population to represent the whole group.",
+     "**Census**: An investigation that collects data from every single member of the population.",
+     "**Parameter**: A numerical value describing a characteristic of an entire population (e.g., the true population mean).",
+     "**Statistic**: A numerical value calculated from a sample, used to estimate the unknown population parameter."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Population and Sample",
+      "p": "A population is the entire group of individuals or items being studied. A sample is a selection of items taken from the population to represent the whole group."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Advantages and Disadvantages of Sampling",
+    "p": "While a census provides completely accurate information about an entire population, it is often impossible or impractical to conduct one. Sampling offers a practical alternative with distinct trade-offs.",
+    "bullets": [
+     "**Save Time and Money**: Collecting data from a sample takes significantly less time, labor, and financial resource than surveying an entire population.",
+     "**Practicality**: For very large or infinite populations (such as fish in a lake), taking a census is physically impossible.",
+     "**Destructive Testing**: If testing an item destroys it (e.g., testing crash safety of cars or lifetime of batteries), a census would destroy the entire stock.",
+     "**Limitation of Sampling**: Samples only provide estimates, not exact values, introducing **sampling error**.",
+     "**Risk of Bias**: A poorly chosen sample can give misleading results about the true population."
+    ],
+    "table": {
+     "head": [
+      "Feature",
+      "Census",
+      "Sample"
+     ],
+     "rows": [
+      [
+       "Definition",
+       "Data collected from every member of population",
+       "Data collected from a subset of population"
+      ],
+      [
+       "Accuracy",
+       "100% accurate (no sampling error)",
+       "Estimate (subject to sampling error)"
+      ],
+      [
+       "Cost & Time",
+       "High cost, takes a long time",
+       "Low cost, quick to complete"
+      ],
+      [
+       "Feasibility",
+       "Impractical for large/infinite groups",
+       "Practical for any group size"
+      ],
+      [
+       "Destructive Testing",
+       "Destroys entire population",
+       "Preserves main population"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Representative Samples and Unbiased Data",
+    "p": "To draw valid conclusions about a population, a sample must accurately reflect the characteristics of that population without favouring any specific group.",
+    "bullets": [
+     "**Representative Sample**: A sample that shares the same key characteristics and proportions as the population (e.g., age distribution, gender balance).",
+     "**Unbiased Sample**: A sample chosen using a method where every member of the population has an equal chance of selection.",
+     "**Generalisation**: You can only generalise sample results to the population if the sample is representative.",
+     "**Sampling Frame**: A complete list of all members of the population from which the sample is drawn (e.g., a school register, an employee database)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Unbiased Representative Sample",
+      "p": "For sample results to validly describe a population, every item in the population must have an equal chance of selection, ensuring the sample mirrors population characteristics."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Sources and Types of Sampling Bias",
+    "p": "Bias occurs when certain members of the population are more or less likely to be selected than others, leading to systematic errors in statistical estimates.",
+    "bullets": [
+     "**Convenience Sampling**: Choosing individuals who are easiest to reach (e.g., asking people outside a supermarket at 10 am). This excludes shift workers, students, and people shopping elsewhere.",
+     "**Voluntary Response Bias**: Asking people to self-select (e.g., online polls or phone-in surveys). Only people with strong opinions tend to respond.",
+     "**Time Bias**: Surveying at a specific time of day or year (e.g., asking commuters at 8 am ignores non-working groups).",
+     "**Location Bias**: Gathering data in one specific location (e.g., surveying people at a sports center about national exercise habits).",
+     "**Non-Response Bias**: Occurs when selected individuals refuse to participate or cannot be contacted."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "How to Conduct Simple Random Sampling",
+    "p": "Simple random sampling ensures that every individual in the population has an equal chance of being selected, eliminating researcher selection bias.",
+    "bullets": [
+     "**Step 1: Define the Sampling Frame**: Allocate a unique identifying number (e.g., 001 to 500) to every item or person on the population list.",
+     "**Step 2: Generate Random Numbers**: Use a random number generator, computer algorithm, or random number table to pick numbers.",
+     "**Alternative Physical Method**: Write all names/numbers on identical slips of paper, place them in a container, mix thoroughly, and draw without looking.",
+     "**Ignore Repeated Numbers**: If a random number generator produces a duplicate number, discard it and generate another until the required sample size is reached.",
+     "**Key Requirement**: Mixing thoroughly and ensuring identical slips is essential for true physical randomness."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam Procedure for Random Sampling",
+      "p": "When asked how to select a random sample: 1. Number the population list. 2. Use a random number generator. 3. Ignore duplicate numbers. 4. Match selected numbers back to the list."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "The Impact of Sample Size on Precision",
+    "p": "The size of a sample plays a vital role in determining how accurately the sample statistics reflect the true population parameters.",
+    "bullets": [
+     "**Larger Samples Give Better Estimates**: As sample size increases, the sample statistic gets closer to the true population parameter.",
+     "**Reduced Sampling Variability**: Larger samples reduce the distorting effect of anomalies or extreme values.",
+     "**Diminishing Returns**: Doubling sample size improves accuracy, but very large samples add extra cost for only small gains in precision.",
+     "**Too Small Samples**: A sample that is too small (e.g., surveying 5 people out of 1000) is unreliable because random variations dominate the results."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Scaling Up Sample Proportions to Populations",
+    "p": "One of the primary uses of sampling is estimating total quantities or counts within a whole population based on sample proportions.",
+    "bullets": [
+     "**Formula for Sample Relative Frequency / Proportion**: Proportion = (Number of successful outcomes in sample) / (Total sample size).",
+     "**Formula for Population Estimate**: Estimated Population Quantity = (Sample Proportion) * (Total Population Size).",
+     "**Alternative Equation**: Estimated Count = (Sample Count / Sample Size) * Population Size.",
+     "**Rounding**: Population estimates for discrete objects (people, animals, manufactured items) should be rounded to the nearest whole number unless specified.",
+     "**Assumption**: This calculation assumes the sample is fully representative of the whole population."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Don't Forget to Scale Up!",
+      "p": "A common mistake is calculating the sample proportion (e.g. 15/50 = 0.3) and leaving that as the final answer instead of multiplying by the total population size."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Estimating Population Means and Overall Totals",
+    "p": "Sample statistics such as the sample mean can be directly applied to estimate overall population characteristics.",
+    "bullets": [
+     "**Estimating Population Mean**: The mean of an unbiased sample serves as the best estimate for the mean of the entire population.",
+     "**Estimating Population Grand Total**: Population Total Estimate = Sample Mean * Total Population Size.",
+     "**Worked Example**: If 40 sampled trees have a mean height of 6.5 metres, an orchard of 800 trees is estimated to have a total height of 6.5 * 800 = 5200 metres.",
+     "**Key Assumption**: Assumes conditions across the sample apply uniformly across the rest of the population."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Estimating Population Sizes using Capture-Recapture",
+    "p": "Capture-recapture is a sampling technique used to estimate the size of mobile populations, such as wild animals or fish in a lake.",
+    "bullets": [
+     "**Step 1 (Capture & Tag)**: Catch a sample of size M, mark or tag them safely, and release them back into the population.",
+     "**Step 2 (Recapture)**: After allowing time for tagged animals to mix thoroughly, catch a second sample of size n.",
+     "**Step 3 (Count Tagged)**: Count the number of tagged animals m in the second sample.",
+     "**Equation**: Proportion tagged in sample 2 = Proportion tagged in total population -> m / n = M / N.",
+     "**Formula for Population Size (N)**: Estimated Total Population N = (M * n) / m.",
+     "**Key Assumptions**: No animals born, died, immigrated, or emigrated; tags do not fall off or affect survival; tagged animals mix completely randomly."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Capture-Recapture Formula",
+      "p": "N = (M * n) / m, where N is estimated total population, M is initial tagged sample, n is second sample size, and m is number of tagged items in second sample."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "How to Answer Exam Questions Criticising Samples",
+    "p": "Eduqas exam questions frequently ask you to evaluate a sampling plan and point out why it is biased or flawed.",
+    "bullets": [
+     "**Check Location**: Is the sample taken in a place that favours a specific group? (e.g., gym members asked about national fitness).",
+     "**Check Time**: Is the timing restrictive? (e.g., surveying at 11 am on a Tuesday excludes full-time workers).",
+     "**Check Sample Size**: Is the sample size too small to draw meaningful conclusions? (e.g., asking 10 people to represent a town of 20,000).",
+     "**Check Selection Method**: Was it voluntary? (e.g., 'text YES or NO' leads to self-selection bias).",
+     "**Always Suggest an Improvement**: State a concrete fix, such as 'Take a simple random sample using a numbered list' or 'Survey at different times of day'."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Testing a Pot of Soup",
+   "p": "To check if a large pot of vegetable soup is seasoned correctly, you do not need to drink the entire pot (a census); you take a single spoonful (a sample). For that single spoonful to tell you what the whole pot tastes like, the soup must be stirred thoroughly so the vegetables and salt are evenly distributed (a representative, random sample). If you only skim the unmixed cream floating at the top (convenience / biased sampling), your spoon will give a completely misleading idea of the whole pot. The analogy breaks down because soup is a continuous liquid that can be perfectly mixed into a homogeneous state, whereas human populations have complex individual variations and cannot be physically stirred together."
+  },
+  "terms": [
+   {
+    "t": "Population",
+    "d": "The complete set of all items, individuals, or measurements under statistical investigation."
+   },
+   {
+    "t": "Sample",
+    "d": "A subset of items or individuals selected from a population to represent the whole."
+   },
+   {
+    "t": "Census",
+    "d": "A survey or study that collects data from every single member of a population."
+   },
+   {
+    "t": "Sampling Frame",
+    "d": "A complete list of all members of the population used to select a sample."
+   },
+   {
+    "t": "Simple Random Sample",
+    "d": "A sampling method where every item in the population has an equal chance of being chosen."
+   },
+   {
+    "t": "Representative Sample",
+    "d": "A sample that shares key characteristics in the same proportions as the population."
+   },
+   {
+    "t": "Bias",
+    "d": "A systematic distortion in data or sampling that leads to inaccurate or unfair conclusions."
+   },
+   {
+    "t": "Convenience Sampling",
+    "d": "Selecting a sample based on ease of access, often producing biased results."
+   },
+   {
+    "t": "Voluntary Response Bias",
+    "d": "Bias resulting from individuals self-selecting into a sample, usually attracting extreme views."
+   },
+   {
+    "t": "Sampling Error",
+    "d": "The natural statistical difference between a sample estimate and the true population value."
+   },
+   {
+    "t": "Capture-Recapture",
+    "d": "A method used to estimate the total size of a mobile population using two marked samples."
+   },
+   {
+    "t": "Parameter",
+    "d": "A numerical summary measure that describes a characteristic of an entire population."
+   },
+   {
+    "t": "Statistic",
+    "d": "A numerical summary value calculated from sample data used to estimate a population parameter."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "A sample of 10 people is enough to represent the whole UK population.",
+    "r": "A sample size of 10 is far too small; small samples are unreliable as random variations dominate the results."
+   },
+   {
+    "w": "To pick a random sample, just stand on the high street and ask people who walk past.",
+    "r": "This is convenience sampling, which is biased because it excludes people at work, school, or shopping elsewhere."
+   },
+   {
+    "w": "When scaling up, state that 15 out of 50 defective items means there will be 15 defective items in 1000.",
+    "r": "Multiply the sample proportion (15/50 = 0.3) by the total population size: 0.3 * 1000 = 300 defective items."
+   },
+   {
+    "w": "If a random number generator picks number 14 twice, select person 14 twice.",
+    "r": "Ignore repeated numbers when selecting individuals without replacement to ensure distinct sample members."
+   },
+   {
+    "w": "A census is always worse than a sample because it takes too long.",
+    "r": "A census is 100% accurate because it eliminates sampling error; it is only disadvantageous due to cost, time, or impracticality."
+   },
+   {
+    "w": "In capture-recapture, calculate N = M + n - m.",
+    "r": "The capture-recapture estimate uses proportional scaling: N = (M * n) / m."
+   },
+   {
+    "w": "Sampling error means someone made a calculation mistake.",
+    "r": "Sampling error is the natural variance between a sample estimate and the true population parameter."
+   },
+   {
+    "w": "Putting a survey on the school website ensures everyone answers fairly.",
+    "r": "Online voluntary surveys suffer from self-selection bias, as only interested students respond."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Define what is meant by a 'population' in statistics.",
+    "marks": 1,
+    "model": [
+     "The complete set of all items or individuals being studied."
+    ],
+    "tip": "Do not just give an example like 'people'; define it as the entire group under investigation."
+   },
+   {
+    "q": "Give one advantage and one disadvantage of using a sample rather than a census.",
+    "marks": 2,
+    "model": [
+     "Advantage: Takes less time / is cheaper / easier to collect data.",
+     "Disadvantage: Gives an estimate rather than exact data / subject to sampling error."
+    ],
+    "tip": "Keep advantages focused on time/cost/practicality and disadvantages on accuracy/bias."
+   },
+   {
+    "q": "A school has 800 students. Describe how to select a simple random sample of 40 students.",
+    "marks": 2,
+    "model": [
+     "Assign each student a unique number from 1 to 800 (using a sampling frame/register).",
+     "Use a random number generator to select 40 unique numbers, ignoring any duplicate numbers."
+    ],
+    "tip": "Always mention numbering the list, using a random generator, and ignoring duplicates."
+   },
+   {
+    "q": "A lightbulb factory tests a sample of 150 bulbs from a batch of 6000. They find 9 defective bulbs. Estimate the total number of defective bulbs in the batch.",
+    "marks": 2,
+    "model": [
+     "Sample proportion = 9 / 150 = 0.06",
+     "Estimated defective = 0.06 * 6000 = 360 lightbulbs."
+    ],
+    "tip": "Show the relative frequency fraction clearly before multiplying by the batch size."
+   },
+   {
+    "q": "Sarah wants to find out how much time teenagers spend reading. She surveys 20 pupils outside the school library at 3:30 pm. Give two reasons why her sample may be biased.",
+    "marks": 2,
+    "model": [
+     "Location bias: pupils outside a library are more likely to enjoy reading than average teenagers.",
+     "Sample size bias: a sample of 20 pupils is too small to represent all teenagers."
+    ],
+    "tip": "Identify specific features of her methodology (library location, tiny sample size) and explain why they distort the data."
+   },
+   {
+    "q": "A farmer tests 50 apples from an orchard of 2500 trees. The mean weight of the sampled apples is 140 g. Estimate the total mass of apples in the orchard (assuming 1 apple per tree). State one assumption made.",
+    "marks": 3,
+    "model": [
+     "Estimated total mass = 140 g * 2500 = 350,000 g (or 350 kg).",
+     "Assumption: The sample of 50 apples is representative of all apples in the orchard."
+    ],
+    "tip": "Include units in your calculation step and clearly state the representativeness assumption."
+   },
+   {
+    "q": "Describe how the capture-recapture method can be used to estimate the number of fish in a lake.",
+    "marks": 3,
+    "model": [
+     "Catch a sample of fish, tag/mark them safely, and release them back into the lake.",
+     "Allow time for tagged fish to mix thoroughly with the rest of the population.",
+     "Catch a second sample of fish, count the total caught (n) and the number of tagged fish (m), then use N = (M * n) / m."
+    ],
+    "tip": "List the key sequence: capture and tag, release and mix, recapture and calculate."
+   },
+   {
+    "q": "A biologist catches and tags 45 beetles in a wood. A week later, she catches 60 beetles and finds 9 of them are tagged. Calculate an estimate for the population of beetles in the wood. State one assumption.",
+    "marks": 4,
+    "model": [
+     "Identify values: M = 45, n = 60, m = 9.",
+     "Use formula: N = (M * n) / m = (45 * 60) / 9.",
+     "Calculate: N = 2700 / 9 = 300 beetles.",
+     "Assumption: The population of beetles did not change (no births, deaths, or migration) between samples."
+    ],
+    "tip": "Write out the capture-recapture formula explicitly before substituting numbers."
+   },
+   {
+    "q": "A student wants to investigate screen time among 15-year-olds in Wales. He posts an online poll on his social media account. Evaluate this plan by giving two criticisms and suggesting two improvements.",
+    "marks": 4,
+    "model": [
+     "Criticism 1: Voluntary response bias (only followers with strong views or active social media users respond).",
+     "Criticism 2: Unrepresentative location/group (only his personal friends, not a random sample across Wales).",
+     "Improvement 1: Obtain a random sample of schools across Wales using a sampling frame.",
+     "Improvement 2: Use simple random sampling within selected schools to ensure representative coverage."
+    ],
+    "tip": "Structure your answer by directly linking each criticism with a constructive improvement."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A Quality Assurance manager inspects a shipment of 4500 electronic components. She takes a sample of 120 components and finds that 8 are faulty. \na) Estimate the total number of faulty components in the entire shipment.\nb) State one assumption you made in your calculation.",
+    "steps": [
+     "Step 1: Calculate the proportion of faulty items in the sample.",
+     "Sample proportion = 8 / 120 = 1 / 15 = 0.0666...",
+     "Step 2: Scale up the sample proportion to the total population of 4500.",
+     "Estimated faulty components = (8 / 120) * 4500 = 8 * 37.5 = 300.",
+     "Step 3: State a valid statistical assumption.",
+     "Assumption: The sample of 120 components is representative of the whole shipment of 4500."
+    ],
+    "ans": "a) 300 faulty components\nb) The sample of 120 components is representative of the entire shipment."
+   },
+   {
+    "q": "An ecologist wants to estimate the total population of ducks on a lake. \nOn Monday, he catches 40 ducks, tags them, and releases them.\nOn Thursday, he catches 50 ducks and finds that 8 of them have tags.\na) Calculate an estimate for the total duck population.\nb) Give two reasons why this estimate might be inaccurate.",
+    "steps": [
+     "Step 1: Identify the values for the capture-recapture formula N = (M * n) / m.",
+     "M (initial tagged sample) = 40",
+     "n (second sample size) = 50",
+     "m (tagged in second sample) = 8",
+     "Step 2: Substitute values into the formula.",
+     "N = (40 * 50) / 8 = 2000 / 8 = 250",
+     "Step 3: Identify potential limitations/reasons for inaccuracy.",
+     "Reason 1: Tags may have fallen off between Monday and Thursday.",
+     "Reason 2: Ducks may have flown away (emigrated) or new ducks arrived (immigrated)."
+    ],
+    "ans": "a) Estimated population = 250 ducks\nb) Reason 1: Tags could have fallen off. Reason 2: Ducks may have left or joined the lake."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Figure 1: Visual representation of selecting a small sample subset (n = 30) from a large population (N = 500).",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#1b2540\" stroke-width=\"2\"/><ellipse cx=\"140\" cy=\"120\" rx=\"110\" ry=\"85\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"140\" y=\"55\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">Population (N = 500)</text><circle cx=\"80\" cy=\"90\" r=\"4\" fill=\"#1b2540\"/><circle cx=\"110\" cy=\"140\" r=\"4\" fill=\"#1b2540\"/><circle cx=\"160\" cy=\"95\" r=\"4\" fill=\"#1b2540\"/><circle cx=\"180\" cy=\"150\" r=\"4\" fill=\"#1b2540\"/><circle cx=\"95\" cy=\"165\" r=\"4\" fill=\"#1b2540\"/><circle cx=\"130\" cy=\"100\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"150\" cy=\"130\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"120\" cy=\"160\" r=\"4\" fill=\"#2563eb\"/><path d=\"M 230 120 L 270 120\" stroke=\"#1b2540\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><defs><marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#1b2540\"/></marker></defs><text x=\"250\" y=\"110\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Select</text><circle cx=\"330\" cy=\"120\" r=\"45\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"330\" y=\"65\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">Sample (n = 30)</text><circle cx=\"320\" cy=\"110\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"340\" cy=\"125\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"325\" cy=\"135\" r=\"4\" fill=\"#2563eb\"/><text x=\"330\" y=\"185\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Subset of Population</text><text x=\"140\" y=\"218\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Entire Group Being Studied</text></svg>"
+   },
+   {
+    "cap": "Figure 2: Contrast between an unbiased, representative sample and a biased sample over-representing one group.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"25\" y=\"30\" width=\"165\" height=\"180\" rx=\"8\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"107\" y=\"52\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">Unbiased Sample</text><circle cx=\"60\" cy=\"85\" r=\"8\" fill=\"#2563eb\"/><rect x=\"95\" y=\"77\" width=\"14\" height=\"14\" fill=\"#dc2626\"/><polygon points=\"145,77 153,92 137,92\" fill=\"#ca8a04\"/><circle cx=\"70\" cy=\"125\" r=\"8\" fill=\"#2563eb\"/><rect x=\"110\" y=\"117\" width=\"14\" height=\"14\" fill=\"#dc2626\"/><polygon points=\"140,117 148,132 132,132\" fill=\"#ca8a04\"/><text x=\"107\" y=\"170\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Fair Representation</text><text x=\"107\" y=\"190\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">All groups selected equally</text><rect x=\"210\" y=\"30\" width=\"165\" height=\"180\" rx=\"8\" fill=\"#fecaca\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"292\" y=\"52\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">Biased Sample</text><circle cx=\"245\" cy=\"85\" r=\"8\" fill=\"#2563eb\"/><circle cx=\"280\" cy=\"85\" r=\"8\" fill=\"#2563eb\"/><circle cx=\"315\" cy=\"85\" r=\"8\" fill=\"#2563eb\"/><circle cx=\"260\" cy=\"125\" r=\"8\" fill=\"#2563eb\"/><circle cx=\"295\" cy=\"125\" r=\"8\" fill=\"#2563eb\"/><rect x=\"330\" y=\"117\" width=\"14\" height=\"14\" fill=\"#dc2626\"/><text x=\"292\" y=\"170\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Unfair Representation</text><text x=\"292\" y=\"190\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">One group over-represented</text></svg>"
+   },
+   {
+    "cap": "Figure 3: Step-by-step process for conducting simple random sampling using numbered lists and random generators.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"25\" y=\"30\" width=\"105\" height=\"160\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"77\" y=\"52\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">Step 1: List</text><text x=\"77\" y=\"75\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">001 - Alex</text><text x=\"77\" y=\"95\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">002 - Beth</text><text x=\"77\" y=\"115\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">003 - Carl</text><text x=\"77\" y=\"135\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">...</text><text x=\"77\" y=\"155\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">100 - Zadie</text><text x=\"77\" y=\"180\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Assign Numbers</text><rect x=\"147\" y=\"30\" width=\"105\" height=\"160\" rx=\"6\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"200\" y=\"52\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">Step 2: Generate</text><rect x=\"162\" y=\"70\" width=\"75\" height=\"35\" rx=\"4\" fill=\"#ffffff\" stroke=\"#1b2540\"/><text x=\"200\" y=\"92\" font-size=\"13\" font-weight=\"bold\" fill=\"#2563eb\" text-anchor=\"middle\">003, 042, ...</text><text x=\"200\" y=\"130\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Random Generator</text><text x=\"200\" y=\"150\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">or Draw from Hat</text><text x=\"200\" y=\"180\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Ignore Duplicates</text><rect x=\"270\" y=\"30\" width=\"105\" height=\"160\" rx=\"6\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"322\" y=\"52\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">Step 3: Match</text><text x=\"322\" y=\"85\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">003 -&gt; Carl</text><text x=\"322\" y=\"110\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">042 -&gt; David</text><text x=\"322\" y=\"150\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Selected Sample</text><text x=\"322\" y=\"180\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Unbiased Group</text></svg>"
+   },
+   {
+    "cap": "Figure 4: The 3-stage process of the Capture-Recapture method for estimating animal populations.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"25\" y=\"30\" width=\"105\" height=\"130\" rx=\"6\" fill=\"#e9d5ff\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"77\" y=\"52\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">1. Tag (M)</text><circle cx=\"60\" cy=\"85\" r=\"7\" fill=\"#ca8a04\"/><circle cx=\"95\" cy=\"85\" r=\"7\" fill=\"#ca8a04\"/><circle cx=\"77\" cy=\"115\" r=\"7\" fill=\"#ca8a04\"/><text x=\"77\" y=\"145\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Catch &amp; Tag M</text><rect x=\"147\" y=\"30\" width=\"105\" height=\"130\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"200\" y=\"52\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">2. Release</text><circle cx=\"175\" cy=\"85\" r=\"7\" fill=\"#ca8a04\"/><circle cx=\"225\" cy=\"85\" r=\"7\" fill=\"#1b2540\"/><circle cx=\"200\" cy=\"115\" r=\"7\" fill=\"#1b2540\"/><text x=\"200\" y=\"145\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Mix Thoroughly</text><rect x=\"270\" y=\"30\" width=\"105\" height=\"130\" rx=\"6\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"322\" y=\"52\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">3. Recapture (n)</text><circle cx=\"300\" cy=\"85\" r=\"7\" fill=\"#ca8a04\"/><circle cx=\"344\" cy=\"85\" r=\"7\" fill=\"#1b2540\"/><circle cx=\"322\" cy=\"115\" r=\"7\" fill=\"#1b2540\"/><text x=\"322\" y=\"145\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">m tagged out of n</text><rect x=\"40\" y=\"175\" width=\"320\" height=\"40\" rx=\"6\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"200\" y=\"200\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">Estimated Total N = (M * n) / m</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_f.5.0",
+  "sid": "maths_eduqas_f",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.6-flash",
+  "ts": "2026-11-20T17:20:55.061Z"
+ },
+ "maths_eduqas_f.5.3": {
+  "summary": "Comparing distributions requires analysing two distinct characteristics of data sets: a measure of central tendency (average) and a measure of variation (spread). In Eduqas Foundation GCSE Maths, full marks are awarded when students explicitly compare an average (mean, median, or mode) and the range in the context of the problem, using comparative language and precise calculated values. Students must also recognize how extreme values, known as outliers, distort the mean and range while leaving the median relatively unaffected.",
+  "core": [
+   {
+    "h": "The Golden Rule of Distribution Comparisons",
+    "p": "When comparing two statistical distributions in an exam, Eduqas mark schemes strictly require a **two-part comparative statement**. You must compare one measure of average and one measure of spread, always linking your conclusions directly to the real-world context of the data.",
+    "bullets": [
+     "**Part 1: Measure of Central Tendency (Average)** — Compare the mean, median, or mode to state which group performed 'better', 'higher', or 'faster' overall.",
+     "**Part 2: Measure of Spread** — Compare the range to state which group was 'more consistent' or 'more variable'.",
+     "**Context Requirement** — Every comparison must explicitly mention the subject matter (e.g., 'test scores', 'reaction times in seconds', 'heights in cm').",
+     "**Numerical Support** — Always state the calculated values alongside your comparative words (e.g., 'Group A has a higher mean of 15 compared to Group B's mean of 12')."
+    ],
+    "table": {
+     "head": [
+      "Component",
+      "Statistical Measure Used",
+      "Interpretation Word to Use"
+     ],
+     "rows": [
+      [
+       "Central Tendency",
+       "Mean or Median",
+       "Higher / Lower / On average better"
+      ],
+      [
+       "Spread",
+       "Range",
+       "More consistent / Less consistent / More varied"
+      ],
+      [
+       "Most Common Value",
+       "Mode",
+       "Most frequent / Most popular"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "The 2-Mark Standard Rule",
+      "p": "In Eduqas exams, 1 mark is awarded for comparing an average in context, and 1 mark is awarded for comparing the range in context. Simply writing calculated values without comparative words like 'higher' or 'more consistent' will lose marks."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Averages: Mean, Median, and Mode",
+    "p": "An average is a single representative value that summarizes an entire data set. Selecting the correct average depends on the type of data and whether extreme values are present.",
+    "bullets": [
+     "**Mean** = (Sum of all values) ÷ (Total number of values). It uses all data items but is easily pulled off-centre by extreme values.",
+     "**Median** = The middle value when the data is ordered from smallest to largest. For $n$ items, the position is $\\frac{n+1}{2}$. It is not affected by outliers.",
+     "**Mode** = The most frequently occurring item or class. Useful for categorical data (e.g., shoe size, favourite colour).",
+     "**Choosing the best average**: Use the median when there are extreme outliers; use the mean when data is evenly spread without extreme values."
+    ],
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Definitions of Averages",
+      "p": "Mean: The arithmetic balance point of a data set. Median: The middle score in an ordered list. Mode: The score with the highest frequency."
+     },
+     {
+      "k": "warn",
+      "t": "Even Number of Data Points",
+      "p": "When finding the median of an even number of values, add the two central values together and divide by 2."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Measuring Variation: The Range",
+    "p": "The range measures the total spread or variability of a data set. It is calculated by taking the difference between the largest value and the smallest value.",
+    "bullets": [
+     "**Formula**: $\\text{Range} = \\text{Maximum Value} - \\text{Minimum Value}$.",
+     "**Smaller Range** means the data is **more consistent**, **more predictable**, or **less varied**.",
+     "**Larger Range** means the data is **less consistent**, **less predictable**, or **more varied**.",
+     "**Common Misconception**: Range is a measure of spread, NOT an average. Never call the range an average."
+    ],
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam Phrasing for Range",
+      "p": "Always connect a smaller range to the word **consistent**. For example: 'Class 10A has a smaller range of 5 compared to 12, so 10A's marks are more consistent.'"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Outliers and Their Impact on Distributions",
+    "p": "An outlier is an extreme data value that lies an unusually large distance away from the rest of the values in a data set. Outliers can arise from measurement errors or genuine rare events.",
+    "bullets": [
+     "**Impact on Range**: An outlier dramatically increases the range, making the data appear far less consistent than it actually is.",
+     "**Impact on Mean**: An outlier distorts the mean by pulling it towards the extreme value (higher for high outliers, lower for low outliers).",
+     "**Impact on Median**: The median remains **unchanged or virtually unaffected** by outliers because position does not depend on extreme values.",
+     "**Decision Making**: When a data set contains an outlier, the **median** is the most reliable average to represent the distribution."
+    ],
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Outlier Definition",
+      "p": "An outlier is a data value that is significantly higher or lower than the rest of the data in a distribution."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Figure 1: Demonstration of how a high outlier pulls the mean significantly to the right, while leaving the median centered near the bulk of the data.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><text x=\"200\" y=\"25\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">Impact of Outlier on Averages</text><line x1=\"30\" y1=\"130\" x2=\"370\" y2=\"130\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"50\" y1=\"125\" x2=\"50\" y2=\"135\" stroke=\"#64748b\"/><text x=\"50\" y=\"150\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">10</text><line x1=\"100\" y1=\"125\" x2=\"100\" y2=\"135\" stroke=\"#64748b\"/><text x=\"100\" y=\"150\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">12</text><line x1=\"150\" y1=\"125\" x2=\"150\" y2=\"135\" stroke=\"#64748b\"/><text x=\"150\" y=\"150\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">14</text><line x1=\"200\" y1=\"125\" x2=\"200\" y2=\"135\" stroke=\"#64748b\"/><text x=\"200\" y=\"150\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">16</text><line x1=\"350\" y1=\"125\" x2=\"350\" y2=\"135\" stroke=\"#64748b\"/><text x=\"350\" y=\"150\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">50</text><circle cx=\"50\" cy=\"115\" r=\"5\" fill=\"#2563eb\"/><circle cx=\"95\" cy=\"115\" r=\"5\" fill=\"#2563eb\"/><circle cx=\"105\" cy=\"115\" r=\"5\" fill=\"#2563eb\"/><circle cx=\"150\" cy=\"115\" r=\"5\" fill=\"#2563eb\"/><circle cx=\"350\" cy=\"115\" r=\"5\" fill=\"#dc2626\"/><text x=\"350\" y=\"95\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" text-anchor=\"middle\">Outlier (50)</text><path d=\"M 100,165 L 100,180\" stroke=\"#16a34a\" stroke-width=\"2\"/><rect x=\"60\" y=\"185\" width=\"80\" height=\"22\" fill=\"#dcfce7\" rx=\"3\"/><text x=\"100\" y=\"200\" font-size=\"11\" fill=\"#15803d\" text-anchor=\"middle\">Median = 12</text><path d=\"M 200,165 L 200,180\" stroke=\"#dc2626\" stroke-width=\"2\"/><rect x=\"160\" y=\"185\" width=\"80\" height=\"22\" fill=\"#fee2e2\" rx=\"3\"/><text x=\"200\" y=\"200\" font-size=\"11\" fill=\"#b91c1c\" text-anchor=\"middle\">Mean = 20.4</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Comparing Dual (Comparative) Bar Charts",
+    "p": "Dual bar charts display two sets of discrete or categorical data side-by-side for each category, allowing direct visual and numerical comparisons.",
+    "bullets": [
+     "**Reading Heights**: Compare bar heights category by category to identify differences.",
+     "**Comparing Modes**: Identify which category has the tall bar for each group (modal category).",
+     "**Calculating Totals**: Add up bar heights across all categories to compare total group sizes or total occurrences.",
+     "**Key Feature**: Dual bar charts must always feature a clear key distinguishing the two groups (e.g., shading or colour)."
+    ],
+    "fig": [
+     {
+      "cap": "Figure 2: Dual bar chart comparing student performance in three subjects between Class A and Class B.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><line x1=\"50\" y1=\"200\" x2=\"370\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"30\" x2=\"50\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"40\" y=\"204\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"end\">0</text><text x=\"40\" y=\"160\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"end\">5</text><text x=\"40\" y=\"116\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"end\">10</text><text x=\"40\" y=\"72\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"end\">15</text><text x=\"40\" y=\"32\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"end\">20</text><rect x=\"70\" y=\"80\" width=\"25\" height=\"120\" fill=\"#3b82f6\" rx=\"2\"/><rect x=\"97\" y=\"115\" width=\"25\" height=\"85\" fill=\"#f59e0b\" rx=\"2\"/><text x=\"96\" y=\"216\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Maths</text><rect x=\"160\" y=\"58\" width=\"25\" height=\"142\" fill=\"#3b82f6\" rx=\"2\"/><rect x=\"187\" y=\"93\" width=\"25\" height=\"107\" fill=\"#f59e0b\" rx=\"2\"/><text x=\"186\" y=\"216\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Science</text><rect x=\"250\" y=\"102\" width=\"25\" height=\"98\" fill=\"#3b82f6\" rx=\"2\"/><rect x=\"277\" y=\"47\" width=\"25\" height=\"153\" fill=\"#f59e0b\" rx=\"2\"/><text x=\"276\" y=\"216\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">English</text><rect x=\"280\" y=\"15\" width=\"12\" height=\"12\" fill=\"#3b82f6\"/><text x=\"297\" y=\"25\" font-size=\"11\" fill=\"#1b2540\">Class A</text><rect x=\"340\" y=\"15\" width=\"12\" height=\"12\" fill=\"#f59e0b\"/><text x=\"357\" y=\"25\" font-size=\"11\" fill=\"#1b2540\">Class B</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Back-to-Back Stem-and-Leaf Diagrams",
+    "p": "Back-to-back stem-and-leaf diagrams share a central column of stems with leaves extending to the left for Group A and to the right for Group B. They preserve original raw data while displaying distribution shapes.",
+    "bullets": [
+     "**Reading Order**: Read Group B leaves normally from left to right (e.g., stem 2 | leaf 3 = 23). Read Group A leaves backwards from right to left (e.g., leaf 5 | stem 1 = 15).",
+     "**Ordering Leaves**: Leaves must be in ascending order moving outwards from the central stem on both sides.",
+     "**Finding Median**: Count in from smallest to largest value on each side independently.",
+     "**Mandatory Key**: Must state a key representing values from both sides (e.g., '5 | 1 | 2 means 15 for Team Alpha and 12 for Team Beta')."
+    ],
+    "fig": [
+     {
+      "cap": "Figure 3: Back-to-back stem-and-leaf diagram comparing score distributions of Team Alpha and Team Beta.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><text x=\"100\" y=\"30\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\" text-anchor=\"middle\">Team Alpha</text><text x=\"200\" y=\"30\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">Stem</text><text x=\"300\" y=\"30\" font-size=\"12\" font-weight=\"bold\" fill=\"#065f46\" text-anchor=\"middle\">Team Beta</text><line x1=\"170\" y1=\"40\" x2=\"170\" y2=\"185\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"230\" y1=\"40\" x2=\"230\" y2=\"185\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"150\" y=\"65\" font-size=\"12\" fill=\"#1e40af\" text-anchor=\"end\">9  8  5</text><text x=\"200\" y=\"65\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">1</text><text x=\"250\" y=\"65\" font-size=\"12\" fill=\"#065f46\" text-anchor=\"start\">2  4  7  9</text><text x=\"150\" y=\"95\" font-size=\"12\" fill=\"#1e40af\" text-anchor=\"end\">7  4  2  0</text><text x=\"200\" y=\"95\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">2</text><text x=\"250\" y=\"95\" font-size=\"12\" fill=\"#065f46\" text-anchor=\"start\">1  3  3  8</text><text x=\"150\" y=\"125\" font-size=\"12\" fill=\"#1e40af\" text-anchor=\"end\">6  3  1</text><text x=\"200\" y=\"125\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">3</text><text x=\"250\" y=\"125\" font-size=\"12\" fill=\"#065f46\" text-anchor=\"start\">0  5  6</text><text x=\"150\" y=\"155\" font-size=\"12\" fill=\"#1e40af\" text-anchor=\"end\">2</text><text x=\"200\" y=\"155\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">4</text><text x=\"250\" y=\"155\" font-size=\"12\" fill=\"#065f46\" text-anchor=\"start\">1</text><rect x=\"60\" y=\"195\" width=\"280\" height=\"32\" fill=\"#e2e8f0\" rx=\"4\"/><text x=\"200\" y=\"216\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Key: 5 | 1 | 2 means 15 for Alpha and 12 for Beta</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Comparing Line Graphs and Time Series",
+    "p": "Time series and line graphs track data values changes over time across two distributions, allowing comparison of trends, seasonality, and overall rates of change.",
+    "bullets": [
+     "**Overall Trend**: State whether lines are rising (increasing trend) or falling (decreasing trend) over time.",
+     "**Vertical Position**: A line that remains consistently above another indicates a higher average outcome throughout the time period.",
+     "**Fluctuation (Spread)**: A line with steep peaks and troughs has a higher range and lower consistency than a flatter line.",
+     "**Points of Intersection**: Note specific times where values equalise or one group overtakes another."
+    ],
+    "fig": [
+     {
+      "cap": "Figure 4: Time series line graph comparing daily sales for Shop A and Shop B over five days.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><line x1=\"45\" y1=\"190\" x2=\"370\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"45\" y1=\"30\" x2=\"45\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"38\" y=\"194\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"end\">0</text><text x=\"38\" y=\"145\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"end\">50</text><text x=\"38\" y=\"95\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"end\">100</text><text x=\"38\" y=\"45\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"end\">150</text><text x=\"80\" y=\"210\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Mon</text><text x=\"150\" y=\"210\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Tue</text><text x=\"220\" y=\"210\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Wed</text><text x=\"290\" y=\"210\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Thu</text><text x=\"360\" y=\"210\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Fri</text><polyline points=\"80,150 150,110 220,130 290,70 360,50\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><polyline points=\"80,90 150,95 220,85 290,90 360,88\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"3\" stroke-dasharray=\"4\"/><line x1=\"250\" y1=\"20\" x2=\"275\" y2=\"20\" stroke=\"#2563eb\" stroke-width=\"3\"/><text x=\"282\" y=\"24\" font-size=\"11\" fill=\"#1b2540\">Shop A</text><line x1=\"330\" y1=\"20\" x2=\"355\" y2=\"20\" stroke=\"#16a34a\" stroke-width=\"3\" stroke-dasharray=\"4\"/><text x=\"362\" y=\"24\" font-size=\"11\" fill=\"#1b2540\">Shop B</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Calculating Averages from Discrete Frequency Tables",
+    "p": "When distributions are presented in frequency tables, averages must be calculated using table-specific procedures.",
+    "bullets": [
+     "**Mode**: The data value $x$ corresponding to the **highest frequency** $f$. Do not report the frequency itself as the mode.",
+     "**Mean**: Calculate $\\text{Mean} = \\frac{\\sum (f \\times x)}{\\sum f}$. Add an extra column $f \\times x$, sum it, and divide by total frequency.",
+     "**Median Position**: Use cumulative frequency to find the $\\frac{n+1}{2}$ th score position.",
+     "**Range from Table**: $\\text{Maximum } x \\text{ value} - \\text{Minimum } x \\text{ value}$ (ignore frequencies when identifying max and min values)."
+    ],
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Common Table Mean Errors",
+      "p": "Dividing $\\sum (f \\times x)$ by the number of rows instead of the total frequency $\\sum f$ is a major mark-losing error!"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Structuring 4-Mark Comparison Answers in Exams",
+    "p": "Eduqas 4-mark comparison questions require a clear, structured response containing exact calculations and precise written conclusions.",
+    "bullets": [
+     "**Step 1**: Calculate the average (mean or median) for Group A and Group B. Show working.",
+     "**Step 2**: Calculate the range for Group A and Group B. Show working.",
+     "**Step 3**: Write Comparison Sentence 1 (Average): State which group has a higher average, quote both figures, and link to context.",
+     "**Step 4**: Write Comparison Sentence 2 (Spread): State which group has a smaller range, quote both figures, and state that this group is more consistent."
+    ],
+    "table": {
+     "head": [
+      "Mark Point",
+      "Requirement",
+      "Model Sentence Example"
+     ],
+     "rows": [
+      [
+       "M1",
+       "Correct Averages",
+       "Mean A = 14.5, Mean B = 11.2"
+      ],
+      [
+       "M1",
+       "Correct Ranges",
+       "Range A = 6, Range B = 10"
+      ],
+      [
+       "A1",
+       "Contextual Average Comparison",
+       "Group A has a higher mean test score (14.5 > 11.2), so Group A performed better."
+      ],
+      [
+       "A1",
+       "Contextual Spread Comparison",
+       "Group A has a smaller range of test scores (6 < 10), so Group A's scores are more consistent."
+      ]
+     ]
+    },
+    "fig": []
+   },
+   {
+    "h": "Handling Data Sets of Unequal Sizes",
+    "p": "Comparing distributions when one group has significantly more total items than another requires care regarding raw frequencies versus percentages or averages.",
+    "bullets": [
+     "**Do NOT compare raw frequencies** directly if sample sizes differ.",
+     "**Use Averages (Mean/Median)**: Averages normalize data across different sample sizes.",
+     "**Use Proportions/Percentages**: Compare relative frequencies rather than raw counts.",
+     "**Range Validity**: Range remains valid for comparing spread even with unequal sample sizes, provided sample sizes are reasonably representative."
+    ],
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Unequal Group Size Warning",
+      "p": "If Group X has 100 people and Group Y has 20 people, saying 'Group X has more people who scored 10' is invalid. Compare percentages or means instead."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Evaluating Data Integrity & Excluding Outliers",
+    "p": "Statisticians must decide whether an outlier is a recorded error (e.g., typing '180' instead of '18') or a true reflection of population variability.",
+    "bullets": [
+     "**Data Error**: If a score of 105% is recorded on a 100% test, it is impossible and should be removed.",
+     "**Valid Outlier**: If a runner falls over and takes 180 seconds to finish a 100m sprint, it is real data but unrepresentative of their athletic capability.",
+     "**Recalculation**: Exams may ask you to calculate the mean both *with* and *without* an outlier to demonstrate its distorting impact."
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Comparing Two Football Teams",
+   "p": "Think of comparing distributions like comparing two football teams over a season. The mean or median score tells you which team scores more goals overall ('better average performance'). The range tells you how predictable the team is: a team that wins 1-0 every week has a tiny range (highly consistent performance), whereas a team that wins 6-0 one week and loses 0-5 the next has a huge range (unpredictable/inconsistent). An outlier is like a match where 3 players were sent off and the team lost 9-0—it severely drags down their average goals scored, even though it doesn't reflect their typical standard. This analogy breaks down because in sports, team performance can change dynamically due to morale and injuries, whereas statistical distributions treat historical data as fixed numbers."
+  },
+  "terms": [
+   {
+    "t": "Distribution",
+    "d": "The overall shape, spread, and arrangement of data values in a statistical data set."
+   },
+   {
+    "t": "Mean",
+    "d": "The arithmetic average, calculated by adding all data values together and dividing by the total number of values."
+   },
+   {
+    "t": "Median",
+    "d": "The middle value when data is arranged in numerical order."
+   },
+   {
+    "t": "Mode",
+    "d": "The most frequently occurring data value or category in a data set."
+   },
+   {
+    "t": "Range",
+    "d": "The numerical difference between the maximum value and the minimum value in a distribution."
+   },
+   {
+    "t": "Outlier",
+    "d": "An extreme data value that lies significantly outside the general pattern of the rest of the distribution."
+   },
+   {
+    "t": "Consistency",
+    "d": "A measure of how close data values are to one another, indicated by a smaller range."
+   },
+   {
+    "t": "Variability",
+    "d": "The degree of spread in a distribution, indicated by a larger range."
+   },
+   {
+    "t": "Dual Bar Chart",
+    "d": "A chart displaying two sets of bars side-by-side to allow direct comparison of frequencies across categories."
+   },
+   {
+    "t": "Back-to-Back Stem-and-Leaf",
+    "d": "A diagram organizing two data sets around a shared central stem of leading digits."
+   },
+   {
+    "t": "Time Series",
+    "d": "A graph plotting values sequentially over equal time intervals to show trends."
+   },
+   {
+    "t": "Central Tendency",
+    "d": "A statistical measure identifying a single central score as representative of an entire distribution (mean, median, mode)."
+   },
+   {
+    "t": "Modal Class",
+    "d": "The class interval with the highest frequency in grouped continuous or discrete data."
+   },
+   {
+    "t": "Frequency Table",
+    "d": "A tabular summary showing the count (frequency) of occurrences for each data value or group."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Writing 'Group A is better because the range is bigger'.",
+    "r": "A larger range means performance is LESS consistent and MORE varied, not better. A smaller range indicates higher consistency."
+   },
+   {
+    "w": "Stating only the numbers, e.g., 'Group A mean = 15, Group B mean = 12'.",
+    "r": "You must explicitly compare them using comparative language in context, e.g., 'Group A has a higher mean mark of 15 compared to Group B's mean of 12'."
+   },
+   {
+    "w": "Calling the range an average.",
+    "r": "The range is a measure of spread/variation, never an average. Averages are mean, median, and mode."
+   },
+   {
+    "w": "Reading Group A leaves from left to right in a back-to-back stem-and-leaf diagram.",
+    "r": "The left side of a back-to-back stem-and-leaf diagram must be read outwards from the stem (right to left)."
+   },
+   {
+    "w": "Confusing frequency with data values when finding the mode from a table.",
+    "r": "The mode is the data value $x$ associated with the highest frequency, not the highest frequency number itself."
+   },
+   {
+    "w": "Calculating table mean by dividing total $f \\times x$ by the number of table rows.",
+    "r": "You must divide total $f \\times x$ by the total frequency $\\sum f$ (the total number of data items)."
+   },
+   {
+    "w": "Using the mean when a severe outlier is present without acknowledging its distortion.",
+    "r": "When outliers exist, the median is the preferred average because it is unaffected by extreme values."
+   },
+   {
+    "w": "Comparing distributions without mentioning the context (e.g. omitting 'seconds', 'marks', or 'cm').",
+    "r": "Eduqas mark schemes mandate linking comparisons to the real-world context specified in the question."
+   }
+  ],
+  "exam": [
+   {
+    "q": "The test marks for 5 students in Class A are: 12, 14, 15, 15, 19. The test marks for 5 students in Class B are: 8, 10, 15, 18, 19. Write down the modal mark for Class A.",
+    "marks": 1,
+    "model": [
+     "15"
+    ],
+    "tip": "Identify the number that appears most frequently in Class A's list."
+   },
+   {
+    "q": "Two runners track their training times over 6 runs in seconds.\nRunner 1: 52, 54, 55, 55, 56, 58 (Mean = 55 s, Range = 6 s)\nRunner 2: 48, 50, 53, 56, 60, 63 (Mean = 55 s, Range = 15 s)\nCompare the distributions of the two runners' times.",
+    "marks": 2,
+    "model": [
+     "Both runners have the same mean running time of 55 seconds.",
+     "Runner 1 has a smaller range (6 seconds < 15 seconds), which means Runner 1's running times are more consistent."
+    ],
+    "tip": "Compare average first, then compare spread with the word 'consistent'."
+   },
+   {
+    "q": "The median height of 10 boys is 165 cm with a range of 22 cm. The median height of 10 girls is 158 cm with a range of 14 cm. Make two comparisons between the heights of the boys and girls.",
+    "marks": 2,
+    "model": [
+     "On average, the boys are taller because their median height is 165 cm compared to 158 cm for girls.",
+     "The girls' heights are more consistent because their range of 14 cm is smaller than the boys' range of 22 cm."
+    ],
+    "tip": "Ensure you explicitly name the context ('heights') and use comparison words."
+   },
+   {
+    "q": "The scores in a mental maths test for two small groups are shown below:\nGroup X: 4, 6, 7, 7, 11\nGroup Y: 2, 3, 5, 8, 17\nBy calculating the mean and range for both groups, compare their test results.",
+    "marks": 4,
+    "model": [
+     "Group X Mean = (4 + 6 + 7 + 7 + 11) / 5 = 35 / 5 = 7",
+     "Group Y Mean = (2 + 3 + 5 + 8 + 17) / 5 = 35 / 5 = 7",
+     "Group X Range = 11 - 4 = 7; Group Y Range = 17 - 2 = 15",
+     "Both groups have the same mean score of 7, but Group X's scores are more consistent because Group X has a smaller range of 7 compared to Group Y's range of 15."
+    ],
+    "tip": "Show full calculations for means and ranges before writing your comparative sentences."
+   },
+   {
+    "q": "A worker records the time taken (in minutes) to complete 5 tasks: 12, 14, 13, 15, 66.\n(a) Identify the outlier.\n(b) Explain why the median is a better average than the mean to summarize this data.",
+    "marks": 2,
+    "model": [
+     "(a) 66 minutes.",
+     "(b) The outlier (66) inflates/distorts the mean, making it unrealistically high, whereas the median is not affected by extreme values."
+    ],
+    "tip": "Focus on the distortion effect of outliers on the mean."
+   },
+   {
+    "q": "The back-to-back stem-and-leaf diagram below shows the ages of members in two clubs:\nClub A: Leaves (read left) | Stem | Club B: Leaves (read right)\n8 5 2 | 2 | 1 4 4\n6 3 0 | 3 | 2 5 7 9\nKey: 2 | 3 | 2 means 32 years for Club A and 32 years for Club B.\nFind the median age for each club and state which club has older members on average.",
+    "marks": 4,
+    "model": [
+     "Club A ages ordered: 22, 25, 28, 30, 33, 36. Median Club A = (28 + 30) / 2 = 29 years old.",
+     "Club B ages ordered: 21, 24, 24, 32, 35, 37, 39. Median Club B = 4th item = 32 years old.",
+     "Club B members are on average older because Club B has a higher median age of 32 years compared to Club A's median age of 29 years."
+    ],
+    "tip": "Carefully list out the data values from the stem-and-leaf diagram before finding the medians."
+   },
+   {
+    "q": "Student C states: 'Data set 1 has a range of 50 and Data set 2 has a range of 10, so Data set 1 performed better.' Give two reasons why Student C is incorrect.",
+    "marks": 2,
+    "model": [
+     "Reason 1: Range measures spread/consistency, not performance or average success.",
+     "Reason 2: A larger range means Data set 1 is less consistent/more variable, not better."
+    ],
+    "tip": "Address both the meaning of range and the misinterpretation of 'better'."
+   },
+   {
+    "q": "The table shows daily ice cream sales (£) for Shop 1 and Shop 2 over 5 days:\nShop 1: 100, 110, 105, 95, 290\nShop 2: 130, 135, 140, 125, 130\n(a) Calculate the mean and median for Shop 1.\n(b) Which average best represents Shop 1's typical daily sales? Explain why.",
+    "marks": 4,
+    "model": [
+     "(a) Shop 1 Mean = (100 + 110 + 105 + 95 + 290) / 5 = 700 / 5 = £140.",
+     "Shop 1 Median ordered: 95, 100, 105, 110, 290 -> Median = £105.",
+     "(b) The median (£105) best represents Shop 1 because 290 is an outlier that distorts the mean to £140, which is higher than 4 out of the 5 daily sales."
+    ],
+    "tip": "Compare the calculated mean to individual data points to prove it is unrepresentative."
+   },
+   {
+    "q": "Two classes sat a 20-mark quiz. Class 1 has a median score of 14 and a range of 4. Class 2 has a median score of 14 and a range of 10. Compare the performance of the two classes.",
+    "marks": 2,
+    "model": [
+     "Both classes had the same average performance as their median scores are equal (14 out of 20).",
+     "Class 1 performed more consistently than Class 2 because Class 1 had a smaller range of scores (4 compared to 10)."
+    ],
+    "tip": "When averages are identical, state that average performance is equal, then focus on spread."
+   }
+  ],
+  "worked": [
+   {
+    "q": "The test scores of 7 pupils in Class 10X and 7 pupils in Class 10Y are recorded below:\nClass 10X: 12, 15, 16, 18, 19, 19, 20\nClass 10Y: 5, 10, 14, 17, 18, 20, 28\nCompare the two distributions by calculating the median and range for each class.",
+    "steps": [
+     "Step 1: Find the median for Class 10X. Since there are 7 values (already ordered), the median is the 4th value: 18.",
+     "Step 2: Find the range for Class 10X: Range = 20 - 12 = 8.",
+     "Step 3: Find the median for Class 10Y. The 4th value in the ordered list is 17.",
+     "Step 4: Find the range for Class 10Y: Range = 28 - 5 = 23.",
+     "Step 5: Write the comparative statement for Average: 'On average, Class 10X scored slightly higher marks, with a median of 18 compared to 17 for Class 10Y.'",
+     "Step 6: Write the comparative statement for Spread: 'Class 10X's marks were much more consistent, having a smaller range of 8 compared to Class 10Y's range of 23.'"
+    ],
+    "ans": "Class 10X achieved a higher median score (18 vs 17) showing slightly better performance on average, and a much smaller range (8 vs 23), showing Class 10X was significantly more consistent than Class 10Y."
+   },
+   {
+    "q": "A company compares the waiting times (in minutes) for customers at two call centres, Centre A and Centre B, presented in a frequency table:\nCentre A: Times (mins) [1, 2, 3, 4], Frequencies [2, 5, 2, 1]\nCentre B: Times (mins) [1, 2, 3, 4], Frequencies [0, 2, 6, 2]\nCalculate the mean waiting time for both call centres and state which centre performs better.",
+    "steps": [
+     "Step 1: Calculate total sum of times for Centre A: (1x2) + (2x5) + (3x2) + (4x1) = 2 + 10 + 6 + 4 = 22.",
+     "Step 2: Calculate total frequency for Centre A: 2 + 5 + 2 + 1 = 10.",
+     "Step 3: Centre A Mean = 22 / 10 = 2.2 minutes.",
+     "Step 4: Calculate total sum of times for Centre B: (1x0) + (2x2) + (3x6) + (4x2) = 0 + 4 + 18 + 8 = 30.",
+     "Step 5: Calculate total frequency for Centre B: 0 + 2 + 6 + 2 = 10.",
+     "Step 6: Centre B Mean = 30 / 10 = 3.0 minutes.",
+     "Step 7: Compare in context: 'Lower waiting times represent better service. Centre A has a lower mean waiting time (2.2 mins) than Centre B (3.0 mins).'"
+    ],
+    "ans": "Centre A performs better because it has a lower mean customer waiting time of 2.2 minutes compared to Centre B's mean waiting time of 3.0 minutes."
+   },
+   {
+    "q": "The data below shows the number of goals scored per match by Team P over 6 matches: 1, 1, 2, 2, 2, 10.\n(a) Calculate the mean, median, and range.\n(b) Identify the outlier and explain its effect on the averages.",
+    "steps": [
+     "Step 1: Calculate Mean = (1 + 1 + 2 + 2 + 2 + 10) / 6 = 18 / 6 = 3 goals per match.",
+     "Step 2: Calculate Median = middle of ordered list (1, 1, 2, 2, 2, 10). The 3rd and 4th values are both 2, so Median = 2 goals.",
+     "Step 3: Calculate Range = 10 - 1 = 9 goals.",
+     "Step 4: Identify outlier: The value 10 is an outlier.",
+     "Step 5: Explain effect: If 10 is removed, the new mean is (1+1+2+2+2)/5 = 1.6 goals. The outlier distorts the mean by increasing it from 1.6 to 3, whereas the median remains 2."
+    ],
+    "ans": "(a) Mean = 3 goals, Median = 2 goals, Range = 9 goals.\n(b) The value 10 is an outlier. It artificially inflates the mean from 1.6 to 3 goals and increases the range from 1 to 9, while leaving the median unaffected."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Figure 1: Demonstration of how a high outlier pulls the mean significantly to the right, while leaving the median centered near the bulk of the data.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><text x=\"200\" y=\"25\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">Impact of Outlier on Averages</text><line x1=\"30\" y1=\"130\" x2=\"370\" y2=\"130\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"50\" y1=\"125\" x2=\"50\" y2=\"135\" stroke=\"#64748b\"/><text x=\"50\" y=\"150\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">10</text><line x1=\"100\" y1=\"125\" x2=\"100\" y2=\"135\" stroke=\"#64748b\"/><text x=\"100\" y=\"150\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">12</text><line x1=\"150\" y1=\"125\" x2=\"150\" y2=\"135\" stroke=\"#64748b\"/><text x=\"150\" y=\"150\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">14</text><line x1=\"200\" y1=\"125\" x2=\"200\" y2=\"135\" stroke=\"#64748b\"/><text x=\"200\" y=\"150\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">16</text><line x1=\"350\" y1=\"125\" x2=\"350\" y2=\"135\" stroke=\"#64748b\"/><text x=\"350\" y=\"150\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">50</text><circle cx=\"50\" cy=\"115\" r=\"5\" fill=\"#2563eb\"/><circle cx=\"95\" cy=\"115\" r=\"5\" fill=\"#2563eb\"/><circle cx=\"105\" cy=\"115\" r=\"5\" fill=\"#2563eb\"/><circle cx=\"150\" cy=\"115\" r=\"5\" fill=\"#2563eb\"/><circle cx=\"350\" cy=\"115\" r=\"5\" fill=\"#dc2626\"/><text x=\"350\" y=\"95\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" text-anchor=\"middle\">Outlier (50)</text><path d=\"M 100,165 L 100,180\" stroke=\"#16a34a\" stroke-width=\"2\"/><rect x=\"60\" y=\"185\" width=\"80\" height=\"22\" fill=\"#dcfce7\" rx=\"3\"/><text x=\"100\" y=\"200\" font-size=\"11\" fill=\"#15803d\" text-anchor=\"middle\">Median = 12</text><path d=\"M 200,165 L 200,180\" stroke=\"#dc2626\" stroke-width=\"2\"/><rect x=\"160\" y=\"185\" width=\"80\" height=\"22\" fill=\"#fee2e2\" rx=\"3\"/><text x=\"200\" y=\"200\" font-size=\"11\" fill=\"#b91c1c\" text-anchor=\"middle\">Mean = 20.4</text></svg>"
+   },
+   {
+    "cap": "Figure 2: Dual bar chart comparing student performance in three subjects between Class A and Class B.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><line x1=\"50\" y1=\"200\" x2=\"370\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"30\" x2=\"50\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"40\" y=\"204\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"end\">0</text><text x=\"40\" y=\"160\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"end\">5</text><text x=\"40\" y=\"116\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"end\">10</text><text x=\"40\" y=\"72\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"end\">15</text><text x=\"40\" y=\"32\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"end\">20</text><rect x=\"70\" y=\"80\" width=\"25\" height=\"120\" fill=\"#3b82f6\" rx=\"2\"/><rect x=\"97\" y=\"115\" width=\"25\" height=\"85\" fill=\"#f59e0b\" rx=\"2\"/><text x=\"96\" y=\"216\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Maths</text><rect x=\"160\" y=\"58\" width=\"25\" height=\"142\" fill=\"#3b82f6\" rx=\"2\"/><rect x=\"187\" y=\"93\" width=\"25\" height=\"107\" fill=\"#f59e0b\" rx=\"2\"/><text x=\"186\" y=\"216\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Science</text><rect x=\"250\" y=\"102\" width=\"25\" height=\"98\" fill=\"#3b82f6\" rx=\"2\"/><rect x=\"277\" y=\"47\" width=\"25\" height=\"153\" fill=\"#f59e0b\" rx=\"2\"/><text x=\"276\" y=\"216\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">English</text><rect x=\"280\" y=\"15\" width=\"12\" height=\"12\" fill=\"#3b82f6\"/><text x=\"297\" y=\"25\" font-size=\"11\" fill=\"#1b2540\">Class A</text><rect x=\"340\" y=\"15\" width=\"12\" height=\"12\" fill=\"#f59e0b\"/><text x=\"357\" y=\"25\" font-size=\"11\" fill=\"#1b2540\">Class B</text></svg>"
+   },
+   {
+    "cap": "Figure 3: Back-to-back stem-and-leaf diagram comparing score distributions of Team Alpha and Team Beta.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><text x=\"100\" y=\"30\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\" text-anchor=\"middle\">Team Alpha</text><text x=\"200\" y=\"30\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">Stem</text><text x=\"300\" y=\"30\" font-size=\"12\" font-weight=\"bold\" fill=\"#065f46\" text-anchor=\"middle\">Team Beta</text><line x1=\"170\" y1=\"40\" x2=\"170\" y2=\"185\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"230\" y1=\"40\" x2=\"230\" y2=\"185\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"150\" y=\"65\" font-size=\"12\" fill=\"#1e40af\" text-anchor=\"end\">9  8  5</text><text x=\"200\" y=\"65\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">1</text><text x=\"250\" y=\"65\" font-size=\"12\" fill=\"#065f46\" text-anchor=\"start\">2  4  7  9</text><text x=\"150\" y=\"95\" font-size=\"12\" fill=\"#1e40af\" text-anchor=\"end\">7  4  2  0</text><text x=\"200\" y=\"95\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">2</text><text x=\"250\" y=\"95\" font-size=\"12\" fill=\"#065f46\" text-anchor=\"start\">1  3  3  8</text><text x=\"150\" y=\"125\" font-size=\"12\" fill=\"#1e40af\" text-anchor=\"end\">6  3  1</text><text x=\"200\" y=\"125\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">3</text><text x=\"250\" y=\"125\" font-size=\"12\" fill=\"#065f46\" text-anchor=\"start\">0  5  6</text><text x=\"150\" y=\"155\" font-size=\"12\" fill=\"#1e40af\" text-anchor=\"end\">2</text><text x=\"200\" y=\"155\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">4</text><text x=\"250\" y=\"155\" font-size=\"12\" fill=\"#065f46\" text-anchor=\"start\">1</text><rect x=\"60\" y=\"195\" width=\"280\" height=\"32\" fill=\"#e2e8f0\" rx=\"4\"/><text x=\"200\" y=\"216\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Key: 5 | 1 | 2 means 15 for Alpha and 12 for Beta</text></svg>"
+   },
+   {
+    "cap": "Figure 4: Time series line graph comparing daily sales for Shop A and Shop B over five days.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><line x1=\"45\" y1=\"190\" x2=\"370\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"45\" y1=\"30\" x2=\"45\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"38\" y=\"194\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"end\">0</text><text x=\"38\" y=\"145\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"end\">50</text><text x=\"38\" y=\"95\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"end\">100</text><text x=\"38\" y=\"45\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"end\">150</text><text x=\"80\" y=\"210\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Mon</text><text x=\"150\" y=\"210\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Tue</text><text x=\"220\" y=\"210\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Wed</text><text x=\"290\" y=\"210\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Thu</text><text x=\"360\" y=\"210\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Fri</text><polyline points=\"80,150 150,110 220,130 290,70 360,50\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><polyline points=\"80,90 150,95 220,85 290,90 360,88\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"3\" stroke-dasharray=\"4\"/><line x1=\"250\" y1=\"20\" x2=\"275\" y2=\"20\" stroke=\"#2563eb\" stroke-width=\"3\"/><text x=\"282\" y=\"24\" font-size=\"11\" fill=\"#1b2540\">Shop A</text><line x1=\"330\" y1=\"20\" x2=\"355\" y2=\"20\" stroke=\"#16a34a\" stroke-width=\"3\" stroke-dasharray=\"4\"/><text x=\"362\" y=\"24\" font-size=\"11\" fill=\"#1b2540\">Shop B</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_f.5.3",
+  "sid": "maths_eduqas_f",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.6-flash",
+  "ts": "2026-11-20T17:23:34.974Z"
  }
 }
