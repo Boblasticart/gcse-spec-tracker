@@ -1910,5 +1910,392 @@
   "src": "pre",
   "by": "gemini/gemini-3.5-flash-lite",
   "ts": "2026-11-16T03:39:06.236Z"
+ },
+ "maths_ocr_h.7.1": {
+  "summary": "Mastering ruler and compass constructions for the OCR GCSE Higher tier requires absolute precision, leaving construction arcs clearly visible as evidence of method. This section covers perpendicular bisectors, angle bisectors, dropping perpendiculars from points to lines, and complex region loci problems bounded by fixed distances and moving objects.",
+  "core": [
+   {
+    "h": "Basic Construction Tools & Arc Rules",
+    "p": "All ruler and compass constructions rely on the proper use of a sharp pencil, a straight-edged ruler without measurement markings, and a pair of compasses. You must never erase your construction arcs; examiners award method marks specifically for these curved lines, which prove you used geometrical methods rather than measuring with a protractor or ruler.",
+    "bullets": [
+     "A straightedge is used exclusively to draw straight lines; never use it to measure lengths during a construction.",
+     "Compass width must remain fixed during an arc operation unless explicitly instructed to change it.",
+     "All intersection points of arcs must be marked clearly with crosses or intersecting dashes.",
+     "Leaving construction lines incomplete will lose method marks; always extend arcs so they cross cleanly."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Never Erase Arcs",
+      "p": "Construction arcs are your working out. Erasing them guarantees zero marks for the construction part of the question."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Perpendicular Bisector of a Line Segment",
+    "p": "A perpendicular bisector is a line that cuts a given line segment exactly in half at a 90-degree angle. It also represents the set of all points equidistant from the two endpoints of the line segment.",
+    "bullets": [
+     "Place the compass point on endpoint A and open your compass to a radius greater than half the length of AB.",
+     "Draw an arc above and below the line segment AB.",
+     "Without changing the compass width, place the compass point on endpoint B and draw arcs above and below to intersect the first set.",
+     "Join the two intersection points with a straight line using your ruler to form the perpendicular bisector."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Perpendicular Bisector",
+      "p": "A line dividing a segment into two equal parts at right angles to the segment."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Constructing the perpendicular bisector of line segment AB using compass arcs.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"100\" y1=\"120\" x2=\"300\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"3\"/><circle cx=\"100\" cy=\"120\" r=\"4\" fill=\"#1b2540\"/><circle cx=\"300\" cy=\"120\" r=\"4\" fill=\"#1b2540\"/><text x=\"95\" y=\"140\" font-size=\"12\" fill=\"#1b2540\">A</text><text x=\"295\" y=\"140\" font-size=\"12\" fill=\"#1b2540\">B</text><path d=\"M 160 40 A 100 100 0 0 1 240 200\" stroke=\"#2563eb\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"4 4\"/><path d=\"M 240 40 A 100 100 0 0 1 160 200\" stroke=\"#2563eb\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"4 4\"/><line x1=\"200\" y1=\"30\" x2=\"200\" y2=\"210\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"205\" y=\"25\" font-size=\"12\" fill=\"#16a34a\">Bisector</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Bisecting an Angle",
+    "p": "An angle bisector divides a given angle into two equal smaller angles. Every point on an angle bisector is equidistant from the two arms forming that angle.",
+    "bullets": [
+     "Place the compass point on the vertex of the angle and draw an arc that cuts both arms of the angle.",
+     "Move the compass point to each intersection of the arc and the arms, and draw two intersecting arcs in the interior of the angle.",
+     "Join the vertex to the point where these interior arcs cross with a straight line.",
+     "Ensure your initial arc is wide enough to create clear intersection points on both arms."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Changing Radius",
+      "p": "You can change the compass radius between drawing the arm arcs and the interior arcs, but keeping it the same is safer and prevents mistakes."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Bisecting an angle using compass arcs from the vertex and arms.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"80\" y1=\"180\" x2=\"280\" y2=\"180\" stroke=\"#1b2540\" stroke-width=\"3\"/><line x1=\"80\" y1=\"180\" x2=\"220\" y2=\"60\" stroke=\"#1b2540\" stroke-width=\"3\"/><circle cx=\"80\" cy=\"180\" r=\"4\" fill=\"#1b2540\"/><text x=\"70\" y=\"195\" font-size=\"12\" fill=\"#1b2540\">Vertex</text><path d=\"M 130 180 A 50 50 0 0 0 118 135\" stroke=\"#2563eb\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M 140 150 A 60 60 0 0 1 180 110\" stroke=\"#2563eb\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"4 4\"/><path d=\"M 118 135 A 60 60 0 0 1 180 110\" stroke=\"#2563eb\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"4 4\"/><line x1=\"80\" y1=\"180\" x2=\"210\" y2=\"110\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"215\" y=\"105\" font-size=\"12\" fill=\"#16a34a\">Angle Bisector</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Perpendicular from a Point to a Line",
+    "p": "Often you need to drop a perpendicular line from a given point P to a line AB, where P may either lie on the line or float above it. This establishes a 90-degree angle from the point to the target line.",
+    "bullets": [
+     "If P is not on the line, place the compass point on P and draw an arc that cuts the line AB in two distinct places.",
+     "With the compass point on each of those two intersection points on the line, draw intersecting arcs on the opposite side of the line from P.",
+     "Join point P to the intersection of these new arcs.",
+     "If P is on the line, construct a perpendicular at a point by drawing equal arcs either side of P first."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Point Placement",
+      "p": "Check carefully whether the point P is on the line or floating off it; the construction method differs slightly in arc placement."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Constructing Standard Angles (60, 30, 45, 90 Degrees)",
+    "p": "Higher tier examinations frequently require exact angle constructions without a protractor. You must combine perpendicular bisectors, angle bisectors, and equilateral triangle principles.",
+    "bullets": [
+     "To make 60 degrees, draw a line, place your compass at one end, set the radius to the line segment length, and draw an arc intersecting another arc drawn from the other end.",
+     "Bisect a 60-degree angle to produce a 30-degree angle.",
+     "Construct a 90-degree angle by dropping a perpendicular from a point or by constructing a perpendicular bisector across a straight line extension.",
+     "Bisect a 90-degree angle to produce a 45-degree angle."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Equilateral Foundation",
+      "p": "An angle of 60 degrees comes directly from constructing an equilateral triangle with compasses locked at the base length."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Introduction to Loci",
+    "p": "A locus (plural: loci) is a set or path of points that satisfy a given rule or set of conditions. Exam questions will ask you to shade regions or trace paths obeying distance and angle constraints.",
+    "bullets": [
+     "Locus of points at a fixed distance r from a point is a circle of radius r.",
+     "Locus of points at a fixed distance d from a straight line is a pair of parallel lines at distance d plus semi-circular ends around the line endpoints.",
+     "Locus of points equidistant from two points A and B is the perpendicular bisector of AB.",
+     "Locus of points equidistant from two intersecting lines is the angle bisector between them."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Locus",
+      "p": "A collection of points sharing a common property or satisfying a specific geometric rule."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Loci: Fixed Distance from a Point and Line",
+    "p": "When constructing regions based on distances, remember that 'less than or equal to' means shading the inside of the boundary, while 'greater than or equal to' means shading the outside.",
+    "bullets": [
+     "For a point P, distance <= 3cm means drawing a circle of radius 3cm and shading inside.",
+     "For a straight line AB, distance <= 2cm means drawing parallel boundary lines 2cm away and adding semicircles of radius 2cm at ends A and B.",
+     "Solid lines represent inclusive inequalities (<=, >=), while dashed lines represent strict inequalities (<, >).",
+     "Always check if the region is bounded by the edges of the provided paper or map box."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Compound Regions",
+      "p": "When asked to find a region satisfying multiple conditions, draw all boundaries first and only shade the intersection region at the very end."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Loci: Equidistant from Two Points or Lines",
+    "p": "Equidistance rules generate symmetry lines. Points equidistant from two fixed points form a perpendicular bisector, while points equidistant from two intersecting walls form angle bisectors.",
+    "bullets": [
+     "Equidistant from point A and point B: construct the perpendicular bisector of AB.",
+     "Equidistant from line AB and line AC: construct the angle bisector of angle BAC.",
+     "Region closer to A than B: find the perpendicular bisector of AB and shade the side containing A.",
+     "Region closer to line AB than line AC: construct the angle bisector and shade the side containing AB."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Closer To vs Equidistant",
+      "p": "Equidistant is a line or curve; 'closer to' is always an inequality region shaded on one side of that line."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Region closer to point A than point B, bounded by the perpendicular bisector.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"100\" y1=\"120\" x2=\"300\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"100\" cy=\"120\" r=\"4\" fill=\"#1b2540\"/><circle cx=\"300\" cy=\"120\" r=\"4\" fill=\"#1b2540\"/><text x=\"95\" y=\"140\" font-size=\"12\" fill=\"#1b2540\">A</text><text x=\"295\" y=\"140\" font-size=\"12\" fill=\"#1b2540\">B</text><line x1=\"200\" y1=\"30\" x2=\"200\" y2=\"210\" stroke=\"#dc2626\" stroke-width=\"2\" stroke-dasharray=\"4 4\"/><rect x=\"100\" y=\"30\" width=\"100\" height=\"180\" fill=\"#bfdbfe\" opacity=\"0.5\"/><text x=\"130\" y=\"60\" font-size=\"12\" fill=\"#1e40af\">Closer to A</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Locus of a Moving Point Under Constraints",
+    "p": "Advanced OCR questions combine loci with boat navigation, animal tethering, or sprinkler coverage. You must handle boundary transitions smoothly.",
+    "bullets": [
+     "A goat tethered by a rope of length L to the corner of a shed sweeps out circular sectors.",
+     "If the rope wraps around the corner of a fence or wall, the radius of the arc changes at the pivot point.",
+     "Intersection of multiple loci defines the exact landing zone or valid movement corridor.",
+     "Always write down scale conversions if the map uses a ratio like 1cm : 5m."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Pivoting Tethers",
+      "p": "When a tethered animal hits a fence corner, the fence post becomes the new centre of rotation for the next arc segment."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Treasure Map and Surveyor's Stakes",
+   "p": "Imagine you are burying treasure on an island. One rule says 'stay within 50 paces of the old oak tree' (a circular fence around a point). Another rule says 'stay closer to the stone pillar than the iron statue' (a fence built along the perpendicular bisector line). The region where you can legally walk without breaking either rule is the intersection of these zones. The analogy breaks down because real terrain has bumps and obstacles, whereas geometric loci assume a perfectly flat Euclidean plane."
+  },
+  "terms": [
+   {
+    "t": "Locus",
+    "d": "A set of points that share a specified geometric property or rule."
+   },
+   {
+    "t": "Perpendicular Bisector",
+    "d": "A line dividing a line segment into two equal parts at a 90-degree angle."
+   },
+   {
+    "t": "Angle Bisector",
+    "d": "A line dividing an angle into two equal halves."
+   },
+   {
+    "t": "Equidistant",
+    "d": "At exactly equal distances from two or more objects."
+   },
+   {
+    "t": "Arc",
+    "d": "A curved part of the circumference of a circle used in constructions."
+   },
+   {
+    "t": "Vertex",
+    "d": "The point where two line segments or rays meet to form an angle."
+   },
+   {
+    "t": "Straightedge",
+    "d": "A ruler with no measurement markings used solely for drawing straight lines."
+   },
+   {
+    "t": "Compass",
+    "d": "A V-shaped instrument with one pointy leg and one pencil leg used for drawing circles and arcs."
+   },
+   {
+    "t": "Region",
+    "d": "An area bounded by one or more locus lines satisfying certain inequalities."
+   },
+   {
+    "t": "Strict Inequality",
+    "d": "A condition using < or > represented by a dashed construction boundary."
+   },
+   {
+    "t": "Inclusive Inequality",
+    "d": "A condition using <= or >= represented by a solid construction boundary."
+   },
+   {
+    "t": "Tether",
+    "d": "A rope or chain limiting the movement of a point object around a fixed anchor."
+   },
+   {
+    "t": "Perpendicular",
+    "d": "Intersecting at or forming right angles (90 degrees)."
+   },
+   {
+    "t": "Intersection",
+    "d": "The exact point where lines, arcs, or loci cross each other."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Erasing construction arcs after finishing the drawing",
+    "r": "Leave all arcs visible; examiners deduct marks if construction lines are missing."
+   },
+   {
+    "w": "Using a protractor to measure angles in construction questions",
+    "r": "Constructions must be done strictly using a ruler and compasses only."
+   },
+   {
+    "w": "Drawing a straight line for a locus of a fixed distance from a point",
+    "r": "A fixed distance from a single point is always a circle, not straight lines."
+   },
+   {
+    "w": "Shading the wrong side of a perpendicular bisector when asked for the region closer to B",
+    "r": "Shade the side containing B, verified by testing a point."
+   },
+   {
+    "w": "Forgetting the semi-circular ends when drawing the locus of a fixed distance from a line segment",
+    "r": "Include semicircles of radius r centred on endpoints A and B."
+   },
+   {
+    "w": "Changing the compass width randomly while bisecting a line",
+    "r": "Keep the compass width constant greater than half length AB for both arcs."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Construct the perpendicular bisector of line AB. Leave in all your construction arcs.",
+    "marks": 2,
+    "model": [
+     "Arc centres at A and B with equal radius greater than half AB",
+     "Accurate perpendicular bisector line drawn intersecting both pairs of arcs"
+    ],
+    "tip": "Make sure your compass opening is noticeably more than half the length of AB."
+   },
+   {
+    "q": "Bisect angle XYZ using a ruler and compasses.",
+    "marks": 2,
+    "model": [
+     "Arc drawn from vertex Y cutting both arms XY and YZ",
+     "Intersecting arcs drawn from arm intersection points, with angle bisector line through Y"
+    ],
+    "tip": "Ensure the arc from vertex Y crosses both arms clearly."
+   },
+   {
+    "q": "Shade the region that is closer to point A than point B, and within 4cm of point A.",
+    "marks": 4,
+    "model": [
+     "Perpendicular bisector of AB constructed accurately",
+     "Circle of radius 4cm centred at A drawn accurately",
+     "Correct side of perpendicular bisector shaded",
+     "Inside of 4cm circle shaded, identifying the exact overlapping region"
+    ],
+    "tip": "Do not shade until all boundary lines and circles are fully drawn."
+   },
+   {
+    "q": "Construct a 60 degree angle at point P on a baseline.",
+    "marks": 2,
+    "model": [
+     "Arc of fixed radius drawn from P intersecting baseline",
+     "Arc of same radius drawn from baseline intersection crossing first arc, connected to P"
+    ],
+    "tip": "This forms an equilateral triangle of side length equal to your compass radius."
+   },
+   {
+    "q": "A goat is tied to corner C of a rectangular shed measuring 4m by 6m by a rope of length 5m. Draw the locus of the goat's outer boundary.",
+    "marks": 3,
+    "model": [
+     "Quarter circle of radius 5m centred at C",
+     "Arcs adjusting where the rope hits the adjacent walls of length 1m and 3m",
+     "Complete continuous outer boundary curve shown"
+    ],
+    "tip": "Watch out for the rope wrapping around corners when the length exceeds the wall dimensions."
+   },
+   {
+    "q": "Construct the perpendicular from point P to the straight line AB.",
+    "marks": 2,
+    "model": [
+     "Arc centred at P cutting line AB at two points",
+     "Intersecting arcs drawn below AB from those two points, line dropped from P"
+    ],
+    "tip": "Ensure your arcs below the line cross cleanly to give an exact point."
+   },
+   {
+    "q": "Shade the region that is less than 3cm from line AB and closer to A than B.",
+    "marks": 4,
+    "model": [
+     "Parallel boundary lines 3cm from AB with semicircles at ends",
+     "Perpendicular bisector of AB constructed",
+     "Correct region satisfying both inequalities shaded clearly"
+    ],
+    "tip": "Label your regions lightly in pencil before final shading if needed."
+   },
+   {
+    "q": "Construct a 30 degree angle using a ruler and compasses.",
+    "marks": 3,
+    "model": [
+     "Construct a 60 degree angle first",
+     "Bisect the 60 degree angle using compasses",
+     "Accurate straight line drawn for the 30 degree ray"
+    ],
+    "tip": "Never measure with a protractor; build it up from standard constructions."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Construct the perpendicular bisector of a line segment PQ of length 8cm and use it to find a point X on the bisector that is 6cm from the midpoint.",
+    "steps": [
+     "Draw a straight line segment PQ of length 8cm using a ruler.",
+     "Place the compass point on P, open it to 6cm (greater than half of 8cm), and draw arcs above and below the line.",
+     "Without changing the compass width, place the compass point on Q and draw intersecting arcs above and below PQ.",
+     "Join the two arc intersections with a straight line to form the perpendicular bisector.",
+     "Measure 6cm along the bisector from the midpoint of PQ and label that point X."
+    ],
+    "ans": "Accurate perpendicular bisector with visible construction arcs and point X marked 6cm from the midpoint."
+   },
+   {
+    "q": "A treasure chest is buried in a field. It is equidistant from trees A and B, and exactly 5m from fence line CD. Using a scale of 1cm to 1m, construct the possible positions for the chest.",
+    "steps": [
+     "Draw trees A and B and fence line CD according to the 1cm:1m scale.",
+     "Construct the perpendicular bisector between A and B.",
+     "Construct parallel boundary lines 5cm away from fence line CD on both sides.",
+     "Identify the points where the perpendicular bisector intersects the 5cm parallel boundary lines."
+    ],
+    "ans": "The possible positions are the exact intersection points of the perpendicular bisector and the 5cm parallel lines."
+   }
+  ],
+  "pid": "maths_ocr_h.7.1",
+  "sid": "maths_ocr_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-20T18:37:57.972Z"
  }
 }

@@ -420,5 +420,535 @@
   "src": "pre",
   "by": "gemini/gemini-flash-lite-latest",
   "ts": "2026-11-19T20:33:47.246Z"
+ },
+ "maths_ocr_h.2.0": {
+  "summary": "Mastering indices and surds for OCR GCSE Higher tier requires deep fluency with the laws of indices, negative and fractional powers, and root estimation. You must seamlessly transition between exponential notation and radical form while navigating tricky arithmetic constraints. Achieving a Grade 9 demands rigorous application of index laws to complex algebraic expressions and exact manipulation without a calculator.",
+  "core": [
+   {
+    "h": "1. Integer Index Notation and Vocabulary",
+    "p": "Index notation is a shorthand way of writing repeated multiplication of the same number or variable. Understanding the exact terminology of base and exponent allows us to scale numbers rapidly and manipulate algebraic expressions with confidence.",
+    "bullets": [
+     "The base is the large number being multiplied repeatedly by itself.",
+     "The exponent or index tells you how many times the base is multiplied by itself.",
+     "When multiplying terms with the same base, add the indices: (a^m) * (a^n) = a^(m+n).",
+     "When dividing terms with the same base, subtract the indices: (a^m) / (a^n) = a^(m-n).",
+     "When raising a power to a power, multiply the indices: (a^m)^n = a^(m*n)."
+    ],
+    "table": {
+     "head": [
+      "Law of Index",
+      "Algebraic Rule",
+      "Numerical Example"
+     ],
+     "rows": [
+      [
+       "Multiplication",
+       "a^m * a^n = a^(m+n)",
+       "2^3 * 2^4 = 2^7"
+      ],
+      [
+       "Division",
+       "a^m / a^n = a^(m-n)",
+       "5^6 / 5^2 = 5^4"
+      ],
+      [
+       "Power of a Power",
+       "(a^m)^n = a^(m*n)",
+       "(3^2)^3 = 3^6"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Index Notation",
+      "p": "A mathematical notation used to write repeated multiplication compactly using a base and a raised index."
+     },
+     {
+      "k": "warn",
+      "t": "Adding Bases",
+      "p": "Never add the bases when multiplying terms. Base stays the same; operate only on the indices."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. Zero Index Property",
+    "p": "Any non-zero number raised to the power of zero is always equal to one. This is not an arbitrary rule but a direct consequence of the laws of indices when dividing a number by itself.",
+    "bullets": [
+     "Rule: For any non-zero number a, a^0 = 1.",
+     "Proof concept: Consider a^3 / a^3 = 1. By index laws, a^(3-3) = a^0. Therefore, a^0 = 1.",
+     "Applies to large numbers, decimals, fractions, and algebraic variables alike.",
+     "0^0 is undefined in GCSE mathematics."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "The Zero Power",
+      "p": "Anything (except 0) to the power of 0 equals 1."
+     },
+     {
+      "k": "tip",
+      "t": "Complex Bases",
+      "p": "If you see (5x^3 y^4)^0, the entire bracket is raised to 0, so the answer is simply 1."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "3. Negative Integer Indices",
+    "p": "A negative index does not mean the number itself is negative. Instead, a negative sign in the index indicates a reciprocal, flipping the base from numerator to denominator or vice versa.",
+    "bullets": [
+     "Rule: a^(-n) = 1 / (a^n)",
+     "Rule for fractions: (a / b)^(-n) = (b / a)^n",
+     "A negative sign in the power means take the reciprocal of the base.",
+     "Evaluate negative powers of integers by turning them into fractions first."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Reciprocal",
+      "p": "The inverse of a number, obtained by swapping its numerator and denominator."
+     },
+     {
+      "k": "warn",
+      "t": "Sign Confusion",
+      "p": "Do not make the number negative. 5^(-2) is 1 / 25, not -25 or -10."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Fractional Indices (Roots)",
+    "p": "Fractional indices connect powers with roots. The numerator of the fraction acts as standard power, while the denominator acts as the root index.",
+    "bullets": [
+     "Rule: a^(1/n) represents the n-th root of a, written as n-th root of a.",
+     "Rule: a^(m/n) = (n-th root of a)^m or n-th root of (a^m).",
+     "Always apply the root part (denominator) first to keep numbers small and manageable without a calculator.",
+     "Fractional indices less than 1 behave as roots, whilst improper fractional indices combine powers and roots."
+    ],
+    "table": {
+     "head": [
+      "Fractional Power",
+      "Radical Form",
+      "Evaluation"
+     ],
+     "rows": [
+      [
+       "8^(1/3)",
+       "Cube root of 8",
+       "2"
+      ],
+      [
+       "27^(2/3)",
+       "(Cube root of 27)^2",
+       "3^2 = 9"
+      ],
+      [
+       "16^(-3/4)",
+       "1 / (4th root of 16)^3",
+       "1 / 8"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Denominator is Root",
+      "p": "In a^(m/n), the denominator n is always the root."
+     },
+     {
+      "k": "tip",
+      "t": "Order of Operations",
+      "p": "Root first, power second. Cubing 27 before taking the cube root creates unnecessarily massive numbers."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "5. Combining Index Laws",
+    "p": "Grade 9 questions frequently require combining multiple index laws within a single expression. You must work methodically, applying brackets, negative signs, and fractional indices step by step.",
+    "bullets": [
+     "Simplify coefficients (numbers) normally using standard arithmetic.",
+     "Apply variable laws group by group (all x terms together, all y terms together).",
+     "Clear brackets using power-of-a-power rules before combining with other terms.",
+     "Check final answers for negative indices unless the question explicitly asks for them."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Methodical Working",
+      "p": "Write out intermediate steps. Examiners award method marks even if arithmetic slips."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Estimating Roots and Surds",
+    "p": "When asked to estimate a root without a calculator, you must bound the non-square number between the nearest two integer square numbers.",
+    "bullets": [
+     "Identify the closest square numbers below and above the target number.",
+     "Take the square roots of those bounding numbers to establish lower and upper integer limits.",
+     "Use linear interpolation or trial and improvement to refine decimal estimates if required.",
+     "Example: Estimate square root of 50. Since 49 < 50 < 64, square root of 50 is between 7 and 8, closer to 7."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Square Number",
+      "p": "The product of an integer multiplied by itself (e.g., 1, 4, 9, 16, 25, 36, 49, 64, 81, 100)."
+     },
+     {
+      "k": "warn",
+      "t": "Exact vs Estimate",
+      "p": "Do not write decimal approximations when an exact surd form is requested."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Solving Equations Involving Indices",
+    "p": "Higher tier exams often test indices where the unknown x is inside the exponent. To solve these equations, you must express both sides of the equation with the same base.",
+    "bullets": [
+     "Rewrite numbers as powers of a common base (e.g., 8 as 2^3, 27 as 3^3, 32 as 2^5).",
+     "Equate the indices once the bases are identical.",
+     "Solve the resulting linear or quadratic equation for x.",
+     "Check your solution by substituting it back into the original exponential equation."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Matching Bases",
+      "p": "If a^x = a^y, then x = y."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Negative Fractional Indices",
+    "p": "Combining negative and fractional indices tests ultimate fluency. You must invert the base first to eliminate the negative sign, and then apply the fractional power.",
+    "bullets": [
+     "Step 1: Deal with the negative sign by reciprocating the base: (a/b)^(-m/n) becomes (b/a)^(m/n).",
+     "Step 2: Apply the denominator as a root to the inverted base.",
+     "Step 3: Apply the numerator as a standard power to complete evaluation.",
+     "Example: 8^(-2/3) = (1/8)^(2/3) = ((cube root of 1/8))^2 = (1/2)^2 = 1/4."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Two-Stage Attack",
+      "p": "Always eliminate the negative sign first before taking roots or powers."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Algebraic Simplification with Negative Indices",
+    "p": "Algebraic fractions containing negative powers require careful factorisation and index law application. Expressions must often be written with positive indices for final presentation.",
+    "bullets": [
+     "Move terms across the fraction bar, changing the sign of the index.",
+     "Factorise out common algebraic terms with the lowest index.",
+     "Ensure no negative indices remain in the final answer unless specifically requested.",
+     "Combine terms by finding common denominators when adding or subtracting algebraic powers."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Fraction Bars",
+      "p": "Only terms with negative indices attached directly to them flip. Coefficients do not automatically move."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Radical to Exponent Conversions",
+    "p": "Fluency in converting between radical (root) notation and exponential notation is vital for calculus preparation and advanced algebraic manipulation.",
+    "bullets": [
+     "Root symbol is equivalent to power of 1/2 for square roots, 1/3 for cube roots.",
+     "Nested roots multiply their fractional indices: square root of cube root of x is x^(1/6).",
+     "Express products of surds as fractional indices to simplify complex terms easily.",
+     "Always simplify the resulting fraction index where possible."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Radical Form",
+      "p": "An expression written using root symbols rather than fractional exponents."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "11. Estimating Cube Roots and Higher Roots",
+    "p": "Estimating higher roots follows the exact same bounding principle as square roots, requiring memorisation of cube numbers.",
+    "bullets": [
+     "Memorise key cube numbers: 1, 8, 27, 64, 125, 216, 343, 512, 729, 1000.",
+     "Bound non-cube numbers between adjacent cubes to estimate cube roots.",
+     "Example: Estimate cube root of 200. Since 125 < 200 < 216, cube root of 200 is between 5 and 6, closer to 6."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Cube Benchmarks",
+      "p": "Know cubes from 1^3 to 10^3 off by heart."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "12. Exam Strategy and Common Traps",
+    "p": "Examiners design specific distractors around index laws. Spotting these traps guarantees high marks in non-calculator papers.",
+    "bullets": [
+     "Watch out for operations involving addition with indices (e.g., 2^3 + 2^3 = 2 * 2^3 = 2^4, not 2^6).",
+     "Be careful with brackets around negative numbers: (-2)^4 = 16, whereas -2^4 = -16.",
+     "Check whether answers require positive indices.",
+     "Show all substitution and transformation steps clearly."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Brackets Matter",
+      "p": "-3^2 means -(3*3) = -9, while (-3)^2 means (-3)*(-3) = 9."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Escalator of Powers",
+   "p": "Think of indices as an elevator in a skyscraper. Ground floor (power 0) is always 1. Positive floors take you up into massive numbers (multiplication), while negative basement floors take you down into fractional depths (reciprocals). Fractional indices act as security checkpoints that shrink your scale before you ride up. Where this breaks down is that elevators move linearly, whereas exponential growth is non-linear and accelerates dramatically."
+  },
+  "terms": [
+   {
+    "t": "Base",
+    "d": "The number or variable that is raised to an exponent."
+   },
+   {
+    "t": "Index",
+    "d": "The power or exponent written above and to the right of a base number."
+   },
+   {
+    "t": "Reciprocal",
+    "d": "The multiplicative inverse of a number, calculated as 1 divided by that number."
+   },
+   {
+    "t": "Fractional Index",
+    "d": "An index expressed as a fraction, representing roots and powers combined."
+   },
+   {
+    "t": "Radical",
+    "d": "A mathematical expression containing a root symbol."
+   },
+   {
+    "t": "Square Number",
+    "d": "The product of an integer multiplied by itself."
+   },
+   {
+    "t": "Cube Number",
+    "d": "The product of an integer multiplied by itself three times."
+   },
+   {
+    "t": "Exponential Equation",
+    "d": "An equation where the unknown variable appears in the exponent."
+   },
+   {
+    "t": "Estimation",
+    "d": "Finding a sensible approximate value by rounding or bounding."
+   },
+   {
+    "t": "Integer",
+    "d": "A whole number that can be positive, negative, or zero."
+   },
+   {
+    "t": "Coefficient",
+    "d": "A numerical or constant quantity placed before multiplying a variable."
+   },
+   {
+    "t": "Undefined",
+    "d": "A mathematical expression lacking any valid meaning or value, such as division by zero."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Writing 5^(-2) as -25 or -10",
+    "r": "1 / 25 (negative index means reciprocal, not negative value)"
+   },
+   {
+    "w": "Adding bases when multiplying indices: 2^3 * 3^2 = 6^5",
+    "r": "Bases must be identical to add indices; if different, evaluate them separately"
+   },
+   {
+    "w": "Evaluating 27^(2/3) by squaring 27 first",
+    "r": "Take the cube root of 27 first to get 3, then square to get 9"
+   },
+   {
+    "w": "Stating any number to the power of 0 is 0",
+    "r": "Any non-zero number to the power of 0 is exactly 1"
+   },
+   {
+    "w": "Evaluating -4^2 as 16",
+    "r": "-16 because the square applies only to 4, not the negative sign, unless written as (-4)^2"
+   },
+   {
+    "w": "Adding indices when multiplying terms with different bases",
+    "r": "Index laws only apply when the bases are the same"
+   },
+   {
+    "w": "Leaving negative indices in an answer when positive indices are requested",
+    "r": "Convert using reciprocals to express with positive indices"
+   }
+  ],
+  "exam": [
+   {
+    "q": "Evaluate 64^(2/3).",
+    "marks": 2,
+    "model": [
+     "Cube root of 64 found: 4",
+     "4 squared evaluated: 16"
+    ],
+    "tip": "Always apply the denominator root first to keep numbers small."
+   },
+   {
+    "q": "Simplify fully: (2x^3)^4 * 3x^(-2)",
+    "marks": 4,
+    "model": [
+     "Expands bracket: 16x^12",
+     "Multiplies coefficients: 16 * 3 = 48",
+     "Adds indices for x: 12 + (-2) = 10",
+     "Final answer: 48x^10"
+    ],
+    "tip": "Clear brackets completely using power-of-a-power before combining terms."
+   },
+   {
+    "q": "Write 125^(-4/3) as a fraction in its simplest form.",
+    "marks": 3,
+    "model": [
+     "Cube root of 125 found: 5",
+     "Applies negative power reciprocal: (1/5)^4",
+     "Evaluates power: 1 / 625"
+    ],
+    "tip": "Handle the fraction in stages: reciprocal, root, then power."
+   },
+   {
+    "q": "Solve the equation 3^x = 81.",
+    "marks": 2,
+    "model": [
+     "Expresses 81 as a power of 3: 3^4",
+     "Equates indices: x = 4"
+    ],
+    "tip": "Learn powers of 2, 3, 4, and 5 to instantly spot common bases."
+   },
+   {
+    "q": "Estimate the value of square root of 70 to 1 decimal place.",
+    "marks": 3,
+    "model": [
+     "Identifies bounding squares: 64 < 70 < 81",
+     "Identifies root bounds: 8 < square root of 70 < 9",
+     "Tests decimal (e.g. 8.3 or 8.4) to find accurate estimate: 8.4"
+    ],
+    "tip": "Show your bounding square numbers to secure method marks."
+   },
+   {
+    "q": "Evaluate (1/9)^(-1/2).",
+    "marks": 2,
+    "model": [
+     "Reciprocates fraction for negative power: 9^(1/2)",
+     "Takes square root: 3"
+    ],
+    "tip": "Inverting a fraction turns a negative fractional power positive."
+   },
+   {
+    "q": "Simplify (a^4 b^(-2)) / (a^(-1) b^3). Give your answer with positive indices.",
+    "marks": 3,
+    "model": [
+     "Subtracts indices for a: 4 - (-1) = 5",
+     "Subtracts indices for b: -2 - 3 = -5",
+     "Rewrites with positive index: a^5 / b^5"
+    ],
+    "tip": "Be extremely careful with double negatives when subtracting indices."
+   },
+   {
+    "q": "Find the value of x when 2^(x+1) = 32.",
+    "marks": 3,
+    "model": [
+     "Expresses 32 as 2^5",
+     "Sets x + 1 = 5",
+     "Solves for x: x = 4"
+    ],
+    "tip": "Once bases match, set exponents equal and solve as a linear equation."
+   },
+   {
+    "q": "Evaluate 5^0 + 5^(-1) + 5^2.",
+    "marks": 3,
+    "model": [
+     "Evaluates 5^0 = 1",
+     "Evaluates 5^(-1) = 1/5",
+     "Evaluates 5^2 = 25",
+     "Sums values: 26 and 1/5 (or 26.2)"
+    ],
+    "tip": "Evaluate each term independently before adding."
+   },
+   {
+    "q": "Express cube root of x^5 in the form x^k.",
+    "marks": 2,
+    "model": [
+     "Converts root to fractional power: (x^5)^(1/3)",
+     "Multiplies indices: x^(5/3)"
+    ],
+    "tip": "The index of the root always becomes the denominator of the fractional power."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Evaluate 27^(4/3) * 9^(-1/2) without using a calculator.",
+    "steps": [
+     "Step 1: Evaluate 27^(4/3). Cube root of 27 is 3. 3 to the power of 4 is 81.",
+     "Step 2: Evaluate 9^(-1/2). Square root of 9 is 3, and the negative power gives the reciprocal: 1/3.",
+     "Step 3: Multiply the two results together: 81 * (1/3) = 27."
+    ],
+    "ans": "27"
+   },
+   {
+    "q": "Solve 4^(2x) = 8^(x+1).",
+    "steps": [
+     "Step 1: Express both bases using a common base of 2. 4 = 2^2 and 8 = 2^3.",
+     "Step 2: Rewrite equation: (2^2)^(2x) = (2^3)^(x+1).",
+     "Step 3: Apply power of a power rule: 2^(4x) = 2^(3x+3).",
+     "Step 4: Equate indices: 4x = 3x + 3.",
+     "Step 5: Solve for x: x = 3."
+    ],
+    "ans": "x = 3"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Visualising fractional indices as roots and powers. The denominator acts as the root index, while the numerator acts as the standard integer power.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\" rx=\"10\"/><text x=\"200\" y=\"50\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#1b2540\">Anatomy of a Fractional Index</text><rect x=\"50\" y=\"75\" width=\"300\" height=\"50\" fill=\"#ffffff\" stroke=\"#1b2540\" stroke-width=\"1\" rx=\"5\"/><text x=\"200\" y=\"105\" font-size=\"20\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#1b2540\">a</text><text x=\"225\" y=\"90\" font-size=\"14\" font-weight=\"bold\" fill=\"#dc2626\">m</text><line x1=\"218\" y1=\"95\" x2=\"238\" y2=\"95\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><text x=\"225\" y=\"115\" font-size=\"14\" font-weight=\"bold\" fill=\"#2563eb\">n</text><path d=\"M 70 150 L 110 150 L 130 190 L 150 130 L 180 130\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"100\" y=\"185\" font-size=\"12\" fill=\"#1b2540\">n-th root (denominator)</text><text x=\"270\" y=\"150\" font-size=\"12\" fill=\"#1b2540\">Power (numerator)</text><circle cx=\"225\" cy=\"100\" r=\"25\" fill=\"none\" stroke=\"#1b2540\" stroke-dasharray=\"3,3\" stroke-width=\"1\"/></svg>"
+   },
+   {
+    "cap": "Bounding square numbers to estimate surds and non-square roots without a calculator.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#fef3c7\" stroke=\"#1b2540\" stroke-width=\"2\" rx=\"10\"/><text x=\"200\" y=\"50\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#1b2540\">Estimating Square Root of 50</text><line x1=\"50\" y1=\"120\" x2=\"350\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"100\" cy=\"120\" r=\"6\" fill=\"#2563eb\"/><circle cx=\"250\" cy=\"120\" r=\"6\" fill=\"#2563eb\"/><circle cx=\"180\" cy=\"120\" r=\"8\" fill=\"#dc2626\"/><text x=\"100\" y=\"105\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#1b2540\">49 (Root = 7)</text><text x=\"250\" y=\"105\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#1b2540\">64 (Root = 8)</text><text x=\"180\" y=\"150\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#dc2626\">50 lies between</text><text x=\"200\" y=\"190\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">Estimate: Approx 7.1</text></svg>"
+   },
+   {
+    "cap": "Summary of index laws showing how bases and indices interact under multiplication, division, and powers.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#dcfce7\" stroke=\"#1b2540\" stroke-width=\"2\" rx=\"10\"/><text x=\"200\" y=\"45\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#1b2540\">Index Laws Quick Reference</text><rect x=\"40\" y=\"65\" width=\"320\" height=\"40\" fill=\"#ffffff\" stroke=\"#1b2540\" rx=\"5\"/><text x=\"200\" y=\"90\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1b2540\">Multiplication: a^m * a^n = a^(m+n)</text><rect x=\"40\" y=\"115\" width=\"320\" height=\"40\" fill=\"#ffffff\" stroke=\"#1b2540\" rx=\"5\"/><text x=\"200\" y=\"140\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1b2540\">Division: a^m / a^n = a^(m-n)</text><rect x=\"40\" y=\"165\" width=\"320\" height=\"40\" fill=\"#ffffff\" stroke=\"#1b2540\" rx=\"5\"/><text x=\"200\" y=\"190\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1b2540\">Power of Power: (a^m)^n = a^(m*n)</text></svg>"
+   }
+  ],
+  "pid": "maths_ocr_h.2.0",
+  "sid": "maths_ocr_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-20T18:39:02.152Z"
  }
 }

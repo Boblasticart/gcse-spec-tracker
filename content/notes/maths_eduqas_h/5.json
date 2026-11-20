@@ -444,5 +444,458 @@
   "src": "pre",
   "by": "gemini/gemini-3.5-flash-lite",
   "ts": "2026-11-16T03:28:44.771Z"
+ },
+ "maths_eduqas_h.5.1": {
+  "summary": "Mastering the design and criticism of questionnaire questions requires understanding how to construct unbiased, clear, and mathematically valid data collection tools. You must eliminate leading questions, avoid ambiguous or overlapping timeframes and response boxes, and ensure respondents are not forced into inaccurate choices. At Grade 9, examiners test your ability to spot subtle flaws in experimental design and rewrite questions to guarantee reliable, representative statistical analysis.",
+  "core": [
+   {
+    "h": "1. Purpose of Questionnaires in Statistics",
+    "p": "A questionnaire is a primary research instrument used to collect data directly from a target population. In GCSE statistics, your primary goal when evaluating or designing a questionnaire is to ensure the data collected is valid, reliable, and free from systematic bias.",
+    "bullets": [
+     "Used for primary data collection from a sample to infer characteristics about a population",
+     "Must be carefully structured to avoid non-sampling errors such as measurement bias",
+     "Requires clear alignment between the hypothesis being tested and the questions asked"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Validity vs Reliability",
+      "p": "A valid question measures what it intends to measure; a reliable question produces consistent results under identical conditions."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. Identifying Leading Questions",
+    "p": "A leading question is one that prompts or encourages the respondent to answer in a particular direction. In exam questions, examiners look for loaded adjectives or presuppositions that sway opinion.",
+    "bullets": [
+     "Words like 'brilliant', 'terrible', 'waste', or 'surely' heavily bias the response",
+     "Fix leading questions by neutralising the wording and offering balanced options",
+     "Example of flaw: 'Don't you agree that homework is a waste of time?'"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Leading Question",
+      "p": "A question that explicitly or implicitly suggests a preferred or expected answer."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Visual comparison of a leading question versus a neutral, unbiased alternative.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"100\" fill=\"#fecaca\" stroke=\"#991b1b\" rx=\"8\" /><text x=\"20\" y=\"30\" font-size=\"12\" font-weight=\"bold\" fill=\"#991b1b\">Leading (Biased):</text><text x=\"20\" y=\"55\" font-size=\"11\" fill=\"#1b2540\">\"Don't you agree our school lunches are awful?\"</text><text x=\"20\" y=\"85\" font-size=\"11\" fill=\"#1b2540\">Flaw: Uses loaded adjective 'awful' and prompts agreement.</text><rect x=\"10\" y=\"120\" width=\"380\" height=\"110\" fill=\"#bbf7d0\" stroke=\"#166534\" rx=\"8\" /><text x=\"20\" y=\"140\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\">Neutral (Valid):</text><text x=\"20\" y=\"165\" font-size=\"11\" fill=\"#1b2540\">\"How would you rate the quality of school lunches?\"</text><text x=\"20\" y=\"190\" font-size=\"11\" fill=\"#1b2540\">Options: [Good] [Average] [Poor]</text><text x=\"20\" y=\"210\" font-size=\"11\" fill=\"#1b2540\">Fix: Removes emotion and gives balanced choices.</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "3. Ambiguous and Vague Terminology",
+    "p": "Ambiguity occurs when words or phrases have multiple interpretations. If different respondents interpret a question differently, the resulting dataset cannot be meaningfully analysed or compared.",
+    "bullets": [
+     "Vague frequency words like 'often', 'regularly', 'sometimes', or 'frequently' mean different things to different people",
+     "Always replace vague frequency words with precise numerical timeframes or ranges",
+     "Example of ambiguity: 'Do you exercise much?' -> What defines 'much'?"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Vague Quantifiers",
+      "p": "Never accept 'often' or 'usually' in a well-designed question. Look for specific time periods like 'in the last 7 days'."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Designing Mutually Exclusive Response Boxes",
+    "p": "Multiple choice response boxes must be mutually exclusive so that every possible answer falls into one and only one category. If categories overlap, respondents cannot accurately select their category.",
+    "bullets": [
+     "Overlapping ranges such as '0-5' and '5-10' leave a respondent with a value of 5 unsure where to tick",
+     "Ranges must be contiguous without gaps and without overlaps (e.g., '0 to 5', '6 to 10')",
+     "Ensure the response options cover all conceivable answers"
+    ],
+    "table": {
+     "head": [
+      "Flawed Option Set",
+      "Corrected Option Set"
+     ],
+     "rows": [
+      [
+       "0 - 5 hours, 5 - 10 hours",
+       "0 - 5 hours, 6 - 10 hours"
+      ],
+      [
+       "Under 20, Over 30",
+       "Under 20, 20 to 39, 40 and over"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Mutually Exclusive Categories",
+      "p": "Categories that cannot occur at the same time, ensuring each data point belongs to exactly one category."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "5. Exhaustive Response Boxes",
+    "p": "In addition to being mutually exclusive, response options must be exhaustive. This means every single respondent must be able to find an option that applies to them without forcing a false answer.",
+    "bullets": [
+     "If a question asks 'What is your transport to work?' with options [Car] [Bus], a cyclist has no valid option",
+     "Always include an 'Other' or 'N/A' category where appropriate",
+     "Check that numerical ranges cover extreme high and low values (e.g., '50 or more')"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "The 'Other' Check",
+      "p": "Always ask yourself: 'Could a real person reading this questionnaire find that none of the boxes apply to them?' If yes, it is not exhaustive."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Avoiding Personal or Sensitive Questions",
+    "p": "Questions that ask for highly personal information (such as exact salary, medical history, or illegal activities) often suffer from low response rates or deliberate dishonesty.",
+    "bullets": [
+     "Respondents may lie or refuse to answer if privacy is compromised",
+     "Use grouped frequency intervals (e.g., salary brackets) rather than asking for exact figures",
+     "Ensure anonymity or confidentiality is implied or stated when handling sensitive data"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Response Rate",
+      "p": "Sensitive phrasing directly reduces response rate and introduces non-response bias into your sample."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Timeframe and Context Issues",
+    "p": "Questions must specify a clear timeframe if they ask about past behaviour or future intentions. Vague timeframes make it impossible to standardise data across a sample.",
+    "bullets": [
+     "Flawed: 'How many times do you visit the cinema?'",
+     "Corrected: 'How many times have you visited the cinema in the last month?'",
+     "Ensure seasonal bias is accounted for if collecting data over a short period"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Recall Bias",
+      "p": "The tendency of respondents to inaccurately remember past events, often mitigated by shortening the requested timeframe."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Double-Barrelled Questions",
+    "p": "A double-barrelled question asks two separate things within a single question structure. This makes it impossible to know which part of the question the respondent is answering.",
+    "bullets": [
+     "Example of flaw: 'Do you enjoy mathematics and find it easy?'",
+     "A student might enjoy maths but find it difficult, or hate it but find it easy",
+     "Fix by splitting into two distinct, single-focus questions"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Two Questions in One",
+      "p": "Look for the word 'and' joining two distinct actions or opinions in a single question sentence."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Anatomy of a double-barrelled question error and how to separate it into valid parts.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"90\" fill=\"#fecaca\" stroke=\"#991b1b\" rx=\"8\" /><text x=\"20\" y=\"30\" font-size=\"12\" font-weight=\"bold\" fill=\"#991b1b\">Double-Barrelled Flaw:</text><text x=\"20\" y=\"55\" font-size=\"11\" fill=\"#1b2540\">\"Do you buy organic food and recycle your plastic?\"</text><text x=\"20\" y=\"78\" font-size=\"11\" fill=\"#1b2540\">Flaw: Asks about two independent behaviours at once.</text><rect x=\"10\" y=\"115\" width=\"380\" height=\"115\" fill=\"#bbf7d0\" stroke=\"#166534\" rx=\"8\" /><text x=\"20\" y=\"135\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\">Corrected Separate Questions:</text><text x=\"20\" y=\"160\" font-size=\"11\" fill=\"#1b2540\">Q1: \"Do you regularly buy organic food? [Yes/No]\"</text><text x=\"20\" y=\"185\" font-size=\"11\" fill=\"#1b2540\">Q2: \"Do you regularly recycle your plastic? [Yes/No]\"</text><text x=\"20\" y=\"210\" font-size=\"11\" fill=\"#1b2540\">Fix: Each question isolates a single variable.</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "9. Criticising Questionnaire Scenarios in Exams",
+    "p": "Exam questions often present a poorly designed question and ask you to state two reasons why it is unsuitable. Your answers must be specific to the given question rather than generic statements.",
+    "bullets": [
+     "Never write 'It is a bad question' or 'People won't answer it'",
+     "Always reference the exact flaw: e.g., 'The timeframes overlap' or 'It is a leading question because of the word brilliant'",
+     "Always provide a concrete improvement when asked to redesign"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Mark Scheme Rule",
+      "p": "Examiners award marks only when you name the specific flaw AND link it directly to the wording or response options provided in the prompt."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Pilot Surveys and Testing",
+    "p": "A pilot survey is a small-scale trial run of a questionnaire conducted before the main survey takes place. It allows researchers to identify ambiguities, check response box formatting, and estimate response rates.",
+    "bullets": [
+     "Helps iron out misunderstandings before wasting resources on a full population sample",
+     "Tests whether the data collected can actually be processed using statistical graphs and averages",
+     "Ensures instructions are clear and easy to follow"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Pilot Survey",
+      "p": "A preliminary trial of a questionnaire carried out on a small sample to test its effectiveness and validity."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "11. Questionnaire Delivery Methods",
+    "p": "The method used to administer a questionnaire affects both the response rate and the presence of bias. Different methods suit different target populations.",
+    "bullets": [
+     "Face-to-face interviews: High response rate, but risk of interviewer bias (respondent lying to please the interviewer)",
+     "Postal / Online surveys: Anonymity is high, but response rates are often very low, causing non-response bias",
+     "Telephone surveys: Moderate response rate, but restricted by time of day and caller ID screening"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Interviewer Bias",
+      "p": "Occurs when the physical presence, tone, or appearance of the interviewer influences the respondent's answers."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "12. Summary Checklist for Question Design",
+    "p": "When constructing a questionnaire from scratch in an examination, run through a mental checklist to ensure full marks are secured.",
+    "bullets": [
+     "1. Is it free from leading words? (No emotional adjectives)",
+     "2. Are timeframes explicit? (e.g., 'in the last week')",
+     "3. Are response boxes mutually exclusive? (No overlapping numbers)",
+     "4. Are response boxes exhaustive? (Includes all possibilities and 'Other')",
+     "5. Is it single-focus? (No double-barrelled structure)"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Grade 9 Polish",
+      "p": "Check that your redesigned question includes both the question text AND the complete set of valid, non-overlapping checkboxes."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "The 5-point evaluation framework for questionnaire questions.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"15\" width=\"360\" height=\"35\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" rx=\"6\" /><text x=\"30\" y=\"37\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\">1. Neutral Wording (No leading phrases)</text><rect x=\"20\" y=\"58\" width=\"360\" height=\"35\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" rx=\"6\" /><text x=\"30\" y=\"80\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\">2. Precise Timeframe (No vague words)</text><rect x=\"20\" y=\"101\" width=\"360\" height=\"35\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" rx=\"6\" /><text x=\"30\" y=\"123\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\">3. Mutually Exclusive Boxes (No overlap)</text><rect x=\"20\" y=\"144\" width=\"360\" height=\"35\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" rx=\"6\" /><text x=\"30\" y=\"166\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\">4. Exhaustive Options (Covers all cases)</text><rect x=\"20\" y=\"187\" width=\"360\" height=\"35\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" rx=\"6\" /><text x=\"30\" y=\"209\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\">5. Single Focus (No double-barrelled questions)</text></svg>"
+     }
+    ]
+   }
+  ],
+  "analogy": {
+   "t": "Designing a Questionnaire is like Setting Up a CCTV Camera Network",
+   "p": "Imagine you are setting up security cameras to capture a crime scene. If your camera lens is tinted with rose-coloured glass (a leading question), every scene looks wonderful and you miss the real picture. If your camera's angle covers two streets at once (a double-barrelled question), footage is confusing and useless. If your camera settings have huge blind spots (overlapping or non-exhaustive boxes), events happen where nobody is watching. Where this analogy breaks down is that cameras are mechanical, whereas human respondents actively interpret, misinterpret, or lie based on how polite or intrusive your questions feel."
+  },
+  "terms": [
+   {
+    "t": "Questionnaire",
+    "d": "A research instrument consisting of a series of questions for the purpose of gathering primary data from respondents."
+   },
+   {
+    "t": "Leading Question",
+    "d": "A question that prompts or encourages the respondent to answer in a particular, biased direction."
+   },
+   {
+    "t": "Double-Barrelled Question",
+    "d": "A question that touches upon two or more distinct issues simultaneously while allowing only a single answer."
+   },
+   {
+    "t": "Mutually Exclusive",
+    "d": "Categories or response options that do not overlap, ensuring a single data point falls into only one category."
+   },
+   {
+    "t": "Exhaustive Categories",
+    "d": "Response options that cover all possible answers so that every respondent can find a valid choice."
+   },
+   {
+    "t": "Pilot Survey",
+    "d": "A small-scale preliminary study conducted to evaluate questionnaire design, validity, and feasibility."
+   },
+   {
+    "t": "Interviewer Bias",
+    "d": "Distortion of survey results caused by the physical presence, attitude, or recording errors of the interviewer."
+   },
+   {
+    "t": "Non-Response Bias",
+    "d": "Error introduced when individuals who do not respond to a survey have different characteristics from those who do."
+   },
+   {
+    "t": "Recall Bias",
+    "d": "Inaccuracy introduced when respondents fail to accurately remember past events or behaviours."
+   },
+   {
+    "t": "Validity",
+    "d": "The extent to which a questionnaire accurately measures what it sets out to measure."
+   },
+   {
+    "t": "Reliability",
+    "d": "The consistency of questionnaire results when repeated under identical conditions."
+   },
+   {
+    "t": "Ambiguous Question",
+    "d": "A question open to multiple interpretations due to vague wording or undefined terms."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Writing 'It is a bad question' when asked to criticise a questionnaire.",
+    "r": "You must state the specific statistical flaw, such as 'It is leading because of the word brilliant' or 'The time intervals overlap'."
+   },
+   {
+    "w": "Creating checkbox options like '0-10, 10-20, 20-30'.",
+    "r": "The categories overlap at 10 and 20. Correct format is '0-9, 10-19, 20-29' or '0 to 9, 10 to 19'."
+   },
+   {
+    "w": "Leaving out an 'Other' or 'None' option when categories are not fully exhaustive.",
+    "r": "Ensure options cover all respondents or provide an 'Other' box so responses are not forced."
+   },
+   {
+    "w": "Using vague frequency words like 'How often do you play sport? [Often] [Rarely]'.",
+    "r": "Use numerical timeframes, e.g., 'How many times did you play sport in the last 7 days?'"
+   },
+   {
+    "w": "Saying 'The sample size is too small' when criticising a single question.",
+    "r": "Sample size issues relate to sampling (HS1), not question design. Keep criticism focused on the question's wording or response boxes."
+   },
+   {
+    "w": "Writing a fix that is just as flawed as the original question.",
+    "r": "Double-check your redesigned question against all 5 rules (neutral, precise, mutually exclusive, exhaustive, single focus)."
+   },
+   {
+    "w": "Assuming 'Do you like swimming or running?' is a valid single question.",
+    "r": "This is double-barrelled; a respondent might like swimming but dislike running."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Sian wants to find out how much time students spend watching television. She designs the following question: 'How much TV do you watch? [ ] 0-2 hours [ ] 2-4 hours [ ] 4-6 hours'. Write down two criticisms of Sian's question and response boxes.",
+    "marks": 2,
+    "model": [
+     "The response boxes overlap at 2 hours and 4 hours.",
+     "The options are not exhaustive because someone watching more than 6 hours has no box to tick."
+    ],
+    "tip": "Identify both the overlapping range flaw and the missing upper limit for full marks."
+   },
+   {
+    "q": "Liam asks this question on a questionnaire: 'Don't you agree that school uniform is uncomfortable?' Give one reason why this question is unsuitable and suggest an improved question.",
+    "marks": 2,
+    "model": [
+     "It is a leading question because it prompts the respondent to agree that uniform is uncomfortable.",
+     "Improvement: 'How would you rate the comfort of school uniform? [Very comfortable] [Comfortable] [Uncomfortable] [Very uncomfortable]' (or similar neutral phrasing)."
+    ],
+    "tip": "State the specific leading word ('Don't you agree' or 'uncomfortable') and provide a balanced scale."
+   },
+   {
+    "q": "A researcher wishes to find out how many books adults read. Question: 'Do you read books and visit the library?' Explain why this question is poorly designed.",
+    "marks": 1,
+    "model": [
+     "It is a double-barrelled question because it asks about reading books and visiting the library in the same question."
+    ],
+    "tip": "Spot the conjunction 'and' connecting two separate activities."
+   },
+   {
+    "q": "Chloe designs a questionnaire to find out how much money teenagers spend on music. Write a suitable question with response boxes for her to use.",
+    "marks": 2,
+    "model": [
+     "Appropriate neutral question text (e.g., 'How much do you spend on music per month?').",
+     "Mutually exclusive and exhaustive response boxes with units (e.g., GBP 0-4.99, GBP 5-9.99, GBP 10 or more)."
+    ],
+    "tip": "Always include currency units and ensure no overlapping intervals."
+   },
+   {
+    "q": "State why a pilot survey is useful when designing a major questionnaire.",
+    "marks": 1,
+    "model": [
+     "It identifies ambiguities, flaws in question wording, or problems with response boxes before the main survey is carried out."
+    ],
+    "tip": "Keep the answer concise, mentioning testing for flaws or clarity."
+   },
+   {
+    "q": "A questionnaire asks: 'How often do you eat fast food?' Response boxes: [Often] [Sometimes] [Never]. Give two reasons why these response boxes are flawed.",
+    "marks": 2,
+    "model": [
+     "The terms 'Often' and 'Sometimes' are vague and mean different things to different people.",
+     "There is no specific timeframe specified (e.g., in the last week or month)."
+    ],
+    "tip": "Target both the subjective terminology and the missing timeframe."
+   },
+   {
+    "q": "Explain one advantage and one disadvantage of using face-to-face interviews instead of postal questionnaires.",
+    "marks": 2,
+    "model": [
+     "Advantage: Higher response rate / researcher can clarify misunderstandings.",
+     "Disadvantage: Risk of interviewer bias / respondents may be less honest about sensitive topics."
+    ],
+    "tip": "Memorise standard administration pros and cons: response rate vs bias."
+   },
+   {
+    "q": "A fitness survey includes the question: 'What is your age?' [ ] Under 20 [ ] 20-40 [ ] Over 40. Criticise these categories.",
+    "marks": 1,
+    "model": [
+     "The categories are ambiguous/overlapping if someone is exactly 20 or 40 years old."
+    ],
+    "tip": "Check boundary values where numbers repeat."
+   },
+   {
+    "q": "Rewrite the following question to make it suitable for a statistical survey: 'Why are electric cars better than petrol cars?'",
+    "marks": 2,
+    "model": [
+     "Remove the assumption that electric cars are better (leading).",
+     "Redesigned neutral question: 'Which type of car do you think is best for the environment, and why?' or similar closed question with balanced options."
+    ],
+    "tip": "Eliminate presupposition entirely."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A gym manager wants to find out customer satisfaction. He places this question at reception: 'Our new gym equipment is fantastic, isn't it? [ ] Yes [ ] No'. Identify two design flaws and rewrite the question properly.",
+    "steps": [
+     "Flaw 1: The question is leading because it uses the biased word 'fantastic' and prompts a 'Yes' response.",
+     "Flaw 2: The response boxes are not exhaustive or balanced enough to capture varying degrees of satisfaction (only Yes/No).",
+     "Redesign: Write a neutral question without loaded adjectives, and provide a 4-point Likert scale or balanced options including 'Other'."
+    ],
+    "ans": "Flaws: Leading question with biased word 'fantastic'; binary Yes/No lacks granularity. Rewrite: 'How would you rate the new gym equipment? [Very good] [Satisfactory] [Poor] [Very poor]'."
+   },
+   {
+    "q": "Design a complete question to find out how many hours of sleep adults get per night on weekdays, including valid response boxes.",
+    "steps": [
+     "Step 1: Write a neutral question specifying the timeframe ('on weekdays' is given, but make it clear).",
+     "Step 2: Ensure no vague words are used.",
+     "Step 3: Create mutually exclusive and exhaustive numerical categories with units."
+    ],
+    "ans": "Question: 'How many hours of sleep do you typically get per night on a weekday?' Response boxes: [ ] Less than 5 hours [ ] 5 to 6 hours [ ] 7 to 8 hours [ ] More than 8 hours."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Comparison of flawed overlapping response boxes versus valid mutually exclusive and exhaustive categories.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"15\" width=\"380\" height=\"100\" fill=\"#fecaca\" stroke=\"#991b1b\" rx=\"6\" /><text x=\"25\" y=\"35\" font-size=\"11\" font-weight=\"bold\" fill=\"#991b1b\">Flawed Categories (Overlapping):</text><text x=\"25\" y=\"58\" font-size=\"10\" fill=\"#1b2540\">[ ] 0 - 10 hours   [ ] 10 - 20 hours   [ ] 20 - 30 hours</text><text x=\"25\" y=\"85\" font-size=\"10\" fill=\"#991b1b\">Error: If a value is 10 or 20, it belongs to two boxes!</text><rect x=\"10\" y=\"125\" width=\"380\" height=\"105\" fill=\"#bbf7d0\" stroke=\"#166534\" rx=\"6\" /><text x=\"25\" y=\"145\" font-size=\"11\" font-weight=\"bold\" fill=\"#166534\">Valid Categories (Exclusive &amp; Exhaustive):</text><text x=\"25\" y=\"168\" font-size=\"10\" fill=\"#1b2540\">[ ] 0 - 9 hours   [ ] 10 - 19 hours   [ ] 20 or more hours</text><text x=\"25\" y=\"198\" font-size=\"10\" fill=\"#166534\">Correct: No overlaps, and upper limit is fully covered.</text></svg>"
+   },
+   {
+    "cap": "Flowchart showing the step-by-step decision process for evaluating any questionnaire question in an exam.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"120\" y=\"10\" width=\"160\" height=\"30\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" rx=\"4\" /><text x=\"135\" y=\"29\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\">Examine Question Text</text><line x1=\"200\" y1=\"40\" x2=\"200\" y2=\"65\" stroke=\"#1d4ed8\" stroke-width=\"2\" /><rect x=\"70\" y=\"65\" width=\"260\" height=\"35\" fill=\"#fef3c7\" stroke=\"#d97706\" rx=\"4\" /><text x=\"80\" y=\"87\" font-size=\"10\" font-weight=\"bold\" fill=\"#d97706\">Are there leading words or double-barrelled parts?</text><line x1=\"200\" y1=\"100\" x2=\"200\" y2=\"125\" stroke=\"#d97706\" stroke-width=\"2\" /><rect x=\"70\" y=\"125\" width=\"260\" height=\"35\" fill=\"#fef3c7\" stroke=\"#d97706\" rx=\"4\" /><text x=\"80\" y=\"147\" font-size=\"10\" font-weight=\"bold\" fill=\"#d97706\">Are timeframes or quantifiers vague ('often')?</text><line x1=\"200\" y1=\"160\" x2=\"200\" y2=\"185\" stroke=\"#d97706\" stroke-width=\"2\" /><rect x=\"70\" y=\"185\" width=\"260\" height=\"40\" fill=\"#bbf7d0\" stroke=\"#166534\" rx=\"4\" /><text x=\"80\" y=\"202\" font-size=\"10\" font-weight=\"bold\" fill=\"#166534\">Check Response Boxes:</text><text x=\"80\" y=\"217\" font-size=\"9\" fill=\"#166534\">Mutually exclusive? Exhaustive? Units included?</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_h.5.1",
+  "sid": "maths_eduqas_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-20T18:20:51.017Z"
  }
 }

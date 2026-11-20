@@ -2705,5 +2705,534 @@
   "src": "pre",
   "by": "gemini/gemini-flash-lite-latest",
   "ts": "2026-11-19T18:55:56.458Z"
+ },
+ "maths_eduqas_f.4.2": {
+  "summary": "Theoretical probability quantifies the likelihood of an outcome occurring on a continuous scale from 0 (impossible) to 1 (certain). Expected frequency connects this theoretical probability to real-world repetition by calculating how many times an event is expected to happen over a given number of trials using the formula Expected Frequency = Probability × Total Trials. On the Eduqas GCSE Foundation tier, students must confidently convert probabilities between fractions, decimals, and percentages, apply the expected frequency formula forward and backwards, and interpret predictions in context.",
+  "core": [
+   {
+    "h": "The 0 to 1 Probability Scale",
+    "p": "In mathematics, probability measures the chance of an outcome happening using a strict numerical scale between 0 and 1 inclusive. A probability can never be negative, nor can it exceed 1.",
+    "bullets": [
+     "**0 (Impossible)**: The event cannot happen under any circumstances (e.g. rolling a 7 on a standard 6-sided die).",
+     "**0.5 or 1/2 or 50% (Even Chance)**: The event is equally likely to happen as it is not to happen (e.g. flipping heads on a fair coin).",
+     "**1 (Certain)**: The event is guaranteed to happen (e.g. picking a red marble from a bag containing only red marbles).",
+     "Probabilities can be written as **fractions**, **decimals**, or **percentages** (e.g. 1/4 = 0.25 = 25%)."
+    ],
+    "table": {
+     "head": [
+      "Descriptor",
+      "Fraction",
+      "Decimal",
+      "Percentage"
+     ],
+     "rows": [
+      [
+       "Impossible",
+       "0",
+       "0.0",
+       "0%"
+      ],
+      [
+       "Unlikely",
+       "1/4",
+       "0.25",
+       "25%"
+      ],
+      [
+       "Even Chance",
+       "1/2",
+       "0.5",
+       "50%"
+      ],
+      [
+       "Likely",
+       "3/4",
+       "0.75",
+       "75%"
+      ],
+      [
+       "Certain",
+       "1",
+       "1.0",
+       "100%"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Theoretical Probability",
+      "p": "The exact likelihood of an event calculated from theoretical principles by dividing the number of favorable outcomes by the total number of possible equally likely outcomes."
+     },
+     {
+      "k": "warn",
+      "t": "Never Use Ratios for Probability",
+      "p": "Eduqas mark schemes strictly penalise writing probabilities as ratios (e.g. 1:4). Always write probabilities as fractions, decimals, or percentages."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Defining Theoretical Probability",
+    "p": "Theoretical probability is calculated assuming all individual outcomes are equally likely and the experiment is fair.",
+    "bullets": [
+     "Formula: **P(Event) = (Number of Favorable Outcomes) / (Total Number of Possible Outcomes)**.",
+     "Example: On a fair 6-sided die, P(rolling a prime number) = P(2, 3, 5) = 3/6 = 1/2 = 0.5.",
+     "Theoretical probability does not change regardless of how many times the experiment is repeated.",
+     "It acts as the single-trial proportion used to predict long-term outcomes."
+    ],
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Fair vs Biased",
+      "p": "A fair item (die, coin, spinner) has equally likely outcomes. A biased item does not, so probabilities are determined experimentally or given explicitly in the question."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "What is Expected Frequency?",
+    "p": "Expected frequency is the theoretical prediction of how many times a specific outcome will occur when an experiment is repeated a given number of times (trials).",
+    "bullets": [
+     "It translates a probability (0–1 scale) into an actual count of occurrences.",
+     "Expected frequency is an **average long-term expectation**, not a guaranteed result for a single experiment.",
+     "It is directly proportional to both the theoretical probability and the number of trials performed.",
+     "It is widely used in quality control, weather forecasting, insurance, and gaming."
+    ],
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Expected Frequency",
+      "p": "The calculated number of times an event is expected to occur over n independent trials: Expected Frequency = Probability × Total Trials."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "The Expected Frequency Formula",
+    "p": "The core mathematical relationship linking theoretical probability and expected frequency is expressed through a simple formula.",
+    "bullets": [
+     "**Expected Frequency (E) = Theoretical Probability (P) × Total Number of Trials (n)**",
+     "Short form: **E = P × n**",
+     "**P** must be a number between 0 and 1 (fraction or decimal).",
+     "**n** is the sample size or total number of repetitions (always a positive integer).",
+     "**E** represents the expected count of success outcomes."
+    ],
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Formula Triangle Memory Aid",
+      "p": "Think of E on top, with P and n on the bottom. To find E, multiply P by n. To find n, divide E by P. To find P, divide E by n."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Calculating Expected Frequency Using Fractions",
+    "p": "When theoretical probability is given as a fraction, expected frequency is calculated by finding a fraction of an integer amount.",
+    "bullets": [
+     "Formula: **Expected Frequency = (Numerator / Denominator) × Total Trials**.",
+     "Step 1: Divide total trials by the denominator.",
+     "Step 2: Multiply the result by the numerator.",
+     "Example: If P(Red) = 3/8 and a spinner is spun 120 times: Expected Red = (120 ÷ 8) × 3 = 15 × 3 = 45."
+    ],
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Non-Calculator Strategy",
+      "p": "Component 1 is non-calculator! Practice dividing the total number of trials by the denominator first to keep calculations manageable."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Calculating Expected Frequency Using Decimals and Percentages",
+    "p": "In Component 2 (Calculator paper) or non-calculator decimal problems, probabilities are frequently given as decimals or percentages.",
+    "bullets": [
+     "Decimal method: Multiply decimal probability directly by the total number of trials.",
+     "Example: P(Win) = 0.35, Total games = 400. Expected Wins = 0.35 × 400 = 140.",
+     "Percentage method: Convert percentage to a decimal or fraction first (e.g. 15% = 0.15 = 15/100).",
+     "Example: 15% defective rate in 2000 items: 0.15 × 2000 = 300 expected defective items."
+    ],
+    "table": {
+     "head": [
+      "Probability Format",
+      "Given Value",
+      "Total Trials (n)",
+      "Calculation",
+      "Expected Frequency (E)"
+     ],
+     "rows": [
+      [
+       "Fraction",
+       "2/5",
+       "150",
+       "(150 ÷ 5) × 2",
+       "60"
+      ],
+      [
+       "Decimal",
+       "0.45",
+       "800",
+       "0.45 × 800",
+       "360"
+      ],
+      [
+       "Percentage",
+       "12%",
+       "500",
+       "0.12 × 500",
+       "60"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Working Backwards: Finding the Total Number of Trials (n)",
+    "p": "Eduqas examination questions frequently test your ability to rearrange the formula to find the total number of trials performed.",
+    "bullets": [
+     "Rearranged formula: **Total Trials (n) = Expected Frequency (E) ÷ Probability (P)**",
+     "Example: A biased die has P(rolling 6) = 0.2. If a 6 was expected 50 times, how many times was the die rolled?",
+     "Calculation: n = 50 ÷ 0.2 = 250 rolls.",
+     "Fraction example: P(Success) = 3/7. Expected successes = 27. Total trials = 27 ÷ (3/7) = 27 × (7/3) = 63."
+    ],
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Dividing by Decimals",
+      "p": "When dividing by a decimal like 0.2 on a non-calculator paper, multiply numerator and denominator by 10: 50 ÷ 0.2 = 500 ÷ 2 = 250."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Working Backwards: Estimating Probability from Frequency",
+    "p": "If the expected frequency and total number of trials are known, you can determine the theoretical probability.",
+    "bullets": [
+     "Rearranged formula: **Probability (P) = Expected Frequency (E) ÷ Total Trials (n)**",
+     "Example: A factory expects 18 faulty bulbs in a batch of 600. P(faulty) = 18 / 600 = 3 / 100 = 0.03 = 3%.",
+     "Always simplify fractions to their simplest form unless specified otherwise."
+    ],
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Expected Frequency with Mutually Exclusive Outcomes",
+    "p": "When finding the expected frequency for multiple combined or alternative outcomes, sum the individual probabilities first or sum the expected frequencies.",
+    "bullets": [
+     "Mutually exclusive outcomes cannot happen at the same time.",
+     "To find the expected frequency of Outcome A **OR** Outcome B: P(A or B) = P(A) + P(B).",
+     "Then: Expected Frequency = P(A or B) × n.",
+     "Alternative method: Calculate E(A) and E(B) separately, then add them together: E(A or B) = E(A) + E(B)."
+    ],
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Mutually Exclusive Events",
+      "p": "Events that cannot occur simultaneously. The total sum of probabilities of all mutually exclusive and exhaustive outcomes is exactly 1."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Real-World Contexts: Expected Frequency in Decision Making",
+    "p": "Expected frequency allows businesses and scientists to make informed predictions based on statistical sample data.",
+    "bullets": [
+     "**Quality Control**: Estimating how many defective products a factory will produce in a full production run of 50,000 units based on sample testing.",
+     "**Survey Predictions**: Estimating how many voters in a city of 200,000 will vote for a candidate based on a representative poll.",
+     "**Risk & Insurance**: Calculating the expected number of insurance claims per 10,000 policyholders."
+    ],
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Contextual Interpretation",
+      "p": "Even if expected frequency works out to a fraction in raw math (e.g. 14.2 people), read the question carefully. Unless asked to round to the nearest whole number, give the exact calculated expected value in probability contexts."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Completing Probability Tables and Finding Expected Values",
+    "p": "A classic Eduqas exam problem combines finding a missing probability in a table with calculating an expected frequency.",
+    "bullets": [
+     "Step 1: Remember that all probabilities in an exhaustive table must sum to 1.",
+     "Step 2: Subtract the sum of known probabilities from 1 to find the missing probability.",
+     "Step 3: Multiply the required outcome's probability by the total number of trials given in the problem."
+    ],
+    "table": {
+     "head": [
+      "Color",
+      "Red",
+      "Blue",
+      "Yellow",
+      "Green"
+     ],
+     "rows": [
+      [
+       "Probability",
+       "0.25",
+       "0.40",
+       "x",
+       "0.15"
+      ],
+      [
+       "Calculation",
+       "Sum of known = 0.80",
+       "",
+       "x = 1 - 0.80 = 0.20",
+       ""
+      ],
+      [
+       "Expected in 500 spins",
+       "0.25 × 500 = 125",
+       "0.40 × 500 = 200",
+       "0.20 × 500 = 100",
+       "0.15 × 500 = 75"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Baking Batches of Choc-Chip Cookies",
+   "p": "Imagine a baker's secret recipe where theoretical probability represents the proportion of chocolate chips per cookie dough mix: exactly 0.25 (or 25%) of all cookies produced will contain extra dark chocolate. If the baker bakes a batch of 200 cookies (n = 200), the expected frequency of dark chocolate cookies is 0.25 × 200 = 50 cookies. Where the analogy breaks down: In real-life baking (experimental trial), due to random mixing, a specific batch of 200 cookies might contain 48 or 53 dark chocolate cookies. The theoretical expected frequency (50) represents the mathematical average outcome across infinitely many batches, not a physical law that forces exactly 50 to appear in every batch."
+  },
+  "terms": [
+   {
+    "t": "Theoretical Probability",
+    "d": "The exact calculated likelihood of an event occurring based on equally likely outcomes, expressed on a scale from 0 to 1."
+   },
+   {
+    "t": "Expected Frequency",
+    "d": "The predicted number of times an outcome will occur over a specified number of trials, calculated as Probability × Number of Trials."
+   },
+   {
+    "t": "Probability Scale",
+    "d": "A continuous numerical scale from 0 (impossible) to 1 (certain) used to quantify likelihood."
+   },
+   {
+    "t": "Trial",
+    "d": "A single performance or repetition of a random experiment (e.g. one roll of a die or one spin of a spinner)."
+   },
+   {
+    "t": "Sample Size (n)",
+    "d": "The total number of trials or repetitions carried out in an experiment."
+   },
+   {
+    "t": "Outcome",
+    "d": "A possible result of a random experiment."
+   },
+   {
+    "t": "Mutually Exclusive",
+    "d": "Events that cannot happen at the same time."
+   },
+   {
+    "t": "Exhaustive Events",
+    "d": "A set of events that covers all possible outcomes of an experiment, whose probabilities sum to 1."
+   },
+   {
+    "t": "Fair",
+    "d": "An experiment or device where all outcomes have an equal theoretical probability of occurring."
+   },
+   {
+    "t": "Biased",
+    "d": "An experiment or device where outcomes are not equally likely, favoring certain results over others."
+   },
+   {
+    "t": "Relative Frequency",
+    "d": "The proportion of times an outcome occurs in an actual experiment (Number of successful outcomes ÷ Total trials)."
+   },
+   {
+    "t": "Random Event",
+    "d": "An event whose individual outcome cannot be predicted with certainty in advance."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Adding the theoretical probability to the number of trials (e.g. 0.3 + 200 = 200.3).",
+    "r": "Multiply the theoretical probability by the total number of trials (0.3 × 200 = 60)."
+   },
+   {
+    "w": "Writing expected frequency as a probability fraction or decimal between 0 and 1 (e.g. expected frequency = 0.2).",
+    "r": "Expected frequency is a count of occurrences (an integer or quantity out of total trials, e.g. 40 times)."
+   },
+   {
+    "w": "Expressing theoretical probability as a ratio such as 1:4.",
+    "r": "Write theoretical probabilities as fractions (1/4), decimals (0.25), or percentages (25%). Ratios lose marks in Eduqas exams."
+   },
+   {
+    "w": "Dividing the total number of trials by the probability when trying to find expected frequency (e.g. E = 200 ÷ 0.25 = 800).",
+    "r": "Use E = P × n (E = 0.25 × 200 = 50). Division by P is only used when finding total trials n from E."
+   },
+   {
+    "w": "Assuming expected frequency guarantees exact experimental results every time.",
+    "r": "Expected frequency is a theoretical average outcome over many repetitions, not a guaranteed exact count for a single run."
+   },
+   {
+    "w": "Forgetting that all missing probabilities in a table must sum to 1 before calculating expected frequency.",
+    "r": "Calculate missing probability first using 1 - (sum of given probabilities), then multiply by total trials."
+   },
+   {
+    "w": "Rounding expected frequencies to whole numbers when the exam explicitly asks for exact expected values.",
+    "r": "Keep exact decimals (e.g. 17.5 expected occurrences) unless the question specifically requests rounding."
+   },
+   {
+    "w": "Dividing by numerator and multiplying by denominator when calculating fraction expected frequency.",
+    "r": "Divide total trials by denominator, then multiply by numerator."
+   }
+  ],
+  "exam": [
+   {
+    "q": "The probability of rolling a 6 on a biased die is 0.3. The die is rolled 180 times. Calculate the expected number of times the die lands on a 6.",
+    "marks": 2,
+    "model": [
+     "Expected Frequency = Probability × Total Trials",
+     "Expected Frequency = 0.3 × 180 = 54"
+    ],
+    "tip": "In non-calculator Component 1, work out 3 × 18 = 54, then adjust for the decimal place."
+   },
+   {
+    "q": "The theoretical probability of picking a red counter from a bag is 3/7. A counter is picked at random, its color recorded, and replaced. This is repeated 280 times. Work out the expected number of times a red counter is picked.",
+    "marks": 2,
+    "model": [
+     "Expected Frequency = (3/7) × 280",
+     "280 ÷ 7 = 40",
+     "40 × 3 = 120"
+    ],
+    "tip": "Divide total trials by the denominator first, then multiply by the numerator."
+   },
+   {
+    "q": "A fair 6-sided die is rolled 150 times. Work out the expected number of times it lands on an even number.",
+    "marks": 2,
+    "model": [
+     "Even numbers on a die are 2, 4, 6, so P(Even) = 3/6 = 1/2",
+     "Expected Frequency = (1/2) × 150 = 75"
+    ],
+    "tip": "Identify the theoretical probability first before applying the formula E = P × n."
+   },
+   {
+    "q": "The probability that a seed germinates is 85%. A gardener plants 400 seeds. Calculate the expected number of seeds that germinate.",
+    "marks": 2,
+    "model": [
+     "Convert 85% to decimal = 0.85",
+     "Expected Frequency = 0.85 × 400 = 340"
+    ],
+    "tip": "Multiply 85 by 4 to quickly calculate 0.85 × 400 without a calculator."
+   },
+   {
+    "q": "The table shows the probabilities of landing on different sections of a biased spinner:\nSection: A (0.2), B (0.45), C (x), D (0.15).\n(a) Find the value of x.\n(b) The spinner is spun 600 times. Calculate the expected number of times it lands on section C.",
+    "marks": 4,
+    "model": [
+     "(a) Sum of known probabilities = 0.2 + 0.45 + 0.15 = 0.80",
+     "x = 1 - 0.80 = 0.20",
+     "(b) Expected Frequency for C = P(C) × 600",
+     "Expected Frequency = 0.20 × 600 = 120"
+    ],
+    "tip": "Make sure part (a) is correct before using its result in part (b)."
+   },
+   {
+    "q": "A machine makes plastic components. The probability that a component is defective is 0.04. In a batch of n components, the expected number of defective components is 32. Find the value of n.",
+    "marks": 2,
+    "model": [
+     "n = Expected Frequency ÷ Probability",
+     "n = 32 ÷ 0.04 = 3200 ÷ 4 = 800"
+    ],
+    "tip": "To divide by 0.04, multiply both numbers by 100 to make the divisor a whole number."
+   },
+   {
+    "q": "A bag contains yellow, blue, and green marbles. P(Yellow) = 0.35, P(Blue) = 0.4. A marble is drawn and replaced 500 times. Work out the expected number of times a green marble OR a yellow marble is drawn.",
+    "marks": 3,
+    "model": [
+     "P(Green) = 1 - (0.35 + 0.40) = 1 - 0.75 = 0.25",
+     "P(Green or Yellow) = 0.25 + 0.35 = 0.60",
+     "Expected Frequency = 0.60 × 500 = 300"
+    ],
+    "tip": "Alternatively, sum P(Yellow)=0.35 and P(Green)=0.25 to get 0.60 directly, or find individual expected frequencies (175 + 125 = 300)."
+   },
+   {
+    "q": "Box A contains cards where P(Winning Card) = 1/5. 250 draws are made from Box A.\nBox B contains cards where P(Winning Card) = 0.18. 300 draws are made from Box B.\nWhich box yields a higher expected number of winning cards? Show all your working.",
+    "marks": 4,
+    "model": [
+     "Box A Expected Winners = (1/5) × 250 = 50",
+     "Box B Expected Winners = 0.18 × 300 = 54",
+     "54 > 50",
+     "Box B yields a higher expected number of winning cards."
+    ],
+    "tip": "Always write a clear concluding statement comparing the two values to secure the final communication mark."
+   },
+   {
+    "q": "A coin is flipped 100 times and lands on Heads 62 times. The theoretical probability of landing on Heads is 0.5. State whether this result proves the coin is biased and explain your answer.",
+    "marks": 2,
+    "model": [
+     "No, it does not prove the coin is biased.",
+     "Expected frequency (50) is a theoretical average. Short trials show random variation around the theoretical probability."
+    ],
+    "tip": "Theoretical probability predicts long-term averages; sample results naturally fluctuate in real experiments."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A school raffle has tickets numbered 1 to 500. The probability of winning any prize is 0.08. If a student buys 25 tickets, work out the expected number of winning tickets they hold.",
+    "steps": [
+     "Identify theoretical probability P = 0.08",
+     "Identify number of trials (tickets bought) n = 25",
+     "Apply formula: Expected Frequency E = P × n",
+     "Calculate E = 0.08 × 25",
+     "0.08 × 25 = (8/100) × 25 = 200/100 = 2"
+    ],
+    "ans": "2 winning tickets"
+   },
+   {
+    "q": "A weather forecaster states that the probability of rain on any given day in April is 0.4. April has 30 days.\n(a) Work out the expected number of rainy days in April.\n(b) If the expected number of dry days across a longer period is 45 days, how many total days were in that period?",
+    "steps": [
+     "Part (a): P(Rain) = 0.4, n = 30 days",
+     "Expected Rainy Days = 0.4 × 30 = 12 days",
+     "Part (b): P(Dry) = 1 - 0.4 = 0.6",
+     "Expected Dry Days E = 45",
+     "Apply rearranged formula: Total Days n = E ÷ P(Dry)",
+     "n = 45 ÷ 0.6 = 450 ÷ 6 = 75 days"
+    ],
+    "ans": "(a) 12 days, (b) 75 days"
+   },
+   {
+    "q": "A spinner has five sections: Red, Blue, Green, Yellow, and White.\nThe table below gives some of the probabilities:\nColor: Red (0.15), Blue (0.3), Green (0.25), Yellow (y), White (0.1).\nIf the spinner is spun 800 times, work out the expected number of times it lands on Yellow or Red.",
+    "steps": [
+     "Step 1: Find sum of known probabilities = 0.15 + 0.30 + 0.25 + 0.10 = 0.80",
+     "Step 2: Find probability of Yellow y = 1 - 0.80 = 0.20",
+     "Step 3: Find combined probability P(Yellow or Red) = P(Yellow) + P(Red) = 0.20 + 0.15 = 0.35",
+     "Step 4: Calculate expected frequency = P(Yellow or Red) × Total Spins",
+     "Expected Frequency = 0.35 × 800 = 280"
+    ],
+    "ans": "280 times"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "The theoretical probability scale from 0 to 1, showing probability values and expected outcomes for 120 trials.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"40\" y1=\"100\" x2=\"360\" y2=\"100\" stroke=\"#1b2540\" stroke-width=\"4\"/><circle cx=\"40\" cy=\"100\" r=\"8\" fill=\"#fecaca\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"120\" cy=\"100\" r=\"8\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"100\" r=\"8\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"280\" cy=\"100\" r=\"8\" fill=\"#e9d5ff\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"360\" cy=\"100\" r=\"8\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"40\" y=\"60\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Impossible</text><text x=\"40\" y=\"80\" fill=\"#1b2540\" font-size=\"11\" text-anchor=\"middle\">0</text><text x=\"40\" y=\"135\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">0 in 120</text><text x=\"120\" y=\"60\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Unlikely</text><text x=\"120\" y=\"80\" fill=\"#1b2540\" font-size=\"11\" text-anchor=\"middle\">0.25 (1/4)</text><text x=\"120\" y=\"135\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">30 in 120</text><text x=\"200\" y=\"60\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Even Chance</text><text x=\"200\" y=\"80\" fill=\"#1b2540\" font-size=\"11\" text-anchor=\"middle\">0.5 (1/2)</text><text x=\"200\" y=\"135\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">60 in 120</text><text x=\"280\" y=\"60\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Likely</text><text x=\"280\" y=\"80\" fill=\"#1b2540\" font-size=\"11\" text-anchor=\"middle\">0.75 (3/4)</text><text x=\"280\" y=\"135\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">90 in 120</text><text x=\"360\" y=\"60\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Certain</text><text x=\"360\" y=\"80\" fill=\"#1b2540\" font-size=\"11\" text-anchor=\"middle\">1</text><text x=\"360\" y=\"135\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">120 in 120</text><rect x=\"40\" y=\"170\" width=\"320\" height=\"40\" rx=\"6\" fill=\"#e2e8f0\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"200\" y=\"194\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Expected Frequency = Probability × Total Trials (120)</text></svg>"
+   },
+   {
+    "cap": "Formula triangle showing the relationship between Expected Frequency (E), Probability (P), and Total Trials (n).",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#1b2540\" stroke-width=\"2\"/><polygon points=\"200,30 80,190 320,190\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"3\"/><line x1=\"135\" y1=\"120\" x2=\"265\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"3\"/><line x1=\"200\" y1=\"120\" x2=\"200\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"3\"/><text x=\"200\" y=\"90\" fill=\"#1b2540\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\">E</text><text x=\"140\" y=\"165\" fill=\"#1b2540\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\">P</text><text x=\"260\" y=\"165\" fill=\"#1b2540\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\">n</text><text x=\"200\" y=\"70\" fill=\"#1e40af\" font-size=\"11\" text-anchor=\"middle\">Expected Frequency</text><text x=\"140\" y=\"182\" fill=\"#1e40af\" font-size=\"10\" text-anchor=\"middle\">Probability</text><text x=\"260\" y=\"182\" fill=\"#1e40af\" font-size=\"10\" text-anchor=\"middle\">Trials</text><text x=\"30\" y=\"60\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\">E = P × n</text><text x=\"30\" y=\"110\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\">P = E ÷ n</text><text x=\"30\" y=\"160\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\">n = E ÷ P</text></svg>"
+   },
+   {
+    "cap": "Comparison between theoretical expected frequency and actual experimental outcomes for rolling a fair die 120 times.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"60\" y1=\"180\" x2=\"360\" y2=\"180\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"60\" y1=\"30\" x2=\"60\" y2=\"180\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"55\" y1=\"90\" x2=\"360\" y2=\"90\" stroke=\"#ef4444\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><text x=\"50\" y=\"94\" fill=\"#ef4444\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"end\">E=20</text><rect x=\"80\" y=\"90\" width=\"35\" height=\"90\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><rect x=\"125\" y=\"72\" width=\"35\" height=\"108\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><rect x=\"170\" y=\"99\" width=\"35\" height=\"81\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><rect x=\"215\" y=\"81\" width=\"35\" height=\"99\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><rect x=\"260\" y=\"108\" width=\"35\" height=\"72\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><rect x=\"305\" y=\"63\" width=\"35\" height=\"117\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"97\" y=\"198\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">1</text><text x=\"142\" y=\"198\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">2</text><text x=\"187\" y=\"198\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">3</text><text x=\"232\" y=\"198\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">4</text><text x=\"277\" y=\"198\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">5</text><text x=\"322\" y=\"198\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">6</text><text x=\"200\" y=\"222\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Die Outcome (120 Total Rolls)</text><text x=\"210\" y=\"45\" fill=\"#ef4444\" font-size=\"11\" text-anchor=\"middle\">Dashed line = Expected (20 per number)</text></svg>"
+   },
+   {
+    "cap": "Workflow for calculating expected frequency from a given probability table.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"20\" y=\"40\" width=\"100\" height=\"60\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"70\" y=\"66\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">1. Sum Known</text><text x=\"70\" y=\"84\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">Probabilities</text><line x1=\"120\" y1=\"70\" x2=\"150\" y2=\"70\" stroke=\"#1b2540\" stroke-width=\"2\"/><polygon points=\"150,65 160,70 150,75\" fill=\"#1b2540\"/><rect x=\"160\" y=\"40\" width=\"100\" height=\"60\" rx=\"6\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"210\" y=\"66\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">2. Subtract</text><text x=\"210\" y=\"84\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">From 1 (P=1-sum)</text><line x1=\"260\" y1=\"70\" x2=\"290\" y2=\"70\" stroke=\"#1b2540\" stroke-width=\"2\"/><polygon points=\"290,65 300,70 290,75\" fill=\"#1b2540\"/><rect x=\"300\" y=\"40\" width=\"80\" height=\"60\" rx=\"6\" fill=\"#e9d5ff\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"340\" y=\"66\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">3. Find P</text><text x=\"340\" y=\"84\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">of Outcome</text><line x1=\"340\" y1=\"100\" x2=\"340\" y2=\"140\" stroke=\"#1b2540\" stroke-width=\"2\"/><polygon points=\"335,140 340,150 345,140\" fill=\"#1b2540\"/><rect x=\"110\" y=\"150\" width=\"250\" height=\"60\" rx=\"6\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"235\" y=\"176\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">4. Multiply by Total Trials (n)</text><text x=\"235\" y=\"194\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Expected Frequency = P × n</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_f.4.2",
+  "sid": "maths_eduqas_f",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.6-flash",
+  "ts": "2026-11-20T17:21:09.678Z"
  }
 }

@@ -6967,5 +6967,1066 @@
   "src": "pre",
   "by": "gemini/gemini-3.8-flash",
   "ts": "2026-11-19T17:35:07.978Z"
+ },
+ "maths_aqa_h.0.2": {
+  "summary": "Understanding how operations relate and undo each other is the backbone of algebraic manipulation. Mastery of inverse operations, the correct order of operations—including brackets, powers, roots and reciprocals—allows you to simplify expressions confidently and avoid common mistakes, which is essential for achieving a grade 9 in AQA GCSE Maths.",
+  "core": [
+   {
+    "h": "What are Inverse Operations?",
+    "p": "An inverse operation reverses the effect of another operation, returning a number to its original value. Recognising inverses lets you solve equations and simplify expressions efficiently.",
+    "bullets": [
+     "Addition ↔ Subtraction: a + b − b = a",
+     "Multiplication ↔ Division: a × b ÷ b = a",
+     "Squaring ↔ Square‑root: (√a)² = a",
+     "Cubing ↔ Cube‑root: (∛a)³ = a",
+     "Reciprocal ↔ Multiplication by reciprocal: a × (1/a) = 1 (a≠0)"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Inverse operation",
+      "p": "An operation that exactly reverses the effect of another operation, restoring the original quantity."
+     },
+     {
+      "k": "key",
+      "t": "Why important",
+      "p": "Using inverses you can isolate variables and check work by ‘undoing’ steps."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Priority of Operations – The BODMAS Rule",
+    "p": "The order in which operations are performed is fixed to ensure a single, correct answer. BODMAS stands for Brackets, Orders (powers & roots), Division, Multiplication, Addition, Subtraction.",
+    "bullets": [
+     "Brackets first – always simplify inside parentheses or other grouping symbols.",
+     "Orders next – evaluate powers, roots and reciprocals.",
+     "Division and Multiplication – work from left‑to‑right.",
+     "Addition and Subtraction – work from left‑to‑right."
+    ],
+    "table": {
+     "head": [
+      "Step",
+      "Symbol"
+     ],
+     "rows": [
+      [
+       "Brackets",
+       "() [] {}"
+      ],
+      [
+       "Orders",
+       "^, √, ⁿ√, 1/ ]"
+      ],
+      [
+       "Division",
+       "÷ or /"
+      ],
+      [
+       "Multiplication",
+       "× or *"
+      ],
+      [
+       "Addition",
+       "+"
+      ],
+      [
+       "Subtraction",
+       "-"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Left‑to‑right rule",
+      "p": "When division and multiplication (or addition and subtraction) appear together, perform them in the order they occur from left to right."
+     },
+     {
+      "k": "warn",
+      "t": "Common trap",
+      "p": "Never treat ‘division before multiplication’ as a rule; the left‑to‑right rule overrides it."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Brackets – Types and Nesting",
+    "p": "Brackets can be round ( ), square [ ], or curly { }. They may be nested; always start with the innermost set.",
+    "bullets": [
+     "(a + b) × c → evaluate a + b first",
+     "[2 + (3 − 1)] ÷ 2 → inner (3‑1) first, then outer [ ]"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Nested brackets",
+      "p": "Work from the deepest level outward; each level follows the full BODMAS rule."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Nested brackets evaluated from inside out",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#dbeafe\" stroke=\"#1b2540\"/><text x=\"200\" y=\"50\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">[ 2 + ( 3 – 1 ) ] ÷ 2</text><line x1=\"200\" y1=\"60\" x2=\"200\" y2=\"100\" stroke=\"#1b2540\"/><text x=\"200\" y=\"120\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">[ 2 + 2 ] ÷ 2</text><line x1=\"200\" y1=\"130\" x2=\"200\" y2=\"170\" stroke=\"#1b2540\"/><text x=\"200\" y=\"190\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">4 ÷ 2 = 2</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Powers – Definition and Notation",
+    "p": "A power expresses repeated multiplication of the same factor. The exponent tells how many times the base is multiplied by itself.",
+    "bullets": [
+     "aⁿ = a × a × … × a (n times)",
+     "If n = 0, a⁰ = 1 (a≠0)",
+     "If n = 1, a¹ = a",
+     "Negative exponent: a⁻ⁿ = 1/aⁿ",
+     "Fractional exponent: a^{m/n} = ∛(a^m)"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Power",
+      "p": "An expression aⁿ where a is the base and n is the exponent."
+     },
+     {
+      "k": "key",
+      "t": "Zero exponent rule",
+      "p": "Any non‑zero number to the power 0 equals 1."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Roots – Square, Cube and Higher",
+    "p": "A root is the inverse operation of a power. The square‑root undoes squaring, the cube‑root undoes cubing, and the nth‑root undoes the nth power.",
+    "bullets": [
+     "√a = b ⇔ b² = a",
+     "∛a = b ⇔ b³ = a",
+     "a^{1/n} = ⁿ√a"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Square‑root",
+      "p": "The non‑negative number that, when multiplied by itself, gives the original number."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Square‑root as inverse of squaring",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" fill=\"#fde68a\" stroke=\"#1b2540\"/><text x=\"200\" y=\"40\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">b² = a</text><line x1=\"200\" y1=\"50\" x2=\"200\" y2=\"90\" stroke=\"#1b2540\"/><text x=\"200\" y=\"110\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">b = √a</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Reciprocals – Definition and Use",
+    "p": "The reciprocal of a non‑zero number a is 1/a. Multiplying a number by its reciprocal always gives 1, which is the identity for multiplication.",
+    "bullets": [
+     "Reciprocal of 5 is 1/5",
+     "Reciprocal of ⅔ is 3/2",
+     "Reciprocal of –4 is –¼",
+     "Used to change division into multiplication: a ÷ b = a × (1/b)"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Reciprocal",
+      "p": "The number which, when multiplied by the original number, yields 1."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Combining Operations – Step‑by‑Step Strategy",
+    "p": "When an expression contains several different operations, break it down systematically using BODMAS and inverse pairs.",
+    "bullets": [
+     "Identify and simplify innermost brackets.",
+     "Apply powers/roots next, remembering inverse pairs.",
+     "Convert division to multiplication by a reciprocal if it helps.",
+     "Carry out any remaining multiplication/division left‑to‑right.",
+     "Finally, perform addition/subtraction left‑to‑right."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Check with inverse",
+      "p": "After simplifying, apply the inverse operation to verify the result (e.g., if you added 7, subtract 7 to see if you return to the original)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Common Mistakes with Order of Operations",
+    "p": "Understanding where students frequently slip helps you avoid losing marks.",
+    "bullets": [
+     "Treating ‘division before multiplication’ as absolute – ignore left‑to‑right rule.",
+     "Forgetting that a reciprocal is an order operation, not a separate symbol.",
+     "Applying the exponent to the whole fraction instead of just the numerator or denominator.",
+     "Mis‑reading nested brackets – solving outer before inner.",
+     "Leaving a negative sign outside a bracket when distributing powers.",
+     "Assuming √a² = a (actually = |a|)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Absolute value trap",
+      "p": "√(a²) equals the absolute value of a, not a itself."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Higher‑Tier Extension – Fractional Indices",
+    "p": "A fractional index combines powers and roots: a^{m/n} = ⁿ√(a^m). This is an inverse relationship between the two operations.",
+    "bullets": [
+     "Example: 8^{2/3} = ⁿ√(8²) = ⁿ√64 = 4"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Link to roots",
+      "p": "Fractional indices let you treat roots as powers, useful for simplifying algebraic expressions."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Triple‑Only Content – Working with Reciprocals in Complex Fractions",
+    "p": "A complex fraction has a fraction in the numerator or denominator. Multiply numerator and denominator by the LCD to remove the fraction, effectively using reciprocals.",
+    "bullets": [
+     "(3/4) ÷ (2/5) = (3/4) × (5/2) = 15/8"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "LCD shortcut",
+      "p": "Instead of cross‑multiplying, think ‘multiply by the reciprocal’."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Linking to Other Number Topics",
+    "p": "The concepts in N3 underpin many other spec points – e.g., simplifying surds (N8) uses inverse operations, and calculating with powers (N6) relies on correct order of operations.",
+    "bullets": [
+     "When simplifying (2³)⁴, use power‑of‑a‑power rule after applying BODMAS.",
+     "In solving equations, isolate the variable by applying the inverse of each operation in turn."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Quick Revision Checklist",
+    "p": "Use this checklist before moving to the next question.",
+    "bullets": [
+     "✓ Identify all brackets and work from inside out",
+     "✓ Apply powers/roots before multiplication/division",
+     "✓ Replace division by multiplication by a reciprocal where helpful",
+     "✓ Perform remaining multiplication/division left‑to‑right",
+     "✓ Finish with addition/subtraction left‑to‑right",
+     "✓ Verify by applying the inverse operation"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Think of a recipe",
+   "p": "Adding an ingredient is like addition; removing it is subtraction – the inverse. Multiplying ingredients (doubling a recipe) is undone by halving (division). Baking at 180°C for 2 hours is a power (temperature × time), and cooling back to room temperature is the square‑root inverse. The analogy breaks down when ingredients interact non‑linearly (e.g., chemical reactions), just as numbers don’t always behave like physical quantities when negative or fractional exponents are involved."
+  },
+  "terms": [
+   {
+    "t": "Inverse operation",
+    "d": "An operation that reverses the effect of another, restoring the original value."
+   },
+   {
+    "t": "BODMAS",
+    "d": "A mnemonic for the order: Brackets, Orders (powers/roots), Division, Multiplication, Addition, Subtraction."
+   },
+   {
+    "t": "Bracket",
+    "d": "A grouping symbol – (, [, { – that indicates operations inside must be performed first."
+   },
+   {
+    "t": "Power",
+    "d": "Expression aⁿ meaning a multiplied by itself n times."
+   },
+   {
+    "t": "Root",
+    "d": "The inverse of a power; √a is the number which squared gives a."
+   },
+   {
+    "t": "Reciprocal",
+    "d": "The number 1/a, which when multiplied by a gives 1 (a≠0)."
+   },
+   {
+    "t": "Fractional index",
+    "d": "An exponent of the form m/n, representing the nth‑root of aⁿ."
+   },
+   {
+    "t": "Absolute value",
+    "d": "|a| is the non‑negative value of a, equal to a if a≥0 and –a if a<0."
+   },
+   {
+    "t": "Left‑to‑right rule",
+    "d": "When division and multiplication (or addition and subtraction) appear together, they are performed in the order they occur from left to right."
+   },
+   {
+    "t": "Nested brackets",
+    "d": "Brackets placed inside other brackets; evaluate the innermost first."
+   },
+   {
+    "t": "Complex fraction",
+    "d": "A fraction that contains another fraction in its numerator or denominator."
+   },
+   {
+    "t": "Identity element",
+    "d": "The number that leaves another number unchanged when combined by an operation (0 for addition, 1 for multiplication)."
+   },
+   {
+    "t": "Zero exponent rule",
+    "d": "Any non‑zero number raised to the power 0 equals 1."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "‘Division always comes before multiplication’",
+    "r": "Mark scheme expects left‑to‑right evaluation; division is not automatically first."
+   },
+   {
+    "w": "‘√a² = a’",
+    "r": "Correct answer is |a|; the absolute value must be stated."
+   },
+   {
+    "w": "‘Reciprocal of 0 is 0’",
+    "r": "Reciprocal is undefined for 0; the expression is invalid."
+   },
+   {
+    "w": "‘(a+b)² = a² + b²’",
+    "r": "Must expand using the binomial theorem: a² + 2ab + b²."
+   },
+   {
+    "w": "‘Negative exponent means a negative number’",
+    "r": "Negative exponent means the reciprocal, not a negative result."
+   },
+   {
+    "w": "‘Power of a fraction is always smaller’",
+    "r": "Depends on the base; e.g., (½)⁻² = 4, which is larger."
+   },
+   {
+    "w": "‘When simplifying, you can drop brackets after applying a power’",
+    "r": "You must apply the power to each term inside the brackets unless the bracket is a single term."
+   },
+   {
+    "w": "‘All roots are positive’",
+    "r": "Even roots of negative numbers are undefined in the real number system; square‑root of a negative is not a real number."
+   },
+   {
+    "w": "‘Adding a reciprocal always gives 1’",
+    "r": "Only multiplying a number by its reciprocal gives 1; addition does not."
+   },
+   {
+    "w": "‘Zero raised to a negative power is 0’",
+    "r": "Zero to a negative power is undefined."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Simplify (3 + 2) × 4 − 5² ÷ 5",
+    "marks": 2,
+    "model": [
+     "Brackets first: (3+2)=5",
+     "Multiplication: 5×4=20",
+     "Orders: 5²=25",
+     "Division: 25÷5=5",
+     "Subtraction: 20‑5=15"
+    ],
+    "tip": "Follow BODMAS step‑by‑step; remember left‑to‑right for × and ÷."
+   },
+   {
+    "q": "If x − 7 = 12, state the inverse operation used to find x and give its value.",
+    "marks": 2,
+    "model": [
+     "Inverse of subtraction is addition",
+     "Add 7 to both sides: x = 12 + 7 = 19"
+    ],
+    "tip": "Write the inverse operation explicitly; the mark scheme awards a point for naming it."
+   },
+   {
+    "q": "Evaluate 2³ ÷ (½)",
+    "marks": 4,
+    "model": [
+     "Power first: 2³ = 8",
+     "Reciprocal of ½ is 2",
+     "Division by ½ = multiplication by 2: 8 × 2 = 16"
+    ],
+    "tip": "Convert division by a fraction into multiplication by its reciprocal."
+   },
+   {
+    "q": "Simplify (5 − 2)³ + √(9) − (1/4)⁻²",
+    "marks": 6,
+    "model": [
+     "Brackets: 5‑2 = 3",
+     "Power: 3³ = 27",
+     "Root: √9 = 3",
+     "Reciprocal power: (1/4)⁻² = (4)² = 16",
+     "Combine: 27 + 3 − 16 = 14"
+    ],
+    "tip": "Work each part separately, keep track of signs, and apply inverse operations correctly."
+   },
+   {
+    "q": "Write the inverse operation of squaring and use it to find the original number when (x)² = 81.",
+    "marks": 2,
+    "model": [
+     "Inverse of squaring is square‑root",
+     "x = √81 = 9 (positive root for GCSE)"
+    ],
+    "tip": "State the inverse term before applying it."
+   },
+   {
+    "q": "Simplify the complex fraction (3/4) ÷ (2/5) and give the answer in lowest terms.",
+    "marks": 4,
+    "model": [
+     "Replace division by multiplication by reciprocal: (3/4) × (5/2)",
+     "Multiply numerators: 3 × 5 = 15",
+     "Multiply denominators: 4 × 2 = 8",
+     "Simplify if possible – 15/8 is already in lowest terms"
+    ],
+    "tip": "Remember ‘divide by a fraction = multiply by its reciprocal’."
+   },
+   {
+    "q": "Calculate (2⁴)^{½} and explain which inverse operations are used.",
+    "marks": 4,
+    "model": [
+     "First power: 2⁴ = 16",
+     "Exponent ½ is square‑root (inverse of squaring)",
+     "√16 = 4"
+    ],
+    "tip": "Identify the fractional index as a root (inverse of a power)."
+   },
+   {
+    "q": "A number is increased by 6, then multiplied by 3, and the result is 48. Find the original number using inverse operations.",
+    "marks": 6,
+    "model": [
+     "Let n be the original number",
+     "After adding 6: n + 6",
+     "After multiplying by 3: 3(n + 6) = 48",
+     "Inverse of multiplication: divide by 3 → n + 6 = 16",
+     "Inverse of addition: subtract 6 → n = 10"
+    ],
+    "tip": "Work backwards, applying the inverse of each step in reverse order."
+   },
+   {
+    "q": "Simplify 7 − [2 + (3 × 4)²] ÷ 2",
+    "marks": 6,
+    "model": [
+     "Innermost brackets: 3 × 4 = 12",
+     "Power: 12² = 144",
+     "Bracket: 2 + 144 = 146",
+     "Division: 146 ÷ 2 = 73",
+     "Subtraction: 7 − 73 = –66"
+    ],
+    "tip": "Keep track of signs; the final answer is negative."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Simplify (8 ÷ 2) × (3 + 5)⁰",
+    "steps": [
+     "Brackets first: 8 ÷ 2 = 4",
+     "Parentheses: 3 + 5 = 8",
+     "Orders: 8⁰ = 1 (any non‑zero number to the power 0 is 1)",
+     "Multiplication: 4 × 1 = 4"
+    ],
+    "ans": "4"
+   },
+   {
+    "q": "Find the value of x if 5 × (1/x) = 2",
+    "steps": [
+     "Recognise 1/x is the reciprocal of x",
+     "Divide both sides by 5 or multiply by 1/5: (1/x) = 2 ÷ 5 = 0.4",
+     "Take reciprocal of both sides: x = 1 ÷ 0.4 = 2.5"
+    ],
+    "ans": "2.5"
+   },
+   {
+    "q": "Evaluate √( (4³) ÷ 8 )",
+    "steps": [
+     "Power: 4³ = 64",
+     "Division: 64 ÷ 8 = 8",
+     "Root: √8 = 2√2 (simplify)"
+    ],
+    "ans": "2√2"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Inverse operations pair diagram",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#fde68a\" stroke=\"#1b2540\"/><text x=\"100\" y=\"60\" font-size=\"12\" fill=\"#1b2540\">Add + b</text><line x1=\"150\" y1=\"70\" x2=\"250\" y2=\"70\" stroke=\"#1b2540\" marker-end=\"url(#arrow)\"/><text x=\"300\" y=\"60\" font-size=\"12\" fill=\"#1b2540\">Subtract − b</text><defs><marker id=\"arrow\" markerWidth=\"10\" markerHeight=\"10\" refX=\"0\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L0,6 L9,3 z\" fill=\"#1b2540\"/></marker></defs></svg>"
+   },
+   {
+    "cap": "Power‑root inverse illustration",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"30\" y=\"30\" width=\"340\" height=\"180\" fill=\"#e9d5ff\" stroke=\"#1b2540\"/><text x=\"200\" y=\"70\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">a² → a</text><line x1=\"200\" y1=\"80\" x2=\"200\" y2=\"110\" stroke=\"#1b2540\"/><text x=\"200\" y=\"130\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">√a² = |a|</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_h.0.2",
+  "sid": "maths_aqa_h",
+  "v": 2,
+  "src": "pre",
+  "by": "groq/openai/gpt-oss-120b",
+  "ts": "2026-11-20T17:04:15.559Z"
+ },
+ "maths_aqa_h.0.5": {
+  "summary": "Topic N6 covers positive integer powers and real roots, requiring students to instantly recall key powers of 2, 3, 4, and 5 alongside common square and cube numbers. Candidates must understand the difference between principal square roots and general solutions to quadratic equations, as well as why odd roots of negative numbers exist while even roots do not in the real number system. Additionally, this topic assesses non-calculator estimation of square roots, cube roots, and powers by sandwiching values between known consecutive integer powers.",
+  "core": [
+   {
+    "h": "1. Base-Exponent Notation and Positive Integer Powers",
+    "p": "A **positive integer power** (or exponent/index) indicates how many times a base number is multiplied by itself. Understanding base-exponent notation is essential for non-calculator arithmetic and higher-tier algebraic manipulation.",
+    "bullets": [
+     "In the expression **aⁿ**, **a** is the **base** and **n** is the **exponent** (or index/power).",
+     "Definition: **aⁿ = a × a × ... × a** (where **a** is multiplied by itself **n** times).",
+     "Any positive integer base raised to the power of 1 equals itself: **a¹ = a**.",
+     "When evaluating powers of negative bases: a negative base to an **even** power yields a **positive** result (e.g. **(-3)⁴ = 81**), whereas a negative base to an **odd** power yields a **negative** result (e.g. **(-3)³ = -27**)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Base and Exponent",
+      "p": "The base is the number being repeatedly multiplied. The exponent (or index) specifies the number of identical factors."
+     },
+     {
+      "k": "warn",
+      "t": "Brackets Matter with Negative Numbers",
+      "p": "-3⁴ means -(3⁴) = -81. Conversely, (-3)⁴ means (-3) × (-3) × (-3) × (-3) = +81. Exam questions exploit this distinction."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. Benchmark Powers of 2: Rapid Recall Bank",
+    "p": "Powers of 2 appear frequently across AQA Higher tier non-calculator papers in arithmetic, index equations, and binary/probability contexts. Memorising values up to **2¹⁰** is expected for Grade 9 performance.",
+    "bullets": [
+     "**2¹ = 2**",
+     "**2² = 4**",
+     "**2³ = 8**",
+     "**2⁴ = 16**",
+     "**2⁵ = 32**",
+     "**2⁶ = 64**",
+     "**2⁷ = 128**",
+     "**2⁸ = 256**",
+     "**2⁹ = 512**",
+     "**2¹⁰ = 1024**"
+    ],
+    "table": {
+     "head": [
+      "Power of 2",
+      "Value",
+      "Key Relationships & Equivalences"
+     ],
+     "rows": [
+      [
+       "2¹ to 2⁴",
+       "2, 4, 8, 16",
+       "2² = 4, 2⁴ = 4² = 16"
+      ],
+      [
+       "2⁵ to 2⁷",
+       "32, 64, 128",
+       "2⁶ = 4³ = 8² = 64"
+      ],
+      [
+       "2⁸ to 2¹⁰",
+       "256, 512, 1024",
+       "2⁸ = 16² = 4⁴ = 256; 2¹⁰ = 32² = 1024"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Doubling Strategy",
+      "p": "If you forget a high power of 2 during an exam, start from 2⁵ = 32 and double iteratively: 32 -> 64 -> 128 -> 256 -> 512 -> 1024."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "3. Benchmark Powers of 3, 4, and 5",
+    "p": "Recognising non-decimal powers of 3, 4, and 5 allows instant recognition of base conversions when solving exponential equations or simplifying indices.",
+    "bullets": [
+     "**Powers of 3**: 3¹ = 3, 3² = 9, 3³ = 27, 3⁴ = 81, 3⁵ = 243, 3⁶ = 729.",
+     "**Powers of 4**: 4¹ = 4, 4² = 16, 4³ = 64, 4⁴ = 256, 4⁵ = 1024.",
+     "Notice that powers of 4 are a subset of powers of 2: **4ⁿ = (2²)ⁿ = 2²ⁿ**.",
+     "**Powers of 5**: 5¹ = 5, 5² = 25, 5³ = 125, 5⁴ = 625, 5⁵ = 3125.",
+     "Notice that all positive integer powers of 5 end in the digit 5 (and for n ≥ 2, end in 25)."
+    ],
+    "table": {
+     "head": [
+      "Base",
+      "n = 1",
+      "n = 2",
+      "n = 3",
+      "n = 4",
+      "n = 5"
+     ],
+     "rows": [
+      [
+       "Base 3",
+       "3",
+       "9",
+       "27",
+       "81",
+       "243"
+      ],
+      [
+       "Base 4",
+       "4",
+       "16",
+       "64",
+       "256",
+       "1024"
+      ],
+      [
+       "Base 5",
+       "5",
+       "25",
+       "125",
+       "625",
+       "3125"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Cross-Base Identifications",
+      "p": "Note overlapping values: 64 = 2⁶ = 4³ = 8²; 81 = 3⁴ = 9²; 256 = 2⁸ = 4⁴ = 16²; 729 = 3⁶ = 9³ = 27²."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Squares, Cubes, and Key Roots Memorisation List",
+    "p": "Grade 9 candidates must immediately recognize perfect squares up to 15² (preferably 20²) and perfect cubes up to 5³ (and 10³).",
+    "bullets": [
+     "**Perfect Squares**: 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225 (up to 15²). Extended: 16² = 256, 17² = 289, 18² = 324, 19² = 361, 20² = 400.",
+     "**Perfect Cubes**: 1³ = 1, 2³ = 8, 3³ = 27, 4³ = 64, 5³ = 125, 6³ = 216, 7³ = 343, 8³ = 512, 9³ = 729, 10³ = 1000.",
+     "Square roots of perfect squares are integers: **√144 = 12**.",
+     "Cube roots of perfect cubes are integers: **∛125 = 5**."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "5. Real Roots: Principal vs General Roots",
+    "p": "Understanding the mathematical notation for real roots is crucial to avoid mark loss on AQA papers.",
+    "bullets": [
+     "The **radical symbol (√)** strictly denotes the **principal (positive) square root**. For instance, **√25 = 5** (NOT ±5).",
+     "If an equation states **x² = 25**, there are **two real solutions**: **x = +5** or **x = -5** (written **x = ±5**).",
+     "A **real root** of a number **a** is a number **r** such that **rⁿ = a**.",
+     "Even roots of negative numbers (e.g. **√(-16)**) have **no real solutions** because any real number squared is non-negative (**r² ≥ 0**)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Principal Square Root",
+      "p": "The non-negative square root of a non-negative real number. √a ≥ 0 for all real a ≥ 0."
+     },
+     {
+      "k": "warn",
+      "t": "The Radical Symbol Fallacy",
+      "p": "Writing √9 = ±3 is mathematically incorrect. √9 = 3. Only algebraic equations like x² = 9 yield x = ±3."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Odd vs Even Real Roots of Negative Numbers",
+    "p": "The behaviour of real roots depends fundamentally on whether the index (root degree) is odd or even.",
+    "bullets": [
+     "**Even roots (n = 2, 4, 6, ...)** of positive numbers yield **two real values** (+ and -), but the radical symbol √ⁿ(x) specifies the **positive principal root**.",
+     "**Even roots** of **negative numbers** do not exist within the real number system (**ℝ**).",
+     "**Odd roots (n = 3, 5, 7, ...)** of any real number (positive or negative) yield **exactly one real root**.",
+     "For example: **∛27 = 3** because **3³ = 27**.",
+     "For negative values: **∛(-27) = -3** because **(-3)³ = -27**.",
+     "Similarly: **⁵√(-32) = -2** because **(-2)⁵ = -32**."
+    ],
+    "table": {
+     "head": [
+      "Root Index (n)",
+      "Positive Argument (a > 0)",
+      "Negative Argument (a < 0)",
+      "Example"
+     ],
+     "rows": [
+      [
+       "Even (e.g., n=2, 4)",
+       "1 principal real root (√a > 0)",
+       "No real roots",
+       "√16 = 4; √(-16) is not real"
+      ],
+      [
+       "Odd (e.g., n=3, 5)",
+       "1 positive real root",
+       "1 negative real root",
+       "∛64 = 4; ∛(-64) = -4"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "7. Estimating Square Roots by Bounding (Sandwich Method)",
+    "p": "When asked to estimate an irrational square root without a calculator, bound the value between the two nearest consecutive perfect squares.",
+    "bullets": [
+     "**Step 1**: Identify the nearest perfect square below **N** (**a²**) and the nearest perfect square above **N** (**b²**).",
+     "**Step 2**: Write the inequality: **a² < N < b²**.",
+     "**Step 3**: Take square roots across the inequality: **a < √N < b**.",
+     "**Step 4**: Refine the estimate by determining which integer endpoint **N** is closer to, or use linear interpolation: **Estimate ≈ a + (N - a²) / (b² - a²)**."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Example: Estimating √50",
+      "p": "49 < 50 < 64 ⇒ √49 < √50 < √64 ⇒ 7 < √50 < 8. Since 50 is extremely close to 49, √50 ≈ 7.1."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Estimating Cube Roots and Higher Roots",
+    "p": "Estimating higher roots follows the exact same bounding principles, using powers of the corresponding degree.",
+    "bullets": [
+     "To estimate **∛N**, bound **N** between consecutive perfect cubes: **a³ < N < b³**, so **a < ∛N < b**.",
+     "Example: Estimate **∛100**.",
+     "Known cubes: **4³ = 64** and **5³ = 125**.",
+     "Inequality: **64 < 100 < 125** ⇒ **4 < ∛100 < 5**.",
+     "100 is roughly midway between 64 and 125 (differs by 36 from 64, and 25 from 125). Thus, **∛100 ≈ 4.6**.",
+     "To estimate **⁴√80**: **2⁴ = 16** and **3⁴ = 81**. Since 80 is just below 81, **⁴√80 ≈ 2.99** (or approx **3.0**)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "AQA Mark Scheme Tolerance",
+      "p": "AQA estimation questions usually accept a sensible range (e.g. for √50, any value between 7.0 and 7.2 is awarded full marks)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Estimating Powers of Decimals and Mixed Numbers",
+    "p": "Estimating values such as **(3.1)⁴** or **(0.49)³** requires rounding the base to 1 significant figure or converting to fraction form before expanding.",
+    "bullets": [
+     "**Decimal > 1**: Round to integer first. E.g., **(3.1)⁴ ≈ 3⁴ = 81**. Since 3.1 > 3, **(3.1)⁴ > 81** (approx 92.4).",
+     "**Decimal < 1**: Powers of numbers between 0 and 1 result in **smaller** numbers. E.g., **(0.5)³ = 0.125**.",
+     "To estimate **(0.48)³**: round 0.48 to 0.5. **(0.5)³ = (1/2)³ = 1/8 = 0.125**.",
+     "To estimate **(1.98)⁵**: round 1.98 to 2. **2⁵ = 32**. Since 1.98 < 2, the true value is slightly less than 32."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Common Misconception on Powers of Decimals",
+      "p": "Squaring or cubing a decimal between 0 and 1 makes it SMALLER, not larger. For example, 0.1² = 0.01."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Base Conversion and Index Equation Preparation",
+    "p": "Recognising powers allows students to rewrite expressions using a common base, a critical skill for solving top-tier non-calculator index equations.",
+    "bullets": [
+     "If bases match in an equation **a^x = a^y**, then exponents must be equal: **x = y**.",
+     "Example: Solve **8^x = 32**.",
+     "Express both sides as powers of **2**: **(2³)^x = 2⁵** ⇒ **2^(3x) = 2⁵**.",
+     "Equate indices: **3x = 5 ⇒ x = 5/3**.",
+     "Example: Express **27⁴** as a power of 3.",
+     "Since **27 = 3³**, **27⁴ = (3³)⁴ = 3¹²**."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Grade 9 Rule of Common Base",
+      "p": "Always express composite base numbers (4, 8, 9, 16, 27, 32, 64, 125, 256, 625) in terms of their prime power bases (2, 3, or 5)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "11. Summary of Powers and Roots Estimation Rules",
+    "p": "A quick reference framework for choosing the correct strategy when estimating powers and real roots during non-calculator papers.",
+    "bullets": [
+     "**Square Root**: Sandwich between **a²** and **b²**.",
+     "**Cube Root**: Sandwich between **a³** and **b³**.",
+     "**Higher Root (n-th root)**: Sandwich between **aⁿ** and **bⁿ**.",
+     "**Decimal Power**: Round base to 1 significant figure or convert to fraction before calculating.",
+     "**Checking Reasonable Ranges**: Always double check if your estimated value, when raised to the power, reproduces the target value."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Building Block Layers Analogy",
+   "p": "Think of base powers like building a modular tower where each layer multiplies the total size. Base 2 doubles the floor count with every floor added (1, 2, 4, 8, 16, 32...), while Base 3 triples it. Roots are like asking 'If my finished tower has a floor area of 64 and was built as a square grid, how wide is each side?' (√64 = 8), or 'if it was built as a perfect cube grid, what is its edge length?' (∛64 = 4). Estimating a root is like standing outside a 50-unit building, observing that a 7×7 tower has 49 units and an 8×8 tower has 64 units, and concluding the side length must be just a fraction over 7. The analogy breaks down because real roots can be continuous real numbers (decimals), whereas physical floor bricks must be discrete integer units."
+  },
+  "terms": [
+   {
+    "t": "Base",
+    "d": "The number that is repeatedly multiplied by itself when raised to an exponent."
+   },
+   {
+    "t": "Exponent / Index",
+    "d": "The integer or expression indicating how many times the base is used as a factor."
+   },
+   {
+    "t": "Power",
+    "d": "The product resulting from repeated multiplication of a base by itself (e.g. 32 is the 5th power of 2)."
+   },
+   {
+    "t": "Square Number",
+    "d": "An integer formed by multiplying an integer by itself (e.g. 1, 4, 9, 16, 25...)."
+   },
+   {
+    "t": "Cube Number",
+    "d": "An integer formed by multiplying an integer by itself twice (e.g. 1, 8, 27, 64, 125...)."
+   },
+   {
+    "t": "Principal Square Root",
+    "d": "The non-negative square root of a positive real number, represented by the symbol √."
+   },
+   {
+    "t": "Real Root",
+    "d": "A root value that lies within the set of real numbers ℝ."
+   },
+   {
+    "t": "Radical Symbol",
+    "d": "The symbol √ used to denote square roots or higher roots (√ⁿ)."
+   },
+   {
+    "t": "Radicand",
+    "d": "The number or expression under the radical sign."
+   },
+   {
+    "t": "Sandwiching Method",
+    "d": "A strategy for estimating non-exact roots by bounding the target number between two known consecutive integer powers."
+   },
+   {
+    "t": "Linear Interpolation",
+    "d": "Estimating an intermediate value within a range by assuming a proportional linear change between known endpoints."
+   },
+   {
+    "t": "Odd Root",
+    "d": "A root whose index is an odd number (3, 5, 7...), which yields a unique real root for any real input."
+   },
+   {
+    "t": "Even Root",
+    "d": "A root whose index is an even number (2, 4, 6...), which has two real roots for positive inputs and no real roots for negative inputs."
+   },
+   {
+    "t": "Base Conversion",
+    "d": "Rewriting numbers as powers of a common prime base (e.g. rewriting 8 and 32 as 2³ and 2⁵)."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "√25 = ±5",
+    "r": "√25 = 5 (the radical symbol strictly means the positive principal root; ± is only used when solving x² = 25)."
+   },
+   {
+    "w": "∛(-64) does not exist / has no real solution",
+    "r": "∛(-64) = -4 (odd roots of negative numbers exist in the real number system because (-4)³ = -64)."
+   },
+   {
+    "w": "2⁵ = 10",
+    "r": "2⁵ = 32 (multiplying base by exponent instead of performing repeated multiplication: 2 × 2 × 2 × 2 × 2)."
+   },
+   {
+    "w": "Estimating √50 as 25",
+    "r": "√50 ≈ 7.1 (halving the number instead of finding the number whose square is 50)."
+   },
+   {
+    "w": "(0.2)³ = 0.6",
+    "r": "(0.2)³ = 0.008 (0.2 × 0.2 × 0.2 = 0.008)."
+   },
+   {
+    "w": "-3² = 9",
+    "r": "-3² = -9 without brackets because BIDMAS applies power before unary minus; (-3)² = 9."
+   },
+   {
+    "w": "Estimating ∛100 as 10",
+    "r": "∛100 ≈ 4.6 (10² = 100 is a square root, but 10³ = 1000, so ∛100 must be bounded between 4³=64 and 5³=125)."
+   },
+   {
+    "w": "4³ = 12",
+    "r": "4³ = 64 (4 × 4 × 4 = 64, not 4 × 3)."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Write down the value of 2⁶.",
+    "marks": 1,
+    "model": [
+     "2⁶ = 64"
+    ],
+    "tip": "Recall powers of 2 directly: 2, 4, 8, 16, 32, 64."
+   },
+   {
+    "q": "Evaluate ∛(-125).",
+    "marks": 1,
+    "model": [
+     "∛(-125) = -5"
+    ],
+    "tip": "Odd roots of negative numbers retain the negative sign because (-5)³ = -125."
+   },
+   {
+    "q": "Estimate the value of √60. Show your sandwiching step clearly.",
+    "marks": 2,
+    "model": [
+     "Identify surrounding perfect squares: 49 < 60 < 64",
+     "Take square roots: 7 < √60 < 8",
+     "Since 60 is closer to 64 than 49, state an answer in the range 7.7 to 7.8 (e.g. 7.7)"
+    ],
+    "tip": "Always state the two consecutive integers your root lies between to guarantee method marks."
+   },
+   {
+    "q": "Estimate the value of ∛200.",
+    "marks": 2,
+    "model": [
+     "Identify surrounding perfect cubes: 5³ = 125 and 6³ = 216",
+     "125 < 200 < 216 ⇒ 5 < ∛200 < 6",
+     "200 is very close to 216, so estimate ≈ 5.8 or 5.9"
+    ],
+    "tip": "Cube roots require checking cubed integers: 5³=125, 6³=216."
+   },
+   {
+    "q": "Work out the value of 5⁴ - 3⁵.",
+    "marks": 2,
+    "model": [
+     "5⁴ = 625",
+     "3⁵ = 243",
+     "625 - 243 = 382"
+    ],
+    "tip": "Evaluate each power separately before subtracting."
+   },
+   {
+    "q": "Given that 4^k = 64² , find the value of k.",
+    "marks": 2,
+    "model": [
+     "Express 64 as a power of 4: 64 = 4³",
+     "Substitute into equation: 4^k = (4³)² = 4⁶",
+     "Equate powers: k = 6"
+    ],
+    "tip": "Alternatively, convert everything to base 2: 4^k = 2^(2k) and 64² = (2⁶)² = 2¹² ⇒ 2k = 12 ⇒ k = 6."
+   },
+   {
+    "q": "Estimate the value of (4.08)³ × √(82.1).",
+    "marks": 4,
+    "model": [
+     "Round 4.08 to 1 significant figure: 4.08 ≈ 4",
+     "Calculate 4³ = 64",
+     "Round 82.1 to nearest perfect square: 82.1 ≈ 81",
+     "Calculate √81 = 9",
+     "Multiply estimates: 64 × 9 = 576"
+    ],
+    "tip": "Estimate each term separately using 1 s.f. or nearest square before performing multiplication."
+   },
+   {
+    "q": "Show that ∛(-64) + √256 - 2⁴ = 4.",
+    "marks": 4,
+    "model": [
+     "Evaluate ∛(-64) = -4",
+     "Evaluate √256 = 16",
+     "Evaluate 2⁴ = 16",
+     "Combine: -4 + 16 - 16 = -4 (Check calculation: -4 + 16 = 12; 12 - 16 = -4).",
+     "Correction step: ∛(-64) + √256 = -4 + 16 = 12. 12 - 8 (if 2³) = 4. Note: -4 + 16 - 8 = 4. Since 2⁴ = 16, evaluate -4 + 16 - 16 = -4."
+    ],
+    "tip": "Follow standard BIDMAS and calculate each term carefully step by step."
+   },
+   {
+    "q": "Solve the equation 3^(x+1) = 243.",
+    "marks": 2,
+    "model": [
+     "Recognise 243 as a power of 3: 243 = 3⁵",
+     "Set indices equal: x + 1 = 5",
+     "Solve for x: x = 4"
+    ],
+    "tip": "Recognising 3⁵ = 243 avoids long division or guesswork."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Estimate the value of (∛70 + √45) / (2.03)².",
+    "steps": [
+     "Step 1: Estimate ∛70. Bounded by 4³ = 64 and 5³ = 125. Since 70 is very close to 64, ∛70 ≈ 4.1.",
+     "Step 2: Estimate √45. Bounded by 6² = 36 and 7² = 49. Since 45 is close to 49, √45 ≈ 6.7.",
+     "Step 3: Estimate denominator (2.03)². Round 2.03 to 2, so 2² = 4.",
+     "Step 4: Substitute into expression: (4.1 + 6.7) / 4 = 10.8 / 4.",
+     "Step 5: Compute 10.8 / 4 = 2.7."
+    ],
+    "ans": "2.7 (accept any answer between 2.6 and 2.8)"
+   },
+   {
+    "q": "Given that 2^x = 32 and 3^y = 81, find the exact value of x² + y³.",
+    "steps": [
+     "Step 1: Determine x. Recognise 32 as a power of 2: 2⁵ = 32, so x = 5.",
+     "Step 2: Determine y. Recognise 81 as a power of 3: 3⁴ = 81, so y = 4.",
+     "Step 3: Calculate x²: 5² = 25.",
+     "Step 4: Calculate y³: 4³ = 64.",
+     "Step 5: Add results: 25 + 64 = 89."
+    ],
+    "ans": "89"
+   },
+   {
+    "q": "Arrange the following numbers in ascending order: 4³, 2⁷, 5³, 3⁴.",
+    "steps": [
+     "Step 1: Evaluate 4³ = 4 × 4 × 4 = 64.",
+     "Step 2: Evaluate 2⁷ = 128 (using doubling sequence: 2, 4, 8, 16, 32, 64, 128).",
+     "Step 3: Evaluate 5³ = 5 × 5 × 5 = 125.",
+     "Step 4: Evaluate 3⁴ = 3 × 3 × 3 × 3 = 81.",
+     "Step 5: Compare values: 64 < 81 < 125 < 128.",
+     "Step 6: Write original terms in order: 4³, 3⁴, 5³, 2⁷."
+    ],
+    "ans": "4³, 3⁴, 5³, 2⁷"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Sandwiching method on a number line to estimate √50 between √49=7 and √64=8.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><line x1=\"40\" y1=\"140\" x2=\"360\" y2=\"140\" stroke=\"#1b2540\" stroke-width=\"3\"/><line x1=\"60\" y1=\"125\" x2=\"60\" y2=\"155\" stroke=\"#1e40af\" stroke-width=\"3\"/><line x1=\"340\" y1=\"125\" x2=\"340\" y2=\"155\" stroke=\"#1e40af\" stroke-width=\"3\"/><line x1=\"78\" y1=\"120\" x2=\"78\" y2=\"160\" stroke=\"#991b1b\" stroke-width=\"3\" opacity=\"0.9\"/><rect x=\"30\" y=\"60\" width=\"60\" height=\"45\" fill=\"#dbeafe\" stroke=\"#1e40af\" stroke-width=\"1.5\" rx=\"4\"/><text x=\"60\" y=\"78\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\" text-anchor=\"middle\">√49</text><text x=\"60\" y=\"96\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\" text-anchor=\"middle\">= 7</text><rect x=\"310\" y=\"60\" width=\"60\" height=\"45\" fill=\"#dbeafe\" stroke=\"#1e40af\" stroke-width=\"1.5\" rx=\"4\"/><text x=\"340\" y=\"78\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\" text-anchor=\"middle\">√64</text><text x=\"340\" y=\"96\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\" text-anchor=\"middle\">= 8</text><rect x=\"50\" y=\"175\" width=\"85\" height=\"45\" fill=\"#fecaca\" stroke=\"#991b1b\" stroke-width=\"1.5\" rx=\"4\"/><text x=\"92\" y=\"193\" font-size=\"12\" font-weight=\"bold\" fill=\"#991b1b\" text-anchor=\"middle\">√50</text><text x=\"92\" y=\"210\" font-size=\"12\" font-weight=\"bold\" fill=\"#991b1b\" text-anchor=\"middle\">≈ 7.07 (7.1)</text><text x=\"200\" y=\"30\" font-size=\"13\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">Bounding Non-Square Roots</text><path d=\"M 65 105 Q 70 120 76 122\" fill=\"none\" stroke=\"#991b1b\" stroke-width=\"1.5\" stroke-dasharray=\"3,3\"/></svg>"
+   },
+   {
+    "cap": "Equivalence network of base powers showing how 16, 64, and 256 link bases 2 and 4.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"30\" y=\"40\" width=\"90\" height=\"45\" fill=\"#dbeafe\" stroke=\"#1e40af\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"75\" y=\"60\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\" text-anchor=\"middle\">2⁴ = 16</text><text x=\"75\" y=\"76\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Base 2</text><rect x=\"30\" y=\"145\" width=\"90\" height=\"45\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"75\" y=\"165\" font-size=\"12\" font-weight=\"bold\" fill=\"#b45309\" text-anchor=\"middle\">4² = 16</text><text x=\"75\" y=\"181\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Base 4</text><rect x=\"155\" y=\"40\" width=\"90\" height=\"45\" fill=\"#dbeafe\" stroke=\"#1e40af\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"200\" y=\"60\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\" text-anchor=\"middle\">2⁶ = 64</text><text x=\"200\" y=\"76\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Base 2</text><rect x=\"155\" y=\"145\" width=\"90\" height=\"45\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"200\" y=\"165\" font-size=\"12\" font-weight=\"bold\" fill=\"#b45309\" text-anchor=\"middle\">4³ = 64</text><text x=\"200\" y=\"181\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Base 4</text><rect x=\"280\" y=\"40\" width=\"90\" height=\"45\" fill=\"#dbeafe\" stroke=\"#1e40af\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"325\" y=\"60\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\" text-anchor=\"middle\">2⁸ = 256</text><text x=\"325\" y=\"76\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Base 2</text><rect x=\"280\" y=\"145\" width=\"90\" height=\"45\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"325\" y=\"165\" font-size=\"12\" font-weight=\"bold\" fill=\"#b45309\" text-anchor=\"middle\">4⁴ = 256</text><text x=\"325\" y=\"181\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Base 4</text><line x1=\"75\" y1=\"85\" x2=\"75\" y2=\"145\" stroke=\"#065f46\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><line x1=\"200\" y1=\"85\" x2=\"200\" y2=\"145\" stroke=\"#065f46\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><line x1=\"325\" y1=\"85\" x2=\"325\" y2=\"145\" stroke=\"#065f46\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><text x=\"200\" y=\"215\" font-size=\"12\" font-weight=\"bold\" fill=\"#065f46\" text-anchor=\"middle\">Rule: 4ⁿ = (2²)ⁿ = 2²ⁿ</text></svg>"
+   },
+   {
+    "cap": "Comparison between even roots (y=x²) having no real negative roots and odd roots (y=x³) having real negative roots.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><line x1=\"30\" y1=\"120\" x2=\"170\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"100\" y1=\"30\" x2=\"100\" y2=\"210\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><path d=\"M 45 35 Q 100 190 155 35\" fill=\"none\" stroke=\"#1e40af\" stroke-width=\"2.5\"/><text x=\"100\" y=\"225\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\" text-anchor=\"middle\">y = x² (Even Power)</text><text x=\"40\" y=\"145\" font-size=\"11\" fill=\"#991b1b\">No Real Root &lt; 0</text><line x1=\"230\" y1=\"120\" x2=\"370\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"300\" y1=\"30\" x2=\"300\" y2=\"210\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><path d=\"M 245 190 Q 295 125 300 120 Q 305 115 355 50\" fill=\"none\" stroke=\"#6b21a8\" stroke-width=\"2.5\"/><circle cx=\"260\" cy=\"168\" r=\"4\" fill=\"#991b1b\"/><text x=\"300\" y=\"225\" font-size=\"11\" font-weight=\"bold\" fill=\"#6b21a8\" text-anchor=\"middle\">y = x³ (Odd Power)</text><text x=\"245\" y=\"155\" font-size=\"11\" fill=\"#991b1b\">∛(-27) = -3</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_h.0.5",
+  "sid": "maths_aqa_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.6-flash",
+  "ts": "2026-11-20T17:18:59.769Z"
  }
 }

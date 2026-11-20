@@ -4515,5 +4515,609 @@
   "src": "pre",
   "by": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
   "ts": "2026-11-19T18:15:41.844Z"
+ },
+ "maths_aqa_h.4.5": {
+  "summary": "Systematic enumeration is the rigorous process of listing or counting every possible outcome in a sample space without omitting any or counting duplicates. At Higher tier GCSE Maths, AQA requires students to construct and interpret sample space grids, two-way tables, multi-set Venn diagrams, tree diagrams, and apply the Product Rule for Counting. Mastering these techniques ensures you can systematically evaluate single-stage and multi-stage combined events, apply correct set notation, and solve complex conditional and constrained counting problems under exam conditions.",
+  "core": [
+   {
+    "h": "Principles of Systematic Enumeration & Sample Spaces",
+    "p": "Systematic enumeration involves listing or counting all elements of a sample space in a logical, structured order. Randomly guessing or listing outcomes haphazardly inevitably leads to missed combinations or double counting, which costs accuracy marks on AQA exams.",
+    "bullets": [
+     "A **sample space** ($\\mathcal{E}$ or $\\xi$) is the set of all possible outcomes of a probability experiment.",
+     "An **outcome** is a single possible result of an experiment (e.g. rolling a 4 on a fair die).",
+     "An **event** is a set of one or more outcomes meeting a specific condition (e.g. rolling an even number: $\\{2, 4, 6\\}$).",
+     "**Systematic ordering** means changing one variable at a time (lexicographical or numerical order) to guarantee complete coverage."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Sample Space",
+      "p": "The complete set of all possible outcomes of a probability experiment, denoted by the universal set symbol $\\mathcal{E}$ or $\\xi$."
+     },
+     {
+      "k": "tip",
+      "t": "Exam Strategy",
+      "p": "When asked to 'list all possible outcomes', structure your list alphabetically or numerically (e.g. 11, 12, 13, 21, 22, 23...). Never write outcomes at random."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "The Product Rule for Counting",
+    "p": "When an experiment consists of multiple independent stages, listing every single outcome can be inefficient. The **Product Rule for Counting** calculates the total number of possible combinations directly by multiplying the number of choices available at each stage.",
+    "bullets": [
+     "If there are $m$ ways of making a first choice and $n$ ways of making a second choice, there are $m \\times n$ total combined outcomes.",
+     "For $k$ sequential stages with $n_1, n_2, \\dots, n_k$ choices, total outcomes $= n_1 \\times n_2 \\times \\dots \\times n_k$.",
+     "When repetition is **not allowed** (sampling without replacement), the number of choices decreases by 1 for each subsequent selection.",
+     "When constraints apply (e.g. forming even numbers), fill the **most restricted position first** before multiplying."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Product Rule Formula",
+      "p": "Total Outcomes = $n_1 \\times n_2 \\times n_3 \\times \\dots \\times n_k$ where $n_i$ represents the number of choices at stage $i$."
+     },
+     {
+      "k": "warn",
+      "t": "Constrained Counting Trap",
+      "p": "If forming a 3-digit odd number greater than 500, determine the options for the hundreds digit and units digit BEFORE applying the product rule to the tens digit."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Sample Space Grids (Outcome Tables)",
+    "p": "Sample space grids are two-dimensional tables used to enumerate outcomes when combining two independent events, such as rolling two dice, spinning two spinners, or flipping two coins.",
+    "bullets": [
+     "One experiment forms the **rows** and the second experiment forms the **columns**.",
+     "The internal cells contain the resulting combined outcomes, such as sums, differences, or products.",
+     "For two 6-sided dice, the grid contains $6 \\times 6 = 36$ equally likely outcomes.",
+     "Grids make it easy to highlight and count outcomes that satisfy compound inequalities (e.g. sum $> 8$ and difference $< 3$)."
+    ],
+    "table": {
+     "head": [
+      "Spin 1 \\ Spin 2",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "rows": [
+      [
+       "1",
+       "(1,1) sum=2",
+       "(1,2) sum=3",
+       "(1,3) sum=4",
+       "(1,4) sum=5"
+      ],
+      [
+       "2",
+       "(2,1) sum=3",
+       "(2,2) sum=4",
+       "(2,3) sum=5",
+       "(2,4) sum=6"
+      ],
+      [
+       "3",
+       "(3,1) sum=4",
+       "(3,2) sum=5",
+       "(3,3) sum=6",
+       "(3,4) sum=7"
+      ],
+      [
+       "4",
+       "(4,1) sum=5",
+       "(4,2) sum=6",
+       "(4,3) sum=7",
+       "(4,4) sum=8"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Identifying Diagonals",
+      "p": "In a sum grid for two standard dice, outcomes with equal totals lie along diagonal lines. This allows rapid verification of outcome counts."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Sample space grid for rolling two fair 4-sided spinners, showing outcome sums. Cells with a sum of 5 are highlighted.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><text x=\"200\" y=\"22\" fill=\"#1b2540\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Sample Space Grid: Two 4-Sided Spinners (Sum)</text><rect x=\"40\" y=\"40\" width=\"320\" height=\"170\" fill=\"#ffffff\" stroke=\"#1b2540\" stroke-width=\"1.5\" rx=\"4\"/><line x1=\"40\" y1=\"74\" x2=\"360\" y2=\"74\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"40\" y1=\"108\" x2=\"360\" y2=\"108\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"40\" y1=\"142\" x2=\"360\" y2=\"142\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"40\" y1=\"176\" x2=\"360\" y2=\"176\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"104\" y1=\"40\" x2=\"104\" y2=\"210\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"168\" y1=\"40\" x2=\"168\" y2=\"210\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"232\" y1=\"40\" x2=\"232\" y2=\"210\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"296\" y1=\"40\" x2=\"296\" y2=\"210\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><text x=\"72\" y=\"60\" fill=\"#64748b\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">+ (Sum)</text><text x=\"136\" y=\"60\" fill=\"#1e3a8a\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Spinner 2: 1</text><text x=\"200\" y=\"60\" fill=\"#1e3a8a\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">2</text><text x=\"264\" y=\"60\" fill=\"#1e3a8a\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">3</text><text x=\"328\" y=\"60\" fill=\"#1e3a8a\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">4</text><text x=\"72\" y=\"95\" fill=\"#1e3a8a\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Spin 1: 1</text><text x=\"72\" y=\"129\" fill=\"#1e3a8a\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">2</text><text x=\"72\" y=\"163\" fill=\"#1e3a8a\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">3</text><text x=\"72\" y=\"197\" fill=\"#1e3a8a\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">4</text><rect x=\"298\" y=\"76\" width=\"60\" height=\"30\" fill=\"#fde68a\" rx=\"4\"/><rect x=\"234\" y=\"110\" width=\"60\" height=\"30\" fill=\"#fde68a\" rx=\"4\"/><rect x=\"170\" y=\"144\" width=\"60\" height=\"30\" fill=\"#fde68a\" rx=\"4\"/><rect x=\"106\" y=\"178\" width=\"60\" height=\"30\" fill=\"#fde68a\" rx=\"4\"/><text x=\"136\" y=\"95\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">2</text><text x=\"200\" y=\"95\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">3</text><text x=\"264\" y=\"95\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">4</text><text x=\"328\" y=\"95\" fill=\"#92400e\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">5</text><text x=\"136\" y=\"129\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">3</text><text x=\"200\" y=\"129\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">4</text><text x=\"264\" y=\"129\" fill=\"#92400e\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">5</text><text x=\"328\" y=\"129\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">6</text><text x=\"136\" y=\"163\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">4</text><text x=\"200\" y=\"163\" fill=\"#92400e\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">5</text><text x=\"264\" y=\"163\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">6</text><text x=\"328\" y=\"163\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">7</text><text x=\"136\" y=\"197\" fill=\"#92400e\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">5</text><text x=\"200\" y=\"197\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">6</text><text x=\"264\" y=\"197\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">7</text><text x=\"328\" y=\"197\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">8</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Two-Way Tables for Categorical Enumeration",
+    "p": "Two-way tables categorize data using two distinct variables (such as gender and choice of activity). They systematically partition a group into mutually exclusive sub-categories so that row totals, column totals, and the overall grand total align.",
+    "bullets": [
+     "Each internal cell represents the frequency of items satisfying both a specific row category and column category ($A \\cap B$).",
+     "Row totals sum horizontally across all columns for that row.",
+     "Column totals sum vertically down all rows for that column.",
+     "The bottom-right cell represents the **Grand Total** $n(\\mathcal{E})$, which equals both the sum of all row totals and the sum of all column totals.",
+     "Missing values in incomplete two-way tables are found systematically using row/column arithmetic before answering probability questions."
+    ],
+    "table": {
+     "head": [
+      "Group",
+      "Boys",
+      "Girls",
+      "Total"
+     ],
+     "rows": [
+      [
+       "French",
+       "14",
+       "18",
+       "32"
+      ],
+      [
+       "Spanish",
+       "11",
+       "7",
+       "18"
+      ],
+      [
+       "Total",
+       "25",
+       "25",
+       "50"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Two-Way Table",
+      "p": "A grid format used to present counts of items classified under two separate categorical variables simultaneously."
+     },
+     {
+      "k": "warn",
+      "t": "Grand Total Check",
+      "p": "Always sum both row totals and column totals independently to ensure they yield identical Grand Totals. An arithmetic error here will invalidate subsequent probability calculations."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Structure of a 2x2 Two-Way Table with sub-totals and Grand Total highlighted.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><text x=\"200\" y=\"22\" fill=\"#1b2540\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Two-Way Table Categorical Structure</text><rect x=\"50\" y=\"45\" width=\"300\" height=\"165\" fill=\"#ffffff\" stroke=\"#1b2540\" stroke-width=\"1.5\" rx=\"4\"/><line x1=\"50\" y1=\"85\" x2=\"350\" y2=\"85\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"50\" y1=\"125\" x2=\"350\" y2=\"125\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"50\" y1=\"165\" x2=\"350\" y2=\"165\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"150\" y1=\"45\" x2=\"150\" y2=\"210\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"220\" y1=\"45\" x2=\"220\" y2=\"210\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"285\" y1=\"45\" x2=\"285\" y2=\"210\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><rect x=\"286\" y=\"166\" width=\"63\" height=\"43\" fill=\"#bbf7d0\" rx=\"2\"/><text x=\"100\" y=\"70\" fill=\"#64748b\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">Category</text><text x=\"185\" y=\"70\" fill=\"#1e3a8a\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Boys</text><text x=\"252.5\" y=\"70\" fill=\"#1e3a8a\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Girls</text><text x=\"317.5\" y=\"70\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Total</text><text x=\"100\" y=\"110\" fill=\"#1e3a8a\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">French</text><text x=\"185\" y=\"110\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">14</text><text x=\"252.5\" y=\"110\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">18</text><text x=\"317.5\" y=\"110\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">32</text><text x=\"100\" y=\"150\" fill=\"#1e3a8a\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Spanish</text><text x=\"185\" y=\"150\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">11</text><text x=\"252.5\" y=\"150\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">7</text><text x=\"317.5\" y=\"150\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">18</text><text x=\"100\" y=\"190\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Total</text><text x=\"185\" y=\"190\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">25</text><text x=\"252.5\" y=\"190\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">25</text><text x=\"317.5\" y=\"190\" fill=\"#065f46\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">50</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Two-Set Venn Diagrams & Set Notation",
+    "p": "Venn diagrams represent how items are distributed across overlapping sets within a defined universal set. A two-set Venn diagram partitions space into 4 mutually exclusive regions.",
+    "bullets": [
+     "**Universal Set** ($\\mathcal{E}$ or $\\xi$): The boundary rectangle containing all elements under consideration.",
+     "**Intersection** ($A \\cap B$): The central overlap containing elements in BOTH set $A$ and set $B$.",
+     "**Union** ($A \\cup B$): The region combining all elements in set $A$, set $B$, or both.",
+     "**Complement** ($A'$): All elements in $\\mathcal{E}$ that are NOT in set $A$.",
+     "**Only $A$** ($A \\cap B'$): Elements belonging to set $A$ but excluding any in set $B$ ($n(A \\text{ only}) = n(A) - n(A \\cap B)$).",
+     "**Outside** ($(A \\cup B)'$): Elements belonging to neither set $A$ nor set $B$."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Set Operations Notation",
+      "p": "$A \\cap B$ means 'A AND B' (intersection).\n$A \\cup B$ means 'A OR B' (union).\n$A'$ means 'NOT A' (complement)."
+     },
+     {
+      "k": "tip",
+      "t": "Finding 'Only A'",
+      "p": "If $n(A) = 15$ and $n(A \\cap B) = 6$, the number in 'A only' is $15 - 6 = 9$. Never write 15 directly into the set $A$ circle."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Three-Set Venn Diagrams: Systematic Filling Strategy",
+    "p": "Three-set Venn diagrams organize elements across three overlapping sets ($A$, $B$, $C$), creating 8 distinct mutually exclusive regions. Populating a 3-set Venn diagram requires a strict **inside-out strategy**.",
+    "bullets": [
+     "**Step 1**: Enter the central triple intersection value $n(A \\cap B \\cap C)$ first.",
+     "**Step 2**: Work outwards to the double intersections ($A \\cap B \\cap C'$, $A \\cap C \\cap B'$, $B \\cap C \\cap A'$), subtracting the central triple intersection count from each given pair total.",
+     "**Step 3**: Calculate the single-set regions ($A$ only, $B$ only, $C$ only) by subtracting all three inner region counts from the given set totals.",
+     "**Step 4**: Calculate the outside region $(A \\cup B \\cup C)'$ by subtracting the sum of all 7 internal regions from $n(\\mathcal{E})$.",
+     "Always verify that the sum of all 8 region numbers equals the universal set total $n(\\mathcal{E})$."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "The Inside-Out Rule",
+      "p": "Always fill the central intersection $n(A \\cap B \\cap C)$ FIRST. If this value is unknown, let it equal $x$ and form an algebraic equation using set totals."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Three-set Venn diagram displaying 8 distinct regions with region counts and universal set box.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"15\" y=\"15\" width=\"370\" height=\"210\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"30\" y=\"35\" fill=\"#1b2540\" font-size=\"13\" font-weight=\"bold\">E = 40</text><circle cx=\"160\" cy=\"105\" r=\"55\" fill=\"#dbeafe\" fill-opacity=\"0.6\" stroke=\"#1e3a8a\" stroke-width=\"1.5\"/><circle cx=\"240\" cy=\"105\" r=\"55\" fill=\"#fde68a\" fill-opacity=\"0.6\" stroke=\"#92400e\" stroke-width=\"1.5\"/><circle cx=\"200\" cy=\"155\" r=\"55\" fill=\"#bbf7d0\" fill-opacity=\"0.6\" stroke=\"#065f46\" stroke-width=\"1.5\"/><text x=\"130\" y=\"65\" fill=\"#1e3a8a\" font-size=\"13\" font-weight=\"bold\">A</text><text x=\"265\" y=\"65\" fill=\"#92400e\" font-size=\"13\" font-weight=\"bold\">B</text><text x=\"200\" y=\"218\" fill=\"#065f46\" font-size=\"13\" font-weight=\"bold\">C</text><text x=\"135\" y=\"100\" fill=\"#1e3a8a\" font-size=\"11\" font-weight=\"bold\">7</text><text x=\"260\" y=\"100\" fill=\"#92400e\" font-size=\"11\" font-weight=\"bold\">9</text><text x=\"200\" y=\"190\" fill=\"#065f46\" font-size=\"11\" font-weight=\"bold\">6</text><text x=\"200\" y=\"85\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\">4</text><text x=\"165\" y=\"135\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\">3</text><text x=\"235\" y=\"135\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\">5</text><text x=\"200\" y=\"120\" fill=\"#991b1b\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">2</text><text x=\"45\" y=\"205\" fill=\"#64748b\" font-size=\"12\" font-weight=\"bold\">Outside = 4</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Advanced Set Notation & Region Logic",
+    "p": "AQA Grade 9 questions frequently assess ability to translate complex set descriptions into set notation and identify corresponding visual regions.",
+    "bullets": [
+     "$A \\cap B'$: Elements in $A$ and NOT in $B$ (pure $A$).",
+     "$A' \\cap B'$: Elements NOT in $A$ and NOT in $B$ (same as $(A \\cup B)'$).",
+     "$A \\cup B'$: Elements in $A$ OR outside $B$.",
+     "$(A \\cap B)'$: Everything EXCEPT the intersection of $A$ and $B$.",
+     "$n(A)$: The total count of all elements inside circle $A$, which equals $n(A \\cap B') + n(A \\cap B)$.",
+     "Empty Set ($\nvarnothing$): A set containing zero elements ($n(\\varnothing) = 0$)."
+    ],
+    "table": {
+     "head": [
+      "Set Notation",
+      "Descriptive Meaning",
+      "Region Composition"
+     ],
+     "rows": [
+      [
+       "$A \\cap B$",
+       "Both A and B",
+       "Central overlap"
+      ],
+      [
+       "$A \\cup B$",
+       "A or B or both",
+       "All circles combined"
+      ],
+      [
+       "$A \\cap B'$",
+       "A only (not B)",
+       "Left crescent of A"
+      ],
+      [
+       "$(A \\cup B)'$",
+       "Neither A nor B",
+       "Outside all circles"
+      ],
+      [
+       "$A' \\cup B'$",
+       "Not in both (De Morgan)",
+       "Everything except $A \\cap B$"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "De Morgan's Laws",
+      "p": "$(A \\cup B)' = A' \\cap B'$ (Neither A nor B)\n$(A \\cap B)' = A' \\cup B'$ (Not both A and B)"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Tree Diagrams: Structural Systematic Enumeration",
+    "p": "Tree diagrams systematically enumerate multi-stage experiments where outcomes occur sequentially. Each path from root to branch tip represents a unique systematic outcome.",
+    "bullets": [
+     "**Branches** represent choices or outcomes at a specific stage.",
+     "**Stage 1** splits into primary possibilities; **Stage 2** splits each branch into secondary possibilities.",
+     "The total number of outcome paths equals the product of the number of choices at each branch point.",
+     "Probabilities along a continuous path are **multiplied** (AND rule).",
+     "Probabilities of separate end branches are **added** (OR rule).",
+     "The sum of probabilities on any set of branches radiating from a single node must equal 1."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Probability Tree Diagram",
+      "p": "A diagram representing sequential events where branches show outcome possibilities and their associated probabilities."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Two-stage probability tree diagram for picking two counters without replacement (dependent events).",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><text x=\"200\" y=\"20\" fill=\"#1b2540\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Tree Diagram: Selection Without Replacement</text><line x1=\"40\" y1=\"120\" x2=\"130\" y2=\"65\" stroke=\"#1e3a8a\" stroke-width=\"2\"/><line x1=\"40\" y1=\"120\" x2=\"130\" y2=\"175\" stroke=\"#991b1b\" stroke-width=\"2\"/><text x=\"75\" y=\"80\" fill=\"#1e3a8a\" font-size=\"11\" font-weight=\"bold\">3/5 R</text><text x=\"75\" y=\"160\" fill=\"#991b1b\" font-size=\"11\" font-weight=\"bold\">2/5 B</text><line x1=\"150\" y1=\"65\" x2=\"240\" y2=\"35\" stroke=\"#1e3a8a\" stroke-width=\"1.5\"/><line x1=\"150\" y1=\"65\" x2=\"240\" y2=\"95\" stroke=\"#991b1b\" stroke-width=\"1.5\"/><text x=\"190\" y=\"42\" fill=\"#1e3a8a\" font-size=\"11\">2/4 R</text><text x=\"190\" y=\"92\" fill=\"#991b1b\" font-size=\"11\">2/4 B</text><line x1=\"150\" y1=\"175\" x2=\"240\" y2=\"145\" stroke=\"#1e3a8a\" stroke-width=\"1.5\"/><line x1=\"150\" y1=\"175\" x2=\"240\" y2=\"205\" stroke=\"#991b1b\" stroke-width=\"1.5\"/><text x=\"190\" y=\"152\" fill=\"#1e3a8a\" font-size=\"11\">3/4 R</text><text x=\"190\" y=\"202\" fill=\"#991b1b\" font-size=\"11\">1/4 B</text><text x=\"255\" y=\"38\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\">RR (6/20)</text><text x=\"255\" y=\"98\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\">RB (6/20)</text><text x=\"255\" y=\"148\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\">BR (6/20)</text><text x=\"255\" y=\"208\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\">BB (2/20)</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Dependent vs Independent Enumeration Pathways",
+    "p": "When enumerating multi-stage experiments, you must identify whether the selection is **with replacement** (independent) or **without replacement** (dependent/conditional).",
+    "bullets": [
+     "**Independent Events**: The sample space size and outcome probabilities remain identical at every stage.",
+     "**Dependent Events**: Each selection reduces the remaining total count by 1 and reduces the count of that chosen category by 1.",
+     "For dependent sampling of $n$ items from a population $N$, the denominators change sequentially from $N$, to $N-1$, to $N-2$.",
+     "Systematic tree diagrams map conditional pathways explicitly to prevent missing conditional sub-branches."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "'Without Replacement' Trap",
+      "p": "Always update BOTH the numerator and denominator for stage 2 branches in conditional tree diagrams."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Systematic Listing with Constraints",
+    "p": "High-tier AQA questions present constrained combination problems, such as forming multi-digit numbers from a set of digit cards without replacement.",
+    "bullets": [
+     "**Identify Constraints First**: Pinpoint restrictions like 'even number' (last digit must be 2, 4, 6, 8, 0) or 'greater than 400' (first digit must be $\\ge 4$).",
+     "**Order of Allocation**: Allocate options to the most restricted digit position first, then second most restricted, and finally remaining digits.",
+     "**Systematic Grouping**: Group possibilities by their starting digit or final digit to ensure no overlap or omission.",
+     "**Apply Product Rule with Reduction**: For $k$ digit positions with choices $c_1, c_2, c_3$, total combinations $= c_1 \\times c_2 \\times c_3$."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Structured Code Trees",
+      "p": "When listing constrained numbers (e.g. 3-digit even numbers from cards {2, 3, 5, 6}), list systematically: 236, 256, 326, 352, 356, 526, 532, 536, 632, 652."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Converting Between Grids, Tables, Venns, and Trees",
+    "p": "Different representation formats display identical sample spaces. Grade 9 students must fluently convert information between these structures.",
+    "bullets": [
+     "**Two-Way Table to Venn Diagram**: Central intersection $A \\cap B$ corresponds to the row-column cell overlap; row total minus overlap gives 'A only'.",
+     "**Venn Diagram to Tree Diagram**: First branch probability $= n(A)/n(\\mathcal{E})$; second branch conditional probability $= n(A \\cap B)/n(A)$.",
+     "**Sample Space Grid to Frequency List**: Count frequency of cell outcomes to build standard probability distributions.",
+     "Always cross-check total counts ($n(\\mathcal{E})$) across representations to verify consistency."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Equivalence of Representations",
+      "p": "Whether presented as a Venn diagram, two-way table, or tree diagram, the underlying total sample space size $n(\\mathcal{E})$ must remain invariant."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Master Library Filing System",
+   "p": "Imagine a massive library containing hundreds of books. If books are dumped in random piles, finding a specific book or counting books written by a specific author in a given decade is chaotic and prone to error. Systematic enumeration is like organizing the library into a strict grid index system: cataloging by Genre (Rows) and Publication Century (Columns), or using a branching Decision Tree (Fiction $\\rightarrow$ Sci-Fi $\\rightarrow$ Hard Sci-Fi) to classify every single book uniquely. The analogy breaks down because while library books can occasionally be misplaced or cross-referenced under multiple genres simultaneously, elements in a mathematical sample space grid or Venn partition must strictly belong to precise, mutually exclusive, defined regions."
+  },
+  "terms": [
+   {
+    "t": "Sample Space",
+    "d": "The set of all possible outcomes of a probability experiment, denoted by $\\mathcal{E}$ or $\\xi$."
+   },
+   {
+    "t": "Systematic Enumeration",
+    "d": "The process of listing or counting all possible outcomes of a set or event in a clear, structured order without omission or repetition."
+   },
+   {
+    "t": "Product Rule for Counting",
+    "d": "A method to find the total number of combined outcomes for multi-stage processes by multiplying the number of available choices at each stage."
+   },
+   {
+    "t": "Intersection ($A \\cap B$)",
+    "d": "The set of elements that belong to BOTH set A and set B."
+   },
+   {
+    "t": "Union ($A \\cup B$)",
+    "d": "The set of elements that belong to set A, set B, OR both."
+   },
+   {
+    "t": "Complement ($A'$)",
+    "d": "The set of all elements in the universal set $\\mathcal{E}$ that do NOT belong to set A."
+   },
+   {
+    "t": "Universal Set ($\\mathcal{E}$)",
+    "d": "The set containing all possible elements under consideration in a given problem."
+   },
+   {
+    "t": "Two-Way Table",
+    "d": "A table used to summarize and organize bivariate categorical data showing frequencies across row and column classifications."
+   },
+   {
+    "t": "Venn Diagram",
+    "d": "A visual diagram using overlapping circles inside a universal set rectangle to represent set relationships and counts."
+   },
+   {
+    "t": "Tree Diagram",
+    "d": "A branching diagram representing sequential stages of an experiment, showing outcome paths and their probabilities."
+   },
+   {
+    "t": "Mutually Exclusive",
+    "d": "Events that cannot happen at the same time ($A \\cap B = \\varnothing$)."
+   },
+   {
+    "t": "Exhaustive Events",
+    "d": "A set of events whose total combined outcomes cover the entire sample space, so their probabilities sum to 1."
+   },
+   {
+    "t": "Independent Events",
+    "d": "Events where the outcome of one stage has zero impact on the probability of outcomes in subsequent stages."
+   },
+   {
+    "t": "Conditional Probability",
+    "d": "The probability of an event occurring given that another event has already occurred."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Writing $15$ into the 'Set A only' region of a Venn diagram when given $n(A) = 15$ and $n(A \\cap B) = 5$.",
+    "r": "Subtract the intersection value first: write $15 - 5 = 10$ into the 'Set A only' region."
+   },
+   {
+    "w": "Using simple addition ($m + n$) instead of multiplication ($m \\times n$) when applying the Product Rule for Counting sequential choices.",
+    "r": "Multiply the number of options at each independent stage ($m \\times n$)."
+   },
+   {
+    "w": "Omitting the outside region $(A \\cup B)'$ when completing a Venn diagram.",
+    "r": "Subtract all internal circle counts from the total universal set $n(\\mathcal{E})$ to find the outside count."
+   },
+   {
+    "w": "Keeping denominators identical in a tree diagram when sampling WITHOUT replacement.",
+    "r": "Reduce the total denominator by 1 for second-stage branches (e.g. from /10 to /9)."
+   },
+   {
+    "w": "Listing combinations randomly (e.g. 31, 12, 32, 21) leading to missed outcomes.",
+    "r": "List systematically in numerical or alphabetical order (12, 13, 21, 23, 31, 32)."
+   },
+   {
+    "w": "Confusing set notation symbols $\\cap$ (intersection/AND) and $\\cup$ (union/OR).",
+    "r": "Remember $\\cap$ looks like an 'A' for AND, while $\\cup$ looks like a 'U' for Union/OR."
+   },
+   {
+    "w": "Double counting the intersection when finding $n(A \\cup B)$ by adding $n(A) + n(B)$.",
+    "r": "Use the inclusion-exclusion principle: $n(A \\cup B) = n(A) + n(B) - n(A \\cap B)$."
+   },
+   {
+    "w": "Filling a 3-set Venn diagram from the outside in rather than the inside out.",
+    "r": "Always start populating counts from the central triple intersection $n(A \\cap B \\cap C)$ first."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A menu offers 3 starters, 5 main courses, and 4 desserts. How many different 3-course meals can be selected?",
+    "marks": 1,
+    "model": [
+     "Total combinations = $3 \\times 5 \\times 4 = 60$"
+    ],
+    "tip": "Apply the Product Rule for Counting directly: multiply the number of options at each stage."
+   },
+   {
+    "q": "Four cards show digits 2, 5, 7, and 8. Three cards are picked at random without replacement to form a 3-digit number. How many different 3-digit numbers greater than 600 can be formed?",
+    "marks": 2,
+    "model": [
+     "First digit must be 7 or 8 (2 choices).",
+     "Remaining two digits chosen from 3 remaining cards: $2 \\times 3 \\times 2 = 12$"
+    ],
+    "tip": "Identify the constraint on the hundreds digit first before applying the product rule."
+   },
+   {
+    "q": "In a group of 40 students, 22 study History (H), 18 study Geography (G), and 6 study neither. Find $n(H \\cap G)$.",
+    "marks": 3,
+    "model": [
+     "Students studying H or G: $n(H \\cup G) = 40 - 6 = 34$",
+     "Apply formula: $n(H \\cup G) = n(H) + n(G) - n(H \\cap G)$",
+     "34 = 22 + 18 - n(H \\cap G)",
+     "34 = 40 - n(H \\cap G) \\rightarrow n(H \\cap G) = 6"
+    ],
+    "tip": "Subtract outside students from universal total to get union, then solve for overlap."
+   },
+   {
+    "q": "Two fair 6-sided dice are rolled and their scores are multiplied together. Find the probability that the product is an even number greater than 10.",
+    "marks": 4,
+    "model": [
+     "Construct/enumerate 6x6 product grid (36 total outcomes).",
+     "Identify products > 10: (2,6=12), (3,4=12), (3,5=15-odd), (3,6=18), (4,3=12), (4,4=16), (4,5=20), (4,6=24), (5,3=15-odd), (5,4=20), (5,5=25-odd), (5,6=30), (6,2=12), (6,3=18), (6,4=24), (6,5=30), (6,6=36).",
+     "Filter for EVEN products > 10: 14 successful outcomes.",
+     "Probability = 14/36 = 7/18."
+    ],
+    "tip": "Systematically list all products over 10, then discard odd products to avoid missing any."
+   },
+   {
+    "q": "A bag contains 5 red counters and 3 blue counters. Two counters are taken at random without replacement. Complete a tree diagram and calculate the probability of selecting at least one blue counter.",
+    "marks": 4,
+    "model": [
+     "Stage 1: P(R) = 5/8, P(B) = 3/8",
+     "Stage 2 after R: P(R) = 4/7, P(B) = 3/7; Stage 2 after B: P(R) = 5/7, P(B) = 2/7",
+     "P(No Blue) = P(RR) = (5/8) * (4/7) = 20/56",
+     "P(At least 1 Blue) = 1 - P(RR) = 1 - 20/56 = 36/56 = 9/14"
+    ],
+    "tip": "Use 1 - P(No Blue) to calculate 'at least one' quickly and accurately."
+   },
+   {
+    "q": "Shade the region representing $A \\cap B'$ on a standard two-circle Venn diagram.",
+    "marks": 1,
+    "model": [
+     "Shade only the crescent part of circle A that does not overlap circle B."
+    ],
+    "tip": "$A \\cap B'$ means inside circle A AND outside circle B."
+   },
+   {
+    "q": "Here is data for 100 students: 60 play Sport (S), 45 play Music (M), 20 play both. A student is picked at random. Given that the student plays Sport, find the probability that they also play Music.",
+    "marks": 3,
+    "model": [
+     "Draw/enumerate Venn counts: n(S only) = 60 - 20 = 40, n(S and M) = 20.",
+     "Given student plays Sport, restricted sample space size = 60.",
+     "Number who also play Music = 20.",
+     "Conditional probability = 20/60 = 1/3."
+    ],
+    "tip": "Conditional probability restricts the denominator to the given event's total count."
+   },
+   {
+    "q": "How many odd 3-digit numbers can be formed using the digits 1, 2, 4, 5, 8 if digits CANNOT be repeated?",
+    "marks": 3,
+    "model": [
+     "Last digit constraint (must be odd: 1 or 5) -> 2 choices.",
+     "Hundreds digit choice -> 4 remaining digits available.",
+     "Tens digit choice -> 3 remaining digits available.",
+     "Total = 4 * 3 * 2 = 24."
+    ],
+    "tip": "Fill units digit first (2 options), then hundreds (4 left), then tens (3 left)."
+   },
+   {
+    "q": "Express De Morgan's Law $(A \\cup B)'$ in words and identify its region in a Venn diagram.",
+    "marks": 2,
+    "model": [
+     "In words: The set of elements that are in neither set A nor set B.",
+     "Venn region: The area outside both circle A and circle B."
+    ],
+    "tip": "$(A \\cup B)'$ is identical to $A' \\cap B'$."
+   },
+   {
+    "q": "In a survey of 80 people: 40 like Tea (T), 35 like Coffee (C), 30 like Juice (J), 12 like T and C, 10 like T and J, 8 like C and J, 4 like all three. Complete a 3-set Venn diagram and find how many like none of these drinks.",
+    "marks": 5,
+    "model": [
+     "Central overlap T n C n J = 4",
+     "Double overlaps: T n C only = 12 - 4 = 8; T n J only = 10 - 4 = 6; C n J only = 8 - 4 = 4",
+     "Single sets: T only = 40 - (8+4+6) = 22; C only = 35 - (8+4+4) = 19; J only = 30 - (6+4+4) = 16",
+     "Sum of all inside regions = 4 + 8 + 6 + 4 + 22 + 19 + 16 = 79",
+     "Outside (none) = 80 - 79 = 1."
+    ],
+    "tip": "Always populate from the central triple overlap outwards, subtracting double overlaps correctly."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A security code is formed using three digits chosen from {1, 3, 4, 6, 7, 9} followed by one letter chosen from {X, Y, Z}.\n(a) How many total codes can be formed if digits CAN be repeated?\n(b) How many total codes can be formed if digits CANNOT be repeated and the code must end with 'Z'?",
+    "steps": [
+     "Part (a): Stage 1 has 6 digit options, Stage 2 has 6 digit options, Stage 3 has 6 digit options, Stage 4 (letter) has 3 options.\nApply Product Rule: $6 \\times 6 \\times 6 \\times 3 = 216 \\times 3 = 648$.",
+     "Part (b): Stage 4 (letter 'Z') has 1 fixed choice.\nStage 1 (first digit) has 6 choices.\nStage 2 (second digit) has 5 remaining choices.\nStage 3 (third digit) has 4 remaining choices.\nApply Product Rule without replacement: $6 \\times 5 \\times 4 \\times 1 = 120$."
+    ],
+    "ans": "(a) 648\n(b) 120"
+   },
+   {
+    "q": "In a year group of 120 students:\n- 65 study French ($F$)\n- 50 study Spanish ($S$)\n- 25 study German ($G$)\n- 15 study French and Spanish\n- 10 study French and German\n- 8 study Spanish and German\n- 5 study all three languages\n(a) Draw and populate a complete 3-set Venn diagram.\n(b) Find the probability that a randomly chosen student studies exactly one language.",
+    "steps": [
+     "Step 1: Fill central triple intersection $n(F \\cap S \\cap G) = 5$.",
+     "Step 2: Calculate double intersections (only 2 languages):\n- French and Spanish only $= 15 - 5 = 10$\n- French and German only $= 10 - 5 = 5$\n- Spanish and German only $= 8 - 5 = 3$",
+     "Step 3: Calculate single language regions:\n- French only $= 65 - (10 + 5 + 5) = 45$\n- Spanish only $= 50 - (10 + 5 + 3) = 32$\n- German only $= 25 - (5 + 5 + 3) = 12$",
+     "Step 4: Calculate outside region (neither):\n- Total inside $= 5 + 10 + 5 + 3 + 45 + 32 + 12 = 112$\n- Outside $= 120 - 112 = 8$",
+     "Step 5: Calculate probability of exactly one language:\n- Number studying exactly one language $= 45 + 32 + 12 = 89$\n- Probability $= 89/120$."
+    ],
+    "ans": "(a) Regions: F only=45, S only=32, G only=12, F&S only=10, F&G only=5, S&G only=3, All three=5, Outside=8.\n(b) 89/120"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Sample space grid for rolling two fair 4-sided spinners, showing outcome sums. Cells with a sum of 5 are highlighted.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><text x=\"200\" y=\"22\" fill=\"#1b2540\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Sample Space Grid: Two 4-Sided Spinners (Sum)</text><rect x=\"40\" y=\"40\" width=\"320\" height=\"170\" fill=\"#ffffff\" stroke=\"#1b2540\" stroke-width=\"1.5\" rx=\"4\"/><line x1=\"40\" y1=\"74\" x2=\"360\" y2=\"74\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"40\" y1=\"108\" x2=\"360\" y2=\"108\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"40\" y1=\"142\" x2=\"360\" y2=\"142\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"40\" y1=\"176\" x2=\"360\" y2=\"176\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"104\" y1=\"40\" x2=\"104\" y2=\"210\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"168\" y1=\"40\" x2=\"168\" y2=\"210\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"232\" y1=\"40\" x2=\"232\" y2=\"210\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"296\" y1=\"40\" x2=\"296\" y2=\"210\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><text x=\"72\" y=\"60\" fill=\"#64748b\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">+ (Sum)</text><text x=\"136\" y=\"60\" fill=\"#1e3a8a\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Spinner 2: 1</text><text x=\"200\" y=\"60\" fill=\"#1e3a8a\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">2</text><text x=\"264\" y=\"60\" fill=\"#1e3a8a\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">3</text><text x=\"328\" y=\"60\" fill=\"#1e3a8a\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">4</text><text x=\"72\" y=\"95\" fill=\"#1e3a8a\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Spin 1: 1</text><text x=\"72\" y=\"129\" fill=\"#1e3a8a\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">2</text><text x=\"72\" y=\"163\" fill=\"#1e3a8a\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">3</text><text x=\"72\" y=\"197\" fill=\"#1e3a8a\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">4</text><rect x=\"298\" y=\"76\" width=\"60\" height=\"30\" fill=\"#fde68a\" rx=\"4\"/><rect x=\"234\" y=\"110\" width=\"60\" height=\"30\" fill=\"#fde68a\" rx=\"4\"/><rect x=\"170\" y=\"144\" width=\"60\" height=\"30\" fill=\"#fde68a\" rx=\"4\"/><rect x=\"106\" y=\"178\" width=\"60\" height=\"30\" fill=\"#fde68a\" rx=\"4\"/><text x=\"136\" y=\"95\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">2</text><text x=\"200\" y=\"95\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">3</text><text x=\"264\" y=\"95\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">4</text><text x=\"328\" y=\"95\" fill=\"#92400e\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">5</text><text x=\"136\" y=\"129\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">3</text><text x=\"200\" y=\"129\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">4</text><text x=\"264\" y=\"129\" fill=\"#92400e\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">5</text><text x=\"328\" y=\"129\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">6</text><text x=\"136\" y=\"163\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">4</text><text x=\"200\" y=\"163\" fill=\"#92400e\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">5</text><text x=\"264\" y=\"163\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">6</text><text x=\"328\" y=\"163\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">7</text><text x=\"136\" y=\"197\" fill=\"#92400e\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">5</text><text x=\"200\" y=\"197\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">6</text><text x=\"264\" y=\"197\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">7</text><text x=\"328\" y=\"197\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">8</text></svg>"
+   },
+   {
+    "cap": "Structure of a 2x2 Two-Way Table with sub-totals and Grand Total highlighted.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><text x=\"200\" y=\"22\" fill=\"#1b2540\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Two-Way Table Categorical Structure</text><rect x=\"50\" y=\"45\" width=\"300\" height=\"165\" fill=\"#ffffff\" stroke=\"#1b2540\" stroke-width=\"1.5\" rx=\"4\"/><line x1=\"50\" y1=\"85\" x2=\"350\" y2=\"85\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"50\" y1=\"125\" x2=\"350\" y2=\"125\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"50\" y1=\"165\" x2=\"350\" y2=\"165\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"150\" y1=\"45\" x2=\"150\" y2=\"210\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"220\" y1=\"45\" x2=\"220\" y2=\"210\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"285\" y1=\"45\" x2=\"285\" y2=\"210\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><rect x=\"286\" y=\"166\" width=\"63\" height=\"43\" fill=\"#bbf7d0\" rx=\"2\"/><text x=\"100\" y=\"70\" fill=\"#64748b\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">Category</text><text x=\"185\" y=\"70\" fill=\"#1e3a8a\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Boys</text><text x=\"252.5\" y=\"70\" fill=\"#1e3a8a\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Girls</text><text x=\"317.5\" y=\"70\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Total</text><text x=\"100\" y=\"110\" fill=\"#1e3a8a\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">French</text><text x=\"185\" y=\"110\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">14</text><text x=\"252.5\" y=\"110\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">18</text><text x=\"317.5\" y=\"110\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">32</text><text x=\"100\" y=\"150\" fill=\"#1e3a8a\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Spanish</text><text x=\"185\" y=\"150\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">11</text><text x=\"252.5\" y=\"150\" fill=\"#1b2540\" font-size=\"12\" text-anchor=\"middle\">7</text><text x=\"317.5\" y=\"150\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">18</text><text x=\"100\" y=\"190\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Total</text><text x=\"185\" y=\"190\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">25</text><text x=\"252.5\" y=\"190\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">25</text><text x=\"317.5\" y=\"190\" fill=\"#065f46\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">50</text></svg>"
+   },
+   {
+    "cap": "Three-set Venn diagram displaying 8 distinct regions with region counts and universal set box.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"15\" y=\"15\" width=\"370\" height=\"210\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"30\" y=\"35\" fill=\"#1b2540\" font-size=\"13\" font-weight=\"bold\">E = 40</text><circle cx=\"160\" cy=\"105\" r=\"55\" fill=\"#dbeafe\" fill-opacity=\"0.6\" stroke=\"#1e3a8a\" stroke-width=\"1.5\"/><circle cx=\"240\" cy=\"105\" r=\"55\" fill=\"#fde68a\" fill-opacity=\"0.6\" stroke=\"#92400e\" stroke-width=\"1.5\"/><circle cx=\"200\" cy=\"155\" r=\"55\" fill=\"#bbf7d0\" fill-opacity=\"0.6\" stroke=\"#065f46\" stroke-width=\"1.5\"/><text x=\"130\" y=\"65\" fill=\"#1e3a8a\" font-size=\"13\" font-weight=\"bold\">A</text><text x=\"265\" y=\"65\" fill=\"#92400e\" font-size=\"13\" font-weight=\"bold\">B</text><text x=\"200\" y=\"218\" fill=\"#065f46\" font-size=\"13\" font-weight=\"bold\">C</text><text x=\"135\" y=\"100\" fill=\"#1e3a8a\" font-size=\"11\" font-weight=\"bold\">7</text><text x=\"260\" y=\"100\" fill=\"#92400e\" font-size=\"11\" font-weight=\"bold\">9</text><text x=\"200\" y=\"190\" fill=\"#065f46\" font-size=\"11\" font-weight=\"bold\">6</text><text x=\"200\" y=\"85\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\">4</text><text x=\"165\" y=\"135\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\">3</text><text x=\"235\" y=\"135\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\">5</text><text x=\"200\" y=\"120\" fill=\"#991b1b\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">2</text><text x=\"45\" y=\"205\" fill=\"#64748b\" font-size=\"12\" font-weight=\"bold\">Outside = 4</text></svg>"
+   },
+   {
+    "cap": "Two-stage probability tree diagram for picking two counters without replacement (dependent events).",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><text x=\"200\" y=\"20\" fill=\"#1b2540\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Tree Diagram: Selection Without Replacement</text><line x1=\"40\" y1=\"120\" x2=\"130\" y2=\"65\" stroke=\"#1e3a8a\" stroke-width=\"2\"/><line x1=\"40\" y1=\"120\" x2=\"130\" y2=\"175\" stroke=\"#991b1b\" stroke-width=\"2\"/><text x=\"75\" y=\"80\" fill=\"#1e3a8a\" font-size=\"11\" font-weight=\"bold\">3/5 R</text><text x=\"75\" y=\"160\" fill=\"#991b1b\" font-size=\"11\" font-weight=\"bold\">2/5 B</text><line x1=\"150\" y1=\"65\" x2=\"240\" y2=\"35\" stroke=\"#1e3a8a\" stroke-width=\"1.5\"/><line x1=\"150\" y1=\"65\" x2=\"240\" y2=\"95\" stroke=\"#991b1b\" stroke-width=\"1.5\"/><text x=\"190\" y=\"42\" fill=\"#1e3a8a\" font-size=\"11\">2/4 R</text><text x=\"190\" y=\"92\" fill=\"#991b1b\" font-size=\"11\">2/4 B</text><line x1=\"150\" y1=\"175\" x2=\"240\" y2=\"145\" stroke=\"#1e3a8a\" stroke-width=\"1.5\"/><line x1=\"150\" y1=\"175\" x2=\"240\" y2=\"205\" stroke=\"#991b1b\" stroke-width=\"1.5\"/><text x=\"190\" y=\"152\" fill=\"#1e3a8a\" font-size=\"11\">3/4 R</text><text x=\"190\" y=\"202\" fill=\"#991b1b\" font-size=\"11\">1/4 B</text><text x=\"255\" y=\"38\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\">RR (6/20)</text><text x=\"255\" y=\"98\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\">RB (6/20)</text><text x=\"255\" y=\"148\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\">BR (6/20)</text><text x=\"255\" y=\"208\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\">BB (2/20)</text></svg>"
+   }
+  ],
+  "pid": "maths_aqa_h.4.5",
+  "sid": "maths_aqa_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.6-flash",
+  "ts": "2026-11-20T17:18:51.722Z"
  }
 }

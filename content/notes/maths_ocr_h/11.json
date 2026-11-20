@@ -420,5 +420,379 @@
   "src": "pre",
   "by": "gemini/gemini-3.5-flash-lite",
   "ts": "2026-11-16T03:42:35.848Z"
+ },
+ "maths_ocr_h.11.2": {
+  "summary": "Mastering OCR GCSE Higher Statistics requires calculating exact summary statistics from raw, frequency, and grouped frequency data, while understanding how outliers distort measures. You must be able to draw, interpret, and interpolate from cumulative frequency diagrams, box plots, and scatter graphs to assess correlation and make reliable predictions. Additionally, critically evaluating statistical misrepresentation in graphs and misleading claims is essential for securing a grade 9.",
+  "core": [
+   {
+    "h": "Measures of Central Tendency",
+    "p": "Summary statistics provide single values to represent the centre and spread of a dataset. For raw data, the **mean** is found by summing all values and dividing by the count ($n$). The **median** is the middle value when data is ordered in magnitude, located at position $\\frac{n+1}{2}$. The **mode** is the most frequent value. When data is presented in a frequency table, the mean is calculated using $\\frac{\\sum fx}{\\sum f}$, where $x$ represents the midpoint for grouped data.",
+    "bullets": [
+     "**Mean**: $\\bar{x} = \\frac{\\sum x}{n}$ for raw data, and $\\bar{x} = \\frac{\\sum fx}{\\sum f}$ for frequency tables.",
+     "**Median**: Position is $\\frac{n+1}{2}$. For grouped data, use linear interpolation.",
+     "**Mode/Modal Class**: The value or class interval with the highest frequency.",
+     "When data is open-ended (e.g., '10 or more'), exact means cannot be calculated without assuming a midpoint for the open class."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Choosing the Right Average",
+      "p": "Use the median for skewed data or data with extreme outliers because it is not affected by extreme values. Use the mean when every value must be accounted for."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Measures of Spread: Range and Interquartile Range",
+    "p": "Spread measures how dispersed or varied a dataset is. The **range** is simply the maximum value minus the minimum value, making it extremely sensitive to outliers. The **interquartile range (IQR)** measures the spread of the middle 50% of the data, calculated as the upper quartile ($Q_3$) minus the lower quartile ($Q_1$).",
+    "bullets": [
+     "**Range** = Maximum value $-$ Minimum value.",
+     "**Lower Quartile ($Q_1$)**: Value at position $\\frac{n+1}{4}$.",
+     "**Upper Quartile ($Q_3$)**: Value at position $\\frac{3(n+1)}{4}$.",
+     "**Interquartile Range (IQR)** = $Q_3 - Q_1$.",
+     "IQR is a more robust measure of spread than the range because it ignores top and bottom 25% extremes."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Interquartile Range",
+      "p": "The difference between the upper quartile and the lower quartile, representing the range of the middle 50% of data."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Cumulative Frequency Diagrams",
+    "p": "Cumulative frequency graphs display the running total of frequencies against the **upper class boundaries**. They are essential for estimating medians, quartiles, and percentiles for continuous or grouped data. Always plot points at the upper bound of each interval and join them with a smooth, continuous S-shaped curve (never straight line segments).",
+    "bullets": [
+     "Plot points at **(upper class boundary, cumulative frequency)**.",
+     "Start the curve at the lower boundary of the first class with a cumulative frequency of zero.",
+     "To find the median ($Q_2$), go to $\\frac{n}{2}$ on the vertical axis, read across to the curve, and drop down to read the value.",
+     "To find the IQR, subtract the value at $\\frac{n}{4}$ ($Q_1$) from the value at $\\frac{3n}{4}$ ($Q_3$)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Plotting Trap",
+      "p": "Students often plot cumulative frequency points at interval midpoints. Points must always be plotted at the upper class boundary."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Box Plots (Box-and-Whisker Diagrams)",
+    "p": "A box plot provides a visual summary of a dataset's distribution using five key values: minimum, lower quartile ($Q_1$), median ($Q_2$), upper quartile ($Q_3$), and maximum. They are drawn against a scaled number line and allow for immediate visual comparison of two or more datasets regarding central tendency and spread.",
+    "bullets": [
+     "The five key values required are: **Minimum**, **$Q_1$**, **Median**, **$Q_3$**, and **Maximum**.",
+     "A box is drawn from $Q_1$ to $Q_3$, with a vertical line inside the box representing the median.",
+     "Whiskers extend from the ends of the box to the minimum and maximum values.",
+     "To compare distributions, always comment on **average** (median) and **spread** (IQR), referencing the context of the question."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Comparative Language",
+      "p": "When comparing two box plots in exam questions, never just state numbers. Write: 'Dataset A has a higher median (15 vs 12), showing higher average performance, but a larger IQR (6 vs 4), showing less consistency.'"
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Structure of a standard box plot showing minimum, quartiles, median, and maximum.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"120\" x2=\"350\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"80\" y1=\"90\" x2=\"80\" y2=\"150\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"320\" y1=\"90\" x2=\"320\" y2=\"150\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"140\" y=\"80\" width=\"120\" height=\"80\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"190\" y1=\"80\" x2=\"190\" y2=\"160\" stroke=\"#dc2626\" stroke-width=\"2\"/><line x1=\"80\" y1=\"120\" x2=\"140\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"260\" y1=\"120\" x2=\"320\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"75\" y=\"175\" fill=\"#1b2540\" font-size=\"11\">Min</text><text x=\"130\" y=\"175\" fill=\"#1b2540\" font-size=\"11\">Q1</text><text x=\"180\" y=\"70\" fill=\"#dc2626\" font-size=\"11\">Median</text><text x=\"310\" y=\"175\" fill=\"#1b2540\" font-size=\"11\">Max</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Outliers",
+    "p": "An outlier is an extreme data point that lies unusually far away from the rest of the dataset. Outliers can be caused by recording errors, measurement mistakes, or genuine extreme observations. In OCR exams, outliers are formally defined mathematically using quartiles and the interquartile range.",
+    "bullets": [
+     "Standard Higher tier rule for outliers: Any value greater than $Q_3 + 1.5 \\times \\text{IQR}$ or less than $Q_1 - 1.5 \\times \\text{IQR}$ is an outlier.",
+     "When an outlier is identified, examiners may ask whether it should be removed. Mention that valid data should generally be kept unless it is a clear recording error.",
+     "Outliers heavily skew the mean and range, but have very little impact on the median and IQR."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Outlier Threshold",
+      "p": "Lower bound: $Q_1 - 1.5 \\times \\text{IQR}$. Upper bound: $Q_3 + 1.5 \\times \\text{IQR}$."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Bivariate Data and Scatter Graphs",
+    "p": "Bivariate data involves pairs of numerical observations for two variables on the same subjects (e.g., height and weight). A scatter graph plots these pairs as coordinates $(x, y)$. By analysing the pattern of points, we can determine if there is a relationship or **correlation** between the two variables.",
+    "bullets": [
+     "**Positive correlation**: As $x$ increases, $y$ increases (points trend bottom-left to top-right).",
+     "**Negative correlation**: As $x$ increases, $y$ decreases (points trend top-left to bottom-right).",
+     "**No correlation**: Points are scattered randomly with no discernible linear trend.",
+     "Strength of correlation depends on how closely the points follow a straight line pattern."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Correlation vs Causation",
+      "p": "Never state that variable A *causes* variable B just because there is strong correlation. There may be a third confounding variable, or the relationship might be purely coincidental."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Scatter graph illustrating positive correlation and a line of best fit.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"200\" x2=\"370\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"20\" x2=\"50\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"80\" cy=\"170\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"110\" cy=\"150\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"150\" cy=\"130\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"190\" cy=\"100\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"240\" cy=\"80\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"300\" cy=\"50\" r=\"4\" fill=\"#2563eb\"/><line x1=\"60\" y1=\"190\" x2=\"340\" y2=\"40\" stroke=\"#dc2626\" stroke-dasharray=\"4\" stroke-width=\"2\"/><text x=\"160\" y=\"225\" fill=\"#1b2540\" font-size=\"11\">Variable X</text><text x=\"10\" y=\"110\" fill=\"#1b2540\" font-size=\"11\">Variable Y</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Lines of Best Fit",
+    "p": "A line of best fit is a straight line drawn on a scatter graph to represent the general trend of the bivariate data. A good line of best fit must pass through the mean point $(\\bar{x}, \\bar{y})$ and have roughly an equal number of points above and below the line.",
+    "bullets": [
+     "Used to make predictions for unknown values of $y$ given $x$ (or vice versa).",
+     "Must be drawn with a ruler across the full range of data.",
+     "**Interpolation**: Predicting a value *within* the range of given data points (reliable).",
+     "**Extrapolation**: Predicting a value *outside* the range of given data points (unreliable, as the trend may change)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam Drawing Rule",
+      "p": "Examiners check that your line of best fit is balanced. Do not simply connect the first and last points unless they happen to represent the statistical average trend."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Statistical Misrepresentation",
+    "p": "Graphs and statistics can be deliberately or accidentally manipulated to mislead the reader. In exam questions, you must be able to spot and explain flaws in graphical representations and summary claims.",
+    "bullets": [
+     "**Broken or omitted axes**: The vertical axis does not start at zero, exaggerating differences between categories.",
+     "**Inconsistent scale**: Unequal intervals on axes distort the visual rate of change.",
+     "**Missing labels or units**: Makes charts impossible to interpret accurately.",
+     "**Area/Volume distortion**: Scaling 2D pictograms or 3D bars where doubling the height doubles both dimensions, exaggerating the visual volume by a factor of four or eight."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "key": "Spotting Misrepresentation",
+      "t": "Check Axes First",
+      "p": "Always check if the y-axis starts at zero. If it doesn't, small differences look massive, which is a classic exam trap."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Analogy: Summarising a Marathon Race",
+   "p": "Imagine timing 1,000 runners in a massive marathon. The **mean** is the average time of everyone combined, which can be massively delayed if an elite runner breaks a leg and crawls across in 10 hours (an **outlier**). The **median** is simply the time of the 500th runner to cross the line, completely unaffected by how slowly the last runner finishes. A **box plot** gives you a snapshot of the race: the start time of the fastest finisher (min), where the quarter-way runners are ($Q_1$), the halfway champion (median), the three-quarter mark ($Q_3$), and the slowest finisher (max). **Interpolation** is guessing a runner's split time at the 20-mile mark based on their overall pace, whereas **extrapolation** is foolishly predicting how long they would take to run 50 miles based on those 26.2 miles."
+  },
+  "terms": [
+   {
+    "t": "Summary Statistics",
+    "d": "Values that summarise the central tendency and spread of a dataset."
+   },
+   {
+    "t": "Mean",
+    "d": "The sum of all values divided by the total number of values."
+   },
+   {
+    "t": "Median",
+    "d": "The middle value when data is arranged in ascending order."
+   },
+   {
+    "t": "Mode",
+    "d": "The most frequently occurring value in a dataset."
+   },
+   {
+    "t": "Interquartile Range (IQR)",
+    "d": "The difference between the upper quartile ($Q_3$) and lower quartile ($Q_1$)."
+   },
+   {
+    "t": "Cumulative Frequency",
+    "d": "The running total of frequencies up to a given upper class boundary."
+   },
+   {
+    "t": "Box Plot",
+    "d": "A graphical representation of data using minimum, lower quartile, median, upper quartile, and maximum."
+   },
+   {
+    "t": "Outlier",
+    "d": "A data point that lies significantly outside the overall pattern of distribution, defined as $> Q_3 + 1.5\\text{IQR}$ or $< Q_1 - 1.5\\text{IQR}$."
+   },
+   {
+    "t": "Bivariate Data",
+    "d": "Data which has pairs of values for two different variables."
+   },
+   {
+    "t": "Correlation",
+    "d": "A measure of the relationship or association between two variables."
+   },
+   {
+    "t": "Interpolation",
+    "d": "Estimating a value within the range of measured data points using a line of best fit."
+   },
+   {
+    "t": "Extrapolation",
+    "d": "Estimating a value outside the range of measured data points, which is generally unreliable."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Plotting cumulative frequency at the midpoint of class intervals.",
+    "r": "Always plot cumulative frequency points at the upper class boundary."
+   },
+   {
+    "w": "Calculating IQR as Max minus Min.",
+    "r": "IQR is Upper Quartile ($Q_3$) minus Lower Quartile ($Q_1$)."
+   },
+   {
+    "w": "Stating that strong correlation proves causation.",
+    "r": "Correlation only shows a relationship; it does not prove that one variable causes the other."
+   },
+   {
+    "w": "Finding the median position as n/2 instead of (n+1)/2 for raw data lists.",
+    "r": "Position of raw data median is (n+1)/2. For grouped frequency tables, use n/2 with cumulative frequency."
+   },
+   {
+    "w": "Drawing a line of best fit by connecting the first and last data points.",
+    "r": "A line of best fit must be balanced by eye, having roughly equal points above and below, and passing through the mean point."
+   },
+   {
+    "w": "Saying extrapolation is completely accurate because it uses a mathematical line.",
+    "r": "Extrapolation is unreliable because the trend may not continue outside the tested range."
+   },
+   {
+    "w": "Forgetting units when describing summary statistics in context.",
+    "r": "Always include proper context units (e.g., grams, seconds, pounds) in your final answers."
+   }
+  ],
+  "exam": [
+   {
+    "q": "The lower quartile of a dataset is 12 and the upper quartile is 44. Calculate the interquartile range.",
+    "marks": 1,
+    "model": [
+     "44 - 12 = 32"
+    ],
+    "tip": "Subtract lower quartile from upper quartile."
+   },
+   {
+    "q": "Explain why a vertical axis starting at 50 instead of 0 can be misleading in a bar chart.",
+    "marks": 2,
+    "model": [
+     "It exaggerates the differences between bar heights",
+     "making small proportional changes look much larger than they actually are."
+    ],
+    "tip": "Mention exaggeration and proportionality."
+   },
+   {
+    "q": "A dataset of 40 values has $\\sum fx = 680$. Calculate the estimated mean.",
+    "marks": 2,
+    "model": [
+     "Mean = 680 / 40",
+     "= 17"
+    ],
+    "tip": "Use the formula sum of fx divided by sum of f."
+   },
+   {
+    "q": "The median of 35 items of data is required. State the position of the median item.",
+    "marks": 1,
+    "model": [
+     "(35 + 1) / 2 = 18th item"
+    ],
+    "tip": "Remember (n+1)/2 for raw data."
+   },
+   {
+    "q": "State the difference between interpolation and extrapolation on a scatter graph.",
+    "marks": 2,
+    "model": [
+     "Interpolation estimates values within the range of given data points",
+     "whereas extrapolation estimates values outside the range."
+    ],
+    "tip": "Keep definitions concise and precise."
+   },
+   {
+    "q": "A box plot has minimum 5, Q1 12, median 20, Q3 35, and maximum 45. Determine if 70 is an outlier using the 1.5 x IQR rule.",
+    "marks": 4,
+    "model": [
+     "IQR = 35 - 12 = 23",
+     "Upper limit = Q3 + 1.5 * IQR = 35 + 1.5(23) = 35 + 34.5 = 69.5",
+     "Since 70 is greater than 69.5,",
+     "70 is an outlier."
+    ],
+    "tip": "Show all calculation steps clearly for the upper threshold."
+   },
+   {
+    "q": "Describe the type of correlation shown when as temperature increases, ice cream sales increase.",
+    "marks": 1,
+    "model": [
+     "Positive correlation"
+    ],
+    "tip": "State positive or negative clearly."
+   },
+   {
+    "q": "Explain why a researcher should be cautious when using a line of best fit to predict a value far beyond the collected data range.",
+    "marks": 2,
+    "model": [
+     "This is extrapolation,",
+     "and the trend may not continue in the same way outside the known data range."
+    ],
+    "tip": "Use the term extrapolation and explain the risk."
+   },
+   {
+    "q": "Give one reason why the median is preferred over the mean when analysing house prices.",
+    "marks": 1,
+    "model": [
+     "House prices have extreme high outliers (mansions) which skew the mean, whereas the median is unaffected."
+    ],
+    "tip": "Mention skewed data and extreme outliers."
+   }
+  ],
+  "worked": [
+   {
+    "q": "The table shows the time taken, t minutes, by 80 people to solve a puzzle. Time (0 < t <= 10): frequency 10; (10 < t <= 20): frequency 24; (20 < t <= 30): frequency 30; (30 < t <= 40): frequency 16. Calculate an estimate for the mean time.",
+    "steps": [
+     "Find the midpoint (x) for each interval: 5, 15, 25, 35.",
+     "Multiply each midpoint by its frequency (fx): (10*5=50), (24*15=360), (30*25=750), (16*35=560).",
+     "Sum the fx values: 50 + 360 + 750 + 560 = 1720.",
+     "Divide by total frequency (80): 1720 / 80 = 21.5."
+    ],
+    "ans": "21.5 minutes"
+   },
+   {
+    "q": "A student records the exam scores of 60 pupils. Lower quartile Q1 = 32, Upper quartile Q3 = 68. Show that a score of 122 is an outlier.",
+    "steps": [
+     "Calculate the interquartile range: IQR = Q3 - Q1 = 68 - 32 = 36.",
+     "Calculate the upper outlier threshold: Q3 + 1.5 * IQR = 68 + 1.5(36).",
+     "Evaluate: 1.5 * 36 = 54, so threshold = 68 + 54 = 122.",
+     "Compare: Since the score is 122 (or greater than/equal to the upper threshold boundary), it is classified as an outlier."
+    ],
+    "ans": "Threshold is 122, so 122 is an outlier."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Cumulative frequency graph illustrating quartile positions and median estimation.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"40\" y1=\"200\" x2=\"380\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"40\" y1=\"20\" x2=\"40\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M40 200 Q 120 198, 200 130 T 360 40\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"40\" y1=\"110\" x2=\"200\" y2=\"110\" stroke=\"#dc2626\" stroke-dasharray=\"3\"/><line x1=\"200\" y1=\"200\" x2=\"200\" y2=\"110\" stroke=\"#dc2626\" stroke-dasharray=\"3\"/><text x=\"160\" y=\"225\" fill=\"#1b2540\" font-size=\"11\">Upper Boundaries</text><text x=\"10\" y=\"115\" fill=\"#1b2540\" font-size=\"11\">n/2</text><text x=\"170\" y=\"215\" fill=\"#dc2626\" font-size=\"11\">Median</text></svg>"
+   },
+   {
+    "cap": "Box plot diagram showing quartiles, whiskers, median, and spread.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"40\" y1=\"140\" x2=\"360\" y2=\"140\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"70\" y1=\"110\" x2=\"70\" y2=\"170\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"330\" y1=\"110\" x2=\"330\" y2=\"170\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"130\" y=\"100\" width=\"140\" height=\"80\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"200\" y1=\"100\" x2=\"200\" y2=\"180\" stroke=\"#dc2626\" stroke-width=\"2\"/><line x1=\"70\" y1=\"140\" x2=\"130\" y2=\"140\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"270\" y1=\"140\" x2=\"330\" y2=\"140\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"60\" y=\"195\" fill=\"#1b2540\" font-size=\"11\">Min</text><text x=\"120\" y=\"90\" fill=\"#1b2540\" font-size=\"11\">Q1</text><text x=\"190\" y=\"90\" fill=\"#dc2626\" font-size=\"11\">Median</text><text x=\"260\" y=\"90\" fill=\"#1b2540\" font-size=\"11\">Q3</text><text x=\"320\" y=\"195\" fill=\"#1b2540\" font-size=\"11\">Max</text></svg>"
+   },
+   {
+    "cap": "Scatter graph with positive correlation and line of best fit.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"40\" y1=\"200\" x2=\"380\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"40\" y1=\"20\" x2=\"40\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"70\" cy=\"170\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"100\" cy=\"150\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"140\" cy=\"130\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"180\" cy=\"100\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"230\" cy=\"80\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"300\" cy=\"50\" r=\"4\" fill=\"#2563eb\"/><line x1=\"50\" y1=\"185\" x2=\"340\" y2=\"35\" stroke=\"#dc2626\" stroke-dasharray=\"4\" stroke-width=\"2\"/><text x=\"180\" y=\"225\" fill=\"#1b2540\" font-size=\"11\">Variable X</text><text x=\"10\" y=\"110\" fill=\"#1b2540\" font-size=\"11\">Variable Y</text></svg>"
+   }
+  ],
+  "pid": "maths_ocr_h.11.2",
+  "sid": "maths_ocr_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-20T18:40:15.839Z"
  }
 }

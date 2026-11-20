@@ -1387,5 +1387,466 @@
   "src": "pre",
   "by": "gemini/gemini-flash-lite-latest",
   "ts": "2026-11-19T20:28:08.504Z"
+ },
+ "maths_ocr_h.0.0": {
+  "summary": "Mastering integer calculations under OCR J560 Higher requires absolute fluency in the four core arithmetic operations with both positive and negative numbers. You must execute complex mental and written calculations using column methods for addition, subtraction, multiplication, and division, while rigorously applying signed number rules. Achieving a grade 9 standard means understanding the deep structural symmetry of integers, avoiding common sign traps, and deploying estimation techniques to verify every non-calculator result.",
+  "core": [
+   {
+    "h": "1. Foundations of Integers and Place Value",
+    "p": "Integers comprise all whole numbers, their negative counterparts, and zero. The Hindu-Arabic base-10 place value system means that every digit's value depends on its position relative to the decimal point, scaling by powers of 10.",
+    "bullets": [
+     "The set of integers is denoted by the blackboard bold letter Z: {..., -3, -2, -1, 0, 1, 2, 3, ...}.",
+     "Place values proceed right to left: Units, Tens, Hundreds, Thousands, Ten-Thousands, and so on.",
+     "Zero is an integer; it is neither positive nor negative, serving as the additive identity.",
+     "Comparing integers relies on their position on a horizontal number line: numbers further to the right are always greater."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Integer",
+      "p": "A whole number that can be positive, negative, or zero, containing no fractional or decimal parts."
+     },
+     {
+      "k": "key",
+      "t": "Number Line Orientation",
+      "p": "Always visualize negative numbers extending infinitely to the left of zero on a standard horizontal axis."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "The number line showing integers extending symmetrically from zero.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" rx=\"8\"/><line x1=\"40\" y1=\"120\" x2=\"360\" y2=\"120\" stroke=\"#334155\" stroke-width=\"3\"/><circle cx=\"200\" cy=\"120\" r=\"5\" fill=\"#ef4444\"/><text x=\"195\" y=\"145\" font-size=\"12\" fill=\"#334155\">0</text><circle cx=\"120\" cy=\"120\" r=\"5\" fill=\"#3b82f6\"/><text x=\"110\" y=\"145\" font-size=\"12\" fill=\"#334155\">-4</text><circle cx=\"280\" cy=\"120\" r=\"5\" fill=\"#3b82f6\"/><text x=\"275\" y=\"145\" font-size=\"12\" fill=\"#334155\">4</text><line x1=\"120\" y1=\"110\" x2=\"120\" y2=\"130\" stroke=\"#334155\" stroke-width=\"2\"/><line x1=\"200\" y1=\"110\" x2=\"200\" y2=\"130\" stroke=\"#334155\" stroke-width=\"2\"/><line x1=\"280\" y1=\"110\" x2=\"280\" y2=\"130\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"80\" y=\"80\" font-size=\"12\" fill=\"#475569\">Negative Integers</text><text x=\"250\" y=\"80\" font-size=\"12\" fill=\"#475569\">Positive Integers</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "2. Addition of Positive and Negative Integers",
+    "p": "Addition combines quantities. When adding a positive integer, move right on the number line. When adding a negative integer, it is equivalent to subtracting its positive counterpart, moving left on the number line.",
+    "bullets": [
+     "Rule 1: a + (+b) = a + b. Example: 5 + (+3) = 8.",
+     "Rule 2: a + (-b) = a - b. Example: 7 + (-4) = 3.",
+     "Commutative Property: a + b = b + a holds true for all integers.",
+     "Associative Property: (a + b) + c = a + (b + c) allows flexible grouping in multi-term sums."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Sign Collision",
+      "p": "Two like signs side by side become a plus (+ + or - - becomes +). Two unlike signs become a minus (+ - or - + becomes -)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "3. Subtraction of Positive and Negative Integers",
+    "p": "Subtraction calculates the difference between numbers or removes a quantity. Subtracting a positive moves left; subtracting a negative integer is the exact inverse of moving left, so it moves right (adding the positive equivalent).",
+    "bullets": [
+     "Rule 1: a - (+b) = a - b. Example: 10 - 6 = 4.",
+     "Rule 2: a - (-b) = a + b. Example: 5 - (-3) = 5 + 3 = 8.",
+     "Subtraction is neither commutative nor associative; order strictly matters.",
+     "The difference between two numbers a and b is given by |a - b|, representing the distance between them."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Double Negative Trap",
+      "p": "Students often miscalculate -5 - (-8) as -13. The correct evaluation is -5 + 8 = 3."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Multiplication Rules for Signed Integers",
+    "p": "Multiplication is repeated addition. For signed numbers, the magnitude is the product of the absolute values, and the sign is determined by the parity of negative factors.",
+    "bullets": [
+     "Positive × Positive = Positive (+ × + = +). Example: 4 × 5 = 20.",
+     "Negative × Negative = Positive (- × - = +). Example: -4 × -5 = 20.",
+     "Positive × Negative = Negative (+ × - = -). Example: 4 × -5 = -20.",
+     "Negative × Positive = Negative (- × + = -). Example: -4 × 5 = -20."
+    ],
+    "table": {
+     "head": [
+      "Operation",
+      "Example",
+      "Result Sign"
+     ],
+     "rows": [
+      [
+       "(+) × (+)",
+       "6 × 3",
+       "Positive (+18)"
+      ],
+      [
+       "(-) × (-)",
+       "-6 × -3",
+       "Positive (+18)"
+      ],
+      [
+       "(+) × (-)",
+       "6 × -3",
+       "Negative (-18)"
+      ],
+      [
+       "(-) × (+)",
+       "-6 × 3",
+       "Negative (-18)"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Product Sign Rule",
+      "p": "Like signs give a positive product; unlike signs give a negative product."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Grid mapping multiplication signs for integers.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" rx=\"8\"/><line x1=\"50\" y1=\"120\" x2=\"350\" y2=\"120\" stroke=\"#334155\" stroke-width=\"2\"/><line x1=\"200\" y1=\"30\" x2=\"200\" y2=\"210\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"270\" y=\"80\" font-size=\"14\" fill=\"#16a34a\">(+) × (+) = (+)</text><text x=\"60\" y=\"80\" font-size=\"14\" fill=\"#dc2626\">(-) × (+) = (-)</text><text x=\"60\" y=\"180\" font-size=\"14\" fill=\"#16a34a\">(-) × (-) = (+)</text><text x=\"270\" y=\"180\" font-size=\"14\" fill=\"#dc2626\">(+) × (-) = (-)</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "5. Division Rules for Signed Integers",
+    "p": "Division is the inverse operation of multiplication. Therefore, the exact same sign rules that govern multiplication apply identically to division.",
+    "bullets": [
+     "Positive ÷ Positive = Positive. Example: 24 ÷ 6 = 4.",
+     "Negative ÷ Negative = Positive. Example: -24 ÷ -6 = 4.",
+     "Positive ÷ Negative = Negative. Example: 24 ÷ -6 = -4.",
+     "Negative ÷ Positive = Negative. Example: -24 ÷ 6 = -4.",
+     "Division by zero is undefined because no integer multiplied by 0 can yield a non-zero dividend."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Quotient",
+      "p": "The result of dividing one integer by another, provided the divisor is non-zero."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Column Addition and Subtraction Algorithms",
+    "p": "For large integers not suited to mental arithmetic, formal column algorithms ensure accuracy by aligning place value columns vertically.",
+    "bullets": [
+     "Align digits strictly by place value: units under units, tens under tens, hundreds under hundreds.",
+     "For addition, sum each column from right to left, carrying over any value of 10 or more to the next column left.",
+     "For subtraction, subtract from right to left; if the top digit is smaller than the bottom digit, exchange (borrow) 1 from the adjacent column left.",
+     "Check subtraction results by adding the subtrahend to the difference to recover the minuend."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exchange Method",
+      "p": "When borrowing across multiple zeros (e.g., 1000 - 347), reduce the leading non-zero digit and cascade the exchanges cleanly."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Column Multiplication (Short and Long)",
+    "p": "Multiplication of multi-digit integers utilizes distributive expansion via short multiplication (single-digit multiplier) or long multiplication (multi-digit multiplier).",
+    "bullets": [
+     "Short multiplication multiplies each digit of the multi-digit number by a single-digit multiplier, carrying tens forward.",
+     "Long multiplication breaks the multiplier into its place-value components (e.g., multiplying by 34 means multiplying by 4, then by 30, and adding the partial products).",
+     "Always insert a placeholder zero when shifting to the tens column in long multiplication.",
+     "Estimate the product beforehand using rounded numbers to catch magnitude errors."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Placeholder Omission",
+      "p": "Forgetting the zero placeholder when multiplying by the tens digit is the #1 cause of lost marks in long multiplication."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Short Division and Bus Stop Method",
+    "p": "Division of integers where the divisor is up to 12 uses short division (the bus stop method). For larger divisors, long division or factorisation is required.",
+    "bullets": [
+     "Write the dividend inside the bus stop shelter and the divisor on the outside left.",
+     "Divide the divisor into the first digit of the dividend; write the quotient above and carry any remainder to the next digit right.",
+     "If the divisor does not fit into a digit, write 0 above and carry the entire digit as a remainder.",
+     "Express remaining remainders as fractions or decimals depending on the problem context."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Bus Stop Layout",
+      "p": "Divisor | Dividend inside the bracket, Quotient displayed directly on top."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Long Division Algorithm for Large Integers",
+    "p": "Long division handles divisors with two or more digits by systematically estimating partial quotients using multiples of the divisor.",
+    "bullets": [
+     "Construct a side-working table of the first few multiples (1 to 9) of the divisor before starting.",
+     "Determine how many times the divisor fits into the leftmost chunk of the dividend.",
+     "Multiply that partial quotient by the divisor, write it underneath, and subtract to find the remainder.",
+     "Bring down the next digit of the dividend and repeat the cycle until all digits are processed."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Multiples List",
+      "p": "Writing out 1× to 9× of your divisor in the margin saves massive amounts of time and eliminates mental arithmetic slips."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Combined Operations and Signed Arithmetic Fluency",
+    "p": "Higher tier problems routinely embed signed integer calculations within multi-step contexts requiring strict adherence to operational rules and structural properties.",
+    "bullets": [
+     "Always evaluate expressions containing brackets and exponents before applying general multiplication and addition.",
+     "Maintain clean working steps on paper; never attempt complex multi-sign integer chains entirely in your head.",
+     "Check parity: an even number of negative factors in a product yields a positive result; an odd number yields a negative result."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Parity Rule for Negatives",
+      "p": "Product sign depends strictly on whether the count of negative factors is even (+) or odd (-)."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Flowchart illustrating sign resolution rules in compound expressions.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" rx=\"8\"/><rect x=\"40\" y=\"40\" width=\"120\" height=\"40\" fill=\"#e0f2fe\" stroke=\"#0369a1\" rx=\"6\"/><text x=\"55\" y=\"65\" font-size=\"11\" fill=\"#0369a1\">Count Negatives</text><line x1=\"160\" y1=\"60\" x2=\"220\" y2=\"60\" stroke=\"#334155\" stroke-width=\"2\" marker-end=\"url(#arr)\"/><rect x=\"220\" y=\"40\" width=\"140\" height=\"40\" fill=\"#fef3c7\" stroke=\"#d97706\" rx=\"6\"/><text x=\"235\" y=\"65\" font-size=\"11\" fill=\"#d97706\">Even Count? (+)</text><rect x=\"220\" y=\"140\" width=\"140\" height=\"40\" fill=\"#fee2e2\" stroke=\"#dc2626\" rx=\"6\"/><text x=\"235\" y=\"165\" font-size=\"11\" fill=\"#dc2626\">Odd Count? (-)</text><line x1=\"290\" y1=\"80\" x2=\"290\" y2=\"140\" stroke=\"#334155\" stroke-width=\"2\"/></svg>"
+     }
+    ]
+   }
+  ],
+  "analogy": {
+   "t": "Bank Accounts and Temperature Scales",
+   "p": "Think of integers as bank balances and debts. A positive number is money in your bank account, while a negative number is an overdraft debt. Adding a positive number is making a deposit; adding a negative number is receiving a bill (adding debt). Subtracting a positive number is making a withdrawal; subtracting a negative number is having a debt cancelled or forgiven (which instantly increases your net wealth). Where this analogy breaks down is multiplication: trying to visualize what 'minus three times minus four dollars' looks like in a physical wallet fails because multiplication of two debts represents an abstract algebraic transformation rather than a tangible monetary transaction."
+  },
+  "terms": [
+   {
+    "t": "Integer",
+    "d": "A whole number that can be positive, negative, or zero."
+   },
+   {
+    "t": "Sum",
+    "d": "The result of adding two or more numbers."
+   },
+   {
+    "t": "Difference",
+    "d": "The result of subtracting one number from another, representing distance."
+   },
+   {
+    "t": "Product",
+    "d": "The result of multiplying two or more numbers."
+   },
+   {
+    "t": "Quotient",
+    "d": "The result of dividing one number by another."
+   },
+   {
+    "t": "Dividend",
+    "d": "The number that is being divided in a division operation."
+   },
+   {
+    "t": "Divisor",
+    "d": "The number by which another number is divided."
+   },
+   {
+    "t": "Remainder",
+    "d": "The integer left over after division when the dividend is not an exact multiple of the divisor."
+   },
+   {
+    "t": "Additive Identity",
+    "d": "Zero, because adding it to any integer leaves that integer unchanged."
+   },
+   {
+    "t": "Multiplicative Identity",
+    "d": "One, because multiplying any integer by it leaves that integer unchanged."
+   },
+   {
+    "t": "Commutative",
+    "d": "A property where changing the order of operands does not change the result (e.g., a + b = b + a)."
+   },
+   {
+    "t": "Associative",
+    "d": "A property where grouping of operands does not affect the result (e.g., (a + b) + c = a + (b + c))."
+   },
+   {
+    "t": "Distributive",
+    "d": "A property where an operation distributes over another (e.g., a(b + c) = ab + ac)."
+   },
+   {
+    "t": "Absolute Value",
+    "d": "The magnitude of a number regardless of its sign, denoted by |a|."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Writing -3 - (-5) = -8",
+    "r": "-3 - (-5) becomes -3 + 5 = 2 because subtracting a negative is adding."
+   },
+   {
+    "w": "Writing -4 × -3 = -12",
+    "r": "Negative times negative is positive, so -4 × -3 = +12."
+   },
+   {
+    "w": "Evaluating -5^2 as (-5) × (-5) = 25",
+    "r": "Without brackets, -5^2 means -(5^2) = -25. Brackets are required for (-5)^2 = 25."
+   },
+   {
+    "w": "Forgetting the placeholder zero in long multiplication",
+    "r": "Multiplying by the tens column requires inserting a trailing zero before summing partial products."
+   },
+   {
+    "w": "Saying zero is a positive integer",
+    "r": "Zero is neither positive nor negative; it is neutral."
+   },
+   {
+    "w": "Stating that division by zero equals zero",
+    "r": "Division by zero is strictly undefined."
+   },
+   {
+    "w": "Applying sign rules for multiplication when performing addition (-3 + -4 = +12)",
+    "r": "Addition of two negative numbers results in a larger negative number (-7), not a positive."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Work out -7 + 12.",
+    "marks": 1,
+    "model": [
+     "5"
+    ],
+    "tip": "Start at -7 on the number line and move 12 units to the right."
+   },
+   {
+    "q": "Work out -8 - (-5).",
+    "marks": 1,
+    "model": [
+     "-3"
+    ],
+    "tip": "Rewrite the double negative as addition: -8 + 5."
+   },
+   {
+    "q": "Calculate -6 × (-4).",
+    "marks": 1,
+    "model": [
+     "24"
+    ],
+    "tip": "Negative multiplied by negative gives a positive product."
+   },
+   {
+    "q": "Work out -45 ÷ 9.",
+    "marks": 1,
+    "model": [
+     "-5"
+    ],
+    "tip": "Negative divided by positive yields a negative quotient."
+   },
+   {
+    "q": "The temperature at midnight was -4°C. By midday, the temperature had risen by 9°C. What was the temperature at midday?",
+    "marks": 2,
+    "model": [
+     "-4 + 9",
+     "5 (°C)"
+    ],
+    "tip": "Translate 'risen by' into addition."
+   },
+   {
+    "q": "Work out 306 × 24 using a formal written method.",
+    "marks": 3,
+    "model": [
+     "306 × 4 = 1224",
+     "306 × 20 = 6120",
+     "1224 + 6120 = 7328"
+    ],
+    "tip": "Show partial products clearly or use column multiplication."
+   },
+   {
+    "q": "Work out 1472 ÷ 32 using a formal written method.",
+    "marks": 3,
+    "model": [
+     "Establishing multiples of 32 (32, 64, 96, 128, 160...)",
+     "Dividing chunks correctly to get 46",
+     "46"
+    ],
+    "tip": "Write out the first 5 multiples of 32 in the margin before starting."
+   },
+   {
+    "q": "Insert brackets into the expression -3 × 2 + 5 so that the answer is -21.",
+    "marks": 2,
+    "model": [
+     "Recognising order needs addition first",
+     "-3 × (2 + 5)"
+    ],
+    "tip": "Test different bracket placements on sums and products."
+   },
+   {
+    "q": "Work out -15 - (-4) × 3.",
+    "marks": 2,
+    "model": [
+     "Evaluating multiplication first: -4 × 3 = -12",
+     "-15 - (-12) = -15 + 12 = -3"
+    ],
+    "tip": "Strictly follow BIDMAS: multiplication before subtraction."
+   },
+   {
+    "q": "Find the difference in temperature between -14°C and 6°C.",
+    "marks": 2,
+    "model": [
+     "6 - (-14) or counting up from -14 to 6",
+     "20 (°C)"
+    ],
+    "tip": "Difference is always higher value minus lower value: 6 - (-14) = 20."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Calculate the value of -18 + 6 × (-3) - (-24) ÷ 4.",
+    "steps": [
+     "Identify all operations and apply order of operations (BIDMAS).",
+     "Evaluate the multiplication term: 6 × (-3) = -18.",
+     "Evaluate the division term: (-24) ÷ 4 = -6.",
+     "Substitute these back into the expression: -18 + (-18) - (-6).",
+     "Simplify side-by-side signs: -18 - 18 + 6.",
+     "Perform addition and subtraction from left to right: -36 + 6 = -30."
+    ],
+    "ans": "-30"
+   },
+   {
+    "q": "A frozen food warehouse is at a temperature of -22°C. A fault occurs and the temperature rises by 3°C every hour. What is the temperature inside the warehouse after 7 hours?",
+    "steps": [
+     "Identify the initial starting integer: -22.",
+     "Calculate the total temperature change over 7 hours: 7 × 3 = 21°C increase.",
+     "Add the rise to the initial temperature: -22 + 21.",
+     "Compute the final integer: -1°C."
+    ],
+    "ans": "-1°C"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Visualising addition and subtraction of signed numbers on a dual number line.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" rx=\"8\"/><line x1=\"40\" y1=\"100\" x2=\"360\" y2=\"100\" stroke=\"#334155\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"100\" r=\"5\" fill=\"#2563eb\"/><text x=\"130\" y=\"85\" font-size=\"11\" fill=\"#2563eb\">Start: -3</text><path d=\"M 140 90 Q 200 40 260 90\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"180\" y=\"50\" font-size=\"11\" fill=\"#16a34a\">Add +6</text><circle cx=\"260\" cy=\"100\" r=\"5\" fill=\"#16a34a\"/><text x=\"250\" y=\"125\" font-size=\"11\" fill=\"#16a34a\">End: +3</text></svg>"
+   }
+  ],
+  "pid": "maths_ocr_h.0.0",
+  "sid": "maths_ocr_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-20T18:27:01.477Z"
  }
 }

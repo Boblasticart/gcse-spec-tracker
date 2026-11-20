@@ -1317,5 +1317,461 @@
   "src": "pre",
   "by": "gemini/gemini-flash-lite-latest",
   "ts": "2026-11-19T20:38:56.172Z"
+ },
+ "maths_ocr_h.6.2": {
+  "summary": "Mastering transformations of curves and their equations for OCR GCSE Higher Maths requires precise algebraic manipulation and geometric visualization. You must know how changes inside or outside function notation affect coordinates, mapping $f(x)$ to forms like $f(x+a)$, $f(x)+a$, $-f(x)$, and $f(-x)$. These core skills frequently appear in high-tariff analytical questions requiring rigorous step-by-step mathematical reasoning.",
+  "core": [
+   {
+    "h": "1. Introduction to Function Transformations",
+    "p": "Transformations change the position or orientation of a curve on the Cartesian plane without altering its fundamental shape. By applying algebraic operations directly to the function notation $f(x)$, we can systematically predict how every single coordinate point $(x, y)$ moves.",
+    "bullets": [
+     "A transformation can be rigid, preserving lengths and angles, such as translations and reflections.",
+     "The original function is known as the object function, and the resulting transformed curve is the image function.",
+     "Transformations outside the function notation $f(x)$ affect the vertical y-coordinates.",
+     "Transformations inside the argument of the function notation $f(x)$ affect the horizontal x-coordinates."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Outside vs Inside",
+      "p": "Operations applied outside the function $f(x)$ affect the y-values directly. Operations applied inside the function argument $f(x)$ affect the x-values in the reverse algebraic sense."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. Vertical Translations",
+    "p": "A vertical translation shifts a graph straight up or down parallel to the y-axis. Every single y-coordinate on the graph is increased or decreased by a constant value while all x-coordinates remain completely unchanged.",
+    "bullets": [
+     "The equation for a vertical translation of $f(x)$ by vector $(0, a)$ is given by $y = f(x) + a$.",
+     "If $a > 0$, the graph moves $a$ units vertically upwards.",
+     "If $a < 0$, the graph moves $|a|$ units vertically downwards.",
+     "A point $(x, y)$ on the original curve maps to the new point $(x, y + a)$ on the transformed curve."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Vertical Translation",
+      "p": "The transformation $y = f(x) + a$ translates the graph of $f(x)$ vertically by vector (0, a)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "3. Horizontal Translations",
+    "p": "A horizontal translation shifts a graph left or right parallel to the x-axis. Because the change happens inside the function argument alongside $x$, the movement operates counter-intuitively relative to the algebraic sign.",
+    "bullets": [
+     "The equation for a horizontal translation of $f(x)$ by vector $(a, 0)$ is given by $y = f(x - a)$.",
+     "If $a > 0$, the graph moves $a$ units horizontally to the right.",
+     "If $a < 0$, the graph moves $|a|$ units horizontally to the left.",
+     "A point $(x, y)$ on the original curve maps to the new point $(x + a, y)$ on the transformed curve."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "The Horizontal Trap",
+      "p": "Never assume a positive sign inside the bracket means a shift to the right. $f(x - 3)$ shifts right by 3 units, whereas $f(x + 3)$ shifts left by 3 units."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Comparing horizontal shifts $f(x-2)$ moving right and $f(x+2)$ moving left.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"40\" y1=\"120\" x2=\"360\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"200\" y1=\"20\" x2=\"200\" y2=\"220\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><path d=\"M 80 180 Q 200 40 320 180\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><path d=\"M 120 180 Q 240 40 360 180\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2\" stroke-dasharray=\"4\"/><text x=\"210\" y=\"110\" fill=\"#1b2540\" font-size=\"12\">f(x)</text><text x=\"290\" y=\"150\" fill=\"#dc2626\" font-size=\"12\">f(x-2)</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "4. Vertical Reflections",
+    "p": "A vertical reflection mirrors the entire graph across the horizontal x-axis. Every y-coordinate is multiplied by $-1$, while all x-coordinates stay exactly where they are.",
+    "bullets": [
+     "The equation for a reflection of $f(x)$ in the x-axis is given by $y = -f(x)$.",
+     "Every point $(x, y)$ maps to the new point $(x, -y)$.",
+     "Maximum turning points become minimum turning points, and vice versa.",
+     "Roots and intercepts lying directly on the x-axis remain completely unchanged during this reflection."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Reflection in x-axis",
+      "p": "The transformation $y = -f(x)$ reflects the graph of $f(x)$ across the x-axis by negating the entire function output."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "5. Horizontal Reflections",
+    "p": "A horizontal reflection mirrors the entire graph across the vertical y-axis. Every x-coordinate is multiplied by $-1$, while all y-coordinates stay exactly where they are.",
+    "bullets": [
+     "The equation for a reflection of $f(x)$ in the y-axis is given by $y = f(-x)$.",
+     "Every point $(x, y)$ maps to the new point $(-x, y)$.",
+     "Graphs that possess reflectional symmetry across the y-axis satisfy the condition $f(-x) = f(x)$, defining an even function.",
+     "Graphs that satisfy $f(-x) = -f(x)$ define an odd function with rotational symmetry."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Inside Negation",
+      "p": "Negating the input variable directly inside the function argument, writing $f(-x)$, causes a reflection in the vertical y-axis."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Visualising vertical and horizontal reflections on a simple curve.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"40\" y1=\"120\" x2=\"360\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"200\" y1=\"20\" x2=\"200\" y2=\"220\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><path d=\"M 100 80 Q 200 200 300 80\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><path d=\"M 100 160 Q 200 40 300 160\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\" stroke-dasharray=\"4\"/><text x=\"210\" y=\"90\" fill=\"#2563eb\" font-size=\"12\">f(x)</text><text x=\"210\" y=\"150\" fill=\"#16a34a\" font-size=\"12\">-f(x)</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "6. Combining Transformations",
+    "p": "Examiners frequently combine two or more transformations into a single question. When tackling multiple transformations, the order in which they are applied algebraically is crucial to avoid making catastrophic errors.",
+    "bullets": [
+     "When combining transformations involving function notation, always apply bracketed inner operations first, then outer operations.",
+     "For example, in $y = f(x - a) + b$, translate horizontally by vector $(a, 0)$ first, then vertically by vector $(0, b)$.",
+     "Tracking specific key points, such as turning points, intercepts, and asymptotic endpoints, guarantees absolute accuracy.",
+     "Always substitute a test coordinate to verify your final transformed equation."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Order of Operations",
+      "p": "Applying transformations in the wrong sequence scrambles the coordinates. Always process horizontal shifts and reflections before vertical ones."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Transforming Turning Points and Minima/Maxima",
+    "p": "In exam questions, you are often given the coordinates of a turning point on $y = f(x)$ and asked to find the new coordinates after transformation. Understanding coordinate mapping rules makes these questions straightforward.",
+    "bullets": [
+     "For $y = f(x) + a$, the turning point $(x, y)$ becomes $(x, y + a)$.",
+     "For $y = f(x - a)$, the turning point $(x, y)$ becomes $(x + a, y)$.",
+     "For $y = -f(x)$, the turning point $(x, y)$ becomes $(x, -y)$.",
+     "For $y = f(-x)$, the turning point $(x, y)$ becomes $(-x, y)$."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Turning Point Mapping",
+      "p": "Treat every notable feature of a curve (turning points, intercepts, asymptotes) as an independent point and apply the coordinate mapping rule directly."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Function Notation Interpretation",
+    "p": "OCR exam questions test your fluency by switching between explicit algebraic formulas and abstract function notation $y = f(x)$. You must be fully comfortable working with both formats seamlessly.",
+    "bullets": [
+     "If $f(x) = x^2 - 4x$, then $f(x - 3)$ requires replacing every instance of $x$ with $(x - 3)$.",
+     "Expanding and simplifying algebraic expressions after transformation is a vital grade 9 skill.",
+     "Always use parentheses when substituting bracketed expressions into polynomial functions to prevent sign errors.",
+     "Recognize that $f(x) + c$ adds $c$ to the entire evaluated expression."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Substitution Rule",
+      "p": "To evaluate $f(x - a)$, substitute $(x - a)$ into every position where $x$ appears in the original definition of $f(x)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Inverse and Symmetric Functions in Transformations",
+    "p": "Reflections connect deeply with the study of symmetry in functions. Recognizing even and odd functions simplifies sketching transformed curves without plotting points.",
+    "bullets": [
+     "An even function satisfies $f(-x) = f(x)$ and possesses line symmetry about the y-axis.",
+     "An odd function satisfies $f(-x) = -f(x)$ and possesses rotational symmetry of order 2 about the origin $(0, 0)$.",
+     "Reflecting an even function in the y-axis leaves its equation completely unchanged.",
+     "Reflecting an odd function in both axes results in the original curve."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Symmetry Tests",
+      "p": "Substitute $-x$ into a function to instantly test for even or odd algebraic symmetry."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Identifying Transformations from Equations",
+    "p": "Given a transformed equation, you must be able to describe the single geometric transformation that maps the original curve onto the new curve using precise mathematical terminology.",
+    "bullets": [
+     "State the exact type of transformation (e.g., translation, reflection).",
+     "For translations, state the exact vector using column vector notation or clear phrasing.",
+     "For reflections, state the exact mirror line, such as 'the x-axis' or 'the y-axis'.",
+     "Avoid vague descriptions like 'moved right' or 'flipped down'; use standard OCR mark scheme vocabulary."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Mark Scheme Precision",
+      "p": "Examiners penalize missing details. Always state 'translation by vector' or 'reflection in the line' explicitly to secure full marks."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Mapping key points of a curve under combined transformations.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"40\" y1=\"120\" x2=\"360\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"200\" y1=\"20\" x2=\"200\" y2=\"220\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><circle cx=\"160\" cy=\"80\" r=\"4\" fill=\"#2563eb\"/><text x=\"130\" y=\"75\" fill=\"#2563eb\" font-size=\"11\">(x, y)</text><circle cx=\"240\" cy=\"160\" r=\"4\" fill=\"#dc2626\"/><text x=\"250\" y=\"175\" fill=\"#dc2626\" font-size=\"11\">(x+a, -y)</text><path d=\"M 160 80 Q 200 220 240 160\" fill=\"none\" stroke=\"#9333ea\" stroke-width=\"1.5\" stroke-dasharray=\"2\"/></svg>"
+     }
+    ]
+   },
+   {
+    "h": "11. Exam Strategy for Graph Sketching",
+    "p": "When asked to sketch a transformed graph showing key features, examiners award marks for specific geometric markers rather than artistic perfection.",
+    "bullets": [
+     "Always clearly label any turning points with their exact new coordinates.",
+     "Always clearly label intersections with the coordinate axes, including y-intercepts and roots.",
+     "Maintain the general curvature and asymptotic behavior of the original standard function.",
+     "Check your sketch against the algebraic rules for at least one known point."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Key Features",
+      "p": "Focus your sketching efforts on the coordinates of maximums, minimums, and axis intercepts. These are what examiners check on the template."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "12. Common Exam Pitfalls and How to Avoid Them",
+    "p": "High-achieving students often lose marks through careless algebraic expansion or confusing horizontal and vertical shifts. Being aware of these traps ensures grade 9 security.",
+    "bullets": [
+     "Confusing $f(x + a)$ with moving left instead of right.",
+     "Forgetting to apply brackets when substituting expressions into polynomial terms.",
+     "Applying transformations in the wrong sequence when multiple changes occur.",
+     "Failing to negate the entire function output when sketching $y = -f(x)$."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Bracket Expansion",
+      "p": "When substituting $(x - 2)$ into $x^2$, write $(x - 2)^2$ and expand carefully to $x^2 - 4x + 4$, never $x^2 - 4$."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Puppet and the Strings Analogy",
+   "p": "Imagine a graph as a rigid wire sculpture mounted on a transparent sheet of glass. A translation is equivalent to physically sliding the sheet of glass across a table without rotating it. A reflection is equivalent to picking up the sheet of glass and flipping it over in mid-air. Operations applied inside the function bracket act like internal springs attached directly to the wire sculpture, moving parts horizontally, while operations applied outside act on the entire glass sheet vertically. Where this analogy breaks down is that algebraic function transformations also warp or shift continuous infinite domains, whereas a physical glass sheet has fixed boundaries."
+  },
+  "terms": [
+   {
+    "t": "Object function",
+    "d": "The original untransformed function $f(x)$ before any geometric operations are applied."
+   },
+   {
+    "t": "Image function",
+    "d": "The resulting function after transformations have been applied to an object function."
+   },
+   {
+    "t": "Translation",
+    "d": "A rigid transformation that shifts every point of a graph by the same distance in a given direction."
+   },
+   {
+    "t": "Reflection",
+    "d": "A rigid transformation that flips a graph across a specified line of symmetry."
+   },
+   {
+    "t": "Vector notation",
+    "d": "A representation of translation direction and magnitude using column vectors like (a, b)."
+   },
+   {
+    "t": "Even function",
+    "d": "A function satisfying $f(-x) = f(x)$, exhibiting line symmetry about the y-axis."
+   },
+   {
+    "t": "Odd function",
+    "d": "A function satisfying $f(-x) = -f(x)$, exhibiting rotational symmetry about the origin."
+   },
+   {
+    "t": "Turning point",
+    "d": "A point on a curve where the derivative is zero, representing a local maximum or minimum."
+   },
+   {
+    "t": "Asymptote",
+    "d": "A line that a curve approaches indefinitely as it tends towards infinity."
+   },
+   {
+    "t": "Function argument",
+    "d": "The independent variable input placed inside the parentheses of $f(x)$."
+   },
+   {
+    "t": "Cartesian plane",
+    "d": "A coordinate system defined by perpendicular x and y axes."
+   },
+   {
+    "t": "Coordinate mapping",
+    "d": "The algebraic rule determining how a point $(x, y)$ transforms into a new coordinate $(X, Y)$."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Writing that $y = f(x + 3)$ translates the graph 3 units to the right.",
+    "r": "$y = f(x + 3)$ translates the graph 3 units to the left because horizontal transformations work in the reverse direction of the algebraic sign."
+   },
+   {
+    "w": "Expanding $f(x) = x^2$ transformed by $f(x - 2)$ as $x^2 - 2$.",
+    "r": "Must substitute the entire bracket: $(x - 2)^2 = x^2 - 4x + 4$."
+   },
+   {
+    "w": "Reflecting $y = f(x)$ in the x-axis by negating only the variable: $f(-x)$.",
+    "r": "Reflection in the x-axis is achieved by negating the entire function output: $-f(x)$."
+   },
+   {
+    "w": "Describing a translation as 'moved up 4 units' without mentioning the vector.",
+    "r": "OCR mark schemes require precise mathematical language: 'translation by vector (0, 4)'."
+   },
+   {
+    "w": "Applying vertical stretching or scaling when only translations and reflections are tested.",
+    "r": "Stick strictly to the specified operations: translations and reflections."
+   },
+   {
+    "w": "Forgetting to transform the y-intercept when applying horizontal shifts.",
+    "r": "Calculate the new y-intercept by evaluating the transformed equation at $x = 0$."
+   },
+   {
+    "w": "Shifting the turning point in the wrong direction for horizontal translations.",
+    "r": "Add the shift value to the x-coordinate when the form is $f(x - a)$."
+   }
+  ],
+  "exam": [
+   {
+    "q": "The curve with equation $y = f(x)$ has a turning point at $(3, 5)$. Write down the coordinates of the turning point on the curve $y = f(x - 2) + 4$.",
+    "marks": 2,
+    "model": [
+     "State x-coordinate: $3 + 2 = 5$",
+     "State y-coordinate: $5 + 4 = 9$, coordinates $(5, 9)$"
+    ],
+    "tip": "Handle horizontal and vertical shifts independently by adding directly to the respective coordinates."
+   },
+   {
+    "s": true,
+    "q": "Describe fully the single transformation that maps the curve $y = x^2$ onto the curve $y = (x + 4)^2$.",
+    "marks": 2,
+    "model": [
+     "State transformation type: Translation",
+     "State vector: $\\begin{pmatrix} -4 \\\\ 0 \\\\ \\end{pmatrix}$"
+    ],
+    "tip": "Always use column vector notation for translations in OCR mark schemes."
+   },
+   {
+    "q": "The graph of $y = f(x)$ has a minimum point at $(-2, 3)$. Find the coordinates of the minimum point of $y = -f(x)$.",
+    "marks": 2,
+    "model": [
+     "Recognize reflection in the x-axis",
+     "Negate the y-coordinate: $(-2, -3)$"
+    ],
+    "tip": "A reflection in the x-axis multiplies the y-coordinate by $-1$ while leaving x unchanged."
+   },
+   {
+    "q": "Function $f(x) = x^3 - 3x$. Write down the algebraic equation for the curve when $f(x)$ is reflected in the y-axis.",
+    "marks": 2,
+    "model": [
+     "Substitute $-x$ into the function: $f(-x) = (-x)^3 - 3(-x)$",
+     "Simplify to $-x^3 + 3x$"
+    ],
+    "tip": "Reflection in the y-axis requires replacing every $x$ with $-x$ using brackets."
+   },
+   {
+    "q": "The curve $y = f(x)$ is translated by vector $\\begin{pmatrix} 0 \\\\ -5 \\\\ \\end{pmatrix}$. Write down the equation of the translated curve in terms of $f(x)$.",
+    "marks": 1,
+    "model": [
+     "Write $y = f(x) - 5$"
+    ],
+    "tip": "Vertical translations subtract or add directly outside the function notation."
+   },
+   {
+    "q": "A curve has equation $y = x^2 + 6x + 8$. By completing the square or otherwise, find the equation of the curve after a translation by vector $\\begin{pmatrix} -2 \\\\ 3 \\\\ \\end{pmatrix}$.",
+    "marks": 4,
+    "model": [
+     "Substitute $(x + 2)$ for $x$ and add $3$ to the expression",
+     "Write $y = (x + 2)^2 + 6(x + 2) + 8 + 3$",
+     "Expand brackets: $y = x^2 + 4x + 4 + 6x + 12 + 8 + 3$",
+     "Simplify to $y = x^2 + 10x + 27$"
+    ],
+    "tip": "Substitute bracketed terms carefully and expand systematically."
+   },
+   {
+    "q": "The graph of $y = \\sin(x)$ is reflected in the x-axis. Write down the equation of the new graph.",
+    "marks": 1,
+    "model": [
+     "Write $y = -\\sin(x)$"
+    ],
+    "tip": "Reflecting in the x-axis simply places a negative sign in front of the entire function."
+   },
+   {
+    "q": "The point $(4, 12)$ lies on the curve $y = f(x)$. State the coordinates of this point on $y = f(-x)$.",
+    "marks": 2,
+    "model": [
+     "Recognize horizontal reflection",
+     "Negate the x-coordinate: $(-4, 12)$"
+    ],
+    "tip": "Reflection in the y-axis negates only the x-coordinate."
+   },
+   {
+    "q": "Explain why the graph of $y = x^2 - 4$ is unchanged when reflected in the y-axis.",
+    "marks": 2,
+    "model": [
+     "Substitute $-x$ for $x$: $y = (-x)^2 - 4$",
+     "Simplify to $y = x^2 - 4$, showing it is an even function"
+    ],
+    "tip": "Even functions yield identical equations when $x$ is replaced by $-x$."
+   },
+   {
+    "q": "The curve $y = f(x)$ is translated 3 units to the right and 2 units down. Write the equation of the new curve.",
+    "marks": 2,
+    "model": [
+     "Apply horizontal shift right: $f(x - 3)$",
+     "Apply vertical shift down: $f(x - 3) - 2$"
+    ],
+    "tip": "Combine horizontal inner brackets and outer vertical adjustments correctly."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A function is defined as $f(x) = x^2 - 4x + 3$. Find the equation of the curve when it is translated by the vector $\\begin{pmatrix} 2 \\\\ -1 \\\\ \\end{pmatrix}$, giving your answer in the form $y = x^2 + bx + c$.",
+    "steps": [
+     "Identify the required transformations: a horizontal shift right by 2 and a vertical shift down by 1.",
+     "Substitute $(x - 2)$ for $x$ inside the function and subtract 1 on the outside: $y = f(x - 2) - 1$.",
+     "Substitute into the polynomial expression: $y = (x - 2)^2 - 4(x - 2) + 3 - 1$.",
+     "Expand the brackets: $y = (x^2 - 4x + 4) - (4x - 8) + 3 - 1$.",
+     "Collect like terms to simplify: $y = x^2 - 8x + 14$."
+    ],
+    "ans": "$y = x^2 - 8x + 14$"
+   },
+   {
+    "q": "The curve $y = g(x)$ has a maximum point at $(2, 7)$. Find the coordinates of the maximum point on the transformed curve $y = -g(x + 3) + 5$.",
+    "steps": [
+     "Break down the transformations applied to the original point $(2, 7)$.",
+     "The inner term $(x + 3)$ represents a horizontal translation of $-3$ units, changing the x-coordinate from $2$ to $2 - 3 = -1$.",
+     "The negative sign outside $-g$ represents a reflection in the x-axis, multiplying the y-coordinate by $-1$, giving $-7$.",
+     "The outer $+5$ represents a vertical translation of $+5$ units, adding $5$ to the y-coordinate: $-7 + 5 = -2$.",
+     "Combine the resulting coordinates into the final point: $(-1, -2)$."
+    ],
+    "ans": "$(-1, -2)$"
+   }
+  ],
+  "svg": [],
+  "pid": "maths_ocr_h.6.2",
+  "sid": "maths_ocr_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-20T18:39:13.769Z"
  }
 }

@@ -7050,5 +7050,498 @@
   "src": "pre",
   "by": "gemini/gemini-flash-lite-latest",
   "ts": "2026-11-19T20:21:21.135Z"
+ },
+ "maths_eduqas_h.3.20": {
+  "summary": "Mastering the exact values of sine, cosine, and tangent for 0, 30, 45, 60, and 90 degrees is essential for success in both Non-Calculator and Calculator components of Eduqas GCSE Mathematics. These exact values provide precise algebraic fractions with roots, avoiding decimal approximations, and allow you to solve complex geometrical and trigonometric problems effortlessly. By memorising two fundamental geometric triangles—the equilateral triangle split in half and the isosceles right-angled triangle—along with the simple square-root counting pattern, you will never need to guess or panic in an exam.",
+  "core": [
+   {
+    "h": "Introduction to Exact Trigonometric Values",
+    "p": "In Higher Tier Eduqas exams, questions frequently instruct you to 'leave your answer in exact form' or 'do not use a calculator' for Component 1. Knowing exact values means writing numbers like (sqrt(3)) / 2 instead of 0.866025...",
+    "bullets": [
+     "Required angles for this specification point: 0 degrees, 30 degrees, 45 degrees, 60 degrees, and 90 degrees.",
+     "Exact values use surds (square roots) and fractions, representing true mathematical precision.",
+     "Crucial for Paper 1 (Non-Calculator) where decimal approximations are penalized or marked incorrect.",
+     "Form the foundation for advanced trigonometric proofs and 3D trigonometry calculations."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Exact Form",
+      "p": "Always keep surds in your final answer unless the question explicitly asks for a decimal approximation."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "The 30-60-90 Triangle: Derivation Source",
+    "p": "To understand where the exact values for 30 degrees and 60 degrees come from, we start with an equilateral triangle of side length 2 units. Dropping a perpendicular line straight down the center creates two identical right-angled triangles.",
+    "bullets": [
+     "Equilateral triangle starting side length: 2 units for all three sides.",
+     "Vertical line bisects the top angle into 30 degrees and the bottom base into 1 unit.",
+     "Using Pythagoras' theorem, the vertical height is calculated as sqrt(2^2 - 1^2) = sqrt(3).",
+     "The resulting right-angled triangle has angles of 30 degrees and 60 degrees, with side lengths 1, sqrt(3), and hypotenuse 2."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Pythagoras Check",
+      "p": "Height^2 + Base^2 = Hypotenuse^2 => (sqrt(3))^2 + 1^2 = 3 + 1 = 4 = 2^2."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Deriving 30 and 60 degree exact ratios from a split equilateral triangle.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><polygon points=\"200,30 100,200 300,200\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"200\" y1=\"30\" x2=\"200\" y2=\"200\" stroke=\"#e11d48\" stroke-width=\"2\" stroke-dasharray=\"4\"/><text x=\"205\" y=\"115\" fill=\"#e11d48\" font-size=\"12\">sqrt(3)</text><text x=\"145\" y=\"215\" fill=\"#1b2540\" font-size=\"12\">1</text><text x=\"250\" y=\"215\" fill=\"#1b2540\" font-size=\"12\">1</text><text x=\"145\" y=\"110\" fill=\"#1b2540\" font-size=\"12\">2</text><text x=\"190\" y=\"55\" fill=\"#1b2540\" font-size=\"12\">30°</text><text x=\"115\" y=\"185\" fill=\"#1b2540\" font-size=\"12\">60°</text><text x=\"210\" y=\"190\" fill=\"#1b2540\" font-size=\"12\">90°</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "The 45-45-90 Triangle: Derivation Source",
+    "p": "The exact values for 45 degrees come from a right-angled isosceles triangle. By setting the two shorter perpendicular sides to a length of 1 unit, we can find the exact length of the hypotenuse.",
+    "bullets": [
+     "Perpendicular shorter sides both equal to 1 unit in length.",
+     "Base angles are both equal to 45 degrees because the triangle is isosceles.",
+     "Using Pythagoras' theorem, the hypotenuse is sqrt(1^2 + 1^2) = sqrt(2).",
+     "Provides all required exact trigonometric ratios for the 45 degree angle."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Isosceles Symmetry",
+      "p": "Because sin(45°) = cos(45°), opposite and adjacent sides are identical in length."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Isosceles right-angled triangle used for 45 degree exact values.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><polygon points=\"120,40 120,200 280,200\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"120\" y=\"180\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"95\" y=\"125\" fill=\"#1b2540\" font-size=\"12\">1</text><text x=\"200\" y=\"215\" fill=\"#1b2540\" font-size=\"12\">1</text><text x=\"190\" y=\"110\" fill=\"#1b2540\" font-size=\"12\">sqrt(2)</text><text x=\"130\" y=\"65\" fill=\"#1b2540\" font-size=\"12\">45°</text><text x=\"255\" y=\"185\" fill=\"#1b2540\" font-size=\"12\">45°</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Master Table of Exact Trigonometric Values",
+    "p": "You must commit this complete table of exact values to memory for your GCSE examinations. Examiners expect instant recall during Non-Calculator papers.",
+    "bullets": [
+     "Rows represent sine, cosine, and tangent functions.",
+     "Columns represent angles 0°, 30°, 45°, 60°, and 90°.",
+     "Tan is always equal to Sin divided by Cos for every angle.",
+     "Undefined values occur when division by zero takes place."
+    ],
+    "table": {
+     "head": [
+      "Angle (θ)",
+      "0°",
+      "30°",
+      "45°",
+      "60°",
+      "90°"
+     ],
+     "rows": [
+      [
+       "sin(θ)",
+       "0",
+       "1 / 2",
+       "sqrt(2) / 2",
+       "sqrt(3) / 2",
+       "1"
+      ],
+      [
+       "cos(θ)",
+       "1",
+       "sqrt(3) / 2",
+       "sqrt(2) / 2",
+       "1 / 2",
+       "0"
+      ],
+      [
+       "tan(θ)",
+       "0",
+       "sqrt(3) / 3",
+       "1",
+       "sqrt(3)",
+       "Undefined"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Tan 90°",
+      "p": "Never write 0 or 1 for tan(90°). It is undefined (or infinity) because cos(90°) = 0."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "The Sine Finger-Counting Trick",
+    "p": "If you ever blank in the exam, use the left-hand rule for sine. Hold out your left hand with fingers representing 0°, 30°, 45°, 60°, and 90° from pinky to thumb.",
+    "bullets": [
+     "Formula for sine: sin(theta) = sqrt(fingers below) / 2.",
+     "For 30° (index finger), there is 1 finger below, giving sqrt(1)/2 = 1/2.",
+     "For 60° (ring finger), there are 3 fingers below, giving sqrt(3)/2.",
+     "Works reliably for all five standard angles."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Hand Trick",
+      "p": "Fingers below for Sine, fingers above for Cosine. Divide both by 2 under a square root."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "The Cosine Pattern and Symmetry",
+    "p": "Cosine values follow the exact reverse pattern of sine values. Because sin(theta) = cos(90 degrees - theta), the table entries mirror each other perfectly.",
+    "bullets": [
+     "cos(0°) = 1, matching sin(90°) = 1.",
+     "cos(30°) = sqrt(3)/2, matching sin(60°) = sqrt(3)/2.",
+     "cos(45°) = sin(45°) = sqrt(2)/2 because of 45 degree symmetry.",
+     "cos(90°) = 0, matching sin(0°) = 0."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Complementary Angles",
+      "p": "The cosine of an acute angle equals the sine of its complementary angle."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Calculating Tangent from Sine and Cosine",
+    "p": "Tangent is defined as the ratio of the opposite side to the adjacent side, which algebraically equals sin(theta) / cos(theta). You can derive any tangent value instantly using this quotient identity.",
+    "bullets": [
+     "tan(0°) = 0 / 1 = 0.",
+     "tan(30°) = (1/2) / (sqrt(3)/2) = 1 / sqrt(3), which rationalises to sqrt(3)/3.",
+     "tan(45°) = (sqrt(2)/2) / (sqrt(2)/2) = 1.",
+     "tan(60°) = (sqrt(3)/2) / (1/2) = sqrt(3)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Quotient Identity",
+      "p": "tan(theta) = sin(theta) / cos(theta) for all valid theta."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Rationalising Denominators",
+    "p": "Eduqas mark schemes and standard mathematical convention require surds in denominators to be rationalised. Leaving 1 / sqrt(3) can sometimes lose an optional simplification mark or fail standard form expectations.",
+    "bullets": [
+     "Multiply numerator and denominator by the surd present in the denominator.",
+     "Example for tan(30°): (1 / sqrt(3)) * (sqrt(3) / sqrt(3)) = sqrt(3) / 3.",
+     "Example for sin(45°): 1 / sqrt(2) simplifies to sqrt(2) / 2.",
+     "Always check your final fraction for possible surd simplifications."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Standard Forms",
+      "p": "Memorise 1 / sqrt(3) as sqrt(3) / 3 so you can write it down instantly."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Applying Exact Values in Right-Angled Triangles",
+    "p": "When solving non-calculator trigonometry questions, substitute exact values directly into SOH CAH TOA equations before doing any multiplication or division.",
+    "bullets": [
+     "Identify the angle and the relevant sides (Hypotenuse, Opposite, Adjacent).",
+     "Select sin, cos, or tan and substitute the exact value for the trigonometric ratio.",
+     "Rearrange the algebraic equation to isolate the unknown side length.",
+     "Simplify surds in the final arithmetic steps."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Substitution Order",
+      "p": "Substitute the exact trigonometric value first, then solve algebraically."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Using exact trig values to find an unknown side in a non-calculator triangle.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><polygon points=\"80,200 320,200 320,80\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"300\" y=\"180\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"185\" y=\"215\" fill=\"#1b2540\" font-size=\"12\">x cm</text><text x=\"330\" y=\"145\" fill=\"#1b2540\" font-size=\"12\">8 cm</text><text x=\"180\" y=\"130\" fill=\"#1b2540\" font-size=\"12\">60°</text><text x=\"95\" y=\"190\" fill=\"#1b2540\" font-size=\"12\"></text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Working Backwards: Finding Angles from Exact Values",
+    "p": "If an exam question states that sin(theta) = sqrt(3) / 2 and asks for the value of theta, you must recognise the exact value in reverse to state theta = 60 degrees.",
+    "bullets": [
+     "Recognise standard fraction-surd pairs instantly.",
+     "If cos(theta) = 1 / 2, immediately deduce theta = 60°.",
+     "If tan(theta) = 1, immediately deduce theta = 45°.",
+     "Essential skill for inverse trigonometric reasoning without calculators."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Angle Units",
+      "p": "Always include the degree symbol (°) in your final angle answers."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Compound Expressions with Exact Values",
+    "p": "Higher tier papers often combine multiple exact values in a single arithmetic expression, such as sin(30°) + cos(60°) * tan(45°).",
+    "bullets": [
+     "Substitute each exact value carefully into the expression.",
+     "Apply standard order of operations (BIDMAS / PEMDAS): multiplication before addition.",
+     "Find common denominators to combine fractional terms.",
+     "Write the final single exact number as your answer."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "BIDMAS",
+      "p": "Always perform multiplications of exact trig values before adding or subtracting them."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Common Exam Traps and Misconceptions",
+    "p": "Examiners note several recurring errors regarding exact trigonometric values. Being aware of these traps will protect your grade 9 status.",
+    "bullets": [
+     "Confusing sin(30°) with cos(30°).",
+     "Writing decimals (like 0.5) when the question specifies 'exact value'.",
+     "Forgetting that tan(90°) is undefined and writing 0 instead.",
+     "Failing to rationalise denominators like 1 / sqrt(3)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Decimal Penalty",
+      "p": "Writing 0.866 instead of sqrt(3)/2 on a non-calculator paper loses all available marks."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Musical Scale Analogy",
+   "p": "Just like a musician instantly recognises standard musical notes and chords without having to tune their instrument from scratch every time, a top mathematician memorises exact trigonometric values (0°, 30°, 45°, 60°, 90°) as foundational musical notes. Where this analogy breaks down is that musical notes can be played with slight expressive vibrato or rubato, whereas mathematical exact values are rigidly absolute and binary: a fraction like sqrt(3)/2 is 100% precise and leaves zero room for artistic interpretation."
+  },
+  "terms": [
+   {
+    "t": "Exact Value",
+    "d": "A representation of a number using fractions, integers, and surds rather than a rounded decimal approximation."
+   },
+   {
+    "t": "Sine (sin)",
+    "d": "In a right-angled triangle, the ratio of the length of the opposite side to the hypotenuse."
+   },
+   {
+    "t": "Cosine (cos)",
+    "d": "In a right-angled triangle, the ratio of the length of the adjacent side to the hypotenuse."
+   },
+   {
+    "t": "Tangent (tan)",
+    "d": "In a right-angled triangle, the ratio of the length of the opposite side to the adjacent side."
+   },
+   {
+    "t": "Surd",
+    "d": "An irrational number expressed as a square root, cube root, or other root symbol."
+   },
+   {
+    "t": "Rationalising",
+    "d": "The algebraic process of eliminating a surd from the denominator of a fraction."
+   },
+   {
+    "t": "Hypotenuse",
+    "d": "The longest side of a right-angled triangle, situated opposite the right angle."
+   },
+   {
+    "t": "Complementary Angles",
+    "d": "Two angles whose sum is exactly 90 degrees."
+   },
+   {
+    "t": "Quotient Identity",
+    "d": "The trigonometric identity stating that tan(theta) equals sin(theta) divided by cos(theta)."
+   },
+   {
+    "t": "Undefined",
+    "d": "A mathematical term indicating that an expression has no valid numerical value, such as division by zero."
+   },
+   {
+    "t": "Equilateral Triangle",
+    "d": "A triangle with three equal sides and three interior angles of 60 degrees."
+   },
+   {
+    "t": "Isosceles Triangle",
+    "d": "A triangle with at least two equal sides and two equal base angles."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Writing 0.5 for sin(60°)",
+    "r": "sin(60°) is sqrt(3)/2; 0.5 is sin(30°)."
+   },
+   {
+    "w": "Writing 1 for tan(90°)",
+    "r": "tan(90°) is undefined because cos(90°) = 0."
+   },
+   {
+    "w": "Writing 0.707 instead of sqrt(2)/2",
+    "r": "Decimal approximations are not exact values and are rejected on non-calculator papers."
+   },
+   {
+    "w": "Leaving 1 / sqrt(3) unsimplified",
+    "r": "Must rationalise the denominator to sqrt(3)/3."
+   },
+   {
+    "w": "Confusing cos(0°) and sin(0°)",
+    "r": "cos(0°) = 1, whereas sin(0°) = 0."
+   },
+   {
+    "w": "Writing sqrt(3) for tan(30°)",
+    "r": "tan(30°) = sqrt(3)/3; sqrt(3) is the value for tan(60°)."
+   },
+   {
+    "w": "Forgetting the division by 2 in sine and cosine values",
+    "r": "All standard sin and cos values for 30, 45, 60 have a denominator of 2."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Write down the exact value of sin(30°).",
+    "marks": 1,
+    "model": [
+     "1/2"
+    ],
+    "tip": "Direct recall question; write the fraction clearly."
+   },
+   {
+    "q": "Write down the exact value of tan(45°).",
+    "marks": 1,
+    "model": [
+     "1"
+    ],
+    "tip": "Instant recall from the 45-45-90 triangle."
+   },
+   {
+    "q": "Work out the exact value of sin(30°) + cos(60°).",
+    "marks": 2,
+    "model": [
+     "1/2 + 1/2",
+     "1"
+    ],
+    "tip": "Substitute exact values first, then add."
+   },
+   {
+    "q": "Given that tan(theta) = sqrt(3), find the exact value of angle theta in degrees.",
+    "marks": 1,
+    "model": [
+     "60°"
+    ],
+    "tip": "Work backwards from the standard table."
+   },
+   {
+    "q": "Work out the exact value of sin(60°) * cos(30°).",
+    "marks": 2,
+    "model": [
+     "(sqrt(3)/2) * (sqrt(3)/2)",
+     "3/4"
+    ],
+    "tip": "Multiply numerators and denominators; sqrt(3) * sqrt(3) = 3."
+   },
+   {
+    "q": "Find the exact length x in a right-angled triangle where the hypotenuse is 10 cm and the angle is 30° opposite to x.",
+    "marks": 3,
+    "model": [
+     "sin(30°) = x / 10",
+     "1/2 = x / 10",
+     "x = 5"
+    ],
+    "tip": "Use SOH, substitute exact sin(30°), and solve."
+   },
+   {
+    "q": "Show that (sin(45°) / cos(45°)) = 1 without using decimals.",
+    "marks": 2,
+    "model": [
+     "(sqrt(2)/2) / (sqrt(2)/2)",
+     "1"
+    ],
+    "tip": "Any non-zero quantity divided by itself is 1."
+   },
+   {
+    "q": "Work out the exact value of (tan(60°))^2 + (cos(30°))^2.",
+    "marks": 3,
+    "model": [
+     "(sqrt(3))^2 + (sqrt(3)/2)^2",
+     "3 + 3/4",
+     "3.75 or 15/4"
+    ],
+    "tip": "Square the surds carefully before adding."
+   },
+   {
+    "q": "Explain why tan(90°) has no exact numerical value.",
+    "marks": 2,
+    "model": [
+     "tan(90°) = sin(90°) / cos(90°)",
+     "cos(90°) = 0, so it involves division by zero which is undefined"
+    ],
+    "tip": "Mention division by zero explicitly for full marks."
+   },
+   {
+    "q": "Calculate the exact area of a triangle with two sides 6 cm and 8 cm and included angle 60°.",
+    "marks": 3,
+    "model": [
+     "Area = 1/2 * 6 * 8 * sin(60°)",
+     "24 * (sqrt(3)/2)",
+     "12sqrt(3)"
+    ],
+    "tip": "Use Area = 1/2 ab sin C and substitute exact sin(60°)."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Work out the exact value of: sin(60°) * cos(30°) + cos(60°) * sin(30°)",
+    "steps": [
+     "Identify exact values: sin(60°) = sqrt(3)/2, cos(30°) = sqrt(3)/2, cos(60°) = 1/2, sin(30°) = 1/2.",
+     "Substitute into the expression: (sqrt(3)/2 * sqrt(3)/2) + (1/2 * 1/2).",
+     "Multiply the terms: (3/4) + (1/4).",
+     "Add the fractions: 4/4 = 1."
+    ],
+    "ans": "1"
+   },
+   {
+    "q": "Find the exact length of the adjacent side in a right-angled triangle where the hypotenuse is 12 cm and the angle is 60° adjacent to the unknown side y.",
+    "steps": [
+     "Select the correct trigonometric ratio using CAH: cos(theta) = Adjacent / Hypotenuse.",
+     "Substitute known values: cos(60°) = y / 12.",
+     "Substitute the exact value for cos(60°), which is 1/2: 1/2 = y / 12.",
+     "Rearrange to solve for y: y = 12 * (1/2) = 6 cm."
+    ],
+    "ans": "6 cm"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Visual summary of the exact trigonometric values for 0, 30, 45, 60, and 90 degrees.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"40\" y=\"55\" fill=\"#1b2540\" font-size=\"14\" font-weight=\"bold\">Exact Trig Values Summary Reference</text><line x1=\"30\" y1=\"70\" x2=\"370\" y2=\"70\" stroke=\"#1b2540\" stroke-width=\"1\"/><text x=\"40\" y=\"100\" fill=\"#1b2540\" font-size=\"12\">30°: sin=1/2, cos=sqrt(3)/2, tan=sqrt(3)/3</text><text x=\"40\" y=\"135\" fill=\"#1b2540\" font-size=\"12\">45°: sin=sqrt(2)/2, cos=sqrt(2)/2, tan=1</text><text x=\"40\" y=\"170\" fill=\"#1b2540\" font-size=\"12\">60°: sin=sqrt(3)/2, cos=1/2, tan=sqrt(3)</text><text x=\"40\" y=\"205\" fill=\"#1b2540\" font-size=\"12\">0°/90°: sin(0)=0, cos(0)=1, tan(90)=Undefined</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_h.3.20",
+  "sid": "maths_eduqas_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-20T18:13:03.406Z"
  }
 }

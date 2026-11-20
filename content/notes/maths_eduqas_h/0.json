@@ -3280,5 +3280,2618 @@
   "src": "pre",
   "by": "gemini/gemini-flash-lite-latest",
   "ts": "2026-11-19T18:54:38.166Z"
+ },
+ "maths_eduqas_h.0.4": {
+  "summary": "Systematic listing strategies and the product rule for counting are essential Eduqas GCSE Maths Higher tier methods used to enumerate all possible outcomes of single or multi-stage events. Mastering systematic listing ensures no combinations are omitted or counted twice, while the product rule provides an efficient algebraic method to calculate total outcomes by multiplying the number of options available at each independent stage. For restricted choices or unordered selections, these principles are adapted by adjusting stage possibilities or dividing out repeated symmetry.",
+  "core": [
+   {
+    "h": "Fundamental Principles of Systematic Listing",
+    "p": "Systematic listing is the process of generating every possible outcome in a sample space using a rigid, logical pattern. When dealing with small outcome spaces, manual listing avoids both missing valid items and creating duplicates.",
+    "bullets": [
+     "**Completeness**: A system guarantees that every element of the sample space is generated.",
+     "**Uniqueness**: A rigid ordering rule prevents double-counting identical combinations.",
+     "**Pattern Recognition**: Ordering elements alphabetically or numerically makes missing items immediately obvious.",
+     "**Verification**: The total number of listed items must match the count predicted by counting rules."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Systematic Listing",
+      "p": "An exhaustive, structured method of recording every possible outcome of one or more events in a fixed, repeatable order without omission or repetition."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Organised Numerical and Alphabetical Ordering",
+    "p": "When listing multi-digit numbers or character codes, fixing the first digit or letter and systematically varying subsequent positions ensures exhaustive coverage.",
+    "bullets": [
+     "**Fixed-Prefix Strategy**: Hold the first position constant (e.g. start all codes with 1), list all valid remaining choices, then increment the first position (e.g. start with 2).",
+     "**Lexicographical Order**: Order character outcomes as they would appear in a dictionary (e.g. AB, AC, AD, BA, BC, BD).",
+     "**Ascending Numerical Order**: Order number combinations from smallest to largest to easily verify completeness."
+    ],
+    "table": {
+     "head": [
+      "Fixed 1st Digit",
+      "Valid 2nd Digits",
+      "Valid 3rd Digits",
+      "Generated Outcomes"
+     ],
+     "rows": [
+      [
+       "1",
+       "2",
+       "3, 4",
+       "123, 124"
+      ],
+      [
+       "1",
+       "3",
+       "2, 4",
+       "132, 134"
+      ],
+      [
+       "2",
+       "1",
+       "3, 4",
+       "213, 214"
+      ],
+      [
+       "2",
+       "3",
+       "1, 4",
+       "231, 234"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam Presentation Tip",
+      "p": "In Eduqas Component 1 non-calculator papers, structure your answer in clear columns based on the fixed leading character to prove your method is systematic."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Two-Way Sample Space Grids",
+    "p": "Two-way tables or sample space grids represent the combined outcomes of two independent events along perpendicular axes, providing a visual grid of all possible pairs.",
+    "bullets": [
+     "**Row and Column Setup**: Place outcomes of Event A along the top row and Event B down the left column.",
+     "**Grid Intersections**: Each cell $(r, c)$ represents a unique combined outcome $(A_r, B_c)$.",
+     "**Total Grid Size**: A grid with $m$ rows and $n$ columns contains exactly $m \\times n$ cells.",
+     "**Filtering Outcomes**: Grids allow easy highlighting of cells meeting specific conditions (e.g., sum equals 7, both numbers even)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Sample Space Grid Capacity",
+      "p": "Sample space grids are ideal for two-stage experiments with up to around 36 total outcomes (e.g. rolling two 6-sided dice)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Tree Diagrams for Counting Outcomes",
+    "p": "Tree diagrams display multi-stage processes visually. Each choice branches out from the previous node, making them suitable for 2-stage or 3-stage outcome problems.",
+    "bullets": [
+     "**Nodes and Branches**: Every node represents a decision point; each branch represents a possible choice.",
+     "**Path Counts**: The number of final terminal ends equals the total number of distinct outcomes.",
+     "**Conditional Branching**: Invalid options after previous choices are omitted by ending that branch line early."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": [
+     {
+      "cap": "Figure 1: Tree diagram showing 3 starter choices, 2 main choices, and 2 dessert choices yielding 12 total meal combinations.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#ffffff\" stroke=\"none\"/><path d=\"M 30 120 L 100 50 M 30 120 L 100 120 M 30 120 L 100 190\" stroke=\"#1b2540\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"30\" cy=\"120\" r=\"5\" fill=\"#1e3a8a\"/><circle cx=\"100\" cy=\"50\" r=\"5\" fill=\"#1e3a8a\"/><circle cx=\"100\" cy=\"120\" r=\"5\" fill=\"#1e3a8a\"/><circle cx=\"100\" cy=\"190\" r=\"5\" fill=\"#1e3a8a\"/><text x=\"105\" y=\"45\" font-size=\"11\" fill=\"#1b2540\" font-weight=\"bold\">Starter 1</text><text x=\"105\" y=\"115\" font-size=\"11\" fill=\"#1b2540\" font-weight=\"bold\">Starter 2</text><text x=\"105\" y=\"185\" font-size=\"11\" fill=\"#1b2540\" font-weight=\"bold\">Starter 3</text><path d=\"M 140 50 L 210 30 M 140 50 L 210 70\" stroke=\"#1b2540\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M 140 120 L 210 100 M 140 120 L 210 140\" stroke=\"#1b2540\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M 140 190 L 210 170 M 140 190 L 210 210\" stroke=\"#1b2540\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"215\" y=\"33\" font-size=\"11\" fill=\"#1b2540\">Main A</text><text x=\"215\" y=\"73\" font-size=\"11\" fill=\"#1b2540\">Main B</text><path d=\"M 255 30 L 320 20 M 255 30 L 320 40\" stroke=\"#1b2540\" stroke-width=\"1\" fill=\"none\"/><path d=\"M 255 70 L 320 60 M 255 70 L 320 80\" stroke=\"#1b2540\" stroke-width=\"1\" fill=\"none\"/><text x=\"325\" y=\"23\" font-size=\"11\" fill=\"#065f46\">D1 (1)</text><text x=\"325\" y=\"43\" font-size=\"11\" fill=\"#065f46\">D2 (2)</text><text x=\"325\" y=\"63\" font-size=\"11\" fill=\"#065f46\">D1 (3)</text><text x=\"325\" y=\"83\" font-size=\"11\" fill=\"#065f46\">D2 (4)</text><rect x=\"260\" y=\"185\" width=\"130\" height=\"45\" fill=\"#dbeafe\" stroke=\"#1e3a8a\" rx=\"4\"/><text x=\"265\" y=\"202\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e3a8a\">Product Rule:</text><text x=\"265\" y=\"220\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\">3 × 2 × 2 = 12 outcomes</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "The Product Rule for Counting (Basic Form)",
+    "p": "The Product Rule for Counting states that if there are $a$ ways of making a first decision and $b$ ways of making a second independent decision, there are $a \\times b$ total possible combined outcomes.",
+    "bullets": [
+     "**Formula**: Total Outcomes $= n_1 \\times n_2$.",
+     "**Independent Choices**: The number of options available in stage 2 does not depend on which specific option was chosen in stage 1.",
+     "**Efficiency**: Eliminates the need to manually write out long lists when only the total count is required."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Product Rule for Counting",
+      "p": "If an event $A$ can occur in $m$ ways and a subsequent independent event $B$ can occur in $n$ ways, then the sequence of event $A$ followed by event $B$ can occur in $m \\times n$ ways."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Extending the Product Rule to Multi-Stage Choices",
+    "p": "When a process involves $k$ sequential independent choices, the product rule generalizes by multiplying the number of options at every stage together.",
+    "bullets": [
+     "**General Multi-Stage Formula**: $\\text{Total} = n_1 \\times n_2 \\times n_3 \\times \\dots \\times n_k$.",
+     "**Example Application**: Creating a 4-digit PIN using digits 0 to 9 with repetition allowed has $10 \\times 10 \\times 10 \\times 10 = 10,000$ possible PINs.",
+     "**License Plates / Password Codes**: Different character positions may draw from different sets (e.g. 2 letters followed by 3 digits gives $26 \\times 26 \\times 10 \\times 10 \\times 10 = 676,000$ combinations)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Do Not Add Stage Options",
+      "p": "A frequent student error is adding option counts instead of multiplying them ($n_1 + n_2 + n_3$ instead of $n_1 \\times n_2 \\times n_3$). Addition is only used when options are mutually exclusive alternative routes."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Counting Without Repetition (Distinct Items)",
+    "p": "When options cannot be reused (sampling without replacement), the number of choices available decreases by 1 at each successive stage.",
+    "bullets": [
+     "**Decreasing Factors**: For $k$ items selected from $n$ distinct items without replacement, the total ways are $n \\times (n-1) \\times (n-2) \\times \\dots \\times (n - k + 1)$.",
+     "**Full Permutations**: Arranging all $n$ items in a line gives $n! = n \\times (n-1) \\times \\dots \\times 2 \\times 1$.",
+     "**Example**: Forming a 3-digit number from digits {1, 3, 5, 7, 9} with no repeated digits gives $5 \\times 4 \\times 3 = 60$ unique numbers."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": [
+     {
+      "cap": "Figure 2: Tree reduction logic when selecting 3 items from 4 without replacement.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#ffffff\" stroke=\"none\"/><rect x=\"20\" y=\"30\" width=\"100\" height=\"180\" fill=\"#dbeafe\" stroke=\"#1e3a8a\" rx=\"6\"/><text x=\"70\" y=\"55\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\" text-anchor=\"middle\">Position 1</text><text x=\"70\" y=\"90\" font-size=\"13\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">4 choices</text><text x=\"70\" y=\"110\" font-size=\"10\" fill=\"#475569\" text-anchor=\"middle\">(A, B, C, D)</text><rect x=\"150\" y=\"30\" width=\"100\" height=\"180\" fill=\"#fde68a\" stroke=\"#b45309\" rx=\"6\"/><text x=\"200\" y=\"55\" font-size=\"12\" font-weight=\"bold\" fill=\"#b45309\" text-anchor=\"middle\">Position 2</text><text x=\"200\" y=\"90\" font-size=\"13\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">3 choices</text><text x=\"200\" y=\"110\" font-size=\"10\" fill=\"#475569\" text-anchor=\"middle\">(1 item used)</text><rect x=\"280\" y=\"30\" width=\"100\" height=\"180\" fill=\"#bbf7d0\" stroke=\"#065f46\" rx=\"6\"/><text x=\"330\" y=\"55\" font-size=\"12\" font-weight=\"bold\" fill=\"#065f46\" text-anchor=\"middle\">Position 3</text><text x=\"330\" y=\"90\" font-size=\"13\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">2 choices</text><text x=\"330\" y=\"110\" font-size=\"10\" fill=\"#475569\" text-anchor=\"middle\">(2 items used)</text><path d=\"M 120 120 L 150 120\" stroke=\"#1b2540\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><path d=\"M 250 120 L 280 120\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"200\" y=\"200\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">Total = 4 × 3 × 2 = 24 ways</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Handling Specific Constraints and Fixed Positions",
+    "p": "In Eduqas Higher tier questions, outcomes often must satisfy constraints such as being even, odd, greater than a threshold, or having specific digits fixed in certain positions.",
+    "bullets": [
+     "**Rule of Most Restricted First**: Always count options for the most constrained position before unconstrained positions.",
+     "**Even/Odd Restrictions**: The last digit determines parity. For an even 3-digit number using {1, 2, 3, 4, 5}, the last position has only 2 choices ({2, 4}).",
+     "**Leading Zero Restriction**: A 3-digit number cannot start with 0. The first position is restricted to non-zero digits.",
+     "**Value Thresholds**: For a 3-digit number to be $>400$, the first digit must be selected from digits $\\ge 4$."
+    ],
+    "table": {
+     "head": [
+      "Constraint Type",
+      "Target Position",
+      "Strategy / Action"
+     ],
+     "rows": [
+      [
+       "Even Number",
+       "Last Digit",
+       "Count available even digits first."
+      ],
+      [
+       "Odd Number",
+       "Last Digit",
+       "Count available odd digits first."
+      ],
+      [
+       "Value > 500",
+       "First Digit",
+       "Limit choices to digits 5, 6, 7, 8, 9."
+      ],
+      [
+       "Multiple of 5",
+       "Last Digit",
+       "Limit choices to 0 and 5."
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Filling Order Technique",
+      "p": "Write down empty boxes for each position `[ ] [ ] [ ]`. Fill in the number of possibilities for the constrained box first, then fill the remaining boxes in any order."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Unordered Selections and Dividing Out Symmetries",
+    "p": "When the order of selection does not matter (e.g. choosing a committee of 2 people from $n$ candidates), calculating ordered permutations counts each pair twice ($AB$ and $BA$).",
+    "bullets": [
+     "**Ordered Pairs vs Unordered Pairs**: Choosing Person A then Person B produces the same group as Person B then Person A.",
+     "**Dividing by Overcount**: For a selection of 2 items from $n$ distinct items where order does not matter: $\\text{Unordered Pairs} = \\frac{n \\times (n-1)}{2}$.",
+     "**Selecting 3 Items**: For a group of 3 unordered items, there are $3! = 6$ arrangements of the same 3 items, so divide the product rule count by 6."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Handshake Problem Rule",
+      "p": "If $n$ people all shake hands with each other once, the total number of handshakes is $\\frac{n(n-1)}{2}$ because each handshake involves 2 people and order is irrelevant."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Figure 3: Unordered selections among 4 nodes (A, B, C, D) forming 6 distinct undirected links (handshakes).",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#ffffff\" stroke=\"none\"/><circle cx=\"120\" cy=\"60\" r=\"20\" fill=\"#dbeafe\" stroke=\"#1e3a8a\" stroke-width=\"2\"/><text x=\"120\" y=\"65\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e3a8a\" text-anchor=\"middle\">A</text><circle cx=\"280\" cy=\"60\" r=\"20\" fill=\"#dbeafe\" stroke=\"#1e3a8a\" stroke-width=\"2\"/><text x=\"280\" y=\"65\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e3a8a\" text-anchor=\"middle\">B</text><circle cx=\"280\" cy=\"180\" r=\"20\" fill=\"#dbeafe\" stroke=\"#1e3a8a\" stroke-width=\"2\"/><text x=\"280\" y=\"185\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e3a8a\" text-anchor=\"middle\">C</text><circle cx=\"120\" cy=\"180\" r=\"20\" fill=\"#dbeafe\" stroke=\"#1e3a8a\" stroke-width=\"2\"/><text x=\"120\" y=\"185\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e3a8a\" text-anchor=\"middle\">D</text><line x1=\"140\" y1=\"60\" x2=\"260\" y2=\"60\" stroke=\"#065f46\" stroke-width=\"2\"/><line x1=\"280\" y1=\"80\" x2=\"280\" y2=\"160\" stroke=\"#065f46\" stroke-width=\"2\"/><line x1=\"260\" y1=\"180\" x2=\"140\" y2=\"180\" stroke=\"#065f46\" stroke-width=\"2\"/><line x1=\"120\" y1=\"160\" x2=\"120\" y2=\"80\" stroke=\"#065f46\" stroke-width=\"2\"/><line x1=\"134\" y1=\"74\" x2=\"266\" y2=\"166\" stroke=\"#065f46\" stroke-width=\"2\"/><line x1=\"134\" y1=\"166\" x2=\"266\" y2=\"74\" stroke=\"#065f46\" stroke-width=\"2\"/><text x=\"200\" y=\"225\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">Handshakes = (4 × 3) / 2 = 6 unique pairs</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Combining Additive and Multiplicative Counting Rules",
+    "p": "Complex counting problems require splitting scenarios into mutually exclusive cases. Use the product rule within each case (AND), then add the results of all valid cases together (OR).",
+    "bullets": [
+     "**AND Rule (Product Rule)**: Multiply choices when stages occur sequentially ($A$ AND $B$).",
+     "**OR Rule (Addition Rule)**: Add counts when choices represent alternative mutually exclusive paths ($Case 1$ OR $Case 2$).",
+     "**Case-Based Strategy**: Split problem into clear non-overlapping cases (e.g. Case 1: Code starts with 1; Case 2: Code starts with 2)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "AND vs OR Principle",
+      "p": "Multiply when combining choices across successive steps (Stage 1 AND Stage 2). Add when combining separate, non-overlapping possibilities (Scenario A OR Scenario B)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Connecting Counting Strategies to Probability",
+    "p": "The product rule provides the total number of elements in the sample space $n(S)$, which forms the denominator of theoretical probability calculations.",
+    "bullets": [
+     "**Theoretical Probability Formula**: $P(\\text{Event}) = \\frac{\\text{Number of Favourable Outcomes } n(E)}{\\text{Total Possible Outcomes } n(S)}$.",
+     "**Numerator Calculation**: Apply systematic listing or product rule with constraints to find $n(E)$.",
+     "**Denominator Calculation**: Apply unconstrained product rule to find $n(S)$."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Eduqas Exam Execution and Calculator Strategies",
+    "p": "Eduqas Component 1 (non-calculator) tests fundamental arithmetic with smaller numbers, while Component 2 (calculator) features larger outcome spaces and multi-step word problems.",
+    "bullets": [
+     "**Component 1 (Non-Calculator)**: Expect manual listing of 6 to 12 items or product rule evaluations such as $5 \\times 4 \\times 3 = 60$. Work clearly with grid layouts.",
+     "**Component 2 (Calculator)**: Expect large power calculations (e.g., $26^2 \\times 10^4 = 6,760,000$). Write down the full unsimplified product expression before entering into the calculator.",
+     "**Mark Scheme Requirements**: Show explicit product expressions (e.g., $6 \\times 5 \\times 4$) to secure method marks even if a calculation error occurs."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Unsubstantiated Answers",
+      "p": "Writing down only a final numerical answer without showing the product calculation (e.g., writing 120 without $5 \\times 4 \\times 3$) risks losing method marks on Eduqas papers if the final value is incorrect."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Custom Burger Assembly Line",
+   "p": "Imagine assembling a custom burger at a restaurant where you select 1 bun type out of 3, 1 patty out of 4, and 1 sauce out of 5. The total number of distinct burger combinations is found by multiplying the choices at each stage: $3 \\times 4 \\times 5 = 60$. This analogy breaks down if a choice at one stage restricts subsequent options (for example, if picking a gluten-free bun eliminates 2 sauce options), requiring case-by-case addition instead of a single multiplication."
+  },
+  "terms": [
+   {
+    "t": "Systematic Listing",
+    "d": "A structured method of writing down all possible outcomes in an organized, non-repeating pattern."
+   },
+   {
+    "t": "Product Rule for Counting",
+    "d": "A mathematical principle stating that the total outcomes for sequential independent events is the product of the number of options at each stage."
+   },
+   {
+    "t": "Sample Space",
+    "d": "The set of all possible outcomes of a probability experiment or decision process."
+   },
+   {
+    "t": "Permutations",
+    "d": "Arrangements of items where the order of selection is significant."
+   },
+   {
+    "t": "Combinations",
+    "d": "Selections of items where the order of selection does not matter."
+   },
+   {
+    "t": "Independent Events",
+    "d": "Events where the outcome of one event does not affect the available outcomes or probabilities of another."
+   },
+   {
+    "t": "Without Replacement",
+    "d": "Selecting items without returning chosen items back to the pool, reducing available options for subsequent choices."
+   },
+   {
+    "t": "With Replacement",
+    "d": "Selecting items where chosen items are returned to the pool, keeping options constant across stages."
+   },
+   {
+    "t": "Factorial (!)",
+    "d": "The product of an integer and all positive integers below it (e.g. $4! = 4 \\times 3 \\times 2 \\times 1 = 24$)."
+   },
+   {
+    "t": "Two-Way Table",
+    "d": "A grid display showing combined outcomes of two categorical variables or sequential choices."
+   },
+   {
+    "t": "Tree Diagram",
+    "d": "A branching diagram visualising multi-stage outcomes and paths."
+   },
+   {
+    "t": "Mutually Exclusive Events",
+    "d": "Events or outcomes that cannot happen at the same time, allowing their outcome counts to be added."
+   },
+   {
+    "t": "Constraint",
+    "d": "A condition imposed on a selection problem that limits the available choices for specific positions."
+   },
+   {
+    "t": "Lexicographical Order",
+    "d": "Alphabetical or numerical dictionary order used to list items systematically."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Adding the stage counts together instead of multiplying (e.g. 3 + 4 + 2 = 9 total meals).",
+    "r": "Multiply the number of choices at each stage together using the product rule: 3 × 4 × 2 = 24."
+   },
+   {
+    "w": "Ignoring non-repetition rules and calculating 5 × 5 × 5 = 125 for a digit code with distinct digits.",
+    "r": "Reduce available options at each stage: 5 × 4 × 3 = 60."
+   },
+   {
+    "w": "Forgetting to restrict the first digit when making multi-digit numbers (allowing 0 as the lead digit of a 3-digit number).",
+    "r": "Exclude 0 from the first position choices so that a 3-digit number remains valid."
+   },
+   {
+    "w": "Not dividing by 2 when order does not matter in pairs (e.g., stating 12 handshake pairs for 4 people).",
+    "r": "Divide the ordered count by 2: (4 × 3) / 2 = 6."
+   },
+   {
+    "w": "Filling unconstrained digits before constrained digits (e.g. ignoring the last digit condition for even numbers).",
+    "r": "Determine choices for constrained positions first (e.g. last digit must be even), then multiply by remaining options."
+   },
+   {
+    "w": "Listing outcomes randomly without a visible system, leaving out outcomes.",
+    "r": "Use systematic fixed-prefix listing or two-way tables to ensure all possibilities are included."
+   },
+   {
+    "w": "Mixing up AND (multiplication) and OR (addition) logic across complex scenarios.",
+    "r": "Multiply choices within a single path (AND), then add outcomes across distinct paths (OR)."
+   },
+   {
+    "w": "Writing only the final numerical answer without showing the explicit product expression.",
+    "r": "Write out the full multiplication expression (e.g., 6 × 5 × 4 = 120) to secure method marks."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A restaurant menu offers 4 starters, 5 main courses, and 3 desserts. Calculate the total number of different 3-course meals available.",
+    "marks": 2,
+    "model": [
+     "Identify options at each stage: Starters = 4, Mains = 5, Desserts = 3.",
+     "Apply the product rule for counting: 4 × 5 × 3 = 60."
+    ],
+    "tip": "Multiply options for independent stages together."
+   },
+   {
+    "q": "A passcode is made using 3 digits selected from the set {1, 2, 3, 4, 5, 6}. Digits cannot be repeated. How many different passcodes can be created?",
+    "marks": 2,
+    "model": [
+     "First position has 6 choices, second has 5 choices, third has 4 choices.",
+     "Total passcodes = 6 × 5 × 4 = 120."
+    ],
+    "tip": "Reduce option counts by 1 for each step when repetition is not allowed."
+   },
+   {
+    "q": "A code consists of 2 letters from the alphabet (A–Z) followed by 2 digits from 0 to 9. Letters and digits can be repeated. Calculate the total number of possible codes.",
+    "marks": 2,
+    "model": [
+     "Number of letters = 26; number of digits = 10.",
+     "Total codes = 26 × 26 × 10 × 10 = 67,600."
+    ],
+    "tip": "Calculate options for each position separately before multiplying."
+   },
+   {
+    "q": "List systematically all 3-digit numbers that can be formed using the digits 1, 2, and 4 without repeating any digit.",
+    "marks": 2,
+    "model": [
+     "Fix starting digit 1: 124, 142.",
+     "Fix starting digit 2: 214, 241.",
+     "Fix starting digit 4: 412, 421.",
+     "Complete list: 124, 142, 214, 241, 412, 421 (6 numbers)."
+    ],
+    "tip": "Group lists by leading digit to demonstrate systematic structure."
+   },
+   {
+    "q": "How many even 3-digit numbers can be formed using the digits 2, 3, 5, 6, 8 if no digit can be repeated?",
+    "marks": 3,
+    "model": [
+     "Identify constrained position: Last digit must be even ({2, 6, 8}), giving 3 options.",
+     "Choose remaining 2 positions from remaining 4 digits: 4 options for first digit, 3 options for second digit.",
+     "Total numbers = 4 × 3 × 3 = 36."
+    ],
+    "tip": "Always determine possibilities for the constrained position (last digit) first."
+   },
+   {
+    "q": "Ten players enter a chess tournament. Every player plays one match against every other player. Calculate the total number of matches played.",
+    "marks": 3,
+    "model": [
+     "Player 1 chooses from 9 opponents, leading to 10 × 9 = 90 ordered pairs.",
+     "Since Match(A, B) is identical to Match(B, A), divide by 2.",
+     "Total matches = (10 × 9) / 2 = 45."
+    ],
+    "tip": "Divide by 2 for unordered pairwise interactions like matches or handshakes."
+   },
+   {
+    "q": "Four cards numbered 2, 5, 7, and 8 are used to form a 4-digit number. Find the probability that a randomly formed number is greater than 6000. Each card is used once.",
+    "marks": 4,
+    "model": [
+     "Total possible 4-digit numbers = 4 × 3 × 2 × 1 = 24.",
+     "To be > 6000, first digit must be 7 or 8 (2 choices).",
+     "Remaining 3 positions can be filled in 3 × 2 × 1 = 6 ways.",
+     "Favourable numbers = 2 × 3 × 2 × 1 = 12.",
+     "Probability = 12 / 24 = 1/2."
+    ],
+    "tip": "Use the product rule to find both numerator and denominator for probability."
+   },
+   {
+    "q": "A security system code uses 3 letters chosen from A, B, C, D, E followed by 2 non-zero digits (1 to 9). No character or digit may be repeated in the code. Find the total number of valid codes.",
+    "marks": 3,
+    "model": [
+     "Letter choices: 5 × 4 × 3 = 60.",
+     "Digit choices: 9 × 8 = 72.",
+     "Total valid codes = 60 × 72 = 4,320."
+    ],
+    "tip": "Calculate letter combinations and digit combinations, then multiply together."
+   },
+   {
+    "q": "A committee of 2 students is selected from 4 boys and 5 girls. Calculate the number of ways to select a committee containing 1 boy and 1 girl.",
+    "marks": 2,
+    "model": [
+     "Number of boy choices = 4.",
+     "Number of girl choices = 5.",
+     "Total committees = 4 × 5 = 20."
+    ],
+    "tip": "Selecting one from set A and one from set B does not require dividing by 2."
+   },
+   {
+    "q": "A 3-digit lock code is created using digits 0 to 9. Case A: Digits can repeat, but code must start with 7. Case B: Digits cannot repeat, and code must end with 0. Calculate which case offers more possible codes and find the difference.",
+    "marks": 4,
+    "model": [
+     "Case A: 1 choice for 1st digit (7), 10 choices for 2nd, 10 choices for 3rd = 1 × 10 × 10 = 100 codes.",
+     "Case B: 1 choice for 3rd digit (0), 9 remaining choices for 1st digit (1–9), 8 remaining choices for 2nd digit = 9 × 8 × 1 = 72 codes.",
+     "Comparison: Case A has more codes.",
+     "Difference = 100 - 72 = 28 codes."
+    ],
+    "tip": "Evaluate each case separately before finding the numerical difference."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A company creates 4-character ID badges. The first character must be a letter from {A, B, C, D}. The second and third characters must be digits from {1, 2, 3, 4, 5, 6, 7}. The fourth character must be a symbol from {#, $, %}. (a) Calculate the total number of different ID badges if repetition of digits is allowed. (b) Calculate the number of ID badges if digits cannot be repeated.",
+    "steps": [
+     "Part (a): Identify available options at each position: Pos 1 (Letter) = 4, Pos 2 (Digit) = 7, Pos 3 (Digit) = 7, Pos 4 (Symbol) = 3.",
+     "Apply product rule with repetition allowed: Total = 4 × 7 × 7 × 3 = 588.",
+     "Part (b): Identify options with no digit repetition: Pos 1 = 4, Pos 2 = 7, Pos 3 = 6 (one digit used), Pos 4 = 3.",
+     "Apply product rule without repetition: Total = 4 × 7 × 6 × 3 = 504."
+    ],
+    "ans": "(a) 588 badges, (b) 504 badges"
+   },
+   {
+    "q": "Three-digit numbers are formed using the digits 1, 2, 3, 4, 5, 6 without repetition. Calculate: (a) Total 3-digit numbers that can be formed. (b) How many of these numbers are odd and greater than 300.",
+    "steps": [
+     "Part (a): Unconstrained 3-digit numbers selected from 6 digits without replacement = 6 × 5 × 4 = 120 numbers.",
+     "Part (b): Apply case analysis due to overlapping constraints on 1st digit (>300) and 3rd digit (odd: {1, 3, 5}).",
+     "Case 1: First digit is ODD and >300 ({3, 5} -> 2 options). Last digit must be odd from remaining 2 odd digits -> 2 options. Middle digit from remaining 4 unused digits -> 4 options. Count = 2 × 4 × 2 = 16.",
+     "Case 2: First digit is EVEN and >300 ({4, 6} -> 2 options). Last digit can be any of 3 odd digits -> 3 options. Middle digit from remaining 4 unused digits -> 4 options. Count = 2 × 4 × 3 = 24.",
+     "Total valid numbers = Case 1 + Case 2 = 16 + 24 = 40 numbers."
+    ],
+    "ans": "(a) 120 numbers, (b) 40 numbers"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Figure 4: Visual matrix showing sample space grid for two sequential spinner outcomes.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#ffffff\" stroke=\"none\"/><rect x=\"80\" y=\"40\" width=\"280\" height=\"160\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"2\" rx=\"4\"/><line x1=\"80\" y1=\"80\" x2=\"360\" y2=\"80\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><line x1=\"80\" y1=\"120\" x2=\"360\" y2=\"120\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><line x1=\"80\" y1=\"160\" x2=\"360\" y2=\"160\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><line x1=\"150\" y1=\"40\" x2=\"150\" y2=\"200\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><line x1=\"220\" y1=\"40\" x2=\"220\" y2=\"200\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><line x1=\"290\" y1=\"40\" x2=\"290\" y2=\"200\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"115\" y=\"65\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\" text-anchor=\"middle\">Spin 2: 1</text><text x=\"185\" y=\"65\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\" text-anchor=\"middle\">Spin 2: 2</text><text x=\"255\" y=\"65\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\" text-anchor=\"middle\">Spin 2: 3</text><text x=\"325\" y=\"65\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\" text-anchor=\"middle\">Spin 2: 4</text><text x=\"40\" y=\"105\" font-size=\"12\" font-weight=\"bold\" fill=\"#b45309\" text-anchor=\"middle\">Spin 1: 1</text><text x=\"40\" y=\"145\" font-size=\"12\" font-weight=\"bold\" fill=\"#b45309\" text-anchor=\"middle\">Spin 1: 2</text><text x=\"40\" y=\"185\" font-size=\"12\" font-weight=\"bold\" fill=\"#b45309\" text-anchor=\"middle\">Spin 1: 3</text><text x=\"115\" y=\"105\" font-size=\"12\" fill=\"#475569\" text-anchor=\"middle\">(1,1)</text><text x=\"185\" y=\"105\" font-size=\"12\" fill=\"#475569\" text-anchor=\"middle\">(1,2)</text><text x=\"255\" y=\"105\" font-size=\"12\" fill=\"#475569\" text-anchor=\"middle\">(1,3)</text><text x=\"325\" y=\"105\" font-size=\"12\" fill=\"#475569\" text-anchor=\"middle\">(1,4)</text><text x=\"115\" y=\"145\" font-size=\"12\" fill=\"#475569\" text-anchor=\"middle\">(2,1)</text><text x=\"185\" y=\"145\" font-size=\"12\" fill=\"#475569\" text-anchor=\"middle\">(2,2)</text><text x=\"255\" y=\"145\" font-size=\"12\" fill=\"#475569\" text-anchor=\"middle\">(2,3)</text><text x=\"325\" y=\"145\" font-size=\"12\" fill=\"#475569\" text-anchor=\"middle\">(2,4)</text><text x=\"115\" y=\"185\" font-size=\"12\" fill=\"#475569\" text-anchor=\"middle\">(3,1)</text><text x=\"185\" y=\"185\" font-size=\"12\" fill=\"#475569\" text-anchor=\"middle\">(3,2)</text><text x=\"255\" y=\"185\" font-size=\"12\" fill=\"#475569\" text-anchor=\"middle\">(3,3)</text><text x=\"325\" y=\"185\" font-size=\"12\" fill=\"#475569\" text-anchor=\"middle\">(3,4)</text><text x=\"200\" y=\"225\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">Grid size = 3 rows × 4 columns = 12 outcomes</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_h.0.4",
+  "sid": "maths_eduqas_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.6-flash",
+  "ts": "2026-11-20T17:22:21.223Z"
+ },
+ "maths_eduqas_h.0.5": {
+  "summary": "Understanding positive integer powers and real roots is fundamental to mastering Higher tier Eduqas GCSE Mathematics. This topic requires fluent non-calculator recall of key powers of 2 (up to 2¹⁰ = 1024), 3 (up to 3⁵ = 243), 4 (up to 4⁴ = 256), and 5 (up to 5⁴ = 625), alongside their corresponding real roots. High-grade candidates must master non-calculator estimation strategies by bounding unknown roots between consecutive integer powers and applying linear interpolation, while navigating the distinction between principal roots, dual solutions to quadratic equations, and real odd roots of negative radicands.",
+  "core": [
+   {
+    "h": "1. Foundations of Index Notation: Bases, Exponents, and Radicals",
+    "p": "An integer power represents repeated multiplication of a base number by itself. In index notation, written as aⁿ, 'a' represents the base and 'n' represents the positive integer exponent (or index). Real roots perform the inverse operation: finding the base value that yields a target number when raised to a given power.",
+    "bullets": [
+     "**Base (a)**: The core number being multiplied repeatedly.",
+     "**Exponent / Index (n)**: The positive integer indicating how many times the base is used as a factor.",
+     "**Radicand**: The quantity under a radical sign (√) whose root is being evaluated.",
+     "**Radical Index (n)**: The small integer outside the radical symbol ⁿ√x specifying the degree of the root (defaulting to 2 for square roots)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Index Notation and Real Root",
+      "p": "For a positive integer n, aⁿ = a × a × ... × a (n factors). The real n-th root ⁿ√x is the real number r such that rⁿ = x."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. Essential Non-Calculator Recall: Powers of 2",
+    "p": "Powers of 2 double at each consecutive step. Rapid, accurate recall of powers of 2 up to 2¹⁰ is essential for Component 1 (Non-Calculator) items involving prime factorisation, exponential equations, and simplifying fractional indices.",
+    "bullets": [
+     "2¹ = 2, 2² = 4, 2³ = 8, 2⁴ = 16, 2⁵ = 32",
+     "2⁶ = 64, 2⁷ = 128, 2⁸ = 256, 2⁹ = 512, 2¹⁰ = 1024",
+     "**Key Equivalence**: Note that 2⁴ = 16 = 4² and 2⁶ = 64 = 8² = 4³. Recognising shared values allows quick base conversion in non-calculator index simplifications."
+    ],
+    "table": {
+     "head": [
+      "Power of 2",
+      "Evaluated Value",
+      "Equivalent Base Forms"
+     ],
+     "rows": [
+      [
+       "2¹",
+       "2",
+       "2"
+      ],
+      [
+       "2²",
+       "4",
+       "4¹"
+      ],
+      [
+       "2³",
+       "8",
+       "8¹"
+      ],
+      [
+       "2⁴",
+       "16",
+       "4²"
+      ],
+      [
+       "2⁵",
+       "32",
+       "32¹"
+      ],
+      [
+       "2⁶",
+       "64",
+       "4³ = 8²"
+      ],
+      [
+       "2⁷",
+       "128",
+       "128¹"
+      ],
+      [
+       "2⁸",
+       "256",
+       "4⁴ = 16²"
+      ],
+      [
+       "2⁹",
+       "512",
+       "512¹"
+      ],
+      [
+       "2¹⁰",
+       "1024",
+       "32²"
+      ]
+     ]
+    },
+    "callouts": []
+   },
+   {
+    "h": "3. Essential Non-Calculator Recall: Powers of 3, 4, and 5",
+    "p": "Recognising powers of 3, 4, and 5 instantly is required by Eduqas mark schemes to earn efficiency marks in non-calculator questions. Memorising these sequences avoids tedious manual long multiplication during time-pressured exams.",
+    "bullets": [
+     "**Powers of 3**: 3¹ = 3, 3² = 9, 3³ = 27, 3⁴ = 81, 3⁵ = 243, 3⁶ = 729",
+     "**Powers of 4**: 4¹ = 4, 4² = 16, 4³ = 64, 4⁴ = 256, 4⁵ = 1024",
+     "**Powers of 5**: 5¹ = 5, 5² = 25, 5³ = 125, 5⁴ = 625, 5⁵ = 3125",
+     "**Inter-base Identity**: Powers of 4 are always even powers of 2 (4ⁿ = (2²)ⁿ = 2²ⁿ). For instance, 4³ = 2⁶ = 64."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Base Conversion Strategy",
+      "p": "When expressions involve bases 2 and 4 simultaneously, convert base 4 to base 2 immediately using 4 = 2²."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Comparative Growth of Integer Powers",
+    "p": "The growth rate of integer powers accelerates dramatically as the base increases. Comparing values across bases 2, 3, 4, and 5 highlights how quickly higher bases outpace smaller ones.",
+    "bullets": [
+     "At exponent n = 2: 2² = 4, 3² = 9, 4² = 16, 5² = 25.",
+     "At exponent n = 3: 2³ = 8, 3³ = 27, 4³ = 64, 5³ = 125.",
+     "At exponent n = 4: 2⁴ = 16, 3⁴ = 81, 4⁴ = 256, 5⁴ = 625.",
+     "Comparing 2⁴ = 16 with 5⁴ = 625 shows that increasing the base from 2 to 5 results in a nearly 40-fold increase in the value."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": [
+     {
+      "cap": "Figure 1: Exponential growth comparison of values for bases 2, 3, 4, and 5 at exponent n = 4.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><text x=\"200\" y=\"25\" font-size=\"13\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">Growth Comparison at Exponent n = 4</text><rect x=\"40\" y=\"180\" width=\"60\" height=\"20\" fill=\"#3b82f6\" rx=\"4\"/><text x=\"70\" y=\"165\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e3a8a\" text-anchor=\"middle\">2⁴ = 16</text><rect x=\"130\" y=\"145\" width=\"60\" height=\"55\" fill=\"#10b981\" rx=\"4\"/><text x=\"160\" y=\"130\" font-size=\"11\" font-weight=\"bold\" fill=\"#065f46\" text-anchor=\"middle\">3⁴ = 81</text><rect x=\"220\" y=\"80\" width=\"60\" height=\"120\" fill=\"#f59e0b\" rx=\"4\"/><text x=\"250\" y=\"65\" font-size=\"11\" font-weight=\"bold\" fill=\"#78350f\" text-anchor=\"middle\">4⁴ = 256</text><rect x=\"310\" y=\"40\" width=\"60\" height=\"160\" fill=\"#ef4444\" rx=\"4\"/><text x=\"340\" y=\"25\" font-size=\"11\" font-weight=\"bold\" fill=\"#7f1d1d\" text-anchor=\"middle\">5⁴ = 625</text><line x1=\"30\" y1=\"200\" x2=\"380\" y2=\"200\" stroke=\"#475569\" stroke-width=\"2\"/></svg>"
+     }
+    ]
+   },
+   {
+    "h": "5. Real Roots: Definitions, Symbols, and Principal Values",
+    "p": "A real root of a number x is a real number r which, when raised to an integer power n, satisfies rⁿ = x. Understanding root notation requires distinguishing between evaluating a radical symbol and solving an equation.",
+    "bullets": [
+     "**Square Root (√x)**: By standard mathematical convention, √x denotes the **principal (positive) square root**. For example, √49 = 7.",
+     "**Dual Solutions to Equations**: The equation x² = 49 has TWO real solutions: x = +7 and x = -7 (written x = ±7).",
+     "**Cube Root (∛x)**: The unique number that cubed gives x. Every real number has exactly one real cube root.",
+     "**Higher Real Roots (ⁿ√x)**: For positive radicands, ⁿ√x is the unique positive real number whose n-th power is x."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Principal Root vs Equation Solving Trap",
+      "p": "Do not write √36 = ±6 on Eduqas mark schemes. The radical sign √ strictly means the positive principal root (+6). Dual signs ± only apply when solving equations such as x² = 36."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Even Roots vs Odd Roots of Positive and Negative Numbers",
+    "p": "The existence and number of real roots depend strictly on the parity (even or odd) of the root index and the sign of the radicand.",
+    "bullets": [
+     "**Even Roots of Positive Radicands**: Yield two real roots (e.g., roots of 16 are +2 and -2; principal value ∜16 = 2).",
+     "**Even Roots of Negative Radicands**: Have **NO real solutions**. For instance, √(-16) has no real value because any real number squared is non-negative.",
+     "**Odd Roots of Positive Radicands**: Yield exactly one positive real root (e.g., ∛27 = 3).",
+     "**Odd Roots of Negative Radicands**: Yield exactly one negative real root (e.g., ∛(-27) = -3, because (-3)³ = -27)."
+    ],
+    "table": {
+     "head": [
+      "Root Type",
+      "Radicand Sign",
+      "Number of Real Roots",
+      "Example Evaluation"
+     ],
+     "rows": [
+      [
+       "Even (e.g., n=2)",
+       "Positive (+)",
+       "2 solutions (1 principal)",
+       "√25 = 5 (x² = 25 ⇒ x = ±5)"
+      ],
+      [
+       "Even (e.g., n=2)",
+       "Negative (-)",
+       "0 real roots",
+       "√(-25) is not a real number"
+      ],
+      [
+       "Odd (e.g., n=3)",
+       "Positive (+)",
+       "1 positive real root",
+       "∛125 = 5"
+      ],
+      [
+       "Odd (e.g., n=3)",
+       "Negative (-)",
+       "1 negative real root",
+       "∛(-125) = -5"
+      ]
+     ]
+    },
+    "callouts": []
+   },
+   {
+    "h": "7. Estimating Square Roots by Bounding",
+    "p": "When estimating non-integer square roots on non-calculator papers, students must bound the target radicand between two consecutive perfect square numbers.",
+    "bullets": [
+     "**Step 1: Identify Bounding Perfect Squares**: Locate perfect squares directly below and above the target number x.",
+     "**Step 2: Establish Integer Bounds**: Take square roots of the bounding squares to get k < √x < k+1.",
+     "**Step 3: Refine Decimal Estimate (Linear Interpolation)**: Determine relative position within the interval: Estimate ≈ k + (x - k²) / ((k+1)² - k²).",
+     "**Example**: Estimate √50. Bounding squares are 49 < 50 < 64. Thus 7 < √50 < 8. Since 50 is 1 unit above 49 in a total gap of 15 units (64 - 49), √50 ≈ 7 + (1/15) ≈ 7.07."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "8. Estimating Cube Roots and Higher Order Roots",
+    "p": "Estimating cube roots and higher roots follows the exact same bounding logic using perfect cubes (1, 8, 27, 64, 125, 216, 343, 512, 729, 1000) or higher powers.",
+    "bullets": [
+     "**Estimating ∛100**: Perfect cubes surrounding 100 are 64 and 125. Since 64 < 100 < 125, we have 4 < ∛100 < 5.",
+     "**Refining ∛100**: Gap from 64 to 125 is 61 units. 100 is 36 units above 64, so ∛100 is slightly over halfway between 4 and 5 (approx 4.6).",
+     "**Estimating ∜200**: Bounding 4th powers are 3⁴ = 81 and 4⁴ = 256. Thus 3 < ∜200 < 4. Since 200 is closer to 256, ∜200 ≈ 3.7 to 3.8."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Method Marks Strategy",
+      "p": "Always write down the two bounding integer powers explicitly (e.g. 'Since 4³ = 64 and 5³ = 125...'). This secures method marks even if your final decimal estimate is slightly imprecise."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Estimating Powers of Decimals and Values between 0 and 1",
+    "p": "When a number between 0 and 1 is raised to a positive integer power, the result becomes **smaller** than the original base. This counter-intuitive behavior is frequently tested in Eduqas ordering questions.",
+    "bullets": [
+     "**Base > 1**: Raising to a positive power increases the value (e.g., 3² = 9 > 3).",
+     "**Base between 0 and 1**: Raising to a positive power decreases the value (e.g., 0.5² = 0.25 < 0.5).",
+     "**Estimating (0.9)⁴**: Since 0.9 is close to 1, (0.9)⁴ will be slightly less than 1 (approx 0.65 - 0.70).",
+     "**Estimating (3.1)⁴**: Round base to 3: 3⁴ = 81. Since 3.1 > 3, (3.1)⁴ will be slightly greater than 81 (approx 92)."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": [
+     {
+      "cap": "Figure 3: Contrast between power growth for bases greater than 1 vs base values between 0 and 1.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"20\" y=\"20\" width=\"170\" height=\"200\" fill=\"#dbeafe\" rx=\"6\" stroke=\"#93c5fd\"/><text x=\"105\" y=\"45\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\" text-anchor=\"middle\">Base x &gt; 1</text><text x=\"105\" y=\"75\" font-size=\"11\" fill=\"#1e293b\" text-anchor=\"middle\">Powers GROW</text><text x=\"105\" y=\"110\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">2¹ = 2</text><text x=\"105\" y=\"135\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">2² = 4</text><text x=\"105\" y=\"160\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">2³ = 8</text><text x=\"105\" y=\"195\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\" text-anchor=\"middle\">xⁿ &gt; x for n &gt; 1</text><rect x=\"210\" y=\"20\" width=\"170\" height=\"200\" fill=\"#fef3c7\" rx=\"6\" stroke=\"#fde68a\"/><text x=\"295\" y=\"45\" font-size=\"12\" font-weight=\"bold\" fill=\"#92400e\" text-anchor=\"middle\">Base 0 &lt; x &lt; 1</text><text x=\"295\" y=\"75\" font-size=\"11\" fill=\"#1e293b\" text-anchor=\"middle\">Powers SHRINK</text><text x=\"295\" y=\"110\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">0.5¹ = 0.5</text><text x=\"295\" y=\"135\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">0.5² = 0.25</text><text x=\"295\" y=\"160\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">0.5³ = 0.125</text><text x=\"295\" y=\"195\" font-size=\"11\" font-weight=\"bold\" fill=\"#b91c1c\" text-anchor=\"middle\">xⁿ &lt; x for n &gt; 1</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "10. Calculator vs Non-Calculator Exam Tactics (Component 1 vs 2)",
+    "p": "Eduqas Component 1 forbids calculators, requiring precise knowledge of standard integer powers. Component 2 allows calculators, testing correct key entry and multi-step evaluation.",
+    "bullets": [
+     "**Component 1 (Non-Calculator)**: Rely on mental recall of powers of 2, 3, 4, 5, manual bounding of surds/roots, and prime factor trees.",
+     "**Component 2 (Calculator)**: Use dedicated power keys (x^□ or xʸ) and root keys (ⁿ√x).",
+     "**Parentheses Rule**: When evaluating negative numbers raised to powers on a calculator, always enclose the negative number in brackets: (-3)⁴ = 81. Typing -3⁴ yields -81 due to operator precedence."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Sanity Checking Calculator Results",
+      "p": "Use Component 1 estimation techniques on Component 2 to quickly check if a calculator result is sensible (e.g. ∛500 must lie between 7 and 8)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "11. Advanced Applications: Exponential Equations and Inequality Ordering",
+    "p": "Top-grade questions require combining powers and roots to solve exponential equations or order expressions containing mixed radicals and powers.",
+    "bullets": [
+     "**Solving Exponential Inequalities**: Solve 3^x = 200. Recalling 3⁴ = 81 and 3⁵ = 243 shows 4 < x < 5. Since 200 is close to 243, x ≈ 4.8.",
+     "**Ordering Unsimplified Expressions**: Order 2⁵, 3³, √700, and 5³ without a calculator. Values: 2⁵ = 32, 3³ = 27, √700 ≈ 26.46 (since 26² = 676), 5³ = 125. Ascending order: √700, 3³, 2⁵, 5³.",
+     "**Combining Index Rules with Power Recall**: Simplify (∛125 × 2⁵) / 4² = (5 × 32) / 16 = 5 × 2 = 10."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Power Rocket and Root Anchor",
+   "p": "Think of positive integer powers as a multi-stage rocket boost where each step multiplies your current altitude by the base number—climbing an increasingly steep ladder where rungs get rapidly farther apart. Finding a real root is like dropping an anchor from your high altitude back down to determine the ground-level starting step. The analogy breaks down because physical rockets accelerate continuously, whereas integer powers multiply discrete base factors in instant jumps between integer steps."
+  },
+  "terms": [
+   {
+    "t": "Base",
+    "d": "The repeated factor in an exponential expression aⁿ."
+   },
+   {
+    "t": "Exponent (Index)",
+    "d": "The integer n in aⁿ indicating how many times the base is multiplied by itself."
+   },
+   {
+    "t": "Power",
+    "d": "The result of raising a base to an exponent (or the expression aⁿ as a whole)."
+   },
+   {
+    "t": "Radicand",
+    "d": "The value sitting under the radical sign ⁿ√x whose root is being calculated."
+   },
+   {
+    "t": "Radical Symbol",
+    "d": "The symbol (√) used to denote a square root or higher root."
+   },
+   {
+    "t": "Square Root",
+    "d": "A number r such that r² = x."
+   },
+   {
+    "t": "Cube Root",
+    "d": "A number r such that r³ = x."
+   },
+   {
+    "t": "Principal Root",
+    "d": "The unique positive real root of a positive number, denoted by √x."
+   },
+   {
+    "t": "Even Root",
+    "d": "A root with an even index (e.g. n = 2, 4, 6), which has no real solutions for negative radicands."
+   },
+   {
+    "t": "Odd Root",
+    "d": "A root with an odd index (e.g. n = 3, 5), which yields exactly one real root for any real radicand."
+   },
+   {
+    "t": "Bounding",
+    "d": "Enclosing an unknown value between two known consecutive integer powers or roots."
+   },
+   {
+    "t": "Linear Interpolation",
+    "d": "Estimating a value within an interval by assuming a proportional linear shift between endpoints."
+   },
+   {
+    "t": "Base Conversion",
+    "d": "Rewriting powers with different bases in terms of a common base (e.g., 4³ = (2²)³ = 2⁶)."
+   },
+   {
+    "t": "Real Root",
+    "d": "A root that belongs to the set of real numbers (excluding imaginary/complex numbers)."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Writing (-3)² = -9",
+    "r": "(-3)² = (-3) × (-3) = +9. Parentheses are required to square the negative sign."
+   },
+   {
+    "w": "Stating √49 = ±7 when evaluating a radical expression",
+    "r": "√49 refers strictly to the principal square root, which is +7. Dual signs (±) apply only when solving equations like x² = 49."
+   },
+   {
+    "w": "Claiming √(-25) = -5",
+    "r": "Even roots of negative numbers have no real solutions because (-5)² = +25, not -25."
+   },
+   {
+    "w": "Writing ∛(-64) has no real answer",
+    "r": "∛(-64) = -4 because (-4)³ = -64. Odd roots of negative numbers are fully defined in real numbers."
+   },
+   {
+    "w": "Confusing 2⁵ with 2 × 5 = 10",
+    "r": "2⁵ represents 2 × 2 × 2 × 2 × 2 = 32."
+   },
+   {
+    "w": "Assuming 4³ is equal to 3⁴",
+    "r": "4³ = 64, whereas 3⁴ = 81. Swapping the base and exponent changes the value entirely."
+   },
+   {
+    "w": "Estimating √50 as 25",
+    "r": "√50 is between √49 = 7 and √64 = 8, giving approximately 7.07. Halving a number is not taking its square root."
+   },
+   {
+    "w": "Evaluating (0.4)² as 1.6",
+    "r": "0.4 × 0.4 = 0.16. Squaring a decimal less than 1 produces two decimal places."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Evaluate 3⁴ without using a calculator.",
+    "marks": 1,
+    "model": [
+     "3⁴ = 3 × 3 × 3 × 3 = 81"
+    ],
+    "tip": "Recall powers of 3 directly: 3¹=3, 3²=9, 3³=27, 3⁴=81."
+   },
+   {
+    "q": "Evaluate ∛(-125) without using a calculator.",
+    "marks": 1,
+    "model": [
+     "(-5) × (-5) × (-5) = -125",
+     "∛(-125) = -5"
+    ],
+    "tip": "Odd roots of negative numbers are negative."
+   },
+   {
+    "q": "Determine which is larger: 2⁶ or 4³. Show your working.",
+    "marks": 2,
+    "model": [
+     "Evaluate 2⁶ = 64",
+     "Evaluate 4³ = 64 (or show 4³ = (2²)³ = 2⁶)",
+     "State that both expressions are equal."
+    ],
+    "tip": "Convert both numbers to base 2 to compare directly."
+   },
+   {
+    "q": "Estimate the value of √75 to 1 decimal place. Show clear working.",
+    "marks": 2,
+    "model": [
+     "Identify bounding perfect squares: 64 < 75 < 81",
+     "State integer bounds: 8 < √75 < 9",
+     "Interpolate: 75 is 11 units above 64 in an interval of 17 units (81-64), so estimate is approx 8.6 or 8.7."
+    ],
+    "tip": "Always state the two surrounding perfect squares to secure the method mark."
+   },
+   {
+    "q": "Find the consecutive integers k and k+1 such that k < ∛200 < k+1.",
+    "marks": 2,
+    "model": [
+     "Identify perfect cubes: 5³ = 125 and 6³ = 216",
+     "Write: 125 < 200 < 216",
+     "Conclude k = 5 and k+1 = 6 (so 5 < ∛200 < 6)."
+    ],
+    "tip": "Memorise perfect cubes up to 10³ = 1000 for Component 1."
+   },
+   {
+    "q": "Without using a calculator, evaluate (2⁷ × 5³) / (4³ × √25).",
+    "marks": 4,
+    "model": [
+     "Rewrite 4³ as (2²)³ = 2⁶",
+     "Evaluate √25 = 5",
+     "Simplify expression to (2⁷ × 5³) / (2⁶ × 5)",
+     "Apply index laws: 2⁷⁻⁶ × 5³⁻¹ = 2¹ × 5² = 2 × 25 = 50"
+    ],
+    "tip": "Express all terms with prime bases (2 and 5) before simplifying."
+   },
+   {
+    "q": "Estimate the value of (√98 + 3⁴) / (0.49²). Show clear estimation steps.",
+    "marks": 4,
+    "model": [
+     "Estimate √98 ≈ √100 = 10",
+     "Evaluate 3⁴ = 81",
+     "Estimate numerator: 10 + 81 = 91",
+     "Estimate denominator: 0.49 ≈ 0.5, so 0.5² = 0.25",
+     "Evaluate 91 / 0.25 = 91 × 4 = 364 (accept 360 to 370 depending on rounding)."
+    ],
+    "tip": "Dividing by 0.25 is equivalent to multiplying by 4."
+   },
+   {
+    "q": "A square has an area of 5⁴ cm². A cube has a volume of 2¹² cm³. Show that the ratio of the side length of the square to the edge length of the cube is 25 : 16.",
+    "marks": 6,
+    "model": [
+     "Side length of square = √(5⁴) = 5² = 25 cm",
+     "Volume of cube = 2¹² ⇒ Edge length = ∛(2¹²) = 2⁴ cm",
+     "Evaluate edge length of cube: 2⁴ = 16 cm",
+     "Form ratio of square side to cube edge: 25 : 16",
+     "State that 25 : 16 matches the required ratio."
+    ],
+    "tip": "Express roots as fractional exponents: √(5⁴) = 5^(4/2) = 5²."
+   },
+   {
+    "q": "Solve 3^x = 200 by finding the two consecutive integers between which x lies, and estimate x to 1 decimal place with justification.",
+    "marks": 4,
+    "model": [
+     "Recall powers of 3: 3⁴ = 81 and 3⁵ = 243",
+     "State that 81 < 200 < 243, so 4 < x < 5",
+     "Observe that 200 is much closer to 243 (gap of 43) than 81 (gap of 119)",
+     "Estimate x ≈ 4.8 (accept 4.7 to 4.9 with reasoning)."
+    ],
+    "tip": "Explicitly explain why x is closer to 5 than 4 to earn the full reasoning mark."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Estimate the value of √110 to one decimal place without using a calculator.",
+    "steps": [
+     "Step 1: Locate the nearest perfect square numbers below and above 110.",
+     "100 (which is 10²) and 121 (which is 11²).",
+     "Step 2: Write down the inequality bounds: 100 < 110 < 121, so 10 < √110 < 11.",
+     "Step 3: Calculate the total gap between the bounding squares: 121 - 100 = 21.",
+     "Step 4: Find the distance from the lower bound to target: 110 - 100 = 10.",
+     "Step 5: Apply linear interpolation: √110 ≈ 10 + (10/21) ≈ 10 + 0.48 = 10.48.",
+     "Step 6: Round to 1 decimal place: 10.5."
+    ],
+    "ans": "10.5"
+   },
+   {
+    "q": "Evaluate (4⁴ × ∛27) / (2⁵ × 5²) without using a calculator.",
+    "steps": [
+     "Step 1: Convert base 4 to base 2: 4⁴ = (2²)⁴ = 2⁸.",
+     "Step 2: Evaluate the cube root: ∛27 = 3.",
+     "Step 3: Evaluate the denominator power of 5: 5² = 25.",
+     "Step 4: Substitute values into expression: (2⁸ × 3) / (2⁵ × 25).",
+     "Step 5: Simplify powers of 2 using index division rule: 2⁸ / 2⁵ = 2³ = 8.",
+     "Step 6: Multiply remaining numerator terms: 8 × 3 = 24.",
+     "Step 7: Combine with denominator: 24 / 25 = 0.96."
+    ],
+    "ans": "24/25 (or 0.96)"
+   },
+   {
+    "q": "Find all real solutions to the equation x⁴ = 256 and compare the result with the evaluated expression ∜256.",
+    "steps": [
+     "Step 1: To solve x⁴ = 256, take the 4th root of both sides.",
+     "Step 2: Since 4 is an even index, taking an even root yields both positive and negative real solutions: x = ±∜256.",
+     "Step 3: Recall powers of 2 or 4: 4⁴ = 256 (or 2⁸ = 256). Thus ∜256 = 4.",
+     "Step 4: The solutions to x⁴ = 256 are x = +4 and x = -4.",
+     "Step 5: The expression ∜256 strictly denotes the positive principal 4th root, so ∜256 = 4.",
+     "Step 6: Conclusion: Equation has 2 real solutions (x = ±4), whereas radical expression ∜256 has 1 value (+4)."
+    ],
+    "ans": "Equation solutions: x = ±4; Radical expression ∜256 = 4."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Figure 2: Contrast between power growth for bases greater than 1 vs base values between 0 and 1.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"20\" y=\"20\" width=\"170\" height=\"200\" fill=\"#dbeafe\" rx=\"6\" stroke=\"#93c5fd\"/><text x=\"105\" y=\"45\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\" text-anchor=\"middle\">Base x &gt; 1</text><text x=\"105\" y=\"75\" font-size=\"11\" fill=\"#1e293b\" text-anchor=\"middle\">Powers GROW</text><text x=\"105\" y=\"110\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">2¹ = 2</text><text x=\"105\" y=\"135\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">2² = 4</text><text x=\"105\" y=\"160\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">2³ = 8</text><text x=\"105\" y=\"195\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\" text-anchor=\"middle\">xⁿ &gt; x for n &gt; 1</text><rect x=\"210\" y=\"20\" width=\"170\" height=\"200\" fill=\"#fef3c7\" rx=\"6\" stroke=\"#fde68a\"/><text x=\"295\" y=\"45\" font-size=\"12\" font-weight=\"bold\" fill=\"#92400e\" text-anchor=\"middle\">Base 0 &lt; x &lt; 1</text><text x=\"295\" y=\"75\" font-size=\"11\" fill=\"#1e293b\" text-anchor=\"middle\">Powers SHRINK</text><text x=\"295\" y=\"110\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">0.5¹ = 0.5</text><text x=\"295\" y=\"135\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">0.5² = 0.25</text><text x=\"295\" y=\"160\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">0.5³ = 0.125</text><text x=\"295\" y=\"195\" font-size=\"11\" font-weight=\"bold\" fill=\"#b91c1c\" text-anchor=\"middle\">xⁿ &lt; x for n &gt; 1</text></svg>"
+   },
+   {
+    "cap": "Figure 3: Exponential growth comparison of values for bases 2, 3, 4, and 5 at exponent n = 4.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><text x=\"200\" y=\"25\" font-size=\"13\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">Growth Comparison at Exponent n = 4</text><rect x=\"40\" y=\"180\" width=\"60\" height=\"20\" fill=\"#3b82f6\" rx=\"4\"/><text x=\"70\" y=\"165\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e3a8a\" text-anchor=\"middle\">2⁴ = 16</text><rect x=\"130\" y=\"145\" width=\"60\" height=\"55\" fill=\"#10b981\" rx=\"4\"/><text x=\"160\" y=\"130\" font-size=\"11\" font-weight=\"bold\" fill=\"#065f46\" text-anchor=\"middle\">3⁴ = 81</text><rect x=\"220\" y=\"80\" width=\"60\" height=\"120\" fill=\"#f59e0b\" rx=\"4\"/><text x=\"250\" y=\"65\" font-size=\"11\" font-weight=\"bold\" fill=\"#78350f\" text-anchor=\"middle\">4⁴ = 256</text><rect x=\"310\" y=\"40\" width=\"60\" height=\"160\" fill=\"#ef4444\" rx=\"4\"/><text x=\"340\" y=\"25\" font-size=\"11\" font-weight=\"bold\" fill=\"#7f1d1d\" text-anchor=\"middle\">5⁴ = 625</text><line x1=\"30\" y1=\"200\" x2=\"380\" y2=\"200\" stroke=\"#475569\" stroke-width=\"2\"/></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_h.0.5",
+  "sid": "maths_eduqas_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.6-flash",
+  "ts": "2026-11-20T17:23:39.257Z"
+ },
+ "maths_eduqas_h.0.9": {
+  "summary": "Decimals are classified as rational when they can be written as exact fractions of integers, appearing either as terminating decimals or endlessly repeating recurring decimals. Identifying whether a fully simplified fraction terminates or recurs relies on prime factorisation of its denominator: denominators with only 2 and 5 as prime factors terminate, while any other prime factor causes a recurring pattern. Mastering algebraic techniques to convert recurring decimals into exact fractions is an essential Component 1 non-calculator and Component 2 calculator skill required for grade 9 success in Eduqas GCSE Mathematics.",
+  "core": [
+   {
+    "h": "Classification of Decimals: Rational vs Irrational",
+    "p": "Every real number decimal falls into one of three categories: terminating, recurring, or non-terminating non-recurring. The first two categories represent **rational numbers**, meaning they can be expressed in the exact form a/b where a and b are integers and b ≠ 0.",
+    "bullets": [
+     "**Terminating Decimals**: Have a finite number of digits after the decimal point (e.g. 0.375, 4.125).",
+     "**Recurring Decimals**: Have a repeating pattern of digits that continues infinitely (e.g. 0.333..., 0.142857142857...).",
+     "**Non-terminating, Non-recurring Decimals**: Infinite decimals with no repeating pattern, representing **irrational numbers** such as π or √2.",
+     "Eduqas mark schemes require clear distinction between exact fraction representations and rounded decimal approximations."
+    ],
+    "table": {
+     "head": [
+      "Decimal Type",
+      "Pattern Property",
+      "Rational / Irrational",
+      "Exact Fraction Form"
+     ],
+     "rows": [
+      [
+       "Terminating",
+       "Ends after finite decimal places",
+       "Rational",
+       "Yes (e.g. 3/8)"
+      ],
+      [
+       "Recurring",
+       "Infinite repeating digit cycle",
+       "Rational",
+       "Yes (e.g. 4/11)"
+      ],
+      [
+       "Non-terminating & Non-recurring",
+       "Infinite without repetition",
+       "Irrational",
+       "No (e.g. π, √3)"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Rational Number",
+      "p": "A number that can be expressed in the form a/b, where a and b are integers and b is non-zero. Its decimal expansion always terminates or recurs."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "The Prime Factor Test for Terminating Decimals",
+    "p": "Whether a simplified fraction produces a terminating or recurring decimal depends entirely on the prime factors of its denominator. Base-10 arithmetic uses prime factors 2 and 5.",
+    "bullets": [
+     "**First Step**: Always simplify the fraction to its lowest terms by dividing out the Highest Common Factor (HCF).",
+     "**Second Step**: Express the denominator as a product of prime factors.",
+     "**Terminating Condition**: If the simplified denominator's prime factorisation contains **only 2s, only 5s, or both 2s and 5s**, the fraction produces a **terminating decimal**.",
+     "**Recurring Condition**: If the simplified denominator contains **any prime factor other than 2 or 5** (such as 3, 7, 11, 13, etc.), the fraction produces a **recurring decimal**."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "The Denominator Prime Factor Rule",
+      "p": "Fraction a/b in lowest terms terminates if and only if b = 2^m × 5^n for non-negative integers m and n."
+     },
+     {
+      "k": "warn",
+      "t": "Unsimplified Fraction Trap",
+      "p": "Do not test prime factors before simplifying! 21/60 seems to have prime factor 3 in 60, but simplified 21/60 = 7/20. 20 = 2² × 5, so 21/60 actually terminates (0.35)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Standard Dot Notation Rules in Eduqas GCSE",
+    "p": "Eduqas uses dot notation to specify recurring digits precisely. Correct placement of dots over digits is essential for full marks in both non-calculator and calculator papers.",
+    "bullets": [
+     "**Single Repeating Digit**: A single dot is placed directly above the repeating digit. Example: 0.444... = 0.4̇.",
+     "**Two Repeating Digits**: A dot is placed over both repeating digits. Example: 0.353535... = 0.3̇5̇.",
+     "**Three or More Repeating Digits**: Place a dot over the **first** digit and the **last** digit of the repeating block only. Example: 0.12341234... = 0.1̇234̇.",
+     "**Offset/Delayed Repeating Digits**: Non-repeating digits after the decimal point do not receive dots. Example: 0.1666... = 0.16̇; 0.4182182... = 0.41̇82̇."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Do Not Put Dots Over Middle Digits",
+      "p": "For a block of 4 digits repeating like 0.51235123..., write 0.5̇123̇. Writing dots over every digit (0.5̇1̇2̇3̇) is incorrect in standard notation."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Converting Terminating Decimals to Simplified Fractions",
+    "p": "Converting terminating decimals into simplified fractions relies on place value powers of 10 followed by simplifying the fraction to its lowest terms.",
+    "bullets": [
+     "Identify the place value of the final decimal digit (10ths, 100ths, 1000ths).",
+     "Write the digits as the numerator and the place value power of 10 as the denominator.",
+     "Divide both numerator and denominator by their Highest Common Factor (HCF) until coprime.",
+     "Example: 0.048 = 48/1000. HCF(48, 1000) = 8. Dividing by 8 gives 6/125."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Converting Fractions to Decimals Using Short Division",
+    "p": "To convert any fraction a/b into a decimal without a calculator, carry out short division (numerator divided by denominator), adding decimal zeros as necessary.",
+    "bullets": [
+     "Set up numerator ÷ denominator inside the division bracket (bus stop method).",
+     "Place decimal point after the numerator and append zeros.",
+     "Carry over remainders to subsequent decimal positions.",
+     "If remainders become zero, the decimal terminates.",
+     "If a remainder repeats a previously encountered remainder, the decimal has entered a recurring cycle."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Pigeonhole Principle in Division",
+      "p": "When dividing by denominator b, there are at most b - 1 possible non-zero remainders. Therefore, the decimal cycle length can never exceed b - 1."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Algebraic Method: Simple Single-Digit Recurring Decimals",
+    "p": "To convert recurring decimals into fractions algebraically, multiply the decimal by powers of 10 to align the infinite repeating tails, then subtract to eliminate them.",
+    "bullets": [
+     "**Step 1**: Set variable x equal to the recurring decimal (written out with at least 3 repeating blocks).",
+     "**Step 2**: Since 1 digit recurs, multiply both sides by 10^1 = 10.",
+     "**Step 3**: Subtract equation (1) from equation (2) to eliminate the infinite recurring decimal part.",
+     "**Step 4**: Solve for x and simplify the fraction."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Algebraic Proof Requirement",
+      "p": "In Eduqas non-calculator papers, full marks require showing the explicit equation setting x = 0.ẋ, the multiplication by 10, the line showing subtraction (9x = ...), and the final simplified fraction."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Algebraic Method: Multi-Digit Pure Recurring Decimals",
+    "p": "When two or more digits recur immediately after the decimal point, multiply by 10^n, where n is the length of the repeating block.",
+    "bullets": [
+     "For 2 recurring digits (e.g. 0.3535...): Multiply by 10² = 100.",
+     "For 3 recurring digits (e.g. 0.123123...): Multiply by 10³ = 1000.",
+     "Subtract x from 10^n x so that (10^n - 1)x equals an integer.",
+     "Divide by (10^n - 1) and simplify the resulting fraction."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Selecting the Correct Power of 10",
+      "p": "Match the number of zeros in your multiplier to the number of digits in the recurring pattern. 2 repeating digits -> multiply by 100."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Algebraic Method: Delayed (Offset) Recurring Decimals",
+    "p": "When non-repeating digits precede the recurring block after the decimal point, two equations must be created where the decimal tail matches exactly.",
+    "bullets": [
+     "**Method A (Two Powers of 10)**: Find one power of 10 to shift non-repeating digits left of the decimal, and a second power of 10 to shift one full repeating cycle left.",
+     "Example for x = 0.16̇5̇ (1 non-repeating digit '1', 2 repeating digits '65'):",
+     "1) 10x = 1.656565...",
+     "2) 1000x = 165.656565...",
+     "3) Subtract: 1000x - 10x = 165.6565... - 1.6565... => 990x = 164.",
+     "4) x = 164 / 990 = 82 / 495.",
+     "**Method B (Standard Subtraction with Decimal Numerator)**: Multiply by 10^n for cycle length, subtract x, then clear the decimal numerator by multiplying top and bottom by 10."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Decimal Numerator Penalty",
+      "p": "Leaving a fraction as 16.4/99 loses the final accuracy mark in Eduqas mark schemes. A fraction must consist of whole number integers."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Calculations Involving Recurring Decimals",
+    "p": "Never perform arithmetic directly on recurring decimals by rounding or adding decimal columns. Convert all recurring decimals to exact fractions first.",
+    "bullets": [
+     "**Addition / Subtraction**: Convert each recurring decimal to an exact fraction, find a common denominator, add/subtract numerators, and simplify.",
+     "**Multiplication / Division**: Convert each decimal to an exact fraction, cancel common factors, and multiply numerators and denominators.",
+     "**Example**: Evaluate 0.4̇ × 0.1̇8̇.",
+     "Convert: 0.4̇ = 4/9; 0.1̇8̇ = 18/99 = 2/11.",
+     "Multiply: (4/9) × (2/11) = 8/99.",
+     "If required as a decimal: 8/99 = 0.0808... = 0.0̇8̇."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Converting Mixed Numbers and Recurring Decimals Greater Than 1",
+    "p": "For numbers with a non-zero integer part (e.g. 3.2̇7̇), separate the integer part or treat the entire number algebraically.",
+    "bullets": [
+     "**Separation Method**: 3.2̇7̇ = 3 + 0.2̇7̇. Convert 0.2̇7̇ = 27/99 = 3/11. Combined: 3 + 3/11 = 36/11.",
+     "**Direct Algebraic Method**: Let x = 3.272727... Then 100x = 327.272727... Subtracting gives 99x = 324 => x = 324/99 = 36/11.",
+     "Both methods are accepted by Eduqas mark schemes, but separation avoids arithmetic errors with large integers."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Advanced Eduqas Proofs and Theoretical Questions",
+    "p": "Grade 9 questions often test theoretical understanding, such as proving that 0.9̇ = 1 or working with algebraic denominators.",
+    "bullets": [
+     "**Proof that 0.9̇ = 1**:",
+     "Let x = 0.9999...",
+     "10x = 9.9999...",
+     "10x - x = 9.9999... - 0.9999...",
+     "9x = 9 => x = 1.",
+     "**Algebraic Denominator Problems**: Determining values of n for which (n + 3) / (20n) produces a terminating decimal requires analyzing prime factors of 20n."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Mathematical Equivalence",
+      "p": "0.999... is not 'approaching 1' or 'almost 1'; it is exact mathematical equality to 1."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Sound Loop & Audio Track",
+   "p": "Converting a recurring decimal to a fraction is like isolating an infinite audio loop on a music track. A terminating decimal is like a sound effect with a clear ending. A recurring decimal is a clean 2-second drum beat repeating endlessly. By shifting the track by exactly one loop length (multiplying by 10, 100, etc.) and playing it inverted alongside the original track (algebraic subtraction), the infinite repeating drum loop perfectly cancels itself out, leaving behind only the clear static count at the beginning (a finite integer equation). This breakdown occurs if the track has random un-looped noise at the start (offset recurring decimals), requiring you to slice off the prefix first before matching the loop phase.",
+   "breakdown": "The analogy breaks down because sound editing works with physical soundwaves, whereas recurring decimal subtraction operates on infinite mathematical precision with zero remainder."
+  },
+  "terms": [
+   {
+    "t": "Terminating Decimal",
+    "d": "A decimal number with a finite number of digits following the decimal point."
+   },
+   {
+    "t": "Recurring Decimal",
+    "d": "A decimal number in which a digit or block of digits repeats endlessly."
+   },
+   {
+    "t": "Rational Number",
+    "d": "A number that can be expressed as a fraction a/b where a and b are integers and b ≠ 0."
+   },
+   {
+    "t": "Irrational Number",
+    "d": "A real number that cannot be written as a simple fraction a/b; its decimal expansion is non-terminating and non-recurring."
+   },
+   {
+    "t": "Dot Notation",
+    "d": "The standard notation where dots placed above digits indicate the start and end of a recurring sequence."
+   },
+   {
+    "t": "Coprime",
+    "d": "Two integers having no common prime factors other than 1; their highest common factor is 1."
+   },
+   {
+    "t": "Denominator",
+    "d": "The integer written on the bottom of a fraction line."
+   },
+   {
+    "t": "Numerator",
+    "d": "The integer written on the top of a fraction line."
+   },
+   {
+    "t": "Prime Factorisation",
+    "d": "Expressing a positive integer strictly as the product of prime numbers."
+   },
+   {
+    "t": "Period / Cycle Length",
+    "d": "The number of digits in the repeating block of a recurring decimal."
+   },
+   {
+    "t": "Offset / Delayed Recurrence",
+    "d": "A recurring decimal where repeating digits do not begin immediately after the decimal point."
+   },
+   {
+    "t": "Algebraic Elimination",
+    "d": "The process of subtracting two equations with matching decimal parts to eliminate infinite decimal tails."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "0.1̇6̇ = 16/99 for decimal 0.1666...",
+    "r": "0.1666... is 0.16̇ (only 6 recurs). 10x = 1.666..., 100x = 16.666..., 90x = 15 => x = 15/90 = 1/6."
+   },
+   {
+    "w": "Writing 0.3̇4̇5̇ for 0.345345...",
+    "r": "Write 0.3̇45̇ placing dots only on the first and last digits of the repeating sequence."
+   },
+   {
+    "w": "Leaving final fraction as 24.3 / 99",
+    "r": "Fractions must contain whole numbers: 24.3/99 = 243/990 = 27/110."
+   },
+   {
+    "w": "Stating 9/15 recurs because 15 has prime factor 3",
+    "r": "Simplify first: 9/15 = 3/5. The simplified denominator 5 has only prime factor 5, so it terminates (0.6)."
+   },
+   {
+    "w": "Multiplying x = 0.4̇1̇2̇ by 10 instead of 1000",
+    "r": "Multiply by 10^n where n is the block length. 3 repeating digits requires multiplying by 1000."
+   },
+   {
+    "w": "Adding 0.3̇ + 0.6̇ to get 0.9̇ and stopping",
+    "r": "0.3̇ = 3/9 = 1/3 and 0.6̇ = 6/9 = 2/3. 1/3 + 2/3 = 1."
+   },
+   {
+    "w": "Forgetting to write x = ... at the start of an algebraic proof",
+    "r": "Eduqas mark schemes award a method mark specifically for defining the variable equation x = 0.xxx..."
+   },
+   {
+    "w": "Thinking 0.999... is slightly less than 1",
+    "r": "0.999... is exactly equal to 1, as proven by 9x = 9 => x = 1."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Show algebraically that the recurring decimal 0.4̇7̇ can be written as 47/99.",
+    "marks": 2,
+    "model": [
+     "Let x = 0.474747...",
+     "100x = 47.474747...",
+     "100x - x = 47",
+     "99x = 47 => x = 47/99"
+    ],
+    "tip": "Always write out at least two full cycles of digits in your initial equation to show clear rigor."
+   },
+   {
+    "q": "Prove algebraically that the recurring decimal 0.21̇6̇ can be written as 107/495.",
+    "marks": 3,
+    "model": [
+     "Let x = 0.2161616...",
+     "10x = 2.161616...",
+     "1000x = 216.161616...",
+     "1000x - 10x = 214",
+     "990x = 214",
+     "x = 214/990 = 107/495"
+    ],
+    "tip": "Subtracting 10x from 1000x aligns the decimal parts perfectly so no decimal subtraction errors occur."
+   },
+   {
+    "q": "Express 3.1̇42̇ as an improper fraction in its simplest form.",
+    "marks": 3,
+    "model": [
+     "Let x = 3.142142142...",
+     "1000x = 3142.142142142...",
+     "999x = 3139",
+     "x = 3139/999"
+    ],
+    "tip": "Check if 3139 and 999 share factors by testing divisibility rules for 3 and 9 (sum of digits 3+1+3+9 = 16, so not divisible by 3)."
+   },
+   {
+    "q": "State whether the fraction 21/140 terminates or recurs. You must justify your answer without converting to a decimal.",
+    "marks": 2,
+    "model": [
+     "Simplify fraction: HCF(21, 140) = 7, so 21/140 = 3/20",
+     "Prime factorise denominator: 20 = 2² × 5",
+     "Since denominator prime factors are only 2 and 5, the decimal terminates."
+    ],
+    "tip": "Simplifying the fraction first is vital; testing 140 directly leads to incorrect reasoning about factor 7."
+   },
+   {
+    "q": "Work out 0.7̇ + 0.2̇4̇. Give your answer as a simplified fraction.",
+    "marks": 4,
+    "model": [
+     "Convert 0.7̇: x = 0.777..., 10x = 7.777..., 9x = 7 => 0.7̇ = 7/9",
+     "Convert 0.2̇4̇: y = 0.2424..., 100y = 24.2424..., 99y = 24 => 0.2̇4̇ = 24/99 = 8/33",
+     "Add fractions: 7/9 + 8/33 = 77/99 + 24/99 = 101/99"
+    ],
+    "tip": "Never add recurring decimals directly as 0.977... Convert to fractions with a common denominator."
+   },
+   {
+    "q": "Prove algebraically that 0.9̇ = 1.",
+    "marks": 2,
+    "model": [
+     "Let x = 0.9999...",
+     "10x = 9.9999...",
+     "10x - x = 9",
+     "9x = 9 => x = 1"
+    ],
+    "tip": "State x = 0.999... clearly. The subtraction 9x = 9 leading to x = 1 is a valid standard algebraic proof."
+   },
+   {
+    "q": "Find the value of k such that 0.0̇6̇ × k = 1.",
+    "marks": 3,
+    "model": [
+     "Let x = 0.060606...",
+     "100x = 6.060606... => 99x = 6 => x = 6/99 = 2/33",
+     "(2/33) × k = 1",
+     "k = 33/2 = 16.5 (or 33/2)"
+    ],
+    "tip": "Recognise that k is the reciprocal of the fraction representation of 0.0̇6̇."
+   },
+   {
+    "q": "Explain why 5/12 produces a recurring decimal.",
+    "marks": 2,
+    "model": [
+     "5/12 is in its simplest form.",
+     "Prime factorisation of denominator 12 = 2² × 3.",
+     "Because it contains a prime factor other than 2 or 5 (the factor 3), it must recur."
+    ],
+    "tip": "Explicitly mention that the fraction is already in simplest form."
+   },
+   {
+    "q": "Evaluate (0.6̇)² as a fraction in its simplest form.",
+    "marks": 3,
+    "model": [
+     "Let x = 0.666... => 10x = 6.666... => 9x = 6 => x = 6/9 = 2/3",
+     "Square the fraction: (2/3)² = 4/9",
+     "Final fraction = 4/9"
+    ],
+    "tip": "Do not attempt to square 0.666... directly as decimals. Always convert to fractions first."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Convert the delayed recurring decimal 0.354̇8̇ into a simplified fraction using a complete algebraic method.",
+    "steps": [
+     "Step 1: Assign a variable to the decimal written out with repeated digits: Let x = 0.35484848...",
+     "Step 2: Identify non-repeating digits ('35', 2 digits) and repeating digits ('48', 2 digits).",
+     "Step 3: Multiply x by 100 to move non-repeating digits to the left of the decimal point: 100x = 35.484848...",
+     "Step 4: Multiply x by 10000 to move one full repeating pattern past the decimal point: 10000x = 3548.484848...",
+     "Step 5: Subtract equation (1) from equation (2) to eliminate the infinite recurring decimal tail:",
+     "10000x - 100x = 3548.484848... - 35.484848...",
+     "9900x = 3513",
+     "Step 6: Solve for x: x = 3513 / 9900",
+     "Step 7: Simplify the fraction. Test divisibility by 3: sum of digits 3+5+1+3 = 12 (divisible by 3).",
+     "3513 ÷ 3 = 1171",
+     "9900 ÷ 3 = 3300",
+     "Final simplified fraction = 1171 / 3300."
+    ],
+    "ans": "1171 / 3300"
+   },
+   {
+    "q": "A fraction is given by F = 14 / (2^a × 5^b × 7). Given that a and b are positive integers, prove whether F is a terminating or recurring decimal.",
+    "steps": [
+     "Step 1: Simplify the fraction F by canceling common factors in numerator and denominator.",
+     "Numerator = 14 = 2 × 7.",
+     "Denominator = 2^a × 5^b × 7.",
+     "Cancel factor 7: F = 2 / (2^a × 5^b).",
+     "Cancel factor 2 (since a ≥ 1): F = 1 / (2^(a-1) × 5^b).",
+     "Step 2: Analyze the remaining prime factors of the simplified denominator.",
+     "The simplified denominator consists solely of powers of 2 and 5.",
+     "Step 3: State conclusion: Because the simplified denominator has no prime factors other than 2 and 5, F is guaranteed to be a terminating decimal for all positive integers a and b."
+    ],
+    "ans": "Terminating decimal (proven by simplifying factor 7 out)"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Figure 1: Anatomy of dot notation for single, multi-digit, and delayed recurring decimals.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"20\" y=\"20\" width=\"110\" height=\"80\" fill=\"#dbeafe\" stroke=\"#1e40af\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"75\" y=\"50\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\" text-anchor=\"middle\">0.7&#775;</text><text x=\"75\" y=\"75\" font-size=\"11\" fill=\"#1e40af\" text-anchor=\"middle\">Single Repeating</text><text x=\"75\" y=\"88\" font-size=\"11\" fill=\"#1e40af\" text-anchor=\"middle\">= 0.7777...</text><rect x=\"145\" y=\"20\" width=\"110\" height=\"80\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"200\" y=\"50\" font-size=\"13\" font-weight=\"bold\" fill=\"#78350f\" text-anchor=\"middle\">0.3&#775;5&#775;</text><text x=\"200\" y=\"75\" font-size=\"11\" fill=\"#b45309\" text-anchor=\"middle\">Two Repeating</text><text x=\"200\" y=\"88\" font-size=\"11\" fill=\"#b45309\" text-anchor=\"middle\">= 0.353535...</text><rect x=\"270\" y=\"20\" width=\"110\" height=\"80\" fill=\"#e9d5ff\" stroke=\"#6b21a8\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"325\" y=\"50\" font-size=\"13\" font-weight=\"bold\" fill=\"#581c87\" text-anchor=\"middle\">0.1&#775;234&#775;</text><text x=\"325\" y=\"75\" font-size=\"11\" fill=\"#6b21a8\" text-anchor=\"middle\">Block of 4</text><text x=\"325\" y=\"88\" font-size=\"11\" fill=\"#6b21a8\" text-anchor=\"middle\">Dots on Ends Only</text><rect x=\"20\" y=\"120\" width=\"360\" height=\"95\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"200\" y=\"145\" font-size=\"13\" font-weight=\"bold\" fill=\"#14532d\" text-anchor=\"middle\">Offset Decimal: 0.41&#775;82&#775;</text><text x=\"200\" y=\"170\" font-size=\"11\" fill=\"#15803d\" text-anchor=\"middle\">Non-repeating digit '4' has NO dot</text><text x=\"200\" y=\"190\" font-size=\"11\" fill=\"#15803d\" text-anchor=\"middle\">Repeating block '182' gets start dot on 1 and end dot on 2</text></svg>"
+   },
+   {
+    "cap": "Figure 2: Flowchart for determining if a simplified fraction terminates or recurs.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"130\" y=\"15\" width=\"140\" height=\"40\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"200\" y=\"38\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\" text-anchor=\"middle\">Fraction a/b</text><line x1=\"200\" y1=\"55\" x2=\"200\" y2=\"75\" stroke=\"#475569\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><rect x=\"110\" y=\"75\" width=\"180\" height=\"40\" fill=\"#fde68a\" stroke=\"#d97706\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"200\" y=\"94\" font-size=\"11\" font-weight=\"bold\" fill=\"#78350f\" text-anchor=\"middle\">Simplify to Lowest Terms</text><text x=\"200\" y=\"107\" font-size=\"11\" fill=\"#78350f\" text-anchor=\"middle\">Prime factorise b</text><line x1=\"160\" y1=\"115\" x2=\"100\" y2=\"150\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"240\" y1=\"115\" x2=\"300\" y2=\"150\" stroke=\"#475569\" stroke-width=\"2\"/><rect x=\"20\" y=\"150\" width=\"150\" height=\"65\" fill=\"#bbf7d0\" stroke=\"#16a34a\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"95\" y=\"173\" font-size=\"12\" font-weight=\"bold\" fill=\"#14532d\" text-anchor=\"middle\">Prime Factors</text><text x=\"95\" y=\"190\" font-size=\"11\" fill=\"#14532d\" text-anchor=\"middle\">ONLY 2 and/or 5</text><text x=\"95\" y=\"205\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\" text-anchor=\"middle\">=&gt; TERMINATING</text><rect x=\"230\" y=\"150\" width=\"150\" height=\"65\" fill=\"#fecaca\" stroke=\"#dc2626\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"305\" y=\"173\" font-size=\"12\" font-weight=\"bold\" fill=\"#7f1d1d\" text-anchor=\"middle\">Contains Other</text><text x=\"305\" y=\"190\" font-size=\"11\" fill=\"#7f1d1d\" text-anchor=\"middle\">Factors (3, 7, 11...)</text><text x=\"305\" y=\"205\" font-size=\"11\" font-weight=\"bold\" fill=\"#b91c1c\" text-anchor=\"middle\">=&gt; RECURRING</text></svg>"
+   },
+   {
+    "cap": "Figure 3: Visual representation of algebraic elimination of infinite repeating decimal tails.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"30\" y=\"25\" width=\"340\" height=\"45\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"45\" y=\"52\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\">100x = 35.353535...</text><rect x=\"30\" y=\"80\" width=\"340\" height=\"45\" fill=\"#e0e7ff\" stroke=\"#4338ca\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"45\" y=\"107\" font-size=\"13\" font-weight=\"bold\" fill=\"#312e81\">x = 0.353535...</text><line x1=\"30\" y1=\"135\" x2=\"370\" y2=\"135\" stroke=\"#09090b\" stroke-width=\"2\" stroke-dasharray=\"4\"/><rect x=\"30\" y=\"145\" width=\"340\" height=\"55\" fill=\"#bbf7d0\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"6\"/><text x=\"45\" y=\"178\" font-size=\"13\" font-weight=\"bold\" fill=\"#14532d\">99x = 35.000000...</text><text x=\"270\" y=\"178\" font-size=\"12\" fill=\"#15803d\" font-weight=\"bold\">x = 35 / 99</text><rect x=\"225\" y=\"32\" width=\"135\" height=\"85\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"1.5\" stroke-dasharray=\"3\" rx=\"4\"/><text x=\"292\" y=\"80\" font-size=\"11\" font-weight=\"bold\" fill=\"#854d0e\" text-anchor=\"middle\">Tails Cancel Out!</text></svg>"
+   },
+   {
+    "cap": "Figure 4: Remainder loop cycle showing why 1/7 creates a 6-digit recurring decimal.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><circle cx=\"200\" cy=\"120\" r=\"80\" fill=\"none\" stroke=\"#cbd5e1\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"40\" r=\"20\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"1.5\"/><text x=\"200\" y=\"45\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\" text-anchor=\"middle\">R = 1</text><circle cx=\"270\" cy=\"80\" r=\"20\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"1.5\"/><text x=\"270\" y=\"85\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\" text-anchor=\"middle\">R = 3</text><circle cx=\"270\" cy=\"160\" r=\"20\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"1.5\"/><text x=\"270\" y=\"165\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\" text-anchor=\"middle\">R = 2</text><circle cx=\"200\" cy=\"200\" r=\"20\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"1.5\"/><text x=\"200\" y=\"205\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\" text-anchor=\"middle\">R = 6</text><circle cx=\"130\" cy=\"160\" r=\"20\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"1.5\"/><text x=\"130\" y=\"165\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\" text-anchor=\"middle\">R = 4</text><circle cx=\"130\" cy=\"80\" r=\"20\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"1.5\"/><text x=\"130\" y=\"85\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\" text-anchor=\"middle\">R = 5</text><text x=\"200\" y=\"115\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" text-anchor=\"middle\">1/7 = 0.1&#775;42857&#775;</text><text x=\"200\" y=\"133\" font-size=\"11\" fill=\"#475569\" text-anchor=\"middle\">6 Remainders Cycle</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_h.0.9",
+  "sid": "maths_eduqas_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.6-flash",
+  "ts": "2026-11-20T17:24:53.274Z"
+ },
+ "maths_eduqas_h.0.15": {
+  "summary": "Limits of accuracy define the exact range within which a rounded or measured quantity true value must lie. The lower bound (LB) is the smallest possible true value, while the upper bound (UB) is the smallest value strictly greater than any value that would round down. Mastery of bounds requires calculating error intervals using inequality notation (LB ≤ x < UB), selecting correct combinations of upper and lower bounds for compound operations (such as division and subtraction), and identifying a suitable degree of accuracy where lower and upper bounds converge.",
+  "core": [
+   {
+    "h": "1. Understanding Limits of Accuracy and Rounding",
+    "p": "Every continuous measurement in the real world is an approximation limited by the precision of the measuring instrument. When a number is recorded to a given degree of accuracy—such as to the nearest integer, decimal place, or significant figure—the true underlying value lies within a specific interval called the limits of accuracy.",
+    "bullets": [
+     "**Continuous Data**: Quantities like length, mass, time, and speed can take any real value and are always subject to measurement limits.",
+     "**Discrete Data**: Counted items (e.g., number of people) are exact, but when rounded in statistics or reports, bounds still apply.",
+     "**True Value Range**: If a rounded value is given, the true value lies between the **Lower Bound (LB)** and the **Upper Bound (UB)**.",
+     "**Degree of Accuracy**: The smallest unit of measurement specified (e.g., nearest 10 g, nearest 0.1 cm, 2 significant figures)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Limits of Accuracy",
+      "p": "The maximum and minimum possible values that a rounded or measured quantity could have taken before being rounded to a specified degree of accuracy."
+     },
+     {
+      "k": "key",
+      "t": "Continuous Measurement Truth",
+      "p": "No continuous measurement is exact. Writing a length as 8 cm to the nearest centimetre means the actual length is somewhere between 7.5 cm and 8.5 cm."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. The Half-Unit Rule for Single Bounds",
+    "p": "To calculate the lower bound and upper bound of any single measurement, use the half-unit rule. First determine the unit of accuracy (the degree to which the measurement was rounded), divide that unit by 2, and then subtract and add this half-unit value from the given measurement.",
+    "bullets": [
+     "**Step 1**: Identify the degree of accuracy (e.g., nearest 10 → unit = 10; nearest 0.1 → unit = 0.1; 2 s.f. for 4.3 → unit = 0.1).",
+     "**Step 2**: Calculate the half-unit interval: **Tolerance = Unit of Accuracy ÷ 2**.",
+     "**Step 3**: Calculate **Lower Bound = Given Value − Tolerance**.",
+     "**Step 4**: Calculate **Upper Bound = Given Value + Tolerance**.",
+     "**Significant Figures Example**: A mass of 4.8 kg given to 2 s.f. has a unit of 0.1 kg. Tolerance = 0.05 kg. LB = 4.75 kg, UB = 4.85 kg."
+    ],
+    "table": {
+     "head": [
+      "Specified Accuracy",
+      "Example Value",
+      "Unit of Accuracy",
+      "Half-Unit (Tolerance)",
+      "Lower Bound (LB)",
+      "Upper Bound (UB)"
+     ],
+     "rows": [
+      [
+       "Nearest unit (1)",
+       "45",
+       "1",
+       "0.5",
+       "44.5",
+       "45.5"
+      ],
+      [
+       "Nearest 10",
+       "340",
+       "10",
+       "5",
+       "335",
+       "345"
+      ],
+      [
+       "Nearest 100",
+       "1200",
+       "100",
+       "50",
+       "1150",
+       "1250"
+      ],
+      [
+       "1 decimal place (0.1)",
+       "6.4",
+       "0.1",
+       "0.05",
+       "6.35",
+       "6.45"
+      ],
+      [
+       "2 decimal places (0.01)",
+       "0.83",
+       "0.01",
+       "0.005",
+       "0.825",
+       "0.835"
+      ],
+      [
+       "2 significant figures",
+       "0.047",
+       "0.001",
+       "0.0005",
+       "0.0465",
+       "0.0475"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Finding the Unit of Accuracy",
+      "p": "Look at the last digit place value of the rounded number. For 5.60 m (3 s.f.), the last digit is in the hundredths place (0.01), so the unit is 0.01 and the half-unit is 0.005."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "3. Error Intervals and Inequality Notation",
+    "p": "In Eduqas GCSE examinations, error intervals must be written formally using inequality symbols. The lower bound is inclusive (≤) because a value equal to the lower bound rounds up to the target. The upper bound is exclusive (<) because any value equal to or greater than the upper bound would round up to the next number.",
+    "bullets": [
+     "**Standard Inequality Format**: **LB ≤ x < UB**, where x is the true unrounded quantity.",
+     "**Inclusive Lower Bound (≤)**: Values from the lower bound up to the value itself round to the recorded number.",
+     "**Exclusive Upper Bound (<)**: 8.5 rounds to 9, not 8. Therefore, for a number 8 rounded to the nearest integer, x < 8.5.",
+     "**Writing Error Intervals**: If m = 72 kg to the nearest kg, the error interval is **71.5 kg ≤ m < 72.5 kg**."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Do Not Write 72.499...",
+      "p": "Never write 71.5 ≤ m ≤ 72.49 or 71.5 ≤ m ≤ 72.499. The upper bound is exactly 72.5, expressed with a strict inequality sign (<)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Truncation versus Rounding Bounds",
+    "p": "Truncation is the process of cutting off digits after a specific decimal place or digit position without performing any rounding up. Because truncation never rounds up, the bounds for truncated numbers differ significantly from rounded numbers.",
+    "bullets": [
+     "**Rounding**: 4.7 rounded to 1 d.p. could come from any value between 4.65 and 4.75. Range = [4.65, 4.75).",
+     "**Truncation**: 4.7 truncated to 1 d.p. means all trailing digits were simply dropped. The original number could be 4.7000... up to 4.7999...",
+     "**Truncation Lower Bound**: The truncated number itself (LB = x).",
+     "**Truncation Upper Bound**: The truncated number plus 1 unit of accuracy (UB = x + unit).",
+     "**Truncation Error Interval**: For a number t = 4.7 truncated to 1 d.p., the interval is **4.7 ≤ t < 4.8**."
+    ],
+    "table": {
+     "head": [
+      "Process",
+      "Stated Value",
+      "Degree / Unit",
+      "Lower Bound",
+      "Upper Bound",
+      "Inequality Interval"
+     ],
+     "rows": [
+      [
+       "Rounded",
+       "8.3",
+       "1 d.p. (0.1)",
+       "8.25",
+       "8.35",
+       "8.25 ≤ x < 8.35"
+      ],
+      [
+       "Truncated",
+       "8.3",
+       "1 d.p. (0.1)",
+       "8.30",
+       "8.40",
+       "8.30 ≤ x < 8.40"
+      ],
+      [
+       "Rounded",
+       "150",
+       "Nearest 10",
+       "145",
+       "155",
+       "145 ≤ x < 155"
+      ],
+      [
+       "Truncated",
+       "150",
+       "Nearest 10",
+       "150",
+       "160",
+       "150 ≤ x < 160"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Exam Distinction",
+      "p": "Read questions carefully to spot whether a number was **rounded** or **truncated**. Truncation always shifts the entire bound interval upwards."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "5. Bounds in Addition and Subtraction Operations",
+    "p": "When combining rounded numbers in calculations, you must select the appropriate combination of lower and upper bounds to achieve the absolute maximum (upper bound) or absolute minimum (lower bound) possible result.",
+    "bullets": [
+     "**Addition Upper Bound**: Maximum total occurs when both components are at their maximum bounds: **UB(A + B) = UB(A) + UB(B)**.",
+     "**Addition Lower Bound**: Minimum total occurs when both components are at their minimum bounds: **LB(A + B) = LB(A) + LB(B)**.",
+     "**Subtraction Upper Bound**: Maximum difference occurs when the starting amount is as large as possible and the subtracted amount is as small as possible: **UB(A − B) = UB(A) − LB(B)**.",
+     "**Subtraction Lower Bound**: Minimum difference occurs when the starting amount is as small as possible and the subtracted amount is as large as possible: **LB(A − B) = LB(A) − UB(B)**."
+    ],
+    "table": {
+     "head": [
+      "Operation",
+      "To Calculate Upper Bound (Maximum)",
+      "To Calculate Lower Bound (Minimum)"
+     ],
+     "rows": [
+      [
+       "Addition: A + B",
+       "UB(A) + UB(B)",
+       "LB(A) + LB(B)"
+      ],
+      [
+       "Subtraction: A − B",
+       "UB(A) − LB(B)",
+       "LB(A) − UB(B)"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Subtraction Pitfall",
+      "p": "A very common mistake in Eduqas exams is subtracting the upper bound of B to find the upper bound of A − B. Remember: to make a difference as big as possible, subtract the SMALLEST possible amount!"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Bounds in Multiplication and Division Operations",
+    "p": "For positive numbers, multiplication behaves intuitively (max × max = max), but division requires cross-combining bounds in the same manner as subtraction.",
+    "bullets": [
+     "**Multiplication Upper Bound**: **UB(A × B) = UB(A) × UB(B)** (for positive A and B).",
+     "**Multiplication Lower Bound**: **LB(A × B) = LB(A) × LB(B)** (for positive A and B).",
+     "**Division Upper Bound**: Maximum quotient occurs when the numerator is as large as possible and the denominator is as small as possible: **UB(A ÷ B) = UB(A) ÷ LB(B)**.",
+     "**Division Lower Bound**: Minimum quotient occurs when the numerator is as small as possible and the denominator is as large as possible: **LB(A ÷ B) = LB(A) ÷ UB(B)**.",
+     "**Reciprocal / Inverse**: If y = 1 / x, then **UB(y) = 1 / LB(x)** and **LB(y) = 1 / UB(x)**."
+    ],
+    "table": {
+     "head": [
+      "Operation",
+      "To Calculate Upper Bound (Maximum)",
+      "To Calculate Lower Bound (Minimum)"
+     ],
+     "rows": [
+      [
+       "Multiplication: A × B",
+       "UB(A) × UB(B)",
+       "LB(A) × LB(B)"
+      ],
+      [
+       "Division: A ÷ B",
+       "UB(A) / LB(B)",
+       "LB(A) / UB(B)"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Division Maximisation Rule",
+      "p": "To maximize a fraction, maximize the top (numerator) and minimize the bottom (denominator). To minimize a fraction, minimize the top and maximize the bottom."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Compound Formulas and Multi-Step Calculations",
+    "p": "In real-world Eduqas Component 1 and 2 problems, bounds are applied to compound formulas such as Speed = Distance ÷ Time, Density = Mass ÷ Volume, and Pressure = Force ÷ Area.",
+    "bullets": [
+     "**Speed Bounds**: **UB(Speed) = UB(Distance) ÷ LB(Time)**; **LB(Speed) = LB(Distance) ÷ UB(Time)**.",
+     "**Density Bounds**: **UB(Density) = UB(Mass) ÷ LB(Volume)**; **LB(Density) = LB(Mass) ÷ UB(Volume)**.",
+     "**Pressure Bounds**: **UB(Pressure) = UB(Force) ÷ LB(Area)**; **LB(Pressure) = LB(Force) ÷ UB(Area)**.",
+     "**Area of Rectangle**: **UB(Area) = UB(length) × UB(width)**; **LB(Area) = LB(length) × LB(width)**.",
+     "**Volume of Prism/Cuboid**: **UB(Vol) = UB(l) × UB(w) × UB(h)**; **LB(Vol) = LB(l) × LB(w) × LB(h)**."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Always Find Individual Bounds First",
+      "p": "Calculate the upper and lower bounds of every individual variable BEFORE plugging them into compound formulas. Never calculate the unrounded answer first and then try to round it!"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Powers, Roots, and Geometric Applications",
+    "p": "When calculations involve squares, cubes, square roots, or geometric formulas like circle area and trigonometry, bounds must be propagated carefully.",
+    "bullets": [
+     "**Squaring / Powers**: If Area = x², then **UB(Area) = [UB(x)]²** and **LB(Area) = [LB(x)]²**.",
+     "**Square Roots**: If side length s = √Area, then **UB(s) = √(UB(Area))** and **LB(s) = √(LB(Area))**.",
+     "**Circle Area (A = πr²)**: **UB(A) = π × [UB(r)]²** and **LB(A) = π × [LB(r)]²** (assuming π is exact).",
+     "**Trigonometric Functions**: For acute angles θ, sin(θ) and tan(θ) increase as θ increases, so **UB(sin θ) = sin(UB(θ))**. However, cos(θ) decreases as θ increases, so **UB(cos θ) = cos(LB(θ))** and **LB(cos θ) = cos(UB(θ))**."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Cosine Behaviour in Right-Angled Triangles",
+      "p": "Because cos(θ) gets smaller as the angle θ gets larger in the range 0° to 90°, applying bounds to cosine functions flips upper and lower bounds!"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Upper and Lower Bounds with Discrete and Categorical Data",
+    "p": "While bounds are most commonly applied to continuous measures, discrete data rounded in contextual questions (such as number of people or items in containers) requires careful logical handling.",
+    "bullets": [
+     "**Discrete Quantities**: If a count is given as 400 to the nearest 100, the true count could be any integer from 350 up to 449.",
+     "**Mathematical vs Practical Bounds**: Mathematically, the bound is 350 ≤ n < 450. In integer contexts, the maximum actual count is 449.",
+     "**Capacity / Packaging Limits**: If a box can hold maximum 20 kg, to guarantee it never overloads, you must calculate using the **upper bound of the items' mass** and check if it remains under 20 kg.",
+     "**Guaranteed Capacity Questions**: To find how many items can **definitely** fit, divide the **LB of the container capacity** by the **UB of an item's size**, then round down to the nearest integer."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Guaranteed Fit Rule",
+      "p": "'Guaranteed to fit' or 'definitely safe' means planning for the worst-case scenario: the smallest possible container capacity and the largest possible item size."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Determining Suitable Degree of Accuracy (Comparing Bounds)",
+    "p": "A signature Grade 9 Eduqas question asks students to calculate a value using bounds and then state the result to a 'suitable degree of accuracy', justifying their answer.",
+    "bullets": [
+     "**Procedure**: Calculate both the Lower Bound and Upper Bound of the final value to full calculator display accuracy.",
+     "**Comparison**: Compare the decimal expansions of both bounds digit by digit from left to right.",
+     "**Convergence Point**: Find the degree of rounding (e.g., 2 s.f., 1 d.p.) where BOTH the LB and UB round to the **exact same number**.",
+     "**Justification Requirement**: State both the LB and UB values, show that both round to the same value to N significant figures/decimal places, and state that value as your final answer.",
+     "**Example**: If LB = 14.283... and UB = 14.289..., both values round to 14.3 to 3 s.f. (or 1 d.p.). The suitable answer is 14.3."
+    ],
+    "table": {
+     "head": [
+      "Calculated LB",
+      "Calculated UB",
+      "Rounded to 2 s.f.",
+      "Rounded to 3 s.f.",
+      "Suitable Degree of Accuracy & Value"
+     ],
+     "rows": [
+      [
+       "5.6214",
+       "5.6289",
+       "LB=5.6, UB=5.6",
+       "LB=5.62, UB=5.63",
+       "5.6 (to 2 s.f., since 3 s.f. differs)"
+      ],
+      [
+       "18.412",
+       "18.448",
+       "LB=18, UB=18",
+       "LB=18.4, UB=18.4",
+       "18.4 (to 3 s.f.)"
+      ],
+      [
+       "0.07381",
+       "0.07389",
+       "LB=0.074, UB=0.074",
+       "LB=0.0738, UB=0.0739",
+       "0.074 (to 2 s.f.)"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Grade 9 Exam Justification",
+      "p": "To gain full marks, you MUST write down both full bounds, explicitly show they round to the same number at a specific accuracy, and state that shared value."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "11. Exam Strategies and Non-Calculator Methods",
+    "p": "Component 1 non-calculator papers test bounds using manageable decimals and fractions, whereas Component 2 permits full calculator evaluation.",
+    "bullets": [
+     "**Component 1 (Non-Calc)**: Convert decimal bounds into top-heavy fractions (e.g., 3.5 = 7/2) to simplify divisions without a calculator.",
+     "**Component 2 (Calc)**: Store full unrounded upper and lower bounds in calculator memories (A, B, C...) to avoid intermediate rounding errors.",
+     "**Sanity Checks**: Upper bounds of quantities calculated via addition/multiplication must be larger than unrounded estimates; lower bounds must be smaller.",
+     "**Units Verification**: Ensure all units match before applying bounds (e.g., convert grams to kilograms or minutes to hours first)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Fraction Trick for Non-Calculator Bounds",
+      "p": "If computing 12 ÷ 2.5 on Component 1, rewrite as 12 ÷ (5/2) = 12 × (2/5) = 24/5 = 4.8. This avoids awkward decimal division."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Flexible Shipping Container Analogy",
+   "p": "Imagine packing boxes into a shipping container. The container's length is stated as 10 m to the nearest metre, meaning its actual length fluctuates between a minimum of 9.5 m (lower bound) and just under 10.5 m (upper bound). Each box inside is labeled 1 m long to the nearest 0.1 m, meaning each box is actually between 0.95 m and 1.05 m long. If you want to guarantee how many boxes will fit without bursting the container, you must prepare for the absolute worst-case scenario: the smallest container (9.5 m) holding the largest possible boxes (1.05 m each). 9.5 ÷ 1.05 = 9.04, so only 9 boxes are guaranteed to fit. Where the analogy breaks down: Physical containers do not literally expand or shrink in real-time; the bounds represent our uncertainty about the exact static measurement."
+  },
+  "terms": [
+   {
+    "t": "Lower Bound (LB)",
+    "d": "The smallest possible value that a rounded measurement could have been prior to rounding."
+   },
+   {
+    "t": "Upper Bound (UB)",
+    "d": "The smallest value that is strictly greater than any value rounding to the specified recorded measurement."
+   },
+   {
+    "t": "Error Interval",
+    "d": "The mathematical range of possible true values for a rounded quantity, expressed using inequality notation LB ≤ x < UB."
+   },
+   {
+    "t": "Degree of Accuracy",
+    "d": "The level of precision to which a measurement is stated (e.g., nearest integer, 2 d.p., 3 s.f.)."
+   },
+   {
+    "t": "Tolerance",
+    "d": "Half of the unit of accuracy; the amount added to and subtracted from a measurement to find upper and lower bounds."
+   },
+   {
+    "t": "Truncation",
+    "d": "Approximating a number by dropping all digits beyond a given decimal place or position without rounding."
+   },
+   {
+    "t": "Unit of Accuracy",
+    "d": "The place value of the final recorded digit in a rounded number (e.g., 0.01 for a number rounded to 2 decimal places)."
+   },
+   {
+    "t": "Suitable Degree of Accuracy",
+    "d": "The level of rounding (e.g. 2 s.f.) to which both the lower bound and upper bound calculations round to the identical value."
+   },
+   {
+    "t": "Maximum Possible Value",
+    "d": "The upper bound result obtained by combining individual upper and lower bounds appropriately in an arithmetic expression."
+   },
+   {
+    "t": "Minimum Possible Value",
+    "d": "The lower bound result obtained by combining individual lower and upper bounds appropriately in an arithmetic expression."
+   },
+   {
+    "t": "Continuous Data",
+    "d": "Data that can take any value along a continuous numerical scale, always subject to measurement bounds."
+   },
+   {
+    "t": "Discrete Data",
+    "d": "Data that can only take specific, distinct values (often integers), which may still be bounded when reported in rounded form."
+   },
+   {
+    "t": "Inclusive Bound (≤)",
+    "d": "A boundary limit that includes the value itself; used for lower bounds in standard error intervals."
+   },
+   {
+    "t": "Exclusive Bound (<)",
+    "d": "A boundary limit that excludes the value itself; used for upper bounds in standard error intervals."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Writing 64.99 or 64.9 instead of 65 as the upper bound for 60 rounded to the nearest 10.",
+    "r": "The upper bound must be written as 65 in error intervals (e.g., 55 ≤ x < 65)."
+   },
+   {
+    "w": "Calculating Upper Bound of A − B as UB(A) − UB(B).",
+    "r": "Upper bound of a subtraction is UB(A) − LB(B), because subtracting a smaller quantity yields a larger remaining result."
+   },
+   {
+    "w": "Calculating Upper Bound of A ÷ B as UB(A) ÷ UB(B).",
+    "r": "Upper bound of a division is UB(A) ÷ LB(B), because dividing by a smaller number yields a larger quotient."
+   },
+   {
+    "w": "Calculating the unrounded calculation first and then finding bounds of the answer.",
+    "r": "Find the upper and lower bounds of EACH individual measurement FIRST before performing any operations."
+   },
+   {
+    "w": "Using the same bounds for truncated numbers as for rounded numbers (e.g., stating 4.3 truncated to 1 d.p. has LB = 4.25).",
+    "r": "Truncated numbers have LB equal to the stated value (4.30) and UB equal to stated value plus unit (4.40)."
+   },
+   {
+    "w": "Writing inequality signs backwards or using ≤ for upper bounds (e.g., 12.5 ≤ x ≤ 13.5).",
+    "r": "Use strict inequality for the upper bound: 12.5 ≤ x < 13.5."
+   },
+   {
+    "w": "Selecting an arbitrary rounding level when asked for a 'suitable degree of accuracy'.",
+    "r": "Calculate both LB and UB full decimal answers, and find the highest degree of accuracy where both bounds round to the exact same number."
+   },
+   {
+    "w": "Forgetting that cosine flips bounds when finding maximum values in trigonometry.",
+    "r": "Since cos(θ) decreases as θ increases, maximum cos(θ) occurs at the lower bound of θ."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A number y is rounded to 1 decimal place. The recorded value is 7.4. Write down the error interval for y.",
+    "marks": 2,
+    "model": [
+     "Identify unit of accuracy = 0.1",
+     "Half-unit tolerance = 0.1 ÷ 2 = 0.05",
+     "Lower bound = 7.4 − 0.05 = 7.35",
+     "Upper bound = 7.4 + 0.05 = 7.45",
+     "Error interval: 7.35 ≤ y < 7.45"
+    ],
+    "tip": "Ensure you use ≤ for lower bound and < for upper bound."
+   },
+   {
+    "q": "The length L of a metal rod is truncated to 2 decimal places as 15.68 cm. Write down the error interval for L.",
+    "marks": 2,
+    "model": [
+     "Identify truncation unit = 0.01",
+     "Lower bound for truncation = stated value = 15.68",
+     "Upper bound for truncation = stated value + unit = 15.69",
+     "Error interval: 15.68 ≤ L < 15.69"
+    ],
+    "tip": "Truncation does not subtract half a unit; the lower bound is the number itself."
+   },
+   {
+    "q": "A rectangle has length a = 8.4 cm and width b = 5.2 cm, both given to 1 decimal place. Calculate the upper bound for the perimeter of the rectangle.",
+    "marks": 2,
+    "model": [
+     "UB of length a = 8.45 cm",
+     "UB of width b = 5.25 cm",
+     "UB of Perimeter = 2 × (UB(a) + UB(b))",
+     "UB of Perimeter = 2 × (8.45 + 5.25) = 2 × 13.70 = 27.4 cm"
+    ],
+    "tip": "Perimeter is addition, so use upper bounds for both length and width."
+   },
+   {
+    "q": "A train travels a distance of D = 140 miles, correct to the nearest 10 miles. The time taken is T = 2.5 hours, correct to 1 decimal place. Calculate the lower bound for the average speed of the train in miles per hour.",
+    "marks": 4,
+    "model": [
+     "Identify LB and UB of distance: LB(D) = 135 miles, UB(D) = 145 miles",
+     "Identify LB and UB of time: LB(T) = 2.45 hours, UB(T) = 2.55 hours",
+     "Formula for minimum speed: LB(Speed) = LB(D) ÷ UB(T)",
+     "LB(Speed) = 135 ÷ 2.55",
+     "LB(Speed) = 52.941176... mph = 52.9 mph (3 s.f.)"
+    ],
+    "tip": "Minimum speed requires MINIMUM distance divided by MAXIMUM time."
+   },
+   {
+    "q": "The force F applied to an area A is measured as F = 650 N to 2 significant figures. The area is A = 0.040 m² to 2 significant figures. Work out the upper bound for the pressure P in N/m², where P = F / A.",
+    "marks": 4,
+    "model": [
+     "Identify bounds for F (2 s.f., unit = 10): UB(F) = 655 N, LB(F) = 645 N",
+     "Identify bounds for A (2 s.f., unit = 0.001): UB(A) = 0.0405 m², LB(A) = 0.0395 m²",
+     "Formula for maximum pressure: UB(P) = UB(F) ÷ LB(A)",
+     "UB(P) = 655 ÷ 0.0395",
+     "UB(P) = 16582.278... N/m² = 16600 N/m² (to 3 s.f.)"
+    ],
+    "tip": "Maximum pressure occurs when Force is at Upper Bound and Area is at Lower Bound."
+   },
+   {
+    "q": "A solid metal sphere has mass m = 4.50 kg correct to 3 significant figures and radius r = 8.0 cm correct to 2 significant figures. Given Volume = (4/3)πr³, calculate the lower bound of the density of the metal in g/cm³.",
+    "marks": 6,
+    "model": [
+     "Convert mass unit: m = 4500 g to 3 s.f. → LB(m) = 4495 g, UB(m) = 4505 g",
+     "Radius bounds (2 s.f., unit = 0.1): LB(r) = 7.95 cm, UB(r) = 8.05 cm",
+     "To find LB(Density), need LB(Mass) ÷ UB(Volume)",
+     "UB(Volume) = (4/3) × π × (8.05)³ = (4/3) × π × 522.003125 = 2186.554... cm³",
+     "LB(Density) = LB(m) ÷ UB(Volume) = 4495 ÷ 2186.554...",
+     "LB(Density) = 2.0557... g/cm³ = 2.06 g/cm³ (3 s.f.)"
+    ],
+    "tip": "Pay close attention to unit conversions (kg to g) before calculating bounds."
+   },
+   {
+    "q": "A value V is calculated using V = x / (y − z). The values are given as x = 40 (nearest integer), y = 8.4 (1 d.p.), z = 3.6 (1 d.p.). Calculate the upper bound of V.",
+    "marks": 4,
+    "model": [
+     "Find bounds: UB(x) = 40.5, LB(x) = 39.5",
+     "y bounds: UB(y) = 8.45, LB(y) = 8.35",
+     "z bounds: UB(z) = 3.65, LB(z) = 3.55",
+     "To maximize V = x / (y − z), maximize numerator UB(x) and minimize denominator LB(y − z)",
+     "LB(y − z) = LB(y) − UB(z) = 8.35 − 3.65 = 4.70",
+     "UB(V) = UB(x) ÷ LB(y − z) = 40.5 ÷ 4.70 = 8.61702... = 8.62 (3 s.f.)"
+    ],
+    "tip": "To minimize the denominator (y - z), take LB of y and SUBTRACT UB of z!"
+   },
+   {
+    "q": "An formula gives acceleration a = (v − u) / t. v = 28 m/s (2 s.f.), u = 12 m/s (2 s.f.), t = 4.0 s (2 s.f.). Calculate the lower bound of a.",
+    "marks": 4,
+    "model": [
+     "Find bounds for v: LB(v) = 27.5, UB(v) = 28.5",
+     "Find bounds for u: LB(u) = 11.5, UB(u) = 12.5",
+     "Find bounds for t: LB(t) = 3.95, UB(t) = 4.05",
+     "To minimize a, minimize numerator (v − u) and maximize denominator t",
+     "LB(v − u) = LB(v) − UB(u) = 27.5 − 12.5 = 15.0",
+     "LB(a) = LB(v − u) ÷ UB(t) = 15.0 ÷ 4.05 = 3.7037... m/s² = 3.70 m/s² (3 s.f.)"
+    ],
+    "tip": "Minimising numerator (v - u) requires LB(v) minus UB(u)."
+   },
+   {
+    "q": "The area of a square tile is given as 144 cm² correct to the nearest integer. By calculating upper and lower bounds, give the side length of the tile to a suitable degree of accuracy. Give a reason for your answer.",
+    "marks": 6,
+    "model": [
+     "Bounds of Area A: LB(A) = 143.5 cm², UB(A) = 144.5 cm²",
+     "Side length s = √A",
+     "LB(s) = √(143.5) = 11.9791485... cm",
+     "UB(s) = √(144.5) = 12.0208152... cm",
+     "Compare bounds: Rounding to 1 s.f. → LB=10, UB=10; Rounding to 2 s.f. → LB=12, UB=12; Rounding to 3 s.f. → LB=12.0, UB=12.0; Rounding to 4 s.f. → LB=11.98, UB=12.02 (differ)",
+     "Both LB and UB round to 12.0 (or 12) to 3 significant figures.",
+     "Suitable answer: 12.0 cm (or 12 cm to 3 s.f.) because both bounds round to 12.0 to 3 s.f."
+    ],
+    "tip": "State both LB and UB values clearly before stating the rounded answer and justification."
+   },
+   {
+    "q": "A water tank holds 500 litres of water correct to 2 significant figures. Bottles of capacity 1.25 litres (correct to 2 decimal places) are filled from the tank. Calculate the maximum number of bottles that are GUARANTEED to be filled completely.",
+    "marks": 4,
+    "model": [
+     "Tank capacity bounds (2 s.f., unit = 10): LB(Tank) = 495 litres, UB(Tank) = 505 litres",
+     "Bottle capacity bounds (2 d.p., unit = 0.01): LB(Bottle) = 1.245 litres, UB(Bottle) = 1.255 litres",
+     "To GUARANTEE filling, assume worst-case: minimum tank capacity and maximum bottle capacity",
+     "Guaranteed bottles = LB(Tank) ÷ UB(Bottle) = 495 ÷ 1.255 = 394.422...",
+     "Since only full bottles count, truncate to integer: 394 full bottles."
+    ],
+    "tip": "Guaranteed outcome requires worst-case division: minimum supply divided by maximum demand."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A rectangular garden has length L = 18.3 m and width W = 12.6 m, both measured to 1 decimal place. (a) Calculate the upper bound for the area of the garden. (b) Calculate the lower bound for the area of the garden. (c) By comparing both bounds, state the area of the garden to a suitable degree of accuracy and justify your choice.",
+    "steps": [
+     "Step 1: Determine individual bounds for L and W. Degree of accuracy is 1 d.p. (unit = 0.1, half-unit = 0.05).",
+     "LB(L) = 18.3 − 0.05 = 18.25 m; UB(L) = 18.3 + 0.05 = 18.35 m.",
+     "LB(W) = 12.6 − 0.05 = 12.55 m; UB(W) = 12.6 + 0.05 = 12.65 m.",
+     "Step 2: (a) Calculate Upper Bound for Area = UB(L) × UB(W) = 18.35 × 12.65 = 232.1275 m².",
+     "Step 3: (b) Calculate Lower Bound for Area = LB(L) × LB(W) = 18.25 × 12.55 = 229.0375 m².",
+     "Step 4: (c) Compare LB and UB to determine suitable degree of accuracy:",
+     "To 1 s.f.: LB = 200, UB = 200",
+     "To 2 s.f.: LB = 230, UB = 230",
+     "To 3 s.f.: LB = 229, UB = 232 (they differ!)",
+     "Step 5: Conclude that both bounds agree to 2 significant figures (230 m²)."
+    ],
+    "ans": "(a) Upper Bound Area = 232.1275 m²\n(b) Lower Bound Area = 229.0375 m²\n(c) Suitable Area = 230 m². Reason: Both the lower bound (229.0375) and upper bound (232.1275) round to 230 to 2 significant figures."
+   },
+   {
+    "q": "In an experiment, speed v is calculated using v = d / t. Distance d is measured as 85 metres correct to the nearest metre. Time t is measured as 4.2 seconds correct to 1 decimal place. Calculate the upper bound for speed v, giving your answer to 3 significant figures.",
+    "steps": [
+     "Step 1: Identify accuracy unit for distance d (nearest metre = 1 m). Tolerance = 0.5 m.",
+     "LB(d) = 84.5 m, UB(d) = 85.5 m.",
+     "Step 2: Identify accuracy unit for time t (1 decimal place = 0.1 s). Tolerance = 0.05 s.",
+     "LB(t) = 4.15 s, UB(t) = 4.25 s.",
+     "Step 3: Apply upper bound formula for division: UB(v) = UB(d) ÷ LB(t).",
+     "Step 4: Substitute values: UB(v) = 85.5 ÷ 4.15 = 20.60240964... m/s.",
+     "Step 5: Round to 3 significant figures: 20.6 m/s."
+    ],
+    "ans": "Upper bound of speed = 20.6 m/s (to 3 significant figures)."
+   },
+   {
+    "q": "The formula for the resistance R of a circuit is R = (V1 − V2) / I. V1 = 12.4 V (1 d.p.), V2 = 4.8 V (1 d.p.), and I = 1.5 A (1 d.p.). Calculate the lower bound for R.",
+    "steps": [
+     "Step 1: Find bounds for V1 (unit 0.1): LB(V1) = 12.35 V, UB(V1) = 12.45 V.",
+     "Step 2: Find bounds for V2 (unit 0.1): LB(V2) = 4.75 V, UB(V2) = 4.85 V.",
+     "Step 3: Find bounds for I (unit 0.1): LB(I) = 1.45 A, UB(I) = 1.55 A.",
+     "Step 4: To minimize R = (V1 − V2) / I, minimize the numerator (V1 − V2) and maximize the denominator I.",
+     "Step 5: LB(V1 − V2) = LB(V1) − UB(V2) = 12.35 − 4.85 = 7.50 V.",
+     "Step 6: LB(R) = LB(V1 − V2) ÷ UB(I) = 7.50 ÷ 1.55 = 4.83870967... Ω.",
+     "Step 7: Round to 3 significant figures: 4.84 Ω."
+    ],
+    "ans": "Lower bound of resistance R = 4.84 Ω (to 3 s.f.)."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Figure 1: Error interval for a value of 70 rounded to the nearest 10. Lower bound 65 is inclusive (solid dot, ≤) while upper bound 75 is exclusive (hollow circle, <).",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1\" rx=\"6\"/><line x1=\"50\" y1=\"120\" x2=\"350\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"3\"/><polygon points=\"345,115 355,120 345,125\" fill=\"#1b2540\"/><line x1=\"90\" y1=\"110\" x2=\"90\" y2=\"130\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"210\" y1=\"110\" x2=\"210\" y2=\"130\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"330\" y1=\"110\" x2=\"330\" y2=\"130\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"90\" y=\"95\" width=\"240\" height=\"50\" fill=\"#dbeafe\" opacity=\"0.5\" rx=\"4\"/><circle cx=\"90\" cy=\"120\" r=\"6\" fill=\"#2563eb\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"330\" cy=\"120\" r=\"6\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"3\"/><text x=\"90\" y=\"155\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">65 (LB)</text><text x=\"210\" y=\"155\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">70 (Stated)</text><text x=\"330\" y=\"155\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">75 (UB)</text><text x=\"90\" y=\"75\" font-size=\"11\" fill=\"#2563eb\" text-anchor=\"middle\">Inclusive (x ≥ 65)</text><text x=\"330\" y=\"75\" font-size=\"11\" fill=\"#dc2626\" text-anchor=\"middle\">Exclusive (x &lt; 75)</text><text x=\"210\" y=\"45\" font-size=\"13\" font-weight=\"bold\" fill=\"#1b2540\" text-anchor=\"middle\">Error Interval: 65 ≤ x &lt; 75</text><text x=\"210\" y=\"185\" font-size=\"11\" fill=\"#475569\" text-anchor=\"middle\">Tolerance = ±5 (Half of unit 10)</text></svg>"
+   },
+   {
+    "cap": "Figure 2: Combination rules for Upper and Lower Bounds across Four Basic Arithmetic Operations.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"15\" y=\"15\" width=\"175\" height=\"95\" fill=\"#bbf7d0\" stroke=\"#166534\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"102\" y=\"38\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\" text-anchor=\"middle\">Addition: A + B</text><text x=\"102\" y=\"62\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Max = UB(A) + UB(B)</text><text x=\"102\" y=\"86\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Min = LB(A) + LB(B)</text><rect x=\"210\" y=\"15\" width=\"175\" height=\"95\" fill=\"#fde68a\" stroke=\"#92400e\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"297\" y=\"38\" font-size=\"12\" font-weight=\"bold\" fill=\"#92400e\" text-anchor=\"middle\">Subtraction: A − B</text><text x=\"297\" y=\"62\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Max = UB(A) − LB(B)</text><text x=\"297\" y=\"86\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Min = LB(A) − UB(B)</text><rect x=\"15\" y=\"125\" width=\"175\" height=\"95\" fill=\"#dbeafe\" stroke=\"#1e40af\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"102\" y=\"148\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\" text-anchor=\"middle\">Multiplication: A × B</text><text x=\"102\" y=\"172\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Max = UB(A) × UB(B)</text><text x=\"102\" y=\"196\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Min = LB(A) × LB(B)</text><rect x=\"210\" y=\"125\" width=\"175\" height=\"95\" fill=\"#fecaca\" stroke=\"#991b1b\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"297\" y=\"148\" font-size=\"12\" font-weight=\"bold\" fill=\"#991b1b\" text-anchor=\"middle\">Division: A ÷ B</text><text x=\"297\" y=\"172\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Max = UB(A) ÷ LB(B)</text><text x=\"297\" y=\"196\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Min = LB(A) ÷ UB(B)</text></svg>"
+   },
+   {
+    "cap": "Figure 3: Determining a Suitable Degree of Accuracy by comparing Lower Bound (14.283) and Upper Bound (14.289) convergence.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"20\" y=\"20\" width=\"360\" height=\"60\" fill=\"#e9d5ff\" stroke=\"#6b21a8\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"200\" y=\"42\" font-size=\"12\" font-weight=\"bold\" fill=\"#6b21a8\" text-anchor=\"middle\">Calculated Bounds Range</text><text x=\"40\" y=\"65\" font-size=\"11\" fill=\"#1b2540\">LB = 14.2831...</text><text x=\"260\" y=\"65\" font-size=\"11\" fill=\"#1b2540\">UB = 14.2894...</text><rect x=\"20\" y=\"95\" width=\"360\" height=\"125\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1\" rx=\"6\"/><text x=\"35\" y=\"120\" font-size=\"11\" font-weight=\"bold\" fill=\"#1b2540\">Degree of Rounding</text><text x=\"170\" y=\"120\" font-size=\"11\" font-weight=\"bold\" fill=\"#1b2540\">LB Rounds</text><text x=\"260\" y=\"120\" font-size=\"11\" font-weight=\"bold\" fill=\"#1b2540\">UB Rounds</text><text x=\"340\" y=\"120\" font-size=\"11\" font-weight=\"bold\" fill=\"#1b2540\">Match?</text><line x1=\"30\" y1=\"128\" x2=\"370\" y2=\"128\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><text x=\"35\" y=\"148\" font-size=\"11\" fill=\"#475569\">1 s.f. / 2 s.f.</text><text x=\"170\" y=\"148\" font-size=\"11\" fill=\"#475569\">10 / 14</text><text x=\"260\" y=\"148\" font-size=\"11\" fill=\"#475569\">10 / 14</text><text x=\"340\" y=\"148\" font-size=\"11\" font-weight=\"bold\" fill=\"#166534\">YES</text><text x=\"35\" y=\"170\" font-size=\"11\" stroke=\"#166534\" fill=\"#166534\" font-weight=\"bold\">3 s.f. (1 d.p.)</text><text x=\"170\" y=\"170\" font-size=\"11\" fill=\"#166534\" font-weight=\"bold\">14.3</text><text x=\"260\" y=\"170\" font-size=\"11\" fill=\"#166534\" font-weight=\"bold\">14.3</text><text x=\"340\" y=\"170\" font-size=\"11\" font-weight=\"bold\" fill=\"#166534\">YES ✓</text><text x=\"35\" y=\"192\" font-size=\"11\" fill=\"#dc2626\">4 s.f. (2 d.p.)</text><text x=\"170\" y=\"192\" font-size=\"11\" fill=\"#dc2626\">14.28</text><text x=\"260\" y=\"192\" font-size=\"11\" fill=\"#dc2626\">14.29</text><text x=\"340\" y=\"192\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">NO ✗</text><text x=\"200\" y=\"212\" font-size=\"11\" font-weight=\"bold\" fill=\"#166534\" text-anchor=\"middle\">Suitable Answer = 14.3 (Highest agreeing accuracy)</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_h.0.15",
+  "sid": "maths_eduqas_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.6-flash",
+  "ts": "2026-11-20T17:26:58.177Z"
+ },
+ "maths_eduqas_h.0.8": {
+  "summary": "Standard form is a mathematical notation used to express very large or very small numbers in a concise format. It consists of a number between 1 and 10 multiplied by a power of 10, allowing for easier comparison and calculation of magnitudes. This system is fundamental for scientific and engineering contexts where precision and scale are critical, such as measuring interstellar distances or the mass of subatomic particles.",
+  "core": [
+   {
+    "h": "The Structure of Standard Form",
+    "p": "Standard form, also known as **Standard Index Form**, is written in the format **A x 10^n**. This notation is designed to provide a clear sense of the number's magnitude (the power) and its precision (the significant figures).",
+    "bullets": [
+     "A is the multiplier, often called the mantissa.",
+     "10 is the base, which is always constant in this notation.",
+     "n is the exponent or power, which must be an integer (positive, negative, or zero)."
+    ],
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Standard Form",
+      "p": "A way of writing a number as a product of a number between 1 and 10 and a power of 10."
+     }
+    ]
+   },
+   {
+    "h": "The Constraints on A",
+    "p": "The value of **A** is strictly controlled to ensure every number has a unique representation in standard form. This makes comparing numbers instantaneous.",
+    "bullets": [
+     "A must be greater than or equal to 1.",
+     "A must be strictly less than 10.",
+     "Mathematically, this is written as 1 <= A < 10.",
+     "If A is 10 or 0.5, the number is not in standard form and must be adjusted."
+    ],
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Common Error",
+      "p": "Students often write 10 x 10^4. This is incorrect because A is not less than 10. It should be 1 x 10^5."
+     }
+    ]
+   },
+   {
+    "h": "Large Numbers (Positive Powers)",
+    "p": "When the exponent **n** is positive, it indicates a large number. The value of n tells you how many places the decimal point has moved to the right from its position in A.",
+    "bullets": [
+     "10^1 = 10",
+     "10^2 = 100",
+     "10^3 = 1000",
+     "A positive n represents the number of times A is multiplied by 10."
+    ]
+   },
+   {
+    "h": "Small Numbers (Negative Powers)",
+    "p": "When the exponent **n** is negative, it indicates a small number (a decimal between 0 and 1). This uses the reciprocal property of indices.",
+    "bullets": [
+     "10^-1 = 1/10 = 0.1",
+     "10^-2 = 1/100 = 0.01",
+     "10^-3 = 1/1000 = 0.001",
+     "A negative n represents the number of times A is divided by 10."
+    ],
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Negative Exponents",
+      "p": "A negative power does NOT make the number negative; it makes the number small."
+     }
+    ]
+   },
+   {
+    "h": "Converting Ordinary to Standard Form",
+    "p": "To convert an ordinary number, identify where the decimal point must move to create a number **A** between 1 and 10.",
+    "bullets": [
+     "Count the number of jumps the decimal point takes.",
+     "If the decimal moves left (large number), n is positive.",
+     "If the decimal moves right (small number), n is negative.",
+     "Example: 45,000 becomes 4.5 x 10^4 (4 jumps left)."
+    ]
+   },
+   {
+    "h": "Converting Standard Form to Ordinary",
+    "p": "This process reverses the conversion by moving the decimal point according to the power of 10.",
+    "bullets": [
+     "If n is positive, move the decimal point n places to the right, filling gaps with zeros.",
+     "If n is negative, move the decimal point n places to the left, filling gaps with zeros.",
+     "Example: 3.2 x 10^-3 becomes 0.0032 (3 jumps left)."
+    ]
+   },
+   {
+    "h": "Multiplication in Standard Form",
+    "p": "Multiplication is straightforward because you can treat the numbers and the powers of 10 separately using the **First Law of Indices**.",
+    "bullets": [
+     "Multiply the A values together.",
+     "Add the exponents (n + m).",
+     "Check if the new A is still between 1 and 10; if not, normalise it.",
+     "Rule: (A x 10^n) x (B x 10^m) = (A x B) x 10^(n+m)."
+    ]
+   },
+   {
+    "h": "Division in Standard Form",
+    "p": "Division follows a similar logic to multiplication, utilizing the **Second Law of Indices**.",
+    "bullets": [
+     "Divide the first A value by the second A value.",
+     "Subtract the second exponent from the first (n - m).",
+     "Normalise the result if A is now less than 1.",
+     "Rule: (A x 10^n) / (B x 10^m) = (A / B) x 10^(n-m)."
+    ]
+   },
+   {
+    "h": "Addition and Subtraction",
+    "p": "Addition and subtraction are more complex because you cannot simply add the powers. The numbers must be at the same **magnitude** first.",
+    "bullets": [
+     "Convert both numbers so they have the same power of 10 (usually the larger power).",
+     "Add or subtract the A values.",
+     "Convert the final answer back into standard form if necessary.",
+     "Example: (3 x 10^4) + (5 x 10^3) = (3 x 10^4) + (0.5 x 10^4) = 3.5 x 10^4."
+    ]
+   },
+   {
+    "h": "Normalisation (Adjusting the Result)",
+    "p": "After calculating, your answer might not be in standard form. **Normalisation** is the process of fixing this.",
+    "bullets": [
+     "If A >= 10: Divide A by 10 and add 1 to the power n.",
+     "If A < 1: Multiply A by 10 and subtract 1 from the power n.",
+     "Example: 25 x 10^4 becomes 2.5 x 10^5.",
+     "Example: 0.4 x 10^-3 becomes 4 x 10^-4."
+    ]
+   },
+   {
+    "h": "Calculator Skills (Component 2)",
+    "p": "In calculator papers, use the dedicated standard form button to avoid errors with brackets and order of operations.",
+    "bullets": [
+     "Look for buttons labeled EXP, EE, or x10^x.",
+     "To enter 5 x 10^3, press [5] [x10^x] [3].",
+     "Do not manually type 'x 10 ^' as the calculator may treat the power separately from the multiplier.",
+     "Always check if the question asks for the answer in standard form or as an ordinary number."
+    ]
+   },
+   {
+    "h": "Comparing and Ordering",
+    "p": "Standard form makes it easy to compare very different sizes. The power of 10 is the most important factor.",
+    "bullets": [
+     "First, compare the exponents (n). The number with the higher n is always larger.",
+     "If the exponents are equal, compare the A values.",
+     "Example: 9.9 x 10^3 is smaller than 1.1 x 10^4 because 4 is a higher power than 3."
+    ]
+   },
+   {
+    "h": "Real-World Interpretation",
+    "p": "Standard form is used to describe physical constants and measurements in science.",
+    "bullets": [
+     "Astronomy: Distances between stars are measured in light-years (approx 9.46 x 10^12 km).",
+     "Biology: The width of a human hair is roughly 7 x 10^-5 metres.",
+     "Physics: The speed of light is 3 x 10^8 m/s."
+    ]
+   }
+  ],
+  "analogy": {
+   "t": "The Microscope Zoom",
+   "p": "Think of standard form like a microscope. The number A is the detail you see through the lens, and the power of 10 is the zoom level. A positive power (zoom out) lets you see huge things like galaxies, while a negative power (zoom in) lets you see tiny things like atoms. The rule is that you must always adjust the lens so you see between 1 and 10 'units' of detail. If you zoom in one more level, you have to move the decimal point in your detail to keep the actual size of the object the same. The analogy breaks down because in a real microscope, zooming doesn't change the numerical digits of the object's size, but in math, we must shift the decimal to maintain the 'between 1 and 10' rule."
+  },
+  "terms": [
+   {
+    "t": "Mantissa",
+    "d": "The part of a number in standard form that contains the significant digits (the 'A' in A x 10^n)."
+   },
+   {
+    "t": "Exponent",
+    "d": "The power to which the base 10 is raised, indicating the magnitude."
+   },
+   {
+    "t": "Standard Index Form",
+    "d": "The formal name for standard form used in many mathematical contexts."
+   },
+   {
+    "t": "Normalisation",
+    "d": "The process of adjusting a result so that the multiplier A is between 1 and 10."
+   },
+   {
+    "t": "Ordinary Number",
+    "d": "A number written in standard decimal notation without powers of 10."
+   },
+   {
+    "t": "Magnitude",
+    "d": "The relative size of a number, primarily determined by its exponent in standard form."
+   },
+   {
+    "t": "Reciprocal",
+    "d": "The result of dividing 1 by a number; negative powers represent reciprocals of positive powers."
+   },
+   {
+    "t": "Integer",
+    "d": "A whole number; in standard form, the exponent n must be an integer."
+   },
+   {
+    "t": "Base",
+    "d": "The number being raised to a power; in standard form, the base is always 10."
+   },
+   {
+    "t": "Significant Figures",
+    "d": "The digits in A that carry meaning contributing to its precision."
+   },
+   {
+    "t": "Place Value",
+    "d": "The numerical value that a digit has by virtue of its position in a number."
+   },
+   {
+    "t": "Decimal Shift",
+    "d": "The movement of the decimal point left or right when multiplying or dividing by powers of 10."
+   },
+   {
+    "t": "Scientific Notation",
+    "d": "The international term for standard form, used across all science disciplines."
+   },
+   {
+    "t": "Laws of Indices",
+    "d": "The rules used to multiply and divide powers, essential for calculating with standard form."
+   },
+   {
+    "t": "Prefix",
+    "d": "Standard units like 'kilo' (10^3) or 'micro' (10^-6) that relate directly to standard form."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "0.5 x 10^4",
+    "r": "5 x 10^3 (A must be at least 1)"
+   },
+   {
+    "w": "12 x 10^5",
+    "r": "1.2 x 10^6 (A must be less than 10)"
+   },
+   {
+    "w": "4 x 10^-3 = -4000",
+    "r": "0.004 (Negative powers create small decimals, not negative numbers)"
+   },
+   {
+    "w": "3 x 10^2 + 2 x 10^3 = 5 x 10^5",
+    "r": "2.3 x 10^3 (You cannot add exponents during addition)"
+   },
+   {
+    "w": "Counting the number of zeros to find n",
+    "r": "Counting the number of decimal place jumps"
+   },
+   {
+    "w": "(2 x 10^3)^2 = 2 x 10^6",
+    "r": "4 x 10^6 (You must square the multiplier A as well as the power)"
+   },
+   {
+    "w": "3.5 x 10^4 = 3500",
+    "r": "35000 (Incorrect number of decimal shifts)"
+   },
+   {
+    "w": "1.5 x 10^0 = 0",
+    "r": "1.5 (Any number to the power of 0 is 1)"
+   },
+   {
+    "w": "Writing 4.0 x 10^3 as 4000.0",
+    "r": "4000 (Ordinary numbers usually don't need the trailing decimal)"
+   },
+   {
+    "w": "Using 'x' from the alphabet on a calculator",
+    "r": "Using the dedicated EXP or x10^x button"
+   }
+  ],
+  "exam": [
+   {
+    "q": "Write 0.000007 in standard form.",
+    "marks": 1,
+    "model": [
+     "Identify the first non-zero digit: 7",
+     "Count jumps from decimal to after the 7: 6 jumps right",
+     "7 x 10^-6"
+    ],
+    "tip": "Small numbers always have negative exponents."
+   },
+   {
+    "q": "Write 4,500,000 in standard form.",
+    "marks": 1,
+    "model": [
+     "Place decimal after the 4: 4.5",
+     "Count jumps from end of number to after the 4: 6 jumps left",
+     "4.5 x 10^6"
+    ],
+    "tip": "Large numbers always have positive exponents."
+   },
+   {
+    "q": "Work out (2 x 10^3) x (4 x 10^5). Give your answer in standard form.",
+    "marks": 2,
+    "model": [
+     "Multiply the numbers: 2 x 4 = 8",
+     "Add the powers: 3 + 5 = 8",
+     "8 x 10^8"
+    ],
+    "tip": "Always check if the final A is between 1 and 10."
+   },
+   {
+    "q": "Work out (6 x 10^7) / (3 x 10^2). Give your answer in standard form.",
+    "marks": 2,
+    "model": [
+     "Divide the numbers: 6 / 3 = 2",
+     "Subtract the powers: 7 - 2 = 5",
+     "2 x 10^5"
+    ],
+    "tip": "Subtract the powers in the order they appear (top minus bottom)."
+   },
+   {
+    "q": "Calculate (5 x 10^4) + (3 x 10^3).",
+    "marks": 2,
+    "model": [
+     "Convert to same power: 5 x 10^4 + 0.3 x 10^4",
+     "Add: 5.3 x 10^4"
+    ],
+    "tip": "Convert the smaller number to the larger power to avoid decimals less than 1."
+   },
+   {
+    "q": "Work out (4 x 10^3) x (5 x 10^6). Give your answer in standard form.",
+    "marks": 2,
+    "model": [
+     "Multiply: 4 x 5 = 20",
+     "Add powers: 3 + 6 = 9",
+     "Normalise: 20 x 10^9 = 2 x 10^10"
+    ],
+    "tip": "This is a common 2-mark question where the second mark is for normalisation."
+   },
+   {
+    "q": "A star is 9.46 x 10^12 km away. Light travels at 3 x 10^5 km/s. How many seconds does light take to reach Earth? Give your answer in standard form.",
+    "marks": 4,
+    "model": [
+     "Time = Distance / Speed",
+     "Time = (9.46 x 10^12) / (3 x 10^5)",
+     "Divide A: 9.46 / 3 = 3.1533...",
+     "Subtract powers: 12 - 5 = 7",
+     "3.15 x 10^7 (to 3 sig figs)"
+    ],
+    "tip": "Standard form is often used in speed-distance-time problems in Paper 2."
+   },
+   {
+    "q": "Calculate (1.2 x 10^5) - (4 x 10^4).",
+    "marks": 3,
+    "model": [
+     "Convert to same power: 12 x 10^4 - 4 x 10^4",
+     "Subtract: 8 x 10^4"
+    ],
+    "tip": "You can also convert to 1.2 x 10^5 - 0.4 x 10^5 = 0.8 x 10^5, then normalise."
+   },
+   {
+    "q": "Find the area of a rectangle with length 2 x 10^3 m and width 5 x 10^4 m.",
+    "marks": 2,
+    "model": [
+     "Area = (2 x 10^3) x (5 x 10^4)",
+     "Area = 10 x 10^7",
+     "Normalise: 1 x 10^8"
+    ],
+    "tip": "Don't forget to square or multiply the units if required, though here it is just the value."
+   },
+   {
+    "q": "Which is larger: 0.004 or 3.5 x 10^-3?",
+    "marks": 2,
+    "model": [
+     "Convert 0.004 to standard form: 4 x 10^-3",
+     "Compare 4 x 10^-3 and 3.5 x 10^-3",
+     "0.004 is larger"
+    ],
+    "tip": "Always convert to the same format to compare accurately."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Calculate (3 x 10^5) x (4 x 10^2), giving your answer in standard form.",
+    "steps": [
+     "Multiply the mantissas: 3 x 4 = 12",
+     "Multiply the powers by adding indices: 10^5 x 10^2 = 10^(5+2) = 10^7",
+     "Combine the results: 12 x 10^7",
+     "Normalise the result: 12 is too big, so move decimal left to get 1.2 and increase power by 1."
+    ],
+    "ans": "1.2 x 10^8"
+   },
+   {
+    "q": "Calculate (6 x 10^4) + (7 x 10^3), giving your answer in standard form.",
+    "steps": [
+     "Identify the different powers: 10^4 and 10^3.",
+     "Change the smaller power to match the larger: 7 x 10^3 = 0.7 x 10^4.",
+     "Add the mantissas: 6 + 0.7 = 6.7.",
+     "Keep the power the same: 6.7 x 10^4."
+    ],
+    "ans": "6.7 x 10^4"
+   },
+   {
+    "q": "Calculate (1.2 x 10^4) / (4 x 10^-2), giving your answer in standard form.",
+    "steps": [
+     "Divide the mantissas: 1.2 / 4 = 0.3.",
+     "Subtract the powers: 4 - (-2) = 4 + 2 = 6.",
+     "Combine: 0.3 x 10^6.",
+     "Normalise: 0.3 is too small, so move decimal right to get 3 and decrease power by 1."
+    ],
+    "ans": "3 x 10^5"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "The anatomy of standard form showing the mantissa (A), the base (10), and the exponent (n).",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"50\" y=\"70\" width=\"60\" height=\"40\" fill=\"#dbeafe\" stroke=\"#1b2540\" /><text x=\"70\" y=\"95\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#1b2540\">A</text><text x=\"120\" y=\"95\" font-family=\"sans-serif\" font-size=\"20\" fill=\"#1b2540\">×</text><text x=\"150\" y=\"95\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#1b2540\">10</text><rect x=\"175\" y=\"50\" width=\"40\" height=\"30\" fill=\"#fde68a\" stroke=\"#1b2540\" /><text x=\"188\" y=\"70\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#1b2540\">n</text><text x=\"50\" y=\"150\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#1b2540\">A: The Mantissa (1 to 9.99...)</text><text x=\"50\" y=\"175\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#1b2540\">10: The Base (Always 10)</text><text x=\"50\" y=\"200\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#1b2540\">n: The Exponent (Any Integer)</text></svg>"
+   },
+   {
+    "cap": "The number line constraint for the multiplier A, which must be at least 1 but less than 10.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"50\" y1=\"120\" x2=\"350\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"2\" /><rect x=\"80\" y=\"100\" width=\"240\" height=\"40\" fill=\"#bbf7d0\" fill-opacity=\"0.5\" stroke=\"#1b2540\" /><circle cx=\"80\" cy=\"120\" r=\"5\" fill=\"#1b2540\" /><line x1=\"320\" y1=\"100\" x2=\"320\" y2=\"140\" stroke=\"#1b2540\" stroke-width=\"2\" /><text x=\"80\" y=\"160\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#1b2540\">1 (Included)</text><text x=\"280\" y=\"160\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#1b2540\">10 (Excluded)</text><text x=\"100\" y=\"80\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#1b2540\">Valid range for A: 1 to 9.99...</text></svg>"
+   },
+   {
+    "cap": "Visualising decimal movement for positive and negative exponents.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"50\" y=\"50\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#1b2540\">4.5 x 10^3</text><path d=\"M 80 80 Q 100 110 120 80\" fill=\"none\" stroke=\"#1b2540\" /><path d=\"M 120 80 Q 140 110 160 80\" fill=\"none\" stroke=\"#1b2540\" /><path d=\"M 160 80 Q 180 110 200 80\" fill=\"none\" stroke=\"#1b2540\" /><text x=\"50\" y=\"130\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#1b2540\">4 5 0 0 .</text><text x=\"50\" y=\"170\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#1b2540\">Positive n: Move decimal right</text><text x=\"50\" y=\"195\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#1b2540\">Negative n: Move decimal left</text></svg>"
+   },
+   {
+    "cap": "The four-step logical process for adding or subtracting numbers in standard form.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"50\" y=\"20\" width=\"300\" height=\"30\" fill=\"#e9d5ff\" stroke=\"#1b2540\" /><text x=\"60\" y=\"40\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#1b2540\">Step 1: Match the powers of 10</text><rect x=\"50\" y=\"70\" width=\"300\" height=\"30\" fill=\"#dbeafe\" stroke=\"#1b2540\" /><text x=\"60\" y=\"90\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#1b2540\">Step 2: Add or subtract A values</text><rect x=\"50\" y=\"120\" width=\"300\" height=\"30\" fill=\"#fde68a\" stroke=\"#1b2540\" /><text x=\"60\" y=\"140\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#1b2540\">Step 3: Re-adjust to Standard Form</text><rect x=\"50\" y=\"170\" width=\"300\" height=\"30\" fill=\"#bbf7d0\" stroke=\"#1b2540\" /><text x=\"60\" y=\"190\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#1b2540\">Step 4: Final check of A range</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_h.0.8",
+  "sid": "maths_eduqas_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3-flash-preview",
+  "ts": "2026-11-20T17:31:24.105Z"
  }
 }
