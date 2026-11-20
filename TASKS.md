@@ -5,7 +5,7 @@ Runs read **only this file and `docs/CONTEXT.md`**. Keep this file short: finish
 ## Status
 
 ```
-RUN LOCK:       none
+RUN LOCK:       running since 2026-11-20 23:23 UTC, session 01Sm3c8hMXWExECqdbGYesyV (owner in chat)
 CURRENT JOB:    none (J2b done; J3 Maths carries on by itself via the daily pipeline run)
 CURRENT STEPS:  none
 LAST RUN ENDED: 2026-11-20 01:25 UTC. Pipeline healthy and faster: the 19 Nov run saved 78 notes (345 of 5168 done; was 43 the day before), maths_eduqas_h (46/99) and maths_ocr_h (23/45) are now being reached, retry list 173 -> 95; it stopped when Gemini's real daily quota ran out. Biggest failure: 50 of the 95 retries are gemini-flash-lite-latest "did not return JSON". Fix 137527b (CI green): replies with raw line breaks/tabs inside strings are now repaired, and unreadable replies now say why they stopped (MAX_TOKENS/RECITATION/SAFETY) and their length. Next nightly run: read the new failure messages in content/notes/failures.json and fix that cause; next after that is notes with too few diagrams (16).
