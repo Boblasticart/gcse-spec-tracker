@@ -2,6 +2,8 @@
  * Calls the AI providers the owner has keys for. Each one is a plain HTTPS
  * JSON API: Gemini's own, or the OpenAI-style chat API (Groq, OpenRouter, ...).
  */
+import { AiOutputError, parseModelJson } from "@/server/ai/json";
+
 export interface ProviderConfig {
   id: string;
   /** Name of the environment variable (GitHub secret) holding the key. */
@@ -163,7 +165,7 @@ export async function complete(p: ProviderConfig, key: string, prompt: string): 
     });
     const { text, finish } = geminiStreamText(chunks);
     if (!text) throw new Error(`empty reply (${finish || "no candidate"})`);
-    return text;
+    return checkFinished(text, finish, "STOP");
   }
   const chunks = await post(p.url ?? "", { authorization: `Bearer ${key}` }, {
     model: p.model,
@@ -179,7 +181,21 @@ export async function complete(p: ProviderConfig, key: string, prompt: string): 
   // A model that spends its whole token budget thinking replies with nothing: not the note's fault, so after two of these the writer moves on to the next model.
   if (!text && finish === "length") throw new RateLimited("reply cut off: empty reply (length)", false, 5000);
   if (!text) throw new Error(`empty reply (${finish || "no choice"})`);
-  return text;
+  return checkFinished(text, finish, "stop");
+}
+
+/**
+ * A reply that stopped early (token limit, Gemini's RECITATION or SAFETY stop) is usually half a note. If it can't be
+ * read, say why it stopped, so the failures list and STATUS show the real cause instead of just "did not return JSON".
+ */
+export function checkFinished(text: string, finish: string, normal: string): string {
+  if (!finish || finish === normal) return text;
+  try {
+    parseModelJson(text);
+    return text;
+  } catch {
+    throw new AiOutputError(`The reply stopped early (${finish}) after ${text.length} characters.`);
+  }
 }
 
 /** The models to try for a provider. "auto-free" asks OpenRouter which free models exist today (biggest context first). */

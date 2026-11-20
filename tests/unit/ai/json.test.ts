@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { AiOutputError, fixStrayBackslashes, parseModelJson } from "@/server/ai/json";
+import { AiOutputError, escapeControlCharsInStrings, fixStrayBackslashes, parseModelJson } from "@/server/ai/json";
 
 describe("parsing model replies", () => {
   it("reads plain JSON", () => {
@@ -33,5 +33,14 @@ describe("parsing model replies", () => {
     expect(fixStrayBackslashes(ok)).toBe(ok);
     expect(parseModelJson(ok)).toEqual({ a: "x\ny\tz \"q\" \\frac \u00e9 \neither \ne.g." });
   });
-});
 
+  it("reads replies with raw line breaks and tabs inside strings", () => {
+    expect(parseModelJson('{"a":"line one\nline two","b":"x\ty"}')).toEqual({ a: "line one\nline two", b: "x\ty" });
+    expect(parseModelJson('{\n  "a": "say \\"hi\\"\n there"\n}')).toEqual({ a: 'say "hi"\n there' });
+    expect(escapeControlCharsInStrings('{\n"a":"b\nc"}')).toBe('{\n"a":"b\\nc"}');
+  });
+
+  it("says how long an unreadable reply was and how it ended", () => {
+    expect(() => parseModelJson('{"a": "cut off')).toThrow(/did not return JSON\. \(14 characters, ending "\{"a": "cut off"\)/);
+  });
+});

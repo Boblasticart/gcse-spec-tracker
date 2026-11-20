@@ -1,6 +1,8 @@
 import { describe, expect, it } from "vitest";
 
-import { ModelUnavailable, RateLimited, classifyHttpError, geminiFlashModels, geminiStreamText, openaiStreamText, parseSse } from "../../scripts/notes/providers";
+import { AiOutputError } from "@/server/ai/json";
+
+import { ModelUnavailable, RateLimited, checkFinished, classifyHttpError, geminiFlashModels, geminiStreamText, openaiStreamText, parseSse } from "../../scripts/notes/providers";
 
 describe("note writer: provider replies", () => {
   it("moves on to another model when a model can't be used", () => {
@@ -48,5 +50,12 @@ describe("note writer: provider replies", () => {
       { name: "models/gemini-embedding-001", supportedGenerationMethods: ["embedContent"] },
     ]);
     expect(ids).toEqual(["gemini-3.8-flash", "gemini-3.8-flash-lite", "gemini-2.5-flash"]);
+  });
+
+  it("says why a reply stopped early when it can't be read", () => {
+    expect(checkFinished('{"a":1}', "STOP", "STOP")).toBe('{"a":1}');
+    expect(checkFinished('{"a":1}', "MAX_TOKENS", "STOP")).toBe('{"a":1}');
+    expect(() => checkFinished('{"a":"half', "MAX_TOKENS", "STOP")).toThrow(/stopped early \(MAX_TOKENS\) after 10 characters/);
+    expect(() => checkFinished('{"a":"half', "length", "stop")).toThrow(AiOutputError);
   });
 });

@@ -49,6 +49,31 @@ export function fixStrayBackslashes(text: string): string {
 }
 
 /**
+ * Escapes raw line breaks, tabs and other control characters that a model left inside JSON strings (JSON forbids them,
+ * so one stray line break makes the whole reply unreadable). Text outside strings is left alone.
+ */
+export function escapeControlCharsInStrings(text: string): string {
+  let out = "";
+  let inString = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text.charAt(i);
+    if (inString && c === "\\") {
+      out += c + (text[i + 1] ?? "");
+      i++;
+      continue;
+    }
+    if (c === '"') inString = !inString;
+    const code = text.charCodeAt(i);
+    if (inString && code < 0x20) {
+      out += c === "\n" ? "\\n" : c === "\r" ? "\\r" : c === "\t" ? "\\t" : `\\u${code.toString(16).padStart(4, "0")}`;
+      continue;
+    }
+    out += c;
+  }
+  return out;
+}
+
+/**
  * Parses a model reply that should be JSON but may be wrapped in a ```json
  * fence or surrounded by chatter (same fallbacks as the old marking worker).
  */
@@ -57,7 +82,11 @@ export function parseModelJson(text: string): unknown {
     try {
       return { ok: true, value: JSON.parse(s) };
     } catch {
-      return { ok: false };
+      try {
+        return { ok: true, value: JSON.parse(escapeControlCharsInStrings(s)) };
+      } catch {
+        return { ok: false };
+      }
     }
   };
   const trimmed = fixStrayBackslashes(text.trim());
@@ -74,7 +103,8 @@ export function parseModelJson(text: string): unknown {
     const sliced = tryParse(trimmed.slice(a, b + 1));
     if (sliced.ok) return sliced.value;
   }
-  throw new AiOutputError("The AI did not return JSON.");
+  const tail = trimmed.slice(-40).replace(/\s+/g, " ");
+  throw new AiOutputError(`The AI did not return JSON. (${trimmed.length} characters, ending "${tail}")`);
 }
 
 /** Plain object or an empty one. */
