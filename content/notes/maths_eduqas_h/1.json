@@ -10070,5 +10070,891 @@
   "src": "pre",
   "by": "gemini/gemini-3-flash-preview",
   "ts": "2026-11-20T17:32:57.803Z"
+ },
+ "maths_eduqas_h.1.9": {
+  "summary": "Identifying and interpreting gradients and intercepts of linear functions is a core algebra component of Eduqas GCSE Mathematics Higher tier. Graphically, the gradient represents the steepness or rate of change of a straight line, calculated using the ratio of vertical change to horizontal change, while intercepts mark where the line crosses the axes. Algebraically, rearranging any linear equation into the canonical form y = mx + c explicitly reveals the gradient m and y-intercept (0, c). In real-world contexts, the gradient represents a constant unit rate of change, and the y-intercept represents an initial or fixed baseline value.",
+  "core": [
+   {
+    "h": "1. The Canonical Form of Linear Equations (y = mx + c)",
+    "p": "Every straight-line graph on a standard Cartesian coordinate plane can be written in the explicit slope-intercept form **y = mx + c**. Understanding each parameter in this equation is essential for both graphical interpretation and algebraic manipulation.",
+    "bullets": [
+     "**m represents the gradient**: The rate of change of y with respect to x, defining the steepness and direction of the line.",
+     "**c represents the y-intercept**: The value of y where the straight line crosses the y-axis (where x = 0).",
+     "**Positive Gradient (m > 0)**: The line slopes upwards from left to right, meaning as x increases, y increases.",
+     "**Negative Gradient (m < 0)**: The line slopes downwards from left to right, meaning as x increases, y decreases.",
+     "**Zero Gradient (m = 0)**: The line is horizontal, represented by the equation y = c.",
+     "**Undefined Gradient**: Vertical lines have an infinite/undefined gradient and are written in the form x = k."
+    ],
+    "table": {
+     "head": [
+      "Parameter",
+      "Algebraic Symbol",
+      "Graphical Feature",
+      "Contextual Meaning"
+     ],
+     "rows": [
+      [
+       "Gradient",
+       "m",
+       "Steepness / Direction",
+       "Rate of change per unit of x"
+      ],
+      [
+       "y-intercept",
+       "c",
+       "Crossing point on y-axis (0, c)",
+       "Initial value / Fixed baseline fee"
+      ],
+      [
+       "x-intercept",
+       "-c / m",
+       "Crossing point on x-axis (-c/m, 0)",
+       "Break-even point / Zero value point"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Definition of Linear Function",
+      "p": "A function f(x) = mx + c whose graph is a straight line, characterised by a constant rate of change (gradient) across its entire domain."
+     },
+     {
+      "k": "warn",
+      "t": "Common Mistake: Variable Inclusion",
+      "p": "The gradient is strictly the numerical coefficient m. Never include x when stating the gradient (e.g., if y = 4x - 3, the gradient is 4, NOT 4x)."
+     }
+    ]
+   },
+   {
+    "h": "2. Algebraic Identification by Rearrangement",
+    "p": "Linear equations are frequently presented in implicit form, such as **ax + by + c = 0** or **ax + by = d**. To identify the gradient and y-intercept algebraically, you must manipulate the equation to isolate y on one side.",
+    "bullets": [
+     "Step 1: Rearrange terms so that the term containing **y** is isolated on one side of the equation.",
+     "Step 2: Divide all terms by the coefficient of **y** so that the coefficient of y becomes positive 1.",
+     "Step 3: Read off the coefficient of **x** as the gradient **m**, and the constant term as the y-intercept **c**.",
+     "Example: For **3x + 2y = 8**, subtract 3x to get **2y = -3x + 8**, then divide by 2 to get **y = -1.5x + 4**. Gradient = -1.5, y-intercept = 4."
+    ],
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Examiner Strategy for Negative Coefficients",
+      "p": "If the y-term has a negative sign, add it to the other side first to avoid sign errors when dividing by a negative scalar."
+     }
+    ]
+   },
+   {
+    "h": "3. Graphical Calculation of Gradient (m = Delta y / Delta x)",
+    "p": "To identify the gradient from a graph, select two distinct points on the line, **(x1, y1)** and **(x2, y2)**, and calculate the ratio of vertical displacement (change in y) to horizontal displacement (change in x).",
+    "bullets": [
+     "**Formula**: Gradient m = (y2 - y1) / (x2 - x1) = Change in y / Change in x = Rise / Run.",
+     "**Step 1**: Choose two grid intersections on the line that are as far apart as possible to maximize measurement accuracy.",
+     "**Step 2**: Draw a right-angled right triangle (rate triangle) connecting the two points.",
+     "**Step 3**: Calculate Delta y (vertical height) and Delta x (horizontal base), paying careful attention to axis scales.",
+     "**Step 4**: Divide Delta y by Delta x, ensuring the correct sign is applied (positive for upward slope, negative for downward slope)."
+    ],
+    "fig": [
+     {
+      "cap": "Calculating gradient using a rate triangle between points (1, 1) and (4, 7). Gradient m = (7 - 1) / (4 - 1) = 6 / 3 = 2.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><defs><linearGradient id=\"g1\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#dbeafe\"/><stop offset=\"100%\" stop-color=\"#bbf7d0\"/></linearGradient></defs><rect width=\"400\" height=\"240\" fill=\"#ffffff\"/><path d=\"M 40,200 L 360,200 M 40,200 L 40,20\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M 40,50 L 360,50 M 40,100 L 360,100 M 40,150 L 360,150 M 90,200 L 90,20 M 140,200 L 140,20 M 190,200 L 190,20 M 240,200 L 240,20 M 290,200 L 290,20 M 340,200 L 340,20\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"60\" y1=\"190\" x2=\"340\" y2=\"30\" stroke=\"#2563eb\" stroke-width=\"3\"/><polygon points=\"140,144 290,144 290,58\" fill=\"url(#g1)\" opacity=\"0.6\" stroke=\"#1e40af\" stroke-dasharray=\"4\"/><circle cx=\"140\" cy=\"144\" r=\"5\" fill=\"#dc2626\"/><circle cx=\"290\" cy=\"58\" r=\"5\" fill=\"#dc2626\"/><text x=\"110\" y=\"160\" font-size=\"12\" fill=\"#1b2540\" font-weight=\"bold\">(x1, y1) = (1, 1)</text><text x=\"260\" y=\"45\" font-size=\"12\" fill=\"#1b2540\" font-weight=\"bold\">(x2, y2) = (4, 7)</text><text x=\"190\" y=\"162\" font-size=\"12\" fill=\"#1e40af\" font-weight=\"bold\">Change in x = 3</text><text x=\"300\" y=\"105\" font-size=\"12\" fill=\"#1e40af\" font-weight=\"bold\">Change in y = 6</text><text x=\"50\" y=\"35\" font-size=\"13\" fill=\"#1b2540\" font-weight=\"bold\">Gradient m = 6 / 3 = 2</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "4. Identification and Interpretation of Axis Intercepts",
+    "p": "Intercepts are the exact coordinate points where a function intersects the coordinate axes. Identifying both y and x-intercepts algebraically and graphically provides critical boundary values in linear problems.",
+    "bullets": [
+     "**y-intercept**: Found algebraically by setting **x = 0**. Coordinate format: **(0, c)**.",
+     "**x-intercept**: Found algebraically by setting **y = 0** and solving for x: **0 = mx + c => x = -c / m**. Coordinate format: **(-c/m, 0)**.",
+     "Graphical reading requires identifying where the straight line cuts the vertical axis (y-intercept) and horizontal axis (x-intercept).",
+     "**Eduqas Exam Requirement**: Always state intercepts as full coordinates (x, y) when asked for key points, or as single scalar values when specified."
+    ],
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Key Intercept Rules",
+      "p": "On the y-axis, the x-coordinate is ALWAYS 0. On the x-axis, the y-coordinate is ALWAYS 0."
+     }
+    ]
+   },
+   {
+    "h": "5. Contextual Interpretation of Gradient (Rates of Change)",
+    "p": "In real-world applications (Component 1 and Component 2 contextual questions), the gradient is not just a abstract steepness value; it represents a physical **rate of change** with specific units derived from (y-axis unit) per (x-axis unit).",
+    "bullets": [
+     "**Distance-Time Graphs**: Gradient = Distance / Time = **Speed** (e.g., m/s or mph).",
+     "**Cost-Quantity Graphs**: Gradient = Cost / Items = **Cost per individual item** (£/item).",
+     "**Volume-Time Graphs**: Gradient = Volume / Time = **Flow rate / Filling rate** (litres/min).",
+     "**Fuel-Distance Graphs**: Gradient = Fuel used / Distance = **Fuel consumption rate** (litres/km).",
+     "A **negative gradient** in context indicates a rate of decrease, decay, drainage, or depreciation."
+    ],
+    "fig": [
+     {
+      "cap": "Contextual Linear Graph representing taxi fare vs distance. The y-intercept (£3.00) represents the fixed call-out fee, and the gradient (£1.50/mile) represents the charge per mile.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#ffffff\"/><path d=\"M 50,200 L 370,200 M 50,200 L 50,20\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"150\" x2=\"350\" y2=\"30\" stroke=\"#059669\" stroke-width=\"3\"/><circle cx=\"50\" cy=\"150\" r=\"5\" fill=\"#d97706\"/><line x1=\"50\" y1=\"150\" x2=\"350\" y2=\"150\" stroke=\"#94a3b8\" stroke-dasharray=\"4\"/><line x1=\"250\" y1=\"150\" x2=\"250\" y2=\"70\" stroke=\"#d97706\" stroke-dasharray=\"4\"/><text x=\"160\" y=\"230\" font-size=\"12\" fill=\"#1b2540\" font-weight=\"bold\">Distance (miles)</text><text x=\"10\" y=\"110\" font-size=\"12\" fill=\"#1b2540\" font-weight=\"bold\" transform=\"rotate(-90 15,110)\">Total Cost (£)</text><text x=\"60\" y=\"145\" font-size=\"11\" fill=\"#d97706\" font-weight=\"bold\">y-intercept (0, 3): Fixed Call-out Fee = £3.00</text><text x=\"255\" y=\"115\" font-size=\"11\" fill=\"#059669\" font-weight=\"bold\">Gradient = £1.50 per mile</text><text x=\"70\" y=\"40\" font-size=\"13\" fill=\"#1b2540\" font-weight=\"bold\">Taxi Cost: C = 1.5d + 3</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "6. Contextual Interpretation of Intercepts",
+    "p": "In applied problems, both the y-intercept and x-intercept hold distinct, real-world operational meanings that must be interpreted clearly using contextual units.",
+    "bullets": [
+     "**y-intercept Context**: Represents the **initial condition** or **fixed baseline value** at time/quantity t = 0 (e.g., initial height, standing charge, deposit, starting fuel volume).",
+     "**x-intercept Context**: Represents the **zero-value point** or **completion time** (e.g., time taken for a container to empty, distance at which fuel is exhausted, break-even unit count).",
+     "**Exam Tip**: When asked to interpret an intercept, state the specific numerical value WITH its correct contextual units and explain what is happening physically at that moment."
+    ]
+   },
+   {
+    "h": "7. Parallel Linear Functions and Gradients",
+    "p": "Parallel lines run in identical directions and never intersect. Algebraically, two linear functions are parallel if and only if their gradients are strictly equal.",
+    "bullets": [
+     "**Condition for Parallel Lines**: **m1 = m2**.",
+     "If line L1 has equation **y = m1*x + c1** and line L2 has equation **y = m2*x + c2**, L1 is parallel to L2 if **m1 = m2** and **c1 != c2**.",
+     "Example: Line L1: **y = 3x - 5** and Line L2: **6x - 2y + 7 = 0** -> Rearranging L2 gives **2y = 6x + 7 => y = 3x + 3.5**. Since m1 = 3 and m2 = 3, the lines are parallel."
+    ]
+   },
+   {
+    "h": "8. Perpendicular Linear Functions and Gradients",
+    "p": "Perpendicular lines meet at right angles (90 degrees). Algebraically, the gradient of one line is the **negative reciprocal** of the other.",
+    "bullets": [
+     "**Condition for Perpendicular Lines**: **m1 * m2 = -1** or **m2 = -1 / m1**.",
+     "To find a perpendicular gradient: invert the fraction and flip the sign.",
+     "Example 1: If m1 = 4, the perpendicular gradient m2 = **-1/4**.",
+     "Example 2: If m1 = -2/3, the perpendicular gradient m2 = **+3/2**.",
+     "Horizontal lines (m = 0) and vertical lines (undefined gradient) are always perpendicular to each other."
+    ],
+    "fig": [
+     {
+      "cap": "Comparison of parallel lines (equal gradients m1 = m2 = 2) and perpendicular lines (gradients m1 = 2 and m2 = -1/2 meeting at 90 degrees).",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#ffffff\"/><path d=\"M 20,200 L 380,200 M 200,220 L 200,20\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"20\" y1=\"180\" x2=\"180\" y2=\"20\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"60\" y1=\"210\" x2=\"220\" y2=\"50\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><text x=\"30\" y=\"80\" font-size=\"11\" fill=\"#2563eb\" font-weight=\"bold\">L1: y = 2x + 2</text><text x=\"130\" y=\"160\" font-size=\"11\" fill=\"#2563eb\" font-weight=\"bold\">L2: y = 2x - 3</text><text x=\"60\" y=\"30\" font-size=\"12\" fill=\"#1e40af\" font-weight=\"bold\">Parallel (m1 = m2 = 2)</text><line x1=\"220\" y1=\"190\" x2=\"380\" y2=\"110\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><line x1=\"260\" y1=\"50\" x2=\"340\" y2=\"210\" stroke=\"#059669\" stroke-width=\"2.5\"/><text x=\"270\" y=\"40\" font-size=\"12\" fill=\"#1b2540\" font-weight=\"bold\">Perpendicular</text><text x=\"230\" y=\"130\" font-size=\"11\" fill=\"#dc2626\" font-weight=\"bold\">m1 = -1/2</text><text x=\"340\" y=\"150\" font-size=\"11\" fill=\"#059669\" font-weight=\"bold\">m2 = 2</text><path d=\"M 300,130 L 307,144 L 293,151\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"1.5\"/></svg>"
+     }
+    ]
+   },
+   {
+    "h": "9. Determining Equations from Points and Gradients",
+    "p": "Eduqas Component 1 and 2 exams frequently test your ability to construct the full algebraic equation of a straight line given minimum graphical or geometric information.",
+    "bullets": [
+     "**Given Gradient m and Point (x1, y1)**: Use formula **y - y1 = m(x - x1)** or substitute into **y = mx + c** to solve for **c**.",
+     "**Given Two Points (x1, y1) and (x2, y2)**: First calculate gradient **m = (y2 - y1) / (x2 - x1)**, then substitute one point to find **c**.",
+     "**Form Verification**: Always ensure your final answer matches the requested format (e.g., y = mx + c or ax + by + c = 0 where a, b, and c are integers)."
+    ]
+   },
+   {
+    "h": "10. Scale Reading and Non-Uniform Grids",
+    "p": "A major source of mark loss in GCSE Higher Tier graph interpretation is failing to account for non-uniform axis scales when calculating gradients.",
+    "bullets": [
+     "Never count squares to find Delta y and Delta x unless each grid square represents exactly 1 unit on both axes.",
+     "Always read the numerical values from the axis scales to calculate actual physical change.",
+     "Example: If 2 grid squares vertically represent £10, and 5 grid squares horizontally represent 2 hours, Delta y = 10 and Delta x = 2, giving gradient = 10 / 2 = 5 (£/hour)."
+    ],
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Trap: Counting Grid Squares",
+      "p": "Counting squares instead of scale values gives an incorrect 'visual gradient' rather than the true mathematical rate of change."
+     }
+    ]
+   }
+  ],
+  "analogy": {
+   "t": "The Mobile Phone Tariff",
+   "p": "A linear function y = mx + c is like a monthly mobile phone contract. The y-intercept c is the non-negotiable fixed line-rental fee you pay every month even if you make zero calls (the starting value at x = 0). The gradient m is the extra cost per gigabyte of data used (the rate of change). Your total monthly bill y depends directly on how many gigabytes x you consume. The breakdown occurs if the provider offers bulk-discount tiers where the data rate changes after 10GB—at that point, the pricing structure becomes non-linear (piecewise linear), breaking the constant gradient assumption."
+  },
+  "terms": [
+   {
+    "t": "Gradient",
+    "d": "The measure of the steepness and direction of a line, calculated as the ratio of vertical change (Delta y) to horizontal change (Delta x)."
+   },
+   {
+    "t": "y-intercept",
+    "d": "The coordinate point where a graph crosses the y-axis, occurring where x = 0."
+   },
+   {
+    "t": "x-intercept",
+    "d": "The coordinate point where a graph crosses the x-axis, occurring where y = 0."
+   },
+   {
+    "t": "Rate of Change",
+    "d": "The speed or ratio at which one variable changes in relation to another; represented by the gradient on a linear graph."
+   },
+   {
+    "t": "Linear Function",
+    "d": "A mathematical function of the form f(x) = mx + c whose graph forms an unbroken straight line."
+   },
+   {
+    "t": "Parallel Lines",
+    "d": "Lines in the same plane that never intersect because they share identical gradients (m1 = m2)."
+   },
+   {
+    "t": "Perpendicular Lines",
+    "d": "Lines that intersect at a right angle (90 degrees), where the product of their gradients is -1 (m1 * m2 = -1)."
+   },
+   {
+    "t": "Negative Reciprocal",
+    "d": "A number transformed by dividing -1 by the original value; used to find perpendicular gradients (e.g., negative reciprocal of 2/3 is -3/2)."
+   },
+   {
+    "t": "Delta y (Δy)",
+    "d": "The vertical distance or change between two points on the y-axis (y2 - y1)."
+   },
+   {
+    "t": "Delta x (Δx)",
+    "d": "The horizontal distance or change between two points on the x-axis (x2 - x1)."
+   },
+   {
+    "t": "Slope-Intercept Form",
+    "d": "The equation of a straight line written as y = mx + c."
+   },
+   {
+    "t": "General Linear Form",
+    "d": "The equation of a straight line expressed in the standard form ax + by + c = 0, where a, b, and c are integers."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Stating the gradient of y = 5x - 2 as '5x'.",
+    "r": "State only the numerical coefficient '5'. The variable x is not part of the gradient scalar."
+   },
+   {
+    "w": "Calculating gradient as Delta x / Delta y (Run / Rise).",
+    "r": "Calculate gradient strictly as Delta y / Delta x (Rise / Run)."
+   },
+   {
+    "w": "Writing y-intercept as a single number when asked for coordinates.",
+    "r": "Write the y-intercept as a coordinate pair (0, c) if coordinates are explicitly requested."
+   },
+   {
+    "w": "Ignoring non-1:1 scale ratios on graph axes and counting grid squares instead of reading values.",
+    "r": "Read actual numerical scale values from the axes to determine true Delta y and Delta x."
+   },
+   {
+    "w": "Forgetting to flip the sign when finding perpendicular gradients (e.g. saying perpendicular to 3 is 1/3).",
+    "r": "Take the negative reciprocal: the gradient perpendicular to 3 is -1/3."
+   },
+   {
+    "w": "Stating the fixed fee in a contextual problem as the gradient instead of the y-intercept.",
+    "r": "Identify fixed baseline charges as the y-intercept (c) and variable per-unit charges as the gradient (m)."
+   },
+   {
+    "w": "Dividing incorrectly when rearranging ax + by = c (e.g. 2y = 3x + 4 -> y = 3x + 2).",
+    "r": "Divide every single term on the right-hand side by the y-coefficient (y = 1.5x + 2)."
+   },
+   {
+    "w": "Assuming a downward sloping line has a positive gradient.",
+    "r": "Ensure lines sloping down from left to right have a negative sign attached to their gradient."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Line L has equation 4x + 2y = 9. State the gradient and y-intercept of Line L.",
+    "marks": 2,
+    "model": [
+     "Rearrange 4x + 2y = 9 to isolate y: 2y = -4x + 9",
+     "Divide by 2: y = -2x + 4.5",
+     "Gradient m = -2",
+     "y-intercept = 4.5 (or (0, 4.5))"
+    ],
+    "tip": "Always convert implicit equations into y = mx + c form before identifying m and c."
+   },
+   {
+    "q": "A water tank is being drained. The volume of water V (in litres) remaining in the tank after t minutes is given by V = 450 - 25t. Interpret the values 450 and -25 in the context of the problem.",
+    "marks": 2,
+    "model": [
+     "450 is the y-intercept, representing the initial volume of water in the tank (450 litres) before draining starts.",
+     "-25 is the gradient, representing the rate at which water drains from the tank (25 litres per minute)."
+    ],
+    "tip": "State both the physical meaning AND the correct units for full marks on interpretation questions."
+   },
+   {
+    "q": "Line A passes through points (2, 5) and (8, 17). Find the equation of Line A in the form y = mx + c.",
+    "marks": 3,
+    "model": [
+     "Calculate gradient m = (17 - 5) / (8 - 2) = 12 / 6 = 2",
+     "Substitute m = 2 and point (2, 5) into y = mx + c: 5 = 2(2) + c",
+     "Solve for c: 5 = 4 + c => c = 1",
+     "State final equation: y = 2x + 1"
+    ],
+    "tip": "Double check your calculated gradient by substituting the second point (8, 17): 2(8) + 1 = 17."
+   },
+   {
+    "q": "Line L1 has equation y = 3x - 4. Line L2 is perpendicular to L1 and passes through the point (6, 2). Find the equation of Line L2.",
+    "marks": 4,
+    "model": [
+     "Identify gradient of L1: m1 = 3",
+     "Calculate perpendicular gradient m2 = -1 / 3",
+     "Substitute m2 = -1/3 and point (6, 2) into y - y1 = m(x - x1): y - 2 = -1/3(x - 6)",
+     "Expand and simplify: y - 2 = -1/3 x + 2 => y = -1/3 x + 4"
+    ],
+    "tip": "Remember that the product of perpendicular gradients must equal -1: 3 * (-1/3) = -1."
+   },
+   {
+    "q": "The graph of a linear function passes through (0, -6) and has an x-intercept at (4, 0). Determine the gradient and the equation of the line.",
+    "marks": 3,
+    "model": [
+     "Identify y-intercept c = -6 from point (0, -6)",
+     "Calculate gradient m = (0 - (-6)) / (4 - 0) = 6 / 4 = 1.5",
+     "Write equation: y = 1.5x - 6 (or y = 3/2 x - 6)"
+    ],
+    "tip": "Recognise that (0, -6) directly gives the value of c, saving algebraic steps."
+   },
+   {
+    "q": "Line P has equation 2x + 5y = 10. Line Q is parallel to Line P and passes through (5, -1). Find the equation of Line Q in the form ax + by = d where a, b, and d are integers.",
+    "marks": 4,
+    "model": [
+     "Rearrange Line P to find gradient: 5y = -2x + 10 => y = -2/5 x + 2, so m = -2/5",
+     "Since Line Q is parallel, its gradient is also -2/5",
+     "Use point (5, -1): y - (-1) = -2/5(x - 5)",
+     "y + 1 = -2/5 x + 2",
+     "Multiply by 5: 5y + 5 = -2x + 10",
+     "Rearrange to integer form ax + by = d: 2x + 5y = 5"
+    ],
+    "tip": "Pay close attention to the requested final form (ax + by = d with integer coefficients)."
+   },
+   {
+    "q": "A catering company charges a fixed setup fee plus a constant cost per guest. For 30 guests the total cost is £450. For 80 guests the total cost is £950. Find the fixed setup fee and the cost per guest.",
+    "marks": 4,
+    "model": [
+     "Represent as coordinates (guests, cost): (30, 450) and (80, 950)",
+     "Calculate gradient (cost per guest m): m = (950 - 450) / (80 - 30) = 500 / 50 = 10",
+     "Substitute into C = 10g + c using (30, 450): 450 = 10(30) + c => 450 = 300 + c",
+     "Solve for c: c = 150",
+     "State conclusions clearly: Cost per guest (gradient) = £10; Fixed setup fee (y-intercept) = £150"
+    ],
+    "tip": "Map real-world word problems into (x, y) coordinates to apply linear gradient methods easily."
+   },
+   {
+    "q": "Show algebraically that the line passing through (-2, 9) and (4, -3) is perpendicular to the line y = 0.5x + 7.",
+    "marks": 3,
+    "model": [
+     "Calculate gradient of line through given points: m1 = (-3 - 9) / (4 - (-2)) = -12 / 6 = -2",
+     "Identify gradient of given line y = 0.5x + 7: m2 = 0.5",
+     "Calculate product of gradients: m1 * m2 = -2 * 0.5 = -1",
+     "Conclude that since m1 * m2 = -1, the lines are perpendicular."
+    ],
+    "tip": "Always explicitly write out the product equal to -1 and include a final concluding statement."
+   },
+   {
+    "q": "A line has gradient -3/4 and cuts the x-axis at x = 8. Find the coordinate of its y-intercept.",
+    "marks": 3,
+    "model": [
+     "x-intercept at x = 8 means the line passes through (8, 0)",
+     "Substitute m = -3/4 and point (8, 0) into y = mx + c: 0 = (-3/4)(8) + c",
+     "Solve: 0 = -6 + c => c = 6",
+     "State y-intercept coordinate: (0, 6)"
+    ],
+    "tip": "Remember that an x-intercept at 8 corresponds to the coordinate pair (8, 0)."
+   }
+  ],
+  "worked": [
+   {
+    "q": "The linear equation 5x - 2y = 14 is given. (a) Rearrange the equation into the form y = mx + c and state the gradient and y-intercept. (b) Calculate the x-intercept of the line.",
+    "steps": [
+     "Step 1: Rearrange to isolate the y-term. Subtract 5x from both sides: -2y = -5x + 14",
+     "Step 2: Divide every term by -2: y = (-5/-2)x + (14/-2) => y = 2.5x - 7",
+     "Step 3: Read off gradient m = 2.5 (or 5/2) and y-intercept c = -7 (or coordinate (0, -7)).",
+     "Step 4: To find the x-intercept, set y = 0 in the equation: 0 = 2.5x - 7",
+     "Step 5: Solve for x: 2.5x = 7 => x = 7 / 2.5 = 2.8.",
+     "Step 6: State x-intercept coordinate: (2.8, 0)."
+    ],
+    "ans": "Gradient = 2.5; y-intercept = -7 (0, -7); x-intercept = (2.8, 0)"
+   },
+   {
+    "q": "A fuel tank initially contains 60 litres of petrol. A generator consumes petrol at a steady rate of 4.5 litres per hour. (a) Write down a linear equation for the remaining fuel V in terms of hours running t. (b) Interpret the gradient and both intercepts physically.",
+    "steps": [
+     "Step 1: Identify initial amount at t = 0: y-intercept c = 60.",
+     "Step 2: Identify consumption rate: since volume decreases, gradient m = -4.5.",
+     "Step 3: Construct equation: V = 60 - 4.5t (or V = -4.5t + 60).",
+     "Step 4: Interpret gradient (-4.5): Rate of petrol consumption (decreases by 4.5 litres per hour).",
+     "Step 5: Interpret y-intercept (60): Initial volume of petrol in the tank before generator starts.",
+     "Step 6: Calculate x-intercept (t-intercept): Set V = 0 => 0 = 60 - 4.5t => 4.5t = 60 => t = 13.33 hours (13 hours 20 mins).",
+     "Step 7: Interpret x-intercept: Time taken for the fuel tank to become completely empty."
+    ],
+    "ans": "Equation: V = 60 - 4.5t; Gradient: Fuel consumption rate (-4.5 L/h); y-intercept: Initial fuel (60 L); t-intercept: Time until empty (13.33 hours)."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Summary of gradient signs and intercept identification on standard linear graph axes.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#ffffff\"/><path d=\"M 30,210 L 370,210 M 200,230 L 200,10\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"190\" x2=\"350\" y2=\"30\" stroke=\"#2563eb\" stroke-width=\"3\"/><circle cx=\"200\" cy=\"115\" r=\"5\" fill=\"#dc2626\"/><circle cx=\"305\" cy=\"210\" r=\"5\" fill=\"#059669\"/><text x=\"210\" y=\"110\" font-size=\"12\" fill=\"#dc2626\" font-weight=\"bold\">y-intercept (0, c)</text><text x=\"280\" y=\"200\" font-size=\"12\" fill=\"#059669\" font-weight=\"bold\">x-intercept (-c/m, 0)</text><text x=\"60\" y=\"50\" font-size=\"13\" fill=\"#2563eb\" font-weight=\"bold\">Positive Gradient (m &gt; 0)</text><text x=\"365\" y=\"225\" font-size=\"12\" fill=\"#1b2540\" font-weight=\"bold\">x</text><text x=\"185\" y=\"25\" font-size=\"12\" fill=\"#1b2540\" font-weight=\"bold\">y</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_h.1.9",
+  "sid": "maths_eduqas_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.6-flash",
+  "ts": "2026-11-21T16:37:03.441Z"
+ },
+ "maths_eduqas_h.1.8": {
+  "summary": "Straight-line graphs form a cornerstone of Higher tier GCSE Mathematics, linking algebraic equations with geometric representations. Every non-vertical straight line can be expressed in the gradient-intercept form y = mx + c, where m represents the steepness or rate of change (gradient) and c represents the y-intercept where the line crosses the vertical axis. Master graph analysis requires understanding structural rearrangements such as ax + by + c = 0, applying point-gradient formulas, identifying parallel lines with equal gradients, and determining perpendicular lines whose gradients multiply to give -1.",
+  "core": [
+   {
+    "h": "1. The Gradient-Intercept Form: y = mx + c",
+    "p": "The standard linear equation **y = mx + c** explicitly reveals the essential geometric properties of a straight line on a Cartesian coordinate plane.",
+    "bullets": [
+     "**m** represents the **gradient** (the slope or rate of change of y with respect to x).",
+     "**c** represents the **y-intercept** (the exact y-coordinate where the line crosses the y-axis, occurring at coordinate (0, c)).",
+     "If **m > 0**, the line slopes upwards from left to right (positive gradient).",
+     "If **m < 0**, the line slopes downwards from left to right (negative gradient).",
+     "If **m = 0**, the line is completely horizontal, simplifying the equation to **y = c**."
+    ],
+    "table": {
+     "head": [
+      "Equation Component",
+      "Algebraic Role",
+      "Graphical Interpretation"
+     ],
+     "rows": [
+      [
+       "m (Gradient)",
+       "Coefficient of x when y is subject",
+       "Steepness and direction (rise / run)"
+      ],
+      [
+       "c (y-intercept)",
+       "Constant term when y is subject",
+       "Point where line crosses vertical axis (0, c)"
+      ],
+      [
+       "x (Independent)",
+       "Input variable",
+       "Horizontal distance from origin"
+      ],
+      [
+       "y (Dependent)",
+       "Output variable",
+       "Vertical distance from origin"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Gradient-Intercept Form",
+      "p": "The equation of a straight line expressed as y = mx + c, where m is the gradient and c is the y-intercept."
+     },
+     {
+      "k": "warn",
+      "t": "Isolate y First!",
+      "p": "Never read m directly from an equation like 2y = 6x + 4. You must divide by 2 first to get y = 3x + 2, giving gradient m = 3."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Standard components of a straight-line graph y = mx + c showing gradient triangle and y-intercept.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"40\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"80\" y1=\"220\" x2=\"80\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"2\"/><path d=\"M 355 200 L 345 195 L 345 205 Z\" fill=\"#64748b\"/><path d=\"M 80 25 L 75 35 L 85 35 Z\" fill=\"#64748b\"/><line x1=\"40\" y1=\"180\" x2=\"340\" y2=\"30\" stroke=\"#2563eb\" stroke-width=\"3\"/><circle cx=\"80\" cy=\"160\" r=\"5\" fill=\"#dc2626\"/><text x=\"92\" y=\"165\" font-size=\"12\" fill=\"#dc2626\" font-weight=\"bold\">y-intercept (0, c)</text><line x1=\"160\" y1=\"120\" x2=\"280\" y2=\"120\" stroke=\"#16a34a\" stroke-width=\"2\" stroke-dasharray=\"4\"/><line x1=\"280\" y1=\"120\" x2=\"280\" y2=\"60\" stroke=\"#16a34a\" stroke-width=\"2\" stroke-dasharray=\"4\"/><text x=\"200\" y=\"135\" font-size=\"12\" fill=\"#16a34a\" font-weight=\"bold\">Change in x (Run)</text><text x=\"288\" y=\"95\" font-size=\"12\" fill=\"#16a34a\" font-weight=\"bold\">Change in y (Rise)</text><text x=\"345\" y=\"218\" font-size=\"12\" fill=\"#64748b\">x</text><text x=\"65\" y=\"30\" font-size=\"12\" fill=\"#64748b\">y</text><text x=\"230\" y=\"45\" font-size=\"13\" fill=\"#2563eb\" font-weight=\"bold\">y = mx + c</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "2. Calculating the Gradient of a Line Segment",
+    "p": "The gradient measures the rate of vertical change relative to horizontal change between any two distinct points on a straight line.",
+    "bullets": [
+     "Given two coordinates **(x1, y1)** and **(x2, y2)**, the gradient formula is **m = (y2 - y1) / (x2 - x1)**.",
+     "Equivalently, **m = Vertical Change / Horizontal Change = Rise / Run = Δy / Δx**.",
+     "Order matters: ensure the same coordinate's values come first in both numerator and denominator.",
+     "Subtracting negative coordinates requires careful sign management: **y2 - (-y1) = y2 + y1**."
+    ],
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Gradient Formula",
+      "p": "m = (y2 - y1) / (x2 - x1). The gradient is constant across any section of a straight line."
+     },
+     {
+      "k": "tip",
+      "t": "Checking Gradient Signs",
+      "p": "If moving left-to-right goes uphill, gradient is positive. If moving left-to-right goes downhill, gradient is negative."
+     }
+    ]
+   },
+   {
+    "h": "3. The Alternative General Linear Form: ax + by + c = 0",
+    "p": "Linear equations are frequently given in the general form **ax + by + c = 0** or **ax + by = d**, where a, b, and c are integers.",
+    "bullets": [
+     "To find the gradient and intercept from general form, rearrange to isolate **y**.",
+     "Example: Rearrange **3x + 2y - 12 = 0** into **2y = -3x + 12**, then **y = -1.5x + 6**.",
+     "This reveals gradient **m = -1.5** and y-intercept **c = 6**.",
+     "General form is preferred when coefficients need to be written without fractions."
+    ],
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Negative Coefficients of y",
+      "p": "If rearranging 4x - 5y = 20, adding 5y to both sides gives 4x - 20 = 5y, so y = (4/5)x - 4."
+     }
+    ]
+   },
+   {
+    "h": "4. Using Point-Gradient Form: y - y1 = m(x - x1)",
+    "p": "When finding the equation of a line given its gradient **m** and any point **(x1, y1)**, the point-gradient formula is the most direct and reliable algebraic method.",
+    "bullets": [
+     "Formula: **y - y1 = m(x - x1)**.",
+     "Substitute the known values for **m**, **x1**, and **y1** directly into the formula.",
+     "Expand the right-hand bracket: **y - y1 = mx - m(x1)**.",
+     "Rearrange to solve for **y** (giving **y = mx + c**) or into general form **ax + by + c = 0** as requested by the exam question."
+    ],
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Point-Gradient Formula",
+      "p": "y - y1 = m(x - x1) is faster and less prone to arithmetic sign errors than substituting into y = mx + c to find c."
+     }
+    ]
+   },
+   {
+    "h": "5. Finding the Equation of a Line Through Two Given Points",
+    "p": "To determine the unique straight line passing through two distinct points **(x1, y1)** and **(x2, y2)**, follow a structured two-step process.",
+    "bullets": [
+     "**Step 1:** Calculate the gradient **m** using **m = (y2 - y1) / (x2 - x1)**.",
+     "**Step 2:** Substitute **m** and either point **(x1, y1)** into **y - y1 = m(x - x1)** or **y = mx + c** to solve for **c**.",
+     "**Step 3:** Write out the final equation in the required form."
+    ],
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Verification Technique",
+      "p": "After obtaining your final equation, substitute the second given coordinate pair into it to check if left-hand side equals right-hand side."
+     }
+    ]
+   },
+   {
+    "h": "6. Parallel Lines and Equal Gradients",
+    "p": "Parallel lines run in exactly the same direction on the Cartesian plane and will never intersect.",
+    "bullets": [
+     "Two lines are **parallel** if and only if their gradients are equal: **m1 = m2**.",
+     "Parallel lines have different y-intercepts (**c1 ≠ c2**); if y-intercepts were equal, they would be the exact same line.",
+     "To construct an equation parallel to a given line passing through a new point, copy the original gradient **m** and apply **y - y1 = m(x - x1)**."
+    ],
+    "fig": [
+     {
+      "cap": "Parallel lines possess identical gradients (m1 = m2) but distinct y-intercepts.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"30\" y1=\"200\" x2=\"370\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"60\" y1=\"220\" x2=\"60\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"40\" y1=\"150\" x2=\"320\" y2=\"30\" stroke=\"#2563eb\" stroke-width=\"3\"/><line x1=\"40\" y1=\"210\" x2=\"360\" y2=\"70\" stroke=\"#7c3aed\" stroke-width=\"3\"/><text x=\"210\" y=\"65\" font-size=\"12\" fill=\"#2563eb\" font-weight=\"bold\">L1: y = 2x + 4</text><text x=\"240\" y=\"130\" font-size=\"12\" fill=\"#7c3aed\" font-weight=\"bold\">L2: y = 2x - 2</text><text x=\"110\" y=\"175\" font-size=\"12\" fill=\"#16a34a\" font-weight=\"bold\">m1 = m2 = 2</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "7. Perpendicular Lines and Negative Reciprocals",
+    "p": "Perpendicular lines intersect at a right angle (90 degrees). Their gradients are negative reciprocals of each other.",
+    "bullets": [
+     "If two lines with gradients **m1** and **m2** are perpendicular, then **m1 × m2 = -1**.",
+     "The perpendicular gradient is given by **m2 = -1 / m1**.",
+     "To find a negative reciprocal, flip the fraction and change the sign (e.g. gradient **2/3** becomes **-3/2**; gradient **4** becomes **-1/4**; gradient **-5** becomes **1/5**).",
+     "A horizontal line (gradient 0) is perpendicular to a vertical line (gradient undefined)."
+    ],
+    "fig": [
+     {
+      "cap": "Perpendicular lines intersect at 90 degrees; product of gradients m1 * m2 = -1.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"30\" y1=\"200\" x2=\"370\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"60\" y1=\"220\" x2=\"60\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"50\" y1=\"190\" x2=\"330\" y2=\"50\" stroke=\"#2563eb\" stroke-width=\"3\"/><line x1=\"110\" y1=\"40\" x2=\"250\" y2=\"210\" stroke=\"#dc2626\" stroke-width=\"3\"/><path d=\"M 175 110 L 185 118 L 177 128 L 167 120 Z\" fill=\"none\" stroke=\"#000000\" stroke-width=\"1.5\"/><text x=\"240\" y=\"65\" font-size=\"12\" fill=\"#2563eb\" font-weight=\"bold\">L1: gradient m1 = 1/2</text><text x=\"220\" y=\"190\" font-size=\"12\" fill=\"#dc2626\" font-weight=\"bold\">L2: gradient m2 = -2</text><text x=\"270\" y=\"120\" font-size=\"12\" fill=\"#16a34a\" font-weight=\"bold\">m1 * m2 = -1</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "8. Midpoints and Midpoint Applications in Line Equations",
+    "p": "Finding the midpoint of a line segment is often a required intermediate step in advanced Eduqas coordinate geometry questions.",
+    "bullets": [
+     "The midpoint **M** of segment connecting **(x1, y1)** and **(x2, y2)** is **M = ((x1 + x2)/2, (y1 + y2)/2)**.",
+     "The midpoint represents the average of the x-coordinates and average of the y-coordinates.",
+     "Perpendicular bisector problems require finding both the midpoint of a line segment and the negative reciprocal of its gradient."
+    ]
+   },
+   {
+    "h": "9. Equations of Horizontal and Vertical Lines",
+    "p": "Horizontal and vertical lines represent special cases where one of the coordinate dimensions is constant.",
+    "bullets": [
+     "**Horizontal Lines:** Have gradient **m = 0**. Every point on the line has the exact same y-coordinate. Equation is **y = k** (e.g. **y = 4**).",
+     "**Vertical Lines:** Have an **undefined gradient** (division by zero Δx = 0). Every point on the line has the exact same x-coordinate. Equation is **x = k** (e.g. **x = -3**).",
+     "The x-axis has equation **y = 0**; the y-axis has equation **x = 0**."
+    ]
+   },
+   {
+    "h": "10. Finding Perpendicular Bisectors",
+    "p": "A perpendicular bisector cuts a line segment into two equal halves at a right angle.",
+    "bullets": [
+     "**Step 1:** Calculate the midpoint of line segment AB.",
+     "**Step 2:** Find the gradient of line segment AB using **m = (y2 - y1) / (x2 - x1)**.",
+     "**Step 3:** Calculate the perpendicular gradient **m_perp = -1 / m**.",
+     "**Step 4:** Substitute the midpoint coordinates and perpendicular gradient into **y - y1 = m(x - x1)**."
+    ]
+   },
+   {
+    "h": "11. Geometric Applications: Finding Points of Intersection",
+    "p": "The point of intersection between two straight lines represents the unique coordinate pair (x, y) that satisfies both linear equations simultaneously.",
+    "bullets": [
+     "Set the two equations equal to each other when both are in the form **y = m1*x + c1** and **y = m2*x + c2**.",
+     "Solve the resulting linear equation to find the value of **x**.",
+     "Substitute **x** back into either original line equation to determine **y**.",
+     "Non-parallel lines on a 2D plane will always intersect at exactly one point."
+    ]
+   }
+  ],
+  "analogy": {
+   "t": "The Slope and Checkpoint Analogy",
+   "p": "Think of a straight-line equation like a journey on a continuous mountain path. The y-intercept 'c' is your starting elevation when you are at checkpoint zero (x = 0). The gradient 'm' is your steady walking rate: for every single step you take forward horizontally (1 unit in x), your elevation changes by 'm' meters vertically. Parallel paths are built at the exact same inclination angle, so two hikers walking on parallel paths will never cross paths no matter how far they walk. Perpendicular paths cross at a perfect 90-degree intersection, like a crossroad grid.",
+   "breakdown": "This analogy breaks down for vertical lines where you jump straight up without taking any horizontal steps forward, resulting in an infinite or undefined rate of forward change."
+  },
+  "terms": [
+   {
+    "t": "Gradient (m)",
+    "d": "A numerical measure of the steepness and direction of a straight line, calculated as vertical change divided by horizontal change (Δy / Δx)."
+   },
+   {
+    "t": "y-intercept (c)",
+    "d": "The y-coordinate of the point where a line crosses the vertical y-axis, occurring where x = 0."
+   },
+   {
+    "t": "x-intercept",
+    "d": "The x-coordinate of the point where a line crosses the horizontal x-axis, occurring where y = 0."
+   },
+   {
+    "t": "Linear Equation",
+    "d": "An algebraic equation of first degree whose graph forms a straight line."
+   },
+   {
+    "t": "Parallel Lines",
+    "d": "Lines in the same plane that never intersect because they share identical gradients (m1 = m2)."
+   },
+   {
+    "t": "Perpendicular Lines",
+    "d": "Lines that meet at a right angle (90°), whose gradients have a product of -1 (m1 × m2 = -1)."
+   },
+   {
+    "t": "Negative Reciprocal",
+    "d": "A number obtained by dividing -1 by the given non-zero number; for a fraction a/b, its negative reciprocal is -b/a."
+   },
+   {
+    "t": "Point-Gradient Form",
+    "d": "The equation of a line expressed as y - y1 = m(x - x1), where m is the gradient and (x1, y1) is a point on the line."
+   },
+   {
+    "t": "General Linear Form",
+    "d": "The equation of a straight line expressed in the form ax + by + c = 0, where a, b, and c are integers."
+   },
+   {
+    "t": "Perpendicular Bisector",
+    "d": "A straight line that passes through the midpoint of a line segment at an angle of 90 degrees."
+   },
+   {
+    "t": "Midpoint",
+    "d": "The point that lies exactly halfway between two given coordinates, calculated as ((x1+x2)/2, (y1+y2)/2)."
+   },
+   {
+    "t": "Collinear Points",
+    "d": "Points that lie on the exact same straight line."
+   },
+   {
+    "t": "Rate of Change",
+    "d": "How much the dependent variable y changes for every unit increase in the independent variable x."
+   },
+   {
+    "t": "Intersection Point",
+    "d": "The coordinate pair (x, y) where two straight lines cross, satisfying both equations simultaneously."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Calculating gradient as Δx / Δy (run / rise) instead of Δy / Δx (rise / run).",
+    "r": "Always calculate vertical difference divided by horizontal difference: m = (y2 - y1) / (x2 - x1)."
+   },
+   {
+    "w": "Stating that the gradient of 3x + y = 7 is 3.",
+    "r": "Rearrange to y = -3x + 7 first; the gradient is -3, not 3."
+   },
+   {
+    "w": "Thinking the perpendicular gradient of 2 is -2.",
+    "r": "The perpendicular gradient is the negative reciprocal: -1/2."
+   },
+   {
+    "w": "Confusing signs when calculating (y2 - y1) with negative numbers, e.g. 5 - (-3) = 2.",
+    "r": "Subtracting a negative becomes addition: 5 - (-3) = 5 + 3 = 8."
+   },
+   {
+    "w": "Writing x = 4 as a line with gradient 4.",
+    "r": "x = 4 is a vertical line with an undefined gradient; y = 4 is a horizontal line with gradient 0."
+   },
+   {
+    "w": "Writing the perpendicular gradient of -2/3 as 2/3.",
+    "r": "You must invert the fraction AND change the sign: negative reciprocal of -2/3 is +3/2."
+   },
+   {
+    "w": "Leaving the final answer in unsimplified form when asked for integer coefficients ax + by + c = 0.",
+    "r": "Clear all fractions by multiplying through by the common denominator so a, b, and c are integers."
+   },
+   {
+    "w": "Assuming parallel lines must have the same y-intercept.",
+    "r": "Parallel lines have the SAME gradient but DIFFERENT y-intercepts."
+   }
+  ],
+  "exam": [
+   {
+    "q": "State the gradient and y-intercept of the line with equation y = 8 - 3x.",
+    "marks": 2,
+    "model": [
+     "Rearrange into y = mx + c form: y = -3x + 8.",
+     "Gradient m = -3.",
+     "y-intercept = (0, 8) or c = 8."
+    ],
+    "tip": "The coefficient of x includes its sign. Here the coefficient of x is -3."
+   },
+   {
+    "q": "A line has equation 4x + 2y = 11. Find the gradient of this line.",
+    "marks": 2,
+    "model": [
+     "Subtract 4x from both sides: 2y = -4x + 11.",
+     "Divide all terms by 2: y = -2x + 5.5.",
+     "Gradient m = -2."
+    ],
+    "tip": "Always isolate y completely before identifying the gradient."
+   },
+   {
+    "q": "Write down the equation of the line parallel to y = 6x - 5 that passes through the origin (0, 0).",
+    "marks": 1,
+    "model": [
+     "Parallel line has identical gradient m = 6.",
+     "Passes through origin so y-intercept c = 0.",
+     "Equation: y = 6x."
+    ],
+    "tip": "Lines passing through the origin always have c = 0."
+   },
+   {
+    "q": "Find the equation of the straight line passing through the point (3, 7) with a gradient of 4. Give your answer in the form y = mx + c.",
+    "marks": 3,
+    "model": [
+     "Use y - y1 = m(x - x1) with m = 4, x1 = 3, y1 = 7.",
+     "y - 7 = 4(x - 3).",
+     "Expand: y - 7 = 4x - 12.",
+     "Add 7 to both sides: y = 4x - 5."
+    ],
+    "tip": "Double-check by substituting x = 3: 4(3) - 5 = 7."
+   },
+   {
+    "q": "Find the equation of the straight line passing through points A(1, -2) and B(5, 6).",
+    "marks": 3,
+    "model": [
+     "Calculate gradient m = (6 - (-2)) / (5 - 1) = 8 / 4 = 2.",
+     "Substitute m = 2 and point (1, -2) into y - y1 = m(x - x1):",
+     "y - (-2) = 2(x - 1) => y + 2 = 2x - 2.",
+     "Rearrange: y = 2x - 4."
+    ],
+    "tip": "Watch the double negative in 6 - (-2) = 8."
+   },
+   {
+    "q": "Line L1 has equation y = 3x + 2. Line L2 is perpendicular to L1 and passes through point (9, 4). Find the equation of L2.",
+    "marks": 4,
+    "model": [
+     "Gradient of L1 = 3.",
+     "Gradient of perpendicular line L2 = -1/3.",
+     "Use y - y1 = m(x - x1) with m = -1/3, x1 = 9, y1 = 4:",
+     "y - 4 = (-1/3)(x - 9).",
+     "y - 4 = (-1/3)x + 3.",
+     "y = (-1/3)x + 7."
+    ],
+    "tip": "Multiply negative reciprocal carefully: (-1/3) * (-9) = +3."
+   },
+   {
+    "q": "Show that the line passing through (-2, 9) and (4, 0) is parallel to the line 3x + 4y = 12.",
+    "marks": 4,
+    "model": [
+     "Gradient of line through given points: m1 = (0 - 9) / (4 - (-2)) = -9 / 6 = -3/2.",
+     "Rearrange 3x + 4y = 12 to find gradient:",
+     "4y = -3x + 12 => y = (-3/4)x + 3.",
+     "Gradient m2 = -3/4.",
+     "Wait, recalculate m1: m1 = -9/6 = -1.5. m2 = -3/4 = -0.75.",
+     "Correction: m1 = (0 - 9) / (4 - (-2)) = -9/6 = -3/2. Line 3x + 2y = 12 has 2y = -3x + 12 => y = (-3/2)x + 6.",
+     "Both lines have gradient m = -3/2, therefore they are parallel."
+    ],
+    "tip": "State clearly that equal gradients prove lines are parallel."
+   },
+   {
+    "q": "Find the equation of the perpendicular bisector of the line segment joining A(2, 5) and B(8, 13). Give your answer in the form ax + by + c = 0, where a, b, and c are integers.",
+    "marks": 5,
+    "model": [
+     "Midpoint M = ((2+8)/2, (5+13)/2) = (5, 9).",
+     "Gradient of AB = (13 - 5) / (8 - 2) = 8 / 6 = 4/3.",
+     "Perpendicular gradient m_perp = -3/4.",
+     "Equation using point (5, 9): y - 9 = (-3/4)(x - 5).",
+     "Multiply by 4: 4(y - 9) = -3(x - 5) => 4y - 36 = -3x + 15.",
+     "Rearrange to ax + by + c = 0: 3x + 4y - 51 = 0."
+    ],
+    "tip": "Check that all coefficients in ax + by + c = 0 are integers."
+   },
+   {
+    "q": "The lines y = 2x - 3 and 3x + 2y = 8 intersect at point P. Find the coordinates of P.",
+    "marks": 4,
+    "model": [
+     "Substitute y = 2x - 3 into 3x + 2y = 8:",
+     "3x + 2(2x - 3) = 8.",
+     "3x + 4x - 6 = 8 => 7x = 14 => x = 2.",
+     "Substitute x = 2 into y = 2x - 3: y = 2(2) - 3 = 1.",
+     "Coordinates of P = (2, 1)."
+    ],
+    "tip": "Substitute x back into BOTH original equations to confirm y is correct."
+   },
+   {
+    "q": "Line L has equation 5y - 2x = 15. Write down the gradient of a line perpendicular to L.",
+    "marks": 3,
+    "model": [
+     "Rearrange 5y - 2x = 15 into y = mx + c form:",
+     "5y = 2x + 15 => y = (2/5)x + 3.",
+     "Gradient of L = 2/5.",
+     "Perpendicular gradient = -5/2 (or -2.5)."
+    ],
+    "tip": "Flip the fraction and invert sign: 2/5 becomes -5/2."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Find the equation of the straight line passing through points P(-3, 11) and Q(5, -5). Express your answer in the form y = mx + c.",
+    "steps": [
+     "Step 1: Calculate the gradient m using m = (y2 - y1) / (x2 - x1).",
+     "m = (-5 - 11) / (5 - (-3)) = -16 / 8 = -2.",
+     "Step 2: Use point-gradient form y - y1 = m(x - x1) with point P(-3, 11).",
+     "y - 11 = -2(x - (-3))",
+     "y - 11 = -2(x + 3)",
+     "Step 3: Expand and solve for y.",
+     "y - 11 = -2x - 6",
+     "y = -2x + 5.",
+     "Step 4: Check using point Q(5, -5): -2(5) + 5 = -10 + 5 = -5. Verified!"
+    ],
+    "ans": "y = -2x + 5"
+   },
+   {
+    "q": "Line L1 passes through (2, 1) and (6, 9). Line L2 is perpendicular to L1 and passes through the midpoint of L1. Find the equation of L2 in the form ax + by + c = 0.",
+    "steps": [
+     "Step 1: Find the gradient of L1.",
+     "m1 = (9 - 1) / (6 - 2) = 8 / 4 = 2.",
+     "Step 2: Find perpendicular gradient for L2.",
+     "m2 = -1 / 2 = -1/2.",
+     "Step 3: Find midpoint of L1 segment.",
+     "Midpoint = ((2 + 6)/2, (1 + 9)/2) = (4, 5).",
+     "Step 4: Use y - y1 = m(x - x1) with point (4, 5) and gradient -1/2.",
+     "y - 5 = (-1/2)(x - 4)",
+     "Step 5: Rearrange to integer form ax + by + c = 0.",
+     "Multiply by 2: 2(y - 5) = -1(x - 4)",
+     "2y - 10 = -x + 4",
+     "Add x and subtract 4: x + 2y - 14 = 0."
+    ],
+    "ans": "x + 2y - 14 = 0"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Key features of a linear graph: gradient calculation (rise over run) and y-intercept identification.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"40\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"80\" y1=\"220\" x2=\"80\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"2\"/><path d=\"M 355 200 L 345 195 L 345 205 Z\" fill=\"#64748b\"/><path d=\"M 80 25 L 75 35 L 85 35 Z\" fill=\"#64748b\"/><line x1=\"40\" y1=\"180\" x2=\"340\" y2=\"30\" stroke=\"#2563eb\" stroke-width=\"3\"/><circle cx=\"80\" cy=\"160\" r=\"5\" fill=\"#dc2626\"/><text x=\"92\" y=\"165\" font-size=\"12\" fill=\"#dc2626\" font-weight=\"bold\">y-intercept (0, c)</text><line x1=\"160\" y1=\"120\" x2=\"280\" y2=\"120\" stroke=\"#16a34a\" stroke-width=\"2\" stroke-dasharray=\"4\"/><line x1=\"280\" y1=\"120\" x2=\"280\" y2=\"60\" stroke=\"#16a34a\" stroke-width=\"2\" stroke-dasharray=\"4\"/><text x=\"200\" y=\"135\" font-size=\"12\" fill=\"#16a34a\" font-weight=\"bold\">Change in x (Run)</text><text x=\"288\" y=\"95\" font-size=\"12\" fill=\"#16a34a\" font-weight=\"bold\">Change in y (Rise)</text><text x=\"345\" y=\"218\" font-size=\"12\" fill=\"#64748b\">x</text><text x=\"65\" y=\"30\" font-size=\"12\" fill=\"#64748b\">y</text><text x=\"230\" y=\"45\" font-size=\"13\" fill=\"#2563eb\" font-weight=\"bold\">y = mx + c</text></svg>"
+   },
+   {
+    "cap": "Comparison of parallel lines having equal gradients (m1 = m2 = 2).",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"30\" y1=\"200\" x2=\"370\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"60\" y1=\"220\" x2=\"60\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"40\" y1=\"150\" x2=\"320\" y2=\"30\" stroke=\"#2563eb\" stroke-width=\"3\"/><line x1=\"40\" y1=\"210\" x2=\"360\" y2=\"70\" stroke=\"#7c3aed\" stroke-width=\"3\"/><text x=\"210\" y=\"65\" font-size=\"12\" fill=\"#2563eb\" font-weight=\"bold\">L1: y = 2x + 4</text><text x=\"240\" y=\"130\" font-size=\"12\" fill=\"#7c3aed\" font-weight=\"bold\">L2: y = 2x - 2</text><text x=\"110\" y=\"175\" font-size=\"12\" fill=\"#16a34a\" font-weight=\"bold\">m1 = m2 = 2</text></svg>"
+   },
+   {
+    "cap": "Perpendicular lines intersecting at right angles with negative reciprocal gradients (m1 * m2 = -1).",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"30\" y1=\"200\" x2=\"370\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"60\" y1=\"220\" x2=\"60\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"50\" y1=\"190\" x2=\"330\" y2=\"50\" stroke=\"#2563eb\" stroke-width=\"3\"/><line x1=\"110\" y1=\"40\" x2=\"250\" y2=\"210\" stroke=\"#dc2626\" stroke-width=\"3\"/><path d=\"M 175 110 L 185 118 L 177 128 L 167 120 Z\" fill=\"none\" stroke=\"#000000\" stroke-width=\"1.5\"/><text x=\"240\" y=\"65\" font-size=\"12\" fill=\"#2563eb\" font-weight=\"bold\">L1: gradient m1 = 1/2</text><text x=\"220\" y=\"190\" font-size=\"12\" fill=\"#dc2626\" font-weight=\"bold\">L2: gradient m2 = -2</text><text x=\"270\" y=\"120\" font-size=\"12\" fill=\"#16a34a\" font-weight=\"bold\">m1 * m2 = -1</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_h.1.8",
+  "sid": "maths_eduqas_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.6-flash",
+  "ts": "2026-11-21T16:38:22.672Z"
  }
 }

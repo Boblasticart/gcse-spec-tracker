@@ -1787,5 +1787,385 @@
   "src": "pre",
   "by": "gemini/gemini-flash-lite-latest",
   "ts": "2026-11-20T18:39:28.091Z"
+ },
+ "maths_ocr_h.9.3": {
+  "summary": "Mensuration of 3D solids involves calculating the space inside (volume) and the total area of all external faces (surface area). For Higher tier OCR GCSE, mastery requires distinguishing between perpendicular height and slant height, applying Pythagoras' Theorem to find missing dimensions, and manipulating formulae to solve for unknown variables like radius or height. You must also be fluent in calculating frustums and composite solids, often leaving answers in exact form using pi.",
+  "core": [
+   {
+    "h": "General Prisms",
+    "p": "A prism is a 3D shape with a **constant cross-section** throughout its length. To find the volume of any prism, you must first identify the 2D shape that remains the same when sliced parallel to its base.",
+    "bullets": [
+     "Volume = Area of cross-section x length.",
+     "The cross-section can be any polygon (triangle, trapezium, hexagon).",
+     "Surface area is the sum of the areas of the two ends plus the area of the side faces (which are always rectangles).",
+     "For a right-prism, the side faces' total area = perimeter of cross-section x length."
+    ],
+    "callouts": [
+     {
+      "k": "key",
+      "t": "The Cross-Section Rule",
+      "p": "Always identify the face that 'goes all the way through' the shape. This is your cross-section area."
+     }
+    ]
+   },
+   {
+    "h": "Cylinders",
+    "p": "A cylinder is a circular prism. Because the cross-section is a circle, we use circle area formulae within the prism volume formula.",
+    "bullets": [
+     "Volume = pi * r^2 * h.",
+     "Curved Surface Area (CSA) = 2 * pi * r * h (this is the rectangle formed if you 'unroll' the side).",
+     "Total Surface Area = 2 * pi * r^2 + 2 * pi * r * h (two circular ends plus the curved side).",
+     "Ensure the height (h) is perpendicular to the circular base."
+    ],
+    "fig": [
+     {
+      "cap": "A cylinder showing the radius (r) of the circular base and the perpendicular height (h).",
+      "svg": "<svg viewBox=\"0 0 400 240\"><path d=\"M100 60 Q200 30 300 60 L300 180 Q200 210 100 180 Z\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><ellipse cx=\"200\" cy=\"60\" rx=\"100\" ry=\"30\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"200\" y1=\"60\" x2=\"300\" y2=\"60\" stroke=\"#1b2540\" stroke-dasharray=\"4\"/><text x=\"240\" y=\"55\" fill=\"#1b2540\">r</text><line x1=\"320\" y1=\"60\" x2=\"320\" y2=\"180\" stroke=\"#1b2540\" marker-start=\"url(#arrow)\" marker-end=\"url(#arrow)\"/><text x=\"330\" y=\"125\" fill=\"#1b2540\">h</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Pyramids",
+    "p": "A pyramid has a base (any polygon) and an apex directly above the center of the base. The volume is always exactly one-third of the volume of a prism with the same base and height.",
+    "bullets": [
+     "Volume = 1/3 * base area * perpendicular height.",
+     "The 'perpendicular height' (h) is the vertical distance from the apex to the center of the base.",
+     "Surface area = base area + sum of the areas of the triangular faces.",
+     "For a regular pyramid, all triangular faces are congruent isosceles triangles."
+    ],
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Height Confusion",
+      "p": "Never use the slant height of a triangular face to calculate volume. You must use the vertical height."
+     }
+    ]
+   },
+   {
+    "h": "Cones",
+    "p": "A cone is a circular pyramid. It has unique properties involving the relationship between its radius, vertical height, and slant height.",
+    "bullets": [
+     "Volume = 1/3 * pi * r^2 * h.",
+     "Curved Surface Area (CSA) = pi * r * l (where l is the slant height).",
+     "Total Surface Area = pi * r * l + pi * r^2.",
+     "The relationship between r, h, and l is l^2 = r^2 + h^2 (Pythagoras)."
+    ],
+    "fig": [
+     {
+      "cap": "A cone illustrating the relationship between vertical height (h), slant height (l), and radius (r).",
+      "svg": "<svg viewBox=\"0 0 400 240\"><ellipse cx=\"200\" cy=\"190\" rx=\"100\" ry=\"30\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M100 190 L200 40 L300 190\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"200\" y1=\"40\" x2=\"200\" y2=\"190\" stroke=\"#1b2540\" stroke-dasharray=\"4\"/><line x1=\"200\" y1=\"190\" x2=\"300\" y2=\"190\" stroke=\"#1b2540\" stroke-dasharray=\"4\"/><text x=\"205\" y=\"120\" fill=\"#1b2540\">h</text><text x=\"250\" y=\"185\" fill=\"#1b2540\">r</text><text x=\"260\" y=\"110\" fill=\"#1b2540\">l</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Spheres and Hemispheres",
+    "p": "Spheres are perfectly symmetrical solids. Calculations only require the radius (r).",
+    "bullets": [
+     "Volume of a sphere = 4/3 * pi * r^3.",
+     "Surface area of a sphere = 4 * pi * r^2.",
+     "Volume of a hemisphere = 2/3 * pi * r^3.",
+     "Total Surface Area of a solid hemisphere = 3 * pi * r^2 (2 * pi * r^2 for the curved part + pi * r^2 for the flat base)."
+    ],
+    "fig": [
+     {
+      "cap": "A sphere with radius (r). The surface area is exactly four times the area of its central circle.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><circle cx=\"200\" cy=\"120\" r=\"80\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><ellipse cx=\"200\" cy=\"120\" rx=\"80\" ry=\"25\" fill=\"none\" stroke=\"#1b2540\" stroke-dasharray=\"4\"/><line x1=\"200\" y1=\"120\" x2=\"280\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"230\" y=\"115\" fill=\"#1b2540\">r</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Frustums",
+    "p": "A frustum is the part of a cone or pyramid that remains after the top has been cut off by a plane parallel to the base.",
+    "bullets": [
+     "Volume of frustum = Volume of large cone - Volume of small (removed) cone.",
+     "Use similar triangles to find the height or radius of the small cone if not given.",
+     "Linear scale factor (k) = r_small / r_large = h_small / h_large.",
+     "Volume scale factor = k^3."
+    ],
+    "fig": [
+     {
+      "cap": "A frustum created by removing a smaller cone from a larger one. Similar triangles are used to find missing dimensions.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><path d=\"M120 180 L280 180 L240 80 L160 80 Z\" fill=\"#fecaca\" stroke=\"#1b2540\" stroke-width=\"2\"/><ellipse cx=\"200\" cy=\"180\" rx=\"80\" ry=\"20\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><ellipse cx=\"200\" cy=\"80\" rx=\"40\" ry=\"10\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M160 80 L200 0 L240 80\" fill=\"none\" stroke=\"#1b2540\" stroke-dasharray=\"2\"/><text x=\"205\" y=\"40\" fill=\"#1b2540\">Removed</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Composite Solids",
+    "p": "Composite solids are made by combining two or more standard 3D shapes. To solve these, break the shape down into its constituent parts.",
+    "bullets": [
+     "Total Volume = Volume 1 + Volume 2.",
+     "Total Surface Area = Sum of external areas (subtract any faces that are touching/hidden).",
+     "Common combinations: Cylinder with a hemisphere on top, or a cone on top of a cylinder."
+    ]
+   },
+   {
+    "h": "Exact Values and Pi",
+    "p": "OCR Higher papers often ask for answers 'in terms of pi'. This means you should treat pi like an algebraic variable.",
+    "bullets": [
+     "Do not convert pi to 3.14 or use the calculator button until the final step if a decimal is required.",
+     "Example: A sphere with r=3 has Volume = 4/3 * pi * 3^3 = 4/3 * pi * 27 = 36pi.",
+     "This prevents rounding errors in multi-step problems."
+    ]
+   },
+   {
+    "h": "Dimensional Consistency",
+    "p": "Always check that your units are consistent before starting a calculation.",
+    "bullets": [
+     "If radius is in cm and height is in m, convert both to the same unit (usually cm).",
+     "Volume units are always cubed (e.g., cm^3, m^3).",
+     "Surface area units are always squared (e.g., cm^2, m^2)."
+    ]
+   },
+   {
+    "h": "Working Backwards",
+    "p": "Grade 9 questions often provide the volume and ask for a dimension like the radius.",
+    "bullets": [
+     "Set up an equation: Formula = Given Value.",
+     "Rearrange to isolate the unknown variable.",
+     "If solving for r in a sphere, you will need to use the cube root: r = cuberoot(3V / 4pi)."
+    ]
+   }
+  ],
+  "analogy": {
+   "t": "The Loaf and the Spotlight",
+   "p": "A prism is like a loaf of bread: every slice you cut is the exact same shape, so the volume is just the area of one slice times the length of the loaf. A pyramid or cone is like a spotlight beam starting at a single point and widening out to a shape; because it tapers perfectly, it only occupies exactly one-third of the space that a 'loaf' of the same height and base would occupy. This analogy breaks down for spheres, as they don't have a constant cross-section or a single apex point in the same way."
+  },
+  "terms": [
+   {
+    "t": "Cross-section",
+    "d": "The 2D shape formed by cutting through a solid parallel to its base."
+   },
+   {
+    "t": "Prism",
+    "d": "A 3D solid with a constant cross-section and parallel ends."
+   },
+   {
+    "t": "Apex",
+    "d": "The top vertex of a cone or pyramid."
+   },
+   {
+    "t": "Slant Height",
+    "d": "The distance from the apex of a cone or pyramid down the side to the edge of the base."
+   },
+   {
+    "t": "Perpendicular Height",
+    "d": "The vertical distance from the base to the highest point, at a 90-degree angle."
+   },
+   {
+    "t": "Frustum",
+    "d": "The portion of a cone or pyramid that remains after the top is removed by a cut parallel to the base."
+   },
+   {
+    "t": "Curved Surface Area",
+    "d": "The area of the non-flat surfaces of a cylinder, cone, or sphere."
+   },
+   {
+    "t": "Hemisphere",
+    "d": "Exactly half of a sphere."
+   },
+   {
+    "t": "Radius",
+    "d": "The distance from the center of a circle or sphere to its edge."
+   },
+   {
+    "t": "Diameter",
+    "d": "The distance across a circle or sphere through its center (2 * radius)."
+   },
+   {
+    "t": "Pi (π)",
+    "d": "The mathematical constant representing the ratio of a circle's circumference to its diameter."
+   },
+   {
+    "t": "Composite Solid",
+    "d": "A 3D shape made up of two or more simpler geometric solids."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Using the diameter in the volume formula instead of the radius.",
+    "r": "Always divide the diameter by 2 first to find the radius."
+   },
+   {
+    "w": "Using slant height (l) instead of vertical height (h) in the volume formula for a cone.",
+    "r": "Use h for volume; use l only for curved surface area."
+   },
+   {
+    "w": "Forgetting to add the circular base when asked for the total surface area of a cone.",
+    "r": "Total SA = Curved SA (pi*r*l) + Base Area (pi*r^2)."
+   },
+   {
+    "w": "Forgetting the flat circular face when calculating the surface area of a solid hemisphere.",
+    "r": "Total SA = 2*pi*r^2 (curved) + pi*r^2 (flat) = 3*pi*r^2."
+   },
+   {
+    "w": "Squaring the radius instead of cubing it when calculating sphere volume.",
+    "r": "Volume involves three dimensions, so the radius must be cubed (r^3)."
+   },
+   {
+    "w": "Adding the surface areas of two shapes in a composite solid without subtracting the touching faces.",
+    "r": "Subtract the area of the faces that are no longer on the 'outside'."
+   },
+   {
+    "w": "Incorrectly rearranging the sphere volume formula (e.g., forgetting the 4/3).",
+    "r": "Multiply by 3 and divide by 4*pi before taking the cube root."
+   },
+   {
+    "w": "Confusing the units for area (squared) and volume (cubed).",
+    "r": "Check the question carefully: cm^2 for area, cm^3 for volume."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A sphere has a radius of 6 cm. Calculate its volume, leaving your answer in terms of pi.",
+    "marks": 2,
+    "model": [
+     "V = 4/3 * pi * r^3",
+     "V = 4/3 * pi * 6^3",
+     "V = 4/3 * pi * 216",
+     "V = 288pi"
+    ],
+    "tip": "Leaving answers in terms of pi saves time and maintains 100% accuracy."
+   },
+   {
+    "q": "A cone has a base radius of 5 cm and a vertical height of 12 cm. Find its slant height.",
+    "marks": 2,
+    "model": [
+     "l^2 = r^2 + h^2",
+     "l^2 = 5^2 + 12^2",
+     "l^2 = 25 + 144 = 169",
+     "l = 13 cm"
+    ],
+    "tip": "Recognize the 5-12-13 Pythagorean triple to save time."
+   },
+   {
+    "q": "Calculate the total surface area of a solid hemisphere with radius 10 cm. Give your answer to 3 significant figures.",
+    "marks": 3,
+    "model": [
+     "Curved SA = 2 * pi * 10^2 = 200pi",
+     "Flat base Area = pi * 10^2 = 100pi",
+     "Total SA = 300pi",
+     "Total SA = 942 cm^2"
+    ],
+    "tip": "A solid hemisphere has TWO surfaces: the bowl and the lid."
+   },
+   {
+    "q": "A cylinder has volume 500 cm^3 and height 10 cm. Find its radius to 1 decimal place.",
+    "marks": 3,
+    "model": [
+     "500 = pi * r^2 * 10",
+     "50 = pi * r^2",
+     "r^2 = 50 / pi",
+     "r = sqrt(15.915...)",
+     "r = 4.0 cm"
+    ],
+    "tip": "Rearrange the formula before plugging in all the numbers to avoid rounding errors."
+   },
+   {
+    "q": "A pyramid has a square base of side 6 cm and a volume of 60 cm^3. Calculate its vertical height.",
+    "marks": 3,
+    "model": [
+     "Base Area = 6 * 6 = 36 cm^2",
+     "V = 1/3 * Base Area * h",
+     "60 = 1/3 * 36 * h",
+     "60 = 12 * h",
+     "h = 5 cm"
+    ],
+    "tip": "Always calculate the base area as a distinct first step."
+   },
+   {
+    "q": "A cone is cut to form a frustum. The original cone had height 20 cm and radius 8 cm. The top 10 cm is removed. Find the volume of the frustum in terms of pi.",
+    "marks": 5,
+    "model": [
+     "Large cone V = 1/3 * pi * 8^2 * 20 = 1280pi / 3",
+     "Scale factor k = 10/20 = 0.5",
+     "Small radius = 8 * 0.5 = 4 cm",
+     "Small cone V = 1/3 * pi * 4^2 * 10 = 160pi / 3",
+     "Frustum V = (1280pi - 160pi) / 3 = 1120pi / 3",
+     "V = 373.33pi (or 1120/3 pi)"
+    ],
+    "tip": "Use the linear scale factor to find the small radius quickly."
+   },
+   {
+    "q": "A solid is made of a cone on top of a cylinder. Both have radius 3 cm. The cylinder has height 10 cm. The cone has height 4 cm. Find the total volume.",
+    "marks": 4,
+    "model": [
+     "Cylinder V = pi * 3^2 * 10 = 90pi",
+     "Cone V = 1/3 * pi * 3^2 * 4 = 12pi",
+     "Total V = 90pi + 12pi = 102pi",
+     "Total V = 320.4 cm^3 (to 1 dp)"
+    ],
+    "tip": "Break composite shapes into simple parts and sum them."
+   },
+   {
+    "q": "The surface area of a sphere is 100 cm^2. Find its radius.",
+    "marks": 3,
+    "model": [
+     "4 * pi * r^2 = 100",
+     "pi * r^2 = 25",
+     "r^2 = 25 / pi",
+     "r = sqrt(25 / pi) = 2.82 cm"
+    ],
+    "tip": "Don't forget the 4 in the surface area formula."
+   },
+   {
+    "q": "A cylinder has radius r and height 2r. A sphere has radius r. Show that the cylinder volume is 1.5 times the sphere volume.",
+    "marks": 4,
+    "model": [
+     "V_cylinder = pi * r^2 * (2r) = 2 * pi * r^3",
+     "V_sphere = 4/3 * pi * r^3",
+     "Ratio = (2 * pi * r^3) / (4/3 * pi * r^3)",
+     "Ratio = 2 / (4/3) = 6/4 = 1.5"
+    ],
+    "tip": "In 'Show that' questions, algebraic cancellation is your best friend."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A container is in the shape of a cone with radius 6 cm and slant height 10 cm. Calculate the capacity (volume) of the container in cm^3. Give your answer to 3 significant figures.",
+    "steps": [
+     "Identify that volume requires vertical height (h), but slant height (l) is given.",
+     "Use Pythagoras: h^2 + r^2 = l^2 -> h^2 + 6^2 = 10^2.",
+     "Solve for h: h^2 + 36 = 100 -> h^2 = 64 -> h = 8 cm.",
+     "Apply volume formula: V = 1/3 * pi * r^2 * h.",
+     "Substitute values: V = 1/3 * pi * 6^2 * 8.",
+     "Calculate: V = 1/3 * pi * 36 * 8 = 12 * pi * 8 = 96pi.",
+     "Convert to decimal: 96 * 3.14159... = 301.59..."
+    ],
+    "ans": "302 cm^3"
+   },
+   {
+    "q": "A frustum is made by removing a small cone from a large cone. The large cone has radius 12 cm and height 30 cm. The frustum has height 20 cm. Find the volume of the frustum.",
+    "steps": [
+     "Find the height of the small cone removed: 30 cm - 20 cm = 10 cm.",
+     "Find the scale factor between the cones: k = height_small / height_large = 10 / 30 = 1/3.",
+     "Find the radius of the small cone: r_small = 12 * (1/3) = 4 cm.",
+     "Calculate Large Volume: V_large = 1/3 * pi * 12^2 * 30 = 1440pi.",
+     "Calculate Small Volume: V_small = 1/3 * pi * 4^2 * 10 = 160pi / 3.",
+     "Subtract Small from Large: 1440pi - 53.33pi = 1386.67pi.",
+     "Final calculation: 1386.67 * pi = 4356.3..."
+    ],
+    "ans": "4356 cm^3 (to 4 sig figs)"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Standard Cylinder: Volume is base area (pi r^2) multiplied by height (h).",
+    "svg": "<svg viewBox=\"0 0 400 240\"><ellipse cx=\"200\" cy=\"50\" rx=\"80\" ry=\"25\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M120 50 L120 190 Q200 215 280 190 L280 50\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><ellipse cx=\"200\" cy=\"190\" rx=\"80\" ry=\"25\" fill=\"none\" stroke=\"#1b2540\" stroke-dasharray=\"4\"/><line x1=\"200\" y1=\"50\" x2=\"280\" y2=\"50\" stroke=\"#1b2540\"/><text x=\"230\" y=\"45\" fill=\"#1b2540\">r</text><line x1=\"300\" y1=\"50\" x2=\"300\" y2=\"190\" stroke=\"#1b2540\"/><text x=\"310\" y=\"125\" fill=\"#1b2540\">h</text></svg>"
+   },
+   {
+    "cap": "Cone Dimensions: The relationship l^2 = r^2 + h^2 is vital for Higher tier problems.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><ellipse cx=\"200\" cy=\"200\" rx=\"90\" ry=\"30\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M110 200 L200 30 L290 200\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"200\" y1=\"30\" x2=\"200\" y2=\"200\" stroke=\"#1b2540\" stroke-dasharray=\"4\"/><line x1=\"200\" y1=\"200\" x2=\"290\" y2=\"200\" stroke=\"#1b2540\" stroke-dasharray=\"4\"/><text x=\"205\" y=\"110\" fill=\"#1b2540\">h</text><text x=\"240\" y=\"195\" fill=\"#1b2540\">r</text><text x=\"255\" y=\"100\" fill=\"#1b2540\">l</text></svg>"
+   },
+   {
+    "cap": "Sphere: Surface Area is 4 * pi * r^2. Volume is 4/3 * pi * r^3.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><circle cx=\"200\" cy=\"120\" r=\"85\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><ellipse cx=\"200\" cy=\"120\" rx=\"85\" ry=\"30\" fill=\"none\" stroke=\"#1b2540\" stroke-dasharray=\"4\"/><line x1=\"200\" y1=\"120\" x2=\"285\" y2=\"120\" stroke=\"#1b2540\"/><text x=\"235\" y=\"115\" fill=\"#1b2540\">r</text></svg>"
+   }
+  ],
+  "pid": "maths_ocr_h.9.3",
+  "sid": "maths_ocr_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3-flash-preview",
+  "ts": "2026-11-21T16:56:55.749Z"
  }
 }

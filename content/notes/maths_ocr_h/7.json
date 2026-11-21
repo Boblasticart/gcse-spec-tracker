@@ -2297,5 +2297,386 @@
   "src": "pre",
   "by": "gemini/gemini-flash-lite-latest",
   "ts": "2026-11-20T18:37:57.972Z"
+ },
+ "maths_ocr_h.7.5": {
+  "summary": "Understanding 3D geometry involves categorizing solids by their properties—faces, edges, and vertices—and accurately representing these objects in two dimensions. Mastery of plans, elevations, and nets is essential for spatial reasoning, allowing students to translate between complex 3D structures and their orthographic projections, which is a fundamental skill in engineering and architecture. Grade 9 students must be able to move fluently between 3D visualisations and 2D representations, including the use of hidden lines and isometric grids.",
+  "core": [
+   {
+    "h": "Properties of Polyhedra",
+    "p": "A polyhedron is a 3D shape with flat faces, straight edges, and sharp corners (vertices). Understanding the relationship between these components is the foundation of 3D geometry.",
+    "bullets": [
+     "**Face**: A flat surface of a 3D shape.",
+     "**Edge**: The line segment where two faces meet.",
+     "**Vertex**: A point where three or more edges meet (plural: vertices).",
+     "**Euler's Formula**: For any convex polyhedron, V - E + F = 2, where V is vertices, E is edges, and F is faces."
+    ],
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Polyhedron",
+      "p": "A solid figure with many flat faces, typically more than six."
+     }
+    ]
+   },
+   {
+    "h": "Prisms and Cylinders",
+    "p": "Prisms are a specific class of polyhedra defined by their uniformity along their length. While a cylinder shares properties with a prism, it is not a polyhedron because it has curved surfaces.",
+    "bullets": [
+     "**Prism**: A solid with a constant cross-section throughout its length.",
+     "**Cross-section**: The shape formed by cutting through a solid at right angles to its axis.",
+     "**Cylinder**: Has two circular ends joined by a curved surface; it is essentially a 'circular prism'.",
+     "The number of faces in an n-gonal prism is always n + 2."
+    ],
+    "table": {
+     "head": [
+      "Shape",
+      "Faces",
+      "Edges",
+      "Vertices"
+     ],
+     "rows": [
+      [
+       "Cube",
+       "6",
+       "12",
+       "8"
+      ],
+      [
+       "Triangular Prism",
+       "5",
+       "9",
+       "6"
+      ],
+      [
+       "Hexagonal Prism",
+       "8",
+       "18",
+       "12"
+      ]
+     ]
+    }
+   },
+   {
+    "h": "Pyramids and Cones",
+    "p": "Pyramids and cones taper from a base to a single point called the apex. The properties change based on the shape of the base.",
+    "bullets": [
+     "**Pyramid**: A polyhedron with a polygonal base and triangular faces that meet at an apex.",
+     "**Cone**: Has a circular base and a curved surface tapering to an apex.",
+     "**Tetrahedron**: A triangular-based pyramid; it is the simplest polyhedron with 4 faces, 4 vertices, and 6 edges."
+    ],
+    "fig": [
+     {
+      "cap": "A square-based pyramid showing the relationship between the base, the triangular faces, and the apex.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><path d=\"M100 180 L300 180 L340 140 L140 140 Z\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M100 180 L220 40 L300 180\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M340 140 L220 40 L140 140\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\" stroke-dasharray=\"4\"/><text x=\"210\" y=\"30\" fill=\"#1b2540\">Apex</text><text x=\"180\" y=\"210\" fill=\"#1b2540\">Square Base</text><text x=\"280\" y=\"100\" fill=\"#1b2540\">Slant Face</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Platonic Solids",
+    "p": "There are only five regular polyhedra, known as Platonic solids, where every face is an identical regular polygon and the same number of faces meet at each vertex.",
+    "bullets": [
+     "**Tetrahedron**: 4 faces (triangles).",
+     "**Cube (Hexahedron)**: 6 faces (squares).",
+     "**Octahedron**: 8 faces (triangles).",
+     "**Dodecahedron**: 12 faces (pentagons).",
+     "**Icosahedron**: 20 faces (triangles)."
+    ],
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Regularity",
+      "p": "In a Platonic solid, all faces, edges, and angles are congruent."
+     }
+    ]
+   },
+   {
+    "h": "Plans and Elevations: The Concept",
+    "p": "Orthographic projection is the method of representing a 3D object by three 2D drawings from specific viewpoints.",
+    "bullets": [
+     "**Plan**: The view from directly above the object.",
+     "**Front Elevation**: The view from the front of the object.",
+     "**Side Elevation**: The view from one side (usually specified as left or right)."
+    ],
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam Technique",
+      "p": "Always check the orientation. The 'Front' is often indicated by an arrow on the 3D diagram."
+     }
+    ]
+   },
+   {
+    "h": "Drawing Elevations and Plans",
+    "p": "When drawing these, you must project the dimensions accurately. The width of the front elevation must match the width of the plan.",
+    "bullets": [
+     "Use a sharp pencil and a ruler.",
+     "Draw on the grid provided (usually 1cm squared paper).",
+     "**Hidden Lines**: Use dashed lines to indicate edges that exist but are hidden from that specific viewpoint.",
+     "Ensure the height of the front elevation matches the height of the side elevation."
+    ],
+    "fig": [
+     {
+      "cap": "Orthographic projections of an L-shaped block. Note how the dimensions align across the plan and elevations.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"40\" y=\"40\" width=\"60\" height=\"60\" fill=\"#fde68a\" stroke=\"#1b2540\"/><rect x=\"40\" y=\"100\" width=\"120\" height=\"60\" fill=\"#fde68a\" stroke=\"#1b2540\"/><text x=\"40\" y=\"30\" fill=\"#1b2540\">Plan View</text><rect x=\"220\" y=\"100\" width=\"120\" height=\"60\" fill=\"#bbf7d0\" stroke=\"#1b2540\"/><line x1=\"280\" y1=\"100\" x2=\"280\" y2=\"160\" stroke=\"#1b2540\" stroke-dasharray=\"4\"/><text x=\"220\" y=\"90\" fill=\"#1b2540\">Front Elevation</text><rect x=\"220\" y=\"180\" width=\"60\" height=\"40\" fill=\"#fecaca\" stroke=\"#1b2540\"/><text x=\"220\" y=\"175\" fill=\"#1b2540\">Side Elevation</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Nets of 3D Solids",
+    "p": "A net is a 2D pattern that can be folded to form a 3D solid. Visualising how faces connect is key to solving net problems.",
+    "bullets": [
+     "A cube has 11 possible nets.",
+     "The net of a cylinder consists of two circles and one rectangle.",
+     "The length of the rectangle in a cylinder's net is equal to the circumference of the circular base (C = 2 * pi * r).",
+     "The net of a cone is a sector of a circle plus a smaller circle for the base."
+    ],
+    "fig": [
+     {
+      "cap": "The net of a cylinder. The width of the rectangle must equal the circumference of the circles to fold correctly.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"100\" y=\"80\" width=\"200\" height=\"80\" fill=\"#e9d5ff\" stroke=\"#1b2540\"/><circle cx=\"200\" cy=\"40\" r=\"40\" fill=\"#e9d5ff\" stroke=\"#1b2540\"/><circle cx=\"200\" cy=\"200\" r=\"40\" fill=\"#e9d5ff\" stroke=\"#1b2540\"/><text x=\"110\" y=\"125\" fill=\"#1b2540\">Circumference Length</text><text x=\"310\" y=\"125\" fill=\"#1b2540\">Height</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Isometric Drawing",
+    "p": "Isometric paper uses a grid of dots forming equilateral triangles. It allows you to draw 3D objects where vertical lines remain vertical, and horizontal lines are drawn at 30 degrees.",
+    "bullets": [
+     "Parallel lines on the object remain parallel on the drawing.",
+     "There is no perspective (objects do not get smaller as they get further away).",
+     "Useful for translating plans and elevations back into a 3D form."
+    ],
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Common Error",
+      "p": "Do not draw horizontal lines on isometric paper; they must follow the 30-degree grid lines."
+     }
+    ]
+   },
+   {
+    "h": "Spheres and Curved Surfaces",
+    "p": "Spheres are unique as they have no edges or vertices, only one continuous curved face.",
+    "bullets": [
+     "A sphere looks like a circle from every elevation and the plan.",
+     "A hemisphere has two faces: one flat circular base and one curved surface.",
+     "A hemisphere has 1 edge (the boundary of the base) and 0 vertices."
+    ]
+   },
+   {
+    "h": "Compound Solids",
+    "p": "OCR Higher papers often feature shapes made of multiple cuboids or prisms. You must be able to calculate total faces, edges, and vertices for these.",
+    "bullets": [
+     "When two shapes are joined, some faces are 'lost' inside the join.",
+     "The number of vertices may decrease if they coincide.",
+     "Always count carefully, marking off faces as you go to avoid double-counting."
+    ]
+   }
+  ],
+  "analogy": {
+   "t": "The Architect's Blueprint",
+   "p": "Imagine a 3D shape is a house. The 'Plan' is what a bird sees flying directly over the roof. The 'Elevations' are what a person sees standing directly in front of the house or at the side. You need all three views to build the house correctly; a single view might hide a secret extension or a chimney. The 'Net' is like the cardboard box the house came in, flattened out. The analogy breaks down because real buildings have internal walls and thickness, whereas in GCSE geometry, we usually treat solids as 'filled' or focus only on the external surface boundaries."
+  },
+  "terms": [
+   {
+    "t": "Polyhedron",
+    "d": "A 3D solid with flat faces and straight edges."
+   },
+   {
+    "t": "Prism",
+    "d": "A solid with two congruent, parallel bases and a constant cross-section."
+   },
+   {
+    "t": "Apex",
+    "d": "The top point or vertex of a cone or pyramid."
+   },
+   {
+    "t": "Plan",
+    "d": "A 2D drawing of a 3D object as seen from directly above."
+   },
+   {
+    "t": "Elevation",
+    "d": "A 2D drawing of a 3D object as seen from the front or side."
+   },
+   {
+    "t": "Net",
+    "d": "A 2D shape that can be folded to make a 3D solid."
+   },
+   {
+    "t": "Vertex",
+    "d": "A corner point where edges meet."
+   },
+   {
+    "t": "Edge",
+    "d": "A line where two faces of a solid meet."
+   },
+   {
+    "t": "Cross-section",
+    "d": "The shape made by cutting through a solid at right angles to its length."
+   },
+   {
+    "t": "Isometric",
+    "d": "A method of 3D representation using a 30-degree grid."
+   },
+   {
+    "t": "Regular Polyhedron",
+    "d": "A solid where all faces are identical regular polygons."
+   },
+   {
+    "t": "Orthographic",
+    "d": "A way of representing 3D objects using 2D drawings of different views."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Drawing the plan and elevations with different scales.",
+    "r": "Ensure the width of the front elevation and the width of the plan are identical."
+   },
+   {
+    "w": "Forgetting to use dashed lines for hidden edges.",
+    "r": "Always use dashed lines for edges that are obscured from view but exist."
+   },
+   {
+    "w": "Assuming a cylinder net is just two circles and any rectangle.",
+    "r": "The rectangle's length must exactly equal the circumference of the circle."
+   },
+   {
+    "w": "Miscounting vertices on a prism.",
+    "r": "Remember a prism has 2n vertices, where n is the number of sides of the base."
+   },
+   {
+    "w": "Drawing horizontal lines on isometric paper.",
+    "r": "All 'horizontal' lines must be drawn at a 30-degree angle along the grid dots."
+   },
+   {
+    "w": "Confusing a pyramid with a prism.",
+    "r": "A prism has a constant cross-section; a pyramid tapers to a point."
+   },
+   {
+    "w": "Thinking a sphere has one vertex (the top).",
+    "r": "A sphere has zero vertices and zero edges."
+   },
+   {
+    "w": "Neglecting the 'Front' arrow in exam diagrams.",
+    "r": "The arrow defines which view is the 'Front Elevation'; ignore it and you lose marks."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A prism has a cross-section of a regular pentagon. How many faces, edges, and vertices does it have?",
+    "marks": 2,
+    "model": [
+     "Faces: 5 (sides) + 2 (ends) = 7",
+     "Edges: 5 (top) + 5 (bottom) + 5 (vertical) = 15",
+     "Vertices: 5 (top) + 5 (bottom) = 10"
+    ],
+    "tip": "For an n-sided prism: Faces = n+2, Edges = 3n, Vertices = 2n."
+   },
+   {
+    "q": "Draw the plan of a sphere with radius 3cm.",
+    "marks": 1,
+    "model": [
+     "A circle with a radius of 3cm (or diameter 6cm)."
+    ],
+    "tip": "Spheres look like circles from every orthographic direction."
+   },
+   {
+    "q": "Verify Euler's formula for a square-based pyramid.",
+    "marks": 2,
+    "model": [
+     "Vertices (V) = 5, Edges (E) = 8, Faces (F) = 5",
+     "V - E + F = 5 - 8 + 5 = 2",
+     "Formula holds true."
+    ],
+    "tip": "Euler's formula V - E + F = 2 applies to all convex polyhedra."
+   },
+   {
+    "q": "A solid is made of 1cm cubes. The plan is a 2x2 square. The front elevation is a 2x2 square. What is the maximum number of cubes used?",
+    "marks": 2,
+    "model": [
+     "A 2x2x2 cube arrangement would satisfy this.",
+     "Maximum cubes = 2 * 2 * 2 = 8."
+    ],
+    "tip": "Visualise the 'bounding box' created by the elevations."
+   },
+   {
+    "q": "Explain why a cylinder is not a polyhedron.",
+    "marks": 1,
+    "model": [
+     "A polyhedron must have only flat faces and straight edges.",
+     "A cylinder has a curved surface."
+    ],
+    "tip": "Use the precise definitions of faces and edges."
+   },
+   {
+    "q": "Draw the net of a triangular prism with a right-angled triangle base (3cm, 4cm, 5cm) and length 10cm.",
+    "marks": 4,
+    "model": [
+     "Three rectangles joined: 10x3, 10x4, and 10x5.",
+     "Two right-angled triangles (3, 4, 5) attached to the 10x3 or 10x4 rectangle.",
+     "Correct dimensions labelled.",
+     "Correct orientation so edges match when folded."
+    ],
+    "tip": "Check that the sides of the triangles match the widths of the rectangles they will meet."
+   },
+   {
+    "q": "A shape has 12 edges and 8 vertices. Name the shape.",
+    "marks": 1,
+    "model": [
+     "Cuboid or Cube."
+    ],
+    "tip": "Memorise the properties of common solids like the cube and tetrahedron."
+   },
+   {
+    "q": "On isometric paper, draw a cuboid with dimensions 3 units by 2 units by 4 units.",
+    "marks": 3,
+    "model": [
+     "Vertical lines are 4 units high.",
+     "Width lines are 3 units at 30 degrees.",
+     "Depth lines are 2 units at 30 degrees.",
+     "All parallel edges are drawn correctly."
+    ],
+    "tip": "Count the gaps between dots, not the dots themselves."
+   }
+  ],
+  "worked": [
+   {
+    "q": "An object is made from 5 centimetre cubes. The front elevation shows a 'T' shape (3 across the top, 1 in the middle below). The side elevation is a single column of 2 cubes. Draw the plan.",
+    "steps": [
+     "Analyze the front: There are 3 cubes in the top layer and 1 in the bottom layer.",
+     "Analyze the side: The side view is 1 cube wide and 2 cubes high. This means the object is only 1 cube deep.",
+     "Combine: The object is a flat 'T' shape made of 4 cubes, but the question says 5 cubes.",
+     "Re-evaluate: If there are 5 cubes, one must be hidden. Since the side elevation is only 1 wide, the 5th cube must be directly behind one of the others.",
+     "However, if the side elevation is 1 wide, there can be no 'depth'. Check the question constraints. If the side elevation is 1 wide, the plan must be a 3x1 row.",
+     "Wait, if the plan is a 3x1 row, that only accounts for the 3 cubes on the top layer. The 4th is below. The 5th must be behind one of the top ones, making the side elevation 2 wide? No, the side elevation is 1 wide. Therefore, the 5th cube must be hidden in the front view (e.g., behind the middle cube).",
+     "Plan: A 3x1 rectangle if the 5th cube is hidden behind the middle one."
+    ],
+    "ans": "A 3x1 rectangle of squares."
+   },
+   {
+    "q": "Calculate the number of vertices on a dodecahedron using the fact it has 12 pentagonal faces.",
+    "steps": [
+     "Each face is a pentagon, so it has 5 edges. 12 faces * 5 edges = 60 edges.",
+     "Each edge is shared by 2 faces, so E = 60 / 2 = 30.",
+     "We know F = 12.",
+     "Use Euler's Formula: V - E + F = 2.",
+     "V - 30 + 12 = 2.",
+     "V - 18 = 2.",
+     "V = 20."
+    ],
+    "ans": "20 vertices"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "A triangular prism showing the vertices (points), edges (lines), and faces (surfaces).",
+    "svg": "<svg viewBox=\"0 0 400 240\"><path d=\"M80 180 L180 180 L130 140 Z\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M80 180 L80 60 L130 20 L130 140\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M180 180 L180 60 L130 20\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"80\" y1=\"60\" x2=\"180\" y2=\"60\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"190\" y=\"185\" fill=\"#1b2540\">Vertex</text><text x=\"190\" y=\"120\" fill=\"#1b2540\">Edge</text><text x=\"100\" y=\"100\" fill=\"#1b2540\">Face</text></svg>"
+   }
+  ],
+  "pid": "maths_ocr_h.7.5",
+  "sid": "maths_ocr_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3-flash-preview",
+  "ts": "2026-11-21T16:55:11.069Z"
  }
 }

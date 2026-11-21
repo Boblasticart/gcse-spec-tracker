@@ -897,5 +897,1129 @@
   "src": "pre",
   "by": "gemini/gemini-flash-lite-latest",
   "ts": "2026-11-20T18:20:51.017Z"
+ },
+ "maths_eduqas_h.5.0": {
+  "summary": "Sampling allows mathematicians and statisticians to draw conclusions about a large target population without having to test or survey every single individual. In GCSE Eduqas Higher Maths, you must master calculating stratified samples proportionally, executing systematic sampling, and estimating hidden population sizes using the capture-recapture method. Crucially, you must evaluate sampling limitations such as selection bias, non-response, inadequate sample sizes, and invalid underlying assumptions in real-world contexts.",
+  "core": [
+   {
+    "h": "Population, Sample, and Census",
+    "p": "In statistics, the **population** refers to the entire group of items or individuals about which you want to collect data. A **census** is a study that attempts to collect data from every single member of the population, whereas a **sample** selects a smaller subset to represent the whole group.",
+    "bullets": [
+     "**Target Population**: The complete set of individuals or items under investigation (e.g. all 1,200 students in a secondary school).",
+     "**Census**: Data is gathered from 100% of the population. Provides complete accuracy but can be extremely expensive, time-consuming, or impossible.",
+     "**Sample**: A selection of items taken from the population to make inferences about the whole group.",
+     "**Destructive Testing**: When testing items destroys them (e.g. testing the lifespan of batteries or crash-testing cars), a census is impossible, making sampling essential.",
+     "**Sampling Frame**: A complete, numbered list of all members of the population from which a sample is drawn (e.g. a school register or electoral roll)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Population vs Sample",
+      "p": "A **population** is the entire collection of entities under study. A **sample** is a subset of the population chosen to estimate characteristics of the whole population."
+     },
+     {
+      "k": "warn",
+      "t": "Sampling Frame Requirement",
+      "p": "A random sample cannot be drawn directly without a reliable **sampling frame** (a list of every population member). If no list exists, true random sampling is impossible."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Sources of Bias and Unrepresentative Samples",
+    "p": "A sample is **biased** if it systematically favours certain outcomes or over-represents specific sub-groups of the population. Inferences drawn from a biased sample will be invalid.",
+    "bullets": [
+     "**Selection Bias**: Occurs when the sampling method excludes certain parts of the population (e.g. surveying people outside a gym at 8 am ignores non-gym goers and shift workers).",
+     "**Non-Response Bias**: Occurs when chosen individuals fail to respond to a survey, and those who do choose to respond have significantly different opinions from those who do not.",
+     "**Inadequate Sample Size**: A sample that is too small leads to high sampling variability, meaning random fluctuations dominate the findings.",
+     "**Temporal / Location Bias**: Sampling at a single time of day, day of the week, or location leads to unrepresentative data."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Evaluating Bias in Exam Questions",
+      "p": "When asked to criticise a sampling method, always state **who is excluded**, **why they are excluded**, and **how this skews the results**."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Simple Random Sampling (SRS)",
+    "p": "In a **simple random sample**, every individual in the population has an equal chance of being selected, and every possible sample of a given size has an equal probability of selection.",
+    "bullets": [
+     "**Procedure**: Assign a unique number from 1 to N to every member in the sampling frame. Use a random number generator (or random number table) to generate numbers. Select the corresponding members, ignoring any duplicate numbers generated.",
+     "**Advantage**: Completely free from interviewer bias; every member has an equal probability of selection.",
+     "**Disadvantage**: Requires a complete sampling frame prior to sampling. By pure chance, a simple random sample can still produce an unrepresentative sample (e.g. selecting all males)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Must Mention Duplicate Numbers",
+      "p": "In exam descriptions of random sampling, you **must explicitly state** that any duplicate numbers generated are ignored/discarded and replaced with a new random number."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Stratified Random Sampling: Concepts & Calculation",
+    "p": "When a population contains distinct sub-groups (**strata**) of different sizes (such as age brackets or school year groups), **stratified sampling** ensures that each group is represented in the sample in exact proportion to its size in the total population.",
+    "bullets": [
+     "**Stratum Definition**: A non-overlapping sub-group of the population sharing a key characteristic (e.g. Year 11 students).",
+     "**Proportional Formula**: Number to sample from a stratum = (Stratum Size / Total Population Size) * Desired Total Sample Size.",
+     "**Random Selection**: Within each stratum, individuals must be selected using **simple random sampling**.",
+     "**Rounding Rule**: If calculated stratum sample sizes involve decimals, round to the nearest whole number. Always double-check that the sum of the rounded numbers equals the total sample size required; adjust the stratum with the largest fractional part if off by 1."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Stratified Sampling Formula",
+      "p": "Stratum Sample Size = (Stratum Count / Total Population) * Total Sample Size"
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Stratified Random Sampling divides the population into distinct strata before randomly sampling proportionally from each stratum.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"20\" y=\"20\" width=\"160\" height=\"200\" fill=\"#ffffff\" stroke=\"#64748b\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"100\" y=\"40\" text-anchor=\"middle\" fill=\"#1e293b\" font-size=\"12\" font-weight=\"bold\">Population (N = 200)</text><rect x=\"30\" y=\"50\" width=\"140\" height=\"40\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1\" rx=\"4\"/><text x=\"100\" y=\"74\" text-anchor=\"middle\" fill=\"#1e40af\" font-size=\"11\">Year 10: 100 pupils (50%)</text><rect x=\"30\" y=\"100\" width=\"140\" height=\"40\" fill=\"#fde68a\" stroke=\"#d97706\" stroke-width=\"1\" rx=\"4\"/><text x=\"100\" y=\"124\" text-anchor=\"middle\" fill=\"#92400e\" font-size=\"11\">Year 11: 60 pupils (30%)</text><rect x=\"30\" y=\"150\" width=\"140\" height=\"40\" fill=\"#bbf7d0\" stroke=\"#16a34a\" stroke-width=\"1\" rx=\"4\"/><text x=\"100\" y=\"174\" text-anchor=\"middle\" fill=\"#166534\" font-size=\"11\">Year 12: 40 pupils (20%)</text><path d=\"M 190 120 L 220 120\" stroke=\"#475569\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><rect x=\"230\" y=\"20\" width=\"150\" height=\"200\" fill=\"#ffffff\" stroke=\"#64748b\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"305\" y=\"40\" text-anchor=\"middle\" fill=\"#1e293b\" font-size=\"12\" font-weight=\"bold\">Sample (n = 40)</text><rect x=\"240\" y=\"50\" width=\"130\" height=\"40\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1\" rx=\"4\"/><text x=\"305\" y=\"74\" text-anchor=\"middle\" fill=\"#1e40af\" font-size=\"11\">Year 10: 20 pupils (50%)</text><rect x=\"240\" y=\"100\" width=\"130\" height=\"40\" fill=\"#fde68a\" stroke=\"#d97706\" stroke-width=\"1\" rx=\"4\"/><text x=\"305\" y=\"124\" text-anchor=\"middle\" fill=\"#92400e\" font-size=\"11\">Year 11: 12 pupils (30%)</text><rect x=\"240\" y=\"150\" width=\"130\" height=\"40\" fill=\"#bbf7d0\" stroke=\"#16a34a\" stroke-width=\"1\" rx=\"4\"/><text x=\"305\" y=\"174\" text-anchor=\"middle\" fill=\"#166534\" font-size=\"11\">Year 12: 8 pupils (20%)</text><defs><marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#475569\"/></marker></defs></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Systematic Sampling",
+    "p": "In **systematic sampling**, members of the population are chosen at regular numeric intervals from an ordered sampling frame.",
+    "bullets": [
+     "**Interval Formula**: Calculate sampling interval k = N / n, where N is total population size and n is target sample size.",
+     "**Random Start**: Select a random starting integer r between 1 and k using a random number generator.",
+     "**Selection Sequence**: Select the items at positions r, r + k, r + 2k, r + 3k, ..., until sample size n is reached.",
+     "**Advantage**: Quick, simple to execute, and spreads the sample evenly across an ordered list.",
+     "**Disadvantage**: Can introduce severe bias if the population list contains an underlying periodic pattern/trend matching interval k."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Calculating the Interval k",
+      "p": "Always round k DOWN to the nearest integer if N / n is not a whole number to ensure you do not run out of items before completing the sample size."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Systematic Sampling: Starting at random index r=2 with interval k=4 to pick members 2, 6, 10, 14.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><text x=\"200\" y=\"30\" text-anchor=\"middle\" fill=\"#1e293b\" font-size=\"13\" font-weight=\"bold\">Systematic Sampling (N=16, n=4, k=4)</text><g transform=\"translate(20, 70)\"><rect x=\"0\" y=\"0\" width=\"20\" height=\"35\" fill=\"#e2e8f0\" stroke=\"#94a3b8\" rx=\"3\"/><text x=\"10\" y=\"22\" text-anchor=\"middle\" font-size=\"10\">1</text><rect x=\"24\" y=\"0\" width=\"20\" height=\"35\" fill=\"#bbf7d0\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"3\"/><text x=\"34\" y=\"22\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\">2</text><rect x=\"48\" y=\"0\" width=\"20\" height=\"35\" fill=\"#e2e8f0\" stroke=\"#94a3b8\" rx=\"3\"/><text x=\"58\" y=\"22\" text-anchor=\"middle\" font-size=\"10\">3</text><rect x=\"72\" y=\"0\" width=\"20\" height=\"35\" fill=\"#e2e8f0\" stroke=\"#94a3b8\" rx=\"3\"/><text x=\"82\" y=\"22\" text-anchor=\"middle\" font-size=\"10\">4</text><rect x=\"96\" y=\"0\" width=\"20\" height=\"35\" fill=\"#e2e8f0\" stroke=\"#94a3b8\" rx=\"3\"/><text x=\"106\" y=\"22\" text-anchor=\"middle\" font-size=\"10\">5</text><rect x=\"120\" y=\"0\" width=\"20\" height=\"35\" fill=\"#bbf7d0\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"3\"/><text x=\"130\" y=\"22\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\">6</text><rect x=\"144\" y=\"0\" width=\"20\" height=\"35\" fill=\"#e2e8f0\" stroke=\"#94a3b8\" rx=\"3\"/><text x=\"154\" y=\"22\" text-anchor=\"middle\" font-size=\"10\">7</text><rect x=\"168\" y=\"0\" width=\"20\" height=\"35\" fill=\"#e2e8f0\" stroke=\"#94a3b8\" rx=\"3\"/><text x=\"178\" y=\"22\" text-anchor=\"middle\" font-size=\"10\">8</text><rect x=\"192\" y=\"0\" width=\"20\" height=\"35\" fill=\"#e2e8f0\" stroke=\"#94a3b8\" rx=\"3\"/><text x=\"202\" y=\"22\" text-anchor=\"middle\" font-size=\"10\">9</text><rect x=\"216\" y=\"0\" width=\"20\" height=\"35\" fill=\"#bbf7d0\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"3\"/><text x=\"226\" y=\"22\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\">10</text><rect x=\"240\" y=\"0\" width=\"20\" height=\"35\" fill=\"#e2e8f0\" stroke=\"#94a3b8\" rx=\"3\"/><text x=\"250\" y=\"22\" text-anchor=\"middle\" font-size=\"10\">11</text><rect x=\"264\" y=\"0\" width=\"20\" height=\"35\" fill=\"#e2e8f0\" stroke=\"#94a3b8\" rx=\"3\"/><text x=\"274\" y=\"22\" text-anchor=\"middle\" font-size=\"10\">12</text><rect x=\"288\" y=\"0\" width=\"20\" height=\"35\" fill=\"#e2e8f0\" stroke=\"#94a3b8\" rx=\"3\"/><text x=\"298\" y=\"22\" text-anchor=\"middle\" font-size=\"10\">13</text><rect x=\"312\" y=\"0\" width=\"20\" height=\"35\" fill=\"#bbf7d0\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"3\"/><text x=\"322\" y=\"22\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\">14</text><rect x=\"336\" y=\"0\" width=\"20\" height=\"35\" fill=\"#e2e8f0\" stroke=\"#94a3b8\" rx=\"3\"/><text x=\"346\" y=\"22\" text-anchor=\"middle\" font-size=\"10\">15</text></g><path d=\"M 54 115 A 30 30 0 0 0 150 115\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/><text x=\"102\" y=\"140\" text-anchor=\"middle\" fill=\"#2563eb\" font-size=\"11\">+ k (4)</text><path d=\"M 150 115 A 30 30 0 0 0 246 115\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/><text x=\"198\" y=\"140\" text-anchor=\"middle\" fill=\"#2563eb\" font-size=\"11\">+ k (4)</text><rect x=\"40\" y=\"175\" width=\"320\" height=\"45\" fill=\"#ffffff\" stroke=\"#cbd5e1\" rx=\"4\"/><text x=\"200\" y=\"195\" text-anchor=\"middle\" fill=\"#334155\" font-size=\"11\">Random start point = 2 (chosen between 1 and 4)</text><text x=\"200\" y=\"210\" text-anchor=\"middle\" fill=\"#166534\" font-size=\"11\" font-weight=\"bold\">Selected Sample: {2, 6, 10, 14}</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Quota and Opportunity (Convenience) Sampling",
+    "p": "When a sampling frame is unavailable, non-random (non-probability) sampling techniques are used.",
+    "bullets": [
+     "**Quota Sampling**: An interviewer selects participants to fill predetermined quotas for specific categories (e.g. 20 men over 50, 20 women under 30). Selection within quotas is non-random.",
+     "**Opportunity (Convenience) Sampling**: Selecting participants who are easily accessible at a specific time and location (e.g. stopping passers-by on a street outside a shopping centre).",
+     "**Key Differences from Probability Sampling**: Neither method requires a sampling frame. Both are fast and cheap, but both introduce severe **interviewer bias** and cannot be used to calculate statistical probabilities or margins of error."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Non-Random Sampling Limitations",
+      "p": "In Eduqas exam questions, non-probability samples (Quota and Opportunity) must never be described as 'random'. You cannot extrapolate conclusions to the wider population with reliable confidence intervals."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Estimating Population Characteristics (Scaling Up)",
+    "p": "Sample results can be scaled up to estimate overall population characteristics. The fundamental principle is that the proportion of items with a characteristic in a representative sample equals the proportion in the whole population.",
+    "bullets": [
+     "**Proportion Principle**: Sample Proportion = (Number in Sample with Attribute / Total Sample Size n).",
+     "**Estimated Population Total**: Estimated Count in Population = Sample Proportion * Total Population Size N.",
+     "**Scaling Factor Method**: Scaling Factor = Total Population (N) / Sample Size (n). Estimated Count = Sample Count * Scaling Factor.",
+     "**Reliability**: The accuracy of the estimate depends directly on whether the sample is representative and of sufficient size."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Setting Up Proportion Equations",
+      "p": "Write down equal ratios: (Sample Successes / Sample Size) = (Population Successes / Total Population). Solve for the missing variable using cross-multiplication."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Capture-Recapture: Mechanics and Estimation",
+    "p": "The **capture-recapture method** (Lincoln Index) is an indirect sampling technique used to estimate the size of a mobile animal population where counting every individual is impossible.",
+    "bullets": [
+     "**Stage 1 (Capture & Mark)**: Capture a sample of size M from the population, mark or tag each individual safely, and release them back into the habitat.",
+     "**Stage 2 (Mixing Period)**: Allow sufficient time for marked individuals to mix randomly back into the whole population.",
+     "**Stage 3 (Recapture)**: Capture a second independent sample of size n. Count how many individuals in this second sample are marked (m).",
+     "**Mathematical Equation**: Ratio of marked items in second sample equals ratio of total marked items in population: m / n = M / N.",
+     "**Population Formula**: Estimated Total Population N = (M * n) / m."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Capture-Recapture Formula",
+      "p": "N = (M * n) / m  \nWhere N = estimated total population, M = initial number marked, n = second sample size, m = number of marked items in second sample."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "The three stages of the Capture-Recapture method to estimate total population N.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"15\" y=\"20\" width=\"110\" height=\"150\" fill=\"#ffffff\" stroke=\"#94a3b8\" rx=\"6\"/><text x=\"70\" y=\"40\" text-anchor=\"middle\" fill=\"#1e293b\" font-size=\"11\" font-weight=\"bold\">Stage 1: Mark</text><circle cx=\"45\" cy=\"70\" r=\"8\" fill=\"#ef4444\"/><circle cx=\"70\" cy=\"70\" r=\"8\" fill=\"#ef4444\"/><circle cx=\"95\" cy=\"70\" r=\"8\" fill=\"#ef4444\"/><circle cx=\"55\" cy=\"100\" r=\"8\" fill=\"#ef4444\"/><circle cx=\"85\" cy=\"100\" r=\"8\" fill=\"#ef4444\"/><text x=\"70\" y=\"135\" text-anchor=\"middle\" fill=\"#b91c1c\" font-size=\"11\" font-weight=\"bold\">Marked M = 5</text><rect x=\"145\" y=\"20\" width=\"110\" height=\"150\" fill=\"#ffffff\" stroke=\"#94a3b8\" rx=\"6\"/><text x=\"200\" y=\"40\" text-anchor=\"middle\" fill=\"#1e293b\" font-size=\"11\" font-weight=\"bold\">Stage 2: Mix</text><circle cx=\"170\" cy=\"65\" r=\"8\" fill=\"#ef4444\"/><circle cx=\"220\" cy=\"75\" r=\"8\" fill=\"#94a3b8\"/><circle cx=\"180\" cy=\"100\" r=\"8\" fill=\"#94a3b8\"/><circle cx=\"225\" cy=\"115\" r=\"8\" fill=\"#ef4444\"/><circle cx=\"195\" cy=\"135\" r=\"8\" fill=\"#94a3b8\"/><text x=\"200\" y=\"160\" text-anchor=\"middle\" fill=\"#475569\" font-size=\"10\">Random mixing</text><rect x=\"275\" y=\"20\" width=\"110\" height=\"150\" fill=\"#ffffff\" stroke=\"#94a3b8\" rx=\"6\"/><text x=\"330\" y=\"40\" text-anchor=\"middle\" fill=\"#1e293b\" font-size=\"11\" font-weight=\"bold\">Stage 3: Recapture</text><circle cx=\"305\" cy=\"70\" r=\"8\" fill=\"#ef4444\" stroke=\"#16a34a\" stroke-width=\"2\"/><circle cx=\"330\" cy=\"70\" r=\"8\" fill=\"#ef4444\" stroke=\"#16a34a\" stroke-width=\"2\"/><circle cx=\"355\" cy=\"70\" r=\"8\" fill=\"#94a3b8\"/><circle cx=\"315\" cy=\"100\" r=\"8\" fill=\"#94a3b8\"/><circle cx=\"345\" cy=\"100\" r=\"8\" fill=\"#94a3b8\"/><text x=\"330\" y=\"135\" text-anchor=\"middle\" fill=\"#1e293b\" font-size=\"10\">Sample n = 5</text><text x=\"330\" y=\"150\" text-anchor=\"middle\" fill=\"#15803d\" font-size=\"10\" font-weight=\"bold\">Recaptured m = 2</text><rect x=\"40\" y=\"185\" width=\"320\" height=\"40\" fill=\"#e0e7ff\" stroke=\"#4338ca\" rx=\"4\"/><text x=\"200\" y=\"210\" text-anchor=\"middle\" fill=\"#3730a3\" font-size=\"12\" font-weight=\"bold\">N = (M × n) / m = (5 × 5) / 2 = 12.5 ≈ 13</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Assumptions and Sources of Error in Capture-Recapture",
+    "p": "The capture-recapture formula yields an accurate estimate **only** if core biological and statistical assumptions hold true. In exam questions, you are frequently asked how a violation of these assumptions affects the population estimate.",
+    "bullets": [
+     "**Assumption 1: Closed Population**: No births, deaths, immigration, or emigration occur between the two captures.",
+     "**Assumption 2: Marks Are Retained**: Marks, tags, or bands do not fall off, rub away, or become unreadable.",
+     "**Assumption 3: Marks Do Not Harm or Alter Behaviour**: Marking does not make animals more visible to predators or affect their catchability.",
+     "**Assumption 4: Equal Probability of Capture**: Every individual has an equal chance of being captured in both samples; marked animals do not become 'trap-shy' or 'trap-happy'.",
+     "**Assumption 5: Sufficient Mixing**: Marked individuals have mixed thoroughly back into the population before the second sample is taken."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Mathematical Impact of Violation Errors",
+      "p": "If tags fall off, m (recaptured marked count) will be **too small**, which causes the calculated estimate N = (M * n) / m to **overestimate** the population size!"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Evaluating Reliability, Sample Size, and Response Rates",
+    "p": "When evaluating statistical claims, examiners expect you to critically assess sample size, sample representation, non-response rates, and practical collection conditions.",
+    "bullets": [
+     "**Sample Size Effect**: Increasing sample size reduces standard error and sampling variation, but **does not eliminate bias** caused by bad design.",
+     "**Response Rate**: A low response rate distorts conclusions because responders often hold extreme or unrepresentative opinions compared to non-responders.",
+     "**Extrapolating Beyond Scope**: Avoid applying sample findings to a population outside the original frame (e.g. using results from a sample of teenager habits to draw inferences about pensioners)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Sample Size vs Bias Rule",
+      "p": "A large sample size reduces random variability, but a large **biased** sample just gives a very precise wrong answer!"
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Comparison between a biased non-representative sample and an unbiased representative sample of a target population.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"20\" y=\"20\" width=\"170\" height=\"200\" fill=\"#ffffff\" stroke=\"#f87171\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"105\" y=\"40\" text-anchor=\"middle\" fill=\"#991b1b\" font-size=\"12\" font-weight=\"bold\">Biased Sample</text><circle cx=\"50\" cy=\"70\" r=\"7\" fill=\"#ef4444\"/><circle cx=\"70\" cy=\"80\" r=\"7\" fill=\"#ef4444\"/><circle cx=\"60\" cy=\"100\" r=\"7\" fill=\"#ef4444\"/><circle cx=\"45\" cy=\"115\" r=\"7\" fill=\"#ef4444\"/><circle cx=\"130\" cy=\"70\" r=\"7\" fill=\"#94a3b8\"/><circle cx=\"150\" cy=\"90\" r=\"7\" fill=\"#94a3b8\"/><circle cx=\"140\" cy=\"120\" r=\"7\" fill=\"#94a3b8\"/><circle cx=\"120\" cy=\"150\" r=\"7\" fill=\"#94a3b8\"/><text x=\"105\" y=\"185\" text-anchor=\"middle\" fill=\"#b91c1c\" font-size=\"11\">Only samples one cluster;</text><text x=\"105\" y=\"205\" text-anchor=\"middle\" fill=\"#b91c1c\" font-size=\"11\">ignores rest of population.</text><rect x=\"210\" y=\"20\" width=\"170\" height=\"200\" fill=\"#ffffff\" stroke=\"#4ade80\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"295\" y=\"40\" text-anchor=\"middle\" fill=\"#166534\" font-size=\"12\" font-weight=\"bold\">Representative Sample</text><circle cx=\"235\" cy=\"70\" r=\"7\" fill=\"#22c55e\"/><circle cx=\"350\" cy=\"75\" r=\"7\" fill=\"#22c55e\"/><circle cx=\"270\" cy=\"110\" r=\"7\" fill=\"#22c55e\"/><circle cx=\"320\" cy=\"120\" r=\"7\" fill=\"#22c55e\"/><circle cx=\"240\" cy=\"155\" r=\"7\" fill=\"#22c55e\"/><circle cx=\"340\" cy=\"160\" r=\"7\" fill=\"#22c55e\"/><text x=\"295\" y=\"185\" text-anchor=\"middle\" fill=\"#15803d\" font-size=\"11\">Sample spread evenly</text><text x=\"295\" y=\"205\" text-anchor=\"middle\" fill=\"#15803d\" font-size=\"11\">across entire population.</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Comparative Analysis of Sampling Techniques",
+    "p": "Choosing the correct sampling method depends on the availability of a sampling frame, budget, time, and the underlying structure of the population.",
+    "bullets": [
+     "Review the key characteristics of each sampling method in the table below to select the appropriate technique for any given exam scenario."
+    ],
+    "table": {
+     "head": [
+      "Sampling Method",
+      "Sampling Frame Required?",
+      "Selection Mechanism",
+      "Main Advantage",
+      "Main Limitation"
+     ],
+     "rows": [
+      [
+       "Simple Random",
+       "Yes",
+       "Random numbers chosen by generator",
+       "Unbiased; equal chance for all",
+       "Can select unrepresentative group by chance"
+      ],
+      [
+       "Stratified",
+       "Yes",
+       "Proportional random selection from strata",
+       "Guarantees sub-group representation",
+       "Strata must be clearly identifiable"
+      ],
+      [
+       "Systematic",
+       "Yes",
+       "Every k-th item from random start r",
+       "Simple and evenly spread",
+       "Biased if data has periodic pattern"
+      ],
+      [
+       "Quota",
+       "No",
+       "Interviewer fills target categories",
+       "Fast, cheap, no list needed",
+       "Interviewer selection bias"
+      ],
+      [
+       "Opportunity",
+       "No",
+       "First available individuals sampled",
+       "Easiest and fastest",
+       "Highly biased and unrepresentative"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Sampling as Tasting a Pot of Soup",
+   "p": "Imagine chef cooking a large 50-litre pot of vegetable soup (the population). To test if the soup is salted correctly, the chef does not drink all 50 litres (a census). Instead, the chef stirs the pot thoroughly so all ingredients mix evenly (random sampling assumptions) and takes a single 15 ml spoon (the sample). If the soup is well-stirred, that single spoon accurately represents the flavor of the entire pot.  \n\nWhere the analogy breaks down: If the chef fails to stir the pot, all the heavy vegetables settle at the bottom and oil floats on top. Taking a spoon from the top surface yields a completely biased sample (opportunity sampling). Furthermore, unlike liquid soup, human populations have complex sub-groups (strata) that do not naturally 'dissolve' or mix uniformly, requiring deliberate stratified sampling design."
+  },
+  "terms": [
+   {
+    "t": "Population",
+    "d": "The entire group of individuals, items, or events about which data is to be collected and conclusions are drawn."
+   },
+   {
+    "t": "Sample",
+    "d": "A subset of the population selected for study to make estimates or inferences about the whole population."
+   },
+   {
+    "t": "Census",
+    "d": "A survey or investigation that collects data from every single member of the target population."
+   },
+   {
+    "t": "Sampling Frame",
+    "d": "A complete, numbered list or database of all individuals/items in the population from which a sample is drawn."
+   },
+   {
+    "t": "Bias",
+    "d": "Systematic error or deviation in results caused by sampling methods that favour certain outcomes or exclude specific sub-groups."
+   },
+   {
+    "t": "Simple Random Sampling",
+    "d": "A sampling method where every member of the population has an equal chance of being selected, using random numbers."
+   },
+   {
+    "t": "Stratified Sampling",
+    "d": "A sampling method where the population is divided into mutually exclusive strata, and proportional random samples are taken from each stratum."
+   },
+   {
+    "t": "Stratum",
+    "d": "A distinct sub-group of a population sharing a specific demographic characteristic (e.g. age group, gender, school year)."
+   },
+   {
+    "t": "Systematic Sampling",
+    "d": "A sampling method where items are chosen at regular numeric intervals k = N/n from an ordered list, starting from a random index."
+   },
+   {
+    "t": "Quota Sampling",
+    "d": "A non-probability sampling method where an interviewer selects participants non-randomly until pre-set quotas for sub-groups are filled."
+   },
+   {
+    "t": "Opportunity Sampling",
+    "d": "A non-probability sampling method where data is collected from whoever is available and willing at a particular place and time."
+   },
+   {
+    "t": "Capture-Recapture",
+    "d": "A technique used to estimate total population size for mobile organisms by capturing, marking, releasing, and recapturing individuals."
+   },
+   {
+    "t": "Lincoln Index",
+    "d": "The mathematical formula N = (M * n) / m used in capture-recapture to estimate population size."
+   },
+   {
+    "t": "Non-Response Bias",
+    "d": "Bias introduced when selected individuals refuse or fail to participate, skewing results if non-responders differ systematically from responders."
+   },
+   {
+    "t": "Representative Sample",
+    "d": "A sample whose key demographic characteristics accurately reflect the proportions present in the overall target population."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Forgetting to ignore duplicates when generating random numbers for a simple random sample.",
+    "r": "Explicitly state that duplicate random numbers must be ignored/discarded and replaced by drawing another random number until the target sample size is reached."
+   },
+   {
+    "w": "Failing to round calculated stratified sample sizes or leaving fractions as answers.",
+    "r": "Round each stratum sample size to the nearest whole integer, and verify that the sum of all rounded stratum samples equals the required total sample size n."
+   },
+   {
+    "w": "Assuming a large sample size automatically eliminates bias.",
+    "r": "Recognise that a large sample size only reduces random variability; if the sampling method is fundamentally biased, increasing sample size does not make it representative."
+   },
+   {
+    "w": "Stating that tags/marks falling off in capture-recapture causes an UNDERestimate of population size.",
+    "r": "Understand that if tags fall off, m (marked recaptures) becomes smaller. Since N = (M * n) / m, dividing by a smaller m yields a LARGER value for N (an OVERestimate)."
+   },
+   {
+    "w": "Confusing Quota Sampling with Stratified Sampling.",
+    "r": "Stratified sampling uses random selection within each stratum using a sampling frame; Quota sampling uses non-random selection by an interviewer without a sampling frame."
+   },
+   {
+    "w": "Writing 'ask people in the street' as an example of random sampling.",
+    "r": "Classify street surveys as opportunity/convenience sampling, which is non-random and subject to severe location and time bias."
+   },
+   {
+    "w": "Omitting key assumptions when asked to evaluate capture-recapture reliability.",
+    "r": "List specific conditions: closed population (no births/deaths/migration), marks remain intact, equal probability of capture, and sufficient time for thorough mixing."
+   },
+   {
+    "w": "Dividing Sample Size by Population Size in stratified calculation instead of Stratum Size by Population Size.",
+    "r": "Apply the correct formula: Stratum Sample = (Stratum Size / Total Population) * Total Sample Size."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Explain why taking a census of all light bulbs produced in a factory to test their lifespan is not suitable. (1 mark)",
+    "marks": 1,
+    "model": [
+     "Testing light bulb lifespan is destructive testing; taking a census would destroy all light bulbs produced, leaving none to sell."
+    ],
+    "tip": "Always mention 'destructive testing' or 'items destroyed' for products tested to destruction."
+   },
+   {
+    "q": "A school has 600 students in Key Stage 3 and 400 students in Key Stage 4. A teacher wants to take a stratified sample of 80 students. Calculate how many Key Stage 4 students should be in the sample. (2 marks)",
+    "marks": 2,
+    "model": [
+     "Total Population = 600 + 400 = 1000",
+     "Key Stage 4 Sample = (400 / 1000) * 80 = 32 students"
+    ],
+    "tip": "Find the total population first before setting up the fraction."
+   },
+   {
+    "q": "Describe how a researcher could select a simple random sample of 50 employees from a staff list of 500 employees using random numbers. (3 marks)",
+    "marks": 3,
+    "model": [
+     "Assign every employee on the list a unique identification number from 1 to 500.",
+     "Use a random number generator to select numbers between 1 and 500.",
+     "Ignore any duplicate numbers generated and continue generating until 50 unique employees are selected."
+    ],
+    "tip": "You must include 'assign unique numbers', 'random number generator', and 'ignore duplicates' for full marks."
+   },
+   {
+    "q": "A researcher wants to sample 50 pupils from a school of 800 pupils using systematic sampling. Explain how the researcher should carry out this sample. (3 marks)",
+    "marks": 3,
+    "model": [
+     "Calculate interval k = 800 / 50 = 16.",
+     "Select a random starting number r between 1 and 16 using a random number generator.",
+     "Select the r-th pupil on the alphabetical list, and then every 16th pupil after that (r, r+16, r+32, ...)."
+    ],
+    "tip": "Explicitly state how interval k is calculated and that the starting point must be chosen randomly between 1 and k."
+   },
+   {
+    "q": "A biologist captures, marks, and releases 45 fish in a lake. One week later, she captures 60 fish and finds that 9 of them are marked.  \n(a) Estimate the total number of fish in the lake. (2 marks)  \n(b) State two assumptions made in arriving at this estimate. (2 marks)",
+    "marks": 4,
+    "model": [
+     "(a) N = (M * n) / m = (45 * 60) / 9 = 300 fish.",
+     "(b) Assumption 1: Population is closed (no births, deaths, immigration, or emigration).",
+     "Assumption 2: Marks did not fall off and were not rubbed off.",
+     "Assumption 3: Marked fish mixed randomly and had equal chance of recapture."
+    ],
+    "tip": "Part (a) uses formula N = M*n/m. Part (b) requires distinct biological/statistical assumptions."
+   },
+   {
+    "q": "A town councillor wants to know the opinion of local residents regarding a proposed new bus lane. She surveys the first 40 people who board a bus at 8:30 am on a Monday.  \nGive two reasons why this sample may be biased. (2 marks)",
+    "marks": 2,
+    "model": [
+     "Reason 1: Only surveys bus users; non-bus users (e.g. motorists, cyclists, pedestrians) are completely excluded.",
+     "Reason 2: Time bias; surveying at 8:30 am samples commuters/workers, excluding retirees, students, or night shift workers."
+    ],
+    "tip": "Be specific about WHO is excluded and WHY the location/time creates bias."
+   },
+   {
+    "q": "A sports club has 4 strata of members: Junior Males (120), Junior Females (80), Senior Males (250), Senior Females (150). A manager takes a stratified sample of 75 members.  \nCalculate the number of Junior Males and Senior Females required in the sample. (4 marks)",
+    "marks": 4,
+    "model": [
+     "Total Population N = 120 + 80 + 250 + 150 = 600 members.",
+     "Junior Males Sample = (120 / 600) * 75 = 15.",
+     "Senior Females Sample = (150 / 600) * 75 = 18.75 ≈ 19 members."
+    ],
+    "tip": "Check if integer rounding is required. Write down exact calculations before rounding."
+   },
+   {
+    "q": "In a capture-recapture study of mice in a field, 40 mice were initially caught, marked, and released. Later, 50 mice were caught, of which 10 were marked.  \nIt was discovered that the dye used to mark the mice washed off in rain before the second sample was taken.  \nExplain how this affects the calculated population estimate. (3 marks)",
+    "marks": 3,
+    "model": [
+     "If dye washes off, fewer recaptured mice will be recognised as marked, so m decreases below its true value.",
+     "In the formula N = (M * n) / m, dividing by a smaller value of m produces a larger value for N.",
+     "Therefore, the calculated estimate will OVERESTIMATE the true population size."
+    ],
+    "tip": "Chain your reasoning: effect on m -> effect on fraction -> over/underestimate conclusion."
+   },
+   {
+    "q": "A Quality Assurance manager samples 200 items from a production line of 5,000 items and finds 6 defective items.  \n(a) Estimate the total number of defective items in the whole batch of 5,000. (2 marks)  \n(b) Explain one limitation of using this sample estimate for the whole day's production. (1 mark)",
+    "marks": 3,
+    "model": [
+     "(a) Estimated Defect Rate = 6 / 200 = 0.03 (3%).",
+     "Total Defective = 0.03 * 5000 = 150 items.",
+     "(b) Sampling at one specific point in time assumes machine accuracy is constant; it ignores machine wear or calibration changes over time."
+    ],
+    "tip": "Multiply proportion by population size. Comment on temporal changes for part (b)."
+   },
+   {
+    "q": "Compare Quota Sampling and Stratified Random Sampling. Give one similarity and two differences. (3 marks)",
+    "marks": 3,
+    "model": [
+     "Similarity: Both divide the target population into sub-groups (strata/categories) based on characteristics like age or gender.",
+     "Difference 1: Stratified sampling requires a complete sampling frame; quota sampling does not.",
+     "Difference 2: Stratified sampling selects individuals randomly within strata; quota sampling relies on non-random interviewer selection."
+    ],
+    "tip": "Focus on sampling frame requirement and randomness as the core points of distinction."
+   }
+  ],
+  "worked": [
+   {
+    "q": "The table below shows the number of pupils in each year group at Oakridge High School.\n\nYear 7: 210 pupils\nYear 8: 195 pupils\nYear 9: 180 pupils\nYear 10: 165 pupils\nYear 11: 150 pupils\nTotal Population = 900 pupils\n\nA headteacher wants to take a stratified sample of 60 pupils across the school.\n(a) Calculate the number of pupils to be sampled from each year group.\n(b) Explain how the pupils from Year 7 should be chosen once the sample size for Year 7 is determined.",
+    "steps": [
+     "Step 1: Calculate total population N = 210 + 195 + 180 + 165 + 150 = 900.",
+     "Step 2: Apply stratified formula for Year 7: (210 / 900) * 60 = 14 pupils.",
+     "Step 3: Calculate for Year 8: (195 / 900) * 60 = 13 pupils.",
+     "Step 4: Calculate for Year 9: (180 / 900) * 60 = 12 pupils.",
+     "Step 5: Calculate for Year 10: (165 / 900) * 60 = 11 pupils.",
+     "Step 6: Calculate for Year 11: (150 / 900) * 60 = 10 pupils.",
+     "Step 7: Verify sum: 14 + 13 + 12 + 11 + 10 = 60 pupils. (Matches total sample size).",
+     "Step 8: For part (b), state the random selection procedure: Number all Year 7 pupils from 1 to 210 on a list, generate 14 unique numbers using a random number generator, ignore any duplicates, and select the corresponding pupils."
+    ],
+    "ans": "(a) Year 7: 14, Year 8: 13, Year 9: 12, Year 10: 11, Year 11: 10\n(b) Assign numbers 1–210 to Year 7 pupils, use a random number generator to pick 14 unique numbers ignoring duplicates, and pick those pupils."
+   },
+   {
+    "q": "An ecologist estimates the population of dragonflies around a lake.\nOn Monday, she catches, rings, and releases 80 dragonflies.\nOn Thursday, she catches 110 dragonflies and finds that 16 of them have rings.\n(a) Estimate the dragonfly population around the lake.\n(b) The ecologist notices that the rings are bright red and make dragonflies more visible to predatory birds. State whether your answer to part (a) is an overestimate or underestimate, explaining your reasoning.",
+    "steps": [
+     "Step 1: Identify given variables for Capture-Recapture formula: M = 80 (initially marked), n = 110 (second sample), m = 16 (marked in second sample).",
+     "Step 2: Use Lincoln Index formula: N = (M * n) / m.",
+     "Step 3: Calculate N = (80 * 110) / 16 = 8800 / 16 = 550.",
+     "Step 4: Analyze effect for part (b): Bright red rings make marked dragonflies more likely to be eaten by birds before Thursday.",
+     "Step 5: This reduces the number of surviving marked dragonflies, so m (recaptured marked count) will be lower than expected.",
+     "Step 6: Since N = (M * n) / m, dividing by a smaller value of m produces a LARGER value for N.",
+     "Step 7: Conclude that 550 is an OVERESTIMATE of the true population."
+    ],
+    "ans": "(a) Estimated population = 550 dragonflies.\n(b) Overestimate. Predation reduces the number of marked dragonflies surviving, making m smaller. Dividing by a smaller m increases N."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Stratified Random Sampling divides the population into distinct strata before randomly sampling proportionally from each stratum.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"20\" y=\"20\" width=\"160\" height=\"200\" fill=\"#ffffff\" stroke=\"#64748b\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"100\" y=\"40\" text-anchor=\"middle\" fill=\"#1e293b\" font-size=\"12\" font-weight=\"bold\">Population (N = 200)</text><rect x=\"30\" y=\"50\" width=\"140\" height=\"40\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1\" rx=\"4\"/><text x=\"100\" y=\"74\" text-anchor=\"middle\" fill=\"#1e40af\" font-size=\"11\">Year 10: 100 pupils (50%)</text><rect x=\"30\" y=\"100\" width=\"140\" height=\"40\" fill=\"#fde68a\" stroke=\"#d97706\" stroke-width=\"1\" rx=\"4\"/><text x=\"100\" y=\"124\" text-anchor=\"middle\" fill=\"#92400e\" font-size=\"11\">Year 11: 60 pupils (30%)</text><rect x=\"30\" y=\"150\" width=\"140\" height=\"40\" fill=\"#bbf7d0\" stroke=\"#16a34a\" stroke-width=\"1\" rx=\"4\"/><text x=\"100\" y=\"174\" text-anchor=\"middle\" fill=\"#166534\" font-size=\"11\">Year 12: 40 pupils (20%)</text><path d=\"M 190 120 L 220 120\" stroke=\"#475569\" stroke-width=\"2\" marker-end=\"url(#arrow1)\"/><rect x=\"230\" y=\"20\" width=\"150\" height=\"200\" fill=\"#ffffff\" stroke=\"#64748b\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"305\" y=\"40\" text-anchor=\"middle\" fill=\"#1e293b\" font-size=\"12\" font-weight=\"bold\">Sample (n = 40)</text><rect x=\"240\" y=\"50\" width=\"130\" height=\"40\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1\" rx=\"4\"/><text x=\"305\" y=\"74\" text-anchor=\"middle\" fill=\"#1e40af\" font-size=\"11\">Year 10: 20 pupils (50%)</text><rect x=\"240\" y=\"100\" width=\"130\" height=\"40\" fill=\"#fde68a\" stroke=\"#d97706\" stroke-width=\"1\" rx=\"4\"/><text x=\"305\" y=\"124\" text-anchor=\"middle\" fill=\"#92400e\" font-size=\"11\">Year 11: 12 pupils (30%)</text><rect x=\"240\" y=\"150\" width=\"130\" height=\"40\" fill=\"#bbf7d0\" stroke=\"#16a34a\" stroke-width=\"1\" rx=\"4\"/><text x=\"305\" y=\"174\" text-anchor=\"middle\" fill=\"#166534\" font-size=\"11\">Year 12: 8 pupils (20%)</text><defs><marker id=\"arrow1\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#475569\"/></marker></defs></svg>"
+   },
+   {
+    "cap": "Systematic Sampling: Starting at random index r=2 with interval k=4 to pick members 2, 6, 10, 14.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><text x=\"200\" y=\"30\" text-anchor=\"middle\" fill=\"#1e293b\" font-size=\"13\" font-weight=\"bold\">Systematic Sampling (N=16, n=4, k=4)</text><g transform=\"translate(20, 70)\"><rect x=\"0\" y=\"0\" width=\"20\" height=\"35\" fill=\"#e2e8f0\" stroke=\"#94a3b8\" rx=\"3\"/><text x=\"10\" y=\"22\" text-anchor=\"middle\" font-size=\"10\">1</text><rect x=\"24\" y=\"0\" width=\"20\" height=\"35\" fill=\"#bbf7d0\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"3\"/><text x=\"34\" y=\"22\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\">2</text><rect x=\"48\" y=\"0\" width=\"20\" height=\"35\" fill=\"#e2e8f0\" stroke=\"#94a3b8\" rx=\"3\"/><text x=\"58\" y=\"22\" text-anchor=\"middle\" font-size=\"10\">3</text><rect x=\"72\" y=\"0\" width=\"20\" height=\"35\" fill=\"#e2e8f0\" stroke=\"#94a3b8\" rx=\"3\"/><text x=\"82\" y=\"22\" text-anchor=\"middle\" font-size=\"10\">4</text><rect x=\"96\" y=\"0\" width=\"20\" height=\"35\" fill=\"#e2e8f0\" stroke=\"#94a3b8\" rx=\"3\"/><text x=\"106\" y=\"22\" text-anchor=\"middle\" font-size=\"10\">5</text><rect x=\"120\" y=\"0\" width=\"20\" height=\"35\" fill=\"#bbf7d0\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"3\"/><text x=\"130\" y=\"22\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\">6</text><rect x=\"144\" y=\"0\" width=\"20\" height=\"35\" fill=\"#e2e8f0\" stroke=\"#94a3b8\" rx=\"3\"/><text x=\"154\" y=\"22\" text-anchor=\"middle\" font-size=\"10\">7</text><rect x=\"168\" y=\"0\" width=\"20\" height=\"35\" fill=\"#e2e8f0\" stroke=\"#94a3b8\" rx=\"3\"/><text x=\"178\" y=\"22\" text-anchor=\"middle\" font-size=\"10\">8</text><rect x=\"192\" y=\"0\" width=\"20\" height=\"35\" fill=\"#e2e8f0\" stroke=\"#94a3b8\" rx=\"3\"/><text x=\"202\" y=\"22\" text-anchor=\"middle\" font-size=\"10\">9</text><rect x=\"216\" y=\"0\" width=\"20\" height=\"35\" fill=\"#bbf7d0\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"3\"/><text x=\"226\" y=\"22\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\">10</text><rect x=\"240\" y=\"0\" width=\"20\" height=\"35\" fill=\"#e2e8f0\" stroke=\"#94a3b8\" rx=\"3\"/><text x=\"250\" y=\"22\" text-anchor=\"middle\" font-size=\"10\">11</text><rect x=\"264\" y=\"0\" width=\"20\" height=\"35\" fill=\"#e2e8f0\" stroke=\"#94a3b8\" rx=\"3\"/><text x=\"274\" y=\"22\" text-anchor=\"middle\" font-size=\"10\">12</text><rect x=\"288\" y=\"0\" width=\"20\" height=\"35\" fill=\"#e2e8f0\" stroke=\"#94a3b8\" rx=\"3\"/><text x=\"298\" y=\"22\" text-anchor=\"middle\" font-size=\"10\">13</text><rect x=\"312\" y=\"0\" width=\"20\" height=\"35\" fill=\"#bbf7d0\" stroke=\"#16a34a\" stroke-width=\"2\" rx=\"3\"/><text x=\"322\" y=\"22\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\">14</text><rect x=\"336\" y=\"0\" width=\"20\" height=\"35\" fill=\"#e2e8f0\" stroke=\"#94a3b8\" rx=\"3\"/><text x=\"346\" y=\"22\" text-anchor=\"middle\" font-size=\"10\">15</text></g><path d=\"M 54 115 A 30 30 0 0 0 150 115\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/><text x=\"102\" y=\"140\" text-anchor=\"middle\" fill=\"#2563eb\" font-size=\"11\">+ k (4)</text><path d=\"M 150 115 A 30 30 0 0 0 246 115\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/><text x=\"198\" y=\"140\" text-anchor=\"middle\" fill=\"#2563eb\" font-size=\"11\">+ k (4)</text><rect x=\"40\" y=\"175\" width=\"320\" height=\"45\" fill=\"#ffffff\" stroke=\"#cbd5e1\" rx=\"4\"/><text x=\"200\" y=\"195\" text-anchor=\"middle\" fill=\"#334155\" font-size=\"11\">Random start point = 2 (chosen between 1 and 4)</text><text x=\"200\" y=\"210\" text-anchor=\"middle\" fill=\"#166534\" font-size=\"11\" font-weight=\"bold\">Selected Sample: {2, 6, 10, 14}</text></svg>"
+   },
+   {
+    "cap": "The three stages of the Capture-Recapture method to estimate total population N.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"15\" y=\"20\" width=\"110\" height=\"150\" fill=\"#ffffff\" stroke=\"#94a3b8\" rx=\"6\"/><text x=\"70\" y=\"40\" text-anchor=\"middle\" fill=\"#1e293b\" font-size=\"11\" font-weight=\"bold\">Stage 1: Mark</text><circle cx=\"45\" cy=\"70\" r=\"8\" fill=\"#ef4444\"/><circle cx=\"70\" cy=\"70\" r=\"8\" fill=\"#ef4444\"/><circle cx=\"95\" cy=\"70\" r=\"8\" fill=\"#ef4444\"/><circle cx=\"55\" cy=\"100\" r=\"8\" fill=\"#ef4444\"/><circle cx=\"85\" cy=\"100\" r=\"8\" fill=\"#ef4444\"/><text x=\"70\" y=\"135\" text-anchor=\"middle\" fill=\"#b91c1c\" font-size=\"11\" font-weight=\"bold\">Marked M = 5</text><rect x=\"145\" y=\"20\" width=\"110\" height=\"150\" fill=\"#ffffff\" stroke=\"#94a3b8\" rx=\"6\"/><text x=\"200\" y=\"40\" text-anchor=\"middle\" fill=\"#1e293b\" font-size=\"11\" font-weight=\"bold\">Stage 2: Mix</text><circle cx=\"170\" cy=\"65\" r=\"8\" fill=\"#ef4444\"/><circle cx=\"220\" cy=\"75\" r=\"8\" fill=\"#94a3b8\"/><circle cx=\"180\" cy=\"100\" r=\"8\" fill=\"#94a3b8\"/><circle cx=\"225\" cy=\"115\" r=\"8\" fill=\"#ef4444\"/><circle cx=\"195\" cy=\"135\" r=\"8\" fill=\"#94a3b8\"/><text x=\"200\" y=\"160\" text-anchor=\"middle\" fill=\"#475569\" font-size=\"10\">Random mixing</text><rect x=\"275\" y=\"20\" width=\"110\" height=\"150\" fill=\"#ffffff\" stroke=\"#94a3b8\" rx=\"6\"/><text x=\"330\" y=\"40\" text-anchor=\"middle\" fill=\"#1e293b\" font-size=\"11\" font-weight=\"bold\">Stage 3: Recapture</text><circle cx=\"305\" cy=\"70\" r=\"8\" fill=\"#ef4444\" stroke=\"#16a34a\" stroke-width=\"2\"/><circle cx=\"330\" cy=\"70\" r=\"8\" fill=\"#ef4444\" stroke=\"#16a34a\" stroke-width=\"2\"/><circle cx=\"355\" cy=\"70\" r=\"8\" fill=\"#94a3b8\"/><circle cx=\"315\" cy=\"100\" r=\"8\" fill=\"#94a3b8\"/><circle cx=\"345\" cy=\"100\" r=\"8\" fill=\"#94a3b8\"/><text x=\"330\" y=\"135\" text-anchor=\"middle\" fill=\"#1e293b\" font-size=\"10\">Sample n = 5</text><text x=\"330\" y=\"150\" text-anchor=\"middle\" fill=\"#15803d\" font-size=\"10\" font-weight=\"bold\">Recaptured m = 2</text><rect x=\"40\" y=\"185\" width=\"320\" height=\"40\" fill=\"#e0e7ff\" stroke=\"#4338ca\" rx=\"4\"/><text x=\"200\" y=\"210\" text-anchor=\"middle\" fill=\"#3730a3\" font-size=\"12\" font-weight=\"bold\">N = (M × n) / m = (5 × 5) / 2 = 12.5 ≈ 13</text></svg>"
+   },
+   {
+    "cap": "Comparison between a biased non-representative sample and an unbiased representative sample of a target population.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"20\" y=\"20\" width=\"170\" height=\"200\" fill=\"#ffffff\" stroke=\"#f87171\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"105\" y=\"40\" text-anchor=\"middle\" fill=\"#991b1b\" font-size=\"12\" font-weight=\"bold\">Biased Sample</text><circle cx=\"50\" cy=\"70\" r=\"7\" fill=\"#ef4444\"/><circle cx=\"70\" cy=\"80\" r=\"7\" fill=\"#ef4444\"/><circle cx=\"60\" cy=\"100\" r=\"7\" fill=\"#ef4444\"/><circle cx=\"45\" cy=\"115\" r=\"7\" fill=\"#ef4444\"/><circle cx=\"130\" cy=\"70\" r=\"7\" fill=\"#94a3b8\"/><circle cx=\"150\" cy=\"90\" r=\"7\" fill=\"#94a3b8\"/><circle cx=\"140\" cy=\"120\" r=\"7\" fill=\"#94a3b8\"/><circle cx=\"120\" cy=\"150\" r=\"7\" fill=\"#94a3b8\"/><text x=\"105\" y=\"185\" text-anchor=\"middle\" fill=\"#b91c1c\" font-size=\"11\">Only samples one cluster;</text><text x=\"105\" y=\"205\" text-anchor=\"middle\" fill=\"#b91c1c\" font-size=\"11\">ignores rest of population.</text><rect x=\"210\" y=\"20\" width=\"170\" height=\"200\" fill=\"#ffffff\" stroke=\"#4ade80\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"295\" y=\"40\" text-anchor=\"middle\" fill=\"#166534\" font-size=\"12\" font-weight=\"bold\">Representative Sample</text><circle cx=\"235\" cy=\"70\" r=\"7\" fill=\"#22c55e\"/><circle cx=\"350\" cy=\"75\" r=\"7\" fill=\"#22c55e\"/><circle cx=\"270\" cy=\"110\" r=\"7\" fill=\"#22c55e\"/><circle cx=\"320\" cy=\"120\" r=\"7\" fill=\"#22c55e\"/><circle cx=\"240\" cy=\"155\" r=\"7\" fill=\"#22c55e\"/><circle cx=\"340\" cy=\"160\" r=\"7\" fill=\"#22c55e\"/><text x=\"295\" y=\"185\" text-anchor=\"middle\" fill=\"#15803d\" font-size=\"11\">Sample spread evenly</text><text x=\"295\" y=\"205\" text-anchor=\"middle\" fill=\"#15803d\" font-size=\"11\">across entire population.</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_h.5.0",
+  "sid": "maths_eduqas_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.6-flash",
+  "ts": "2026-11-21T16:50:25.725Z"
+ },
+ "maths_eduqas_h.5.3": {
+  "summary": "Histograms and cumulative frequency graphs are two essential statistical methods for representing and analyzing continuous grouped data on the Eduqas GCSE Maths Higher specification. A histogram displays continuous data using vertical bars where the area of each bar is directly proportional to the frequency, calculated via Frequency Density = Frequency ÷ Class Width. A cumulative frequency graph plots a running total of frequencies against the upper boundaries of class intervals, enabling precise graphical estimations of median, quartiles, interquartile range, and custom percentiles across both Component 1 (non-calculator) and Component 2 (calculator) examination papers.",
+  "core": [
+   {
+    "h": "Continuous Data and Grouped Frequency Distributions",
+    "p": "In statistics, continuous data can take any quantitative real value within a given interval, such as time, height, mass, or speed. Because individual data points are rarely repeated exactly, continuous data must be collected into **grouped frequency tables** using contiguous class intervals.",
+    "bullets": [
+     "**Class Intervals**: Defined ranges of values, often written using inequalities such as **10 ≤ x < 20** or **20 < t ≤ 35**.",
+     "**Continuous Boundaries**: There are no gaps between consecutive intervals; the upper bound of one interval is the lower bound of the next.",
+     "**Class Width**: The size of an interval, calculated as **Upper Boundary - Lower Boundary**.",
+     "Grouped tables summarize raw data but lose exact individual values, meaning graph calculations produce **estimates**."
+    ],
+    "table": {
+     "head": [
+      "Class Interval (t seconds)",
+      "Frequency",
+      "Lower Boundary",
+      "Upper Boundary",
+      "Class Width"
+     ],
+     "rows": [
+      [
+       "0 < t ≤ 10",
+       "8",
+       "0",
+       "10",
+       "10"
+      ],
+      [
+       "10 < t ≤ 15",
+       "12",
+       "10",
+       "15",
+       "5"
+      ],
+      [
+       "15 < t ≤ 30",
+       "18",
+       "15",
+       "30",
+       "15"
+      ],
+      [
+       "30 < t ≤ 50",
+       "10",
+       "30",
+       "50",
+       "20"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Continuous Boundaries Rule",
+      "p": "Always ensure class intervals are contiguous. For an interval like 10 < t ≤ 15, the lower boundary is 10 and the upper boundary is 15. The class width is 15 - 10 = 5."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "The Core Principle of Histograms: Area Represents Frequency",
+    "p": "A histogram is fundamentally different from a standard bar chart. In a bar chart, the height of the bar represents frequency and bars are separated by gaps. In a **histogram**, the **area of each bar is proportional to the frequency**, and bars are drawn continuous with zero gaps.",
+    "bullets": [
+     "**Area = Frequency** (or proportional to frequency when a scale factor is used).",
+     "**Vertical Axis**: Must ALWAYS be labelled **Frequency Density**, never raw frequency.",
+     "**Horizontal Axis**: Represents the continuous variable with a standard linear numerical scale.",
+     "**No Gaps**: Bars touch each other because continuous data has no gaps between boundaries."
+    ],
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Histogram Definition",
+      "p": "A visual representation of continuous grouped data where the area of each rectangular bar is proportional to the frequency of the class interval."
+     },
+     {
+      "k": "warn",
+      "t": "Common Mark Scheme Trap",
+      "p": "Plotting raw frequency on the vertical axis for unequal class intervals earns zero marks for the graph in Eduqas mark schemes."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Frequency Density Formula and Mathematical Relationships",
+    "p": "To ensure the area of each bar correctly reflects frequency, we calculate **Frequency Density** for every class interval using a simple mathematical ratio.",
+    "bullets": [
+     "**Frequency Density Formula**: **Frequency Density = Frequency ÷ Class Width**",
+     "**Rearranged for Frequency**: **Frequency = Frequency Density × Class Width**",
+     "**Rearranged for Class Width**: **Class Width = Frequency ÷ Frequency Density**",
+     "Units for Frequency Density depend on the variable, such as 'people per minute' or 'items per kilogram'."
+    ],
+    "table": {
+     "head": [
+      "Class Interval",
+      "Frequency",
+      "Class Width",
+      "Calculation",
+      "Frequency Density"
+     ],
+     "rows": [
+      [
+       "0 ≤ x < 10",
+       "20",
+       "10",
+       "20 ÷ 10",
+       "2.0"
+      ],
+      [
+       "10 ≤ x < 25",
+       "45",
+       "15",
+       "45 ÷ 15",
+       "3.0"
+      ],
+      [
+       "25 ≤ x < 30",
+       "25",
+       "5",
+       "25 ÷ 5",
+       "5.0"
+      ],
+      [
+       "30 ≤ x < 50",
+       "30",
+       "20",
+       "30 ÷ 20",
+       "1.5"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam Technique: Table Columns",
+      "p": "In Eduqas non-calculator Component 1, add two extra working columns to the provided table: 'Class Width' and 'Frequency Density'."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Equal vs Unequal Class Intervals",
+    "p": "Class intervals in a data set may be equal or unequal. Understanding how class width affects bar height is essential for correct graphical construction and interpretation.",
+    "bullets": [
+     "**Equal Class Widths**: When all intervals have the same width, Frequency Density is directly proportional to Frequency, so bar heights relative to each other match frequency ratios.",
+     "**Unequal Class Widths**: Wider intervals naturally accumulate more items; using frequency as height makes wide intervals look unfairly massive. Frequency density normalizes the data to a uniform width scale.",
+     "**Visual Distortion**: Using height for raw frequency with unequal widths misleads the reader because human vision naturally perceives area as magnitude."
+    ],
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Why Frequency Density is Essential",
+      "p": "Frequency density measures the 'concentration' or 'density' of data per unit width, allowing fair visual comparisons across intervals of varying sizes."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Step-by-Step Construction of a Histogram",
+    "p": "Constructing an accurate histogram requires structured calculations and precise grid plotting following strict examination rules.",
+    "bullets": [
+     "**Step 1**: Calculate the **Class Width** for each interval (Upper Bound - Lower Bound).",
+     "**Step 2**: Calculate **Frequency Density = Frequency ÷ Class Width** for each row.",
+     "**Step 3**: Draw a continuous linear scale on the horizontal x-axis covering the full data range.",
+     "**Step 4**: Draw a linear scale on the vertical y-axis starting at 0, labelled **Frequency Density**.",
+     "**Step 5**: Draw adjacent vertical rectangular bars for each interval using exact class boundaries."
+    ],
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Scale Precision",
+      "p": "Eduqas examiners require axes to be fully labelled with uniform scale increments. Avoid awkward grid divisions like 1 square = 3 units."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Figure 1: Structure of a Histogram with unequal class widths showing Frequency Density on y-axis and Area = Frequency.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"200\" x2=\"370\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"30\" x2=\"50\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"15\" y=\"115\" font-size=\"11\" fill=\"#1b2540\" font-weight=\"bold\" transform=\"rotate(-90 15,115)\">Frequency Density</text><text x=\"170\" y=\"230\" font-size=\"11\" fill=\"#1b2540\" font-weight=\"bold\">Class Interval (x)</text><rect x=\"50\" y=\"120\" width=\"60\" height=\"80\" fill=\"#dbeafe\" stroke=\"#1e40af\" stroke-width=\"1.5\"/><rect x=\"110\" y=\"60\" width=\"40\" height=\"140\" fill=\"#bbf7d0\" stroke=\"#166534\" stroke-width=\"1.5\"/><rect x=\"150\" y=\"150\" width=\"120\" height=\"50\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"1.5\"/><rect x=\"270\" y=\"100\" width=\"80\" height=\"100\" fill=\"#e9d5ff\" stroke=\"#6b21a8\" stroke-width=\"1.5\"/><text x=\"40\" y=\"215\" font-size=\"10\" fill=\"#475569\">0</text><text x=\"105\" y=\"215\" font-size=\"10\" fill=\"#475569\">10</text><text x=\"145\" y=\"215\" font-size=\"10\" fill=\"#475569\">15</text><text x=\"265\" y=\"215\" font-size=\"10\" fill=\"#475569\">30</text><text x=\"345\" y=\"215\" font-size=\"10\" fill=\"#475569\">50</text><text x=\"35\" y=\"123\" font-size=\"10\" fill=\"#475569\">2.0</text><text x=\"35\" y=\"63\" font-size=\"10\" fill=\"#475569\">3.5</text><text x=\"62\" y=\"155\" font-size=\"11\" fill=\"#1e40af\" font-weight=\"bold\">F = 120</text><text x=\"118\" y=\"120\" font-size=\"11\" fill=\"#166534\" font-weight=\"bold\">F = 140</text><text x=\"195\" y=\"170\" font-size=\"11\" fill=\"#b45309\" font-weight=\"bold\">F = 60</text><text x=\"295\" y=\"145\" font-size=\"11\" fill=\"#6b21a8\" font-weight=\"bold\">F = 200</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Interpreting Histograms: Finding Frequency and Estimating Data",
+    "p": "To read information from an existing histogram, apply the reverse of the frequency density formula. The number of items in any bar or portion of a bar corresponds directly to its area.",
+    "bullets": [
+     "**Full Bar Frequency**: Calculate **Width × Height** for that specific bar.",
+     "**Total Population Size**: Sum the areas of all individual bars: **Total Frequency = Σ (Width × Frequency Density)**.",
+     "**Partial Interval Estimates**: Assuming data is uniformly distributed within a class, calculate the fraction of width required multiplied by the bar's frequency density."
+    ],
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Uniform Distribution Assumption",
+      "p": "The assumption that data values are spread evenly across a class interval, allowing linear estimation for sub-intervals."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Figure 2: Calculating frequency from bar area. Sub-width (5) multiplied by Frequency Density (4) gives a sub-frequency of 20.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"60\" y1=\"190\" x2=\"360\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"60\" y1=\"40\" x2=\"60\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"15\" y=\"110\" font-size=\"11\" fill=\"#1b2540\" font-weight=\"bold\" transform=\"rotate(-90 15,110)\">Frequency Density</text><rect x=\"100\" y=\"70\" width=\"160\" height=\"120\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"1.5\"/><rect x=\"180\" y=\"70\" width=\"80\" height=\"120\" fill=\"#fecaca\" stroke=\"#dc2626\" stroke-dasharray=\"4,4\" stroke-width=\"1.5\"/><text x=\"90\" y=\"208\" font-size=\"11\" fill=\"#475569\">20</text><text x=\"170\" y=\"208\" font-size=\"11\" fill=\"#dc2626\" font-weight=\"bold\">30</text><text x=\"250\" y=\"208\" font-size=\"11\" fill=\"#475569\">40</text><text x=\"45\" y=\"75\" font-size=\"11\" fill=\"#475569\">4.0</text><line x1=\"180\" y1=\"200\" x2=\"260\" y2=\"200\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"200\" y=\"222\" font-size=\"11\" fill=\"#dc2626\" font-weight=\"bold\">Width = 10</text><text x=\"185\" y=\"125\" font-size=\"12\" fill=\"#dc2626\" font-weight=\"bold\">Area = 10 x 4 = 40</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Cumulative Frequency: Concept and Frequency Tables",
+    "p": "Cumulative frequency represents the **running total of frequencies** up to a given upper boundary value. It measures how many observations fall at or below a certain threshold.",
+    "bullets": [
+     "**Running Total**: Add each class frequency to the sum of all previous frequencies.",
+     "**Final Cumulative Value**: The last cumulative frequency entry must equal the total number of observations (N).",
+     "**Cumulative Frequency Table**: Created by replacing class intervals with 'less than' or 'up to' statements using upper boundaries."
+    ],
+    "table": {
+     "head": [
+      "Class Interval (m kg)",
+      "Frequency",
+      "Cumulative Interval",
+      "Cumulative Frequency"
+     ],
+     "rows": [
+      [
+       "0 < m ≤ 10",
+       "5",
+       "m ≤ 10",
+       "5"
+      ],
+      [
+       "10 < m ≤ 20",
+       "12",
+       "m ≤ 20",
+       "5 + 12 = 17"
+      ],
+      [
+       "20 < m ≤ 30",
+       "22",
+       "m ≤ 30",
+       "17 + 22 = 39"
+      ],
+      [
+       "30 < m ≤ 40",
+       "15",
+       "m ≤ 40",
+       "39 + 15 = 54"
+      ],
+      [
+       "40 < m ≤ 50",
+       "6",
+       "m ≤ 50",
+       "54 + 6 = 60"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Verification Check",
+      "p": "Always check that the final cumulative frequency number matches the total sample size given in the exam question stem."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Plotting Cumulative Frequency Curves (The Upper Boundary Rule)",
+    "p": "Plotting a cumulative frequency graph requires strict adherence to plotting coordinates at the upper class boundary. Joining these points creates an S-shaped curve (an ogive).",
+    "bullets": [
+     "**X-Coordinates**: MUST be the **Upper Class Boundary** of each interval.",
+     "**Y-Coordinates**: The corresponding **Cumulative Frequency**.",
+     "**Starting Point**: Always plot a point at (Lower Boundary of 1st Class, 0).",
+     "**Line Style**: Join points with a **smooth S-shaped curve** (or straight line segments if explicitly requested by questions, though a smooth curve is preferred)."
+    ],
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "The Midpoint Mistake",
+      "p": "NEVER plot cumulative frequency at interval midpoints. Midpoints are used for estimating means, NOT for cumulative frequency graphs!"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Estimating Median and Quartiles from Graphs",
+    "p": "Cumulative frequency graphs allow rapid visual estimation of measures of position, including the median (50th percentile) and quartiles (25th and 75th percentiles).",
+    "bullets": [
+     "**Total Frequency (n)**: Read the maximum y-axis value of the curve.",
+     "**Median Position ($Q_2$)**: Locate **$n / 2$** on the y-axis, draw horizontally to the curve, then down to read the x-axis value.",
+     "**Lower Quartile Position ($Q_1$)**: Locate **$n / 4$** (or $0.25n$) on the y-axis, move to curve and read x-axis.",
+     "**Upper Quartile Position ($Q_3$)**: Locate **$3n / 4$** (or $0.75n$) on the y-axis, move to curve and read x-axis."
+    ],
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "N vs N+1 Rule",
+      "p": "In GCSE Maths grouped data graphs, use n/2, n/4, and 3n/4 directly on the y-axis rather than (n+1)/2."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Interquartile Range (IQR) and Percentiles",
+    "p": "The Interquartile Range measures the spread of the middle 50% of the dataset, providing a robust measure of dispersion unaffected by extreme outliers.",
+    "bullets": [
+     "**Interquartile Range Formula**: **$IQR = Q_3 - Q_1$**",
+     "**Interpretation**: A smaller IQR indicates greater consistency; a larger IQR indicates wider spread.",
+     "**Percentiles**: Any $p$-th percentile is found by taking $\\frac{p}{100} \\times n$ on the cumulative frequency axis and reading off the corresponding x-value.",
+     "**10th-90th Interpercentile Range**: Found by subtracting the 10th percentile value from the 90th percentile value ($P_{90} - P_{10}$)."
+    ],
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Interquartile Range (IQR)",
+      "p": "The numerical difference between the upper quartile ($Q_3$) and lower quartile ($Q_1$), representing the range of the central 50% of ordered observations."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Estimating Proportions, Percentages, and Thresholds",
+    "p": "A common Eduqas exam question asks for the number or percentage of items above or below a specific threshold value.",
+    "bullets": [
+     "**Finding Count Below a Threshold ($x \\le v$)**: Find $v$ on the horizontal x-axis, move vertically up to the curve, then horizontally left to read value $c$ on the y-axis.",
+     "**Finding Count Above a Threshold ($x > v$)**: Subtract the curve reading from total population: **$Count = n - c$**.",
+     "**Calculating Percentage**: **$Percentage = (Count \\div n) \\times 100\\%$**."
+    ],
+    "fig": []
+   },
+   {
+    "h": "Comparing Distributions Using Cumulative Frequency Curves",
+    "p": "When two datasets are plotted on the same axes, compare them systematically by commenting on average location (median) and spread (IQR) in context.",
+    "bullets": [
+     "**Compare Medians**: Compare average values directly. State which dataset has a higher median and what it means in context (e.g., 'Group A scored higher on average').",
+     "**Compare IQRs**: Compare consistency. A smaller IQR means data is more consistent / less varied.",
+     "**Contextual Interpretation**: Always reference units and contextual variables in both comparative statements."
+    ],
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Full Marks Comparison Rule",
+      "p": "Eduqas mark schemes demand TWO things for full marks: numerical values quoted for both sets AND contextual interpretation for both median and IQR."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Component 1 vs Component 2 Exam Techniques",
+    "p": "Eduqas separates GCSE Assessment into Component 1 (Non-Calculator) and Component 2 (Calculator). Specific strategies apply to each paper.",
+    "bullets": [
+     "**Component 1 (Non-Calculator)**: Calculations involve clean decimals or simple fractions (e.g. class width 2.5, frequency 15 -> FD = 6). Double check mental arithmetic.",
+     "**Component 2 (Calculator)**: Class widths and frequencies may involve complex decimals. Write down exact unrounded frequency density calculations in your table first.",
+     "**Grid Accuracy**: Use sharp pencil and ruler; plotted points must be within 0.5 small square accuracy."
+    ],
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Axis Scales",
+      "p": "Always check what each small grid square represents along both x and y axes before plotting points or reading values."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Population Density in Cities vs Frequency Density",
+   "p": "Think of class intervals as cities of different geographic areas, and frequencies as the total populations living in those cities. Comparing total population alone makes large cities look overpopulated even if people are spread out thinly. To measure crowding fairly, you calculate **Population Density = Population ÷ Area**. Similarly, in histograms, intervals have different widths (areas). Calculating **Frequency Density = Frequency ÷ Class Width** gives a fair measurement of data concentration per unit width. **Where the analogy breaks down**: Geographical land area is two-dimensional (width × length), whereas a class interval width on a histogram axis is strictly one-dimensional along a single variable line."
+  },
+  "terms": [
+   {
+    "t": "Histogram",
+    "d": "A graphical representation of continuous grouped data where the area of each bar is proportional to its frequency."
+   },
+   {
+    "t": "Frequency Density",
+    "d": "The ratio of frequency to class width for a class interval, representing bar height on a histogram."
+   },
+   {
+    "t": "Class Width",
+    "d": "The difference between the upper class boundary and the lower class boundary of an interval."
+   },
+   {
+    "t": "Cumulative Frequency",
+    "d": "The running total of frequencies of all data values up to the upper boundary of a class interval."
+   },
+   {
+    "t": "Cumulative Frequency Curve",
+    "d": "A smooth S-shaped curve plotted using upper class boundaries against cumulative frequencies."
+   },
+   {
+    "t": "Upper Class Boundary",
+    "d": "The highest possible data value contained within a specific continuous class interval."
+   },
+   {
+    "t": "Lower Class Boundary",
+    "d": "The lowest possible data value contained within a specific continuous class interval."
+   },
+   {
+    "t": "Median (Q2)",
+    "d": "The middle value of a data set, located at the 50th percentile ($n/2$ on cumulative frequency)."
+   },
+   {
+    "t": "Lower Quartile (Q1)",
+    "d": "The value below which 25% of the data falls, located at the 25th percentile ($n/4$ on cumulative frequency)."
+   },
+   {
+    "t": "Upper Quartile (Q3)",
+    "d": "The value below which 75% of the data falls, located at the 75th percentile ($3n/4$ on cumulative frequency)."
+   },
+   {
+    "t": "Interquartile Range (IQR)",
+    "d": "The measure of dispersion calculated as Upper Quartile minus Lower Quartile ($Q_3 - Q_1$)."
+   },
+   {
+    "t": "Interpolation",
+    "d": "The method of estimating an unknown value between known data points along a graph curve."
+   },
+   {
+    "t": "Contiguous Intervals",
+    "d": "Class intervals that share exact boundary points with no gaps between consecutive ranges."
+   },
+   {
+    "t": "Percentile",
+    "d": "A measure indicating the value below which a given percentage of observations in a group falls."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Plotting raw frequency on the vertical y-axis when drawing a histogram with unequal class widths.",
+    "r": "Calculate and plot Frequency Density (Frequency ÷ Class Width) on the vertical axis."
+   },
+   {
+    "w": "Plotting cumulative frequency points at the midpoint of each class interval.",
+    "r": "Plot cumulative frequency points strictly at the Upper Class Boundary of each interval."
+   },
+   {
+    "w": "Starting a cumulative frequency curve at the upper boundary of the first class interval instead of starting at (Lower Boundary, 0).",
+    "r": "Anchor the curve to the horizontal axis at the lower boundary of the very first class interval where cumulative frequency is 0."
+   },
+   {
+    "w": "Finding median and quartiles on a cumulative frequency graph using $(n+1)/2$ positions.",
+    "r": "For continuous grouped cumulative frequency graphs, use $n/2$, $n/4$, and $3n/4$ directly."
+   },
+   {
+    "w": "Miscalculating class width by assuming discrete gaps, e.g. taking width of $10 \\le x < 20$ as 9.",
+    "r": "Subtract boundaries directly: $20 - 10 = 10$."
+   },
+   {
+    "w": "Writing down bar height as the total frequency when reading a histogram with unequal widths.",
+    "r": "Multiply bar height (Frequency Density) by bar width (Class Width) to calculate Frequency."
+   },
+   {
+    "w": "Comparing two distributions by just listing values without contextual statements.",
+    "r": "State which dataset is larger/more consistent in context, e.g., 'Group A has a higher median score, showing better performance on average'."
+   },
+   {
+    "w": "Reading 'more than threshold' values directly off the y-axis without subtracting from total n.",
+    "r": "Subtract the graph y-reading from the total population size $n$ to get the count above threshold."
+   }
+  ],
+  "exam": [
+   {
+    "q": "The table shows information about the masses of 80 packages.\n\nMass (m kg): 0 < m ≤ 5 | 5 < m ≤ 15 | 15 < m ≤ 25 | 25 < m ≤ 45\nFrequency: 10 | 30 | 24 | 16\n\nCalculate the frequency densities for each of the four class intervals.",
+    "marks": 2,
+    "model": [
+     "Interval 1 width = 5 - 0 = 5; FD = 10 ÷ 5 = 2.0",
+     "Interval 2 width = 15 - 5 = 10; FD = 30 ÷ 10 = 3.0",
+     "Interval 3 width = 25 - 15 = 10; FD = 24 ÷ 10 = 2.4",
+     "Interval 4 width = 45 - 25 = 20; FD = 16 ÷ 20 = 0.8"
+    ],
+    "tip": "Always write down class widths first before dividing to avoid arithmetic mistakes."
+   },
+   {
+    "q": "Complete the cumulative frequency table for the given dataset of 60 runners:\n\nTime (t mins): 0 < t ≤ 20 (Freq: 8)\nTime (t mins): 20 < t ≤ 30 (Freq: 18)\nTime (t mins): 30 < t ≤ 40 (Freq: 22)\nTime (t mins): 40 < t ≤ 60 (Freq: 12)",
+    "marks": 2,
+    "model": [
+     "t ≤ 20 : 8",
+     "t ≤ 30 : 8 + 18 = 26",
+     "t ≤ 40 : 26 + 22 = 48",
+     "t ≤ 60 : 48 + 12 = 60"
+    ],
+    "tip": "Ensure the final cumulative frequency matches the total sum (60)."
+   },
+   {
+    "q": "Explain why using raw frequency for the vertical axis height of unequal class bars produces a misleading histogram.",
+    "marks": 2,
+    "model": [
+     "Human perception interprets the area of a bar as representing quantity.",
+     "With unequal widths, wider bars would have larger areas even if their frequency density is low, falsely magnifying their importance."
+    ],
+    "tip": "Use key terms like 'area', 'proportional', and 'frequency density' for mark scheme alignment."
+   },
+   {
+    "q": "A cumulative frequency graph for 100 students' exam marks has an upper quartile of 68 marks and a lower quartile of 42 marks. Calculate the interquartile range.",
+    "marks": 1,
+    "model": [
+     "IQR = Q3 - Q1 = 68 - 42 = 26 marks"
+    ],
+    "tip": "Always include units (marks) if required in contextual questions."
+   },
+   {
+    "q": "In a histogram, the bar for the class interval 20 < x ≤ 35 has a height of 4.2 units on the frequency density axis. Calculate the number of observations in this class.",
+    "marks": 2,
+    "model": [
+     "Class Width = 35 - 20 = 15",
+     "Frequency = Class Width × Frequency Density = 15 × 4.2 = 63"
+    ],
+    "tip": "Remember: Frequency = Width × Height."
+   },
+   {
+    "q": "A cumulative frequency graph represents 200 lightbulbs tested for lifespan (hours). The graph shows that 160 lightbulbs lasted 1200 hours or less. Estimate the percentage of lightbulbs that lasted MORE than 1200 hours.",
+    "marks": 3,
+    "model": [
+     "Number lasting more than 1200 hours = 200 - 160 = 40",
+     "Percentage = (40 ÷ 200) × 100",
+     "Percentage = 20%"
+    ],
+    "tip": "Pay close attention to words like 'MORE than'; subtract from total n first."
+   },
+   {
+    "q": "The lower quartile of a dataset of 120 items is found from a cumulative frequency curve. State the cumulative frequency value on the vertical axis used to locate the lower quartile.",
+    "marks": 1,
+    "model": [
+     "n / 4 = 120 / 4 = 30"
+    ],
+    "tip": "Quarter of total frequency gives the y-axis coordinate for Q1."
+   },
+   {
+    "q": "Two classes sat the same test. Class 10A has Median = 65%, IQR = 12%. Class 10B has Median = 58%, IQR = 24%. Compare the test performances of Class 10A and Class 10B.",
+    "marks": 4,
+    "model": [
+     "Class 10A has a higher median score (65% > 58%), indicating that on average 10A performed better than 10B.",
+     "Class 10A has a smaller interquartile range (12% < 24%), showing that 10A's marks were more consistent than 10B's."
+    ],
+    "tip": "Always make two distinct comparisons: one for average (median) and one for consistency (IQR), both fully in context."
+   },
+   {
+    "q": "A histogram is drawn for continuous variable h (height in cm). A bar from h = 140 to h = 155 has a frequency of 45. Find the frequency density of this bar.",
+    "marks": 2,
+    "model": [
+     "Class width = 155 - 140 = 15",
+     "Frequency Density = 45 ÷ 15 = 3"
+    ],
+    "tip": "Class width = Upper bound minus lower bound."
+   },
+   {
+    "q": "On a cumulative frequency graph for 80 plants, the curve passes through coordinates (10, 0), (20, 14), (30, 40), (40, 70), (50, 80). State the coordinates of the point corresponding to the lower boundary of the first class.",
+    "marks": 1,
+    "model": [
+     "(10, 0)"
+    ],
+    "tip": "The curve starts on the x-axis where cumulative frequency equals 0."
+   }
+  ],
+  "worked": [
+   {
+    "q": "The table below shows the distribution of weights (w kg) of 100 luggage bags at an airport terminal:\n\nWeight (w kg) | Frequency\n0 < w ≤ 10 | 16\n10 < w ≤ 15 | 28\n15 < w ≤ 20 | 36\n20 < w ≤ 35 | 20\n\n(a) Calculate the frequency densities for all class intervals.\n(b) Calculate an estimate for the number of bags weighing between 12 kg and 22 kg.",
+    "steps": [
+     "Part (a): Determine class widths and calculate FD = Frequency ÷ Class Width for each interval.",
+     "Interval 0 < w ≤ 10: Width = 10, Freq = 16 -> FD = 16 ÷ 10 = 1.6",
+     "Interval 10 < w ≤ 15: Width = 5, Freq = 28 -> FD = 28 ÷ 5 = 5.6",
+     "Interval 15 < w ≤ 20: Width = 5, Freq = 36 -> FD = 36 ÷ 5 = 7.2",
+     "Interval 20 < w ≤ 35: Width = 15, Freq = 20 -> FD = 20 ÷ 15 = 1.333...",
+     "Part (b): Estimate count between 12 kg and 22 kg by splitting across intervals assuming uniform distribution.",
+     "From 12 to 15 (within 10 < w ≤ 15 bar): width = 15 - 12 = 3. Count = 3 × 5.6 = 16.8 bags.",
+     "From 15 to 20 (entire 15 < w ≤ 20 bar): full frequency = 36 bags.",
+     "From 20 to 22 (within 20 < w ≤ 35 bar): width = 22 - 20 = 2. Count = 2 × (20 / 15) = 2.667 bags.",
+     "Total estimated bags = 16.8 + 36 + 2.667 = 55.467 bags."
+    ],
+    "ans": "(a) Frequency Densities: 1.6, 5.6, 7.2, 1.33. (b) 55.5 bags (or 55)."
+   },
+   {
+    "q": "A cumulative frequency graph is constructed for the journey times of 120 commuters. The curve passes through upper boundary points: (10, 8), (20, 32), (30, 84), (40, 110), (50, 120).\n\n(a) Estimate the median journey time.\n(b) Estimate the Interquartile Range (IQR).\n(c) Estimate the number of commuters with a journey time greater than 35 minutes.",
+    "steps": [
+     "Part (a): Total n = 120. Median is at y = 120 / 2 = 60. Reading x value from curve at y = 60 gives t ≈ 25.0 minutes.",
+     "Part (b): Lower Quartile Q1 at y = 120 / 4 = 30. Reading x at y = 30 gives Q1 ≈ 19.5 minutes.",
+     "Upper Quartile Q3 at y = 3 × 120 / 4 = 90. Reading x at y = 90 gives Q3 ≈ 32.0 minutes.",
+     "IQR = Q3 - Q1 = 32.0 - 19.5 = 12.5 minutes.",
+     "Part (c): Find threshold x = 35 minutes on horizontal axis. Move up to curve and across to y-axis to read y ≈ 98.",
+     "Number of commuters taking MORE than 35 minutes = 120 - 98 = 22 commuters."
+    ],
+    "ans": "(a) Median ≈ 25.0 mins (b) IQR ≈ 12.5 mins (c) 22 commuters"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Figure 1: Structure of a Histogram with unequal class widths showing Frequency Density on y-axis and Area = Frequency.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"200\" x2=\"370\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"30\" x2=\"50\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"15\" y=\"115\" font-size=\"11\" fill=\"#1b2540\" font-weight=\"bold\" transform=\"rotate(-90 15,115)\">Frequency Density</text><text x=\"170\" y=\"230\" font-size=\"11\" fill=\"#1b2540\" font-weight=\"bold\">Class Interval (x)</text><rect x=\"50\" y=\"120\" width=\"60\" height=\"80\" fill=\"#dbeafe\" stroke=\"#1e40af\" stroke-width=\"1.5\"/><rect x=\"110\" y=\"60\" width=\"40\" height=\"140\" fill=\"#bbf7d0\" stroke=\"#166534\" stroke-width=\"1.5\"/><rect x=\"150\" y=\"150\" width=\"120\" height=\"50\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"1.5\"/><rect x=\"270\" y=\"100\" width=\"80\" height=\"100\" fill=\"#e9d5ff\" stroke=\"#6b21a8\" stroke-width=\"1.5\"/><text x=\"40\" y=\"215\" font-size=\"10\" fill=\"#475569\">0</text><text x=\"105\" y=\"215\" font-size=\"10\" fill=\"#475569\">10</text><text x=\"145\" y=\"215\" font-size=\"10\" fill=\"#475569\">15</text><text x=\"265\" y=\"215\" font-size=\"10\" fill=\"#475569\">30</text><text x=\"345\" y=\"215\" font-size=\"10\" fill=\"#475569\">50</text><text x=\"35\" y=\"123\" font-size=\"10\" fill=\"#475569\">2.0</text><text x=\"35\" y=\"63\" font-size=\"10\" fill=\"#475569\">3.5</text><text x=\"62\" y=\"155\" font-size=\"11\" fill=\"#1e40af\" font-weight=\"bold\">F = 120</text><text x=\"118\" y=\"120\" font-size=\"11\" fill=\"#166534\" font-weight=\"bold\">F = 140</text><text x=\"195\" y=\"170\" font-size=\"11\" fill=\"#b45309\" font-weight=\"bold\">F = 60</text><text x=\"295\" y=\"145\" font-size=\"11\" fill=\"#6b21a8\" font-weight=\"bold\">F = 200</text></svg>"
+   },
+   {
+    "cap": "Figure 2: Calculating frequency from bar area. Sub-width (10) multiplied by Frequency Density (4.0) gives a sub-frequency of 40.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"60\" y1=\"190\" x2=\"360\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"60\" y1=\"40\" x2=\"60\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"15\" y=\"110\" font-size=\"11\" fill=\"#1b2540\" font-weight=\"bold\" transform=\"rotate(-90 15,110)\">Frequency Density</text><rect x=\"100\" y=\"70\" width=\"160\" height=\"120\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"1.5\"/><rect x=\"180\" y=\"70\" width=\"80\" height=\"120\" fill=\"#fecaca\" stroke=\"#dc2626\" stroke-dasharray=\"4,4\" stroke-width=\"1.5\"/><text x=\"90\" y=\"208\" font-size=\"11\" fill=\"#475569\">20</text><text x=\"170\" y=\"208\" font-size=\"11\" fill=\"#dc2626\" font-weight=\"bold\">30</text><text x=\"250\" y=\"208\" font-size=\"11\" fill=\"#475569\">40</text><text x=\"45\" y=\"75\" font-size=\"11\" fill=\"#475569\">4.0</text><line x1=\"180\" y1=\"200\" x2=\"260\" y2=\"200\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"200\" y=\"222\" font-size=\"11\" fill=\"#dc2626\" font-weight=\"bold\">Width = 10</text><text x=\"185\" y=\"125\" font-size=\"12\" fill=\"#dc2626\" font-weight=\"bold\">Area = 10 x 4 = 40</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_h.5.3",
+  "sid": "maths_eduqas_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.6-flash",
+  "ts": "2026-11-21T16:51:29.242Z"
  }
 }
