@@ -5,7 +5,7 @@ Runs read **only this file and `docs/CONTEXT.md`**. Keep this file short: finish
 ## Status
 
 ```
-RUN LOCK:       none
+RUN LOCK:       running since 2026-11-21 01:10 UTC, session session_01Sm3c8kXcYjme3kTYceLt1h
 CURRENT JOB:    none (J2b done; J3 Maths carries on by itself via the daily pipeline run)
 CURRENT STEPS:  none
 LAST RUN ENDED: 2026-11-20 23:50 UTC (owner in chat). Owner set a goal of ~500 notes/day by Fri 27 Nov (see "Claude is also writing notes"). Fixed Groq stopping after 8 requests a day (b0df3cb, CI green): its own JSON check was treated as "not answering" and switched off gpt-oss-120b; Groq now runs without JSON mode. Claude wrote 12 more bio_edx notes. Started an extra Write notes run (run-request 2026-11-20b) to use Groq tonight. Next nightly run: check Groq made far more requests, read the new "stopped early" failure messages and fix that cause, then write notes with the rest of the usage.
