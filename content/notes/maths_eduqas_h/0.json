@@ -5893,5 +5893,905 @@
   "src": "pre",
   "by": "gemini/gemini-3-flash-preview",
   "ts": "2026-11-20T17:31:24.105Z"
+ },
+ "maths_eduqas_h.0.7": {
+  "summary": "HN8 requires you to work exactly with fractions, surds and multiples of \\(\\pi\\). This means you must be able to simplify surds, rationalise denominators and give answers in exact form rather than decimal approximations. Mastery of these skills lets you manipulate algebraic expressions accurately and avoid loss of precision, which is essential for the higher‑tier GCSE maths exam.",
+  "core": [
+   {
+    "h": "Exact values – why they matter",
+    "p": "Exact values keep the mathematics pure and avoid rounding errors. In GCSE exams you are expected to give answers as fractions, surds or multiples of \\(\\pi\\) unless the question explicitly asks for a decimal.",
+    "bullets": [
+     "Exact = no rounding, no decimal approximation",
+     "Allowed forms: fractions, surds (\\(\\sqrt{a}\\)), \\(k\\pi\\) where \\(k\\) is rational",
+     "All calculations must stay in exact form until the final answer"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Exact answer requirement",
+      "p": "If the question does not ask for a decimal, you must not give one."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Fractions – operations and simplification",
+    "p": "A fraction \\(\\frac{a}{b}\\) represents the exact ratio of two integers. Work with them using the four operations, always simplifying to lowest terms.",
+    "bullets": [
+     "Addition/Subtraction: \\(\\frac{a}{b}\\pm\\frac{c}{d}=\\frac{ad\\pm bc}{bd}\\)",
+     "Multiplication: \\(\\frac{a}{b}\\times\\frac{c}{d}=\\frac{ac}{bd}\\)",
+     "Division: \\(\\frac{a}{b}\\div\\frac{c}{d}=\\frac{a}{b}\\times\\frac{d}{c}=\\frac{ad}{bc}\\)",
+     "Simplify by dividing numerator and denominator by their HCF"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "",
+      "p": "Always reduce the final fraction; leave it in lowest terms."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Surds – definition and basic properties",
+    "p": "A surd is an irrational number that can be written as a root that cannot be simplified to a rational number, e.g. \\(\\sqrt{2},\\ \\sqrt[3]{5}\\).",
+    "bullets": [
+     "\\(\\sqrt{ab}=\\sqrt{a}\\times\\sqrt{b}\\) only if \\(a,b\\ge0\\)",
+     "\\(\\sqrt{a}\\times\\sqrt{b}=\\sqrt{ab}\\)",
+     "\\(\\sqrt{a^2}=|a|\\) – take the absolute value",
+     "Powers: \\((\\sqrt{a})^2 = a\\)"
+    ],
+    "table": {
+     "head": [
+      "Property",
+      "Example"
+     ],
+     "rows": [
+      [
+       "\\(\\sqrt{mn}=\\sqrt{m}\\sqrt{n}\\)",
+       "\\(\\sqrt{12}=\\sqrt{4\\times3}=2\\sqrt{3}\\)"
+      ],
+      [
+       "\\(\\frac{\\sqrt{a}}{\\sqrt{b}}=\\sqrt{\\frac{a}{b}}\\)",
+       "\\(\\frac{\\sqrt{8}}{\\sqrt{2}}=\\sqrt{4}=2\\)"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Surd",
+      "p": "An expression of the form \\(\\sqrt[n]{a}\\) where \\(a\\) is not a perfect \\(n\\)th power."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Simplifying surds",
+    "p": "Write a surd as the product of the largest perfect square factor and the remaining factor under the root.",
+    "bullets": [
+     "Factor the radicand into prime factors",
+     "Group factors into pairs (for square roots) or triples (for cube roots)",
+     "Take one factor from each pair out of the root"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "",
+      "p": "Remember \\(\\sqrt{50}=5\\sqrt{2}\\) because \\(50=25\\times2\\)."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Simplifying \\(\\sqrt{72}\\) step‑by‑step",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" fill=\"#dbeafe\" stroke=\"#1b2540\"/><text x=\"20\" y=\"40\" font-size=\"12\" fill=\"#1b2540\">72 = 2\\u00D72\\u00D73\\u00D74</text><text x=\"20\" y=\"70\" font-size=\"12\" fill=\"#1b2540\">Group pairs: (2\\u00D72) (3\\u00D74)</text><text x=\"20\" y=\"100\" font-size=\"12\" fill=\"#1b2540\">Take one of each pair out: 2\\u00D73\\sqrt{2\\u00D74}</text><text x=\"20\" y=\"130\" font-size=\"12\" fill=\"#1b2540\">Simplify: 6\\sqrt{2}</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Rationalising denominators – square‑root case",
+    "p": "To remove a surd from a denominator multiply numerator and denominator by the same surd (or its conjugate for binomials).",
+    "bullets": [
+     "For \\(\\frac{a}{\\sqrt{b}}\\) multiply by \\(\\frac{\\sqrt{b}}{\\sqrt{b}}\\)",
+     "Result: \\(\\frac{a\\sqrt{b}}{b}\\)",
+     "Always simplify the resulting fraction"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "",
+      "p": "Do NOT multiply by \\(\\sqrt{b}\\) alone – you must multiply both top and bottom."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Rationalising denominators – binomial case",
+    "p": "When the denominator is of the form \\(a\\pm\\sqrt{b}\\) use its conjugate \\(a\\mp\\sqrt{b}\\).",
+    "bullets": [
+     "\\(\\frac{1}{a+\\sqrt{b}}\\times\\frac{a-\\sqrt{b}}{a-\\sqrt{b}} = \\frac{a-\\sqrt{b}}{a^2-b}\\)",
+     "The denominator becomes a difference of squares, a rational number"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Conjugate",
+      "p": "The conjugate of \\(a+\\sqrt{b}\\) is \\(a-\\sqrt{b}\\)."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Rationalising \\(\\frac{3}{2+\\sqrt5}\\)",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" fill=\"#fde68a\" stroke=\"#1b2540\"/><text x=\"20\" y=\"40\" font-size=\"12\" fill=\"#1b2540\">\\frac{3}{2+\\sqrt5}\\times\\frac{2-\\sqrt5}{2-\\sqrt5}</text><text x=\"20\" y=\"70\" font-size=\"12\" fill=\"#1b2540\">=\\frac{3(2-\\sqrt5)}{(2)^2-(\\sqrt5)^2}</text><text x=\"20\" y=\"100\" font-size=\"12\" fill=\"#1b2540\">=\\frac{6-3\\sqrt5}{4-5}</text><text x=\"20\" y=\"130\" font-size=\"12\" fill=\"#1b2540\">=\\frac{6-3\\sqrt5}{-1}= -6+3\\sqrt5</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Multiples of \\(\\pi\\) – exact trigonometric values",
+    "p": "Angles are often required in radians. Keep \\(\\pi\\) symbolic; never replace with 3.14 unless asked for a decimal.",
+    "bullets": [
+     "\\(\\frac{\\pi}{2},\\ \\pi,\\ \\frac{3\\pi}{2},\\ 2\\pi\\) are common exact angles",
+     "Use unit‑circle values: \\(\\sin \\frac{\\pi}{6}=\\frac12\\), \\(\\cos \\frac{\\pi}{3}=\\frac12\\), etc.",
+     "When multiplying or adding multiples of \\(\\pi\\), treat \\(\\pi\\) as a constant"
+    ],
+    "table": {
+     "head": [
+      "Angle (rad)",
+      "sin",
+      "cos",
+      "tan"
+     ],
+     "rows": [
+      [
+       "\\(0\\)",
+       "0",
+       "1",
+       "0"
+      ],
+      [
+       "\\(\\frac{\\pi}{6}\\)",
+       "1/2",
+       "√3/2",
+       "1/√3"
+      ],
+      [
+       "\\(\\frac{\\pi}{4}\\)",
+       "√2/2",
+       "√2/2",
+       "1"
+      ],
+      [
+       "\\(\\frac{\\pi}{3}\\)",
+       "√3/2",
+       "1/2",
+       "√3"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "",
+      "p": "Do not convert \\(\\pi\\) to a decimal when the answer can stay as a multiple of \\(\\pi\\)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Combining fractions, surds and \\(\\pi\\)",
+    "p": "When an expression contains a mix, keep each part exact and apply the appropriate rules sequentially.",
+    "bullets": [
+     "First, rationalise any surd denominators",
+     "Next, combine like terms (e.g., \\(\\sqrt2+2\\sqrt2=3\\sqrt2\\))",
+     "Finally, if \\(\\pi\\) appears, treat it as a separate constant term"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "",
+      "p": "Factor common surd factors to simplify addition/subtraction."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Common pitfalls and how to avoid them",
+    "p": "Understanding the typical errors helps you check your work quickly.",
+    "bullets": [
+     "Leaving a surd in the denominator – always rationalise",
+     "Reducing a fraction incorrectly – verify HCF",
+     "Changing \\(\\sqrt{a^2}\\) to \\(a\\) without absolute value",
+     "Treating \\(\\pi\\) as 3.14 in exact‑answer questions"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "",
+      "p": "Never mix decimal approximations with exact forms in the same answer."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Quick checklist before finalising an answer",
+    "p": "A short list to ensure you have met the specification.",
+    "bullets": [
+     "Is the answer a fraction, surd or multiple of \\(\\pi\\)?",
+     "Is the fraction in lowest terms?",
+     "Is the surd fully simplified (no perfect‑square factor inside)?",
+     "Is the denominator free of surds?",
+     "Have you written \\(\\pi\\) symbol correctly?"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Exact‑answer checklist",
+      "p": "Use this at the end of every HN8 question."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Exact maths is like cooking with a precise recipe",
+   "p": "Imagine a recipe that calls for \"1/3 cup of sugar\" and \"√2 teaspoons of vanilla\". If you round the 1/3 to 0.33 or replace √2 with 1.4, the flavour changes each time you bake. Keeping the exact fractions and surds ensures the result is always the same, just as the exam expects the exact mathematical answer."
+  },
+  "terms": [
+   {
+    "t": "Exact value",
+    "d": "A number expressed without rounding, e.g. \\(\\frac{3}{4},\\ \\sqrt5,\\ 2\\pi\\)"
+   },
+   {
+    "t": "Surd",
+    "d": "An irrational root that cannot be simplified to a rational number"
+   },
+   {
+    "t": "Rationalise",
+    "d": "The process of removing surds from a denominator"
+   },
+   {
+    "t": "Conjugate",
+    "d": "For \\(a+\\sqrt{b}\\) the conjugate is \\(a-\\sqrt{b}\\)"
+   },
+   {
+    "t": "Lowest terms",
+    "d": "A fraction whose numerator and denominator share no common factor other than 1"
+   },
+   {
+    "t": "Absolute value",
+    "d": "The non‑negative value of a number, denoted \\(|a|\\)"
+   },
+   {
+    "t": "Multiple of \\(\\pi\\)",
+    "d": "An expression of the form \\(k\\pi\\) where \\(k\\) is a rational number"
+   },
+   {
+    "t": "Difference of squares",
+    "d": "\\((a+b)(a-b)=a^2-b^2\\)"
+   },
+   {
+    "t": "Prime factorisation",
+    "d": "Expressing a number as a product of prime numbers"
+   },
+   {
+    "t": "HCF",
+    "d": "Highest common factor, the greatest integer that divides two numbers"
+   },
+   {
+    "t": "Simplify surd",
+    "d": "Write \\(\\sqrt{ab}\\) as \\(\\sqrt{a}\\sqrt{b}\\) and take out perfect‑square factors"
+   },
+   {
+    "t": "Exact‑answer checklist",
+    "d": "A short list to verify fraction, surd and \\(\\pi\\) requirements before submitting"
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "\\(\\sqrt{9}=3\\)",
+    "r": "Correct – note that \\(\\sqrt{9}=|3|=3\\) because 3 is positive"
+   },
+   {
+    "w": "\\(\\sqrt{a^2}=a\\)",
+    "r": "Mark scheme expects \\(|a|\\) – the absolute value must be stated"
+   },
+   {
+    "w": "Rationalising \\(\\frac{2}{\\sqrt3}\\) gives \\(\\frac{2\\sqrt3}{3}\\) – then simplify to \\(\\frac{\\sqrt3}{3}\\)",
+    "r": "Incorrect – you cannot cancel the 2; the correct result is \\(\\frac{2\\sqrt3}{3}\\)"
+   },
+   {
+    "w": "Treat \\(\\pi\\) as 3.14 in exact‑answer questions",
+    "r": "Never substitute a decimal for \\(\\pi\\) unless the question explicitly asks for a decimal"
+   },
+   {
+    "w": "\\(\\frac{6}{9}=\\frac{2}{3}\\) – then write as \\(0.666\\)",
+    "r": "Answer must stay as the fraction \\(\\frac{2}{3}\\)"
+   },
+   {
+    "w": "\\(\\sqrt{50}=5\\sqrt{2}\\) – then write as \\(5\\times2=10\\)",
+    "r": "Do not multiply the outside and inside of the root; the simplified form is \\(5\\sqrt{2}\\)"
+   },
+   {
+    "w": "\\(\\frac{1}{2+\\sqrt5}=\\frac{2-\\sqrt5}{4-5}\\) – stop here",
+    "r": "You must simplify the denominator to \\(-1\\) giving \\(-2+\\sqrt5\\)"
+   },
+   {
+    "w": "Combine unlike surds: \\(\\sqrt2+\\sqrt3=\\sqrt5\\)",
+    "r": "Surds with different radicands cannot be combined; the expression stays as \\(\\sqrt2+\\sqrt3\\)"
+   },
+   {
+    "w": "\\(\\frac{a}{b}=a\\times b^{-1}\\) – then write as decimal",
+    "r": "If the question asks for an exact answer, keep the fraction form"
+   },
+   {
+    "w": "Write \\(\\pi\\) as \"pi\" in the answer box",
+    "r": "Use the correct symbol \\(\\pi\\) or type \"pi\" only if the exam software requires it"
+   }
+  ],
+  "exam": [
+   {
+    "q": "Simplify \\(\\frac{5}{\\sqrt{20}}\\) and give your answer in lowest terms.",
+    "marks": 2,
+    "model": [
+     "Rationalise denominator: multiply by \\(\\sqrt{20}/\\sqrt{20}\\)",
+     "Simplify \\(\\sqrt{20}=2\\sqrt5\\)",
+     "Result \\(\\frac{5\\times2\\sqrt5}{20}=\\frac{\\sqrt5}{2}\\)"
+    ],
+    "tip": "Remember to reduce the final fraction."
+   },
+   {
+    "q": "Write \\(\\frac{3}{2+\\sqrt{7}}\\) in a form without a surd in the denominator.",
+    "marks": 4,
+    "model": [
+     "Multiply by conjugate \\(2-\\sqrt7\\) over itself",
+     "=\\frac{3(2-\\sqrt7)}{4-7}",
+     "=\\frac{6-3\\sqrt7}{-3}",
+     "= -2+\\sqrt7"
+    ],
+    "tip": "The denominator becomes a difference of squares."
+   },
+   {
+    "q": "Express \\(\\sin 30^{\\circ}\\) as an exact multiple of \\(\\pi\\).",
+    "marks": 1,
+    "model": [
+     "30° = \\(\\frac{\\pi}{6}\\) rad, \\(\\sin \\frac{\\pi}{6}=\\frac12\\)"
+    ],
+    "tip": "Convert degrees to radians first."
+   },
+   {
+    "q": "Simplify \\(\\sqrt{45}+\\sqrt{5}\\).",
+    "marks": 2,
+    "model": [
+     "\\(\\sqrt{45}=\\sqrt{9\\times5}=3\\sqrt5\\)",
+     "Result \\(3\\sqrt5+\\sqrt5=4\\sqrt5\\)"
+    ],
+    "tip": "Factor out the common surd."
+   },
+   {
+    "q": "Rationalise and simplify \\(\\frac{7}{\\sqrt{3}+\\sqrt{2}}\\).",
+    "marks": 6,
+    "model": [
+     "Multiply by conjugate \\(\\sqrt3-\\sqrt2\\)",
+     "=\\frac{7(\\sqrt3-\\sqrt2)}{3-2}",
+     "=7\\sqrt3-7\\sqrt2"
+    ],
+    "tip": "Denominator becomes 1, so just distribute."
+   },
+   {
+    "q": "Give the exact value of \\(\\cos \\frac{5\\pi}{6}\\).",
+    "marks": 2,
+    "model": [
+     "Reference angle \\(\\pi/6\\), cosine negative in QII",
+     "= -\\frac{\\sqrt3}{2}"
+    ],
+    "tip": "Use unit‑circle symmetry."
+   },
+   {
+    "q": "Write \\(\\frac{4}{\\sqrt{8}}\\) in simplest exact form.",
+    "marks": 2,
+    "model": [
+     "\\(\\sqrt8=2\\sqrt2\\)",
+     "=\\frac{4}{2\\sqrt2}=\\frac{2}{\\sqrt2}=\\frac{2\\sqrt2}{2}=\\sqrt2\\)"
+    ],
+    "tip": "Rationalise after simplifying the radicand."
+   },
+   {
+    "q": "Simplify \\(\\frac{\\sqrt{12}}{\\sqrt{3}}\\).",
+    "marks": 1,
+    "model": [
+     "\\(\\sqrt{12}=\\sqrt{4\\times3}=2\\sqrt3\\)",
+     "=\\frac{2\\sqrt3}{\\sqrt3}=2"
+    ],
+    "tip": "Cancel the common surd."
+   },
+   {
+    "q": "Express \\(\\frac{5\\pi}{4}\\) as a decimal multiple of \\(\\pi\\) to two d.p.",
+    "marks": 2,
+    "model": [
+     "5/4 = 1.25, so answer = 1.25\\pi"
+    ],
+    "tip": "Only do this if the question explicitly asks for a decimal."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Simplify \\(\\frac{9}{\\sqrt{27}}\\).",
+    "steps": [
+     "Factor the radicand: \\(\\sqrt{27}=\\sqrt{9\\times3}=3\\sqrt3\\)",
+     "Rationalise: \\(\\frac{9}{3\\sqrt3}=\\frac{3}{\\sqrt3}\\)",
+     "Multiply by \\(\\sqrt3/\\sqrt3\\): \\(\\frac{3\\sqrt3}{3}=\\sqrt3\\)"
+    ],
+    "ans": "\\(\\sqrt3\\)"
+   },
+   {
+    "q": "Rationalise \\(\\frac{2}{5-\\sqrt{6}}\\).",
+    "steps": [
+     "Conjugate of denominator: \\(5+\\sqrt6\\)",
+     "Multiply numerator and denominator by conjugate:",
+     "\\(\\frac{2(5+\\sqrt6)}{(5)^2-(\\sqrt6)^2}=\\frac{10+2\\sqrt6}{25-6}\\)",
+     "Simplify denominator: \\(19\\)",
+     "Result: \\(\\frac{10+2\\sqrt6}{19}=\\frac{10}{19}+\\frac{2\\sqrt6}{19}\\)"
+    ],
+    "ans": "\\(\\frac{10}{19}+\\frac{2\\sqrt6}{19}\\)"
+   },
+   {
+    "q": "Find the exact value of \\(\\sin\\left(\\frac{7\\pi}{6}\\right)\\).",
+    "steps": [
+     "Reference angle is \\(\\pi/6\\)",
+     "Angle lies in Quadrant III where sine is negative",
+     "Exact sine of \\(\\pi/6\\) is \\(1/2\\)",
+     "Therefore \\(\\sin\\frac{7\\pi}{6}= -\\frac12\\)"
+    ],
+    "ans": "-\\frac12"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Simplifying \\(\\sqrt{72}\\) step‑by‑step",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" fill=\"#dbeafe\" stroke=\"#1b2540\"/><text x=\"20\" y=\"40\" font-size=\"12\" fill=\"#1b2540\">72 = 2×2×2×3×3</text><text x=\"20\" y=\"70\" font-size=\"12\" fill=\"#1b2540\">Group pairs: (2×2)(2×3×3)</text><text x=\"20\" y=\"100\" font-size=\"12\" fill=\"#1b2540\">Take one from each pair: 2×3√(2×3)</text><text x=\"20\" y=\"130\" font-size=\"12\" fill=\"#1b2540\">= 6√2</text></svg>"
+   },
+   {
+    "cap": "Rationalising \\(\\frac{3}{2+\\sqrt5}\\)",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" fill=\"#fde68a\" stroke=\"#1b2540\"/><text x=\"20\" y=\"40\" font-size=\"12\" fill=\"#1b2540\">\\frac{3}{2+\\sqrt5}\\times\\frac{2-\\sqrt5}{2-\\sqrt5}</text><text x=\"20\" y=\"70\" font-size=\"12\" fill=\"#1b2540\">=\\frac{3(2-\\sqrt5)}{4-5}</text><text x=\"20\" y=\"100\" font-size=\"12\" fill=\"#1b2540\">=\\frac{6-3\\sqrt5}{-1}</text><text x=\"20\" y=\"130\" font-size=\"12\" fill=\"#1b2540\">= -6+3\\sqrt5</text></svg>"
+   },
+   {
+    "cap": "Unit‑circle exact values for common angles",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" fill=\"#bbf7d0\" stroke=\"#1b2540\"/><text x=\"20\" y=\"40\" font-size=\"12\" fill=\"#1b2540\">Angle (rad)   sin   cos   tan</text><text x=\"20\" y=\"70\" font-size=\"12\" fill=\"#1b2540\">0            0    1    0</text><text x=\"20\" y=\"100\" font-size=\"12\" fill=\"#1b2540\">π/6          1/2  √3/2 1/√3</text><text x=\"20\" y=\"130\" font-size=\"12\" fill=\"#1b2540\">π/4          √2/2 √2/2 1</text><text x=\"20\" y=\"160\" font-size=\"12\" fill=\"#1b2540\">π/3          √3/2 1/2  √3</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_h.0.7",
+  "sid": "maths_eduqas_h",
+  "v": 2,
+  "src": "pre",
+  "by": "groq/openai/gpt-oss-120b",
+  "ts": "2026-11-20T23:39:49.006Z"
+ },
+ "maths_eduqas_h.0.11": {
+  "summary": "Interpreting fractions and percentages as operators means viewing them as actions that change a quantity – a fraction tells you to take a part of a whole, while a percentage tells you to take a part per hundred. This viewpoint lets you solve problems by applying the operator directly, rather than converting back and forth, and is essential for higher‑tier questions that combine multiple steps and require clear reasoning.",
+  "core": [
+   {
+    "h": "What does it mean to ‘interpret as an operator’?",
+    "p": "A fraction or percentage can be seen as a *function* that takes an original amount and returns a new amount. This is the same as the operator “multiply by”.",
+    "bullets": [
+     "Fraction a/b means **multiply the original quantity by a/b**.",
+     "Percentage p % means **multiply the original quantity by p/100**.",
+     "The operator acts on any number: a length, a price, a probability, etc."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Operator interpretation",
+      "p": "Viewing a fraction or percentage as an instruction to multiply a given quantity by that fraction or percentage."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Applying a fraction operator",
+    "p": "When a fraction is given as an operator, you multiply the original value by the fraction. This works for whole numbers, decimals and mixed numbers.",
+    "bullets": [
+     "If a recipe calls for ¾ of a cup of sugar, you calculate ¾ × 1 cup = 0.75 cup.",
+     "For a discount of ⅕ on a price of £120, the new price is (1 – ⅕) × 120 = 4/5 × 120 = £96."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "",
+      "p": "Always multiply *first*, then add/subtract any extra amounts."
+     },
+     {
+      "k": "tip",
+      "t": "",
+      "p": "Convert mixed numbers to improper fractions before multiplying."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Applying a percentage operator",
+    "p": "A percentage is simply a fraction out of 100, so the operator is “multiply by p/100”.",
+    "bullets": [
+     "Increase by 25 % → multiply by 1 + 25/100 = 1.25.",
+     "Decrease by 40 % → multiply by 1 – 40/100 = 0.60.",
+     "Finding p % of a number N → p/100 × N."
+    ],
+    "table": {
+     "head": [
+      "Action",
+      "Operator",
+      "Example"
+     ],
+     "rows": [
+      [
+       "Increase by p %",
+       "× (1 + p/100)",
+       "Increase 80 by 12 % → 80 × 1.12 = 89.6"
+      ],
+      [
+       "Decrease by p %",
+       "× (1 – p/100)",
+       "Decrease 250 by 30 % → 250 × 0.70 = 175"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "",
+      "p": "Do NOT add the percentage directly to the number; you must first convert to a multiplier."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Combining fraction and percentage operators",
+    "p": "Higher‑tier questions often require you to apply several operators in sequence.",
+    "bullets": [
+     "First operator acts on the original amount, the second on the result of the first.",
+     "Order of operations matters – treat each operator as a separate multiplication step.",
+     "Use brackets to show the sequence clearly."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "",
+      "p": "Write the problem as a product of multipliers before calculating."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Operator vs. part‑of‑whole language",
+    "p": "Exam questions may phrase the same idea in different ways.",
+    "bullets": [
+     "\"Find ⅗ of 180\" → operator ⅗ × 180.",
+     "\"What is 60 % of the distance?\" → operator 0.60 × distance.",
+     "\"The price is reduced by ⅖\" → new price = (1 – ⅖) × original."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "",
+      "p": "Words like ‘of’, ‘per’, ‘out of’, ‘reduced by’, ‘increased by’ signal the operator."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Working with mixed numbers as operators",
+    "p": "Convert mixed numbers to improper fractions before using them as operators.",
+    "bullets": [
+     "3 ½ % = 3.5 % = 3.5/100 = 7/200.",
+     "2 ⅓ × N = (7/3) × N."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Improper fraction",
+      "p": "A fraction where the numerator is larger than the denominator."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Operator interpretation in word problems",
+    "p": "Identify the quantity being acted upon and the operator that changes it.",
+    "bullets": [
+     "“A garden is ¼ larger than before” → new area = (1 + ¼) × original.",
+     "“A tax of 12 % is added to the price” → final price = (1 + 0.12) × base price."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "",
+      "p": "Underline the verb (increase, decrease, of, per) to spot the operator."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Using the operator form for reverse calculations",
+    "p": "Sometimes you need to find the original amount before the operator was applied.",
+    "bullets": [
+     "If a price after a 20 % discount is £80, original = £80 ÷ 0.80 = £100.",
+     "If a quantity is ⅔ of the original, original = given ÷ (2/3) = given × 3/2."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "",
+      "p": "Do NOT multiply by the percentage again; you must divide by the multiplier."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Operator notation in algebra",
+    "p": "When variables are involved, keep the operator form to avoid premature calculation.",
+    "bullets": [
+     "If x % of y is required, write (x/100) × y.",
+     "For “increase y by p %”, write y × (1 + p/100)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "",
+      "p": "Maintain the fraction/percentage as a factor until the final step."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Common pitfalls and how to avoid them",
+    "p": "Understanding the operator view prevents typical errors.",
+    "bullets": [
+     "Adding percentages directly to numbers (e.g., 50 + 20 % = 70) is wrong.",
+     "Confusing “of” with “out of” – both mean multiplication, but “out of” often signals a fraction of a whole.",
+     "For decreases, remember to use (1 – p/100), not (1 + p/100)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "",
+      "p": "Check whether the wording indicates a *change* (increase/decrease) or a *part* (of)."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Cooking Analogy",
+   "p": "Think of a fraction or percentage as a recipe instruction: ‘add ⅔ of a cup of sugar’ tells you to take the original cup and apply the operator ⅔ to get the amount you actually add. The analogy breaks down when the instruction involves non‑linear changes (e.g., exponential growth), which are not covered by simple multiplication operators."
+  },
+  "terms": [
+   {
+    "t": "Operator interpretation",
+    "d": "Viewing a fraction or percentage as a multiplier that acts on a given quantity."
+   },
+   {
+    "t": "Multiplier",
+    "d": "The decimal or fractional value you multiply by when applying a fraction/percentage operator."
+   },
+   {
+    "t": "Improper fraction",
+    "d": "A fraction where the numerator exceeds the denominator, used when converting mixed numbers for operator use."
+   },
+   {
+    "t": "Percentage",
+    "d": "A fraction out of 100, written with the symbol %; as an operator it equals p/100."
+   },
+   {
+    "t": "Increase operator",
+    "d": "(1 + p/100) where p % is the amount of increase."
+   },
+   {
+    "t": "Decrease operator",
+    "d": "(1 – p/100) where p % is the amount of decrease."
+   },
+   {
+    "t": "Reverse operator",
+    "d": "Dividing by the multiplier to find the original quantity before the operator was applied."
+   },
+   {
+    "t": "Mixed number operator",
+    "d": "Convert a mixed number to an improper fraction before using it as a multiplier."
+   },
+   {
+    "t": "Part‑of‑whole language",
+    "d": "Words such as ‘of’, ‘per’, ‘out of’ that signal multiplication by a fraction or percentage."
+   },
+   {
+    "t": "Bracketed operator sequence",
+    "d": "Using brackets to show the order when several operators act consecutively."
+   },
+   {
+    "t": "Decimal equivalent",
+    "d": "The decimal form of a fraction or percentage used for calculation (e.g., ¾ = 0.75)."
+   },
+   {
+    "t": "Factorisation of percentage",
+    "d": "Expressing a percentage as a product of prime factors when required for higher‑tier simplifications."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "20 % of 50 = 70",
+    "r": "20 % of 50 = 0.20 × 50 = 10. The percentage must be converted to a multiplier before multiplying."
+   },
+   {
+    "w": "A 30 % discount gives a price of 130 % of the original",
+    "r": "A 30 % discount means the new price is 70 % (or 0.70) of the original, not 130 %."
+   },
+   {
+    "w": "Increase 40 by ¼ = 40 + ¼ = 40.25",
+    "r": "Increase means multiply: 40 × (1 + ¼) = 40 × 1.25 = 50."
+   },
+   {
+    "w": "⅔ of 9 = 6 because 9 ÷ 3 = 3 and 3 × 2 = 6",
+    "r": "Correct method is 9 × 2/3 = 6; the reasoning must show multiplication by the fraction, not separate division then multiplication unless justified."
+   },
+   {
+    "w": "Convert 12 % to 12/100 then add to the number",
+    "r": "You must multiply by 12/100, not add the fraction to the original number."
+   },
+   {
+    "w": "A 5 % increase on 200 is 205",
+    "r": "5 % increase = 200 × 1.05 = 210, not 205."
+   },
+   {
+    "w": "If a price falls by 15 % to £85, the original is £85 + 15 %",
+    "r": "Original = £85 ÷ 0.85 = £100; you must divide by the multiplier, not add the percentage."
+   },
+   {
+    "w": "Treat ½ % as 0.5 % = 0.005",
+    "r": "½ % = 0.5 % = 0.005 as a decimal multiplier – the conversion is correct, but many students forget to divide by 100 first."
+   },
+   {
+    "w": "‘Of’ always means division",
+    "r": "‘Of’ in this context means multiplication (e.g., ⅔ of 12 = 12 × 2/3)."
+   },
+   {
+    "w": "When a number is ‘¼ larger’, multiply by ¼",
+    "r": "‘¼ larger’ means increase by ¼ of the original, so multiplier = 1 + ¼ = 1.25."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A shop offers a 20 % discount on a jacket that originally costs £150. What is the sale price?",
+    "marks": 2,
+    "model": [
+     "Convert 20 % to 0.20; multiplier = 1‑0.20 = 0.80; 150 × 0.80 = £120."
+    ],
+    "tip": "Write the discount as a multiplier before calculating."
+   },
+   {
+    "q": "A recipe requires ⅗ of a litre of milk. How many millilitres is this?",
+    "marks": 2,
+    "model": [
+     "Convert litre to ml: 1 L = 1000 ml; ⅗ × 1000 = 600 ml."
+    ],
+    "tip": "Convert units first, then apply the fraction operator."
+   },
+   {
+    "q": "The population of a town increased by 12 % to 56 000. Find the original population.",
+    "marks": 4,
+    "model": [
+     "Multiplier for increase = 1.12; original = 56 000 ÷ 1.12 = 50 000."
+    ],
+    "tip": "Use the reverse operator (divide by the multiplier)."
+   },
+   {
+    "q": "A bank offers 3 % interest per year, compounded annually. After one year a balance of £1 200 becomes £? (ignore compounding for this question – treat as simple increase).",
+    "marks": 2,
+    "model": [
+     "Multiplier = 1 + 0.03 = 1.03; 1 200 × 1.03 = £1 236."
+    ],
+    "tip": "Treat the percentage as a simple increase operator."
+   },
+   {
+    "q": "A car’s fuel efficiency is reduced by ¼ after a modification. If it originally travelled 480 km on a full tank, how far can it now travel?",
+    "marks": 4,
+    "model": [
+     "Decrease multiplier = 1‑¼ = 0.75; 480 × 0.75 = 360 km."
+    ],
+    "tip": "‘Reduced by’ means multiply by (1‑fraction)."
+   },
+   {
+    "q": "A student scored 78 % on a test worth 80 marks. How many marks did they obtain?",
+    "marks": 2,
+    "model": [
+     "Multiplier = 0.78; 80 × 0.78 = 62.4 → 62 marks (if whole‑number required)."
+    ],
+    "tip": "Convert percentage to decimal before multiplying."
+   },
+   {
+    "q": "A garden is ⅖ larger than a previous garden of area 30 m². Find the new area.",
+    "marks": 4,
+    "model": [
+     "Increase multiplier = 1 + ⅖ = 7/5; 30 × 7/5 = 42 m²."
+    ],
+    "tip": "Express ‘larger by’ as 1 + fraction."
+   },
+   {
+    "q": "A discount of ⅓ is applied to a price of £45. What is the price after the discount?",
+    "marks": 2,
+    "model": [
+     "Multiplier = 1‑⅓ = 2/3; 45 × 2/3 = £30."
+    ],
+    "tip": "Discount = subtract fraction from 1 before multiplying."
+   },
+   {
+    "q": "If 15 % of a number is 27, find the number.",
+    "marks": 4,
+    "model": [
+     "Multiplier = 0.15; number = 27 ÷ 0.15 = 180."
+    ],
+    "tip": "Use reverse operator: divide by the percentage multiplier."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A clothing store marks a shirt up by 25 % and then offers a 10 % discount on the new price. The original price is £40. What is the final price?",
+    "steps": [
+     "Increase multiplier = 1 + 0.25 = 1.25; price after increase = 40 × 1.25 = £50.",
+     "Discount multiplier = 1 – 0.10 = 0.90; final price = 50 × 0.90 = £45."
+    ],
+    "ans": "£45"
+   },
+   {
+    "q": "A farmer harvests ⅔ of his crop and sells it at a price that is 15 % above the market rate of £2 per kg. If the total crop weight is 120 kg, how much revenue does he earn from the sold portion?",
+    "steps": [
+     "Weight sold = ⅔ × 120 = 80 kg.",
+     "Price per kg = £2 × 1.15 = £2.30.",
+     "Revenue = 80 × 2.30 = £184."
+    ],
+    "ans": "£184"
+   },
+   {
+    "q": "A loan of £500 is repaid after one year with interest of 7 %. If the borrower pays back £535, what percentage of the original loan does the repayment represent?",
+    "steps": [
+     "Repayment multiplier = 535 ÷ 500 = 1.07.",
+     "Convert to percentage: 1.07 × 100 % = 107 % of the original loan."
+    ],
+    "ans": "107 %"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Fraction as an operator – multiply the original quantity by the fraction.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"grad1\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"0%\"><stop offset=\"0%\" style=\"stop-color:#dbeafe;stop-opacity:1\"/><stop offset=\"100%\" style=\"stop-color:#bbf7d0;stop-opacity:1\"/></linearGradient></defs><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"url(#grad1)\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b2540\">Original quantity = Q</text><line x1=\"200\" y1=\"70\" x2=\"200\" y2=\"110\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"200\" y=\"130\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b2540\">Multiply by a/b</text><line x1=\"200\" y1=\"140\" x2=\"200\" y2=\"180\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"200\" y=\"200\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b2540\">Result = (a/b)·Q</text></svg>"
+   },
+   {
+    "cap": "Percentage as an operator – convert to a multiplier then apply.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b2540\">Original amount = A</text><line x1=\"200\" y1=\"70\" x2=\"200\" y2=\"110\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"200\" y=\"130\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b2540\">Convert p % → p/100</text><line x1=\"200\" y1=\"140\" x2=\"200\" y2=\"180\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"200\" y=\"200\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b2540\">Result = (p/100)·A</text></svg>"
+   },
+   {
+    "cap": "Sequence of operators – brackets show order of application.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#e9d5ff\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"100\" y=\"80\" font-size=\"13\" fill=\"#1b2540\">Original = N</text><text x=\"250\" y=\"80\" font-size=\"13\" fill=\"#1b2540\">Operator 1 = a/b</text><text x=\"100\" y=\"130\" font-size=\"13\" fill=\"#1b2540\">After 1 = N·a/b</text><text x=\"250\" y=\"130\" font-size=\"13\" fill=\"#1b2540\">Operator 2 = p/100</text><text x=\"175\" y=\"180\" font-size=\"13\" fill=\"#1b2540\">Final = N·a/b·p/100</text><line x1=\"130\" y1=\"90\" x2=\"130\" y2=\"115\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"270\" y1=\"90\" x2=\"270\" y2=\"115\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"130\" y1=\"145\" x2=\"270\" y2=\"145\" stroke=\"#1b2540\" stroke-width=\"2\"/></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_h.0.11",
+  "sid": "maths_eduqas_h",
+  "v": 2,
+  "src": "pre",
+  "by": "groq/openai/gpt-oss-120b",
+  "ts": "2026-11-20T23:40:47.237Z"
  }
 }
