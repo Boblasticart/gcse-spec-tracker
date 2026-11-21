@@ -6793,5 +6793,432 @@
   "src": "pre",
   "by": "groq/openai/gpt-oss-120b",
   "ts": "2026-11-20T23:40:47.237Z"
+ },
+ "maths_eduqas_h.0.14": {
+  "summary": "Rounding to an appropriate degree of accuracy means choosing the right number of decimal places or significant figures for the context, then expressing the result as an interval using inequality notation. This interval, called the error interval or bounds, shows the range within which the true value lies. Mastery of this skill lets you communicate uncertainty clearly and earn full marks in both non‑calculator and calculator components.",
+  "core": [
+   {
+    "h": "What does “appropriate degree of accuracy” mean?",
+    "p": "It is the number of decimal places or significant figures that the question requires, based on the data given or the real‑world context.",
+    "bullets": [
+     "If a measurement is given to 2 d.p., your answer must also be to 2 d.p.",
+     "If a number is given to 3 s.f., keep 3 s.f. in the final answer.",
+     "When no guidance is given, use a sensible level – usually 1 d.p. for money, 2 d.p. for lengths, etc."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Degree of accuracy",
+      "p": "The number of decimal places or significant figures to which a value is expressed."
+     },
+     {
+      "k": "key",
+      "t": "",
+      "p": "The degree of accuracy must match the data or the context – otherwise marks are lost."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Rounding rules you must use",
+    "p": "These are the standard rounding conventions required by the exam board.",
+    "bullets": [
+     "If the first digit to be dropped is < 5, leave the last retained digit unchanged.",
+     "If the first digit to be dropped is > 5, increase the last retained digit by 1.",
+     "If the first digit to be dropped is exactly 5 followed only by zeros, round to the nearest even digit (banker’s rounding) – however, for GCSE you may use the simpler “5 rounds up” rule unless the mark scheme states otherwise."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "",
+      "p": "Write the intermediate unrounded value on scrap paper – it helps avoid “double‑rounding” errors."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "How to write an error interval (bounds)",
+    "p": "Once you have rounded, you must show the possible range of the true value using inequality notation.",
+    "bullets": [
+     "Upper bound = rounded value + half of the unit of the last retained place.",
+     "Lower bound = rounded value – half of the unit of the last retained place.",
+     "Write as: lower bound ≤ true value < upper bound (or ≤ depending on rounding rule)."
+    ],
+    "table": {
+     "head": [
+      "Rounded value",
+      "Unit of last place",
+      "Lower bound",
+      "Upper bound"
+     ],
+     "rows": [
+      [
+       "3.46 (2 d.p.)",
+       "0.01",
+       "3.455",
+       "3.465"
+      ],
+      [
+       "0.128 (3 s.f.)",
+       "0.001",
+       "0.1275",
+       "0.1285"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Upper bound",
+      "p": "The greatest possible value the true quantity could have, given the rounding."
+     },
+     {
+      "k": "def",
+      "t": "Lower bound",
+      "p": "The smallest possible value the true quantity could have, given the rounding."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Step‑by‑step process (non‑calculator)",
+    "p": "A clear algorithm to follow in Component 1.",
+    "bullets": [
+     "1. Identify the required degree of accuracy from the question.",
+     "2. Perform any calculations using exact values (fractions, surds, etc.).",
+     "3. Round the final answer to the required degree of accuracy.",
+     "4. Determine the unit of the last retained place (e.g., 0.01 for 2 d.p.).",
+     "5. Calculate lower and upper bounds.",
+     "6. Write the interval using ≤ and < (or ≤) as appropriate."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "",
+      "p": "Do NOT round intermediate steps unless the question explicitly tells you to – this causes loss of marks."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Step‑by‑step process (calculator)",
+    "p": "Component 2 allows a calculator, but the same logical steps apply.",
+    "bullets": [
+     "Use the calculator for the exact calculation, then switch to the ‘mode’ that shows enough decimal places.",
+     "Apply the rounding rule manually – the calculator will not automatically give the correct bound.",
+     "Enter the final rounded value, then add/subtract half the unit to obtain bounds."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "",
+      "p": "Set the calculator to display at least 4 extra decimal places; this prevents accidental rounding."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Common contexts where rounding & bounds appear",
+    "p": "Typical GCSE scenarios that dictate the degree of accuracy.",
+    "bullets": [
+     "Money – usually 2 d.p.",
+     "Lengths, masses, times – often 1 or 2 d.p.",
+     "Scientific data – may be given to 3 s.f. or a specific number of significant figures.",
+     "Angles – usually 1 d.p."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Why inequality symbols matter",
+    "p": "They show the direction of the interval and avoid ambiguity.",
+    "bullets": [
+     "Lower bound uses ≤ because the true value can equal the bound.",
+     "Upper bound uses < (or ≤ if the rounding rule is “round up on 5”).",
+     "Writing the interval incorrectly (e.g., using >) loses marks."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "",
+      "p": "Always write lower bound ≤ value < upper bound unless the question specifies otherwise."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Link to limits of accuracy (HN16)",
+    "p": "Bounds are a concrete application of the abstract concept of limits of accuracy.",
+    "bullets": [
+     "Limits of accuracy describe the maximum possible error of a measurement.",
+     "Error interval = measured value ± limit of accuracy.",
+     "HN16 expects you to interpret these bounds in real‑world contexts."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Worked example (non‑calculator) – rounding to 2 d.p.",
+    "p": "A distance is calculated as 12.347 km. Give the answer to 2 d.p. and write the error interval.",
+    "bullets": [],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Worked example (calculator) – rounding to 3 s.f.",
+    "p": "Using a calculator, find  √(7.23) and give the result to 3 s.f. with bounds.",
+    "bullets": [],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Rounding and bounds are like a safety net for a tightrope walker.",
+   "p": "The walker (your true value) moves along the rope (the exact number). Rounding tells you where the net (the rounded figure) is placed, while the upper and lower bounds are the edges of the net, ensuring the walker never falls off. The analogy breaks down if the net is stretched too far (over‑rounding) – then it no longer protects the walker, just as an inappropriate degree of accuracy gives a misleading answer."
+  },
+  "terms": [
+   {
+    "t": "Degree of accuracy",
+    "d": "The number of decimal places or significant figures required for an answer."
+   },
+   {
+    "t": "Upper bound",
+    "d": "The greatest possible value of the true quantity, calculated as rounded value + half the unit of the last retained place."
+   },
+   {
+    "t": "Lower bound",
+    "d": "The smallest possible value of the true quantity, calculated as rounded value – half the unit of the last retained place."
+   },
+   {
+    "t": "Error interval",
+    "d": "The range between the lower and upper bounds, written using inequality notation."
+   },
+   {
+    "t": "Significant figure",
+    "d": "A digit that contributes to the precision of a number, starting from the first non‑zero digit."
+   },
+   {
+    "t": "Decimal place",
+    "d": "A position to the right of the decimal point; the first decimal place is 0.1, the second 0.01, etc."
+   },
+   {
+    "t": "Banker’s rounding",
+    "d": "Round 5 to the nearest even digit; not required for GCSE unless specified."
+   },
+   {
+    "t": "Inequality notation",
+    "d": "Symbols ≤, <, ≥, > used to describe a range of possible values."
+   },
+   {
+    "t": "Half‑unit",
+    "d": "Half of the smallest unit retained after rounding (e.g., 0.005 for 2 d.p.)."
+   },
+   {
+    "t": "Exact value",
+    "d": "The value before any rounding, often kept as a fraction or surd during calculations."
+   },
+   {
+    "t": "Double‑rounding",
+    "d": "Rounding an intermediate result and then rounding again – leads to loss of accuracy."
+   },
+   {
+    "t": "Limit of accuracy",
+    "d": "The maximum possible error in a measurement, expressed as ± half‑unit."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Rounded 3.456 to 3.5 because the 5 rounds up.",
+    "r": "You must round to the required degree of accuracy first (e.g., 2 d.p. → 3.46), then find bounds."
+   },
+   {
+    "w": "Wrote bounds as 3.455 ≤ x ≤ 3.465.",
+    "r": "Upper bound should be < 3.465 (or ≤ if the rounding rule says ‘round up on 5’)."
+   },
+   {
+    "w": "Rounded each intermediate step in a multi‑step calculation.",
+    "r": "Keep exact values until the final step; only round the final answer."
+   },
+   {
+    "w": "Used 0.01 as half‑unit for 2 s.f. rounding.",
+    "r": "Half‑unit depends on the place value of the last significant figure, not decimal places."
+   },
+   {
+    "w": "Stated “error interval = ±0.005”.",
+    "r": "Error interval must be expressed as two separate inequalities, not a ± notation, for GCSE."
+   },
+   {
+    "w": "Forgot to include the equality sign on the lower bound.",
+    "r": "Lower bound must be ≤ because the true value can equal the bound."
+   },
+   {
+    "w": "Rounded 12.349 to 12.35 and gave bounds 12.345 ≤ x < 12.355.",
+    "r": "If rounding to 2 d.p., the correct bounds are 12.345 ≤ x < 12.355 – note the lower bound includes equality, upper bound excludes it."
+   },
+   {
+    "w": "Used “≈” instead of inequality symbols for bounds.",
+    "r": "The mark scheme requires ≤ and < (or ≤) – approximation symbols do not earn marks."
+   },
+   {
+    "w": "Assumed the degree of accuracy from the calculator display.",
+    "r": "Always read the question; the calculator may show more places than required."
+   },
+   {
+    "w": "Wrote “error interval = 3.455–3.465”.",
+    "r": "You must use inequality notation, not a dash, and include the correct symbols (≤ and <)."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A length is measured as 7.842 m and the answer is required to 2 d.p. Give the rounded value and write the error interval.",
+    "marks": 2,
+    "model": [
+     "Rounded value 7.84 m",
+     "Lower bound 7.835 ≤ true value < 7.845"
+    ],
+    "tip": "Remember the half‑unit for 2 d.p. is 0.005."
+   },
+   {
+    "q": "The mass of a sample is 0.0237 kg. Give the answer to 3 s.f. and state the bounds.",
+    "marks": 3,
+    "model": [
+     "Rounded value 0.0237 kg (3 s.f.)",
+     "Lower bound 0.02365 ≤ m < 0.02375"
+    ],
+    "tip": "Identify the third significant figure (the 3) and use 0.00005 as the half‑unit."
+   },
+   {
+    "q": "Using a calculator, find  √(12.5) and give the result to 2 d.p. with bounds.",
+    "marks": 4,
+    "model": [
+     "Exact calculator value 3.535533…",
+     "Rounded value 3.54",
+     "Lower bound 3.535 ≤ x < 3.545"
+    ],
+    "tip": "Set the calculator to display at least 4 extra decimal places before rounding."
+   },
+   {
+    "q": "A speed is recorded as 58.6 km h⁻¹. The required accuracy is 1 d.p. Write the speed with bounds.",
+    "marks": 2,
+    "model": [
+     "Rounded speed 58.6 km h⁻¹",
+     "Lower bound 58.55 ≤ v < 58.65"
+    ],
+    "tip": "Half‑unit for 1 d.p. is 0.05."
+   },
+   {
+    "q": "The result of a calculation is 0.004678. Give the answer to 2 s.f. and state the error interval.",
+    "marks": 3,
+    "model": [
+     "Rounded value 0.0047 (2 s.f.)",
+     "Lower bound 0.00465 ≤ x < 0.00475"
+    ],
+    "tip": "When the first non‑zero digit is far right, count significant figures carefully."
+   },
+   {
+    "q": "A quantity is 1250 g, required to 2 s.f. Provide the rounded value and bounds.",
+    "marks": 2,
+    "model": [
+     "Rounded value 1300 g",
+     "Lower bound 1250 ≤ x < 1350"
+    ],
+    "tip": "The unit of the last significant figure is 100 g; half‑unit = 50 g."
+   },
+   {
+    "q": "The angle measured is 37.48° to the nearest 0.1°. Write the angle with its error interval.",
+    "marks": 2,
+    "model": [
+     "Rounded angle 37.5°",
+     "Lower bound 37.45° ≤ θ < 37.55°"
+    ],
+    "tip": "0.1° → half‑unit 0.05°."
+   },
+   {
+    "q": "A calculator gives 0.666666… for 2/3. Give the answer to 3 d.p. with bounds.",
+    "marks": 3,
+    "model": [
+     "Rounded value 0.667",
+     "Lower bound 0.6665 ≤ x < 0.6675"
+    ],
+    "tip": "Half‑unit for 3 d.p. is 0.0005."
+   },
+   {
+    "q": "The volume of a cylinder is calculated as 125.678 cm³. Give the answer to 1 d.p. and write the bounds.",
+    "marks": 4,
+    "model": [
+     "Rounded value 125.7 cm³",
+     "Lower bound 125.65 ≤ V < 125.75"
+    ],
+    "tip": "Half‑unit for 1 d.p. is 0.05."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A distance is calculated as 12.347 km. Give the answer to 2 d.p. and write the error interval.",
+    "steps": [
+     "Identify required accuracy: 2 d.p.;",
+     "The exact value is 12.347 km;",
+     "Round to 2 d.p.: look at third decimal (7) → round up → 12.35 km;",
+     "Unit of last place = 0.01 km; half‑unit = 0.005 km;",
+     "Lower bound = 12.35 − 0.005 = 12.345 km;",
+     "Upper bound = 12.35 + 0.005 = 12.355 km;",
+     "Write interval: 12.345 ≤ true distance < 12.355 km."
+    ],
+    "ans": "12.35 km, 12.345 ≤ x < 12.355 km"
+   },
+   {
+    "q": "Using a calculator, find √7.23 and give the result to 3 s.f. with bounds.",
+    "steps": [
+     "Calculate √7.23 on calculator → 2.688…;",
+     "Identify 3 s.f.: first three digits 2,6,8 → 2.69 (since next digit 8 ≥5, round up);",
+     "Unit of third s.f. = 0.01; half‑unit = 0.005;",
+     "Lower bound = 2.69 − 0.005 = 2.685;",
+     "Upper bound = 2.69 + 0.005 = 2.695;",
+     "Write interval: 2.685 ≤ true value < 2.695."
+    ],
+    "ans": "2.69, 2.685 ≤ x < 2.695"
+   },
+   {
+    "q": "A mass is recorded as 0.0237 kg. Give the answer to 3 s.f. and state the bounds.",
+    "steps": [
+     "Required: 3 s.f.;",
+     "First three significant figures are 2,3,7 → 0.0237 (the fourth figure is 0, so no rounding up);",
+     "Unit of third s.f. = 0.0001 kg; half‑unit = 0.00005 kg;",
+     "Lower bound = 0.0237 − 0.00005 = 0.02365 kg;",
+     "Upper bound = 0.0237 + 0.00005 = 0.02375 kg;",
+     "Write interval: 0.02365 ≤ m < 0.02375 kg."
+    ],
+    "ans": "0.0237 kg, 0.02365 ≤ m < 0.02375 kg"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Rounding to 2 d.p. and the resulting error interval.",
+    "svg": "<svg viewBox=\"0 0 400 240\" fill=\"#dbeafe\" stroke=\"#1b2540\" font-size=\"12\">\n  <line x1=\"50\" y1=\"180\" x2=\"350\" y2=\"180\" stroke=\"#1b2540\"/>\n  <line x1=\"200\" y1=\"180\" x2=\"200\" y2=\"80\" stroke=\"#1b2540\"/>\n  <text x=\"210\" y=\"100\">Rounded value = 12.35</text>\n  <text x=\"210\" y=\"120\">Lower bound = 12.345</text>\n  <text x=\"210\" y=\"140\">Upper bound = 12.355</text>\n  <line x1=\"190\" y1=\"115\" x2=\"210\" y2=\"115\" stroke=\"#1b2540\"/>\n  <line x1=\"190\" y1=\"135\" x2=\"210\" y2=\"135\" stroke=\"#1b2540\"/>\n  <text x=\"150\" y=\"190\">Exact value 12.347</text>\n  <text x=\"50\" y=\"200\" fill=\"#1b2540\">0</text>\n  <text x=\"350\" y=\"200\" fill=\"#1b2540\">0.01</text>\n</svg>"
+   },
+   {
+    "cap": "Error interval for 3 s.f. rounding (0.0237 kg).",
+    "svg": "<svg viewBox=\"0 0 400 240\" fill=\"#fde68a\" stroke=\"#1b2540\" font-size=\"12\">\n  <line x1=\"60\" y1=\"180\" x2=\"340\" y2=\"180\" stroke=\"#1b2540\"/>\n  <line x1=\"200\" y1=\"180\" x2=\"200\" y2=\"70\" stroke=\"#1b2540\"/>\n  <text x=\"210\" y=\"90\">Rounded = 0.0237</text>\n  <text x=\"210\" y=\"110\">Lower = 0.02365</text>\n  <text x=\"210\" y=\"130\">Upper = 0.02375</text>\n  <line x1=\"190\" y1=\"115\" x2=\"210\" y2=\"115\" stroke=\"#1b2540\"/>\n  <line x1=\"190\" y1=\"135\" x2=\"210\" y2=\"135\" stroke=\"#1b2540\"/>\n  <text x=\"100\" y=\"190\">Exact 0.0237</text>\n  <text x=\"50\" y=\"200\" fill=\"#1b2540\">0</text>\n  <text x=\"340\" y=\"200\" fill=\"#1b2540\">0.0001</text>\n</svg>"
+   },
+   {
+    "cap": "Illustration of bounds for a measurement to 1 d.p. (58.6 km h⁻¹).",
+    "svg": "<svg viewBox=\"0 0 400 240\" fill=\"#bbf7d0\" stroke=\"#1b2540\" font-size=\"12\">\n  <line x1=\"70\" y1=\"180\" x2=\"330\" y2=\"180\" stroke=\"#1b2540\"/>\n  <line x1=\"200\" y1=\"180\" x2=\"200\" y2=\"100\" stroke=\"#1b2540\"/>\n  <text x=\"210\" y=\"120\">Rounded = 58.6</text>\n  <text x=\"210\" y=\"140\">Lower = 58.55</text>\n  <text x=\"210\" y=\"160\">Upper = 58.65</text>\n  <line x1=\"190\" y1=\"145\" x2=\"210\" y2=\"145\" stroke=\"#1b2540\"/>\n  <line x1=\"190\" y1=\"165\" x2=\"210\" y2=\"165\" stroke=\"#1b2540\"/>\n  <text x=\"120\" y=\"190\">Exact 58.6</text>\n  <text x=\"50\" y=\"200\" fill=\"#1b2540\">0</text>\n  <text x=\"340\" y=\"200\" fill=\"#1b2540\">0.1</text>\n</svg>"
+   }
+  ],
+  "pid": "maths_eduqas_h.0.14",
+  "sid": "maths_eduqas_h",
+  "v": 2,
+  "src": "pre",
+  "by": "groq/openai/gpt-oss-120b",
+  "ts": "2026-11-21T16:16:24.509Z"
  }
 }

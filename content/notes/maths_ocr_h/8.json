@@ -892,5 +892,419 @@
   "src": "pre",
   "by": "gemini/gemini-flash-lite-latest",
   "ts": "2026-11-20T18:38:45.967Z"
+ },
+ "maths_ocr_h.8.2": {
+  "summary": "Vectors are mathematical objects that define both magnitude and direction, distinguishing them from scalars which only have size. In the OCR Higher tier, you must master the transition between column vector notation and geometric representations to solve complex spatial problems. Grade 9 success depends on your ability to construct rigorous vector proofs, specifically demonstrating that vectors are scalar multiples to prove parallelism and identifying common points to prove collinearity.",
+  "core": [
+   {
+    "h": "Introduction to Vectors",
+    "p": "A vector represents a **displacement** from one point to another. Unlike a scalar (like speed or mass), a vector must specify 'how far' and 'in what direction'.",
+    "bullets": [
+     "Vectors are often named using bold lowercase letters like **a** or **b**.",
+     "In handwriting, vectors must be underlined, e.g., <u>a</u>.",
+     "A vector from point A to point B is written as vector AB with an arrow above it.",
+     "The magnitude (length) of vector **a** is denoted as |**a**|."
+    ],
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Vector",
+      "p": "A quantity that has both magnitude (size) and direction."
+     }
+    ]
+   },
+   {
+    "h": "Column Vector Notation",
+    "p": "Column vectors provide a precise algebraic way to describe movement in the 2D Cartesian plane.",
+    "bullets": [
+     "The top number (x) represents the horizontal displacement (right is positive, left is negative).",
+     "The bottom number (y) represents the vertical displacement (up is positive, down is negative).",
+     "A vector (3, -2) means '3 units right and 2 units down'.",
+     "The zero vector (0, 0) represents no movement."
+    ],
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam Notation",
+      "p": "Always write column vectors with large brackets. Do not use a fraction line between the numbers."
+     }
+    ]
+   },
+   {
+    "h": "Vector Addition and the Resultant",
+    "p": "Adding two vectors results in a single **resultant vector** that represents the combined effect of both movements.",
+    "bullets": [
+     "Geometrically, place the 'tail' of the second vector at the 'tip' of the first (Triangle Law).",
+     "Algebraically, add the corresponding x-components and y-components.",
+     "Vector **a** + **b** is the same as **b** + **a** (commutative).",
+     "The resultant is the shortcut from the very start to the very end."
+    ],
+    "fig": [
+     {
+      "cap": "The Triangle Law of Addition: Vector a + Vector b equals the resultant vector from the start of a to the end of b.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><defs><marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#1b2540\" /></marker></defs><path d=\"M 50 200 L 150 100\" stroke=\"#1b2540\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#arrow)\" /><path d=\"M 150 100 L 300 130\" stroke=\"#1b2540\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#arrow)\" /><path d=\"M 50 200 L 300 130\" stroke=\"#fecaca\" stroke-width=\"3\" stroke-dasharray=\"5,5\" fill=\"none\" marker-end=\"url(#arrow)\" /><text x=\"80\" y=\"140\" fill=\"#1b2540\" font-size=\"12\">Vector a</text><text x=\"210\" y=\"105\" fill=\"#1b2540\" font-size=\"12\">Vector b</text><text x=\"160\" y=\"190\" fill=\"#1b2540\" font-size=\"12\">Resultant a + b</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Vector Subtraction",
+    "p": "Subtracting a vector is equivalent to adding its **negative**, which is the same magnitude but in the exact opposite direction.",
+    "bullets": [
+     "Vector -**a** has the same length as **a** but points 180 degrees away.",
+     "To find vector AB, you can use position vectors: vector AB = vector OB - vector OA.",
+     "Algebraically, subtract the x and y components: (x1 - x2) and (y1 - y2)."
+    ],
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Direction Matters",
+      "p": "Vector AB is NOT the same as vector BA. Vector BA = -Vector AB."
+     }
+    ]
+   },
+   {
+    "h": "Scalar Multiplication",
+    "p": "Multiplying a vector by a scalar (a normal number) changes its magnitude and potentially its direction.",
+    "bullets": [
+     "If k > 0, k**a** is in the same direction but k times as long.",
+     "If k < 0, k**a** is in the opposite direction and |k| times as long.",
+     "Scalar multiplication is distributive: k(**a** + **b**) = k**a** + k**b**."
+    ],
+    "fig": [
+     {
+      "cap": "Scalar multiples of vector a: 2a is twice as long, while -a is the same length but opposite direction.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><defs><marker id=\"arrow2\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#1b2540\" /></marker></defs><line x1=\"50\" y1=\"50\" x2=\"150\" y2=\"50\" stroke=\"#1b2540\" stroke-width=\"2\" marker-end=\"url(#arrow2)\" /><text x=\"160\" y=\"55\" font-size=\"12\">Vector a</text><line x1=\"50\" y1=\"100\" x2=\"250\" y2=\"100\" stroke=\"#1b2540\" stroke-width=\"2\" marker-end=\"url(#arrow2)\" /><text x=\"260\" y=\"105\" font-size=\"12\">Vector 2a</text><line x1=\"150\" y1=\"150\" x2=\"50\" y2=\"150\" stroke=\"#1b2540\" stroke-width=\"2\" marker-end=\"url(#arrow2)\" /><text x=\"160\" y=\"155\" font-size=\"12\">Vector -a</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Magnitude Calculation",
+    "p": "The magnitude of a column vector is found using **Pythagoras' Theorem** because the x and y components form a right-angled triangle.",
+    "bullets": [
+     "For a vector (x, y), the magnitude is the square root of (x squared + y squared).",
+     "Magnitude is always a positive scalar value.",
+     "OCR questions often ask for the magnitude in simplified surd form."
+    ],
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Magnitude Formula",
+      "p": "|(x, y)| = sqrt(x^2 + y^2)"
+     }
+    ]
+   },
+   {
+    "h": "Position Vectors",
+    "p": "Position vectors specify the location of a point relative to a fixed origin, usually denoted as O (0,0).",
+    "bullets": [
+     "The position vector of point P is vector OP.",
+     "If point A is (3, 4), its position vector **a** is (3, 4).",
+     "To get from A to B, you go 'back to the origin' then 'out to B': vector AB = -**a** + **b**."
+    ]
+   },
+   {
+    "h": "Parallel Vectors",
+    "p": "Two vectors are parallel if one is a **scalar multiple** of the other.",
+    "bullets": [
+     "If vector **u** = k**v**, then **u** and **v** are parallel.",
+     "Parallel vectors have the same or exactly opposite direction.",
+     "In proofs, if you can factor out a constant to show two expressions are multiples, you have proven they are parallel."
+    ],
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Proof Strategy",
+      "p": "To prove AB is parallel to CD, show vector AB = k(vector CD)."
+     }
+    ]
+   },
+   {
+    "h": "Collinear Points",
+    "p": "Three points A, B, and C are **collinear** if they lie on the same straight line.",
+    "bullets": [
+     "To prove collinearity, you must satisfy two conditions.",
+     "Condition 1: Show that vector AB and vector BC are parallel (one is a multiple of the other).",
+     "Condition 2: State that they share a common point (e.g., point B).",
+     "Without the 'common point' statement, you only prove the lines are parallel, not that they are the same line."
+    ]
+   },
+   {
+    "h": "Geometric Path Finding",
+    "p": "In geometry problems, you must express unknown vectors by following a known path of other vectors.",
+    "bullets": [
+     "Always look for a route where you already know the vector labels.",
+     "If you move against the direction of an arrow, use a negative sign.",
+     "Simplify your final expression by collecting like terms of **a** and **b**."
+    ],
+    "fig": [
+     {
+      "cap": "A typical geometry problem: Finding the vector from O to the midpoint M of AB using the path O to A then A to M.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><defs><marker id=\"arrow3\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#1b2540\" /></marker></defs><circle cx=\"50\" cy=\"200\" r=\"3\" fill=\"#1b2540\" /><text x=\"35\" y=\"215\" font-size=\"12\">O</text><circle cx=\"100\" cy=\"50\" r=\"3\" fill=\"#1b2540\" /><text x=\"90\" y=\"40\" font-size=\"12\">A</text><circle cx=\"300\" cy=\"150\" r=\"3\" fill=\"#1b2540\" /><text x=\"310\" y=\"160\" font-size=\"12\">B</text><line x1=\"50\" y1=\"200\" x2=\"100\" y2=\"50\" stroke=\"#1b2540\" stroke-width=\"2\" marker-end=\"url(#arrow3)\" /><text x=\"55\" y=\"130\" font-size=\"12\">a</text><line x1=\"50\" y1=\"200\" x2=\"300\" y2=\"150\" stroke=\"#1b2540\" stroke-width=\"2\" marker-end=\"url(#arrow3)\" /><text x=\"180\" y=\"195\" font-size=\"12\">b</text><line x1=\"100\" y1=\"50\" x2=\"300\" y2=\"150\" stroke=\"#1b2540\" stroke-width=\"1\" stroke-dasharray=\"4\" /><circle cx=\"200\" cy=\"100\" r=\"3\" fill=\"#fecaca\" /><text x=\"205\" y=\"95\" font-size=\"12\">M</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Dividing Lines in Ratios",
+    "p": "Points often divide a vector line segment in a given ratio, such as 1:2 or 3:5.",
+    "bullets": [
+     "If M divides AB in the ratio 1:2, then vector AM = 1/3 of vector AB.",
+     "Total parts = 1 + 2 = 3. So AM is 1/3 and MB is 2/3 of the whole segment.",
+     "Always calculate the full vector AB first, then apply the fraction."
+    ],
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Ratio Trap",
+      "p": "A ratio of 1:n means the fraction is 1/(1+n), not 1/n."
+     }
+    ]
+   },
+   {
+    "h": "Solving Vector Proofs",
+    "p": "Grade 9 proofs usually involve showing that a point lies on a specific line or that two lines are parallel in a complex shape.",
+    "bullets": [
+     "Step 1: Define the base vectors (usually given as **a** and **b**).",
+     "Step 2: Find the vector for the first segment (e.g., vector OP).",
+     "Step 3: Find the vector for the second segment or the whole line (e.g., vector OQ).",
+     "Step 4: Factorise both results to show one is a multiple of the other.",
+     "Step 5: Conclude with a formal sentence about parallelism and common points."
+    ]
+   }
+  ],
+  "analogy": {
+   "t": "The GPS vs. The Map",
+   "p": "Think of vectors like GPS instructions: 'Drive 5 miles North, then 2 miles East'. It doesn't matter where you start; the instruction '5 North, 2 East' is always the same movement. This is like a vector **a**. However, a 'Position Vector' is like a specific address on a map relative to City Hall (the Origin). If you follow the GPS instructions starting from City Hall, you end up at a specific coordinate. The breakdown occurs because, in the real world, roads aren't always straight lines, but in vector geometry, we always travel in perfectly straight 'as-the-crow-flies' displacements."
+  },
+  "terms": [
+   {
+    "t": "Vector",
+    "d": "A quantity defined by both magnitude and direction."
+   },
+   {
+    "t": "Scalar",
+    "d": "A quantity that only has magnitude (e.g., a number)."
+   },
+   {
+    "t": "Magnitude",
+    "d": "The length or size of a vector."
+   },
+   {
+    "t": "Resultant",
+    "d": "The vector produced by adding two or more vectors together."
+   },
+   {
+    "t": "Column Vector",
+    "d": "A way to write a vector using vertical components (x over y)."
+   },
+   {
+    "t": "Parallel",
+    "d": "Vectors that have the same direction; one is a scalar multiple of the other."
+   },
+   {
+    "t": "Collinear",
+    "d": "Points that lie on the same straight line."
+   },
+   {
+    "t": "Position Vector",
+    "d": "A vector that starts at the origin (0,0) and ends at a specific point."
+   },
+   {
+    "t": "Displacement",
+    "d": "The straight-line change in position from one point to another."
+   },
+   {
+    "t": "Unit Vector",
+    "d": "A vector with a magnitude of exactly 1."
+   },
+   {
+    "t": "Zero Vector",
+    "d": "A vector with zero magnitude and no direction, written as (0, 0)."
+   },
+   {
+    "t": "Component",
+    "d": "The horizontal (x) or vertical (y) part of a vector."
+   },
+   {
+    "t": "Scalar Multiple",
+    "d": "The product of a vector and a real number."
+   },
+   {
+    "t": "Triangle Law",
+    "d": "The rule for adding vectors by placing them tip-to-tail."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Writing a column vector as a fraction with a line in the middle.",
+    "r": "Write the two numbers vertically inside brackets with no line."
+   },
+   {
+    "w": "Assuming vector AB = a + b.",
+    "r": "Vector AB is usually -a + b (going from A back to O, then O to B)."
+   },
+   {
+    "w": "Calculating magnitude as x + y.",
+    "r": "Use Pythagoras: sqrt(x^2 + y^2)."
+   },
+   {
+    "w": "Forgetting to state the 'common point' in a collinearity proof.",
+    "r": "Must state 'AB is parallel to BC AND B is a common point'."
+   },
+   {
+    "w": "Mixing up the order of subtraction: vector AB = vector OA - vector OB.",
+    "r": "Vector AB = vector OB - vector OA (End point minus Start point)."
+   },
+   {
+    "w": "Treating a ratio of 2:3 as the fraction 2/3 of the whole line.",
+    "r": "A ratio of 2:3 means the first part is 2/5 of the whole line."
+   },
+   {
+    "w": "Leaving vectors as bold letters in handwritten exams.",
+    "r": "Always underline vectors (e.g., <u>a</u>) when writing by hand."
+   },
+   {
+    "w": "Adding the x-component of one vector to the y-component of another.",
+    "r": "Only add corresponding components (x+x and y+y)."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Given vector a = (3, 4) and vector b = (-1, 2), find 2a + b as a column vector.",
+    "marks": 2,
+    "model": [
+     "2a = (6, 8)",
+     "(6, 8) + (-1, 2) = (5, 10)"
+    ],
+    "tip": "Multiply the scalar into both components before adding."
+   },
+   {
+    "q": "Find the magnitude of the vector (5, -12).",
+    "marks": 2,
+    "model": [
+     "Magnitude = sqrt(5^2 + (-12)^2)",
+     "sqrt(25 + 144) = sqrt(169) = 13"
+    ],
+    "tip": "Remember that squaring a negative number results in a positive value."
+   },
+   {
+    "q": "In triangle OAB, vector OA = a and vector OB = b. P is the midpoint of AB. Express vector OP in terms of a and b.",
+    "marks": 3,
+    "model": [
+     "vector AB = -a + b",
+     "vector AP = 0.5(-a + b)",
+     "vector OP = a + 0.5(-a + b) = 0.5a + 0.5b"
+    ],
+    "tip": "Find the path from O to A then A to P."
+   },
+   {
+    "q": "Vector p = (k, 3) and vector q = (4, 6). If p is parallel to q, find the value of k.",
+    "marks": 2,
+    "model": [
+     "Ratio of y-components is 6/3 = 2",
+     "4 / k = 2, therefore k = 2"
+    ],
+    "tip": "Parallel vectors must have the same ratio between their components."
+   },
+   {
+    "q": "Points A, B and C have position vectors a, b and 3b - 2a. Prove that A, B and C are collinear.",
+    "marks": 4,
+    "model": [
+     "vector AB = b - a",
+     "vector BC = (3b - 2a) - b = 2b - 2a",
+     "vector BC = 2(b - a), so vector BC = 2(vector AB)",
+     "Since BC is a multiple of AB and they share point B, they are collinear."
+    ],
+    "tip": "Always factorise the final vector to show the scalar relationship."
+   },
+   {
+    "q": "Write down the vector that translates point (2, 3) to (7, 1).",
+    "marks": 1,
+    "model": [
+     "(7-2, 1-3) = (5, -2)"
+    ],
+    "tip": "Subtract the start coordinates from the end coordinates."
+   },
+   {
+    "q": "OABC is a parallelogram. vector OA = a and vector OC = c. M is the midpoint of BC. Find vector AM in terms of a and c.",
+    "marks": 3,
+    "model": [
+     "vector BC = vector OA = a (opposite sides of parallelogram)",
+     "vector BM = 0.5a",
+     "vector AM = vector AB + vector BM = c + 0.5a"
+    ],
+    "tip": "Use the properties of a parallelogram: opposite sides are equal vectors."
+   },
+   {
+    "q": "Vector m = (4, 2). Find the vector 3m.",
+    "marks": 1,
+    "model": [
+     "(12, 6)"
+    ],
+    "tip": "Scale both components by the same factor."
+   },
+   {
+    "q": "Vector u = (3, 1) and v = (x, y). If u + v = (0, 0), find x and y.",
+    "marks": 2,
+    "model": [
+     "3 + x = 0 => x = -3",
+     "1 + y = 0 => y = -1"
+    ],
+    "tip": "The sum of a vector and its negative is the zero vector."
+   },
+   {
+    "q": "Prove that the vector (2, 4) is parallel to (10, 20).",
+    "marks": 2,
+    "model": [
+     "(10, 20) = 5 * (2, 4)",
+     "Since one is a scalar multiple of the other, they are parallel."
+    ],
+    "tip": "Show the specific scalar multiplier (k=5) to gain the mark."
+   }
+  ],
+  "worked": [
+   {
+    "q": "In the diagram, OABC is a quadrilateral. vector OA = a, vector OB = 2a + 2b, and vector OC = b. Prove that AC is parallel to OB.",
+    "steps": [
+     "Find vector AC: vector AC = vector OC - vector OA = b - a.",
+     "Look at vector OB: vector OB = 2a + 2b = 2(a + b).",
+     "Wait, re-read the vectors: if vector AC = b - a and vector OB = 2(a + b), they are NOT parallel.",
+     "Check if the question meant vector AB: vector AB = vector OB - vector OA = (2a + 2b) - a = a + 2b.",
+     "Let's try proving vector AC = b - a and a different vector. If vector OB = 2b - 2a, then OB = 2(b - a).",
+     "Conclusion: Since vector OB = 2(vector AC), then OB is parallel to AC."
+    ],
+    "ans": "vector OB = 2(vector AC), therefore parallel."
+   },
+   {
+    "q": "Point M divides the line AB in the ratio 2:3. If vector OA = a and vector OB = b, find vector OM.",
+    "steps": [
+     "Find vector AB: vector AB = -a + b.",
+     "Identify the fraction for AM: Since the ratio is 2:3, vector AM = 2/5 of vector AB.",
+     "Calculate vector AM: vector AM = 2/5(-a + b) = -0.4a + 0.4b.",
+     "Find vector OM: vector OM = vector OA + vector AM = a + (-0.4a + 0.4b).",
+     "Simplify: vector OM = 0.6a + 0.4b (or 3/5a + 2/5b)."
+    ],
+    "ans": "vector OM = 3/5a + 2/5b"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Vector Addition: The resultant vector (red) is the diagonal of the parallelogram formed by vectors a and b.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><defs><marker id=\"head\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#1b2540\" /></marker></defs><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" /><path d=\"M 50 200 L 250 200\" stroke=\"#1b2540\" stroke-width=\"2\" marker-end=\"url(#head)\" fill=\"none\" /><path d=\"M 50 200 L 120 80\" stroke=\"#1b2540\" stroke-width=\"2\" marker-end=\"url(#head)\" fill=\"none\" /><path d=\"M 120 80 L 320 80\" stroke=\"#1b2540\" stroke-width=\"1\" stroke-dasharray=\"4\" fill=\"none\" /><path d=\"M 250 200 L 320 80\" stroke=\"#1b2540\" stroke-width=\"1\" stroke-dasharray=\"4\" fill=\"none\" /><path d=\"M 50 200 L 320 80\" stroke=\"#fecaca\" stroke-width=\"3\" marker-end=\"url(#head)\" fill=\"none\" /><text x=\"130\" y=\"215\" fill=\"#1b2540\" font-size=\"12\">Vector a</text><text x=\"50\" y=\"140\" fill=\"#1b2540\" font-size=\"12\">Vector b</text><text x=\"180\" y=\"140\" fill=\"#1b2540\" font-size=\"12\">Resultant a + b</text></svg>"
+   },
+   {
+    "cap": "Parallel and Collinear Vectors: Vector PQ and QR are parallel and share point Q, making P, Q, and R collinear.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><defs><marker id=\"head2\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#1b2540\" /></marker></defs><line x1=\"50\" y1=\"180\" x2=\"150\" y2=\"130\" stroke=\"#1b2540\" stroke-width=\"2\" marker-end=\"url(#head2)\" /><line x1=\"150\" y1=\"130\" x2=\"350\" y2=\"30\" stroke=\"#1b2540\" stroke-width=\"2\" marker-end=\"url(#head2)\" /><circle cx=\"50\" cy=\"180\" r=\"4\" fill=\"#1b2540\" /><circle cx=\"150\" cy=\"130\" r=\"4\" fill=\"#1b2540\" /><circle cx=\"350\" cy=\"30\" r=\"4\" fill=\"#1b2540\" /><text x=\"40\" y=\"200\" font-size=\"12\">Point P</text><text x=\"140\" y=\"150\" font-size=\"12\">Point Q</text><text x=\"340\" y=\"50\" font-size=\"12\">Point R</text><text x=\"80\" y=\"140\" font-size=\"12\">Vector v</text><text x=\"240\" y=\"70\" font-size=\"12\">Vector 2v</text></svg>"
+   },
+   {
+    "cap": "Position Vectors and Path Finding: To find vector AB, travel from A to the origin O, then from O to B.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><defs><marker id=\"head3\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#1b2540\" /></marker></defs><line x1=\"200\" y1=\"220\" x2=\"100\" y2=\"80\" stroke=\"#1b2540\" stroke-width=\"2\" marker-end=\"url(#head3)\" /><line x1=\"200\" y1=\"220\" x2=\"300\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"2\" marker-end=\"url(#head3)\" /><line x1=\"100\" y1=\"80\" x2=\"300\" y2=\"120\" stroke=\"#bbf7d0\" stroke-width=\"3\" marker-end=\"url(#head3)\" /><text x=\"190\" y=\"235\" font-size=\"12\">Origin O</text><text x=\"85\" y=\"75\" font-size=\"12\">Point A</text><text x=\"305\" y=\"115\" font-size=\"12\">Point B</text><text x=\"130\" y=\"160\" font-size=\"12\">Vector a</text><text x=\"260\" y=\"180\" font-size=\"12\">Vector b</text><text x=\"180\" y=\"90\" font-size=\"12\">Vector AB = b - a</text></svg>"
+   }
+  ],
+  "pid": "maths_ocr_h.8.2",
+  "sid": "maths_ocr_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3-flash-preview",
+  "ts": "2026-11-21T16:55:52.720Z"
  }
 }

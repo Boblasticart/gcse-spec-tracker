@@ -1514,5 +1514,778 @@
   "src": "pre",
   "by": "gemini/gemini-flash-lite-latest",
   "ts": "2026-11-19T20:34:46.896Z"
+ },
+ "maths_ocr_h.5.5": {
+  "summary": "Sequences are ordered lists of numbers following specific patterns, forming a cornerstone of algebraic reasoning in OCR GCSE Maths. Mastering sequences requires moving beyond simple term-to-term rules to derive general nth term formulae for linear, quadratic, and geometric patterns, allowing for the prediction of any term in the set. This topic bridges the gap between arithmetic and functional notation, demanding precision in handling common differences, second differences, and multiplicative ratios to solve complex problems.",
+  "core": [
+   {
+    "h": "Introduction to Sequence Notation",
+    "p": "A sequence is a list of numbers, called **terms**, that follow a specific rule. We use the letter **n** to represent the position of a term in the sequence (where n = 1 is the first term, n = 2 is the second, and so on).",
+    "bullets": [
+     "The value of a term at position n is often denoted as u_n or x_n.",
+     "Term-to-term rules describe how to get from one number to the next (e.g., 'add 5').",
+     "Position-to-term rules (nth term) allow you to calculate any term directly using its position n.",
+     "Finite sequences have an end; infinite sequences continue forever."
+    ],
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Term",
+      "p": "An individual number within a sequence."
+     },
+     {
+      "k": "key",
+      "t": "Position n",
+      "p": "n must always be a positive integer (1, 2, 3...)."
+     }
+    ]
+   },
+   {
+    "h": "Arithmetic (Linear) Sequences",
+    "p": "Arithmetic sequences have a **common difference** (d), meaning you add or subtract the same amount each time. These are called linear because their nth term formula takes the form of a straight-line graph equation.",
+    "bullets": [
+     "The formula is always in the form: u_n = dn + c.",
+     "d is the common difference (the 'jump' between terms).",
+     "c is the 'zero-th' term (the first term minus the difference).",
+     "If the sequence is decreasing, d will be negative."
+    ],
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Finding c",
+      "p": "To find c, subtract the common difference from the first term: c = u_1 - d."
+     }
+    ]
+   },
+   {
+    "h": "Quadratic Sequences",
+    "p": "In a quadratic sequence, the first differences are not constant, but the **second differences** are. The nth term formula is a quadratic expression: u_n = an^2 + bn + c.",
+    "bullets": [
+     "The second difference is always equal to 2a.",
+     "The first difference between the first and second terms is 3a + b.",
+     "The first term (u_1) is equal to a + b + c.",
+     "Quadratic sequences model areas or accelerating patterns."
+    ],
+    "callouts": [
+     {
+      "k": "key",
+      "t": "The 2a Rule",
+      "p": "If the second difference is 4, then 2a = 4, so a = 2. The formula starts with 2n^2."
+     }
+    ]
+   },
+   {
+    "h": "Geometric Sequences",
+    "p": "Geometric sequences involve multiplying or dividing by a **common ratio** (r) to get the next term. These grow or decay exponentially.",
+    "bullets": [
+     "The formula is u_n = a * r^(n-1), where a is the first term.",
+     "If r > 1, the sequence grows (diverges).",
+     "If 0 < r < 1, the sequence shrinks (converges towards zero).",
+     "If r is negative, the terms will alternate between positive and negative values."
+    ],
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Finding r",
+      "p": "Find the common ratio by dividing any term by the term before it: r = u_2 / u_1."
+     }
+    ]
+   },
+   {
+    "h": "Fibonacci-type Sequences",
+    "p": "In a Fibonacci sequence, each term is the sum of the two preceding terms. The most famous starts 1, 1, 2, 3, 5, 8, 13...",
+    "bullets": [
+     "The recurrence relation is u_n = u_(n-1) + u_(n-2).",
+     "OCR may ask you to find missing terms in a Fibonacci-style sequence starting with different numbers.",
+     "Algebraic Fibonacci problems often involve terms like x, y, x+y, x+2y, 2x+3y."
+    ]
+   },
+   {
+    "h": "Special Number Sequences",
+    "p": "There are several named sequences that you are expected to recognize instantly in the exam.",
+    "table": {
+     "head": [
+      "Sequence Name",
+      "First 5 Terms",
+      "Nth Term Rule"
+     ],
+     "rows": [
+      [
+       "Square Numbers",
+       "1, 4, 9, 16, 25",
+       "n^2"
+      ],
+      [
+       "Cube Numbers",
+       "1, 8, 27, 64, 125",
+       "n^3"
+      ],
+      [
+       "Triangular Numbers",
+       "1, 3, 6, 10, 15",
+       "n(n+1) / 2"
+      ],
+      [
+       "Powers of 2",
+       "2, 4, 8, 16, 32",
+       "2^n"
+      ]
+     ]
+    }
+   },
+   {
+    "h": "Prime Numbers",
+    "p": "The sequence of prime numbers is unique because it does not have a simple algebraic nth term formula.",
+    "bullets": [
+     "Sequence: 2, 3, 5, 7, 11, 13, 17, 19, 23...",
+     "Remember: 1 is NOT a prime number.",
+     "2 is the only even prime number.",
+     "Primes are integers greater than 1 with exactly two factors: 1 and themselves."
+    ]
+   },
+   {
+    "h": "Testing if a Value is in a Sequence",
+    "p": "To determine if a specific number (k) belongs to a sequence, set the nth term formula equal to k and solve for n.",
+    "bullets": [
+     "If n is a positive integer, the number is in the sequence.",
+     "If n is a fraction or decimal, the number is not in the sequence.",
+     "Example: For u_n = 3n + 1, is 20 in the sequence? 3n + 1 = 20 -> 3n = 19 -> n = 6.33 (No)."
+    ]
+   },
+   {
+    "h": "Finding the Nth Term: Linear Method",
+    "p": "Follow these steps for any arithmetic sequence like 7, 11, 15, 19...",
+    "bullets": [
+     "1. Find the difference: 11 - 7 = 4. This gives you 4n.",
+     "2. Find the 'zero-th' term: 7 - 4 = 3.",
+     "3. Combine them: u_n = 4n + 3.",
+     "4. Check: If n=1, 4(1)+3=7. Correct."
+    ]
+   },
+   {
+    "h": "Finding the Nth Term: Quadratic Method",
+    "p": "For a sequence like 2, 6, 12, 20...",
+    "bullets": [
+     "1. Find first differences: 4, 6, 8.",
+     "2. Find second difference: 2. This is 2a, so a = 1.",
+     "3. Use 3a + b = first difference (4): 3(1) + b = 4, so b = 1.",
+     "4. Use a + b + c = first term (2): 1 + 1 + c = 2, so c = 0.",
+     "5. Formula: n^2 + n."
+    ]
+   },
+   {
+    "h": "Fractional Sequences",
+    "p": "If a sequence is made of fractions, find the nth term for the numerators and denominators separately.",
+    "bullets": [
+     "Example: 1/2, 2/3, 3/4, 4/5...",
+     "Numerator nth term: n.",
+     "Denominator nth term: n + 1.",
+     "Full nth term: n / (n + 1)."
+    ]
+   },
+   {
+    "h": "Limits and Large n",
+    "p": "Higher tier students should understand what happens as n becomes very large (n tends to infinity).",
+    "bullets": [
+     "In sequences like 1/n, as n increases, the term value gets closer to 0.",
+     "In linear or quadratic sequences where a > 0, the terms increase without limit.",
+     "This is useful for identifying the long-term behavior of patterns."
+    ]
+   }
+  ],
+  "analogy": {
+   "t": "The Staircase Analogy",
+   "p": "A sequence is like a staircase. An arithmetic sequence is a standard staircase where every step is exactly the same height (constant difference). A quadratic sequence is like a staircase where each step gets progressively taller by a fixed amount (changing difference, constant acceleration). A geometric sequence is like a trampoline bounce: each bounce reaches a fixed percentage of the height of the previous one. The analogy breaks down because real staircases are physical objects, while sequences are abstract lists that can include negative numbers or fractions that don't represent physical 'height'."
+  },
+  "terms": [
+   {
+    "t": "Arithmetic Sequence",
+    "d": "A sequence where the difference between consecutive terms is constant."
+   },
+   {
+    "t": "Geometric Sequence",
+    "d": "A sequence where each term is found by multiplying the previous term by a non-zero constant ratio."
+   },
+   {
+    "t": "Quadratic Sequence",
+    "d": "A sequence where the second differences between terms are constant."
+   },
+   {
+    "t": "Common Difference",
+    "d": "The constant value added to each term to get the next in an arithmetic sequence."
+   },
+   {
+    "t": "Common Ratio",
+    "d": "The constant value multiplied by each term to get the next in a geometric sequence."
+   },
+   {
+    "t": "Nth Term",
+    "d": "A formula that expresses the value of a term in terms of its position n."
+   },
+   {
+    "t": "Recurrence Relation",
+    "d": "A rule that defines a term based on the previous term(s)."
+   },
+   {
+    "t": "Fibonacci Sequence",
+    "d": "A sequence where each term is the sum of the two preceding terms."
+   },
+   {
+    "t": "Convergent",
+    "d": "A sequence that approaches a specific value as n increases."
+   },
+   {
+    "t": "Divergent",
+    "d": "A sequence that does not approach a specific value but grows without limit."
+   },
+   {
+    "t": "Triangular Number",
+    "d": "Numbers that can form an equilateral triangle pattern (1, 3, 6, 10...)."
+   },
+   {
+    "t": "First Difference",
+    "d": "The result of subtracting a term from the term that follows it."
+   },
+   {
+    "t": "Second Difference",
+    "d": "The difference between consecutive first differences."
+   },
+   {
+    "t": "Position",
+    "d": "The index n representing where a term sits in the list."
+   },
+   {
+    "t": "Term-to-term rule",
+    "d": "A rule describing how to calculate a term from the one immediately before it."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Writing n = 0 for the first term.",
+    "r": "The first term is always n = 1."
+   },
+   {
+    "w": "Using the first difference as 'a' in an^2 + bn + c.",
+    "r": "The second difference is 2a, so 'a' is half the second difference."
+   },
+   {
+    "w": "Confusing arithmetic and geometric sequences.",
+    "r": "Check if you are adding (arithmetic) or multiplying (geometric)."
+   },
+   {
+    "w": "Forgetting the minus sign for decreasing linear sequences.",
+    "r": "If the sequence goes 10, 7, 4... the difference is -3, so the rule starts -3n."
+   },
+   {
+    "w": "Thinking 1 is a prime number.",
+    "r": "Prime numbers must have exactly two factors; 1 only has one factor."
+   },
+   {
+    "w": "Writing 'add 4' when asked for the nth term.",
+    "r": "The nth term must be an algebraic expression like 4n + 3."
+   },
+   {
+    "w": "Calculating 2n^2 as (2n)^2.",
+    "r": "Square the n first, then multiply by 2 (BIDMAS)."
+   },
+   {
+    "w": "Solving u_n = k and getting n = 4.5, then saying it is the 5th term.",
+    "r": "If n is not an integer, the value is not in the sequence at all."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Find the next two terms in the sequence: 1, 1, 2, 3, 5, ...",
+    "marks": 2,
+    "model": [
+     "Identify as Fibonacci sequence: 3 + 5 = 8",
+     "Next term: 5 + 8 = 13",
+     "Answer: 8, 13"
+    ],
+    "tip": "Always check if the sequence is Fibonacci if linear and geometric rules fail."
+   },
+   {
+    "q": "Find the nth term of the sequence: 5, 8, 11, 14, ...",
+    "marks": 2,
+    "model": [
+     "Common difference d = 3",
+     "Zero-th term c = 5 - 3 = 2",
+     "nth term = 3n + 2"
+    ],
+    "tip": "Test your formula with n=1 and n=2 to ensure it works."
+   },
+   {
+    "q": "A sequence has nth term n^2 - 3n. Find the 10th term.",
+    "marks": 1,
+    "model": [
+     "Substitute n = 10: 10^2 - 3(10)",
+     "100 - 30 = 70"
+    ],
+    "tip": "Substitution is the most common 1-mark sequence question."
+   },
+   {
+    "q": "Find the nth term of the quadratic sequence: 4, 11, 22, 37, ...",
+    "marks": 4,
+    "model": [
+     "1st diffs: 7, 11, 15. 2nd diff: 4.",
+     "2a = 4 -> a = 2.",
+     "3a + b = 7 -> 3(2) + b = 7 -> b = 1.",
+     "a + b + c = 4 -> 2 + 1 + c = 4 -> c = 1.",
+     "nth term = 2n^2 + n + 1"
+    ],
+    "tip": "Show all three equations (2a, 3a+b, a+b+c) to secure method marks."
+   },
+   {
+    "q": "Is 120 a term in the sequence with nth term 5n - 4?",
+    "marks": 3,
+    "model": [
+     "Set 5n - 4 = 120",
+     "5n = 124",
+     "n = 24.8",
+     "Conclusion: No, because n is not an integer."
+    ],
+    "tip": "You must explicitly state that n is not an integer for the final mark."
+   },
+   {
+    "q": "Find the common ratio of the geometric sequence: 10, 5, 2.5, 1.25, ...",
+    "marks": 1,
+    "model": [
+     "5 / 10 = 0.5",
+     "Common ratio = 0.5"
+    ],
+    "tip": "Ratios can be fractions or decimals."
+   },
+   {
+    "q": "The first three terms of a geometric sequence are 3, 12, 48. Find the nth term.",
+    "marks": 2,
+    "model": [
+     "First term a = 3, Ratio r = 4",
+     "nth term = 3 * 4^(n-1)"
+    ],
+    "tip": "Do not multiply 3 and 4 to get 12^(n-1); the power only applies to the ratio."
+   },
+   {
+    "q": "A sequence of patterns uses matchsticks. Pattern 1 uses 4, Pattern 2 uses 7, Pattern 3 uses 10. How many matchsticks in Pattern 50?",
+    "marks": 3,
+    "model": [
+     "nth term = 3n + 1",
+     "Substitute n = 50: 3(50) + 1",
+     "Answer = 151"
+    ],
+    "tip": "Convert visual patterns into a numerical sequence first."
+   },
+   {
+    "q": "Find the nth term of: 1/4, 4/9, 9/16, 16/25...",
+    "marks": 3,
+    "model": [
+     "Numerators: 1, 4, 9, 16 -> n^2",
+     "Denominators: 4, 9, 16, 25 -> (n+1)^2",
+     "nth term = n^2 / (n+1)^2"
+    ],
+    "tip": "Look for square numbers that have been shifted."
+   },
+   {
+    "q": "The nth term of a sequence is 2n^2 + 5. At what position is the term 205?",
+    "marks": 3,
+    "model": [
+     "2n^2 + 5 = 205",
+     "2n^2 = 200",
+     "n^2 = 100",
+     "n = 10"
+    ],
+    "tip": "Ignore the negative root n = -10 as position must be positive."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Find the nth term for the sequence: 15, 13, 11, 9, ...",
+    "steps": [
+     "Find the difference: 13 - 15 = -2.",
+     "This gives the start of the formula: -2n.",
+     "Find the zero-th term: 15 - (-2) = 17.",
+     "Combine: -2n + 17 or 17 - 2n."
+    ],
+    "ans": "u_n = 17 - 2n"
+   },
+   {
+    "q": "Find the nth term for the sequence: 5, 12, 23, 38, ...",
+    "steps": [
+     "1st differences: 7, 11, 15.",
+     "2nd differences: 4, 4. Constant second difference means quadratic.",
+     "2a = 4, so a = 2. Formula starts 2n^2.",
+     "Subtract 2n^2 from original terms: (5-2), (12-8), (23-18), (38-32) -> 3, 4, 5, 6.",
+     "Find nth term of 3, 4, 5, 6: This is n + 2.",
+     "Combine: 2n^2 + n + 2."
+    ],
+    "ans": "u_n = 2n^2 + n + 2"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Visualizing a Linear Sequence (3, 7, 11, 15). The constant addition of 4 creates a straight-line growth pattern.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"180\" width=\"40\" height=\"30\" fill=\"#dbeafe\" stroke=\"#1b2540\"/><rect x=\"80\" y=\"140\" width=\"40\" height=\"70\" fill=\"#dbeafe\" stroke=\"#1b2540\"/><rect x=\"140\" y=\"100\" width=\"40\" height=\"110\" fill=\"#dbeafe\" stroke=\"#1b2540\"/><rect x=\"200\" y=\"60\" width=\"40\" height=\"150\" fill=\"#dbeafe\" stroke=\"#1b2540\"/><text x=\"30\" y=\"230\" font-size=\"12\" fill=\"#1b2540\">n=1</text><text x=\"90\" y=\"230\" font-size=\"12\" fill=\"#1b2540\">n=2</text><text x=\"150\" y=\"230\" font-size=\"12\" fill=\"#1b2540\">n=3</text><text x=\"210\" y=\"230\" font-size=\"12\" fill=\"#1b2540\">n=4</text><text x=\"30\" y=\"170\" font-size=\"12\" fill=\"#1b2540\">3</text><text x=\"90\" y=\"130\" font-size=\"12\" fill=\"#1b2540\">7</text><text x=\"150\" y=\"90\" font-size=\"12\" fill=\"#1b2540\">11</text><text x=\"210\" y=\"50\" font-size=\"12\" fill=\"#1b2540\">15</text><path d=\"M 60 160 Q 70 150 80 160\" fill=\"none\" stroke=\"#1b2540\"/><text x=\"60\" y=\"145\" font-size=\"11\" fill=\"#1b2540\">+4</text></svg>"
+   },
+   {
+    "cap": "The Second Difference Method for Quadratic Sequences. Constant second differences indicate an n-squared relationship.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><text x=\"20\" y=\"40\" font-size=\"13\" font-weight=\"bold\" fill=\"#1b2540\">Sequence:</text><text x=\"100\" y=\"40\" font-size=\"13\" fill=\"#1b2540\">2, 6, 12, 20, 30</text><text x=\"20\" y=\"80\" font-size=\"13\" font-weight=\"bold\" fill=\"#1b2540\">1st Diff:</text><text x=\"100\" y=\"80\" font-size=\"13\" fill=\"#1b2540\">4, 6, 8, 10</text><text x=\"20\" y=\"120\" font-size=\"13\" font-weight=\"bold\" fill=\"#1b2540\">2nd Diff:</text><text x=\"100\" y=\"120\" font-size=\"13\" fill=\"#1b2540\">2, 2, 2</text><line x1=\"100\" y1=\"45\" x2=\"110\" y2=\"65\" stroke=\"#1b2540\"/><line x1=\"130\" y1=\"45\" x2=\"120\" y2=\"65\" stroke=\"#1b2540\"/><rect x=\"20\" y=\"150\" width=\"360\" height=\"60\" rx=\"10\" fill=\"#fde68a\" stroke=\"#1b2540\"/><text x=\"40\" y=\"175\" font-size=\"12\" fill=\"#1b2540\">2a = Second Difference (2)</text><text x=\"40\" y=\"195\" font-size=\"12\" fill=\"#1b2540\">So a = 1 (Rule contains 1n^2)</text></svg>"
+   },
+   {
+    "cap": "Geometric Growth (Common Ratio = 2). Each term is double the previous, leading to rapid increases in value.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><circle cx=\"50\" cy=\"120\" r=\"10\" fill=\"#bbf7d0\" stroke=\"#1b2540\"/><circle cx=\"120\" cy=\"120\" r=\"20\" fill=\"#bbf7d0\" stroke=\"#1b2540\"/><circle cx=\"210\" cy=\"120\" r=\"40\" fill=\"#bbf7d0\" stroke=\"#1b2540\"/><circle cx=\"340\" cy=\"120\" r=\"80\" fill=\"#bbf7d0\" stroke=\"#1b2540\"/><text x=\"45\" y=\"220\" font-size=\"12\" fill=\"#1b2540\">2</text><text x=\"115\" y=\"220\" font-size=\"12\" fill=\"#1b2540\">4</text><text x=\"205\" y=\"220\" font-size=\"12\" fill=\"#1b2540\">8</text><text x=\"335\" y=\"220\" font-size=\"12\" fill=\"#1b2540\">16</text><text x=\"70\" y=\"100\" font-size=\"11\" fill=\"#1b2540\">x2</text><text x=\"150\" y=\"100\" font-size=\"11\" fill=\"#1b2540\">x2</text><text x=\"260\" y=\"100\" font-size=\"11\" fill=\"#1b2540\">x2</text></svg>"
+   },
+   {
+    "cap": "Triangular Numbers (1, 3, 6, 10). These represent the number of dots needed to form an equilateral triangle.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><circle cx=\"30\" cy=\"40\" r=\"5\" fill=\"#fecaca\" stroke=\"#1b2540\"/><circle cx=\"80\" cy=\"40\" r=\"5\" fill=\"#fecaca\" stroke=\"#1b2540\"/><circle cx=\"70\" cy=\"60\" r=\"5\" fill=\"#fecaca\" stroke=\"#1b2540\"/><circle cx=\"90\" cy=\"60\" r=\"5\" fill=\"#fecaca\" stroke=\"#1b2540\"/><circle cx=\"150\" cy=\"40\" r=\"5\" fill=\"#fecaca\" stroke=\"#1b2540\"/><circle cx=\"140\" cy=\"60\" r=\"5\" fill=\"#fecaca\" stroke=\"#1b2540\"/><circle cx=\"160\" cy=\"60\" r=\"5\" fill=\"#fecaca\" stroke=\"#1b2540\"/><circle cx=\"130\" cy=\"80\" r=\"5\" fill=\"#fecaca\" stroke=\"#1b2540\"/><circle cx=\"150\" cy=\"80\" r=\"5\" fill=\"#fecaca\" stroke=\"#1b2540\"/><circle cx=\"170\" cy=\"80\" r=\"5\" fill=\"#fecaca\" stroke=\"#1b2540\"/><text x=\"25\" y=\"110\" font-size=\"12\" fill=\"#1b2540\">T1=1</text><text x=\"75\" y=\"110\" font-size=\"12\" fill=\"#1b2540\">T2=3</text><text x=\"140\" y=\"110\" font-size=\"12\" fill=\"#1b2540\">T3=6</text><rect x=\"220\" y=\"40\" width=\"150\" height=\"60\" fill=\"#e9d5ff\" stroke=\"#1b2540\"/><text x=\"230\" y=\"65\" font-size=\"12\" fill=\"#1b2540\">Formula: n(n+1)/2</text><text x=\"230\" y=\"85\" font-size=\"12\" fill=\"#1b2540\">T4 = 4(5)/2 = 10</text></svg>"
+   }
+  ],
+  "pid": "maths_ocr_h.5.5",
+  "sid": "maths_ocr_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3-flash-preview",
+  "ts": "2026-11-21T16:56:57.993Z"
+ },
+ "maths_ocr_h.5.3": {
+  "summary": "Algebraic inequalities extend the concept of equations to describe ranges of possible values rather than single solutions. For OCR Higher tier, students must master the transition between algebraic solutions, visual representations on number lines, and formal set notation. This topic bridges the gap between basic algebra and complex coordinate geometry, requiring a deep understanding of how operations—specifically multiplication and division by negative numbers—affect the direction of inequality symbols and how multiple constraints define specific regions in a 2D plane.",
+  "core": [
+   {
+    "h": "Inequality Symbols and Meaning",
+    "p": "Inequalities describe the relationship between two expressions that are not necessarily equal. Understanding the strictness of the boundary is the first step to accuracy.",
+    "bullets": [
+     "**< (Less than)**: The value on the left is strictly smaller than the right.",
+     "**> (Greater than)**: The value on the left is strictly larger than the right.",
+     "**≤ (Less than or equal to)**: Includes the boundary value.",
+     "**≥ (Greater than or equal to)**: Includes the boundary value.",
+     "**≠ (Not equal to)**: Any value except the one specified."
+    ],
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Strict Inequality",
+      "p": "An inequality that does not include the equality case (using < or > symbols)."
+     }
+    ]
+   },
+   {
+    "h": "Number Line Representation",
+    "p": "Visualising inequalities on a 1D number line is a fundamental skill. The type of circle used at the boundary indicates whether the value is included.",
+    "bullets": [
+     "**Open Circle (○)**: Used for strict inequalities (< or >) to show the boundary is not included.",
+     "**Closed Circle (●)**: Used for non-strict inequalities (≤ or ≥) to show the boundary is included.",
+     "**Directional Arrows**: A line extending from the circle shows the direction of the solution set.",
+     "**Line Segments**: Used for double inequalities (e.g., -2 < x ≤ 3) to show a bounded range."
+    ],
+    "fig": [
+     {
+      "cap": "Number line showing strict and non-strict inequalities for different ranges.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"20\" y1=\"120\" x2=\"380\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"100\" y1=\"115\" x2=\"100\" y2=\"125\" stroke=\"#1b2540\"/><line x1=\"200\" y1=\"115\" x2=\"200\" y2=\"125\" stroke=\"#1b2540\"/><line x1=\"300\" y1=\"115\" x2=\"300\" y2=\"125\" stroke=\"#1b2540\"/><text x=\"95\" y=\"140\" fill=\"#1b2540\">-2</text><text x=\"195\" y=\"140\" fill=\"#1b2540\">0</text><text x=\"295\" y=\"140\" fill=\"#1b2540\">2</text><circle cx=\"100\" cy=\"80\" r=\"5\" fill=\"#fff\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"105\" y1=\"80\" x2=\"350\" y2=\"80\" stroke=\"#1b2540\" stroke-width=\"2\"/><polygon points=\"350,75 365,80 350,85\" fill=\"#1b2540\"/><text x=\"110\" y=\"70\" fill=\"#1b2540\">x > -2</text><circle cx=\"300\" cy=\"40\" r=\"5\" fill=\"#1b2540\"/><line x1=\"50\" y1=\"40\" x2=\"295\" y2=\"40\" stroke=\"#1b2540\" stroke-width=\"2\"/><polygon points=\"50,35 35,40 50,45\" fill=\"#1b2540\"/><text x=\"240\" y=\"30\" fill=\"#1b2540\">x ≤ 2</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Solving Linear Inequalities",
+    "p": "Linear inequalities are solved using the same balance method as equations, with one critical exception regarding negative numbers.",
+    "bullets": [
+     "Add or subtract terms from both sides without changing the inequality sign.",
+     "Multiply or divide by positive numbers without changing the inequality sign.",
+     "**The Negative Rule**: If you multiply or divide by a negative number, you MUST reverse the inequality sign.",
+     "Example: -2x < 10 becomes x > -5."
+    ],
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Negative Division",
+      "p": "Forgetting to flip the sign when dividing by a negative is the most common error in Higher tier papers."
+     }
+    ]
+   },
+   {
+    "h": "Set Notation for Inequalities",
+    "p": "OCR requires students to express solutions using formal set notation. This uses curly brackets and a vertical bar or colon to define the properties of the set.",
+    "bullets": [
+     "**{x : x > 3}**: Read as 'the set of all x such that x is greater than 3'.",
+     "**{x : a < x < b}**: Represents a bounded range of values.",
+     "**Union (∪)**: Used to combine two separate solution sets (e.g., for quadratic inequalities where x < a or x > b).",
+     "**Intersection (∩)**: Used to find where two inequalities overlap."
+    ]
+   },
+   {
+    "h": "Double Inequalities",
+    "p": "Double inequalities like -5 ≤ 2x + 1 < 9 describe a value trapped between two boundaries.",
+    "bullets": [
+     "Solve by performing the same operation to all three parts of the inequality.",
+     "Alternatively, split into two separate inequalities: -5 ≤ 2x + 1 AND 2x + 1 < 9.",
+     "Final solutions must be combined back into a single statement if possible, or listed as a set."
+    ]
+   },
+   {
+    "h": "Solving Quadratic Inequalities",
+    "p": "Quadratic inequalities (e.g., x² - 5x + 6 > 0) cannot be solved by simple rearrangement. They require finding critical values first.",
+    "bullets": [
+     "**Step 1**: Rearrange to get 0 on one side (e.g., ax² + bx + c > 0).",
+     "**Step 2**: Solve the quadratic equation ax² + bx + c = 0 to find the **critical values**.",
+     "**Step 3**: Sketch the parabola. If a > 0, it is U-shaped.",
+     "**Step 4**: Identify the regions. For > 0, look for parts of the curve above the x-axis. For < 0, look for parts below the x-axis."
+    ],
+    "fig": [
+     {
+      "cap": "Quadratic inequality x² - 4 < 0. The solution is the region between the critical values -2 and 2.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><path d=\"M 100,40 Q 200,240 300,40\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"120\" x2=\"350\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M 145,120 Q 200,210 255,120\" fill=\"#bbf7d0\" opacity=\"0.5\"/><circle cx=\"145\" cy=\"120\" r=\"4\" fill=\"#fff\" stroke=\"#1b2540\"/><circle cx=\"255\" cy=\"120\" r=\"4\" fill=\"#fff\" stroke=\"#1b2540\"/><text x=\"130\" y=\"110\" fill=\"#1b2540\">-2</text><text x=\"250\" y=\"110\" fill=\"#1b2540\">2</text><text x=\"160\" y=\"180\" fill=\"#1b2540\">x² - 4 &lt; 0</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Inequalities in Two Variables",
+    "p": "These define regions on a Cartesian coordinate plane (x and y axes).",
+    "bullets": [
+     "The boundary is the line formed by replacing the inequality sign with an equals sign.",
+     "**Dashed Line**: Used for strict inequalities (< or >).",
+     "**Solid Line**: Used for non-strict inequalities (≤ or ≥).",
+     "**Test Points**: Pick a point (like 0,0) not on the line. If it satisfies the inequality, shade that side. If not, shade the other side."
+    ]
+   },
+   {
+    "h": "Shading Regions and Conventions",
+    "p": "In exams, you are often asked to shade the 'unwanted' region or the 'wanted' region. Read the question carefully.",
+    "bullets": [
+     "If the question asks to 'Shade the region R', only the area satisfying all inequalities should be marked.",
+     "OCR often uses the convention of shading the **wanted** region unless specified otherwise.",
+     "Ensure boundaries are correctly drawn as solid or dashed to gain full marks."
+    ],
+    "fig": [
+     {
+      "cap": "Region defined by y ≥ x + 2 and y ≤ 5. The intersection forms the target area R.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><line x1=\"50\" y1=\"200\" x2=\"350\" y2=\"200\" stroke=\"#1b2540\"/><line x1=\"200\" y1=\"20\" x2=\"200\" y2=\"220\" stroke=\"#1b2540\"/><line x1=\"80\" y1=\"180\" x2=\"280\" y2=\"20\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"60\" x2=\"350\" y2=\"60\" stroke=\"#1b2540\" stroke-width=\"2\"/><polygon points=\"140,60 240,60 180,120\" fill=\"#dbeafe\" opacity=\"0.6\"/><text x=\"185\" y=\"85\" fill=\"#1b2540\" font-weight=\"bold\">R</text><text x=\"290\" y=\"30\" fill=\"#1b2540\">y = x + 2</text><text x=\"355\" y=\"65\" fill=\"#1b2540\">y = 5</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Integer Solutions",
+    "p": "Some questions ask for the 'integer solutions' to an inequality. This requires listing whole numbers that fall within the solved range.",
+    "bullets": [
+     "Solve the inequality first to find the continuous range.",
+     "Identify all whole numbers (..., -2, -1, 0, 1, 2, ...) inside that range.",
+     "Pay close attention to the boundaries: if x < 5, 5 is NOT an integer solution. If x ≤ 5, 5 IS an integer solution."
+    ]
+   },
+   {
+    "h": "Combining Multiple Inequalities",
+    "p": "When multiple inequalities apply to the same variable, the solution is the intersection of all individual solution sets.",
+    "bullets": [
+     "Example: x > 2 and x < 7 results in 2 < x < 7.",
+     "Example: x < 5 and x < 3 results in x < 3 (since any number less than 3 is automatically less than 5).",
+     "In 2D, this creates a 'feasible region' often used in linear programming contexts."
+    ]
+   }
+  ],
+  "analogy": {
+   "t": "The Bouncer and the Velvet Rope",
+   "p": "Think of an inequality as a bouncer at a club. A strict inequality (< or >) is like a velvet rope: you can get right up to it, but you can't stand on the line itself (the boundary is not included). A non-strict inequality (≤ or ≥) is like a solid wall: you can lean right against it and be part of the space (the boundary is included). Solving the inequality is like finding the 'VIP area' where you are allowed to stand. The analogy breaks down because, in maths, these regions usually extend to infinity, whereas a club has physical walls."
+  },
+  "terms": [
+   {
+    "t": "Inequality",
+    "d": "A mathematical statement that one quantity is greater than or less than another."
+   },
+   {
+    "t": "Strict Inequality",
+    "d": "An inequality that does not include the boundary value (< or >)."
+   },
+   {
+    "t": "Non-strict Inequality",
+    "d": "An inequality that includes the boundary value (≤ or ≥)."
+   },
+   {
+    "t": "Critical Values",
+    "d": "The values where an expression equals zero, marking the boundaries of an inequality's solution."
+   },
+   {
+    "t": "Set Notation",
+    "d": "A formal way of listing elements or defining a range using symbols like {x : ...}."
+   },
+   {
+    "t": "Integer",
+    "d": "A whole number, which can be positive, negative, or zero."
+   },
+   {
+    "t": "Region",
+    "d": "An area on a graph representing the set of all points that satisfy one or more inequalities."
+   },
+   {
+    "t": "Boundary Line",
+    "d": "The line representing the equation part of an inequality, used to divide the plane."
+   },
+   {
+    "t": "Union (∪)",
+    "d": "The set containing all elements that are in either of two sets."
+   },
+   {
+    "t": "Intersection (∩)",
+    "d": "The set containing only elements that are in both of two sets."
+   },
+   {
+    "t": "Feasible Region",
+    "d": "The area on a graph where all given inequalities are satisfied simultaneously."
+   },
+   {
+    "t": "Null Set",
+    "d": "A set with no members, occurring when inequalities have no overlapping solutions."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Dividing -3x < 12 to get x < -4.",
+    "r": "x > -4 (The sign must flip when dividing by a negative number)."
+   },
+   {
+    "w": "Using a solid line for y > 2x + 1.",
+    "r": "Use a dashed line for strict inequalities (< or >)."
+   },
+   {
+    "w": "Solving x² > 9 as x > 3.",
+    "r": "x > 3 OR x < -3 (Quadratic inequalities usually have two distinct regions)."
+   },
+   {
+    "w": "Listing 5 as an integer solution for x < 5.",
+    "r": "4 is the largest integer solution; 5 is not included in a strict inequality."
+   },
+   {
+    "w": "Shading the wrong side of a line in 2D regions.",
+    "r": "Always use a test point like (0,0) to verify which side satisfies the inequality."
+   },
+   {
+    "w": "Writing {x > 5} as set notation.",
+    "r": "{x : x > 5} or {x | x > 5} (The variable and colon are required)."
+   },
+   {
+    "w": "Treating 2 < x > 5 as a valid double inequality.",
+    "r": "Double inequalities must have signs pointing the same way, usually 2 < x < 5."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Solve 4x - 7 ≤ 13.",
+    "marks": 2,
+    "model": [
+     "Add 7 to both sides: 4x ≤ 20",
+     "Divide by 4: x ≤ 5"
+    ],
+    "tip": "This is a standard linear inequality; no sign flip is needed as we divide by positive 4."
+   },
+   {
+    "q": "Represent the inequality -3 < x ≤ 2 on a number line.",
+    "marks": 2,
+    "model": [
+     "Open circle at -3",
+     "Closed circle at 2",
+     "Horizontal line connecting the two circles"
+    ],
+    "tip": "Ensure the circles are clearly distinct (hollow vs filled)."
+   },
+   {
+    "q": "Write down the set of integers that satisfy -2 < n ≤ 3.",
+    "marks": 2,
+    "model": [
+     "Identify integers: -1, 0, 1, 2, 3"
+    ],
+    "tip": "Check boundaries carefully: -2 is excluded, 3 is included."
+   },
+   {
+    "q": "Solve the inequality x² - x - 12 > 0. Give your answer in set notation.",
+    "marks": 4,
+    "model": [
+     "Factorise: (x - 4)(x + 3) = 0",
+     "Critical values: x = 4 and x = -3",
+     "Sketch U-shaped curve: positive regions are outside the roots",
+     "Solution: {x : x < -3} ∪ {x : x > 4}"
+    ],
+    "tip": "Always sketch the graph to avoid picking the 'middle' region by mistake."
+   },
+   {
+    "q": "Solve 5 - 2x > 11.",
+    "marks": 2,
+    "model": [
+     "Subtract 5: -2x > 6",
+     "Divide by -2 and flip sign: x < -3"
+    ],
+    "tip": "The sign flip is the 'make or break' step for this mark."
+   },
+   {
+    "q": "A region R is defined by y > 2, x ≥ 1 and x + y ≤ 6. Draw and label R.",
+    "marks": 4,
+    "model": [
+     "Draw dashed line y = 2",
+     "Draw solid line x = 1",
+     "Draw solid line y = -x + 6",
+     "Correctly identify and label the triangular region R"
+    ],
+    "tip": "Label the lines as you draw them to keep track of boundaries."
+   },
+   {
+    "q": "Express the solution to 3x + 4 < 19 in set notation.",
+    "marks": 2,
+    "model": [
+     "3x < 15",
+     "x < 5",
+     "{x : x < 5}"
+    ],
+    "tip": "The curly brackets and colon are essential for the 'set notation' mark."
+   },
+   {
+    "q": "Find the largest integer value of x such that 7x - 2 < 30.",
+    "marks": 2,
+    "model": [
+     "7x < 32",
+     "x < 4.57...",
+     "Largest integer is 4"
+    ],
+    "tip": "Don't round 4.57 up to 5; x must be strictly less than 4.57."
+   },
+   {
+    "q": "Solve the double inequality 10 < 3x + 1 ≤ 19.",
+    "marks": 3,
+    "model": [
+     "Subtract 1 from all parts: 9 < 3x ≤ 18",
+     "Divide all parts by 3: 3 < x ≤ 6"
+    ],
+    "tip": "Keep the inequality signs exactly as they are in the original question."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Solve the inequality 2(x + 3) > 5x - 12 and represent the solution on a number line.",
+    "steps": [
+     "Expand the brackets: 2x + 6 > 5x - 12",
+     "Subtract 2x from both sides: 6 > 3x - 12",
+     "Add 12 to both sides: 18 > 3x",
+     "Divide by 3: 6 > x (or x < 6)",
+     "Draw an open circle at 6 on a number line and an arrow pointing to the left."
+    ],
+    "ans": "x < 6"
+   },
+   {
+    "q": "Find the region R that satisfies: y ≤ 2x + 1, y > -1, and x + y < 4.",
+    "steps": [
+     "Identify boundary lines: y = 2x + 1 (solid), y = -1 (dashed), y = -x + 4 (dashed).",
+     "Plot y = 2x + 1: goes through (0,1) and (1,3). Shade below.",
+     "Plot y = -1: horizontal line through -1 on y-axis. Shade above.",
+     "Plot y = -x + 4: goes through (0,4) and (4,0). Shade below.",
+     "The intersection is a triangle. Label this area R."
+    ],
+    "ans": "Region R is the triangular area bounded by the three lines."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "A 2D inequality graph showing the intersection of three constraints to define region R.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><defs><marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#1b2540\"/></marker></defs><line x1=\"40\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#1b2540\" marker-end=\"url(#arrow)\"/><line x1=\"60\" y1=\"220\" x2=\"60\" y2=\"30\" stroke=\"#1b2540\" marker-end=\"url(#arrow)\"/><path d=\"M 60,180 L 160,60\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M 40,100 L 300,100\" stroke=\"#1b2540\" stroke-width=\"2\" stroke-dasharray=\"5,5\"/><path d=\"M 60,40 L 220,200\" stroke=\"#1b2540\" stroke-width=\"2\" stroke-dasharray=\"5,5\"/><polygon points=\"80,100 130,100 110,125\" fill=\"#fde68a\" opacity=\"0.7\"/><text x=\"100\" y=\"115\" fill=\"#1b2540\" font-weight=\"bold\">R</text><text x=\"310\" y=\"115\" fill=\"#1b2540\">y = k</text><text x=\"170\" y=\"60\" fill=\"#1b2540\">x + y = c</text></svg>"
+   }
+  ],
+  "pid": "maths_ocr_h.5.3",
+  "sid": "maths_ocr_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3-flash-preview",
+  "ts": "2026-11-21T16:57:00.564Z"
  }
 }
