@@ -59,6 +59,16 @@ describe("note writer: provider replies", () => {
     expect(() => checkFinished('{"a":"half', "length", "stop")).toThrow(AiOutputError);
   });
 
+  it("keeps the complete part of a long reply that was cut off near the end", () => {
+    const whole = `{"summary":"${"x".repeat(200)}","items":[{"q":"one","a":"1"},{"q":"two","a":"2"}],"diagrams":[{"svg":"<svg>`;
+    const kept = JSON.parse(checkFinished(whole, "length", "stop")) as { items: unknown[]; diagrams: unknown[] };
+    expect(kept.items).toHaveLength(2);
+    expect(kept.diagrams).toBeUndefined();
+    expect(JSON.parse(checkFinished('{"a":[1,{"b":"c, d, e, f, g, h"}],"e":"h', "MAX_TOKENS", "STOP"))).toEqual({ a: [1, { b: "c, d, e, f, g, h" }] });
+    // Too little left to be worth checking: still an error.
+    expect(() => checkFinished(`{"a":1,"b":"${"y".repeat(100)}`, "length", "stop")).toThrow(/stopped early/);
+  });
+
   it("doesn't treat Groq's failed JSON check as a provider error", () => {
     expect(classifyHttpError(400, '{"error":{"message":"Failed to generate JSON. Please adjust your prompt."}}')).toBeNull();
   });

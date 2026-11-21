@@ -2,7 +2,7 @@
  * Calls the AI providers the owner has keys for. Each one is a plain HTTPS
  * JSON API: Gemini's own, or the OpenAI-style chat API (Groq, OpenRouter, ...).
  */
-import { AiOutputError, parseModelJson } from "@/server/ai/json";
+import { AiOutputError, closeTruncatedJson, parseModelJson } from "@/server/ai/json";
 
 export interface ProviderConfig {
   id: string;
@@ -200,6 +200,16 @@ export function checkFinished(text: string, finish: string, normal: string): str
     parseModelJson(text);
     return text;
   } catch {
+    // Cut off near the end (the usual case for long notes): keep the complete part and let the checks decide.
+    const closed = closeTruncatedJson(text);
+    if (closed && closed.length >= text.length * 0.8) {
+      try {
+        parseModelJson(closed);
+        return closed;
+      } catch {
+        // fall through
+      }
+    }
     throw new AiOutputError(`The reply stopped early (${finish}) after ${text.length} characters.`);
   }
 }

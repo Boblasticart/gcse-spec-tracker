@@ -111,3 +111,37 @@ export function parseModelJson(text: string): unknown {
 export function asObject(v: unknown): Record<string, unknown> {
   return v && typeof v === "object" && !Array.isArray(v) ? (v as Record<string, unknown>) : {};
 }
+
+/**
+ * A reply that hit the model's token limit is JSON cut off part-way through, usually in its last item. This keeps
+ * everything up to the last complete value and closes the open brackets, so the checks can judge what did arrive
+ * (and the repairs drop half-finished items) instead of throwing the whole note away. Returns null if nothing usable.
+ */
+export function closeTruncatedJson(text: string): string | null {
+  const start = text.indexOf("{");
+  if (start < 0) return null;
+  const stack: string[] = [];
+  let inString = false;
+  let cut = -1;
+  let closers = "";
+  for (let i = start; i < text.length; i++) {
+    const c = text[i];
+    if (inString) {
+      if (c === "\\") i++;
+      else if (c === '"') inString = false;
+      continue;
+    }
+    if (c === '"') inString = true;
+    else if (c === "{" || c === "[") stack.push(c === "{" ? "}" : "]");
+    else if (c === "}" || c === "]") {
+      if (stack.pop() !== c) return null;
+      if (!stack.length) return text.slice(start, i + 1);
+      cut = i + 1;
+      closers = stack.slice().reverse().join("");
+    } else if (c === "," && stack.length) {
+      cut = i;
+      closers = stack.slice().reverse().join("");
+    }
+  }
+  return cut < 0 ? null : text.slice(start, cut) + closers;
+}
