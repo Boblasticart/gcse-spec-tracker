@@ -2021,5 +2021,1460 @@
   "src": "pre",
   "by": "gemini/gemini-3.6-flash",
   "ts": "2026-11-21T16:51:29.242Z"
+ },
+ "maths_eduqas_h.5.5": {
+  "summary": "Applying statistics to describe a population involves using key numerical measures—such as measures of central tendency (mean, median, mode) and dispersion (range, interquartile range)—alongside distribution shapes to characterise an entire group. When testing the full population is impossible, statistical techniques like representative sampling, proportions, and capture-recapture are employed to estimate population parameters. In Eduqas GCSE examinations, candidates must evaluate these statistical estimates in real-world contexts, comparing distributions using location and spread while accounting for skewness, outliers, and fundamental sampling assumptions.",
+  "core": [
+   {
+    "h": "1. Population Parameters vs Sample Statistics",
+    "p": "In statistics, a **population** represents the entire set of individuals, items, or measurements under investigation, whereas a **sample** is a subset selected from that population. Quantifying characteristics of a population requires distinguishing between true population parameters and sample statistics.",
+    "bullets": [
+     "A **population parameter** is a numerical value that describes a characteristic of the whole population (e.g., total population size N, true population mean μ).",
+     "A **sample statistic** is a value calculated from sample data (e.g., sample mean x-bar, sample median) used to estimate the unknown population parameter.",
+     "Describing a population directly requires a full **census**, which gathers data from every single member of the population.",
+     "When a census is impractical due to cost, time, or destructive testing, sample statistics are scaled up or applied to infer population properties."
+    ],
+    "table": {
+     "head": [
+      "Feature",
+      "Population Parameter",
+      "Sample Statistic"
+     ],
+     "rows": [
+      [
+       "Scope",
+       "Reflects every item in the entire population",
+       "Reflects only the items selected in the sample"
+      ],
+      [
+       "Symbol / Example",
+       "Population Total (N), True Mean (μ)",
+       "Sample Mean (x-bar), Sample Proportion (p)"
+      ],
+      [
+       "Variability",
+       "Fixed, constant value for a given population",
+       "Varies from sample to sample (sampling variability)"
+      ],
+      [
+       "Practicality",
+       "Often difficult or impossible to measure directly",
+       "Easy to compute from accessible sample data"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Population Parameter",
+      "p": "A fixed numerical value that describes a specific characteristic of an entire population."
+     },
+     {
+      "k": "key",
+      "t": "Census vs Sample",
+      "p": "A census gives exact population parameters but is often expensive or unfeasible. Sample statistics provide estimates of population parameters."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. Central Tendency in Population Contexts",
+    "p": "Describing the location or central value of a population requires selecting an appropriate average—mean, median, or mode—based on the context and distribution of the data.",
+    "bullets": [
+     "The **mean** uses every data value (Total sum / N). It is ideal for symmetrical data without extreme outliers, but is heavily skewed by extreme values.",
+     "The **median** is the middle value when population data is ordered. It is resistant to extreme outliers and provides a realistic 'typical' value for skewed distributions (e.g., household incomes).",
+     "The **mode** is the most frequently occurring value. It is useful for categorical data or identifying the most common discrete item (e.g., modal shoe size).",
+     "When evaluating a population, stating the average alone is incomplete; it must be combined with a measure of spread to fully describe the population distribution."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Mean Sensitivity Trap",
+      "p": "Do not use the mean to describe the 'typical' value of a population if the data contains extreme outliers or strong skewness; the median is more representative in such cases."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "3. Measures of Population Dispersion",
+    "p": "To fully describe a population, you must specify how spread out the data values are around the central value. Two populations can have identical means but completely different levels of variation.",
+    "bullets": [
+     "**Range** = Maximum value - Minimum value. It measures the total spread across the population but is highly sensitive to extreme outliers.",
+     "**Interquartile Range (IQR)** = Upper Quartile (Q3) - Lower Quartile (Q1). It measures the spread of the middle 50% of the population and is resistant to outliers.",
+     "A smaller range or IQR indicates that the population is more **consistent** or uniform.",
+     "A larger range or IQR indicates greater **variability** or uncertainty across the population.",
+     "In Eduqas exam questions, always interpret dispersion in context (e.g., 'Factory A's machine produces bolts with a smaller IQR, meaning its bolt lengths are more consistent than Factory B')."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam Vocabulary",
+      "p": "When comparing dispersion, use words like 'consistent', 'variable', or 'spread out', and always reference the numerical values calculated from the data."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Skewness and Distribution Shape of a Population",
+    "p": "The shape of a population's distribution reveals how data points are clustered around the measures of central tendency. Distinguishing distribution shapes is critical for accurate population analysis.",
+    "bullets": [
+     "**Symmetrical Distribution**: Data is evenly spread about the center. The mean, median, and mode are all equal (or very close).",
+     "**Positive Skew (Right-Skewed)**: The distribution has a long tail towards higher values. Most data points cluster at the lower end. Order of averages: Mode < Median < Mean.",
+     "**Negative Skew (Left-Skewed)**: The distribution has a long tail towards lower values. Most data points cluster at the upper end. Order of averages: Mean < Median < Mode.",
+     "Understanding skewness helps examiners test whether a student can select the correct average to represent a population."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Positive Skew",
+      "p": "A distribution pattern where data is concentrated at lower values with a long tail extending toward higher values, causing the mean to exceed the median."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Figure 1: Comparison of symmetrical, positively skewed, and negatively skewed population distributions.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#ffffff\" stroke=\"#1b2540\" stroke-width=\"1\"/><text x=\"200\" y=\"22\" fill=\"#1b2540\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Population Distribution Shapes</text><g transform=\"translate(15, 35)\"><rect x=\"0\" y=\"0\" width=\"110\" height=\"155\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"1\" rx=\"4\"/><path d=\"M 10 130 Q 55 20 100 130\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"55\" y1=\"30\" x2=\"55\" y2=\"130\" stroke=\"#dc2626\" stroke-dasharray=\"3,3\" stroke-width=\"1.5\"/><text x=\"55\" y=\"145\" fill=\"#1b2540\" font-size=\"11\" text-anchor=\"middle\">Symmetrical</text><text x=\"55\" y=\"160\" fill=\"#dc2626\" font-size=\"10\" text-anchor=\"middle\">Mean = Median = Mode</text></g><g transform=\"translate(145, 35)\"><rect x=\"0\" y=\"0\" width=\"110\" height=\"155\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"1\" rx=\"4\"/><path d=\"M 10 130 Q 30 20 100 130\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"30\" y1=\"35\" x2=\"30\" y2=\"130\" stroke=\"#059669\" stroke-width=\"1.5\"/><line x1=\"45\" y1=\"55\" x2=\"45\" y2=\"130\" stroke=\"#d97706\" stroke-width=\"1.5\"/><line x1=\"65\" y1=\"85\" x2=\"65\" y2=\"130\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><text x=\"55\" y=\"145\" fill=\"#1b2540\" font-size=\"11\" text-anchor=\"middle\">Positive Skew</text><text x=\"55\" y=\"160\" fill=\"#1b2540\" font-size=\"10\" text-anchor=\"middle\">Mode &lt; Median &lt; Mean</text></g><g transform=\"translate(275, 35)\"><rect x=\"0\" y=\"0\" width=\"110\" height=\"155\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"1\" rx=\"4\"/><path d=\"M 10 130 Q 80 20 100 130\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"45\" y1=\"85\" x2=\"45\" y2=\"130\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><line x1=\"65\" y1=\"55\" x2=\"65\" y2=\"130\" stroke=\"#d97706\" stroke-width=\"1.5\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"130\" stroke=\"#059669\" stroke-width=\"1.5\"/><text x=\"55\" y=\"145\" fill=\"#1b2540\" font-size=\"11\" text-anchor=\"middle\">Negative Skew</text><text x=\"55\" y=\"160\" fill=\"#1b2540\" font-size=\"10\" text-anchor=\"middle\">Mean &lt; Median &lt; Mode</text></g><text x=\"200\" y=\"215\" fill=\"#1b2540\" font-size=\"11\" text-anchor=\"middle\">Distribution skewness determines choice of representative average</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "5. Estimating Population Totals and Proportions",
+    "p": "Sample relative frequencies and proportions can be scaled up to estimate total counts or frequencies within a large population.",
+    "bullets": [
+     "If a representative sample of size n contains m items with a specific characteristic, the sample proportion is **p = m / n**.",
+     "To estimate the total number of items with that characteristic in a population of total size N, calculate: **Estimated Count = (m / n) × N**.",
+     "This relies on the assumption that the sample is **unbiased** and representative of the entire population.",
+     "If the sample is biased (e.g. taken at an inappropriate time or location), scaling up produces an inaccurate population estimate."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Proportional Scaling Formula",
+      "p": "Estimated Population Quantity = (Sample Subset / Sample Total) × Population Total"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. The Capture-Recapture Method",
+    "p": "Capture-recapture is a fundamental mathematical technique used by ecologists and statisticians to estimate the total size N of a mobile population (e.g., fish in a lake, birds in a forest) where a direct census is impossible.",
+    "bullets": [
+     "**Stage 1 (Capture & Tag)**: Capture a sample of size **M** from the population, mark/tag all of them safely, and release them back into the population.",
+     "**Stage 2 (Mix)**: Allow sufficient time for tagged individuals to randomly mix fully with the untagged population.",
+     "**Stage 3 (Recapture)**: Capture a second independent sample of size **n**, and count how many in this second sample are tagged (**m**).",
+     "**Mathematical Ratio**: Assume the proportion of tagged items in the second sample equals the proportion of tagged items in the whole population: **m / n = M / N**.",
+     "Rearranging gives the **Capture-Recapture Formula**: **N = (M × n) / m**."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Capture-Recapture Formula",
+      "p": "N = (M × n) / m, where N = Total Population Size, M = Initial Tagged Sample, n = Second Sample Size, m = Number of Tagged Items in Second Sample."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Figure 2: Three-stage process of the Capture-Recapture method for estimating population size N.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#ffffff\" stroke=\"#1b2540\" stroke-width=\"1\"/><text x=\"200\" y=\"22\" fill=\"#1b2540\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Capture-Recapture Method</text><g transform=\"translate(15, 40)\"><rect x=\"0\" y=\"0\" width=\"110\" height=\"130\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"1\" rx=\"4\"/><text x=\"55\" y=\"25\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">1. Capture &amp; Tag</text><circle cx=\"35\" cy=\"60\" r=\"8\" fill=\"#dc2626\"/><circle cx=\"75\" cy=\"60\" r=\"8\" fill=\"#dc2626\"/><circle cx=\"55\" cy=\"90\" r=\"8\" fill=\"#dc2626\"/><text x=\"55\" y=\"118\" fill=\"#1b2540\" font-size=\"10\" text-anchor=\"middle\">Tag M animals</text></g><text x=\"137\" y=\"105\" fill=\"#1b2540\" font-size=\"16\" font-weight=\"bold\">→</text><g transform=\"translate(145, 40)\"><rect x=\"0\" y=\"0\" width=\"110\" height=\"130\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"1\" rx=\"4\"/><text x=\"55\" y=\"25\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">2. Release &amp; Mix</text><circle cx=\"30\" cy=\"55\" r=\"8\" fill=\"#dc2626\"/><circle cx=\"80\" cy=\"65\" r=\"8\" fill=\"#94a3b8\"/><circle cx=\"45\" cy=\"95\" r=\"8\" fill=\"#94a3b8\"/><circle cx=\"75\" cy=\"95\" r=\"8\" fill=\"#dc2626\"/><text x=\"55\" y=\"118\" fill=\"#1b2540\" font-size=\"10\" text-anchor=\"middle\">Allow full mixing</text></g><text x=\"267\" y=\"105\" fill=\"#1b2540\" font-size=\"16\" font-weight=\"bold\">→</text><g transform=\"translate(275, 40)\"><rect x=\"0\" y=\"0\" width=\"110\" height=\"130\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"1\" rx=\"4\"/><text x=\"55\" y=\"25\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">3. Recapture</text><circle cx=\"35\" cy=\"60\" r=\"8\" fill=\"#dc2626\"/><circle cx=\"75\" cy=\"60\" r=\"8\" fill=\"#94a3b8\"/><circle cx=\"55\" cy=\"90\" r=\"8\" fill=\"#94a3b8\"/><text x=\"55\" y=\"118\" fill=\"#1b2540\" font-size=\"10\" text-anchor=\"middle\">Sample n (m tagged)</text></g><rect x=\"40\" y=\"182\" width=\"320\" height=\"35\" fill=\"#e9d5ff\" stroke=\"#1b2540\" stroke-width=\"1\" rx=\"4\"/><text x=\"200\" y=\"204\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Formula: N = (M × n) / m</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "7. Critical Assumptions of Capture-Recapture",
+    "p": "In Eduqas GCSE examinations, full marks on capture-recapture questions often require stating and critically evaluating the underlying statistical assumptions.",
+    "bullets": [
+     "**Closed Population**: No births, deaths, immigration, or emigration occurred between the two samples.",
+     "**Equal Mixing**: Tagged animals have sufficient time to mix randomly and evenly back into the whole population.",
+     "**Permanent Marks**: Tags/marks do not fall off, rub off, or fade between capture sessions.",
+     "**No Behavioural Bias**: Tagging does not change an animal's likelihood of recapture (e.g., animals do not become 'trap shy' or 'trap happy').",
+     "**Equal Probability of Capture**: Every member of the population has an equal chance of being captured in both samples.",
+     "If any assumption is violated, the calculated population estimate N will be biased (overestimated or underestimated)."
+    ],
+    "table": {
+     "head": [
+      "Assumption Violated",
+      "Effect on Recaptured Tagged Count (m)",
+      "Effect on Estimated Population Size (N)"
+     ],
+     "rows": [
+      [
+       "Tags fall off / lost",
+       "m is smaller than it should be",
+       "N is OVERESTIMATED (N is too large)"
+      ],
+      [
+       "Animals die or leave area",
+       "m is smaller than it should be",
+       "N is OVERESTIMATED"
+      ],
+      [
+       "Animals become trap-shy",
+       "m is smaller than it should be",
+       "N is OVERESTIMATED"
+      ],
+      [
+       "Animals become trap-happy",
+       "m is larger than it should be",
+       "N is UNDERESTIMATED (N is too small)"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Common Exam Pitfall",
+      "p": "If tags fall off, m decreases. Since m is in the denominator of N = (M × n) / m, dividing by a smaller number makes N larger, resulting in an OVERESTIMATE."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Comparing Two Populations Using Location and Spread",
+    "p": "When describing or comparing two distinct populations, you must always provide a complete comparative analysis using one measure of location (average) and one measure of dispersion (spread), both stated strictly in context.",
+    "bullets": [
+     "**Rule of Pairings**: Compare Median with Interquartile Range (IQR), OR compare Mean with Range / Standard Deviation. Do not mix Median with Range in formal comparisons if IQR is available.",
+     "**Structure of Comparison Points**:",
+     "1. **Measure of Location**: State which population has a higher median/mean and state what this means in context (e.g., 'Group A has a higher median score of 72 compared to Group B's 61, indicating Group A performed better overall').",
+     "2. **Measure of Dispersion**: State which population has a smaller IQR/range and state what this means in context (e.g., 'Group A has a smaller IQR of 12 compared to Group B's 24, indicating Group A's scores are more consistent').",
+     "Always quote exact numerical values from graphs, tables, or box plots to secure full marks."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Eduqas Comparison Checklist",
+      "p": "To get 4/4 marks on distribution comparison questions: 1) Compare medians with values. 2) Interpret median in context. 3) Compare IQRs with values. 4) Interpret IQR in context."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Figure 3: Comparative box plots showing differences in central tendency and dispersion between two populations.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#ffffff\" stroke=\"#1b2540\" stroke-width=\"1\"/><text x=\"200\" y=\"22\" fill=\"#1b2540\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Comparing Two Populations (Box Plots)</text><text x=\"20\" y=\"65\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\">Pop A</text><g transform=\"translate(80, 50)\"><line x1=\"20\" y1=\"15\" x2=\"220\" y2=\"15\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><rect x=\"60\" y=\"0\" width=\"100\" height=\"30\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"110\" y1=\"0\" x2=\"110\" y2=\"30\" stroke=\"#dc2626\" stroke-width=\"2\"/><line x1=\"20\" y1=\"5\" x2=\"20\" y2=\"25\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"220\" y1=\"5\" x2=\"220\" y2=\"25\" stroke=\"#1b2540\" stroke-width=\"1.5\"/></g><text x=\"20\" y=\"135\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\">Pop B</text><g transform=\"translate(80, 120)\"><line x1=\"40\" y1=\"15\" x2=\"280\" y2=\"15\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><rect x=\"90\" y=\"0\" width=\"140\" height=\"30\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"145\" y1=\"0\" x2=\"145\" y2=\"30\" stroke=\"#dc2626\" stroke-width=\"2\"/><line x1=\"40\" y1=\"5\" x2=\"40\" y2=\"25\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"280\" y1=\"5\" x2=\"280\" y2=\"25\" stroke=\"#1b2540\" stroke-width=\"1.5\"/></g><line x1=\"80\" y1=\"180\" x2=\"360\" y2=\"180\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"80\" y1=\"180\" x2=\"80\" y2=\"185\" stroke=\"#1b2540\"/><line x1=\"150\" y1=\"180\" x2=\"150\" y2=\"185\" stroke=\"#1b2540\"/><line x1=\"220\" y1=\"180\" x2=\"220\" y2=\"185\" stroke=\"#1b2540\"/><line x1=\"290\" y1=\"180\" x2=\"290\" y2=\"185\" stroke=\"#1b2540\"/><line x1=\"360\" y1=\"180\" x2=\"360\" y2=\"185\" stroke=\"#1b2540\"/><text x=\"80\" y=\"198\" fill=\"#1b2540\" font-size=\"10\" text-anchor=\"middle\">10</text><text x=\"150\" y=\"198\" fill=\"#1b2540\" font-size=\"10\" text-anchor=\"middle\">20</text><text x=\"220\" y=\"198\" fill=\"#1b2540\" font-size=\"10\" text-anchor=\"middle\">30</text><text x=\"290\" y=\"198\" fill=\"#1b2540\" font-size=\"10\" text-anchor=\"middle\">40</text><text x=\"360\" y=\"198\" fill=\"#1b2540\" font-size=\"10\" text-anchor=\"middle\">50</text><text x=\"220\" y=\"220\" fill=\"#1b2540\" font-size=\"11\" text-anchor=\"middle\">Score / Measurement Units</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "9. Cumulative Frequency & Population Quantiles",
+    "p": "Cumulative frequency graphs allow us to estimate key population thresholds, median values, and percentiles across an entire population.",
+    "bullets": [
+     "The vertical axis represents **Cumulative Frequency** (running total of the population), reaching the total population size N at the top.",
+     "**Median (Q2)**: Found at 50% of the total population size (0.5N).",
+     "**Lower Quartile (Q1)**: Found at 25% of total population size (0.25N).",
+     "**Upper Quartile (Q3)**: Found at 75% of total population size (0.75N).",
+     "**Percentiles**: Any specific percentile (e.g. 90th percentile) is determined at (P / 100) × N on the vertical axis and reading across to the curve."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Finding Population Quantiles",
+      "p": "Always use the total cumulative frequency N on the vertical axis to find quartiles (0.25N, 0.5N, 0.75N), then project down to read the population variable."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Identifying Outliers in Population Data",
+    "p": "Outliers are extreme values that differ significantly from the rest of the population data. Identifying outliers is essential before performing population-level analyses.",
+    "bullets": [
+     "**1.5 × IQR Rule**: An observation is an outlier if it is:",
+     "Lower than **Q1 - 1.5 × IQR**, OR",
+     "Higher than **Q3 + 1.5 × IQR**.",
+     "**Impact of Outliers**: Outliers pull the mean towards them and widen the range, but have little to no effect on the median and IQR.",
+     "When outliers exist in population data, report the median and IQR to give an accurate description."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "1.5 × IQR Outlier Boundary Formula",
+      "p": "Lower Threshold = Q1 - 1.5 × IQR | Upper Threshold = Q3 + 1.5 × IQR"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "11. Real-World Applications: Quality Control and Decision Making",
+    "p": "In commercial manufacturing and decision-making, statistical descriptions of populations dictate quality assurance standards and business choices.",
+    "bullets": [
+     "**Quality Control**: Factories test samples of batch output (population) to ensure product dimensions have a mean matching specification and an extremely low IQR.",
+     "**Risk Assessment**: Financial managers evaluate investment populations where higher variability (larger range/IQR) represents higher risk.",
+     "**Public Policy**: Governments use population medians rather than means to set tax thresholds and social support benefits, avoiding distortions from ultra-wealthy outliers."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Contextual Conclusion",
+      "p": "When answering Eduqas decision-making questions, clearly state your choice, cite numerical averages and spreads, and explicitly explain the real-world consequence."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Population Description Analogy",
+   "p": "Describing a population using sample statistics is like taking a high-resolution photo of a dense forest from a distance. If you only look at one single tree (a single sample point), you might assume all trees are that exact height and species. By sampling several random patches of the forest (calculating median height and interquartile range), you can paint an accurate picture of the entire forest's overall health, density, and typical tree height. The analogy breaks down because trees in a forest are geographically fixed, whereas mobile animal populations in capture-recapture move continuously, introducing dynamic factors like migration, births, and deaths."
+  },
+  "terms": [
+   {
+    "t": "Population",
+    "d": "The complete set of all items, individuals, or measurements being studied."
+   },
+   {
+    "t": "Sample",
+    "d": "A subset of data selected from a population used to make inferences about the whole population."
+   },
+   {
+    "t": "Parameter",
+    "d": "A fixed numerical characteristic calculated from an entire population."
+   },
+   {
+    "t": "Statistic",
+    "d": "A numerical characteristic calculated from sample data used to estimate a population parameter."
+   },
+   {
+    "t": "Mean",
+    "d": "The sum of all values divided by the total number of values; sensitive to outliers."
+   },
+   {
+    "t": "Median",
+    "d": "The middle value when data is ordered; robust against extreme outliers."
+   },
+   {
+    "t": "Mode",
+    "d": "The most frequently occurring value in a data set."
+   },
+   {
+    "t": "Range",
+    "d": "The difference between the maximum and minimum values in a distribution."
+   },
+   {
+    "t": "Interquartile Range (IQR)",
+    "d": "The difference between the upper quartile (Q3) and lower quartile (Q1), representing the middle 50% of data."
+   },
+   {
+    "t": "Positive Skew",
+    "d": "A distribution where data clusters at lower values with a long right tail (Mode < Median < Mean)."
+   },
+   {
+    "t": "Negative Skew",
+    "d": "A distribution where data clusters at higher values with a long left tail (Mean < Median < Mode)."
+   },
+   {
+    "t": "Capture-Recapture",
+    "d": "A sampling method used to estimate total population size N via N = (M × n) / m."
+   },
+   {
+    "t": "Census",
+    "d": "A survey or investigation that collects data from every single member of a population."
+   },
+   {
+    "t": "Outlier",
+    "d": "An extreme data point lying outside Q1 - 1.5×IQR or Q3 + 1.5×IQR."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Using 'range' to describe consistency without mentioning the numerical value.",
+    "r": "State the exact numerical range or IQR for both distributions and explicitly state which is smaller and therefore more consistent."
+   },
+   {
+    "w": "Claiming that if tags fall off in capture-recapture, the estimated population size N will be an underestimate.",
+    "r": "If tags fall off, the number of tagged items recaptured (m) decreases. Since N = (M * n) / m, dividing by a smaller m produces a LARGER population estimate N (an overestimate)."
+   },
+   {
+    "w": "Comparing the mean of one group with the median of another group.",
+    "r": "Always compare like with like: compare median with median, or mean with mean."
+   },
+   {
+    "w": "Stating that the mean is always the best average to describe a population.",
+    "r": "Explain that the median is better when the population distribution is skewed or contains extreme outliers."
+   },
+   {
+    "w": "Forgetting to multiply by population total N when scaling up sample proportions.",
+    "r": "To estimate population count, multiply sample proportion (m / n) by total population size N."
+   },
+   {
+    "w": "Using cumulative frequency maximum y-value of 100 instead of total population N when finding quartiles.",
+    "r": "Always use total cumulative frequency N (the top value on the vertical axis) to find Q1 (0.25N), Median (0.5N), and Q3 (0.75N)."
+   },
+   {
+    "w": "Stating that capture-recapture assumes animals have births and deaths.",
+    "r": "State that capture-recapture assumes a CLOSED population with NO births, NO deaths, and NO migration during the study period."
+   },
+   {
+    "w": "Calculating IQR as Q3 + Q1 instead of Q3 - Q1.",
+    "r": "Interquartile Range is Upper Quartile minus Lower Quartile (Q3 - Q1)."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A researcher wants to estimate the total number of trout in a lake. She catches 80 trout, marks them with tags, and releases them. A week later, she catches a second sample of 60 trout and finds that 12 of them are tagged. Estimate the total trout population in the lake.",
+    "marks": 2,
+    "model": [
+     "Use Capture-Recapture formula: N = (M * n) / m",
+     "N = (80 * 60) / 12 = 4800 / 12 = 400 trout"
+    ],
+    "tip": "Identify M = 80, n = 60, m = 12. Plug values into N = (M * n) / m."
+   },
+   {
+    "q": "State two assumptions that must hold true for the capture-recapture estimate in Question 1 to be valid.",
+    "marks": 2,
+    "model": [
+     "Assumption 1: The population is closed (no trout were born, died, entered, or left the lake between samples).",
+     "Assumption 2: Tags did not fall off or rub off, and tagged trout mixed randomly with the rest of the population."
+    ],
+    "tip": "Memorize the standardEduqas capture-recapture assumptions: closed population, equal mixing, no lost tags, equal capture probability."
+   },
+   {
+    "q": "In a capture-recapture study, some of the tags fell off the tagged animals before the second sample was taken. State whether the calculated population size will be an overestimate or an underestimate. Explain your answer.",
+    "marks": 2,
+    "model": [
+     "It will be an overestimate.",
+     "Explanation: Fewer tagged animals will be recorded in the second sample (m will be smaller). Since N = (M * n) / m, dividing by a smaller m gives a larger estimate N."
+    ],
+    "tip": "Trace the effect of m mathematically: smaller denominator m equals larger resulting quotient N."
+   },
+   {
+    "q": "A survey of 50 students in a school of 800 students found that 18 of them walk to school. Estimate how many students in the entire school walk to school.",
+    "marks": 2,
+    "model": [
+     "Sample proportion p = 18 / 50 = 0.36",
+     "Population estimate = 0.36 * 800 = 288 students"
+    ],
+    "tip": "Calculate sample proportion first, then multiply by total school population."
+   },
+   {
+    "q": "Explain why the median is a more appropriate measure of average than the mean when describing household incomes in a city.",
+    "marks": 2,
+    "model": [
+     "Income distributions are usually positively skewed with extreme high earners (outliers).",
+     "The mean is distorted upwards by these extreme values, whereas the median represents the middle, typical household income."
+    ],
+    "tip": "Reference skewness/outliers and contrast the mean's sensitivity with the median's robustness."
+   },
+   {
+    "q": "The box plots for test results of Class A and Class B are compared. Class A: Median = 65, IQR = 10. Class B: Median = 58, IQR = 22. Compare the two distributions in context.",
+    "marks": 4,
+    "model": [
+     "1. Class A has a higher median test score (65) than Class B (58).",
+     "2. This indicates that Class A performed better overall in the test than Class B.",
+     "3. Class A has a smaller IQR (10) than Class B (22).",
+     "4. This indicates that Class A's test scores are more consistent than Class B's."
+    ],
+    "tip": "Write 4 distinct statements: Median value comparison, Median interpretation, IQR value comparison, IQR interpretation."
+   },
+   {
+    "q": "A dataset has lower quartile Q1 = 32 and upper quartile Q3 = 56. Test whether a data value of 95 is an outlier. Show your working.",
+    "marks": 4,
+    "model": [
+     "Calculate IQR: IQR = Q3 - Q1 = 56 - 32 = 24",
+     "Calculate upper outlier threshold: Q3 + 1.5 * IQR",
+     "Threshold = 56 + 1.5 * 24 = 56 + 36 = 92",
+     "Since 95 > 92, the value 95 is an outlier."
+    ],
+    "tip": "Always state the outlier formula Q3 + 1.5 * IQR explicitly before substituting values."
+   },
+   {
+    "q": "A batch of 1200 lightbulbs was sampled by testing 60 bulbs. 3 bulbs were found to be defective. Estimate how many bulbs in the total batch are non-defective.",
+    "marks": 4,
+    "model": [
+     "Number of non-defective bulbs in sample = 60 - 3 = 57",
+     "Sample proportion of non-defective bulbs = 57 / 60 = 0.95",
+     "Estimated non-defective in batch = 0.95 * 1200",
+     "Answer = 1140 bulbs"
+    ],
+    "tip": "Read carefully: the question asks for non-defective bulbs, so subtract defective bulbs first!"
+   },
+   {
+    "q": "Describe the shape of a population distribution where Mean = 42, Median = 50, Mode = 58.",
+    "marks": 1,
+    "model": [
+     "Negatively skewed (left-skewed)."
+    ],
+    "tip": "When Mean < Median < Mode, the distribution is negatively skewed."
+   },
+   {
+    "q": "The cumulative frequency table for the weights of 200 sheep shows Q1 at 45 kg and Q3 at 65 kg. Find the Interquartile Range and state what percentage of the sheep weigh between 45 kg and 65 kg.",
+    "marks": 2,
+    "model": [
+     "Interquartile Range = Q3 - Q1 = 65 - 45 = 20 kg",
+     "Percentage of sheep between Q1 and Q3 = 50%"
+    ],
+    "tip": "By definition, the IQR contains exactly the middle 50% of the population."
+   }
+  ],
+  "worked": [
+   {
+    "q": "An ecologist wishes to estimate the population of woodlice in a woodland area. On Monday, she captures 150 woodlice, marks them with non-toxic paint, and releases them. On Thursday, she captures 120 woodlice and finds that 18 of them have paint marks.\na) Calculate an estimate for the total woodlouse population.\nb) On Friday, the ecologist discovers that the paint used was easily washed off by rain on Wednesday. Describe how this affects her estimate in part (a).",
+    "steps": [
+     "a) Identify variables for capture-recapture: M = 150 (initial tagged), n = 120 (second sample), m = 18 (tagged recaptures).",
+     "Substitute into formula N = (M * n) / m: N = (150 * 120) / 18 = 18000 / 18 = 1000 woodlice.",
+     "b) If paint washed off, fewer recaptured woodlice will show marks, so m is smaller than it should be.",
+     "Since N = (M * n) / m, dividing by a smaller value of m produces a larger value of N.",
+     "Therefore, the population estimate of 1000 is an OVERESTIMATE of the true population size."
+    ],
+    "ans": "a) 1000 woodlice\nb) The value of m is artificially low, which makes the calculated N an overestimate."
+   },
+   {
+    "q": "The table below shows summary statistics for the salaries (£ thousands) of employees in two competing companies, Firm X and Firm Y.\nFirm X: Minimum = 18, Q1 = 24, Median = 32, Q3 = 40, Maximum = 85, Mean = 36\nFirm Y: Minimum = 20, Q1 = 28, Median = 30, Q3 = 34, Maximum = 50, Mean = 31\na) Calculate the Interquartile Range (IQR) for both firms.\nb) Using appropriate statistical measures, compare the salary distributions of Firm X and Firm Y in context.",
+    "steps": [
+     "a) Calculate IQR for Firm X: IQR_X = Q3 - Q1 = 40 - 24 = 16 (£16,000).",
+     "Calculate IQR for Firm Y: IQR_Y = Q3 - Q1 = 34 - 28 = 6 (£6,000).",
+     "b) Compare Location (Median): Firm X has a higher median salary (£32,000) than Firm Y (£30,000), showing that the typical worker at Firm X earns more than at Firm Y.",
+     "Compare Spread (IQR): Firm Y has a significantly smaller IQR (£6,000) than Firm X (£16,000), showing that salaries at Firm Y are much more consistent and tightly grouped.",
+     "Address Skewness/Outliers: Firm X has a mean (£36,000) much higher than its median (£32,000) due to extreme high earners (max £85,000, positive skew). Firm Y's mean and median are nearly identical (£31,000 vs £30,000), indicating a more symmetrical distribution."
+    ],
+    "ans": "a) Firm X IQR = £16,000; Firm Y IQR = £6,000\nb) Firm X has a higher median salary (£32,000 vs £30,000), indicating higher typical pay. However, Firm Y has a much smaller IQR (£6,000 vs £16,000), meaning pay in Firm Y is far more consistent. Firm X's salaries are positively skewed by high upper earners."
+   },
+   {
+    "q": "A factory produces 4000 metal rods daily. A quality control officer samples 150 rods and finds their lengths (x in mm) summarized below:\nQ1 = 98.2 mm, Median = 100.1 mm, Q3 = 101.8 mm.\na) Any rod with length outside [Q1 - 1.5×IQR, Q3 + 1.5×IQR] is classed as defective. Calculate the lower and upper boundary limits for non-defective rods.\nb) If 6 rods in the sample were defective, estimate the total number of defective rods produced daily across the entire factory.",
+    "steps": [
+     "a) Calculate IQR: IQR = Q3 - Q1 = 101.8 - 98.2 = 3.6 mm.",
+     "Calculate 1.5 × IQR: 1.5 * 3.6 = 5.4 mm.",
+     "Calculate Lower Boundary: Q1 - 5.4 = 98.2 - 5.4 = 92.8 mm.",
+     "Calculate Upper Boundary: Q3 + 5.4 = 101.8 + 5.4 = 107.2 mm.",
+     "b) Sample defective proportion p = 6 / 150 = 0.04 (4%).",
+     "Scale up to daily population size N = 4000: Estimated total defective = 0.04 * 4000 = 160 rods."
+    ],
+    "ans": "a) Lower boundary = 92.8 mm, Upper boundary = 107.2 mm\nb) Estimated 160 defective rods per day"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Figure 1: Comparison of symmetrical, positively skewed, and negatively skewed population distributions.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#ffffff\" stroke=\"#1b2540\" stroke-width=\"1\"/><text x=\"200\" y=\"22\" fill=\"#1b2540\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Population Distribution Shapes</text><g transform=\"translate(15, 35)\"><rect x=\"0\" y=\"0\" width=\"110\" height=\"155\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"1\" rx=\"4\"/><path d=\"M 10 130 Q 55 20 100 130\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"55\" y1=\"30\" x2=\"55\" y2=\"130\" stroke=\"#dc2626\" stroke-dasharray=\"3,3\" stroke-width=\"1.5\"/><text x=\"55\" y=\"145\" fill=\"#1b2540\" font-size=\"11\" text-anchor=\"middle\">Symmetrical</text><text x=\"55\" y=\"160\" fill=\"#dc2626\" font-size=\"10\" text-anchor=\"middle\">Mean = Median = Mode</text></g><g transform=\"translate(145, 35)\"><rect x=\"0\" y=\"0\" width=\"110\" height=\"155\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"1\" rx=\"4\"/><path d=\"M 10 130 Q 30 20 100 130\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"30\" y1=\"35\" x2=\"30\" y2=\"130\" stroke=\"#059669\" stroke-width=\"1.5\"/><line x1=\"45\" y1=\"55\" x2=\"45\" y2=\"130\" stroke=\"#d97706\" stroke-width=\"1.5\"/><line x1=\"65\" y1=\"85\" x2=\"65\" y2=\"130\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><text x=\"55\" y=\"145\" fill=\"#1b2540\" font-size=\"11\" text-anchor=\"middle\">Positive Skew</text><text x=\"55\" y=\"160\" fill=\"#1b2540\" font-size=\"10\" text-anchor=\"middle\">Mode &lt; Median &lt; Mean</text></g><g transform=\"translate(275, 35)\"><rect x=\"0\" y=\"0\" width=\"110\" height=\"155\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"1\" rx=\"4\"/><path d=\"M 10 130 Q 80 20 100 130\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"45\" y1=\"85\" x2=\"45\" y2=\"130\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><line x1=\"65\" y1=\"55\" x2=\"65\" y2=\"130\" stroke=\"#d97706\" stroke-width=\"1.5\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"130\" stroke=\"#059669\" stroke-width=\"1.5\"/><text x=\"55\" y=\"145\" fill=\"#1b2540\" font-size=\"11\" text-anchor=\"middle\">Negative Skew</text><text x=\"55\" y=\"160\" fill=\"#1b2540\" font-size=\"10\" text-anchor=\"middle\">Mean &lt; Median &lt; Mode</text></g><text x=\"200\" y=\"215\" fill=\"#1b2540\" font-size=\"11\" text-anchor=\"middle\">Distribution skewness determines choice of representative average</text></svg>"
+   },
+   {
+    "cap": "Figure 2: Three-stage process of the Capture-Recapture method for estimating population size N.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#ffffff\" stroke=\"#1b2540\" stroke-width=\"1\"/><text x=\"200\" y=\"22\" fill=\"#1b2540\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Capture-Recapture Method</text><g transform=\"translate(15, 40)\"><rect x=\"0\" y=\"0\" width=\"110\" height=\"130\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"1\" rx=\"4\"/><text x=\"55\" y=\"25\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">1. Capture &amp; Tag</text><circle cx=\"35\" cy=\"60\" r=\"8\" fill=\"#dc2626\"/><circle cx=\"75\" cy=\"60\" r=\"8\" fill=\"#dc2626\"/><circle cx=\"55\" cy=\"90\" r=\"8\" fill=\"#dc2626\"/><text x=\"55\" y=\"118\" fill=\"#1b2540\" font-size=\"10\" text-anchor=\"middle\">Tag M animals</text></g><text x=\"137\" y=\"105\" fill=\"#1b2540\" font-size=\"16\" font-weight=\"bold\">→</text><g transform=\"translate(145, 40)\"><rect x=\"0\" y=\"0\" width=\"110\" height=\"130\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"1\" rx=\"4\"/><text x=\"55\" y=\"25\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">2. Release &amp; Mix</text><circle cx=\"30\" cy=\"55\" r=\"8\" fill=\"#dc2626\"/><circle cx=\"80\" cy=\"65\" r=\"8\" fill=\"#94a3b8\"/><circle cx=\"45\" cy=\"95\" r=\"8\" fill=\"#94a3b8\"/><circle cx=\"75\" cy=\"95\" r=\"8\" fill=\"#dc2626\"/><text x=\"55\" y=\"118\" fill=\"#1b2540\" font-size=\"10\" text-anchor=\"middle\">Allow full mixing</text></g><text x=\"267\" y=\"105\" fill=\"#1b2540\" font-size=\"16\" font-weight=\"bold\">→</text><g transform=\"translate(275, 40)\"><rect x=\"0\" y=\"0\" width=\"110\" height=\"130\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"1\" rx=\"4\"/><text x=\"55\" y=\"25\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">3. Recapture</text><circle cx=\"35\" cy=\"60\" r=\"8\" fill=\"#dc2626\"/><circle cx=\"75\" cy=\"60\" r=\"8\" fill=\"#94a3b8\"/><circle cx=\"55\" cy=\"90\" r=\"8\" fill=\"#94a3b8\"/><text x=\"55\" y=\"118\" fill=\"#1b2540\" font-size=\"10\" text-anchor=\"middle\">Sample n (m tagged)</text></g><rect x=\"40\" y=\"182\" width=\"320\" height=\"35\" fill=\"#e9d5ff\" stroke=\"#1b2540\" stroke-width=\"1\" rx=\"4\"/><text x=\"200\" y=\"204\" fill=\"#1b2540\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Formula: N = (M × n) / m</text></svg>"
+   },
+   {
+    "cap": "Figure 3: Comparative box plots showing differences in central tendency and dispersion between two populations.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#ffffff\" stroke=\"#1b2540\" stroke-width=\"1\"/><text x=\"200\" y=\"22\" fill=\"#1b2540\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Comparing Two Populations (Box Plots)</text><text x=\"20\" y=\"65\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\">Pop A</text><g transform=\"translate(80, 50)\"><line x1=\"20\" y1=\"15\" x2=\"220\" y2=\"15\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><rect x=\"60\" y=\"0\" width=\"100\" height=\"30\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"110\" y1=\"0\" x2=\"110\" y2=\"30\" stroke=\"#dc2626\" stroke-width=\"2\"/><line x1=\"20\" y1=\"5\" x2=\"20\" y2=\"25\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"220\" y1=\"5\" x2=\"220\" y2=\"25\" stroke=\"#1b2540\" stroke-width=\"1.5\"/></g><text x=\"20\" y=\"135\" fill=\"#1b2540\" font-size=\"11\" font-weight=\"bold\">Pop B</text><g transform=\"translate(80, 120)\"><line x1=\"40\" y1=\"15\" x2=\"280\" y2=\"15\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><rect x=\"90\" y=\"0\" width=\"140\" height=\"30\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"145\" y1=\"0\" x2=\"145\" y2=\"30\" stroke=\"#dc2626\" stroke-width=\"2\"/><line x1=\"40\" y1=\"5\" x2=\"40\" y2=\"25\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"280\" y1=\"5\" x2=\"280\" y2=\"25\" stroke=\"#1b2540\" stroke-width=\"1.5\"/></g><line x1=\"80\" y1=\"180\" x2=\"360\" y2=\"180\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"80\" y1=\"180\" x2=\"80\" y2=\"185\" stroke=\"#1b2540\"/><line x1=\"150\" y1=\"180\" x2=\"150\" y2=\"185\" stroke=\"#1b2540\"/><line x1=\"220\" y1=\"180\" x2=\"220\" y2=\"185\" stroke=\"#1b2540\"/><line x1=\"290\" y1=\"180\" x2=\"290\" y2=\"185\" stroke=\"#1b2540\"/><line x1=\"360\" y1=\"180\" x2=\"360\" y2=\"185\" stroke=\"#1b2540\"/><text x=\"80\" y=\"198\" fill=\"#1b2540\" font-size=\"10\" text-anchor=\"middle\">10</text><text x=\"150\" y=\"198\" fill=\"#1b2540\" font-size=\"10\" text-anchor=\"middle\">20</text><text x=\"220\" y=\"198\" fill=\"#1b2540\" font-size=\"10\" text-anchor=\"middle\">30</text><text x=\"290\" y=\"198\" fill=\"#1b2540\" font-size=\"10\" text-anchor=\"middle\">40</text><text x=\"360\" y=\"198\" fill=\"#1b2540\" font-size=\"10\" text-anchor=\"middle\">50</text><text x=\"220\" y=\"220\" fill=\"#1b2540\" font-size=\"11\" text-anchor=\"middle\">Score / Measurement Units</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_h.5.5",
+  "sid": "maths_eduqas_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.6-flash",
+  "ts": "2026-11-22T16:45:12.960Z"
+ },
+ "maths_eduqas_h.5.6": {
+  "summary": "Scatter graphs display bivariate data to investigate potential linear or non-linear relationships between two quantitative variables. A line of best fit, which must pass through the calculated mean point of the data, models the statistical trend and enables reliable predictions within the range of observed values (interpolation). Extending predictions beyond the domain of recorded data (extrapolation) is inherently unreliable because physical relationships often change outside observed limits, and strong correlation never proves direct causation.",
+  "core": [
+   {
+    "h": "Bivariate Data and Variable Assignment",
+    "p": "Bivariate data consists of paired numerical measurements taken from the same subject or item. When creating a scatter graph, deciding which variable belongs on each axis is essential for correct graphical representation and interpretation.",
+    "bullets": [
+     "**Explanatory (Independent) Variable**: Plotted on the horizontal **x-axis**. This is the variable you control, choose, or view as the input.",
+     "**Response (Dependent) Variable**: Plotted on the vertical **y-axis**. This is the outcome variable being measured or predicted.",
+     "Each data pair is represented as a single point marked with a neat, clear cross (x).",
+     "Axis scales must be uniform, linear, clearly numerical, and fully labelled with units of measurement."
+    ],
+    "table": {
+     "head": [
+      "Scenario",
+      "Independent Variable (x-axis)",
+      "Dependent Variable (y-axis)"
+     ],
+     "rows": [
+      [
+       "Engine size vs Fuel consumption",
+       "Engine size (Litres)",
+       "Fuel consumption (mpg)"
+      ],
+      [
+       "Revision time vs Test mark",
+       "Revision time (Hours)",
+       "Test score (%)"
+      ],
+      [
+       "Elevation vs Temperature",
+       "Elevation (Metres)",
+       "Temperature (°C)"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Bivariate Data",
+      "p": "Data that involves two quantitative variables recorded for each individual sample point in order to explore potential relationships."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Types and Directions of Correlation",
+    "p": "Correlation describes the nature and direction of the linear relationship between two variables. Mark schemes require precise terminology when describing scatter graph trends.",
+    "bullets": [
+     "**Positive Correlation**: As the explanatory variable ($x$) increases, the response variable ($y$) tends to increase.",
+     "**Negative Correlation**: As the explanatory variable ($x$) increases, the response variable ($y$) tends to decrease.",
+     "**Zero (No) Correlation**: No linear pattern exists; changes in $x$ show no systematic effect on $y$.",
+     "Always state both the **direction** (positive/negative) and **strength** when asked to describe correlation."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Exam Terminology Warning",
+      "p": "Do not use terms like 'upwards trend' or 'going down'. You must write 'positive correlation', 'negative correlation', or 'no correlation' to gain marks in Eduqas mark schemes."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Three scatter graphs displaying strong positive correlation, strong negative correlation, and zero correlation.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><g transform=\"translate(15,20)\"><rect width=\"110\" height=\"180\" fill=\"#ffffff\" stroke=\"#cbd5e1\" rx=\"4\"/><line x1=\"25\" y1=\"155\" x2=\"100\" y2=\"155\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"25\" y1=\"155\" x2=\"25\" y2=\"25\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><path d=\"M 30,145 L 36,135 M 40,130 L 46,120 M 50,110 L 56,98 M 60,90 L 66,78 M 70,70 L 76,55 M 80,50 L 86,38\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"30\" y1=\"145\" x2=\"90\" y2=\"35\" stroke=\"#dc2626\" stroke-width=\"1.5\" stroke-dasharray=\"3,3\"/><text x=\"62\" y=\"175\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\" font-weight=\"bold\">Positive</text></g><g transform=\"translate(145,20)\"><rect width=\"110\" height=\"180\" fill=\"#ffffff\" stroke=\"#cbd5e1\" rx=\"4\"/><line x1=\"25\" y1=\"155\" x2=\"100\" y2=\"155\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"25\" y1=\"155\" x2=\"25\" y2=\"25\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><path d=\"M 30,38 L 36,50 M 40,55 L 46,70 M 50,78 L 56,90 M 60,98 L 66,110 M 70,120 L 76,130 M 80,135 L 86,145\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"30\" y1=\"35\" x2=\"90\" y2=\"145\" stroke=\"#dc2626\" stroke-width=\"1.5\" stroke-dasharray=\"3,3\"/><text x=\"62\" y=\"175\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\" font-weight=\"bold\">Negative</text></g><g transform=\"translate(275,20)\"><rect width=\"110\" height=\"180\" fill=\"#ffffff\" stroke=\"#cbd5e1\" rx=\"4\"/><line x1=\"25\" y1=\"155\" x2=\"100\" y2=\"155\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"25\" y1=\"155\" x2=\"25\" y2=\"25\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><path d=\"M 35,45 L 41,55 M 75,40 L 81,50 M 45,95 L 51,105 M 85,100 L 91,110 M 35,135 L 41,145 M 65,140 L 71,150 M 60,65 L 66,75\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"62\" y=\"175\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\" font-weight=\"bold\">Zero / None</text></g></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Strength of Linear Correlation",
+    "p": "The strength of correlation indicates how closely the data points adhere to a straight line of best fit.",
+    "bullets": [
+     "**Strong Correlation**: Data points lie extremely close to the line of best fit, showing little scatter.",
+     "**Weak Correlation**: Data points follow a general linear direction but exhibit significant scatter away from the line.",
+     "Stronger correlation yields higher reliability when making predictions using the line of best fit.",
+     "Scatter increases as random variation or unmeasured confounding variables exert greater influence on $y$."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Grade 9 Precision",
+      "p": "When asked to comment on correlation, always combine strength and direction: e.g., 'Strong negative correlation' or 'Weak positive correlation'."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Non-Linear Relationships",
+    "p": "Not all relationships between variables are linear. Bivariate data can display strong clear patterns that follow curves rather than straight lines.",
+    "bullets": [
+     "Curved distributions occur in physics and economics (e.g., speed vs braking distance follows a quadratic curve; value of a car vs age follows exponential decay).",
+     "A straight line of best fit is **inappropriate** when the scatter graph shows clear non-linear curvature.",
+     "For non-linear distributions, linear extrapolation or linear regression models will introduce severe systematic errors."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Correlation versus Causation",
+    "p": "A strong statistical correlation between two variables does **not** imply that changes in one variable directly cause changes in the other.",
+    "bullets": [
+     "**Causation**: A direct mechanism where variable $A$ causes an effect on variable $B$.",
+     "**Confounding Variable (Third Variable)**: A hidden variable that influences both $A$ and $B$, creating an apparent mathematical link.",
+     "Classic Example: Ice cream sales and suncream sales correlate strongly, but buying ice cream does not cause suncream use; both are driven by sunny weather.",
+     "Exam Questions: Never claim one variable causes another based solely on a scatter graph."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Golden Rule of Statistics",
+      "p": "Correlation does NOT imply causation. Always look for potential third variables or logical physical mechanisms before drawing conclusions."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "The Mean Point (x̄, ȳ)",
+    "p": "The mean point is the single most important landmark when constructing an accurate line of best fit. Eduqas mark schemes specifically award marks for passing through this coordinate.",
+    "bullets": [
+     "Calculate the mean of all $x$-coordinates: $\\bar{x} = \\frac{\\sum x}{n}$.",
+     "Calculate the mean of all $y$-coordinates: $\\bar{y} = \\frac{\\sum y}{n}$.",
+     "The mean point is $(\\bar{x}, \\bar{y})$.",
+     "Every valid linear line of best fit **must** pass precisely through $(\\bar{x}, \\bar{y})$."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Mean Point",
+      "p": "The coordinate $(\\bar{x}, \\bar{y})$ representing the balance point of bivariate data, where $\\bar{x}$ is the mean of all $x$-values and $\\bar{y}$ is the mean of all $y$-values."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Rules for Drawing a Line of Best Fit",
+    "p": "A line of best fit is a single straight trend line drawn to model linear bivariate data.",
+    "bullets": [
+     "Must be drawn with a **sharp pencil and a long clear ruler** extending across the full range of plotted points.",
+     "Must pass directly through the **mean point $(\\bar{x}, \\bar{y})$**.",
+     "Must match the gradient of the trend, balancing the number of data points above and below the line.",
+     "Do **NOT** force the line through the origin $(0,0)$ unless $(0,0)$ makes physical sense and fits the mean trend.",
+     "Do **NOT** join the dots point-to-point."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Checking your Line of Best Fit",
+      "p": "Ensure points above and below the line are evenly spread along its entire length, not clustered at one end."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A line of best fit drawn through a set of bivariate data, explicitly passing through the calculated mean point.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><line x1=\"50\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"50\" y1=\"200\" x2=\"50\" y2=\"30\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"205\" y=\"230\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">Variable X</text><text x=\"20\" y=\"115\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\" transform=\"rotate(-90 20 115)\">Variable Y</text><path d=\"M 75,175 L 85,165 M 115,155 L 125,145 M 150,135 L 160,125 M 240,85 L 250,75 M 285,65 L 295,55 M 325,45 L 335,35\" stroke=\"#2563eb\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"107.5\" r=\"5\" fill=\"#dc2626\"/><text x=\"212\" y=\"112\" font-size=\"11\" fill=\"#dc2626\" font-weight=\"bold\">Mean Point (x̄, ȳ)</text><line x1=\"50\" y1=\"195\" x2=\"350\" y2=\"20\" stroke=\"#059669\" stroke-width=\"2\"/></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Interpolation and Making Predictions",
+    "p": "Interpolation is the process of estimating an unknown value within the domain of recorded data using the line of best fit.",
+    "bullets": [
+     "To estimate $y$ for a given $x$: locate $x$ on the horizontal axis, move vertically up to the line of best fit, then horizontally across to read $y$.",
+     "Show your working by drawing **dashed construction lines** on the graph.",
+     "Interpolation is **reliable** when the correlation is strong and data points are dense around the line."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Dangers of Extrapolation",
+    "p": "Extrapolation involves extending the line of best fit to predict values outside the range of observed data.",
+    "bullets": [
+     "Extrapolation is inherently **unreliable** and potentially invalid.",
+     "Reason 1: The linear trend may change, curve, flatline, or reverse outside the tested domain.",
+     "Reason 2: It can produce physically impossible values (e.g., negative masses, human height exceeding 4 metres).",
+     "Exam response rule: State clearly that extrapolation is unreliable because 'it lies outside the range of given data' and 'the relationship may not remain linear'."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Extrapolation Trap",
+      "p": "If an exam question asks whether a prediction for an extreme value is sensible, check if it falls beyond the minimum or maximum plotted x-value. If so, answer NO due to extrapolation."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Diagram contrasting reliable interpolation within the data range against unreliable extrapolation outside it.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"110\" y=\"40\" width=\"170\" height=\"150\" fill=\"#bbf7d0\" opacity=\"0.4\" rx=\"4\"/><text x=\"195\" y=\"58\" font-size=\"11\" fill=\"#166534\" font-weight=\"bold\" text-anchor=\"middle\">Interpolation Zone (Reliable)</text><rect x=\"280\" y=\"40\" width=\"95\" height=\"150\" fill=\"#fecaca\" opacity=\"0.4\" rx=\"4\"/><text x=\"327\" y=\"58\" font-size=\"11\" fill=\"#991b1b\" font-weight=\"bold\" text-anchor=\"middle\">Extrapolation</text><line x1=\"40\" y1=\"190\" x2=\"375\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"40\" y1=\"190\" x2=\"40\" y2=\"30\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><path d=\"M 120,165 L 126,155 M 150,140 L 156,130 M 180,120 L 186,110 M 210,95 L 216,85 M 240,75 L 246,65 M 270,55 L 276,45\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"100\" y1=\"180\" x2=\"280\" y2=\"45\" stroke=\"#059669\" stroke-width=\"2\"/><line x1=\"280\" y1=\"45\" x2=\"360\" y2=\"-15\" stroke=\"#dc2626\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><circle cx=\"195\" cy=\"110\" r=\"3\" fill=\"#166534\"/><line x1=\"195\" y1=\"190\" x2=\"195\" y2=\"110\" stroke=\"#166534\" stroke-width=\"1\" stroke-dasharray=\"2,2\"/><line x1=\"195\" y1=\"110\" x2=\"40\" y2=\"110\" stroke=\"#166534\" stroke-width=\"1\" stroke-dasharray=\"2,2\"/></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Outliers and Anomalous Data",
+    "p": "An outlier is a data point that lies markedly separate from the main pattern of the scatter plot.",
+    "bullets": [
+     "Causes: measurement error, recording mistake, or an exceptional individual sample.",
+     "Handling: Outliers should be identified and investigated. If confirmed as errors, they should be excluded before calculating the mean point $(\\bar{x}, \\bar{y})$ and placing the line of best fit.",
+     "Exam technique: Circle the outlier if asked to identify it, and give its exact coordinate."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": [
+     {
+      "cap": "Scatter plot showing an outlier clearly positioned away from the linear trend line.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><line x1=\"40\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"40\" y1=\"200\" x2=\"40\" y2=\"30\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><path d=\"M 70,175 L 76,165 M 100,155 L 106,145 M 130,135 L 136,125 M 160,110 L 166,100 M 190,90 L 196,80 M 220,70 L 226,60 M 250,50 L 256,40\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"60\" y1=\"180\" x2=\"270\" y2=\"30\" stroke=\"#059669\" stroke-width=\"2\"/><path d=\"M 230,165 L 236,155\" stroke=\"#dc2626\" stroke-width=\"2\"/><circle cx=\"233\" cy=\"160\" r=\"14\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\" stroke-dasharray=\"3,3\"/><text x=\"255\" y=\"165\" font-size=\"11\" fill=\"#dc2626\" font-weight=\"bold\">Outlier</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Interpreting Gradient and Y-Intercept in Context",
+    "p": "At Grade 9 level, students must interpret the mathematical components of a line of best fit ($y = mx + c$) within the practical scenario presented.",
+    "bullets": [
+     "**Gradient ($m$)**: Represents the rate of change of $y$ per unit change in $x$. $\\text{Gradient} = \\frac{\\text{Change in } y}{\\text{Change in } x}$.",
+     "**Y-intercept ($c$)**: Represents the baseline value of $y$ when $x = 0$.",
+     "Always frame answers using the specific real-world units given in the question prompt."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Example Contextual Interpretation",
+      "p": "If $y$ is heating cost (£) and $x$ is outside temperature (°C), a gradient of -3.5 means: 'For every 1°C increase in temperature, heating cost decreases by £3.50.'"
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Hiking with a Map and Weather Forecast",
+   "p": "Using a line of best fit for interpolation is like using a detailed map to estimate your altitude along a well-trodden trail between two marked checkpoints; the surrounding data points ensure high confidence. Extrapolation is like assuming the trail keeps rising at the exact same slope far beyond the edge of your map into unchartered mountains—where you risk walking off a cliff because terrain and conditions change unpredictably. Correlation showing a link between two hiking groups arriving early does not mean one group pulled the other up the mountain (confounding variable of daylight)."
+  },
+  "terms": [
+   {
+    "t": "Bivariate Data",
+    "d": "Data involving pairs of related numerical measurements for each observed item."
+   },
+   {
+    "t": "Explanatory Variable",
+    "d": "The independent variable plotted on the horizontal x-axis, assumed to influence the response variable."
+   },
+   {
+    "t": "Response Variable",
+    "d": "The dependent variable plotted on the vertical y-axis, measured to observe the effect of the explanatory variable."
+   },
+   {
+    "t": "Positive Correlation",
+    "d": "A relationship where the response variable increases as the explanatory variable increases."
+   },
+   {
+    "t": "Negative Correlation",
+    "d": "A relationship where the response variable decreases as the explanatory variable increases."
+   },
+   {
+    "t": "Zero Correlation",
+    "d": "The absence of any linear relationship between two variables."
+   },
+   {
+    "t": "Line of Best Fit",
+    "d": "A single straight line drawn on a scatter graph that models the linear trend of the data points and passes through the mean point."
+   },
+   {
+    "t": "Mean Point (x̄, ȳ)",
+    "d": "The coordinate whose x-value is the mean of all x-data and y-value is the mean of all y-data."
+   },
+   {
+    "t": "Interpolation",
+    "d": "Estimating an unknown value within the range of observed sample data using the trend model."
+   },
+   {
+    "t": "Extrapolation",
+    "d": "Estimating a value outside the range of observed data by assuming the trend continues linearly."
+   },
+   {
+    "t": "Causation",
+    "d": "A direct relationship where a change in one variable explicitly causes a change in another."
+   },
+   {
+    "t": "Confounding Variable",
+    "d": "An unmeasured external factor that influences both variables, creating a false impression of direct cause-and-effect."
+   },
+   {
+    "t": "Outlier",
+    "d": "A data value that lies significantly outside the general trend of the rest of the dataset."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Joining data points dot-to-dot with straight segments.",
+    "r": "Draw a single continuous straight line of best fit across the data using a ruler."
+   },
+   {
+    "w": "Forcing the line of best fit to start at the origin (0,0).",
+    "r": "Draw the line through the mean point (x̄, ȳ) and along the trend; only pass through (0,0) if supported by data."
+   },
+   {
+    "w": "Stating that strong correlation proves one variable causes the other.",
+    "r": "State that correlation shows a relationship, but causation requires proof that no confounding variables exist."
+   },
+   {
+    "w": "Using the word 'positive' alone when describing correlation.",
+    "r": "State both strength and direction, e.g., 'Strong positive correlation'."
+   },
+   {
+    "w": "Assuming extrapolated predictions are completely reliable.",
+    "r": "State that extrapolation is unreliable because it lies outside the range of recorded data and the trend may change."
+   },
+   {
+    "w": "Including outliers when calculating the mean point (x̄, ȳ).",
+    "r": "Identify and remove obvious anomalous errors before calculating the mean point and positioning the trend line."
+   },
+   {
+    "w": "Forgetting to draw construction lines on scatter graphs for prediction questions.",
+    "r": "Draw vertical and horizontal dashed lines from the axes to your line of best fit to show explicit method."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Describe the correlation shown between the engine capacity of cars and their fuel consumption in miles per gallon.",
+    "marks": 1,
+    "model": [
+     "Negative correlation (or Strong negative correlation)."
+    ],
+    "tip": "Always give direction (positive/negative). Adding strength (strong/weak) is good practice."
+   },
+   {
+    "q": "The mean revision time for 10 students is 6.5 hours and their mean exam score is 58%. State the coordinates of the mean point and explain its importance when drawing a line of best fit.",
+    "marks": 2,
+    "model": [
+     "Mean point coordinates: (6.5, 58)",
+     "Importance: The line of best fit must pass through this point to accurately balance the distribution."
+    ],
+    "tip": "Coordinates must be written as (x, y) with x = independent and y = dependent."
+   },
+   {
+    "q": "A student claims: 'Because there is a strong positive correlation between ice cream sales and sunscreen sales, buying ice cream causes people to buy sunscreen.' Explain why the student is incorrect.",
+    "marks": 2,
+    "model": [
+     "Correlation does not imply causation.",
+     "Both variables are influenced by a third (confounding) variable, such as hot sunny weather."
+    ],
+    "tip": "Use the exact phrase 'Correlation does not imply causation' and name a sensible confounding variable."
+   },
+   {
+    "q": "Use your line of best fit to estimate the test score of a student who revised for 4.5 hours. [Data range: 1 to 8 hours]",
+    "marks": 2,
+    "model": [
+     "Draw a vertical dashed line from x = 4.5 to the line of best fit.",
+     "Read across to the vertical axis to obtain the value (e.g., 46% ± 1%)."
+    ],
+    "tip": "Leave dashed construction lines visible on your graph to secure method marks."
+   },
+   {
+    "q": "A student uses the scatter graph to predict the test score of someone who revised for 25 hours. Comment on the reliability of this prediction.",
+    "marks": 2,
+    "model": [
+     "The prediction is unreliable.",
+     "It involves extrapolation beyond the maximum recorded data value of 8 hours, and the linear trend may not continue (e.g., fatigue or maximum mark limits)."
+    ],
+    "tip": "State 'unreliable', mention 'extrapolation / outside data range', and give a contextual reason."
+   },
+   {
+    "q": "A scatter plot shows a candidate point at (12, 95) while all other points lie close to a trend running from (2, 20) to (10, 50). Identify this point and explain how it should be handled.",
+    "marks": 3,
+    "model": [
+     "Identify (12, 95) as an outlier / anomaly.",
+     "It should be investigated/checked for recording error.",
+     "It should be omitted when calculating the mean point and drawing the line of best fit."
+    ],
+    "tip": "Outliers distort both the mean point and the gradient if included."
+   },
+   {
+    "q": "The line of best fit for height (h in cm) vs age (a in years) for children aged 5 to 12 has equation h = 6a + 75. Interpret the values 6 and 75 in context.",
+    "marks": 2,
+    "model": [
+     "6 represents the average growth rate of 6 cm per year.",
+     "75 represents the baseline estimated height of 75 cm at age 0 (birth)."
+    ],
+    "tip": "Relate gradient to 'rate per unit increase' and y-intercept to 'initial value at x = 0'."
+   },
+   {
+    "q": "Explain why a line of best fit for a car's age vs current market value should not automatically be extended to cross the y-axis or x-axis without caution.",
+    "marks": 2,
+    "model": [
+     "Extrapolating to axes may lead to unrealistic predictions such as negative values.",
+     "Depreciation rates often slow down over time rather than remaining strictly linear."
+    ],
+    "tip": "Relate non-linear behavior to physical constraints in real-world contexts."
+   },
+   {
+    "q": "State two criteria that a examiner checks when assessing whether a straight line of best fit is correctly drawn.",
+    "marks": 2,
+    "model": [
+     "The line passes precisely through the mean point (x̄, ȳ).",
+     "The line follows the overall trend with roughly an equal balance of data points above and below it."
+    ],
+    "tip": "Always use a clear ruler and sharp pencil. Never draw point-to-point lines."
+   }
+  ],
+  "worked": [
+   {
+    "q": "The table below shows the temperature (°C) and daily cold drink sales (£) at a seaside kiosk:\nTemperature (°C): 14, 16, 18, 20, 24, 26\nSales (£): 120, 150, 180, 220, 290, 340\n\n(a) Calculate the mean point (x̄, ȳ).\n(b) Explain why using this graph to predict sales at 40°C is unreliable.",
+    "steps": [
+     "Step 1: Calculate the mean of x (Temperature):\nx̄ = (14 + 16 + 18 + 20 + 24 + 26) / 6 = 118 / 6 = 19.67 °C.",
+     "Step 2: Calculate the mean of y (Sales):\nȳ = (120 + 150 + 180 + 220 + 290 + 340) / 6 = 1300 / 6 = £216.67.",
+     "Step 3: Write the mean point coordinate: (19.67, 216.67).",
+     "Step 4: Evaluate prediction at 40°C: The highest observed data point is 26°C. Predicting at 40°C requires extrapolation far outside the domain of collected data. Extreme heat may also alter behavior (e.g., people staying indoors), so the linear pattern may break down."
+    ],
+    "ans": "(a) Mean point = (19.67, 216.67)\n(b) Unreliable because 40°C is far outside the recorded data range (extrapolation) and the linear trend may not hold at extreme temperatures."
+   },
+   {
+    "q": "A line of best fit drawn on a scatter graph connecting study hours (x) and test percentage (y) passes through (2, 35) and (8, 80).\n(a) Calculate the gradient of the line of best fit.\n(b) Interpret what this gradient represents in the context of the problem.",
+    "steps": [
+     "Step 1: Use the gradient formula m = (y2 - y1) / (x2 - x1).",
+     "Step 2: Substitute values: m = (80 - 35) / (8 - 2) = 45 / 6 = 7.5.",
+     "Step 3: Interpret gradient in context: For every 1 additional hour of study, the expected test score increases by 7.5 percentage points."
+    ],
+    "ans": "(a) Gradient = 7.5\n(b) Each extra hour of study is associated with an average increase of 7.5% in the test mark."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Overview of positive, negative, and zero correlation patterns on scatter graphs.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><g transform=\"translate(15,20)\"><rect width=\"110\" height=\"180\" fill=\"#ffffff\" stroke=\"#cbd5e1\" rx=\"4\"/><line x1=\"25\" y1=\"155\" x2=\"100\" y2=\"155\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"25\" y1=\"155\" x2=\"25\" y2=\"25\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><path d=\"M 30,145 L 36,135 M 40,130 L 46,120 M 50,110 L 56,98 M 60,90 L 66,78 M 70,70 L 76,55 M 80,50 L 86,38\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"30\" y1=\"145\" x2=\"90\" y2=\"35\" stroke=\"#dc2626\" stroke-width=\"1.5\" stroke-dasharray=\"3,3\"/><text x=\"62\" y=\"175\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\" font-weight=\"bold\">Positive</text></g><g transform=\"translate(145,20)\"><rect width=\"110\" height=\"180\" fill=\"#ffffff\" stroke=\"#cbd5e1\" rx=\"4\"/><line x1=\"25\" y1=\"155\" x2=\"100\" y2=\"155\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"25\" y1=\"155\" x2=\"25\" y2=\"25\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><path d=\"M 30,38 L 36,50 M 40,55 L 46,70 M 50,78 L 56,90 M 60,98 L 66,110 M 70,120 L 76,130 M 80,135 L 86,145\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"30\" y1=\"35\" x2=\"90\" y2=\"145\" stroke=\"#dc2626\" stroke-width=\"1.5\" stroke-dasharray=\"3,3\"/><text x=\"62\" y=\"175\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\" font-weight=\"bold\">Negative</text></g><g transform=\"translate(275,20)\"><rect width=\"110\" height=\"180\" fill=\"#ffffff\" stroke=\"#cbd5e1\" rx=\"4\"/><line x1=\"25\" y1=\"155\" x2=\"100\" y2=\"155\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"25\" y1=\"155\" x2=\"25\" y2=\"25\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><path d=\"M 35,45 L 41,55 M 75,40 L 81,50 M 45,95 L 51,105 M 85,100 L 91,110 M 35,135 L 41,145 M 65,140 L 71,150 M 60,65 L 66,75\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"62\" y=\"175\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\" font-weight=\"bold\">Zero / None</text></g></svg>"
+   },
+   {
+    "cap": "Correct construction of a line of best fit passing directly through the mean point.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><line x1=\"50\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"50\" y1=\"200\" x2=\"50\" y2=\"30\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"205\" y=\"230\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">Variable X</text><text x=\"20\" y=\"115\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\" transform=\"rotate(-90 20 115)\">Variable Y</text><path d=\"M 75,175 L 85,165 M 115,155 L 125,145 M 150,135 L 160,125 M 240,85 L 250,75 M 285,65 L 295,55 M 325,45 L 335,35\" stroke=\"#2563eb\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"107.5\" r=\"5\" fill=\"#dc2626\"/><text x=\"212\" y=\"112\" font-size=\"11\" fill=\"#dc2626\" font-weight=\"bold\">Mean Point (x̄, ȳ)</text><line x1=\"50\" y1=\"195\" x2=\"350\" y2=\"20\" stroke=\"#059669\" stroke-width=\"2\"/></svg>"
+   },
+   {
+    "cap": "Visual comparison between reliable interpolation within data limits and risky extrapolation outside.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"110\" y=\"40\" width=\"170\" height=\"150\" fill=\"#bbf7d0\" opacity=\"0.4\" rx=\"4\"/><text x=\"195\" y=\"58\" font-size=\"11\" fill=\"#166534\" font-weight=\"bold\" text-anchor=\"middle\">Interpolation Zone (Reliable)</text><rect x=\"280\" y=\"40\" width=\"95\" height=\"150\" fill=\"#fecaca\" opacity=\"0.4\" rx=\"4\"/><text x=\"327\" y=\"58\" font-size=\"11\" fill=\"#991b1b\" font-weight=\"bold\" text-anchor=\"middle\">Extrapolation</text><line x1=\"40\" y1=\"190\" x2=\"375\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"40\" y1=\"190\" x2=\"40\" y2=\"30\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><path d=\"M 120,165 L 126,155 M 150,140 L 156,130 M 180,120 L 186,110 M 210,95 L 216,85 M 240,75 L 246,65 M 270,55 L 276,45\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"100\" y1=\"180\" x2=\"280\" y2=\"45\" stroke=\"#059669\" stroke-width=\"2\"/><line x1=\"280\" y1=\"45\" x2=\"360\" y2=\"-15\" stroke=\"#dc2626\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><circle cx=\"195\" cy=\"110\" r=\"3\" fill=\"#166534\"/><line x1=\"195\" y1=\"190\" x2=\"195\" y2=\"110\" stroke=\"#166534\" stroke-width=\"1\" stroke-dasharray=\"2,2\"/><line x1=\"195\" y1=\"110\" x2=\"40\" y2=\"110\" stroke=\"#166534\" stroke-width=\"1\" stroke-dasharray=\"2,2\"/></svg>"
+   },
+   {
+    "cap": "Identification of an anomalous outlier point on a scatter graph.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><line x1=\"40\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"40\" y1=\"200\" x2=\"40\" y2=\"30\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><path d=\"M 70,175 L 76,165 M 100,155 L 106,145 M 130,135 L 136,125 M 160,110 L 166,100 M 190,90 L 196,80 M 220,70 L 226,60 M 250,50 L 256,40\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"60\" y1=\"180\" x2=\"270\" y2=\"30\" stroke=\"#059669\" stroke-width=\"2\"/><path d=\"M 230,165 L 236,155\" stroke=\"#dc2626\" stroke-width=\"2\"/><circle cx=\"233\" cy=\"160\" r=\"14\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\" stroke-dasharray=\"3,3\"/><text x=\"255\" y=\"165\" font-size=\"11\" fill=\"#dc2626\" font-weight=\"bold\">Outlier</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_h.5.6",
+  "sid": "maths_eduqas_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.6-flash",
+  "ts": "2026-11-22T16:48:49.368Z"
+ },
+ "maths_eduqas_h.5.4": {
+  "summary": "Comparing distributions is a core Grade 9 statistical skill tested across both non-calculator and calculator papers in Eduqas GCSE Mathematics. To compare two or more datasets effectively, you must always provide two types of statistical measure: a measure of central tendency (median or mean) and a measure of spread (interquartile range, range, or standard deviation). Merely stating that one group has a higher median is insufficient; you must explicitly use comparative language (\"whereas,\" \"on average\") and interpret your mathematical findings within the real-world context of the question.",
+  "core": [
+   {
+    "h": "1. The Foundation of Distribution Comparison",
+    "p": "When comparing two datasets in GCSE Statistics, examiners are looking for a complete statistical comparison. A top-tier response never looks at averages in isolation; it balances location with spread to give a comprehensive view of how populations differ.",
+    "bullets": [
+     "Always compare one measure of average and one measure of spread.",
+     "For median-based comparisons, pair the median with the Interquartile Range (IQR).",
+     "For mean-based comparisons, pair the mean with the standard deviation or range.",
+     "Contextualise every statistical statement using the units and subject of the question."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "The Golden Rule of Comparison",
+      "p": "Every comparison requires a number and a context. Never say 'Group A has a higher median.' Say 'Group A has a higher median score of 45 marks, indicating that on average students in Group A performed better than those in Group B.'"
+     },
+     {
+      "k": "warn",
+      "t": "Ignoring Spread",
+      "p": "Students frequently lose marks by only calculating the averages. If you omit the range, IQR, or standard deviation, you cap your mark."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. Anatomy and Interpretation of Box Plots",
+    "p": "A box plot provides a visual five-number summary of continuous or discrete numerical data. It splits data into four equal sections, each containing roughly 25 percent of the observations.",
+    "bullets": [
+     "The left-most vertical line marks the minimum value.",
+     "The left edge of the box represents the lower quartile (Q1).",
+     "The central vertical line inside the box marks the median (Q2).",
+     "The right edge of the box represents the upper quartile (Q3).",
+     "The right-most vertical line marks the maximum value."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Five-Number Summary",
+      "p": "The set of values that describes a distribution: Minimum, Lower Quartile (Q1), Median, Upper Quartile (Q3), and Maximum."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Visual breakdown of a standard box plot showing minimum, Q1, median, Q3, maximum, and IQR.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"60\" y1=\"120\" x2=\"340\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"60\" y1=\"90\" x2=\"60\" y2=\"150\" stroke=\"#1b2540\" stroke-width=\"3\"/><line x1=\"340\" y1=\"90\" x2=\"340\" y2=\"150\" stroke=\"#1b2540\" stroke-width=\"3\"/><rect x=\"130\" y=\"80\" width=\"150\" height=\"80\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"200\" y1=\"80\" x2=\"200\" y2=\"160\" stroke=\"#1b2540\" stroke-width=\"3\"/><text x=\"60\" y=\"175\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Minimum</text><text x=\"130\" y=\"175\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Q1</text><text x=\"200\" y=\"175\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Median</text><text x=\"340\" y=\"175\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Maximum</text><text x=\"215\" y=\"65\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Q3</text><line x1=\"280\" y1=\"80\" x2=\"280\" y2=\"160\" stroke=\"#1b2540\" stroke-width=\"2\"/></svg>"
+     }
+    ]
+   },
+   {
+    "h": "3. Comparing Two Box Plots: Location",
+    "p": "When comparing two box plots, the first paragraph of your answer must focus on the median. The median tells us about the central tendency or general level of the data.",
+    "bullets": [
+     "State the exact median value for the first distribution.",
+     "State the exact median value for the second distribution.",
+     "Compare them directly (e.g., 'Dataset A's median of 65 is higher than Dataset B's median of 52').",
+     "Interpret the finding: higher median implies higher average performance or values."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Reading Scales Carefully",
+      "p": "Always check whether the axis scale increases by 1s, 2s, 5s, or 10s before reading off quartiles to avoid careless reading errors."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Comparing Two Box Plots: Spread (IQR and Range)",
+    "p": "The second paragraph of your comparison must examine consistency and variability. The Interquartile Range (IQR) measures the spread of the middle 50 percent of the data.",
+    "bullets": [
+     "Calculate IQR = Q3 - Q1 for both distributions.",
+     "Calculate Range = Maximum - Minimum if required.",
+     "State clearly which distribution has a larger or smaller spread.",
+     "Interpret the spread: a smaller IQR means the data is more consistent or reliable."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Interquartile Range (IQR)",
+      "p": "The difference between the upper quartile and the lower quartile (Q3 - Q1). It measures the spread of the middle 50% of data and is resistant to outliers."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Comparison of two box plots highlighting differences in median and spread between two classes.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><text x=\"50\" y=\"40\" font-size=\"12\" fill=\"#1b2540\" font-weight=\"bold\">Class A</text><line x1=\"80\" y1=\"65\" x2=\"320\" y2=\"65\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"120\" y=\"45\" width=\"140\" height=\"40\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"180\" y1=\"45\" x2=\"180\" y2=\"85\" stroke=\"#1b2540\" stroke-width=\"3\"/><line x1=\"80\" y1=\"50\" x2=\"80\" y2=\"80\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"320\" y1=\"50\" x2=\"320\" y2=\"80\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"50\" y=\"150\" font-size=\"12\" fill=\"#1b2540\" font-weight=\"bold\">Class B</text><line x1=\"100\" y1=\"175\" x2=\"300\" y2=\"175\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"140\" y=\"155\" width=\"120\" height=\"40\" fill=\"#fecaca\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"220\" y1=\"155\" x2=\"220\" y2=\"195\" stroke=\"#1b2540\" stroke-width=\"3\"/><line x1=\"100\" y1=\"160\" x2=\"100\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"300\" y1=\"160\" x2=\"300\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"200\" y=\"225\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Score Scale (0 to 100)</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "5. Averages from Raw and Grouped Data",
+    "p": "When distributions are given as lists, frequency tables, or grouped frequency tables, you must select the correct average and spread metrics before comparing.",
+    "bullets": [
+     "Use the median and IQR when data contains extreme outliers or is heavily skewed.",
+     "Use the mean and standard deviation when data is symmetrical and free of anomalies.",
+     "For grouped continuous data, estimate the mean using midpoints: sum of (midpoint * frequency) / total frequency.",
+     "For grouped data, estimate the median position as (n + 1) / 2 or n / 2 depending on exam board convention."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Choosing the Right Average",
+      "p": "If an examiner asks you to discuss which average is more appropriate, cite the presence of outliers or skewness to justify your choice."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. The Effect of Outliers on Statistics",
+    "p": "Outliers are extreme values that lie unusually far away from the rest of the dataset. Recognising how they impact different statistical measures is a Grade 9 differentiator.",
+    "bullets": [
+     "The mean is heavily influenced by outliers because every single value is used in its calculation.",
+     "The median is resistant to outliers because it only depends on the middle value(s).",
+     "The range is extremely sensitive to outliers since it relies solely on the maximum and minimum values.",
+     "The IQR is robust against outliers because it ignores the top and bottom 25 percent of the data."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Careless Outlier Assumptions",
+      "p": "Never remove an outlier unless instructed to do so or unless it is clearly an error in data recording."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Cumulative Frequency Graphs for Quartiles",
+    "p": "Cumulative frequency graphs allow us to estimate quartiles for large continuous datasets, forming the basis of subsequent box plot construction and distribution comparison.",
+    "bullets": [
+     "Plot cumulative frequencies against upper class boundaries.",
+     "Join points with a smooth, curving S-shaped line.",
+     "Find Q1 at 25 percent of the total frequency, Median (Q2) at 50 percent, and Q3 at 75 percent.",
+     "Draw dashed construction lines from the vertical frequency axis to the curve, then down to the horizontal data axis."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Show Your Working",
+      "p": "Examiners award method marks for dashed lines drawn from the 25%, 50%, and 75% marks on the cumulative frequency axis."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Back-to-Back Stem and Leaf Diagrams",
+    "p": "Stem and leaf diagrams preserve all raw data while displaying distributions visually. Back-to-back versions allow direct comparison of two groups.",
+    "bullets": [
+     "The central column lists the shared stems (e.g., tens digits).",
+     "Leaves for the left group go outwards from right to left, in ascending order away from the stem.",
+     "Leaves for the right group go outwards from left to right, in ascending order away from the stem.",
+     "Always include a clear key showing what a stem and leaf represent (e.g., 4 | 2 means 42 marks)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Stem and Leaf Diagram",
+      "p": "A table used to display discrete or continuous numerical data split into a leading digit (stem) and trailing digit (leaf), maintaining all original data values."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Example of back-to-back stem and leaf layout comparing two test cohorts.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><text x=\"100\" y=\"30\" font-size=\"12\" fill=\"#1b2540\" font-weight=\"bold\">Class 11A Leaves</text><text x=\"200\" y=\"30\" font-size=\"12\" fill=\"#1b2540\" font-weight=\"bold\">Stem</text><text x=\"280\" y=\"30\" font-size=\"12\" fill=\"#1b2540\" font-weight=\"bold\">Class 11B Leaves</text><line x1=\"200\" y1=\"40\" x2=\"200\" y2=\"210\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"200\" y=\"70\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">3</text><text x=\"200\" y=\"100\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">4</text><text x=\"200\" y=\"130\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">5</text><text x=\"200\" y=\"160\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">6</text><text x=\"160\" y=\"70\" font-size=\"12\" fill=\"#1b2540\">7 4</text><text x=\"150\" y=\"100\" font-size=\"12\" fill=\"#1b2540\">8 5 2</text><text x=\"170\" y=\"130\" font-size=\"12\" fill=\"#1b2540\">9 1</text><text x=\"160\" y=\"160\" font-size=\"12\" fill=\"#1b2540\">6 3 0</text><text x=\"230\" y=\"70\" font-size=\"12\" fill=\"#1b2540\">1 5</text><text x=\"230\" y=\"100\" font-size=\"12\" fill=\"#1b2540\">0 3 4 8</text><text x=\"230\" y=\"130\" font-size=\"12\" fill=\"#1b2540\">2 6</text><text x=\"230\" y=\"160\" font-size=\"12\" fill=\"#1b2540\">5 9</text><text x=\"200\" y=\"200\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Key: 3 | 4 means 34 marks</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "9. Comparing Skewness in Distributions",
+    "p": "Skewness describes how asymmetrical a distribution is. Recognising skew from graphs or quartile values is a high-level GCSE skill.",
+    "bullets": [
+     "Positive (right) skew: The tail extends to the right; median is closer to the lower quartile; mode < median < mean.",
+     "Negative (left) skew: The tail extends to the left; median is closer to the upper quartile; mean < median < mode.",
+     "Symmetrical distribution: Median is halfway between Q1 and Q3; mean equals median equals mode."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Positive Skew",
+      "p": "A distribution where the majority of data values are clustered at the lower end, with a long tail of higher values stretching to the right."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Structured Comparison Writing Frame",
+    "p": "To secure full marks on 4-mark and 6-mark distribution comparison questions, use a rigorous, repeatable writing structure.",
+    "bullets": [
+     "Sentence 1 (Average): State the numerical average for both datasets and compare them ('Group X has a higher median of 70 compared to Group Y's median of 55').",
+     "Sentence 2 (Context 1): Interpret what this average means in the context of the question.",
+     "Sentence 3 (Spread): State the numerical spread (IQR or range) for both datasets and compare them ('Group X has a smaller IQR of 12 compared to Group Y's IQR of 28').",
+     "Sentence 4 (Context 2): Interpret what this spread means regarding consistency or reliability."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Mark Scheme Check",
+      "p": "Mark schemes award independent marks: one for average calculation/comparison, one for spread calculation/comparison, and one or two for contextual interpretation."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "11. Comparing Frequency Polygons",
+    "p": "Frequency polygons plot frequencies at class midpoints and join them with straight line segments. They are excellent for comparing two distributions on the same set of axes.",
+    "bullets": [
+     "Compare peaks to see which group achieved higher frequencies at certain values.",
+     "Compare shifts along the horizontal axis to determine differences in average level.",
+     "Compare the width of the spread to determine consistency between the two populations."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Do Not Curve Frequency Polygons",
+      "p": "Unlike cumulative frequency graphs, frequency polygons are constructed using straight line segments connecting points at class midpoints."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "12. Standard Deviation and Variance Overview",
+    "p": "Though primarily calculated on scientific calculators in modern GCSE specifications, understanding standard deviation is crucial for parametric comparisons.",
+    "bullets": [
+     "Standard deviation measures the average distance of data values from the mean.",
+     "A larger standard deviation indicates a widely spread, inconsistent dataset.",
+     "A smaller standard deviation indicates data points clustered tightly around the mean.",
+     "Combined with the mean, standard deviation fully describes normal distributions."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Standard Deviation",
+      "p": "A measure of spread calculated as the square root of the variance, representing how much members of a group differ from the mean value."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Archery Competition Analogy",
+   "p": "Comparing two distributions using averages and spread is like comparing two archers. Archer A has an average shot right in the bullseye (high median), and all their arrows are tightly clustered within a small circle (small IQR/consistent spread). Archer B also has an average shot in the bullseye, but their arrows are scattered all across the target board (large IQR/inconsistent spread). Just knowing they have the same average doesn't tell you who is the better archer; you need the spread to know who is reliable. This analogy breaks down because real-world statistical data often exhibits skewness and outliers, whereas archery patterns are typically circular and symmetrical around a center point."
+  },
+  "terms": [
+   {
+    "t": "Median",
+    "d": "The middle value when a dataset is arranged in ascending order, representing the exact 50th percentile."
+   },
+   {
+    "t": "Lower Quartile",
+    "d": "The median of the lower half of a dataset, representing the 25th percentile (Q1)."
+   },
+   {
+    "t": "Upper Quartile",
+    "d": "The median of the upper half of a dataset, representing the 75th percentile (Q3)."
+   },
+   {
+    "t": "Interquartile Range",
+    "d": "The difference between the upper quartile and lower quartile, calculated as Q3 - Q1."
+   },
+   {
+    "t": "Range",
+    "d": "The difference between the maximum and minimum values in a dataset."
+   },
+   {
+    "t": "Box Plot",
+    "d": "A graphical representation of numerical data through its five-number summary."
+   },
+   {
+    "t": "Cumulative Frequency",
+    "d": "The running total of frequencies up to the upper boundary of each class interval."
+   },
+   {
+    "t": "Outlier",
+    "d": "An extreme value that lies abnormally far from the rest of the dataset."
+   },
+   {
+    "t": "Skewness",
+    "d": "A measure of the asymmetry of a probability distribution around its mean or median."
+   },
+   {
+    "t": "Standard Deviation",
+    "d": "A statistical measure of dispersion quantifying the amount of variation or spread of a set of data values."
+   },
+   {
+    "t": "Central Tendency",
+    "d": "A statistical measure that identifies a single value as representative of an entire distribution."
+   },
+   {
+    "t": "Spread",
+    "d": "A numerical value describing how tightly clustered or widely dispersed data values are."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Stating 'Group A has a higher median' without quoting the actual numbers from the question.",
+    "r": "Always state the exact numerical values for both averages and both spreads to secure full marks."
+   },
+   {
+    "w": "Using the range when comparing datasets with extreme outliers.",
+    "r": "Use the Interquartile Range (IQR) because outliers distort the range, whereas the IQR is resistant."
+   },
+   {
+    "w": "Failing to put statistical findings into the real-world context of the question.",
+    "r": "Every comparison must include the units or subject matter (e.g., 'test scores', 'running times in seconds')."
+   },
+   {
+    "w": "Confusing Q1 and Q3 when calculating the Interquartile Range.",
+    "r": "Remember that IQR is always Upper Quartile minus Lower Quartile (Q3 - Q1), never Q1 - Q3."
+   },
+   {
+    "w": "Describing a box plot box as representing the range.",
+    "r": "The box represents the middle 50% of the data (the IQR), while the whiskers extend to the min and max."
+   },
+   {
+    "w": "Stating that a larger range means better performance.",
+    "r": "A larger range means greater inconsistency or spread, not better performance."
+   },
+   {
+    "w": "Drawing cumulative frequency curves with straight lines.",
+    "r": "Cumulative frequency graphs must be drawn with a smooth, continuous S-shaped curve."
+   }
+  ],
+  "exam": [
+   {
+    "q": "The box plots show the distribution of test scores for Class X and Class Y. Compare the two distributions using two statistical measures.",
+    "marks": 4,
+    "model": [
+     "Class X has a higher median score of 62 compared to Class Y's median of 48.",
+     "This indicates that, on average, Class X performed better on the test.",
+     "Class X has a smaller IQR of 15 compared to Class Y's IQR of 28.",
+     "This indicates that Class X's test scores were more consistent than Class Y's."
+    ],
+    "tip": "Ensure you give one average and one spread, with context for both."
+   },
+   {
+    "q": "A company records the daily commute times in minutes for two employees over a month. Employee A: median = 35, IQR = 8. Employee B: median = 38, IQR = 22. Compare their commute times.",
+    "marks": 3,
+    "model": [
+     "Employee A has a lower median commute time of 35 minutes compared to Employee B's 38 minutes, so Employee A's journey is generally shorter.",
+     "Employee B has a much larger IQR of 22 minutes compared to Employee A's 8 minutes.",
+     "Therefore, Employee A's journey times are much more consistent and reliable."
+    ],
+    "tip": "Check units (minutes) and use comparative vocabulary like 'generally shorter' and 'more consistent'."
+   },
+   {
+    "q": "Explain why the median and IQR are preferred over the mean and range when comparing skewed house prices.",
+    "marks": 2,
+    "model": [
+     "House prices usually contain extreme high-value outliers.",
+     "The median and IQR are resistant to outliers, whereas the mean and range are heavily distorted by them."
+    ],
+    "tip": "Always link your justification directly to the presence of outliers or skewness."
+   },
+   {
+    "q": "Two sets of examination results have the same mean of 60 marks. Set A has a standard deviation of 4 marks, while Set B has a standard deviation of 12 marks. Compare the results of the two sets.",
+    "marks": 3,
+    "model": [
+     "Both sets have the same average performance since their means are equal at 60 marks.",
+     "Set A has a smaller standard deviation of 4 marks compared to Set B's 12 marks.",
+     "This means Set A results are tightly clustered around the mean and much more consistent than Set B."
+    ],
+    "tip": "Acknowledge that averages are identical before discussing the difference in spread."
+   },
+   {
+    "q": "From a cumulative frequency graph, for Plant Growth (cm), Company A has Q1 = 12, Median = 18, Q3 = 25. Company B has Q1 = 10, Median = 22, Q3 = 30. Compare the distributions.",
+    "marks": 4,
+    "model": [
+     "Company B has a higher median plant growth of 22 cm compared to Company A's 18 cm, showing greater growth on average.",
+     "Company B has a larger IQR of 20 cm (30 - 10) compared to Company A's IQR of 13 cm (25 - 12).",
+     "This shows that Company B's plant growth is more widely spread and less consistent than Company A's."
+    ],
+    "tip": "Show subtraction for IQR clearly to earn method marks."
+   },
+   {
+    "q": "State one advantage and one disadvantage of using the range to compare two datasets.",
+    "marks": 2,
+    "model": [
+     "Advantage: It is very easy and quick to calculate using all data values.",
+     "Disadvantage: It is extremely sensitive to outliers and does not reflect the spread of the middle data."
+    ],
+    "tip": "Keep answers concise; one clear point per mark."
+   },
+   {
+    "q": "Describe the skewness of a distribution where the median is much closer to the lower quartile than the upper quartile.",
+    "marks": 1,
+    "model": [
+     "Positive skew (or right-skewed)."
+    ],
+    "tip": "Remember: tail follows the longer side of the box."
+   },
+   {
+    "q": "Two athletes' 100m sprint times in seconds are compared. Athlete 1: median 11.2, range 0.4. Athlete 2: median 11.5, range 1.8. Interpret these statistics.",
+    "marks": 3,
+    "model": [
+     "Athlete 1 has a lower median time of 11.2 seconds, indicating they are generally faster than Athlete 2.",
+     "Athlete 1 has a smaller range of 0.4 seconds compared to Athlete 2's 1.8 seconds.",
+     "This indicates that Athlete 1 is much more consistent in their running times."
+    ],
+    "tip": "For times, a lower median means better performance."
+   },
+   {
+    "q": "Constructing a comparison between two sets of discrete data given in a frequency table. Explain the process.",
+    "marks": 4,
+    "model": [
+     "Calculate or identify the median position for both tables using (n+1)/2.",
+     "Determine the median values from the cumulative frequencies.",
+     "Calculate the lower and upper quartiles to find the IQR for both datasets.",
+     "Write comparative statements covering median, IQR, and context."
+    ],
+    "tip": "List your steps methodically when dealing with frequency tables."
+   }
+  ],
+  "worked": [
+   {
+    "q": "The weekly wages (in pounds) of workers in two small factories are summarised below. Factory A: Median = 450, Q1 = 400, Q3 = 520, Min = 320, Max = 680. Factory B: Median = 480, Q1 = 430, Q3 = 490, Min = 390, Max = 550. Compare the wages of the two factories.",
+    "steps": [
+     "Step 1: Compare the averages using the medians. Factory B median is 480 pounds, which is higher than Factory A median of 450 pounds. This means that, on average, workers in Factory B earn more weekly wages.",
+     "Step 2: Calculate the IQRs for both factories to compare spread. Factory A IQR = 520 - 400 = 120 pounds. Factory B IQR = 490 - 430 = 60 pounds.",
+     "Step 3: Compare the spreads. Factory A has a larger IQR of 120 pounds compared to Factory B's 60 pounds. This means Factory B's wages are more consistent, whereas Factory A's wages are more varied."
+    ],
+    "ans": "Factory B has a higher median wage (480 pounds vs 450 pounds), showing higher average earnings. However, Factory B has a smaller IQR (60 pounds vs 120 pounds), indicating that Factory B's wages are more consistent across workers."
+   },
+   {
+    "q": "A teacher compares the marks of two classes in a maths exam out of 50. Class 1 has a mean of 32 and a standard deviation of 3.5. Class 2 has a mean of 30 and a standard deviation of 8.2. Compare their performances.",
+    "steps": [
+     "Step 1: Compare the means. Class 1 has a mean of 32 marks, which is slightly higher than Class 2's mean of 30 marks. On average, Class 1 performed better.",
+     "Step 2: Compare the standard deviations. Class 1 has a standard deviation of 3.5 marks, whereas Class 2 has a standard deviation of 8.2 marks.",
+     "Step 3: Interpret spread. Class 1 results are much less dispersed and more consistent around the mean than Class 2 results."
+    ],
+    "ans": "Class 1 achieved a higher mean mark (32 vs 30) indicating better average performance, and a smaller standard deviation (3.5 vs 8.2) indicating much greater consistency among students."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Comparative box plots showing the distribution of scores for two competing sports teams.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><text x=\"50\" y=\"35\" font-size=\"12\" fill=\"#1b2540\" font-weight=\"bold\">Team Red</text><line x1=\"70\" y1=\"65\" x2=\"330\" y2=\"65\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"110\" y=\"45\" width=\"150\" height=\"40\" fill=\"#fecaca\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"170\" y1=\"45\" x2=\"170\" y2=\"85\" stroke=\"#1b2540\" stroke-width=\"3\"/><line x1=\"70\" y1=\"50\" x2=\"70\" y2=\"80\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"330\" y1=\"50\" x2=\"330\" y2=\"80\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"50\" y=\"145\" font-size=\"12\" fill=\"#1b2540\" font-weight=\"bold\">Team Blue</text><line x1=\"90\" y1=\"175\" x2=\"310\" y2=\"175\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"130\" y=\"155\" width=\"120\" height=\"40\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"210\" y1=\"155\" x2=\"210\" y2=\"195\" stroke=\"#1b2540\" stroke-width=\"3\"/><line x1=\"90\" y1=\"160\" x2=\"90\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"310\" y1=\"160\" x2=\"310\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"200\" y=\"225\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Match Points Scale</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_h.5.4",
+  "sid": "maths_eduqas_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-22T16:56:41.510Z"
  }
 }
