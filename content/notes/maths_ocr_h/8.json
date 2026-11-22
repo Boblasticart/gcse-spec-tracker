@@ -1306,5 +1306,455 @@
   "src": "pre",
   "by": "gemini/gemini-3-flash-preview",
   "ts": "2026-11-21T16:55:52.720Z"
+ },
+ "maths_ocr_h.8.3": {
+  "summary": "Similarity deals with shapes that have the same form but different sizes. When triangles are similar, their corresponding angles are equal and their sides are in a constant ratio, which lets us find unknown lengths, areas and volumes quickly. The scale factor links linear dimensions, while area scales by the square of the factor and volume by the cube. Mastery of these relationships, together with accurate diagram work, is essential for top marks in OCR J560.",
+  "core": [
+   {
+    "h": "Definition of Similarity",
+    "p": "Two figures are similar if they have the same shape but not necessarily the same size. This means all corresponding angles are equal and the lengths of corresponding sides are proportional.",
+    "bullets": [
+     "Corresponding angles are equal (∠A = ∠A', ∠B = ∠B', ∠C = ∠C').",
+     "Corresponding sides are in the same ratio: AB / A'B' = BC / B'C' = AC / A'C' = k (scale factor).",
+     "k > 1 → enlargement; 0 < k < 1 → reduction."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Similar figures",
+      "p": "Figures that have the same shape; corresponding angles are equal and corresponding sides are in proportion."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Two similar triangles with scale factor k.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"><polygon points=\"60,200 140,80 200,200\" fill=\"#dbeafe\"/><polygon points=\"260,200 340,80 400,200\" fill=\"#fde68a\"/></g><text x=\"70\" y=\"210\" font-size=\"12\" fill=\"#1b2540\">ΔABC</text><text x=\"270\" y=\"210\" font-size=\"12\" fill=\"#1b2540\">ΔA'B'C'</text><text x=\"100\" y=\"150\" font-size=\"11\" fill=\"#1b2540\">∠A = ∠A'</text><text x=\"300\" y=\"150\" font-size=\"11\" fill=\"#1b2540\">∠B = ∠B'</text><text x=\"180\" y=\"190\" font-size=\"11\" fill=\"#1b2540\">k</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Enlargement (Dilation) as a Transformation",
+    "p": "An enlargement is a centre‑point transformation that produces a similar figure. The centre is the fixed point, and the scale factor k determines the size change.",
+    "bullets": [
+     "Centre of enlargement O is unchanged.",
+     "Every point P maps to P' such that O, P, P' are collinear and OP' = k·OP.",
+     "If k > 1 the figure is enlarged; if 0 < k < 1 it is reduced."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Scale factor (k)",
+      "p": "The constant ratio of any length in the image to the corresponding length in the original."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Finding Missing Lengths Using the Scale Factor",
+    "p": "When two similar figures are given, you can find any unknown side by setting up a proportion using the scale factor.",
+    "bullets": [
+     "Write the proportion: known side / corresponding side = k.",
+     "Cross‑multiply to solve for the unknown.",
+     "Check that the same k works for at least two other pairs of sides – this validates similarity."
+    ],
+    "table": {
+     "head": [
+      "Original side",
+      "Image side",
+      "Scale factor k"
+     ],
+     "rows": [
+      [
+       "AB",
+       "A'B'",
+       "k = A'B' / AB"
+      ],
+      [
+       "BC",
+       "B'C'",
+       "k = B'C' / BC"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "",
+      "p": "Always write the proportion in the same order (original : image) to avoid sign errors."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Area of Similar Figures",
+    "p": "The area of a shape scales with the square of the linear scale factor.",
+    "bullets": [
+     "If the linear scale factor is k, then Area_image = k² × Area_original.",
+     "Conversely, k = √(Area_image / Area_original).",
+     "Useful when only areas are given – you can still find k and then any missing length."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Area scale factor",
+      "p": "k², where k is the linear scale factor."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Two similar squares: side ratio k = 2, area ratio = 4.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"><rect x=\"60\" y=\"80\" width=\"80\" height=\"80\" fill=\"#dbeafe\"/><rect x=\"200\" y=\"40\" width=\"160\" height=\"160\" fill=\"#fde68a\"/></g><text x=\"80\" y=\"180\" font-size=\"12\" fill=\"#1b2540\">Side = s</text><text x=\"240\" y=\"210\" font-size=\"12\" fill=\"#1b2540\">Side = 2s</text><text x=\"150\" y=\"150\" font-size=\"11\" fill=\"#1b2540\">k = 2</text><text x=\"150\" y=\"170\" font-size=\"11\" fill=\"#1b2540\">Area ratio = 4</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Volume of Similar Solids",
+    "p": "For three‑dimensional figures, volume scales with the cube of the linear scale factor.",
+    "bullets": [
+     "If k is the linear scale factor, then Volume_image = k³ × Volume_original.",
+     "k = ∛(Volume_image / Volume_original).",
+     "Apply after confirming the solids are similar (e.g., similar pyramids, cones, cylinders)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Volume scale factor",
+      "p": "k³, where k is the linear scale factor."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Proving Triangles Similar – AA, SAS, SSS",
+    "p": "Only the AA criterion is required for similarity, but SAS and SSS can also be used when side ratios are known.",
+    "bullets": [
+     "AA: Two pairs of corresponding angles equal ⇒ triangles similar.",
+     "SAS: Two pairs of sides in proportion and the included angle equal ⇒ similar.",
+     "SSS: All three pairs of sides in proportion ⇒ similar."
+    ],
+    "table": {
+     "head": [
+      "Criterion",
+      "Condition",
+      "Result"
+     ],
+     "rows": [
+      [
+       "AA",
+       "∠A = ∠A' and ∠B = ∠B'",
+       "Δ ~ Δ'"
+      ],
+      [
+       "SAS",
+       "AB/A'B' = AC/A'C' and ∠A = ∠A'",
+       "Δ ~ Δ'"
+      ],
+      [
+       "SSS",
+       "AB/A'B' = BC/B'C' = AC/A'C'",
+       "Δ ~ Δ'"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "",
+      "p": "Do NOT assume similarity from a single equal angle; you need at least two."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Using Similarity to Solve Real‑World Problems",
+    "p": "Many exam questions involve scale drawings, maps or models. Translate the given scale into a factor k and apply the appropriate relationship.",
+    "bullets": [
+     "Map scale 1 cm : 5 km → k = 5 000 m / 0.01 m = 500 000.",
+     "Model of a building at 1 : 50 → linear dimensions are 1/50 of the real building.",
+     "If the model’s floor area is 12 m², real floor area = 12 × 50² = 30 000 m²."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "",
+      "p": "Always convert the scale to a pure number before using it as k."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Composite Figures – Similar Parts",
+    "p": "When a complex figure contains similar components, treat each component separately, then combine results if required.",
+    "bullets": [
+     "Identify each similar part (e.g., similar triangles inside a trapezium).",
+     "Find k for each part using known lengths.",
+     "Use area or volume scaling to obtain the whole figure’s measurement."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Common Pitfalls and How to Avoid Them",
+    "p": "Understanding where students lose marks helps you stay clear.",
+    "bullets": [
+     "Mixing up the order of the ratio – always write original : image.",
+     "Using k instead of k² for area or k³ for volume.",
+     "Assuming similarity from a single equal angle.",
+     "For volume problems, forgetting to cube the scale factor."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "",
+      "p": "Do not write Area = k × Area_original – the correct factor is k²."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Summary of Key Formulae",
+    "p": "Collect all the relationships you need to recall quickly.",
+    "bullets": [
+     "Linear: AB' = k·AB",
+     "Area: A' = k²·A",
+     "Volume: V' = k³·V",
+     "k = AB' / AB = √(A' / A) = ∛(V' / V)"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Scale factor relationships",
+      "p": "Linear → k, Area → k², Volume → k³."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Similarity is like a photocopier",
+   "p": "A photocopier reproduces a picture at a different size but keeps every angle exactly the same – the shape is unchanged, only the scale changes. The copier’s ‘zoom’ setting is the scale factor k. Just as the copier squares the zoom setting to calculate the amount of ink needed for the whole page (area), in geometry you square k for area and cube it for volume. The analogy breaks down because a copier cannot change three‑dimensional depth – you need a 3‑D printer to illustrate volume scaling."
+  },
+  "terms": [
+   {
+    "t": "Similar figures",
+    "d": "Figures that have the same shape; corresponding angles are equal and corresponding sides are in proportion."
+   },
+   {
+    "t": "Scale factor (k)",
+    "d": "The constant ratio of any length in the image to the corresponding length in the original figure."
+   },
+   {
+    "t": "Enlargement (dilation)",
+    "d": "A transformation with a centre and a scale factor that produces a similar figure."
+   },
+   {
+    "t": "AA similarity",
+    "d": "Criterion that two triangles are similar if two pairs of corresponding angles are equal."
+   },
+   {
+    "t": "SAS similarity",
+    "d": "Criterion that two triangles are similar if two pairs of sides are in proportion and the included angle is equal."
+   },
+   {
+    "t": "SSS similarity",
+    "d": "Criterion that two triangles are similar if all three pairs of corresponding sides are in proportion."
+   },
+   {
+    "t": "Area scale factor",
+    "d": "The square of the linear scale factor (k²)."
+   },
+   {
+    "t": "Volume scale factor",
+    "d": "The cube of the linear scale factor (k³)."
+   },
+   {
+    "t": "Corresponding sides",
+    "d": "Sides that occupy the same relative position in two similar figures."
+   },
+   {
+    "t": "Corresponding angles",
+    "d": "Angles that occupy the same relative position in two similar figures."
+   },
+   {
+    "t": "Map scale",
+    "d": "A ratio that expresses the relationship between a distance on a map and the actual distance on the ground, used as a scale factor."
+   },
+   {
+    "t": "Model scale",
+    "d": "A ratio that expresses the size of a model compared with the real object, used as a scale factor."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "I used k for area directly, so Area = k × original area.",
+    "r": "Area scales with k², not k. Use Area = k² × original area."
+   },
+   {
+    "w": "Only one equal angle is enough to claim similarity.",
+    "r": "You need at least two equal angles (AA) or a side‑ratio condition (SAS/SSS)."
+   },
+   {
+    "w": "I wrote the proportion as image/original = k.",
+    "r": "Write it as original:image = 1:k or image = k × original; keep the order consistent."
+   },
+   {
+    "w": "For volume I used k² instead of k³.",
+    "r": "Volume scales with the cube of the linear factor: V' = k³·V."
+   },
+   {
+    "w": "I squared the scale factor twice when finding area.",
+    "r": "Only square once; area factor is k², not (k²)²."
+   },
+   {
+    "w": "I mixed up which side corresponded to which when setting up ratios.",
+    "r": "Label the triangles clearly (e.g., ΔABC ↔ ΔA'B'C') and keep the same order throughout."
+   },
+   {
+    "w": "I assumed the centre of enlargement was at the origin without checking the diagram.",
+    "r": "Identify the given centre; it may be any point, not necessarily the origin."
+   },
+   {
+    "w": "I used the map scale directly as a length without converting to a pure number.",
+    "r": "Convert the map scale to a numerical factor before using it as k."
+   }
+  ],
+  "exam": [
+   {
+    "q": "ΔABC is similar to ΔA'B'C'. AB = 6 cm, BC = 8 cm, A'B' = 9 cm. Find the scale factor k and the length of B'C'.",
+    "marks": 2,
+    "model": [
+     "k = A'B' / AB = 9/6 = 3/2",
+     "B'C' = k × BC = (3/2) × 8 = 12 cm"
+    ],
+    "tip": "Write the proportion AB : A'B' = 1 : k first, then solve."
+   },
+   {
+    "q": "Two similar squares have areas 20 cm² and 45 cm². Find the ratio of their corresponding sides.",
+    "marks": 2,
+    "model": [
+     "k = √(45/20) = √(9/4) = 3/2",
+     "Side ratio = 3:2"
+    ],
+    "tip": "Remember to take the square root of the area ratio."
+   },
+   {
+    "q": "A model of a pyramid is built at a scale of 1 : 30. If the model’s volume is 0.5 m³, find the real pyramid’s volume.",
+    "marks": 4,
+    "model": [
+     "k = 1/30 (model : real) → real = 30 × model for lengths",
+     "Volume factor = k³ = (30)³ = 27 000",
+     "Real volume = 0.5 × 27 000 = 13 500 m³"
+    ],
+    "tip": "Work with the linear factor for the real object (30), then cube it for volume."
+   },
+   {
+    "q": "In ΔPQR, ∠P = 40°, ∠Q = 70°. A line through Q parallel to PR meets the extension of PQ at S. Prove ΔPQR ∼ ΔSQT and find the ratio of their areas.",
+    "marks": 6,
+    "model": [
+     "∠P = ∠S (alternate interior angles)",
+     "∠Q common",
+     "Thus AA ⇒ ΔPQR ∼ ΔSQT",
+     "Linear ratio k = PQ / SQ (use given lengths if any, otherwise state k)",
+     "Area ratio = k²"
+    ],
+    "tip": "Identify the parallel line gives equal angles; then use AA."
+   },
+   {
+    "q": "A map scale is 1 cm : 250 m. On the map the distance between two towns is 3.6 cm. Find the real distance.",
+    "marks": 2,
+    "model": [
+     "Real distance = 3.6 × 250 = 900 m"
+    ],
+    "tip": "Convert the scale to a pure number (250 m per cm) before multiplying."
+   },
+   {
+    "q": "Two similar cylinders have radii in the ratio 2 : 5 and heights in the same ratio. Find the ratio of their volumes.",
+    "marks": 4,
+    "model": [
+     "Linear scale factor k = 5/2",
+     "Volume ratio = k³ = (5/2)³ = 125/8"
+    ],
+    "tip": "When both radius and height share the same ratio, the overall linear factor is that ratio."
+   },
+   {
+    "q": "ΔABC is similar to ΔDEF. AB = 4 cm, BC = 6 cm, DE = 10 cm. Find DF.",
+    "marks": 2,
+    "model": [
+     "k = DE / AB = 10/4 = 5/2",
+     "DF = k × BC = (5/2) × 6 = 15 cm"
+    ],
+    "tip": "Use the side that is given in both triangles to get k first."
+   },
+   {
+    "q": "A triangular garden is similar to a model garden at a scale of 1 : 12. If the model’s area is 3.6 m², find the real garden’s area.",
+    "marks": 2,
+    "model": [
+     "Area ratio = k² = 12² = 144",
+     "Real area = 3.6 × 144 = 518.4 m²"
+    ],
+    "tip": "Square the linear scale factor, not the area."
+   },
+   {
+    "q": "In ΔXYZ, XY = 7 cm, XZ = 14 cm. ΔX'Y'Z' is similar with X'Y' = 10 cm. Find the length of X'Z'.",
+    "marks": 2,
+    "model": [
+     "k = X'Y' / XY = 10/7",
+     "X'Z' = k × XZ = (10/7) × 14 = 20 cm"
+    ],
+    "tip": "Keep the same order of letters when applying the scale factor."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A map shows a lake with an area of 2.5 cm². The map scale is 1 cm : 200 m. Find the real area of the lake in hectares (1 ha = 10 000 m²).",
+    "steps": [
+     "Scale factor k = 200 m per cm.",
+     "Linear factor for area = 200 m.",
+     "Area ratio = k² = 200² = 40 000.",
+     "Real area = 2.5 cm² × 40 000 = 100 000 m².",
+     "Convert to hectares: 100 000 ÷ 10 000 = 10 ha."
+    ],
+    "ans": "10 hectares"
+   },
+   {
+    "q": "A model car is built at a scale of 1 : 25. The model’s length is 12 cm. Find the real car’s length and the surface area if the model’s surface area is 0.18 m².",
+    "steps": [
+     "Linear scale factor k = 25.",
+     "Real length = 12 cm × 25 = 300 cm = 3 m.",
+     "Area scale factor = k² = 25² = 625.",
+     "Real surface area = 0.18 m² × 625 = 112.5 m²."
+    ],
+    "ans": "Length = 3 m, Surface area = 112.5 m²"
+   },
+   {
+    "q": "Two similar right‑angled pyramids have heights in the ratio 3 : 7. If the smaller pyramid has a volume of 54 cm³, find the volume of the larger pyramid.",
+    "steps": [
+     "Linear scale factor k = 7/3.",
+     "Volume scale factor = k³ = (7/3)³ = 343/27.",
+     "Larger volume = 54 × 343/27 = 54 × 12.7037 ≈ 686 cm³ (rounded)."
+    ],
+    "ans": "≈ 686 cm³"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Two similar triangles with scale factor k.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"><polygon points=\"60,200 140,80 200,200\" fill=\"#dbeafe\"/><polygon points=\"260,200 340,80 400,200\" fill=\"#fde68a\"/></g><text x=\"70\" y=\"210\" font-size=\"12\" fill=\"#1b2540\">ΔABC</text><text x=\"270\" y=\"210\" font-size=\"12\" fill=\"#1b2540\">ΔA'B'C'</text><text x=\"100\" y=\"150\" font-size=\"11\" fill=\"#1b2540\">∠A = ∠A'</text><text x=\"300\" y=\"150\" font-size=\"11\" fill=\"#1b2540\">∠B = ∠B'</text><text x=\"180\" y=\"190\" font-size=\"11\" fill=\"#1b2540\">k</text></svg>"
+   }
+  ],
+  "pid": "maths_ocr_h.8.3",
+  "sid": "maths_ocr_h",
+  "v": 2,
+  "src": "pre",
+  "by": "groq/openai/gpt-oss-120b",
+  "ts": "2026-11-22T16:38:46.615Z"
  }
 }

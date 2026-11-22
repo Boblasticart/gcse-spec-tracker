@@ -794,5 +794,462 @@
   "src": "pre",
   "by": "gemini/gemini-flash-lite-latest",
   "ts": "2026-11-20T18:40:15.839Z"
+ },
+ "maths_ocr_h.11.0": {
+  "summary": "Sampling is the process of selecting a subset of individuals from a larger group (the population) to make inferences about that group. A **sample** must be representative, which is achieved through **simple random sampling** where every member has an equal chance of selection. Any systematic error that skews results is called **bias**, and recognising and avoiding bias is essential for valid conclusions in statistics.",
+  "core": [
+   {
+    "h": "What is a Population?",
+    "p": "In statistics a population is the complete set of items or individuals that you are interested in studying. It can be finite (e.g., all pupils in a school) or conceptually infinite (e.g., all possible outcomes of a dice roll).",
+    "bullets": [
+     "Denoted by the symbol **N**.",
+     "All characteristics of interest are called parameters (e.g., μ, σ).",
+     "Often impossible to measure directly, so we use a sample."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Population",
+      "p": "The entire set of objects or events that satisfy a set of criteria."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "What is a Sample?",
+    "p": "A sample is a smaller collection taken from the population that we actually observe or measure. It allows us to estimate population parameters using statistics.",
+    "bullets": [
+     "Denoted by the symbol **n**.",
+     "Statistics (e.g., ̅x, s) are calculated from the sample.",
+     "The quality of a sample determines the reliability of any inference."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Sample",
+      "p": "A subset of a population selected for measurement."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Simple Random Sampling (SRS)",
+    "p": "SRS is the gold‑standard method for obtaining an unbiased sample. Every individual in the population has an equal probability of being chosen, and each possible sample of size n is equally likely.",
+    "bullets": [
+     "Can be performed with a random number table, calculator, or computer.",
+     "Requires a complete and up‑to‑date sampling frame (a list of all population members).",
+     "If the population is very large, a **simple random sample without replacement** is usually assumed."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "",
+      "p": "Equal chance for every member → unbiased estimate of parameters."
+     },
+     {
+      "k": "tip",
+      "t": "",
+      "p": "Check the exam question: if it says ‘randomly selected’, assume SRS unless otherwise stated."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Illustration of a simple random sample drawn from a population list.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"20\" y=\"20\" width=\"360\" height=\"40\" fill=\"#dbeafe\" stroke=\"#1b2540\"/>\n  <text x=\"30\" y=\"45\" font-size=\"12\" fill=\"#1b2540\">Population (N = 20)</text>\n  <g fill=\"#fde68a\" stroke=\"#1b2540\">\n    <rect x=\"30\" y=\"80\" width=\"30\" height=\"30\"/>\n    <rect x=\"70\" y=\"80\" width=\"30\" height=\"30\"/>\n    <rect x=\"110\" y=\"80\" width=\"30\" height=\"30\"/>\n    <rect x=\"150\" y=\"80\" width=\"30\" height=\"30\"/>\n    <rect x=\"190\" y=\"80\" width=\"30\" height=\"30\"/>\n    <rect x=\"230\" y=\"80\" width=\"30\" height=\"30\"/>\n    <rect x=\"270\" y=\"80\" width=\"30\" height=\"30\"/>\n    <rect x=\"310\" y=\"80\" width=\"30\" height=\"30\"/>\n  </g>\n  <text x=\"30\" y=\"115\" font-size=\"11\" fill=\"#1b2540\">Sample (n = 8)</text>\n  <line x1=\"200\" y1=\"60\" x2=\"200\" y2=\"80\" stroke=\"#1b2540\" stroke-width=\"2\"/>\n  <text x=\"210\" y=\"70\" font-size=\"11\" fill=\"#1b2540\">Random selection</text>\n</svg>"
+     }
+    ]
+   },
+   {
+    "h": "Why Use Simple Random Sampling?",
+    "p": "Because it minimises systematic error, allowing the sample statistics to be unbiased estimators of the population parameters.",
+    "bullets": [
+     "Law of Large Numbers works best with SRS.",
+     "Confidence intervals and hypothesis tests are derived assuming SRS.",
+     "Reduces the risk of **selection bias**."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "",
+      "p": "Do NOT confuse ‘random’ with ‘representative’; a random sample can still be unrepresentative by chance, especially if n is small."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "What is Bias?",
+    "p": "Bias is any systematic error that leads a sample to over‑ or under‑represent parts of the population, causing the sample statistic to deviate from the true parameter.",
+    "bullets": [
+     "Types of bias include:",
+     "• **Selection bias** – certain groups are more likely to be chosen.",
+     "• **Non‑response bias** – people who do not respond differ from those who do.",
+     "• **Measurement bias** – the instrument or method consistently mis‑records values.",
+     "Bias cannot be corrected by increasing the sample size."
+    ],
+    "table": {
+     "head": [
+      "Bias type",
+      "Cause",
+      "Effect on results"
+     ],
+     "rows": [
+      [
+       "Selection bias",
+       "Sampling frame incomplete",
+       "Certain sub‑groups under‑represented"
+      ],
+      [
+       "Non‑response bias",
+       "Low response rate",
+       "Results reflect only respondents"
+      ],
+      [
+       "Measurement bias",
+       "Faulty instrument",
+       "Systematic over/under‑estimate"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Bias",
+      "p": "A systematic error that leads to an inaccurate representation of the population."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Avoiding Bias – Practical Steps",
+    "p": "Examiners expect you to name at least two ways to reduce bias when designing a study.",
+    "bullets": [
+     "Use a complete and up‑to‑date sampling frame.",
+     "Employ simple random sampling or stratified random sampling when appropriate.",
+     "Ensure high response rates (follow‑ups, incentives).",
+     "Standardise measurement procedures and calibrate equipment."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "",
+      "p": "In mark‑scheme, each valid method you list gains one mark (up to the maximum for the question)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Sampling Frame",
+    "p": "A sampling frame is a list of all members of the population from which the sample is drawn. It must be as accurate as possible.",
+    "bullets": [
+     "If the frame omits some members, **coverage bias** occurs.",
+     "Examples: school roll‑call, electoral register, customer database."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Sampling frame",
+      "p": "A complete list of all elements in the population."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Sample Size and Representativeness",
+    "p": "Larger samples tend to give more reliable estimates, but size alone does not guarantee lack of bias.",
+    "bullets": [
+     "Rule of thumb for proportion estimates: n ≥ 30 and n(1‑p) ≥ 30.",
+     "For means, the Central Limit Theorem applies when n ≥ 30 (higher tier).",
+     "Even with n = 200, a biased selection will still give a biased result."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "",
+      "p": "Do not claim a large n removes bias – it only reduces random error."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Link to Other Statistical Concepts",
+    "p": "Sampling underpins every later topic: summary statistics, confidence intervals, hypothesis testing, and bivariate analysis all assume a well‑designed sample.",
+    "bullets": [
+     "If the sample is biased, any calculated mean, median, standard deviation, or correlation will be misleading.",
+     "Understanding sampling helps you critique data presented in the media."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": [
+     {
+      "cap": "Flow from population → sampling frame → simple random sample → statistics → inference.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"30\" y=\"20\" width=\"120\" height=\"40\" fill=\"#bbf7d0\" stroke=\"#1b2540\"/>\n  <text x=\"40\" y=\"45\" font-size=\"12\" fill=\"#1b2540\">Population</text>\n  <rect x=\"170\" y=\"20\" width=\"120\" height=\"40\" fill=\"#e9d5ff\" stroke=\"#1b2540\"/>\n  <text x=\"180\" y=\"45\" font-size=\"12\" fill=\"#1b2540\">Sampling frame</text>\n  <rect x=\"100\" y=\"100\" width=\"200\" height=\"40\" fill=\"#fde68a\" stroke=\"#1b2540\"/>\n  <text x=\"110\" y=\"125\" font-size=\"12\" fill=\"#1b2540\">Simple Random Sample</text>\n  <rect x=\"150\" y=\"180\" width=\"100\" height=\"40\" fill=\"#dbeafe\" stroke=\"#1b2540\"/>\n  <text x=\"160\" y=\"205\" font-size=\"12\" fill=\"#1b2540\">Statistics</text>\n  <line x1=\"90\" y1=\"60\" x2=\"90\" y2=\"100\" stroke=\"#1b2540\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/>\n  <line x1=\"210\" y1=\"60\" x2=\"210\" y2=\"100\" stroke=\"#1b2540\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/>\n  <line x1=\"200\" y1=\"140\" x2=\"200\" y2=\"180\" stroke=\"#1b2540\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/>\n  <defs>\n    <marker id=\"arrow\" markerWidth=\"6\" markerHeight=\"6\" refX=\"3\" refY=\"3\" orient=\"auto\">\n      <path d=\"M0,0 L0,6 L6,3 z\" fill=\"#1b2540\"/>\n    </marker>\n  </defs>\n</svg>"
+     }
+    ]
+   },
+   {
+    "h": "Higher‑Tier / Triple‑Only Extension",
+    "p": "For higher‑tier questions you may be asked to evaluate the suitability of a sampling method, discussing both random error and bias.",
+    "bullets": [
+     "State the **advantage** of SRS (unbiased, simple to analyse).",
+     "State a **limitation** (may be impractical for very large populations).",
+     "Compare with **stratified sampling** – reduces sampling error when sub‑groups differ markedly.",
+     "Use the terms *random error*, *systematic error*, *bias*, *representativeness*."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "",
+      "p": "Higher‑tier marks often come from a clear, balanced evaluation."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Sampling is like tasting a soup to decide if it needs salt.",
+   "p": "Imagine a huge pot of soup (the population). You can’t drink the whole pot, so you take a spoonful (the sample). If you stir the pot well and take the spoonful at random, the taste will reflect the whole soup – this is simple random sampling. If you always scoop from the top, you might miss the flavours that settle at the bottom – that’s bias. The analogy breaks down because taste is subjective and a single spoonful may not capture subtle flavours, just as a very small sample may give a misleading estimate despite being random."
+  },
+  "terms": [
+   {
+    "t": "Population",
+    "d": "The entire set of individuals or items that satisfy the criteria of a study."
+   },
+   {
+    "t": "Sample",
+    "d": "A subset of the population selected for measurement."
+   },
+   {
+    "t": "Simple Random Sampling (SRS)",
+    "d": "A sampling method where every member of the population has an equal chance of being selected and every possible sample of a given size is equally likely."
+   },
+   {
+    "t": "Sampling Frame",
+    "d": "A complete list of all members of the population from which a sample is drawn."
+   },
+   {
+    "t": "Bias",
+    "d": "A systematic error that leads to an inaccurate representation of the population."
+   },
+   {
+    "t": "Selection Bias",
+    "d": "Bias that occurs when some members of the population are more likely to be chosen than others."
+   },
+   {
+    "t": "Non‑response Bias",
+    "d": "Bias arising when the individuals who do not respond differ in relevant ways from those who do."
+   },
+   {
+    "t": "Measurement Bias",
+    "d": "Bias caused by faulty measurement instruments or procedures."
+   },
+   {
+    "t": "Random Error",
+    "d": "Variability in sample results that occurs by chance and can be reduced by increasing sample size."
+   },
+   {
+    "t": "Representativeness",
+    "d": "The degree to which a sample reflects the characteristics of the population."
+   },
+   {
+    "t": "Coverage Bias",
+    "d": "Bias introduced when the sampling frame does not include all elements of the population."
+   },
+   {
+    "t": "Stratified Sampling",
+    "d": "A method where the population is divided into sub‑groups (strata) and random samples are taken from each stratum."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "‘Random’ automatically means the sample is representative.",
+    "r": "Random sampling reduces bias but does not guarantee representativeness, especially with small n."
+   },
+   {
+    "w": "Increasing sample size removes bias.",
+    "r": "Bias is systematic; larger n only reduces random error."
+   },
+   {
+    "w": "Using a convenience sample is acceptable if the sample is large.",
+    "r": "Convenience samples are prone to selection bias regardless of size."
+   },
+   {
+    "w": "‘Sampling frame’ and ‘population’ are interchangeable.",
+    "r": "The frame is a list of the population; if it is incomplete, bias occurs."
+   },
+   {
+    "w": "All samples are unbiased if taken from the whole population.",
+    "r": "Bias can still arise from non‑response or measurement errors."
+   },
+   {
+    "w": "Stratified sampling is the same as simple random sampling.",
+    "r": "Stratified sampling involves dividing the population into groups first; it is a different technique."
+   },
+   {
+    "w": "If a question says ‘selected at random’, you can assume no bias.",
+    "r": "You must still consider possible sources of bias such as incomplete frames or non‑response."
+   },
+   {
+    "w": "Bias only affects the mean, not other statistics.",
+    "r": "Bias affects any statistic that estimates a population parameter."
+   },
+   {
+    "w": "A sample of 5 is always too small to be useful.",
+    "r": "For very small populations, a sample of 5 may be appropriate; the key is representativeness, not a fixed number."
+   },
+   {
+    "w": "Random number tables are outdated and not needed in exams.",
+    "r": "Examiners accept any valid method of random selection, including tables, calculators or software."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A school has 800 pupils. To find the average height, the teacher randomly selects 40 pupils using a random number generator. Explain why this method is likely to give an unbiased estimate of the true mean height.",
+    "marks": 4,
+    "model": [
+     "All 800 pupils are listed in a sampling frame (the school roll).",
+     "Each pupil has an equal chance of being chosen (simple random sampling).",
+     "Therefore no particular group (e.g., taller or shorter pupils) is systematically over‑ or under‑represented.",
+     "An unbiased estimator means the expected value of the sample mean equals the population mean."
+    ],
+    "tip": "State the equal‑chance principle and link it to the definition of unbiasedness."
+   },
+   {
+    "q": "Identify two possible sources of bias if the same teacher instead asked the class captain to choose 40 pupils he thought were ‘representative’.",
+    "marks": 2,
+    "model": [
+     "Selection bias – the captain may pick friends or pupils he knows, not a random cross‑section.",
+     "Subjective bias – personal judgement may favour certain heights, ages, etc."
+    ],
+    "tip": "Use the exact terms ‘selection bias’ and ‘subjective bias’."
+   },
+   {
+    "q": "A researcher uses an online questionnaire sent to all members of a club. Only 30 % respond. Discuss how non‑response bias could affect the results.",
+    "marks": 6,
+    "model": [
+     "Non‑response bias occurs when those who do not answer differ from respondents.",
+     "If non‑respondents are, for example, less active members, the sample will over‑represent active members.",
+     "This systematic difference leads to estimates (e.g., average attendance) that are higher than the true club average.",
+     "Increasing response rate (reminders, incentives) can reduce this bias.",
+     "Even with a large sample size, the bias remains because it is systematic.",
+     "Hence conclusions drawn without accounting for non‑response may be misleading."
+    ],
+    "tip": "Structure answer: definition → effect → mitigation → link to systematic nature."
+   },
+   {
+    "q": "State one advantage and one limitation of simple random sampling.",
+    "marks": 2,
+    "model": [
+     "Advantage: It provides an unbiased sample because every member has an equal chance of selection.",
+     "Limitation: It can be impractical for very large populations if a complete sampling frame is unavailable."
+    ],
+    "tip": "Use the exact wording ‘unbiased’ and ‘impractical for large populations’."
+   },
+   {
+    "q": "Explain why a larger sample size does not eliminate bias, using an example.",
+    "marks": 4,
+    "model": [
+     "Bias is a systematic error, not random variation.",
+     "If a sample is drawn from an incomplete frame that omits all pupils from Year 12, increasing n from 30 to 300 still excludes Year 12 pupils.",
+     "Therefore the sample statistic will remain biased regardless of size.",
+     "Only correcting the source of bias (e.g., using a complete frame) removes it."
+    ],
+    "tip": "Contrast bias with random error; give a concrete example."
+   },
+   {
+    "q": "A poll of 500 voters is taken using stratified sampling with equal numbers from each age group. Explain how this method reduces sampling error compared with simple random sampling.",
+    "marks": 4,
+    "model": [
+     "Stratified sampling ensures each age group is represented proportionally.",
+     "If some age groups have very different voting patterns, SRS might under‑sample a small but distinct group, increasing variability.",
+     "By guaranteeing representation, the variability between samples (sampling error) is reduced.",
+     "Hence estimates (e.g., overall voting intention) are more precise."
+    ],
+    "tip": "Mention ‘representation of sub‑groups’ and ‘reduces variability’."
+   },
+   {
+    "q": "Define the term ‘sampling frame’ and give one reason why an inaccurate frame leads to bias.",
+    "marks": 2,
+    "model": [
+     "A sampling frame is a complete list of all members of the population.",
+     "If the frame omits certain individuals, those groups cannot be selected, causing coverage bias."
+    ],
+    "tip": "Use the exact phrase ‘coverage bias’."
+   },
+   {
+    "q": "A researcher draws a sample of 50 from a population of 200 by selecting every 4th name on an alphabetical list. Identify the type of bias, if any, and justify your answer.",
+    "marks": 4,
+    "model": [
+     "This is systematic sampling, not simple random sampling.",
+     "If the list is ordered by height, selecting every 4th name could over‑represent a particular height range – a form of selection bias.",
+     "Therefore the method can introduce bias unless the ordering is random with respect to the variable of interest."
+    ],
+    "tip": "State that bias depends on the ordering; link to selection bias."
+   },
+   {
+    "q": "Discuss why it is important to consider bias when interpreting a graph that shows the average test scores of a sample of schools.",
+    "marks": 6,
+    "model": [
+     "If the sample of schools was not randomly selected, it may over‑represent high‑performing schools (selection bias).",
+     "Any conclusions about the national average would therefore be too high.",
+     "Bias can also arise from non‑response if schools with low scores chose not to submit data.",
+     "Recognising bias alerts the reader that the graph may not reflect the true population trend.",
+     "It may suggest the need for caution or for additional data collection.",
+     "Thus, evaluating bias is essential for accurate interpretation and decision‑making."
+    ],
+    "tip": "Link bias to the reliability of the graph’s conclusions."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A university has a list of 1 200 students. Using a random number table, a researcher selects 60 students. Calculate the probability that a particular student is chosen.",
+    "steps": [
+     "Total number of students N = 1 200.",
+     "Sample size n = 60.",
+     "Probability for any one student = n / N = 60 / 1 200.",
+     "Simplify: 60 ÷ 1 200 = 0.05.",
+     "Therefore the probability is 0.05 (or 5 %)."
+    ],
+    "ans": "0.05 or 5 %"
+   },
+   {
+    "q": "From a population of 500 households, a simple random sample of 25 is taken. Explain why the sample mean is an unbiased estimator of the population mean.",
+    "steps": [
+     "In simple random sampling each household has equal chance of selection.",
+     "All possible samples of size 25 are equally likely.",
+     "The expected value of the sample mean equals the population mean (by definition of unbiasedness).",
+     "Thus the sample mean does not systematically over‑ or under‑estimate the true mean."
+    ],
+    "ans": "Because SRS gives each household equal chance, the expected value of the sample mean equals the population mean, making it an unbiased estimator."
+   },
+   {
+    "q": "A survey of 200 people is conducted by telephone. Only 150 people answer. Identify the type of bias and suggest one method to reduce it.",
+    "steps": [
+     "Non‑response bias occurs because 50 people did not answer.",
+     "Those who did not answer may differ in the variable of interest.",
+     "To reduce it, the researcher could call back at different times or offer an incentive to increase response rate."
+    ],
+    "ans": "Non‑response bias; reduce by follow‑up calls or incentives to improve response rate."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Simple random sample drawn from a population list.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"20\" y=\"20\" width=\"360\" height=\"40\" fill=\"#dbeafe\" stroke=\"#1b2540\"/>\n  <text x=\"30\" y=\"45\" font-size=\"12\" fill=\"#1b2540\">Population (N = 20)</text>\n  <g fill=\"#fde68a\" stroke=\"#1b2540\">\n    <rect x=\"30\" y=\"80\" width=\"30\" height=\"30\"/>\n    <rect x=\"70\" y=\"80\" width=\"30\" height=\"30\"/>\n    <rect x=\"110\" y=\"80\" width=\"30\" height=\"30\"/>\n    <rect x=\"150\" y=\"80\" width=\"30\" height=\"30\"/>\n    <rect x=\"190\" y=\"80\" width=\"30\" height=\"30\"/>\n    <rect x=\"230\" y=\"80\" width=\"30\" height=\"30\"/>\n    <rect x=\"270\" y=\"80\" width=\"30\" height=\"30\"/>\n    <rect x=\"310\" y=\"80\" width=\"30\" height=\"30\"/>\n  </g>\n  <text x=\"30\" y=\"115\" font-size=\"11\" fill=\"#1b2540\">Sample (n = 8)</text>\n  <line x1=\"200\" y1=\"60\" x2=\"200\" y2=\"80\" stroke=\"#1b2540\" stroke-width=\"2\"/>\n  <text x=\"210\" y=\"70\" font-size=\"11\" fill=\"#1b2540\">Random selection</text>\n</svg>"
+   }
+  ],
+  "pid": "maths_ocr_h.11.0",
+  "sid": "maths_ocr_h",
+  "v": 2,
+  "src": "pre",
+  "by": "groq/openai/gpt-oss-120b",
+  "ts": "2026-11-22T16:39:46.598Z"
  }
 }

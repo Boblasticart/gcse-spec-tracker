@@ -2287,5 +2287,511 @@
   "src": "pre",
   "by": "gemini/gemini-3-flash-preview",
   "ts": "2026-11-21T16:57:00.564Z"
+ },
+ "maths_ocr_h.5.2": {
+  "summary": "Algebraic equations form the cornerstone of OCR Higher tier GCSE Mathematics, requiring mastery over linear, quadratic, non-linear simultaneous equations, and advanced numerical methods. Students must seamlessly transition between exact algebraic manipulation—such as factorising, completing the square, and using the quadratic formula—and visual graphical methods or numerical iterative processes. Achieving grade 9 demands fluency in rearranging non-standard equations, interpreting turning points and roots geometrically, and demonstrating rigorous step-by-step mathematical reasoning across non-calculator and calculator papers.",
+  "core": [
+   {
+    "h": "1. Linear Equations with Unknowns on Both Sides and Brackets",
+    "p": "Solving linear equations requires isolating the target unknown by applying inverse operations systematically to both sides of the equation while maintaining operational balance.",
+    "bullets": [
+     "**Expand brackets first** if present, taking extreme care with negative signs outside brackets (e.g. -3(2x - 5) = -6x + 15).",
+     "**Collect variable terms** on the side with the larger positive coefficient of x to avoid dealing with negative coefficients.",
+     "**Isolate the constant terms** on the opposite side of the equation.",
+     "**Divide by the coefficient** of the variable as the final step to obtain x = value.",
+     "Always substitute your final numerical solution back into the original equation to verify that LHS = RHS."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Maintaining Equality",
+      "p": "Whatever operation is performed on the left-hand side (LHS) of an equation must be performed identically on the right-hand side (RHS)."
+     },
+     {
+      "k": "warn",
+      "t": "Expanding Negatives Trap",
+      "p": "A common mistake is expanding -2(x - 4) as -2x - 8 instead of the correct -2x + 8."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. Solving Linear Equations involving Algebraic Fractions",
+    "p": "Algebraic fractions in equations must be eliminated early in the solution process by finding a common denominator or multiplying across denominators.",
+    "bullets": [
+     "When single fractions equal each other (e.g. A/B = C/D), cross-multiply to obtain A * D = B * C.",
+     "When adding or subtracting algebraic fractions, multiply every term in the entire equation by the **Least Common Multiple (LCM)** of the denominators to clear all fractions.",
+     "Place multi-term numerators inside brackets before multiplying to protect structural signs.",
+     "Expand the resulting brackets and solve the linear equation using standard balancing steps."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Clearing Denominators Fast",
+      "p": "Never add fractions on one side first if you can multiply the whole equation by the LCM of all denominators in a single step."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "3. Quadratic Equations: Factorising (a = 1 and a > 1)",
+    "p": "Factorising a quadratic expression ax^2 + bx + c = 0 converts a sum into a product of two linear factors, allowing the Null Factor Law to be applied.",
+    "bullets": [
+     "For **a = 1** (x^2 + bx + c = 0): Find two numbers that **multiply to c** and **add to b**.",
+     "For **a > 1** (ax^2 + bx + c = 0): Find two numbers that **multiply to a*c** and **add to b**. Split the middle term bx using these two numbers, then factorise by grouping in pairs.",
+     "**Null Factor Law**: If (p)(q) = 0, then either p = 0 or q = 0.",
+     "**Difference of Two Squares (DOTS)**: Equations of the form a^2 x^2 - b^2 = 0 factorise directly into (ax - b)(ax + b) = 0."
+    ],
+    "table": {
+     "head": [
+      "Quadratic Form",
+      "Method",
+      "Example Factorisation"
+     ],
+     "rows": [
+      [
+       "x^2 + 7x + 12 = 0",
+       "Multiply to +12, add to +7",
+       "(x + 3)(x + 4) = 0"
+      ],
+      [
+       "x^2 - 5x - 14 = 0",
+       "Multiply to -14, add to -5",
+       "(x - 7)(x + 2) = 0"
+      ],
+      [
+       "2x^2 + 7x + 3 = 0",
+       "ac = 6; split 7x into 6x + x",
+       "(2x + 1)(x + 3) = 0"
+      ],
+      [
+       "9x^2 - 16 = 0",
+       "Difference of Two Squares",
+       "(3x - 4)(3x + 4) = 0"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Null Factor Law",
+      "p": "If the product of two real expressions is zero, at least one of the expressions must be zero."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Quadratic Equations: Completing the Square",
+    "p": "Completing the square transforms a quadratic expression into the form a(x + p)^2 + q = 0, enabling direct solving and revealing structural properties like turning points.",
+    "bullets": [
+     "For x^2 + bx + c: Halve the coefficient b to write (x + b/2)^2 - (b/2)^2 + c.",
+     "For ax^2 + bx + c: Factorise a out of the first two terms first: a[x^2 + (b/a)x] + c, then complete the square inside the square bracket.",
+     "To solve a(x + p)^2 + q = 0: Rearrange to (x + p)^2 = -q/a, take the square root of both sides (remembering **+-**), and subtract p.",
+     "The turning point (vertex) of the curve y = a(x + p)^2 + q is located precisely at **(-p, q)**."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Coordinates of Turning Point",
+      "p": "For y = (x - h)^2 + k, the minimum turning point occurs at (h, k). For y = -(x - h)^2 + k, the maximum occurs at (h, k)."
+     },
+     {
+      "k": "warn",
+      "t": "Forgetting the +- Sign",
+      "p": "Taking square roots during solving requires both positive and negative roots: x + p = +- sqrt(-q/a)."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Figure 1: Parabola y = (x - 2)^2 - 9 showing roots at x = -1 and x = 5, and the minimum turning point at (2, -9).",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><line x1=\"40\" y1=\"170\" x2=\"370\" y2=\"170\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"120\" y1=\"20\" x2=\"120\" y2=\"220\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"375\" y=\"174\" fill=\"#1e293b\" font-size=\"11\">x</text><text x=\"124\" y=\"30\" fill=\"#1e293b\" font-size=\"11\">y</text><path d=\"M 60 30 Q 180 260 300 30\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><circle cx=\"90\" cy=\"170\" r=\"4\" fill=\"#dc2626\"/><text x=\"60\" y=\"160\" fill=\"#dc2626\" font-size=\"11\">(-1, 0)</text><circle cx=\"270\" cy=\"170\" r=\"4\" fill=\"#dc2626\"/><text x=\"275\" y=\"160\" fill=\"#dc2626\" font-size=\"11\">(5, 0)</text><circle cx=\"180\" cy=\"195\" r=\"4\" fill=\"#16a34a\"/><text x=\"190\" y=\"200\" fill=\"#16a34a\" font-size=\"11\">Turning Pt (2, -9)</text><line x1=\"180\" y1=\"20\" x2=\"180\" y2=\"210\" stroke=\"#94a3b8\" stroke-width=\"1\" stroke-dasharray=\"4 4\"/><text x=\"210\" y=\"70\" fill=\"#2563eb\" font-size=\"11\">y = (x - 2)^2 - 9</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "5. Quadratic Equations: The Quadratic Formula",
+    "p": "The quadratic formula derives directly from completing the square on ax^2 + bx + c = 0 and provides a universal solution for any quadratic equation.",
+    "bullets": [
+     "Formula: **x = (-b +- sqrt(b^2 - 4ac)) / (2a)**.",
+     "Ensure the equation is arranged in standard form **ax^2 + bx + c = 0** before identifying values for a, b, and c.",
+     "Identify coefficients clearly with their signs: e.g. for 3x^2 - 5x - 2 = 0, a = 3, b = -5, c = -2.",
+     "The **discriminant** (b^2 - 4ac) determines root types: > 0 gives two distinct real roots; = 0 gives one repeated root; < 0 gives no real roots.",
+     "Substitute negative numbers into the formula using brackets, e.g. (-5)^2 = 25."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam Rounding Instruction",
+      "p": "When OCR questions state 'give your answers to 2 decimal places' or 'in surd form', use the quadratic formula."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Linear Simultaneous Equations (Elimination & Substitution)",
+    "p": "Simultaneous linear equations represent two straight lines; solving them finds the unique point of intersection (x, y) satisfying both equations.",
+    "bullets": [
+     "**Elimination Method**: Multiply one or both equations by constants so the coefficients of one variable become equal or opposite.",
+     "Add equations if coefficients have opposite signs (+ and -); subtract if coefficients have identical signs (SAME SIGN SUBTRACT).",
+     "Solve the resulting single-variable linear equation, then substitute back to find the second variable.",
+     "**Substitution Method**: Rearrange one equation to make one variable the subject (e.g. y = 3x - 1), then substitute this expression into the other equation."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Check Both Variables",
+      "p": "Always substitute BOTH calculated x and y values into the original unused equation to confirm accuracy."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Non-Linear Simultaneous Equations (Linear and Quadratic)",
+    "p": "Solving simultaneous equations where one is linear and one is non-linear requires substituting the linear equation into the non-linear equation.",
+    "bullets": [
+     "Rearrange the linear equation to isolate one variable: **y = mx + c** or **x = g(y)**.",
+     "Substitute this linear expression into the quadratic equation (e.g. x^2 + y^2 = r^2 or y = ax^2 + bx + c).",
+     "Expand brackets carefully, collect terms, and set the resulting quadratic to zero.",
+     "Solve the quadratic for the first variable (by factorising or using the formula) to obtain two values.",
+     "Substitute EACH value back into the simple linear equation to find corresponding pairs: **(x1, y1)** and **(x2, y2)**."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Pairing Solutions Correctly",
+      "p": "Never list solutions as x = a, b and y = c, d without pairing them. Points must be explicitly linked as (x1, y1) and (x2, y2)."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Figure 2: Graphical intersection of a linear line y = x + 1 and a non-linear circle x^2 + y^2 = 25 at two distinct coordinate points.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><line x1=\"20\" y1=\"120\" x2=\"380\" y2=\"120\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"200\" y1=\"10\" x2=\"200\" y2=\"230\" stroke=\"#64748b\" stroke-width=\"1.5\"/><circle cx=\"200\" cy=\"120\" r=\"80\" fill=\"none\" stroke=\"#9333ea\" stroke-width=\"2.5\"/><line x1=\"70\" y1=\"230\" x2=\"310\" y2=\"10\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><circle cx=\"136\" cy=\"174\" r=\"4\" fill=\"#dc2626\"/><text x=\"60\" y=\"185\" fill=\"#dc2626\" font-size=\"11\">(-4, -3)</text><circle cx=\"264\" cy=\"66\" r=\"4\" fill=\"#dc2626\"/><text x=\"272\" y=\"60\" fill=\"#dc2626\" font-size=\"11\">(3, 4)</text><text x=\"230\" y=\"35\" fill=\"#2563eb\" font-size=\"11\">y = x + 1</text><text x=\"285\" y=\"140\" fill=\"#9333ea\" font-size=\"11\">x^2 + y^2 = 25</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "8. Graphical Solutions to Equations and Intersections",
+    "p": "Equations of the form f(x) = 0 can be solved graphically by finding where the curve y = f(x) crosses the x-axis (where y = 0).",
+    "bullets": [
+     "Roots of f(x) = 0 correspond precisely to the **x-intercepts** of the graph y = f(x).",
+     "Solutions to simultaneous equations f(x) = g(x) correspond to the **x-coordinates** of the points where y = f(x) and y = g(x) intersect.",
+     "To estimate roots from a given graph, read values off the axes accurately to the required scale precision (usually 1 decimal place)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Reading Axis Scale",
+      "p": "Check the grid scale on exam papers carefully; each square often represents 0.1, 0.2, or 0.5 units."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Graphical Method for Solving f(x) = g(x) by Drawing Lines",
+    "p": "When asked to solve an equation such as x^3 - 3x - 1 = 0 using a pre-drawn graph y = x^3 - 4x, you must rearrange the equation to isolate the drawn curve on one side.",
+    "bullets": [
+     "Start with target equation: x^3 - 3x - 1 = 0.",
+     "Manipulate to match original drawn graph y = x^3 - 4x: subtract x from both sides to get x^3 - 4x - 1 = -x, then add 1 to get **x^3 - 4x = 1 - x**.",
+     "Draw the line **y = 1 - x** on the existing graph.",
+     "The x-coordinates of the intersection points between the curve and line are the exact solutions to the target equation."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Rearrangement Principle",
+      "p": "Original Equation = 0  =>  Drawn Graph Expression = Linear Line Expression (y = mx + c)."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Figure 3: Solving x^3 - 3x - 1 = 0 by finding intersections between drawn curve y = x^3 - 4x and line y = 1 - x.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><line x1=\"30\" y1=\"130\" x2=\"370\" y2=\"130\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"180\" y1=\"10\" x2=\"180\" y2=\"230\" stroke=\"#64748b\" stroke-width=\"1.5\"/><path d=\"M 70 220 C 110 30 150 30 180 130 C 210 230 250 230 290 20\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"60\" y1=\"30\" x2=\"320\" y2=\"210\" stroke=\"#16a34a\" stroke-width=\"2.5\"/><circle cx=\"100\" cy=\"58\" r=\"4\" fill=\"#dc2626\"/><circle cx=\"165\" cy=\"103\" r=\"4\" fill=\"#dc2626\"/><circle cx=\"270\" cy=\"175\" r=\"4\" fill=\"#dc2626\"/><text x=\"295\" y=\"35\" fill=\"#2563eb\" font-size=\"11\">y = x^3 - 4x</text><text x=\"280\" y=\"215\" fill=\"#16a34a\" font-size=\"11\">y = 1 - x</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "10. Iterative Processes: Generating Formulae",
+    "p": "Iteration is a numerical algorithm used to find approximate solutions to complex equations when exact algebraic methods are impossible or impractical.",
+    "bullets": [
+     "To rearrange f(x) = 0 into iterative form **x = g(x)**, isolate x on one side of the equality.",
+     "Example: x^3 - 5x + 2 = 0  =>  5x = x^3 + 2  =>  **x = (x^3 + 2)/5**.",
+     "Convert to subscript notation for the iterative steps: **x_(n+1) = (x_n^3 + 2)/5**.",
+     "Here, x_n represents the current estimate, and x_(n+1) represents the next improved estimate."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Iterative Process",
+      "p": "A sequence of repeating steps using a recurrence formula x_(n+1) = g(x_n) where each calculated value feeds into the next step to converge towards a root."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "11. Iterative Solutions: Finding Roots & Convergence",
+    "p": "Starting with an initial value x_0, repeated substitution into x_(n+1) = g(x_n) yields successive approximations x_1, x_2, x_3... converging to a root.",
+    "bullets": [
+     "Calculator method: Type initial value (e.g., 1.5) and press **[EXE] / [=]** (stores in **ANS**).",
+     "Type the iteration expression replacing x_n with **ANS** (e.g. (ANS^3 + 2)/5).",
+     "Press **[=]** repeatedly to output x_1, x_2, x_3 automatically.",
+     "Truncate or round the outputs to required decimal places when specified in the question."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Calculator Memory Efficiency",
+      "p": "Using the ANS key on your calculator prevents copy/transcription errors and maintains exact internal working precision."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Figure 4: Cobweb diagram illustrating iterative convergence of x_(n+1) = g(x_n) towards the root where y = x intersects y = g(x).",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><line x1=\"30\" y1=\"210\" x2=\"370\" y2=\"210\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"50\" y1=\"20\" x2=\"50\" y2=\"220\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"50\" y1=\"210\" x2=\"350\" y2=\"30\" stroke=\"#94a3b8\" stroke-width=\"1.5\" stroke-dasharray=\"4 4\"/><text x=\"320\" y=\"20\" fill=\"#94a3b8\" font-size=\"11\">y = x</text><path d=\"M 50 180 Q 200 160 360 70\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><text x=\"290\" y=\"60\" fill=\"#2563eb\" font-size=\"11\">y = g(x)</text><path d=\"M 90 210 L 90 174 L 140 174 L 140 156 L 170 156 L 170 140 L 195 140 L 195 125\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2\"/><circle cx=\"220\" cy=\"110\" r=\"4\" fill=\"#16a34a\"/><text x=\"230\" y=\"110\" fill=\"#16a34a\" font-size=\"11\">Root (x_n -> alpha)</text><text x=\"85\" y=\"225\" fill=\"#dc2626\" font-size=\"11\">x_0</text><text x=\"135\" y=\"225\" fill=\"#dc2626\" font-size=\"11\">x_1</text><text x=\"165\" y=\"225\" fill=\"#dc2626\" font-size=\"11\">x_2</text></svg>"
+     }
+    ]
+   }
+  ],
+  "analogy": {
+   "t": "The Navigation & Calibration Analogy",
+   "p": "Solving equations algebraically is like calculating an exact destination using direct vector mapping: formulas and factorisations take you straight to the precise coordinates in one continuous step. Iteration, by contrast, is like an auto-pilot calibration system: it takes an initial rough estimate, measures the error, adjusts course, and repeats the process sequentially—getting closer and closer to the exact target with every cycle. This analogy breaks down because while auto-pilot systems operate in continuous physical space, iterative formulas are discrete mathematical algorithms that can sometimes diverge away from the root if the gradient of the function g(x) is too steep."
+  },
+  "terms": [
+   {
+    "t": "Linear Equation",
+    "d": "An algebraic equation where the highest power of any variable is 1, representing a straight line when graphed."
+   },
+   {
+    "t": "Quadratic Equation",
+    "d": "An equation of degree 2, in the standard form ax^2 + bx + c = 0 where a != 0."
+   },
+   {
+    "t": "Simultaneous Equations",
+    "d": "A set of two or more equations containing multiple variables that must be satisfied simultaneously."
+   },
+   {
+    "t": "Factorisation",
+    "d": "The process of writing an algebraic expression as a product of its factors."
+   },
+   {
+    "t": "Completing the Square",
+    "d": "Rewriting a quadratic expression ax^2 + bx + c into the form a(x + p)^2 + q."
+   },
+   {
+    "t": "Quadratic Formula",
+    "d": "The universal formula x = (-b +- sqrt(b^2 - 4ac)) / (2a) used to find roots of ax^2 + bx + c = 0."
+   },
+   {
+    "t": "Discriminant",
+    "d": "The value b^2 - 4ac under the square root in the quadratic formula, determining the nature and number of roots."
+   },
+   {
+    "t": "Root",
+    "d": "A solution to an equation of the form f(x) = 0; geometrically, where y = f(x) crosses the x-axis."
+   },
+   {
+    "t": "Turning Point",
+    "d": "The point on a curve where the gradient changes sign; the local minimum or maximum vertex of a parabola."
+   },
+   {
+    "t": "Iteration",
+    "d": "A sequence of repeating mathematical operations where the output of one step is used as the input for the next."
+   },
+   {
+    "t": "Convergence",
+    "d": "The property of an iterative sequence approaching a fixed limit or root as the number of steps increases."
+   },
+   {
+    "t": "Divergence",
+    "d": "The property where successive iterations move further away from the root rather than closer."
+   },
+   {
+    "t": "Null Factor Law",
+    "d": "The mathematical property stating that if A * B = 0, then A = 0 or B = 0 (or both)."
+   },
+   {
+    "t": "Intersection Point",
+    "d": "A coordinate pair (x, y) where two graphical curves meet, representing shared solutions to their equations."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Expanding -3(x - 4) as -3x - 12.",
+    "r": "Correct expansion is -3x + 12 (multiplying two negatives yields a positive)."
+   },
+   {
+    "w": "Solving x^2 = 25 as x = 5 only.",
+    "r": "Taking square roots gives both positive and negative roots: x = +- 5."
+   },
+   {
+    "w": "Forgetting to change signs when subtracting linear simultaneous equations.",
+    "r": "Subtracting (3x - 2y = 7) means subtracting every term, so -(-2y) becomes +2y."
+   },
+   {
+    "w": "Writing final answers to simultaneous equations as unlinked values: x = 2, 4 and y = 1, 5.",
+    "r": "Explicitly link paired solutions: (x = 2, y = 1) and (x = 4, y = 5)."
+   },
+   {
+    "w": "Entering -3^2 into a calculator as -9 when evaluating b^2 in the quadratic formula.",
+    "r": "Enclose negative numbers in brackets: (-3)^2 = +9."
+   },
+   {
+    "w": "Stopping an iteration process early without showing intermediate values x_1, x_2, x_3.",
+    "r": "Write down every iteration value to the required number of decimal places step-by-step."
+   },
+   {
+    "w": "Drawing a straight line for f(x) = g(x) graphical problems using wrong y-intercept.",
+    "r": "Rearrange target equation carefully to f(x) = mx + c to obtain exact gradient and y-intercept."
+   },
+   {
+    "w": "In completing the square for 2x^2 - 8x + 5, writing (2x - 4)^2 + 5.",
+    "r": "Factorise 2 out of the variable terms first: 2[x^2 - 4x] + 5 = 2[(x - 2)^2 - 4] + 5 = 2(x - 2)^2 - 3."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Solve 5x - 3 = 2(x + 6).",
+    "marks": 3,
+    "model": [
+     "Expand right hand side: 5x - 3 = 2x + 12",
+     "Subtract 2x from both sides: 3x - 3 = 12",
+     "Add 3 to both sides: 3x = 15",
+     "Divide by 3: x = 5"
+    ],
+    "tip": "Expand brackets correctly first, then group x terms on the side with the larger coefficient."
+   },
+   {
+    "q": "Solve 6x^2 - 7x - 3 = 0 by factorising.",
+    "marks": 3,
+    "model": [
+     "Find two numbers that multiply to 6 * (-3) = -18 and add to -7: -9 and +2",
+     "Split middle term: 6x^2 - 9x + 2x - 3 = 0",
+     "Factorise by grouping: 3x(2x - 3) + 1(2x - 3) = 0 => (3x + 1)(2x - 3) = 0",
+     "Solve linear factors: x = -1/3 or x = 3/2"
+    ],
+    "tip": "Always check your factorised brackets by expanding them mentally before solving."
+   },
+   {
+    "q": "Write x^2 - 8x + 11 in the form (x - a)^2 - b. Hence, state the turning point of y = x^2 - 8x + 11.",
+    "marks": 3,
+    "model": [
+     "Halve -8 to get -4: (x - 4)^2 - 16 + 11",
+     "Simplify constants: (x - 4)^2 - 5",
+     "State minimum turning point coordinate: (4, -5)"
+    ],
+    "tip": "The x-coordinate of the turning point flips sign from inside the bracket; the y-coordinate keeps its sign."
+   },
+   {
+    "q": "Solve 3x^2 + 2x - 7 = 0. Give your answers to 2 decimal places.",
+    "marks": 3,
+    "model": [
+     "Identify a = 3, b = 2, c = -7",
+     "Substitute into formula: x = (-2 +- sqrt(2^2 - 4(3)(-7))) / (2(3))",
+     "Simplify inside surd: x = (-2 +- sqrt(4 + 84)) / 6 = (-2 +- sqrt(88)) / 6",
+     "Calculate values: x = 1.23 and x = -1.90"
+    ],
+    "tip": "Keep full precision on your calculator display until rounding to 2 decimal places at the very end."
+   },
+   {
+    "q": "Solve the simultaneous equations:\n3x + 2y = 16\n2x - 3y = 2",
+    "marks": 4,
+    "model": [
+     "Multiply top equation by 3: 9x + 6y = 48",
+     "Multiply bottom equation by 2: 4x - 6y = 4",
+     "Add the two equations: 13x = 52 => x = 4",
+     "Substitute x = 4 into 3(4) + 2y = 16 => 12 + 2y = 16 => 2y = 4 => y = 2",
+     "Final solution: x = 4, y = 2"
+    ],
+    "tip": "When coefficients have opposite signs (+6y and -6y), ADD the equations to eliminate the variable."
+   },
+   {
+    "q": "Solve the simultaneous equations:\nx + y = 3\nx^2 + y^2 = 29",
+    "marks": 5,
+    "model": [
+     "Rearrange linear equation: y = 3 - x",
+     "Substitute into quadratic: x^2 + (3 - x)^2 = 29",
+     "Expand: x^2 + 9 - 6x + x^2 = 29 => 2x^2 - 6x + 9 = 29",
+     "Rearrange to zero: 2x^2 - 6x - 20 = 0 => x^2 - 3x - 10 = 0",
+     "Factorise: (x - 5)(x + 2) = 0 => x = 5 or x = -2",
+     "Substitute back to find y: when x = 5, y = -2; when x = -2, y = 5",
+     "Solutions: (5, -2) and (-2, 5)"
+    ],
+    "tip": "Carefully square (3 - x) as (3 - x)(3 - x) = 9 - 6x + x^2."
+   },
+   {
+    "q": "Show that the equation x^3 - 4x - 2 = 0 can be rearranged into x = root(3, 4x + 2).",
+    "marks": 2,
+    "model": [
+     "Add 4x and 2 to both sides: x^3 = 4x + 2",
+     "Take the cube root of both sides: x = root(3, 4x + 2)"
+    ],
+    "tip": "Write down every step of basic algebraic manipulation clearly to earn full proof marks."
+   },
+   {
+    "q": "Using x_(n+1) = root(3, 4x_n + 2) with x_0 = 2, calculate the values of x_1, x_2, and x_3 to 3 decimal places.",
+    "marks": 3,
+    "model": [
+     "x_1 = root(3, 4(2) + 2) = root(3, 10) = 2.15443... => 2.154",
+     "x_2 = root(3, 4(2.15443...) + 2) = root(3, 10.6177...) = 2.1979... => 2.198",
+     "x_3 = root(3, 4(2.1979...) + 2) = root(3, 10.7917...) = 2.2098... => 2.210"
+    ],
+    "tip": "Use the ANS button on your calculator to maintain full accuracy between steps."
+   },
+   {
+    "q": "The diagram shows the graph of y = x^2 - 2x - 3. By drawing a suitable straight line, solve x^2 - 3x - 1 = 0.",
+    "marks": 3,
+    "model": [
+     "Rearrange target equation to isolate drawn graph: x^2 - 2x - 3 = x + 2",
+     "Identify line to draw: y = x + 2",
+     "Draw straight line y = x + 2 passing through (0, 2) and (2, 4)",
+     "Read off x-coordinates of intersection points: x = -0.3 and x = 3.3 (approx)"
+    ],
+    "tip": "Ensure your drawn straight line extends across the entire width of the grid."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Solve the algebraic fraction equation: (x + 2) / 3 + (2x - 1) / 4 = 3.",
+    "steps": [
+     "Find LCM of denominators 3 and 4, which is 12.",
+     "Multiply every term in the equation by 12: 12 * [(x + 2)/3] + 12 * [(2x - 1)/4] = 12 * 3.",
+     "Simplify terms: 4(x + 2) + 3(2x - 1) = 36.",
+     "Expand brackets: 4x + 8 + 6x - 3 = 36.",
+     "Collect like terms: 10x + 5 = 36.",
+     "Subtract 5 from both sides: 10x = 31.",
+     "Divide by 10: x = 3.1."
+    ],
+    "ans": "x = 3.1 (or 31/10)"
+   },
+   {
+    "q": "Solve the non-linear simultaneous equations: y - 2x = 3 and x^2 + y^2 = 18. Give answers to 2 decimal places.",
+    "steps": [
+     "Rearrange linear equation to make y the subject: y = 2x + 3.",
+     "Substitute into circle equation: x^2 + (2x + 3)^2 = 18.",
+     "Expand bracket: x^2 + (4x^2 + 12x + 9) = 18.",
+     "Simplify and set to zero: 5x^2 + 12x - 9 = 0.",
+     "Apply quadratic formula with a = 5, b = 12, c = -9: x = (-12 +- sqrt(144 - 4(5)(-9))) / 10 = (-12 +- sqrt(324)) / 10.",
+     "Calculate roots: x = (-12 +- 18) / 10 => x1 = 0.60, x2 = -3.00.",
+     "Substitute x values back into y = 2x + 3: when x = 0.60, y = 2(0.60) + 3 = 4.20; when x = -3.00, y = 2(-3.00) + 3 = -3.00."
+    ],
+    "ans": "x = 0.60, y = 4.20 and x = -3.00, y = -3.00"
+   }
+  ],
+  "svg": [],
+  "pid": "maths_ocr_h.5.2",
+  "sid": "maths_ocr_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.6-flash",
+  "ts": "2026-11-22T16:45:57.761Z"
  }
 }

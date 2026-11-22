@@ -3784,5 +3784,593 @@
   "src": "pre",
   "by": "gemini/gemini-3.6-flash",
   "ts": "2026-11-21T16:50:09.521Z"
+ },
+ "maths_eduqas_h.4.0": {
+  "summary": "Recording, describing, and analysing frequencies of outcomes forms the foundation of empirical statistical analysis at Eduqas GCSE Higher level. Raw observations are systematically structured into frequency tables, two-way tables, and frequency trees to reveal distribution patterns and sub-group relationships. Frequency trees visually decompose total sample populations across successive categorical stages, ensuring that branch counts rigorously sum to their parent totals. Mastering these representations enables candidates to accurately compute relative frequencies, evaluate modal classes, and deduce conditional probabilities across both non-calculator and calculator examination papers.",
+  "core": [
+   {
+    "h": "1. Recording Raw Data in Primary Frequency Tables",
+    "p": "When recording raw discrete or categorical observations, data must be structured systematically using tally marks and absolute frequencies to prepare for statistical analysis.",
+    "bullets": [
+     "**Raw Data**: Unorganized collection of quantitative or qualitative observations prior to grouping.",
+     "**Tally System**: Vertical marks grouped in bundles of five (four vertical lines with a diagonal fifth mark across them) to ensure accurate live counting.",
+     "**Absolute Frequency**: The actual count of times a specific outcome or variable value occurs in the dataset.",
+     "**Total Frequency ($N$)**: The sum of all individual absolute frequencies, calculated as $N = \\sum f$.",
+     "Always perform a total count verification to confirm that $\\sum f$ equals the total number of items sampled."
+    ],
+    "table": {
+     "head": [
+      "Category / Outcome",
+      "Tally",
+      "Absolute Frequency ($f$)"
+     ],
+     "rows": [
+      [
+       "Red",
+       "|||| ||",
+       "7"
+      ],
+      [
+       "Blue",
+       "|||| |||| |",
+       "11"
+      ],
+      [
+       "Green",
+       "||||",
+       "4"
+      ],
+      [
+       "Total ($N$)",
+       "-",
+       "22"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Absolute Frequency",
+      "p": "The absolute count of times a specific event or numerical outcome occurs within a given dataset."
+     },
+     {
+      "k": "tip",
+      "t": "Examiner Check",
+      "p": "Always sum the frequency column immediately after completing a table to verify that no data point was omitted."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. Structure and Properties of Two-Way Tables",
+    "p": "Two-way tables categorize bivariate discrete or categorical data according to two distinct variables simultaneously, displaying row totals, column totals, and a grand total.",
+    "bullets": [
+     "**Row Variable**: Represents the first category classification across horizontal rows.",
+     "**Column Variable**: Represents the second category classification down vertical columns.",
+     "**Cell Entries**: Intersections representing joint frequencies where both conditions are satisfied.",
+     "**Marginal Totals**: The sum of values across individual rows or columns positioned in the margins.",
+     "**Grand Total**: Located in the bottom-right cell; must equal both the sum of row totals and the sum of column totals."
+    ],
+    "table": {
+     "head": [
+      "Category",
+      "Option A",
+      "Option B",
+      "Total"
+     ],
+     "rows": [
+      [
+       "Group 1",
+       "Cell (1,A)",
+       "Cell (1,B)",
+       "Row 1 Total"
+      ],
+      [
+       "Group 2",
+       "Cell (2,A)",
+       "Cell (2,B)",
+       "Row 2 Total"
+      ],
+      [
+       "Total",
+       "Col A Total",
+       "Col B Total",
+       "Grand Total ($N$)"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Grand Total Rule",
+      "p": "Grand Total = Sum of Row Totals = Sum of Column Totals = Sum of all individual internal cells."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Fully annotated Two-Way Table demonstrating category intersections, marginal totals, and grand total consistency.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"20\" y=\"20\" width=\"360\" height=\"35\" fill=\"#1e293b\" rx=\"4\"/><text x=\"110\" y=\"42\" fill=\"#ffffff\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Transport</text><text x=\"210\" y=\"42\" fill=\"#ffffff\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Walk</text><text x=\"290\" y=\"42\" fill=\"#ffffff\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Bus</text><text x=\"350\" y=\"42\" fill=\"#ffffff\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Total</text><rect x=\"20\" y=\"60\" width=\"360\" height=\"40\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"110\" y=\"85\" fill=\"#0f172a\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Year 10</text><text x=\"210\" y=\"85\" fill=\"#334155\" font-size=\"12\" text-anchor=\"middle\">45</text><text x=\"290\" y=\"85\" fill=\"#334155\" font-size=\"12\" text-anchor=\"middle\">15</text><text x=\"350\" y=\"85\" fill=\"#1e40af\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">60</text><rect x=\"20\" y=\"105\" width=\"360\" height=\"40\" fill=\"#f1f5f9\" stroke=\"#cbd5e1\"/><text x=\"110\" y=\"130\" fill=\"#0f172a\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Year 11</text><text x=\"210\" y=\"130\" fill=\"#334155\" font-size=\"12\" text-anchor=\"middle\">55</text><text x=\"350\" y=\"130\" fill=\"#1e40af\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">90</text><text x=\"290\" y=\"130\" fill=\"#334155\" font-size=\"12\" text-anchor=\"middle\">35</text><rect x=\"20\" y=\"150\" width=\"360\" height=\"40\" fill=\"#dbeafe\" stroke=\"#93c5fd\"/><text x=\"110\" y=\"175\" fill=\"#1e40af\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Total</text><text x=\"210\" y=\"175\" fill=\"#1e40af\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">100</text><text x=\"290\" y=\"175\" fill=\"#1e40af\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">50</text><text x=\"350\" y=\"175\" fill=\"#065f46\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">150</text><path d=\"M 320 175 L 335 175\" stroke=\"#059669\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><text x=\"200\" y=\"215\" fill=\"#64748b\" font-size=\"11\" text-anchor=\"middle\">Grand Total = 60 + 90 = 100 + 50 = 150</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "3. Extracting Probabilities & Sub-population Densities from Two-Way Tables",
+    "p": "Two-way tables allow for rapid calculation of overall probabilities, joint probabilities, and conditional sub-population probabilities.",
+    "bullets": [
+     "**Overall Probability**: Frequency of specific outcome divided by the Grand Total ($N$).",
+     "**Joint Probability**: Probability of two conditions occurring simultaneously: $P(A \\text{ and } B) = \\frac{\\text{Cell Count}}{N}$.",
+     "**Sub-group Relative Frequency**: Restricting the denominator to a row total or column total rather than the grand total.",
+     "Always read the denominator constraint in the question wording: 'given that' or 'out of the boys' changes the total denominator."
+    ],
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Denominator Confusion",
+      "p": "Failure to adjust the denominator for conditional sub-populations (e.g. using Grand Total instead of Row Total) is the most frequent mark loss in Eduqas component papers."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Grouped Frequency Tables & Continuous Data Boundaries",
+    "p": "When recording large ranges of continuous data (e.g. time, mass, height), observations are grouped into continuous class intervals defined by inequality notation.",
+    "bullets": [
+     "**Class Intervals**: Defined non-overlapping sub-ranges of values, typically expressed using inequalities such as $0 < t \\le 10$.",
+     "**Lower and Upper Bounds**: The minimum and maximum theoretical values bounded by the inequality.",
+     "**Class Width**: Difference between the upper boundary and lower boundary ($W = \\text{Upper} - \\text{Lower}$).",
+     "**Midpoint ($x$)**: Calculated as $\\frac{\\text{Lower Bound} + \\text{Upper Bound}}{2}$; used as the representative value for estimating means."
+    ],
+    "table": {
+     "head": [
+      "Time ($t$ seconds)",
+      "Class Midpoint ($x$)",
+      "Absolute Frequency ($f$)",
+      "Product ($f \\times x$)"
+     ],
+     "rows": [
+      [
+       "$0 < t \\le 10$",
+       "5",
+       "8",
+       "40"
+      ],
+      [
+       "$10 < t \\le 20$",
+       "15",
+       "14",
+       "210"
+      ],
+      [
+       "$20 < t \\le 30$",
+       "25",
+       "6",
+       "150"
+      ],
+      [
+       "Total",
+       "-",
+       "$N = 28$",
+       "$\\sum fx = 400$"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Class Interval Bounds",
+      "p": "Strict inequalities ($<$) and weak inequalities ($\\le$) ensure that every continuous data value belongs to exactly one interval without ambiguity."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Grouped frequency table continuous boundary breakdown detailing upper/lower limits and class midpoints.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"30\" y=\"30\" width=\"340\" height=\"40\" fill=\"#e2e8f0\" rx=\"6\"/><text x=\"200\" y=\"55\" fill=\"#0f172a\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Interval: 10 &lt; t ≤ 20</text><line x1=\"50\" y1=\"130\" x2=\"350\" y2=\"130\" stroke=\"#475569\" stroke-width=\"3\"/><circle cx=\"50\" cy=\"130\" r=\"6\" fill=\"#ffffff\" stroke=\"#0f172a\" stroke-width=\"2\"/><circle cx=\"350\" cy=\"130\" r=\"6\" fill=\"#0f172a\"/><circle cx=\"200\" cy=\"130\" r=\"6\" fill=\"#2563eb\"/><text x=\"50\" y=\"160\" fill=\"#0f172a\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">10 (Excluded)</text><text x=\"350\" y=\"160\" fill=\"#0f172a\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">20 (Included)</text><text x=\"200\" y=\"160\" fill=\"#2563eb\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Midpoint = 15</text><path d=\"M 50 100 L 350 100\" stroke=\"#059669\" stroke-width=\"2\" fill=\"none\"/><text x=\"200\" y=\"92\" fill=\"#059669\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">Class Width = 20 - 10 = 10</text><text x=\"200\" y=\"205\" fill=\"#64748b\" font-size=\"11\" text-anchor=\"middle\">Inequality notation prevents boundary overlap between adjacent classes.</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "5. Describing Distributions: Modal Class and Modal Value",
+    "p": "Analyzing frequency distributions requires identifying peak frequencies and modal groups to describe the central tendency of categorical or continuous data.",
+    "bullets": [
+     "**Modal Category / Mode**: The outcome or discrete item associated with the highest absolute frequency.",
+     "**Modal Class**: The continuous class interval that contains the highest absolute frequency count.",
+     "**Bimodal Distribution**: A dataset possessing two distinct non-adjacent peak categories with equal or near-equal top frequencies.",
+     "Do not confuse the frequency count itself with the modal category; the mode is the category label, not the number of times it occurs."
+    ],
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Common Error: Mode vs Frequency",
+      "p": "If a frequency table shows 'Blue' has frequency 15, the mode is 'Blue', NOT 15."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Fundamentals of Frequency Trees: Architecture & Nodes",
+    "p": "A frequency tree is a branching diagram that visually splits a total population sample into mutually exclusive categorical sub-groups across successive stages.",
+    "bullets": [
+     "**Root Node**: The starting box containing the grand total population size ($N$).",
+     "**Primary Branches**: The initial split of the total sample into two or more primary categorical sub-groups.",
+     "**Secondary Branches**: Further sub-divisions of each primary branch into secondary attributes.",
+     "**Terminal Nodes / Leaves**: The final boxes at the end of every complete path representing specific joint counts.",
+     "Every branching point represents a complete partitioning: the sum of child nodes must strictly equal the parent node value."
+    ],
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Frequency Tree Conservation Principle",
+      "p": "At any branch junction in a frequency tree, the sum of all outgoing branch frequencies MUST equal the value of the parent node."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Complete Frequency Tree structural anatomy illustrating root node, primary splits, secondary splits, and conservation of counts.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"15\" y=\"95\" width=\"65\" height=\"50\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"2\" rx=\"6\"/><text x=\"47\" y=\"117\" fill=\"#1e40af\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">Total</text><text x=\"47\" y=\"133\" fill=\"#1e40af\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">120</text><line x1=\"80\" y1=\"120\" x2=\"140\" y2=\"65\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"80\" y1=\"120\" x2=\"140\" y2=\"175\" stroke=\"#475569\" stroke-width=\"2\"/><rect x=\"140\" y=\"40\" width=\"75\" height=\"50\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"2\" rx=\"6\"/><text x=\"177\" y=\"62\" fill=\"#92400e\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">Pass</text><text x=\"177\" y=\"78\" fill=\"#92400e\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">80</text><rect x=\"140\" y=\"150\" width=\"75\" height=\"50\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"2\" rx=\"6\"/><text x=\"177\" y=\"172\" fill=\"#991b1b\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">Fail</text><text x=\"177\" y=\"188\" fill=\"#991b1b\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">40</text><line x1=\"215\" y1=\"65\" x2=\"280\" y2=\"35\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"215\" y1=\"65\" x2=\"280\" y2=\"95\" stroke=\"#475569\" stroke-width=\"2\"/><rect x=\"280\" y=\"15\" width=\"95\" height=\"40\" fill=\"#dcfce7\" stroke=\"#166534\" stroke-width=\"1.5\" rx=\"4\"/><text x=\"327\" y=\"32\" fill=\"#14532d\" font-size=\"10\" font-weight=\"bold\" text-anchor=\"middle\">Merit: 50</text><rect x=\"280\" y=\"75\" width=\"95\" height=\"40\" fill=\"#f1f5f9\" stroke=\"#475569\" stroke-width=\"1.5\" rx=\"4\"/><text x=\"327\" y=\"92\" fill=\"#334155\" font-size=\"10\" font-weight=\"bold\" text-anchor=\"middle\">Standard: 30</text><line x1=\"215\" y1=\"175\" x2=\"280\" y2=\"150\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"215\" y1=\"175\" x2=\"280\" y2=\"205\" stroke=\"#475569\" stroke-width=\"2\"/><rect x=\"280\" y=\"130\" width=\"95\" height=\"40\" fill=\"#f1f5f9\" stroke=\"#475569\" stroke-width=\"1.5\" rx=\"4\"/><text x=\"327\" y=\"147\" fill=\"#334155\" font-size=\"10\" font-weight=\"bold\" text-anchor=\"middle\">Resit: 28</text><rect x=\"280\" y=\"185\" width=\"95\" height=\"40\" fill=\"#f1f5f9\" stroke=\"#475569\" stroke-width=\"1.5\" rx=\"4\"/><text x=\"327\" y=\"202\" fill=\"#334155\" font-size=\"10\" font-weight=\"bold\" text-anchor=\"middle\">Leave: 12</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "7. Constructing Frequency Trees from Unstructured Written Text",
+    "p": "Eduqas exam questions frequently provide text descriptions of survey results. Constructing the tree requires systematic step-by-step population tracking.",
+    "bullets": [
+     "**Identify the Total ($N$)**: Locate the total sample size to place into the root node (box 1).",
+     "**Locate Direct Given Sub-totals**: Fill in explicit counts provided directly in the prompt text.",
+     "**Deduce Remaining Sub-totals by Subtraction**: Calculate missing node values using $N_{\\text{parent}} - N_{\\text{known child}} = N_{\\text{missing child}}$.",
+     "**Work Logically From Root to Leaf**: Complete primary stage splits fully before attempting secondary stage splits.",
+     "**Final Leaf Check**: Sum all final right-hand terminal leaf nodes; their total MUST equal the original root node value."
+    ],
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Systematic Deduction Order",
+      "p": "Underline every numeric fact in the exam question stem as you incorporate it into your frequency tree diagram."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Analyzing Sub-group Branches & Ratio Partitioning",
+    "p": "Advanced Eduqas questions combine frequency trees with proportions, percentages, or ratios to divide intermediate node counts.",
+    "bullets": [
+     "**Percentage Splits**: Convert percentage to multiplier or fraction (e.g. $30\\%$ of $60 = 0.30 \\times 60 = 18$).",
+     "**Ratio Splits**: Divide parent node count by the total ratio parts, then multiply by individual share parts.",
+     "**Fractional Sub-groups**: Multiply parent count by specified fraction: $N_{\\text{child}} = N_{\\text{parent}} \\times \\frac{a}{b}$.",
+     "Counts in frequency tree nodes MUST be non-negative integers; if a calculation yields a decimal, re-check arithmetic."
+    ],
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Ratio Node Partitioning",
+      "p": "To divide parent node count $P$ in ratio $a : b$: Value $A = P \\times \\frac{a}{a+b}$, Value $B = P \\times \\frac{b}{a+b}$."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Calculating Probabilities and Relative Frequencies from Trees",
+    "p": "Once a frequency tree is completed, absolute counts can be directly converted into probabilities, fractions, or percentages.",
+    "bullets": [
+     "**Single Stage Probability**: $P(\\text{Outcome}) = \\frac{\\text{Branch Frequency}}{\\text{Root Total}}$.",
+     "**Combined Trajectory Path**: To find probability of following a specific path from root to leaf, divide the final terminal leaf count by the root count.",
+     "**Conditional Relative Frequency**: When evaluating a subset 'given category X', the denominator becomes the category X node count, NOT the root total.",
+     "Always express probabilities in simplest fraction form, exact decimal, or percentage as specified by the mark scheme."
+    ],
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Simplifying Fractions",
+      "p": "In Eduqas exams, unsimplified fractions like $\\frac{18}{60}$ earn full marks unless the question explicitly requests 'in its simplest form'."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Multi-Stage Trees & Complex Sub-populations",
+    "p": "Extending frequency trees across three or more categorical stages requires strict maintenance of branch additive properties at each sub-level.",
+    "bullets": [
+     "Each added categorical dimension multiplies the total number of terminal leaves by the number of categories.",
+     "Primary split (2 categories) $\\rightarrow$ Secondary split (2 categories) $\\rightarrow$ Tertiary split (2 categories) $= 8$ terminal leaf nodes.",
+     "Sum of all 8 terminal leaf nodes must equal the single root node population.",
+     "Useful for complex scenarios involving multi-test medical trials, successive manufacturing checks, or multi-mode travel."
+    ],
+    "fig": []
+   },
+   {
+    "h": "11. Interconverting Two-Way Tables and Frequency Trees",
+    "p": "Frequency trees and two-way tables are mathematically equivalent representations of bivariate data; data can be converted bidirectionally between them without loss of information.",
+    "bullets": [
+     "**Root Node** $\\leftrightarrow$ Grand Total cell in bottom-right of two-way table.",
+     "**Primary Branches** $\\leftrightarrow$ Row Totals (or Column Totals).",
+     "**Secondary Branches** $\\leftrightarrow$ Individual internal table cell counts.",
+     "Converting to a two-way table often simplifies verification of horizontal and vertical totals."
+    ],
+    "table": {
+     "head": [
+      "Frequency Tree Node",
+      "Equivalent Two-Way Table Location"
+     ],
+     "rows": [
+      [
+       "Root Node",
+       "Grand Total (bottom right)"
+      ],
+      [
+       "Primary Nodes (Category A / B)",
+       "Row Totals (or Column Totals)"
+      ],
+      [
+       "Terminal Leaf Nodes",
+       "Individual Intersecting Cells"
+      ]
+     ]
+    },
+    "fig": [
+     {
+      "cap": "Visual conversion mapping connecting Two-Way Table cell counts to equivalent Frequency Tree node structures.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"20\" y=\"40\" width=\"150\" height=\"160\" fill=\"#ffffff\" stroke=\"#64748b\" stroke-width=\"1.5\" rx=\"4\"/><text x=\"95\" y=\"60\" fill=\"#0f172a\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">Two-Way Table</text><rect x=\"30\" y=\"75\" width=\"60\" height=\"35\" fill=\"#dbeafe\" stroke=\"#3b82f6\"/><text x=\"60\" y=\"97\" fill=\"#1e40af\" font-size=\"10\" text-anchor=\"middle\">Cell A: 30</text><rect x=\"100\" y=\"75\" width=\"60\" height=\"35\" fill=\"#fef3c7\" stroke=\"#f59e0b\"/><text x=\"130\" y=\"97\" fill=\"#92400e\" font-size=\"10\" text-anchor=\"middle\">Cell B: 20</text><rect x=\"30\" y=\"120\" width=\"130\" height=\"35\" fill=\"#dcfce7\" stroke=\"#10b981\"/><text x=\"95\" y=\"142\" fill=\"#065f46\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">Row Total = 50</text><path d=\"M 180 120 L 210 120\" stroke=\"#6366f1\" stroke-width=\"3\" stroke-dasharray=\"4,4\" marker-end=\"url(#arrow)\"/><rect x=\"220\" y=\"95\" width=\"50\" height=\"50\" fill=\"#dcfce7\" stroke=\"#10b981\" stroke-width=\"2\" rx=\"4\"/><text x=\"245\" y=\"125\" fill=\"#065f46\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">50</text><line x1=\"270\" y1=\"120\" x2=\"300\" y2=\"85\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"270\" y1=\"120\" x2=\"300\" y2=\"155\" stroke=\"#475569\" stroke-width=\"2\"/><rect x=\"300\" y=\"65\" width=\"80\" height=\"35\" fill=\"#dbeafe\" stroke=\"#3b82f6\" rx=\"4\"/><text x=\"340\" y=\"87\" fill=\"#1e40af\" font-size=\"10\" font-weight=\"bold\" text-anchor=\"middle\">Branch A: 30</text><rect x=\"300\" y=\"140\" width=\"80\" height=\"35\" fill=\"#fef3c7\" stroke=\"#f59e0b\" rx=\"4\"/><text x=\"340\" y=\"162\" fill=\"#92400e\" font-size=\"10\" font-weight=\"bold\" text-anchor=\"middle\">Branch B: 20</text><text x=\"200\" y=\"215\" fill=\"#475569\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">Direct Structural Mapping</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "12. Data Integrity, Sample Size Anomalies, and Eduqas Exam Tactics",
+    "p": "Evaluating data distributions includes assessing whether sample frequencies are sufficient and identifying common errors in table or tree construction.",
+    "bullets": [
+     "**Sample Size Effects**: Small total frequencies ($N < 30$) lead to unreliable relative frequency estimates.",
+     "**Non-Integer Frequencies**: Absolute frequencies represent discrete counts of real items and must always be whole numbers.",
+     "**Exhaustive Branching**: Tree branches must cover all possible options so that no data points are missing.",
+     "**Component 1 (Non-Calculator)**: Expect clean whole numbers and straightforward mental arithmetic for subtractions and ratio splits.",
+     "**Component 2 (Calculator)**: Be prepared for multi-step percentages applied to larger population totals ($N > 1000$)."
+    ],
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Exam Trap: Missing Categories",
+      "p": "Always ensure the categories listed at any branch point are exhaustive (e.g., 'Pass' and 'Fail', or 'Yes', 'No', and 'Undecided')."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The River Network Analogy",
+   "p": "A frequency tree functions exactly like a large river that splits into multiple smaller tributaries. The main river flow at the source represents the total sample population in the root node. As the river flows downstream, it splits at a fork (primary branch) into two smaller streams; the sum of water flow in these two streams must exactly equal the flow of the main river. Each stream then splits again into further minor channels (secondary branches). No water is lost or created along the way. The analogy breaks down because water flow is continuous, whereas frequency tree branches divide discrete individual units (people, objects, or trials) into whole number counts."
+  },
+  "terms": [
+   {
+    "t": "Absolute Frequency",
+    "d": "The actual count of times a specific outcome or value occurs within a dataset."
+   },
+   {
+    "t": "Raw Data",
+    "d": "An unorganized collection of initial observations before grouping or tabular summary."
+   },
+   {
+    "t": "Tally Chart",
+    "d": "A structured table using vertical marks grouped in fives to record live counting of observations."
+   },
+   {
+    "t": "Two-Way Table",
+    "d": "A grid table displaying the joint frequencies of two categorical or discrete variables simultaneously."
+   },
+   {
+    "t": "Frequency Tree",
+    "d": "A branching diagram illustrating how a single starting sample total breaks down across successive categories."
+   },
+   {
+    "t": "Root Node",
+    "d": "The initial box in a frequency tree containing the grand total sample size."
+   },
+   {
+    "t": "Primary Branch",
+    "d": "The first division level splitting the root population into primary sub-categories."
+   },
+   {
+    "t": "Terminal Leaf Node",
+    "d": "A final outcome box located at the end of a complete path on a frequency tree."
+   },
+   {
+    "t": "Class Interval",
+    "d": "A range of values used to group continuous quantitative data, bounded by lower and upper limits."
+   },
+   {
+    "t": "Class Midpoint",
+    "d": "The calculated average of the lower and upper bounds of a continuous class interval."
+   },
+   {
+    "t": "Modal Class",
+    "d": "The class interval containing the highest absolute frequency in a grouped frequency distribution."
+   },
+   {
+    "t": "Relative Frequency",
+    "d": "The proportion of total observations belonging to a category, calculated as frequency divided by total sample size."
+   },
+   {
+    "t": "Bivariate Data",
+    "d": "Data involving two distinct variables measured for each individual unit in a sample."
+   },
+   {
+    "t": "Exhaustive Events",
+    "d": "A set of outcomes that covers every possible possibility, ensuring total probability or total frequency sum is complete."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Writing the frequency count as the mode (e.g. stating Mode = 18 when 18 is the frequency of 'Red').",
+    "r": "Stating the category name itself as the mode (e.g. Mode = 'Red')."
+   },
+   {
+    "w": "Calculating conditional probability using the grand total denominator instead of the specific sub-group total.",
+    "r": "Restricting the denominator to the relevant sub-group node or row/column total specified in the question."
+   },
+   {
+    "w": "Allowing outgoing tree branches from a single node to sum to a total greater or less than the node value.",
+    "r": "Ensuring the exact conservation of frequencies: child branch node sum = parent node count."
+   },
+   {
+    "w": "Misinterpreting inequality signs in continuous class intervals like 10 < t <= 20 by including 10.",
+    "r": "Treating strict inequalities (<) as exclusive of the boundary value, and (<=) as inclusive."
+   },
+   {
+    "w": "Dividing a parent frequency using a ratio by dividing by individual parts rather than total ratio parts.",
+    "r": "Dividing the parent count by the sum of ratio parts before multiplying by individual shares."
+   },
+   {
+    "w": "Giving a decimal answer for a frequency node count in a tree diagram.",
+    "r": "Rounding or recalculating to ensure all node frequencies are exact positive integers."
+   },
+   {
+    "w": "Confusing probability tree diagrams (which display fractions/decimals on branches) with frequency trees (which display integer counts in nodes).",
+    "r": "Placing integer counts inside frequency tree boxes/nodes, leaving branch lines clean or labelled with category names."
+   },
+   {
+    "w": "Adding row totals and column totals together to find the Grand Total of a two-way table.",
+    "r": "Finding Grand Total by summing row totals ONLY (or column totals ONLY), not both."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A group of 80 students were asked whether they study French or German. 48 study French. Of those who study French, 18 also study German. 22 students study neither language. Complete a two-way table and find the total number of students who study German.",
+    "marks": 3,
+    "model": [
+     "Identify French total = 48, so Non-French = 80 - 48 = 32.",
+     "French & German cell = 18, so French & Non-German cell = 48 - 18 = 30.",
+     "Neither language cell (Non-French & Non-German) = 22.",
+     "Non-French & German cell = 32 - 22 = 10.",
+     "Total studying German = 18 + 10 = 28."
+    ],
+    "tip": "Draw a small 2x2 grid on scratch paper even if the exam question does not provide one."
+   },
+   {
+    "q": "150 people attended a cinema. 90 were adults and the rest were children. 60% of the adults watched a comedy film. 25 of the children watched an action film. The cinema only showed comedy and action films. Construct a complete frequency tree for this data.",
+    "marks": 4,
+    "model": [
+     "Root node: Total = 150.",
+     "Primary split: Adults = 90, Children = 150 - 90 = 60.",
+     "Adult secondary split: Comedy = 0.60 * 90 = 54; Action = 90 - 54 = 36.",
+     "Child secondary split: Action = 25; Comedy = 60 - 25 = 35."
+    ],
+    "tip": "Verify that 54 + 36 + 35 + 25 = 150 at the terminal leaves."
+   },
+   {
+    "q": "From the frequency tree in question 2, one person is chosen at random. Find the probability that this person is a child who watched a comedy film.",
+    "marks": 2,
+    "model": [
+     "Identify count of children who watched comedy = 35.",
+     "Divide by grand total: P = 35 / 150 (or 7 / 30)."
+    ],
+    "tip": "Ensure you divide by the grand total 150 because the choice is made from all 150 people."
+   },
+   {
+    "q": "Given the frequency tree in question 2, one of the people who watched an action film is selected at random. What is the probability that this person is an adult?",
+    "marks": 2,
+    "model": [
+     "Calculate total action viewers = 36 (adults) + 25 (children) = 61.",
+     "Target outcome (adult action viewers) = 36.",
+     "Conditional Probability = 36 / 61."
+    ],
+    "tip": "Notice the phrase 'one of the people who watched an action film' restricts the denominator to 61."
+   },
+   {
+    "q": "A grouped frequency table records the ages of 50 club members:\n10 < a <= 20: 8 members\n20 < a <= 30: 15 members\n30 < a <= 40: 19 members\n40 < a <= 50: 8 members\nState the modal class.",
+    "marks": 1,
+    "model": [
+     "Modal class is the class interval with highest frequency (19): 30 < a <= 40."
+    ],
+    "tip": "Write down the exact inequality interval string given in the table."
+   },
+   {
+    "q": "A survey of 200 commuters recorded travel method (Train or Car) and punctuality (On Time or Late). 120 commuters travelled by Train. The ratio of Train commuters who were On Time to Late was 7:1. 15% of Car commuters were Late. Complete a frequency tree.",
+    "marks": 4,
+    "model": [
+     "Root node: Total = 200.",
+     "Primary split: Train = 120, Car = 200 - 120 = 80.",
+     "Train split: Ratio 7:1 has 8 parts. 120 / 8 = 15. On Time = 7 * 15 = 105, Late = 1 * 15 = 15.",
+     "Car split: Late = 15% of 80 = 0.15 * 80 = 12. On Time = 80 - 12 = 68."
+    ],
+    "tip": "Check that each ratio part division yields a whole integer count."
+   },
+   {
+    "q": "A frequency table records scores in a test:\nScore 5: frequency 3\nScore 6: frequency 7\nScore 7: frequency 11\nScore 8: frequency 4\nCalculate the relative frequency of a student scoring at least 7.",
+    "marks": 3,
+    "model": [
+     "Calculate total frequency N = 3 + 7 + 11 + 4 = 25.",
+     "Calculate count of students scoring at least 7 (scores 7 and 8): 11 + 4 = 15.",
+     "Relative frequency = 15 / 25 = 3 / 5 = 0.6."
+    ],
+    "tip": "'At least 7' includes scores of 7 and higher."
+   },
+   {
+    "q": "In a school of 400 pupils, 220 are in Key Stage 3 and 180 are in Key Stage 4. 45% of Key Stage 3 pupils walk to school. The number of Key Stage 4 pupils who walk to school is 70. Complete a frequency tree showing school travel.",
+    "marks": 4,
+    "model": [
+     "Root node = 400.",
+     "Primary split: KS3 = 220, KS4 = 180.",
+     "KS3 Walk = 0.45 * 220 = 99; KS3 Other = 220 - 99 = 121.",
+     "KS4 Walk = 70; KS4 Other = 180 - 70 = 110."
+    ],
+    "tip": "Break down long text questions by solving one sub-branch at a time."
+   },
+   {
+    "q": "Explain why absolute frequencies in a frequency tree node must always be non-negative integers.",
+    "marks": 2,
+    "model": [
+     "Absolute frequencies represent discrete counts of real items, people, or observations.",
+     "Counts cannot be negative or fractional in physical population measurements."
+    ],
+    "tip": "Focus explanation on the real-world physical meaning of count data."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A veterinary clinic recorded data on 120 animals treated in a week. The animals were either Cats or Dogs. 70 of the animals were Cats. 42 of the Cats were male. The ratio of male dogs to female dogs was 3:2. (a) Construct a complete frequency tree. (b) Find the probability that a randomly chosen animal is a female dog.",
+    "steps": [
+     "Step 1: Identify root node total population = 120.",
+     "Step 2: Determine primary branches for species:\n- Cats = 70\n- Dogs = 120 - 70 = 50.",
+     "Step 3: Determine Cat gender secondary branches:\n- Male Cats = 42\n- Female Cats = 70 - 42 = 28.",
+     "Step 4: Determine Dog gender secondary branches using ratio 3:2:\n- Total parts = 3 + 2 = 5\n- Value per part = 50 / 5 = 10\n- Male Dogs = 3 * 10 = 30\n- Female Dogs = 2 * 10 = 20.",
+     "Step 5: Verify leaf node total sum:\n- 42 + 28 + 30 + 20 = 120 (Matches root).",
+     "Step 6: Calculate probability of female dog:\n- P(Female Dog) = Female Dogs / Grand Total = 20 / 120 = 1 / 6."
+    ],
+    "ans": "(a) Completed frequency tree with nodes: Root(120); Cats(70)->[Male(42), Female(28)]; Dogs(50)->[Male(30), Female(20)]. (b) Probability = 1/6 (or 20/120)."
+   },
+   {
+    "q": "Data on 200 factory components were collected to test quality control across two production lines (Line A and Line B):\n- 110 components came from Line A.\n- 15 components from Line A were defective.\n- A total of 24 components across both lines were defective.\n(a) Complete a two-way table.\n(b) Given that a component is from Line B, calculate the probability that it is NOT defective.",
+    "steps": [
+     "Step 1: Set up a 2x2 grid with categories Line A/B vs Defective/Not Defective.",
+     "Step 2: Fill in total components = 200, Line A total = 110. Line B total = 200 - 110 = 90.",
+     "Step 3: Defective row total = 24. Line A defective = 15. Line B defective = 24 - 15 = 9.",
+     "Step 4: Line A Not Defective = 110 - 15 = 95.",
+     "Step 5: Line B Not Defective = 90 - 9 = 81.",
+     "Step 6: Check total Not Defective = 95 + 81 = 176. Check grand total = 24 + 176 = 200.",
+     "Step 7: Calculate conditional probability for Line B components:\n- Total Line B components = 90\n- Non-defective Line B components = 81\n- P(Not Defective | Line B) = 81 / 90 = 9 / 10 = 0.9."
+    ],
+    "ans": "(a) Table filled with cells: Line A (15 Def, 95 Non-Def, 110 Total); Line B (9 Def, 81 Non-Def, 90 Total); Totals (24 Def, 176 Non-Def, 200 Grand Total). (b) Probability = 81/90 = 9/10 (or 0.9)."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Fully annotated Two-Way Table demonstrating category intersections, marginal totals, and grand total consistency.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"20\" y=\"20\" width=\"360\" height=\"35\" fill=\"#1e293b\" rx=\"4\"/><text x=\"110\" y=\"42\" fill=\"#ffffff\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Transport</text><text x=\"210\" y=\"42\" fill=\"#ffffff\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Walk</text><text x=\"290\" y=\"42\" fill=\"#ffffff\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Bus</text><text x=\"350\" y=\"42\" fill=\"#ffffff\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Total</text><rect x=\"20\" y=\"60\" width=\"360\" height=\"40\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"110\" y=\"85\" fill=\"#0f172a\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Year 10</text><text x=\"210\" y=\"85\" fill=\"#334155\" font-size=\"12\" text-anchor=\"middle\">45</text><text x=\"290\" y=\"85\" fill=\"#334155\" font-size=\"12\" text-anchor=\"middle\">15</text><text x=\"350\" y=\"85\" fill=\"#1e40af\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">60</text><rect x=\"20\" y=\"105\" width=\"360\" height=\"40\" fill=\"#f1f5f9\" stroke=\"#cbd5e1\"/><text x=\"110\" y=\"130\" fill=\"#0f172a\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Year 11</text><text x=\"210\" y=\"130\" fill=\"#334155\" font-size=\"12\" text-anchor=\"middle\">55</text><text x=\"350\" y=\"130\" fill=\"#1e40af\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">90</text><text x=\"290\" y=\"130\" fill=\"#334155\" font-size=\"12\" text-anchor=\"middle\">35</text><rect x=\"20\" y=\"150\" width=\"360\" height=\"40\" fill=\"#dbeafe\" stroke=\"#93c5fd\"/><text x=\"110\" y=\"175\" fill=\"#1e40af\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Total</text><text x=\"210\" y=\"175\" fill=\"#1e40af\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">100</text><text x=\"290\" y=\"175\" fill=\"#1e40af\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">50</text><text x=\"350\" y=\"175\" fill=\"#065f46\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">150</text><text x=\"200\" y=\"215\" fill=\"#64748b\" font-size=\"11\" text-anchor=\"middle\">Grand Total = 60 + 90 = 100 + 50 = 150</text></svg>"
+   },
+   {
+    "cap": "Complete Frequency Tree structural anatomy illustrating root node, primary splits, secondary splits, and conservation of counts.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"15\" y=\"95\" width=\"65\" height=\"50\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"2\" rx=\"6\"/><text x=\"47\" y=\"117\" fill=\"#1e40af\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">Total</text><text x=\"47\" y=\"133\" fill=\"#1e40af\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">120</text><line x1=\"80\" y1=\"120\" x2=\"140\" y2=\"65\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"80\" y1=\"120\" x2=\"140\" y2=\"175\" stroke=\"#475569\" stroke-width=\"2\"/><rect x=\"140\" y=\"40\" width=\"75\" height=\"50\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"2\" rx=\"6\"/><text x=\"177\" y=\"62\" fill=\"#92400e\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">Pass</text><text x=\"177\" y=\"78\" fill=\"#92400e\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">80</text><rect x=\"140\" y=\"150\" width=\"75\" height=\"50\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"2\" rx=\"6\"/><text x=\"177\" y=\"172\" fill=\"#991b1b\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">Fail</text><text x=\"177\" y=\"188\" fill=\"#991b1b\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">40</text><line x1=\"215\" y1=\"65\" x2=\"280\" y2=\"35\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"215\" y1=\"65\" x2=\"280\" y2=\"95\" stroke=\"#475569\" stroke-width=\"2\"/><rect x=\"280\" y=\"15\" width=\"95\" height=\"40\" fill=\"#dcfce7\" stroke=\"#166534\" stroke-width=\"1.5\" rx=\"4\"/><text x=\"327\" y=\"32\" fill=\"#14532d\" font-size=\"10\" font-weight=\"bold\" text-anchor=\"middle\">Merit: 50</text><rect x=\"280\" y=\"75\" width=\"95\" height=\"40\" fill=\"#f1f5f9\" stroke=\"#475569\" stroke-width=\"1.5\" rx=\"4\"/><text x=\"327\" y=\"92\" fill=\"#334155\" font-size=\"10\" font-weight=\"bold\" text-anchor=\"middle\">Standard: 30</text><line x1=\"215\" y1=\"175\" x2=\"280\" y2=\"150\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"215\" y1=\"175\" x2=\"280\" y2=\"205\" stroke=\"#475569\" stroke-width=\"2\"/><rect x=\"280\" y=\"130\" width=\"95\" height=\"40\" fill=\"#f1f5f9\" stroke=\"#475569\" stroke-width=\"1.5\" rx=\"4\"/><text x=\"327\" y=\"147\" fill=\"#334155\" font-size=\"10\" font-weight=\"bold\" text-anchor=\"middle\">Resit: 28</text><rect x=\"280\" y=\"185\" width=\"95\" height=\"40\" fill=\"#f1f5f9\" stroke=\"#475569\" stroke-width=\"1.5\" rx=\"4\"/><text x=\"327\" y=\"202\" fill=\"#334155\" font-size=\"10\" font-weight=\"bold\" text-anchor=\"middle\">Leave: 12</text></svg>"
+   },
+   {
+    "cap": "Grouped frequency table continuous boundary breakdown detailing upper/lower limits and class midpoints.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"30\" y=\"30\" width=\"340\" height=\"40\" fill=\"#e2e8f0\" rx=\"6\"/><text x=\"200\" y=\"55\" fill=\"#0f172a\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Interval: 10 &lt; t ≤ 20</text><line x1=\"50\" y1=\"130\" x2=\"350\" y2=\"130\" stroke=\"#475569\" stroke-width=\"3\"/><circle cx=\"50\" cy=\"130\" r=\"6\" fill=\"#ffffff\" stroke=\"#0f172a\" stroke-width=\"2\"/><circle cx=\"350\" cy=\"130\" r=\"6\" fill=\"#0f172a\"/><circle cx=\"200\" cy=\"130\" r=\"6\" fill=\"#2563eb\"/><text x=\"50\" y=\"160\" fill=\"#0f172a\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">10 (Excluded)</text><text x=\"350\" y=\"160\" fill=\"#0f172a\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">20 (Included)</text><text x=\"200\" y=\"160\" fill=\"#2563eb\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Midpoint = 15</text><path d=\"M 50 100 L 350 100\" stroke=\"#059669\" stroke-width=\"2\" fill=\"none\"/><text x=\"200\" y=\"92\" fill=\"#059669\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">Class Width = 20 - 10 = 10</text><text x=\"200\" y=\"205\" fill=\"#64748b\" font-size=\"11\" text-anchor=\"middle\">Inequality notation prevents boundary overlap between adjacent classes.</text></svg>"
+   },
+   {
+    "cap": "Visual conversion mapping connecting Two-Way Table cell counts to equivalent Frequency Tree node structures.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"20\" y=\"40\" width=\"150\" height=\"160\" fill=\"#ffffff\" stroke=\"#64748b\" stroke-width=\"1.5\" rx=\"4\"/><text x=\"95\" y=\"60\" fill=\"#0f172a\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">Two-Way Table</text><rect x=\"30\" y=\"75\" width=\"60\" height=\"35\" fill=\"#dbeafe\" stroke=\"#3b82f6\"/><text x=\"60\" y=\"97\" fill=\"#1e40af\" font-size=\"10\" text-anchor=\"middle\">Cell A: 30</text><rect x=\"100\" y=\"75\" width=\"60\" height=\"35\" fill=\"#fef3c7\" stroke=\"#f59e0b\"/><text x=\"130\" y=\"97\" fill=\"#92400e\" font-size=\"10\" text-anchor=\"middle\">Cell B: 20</text><rect x=\"30\" y=\"120\" width=\"130\" height=\"35\" fill=\"#dcfce7\" stroke=\"#10b981\"/><text x=\"95\" y=\"142\" fill=\"#065f46\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">Row Total = 50</text><path d=\"M 180 120 L 210 120\" stroke=\"#6366f1\" stroke-width=\"3\" stroke-dasharray=\"4,4\"/><rect x=\"220\" y=\"95\" width=\"50\" height=\"50\" fill=\"#dcfce7\" stroke=\"#10b981\" stroke-width=\"2\" rx=\"4\"/><text x=\"245\" y=\"125\" fill=\"#065f46\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">50</text><line x1=\"270\" y1=\"120\" x2=\"300\" y2=\"85\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"270\" y1=\"120\" x2=\"300\" y2=\"155\" stroke=\"#475569\" stroke-width=\"2\"/><rect x=\"300\" y=\"65\" width=\"80\" height=\"35\" fill=\"#dbeafe\" stroke=\"#3b82f6\" rx=\"4\"/><text x=\"340\" y=\"87\" fill=\"#1e40af\" font-size=\"10\" font-weight=\"bold\" text-anchor=\"middle\">Branch A: 30</text><rect x=\"300\" y=\"140\" width=\"80\" height=\"35\" fill=\"#fef3c7\" stroke=\"#f59e0b\" rx=\"4\"/><text x=\"340\" y=\"162\" fill=\"#92400e\" font-size=\"10\" font-weight=\"bold\" text-anchor=\"middle\">Branch B: 20</text><text x=\"200\" y=\"215\" fill=\"#475569\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">Direct Structural Mapping</text></svg>"
+   }
+  ],
+  "pid": "maths_eduqas_h.4.0",
+  "sid": "maths_eduqas_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.6-flash",
+  "ts": "2026-11-22T16:48:02.238Z"
  }
 }
