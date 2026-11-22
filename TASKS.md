@@ -5,7 +5,7 @@ Runs read **only this file and `docs/CONTEXT.md`**. Keep this file short: finish
 ## Status
 
 ```
-RUN LOCK:       none
+RUN LOCK:       running since 2026-11-22 01:10 UTC, session 01Sm3c8hN4zECLRzsxLR9Goy
 CURRENT JOB:    none (J2b done; J3 Maths carries on by itself via the daily pipeline run)
 CURRENT STEPS:  none
 LAST RUN ENDED: 2026-11-21 02:10 UTC (nightly). Found why Groq gave only 3 notes from 30 tries: 21 replies were cut off by its 6000-token reply limit (needed because its free tier allows only ~8000 tokens a minute) and thrown away whole; after ~30 requests it hits its daily token limit (~200k tokens a day), so Groq can only ever add about 20 notes a day. Fix (e2dbdae, CI green): cut-off replies now keep their complete part and go through the quality gate. Claude wrote 12 bio_edx notes (1.12, 2.3-2.13). Pipeline makes about 90 notes a day (Gemini), so with Claude ~100 a day, about 400 short of 500. Next run: check how many cut-off replies now pass, then write notes.
