@@ -5,10 +5,10 @@ Runs read **only this file and `docs/CONTEXT.md`**. Keep this file short: finish
 ## Status
 
 ```
-RUN LOCK:       running since 2026-11-22 01:10 UTC, session 01Sm3c8hN4zECLRzsxLR9Goy
+RUN LOCK:       none
 CURRENT JOB:    none (J2b done; J3 Maths carries on by itself via the daily pipeline run)
 CURRENT STEPS:  none
-LAST RUN ENDED: 2026-11-21 02:10 UTC (nightly). Found why Groq gave only 3 notes from 30 tries: 21 replies were cut off by its 6000-token reply limit (needed because its free tier allows only ~8000 tokens a minute) and thrown away whole; after ~30 requests it hits its daily token limit (~200k tokens a day), so Groq can only ever add about 20 notes a day. Fix (e2dbdae, CI green): cut-off replies now keep their complete part and go through the quality gate. Claude wrote 12 bio_edx notes (1.12, 2.3-2.13). Pipeline makes about 90 notes a day (Gemini), so with Claude ~100 a day, about 400 short of 500. Next run: check how many cut-off replies now pass, then write notes.
+LAST RUN ENDED: 2026-11-22 01:45 UTC (nightly). Pipeline healthy (last run 21 Nov 18:04, 86 saved; Groq now saves about 15 notes a run, up from 3, so the cut-off fix works). 2 items stuck (maths_eduqas_f.4.0 too few exam questions, maths_eduqas_h.0.6 reply cut off), left for now. Claude wrote 60 bio_edx notes (2.14-6.13), all passed the gate first time; CI green. Pipeline ~90 + Claude 60 = about 150 a day, about 350 short of 500. Next run: bio_edx 6.14 onwards (about 25 left), then chem_edx.
 ```
 
 ## Claude is also writing notes (owner asked in chat, 2026-11-16; restarted 2026-11-20: "lets utilise groq key more until limit and well let you write notes lets aim for 500 every day")
@@ -17,7 +17,7 @@ LAST RUN ENDED: 2026-11-21 02:10 UTC (nightly). Found why Groq gave only 3 notes
 - **Every nightly run, after the pipeline check, writes notes with the rest of its usage.** Claude-written notes go through the same repairs and quality gate (`scripts/notes/add.ts`), are saved to the same files and marked `by: claude/...`; the pipeline skips points that already have a note.
 - How: list missing points (kind.items() where !done), then hand 3 points each to a few general-purpose subagents in parallel: each runs `tsx scripts/notes/add.ts prompt <id>`, writes `<id>.json` in the scratchpad, runs `add.ts check <file> <okdir>` and fixes until OK. Then `tsx scripts/notes/add.ts save <okdir> claude/<model>`, commit, push. About 35k tokens per note. The check needs Playwright: if `@playwright/test` is missing, make a stand-in package that re-exports /opt/npm-tools/node_modules/playwright and set `PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers`.
 - To avoid clashing with the pipeline (which is on maths, then English), Claude works on the sciences: `bio_edx` first, then `chem_edx`, `phy_edx`, then the OCR sciences. Only topic files are touched, never progress.json / failures.json.
-- Done so far: 18 bio_edx notes (16 Nov) + 12 (20 Nov: bio_edx 0.2, 0.3, 0.6, 0.7, 0.10, 0.11, 1.0, 1.3, 1.4, 1.7, 1.8, 1.11) + 12 (21 Nov: bio_edx 1.12, 2.3-2.13). Next: bio_edx 2.14 onwards. The check needs `@playwright/test`, and Node ignores NODE_PATH for imports: put the stand-in package at `node_modules/@playwright/test` inside the repo (gitignored) or use an import resolve hook that falls back to /opt/npm-tools/node_modules. Stop when the owner says stop.
+- Done so far: 18 bio_edx notes (16 Nov) + 12 (20 Nov: bio_edx 0.2, 0.3, 0.6, 0.7, 0.10, 0.11, 1.0, 1.3, 1.4, 1.7, 1.8, 1.11) + 12 (21 Nov: bio_edx 1.12, 2.3-2.13) + 60 (22 Nov: bio_edx 2.14-6.13, 4 rounds of 5 subagents x 3 points). Next: bio_edx 6.14 onwards, then chem_edx. The check needs `@playwright/test`, and Node ignores NODE_PATH for imports: put the stand-in package at `node_modules/@playwright/test` inside the repo (gitignored) or use an import resolve hook that falls back to /opt/npm-tools/node_modules. Stop when the owner says stop.
 
 ## Queue (top = next)
 
