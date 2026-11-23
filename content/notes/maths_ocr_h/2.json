@@ -950,5 +950,599 @@
   "src": "pre",
   "by": "gemini/gemini-flash-lite-latest",
   "ts": "2026-11-20T18:39:02.152Z"
+ },
+ "maths_ocr_h.2.1": {
+  "summary": "Standard form (or standard index form) is a precise system for expressing extremely large or small numbers in the format A × 10ⁿ, where 1 ≤ A < 10 and n is an integer. In OCR GCSE Maths Higher Tier (J560), students must master converting between standard form and ordinary numbers, comparing values, and performing non-calculator arithmetic across all four operations. Mastery requires fluently managing exponent rules, adjusting non-standard intermediate answers, working with compound units, and interpreting calculator displays.",
+  "core": [
+   {
+    "h": "Anatomy and Core Rules of Standard Form",
+    "p": "Standard form provides a universal, unambiguous method for writing numbers of any magnitude. It breaks a number into a **front coefficient** and a **power of ten**.",
+    "bullets": [
+     "General structure: **A × 10ⁿ**",
+     "The coefficient **A** must strictly satisfy the inequality **1 ≤ A < 10**. It can be an integer or a decimal, but must never be less than 1 or equal to/greater than 10.",
+     "The exponent **n** must be an **integer** (positive, negative, or zero).",
+     "Positive values of **n** represent numbers greater than or equal to 10.",
+     "Negative values of **n** represent small numbers strictly between 0 and 1.",
+     "When **n = 0**, 10⁰ = 1, so A × 10⁰ = A (used for numbers between 1 and 9.999...)."
+    ],
+    "table": {
+     "head": [
+      "Number Type",
+      "Ordinary Form",
+      "Standard Form",
+      "Validity Reason"
+     ],
+     "rows": [
+      [
+       "Large Number",
+       "45,000,000",
+       "4.5 × 10⁷",
+       "1 ≤ 4.5 < 10 and n = 7"
+      ],
+      [
+       "Small Number",
+       "0.000308",
+       "3.08 × 10⁻⁴",
+       "1 ≤ 3.08 < 10 and n = -4"
+      ],
+      [
+       "Invalid Coefficient",
+       "52 × 10³",
+       "5.2 × 10⁴",
+       "52 is not less than 10"
+      ],
+      [
+       "Invalid Coefficient",
+       "0.4 × 10⁻²",
+       "4 × 10⁻³",
+       "0.4 is less than 1"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Standard Form Definition",
+      "p": "A number is in standard form when written as A × 10ⁿ where 1 ≤ A < 10 and n is an integer."
+     },
+     {
+      "k": "warn",
+      "t": "The Boundary Trap",
+      "p": "A value of A = 10 is NEVER allowed. For example, 10 × 10⁵ must be written as 1.0 × 10⁶. However, A = 1 is allowed (e.g., 1 × 10⁻³)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Converting Ordinary Numbers to Standard Form",
+    "p": "Converting an ordinary number requires identifying where the decimal point must be placed to form a valid coefficient A, and counting place value shifts.",
+    "bullets": [
+     "**Step 1:** Place the decimal point after the first non-zero digit to determine **A**.",
+     "**Step 2:** Count how many place values the decimal point moved from its original position to its new position.",
+     "**Step 3:** Assign the exponent **n**: if the original number was ≥ 10, **n** is positive; if the original number was between 0 and 1, **n** is negative.",
+     "Ensure all significant zeros between non-zero digits are preserved."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam Technique: Count Places, Not Zeros",
+      "p": "Never rely on simply counting zeros. For example, 0.00504 has three zeros, but the decimal moves 3 places to give 5.04 × 10⁻³. In 0.0504, there are two zeros, but the decimal moves 2 places to give 5.04 × 10⁻²."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Converting Standard Form to Ordinary Numbers",
+    "p": "To restore a standard form number back to an ordinary number, perform the place value shift indicated by the exponent **n**.",
+    "bullets": [
+     "If **n is positive**, move the decimal point **n places to the right** (making the number larger). Fill empty place values with zeros.",
+     "If **n is negative**, move the decimal point **|n| places to the left** (making the number smaller). Fill empty place values with zeros.",
+     "Check your answer by re-converting it mentally back to standard form to ensure place values align."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Zero Placeholder Rule",
+      "p": "For a negative exponent -n, when moving left past the first digit, there will always be (n - 1) zeros between the decimal point and the first non-zero digit. E.g., 6.1 × 10⁻⁵ has (5 - 1) = 4 zeros after the decimal point: 0.000061."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Comparing and Ordering Numbers in Standard Form",
+    "p": "Ordering a set of numbers in standard form efficiently requires comparing exponents first before evaluating coefficients.",
+    "bullets": [
+     "**Step 1:** Check the powers of 10 (**n**). The number with the highest exponent is the largest; the number with the lowest (most negative) exponent is the smallest.",
+     "**Step 2:** If two or more numbers share the exact same power of 10, compare their coefficients (**A**).",
+     "**Step 3:** If any numbers in the list are NOT in standard form (or are ordinary numbers), convert them all to standard form first.",
+     "**Step 4:** Always write out the final ordered list using the **original values** given in the question prompt."
+    ],
+    "table": {
+     "head": [
+      "Original List",
+      "Standard Form equivalent",
+      "Exponent (n)",
+      "Final Ascending Rank"
+     ],
+     "rows": [
+      [
+       "3.4 × 10⁵",
+       "3.4 × 10⁵",
+       "5",
+       "3rd (340,000)"
+      ],
+      [
+       "28 × 10⁴",
+       "2.8 × 10⁵",
+       "5",
+       "2nd (280,000)"
+      ],
+      [
+       "9.1 × 10⁴",
+       "9.1 × 10⁴",
+       "4",
+       "1st (91,000)"
+      ],
+      [
+       "0.04 × 10⁷",
+       "4.0 × 10⁵",
+       "5",
+       "4th (400,000)"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Trap: Unadjusted Standard Form in Ordering",
+      "p": "Do not assume a larger coefficient means a larger total number. For example, 8.9 × 10³ is smaller than 1.2 × 10⁴ because 10⁴ > 10³."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Addition and Subtraction without a Calculator",
+    "p": "Unlike multiplication and division, numbers in standard form **cannot** be added or subtracted by simply adding or subtracting their exponents.",
+    "bullets": [
+     "**Method A (Equalising Powers - Preferred for Non-Calculator Papers):**",
+     "1. Rewrite the number with the smaller power of 10 so that it shares the larger power of 10 (this will make its coefficient < 1).",
+     "2. Add or subtract the coefficients while keeping the common power of 10 factorised out.",
+     "3. Adjust the resulting coefficient back into standard form (1 ≤ A < 10) if necessary.",
+     "**Method B (Ordinary Number Method):**",
+     "1. Convert both terms into ordinary numbers.",
+     "2. Perform standard column addition or subtraction.",
+     "3. Convert the final total back into standard form."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Algebraic Foundation of Addition/Subtraction",
+      "p": "(A × 10ⁿ) + (B × 10ⁿ) = (A + B) × 10ⁿ. Powers MUST be identical before coefficients can be combined."
+     },
+     {
+      "k": "tip",
+      "t": "Worked Addition Example",
+      "p": "Calculate (4.3 × 10⁴) + (8.5 × 10³). Change 8.5 × 10³ to 0.85 × 10⁴. Now add coefficients: (4.3 + 0.85) × 10⁴ = 5.15 × 10⁴."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Multiplication in Standard Form",
+    "p": "Multiplication leverages the commutative and associative properties of multiplication alongside index laws.",
+    "bullets": [
+     "Given **(A × 10ᵃ) × (B × 10ᵇ)**:",
+     "**Step 1:** Multiply the coefficients together: **A × B**.",
+     "**Step 2:** Multiply the powers of ten using index laws (add exponents): **10ᵃ × 10ᵇ = 10ᵃ⁺ᵇ**.",
+     "**Step 3:** Combine to get **(A × B) × 10ᵃ⁺ᵇ**.",
+     "**Step 4:** Check if (A × B) is between 1 and 10. If (A × B) ≥ 10, divide the coefficient by 10 and increase the exponent by 1."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Forgetting the Final Adjustment",
+      "p": "(6 × 10⁴) × (5 × 10³) = 30 × 10⁷. This is NOT in standard form because 30 ≥ 10. You must convert 30 × 10⁷ into 3.0 × 10⁸."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Division in Standard Form",
+    "p": "Division follows identical algebraic principles to multiplication, applying the quotient rule of indices.",
+    "bullets": [
+     "Given **(A × 10ᵃ) ÷ (B × 10ᵇ)**:",
+     "**Step 1:** Divide the coefficients: **A ÷ B**.",
+     "**Step 2:** Divide the powers of ten using index laws (subtract exponents): **10ᵃ ÷ 10ᵇ = 10ᵃ⁻ᵇ**.",
+     "**Step 3:** Combine to get **(A ÷ B) × 10ᵃ⁻ᵇ**.",
+     "**Step 4:** If (A ÷ B) < 1, multiply the coefficient by 10 and decrease the exponent by 1 to restore standard form."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Subtracting Negative Exponents",
+      "p": "Be extremely careful when dividing by a negative exponent. For example, 10⁴ ÷ 10⁻³ = 10⁴ ⁻ ⁽⁻³⁾ = 10⁴ ⁺ ³ = 10⁷."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Powers and Roots of Standard Form Numbers",
+    "p": "Raising a standard form number to a power or taking a root requires applying the power of a product rule: (xy)ᵏ = xᵏ yᵏ.",
+    "bullets": [
+     "**Squaring/Cubing:** (A × 10ⁿ)ᵏ = Aᵏ × 10ⁿᵏ. Raise coefficient A to power k, multiply exponent n by k.",
+     "**Square Roots:** √(A × 10ⁿ) = √A × 10ⁿ/². If n is odd, adjust the term first so n is even before taking the square root.",
+     "Example: √(4 × 10⁶) = √4 × 10⁶/² = 2 × 10³.",
+     "Example with odd exponent: √(1.6 × 10⁵) = √(16 × 10⁴) = √16 × 10⁴/² = 4 × 10²."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Odd Exponents under Square Roots",
+      "p": "Always adjust an odd power of 10 to an even power of 10 before taking a square root manually, ensuring the front coefficient becomes a clean square number."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Calculator Strategies and Display Interpretation",
+    "p": "OCR Paper 5 and Paper 6 allow calculators. Candidates must know how to enter standard form correctly and interpret various display outputs.",
+    "bullets": [
+     "**Key Syntax:** Use the dedicated standard form button: **[×10ⁿ]** or **[EXP]**.",
+     "To enter **3.2 × 10⁻⁸**, press: `3 . 2` -> `[×10ⁿ]` -> `- 8` (Do NOT type `× 10 ^`).",
+     "**Calculator Output Display Modes:**",
+     "Calculators display standard form in formats such as `3.2 × 10⁻⁰⁸`, `3.2E-8`, or `3.2 -08`.",
+     "**Exam Answer Requirement:** Never write `3.2E-8` or `3.2⁻⁰⁸` as your final answer on an OCR exam paper. You MUST write **3.2 × 10⁻⁸** using proper mathematical notation."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "The Double Multiplication Error",
+      "p": "If you press `3.2 × 10 [×10ⁿ] 8`, the calculator interprets this as 3.2 × 10 × 10⁸ = 3.2 × 10⁹. Never press the multiplication key `[×]` when using the `[×10ⁿ]` key."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Estimation, Rounding, and Significant Figures",
+    "p": "Questions frequently combine standard form with rounding requirements or estimating calculations.",
+    "bullets": [
+     "When rounding a standard form number to a specified number of significant figures, apply the rounding **only to coefficient A**.",
+     "Example: Round **3.964 × 10⁷** to **2 significant figures** -> 3.96 rounds up to **4.0 × 10⁷**.",
+     "Do NOT drop trailing zeros in coefficient A if they are significant (write 4.0, not 4).",
+     "For non-calculator estimations, round all coefficients to 1 significant figure and round powers of 10 to the nearest manageable power before calculating."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Preserving Significant Zeroes",
+      "p": "If asked for 3 s.f., 5.00 × 10⁴ has 3 s.f. Writing 5 × 10⁴ loses a mark for incorrect accuracy."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Unit Conversions and Real-World Contexts",
+    "p": "Standard form is heavily tested in practical science and real-world compound unit problems (density, speed, population, area, volume).",
+    "bullets": [
+     "**Converting Linear Units:** 1 km = 10³ m, 1 m = 10² cm, 1 cm = 10 mm = 10⁻³ m.",
+     "**Converting Area Units:** 1 m² = (10² cm)² = 10⁴ cm².",
+     "**Converting Volume Units:** 1 m³ = (10² cm)³ = 10⁶ cm³.",
+     "**Mass Conversions:** 1 tonne = 10³ kg = 10⁶ g.",
+     "**Speed-Distance-Time Formula:** Distance = Speed × Time. Ensure time units match (e.g., convert hours to seconds by multiplying by 3600 = 3.6 × 10³)."
+    ],
+    "table": {
+     "head": [
+      "Prefix",
+      "Symbol",
+      "Multiplier Factor",
+      "Standard Form Equivalent"
+     ],
+     "rows": [
+      [
+       "Giga",
+       "G",
+       "1,000,000,000",
+       "10⁹"
+      ],
+      [
+       "Mega",
+       "M",
+       "1,000,000",
+       "10⁶"
+      ],
+      [
+       "Kilo",
+       "k",
+       "1,000",
+       "10³"
+      ],
+      [
+       "Milli",
+       "m",
+       "0.001",
+       "10⁻³"
+      ],
+      [
+       "Micro",
+       "μ",
+       "0.000001",
+       "10⁻⁶"
+      ],
+      [
+       "Nano",
+       "n",
+       "0.000000001",
+       "10⁻⁹"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "OCR Contextual Tip",
+      "p": "Always state units in word problems. If speed is in m/s and distance in km, convert distance to metres (multiply standard form power by 10³) before calculating time."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Telescopic Zoom Lens and Scale Slider",
+   "p": "Think of standard form like a camera with a 1-to-10 zoom lens combined with a discrete scale slider. The coefficient A is the subject framed inside the camera lens (always adjusted so it fills between 1 and 10 units of space). The exponent n is the scale slider knob: each click to the right (+1) zooms out by a factor of 10 to reveal a vastly larger structure (kilometres, light-years), while each click to the left (-1) zooms in by a factor of 10 to view microscopic detail (cell structures, nanometres). Where the analogy breaks down: Optical zoom lenses change scale continuously (e.g., 1.45x, 2.38x), whereas the power of ten exponent n can only change in discrete integer steps (... -2, -1, 0, 1, 2 ...)."
+  },
+  "terms": [
+   {
+    "t": "Standard Form",
+    "d": "A system of writing numbers in the form A × 10ⁿ, where 1 ≤ A < 10 and n is an integer."
+   },
+   {
+    "t": "Coefficient (A)",
+    "d": "The front number in standard form, which must be greater than or equal to 1 and strictly less than 10."
+   },
+   {
+    "t": "Exponent (n)",
+    "d": "The power to which 10 is raised; represents the number of place value shifts."
+   },
+   {
+    "t": "Integer",
+    "d": "A whole number (positive, negative, or zero) with no fractional or decimal part."
+   },
+   {
+    "t": "Ordinary Number",
+    "d": "A number written in standard positional decimal notation without powers of ten."
+   },
+   {
+    "t": "Place Value Shift",
+    "d": "The movement of digits across decimal columns corresponding to multiplication or division by factors of 10."
+   },
+   {
+    "t": "Order of Magnitude",
+    "d": "An exponential scale unit where each step represents a multiplication or division by 10."
+   },
+   {
+    "t": "Product Rule of Indices",
+    "d": "The law stating that when multiplying powers with the same base, exponents are added: 10ᵃ × 10ᵇ = 10ᵃ⁺ᵇ."
+   },
+   {
+    "t": "Quotient Rule of Indices",
+    "d": "The law stating that when dividing powers with the same base, exponents are subtracted: 10ᵃ ÷ 10ᵇ = 10ᵃ⁻ᵇ."
+   },
+   {
+    "t": "Power Rule of Indices",
+    "d": "The law stating that when raising a power to another power, exponents are multiplied: (10ᵃ)ᵇ = 10ᵃᵇ."
+   },
+   {
+    "t": "Significant Figures",
+    "d": "The meaningful digits in a number, starting from the first non-zero digit."
+   },
+   {
+    "t": "Scientific Notation Syntax",
+    "d": "The calculator input method using key [×10ⁿ] or display formats like E or 10^."
+   },
+   {
+    "t": "Compound Unit",
+    "d": "A unit formed by combining fundamental units, such as density (g/cm³) or speed (m/s)."
+   },
+   {
+    "t": "Metric Prefix",
+    "d": "A standard modifier (e.g. kilo, micro) representing specific powers of 10."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Writing 45 × 10⁴ as a final standard form answer.",
+    "r": "4.5 × 10⁵. The coefficient A must satisfy 1 ≤ A < 10."
+   },
+   {
+    "w": "Adding (3 × 10⁴) + (4 × 10⁵) to get 7 × 10⁹.",
+    "r": "0.3 × 10⁵ + 4 × 10⁵ = 4.3 × 10⁵. You cannot add exponents when adding numbers."
+   },
+   {
+    "w": "Interpreting 5 × 10⁻³ as -5000.",
+    "r": "0.005. A negative exponent indicates a small positive fraction, not a negative number."
+   },
+   {
+    "w": "Writing calculator output 6.2E07 directly on the exam paper.",
+    "r": "6.2 × 10⁷. E notation is a calculator display format and is penalized if copied directly."
+   },
+   {
+    "w": "Rounding 3.97 × 10⁵ to 2 s.f. as 4 × 10⁵.",
+    "r": "4.0 × 10⁵. The trailing zero must be shown to maintain 2 significant figures accuracy."
+   },
+   {
+    "w": "Subtracting exponents incorrectly during division: 10⁵ ÷ 10⁻² = 10³.",
+    "r": "10⁵ ⁻ ⁽⁻²⁾ = 10⁷. Subtracting a negative number yields addition."
+   },
+   {
+    "w": "Converting 0.00042 to standard form as 4.2 × 10⁻⁴ by counting zeros (3 zeros) wrongly.",
+    "r": "4.2 × 10⁻⁴ is correct, but doing 4.2 × 10⁻³ by counting '3 zeros after decimal' is wrong. Count decimal place shifts."
+   },
+   {
+    "w": "Squaring (3 × 10⁴)² to get 9 × 10⁶ by multiplying the exponent by 2 but adding exponents wrong.",
+    "r": "9 × 10⁸. By index laws, (10⁴)² = 10⁴ × ² = 10⁸."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Write 0.0000704 in standard form.",
+    "marks": 1,
+    "model": [
+     "7.04 × 10⁻⁵"
+    ],
+    "tip": "Move the decimal point 5 places to the right to place it after the first non-zero digit (7)."
+   },
+   {
+    "q": "Write 4.81 × 10⁶ as an ordinary number.",
+    "marks": 1,
+    "model": [
+     "4,810,000"
+    ],
+    "tip": "Move the decimal point 6 places to the right, adding four trailing zeros."
+   },
+   {
+    "q": "Work out (3 × 10⁴) × (7 × 10⁶). Give your answer in standard form.",
+    "marks": 2,
+    "model": [
+     "Multiply coefficients: 3 × 7 = 21",
+     "Multiply powers of 10: 10⁴ × 10⁶ = 10¹⁰",
+     "Adjust non-standard form 21 × 10¹⁰ = 2.1 × 10¹¹"
+    ],
+    "tip": "Always check if your initial answer has a coefficient ≥ 10 and adjust the power accordingly."
+   },
+   {
+    "q": "Work out (8 × 10⁻³) ÷ (1.6 × 10⁻⁷). Give your answer in standard form.",
+    "marks": 2,
+    "model": [
+     "Divide coefficients: 8 ÷ 1.6 = 5",
+     "Divide powers of 10: 10⁻³ ÷ 10⁻⁷ = 10⁻³ ⁻ ⁽⁻⁷⁾ = 10⁴",
+     "Combine: 5 × 10⁴"
+    ],
+    "tip": "Be careful with negative index subtraction: -3 - (-7) = -3 + 7 = +4."
+   },
+   {
+    "q": "Work out (5.4 × 10⁵) + (7.2 × 10⁴). Give your answer in standard form.",
+    "marks": 2,
+    "model": [
+     "Convert to equal powers of 10: 7.2 × 10⁴ = 0.72 × 10⁵",
+     "Add coefficients: (5.4 + 0.72) × 10⁵ = 6.12 × 10⁵"
+    ],
+    "tip": "Equate the powers of 10 before adding coefficients."
+   },
+   {
+    "q": "Calculate (4 × 10⁻⁵)³. Give your answer in standard form.",
+    "marks": 2,
+    "model": [
+     "Cube coefficient: 4³ = 64",
+     "Multiply exponent by 3: 10⁻⁵ ˣ ³ = 10⁻¹⁵",
+     "Adjust 64 × 10⁻¹⁵ to standard form: 6.4 × 10⁻¹⁴"
+    ],
+    "tip": "Increasing exponent of 10⁻¹⁵ by 1 gives 10⁻¹⁴, not 10⁻¹⁶."
+   },
+   {
+    "q": "Order the following numbers in ascending order: 4.2 × 10⁻³, 0.041, 3.9 × 10⁻², 4.05 × 10⁻³.",
+    "marks": 3,
+    "model": [
+     "Convert all to standard form: 4.2 × 10⁻³, 4.1 × 10⁻², 3.9 × 10⁻², 4.05 × 10⁻³",
+     "Compare powers of -3: 4.05 × 10⁻³ < 4.2 × 10⁻³",
+     "Compare powers of -2: 3.9 × 10⁻² < 4.1 × 10⁻²",
+     "Final ordered list using original forms: 4.05 × 10⁻³, 4.2 × 10⁻³, 3.9 × 10⁻², 0.041"
+    ],
+    "tip": "Always state the final ordered list using the values as originally given in the question."
+   },
+   {
+    "q": "The distance from Earth to the Sun is 1.5 × 10⁸ km. Light travels at a speed of 3.0 × 10⁵ km/s. Calculate the time taken in seconds for light to travel from the Sun to Earth.",
+    "marks": 3,
+    "model": [
+     "Use Time = Distance ÷ Speed",
+     "Time = (1.5 × 10⁸) ÷ (3.0 × 10⁵)",
+     "Divide coefficients: 1.5 ÷ 3.0 = 0.5",
+     "Subtract exponents: 10⁸ ÷ 10⁵ = 10³",
+     "Combine and adjust: 0.5 × 10³ s = 500 s (or 5 × 10² s)"
+    ],
+    "tip": "Check unit compatibility: distance in km and speed in km/s means time will directly be in seconds."
+   },
+   {
+    "q": "A rectangular field has length 8.4 × 10³ m and width 4.5 × 10² m. Calculate the area of the field in square kilometres (km²). Give your answer in standard form.",
+    "marks": 4,
+    "model": [
+     "Calculate area in m²: Area = (8.4 × 10³) × (4.5 × 10²)",
+     "8.4 × 4.5 = 37.8",
+     "10³ × 10² = 10⁵ -> Area = 37.8 × 10⁵ = 3.78 × 10⁶ m²",
+     "Convert m² to km²: 1 km² = 1,000,000 m² = 10⁶ m²",
+     "Area in km² = (3.78 × 10⁶) ÷ 10⁶ = 3.78 km² = 3.78 × 10⁰ km² (or 3.78)"
+    ],
+    "tip": "Remember area unit conversion factors: dividing by 10³ squared means dividing by 10⁶."
+   },
+   {
+    "q": "A microorganism has a mass of 2.5 × 10⁻⁹ grams. A population contains 4.8 × 10¹² of these microorganisms. Calculate the total mass of the population in kilograms. Give your answer in standard form rounded to 2 significant figures.",
+    "marks": 4,
+    "model": [
+     "Total mass in grams = (2.5 × 10⁻⁹) × (4.8 × 10¹²)",
+     "Multiply coefficients: 2.5 × 4.8 = 12",
+     "Multiply powers: 10⁻⁹ × 10¹² = 10³",
+     "Total mass in grams = 12 × 10³ = 1.2 × 10⁴ g",
+     "Convert grams to kilograms: ÷ 10³ -> (1.2 × 10⁴) ÷ 10³ = 1.2 × 10¹ kg (or 12 kg = 1.2 × 10¹ kg)",
+     "Already at 2 significant figures: 1.2 × 10¹ kg"
+    ],
+    "tip": "Break multi-step questions into calculation first, unit conversion second, and rounding third."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Work out ((6 × 10⁷) × (8 × 10⁻³)) ÷ (1.2 × 10⁵), giving your answer in standard form.",
+    "steps": [
+     "Step 1: Simplify the numerator: (6 × 8) × (10⁷ × 10⁻³) = 48 × 10⁴",
+     "Step 2: Set up the division: (48 × 10⁴) ÷ (1.2 × 10⁵)",
+     "Step 3: Divide coefficients: 48 ÷ 1.2 = 40",
+     "Step 4: Divide powers of 10: 10⁴ ÷ 10⁵ = 10⁴ ⁻ ⁵ = 10⁻¹",
+     "Step 5: Combine numerator and denominator results: 40 × 10⁻¹",
+     "Step 6: Adjust 40 × 10⁻¹ into standard form: 40 = 4.0 × 10¹, so (4.0 × 10¹) × 10⁻¹ = 4.0 × 10⁰ = 4"
+    ],
+    "ans": "4 × 10⁰ (or 4)"
+   },
+   {
+    "q": "The volume of a sphere is given by V = 4/3 π r³. Given r = 3.0 × 10⁻⁴ metres, calculate the volume V in m³. Give your answer in standard form in terms of π.",
+    "steps": [
+     "Step 1: Calculate r³ = (3.0 × 10⁻⁴)³ = 3.0³ × (10⁻⁴)³ = 27 × 10⁻¹² m³",
+     "Step 2: Substitute r³ into the volume formula: V = 4/3 × π × (27 × 10⁻¹²)",
+     "Step 3: Multiply 4/3 by 27: (4 × 27) / 3 = 36",
+     "Step 4: Combine numerical terms with power of 10: 36 × 10⁻¹² π",
+     "Step 5: Adjust 36 × 10⁻¹² to standard form: 36 = 3.6 × 10¹, so 3.6 × 10⁻¹¹ π m³"
+    ],
+    "ans": "3.6 × 10⁻¹¹ π m³"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Figure 1: Anatomy of Standard Form showing coefficient bounds and exponent role.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#1b2540\" rx=\"8\"/><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#24304f\" rx=\"6\"/><text x=\"200\" y=\"50\" fill=\"#ffffff\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Standard Form Notation: A × 10ⁿ</text><rect x=\"50\" y=\"80\" width=\"130\" height=\"70\" fill=\"#dbeafe\" stroke=\"#3b82f6\" stroke-width=\"2\" rx=\"6\"/><text x=\"115\" y=\"105\" fill=\"#1e3a8a\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Coefficient (A)</text><text x=\"115\" y=\"128\" fill=\"#1e40af\" font-size=\"11\" text-anchor=\"middle\">1 ≤ A &lt; 10</text><text x=\"200\" y=\"125\" fill=\"#fde68a\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">×</text><rect x=\"220\" y=\"80\" width=\"130\" height=\"70\" fill=\"#bbf7d0\" stroke=\"#22c55e\" stroke-width=\"2\" rx=\"6\"/><text x=\"285\" y=\"105\" fill=\"#14532d\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Exponent (n)</text><text x=\"285\" y=\"128\" fill=\"#166534\" font-size=\"11\" text-anchor=\"middle\">Integer (n ∈ ℤ)</text><path d=\"M 115 150 L 115 180\" stroke=\"#93c5fd\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><text x=\"115\" y=\"198\" fill=\"#93c5fd\" font-size=\"11\" text-anchor=\"middle\">E.g. 4.5 in 4.5 × 10⁶</text><path d=\"M 285 150 L 285 180\" stroke=\"#86efac\" stroke-width=\"2\"/><text x=\"285\" y=\"198\" fill=\"#86efac\" font-size=\"11\" text-anchor=\"middle\">+ve = Large, -ve = Small</text></svg>"
+   },
+   {
+    "cap": "Figure 2: Decimal place value shift comparison between positive and negative exponents.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#0f172a\" rx=\"8\"/><rect x=\"15\" y=\"15\" width=\"370\" height=\"100\" fill=\"#1e293b\" stroke=\"#3b82f6\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"30\" y=\"40\" fill=\"#93c5fd\" font-size=\"12\" font-weight=\"bold\">Positive Exponent (Shift Right): 3.5 × 10⁴</text><text x=\"30\" y=\"70\" fill=\"#ffffff\" font-size=\"13\" font-family=\"monospace\">3 . 5 0 0 0 .</text><path d=\"M 45 75 Q 65 95 85 75 Q 105 95 125 75 Q 145 95 165 75 Q 185 95 205 75\" fill=\"none\" stroke=\"#fde68a\" stroke-width=\"2\"/><text x=\"240\" y=\"75\" fill=\"#fde68a\" font-size=\"12\" font-weight=\"bold\">= 35,000</text><rect x=\"15\" y=\"125\" width=\"370\" height=\"100\" fill=\"#1e293b\" stroke=\"#ec4899\" stroke-width=\"1.5\" rx=\"6\"/><text x=\"30\" y=\"150\" fill=\"#fbcfe8\" font-size=\"12\" font-weight=\"bold\">Negative Exponent (Shift Left): 3.5 × 10⁻³</text><text x=\"30\" y=\"180\" fill=\"#ffffff\" font-size=\"13\" font-family=\"monospace\">. 0 0 3 . 5</text><path d=\"M 105 185 Q 85 205 65 185 Q 45 205 25 185\" fill=\"none\" stroke=\"#fecaca\" stroke-width=\"2\"/><text x=\"240\" y=\"185\" fill=\"#fecaca\" font-size=\"12\" font-weight=\"bold\">= 0.0035</text></svg>"
+   },
+   {
+    "cap": "Figure 3: Non-calculator Standard Form Addition workflow diagram.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#18181b\" rx=\"8\"/><rect x=\"20\" y=\"20\" width=\"360\" height=\"35\" fill=\"#27272a\" stroke=\"#a1a1aa\" stroke-width=\"1\" rx=\"4\"/><text x=\"200\" y=\"42\" fill=\"#ffffff\" font-size=\"11\" text-anchor=\"middle\">(5.2 × 10⁵) + (3.8 × 10⁴)</text><line x1=\"200\" y1=\"55\" x2=\"200\" y2=\"75\" stroke=\"#a1a1aa\" stroke-width=\"2\"/><rect x=\"50\" y=\"75\" width=\"300\" height=\"35\" fill=\"#3f3f46\" stroke=\"#fde68a\" stroke-width=\"1\" rx=\"4\"/><text x=\"200\" y=\"97\" fill=\"#fde68a\" font-size=\"11\" text-anchor=\"middle\">Equalise Powers: 3.8 × 10⁴ → 0.38 × 10⁵</text><line x1=\"200\" y1=\"110\" x2=\"200\" y2=\"130\" stroke=\"#a1a1aa\" stroke-width=\"2\"/><rect x=\"50\" y=\"130\" width=\"300\" height=\"35\" fill=\"#3f3f46\" stroke=\"#93c5fd\" stroke-width=\"1\" rx=\"4\"/><text x=\"200\" y=\"152\" fill=\"#93c5fd\" font-size=\"11\" text-anchor=\"middle\">Add Coefficients: (5.2 + 0.38) × 10⁵ = 5.58 × 10⁵</text><line x1=\"200\" y1=\"165\" x2=\"200\" y2=\"185\" stroke=\"#a1a1aa\" stroke-width=\"2\"/><rect x=\"80\" y=\"185\" width=\"240\" height=\"35\" fill=\"#15803d\" stroke=\"#86efac\" stroke-width=\"1.5\" rx=\"4\"/><text x=\"200\" y=\"207\" fill=\"#ffffff\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Final Result: 5.58 × 10⁵</text></svg>"
+   },
+   {
+    "cap": "Figure 4: Calculator display conversion guide: avoiding common notation errors.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#0284c7\" rx=\"8\"/><rect x=\"30\" y=\"25\" width=\"340\" height=\"75\" fill=\"#0f172a\" stroke=\"#38bdf8\" stroke-width=\"2\" rx=\"6\"/><text x=\"45\" y=\"50\" fill=\"#38bdf8\" font-size=\"11\">Calculator Screen Output:</text><text x=\"200\" y=\"80\" fill=\"#4ade80\" font-size=\"16\" font-family=\"monospace\" font-weight=\"bold\" text-anchor=\"middle\">7.42 E -05</text><rect x=\"30\" y=\"120\" width=\"160\" height=\"90\" fill=\"#991b1b\" rx=\"6\"/><text x=\"110\" y=\"145\" fill=\"#fecaca\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">WRONG Exam Answer</text><text x=\"110\" y=\"175\" fill=\"#ffffff\" font-size=\"12\" font-family=\"monospace\" text-anchor=\"middle\">7.42E-5</text><rect x=\"210\" y=\"120\" width=\"160\" height=\"90\" fill=\"#166534\" rx=\"6\"/><text x=\"290\" y=\"145\" fill=\"#bbf7d0\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">CORRECT Exam Answer</text><text x=\"290\" y=\"175\" fill=\"#ffffff\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">7.42 × 10⁻⁵</text></svg>"
+   }
+  ],
+  "pid": "maths_ocr_h.2.1",
+  "sid": "maths_ocr_h",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.6-flash",
+  "ts": "2026-11-23T20:38:49.912Z"
  }
 }
