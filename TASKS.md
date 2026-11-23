@@ -5,7 +5,7 @@ Runs read **only this file and `docs/CONTEXT.md`**. Keep this file short: finish
 ## Status
 
 ```
-RUN LOCK:       none
+RUN LOCK:       running since 2026-11-23 01:11 UTC, session session_01Sm3c8hMt5trvB6AUT5MJG6
 CURRENT JOB:    none (J2b done; J3 Maths carries on by itself via the daily pipeline run)
 CURRENT STEPS:  none
 LAST RUN ENDED: 2026-11-22 01:45 UTC (nightly). Pipeline healthy (last run 21 Nov 18:04, 86 saved; Groq now saves about 15 notes a run, up from 3, so the cut-off fix works). 2 items stuck (maths_eduqas_f.4.0 too few exam questions, maths_eduqas_h.0.6 reply cut off), left for now. Claude wrote 60 bio_edx notes (2.14-6.13), all passed the gate first time; CI green. Pipeline ~90 + Claude 60 = about 150 a day, about 350 short of 500. Next run: bio_edx 6.14 onwards (about 25 left), then chem_edx.
