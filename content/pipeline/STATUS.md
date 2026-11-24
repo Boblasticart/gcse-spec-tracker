@@ -1,10 +1,10 @@
 # Pipeline status
 
-Last run finished: 2026-11-23 23:49 UTC. This file is written by the pipeline after every run.
+Last run finished: 2026-11-24 22:44 UTC. This file is written by the pipeline after every run.
 
 ## notes
 
-**871 of 5168 done** (16%). This run: 82 saved, 55 failed the checks.
+**1055 of 5168 done** (20%). This run: 124 saved, 100 failed the checks.
 
 | Spec | Done | Of |
 | --- | ---: | ---: |
@@ -16,13 +16,14 @@ Last run finished: 2026-11-23 23:49 UTC. This file is written by the pipeline af
 | englang_aqa (finished) | 32 | 32 |
 | englang_eduqas (finished) | 31 | 31 |
 | englang_edx (finished) | 33 | 33 |
-| englang_ocr | 32 | 33 |
-| englit_aqa | 137 | 205 |
-| englit_eduqas | 13 | 154 |
+| englang_ocr (finished) | 33 | 33 |
+| englit_aqa | 194 | 205 |
+| englit_eduqas | 75 | 154 |
+| englit_ocr | 4 | 147 |
 | bio_edx (finished) | 127 | 127 |
-| chem_edx | 51 | 117 |
+| chem_edx | 111 | 117 |
 
-Not started yet: 39 specs. Waiting for another try: 112 items.
+Not started yet: 38 specs. Waiting for another try: 100 items.
 
 **Stuck (failed 6 runs, needs a person to look): 2**
 
@@ -34,25 +35,22 @@ Not started yet: 39 specs. Waiting for another try: 112 items.
 | Provider | Requests today |
 | --- | ---: |
 | gemini | 1000 |
-| groq | 50 |
+| groq | 101 |
 | openrouter | 46 |
 
 | Model | Passed | Failed | |
 | --- | ---: | ---: | --- |
-| gemini/gemini-flash-lite-latest | 230 | 665 |  |
-| gemini/gemini-3.6-flash | 94 | 35 |  |
-| groq/openai/gpt-oss-120b | 93 | 73 |  |
-| gemini/gemini-3-flash-preview | 80 | 62 |  |
-| gemini/gemini-3.5-flash-lite | 52 | 169 |  |
+| groq/openai/gpt-oss-120b | 36 | 9 |  |
+| groq/openai/gpt-oss-20b | 31 | 21 |  |
+| gemini/gemini-flash-lite-latest | 31 | 86 |  |
+| gemini/gemini-3.6-flash | 14 | 10 |  |
+| gemini/gemini-3-flash-preview | 11 | 11 |  |
 | openrouter/nvidia/nemotron-3-ultra-550b-a55b:free | 7 | 5 |  |
-| gemini/gemini-3.8-flash | 3 | 1 |  |
-| gemini/gemini-3.5-flash | 2 | 3 |  |
 | openrouter/baidu/ernie-5.5-flash-preview:free | 2 | 2 |  |
-| groq/openai/gpt-oss-20b | 1 | 9 | skipped for now |
 | gemini/gemini-flash-latest | 1 | 1 |  |
 | openrouter/inclusionai/ling-3.2-flash:free | 1 | 0 |  |
-| gemini/gemini-3.1-flash-lite | 0 | 13 | skipped for now |
-| gemini/gemini-3.1-flash-lite-preview | 0 | 13 | skipped for now |
-| groq/qwen/qwen3.8-27b | 0 | 10 | skipped for now |
+| gemini/gemini-3.5-flash | 1 | 2 |  |
 | openrouter/particle-ai/particle-1:free | 0 | 11 | skipped for now |
 | openrouter/nvidia/nemotron-3.5-super-vl:free | 0 | 3 |  |
+| gemini/gemini-3.1-flash-lite | 0 | 13 | skipped for now |
+| gemini/gemini-3.1-flash-lite-preview | 0 | 13 | skipped for now |
