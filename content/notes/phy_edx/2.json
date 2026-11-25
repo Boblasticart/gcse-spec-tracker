@@ -1,0 +1,2798 @@
+{
+ "phy_edx.2.0": {
+  "summary": "Gravitational potential energy (GPE) is the energy in an object's gravitational store because of its height in a gravitational field, and kinetic energy (KE) is the energy in an object's kinetic store because it is moving. You must recall and use **change in GPE = mass × gravitational field strength × change in vertical height** (ΔGPE = m × g × Δh) and **kinetic energy = ½ × mass × (speed)²** (KE = ½ × m × v²). Grade 9 answers rearrange both equations confidently, handle unit conversions, explain why KE depends on v² but GPE only on h, and combine the two using conservation of energy (for example to find the speed of a falling object).",
+  "core": [
+   {
+    "h": "1. Gravitational potential energy: what it is",
+    "p": "When you lift an object, you do work against its weight. That energy is not lost: it is stored in the object's **gravitational potential energy store**. If the object falls, the energy can be transferred back out, usually into its kinetic store.",
+    "bullets": [
+     "GPE is the energy an object has because of its **position (height) in a gravitational field**",
+     "Raising an object **increases** its GPE; lowering it **decreases** its GPE",
+     "The work done lifting an object at steady speed = weight × height = the gain in GPE",
+     "We calculate the **change** in GPE, because the 'zero' height (ground, bench, floor) is chosen by us",
+     "GPE depends on mass, gravitational field strength and change in vertical height only"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Gravitational potential energy",
+      "p": "The energy stored in an object because of its position (height) in a gravitational field."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. The GPE equation",
+    "p": "The change in GPE is equal to the weight (m × g) multiplied by the change in vertical height. You must recall this equation: it is not given on the equation sheet.",
+    "bullets": [
+     "**change in gravitational potential energy = mass × gravitational field strength × change in vertical height**",
+     "**ΔGPE = m × g × Δh**",
+     "ΔGPE in joules (J)",
+     "m in kilograms (kg)",
+     "g in newtons per kilogram (N/kg); on Earth g = 10 N/kg in Edexcel exams (more precisely 9.8 N/kg)",
+     "Δh in metres (m), measured **vertically**"
+    ],
+    "table": {
+     "head": [
+      "Quantity",
+      "Symbol",
+      "Unit"
+     ],
+     "rows": [
+      [
+       "Change in gravitational potential energy",
+       "ΔGPE",
+       "joule, J"
+      ],
+      [
+       "Mass",
+       "m",
+       "kilogram, kg"
+      ],
+      [
+       "Gravitational field strength",
+       "g",
+       "newton per kilogram, N/kg"
+      ],
+      [
+       "Change in vertical height",
+       "Δh",
+       "metre, m"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Recall it",
+      "p": "ΔGPE = m × g × Δh. Since m × g is the weight, this is the same as weight × vertical height."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "3. Why GPE depends on m, g and h",
+    "p": "Each factor makes sense if you think about the work needed to lift the object. More mass or a stronger field means a bigger weight to lift; more height means lifting it further. Doubling any one of them doubles the GPE.",
+    "bullets": [
+     "ΔGPE ∝ m: double the mass → double the GPE",
+     "ΔGPE ∝ g: on the Moon (g ≈ 1.6 N/kg) the same lift gives much less GPE than on Earth",
+     "ΔGPE ∝ Δh: a graph of GPE against height is a **straight line through the origin**",
+     "Only the **vertical** height change matters: walking up a long gentle ramp or straight up a ladder to the same height gives the same ΔGPE",
+     "The path taken does not matter, only the start and end heights"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Vertical, not along the slope",
+      "p": "If an object is pushed 10 m up a slope that rises 2 m, use Δh = 2 m, not 10 m."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Left: GPE is directly proportional to height, so the graph is a straight line through the origin. Right: KE is proportional to speed squared, so the graph is a curve that gets steeper; doubling speed quadruples KE.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#ffffff\"/><line x1=\"30\" y1=\"200\" x2=\"185\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"30\" y1=\"200\" x2=\"30\" y2=\"50\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"30\" y1=\"200\" x2=\"180\" y2=\"60\" stroke=\"#1e40af\" stroke-width=\"2.5\"/><text x=\"10\" y=\"40\" font-size=\"12\" fill=\"#1b2540\">GPE (J)</text><text x=\"45\" y=\"80\" font-size=\"12\" fill=\"#1e40af\">GPE ∝ h</text><text x=\"75\" y=\"218\" font-size=\"12\" fill=\"#1b2540\">Height h (m)</text><text x=\"55\" y=\"234\" font-size=\"11\" fill=\"#1e40af\">Straight line</text><line x1=\"230\" y1=\"200\" x2=\"385\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"230\" y1=\"200\" x2=\"230\" y2=\"50\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><polyline points=\"230,200 260,194.4 290,177.6 320,149.6 350,110.4 380,60\" fill=\"none\" stroke=\"#b91c1c\" stroke-width=\"2.5\"/><text x=\"215\" y=\"40\" font-size=\"12\" fill=\"#1b2540\">KE (J)</text><text x=\"245\" y=\"80\" font-size=\"12\" fill=\"#b91c1c\">KE ∝ v²</text><text x=\"270\" y=\"218\" font-size=\"12\" fill=\"#1b2540\">Speed v (m/s)</text><text x=\"260\" y=\"234\" font-size=\"11\" fill=\"#b91c1c\">Curve, getting steeper</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "4. Kinetic energy: what it is",
+    "p": "Any moving object has energy in its **kinetic energy store**. To make something speed up, a force has to do work on it; that work is stored as kinetic energy. To stop it again, a force must do the same amount of work to remove that energy.",
+    "bullets": [
+     "KE is the energy an object has because it is **moving**",
+     "A stationary object has zero kinetic energy",
+     "KE depends on **mass** and **speed**",
+     "KE is never negative, because speed is squared",
+     "Direction does not matter: a car moving north or south at 20 m/s has the same KE"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Kinetic energy",
+      "p": "The energy stored in an object because it is moving."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "5. The kinetic energy equation",
+    "p": "You must recall this equation. Notice that only the speed is squared.",
+    "bullets": [
+     "**kinetic energy = ½ × mass × (speed)²**",
+     "**KE = ½ × m × v²**",
+     "KE in joules (J)",
+     "m in kilograms (kg)",
+     "v in metres per second (m/s)",
+     "Order of working: square v, multiply by m, then halve"
+    ],
+    "table": {
+     "head": [
+      "Quantity",
+      "Symbol",
+      "Unit"
+     ],
+     "rows": [
+      [
+       "Kinetic energy",
+       "KE",
+       "joule, J"
+      ],
+      [
+       "Mass",
+       "m",
+       "kilogram, kg"
+      ],
+      [
+       "Speed",
+       "v",
+       "metre per second, m/s"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Calculator order",
+      "p": "Type 0.5 × m × v x² rather than (0.5 × m × v)². Squaring the whole expression is one of the most common lost marks."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Why speed matters more than mass",
+    "p": "KE is proportional to mass but proportional to the **square** of speed. So speed has a much bigger effect: doubling speed gives four times the kinetic energy, while doubling mass only doubles it.",
+    "bullets": [
+     "Double mass → KE × 2",
+     "Double speed → KE × 4 (2² = 4)",
+     "Triple speed → KE × 9 (3² = 9)",
+     "Halve speed → KE ÷ 4",
+     "This is why higher speed makes road crashes much more dangerous: much more energy has to be transferred in the collision",
+     "A KE against speed graph is a curve; a KE against speed² graph is a straight line through the origin with gradient ½m"
+    ],
+    "table": {
+     "head": [
+      "Change",
+      "Effect on KE"
+     ],
+     "rows": [
+      [
+       "Mass × 2",
+       "× 2"
+      ],
+      [
+       "Speed × 2",
+       "× 4"
+      ],
+      [
+       "Speed × 3",
+       "× 9"
+      ],
+      [
+       "Speed ÷ 2",
+       "÷ 4"
+      ],
+      [
+       "Mass × 2 and speed × 2",
+       "× 8"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "v squared",
+      "p": "Because KE = ½mv², a small rise in speed causes a large rise in kinetic energy."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Rearranging the equations",
+    "p": "Many questions give the energy and ask for the mass, height or speed. Rearrange before substituting, and remember to take the square root at the end when finding speed.",
+    "bullets": [
+     "From ΔGPE = m × g × Δh: **m = ΔGPE ÷ (g × Δh)**",
+     "**Δh = ΔGPE ÷ (m × g)**",
+     "**g = ΔGPE ÷ (m × Δh)**",
+     "From KE = ½ × m × v²: **m = 2 × KE ÷ v²**",
+     "**v² = 2 × KE ÷ m**, so **v = √(2 × KE ÷ m)**",
+     "Do not forget the square root: v² is not the speed"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Forgetting the square root",
+      "p": "If you get a speed of 400 m/s for a dropped ball, you have probably given v² instead of v. Always check your answer is sensible."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Unit conversions",
+    "p": "Both equations only give energy in joules if every quantity is in SI units. Convert before you substitute.",
+    "bullets": [
+     "grams → kilograms: divide by 1000 (e.g. 250 g = 0.25 kg)",
+     "centimetres → metres: divide by 100 (e.g. 80 cm = 0.80 m)",
+     "km/h → m/s: divide by 3.6 (e.g. 72 km/h = 20 m/s)",
+     "kilojoules → joules: multiply by 1000 (1 kJ = 1000 J); megajoules: 1 MJ = 1 000 000 J",
+     "Give the answer with a unit and to a sensible number of significant figures"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Write the equation first",
+      "p": "Marks are often awarded for the substitution even if the final answer is wrong, so always write the equation, then the numbers, then the answer with unit."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Falling objects: GPE transferred to KE",
+    "p": "When an object falls, its height decreases so its GPE decreases, and its speed increases so its KE increases. If air resistance is negligible, all the GPE lost is transferred to the kinetic store, because energy is conserved.",
+    "bullets": [
+     "**Loss of GPE = gain in KE** (if air resistance is negligible)",
+     "m × g × Δh = ½ × m × v²",
+     "Mass cancels, so **v = √(2 × g × Δh)**: all objects dropped from the same height reach the same speed if there is no air resistance",
+     "Thrown upwards: KE is transferred to GPE until the object stops at the top (KE = 0, GPE maximum)",
+     "With air resistance, some energy is transferred to the thermal store of the object and the air, so the gain in KE is less than the loss of GPE"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Ideal assumption",
+      "p": "Questions usually say 'ignore air resistance'. Only then can you set the GPE lost equal to the KE gained."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A ball dropped from height h. At the top all its energy is in the gravitational store; halfway down it has half in each store; just before hitting the ground it is all kinetic (ignoring air resistance). The total stays the same throughout.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"ar\" markerWidth=\"8\" markerHeight=\"8\" refX=\"4\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#1b2540\"/></marker></defs><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#ffffff\"/><rect x=\"0\" y=\"210\" width=\"140\" height=\"30\" fill=\"#bbf7d0\" stroke=\"#15803d\"/><text x=\"10\" y=\"230\" font-size=\"12\" fill=\"#15803d\">Ground</text><circle cx=\"70\" cy=\"40\" r=\"12\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"1.5\"/><circle cx=\"70\" cy=\"120\" r=\"12\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"1.5\" stroke-dasharray=\"3 2\"/><circle cx=\"70\" cy=\"196\" r=\"12\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"1.5\" stroke-dasharray=\"3 2\"/><line x1=\"70\" y1=\"56\" x2=\"70\" y2=\"100\" stroke=\"#6b7280\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\" marker-end=\"url(#ar)\"/><line x1=\"112\" y1=\"205\" x2=\"112\" y2=\"45\" stroke=\"#1b2540\" stroke-width=\"1.5\" marker-end=\"url(#ar)\"/><text x=\"118\" y=\"128\" font-size=\"12\" fill=\"#1b2540\">h</text><rect x=\"150\" y=\"10\" width=\"10\" height=\"10\" fill=\"#dbeafe\" stroke=\"#1e40af\"/><text x=\"165\" y=\"19\" font-size=\"12\" fill=\"#1e40af\">GPE</text><rect x=\"210\" y=\"10\" width=\"10\" height=\"10\" fill=\"#fecaca\" stroke=\"#b91c1c\"/><text x=\"225\" y=\"19\" font-size=\"12\" fill=\"#b91c1c\">KE</text><rect x=\"150\" y=\"34\" width=\"120\" height=\"14\" fill=\"#dbeafe\" stroke=\"#1e40af\"/><text x=\"280\" y=\"45\" font-size=\"12\" fill=\"#1b2540\">GPE max, KE = 0</text><rect x=\"150\" y=\"114\" width=\"60\" height=\"14\" fill=\"#dbeafe\" stroke=\"#1e40af\"/><rect x=\"210\" y=\"114\" width=\"60\" height=\"14\" fill=\"#fecaca\" stroke=\"#b91c1c\"/><text x=\"280\" y=\"125\" font-size=\"12\" fill=\"#1b2540\">Half GPE, half KE</text><rect x=\"150\" y=\"188\" width=\"120\" height=\"14\" fill=\"#fecaca\" stroke=\"#b91c1c\"/><text x=\"280\" y=\"199\" font-size=\"12\" fill=\"#1b2540\">KE max, GPE = 0</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "10. Pendulums, swings and roller coasters",
+    "p": "In any swinging or rolling system, energy moves back and forth between the gravitational and kinetic stores. Highest point means most GPE and least KE; lowest point means least GPE and most KE.",
+    "bullets": [
+     "Pendulum at the end of its swing: momentarily stationary, **KE = 0**, **GPE maximum**",
+     "Pendulum at the bottom: **speed maximum**, KE maximum, GPE minimum",
+     "Speed at the bottom from the height dropped: v = √(2gΔh)",
+     "Roller coaster: the first hill must be the highest, because the car cannot gain more GPE than the energy it started with",
+     "In reality, friction and air resistance dissipate energy, so each swing gets a little lower"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": [
+     {
+      "cap": "A pendulum swings between its two highest points, where it is momentarily at rest (all GPE), and its lowest point, where it moves fastest (most KE). The GPE lost falling through Δh equals the KE gained at the bottom if air resistance is ignored.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"pa\" markerWidth=\"8\" markerHeight=\"8\" refX=\"4\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#1b2540\"/></marker></defs><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#ffffff\"/><rect x=\"160\" y=\"22\" width=\"80\" height=\"8\" fill=\"#9ca3af\" stroke=\"#1b2540\"/><text x=\"250\" y=\"30\" font-size=\"12\" fill=\"#1b2540\">Pivot</text><line x1=\"200\" y1=\"30\" x2=\"104\" y2=\"145\" stroke=\"#6b7280\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><line x1=\"200\" y1=\"30\" x2=\"200\" y2=\"180\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"200\" y1=\"30\" x2=\"296\" y2=\"145\" stroke=\"#6b7280\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><circle cx=\"104\" cy=\"145\" r=\"12\" fill=\"#dbeafe\" stroke=\"#1e40af\" stroke-width=\"1.5\"/><circle cx=\"200\" cy=\"180\" r=\"12\" fill=\"#fecaca\" stroke=\"#b91c1c\" stroke-width=\"1.5\"/><circle cx=\"296\" cy=\"145\" r=\"12\" fill=\"#dbeafe\" stroke=\"#1e40af\" stroke-width=\"1.5\"/><text x=\"20\" y=\"118\" font-size=\"12\" fill=\"#1e40af\">GPE max</text><text x=\"20\" y=\"134\" font-size=\"12\" fill=\"#1e40af\">KE = 0</text><text x=\"300\" y=\"104\" font-size=\"12\" fill=\"#1e40af\">GPE max</text><text x=\"300\" y=\"120\" font-size=\"12\" fill=\"#1e40af\">KE = 0</text><text x=\"176\" y=\"212\" font-size=\"12\" fill=\"#b91c1c\">KE max</text><text x=\"172\" y=\"228\" font-size=\"12\" fill=\"#b91c1c\">GPE min</text><line x1=\"310\" y1=\"145\" x2=\"370\" y2=\"145\" stroke=\"#6b7280\" stroke-dasharray=\"3 3\"/><line x1=\"214\" y1=\"180\" x2=\"370\" y2=\"180\" stroke=\"#6b7280\" stroke-dasharray=\"3 3\"/><line x1=\"355\" y1=\"176\" x2=\"355\" y2=\"150\" stroke=\"#1b2540\" stroke-width=\"1.5\" marker-end=\"url(#pa)\"/><text x=\"362\" y=\"167\" font-size=\"12\" fill=\"#1b2540\">Δh</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "11. Combining with work done and power",
+    "p": "GPE and KE calculations link to other parts of the course. The energy gained by an object equals the work done on it, and power tells you how quickly that energy is transferred.",
+    "bullets": [
+     "Work done lifting an object at steady speed = force × distance = weight × height = ΔGPE",
+     "Work done accelerating an object from rest = gain in KE",
+     "Work done by brakes to stop a car = initial KE of the car",
+     "Power = energy transferred ÷ time, so lifting the same load faster needs more power but the same ΔGPE",
+     "Efficiency calculations often start with a GPE or KE value (covered in 3.11-3.12)"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Energy is energy",
+      "p": "If a question gives KE in one part and asks for height in the next, set KE equal to GPE and rearrange for Δh = KE ÷ (m × g)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "12. Sense checks and typical values",
+    "p": "Estimating typical values helps you spot mistakes. If your answer is wildly larger or smaller than these, check your units and powers of ten.",
+    "bullets": [
+     "A 60 kg person climbing a 3 m flight of stairs gains about 1800 J of GPE",
+     "A 1000 kg car at 30 mph (about 13 m/s) has about 85 000 J of KE",
+     "A tennis ball (0.06 kg) served at 50 m/s has about 75 J of KE",
+     "An apple (0.1 kg) falling 1 m loses about 1 J of GPE",
+     "A ball dropped from 5 m reaches about 10 m/s (ignoring air resistance)"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Energy as money in two bank accounts",
+   "p": "Picture the object having two accounts: a 'height' account (GPE) and a 'motion' account (KE). Lifting it pays into the height account; when it falls, money is transferred from the height account to the motion account, and the total stays the same if nothing leaks out. The motion account has an odd interest rule: its balance depends on speed squared, so going twice as fast needs four times the money. Where it breaks down: money can be spent and gone, but energy is never destroyed; even 'leaks' due to air resistance are just transfers to another store (thermal), and the height account depends on where you choose to call zero height."
+  },
+  "terms": [
+   {
+    "t": "Gravitational potential energy",
+    "d": "Energy stored in an object because of its position (height) in a gravitational field."
+   },
+   {
+    "t": "Kinetic energy",
+    "d": "Energy stored in an object because it is moving; KE = ½ × m × v²."
+   },
+   {
+    "t": "Energy store",
+    "d": "A way in which energy is held, such as the kinetic store or the gravitational potential store."
+   },
+   {
+    "t": "Mass",
+    "d": "The amount of matter in an object, measured in kilograms (kg)."
+   },
+   {
+    "t": "Weight",
+    "d": "The force on an object due to gravity; weight = mass × gravitational field strength, in newtons."
+   },
+   {
+    "t": "Gravitational field strength",
+    "d": "The force per unit mass in a gravitational field, in N/kg; 10 N/kg on Earth."
+   },
+   {
+    "t": "Change in vertical height",
+    "d": "How far an object moves up or down, measured vertically, in metres."
+   },
+   {
+    "t": "Speed",
+    "d": "Distance travelled per unit time, in m/s."
+   },
+   {
+    "t": "Joule",
+    "d": "The unit of energy; 1 J is transferred when a force of 1 N moves through 1 m."
+   },
+   {
+    "t": "Work done",
+    "d": "Energy transferred when a force moves an object; work done = force × distance moved in the direction of the force."
+   },
+   {
+    "t": "Conservation of energy",
+    "d": "Energy cannot be created or destroyed, only transferred between stores, so total energy stays the same."
+   },
+   {
+    "t": "Air resistance",
+    "d": "A frictional force opposing motion through air; it transfers energy to thermal stores so not all lost GPE becomes KE."
+   },
+   {
+    "t": "Directly proportional",
+    "d": "Doubling one quantity doubles the other; the graph is a straight line through the origin."
+   },
+   {
+    "t": "Negligible",
+    "d": "So small that it can be ignored in the calculation, as with air resistance in many falling-object questions."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "KE = ½ × m × v (forgetting to square the speed).",
+    "r": "KE = ½ × m × v²: the speed must be squared."
+   },
+   {
+    "w": "Calculating (½ × m × v)² on the calculator.",
+    "r": "Square only v, then multiply by m and by ½."
+   },
+   {
+    "w": "Doubling speed doubles kinetic energy.",
+    "r": "KE ∝ v², so doubling speed makes KE four times greater."
+   },
+   {
+    "w": "Using the mass in grams, e.g. 250 instead of 0.25 kg.",
+    "r": "Convert mass to kilograms so that energy is in joules."
+   },
+   {
+    "w": "Using the distance along a slope as Δh.",
+    "r": "Use the change in vertical height only."
+   },
+   {
+    "w": "Giving v² as the final answer for speed.",
+    "r": "Take the square root: v = √(2 × KE ÷ m)."
+   },
+   {
+    "w": "Using g = 10 N/kg as the weight, or using weight in place of mass in ΔGPE = m × g × Δh.",
+    "r": "m is the mass in kg; m × g is the weight. Do not multiply a weight by g again."
+   },
+   {
+    "w": "Energy is lost when the ball falls.",
+    "r": "GPE is transferred to KE; with air resistance some is transferred to the thermal store of the air and ball, but none is destroyed."
+   },
+   {
+    "w": "A heavier object dropped from the same height hits the ground faster.",
+    "r": "Ignoring air resistance, v = √(2gh) does not depend on mass, so both reach the same speed."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Write down the equation that links change in gravitational potential energy, mass, gravitational field strength and change in vertical height.",
+    "marks": 1,
+    "model": [
+     "ΔGPE = m × g × Δh (change in GPE = mass × gravitational field strength × change in vertical height)"
+    ],
+    "tip": "Word or symbol form both score, but symbols must be the standard ones."
+   },
+   {
+    "q": "State the equation linking kinetic energy, mass and speed.",
+    "marks": 1,
+    "model": [
+     "KE = ½ × m × v²"
+    ],
+    "tip": "Make sure the ½ and the square are both there."
+   },
+   {
+    "q": "A climber of mass 70 kg climbs 15 m vertically. Calculate the gain in gravitational potential energy. g = 10 N/kg.",
+    "marks": 2,
+    "model": [
+     "ΔGPE = 70 × 10 × 15",
+     "= 10 500 J"
+    ],
+    "tip": "Substitute, then evaluate; include the unit."
+   },
+   {
+    "q": "A cyclist and bike have a total mass of 80 kg and travel at 6 m/s. Calculate the kinetic energy.",
+    "marks": 2,
+    "model": [
+     "KE = ½ × 80 × 6²",
+     "= 1440 J"
+    ],
+    "tip": "6² = 36, not 12."
+   },
+   {
+    "q": "A ball of mass 0.40 kg has 20 J of kinetic energy. Calculate its speed.",
+    "marks": 3,
+    "model": [
+     "v² = 2 × KE ÷ m = 2 × 20 ÷ 0.40",
+     "v² = 100",
+     "v = 10 m/s"
+    ],
+    "tip": "Rearrange before substituting, and remember the square root."
+   },
+   {
+    "q": "A book of mass 0.5 kg gains 6 J of GPE when lifted onto a shelf. Calculate the height it was lifted. g = 10 N/kg.",
+    "marks": 3,
+    "model": [
+     "Δh = ΔGPE ÷ (m × g)",
+     "Δh = 6 ÷ (0.5 × 10)",
+     "Δh = 1.2 m"
+    ],
+    "tip": "Divide by the product m × g, not just by one of them."
+   },
+   {
+    "q": "Car A has the same mass as car B but is travelling twice as fast. Compare their kinetic energies.",
+    "marks": 2,
+    "model": [
+     "KE ∝ v²",
+     "Car A has four times the KE of car B"
+    ],
+    "tip": "Give the factor, not just 'more'."
+   },
+   {
+    "q": "A stone of mass 0.2 kg is dropped from a height of 20 m. Ignoring air resistance, calculate its speed just before it hits the ground. g = 10 N/kg.",
+    "marks": 4,
+    "model": [
+     "GPE lost = 0.2 × 10 × 20 = 40 J",
+     "GPE lost = KE gained, so KE = 40 J",
+     "v² = 2 × 40 ÷ 0.2 = 400",
+     "v = 20 m/s"
+    ],
+    "tip": "State that GPE lost equals KE gained: it is a marking point."
+   },
+   {
+    "q": "Explain why the stone in the previous question would actually hit the ground at a lower speed than calculated.",
+    "marks": 2,
+    "model": [
+     "Air resistance acts on the stone",
+     "So some energy is transferred to thermal stores (of the air and stone), so less GPE becomes KE"
+    ],
+    "tip": "Mention where the energy goes, not that it is 'lost'."
+   },
+   {
+    "q": "A pendulum bob of mass 0.10 kg is released from a point 0.20 m above its lowest position. Describe the energy changes as it swings down and calculate its maximum speed, ignoring air resistance. g = 10 N/kg.",
+    "marks": 6,
+    "model": [
+     "As it swings down its height decreases so GPE decreases",
+     "Its speed increases so KE increases",
+     "GPE is transferred to the kinetic store; total energy is conserved",
+     "GPE lost = 0.10 × 10 × 0.20 = 0.20 J",
+     "KE at bottom = 0.20 J",
+     "v = √(2 × 0.20 ÷ 0.10) = √4 = 2.0 m/s"
+    ],
+    "tip": "6 mark calculations mix description and working; set both out clearly in order."
+   },
+   {
+    "q": "Two balls of different masses are dropped from the same height. Explain, using equations, why they reach the ground at the same speed if air resistance is ignored.",
+    "marks": 4,
+    "model": [
+     "GPE lost = mgh and KE gained = ½mv²",
+     "Energy is conserved so mgh = ½mv²",
+     "Mass cancels: v² = 2gh",
+     "So v depends only on g and h, not on mass"
+    ],
+    "tip": "Show the m cancelling explicitly."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A student of mass 55 kg runs up a flight of stairs with a vertical height of 4.0 m. Calculate the gain in gravitational potential energy. (g = 10 N/kg)",
+    "steps": [
+     "Write the equation: ΔGPE = m × g × Δh",
+     "Substitute: ΔGPE = 55 × 10 × 4.0",
+     "Calculate: ΔGPE = 2200 J"
+    ],
+    "ans": "2200 J (2.2 kJ)"
+   },
+   {
+    "q": "A car of mass 800 kg is travelling at 90 km/h. Calculate its kinetic energy. Then find the KE if it slows to 45 km/h.",
+    "steps": [
+     "Convert: 90 km/h ÷ 3.6 = 25 m/s",
+     "KE = ½ × m × v² = ½ × 800 × 25²",
+     "25² = 625, so KE = 0.5 × 800 × 625 = 250 000 J",
+     "At 45 km/h the speed halves to 12.5 m/s",
+     "KE = ½ × 800 × 12.5² = 0.5 × 800 × 156.25 = 62 500 J",
+     "Check: halving speed should divide KE by 4; 250 000 ÷ 4 = 62 500 J"
+    ],
+    "ans": "250 000 J at 90 km/h and 62 500 J at 45 km/h (one quarter, because KE ∝ v²)."
+   },
+   {
+    "q": "A ball of mass 0.50 kg is dropped from a window 20 m above the ground. Ignoring air resistance, calculate the speed it reaches just before hitting the ground. (g = 10 N/kg)",
+    "steps": [
+     "GPE lost = m × g × Δh = 0.50 × 10 × 20 = 100 J",
+     "Energy is conserved and air resistance is ignored, so KE gained = 100 J",
+     "KE = ½ × m × v², so v² = 2 × KE ÷ m = 2 × 100 ÷ 0.50 = 400",
+     "v = √400 = 20 m/s",
+     "Check with v = √(2gh) = √(2 × 10 × 20) = √400 = 20 m/s"
+    ],
+    "ans": "20 m/s"
+   }
+  ],
+  "svg": [],
+  "pid": "phy_edx.2.0",
+  "sid": "phy_edx",
+  "v": 2,
+  "src": "pre",
+  "by": "claude/claude-opus-5-5",
+  "ts": "2026-11-25T01:27:07.466Z"
+ },
+ "phy_edx.2.1": {
+  "summary": "Energy is held in **stores** (kinetic, gravitational potential, elastic potential, thermal, chemical, nuclear, magnetic and electrostatic) and moves between them by four **transfer pathways**: mechanically (a force doing work), electrically, by heating and by radiation. The **law of conservation of energy** says energy can be transferred usefully, stored or dissipated, but can never be created or destroyed, so in a **closed system** there is no net change to the total energy however it is shared between stores. You must be able to describe the store changes in everyday situations (a ball thrown upwards, a crash, a car accelerating or braking, a kettle boiling) and draw and interpret energy transfer diagrams, including Sankey diagrams.",
+  "core": [
+   {
+    "h": "1. Energy stores",
+    "p": "Energy is not a substance, but it is useful to imagine it held in different **stores**. When something happens, energy leaves one store and enters another. You must name the stores precisely: mark schemes reward 'kinetic energy store', not just 'movement'.",
+    "bullets": [
+     "**Kinetic**: any moving object",
+     "**Gravitational potential**: any object raised in a gravitational field",
+     "**Elastic potential**: a stretched, compressed or bent object (spring, elastic band, bow)",
+     "**Thermal**: any object; the hotter it is, the more energy in its thermal store (particles move faster)",
+     "**Chemical**: fuels, food, batteries; energy released in chemical reactions",
+     "**Nuclear**: atomic nuclei; released in fission and fusion",
+     "**Magnetic**: two magnets attracting or repelling",
+     "**Electrostatic**: two charges attracting or repelling"
+    ],
+    "table": {
+     "head": [
+      "Store",
+      "Example"
+     ],
+     "rows": [
+      [
+       "Kinetic",
+       "A moving car or a running person"
+      ],
+      [
+       "Gravitational potential",
+       "A book on a high shelf"
+      ],
+      [
+       "Elastic potential",
+       "A stretched catapult"
+      ],
+      [
+       "Thermal",
+       "A cup of hot tea"
+      ],
+      [
+       "Chemical",
+       "Petrol, food, a battery"
+      ],
+      [
+       "Nuclear",
+       "Uranium fuel in a reactor"
+      ],
+      [
+       "Magnetic",
+       "Two repelling magnets pushed together"
+      ],
+      [
+       "Electrostatic",
+       "Two like charges held close together"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Light, sound and electricity are not stores",
+      "p": "Light and sound are ways energy is transferred (by radiation, as waves). Electricity transfers energy electrically. None of them is a store."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. Energy transfer pathways",
+    "p": "Energy moves between stores by four pathways. Being precise about the pathway is a frequent mark in 'describe the energy transfers' questions.",
+    "bullets": [
+     "**Mechanically**: a force does work on an object, e.g. pushing a trolley, a spring launching a ball",
+     "**Electrically**: charges move through a circuit and do work, e.g. a battery driving a motor",
+     "**By heating**: energy moves from a hotter object to a cooler one because of a temperature difference",
+     "**By radiation**: energy carried by waves, e.g. light from a lamp, infrared from the Sun, sound from a speaker",
+     "One event can use several pathways at once, e.g. a lamp transfers energy by light and by heating"
+    ],
+    "table": {
+     "head": [
+      "Pathway",
+      "How it works",
+      "Example"
+     ],
+     "rows": [
+      [
+       "Mechanically",
+       "A force moves an object (work done)",
+       "Lifting a box"
+      ],
+      [
+       "Electrically",
+       "Moving charges do work",
+       "Mains powering a kettle"
+      ],
+      [
+       "By heating",
+       "Temperature difference",
+       "Hot pan warming the air"
+      ],
+      [
+       "By radiation",
+       "Waves such as light or sound",
+       "Sunlight warming the Earth"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Work done",
+      "p": "Energy transferred when a force moves an object; work done = force × distance moved in the direction of the force."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "3. What is a system?",
+    "p": "A **system** is the object or group of objects you choose to think about. Drawing a boundary around the system lets you track exactly which stores gain energy and which lose it.",
+    "bullets": [
+     "A system could be a single ball, a car and its brakes, or a kettle and the water inside it",
+     "When a system changes, energy is redistributed between its stores",
+     "Energy can enter or leave the system across its boundary (for example a kettle receives energy electrically from the mains)",
+     "Choosing a bigger system (for example including the surroundings) can make it a closed system"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "System",
+      "p": "An object or group of objects being studied, with the rest of the universe treated as the surroundings."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Conservation of energy",
+    "p": "This is one of the most important laws in physics. However energy is transferred, the total amount stays the same. It can move between stores, be used for something useful, or be spread out into the surroundings, but none is ever made or lost.",
+    "bullets": [
+     "**Energy can be transferred usefully, stored or dissipated, but cannot be created or destroyed**",
+     "'Conserved' means the total amount stays the same before and after a change",
+     "Energy in = useful energy out + wasted energy out",
+     "So you can always find a missing value: wasted energy = total input − useful output",
+     "'Using up' energy really means transferring it into less useful stores, usually thermal stores of the surroundings"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Law of conservation of energy",
+      "p": "Energy can be transferred usefully, stored or dissipated, but cannot be created or destroyed."
+     },
+     {
+      "k": "warn",
+      "t": "Never write 'energy is lost'",
+      "p": "Write 'energy is dissipated (wasted) to the thermal store of the surroundings'. Saying energy is lost or used up contradicts conservation of energy."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "5. Useful, stored and dissipated energy",
+    "p": "In every real transfer, some energy ends up where we want it (useful) and some spreads out where we do not (wasted). Wasted energy usually ends up in thermal stores of the surroundings, spread so thinly that it is hard to use again: this is called **dissipation**.",
+    "bullets": [
+     "**Useful energy**: transferred to the store we want, e.g. kinetic store of a motor's shaft",
+     "**Stored energy**: kept in a store for later, e.g. charging a battery or lifting a weight",
+     "**Dissipated energy**: spread out to the surroundings, usually as thermal energy, e.g. by friction or by sound",
+     "Dissipated energy is still there; it is just not useful any more",
+     "Details of reducing wasted energy belong to 3.7-3.10"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Dissipated",
+      "p": "Energy that has spread out into the surroundings, usually into thermal stores, so that it is no longer useful."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Closed systems",
+    "p": "In a **closed system** no energy enters or leaves, so the total energy cannot change. Energy may move between the stores inside the boundary, but whatever one store loses, the others gain exactly.",
+    "bullets": [
+     "**Where there are energy transfers in a closed system, there is no net change to the total energy in that system**",
+     "Example: a car braking, if the system includes the car, brakes, road and air: kinetic store decreases, thermal stores increase by the same amount",
+     "Example: a perfectly insulated flask of hot water and ice: the water's thermal store decreases, the ice's increases; total unchanged",
+     "A real kettle is not closed on its own because energy enters electrically and leaks to the room by heating",
+     "Treating the Universe as the system makes it closed: its total energy is constant"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Closed system",
+      "p": "A system that no energy can enter or leave, so the total energy in it stays the same."
+     },
+     {
+      "k": "key",
+      "t": "No net change",
+      "p": "Total energy before = total energy after in a closed system. Stores change; the total does not."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A braking car treated as a closed system (car, brakes, road and air inside the boundary). Energy is transferred mechanically by friction from the kinetic store of the car to thermal stores of the brakes and surroundings; the total energy inside the boundary does not change.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#ffffff\"/><rect x=\"15\" y=\"15\" width=\"370\" height=\"175\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#7c3aed\" stroke-width=\"2\" stroke-dasharray=\"6 4\"/><text x=\"25\" y=\"35\" font-size=\"12\" fill=\"#7c3aed\">Closed system boundary</text><line x1=\"25\" y1=\"150\" x2=\"175\" y2=\"150\" stroke=\"#6b7280\" stroke-width=\"2\"/><rect x=\"45\" y=\"100\" width=\"100\" height=\"32\" rx=\"8\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"1.5\"/><rect x=\"65\" y=\"86\" width=\"55\" height=\"16\" rx=\"5\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"1.5\"/><circle cx=\"67\" cy=\"138\" r=\"10\" fill=\"#374151\" stroke=\"#1b2540\"/><circle cx=\"123\" cy=\"138\" r=\"10\" fill=\"#374151\" stroke=\"#1b2540\"/><text x=\"55\" y=\"74\" font-size=\"12\" fill=\"#15803d\">Car braking</text><rect x=\"220\" y=\"70\" width=\"40\" height=\"80\" fill=\"#fecaca\" stroke=\"#b91c1c\" stroke-width=\"1.5\"/><rect x=\"300\" y=\"70\" width=\"40\" height=\"80\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"1.5\"/><text x=\"215\" y=\"62\" font-size=\"12\" fill=\"#b91c1c\">Kinetic</text><text x=\"295\" y=\"62\" font-size=\"12\" fill=\"#b45309\">Thermal</text><text x=\"220\" y=\"168\" font-size=\"12\" fill=\"#1b2540\">Before</text><text x=\"305\" y=\"168\" font-size=\"12\" fill=\"#1b2540\">After</text><text x=\"105\" y=\"215\" font-size=\"13\" fill=\"#7c3aed\">Total energy unchanged</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "7. Drawing energy transfer diagrams",
+    "p": "A simple energy transfer diagram uses boxes for stores and labelled arrows for the pathways between them. It shows where energy starts, where it goes, and how it gets there.",
+    "bullets": [
+     "Boxes = stores (e.g. 'chemical store of battery', 'thermal store of water')",
+     "Arrows = transfers, labelled with the pathway (mechanically, electrically, by heating, by radiation)",
+     "Show the wasted energy as well as the useful energy",
+     "Name the object for each store, e.g. 'thermal store of the surroundings', not just 'heat'",
+     "Read the diagram from left (input) to right (outputs)"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Full answers",
+      "p": "A complete description names the starting store, the pathway and the final store: 'energy is transferred electrically from the mains to the thermal store of the water'."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Energy transfer diagram for an electric kettle. Energy is transferred electrically from the mains to the heating element, then by heating to the thermal store of the water (useful). Some is transferred by heating to the thermal store of the kettle and surroundings (wasted).",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"k1\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#1b2540\"/></marker></defs><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#ffffff\"/><rect x=\"10\" y=\"95\" width=\"90\" height=\"40\" rx=\"6\" fill=\"#e9d5ff\" stroke=\"#7c3aed\" stroke-width=\"1.5\"/><text x=\"20\" y=\"119\" font-size=\"12\" fill=\"#1b2540\">Mains supply</text><rect x=\"145\" y=\"95\" width=\"105\" height=\"40\" rx=\"6\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"1.5\"/><text x=\"151\" y=\"119\" font-size=\"11\" fill=\"#1b2540\">Heating element</text><rect x=\"290\" y=\"35\" width=\"100\" height=\"44\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#1e40af\" stroke-width=\"1.5\"/><text x=\"300\" y=\"53\" font-size=\"12\" fill=\"#1b2540\">Thermal store</text><text x=\"312\" y=\"70\" font-size=\"12\" fill=\"#1b2540\">of water</text><rect x=\"290\" y=\"150\" width=\"100\" height=\"44\" rx=\"6\" fill=\"#fecaca\" stroke=\"#b91c1c\" stroke-width=\"1.5\"/><text x=\"300\" y=\"168\" font-size=\"12\" fill=\"#1b2540\">Thermal store</text><text x=\"300\" y=\"185\" font-size=\"12\" fill=\"#1b2540\">surroundings</text><line x1=\"100\" y1=\"115\" x2=\"140\" y2=\"115\" stroke=\"#1b2540\" stroke-width=\"2\" marker-end=\"url(#k1)\"/><text x=\"70\" y=\"82\" font-size=\"11\" fill=\"#7c3aed\">Electrically</text><line x1=\"250\" y1=\"105\" x2=\"286\" y2=\"65\" stroke=\"#1e40af\" stroke-width=\"2\" marker-end=\"url(#k1)\"/><text x=\"160\" y=\"40\" font-size=\"11\" fill=\"#1e40af\">By heating (useful)</text><line x1=\"250\" y1=\"125\" x2=\"286\" y2=\"165\" stroke=\"#b91c1c\" stroke-width=\"2\" marker-end=\"url(#k1)\"/><text x=\"160\" y=\"215\" font-size=\"11\" fill=\"#b91c1c\">By heating (wasted)</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "8. Sankey diagrams",
+    "p": "A **Sankey diagram** shows the sizes of energy transfers. The width of each arrow is proportional to the amount of energy it represents. Useful energy usually goes straight on; wasted energy bends away (usually downwards).",
+    "bullets": [
+     "**Arrow width ∝ amount of energy**",
+     "Input on the left; outputs on the right",
+     "Total width in = total width out (conservation of energy)",
+     "Useful output usually goes straight; wasted output bends off",
+     "To read one: count squares or measure widths and multiply by the scale (e.g. 1 small square = 10 J)",
+     "To draw one: choose a scale, check the output widths add up to the input width"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Missing values",
+      "p": "If one output is missing, subtract the known outputs from the input: wasted energy = input − useful output."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Sankey diagram for a filament lamp. For every 100 J transferred electrically, only 10 J is transferred usefully as light; 90 J is dissipated by heating to the thermal store of the surroundings. The output widths add up to the input width because energy is conserved.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#ffffff\"/><rect x=\"20\" y=\"60\" width=\"180\" height=\"100\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"1.5\"/><text x=\"40\" y=\"104\" font-size=\"12\" fill=\"#1b2540\">Electrical input</text><text x=\"70\" y=\"122\" font-size=\"12\" fill=\"#1b2540\">100 J</text><rect x=\"200\" y=\"60\" width=\"130\" height=\"10\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"1.5\"/><polygon points=\"330,52 352,65 330,78\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"1.5\"/><text x=\"230\" y=\"46\" font-size=\"12\" fill=\"#15803d\">Light 10 J (useful)</text><path d=\"M200,70 Q290,70 290,160 L290,195 L310,195 L245,232 L180,195 L200,195 L200,160 Z\" fill=\"#fecaca\" stroke=\"#b91c1c\" stroke-width=\"1.5\"/><text x=\"318\" y=\"190\" font-size=\"12\" fill=\"#b91c1c\">Thermal 90 J</text><text x=\"318\" y=\"206\" font-size=\"12\" fill=\"#b91c1c\">(wasted)</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "9. Object projected upwards or up a slope",
+    "p": "When you throw a ball upwards, energy starts in its kinetic store. As it rises it slows down and gains height, so energy is transferred mechanically (by the work done by its weight) from the kinetic store to the gravitational potential store.",
+    "bullets": [
+     "Launch: kinetic store maximum, GPE store minimum",
+     "Rising: kinetic store decreases, gravitational potential store increases",
+     "Top: momentarily stationary, kinetic store zero (for a vertical throw), GPE store maximum",
+     "Falling: the reverse transfer, GPE → kinetic",
+     "Up a slope (e.g. a cyclist freewheeling uphill): kinetic → GPE, with some energy dissipated by friction and air resistance to thermal stores",
+     "With air resistance, the ball does not reach the height it would in a vacuum, because some energy is dissipated"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Ideal case",
+      "p": "Ignoring air resistance, KE lost = GPE gained, so ½mv² = mgΔh."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A ball thrown vertically upwards. At launch the energy is all in its kinetic store; as it rises the kinetic store empties into the gravitational potential store; at the top it is momentarily at rest with the GPE store at its maximum (ignoring air resistance).",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"u1\" markerWidth=\"8\" markerHeight=\"8\" refX=\"4\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#1b2540\"/></marker></defs><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#ffffff\"/><rect x=\"0\" y=\"212\" width=\"120\" height=\"28\" fill=\"#bbf7d0\" stroke=\"#15803d\"/><text x=\"10\" y=\"231\" font-size=\"12\" fill=\"#15803d\">Ground</text><circle cx=\"55\" cy=\"40\" r=\"12\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"1.5\"/><circle cx=\"55\" cy=\"120\" r=\"12\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"1.5\" stroke-dasharray=\"3 2\"/><circle cx=\"55\" cy=\"196\" r=\"12\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"1.5\" stroke-dasharray=\"3 2\"/><line x1=\"95\" y1=\"200\" x2=\"95\" y2=\"45\" stroke=\"#1b2540\" stroke-width=\"1.5\" marker-end=\"url(#u1)\"/><rect x=\"130\" y=\"10\" width=\"10\" height=\"10\" fill=\"#dbeafe\" stroke=\"#1e40af\"/><text x=\"145\" y=\"19\" font-size=\"12\" fill=\"#1e40af\">GPE store</text><rect x=\"230\" y=\"10\" width=\"10\" height=\"10\" fill=\"#fecaca\" stroke=\"#b91c1c\"/><text x=\"245\" y=\"19\" font-size=\"12\" fill=\"#b91c1c\">Kinetic store</text><rect x=\"130\" y=\"34\" width=\"120\" height=\"14\" fill=\"#dbeafe\" stroke=\"#1e40af\"/><text x=\"258\" y=\"45\" font-size=\"12\" fill=\"#1b2540\">Top: GPE max</text><rect x=\"130\" y=\"114\" width=\"60\" height=\"14\" fill=\"#dbeafe\" stroke=\"#1e40af\"/><rect x=\"190\" y=\"114\" width=\"60\" height=\"14\" fill=\"#fecaca\" stroke=\"#b91c1c\"/><text x=\"258\" y=\"125\" font-size=\"12\" fill=\"#1b2540\">Rising: KE → GPE</text><rect x=\"130\" y=\"189\" width=\"120\" height=\"14\" fill=\"#fecaca\" stroke=\"#b91c1c\"/><text x=\"258\" y=\"200\" font-size=\"12\" fill=\"#1b2540\">Launch: KE max</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "10. Moving object hitting an obstacle",
+    "p": "When a moving object hits something and stops, its kinetic store empties. The energy is transferred mechanically (by the forces in the collision) to other stores, mostly thermal stores, plus some by sound.",
+    "bullets": [
+     "Kinetic store of the object decreases to zero (or less, if it bounces)",
+     "Energy transferred mechanically to the thermal stores of the object and the obstacle (they warm up slightly)",
+     "Some energy is transferred by sound (radiation) to the surroundings, eventually ending in thermal stores",
+     "If the object deforms elastically (like a bouncing ball), some energy is briefly in the elastic potential store",
+     "Example: a car crumple zone transfers kinetic energy into deforming the metal, which ends up in thermal stores"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Bouncing ball",
+      "p": "A dropped ball never bounces back to its starting height because some energy is dissipated by heating and sound at each bounce."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "11. Object accelerated by a constant force",
+    "p": "When a constant force pushes an object and it speeds up, the force does work on it. Energy is transferred mechanically into the kinetic store of the object. The energy comes from whatever is providing the force.",
+    "bullets": [
+     "A person pushing a trolley: chemical store of the person → (mechanically) kinetic store of the trolley",
+     "An electric car: chemical store of the battery → (electrically) motor → (mechanically) kinetic store of the car",
+     "A falling object: the constant force is its weight; GPE store → kinetic store",
+     "Work done by the force = force × distance = gain in kinetic energy (if no friction)",
+     "With friction, some energy is dissipated to thermal stores, so the gain in KE is less than the work done by the pushing force"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "12. Vehicle slowing down",
+    "p": "A car slowing down has a decreasing kinetic store. The brakes apply a friction force, so energy is transferred mechanically from the kinetic store of the car to the thermal stores of the brakes, which then dissipate it by heating to the surroundings.",
+    "bullets": [
+     "Kinetic store of car decreases",
+     "Work done by friction between brake pads and discs: energy transferred mechanically",
+     "Thermal store of the brakes increases (brakes get hot)",
+     "Energy then transferred by heating to the thermal store of the surroundings",
+     "Some energy also transferred by sound",
+     "Regenerative braking in electric cars transfers some energy back to the chemical store of the battery instead of wasting it"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Name both ends",
+      "p": "Do not just write 'kinetic to heat'. Write 'kinetic store of the car to the thermal store of the brakes and surroundings'."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "13. Bringing water to a boil in an electric kettle",
+    "p": "An electric kettle is a classic example of electrical work leading to heating. Most of the energy ends up where we want it, in the water, but some always escapes.",
+    "bullets": [
+     "Energy transferred **electrically** from the mains supply to the heating element",
+     "The element's thermal store increases; energy is then transferred **by heating** to the thermal store of the water (useful)",
+     "The temperature of the water rises because its thermal store increases",
+     "Some energy is transferred by heating to the thermal store of the kettle itself and to the surrounding air (wasted)",
+     "Some energy is transferred by sound as the water boils",
+     "Total energy supplied = energy to water + energy to kettle and surroundings"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Electricity is a pathway",
+      "p": "Say 'energy is transferred electrically', never 'electrical energy store'."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Energy as water in tanks joined by pipes",
+   "p": "Imagine each energy store as a water tank and each transfer pathway as a pipe between tanks. When a ball is thrown up, water flows from the 'kinetic' tank to the 'gravitational' tank, and back on the way down. Leaky joints drip water onto the floor, which spreads into a thin puddle you cannot scoop back up: that is dissipation to the thermal store of the surroundings. If you put the whole room inside a sealed box (a closed system), the total amount of water never changes. Where it breaks down: water is a real substance you can see, but energy is an abstract quantity we calculate; also, energy is never truly 'spilled', the puddle is still a store, just a less useful one."
+  },
+  "terms": [
+   {
+    "t": "Energy store",
+    "d": "A way in which energy is held, e.g. kinetic, gravitational potential, elastic potential, thermal, chemical, nuclear, magnetic, electrostatic."
+   },
+   {
+    "t": "Energy transfer",
+    "d": "The movement of energy from one store to another."
+   },
+   {
+    "t": "Transfer pathway",
+    "d": "The way energy moves between stores: mechanically, electrically, by heating or by radiation."
+   },
+   {
+    "t": "Mechanically",
+    "d": "Energy transferred when a force does work by moving an object."
+   },
+   {
+    "t": "Electrically",
+    "d": "Energy transferred when charges move through a circuit and do work."
+   },
+   {
+    "t": "By heating",
+    "d": "Energy transferred from a hotter object to a cooler one because of a temperature difference."
+   },
+   {
+    "t": "By radiation",
+    "d": "Energy transferred by waves, such as light, infrared or sound."
+   },
+   {
+    "t": "Conservation of energy",
+    "d": "Energy can be transferred usefully, stored or dissipated, but cannot be created or destroyed."
+   },
+   {
+    "t": "System",
+    "d": "An object or group of objects being studied."
+   },
+   {
+    "t": "Closed system",
+    "d": "A system that no energy can enter or leave, so there is no net change to its total energy."
+   },
+   {
+    "t": "Dissipation",
+    "d": "The spreading out of energy into the surroundings, usually into thermal stores, so it is less useful."
+   },
+   {
+    "t": "Useful energy",
+    "d": "Energy transferred to the store where it is wanted."
+   },
+   {
+    "t": "Wasted energy",
+    "d": "Energy transferred to stores where it is not wanted, usually thermal stores of the surroundings."
+   },
+   {
+    "t": "Sankey diagram",
+    "d": "A diagram in which the width of each arrow is proportional to the amount of energy transferred."
+   },
+   {
+    "t": "Work done",
+    "d": "Energy transferred when a force moves an object; work done = force × distance moved in the direction of the force."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Energy is lost as heat.",
+    "r": "Energy is dissipated by heating to the thermal store of the surroundings; it is not lost."
+   },
+   {
+    "w": "Electrical energy store or light energy store.",
+    "r": "Electricity and light are transfer pathways (electrically, by radiation), not stores."
+   },
+   {
+    "w": "Movement energy or heat energy.",
+    "r": "Use kinetic energy store and thermal energy store."
+   },
+   {
+    "w": "The energy is used up when the car stops.",
+    "r": "The kinetic store decreases and energy is transferred mechanically to thermal stores of the brakes and surroundings; total energy is conserved."
+   },
+   {
+    "w": "In a closed system energy stays in the same store.",
+    "r": "Energy can move between stores in a closed system; only the total stays the same (no net change)."
+   },
+   {
+    "w": "On a Sankey diagram the useful arrow is drawn long to show it is important.",
+    "r": "Arrow width, not length, is proportional to the energy."
+   },
+   {
+    "w": "Output widths on a Sankey diagram can add up to more than the input.",
+    "r": "Total output must equal total input because energy is conserved."
+   },
+   {
+    "w": "At the top of its flight a ball thrown upwards has no energy.",
+    "r": "It has zero kinetic energy (for a vertical throw) but its gravitational potential store is at maximum."
+   },
+   {
+    "w": "A kettle heats water by transferring heat electrically to the water.",
+    "r": "Energy is transferred electrically to the element, then by heating to the thermal store of the water."
+   }
+  ],
+  "exam": [
+   {
+    "q": "State the law of conservation of energy.",
+    "marks": 1,
+    "model": [
+     "Energy cannot be created or destroyed (it can only be transferred usefully, stored or dissipated)"
+    ],
+    "tip": "Both 'created' and 'destroyed' must appear."
+   },
+   {
+    "q": "Name the energy store that increases when a spring is stretched.",
+    "marks": 1,
+    "model": [
+     "Elastic potential (energy store)"
+    ],
+    "tip": "Use the full name, not 'spring energy'."
+   },
+   {
+    "q": "Name two ways energy is transferred, other than mechanically.",
+    "marks": 2,
+    "model": [
+     "Electrically",
+     "By heating / by radiation"
+    ],
+    "tip": "Use the four pathway names exactly."
+   },
+   {
+    "q": "A filament lamp is supplied with 60 J of energy. It transfers 6 J usefully by light. Calculate the energy wasted and state where it goes.",
+    "marks": 2,
+    "model": [
+     "Wasted = 60 − 6 = 54 J",
+     "Transferred by heating to the thermal store of the surroundings"
+    ],
+    "tip": "Use conservation of energy: input = useful + wasted."
+   },
+   {
+    "q": "Explain what is meant by a closed system and what happens to the total energy in it.",
+    "marks": 2,
+    "model": [
+     "A system where no energy enters or leaves",
+     "There is no net change in the total energy (energy only moves between stores inside)"
+    ],
+    "tip": "Two clear statements: definition and consequence."
+   },
+   {
+    "q": "Describe the energy transfers when a ball is thrown vertically upwards until it reaches its highest point.",
+    "marks": 3,
+    "model": [
+     "Energy starts in the kinetic store of the ball",
+     "Transferred mechanically (work done by weight) to the gravitational potential store as it rises",
+     "At the top kinetic store is zero and GPE store is maximum (some dissipated by air resistance to thermal stores)"
+    ],
+    "tip": "Sequence the answer: start, during, end."
+   },
+   {
+    "q": "Describe the energy transfers when a moving car brakes and comes to rest.",
+    "marks": 3,
+    "model": [
+     "Kinetic store of the car decreases",
+     "Energy transferred mechanically by friction (work done) in the brakes",
+     "Thermal store of the brakes and surroundings increases (some by sound)"
+    ],
+    "tip": "Name the store, the pathway and the final store."
+   },
+   {
+    "q": "Draw a Sankey diagram for an electric motor that is supplied with 200 J and transfers 120 J to the kinetic store of a load, 60 J by heating and 20 J by sound. Use a scale of 1 mm = 2 J.",
+    "marks": 3,
+    "model": [
+     "Input arrow 100 mm wide labelled 200 J",
+     "Useful arrow 60 mm wide straight on labelled 120 J kinetic",
+     "Wasted arrows 30 mm (heating, 60 J) and 10 mm (sound, 20 J) bending away, widths adding to input"
+    ],
+    "tip": "Check output widths add up to the input width."
+   },
+   {
+    "q": "Describe the energy transfers involved in bringing water to the boil in an electric kettle. Identify which transfers are useful and which are wasted.",
+    "marks": 4,
+    "model": [
+     "Energy transferred electrically from the mains to the heating element",
+     "Then by heating to the thermal store of the water (useful)",
+     "Some transferred by heating to the thermal store of the kettle and surrounding air (wasted)",
+     "Some transferred by sound (wasted); total energy supplied = useful + wasted"
+    ],
+    "tip": "Label each transfer useful or wasted explicitly."
+   },
+   {
+    "q": "A skateboarder rolls down a ramp, along the flat and up a second ramp. She does not reach the same height on the second ramp. Using ideas about energy stores, transfers and conservation, explain the energy changes and why she does not reach the original height.",
+    "marks": 6,
+    "model": [
+     "At the top she has a maximum gravitational potential store",
+     "Going down, GPE store decreases and kinetic store increases (transferred mechanically by work done by her weight)",
+     "On the flat, kinetic store is maximum; friction and air resistance dissipate some energy",
+     "Going up the second ramp, kinetic store transferred to GPE store",
+     "Energy dissipated by friction/air resistance to the thermal store of the surroundings (and some by sound)",
+     "Energy is conserved, but less ends in the GPE store, so she cannot reach the original height"
+    ],
+    "tip": "Link every stage to a store change, then conclude with conservation and dissipation."
+   },
+   {
+    "q": "A student says a car braking breaks the law of conservation of energy because 'its energy disappears'. Explain why the student is wrong.",
+    "marks": 2,
+    "model": [
+     "The kinetic energy is transferred to the thermal store of the brakes / surroundings",
+     "The total energy is unchanged; it is dissipated, not destroyed"
+    ],
+    "tip": "Always say where the energy goes."
+   }
+  ],
+  "worked": [
+   {
+    "q": "An electric motor is supplied with 500 J of energy. It lifts a load, giving it 300 J of gravitational potential energy, and transfers 40 J by sound. Calculate the energy transferred by heating, and describe how you would represent this on a Sankey diagram.",
+    "steps": [
+     "Use conservation of energy: energy in = sum of energy out",
+     "Energy by heating = 500 − 300 − 40 = 160 J",
+     "Choose a scale, e.g. 1 mm = 5 J: input 100 mm wide",
+     "Useful arrow (GPE store of load) 60 mm wide, straight on",
+     "Wasted arrows bending downwards: heating 32 mm and sound 8 mm",
+     "Check: 60 + 32 + 8 = 100 mm, equal to the input width"
+    ],
+    "ans": "160 J is transferred by heating to the thermal store of the motor and surroundings; on the Sankey diagram the arrow widths are 100 mm in, 60 mm useful, 32 mm heating and 8 mm sound."
+   },
+   {
+    "q": "A ball is dropped, bounces several times and eventually comes to rest on the floor. Describe the energy transfers and explain how energy is conserved.",
+    "steps": [
+     "At the start: energy is in the gravitational potential store of the ball",
+     "Falling: GPE store decreases, kinetic store increases (transferred mechanically by the work done by its weight)",
+     "On impact: the ball squashes, so energy goes briefly into its elastic potential store, then back to kinetic as it rebounds",
+     "At each bounce some energy is transferred by heating to the thermal stores of the ball and floor, and by sound",
+     "Each bounce is lower because less energy remains in the kinetic and GPE stores",
+     "When it stops, all the original GPE has been dissipated to the thermal store of the surroundings"
+    ],
+    "ans": "The total energy is conserved: the original GPE ends up in the thermal store of the ball, floor and air (some via sound). None is destroyed; it is just dissipated and no longer useful."
+   },
+   {
+    "q": "A sealed, perfectly insulated flask contains hot water and a cold metal spoon. Explain what happens to the energy stores, treating the flask contents as a closed system.",
+    "steps": [
+     "No energy enters or leaves the flask, so it is a closed system",
+     "Energy is transferred by heating from the hotter water to the colder spoon",
+     "The thermal store of the water decreases; the thermal store of the spoon increases",
+     "Transfer continues until both are at the same temperature",
+     "The decrease in the water's thermal store equals the increase in the spoon's thermal store"
+    ],
+    "ans": "Energy moves between stores inside the flask, but there is no net change to the total energy of the closed system."
+   }
+  ],
+  "svg": [],
+  "pid": "phy_edx.2.1",
+  "sid": "phy_edx",
+  "v": 2,
+  "src": "pre",
+  "by": "claude/claude-opus-5-5",
+  "ts": "2026-11-25T01:27:07.475Z"
+ },
+ "phy_edx.2.2": {
+  "summary": "Whenever energy is transferred, some of it ends up in a form or place where it cannot do anything useful for us: this is **wasted energy**. Edexcel wants you to explain that **mechanical processes become wasteful when they cause a rise in temperature**, so energy is **dissipated** by heating the surroundings, and that in **all system changes** energy is dissipated so that it is **stored in less useful ways**. The total energy is always conserved, but once it has spread out thinly into the surroundings it is very hard to use again.",
+  "core": [
+   {
+    "h": "What wasted energy means",
+    "p": "Every device is built to transfer energy into one particular store, such as the kinetic store of a motor or the thermal store of the water in a kettle. Any energy that goes anywhere else is **wasted energy** (also called non-useful energy). It has not been destroyed, it has simply gone somewhere we did not want it.",
+    "bullets": [
+     "**Useful energy** = energy transferred to the store we want",
+     "**Wasted energy** = energy transferred to stores we do not want, usually the **thermal energy store of the surroundings**",
+     "Total energy supplied = useful energy + wasted energy (this comes straight from conservation of energy)",
+     "Whether energy counts as useful depends on the purpose of the device: in a hair dryer the heating is useful, in a laptop it is wasted",
+     "Most wasted energy ends up as a small rise in temperature of the device and the air around it"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Wasted energy",
+      "p": "Energy that is transferred to stores that are not useful, usually by heating the surroundings."
+     },
+     {
+      "k": "warn",
+      "t": "Never say energy is lost",
+      "p": "Writing that energy is 'lost' or 'used up' scores nothing. Say it is **transferred** or **dissipated** to the **surroundings**."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Mechanical processes become wasteful when they cause a rise in temperature",
+    "p": "This is the exact wording of the spec. When parts of a machine move against each other, **friction** acts between the surfaces. Doing work against friction transfers energy **mechanically** into the **thermal energy store** of the surfaces, so their temperature rises. The warm parts then transfer energy **by heating** to the cooler air around them. That energy is dissipated and can no longer drive the machine.",
+    "bullets": [
+     "Friction always opposes motion, so work must be done against it",
+     "Work done against friction raises the **temperature** of both rubbing surfaces",
+     "Hotter parts heat the surroundings by **conduction, convection and radiation**",
+     "Because energy goes into heating rather than movement, the machine does less useful work for the same energy input",
+     "Rule of thumb: if something gets warm and you did not want warmth, energy has been wasted"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "The chain to remember",
+      "p": "Work done against friction -> thermal energy store of surfaces increases -> temperature rises -> energy dissipated by heating the surroundings."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Pushing a block across a rough surface. Work done against friction heats both surfaces, and the warm surfaces then heat the air, so the energy is dissipated to the surroundings.",
+      "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><defs><marker id='ah' markerWidth='8' markerHeight='8' refX='6' refY='4' orient='auto'><path d='M0 0 L8 4 L0 8 Z' fill='#1b2540'/></marker><marker id='ar' markerWidth='8' markerHeight='8' refX='6' refY='4' orient='auto'><path d='M0 0 L8 4 L0 8 Z' fill='#b91c1c'/></marker></defs><rect x='20' y='160' width='360' height='35' fill='#e9d5ff' stroke='#6b21a8'/><rect x='150' y='110' width='100' height='50' fill='#dbeafe' stroke='#1b2540' stroke-width='2'/><text x='178' y='140' font-size='12' fill='#1b2540'>Block</text><line x1='40' y1='135' x2='146' y2='135' stroke='#1b2540' stroke-width='3' marker-end='url(#ah)'/><text x='60' y='125' font-size='12' fill='#1b2540'>Push</text><line x1='250' y1='178' x2='160' y2='178' stroke='#b91c1c' stroke-width='3' marker-end='url(#ar)'/><text x='265' y='182' font-size='12' fill='#b91c1c'>Friction</text><text x='30' y='182' font-size='12' fill='#6b21a8'>Rough surface</text><text x='258' y='130' font-size='12' fill='#b45309'>Surfaces heat up</text><path d='M170 100 Q175 92 170 84 Q165 76 170 68' fill='none' stroke='#dc2626' stroke-width='2'/><path d='M200 100 Q205 92 200 84 Q195 76 200 68' fill='none' stroke='#dc2626' stroke-width='2'/><path d='M230 100 Q235 92 230 84 Q225 76 230 68' fill='none' stroke='#dc2626' stroke-width='2'/><text x='130' y='45' font-size='12' fill='#1b2540'>Energy dissipated to air</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Examples of friction wasting energy in machines",
+    "p": "Almost every machine with moving parts wastes some energy through friction. You should be able to name the parts that rub and say where the energy goes.",
+    "bullets": [
+     "**Electric motor**: friction in the bearings (where the axle turns) heats the motor",
+     "**Car engine and gearbox**: metal parts sliding over each other heat up, which is why engines need oil and a cooling system",
+     "**Bicycle**: friction in the chain, gears and wheel hubs warms them slightly",
+     "**Drill bit**: becomes hot while drilling because of friction with the material",
+     "**Rubbing your hands together**: a deliberate example where the warmth is useful",
+     "**Brakes**: here the transfer to the thermal store is deliberate, the brake pads and discs heat up so the kinetic store of the vehicle decreases"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Name the store",
+      "p": "Mark schemes reward 'kinetic energy store decreases, thermal energy store of the brakes and surroundings increases'. Vague answers such as 'heat is made' lose marks."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Air resistance and drag",
+    "p": "Air resistance is a type of friction that acts on objects moving through air (drag is the general name for this in any fluid). The moving object pushes air particles out of the way, doing work on them. This increases the kinetic store of the air particles and warms the air and the object slightly.",
+    "bullets": [
+     "Air resistance increases with speed, so faster vehicles waste more energy per second",
+     "Energy transferred against air resistance ends up in the **thermal energy store of the surroundings**",
+     "A falling object that reaches terminal velocity has a constant kinetic store, so all of the gravitational potential energy it loses is dissipated against air resistance",
+     "Streamlining reduces air resistance and so reduces wasted energy"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Electrical heating as wasted energy",
+    "p": "When a current flows through a wire or component that has resistance, energy is transferred **electrically** and some goes into the **thermal energy store** of the wire. In a heater that is the purpose, but in most devices it is wasted.",
+    "bullets": [
+     "Charges collide with the ions in the metal, making the ions vibrate more so the temperature rises",
+     "Phone chargers, laptops, TVs and light bulbs all get warm: that warmth is wasted energy",
+     "Filament lamps waste most of their energy input by heating, which is why LEDs are now preferred",
+     "Power lines warm up slightly, dissipating energy to the surroundings"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Sound as wasted energy",
+    "p": "Many devices make noise even though that is not their job. Sound is a transfer of energy by vibrations of particles. The energy carried by sound waves spreads out and is eventually absorbed by the surroundings, ending up in their **thermal energy store**.",
+    "bullets": [
+     "Examples: hum of a motor, noise of a hairdryer fan, rumble of a car engine",
+     "Sound is usually wasted unless the device is a speaker, alarm or musical instrument",
+     "Even useful sound from a speaker eventually warms the room very slightly once it is absorbed",
+     "So sound is a pathway, and the final destination is still the thermal store of the surroundings"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Where it all ends up",
+      "p": "Whatever the route (friction, sound, light, electrical heating), wasted energy finally ends up in the thermal energy store of the surroundings."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Dissipation: energy spreading out",
+    "p": "**Dissipation** means energy spreading out into the surroundings. The spec says that in **all system changes**, energy is dissipated so that it is **stored in less useful ways**. Before a change, energy is often concentrated in one place (fuel, a battery, a hot object, a raised mass). After the change, some of it is spread thinly over a huge number of particles in the air, ground and objects around.",
+    "bullets": [
+     "Concentrated energy is useful because it can be made to do work",
+     "Spread-out energy causes only a **tiny rise in temperature** of a very large mass of material",
+     "Energy at a temperature only slightly above the surroundings cannot easily be transferred to anything useful",
+     "Dissipation happens in **every** real energy transfer: no change is perfectly efficient",
+     "Dissipation is one-way in practice: a warm room never spontaneously reheats your cold cup of tea"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Dissipated",
+      "p": "Energy that has spread out into the surroundings, usually by heating, so that it is stored in less useful ways."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A cup of hot tea cooling. Before, energy is concentrated in the tea's thermal store. After, the same energy is spread through the whole room, raising its temperature by a tiny amount, so it is stored in a less useful way.",
+      "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><defs><marker id='hb' markerWidth='8' markerHeight='8' refX='6' refY='4' orient='auto'><path d='M0 0 L8 4 L0 8 Z' fill='#dc2626'/></marker></defs><rect x='10' y='30' width='180' height='195' fill='#dbeafe' stroke='#1b2540' stroke-width='2'/><rect x='210' y='30' width='180' height='195' fill='#fde68a' stroke='#1b2540' stroke-width='2'/><text x='20' y='50' font-size='13' fill='#1b2540'>Before</text><text x='220' y='50' font-size='13' fill='#1b2540'>After</text><rect x='70' y='110' width='60' height='60' fill='#fecaca' stroke='#b91c1c' stroke-width='2'/><text x='60' y='100' font-size='12' fill='#b91c1c'>Hot tea 90 °C</text><line x1='132' y1='140' x2='178' y2='140' stroke='#dc2626' stroke-width='2' marker-end='url(#hb)'/><line x1='68' y1='140' x2='22' y2='140' stroke='#dc2626' stroke-width='2' marker-end='url(#hb)'/><text x='22' y='200' font-size='12' fill='#1b2540'>Concentrated store</text><rect x='270' y='110' width='60' height='60' fill='#dbeafe' stroke='#1b2540' stroke-width='2'/><text x='270' y='100' font-size='12' fill='#1b2540'>Tea 20 °C</text><text x='222' y='196' font-size='12' fill='#92400e'>Room slightly warmer</text><text x='222' y='214' font-size='12' fill='#92400e'>Spread out, less useful</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Why dissipated energy is less useful",
+    "p": "Grade 9 answers explain WHY dissipated energy is hard to use. To get useful work from thermal energy you need a **temperature difference**, so that energy flows from hot to cold. Once energy has spread out and everything is at nearly the same temperature, there is almost no temperature difference left to drive a useful transfer.",
+    "bullets": [
+     "The energy is shared among an enormous number of particles, so each particle has only a little extra",
+     "The temperature rise of the surroundings is so small it is often unnoticeable",
+     "It is spread over a large volume, so it is impractical to collect",
+     "It cannot easily be transferred back into a concentrated store such as a chemical or kinetic store",
+     "This is why we keep needing new energy resources even though energy is conserved"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Six-mark gold",
+      "p": "Link three ideas: energy is conserved, but it is dissipated to the surroundings, so it is spread out at low temperature and stored in less useful ways."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Conservation of energy still applies",
+    "p": "Wasted energy does not break the law of conservation of energy. Energy cannot be created or destroyed, only transferred between stores. If you include the surroundings in your system, the total energy before and after any change is exactly the same. What changes is how useful the energy is, not how much there is.",
+    "bullets": [
+     "Total energy in = useful energy out + wasted energy out",
+     "In a **closed system** there is no net change to the total energy",
+     "The wasted energy is still there, just in the thermal store of the surroundings",
+     "This equation lets you calculate wasted energy: wasted = total supplied - useful"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Conserved does not mean reusable",
+      "p": "Students sometimes argue that because energy is conserved there can be no energy crisis. Energy is conserved but it becomes dissipated and less useful, so we still need concentrated energy resources."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Examples of dissipation in everyday system changes",
+    "p": "Edexcel asks you to explain dissipation **using examples**. Learn several, with the useful store and the wasted pathway for each.",
+    "bullets": [
+     "Use the exact store names: kinetic, gravitational potential, chemical, thermal, elastic potential, magnetic, electrostatic, nuclear",
+     "Describe the pathway: mechanically, electrically, by heating, by radiation (light and infrared)",
+     "Always finish with 'dissipated to the surroundings'"
+    ],
+    "table": {
+     "head": [
+      "System change",
+      "Useful transfer",
+      "Wasted / dissipated"
+     ],
+     "rows": [
+      [
+       "Electric motor lifting a load",
+       "Electrical -> gravitational potential store of load",
+       "Heating of motor by friction and resistance; sound"
+      ],
+      [
+       "Car accelerating",
+       "Chemical store of fuel -> kinetic store of car",
+       "Thermal store of engine and air; sound; work against air resistance"
+      ],
+      [
+       "Filament lamp",
+       "Electrical -> light (radiation)",
+       "Most energy heats the bulb and surroundings"
+      ],
+      [
+       "Kettle boiling water",
+       "Electrical -> thermal store of water",
+       "Heating of kettle body and air; sound"
+      ],
+      [
+       "Pendulum swinging",
+       "Swaps between gravitational potential and kinetic stores",
+       "Air resistance and friction at pivot heat surroundings, so swings get smaller"
+      ],
+      [
+       "Ball bouncing",
+       "Gravitational potential <-> kinetic <-> elastic potential",
+       "Heating of ball and ground on impact, sound, air resistance"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Bouncing balls and swinging pendulums",
+    "p": "These are favourite exam contexts because you can see the energy being dissipated. Each bounce or swing is lower than the one before, which tells you the useful mechanical energy is decreasing and the thermal store of the surroundings is increasing.",
+    "bullets": [
+     "A ball never returns to its starting height because some energy is dissipated at each bounce",
+     "On impact the ball and ground squash: some energy heats them and some is carried away as sound",
+     "Air resistance acts throughout the motion",
+     "Eventually the ball stops: all of the original gravitational potential energy has been dissipated to the surroundings",
+     "Lower peak height means smaller gravitational potential store, since GPE = m x g x h"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": [
+     {
+      "cap": "A ball dropped onto the ground. Each peak is lower because at every bounce energy is dissipated by heating the ball, ground and air and by sound, until eventually the ball comes to rest.",
+      "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><rect x='20' y='200' width='360' height='12' fill='#bbf7d0' stroke='#166534'/><path d='M40 40 Q70 120 80 200 Q120 -20 160 200 Q200 60 240 200 Q280 120 320 200' fill='none' stroke='#2563eb' stroke-width='2' stroke-dasharray='5 3'/><circle cx='40' cy='40' r='10' fill='#fecaca' stroke='#b91c1c' stroke-width='2'/><text x='56' y='44' font-size='12' fill='#1b2540'>Start height</text><line x1='20' y1='40' x2='380' y2='40' stroke='#94a3b8' stroke-dasharray='3 3'/><text x='236' y='112' font-size='12' fill='#1b2540'>Lower each bounce</text><text x='330' y='196' font-size='12' fill='#166534'>Ground</text><text x='40' y='232' font-size='12' fill='#b91c1c'>Dissipated: heat and sound</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Showing wasted energy on a Sankey diagram",
+    "p": "A Sankey diagram shows energy transfers with arrows whose **width is proportional to the amount of energy**. The useful energy goes straight on and the wasted energy bends away (usually downwards). The widths of the output arrows must add up to the width of the input arrow, which shows energy is conserved.",
+    "bullets": [
+     "Input arrow on the left, full width",
+     "Useful output continues to the right",
+     "Wasted output curves away, often labelled 'thermal energy to surroundings'",
+     "You may be asked to read values from a squared grid, or to calculate a missing value by subtraction"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": [
+     {
+      "cap": "Sankey diagram for an electric motor: 100 J of electrical energy goes in, 70 J ends up in the kinetic store (useful) and 30 J is dissipated by heating the surroundings. 70 J + 30 J = 100 J shows energy is conserved.",
+      "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><text x='20' y='30' font-size='13' fill='#1b2540'>Electric motor</text><rect x='20' y='60' width='180' height='100' fill='#fde68a' stroke='#92400e' stroke-width='2'/><text x='35' y='115' font-size='12' fill='#1b2540'>Electrical 100 J</text><polygon points='200,60 330,60 330,50 372,95 330,140 330,130 200,130' fill='#bbf7d0' stroke='#166534' stroke-width='2'/><text x='207' y='99' font-size='12' fill='#14532d'>Useful kinetic 70 J</text><path d='M200 130 L235 130 Q250 130 250 145 L250 190 L262 190 L235 225 L208 190 L220 190 L220 160 L200 160 Z' fill='#fecaca' stroke='#b91c1c' stroke-width='2'/><text x='268' y='180' font-size='12' fill='#b91c1c'>Wasted thermal 30 J</text><text x='268' y='210' font-size='12' fill='#b91c1c'>To surroundings</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Writing top-mark answers about wasted energy",
+    "p": "Exam questions on this point are mostly 'explain' questions. Examiners look for a clear chain: what causes the waste, which store the energy goes into, and what happens to it afterwards.",
+    "bullets": [
+     "Start with the cause: friction, air resistance, electrical resistance, sound",
+     "State the store: **thermal energy store** of the device and the surroundings",
+     "Use the word **dissipated** and say it is **spread out** into the **surroundings**",
+     "Explain the consequence: stored in less useful ways, cannot be easily used again",
+     "Mention that the total energy is unchanged (conservation) when the question invites it"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Command words",
+      "p": "'State' needs a fact; 'explain' needs a reason with 'because' or 'so'; 'describe' needs what happens in order."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Spilled sugar",
+   "p": "Energy in a useful store is like a bag of sugar: concentrated and easy to use. Every energy transfer is like pouring some sugar into your tea but spilling a few grains across a huge kitchen floor each time. The total amount of sugar is unchanged (conservation), but the spilled grains are spread so thinly that collecting them again is practically impossible, so they are stored in a less useful way. Where it breaks down: sugar grains are separate objects you could in principle sweep up, whereas dissipated energy is shared among countless particles as a tiny temperature rise, and energy is not a substance at all."
+  },
+  "terms": [
+   {
+    "t": "Energy store",
+    "d": "A way in which energy is held, such as kinetic, gravitational potential, chemical, thermal, elastic potential, magnetic, electrostatic or nuclear."
+   },
+   {
+    "t": "Useful energy",
+    "d": "Energy transferred to the store that the device is designed to fill."
+   },
+   {
+    "t": "Wasted energy",
+    "d": "Energy transferred to stores that are not useful, usually the thermal store of the surroundings."
+   },
+   {
+    "t": "Dissipation",
+    "d": "The spreading out of energy into the surroundings so that it is stored in less useful ways."
+   },
+   {
+    "t": "Surroundings",
+    "d": "Everything outside the system being studied, such as the air, ground and nearby objects."
+   },
+   {
+    "t": "Thermal energy store",
+    "d": "The energy an object has because of the motion of its particles; it increases when its temperature rises."
+   },
+   {
+    "t": "Friction",
+    "d": "A force that opposes motion when surfaces move or try to move over each other; work done against it heats the surfaces."
+   },
+   {
+    "t": "Air resistance",
+    "d": "A frictional force acting on an object moving through air, which transfers energy to the surroundings."
+   },
+   {
+    "t": "Work done",
+    "d": "Energy transferred when a force moves an object through a distance in the direction of the force."
+   },
+   {
+    "t": "Mechanical transfer",
+    "d": "Energy transferred when a force acts to move something."
+   },
+   {
+    "t": "Transfer by heating",
+    "d": "Energy transferred from a hotter object to a cooler one because of a temperature difference."
+   },
+   {
+    "t": "Conservation of energy",
+    "d": "Energy cannot be created or destroyed, only transferred usefully, stored or dissipated."
+   },
+   {
+    "t": "Closed system",
+    "d": "A system in which no energy enters or leaves, so the total energy does not change."
+   },
+   {
+    "t": "Sankey diagram",
+    "d": "An energy transfer diagram where the width of each arrow is proportional to the amount of energy."
+   },
+   {
+    "t": "Temperature difference",
+    "d": "The difference in temperature between two places, needed for energy to be transferred by heating."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "The energy is lost.",
+    "r": "The energy is transferred (dissipated) to the thermal energy store of the surroundings."
+   },
+   {
+    "w": "Energy is used up when a device works.",
+    "r": "Energy is conserved; it is transferred to other stores and some is dissipated."
+   },
+   {
+    "w": "Friction creates heat.",
+    "r": "Work done against friction transfers energy to the thermal store of the surfaces, raising their temperature."
+   },
+   {
+    "w": "Heat energy / sound energy stores.",
+    "r": "Thermal energy store; sound is a way energy is transferred, not a store."
+   },
+   {
+    "w": "Wasted energy disappears after a while.",
+    "r": "It spreads out into the surroundings and is stored in less useful ways, but the total is unchanged."
+   },
+   {
+    "w": "A bouncing ball stops because it runs out of energy.",
+    "r": "Energy is dissipated at each bounce by heating and sound, so the gravitational potential store at each peak gets smaller."
+   },
+   {
+    "w": "Dissipated energy can easily be reused because energy is conserved.",
+    "r": "Dissipated energy is spread thinly at a temperature close to the surroundings, so it is difficult to use."
+   },
+   {
+    "w": "Brakes waste energy as friction.",
+    "r": "Brakes deliberately transfer energy from the kinetic store to the thermal store of the brakes, which is then dissipated to the surroundings."
+   }
+  ],
+  "exam": [
+   {
+    "q": "State what is meant by the word dissipated when describing energy.",
+    "marks": 1,
+    "model": [
+     "Energy spreads out (to the surroundings) and is stored in less useful ways."
+    ],
+    "tip": "Include 'spread out' and 'surroundings'."
+   },
+   {
+    "q": "Name the energy store that wasted energy usually ends up in.",
+    "marks": 1,
+    "model": [
+     "Thermal energy store (of the surroundings)."
+    ],
+    "tip": "Write 'thermal', not 'heat'."
+   },
+   {
+    "q": "An electric drill becomes hot when it is used. Explain why this shows that energy has been wasted.",
+    "marks": 2,
+    "model": [
+     "Friction between moving parts / current in the motor transfers energy to the thermal store of the drill.",
+     "This energy is dissipated to the surroundings and is not used to turn the drill bit."
+    ],
+    "tip": "Give a cause and a destination."
+   },
+   {
+    "q": "Explain why mechanical processes become wasteful when they cause a rise in temperature.",
+    "marks": 2,
+    "model": [
+     "Work done against friction transfers energy to the thermal store of the parts (raising their temperature).",
+     "This energy is dissipated by heating the surroundings, so less energy is transferred to the useful store."
+    ],
+    "tip": "This mirrors spec wording; use 'dissipating' and 'heating the surroundings'."
+   },
+   {
+    "q": "A motor is supplied with 500 J of electrical energy. 380 J is transferred to the kinetic store of the load. Calculate the energy wasted.",
+    "marks": 2,
+    "model": [
+     "Wasted energy = 500 - 380",
+     "= 120 J"
+    ],
+    "tip": "Conservation of energy: total in = useful + wasted."
+   },
+   {
+    "q": "A ball is dropped from a height and bounces. Explain why each bounce is lower than the previous one.",
+    "marks": 3,
+    "model": [
+     "Energy is transferred away at each bounce by heating of the ball and ground / sound.",
+     "Work is done against air resistance, heating the air.",
+     "So less energy is in the gravitational potential store at each peak, so the height is lower (GPE = mgh)."
+    ],
+    "tip": "Link the energy decrease to the height using GPE."
+   },
+   {
+    "q": "Give two ways energy is wasted by a car engine.",
+    "marks": 2,
+    "model": [
+     "Heating of the engine and surroundings (by friction between moving parts / hot exhaust).",
+     "Sound."
+    ],
+    "tip": "Two different pathways, not two wordings of one idea."
+   },
+   {
+    "q": "Explain why the energy dissipated from a cooling cup of tea is stored in a less useful way.",
+    "marks": 3,
+    "model": [
+     "The energy spreads out into a large mass of air / surroundings.",
+     "The temperature of the surroundings rises by only a very small amount.",
+     "So it is difficult to transfer it to a useful store / cannot easily be concentrated again."
+    ],
+    "tip": "Grade 9 answers mention the tiny temperature rise."
+   },
+   {
+    "q": "A student says 'energy is conserved, so we will never run out of energy'. Evaluate this statement.",
+    "marks": 4,
+    "model": [
+     "It is true that energy is conserved / total energy is unchanged.",
+     "But in every energy transfer some energy is dissipated to the surroundings.",
+     "Dissipated energy is spread out and stored in less useful ways.",
+     "So we cannot easily reuse it and need concentrated energy resources; the statement is wrong."
+    ],
+    "tip": "Evaluate means give both sides then a judgement."
+   },
+   {
+    "q": "Describe, using examples, how energy is dissipated in system changes. Your answer should refer to at least two different devices or situations.",
+    "marks": 6,
+    "model": [
+     "Energy is dissipated in all system changes / no transfer is 100% efficient.",
+     "Example: in an electric motor, friction in bearings and resistance in coils heat the motor.",
+     "Example: in a car, work done against air resistance and friction heats the car and air; sound is produced.",
+     "Example: a swinging pendulum slows as air resistance and friction at the pivot heat the surroundings.",
+     "The wasted energy ends up in the thermal energy store of the surroundings.",
+     "It is spread out thinly so it is stored in less useful ways and is hard to recover, although total energy is conserved."
+    ],
+    "tip": "Structure: general idea, two or three examples with stores named, then why dissipated energy is less useful."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A lamp is supplied with 200 J of electrical energy. It transfers 30 J by light. How much energy is dissipated, and where does it go?",
+    "steps": [
+     "Use conservation: total supplied = useful + wasted.",
+     "Wasted = 200 J - 30 J = 170 J.",
+     "The wasted energy heats the lamp, which heats the surrounding air by conduction, convection and radiation.",
+     "It ends up in the thermal energy store of the surroundings."
+    ],
+    "ans": "170 J is dissipated to the thermal energy store of the surroundings."
+   },
+   {
+    "q": "Model answer: explain why a pendulum eventually stops swinging.",
+    "steps": [
+     "As the pendulum swings, energy is transferred between its gravitational potential and kinetic stores.",
+     "Work is done against air resistance and against friction at the pivot.",
+     "This transfers energy to the thermal store of the pivot and the air, so the temperature rises slightly.",
+     "This energy is dissipated to the surroundings, so the total of the gravitational potential and kinetic stores decreases each swing.",
+     "The maximum height of each swing gets smaller until the pendulum stops."
+    ],
+    "ans": "It stops because energy is dissipated by heating the surroundings via friction and air resistance, so its mechanical energy decreases to zero."
+   },
+   {
+    "q": "A falling sky-diver reaches terminal velocity and falls a further 100 m, losing 60 000 J of gravitational potential energy. How much energy is dissipated?",
+    "steps": [
+     "At terminal velocity the speed is constant, so the kinetic store does not change.",
+     "So none of the GPE lost goes into the kinetic store.",
+     "All of it is transferred by doing work against air resistance.",
+     "Energy dissipated = 60 000 J."
+    ],
+    "ans": "60 000 J is dissipated to the thermal store of the air and sky-diver."
+   }
+  ],
+  "svg": [],
+  "pid": "phy_edx.2.2",
+  "sid": "phy_edx",
+  "v": 2,
+  "src": "pre",
+  "by": "claude/claude-opus-5-5",
+  "ts": "2026-11-25T01:27:07.481Z"
+ },
+ "phy_edx.2.3": {
+  "summary": "Because wasted energy is dissipated to the surroundings, engineers try to stop it happening in the first place. Edexcel wants you to explain ways of **reducing unwanted energy transfers**, especially **lubrication** (which reduces friction between moving parts) and **thermal insulation** (which reduces energy transfer by heating). You must also describe, qualitatively, how the **thickness** and the **thermal conductivity** of a building's walls affect its **rate of cooling**: thicker walls and materials with lower thermal conductivity make a building cool more slowly.",
+  "core": [
+   {
+    "h": "Why reduce unwanted energy transfers?",
+    "p": "Every unwanted energy transfer is energy that is dissipated to the surroundings instead of doing a useful job. Reducing these transfers means less energy has to be supplied for the same useful output. That saves money, saves fuel resources and reduces pollution from power stations.",
+    "bullets": [
+     "Mechanical waste is mostly caused by **friction** and **air resistance**",
+     "Thermal waste is mostly energy escaping **by heating**: conduction, convection and radiation",
+     "The two main methods named in the spec are **lubrication** and **thermal insulation**",
+     "Reducing unwanted transfers increases the **efficiency** of a device or building",
+     "Lower energy bills and lower carbon dioxide emissions are the usual real-world benefits"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Big idea",
+      "p": "You cannot destroy wasted energy, but you can reduce how much is transferred to unwanted stores in the first place."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Lubrication: how it reduces friction",
+    "p": "Even surfaces that look smooth are covered in tiny bumps when seen under a microscope. When two surfaces slide over each other, the bumps catch and rub, causing friction. Work done against this friction transfers energy to the thermal store of the surfaces. A **lubricant** such as oil or grease forms a thin layer between the surfaces, keeping them apart so the bumps do not catch. Less friction means less work done against friction, so less energy is dissipated by heating.",
+    "bullets": [
+     "Lubricants are usually liquids (oil) or soft solids (grease, graphite)",
+     "The lubricant **separates the surfaces** so they slide over the lubricant rather than over each other",
+     "This **reduces friction**, so less energy is transferred to the thermal energy store of the parts",
+     "Less heating also means less wear and a longer life for the machine",
+     "Lubricants must be topped up because they can be squeezed out, burn or break down over time"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Lubrication",
+      "p": "Using a substance such as oil or grease between moving surfaces to reduce friction, so less energy is wasted by heating."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Zoomed-in view of two surfaces. Without a lubricant the bumps catch and rub, so there is a lot of friction and heating. With a layer of oil the surfaces are kept apart, so friction and wasted energy are reduced.",
+      "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><rect x='10' y='25' width='185' height='205' fill='#f1f5f9' stroke='#1b2540'/><rect x='205' y='25' width='185' height='205' fill='#f1f5f9' stroke='#1b2540'/><text x='20' y='45' font-size='13' fill='#1b2540'>No lubricant</text><text x='215' y='45' font-size='13' fill='#1b2540'>With oil</text><polygon points='30,70 175,70 175,110 165,120 155,110 145,120 135,110 125,120 115,110 105,120 95,110 85,120 75,110 65,120 55,110 45,120 35,110 30,110' fill='#dbeafe' stroke='#1b2540' stroke-width='2'/><polygon points='30,170 175,170 175,130 170,120 160,130 150,120 140,130 130,120 120,130 110,120 100,130 90,120 80,130 70,120 60,130 50,120 40,130 30,120' fill='#e9d5ff' stroke='#1b2540' stroke-width='2'/><rect x='225' y='110' width='145' height='42' fill='#fde68a' stroke='#b45309'/><polygon points='225,70 370,70 370,110 360,120 350,110 340,120 330,110 320,120 310,110 300,120 290,110 280,120 270,110 260,120 250,110 240,120 230,110 225,110' fill='#dbeafe' stroke='#1b2540' stroke-width='2'/><polygon points='225,180 370,180 370,150 365,140 355,150 345,140 335,150 325,140 315,150 305,140 295,150 285,140 275,150 265,140 255,150 245,140 235,150 225,140' fill='#e9d5ff' stroke='#1b2540' stroke-width='2'/><text x='20' y='200' font-size='12' fill='#b91c1c'>Bumps catch and rub</text><text x='20' y='218' font-size='12' fill='#b91c1c'>High friction</text><text x='215' y='200' font-size='12' fill='#166534'>Oil layer separates</text><text x='215' y='218' font-size='12' fill='#166534'>Lower friction</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Where lubrication is used",
+    "p": "Learn a few examples so you can apply the idea to any machine in an exam question.",
+    "bullets": [
+     "**Car engines**: oil coats the pistons and crankshaft so metal does not rub on metal",
+     "**Bicycle chains and gears**: oiling the chain makes pedalling easier and quieter",
+     "**Hinges on doors**: oil stops squeaking, which also reduces energy wasted as sound",
+     "**Bearings in motors, fans and wheels**: grease reduces friction where axles turn",
+     "**Sewing machines and clocks**: light oil keeps small moving parts running freely",
+     "Reducing friction also reduces **noise**, another form of wasted energy"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Full chain for marks",
+      "p": "Lubricant -> reduces friction -> less work done against friction -> less energy transferred to thermal store -> less energy dissipated -> more efficient."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Other ways to reduce mechanical waste",
+    "p": "Lubrication is the method named in the spec, but questions may ask you to suggest other sensible methods for reducing friction and air resistance.",
+    "bullets": [
+     "**Streamlining** vehicles reduces air resistance, so less energy is transferred to the air",
+     "Using **ball bearings or wheels** so surfaces roll instead of slide",
+     "Making surfaces **smoother**",
+     "Tightening loose parts that rattle, which reduces energy wasted as sound and vibration",
+     "Using lighter materials so less force and energy is needed to move them"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "How buildings lose energy by heating",
+    "p": "A warm house is a hot object in cold surroundings, so energy is transferred out from the warmer inside to the cooler outside. To understand insulation, you need to know the three ways this happens.",
+    "bullets": [
+     "**Conduction**: particles in a solid vibrate and pass energy to neighbouring particles; this happens through walls, roofs, floors and glass",
+     "**Convection**: warm air (a fluid) rises and carries energy with it, for example out through the roof or through gaps",
+     "**Radiation**: all objects emit infrared radiation; hotter objects emit more",
+     "Draughts let warm air leave and cold air enter directly",
+     "The bigger the **temperature difference** between inside and outside, the faster energy is transferred"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Cold does not come in",
+      "p": "Never write 'cold gets in'. Energy is transferred from the warmer inside to the cooler outside."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Thermal insulation: the principle",
+    "p": "A **thermal insulator** is a material that does not let energy pass through it easily by heating. It has a **low thermal conductivity**. Many good insulators work by **trapping air** in small pockets. Air is a poor conductor, and because it is trapped it cannot move around, so convection currents cannot form either.",
+    "bullets": [
+     "Insulators reduce the **rate** of energy transfer, they do not stop it completely",
+     "Trapped air is a very poor conductor because gas particles are far apart",
+     "Small pockets prevent convection",
+     "Shiny surfaces can reflect infrared radiation back, reducing transfer by radiation",
+     "Examples: fibreglass wool, foam, wool clothing, feathers, polystyrene"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Thermal insulator",
+      "p": "A material with low thermal conductivity, which reduces the rate of energy transfer by heating."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Insulating a home",
+    "p": "Homes use several types of insulation. Each one targets particular pathways. In exams you are often asked to explain how one method works, so link the method to conduction, convection or radiation.",
+    "bullets": [
+     "Always name the **pathway** that is reduced",
+     "Say that the **rate** of energy transfer is reduced",
+     "Finish with the effect: the house cools more slowly so less fuel is needed to keep it warm"
+    ],
+    "table": {
+     "head": [
+      "Method",
+      "How it reduces energy transfer"
+     ],
+     "rows": [
+      [
+       "Loft insulation (fibreglass wool)",
+       "Traps air, which is a poor conductor, and stops convection currents in the loft; reduces conduction through the ceiling"
+      ],
+      [
+       "Cavity wall insulation (foam)",
+       "Fills the gap between the two brick walls, trapping air in small pockets so convection in the cavity cannot happen; foam has low thermal conductivity"
+      ],
+      [
+       "Double glazing",
+       "A layer of air or gas sealed between two panes of glass reduces conduction; the gap is narrow so convection is limited"
+      ],
+      [
+       "Draught excluders",
+       "Block gaps around doors and windows so warm air cannot escape by convection"
+      ],
+      [
+       "Thick curtains",
+       "Trap a layer of air next to the window, reducing conduction and convection"
+      ],
+      [
+       "Reflective foil behind radiators",
+       "Reflects infrared radiation back into the room instead of into the wall"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": [
+     {
+      "cap": "Common ways of reducing energy transfer from a house: loft insulation in the roof space, cavity wall insulation in the walls, double glazing in the windows and a draught excluder under the door.",
+      "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><text x='10' y='22' font-size='13' fill='#1b2540'>Reducing heat loss</text><polygon points='90,100 200,40 310,100' fill='#fecaca' stroke='#7f1d1d' stroke-width='2'/><rect x='100' y='100' width='200' height='110' fill='#dbeafe' stroke='#1b2540' stroke-width='2'/><rect x='100' y='100' width='200' height='10' fill='#fde68a' stroke='#b45309'/><rect x='100' y='110' width='12' height='100' fill='#e9d5ff' stroke='#6b21a8'/><rect x='130' y='135' width='50' height='40' fill='#ffffff' stroke='#1b2540' stroke-width='2'/><rect x='136' y='141' width='38' height='28' fill='#bfdbfe' stroke='#1d4ed8'/><rect x='230' y='145' width='40' height='60' fill='#a16207' stroke='#422006'/><rect x='226' y='204' width='48' height='6' fill='#1b2540'/><line x1='20' y1='210' x2='380' y2='210' stroke='#166534' stroke-width='2'/><text x='282' y='75' font-size='12' fill='#b45309'>Loft insulation</text><line x1='290' y1='79' x2='265' y2='102' stroke='#b45309'/><text x='10' y='150' font-size='12' fill='#6b21a8'>Cavity wall</text><text x='10' y='165' font-size='12' fill='#6b21a8'>insulation</text><line x1='78' y1='157' x2='104' y2='157' stroke='#6b21a8'/><text x='100' y='230' font-size='12' fill='#1d4ed8'>Double glazing</text><line x1='150' y1='219' x2='155' y2='177' stroke='#1d4ed8'/><text x='240' y='230' font-size='12' fill='#1b2540'>Draught excluder</text><line x1='255' y1='219' x2='250' y2='211' stroke='#1b2540'/></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Thermal conductivity",
+    "p": "**Thermal conductivity** is a property of a material that tells you how well it transfers energy by **conduction**. A material with a **high thermal conductivity** lets energy pass through it quickly. A material with a **low thermal conductivity** transfers energy slowly, so it is a good insulator.",
+    "bullets": [
+     "Metals such as copper and aluminium have high thermal conductivity, so they are used for saucepan bases and radiators",
+     "Brick and concrete have a fairly low thermal conductivity",
+     "Glass has a higher thermal conductivity than brick, which is why single-glazed windows lose a lot of energy",
+     "Air, foam, fibreglass and polystyrene have very low thermal conductivity",
+     "Choosing a lower-conductivity material for the walls reduces the rate of energy transfer through them"
+    ],
+    "table": {
+     "head": [
+      "Thermal conductivity",
+      "Examples",
+      "Use"
+     ],
+     "rows": [
+      [
+       "High",
+       "Copper, aluminium, steel",
+       "Pans, heat sinks, radiators (where you want fast transfer)"
+      ],
+      [
+       "Medium / low",
+       "Glass, brick, concrete",
+       "Building structure"
+      ],
+      [
+       "Very low",
+       "Air, foam, fibreglass, polystyrene, wool",
+       "Insulation, clothing, cup holders"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Thermal conductivity",
+      "p": "A measure of how quickly energy is transferred through a material by conduction. The higher the thermal conductivity, the higher the rate of energy transfer."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Effect of thermal conductivity on how fast a building cools",
+    "p": "The spec asks you to describe this **qualitatively**, meaning in words rather than with equations. If a building's walls are made from a material with a **lower thermal conductivity**, energy is transferred through them more slowly, so the **rate of cooling is lower** and the building stays warm for longer.",
+    "bullets": [
+     "Higher thermal conductivity -> higher rate of energy transfer -> building cools faster",
+     "Lower thermal conductivity -> lower rate of energy transfer -> building cools more slowly",
+     "So builders choose materials with low thermal conductivity, or add insulation layers",
+     "Less energy then needs to be supplied by the heating system to keep the temperature constant"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Learn as a pair",
+      "p": "Lower thermal conductivity AND thicker walls both give a lower rate of cooling."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Cooling curves for two buildings that start at the same temperature. The one with thin walls or high thermal conductivity walls cools quickly (steep curve). The one with thick walls or low thermal conductivity walls cools slowly (gentle curve).",
+      "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><line x1='50' y1='200' x2='380' y2='200' stroke='#1b2540' stroke-width='2'/><line x1='50' y1='200' x2='50' y2='30' stroke='#1b2540' stroke-width='2'/><text x='10' y='22' font-size='12' fill='#1b2540'>Temperature</text><text x='345' y='222' font-size='12' fill='#1b2540'>Time</text><path d='M50 50 Q110 190 370 195' fill='none' stroke='#dc2626' stroke-width='3'/><path d='M50 50 Q200 120 370 160' fill='none' stroke='#2563eb' stroke-width='3'/><text x='58' y='150' font-size='12' fill='#dc2626'>Thin wall</text><text x='58' y='165' font-size='12' fill='#dc2626'>cools fast</text><text x='250' y='98' font-size='12' fill='#2563eb'>Thick wall</text><text x='250' y='113' font-size='12' fill='#2563eb'>cools slowly</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Effect of wall thickness on how fast a building cools",
+    "p": "Energy has to be conducted all the way through a wall to escape. A **thicker wall** means energy has further to travel through the material, so the rate of energy transfer is **lower** and the building **cools more slowly**. A thinner wall of the same material lets energy escape faster.",
+    "bullets": [
+     "Thicker walls -> lower rate of energy transfer -> lower rate of cooling",
+     "Thinner walls -> higher rate of energy transfer -> higher rate of cooling",
+     "Old stone cottages with very thick walls stay warm in winter (and cool in summer)",
+     "Cavity walls use two layers of brick with a gap (filled with insulation) to give an effectively thick, low-conductivity wall",
+     "Thickness and conductivity combine: the best wall is thick AND made of a low-conductivity material"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Say 'rate'",
+      "p": "Insulation and thick walls reduce the **rate** of energy transfer. They do not stop energy escaping altogether."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Cross-section of a cavity wall. Two layers of brick with a layer of insulating foam between them make a thick wall with low overall thermal conductivity, so energy is transferred from the warm inside to the cold outside only slowly.",
+      "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><defs><marker id='ra' markerWidth='8' markerHeight='8' refX='6' refY='4' orient='auto'><path d='M0 0 L8 4 L0 8 Z' fill='#dc2626'/></marker></defs><rect x='10' y='40' width='140' height='160' fill='#fecaca' stroke='#1b2540'/><rect x='270' y='40' width='120' height='160' fill='#dbeafe' stroke='#1b2540'/><rect x='150' y='40' width='40' height='160' fill='#fdba74' stroke='#7c2d12' stroke-width='2'/><rect x='190' y='40' width='40' height='160' fill='#fde68a' stroke='#b45309' stroke-width='2'/><rect x='230' y='40' width='40' height='160' fill='#fdba74' stroke='#7c2d12' stroke-width='2'/><text x='25' y='90' font-size='12' fill='#7f1d1d'>Inside 20 °C</text><text x='285' y='90' font-size='12' fill='#1e3a8a'>Outside 5 °C</text><line x1='40' y1='130' x2='350' y2='130' stroke='#dc2626' stroke-width='2' marker-end='url(#ra)'/><text x='25' y='160' font-size='12' fill='#7f1d1d'>Slow energy flow</text><text x='153' y='220' font-size='12' fill='#7c2d12'>Brick</text><text x='195' y='220' font-size='12' fill='#b45309'>Foam</text><text x='233' y='220' font-size='12' fill='#7c2d12'>Brick</text><text x='180' y='30' font-size='12' fill='#1b2540'>Thick wall</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Other factors affecting rate of cooling",
+    "p": "Thickness and thermal conductivity are the two factors the spec names, but a full answer recognises that other factors matter too. Use these only to support your explanation, not to replace the named factors.",
+    "bullets": [
+     "**Temperature difference**: the bigger the difference between inside and outside, the faster the building cools",
+     "**Surface area**: a larger area of wall, roof or window lets more energy escape per second",
+     "**Draughts**: gaps let warm air escape by convection",
+     "Windows usually lose energy faster than walls because glass is thin and has a higher thermal conductivity than an insulated wall"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Insulation beyond buildings",
+    "p": "The same ideas apply to many everyday objects designed to keep things hot or cold.",
+    "bullets": [
+     "**Vacuum flask**: a vacuum between double walls stops conduction and convection; silvered surfaces reduce radiation; a stopper reduces convection and evaporation",
+     "**Kettle**: a plastic or insulated body reduces energy transfer to the kitchen, so more energy heats the water",
+     "**Hot water tank jacket**: thick insulating layer keeps stored water hot",
+     "**Clothing**: layers trap air, reducing energy transfer from the body",
+     "**Cool box**: insulation slows energy transfer from the warm surroundings into the food"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Investigating insulation in the lab",
+    "p": "A common class investigation compares insulating materials. Beakers of hot water are wrapped in different materials (or different thicknesses of the same material) and their temperatures are recorded over time. The slower the temperature falls, the better the insulation.",
+    "bullets": [
+     "Independent variable: type of insulating material or number of layers (thickness)",
+     "Dependent variable: temperature drop in a fixed time (or rate of cooling)",
+     "Control variables: starting temperature, volume of water, size of beaker, room temperature, time, use of a lid",
+     "Use a thermometer or temperature probe and a stopwatch; read at regular intervals",
+     "Plot temperature against time; the shallower curve shows the better insulator",
+     "Safety: take care handling hot water to avoid scalds"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Fair test",
+      "p": "If a question asks how to make the investigation fair, give specific control variables such as 'same starting temperature' and 'same volume of water', not just 'keep everything the same'."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Escaping through a crowd",
+   "p": "Think of energy trying to get out of a warm house as people leaving a packed stadium. Thermal conductivity is like how easy each exit corridor is to walk through: a wide, clear corridor (high conductivity) lets people out quickly, a cluttered one (low conductivity) slows them. Wall thickness is the length of the corridor: a longer corridor takes longer to get through, so fewer people leave each minute. Lubrication is like oiling the turnstiles so they turn without grinding. Where it breaks down: energy is not a crowd of objects travelling through the wall; in conduction it is passed from particle to particle by vibrations, and insulation only slows the rate rather than locking any energy inside."
+  },
+  "terms": [
+   {
+    "t": "Unwanted energy transfer",
+    "d": "An energy transfer to a store that is not useful, such as heating the surroundings."
+   },
+   {
+    "t": "Friction",
+    "d": "A force that opposes motion between surfaces; work done against it transfers energy to thermal stores."
+   },
+   {
+    "t": "Lubricant",
+    "d": "A substance such as oil or grease placed between moving surfaces to reduce friction."
+   },
+   {
+    "t": "Lubrication",
+    "d": "Using a lubricant to reduce friction so that less energy is dissipated by heating."
+   },
+   {
+    "t": "Thermal insulator",
+    "d": "A material with low thermal conductivity that reduces the rate of energy transfer by heating."
+   },
+   {
+    "t": "Thermal insulation",
+    "d": "Material or design used to reduce the rate of unwanted energy transfer by heating."
+   },
+   {
+    "t": "Thermal conductivity",
+    "d": "A measure of how quickly a material transfers energy through it by conduction."
+   },
+   {
+    "t": "Conduction",
+    "d": "Energy transfer through a material by vibrating particles passing energy to neighbouring particles."
+   },
+   {
+    "t": "Convection",
+    "d": "Energy transfer in a fluid (liquid or gas) when warmer, less dense fluid rises and cooler fluid sinks."
+   },
+   {
+    "t": "Infrared radiation",
+    "d": "Electromagnetic radiation emitted by all objects; hotter objects emit more per second."
+   },
+   {
+    "t": "Rate of cooling",
+    "d": "How quickly the temperature of an object falls, linked to the rate of energy transfer from it."
+   },
+   {
+    "t": "Rate of energy transfer",
+    "d": "The amount of energy transferred per second."
+   },
+   {
+    "t": "Cavity wall insulation",
+    "d": "Insulating foam injected into the gap between the two layers of a brick wall, trapping air and reducing energy transfer."
+   },
+   {
+    "t": "Double glazing",
+    "d": "Windows with two panes of glass separated by a layer of air or gas, reducing energy transfer by conduction."
+   },
+   {
+    "t": "Streamlining",
+    "d": "Shaping an object so that it has less air resistance, reducing energy wasted when it moves."
+   },
+   {
+    "t": "Temperature difference",
+    "d": "The difference in temperature between two places; a larger difference gives a faster rate of energy transfer."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Insulation stops heat escaping.",
+    "r": "Insulation reduces the rate of energy transfer; it cannot stop it completely."
+   },
+   {
+    "w": "Insulation keeps the cold out.",
+    "r": "Insulation reduces energy transfer from the warm inside to the cooler outside."
+   },
+   {
+    "w": "Lubrication removes friction.",
+    "r": "Lubrication reduces friction, so less energy is transferred to the thermal store of the surfaces."
+   },
+   {
+    "w": "Thicker walls have higher thermal conductivity so they keep the house warm.",
+    "r": "Thermal conductivity is a property of the material, not the thickness; thicker walls give a lower rate of energy transfer."
+   },
+   {
+    "w": "Materials with high thermal conductivity are good insulators.",
+    "r": "Good insulators have low thermal conductivity."
+   },
+   {
+    "w": "Air is a good insulator, so a large open gap in a wall is best.",
+    "r": "Air must be trapped in small pockets; in a large gap convection currents can transfer energy."
+   },
+   {
+    "w": "Oil makes the machine use less energy because the energy is saved in the oil.",
+    "r": "Oil reduces friction so less energy is wasted by heating; more of the input is transferred usefully."
+   },
+   {
+    "w": "Double glazing works because glass is an insulator.",
+    "r": "The sealed layer of air or gas between the panes has a low thermal conductivity, reducing conduction."
+   }
+  ],
+  "exam": [
+   {
+    "q": "State one way of reducing unwanted energy transfer in a machine with moving parts.",
+    "marks": 1,
+    "model": [
+     "Lubricate the moving parts (with oil or grease)."
+    ],
+    "tip": "Lubrication is the spec answer; streamlining is acceptable for air resistance."
+   },
+   {
+    "q": "Explain how oiling a bicycle chain reduces the energy wasted.",
+    "marks": 2,
+    "model": [
+     "Oil reduces friction between the chain and the gears.",
+     "So less energy is transferred to the thermal store of the chain / dissipated to the surroundings."
+    ],
+    "tip": "Two linked ideas: friction down, heating down."
+   },
+   {
+    "q": "Which material, copper or polystyrene, has the lower thermal conductivity?",
+    "marks": 1,
+    "model": [
+     "Polystyrene."
+    ],
+    "tip": "Insulators have low thermal conductivity."
+   },
+   {
+    "q": "Describe the effect of increasing the thickness of a building's walls on its rate of cooling.",
+    "marks": 2,
+    "model": [
+     "The rate of energy transfer through the walls decreases.",
+     "So the building cools more slowly / the rate of cooling decreases."
+    ],
+    "tip": "Describe qualitatively: use 'decreases' or 'more slowly'."
+   },
+   {
+    "q": "Describe the effect of building walls from a material with a higher thermal conductivity.",
+    "marks": 2,
+    "model": [
+     "Energy is transferred through the walls faster / higher rate of energy transfer.",
+     "So the building cools faster."
+    ],
+    "tip": "Higher conductivity means faster cooling."
+   },
+   {
+    "q": "Explain how cavity wall insulation reduces energy transfer from a house.",
+    "marks": 3,
+    "model": [
+     "Foam traps air in small pockets.",
+     "Air is a poor conductor / foam has low thermal conductivity, reducing conduction.",
+     "Air cannot move, so convection currents in the cavity are prevented."
+    ],
+    "tip": "Mention both conduction and convection for full marks."
+   },
+   {
+    "q": "Explain why double glazing reduces energy transfer through a window.",
+    "marks": 2,
+    "model": [
+     "The gap between the panes contains air or gas, which has a low thermal conductivity.",
+     "This reduces the rate of energy transfer by conduction."
+    ],
+    "tip": "It is the trapped gas, not the extra glass, that matters."
+   },
+   {
+    "q": "A student wants to compare how well two insulating materials work. Describe a method she could use.",
+    "marks": 4,
+    "model": [
+     "Wrap identical beakers of hot water in each material.",
+     "Use the same volume of water and the same starting temperature.",
+     "Measure the temperature with a thermometer at regular intervals / after a fixed time.",
+     "The material giving the smaller temperature drop is the better insulator."
+    ],
+    "tip": "Include control variables and how to judge the result."
+   },
+   {
+    "q": "Explain why a lubricated machine is more efficient than an unlubricated one.",
+    "marks": 3,
+    "model": [
+     "Lubricant reduces friction between moving parts.",
+     "Less work is done against friction, so less energy is dissipated by heating.",
+     "So a greater proportion of the energy supplied is transferred usefully."
+    ],
+    "tip": "Link to 'proportion of input energy' for efficiency."
+   },
+   {
+    "q": "A family wants to reduce their heating bills. Explain how the design of the walls and other features of the house could reduce the rate of energy transfer from the house.",
+    "marks": 6,
+    "model": [
+     "Thicker walls reduce the rate of energy transfer, so the house cools more slowly.",
+     "Walls made from materials with lower thermal conductivity reduce the rate of energy transfer by conduction.",
+     "Cavity wall insulation traps air in foam, reducing conduction and preventing convection in the cavity.",
+     "Loft insulation traps air, reducing energy transfer through the roof.",
+     "Double glazing has a gas layer of low thermal conductivity between panes; draught excluders stop warm air escaping by convection.",
+     "Less energy needs to be supplied by the heating to keep the house warm, so bills are lower."
+    ],
+    "tip": "Cover both named wall factors first, then other methods, then link to lower bills."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Two identical houses are heated to 20 °C and the heating is switched off. House A has thin walls made of brick. House B has thick walls with a layer of foam inside. Compare how the houses cool.",
+    "steps": [
+     "Both houses transfer energy to the colder surroundings.",
+     "House B has thicker walls, so energy must be conducted further through them, giving a lower rate of energy transfer.",
+     "Foam has a lower thermal conductivity than brick, which further reduces the rate.",
+     "So House B has a lower rate of cooling and its temperature falls more slowly than House A."
+    ],
+    "ans": "House B cools more slowly because its walls are thicker and contain a low thermal conductivity material."
+   },
+   {
+    "q": "In a class experiment, beaker X (no insulation) falls from 80 °C to 56 °C in 10 minutes; beaker Y (wrapped in wool) falls from 80 °C to 68 °C in the same time. Compare the average rates of cooling.",
+    "steps": [
+     "Temperature drop of X = 80 - 56 = 24 °C.",
+     "Average rate for X = 24 °C / 10 min = 2.4 °C per minute.",
+     "Temperature drop of Y = 80 - 68 = 12 °C.",
+     "Average rate for Y = 12 °C / 10 min = 1.2 °C per minute.",
+     "Y cools at half the rate of X because the wool traps air, which has a low thermal conductivity."
+    ],
+    "ans": "X: 2.4 °C/min, Y: 1.2 °C/min, so the wool halves the rate of cooling."
+   },
+   {
+    "q": "Model answer: explain why a car engine needs oil.",
+    "steps": [
+     "Inside the engine, metal parts such as pistons slide against each other.",
+     "Friction between them would transfer a lot of energy to their thermal store, causing them to heat up and wear.",
+     "Oil forms a thin layer that separates the surfaces and reduces friction.",
+     "Less energy is dissipated by heating, so more of the energy from the fuel is transferred to the kinetic store of the car."
+    ],
+    "ans": "Oil reduces friction between moving parts, so less energy is wasted by heating and the engine is more efficient."
+   }
+  ],
+  "svg": [],
+  "pid": "phy_edx.2.3",
+  "sid": "phy_edx",
+  "v": 2,
+  "src": "pre",
+  "by": "claude/claude-opus-5-5",
+  "ts": "2026-11-25T01:27:07.491Z"
+ },
+ "phy_edx.2.4": {
+  "summary": "**Efficiency** tells you what fraction of the energy supplied to a device is transferred usefully. Edexcel requires you to recall and use **efficiency = useful energy transferred by the device / total energy supplied to the device**, giving answers as a decimal or a percentage, and to explain how efficiency can be increased. Because some energy is always dissipated to the surroundings, no real device is 100% efficient, but reducing friction, insulating and redesigning devices can make far more of the input useful.",
+  "core": [
+   {
+    "h": "What efficiency means",
+    "p": "Every device takes in energy and transfers some of it to a useful store and the rest to wasted stores, usually the thermal store of the surroundings. **Efficiency** compares the useful output with the total input. A device with a high efficiency transfers a large proportion of its input usefully and wastes only a little.",
+    "bullets": [
+     "Efficiency is a **ratio**: useful output compared with total input",
+     "An efficiency of 0.8 (80%) means 80% of the input is transferred usefully and 20% is wasted",
+     "Higher efficiency = less energy wasted for the same useful job",
+     "Efficiency depends on what counts as useful: a heater that warms a room is very efficient because the heating is the useful output"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "The efficiency equation",
+    "p": "You must **recall** this equation; it is not given on the Edexcel equation sheet. Both energies must be in the **same unit** (usually joules, J), so the units cancel.",
+    "bullets": [
+     "efficiency = useful energy transferred by the device / total energy supplied to the device",
+     "Useful energy and total energy are both measured in joules (J)",
+     "The total energy supplied is the input energy, which always equals useful energy + wasted energy",
+     "Always write the equation, substitute, then calculate: each stage can earn a mark"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Efficiency (Edexcel equation)",
+      "p": "efficiency = (useful energy transferred by the device) / (total energy supplied to the device)"
+     },
+     {
+      "k": "key",
+      "t": "Must recall",
+      "p": "This equation is one you must remember. Write it out in full at the start of every efficiency calculation."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Decimals, percentages and no units",
+    "p": "The equation gives a decimal between 0 and 1. To turn it into a percentage, multiply by 100. Efficiency has **no units**, because it is joules divided by joules.",
+    "bullets": [
+     "Decimal form: 0.65",
+     "Percentage form: 0.65 x 100 = 65%",
+     "Never write 'J' after an efficiency",
+     "Give the form the question asks for; if it does not say, either is fine but do not mix them up (0.65% is wrong)",
+     "Efficiency can never be greater than 1 (100%): that would mean creating energy, which breaks conservation of energy",
+     "If your answer is greater than 1, you have put the numbers the wrong way up"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Upside-down fraction",
+      "p": "Useful goes on TOP. If you get 1.25 or 125%, swap the numbers."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Efficiency always lies between 0 and 1 (0% and 100%) and has no units. A kettle with efficiency 0.9 transfers 90% of its input usefully. An answer above 1 is impossible.",
+      "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><rect x='40' y='110' width='320' height='16' fill='#bbf7d0' stroke='#166534' stroke-width='2'/><rect x='40' y='110' width='288' height='16' fill='#86efac' stroke='#166534'/><line x1='40' y1='104' x2='40' y2='132' stroke='#1b2540' stroke-width='2'/><line x1='120' y1='104' x2='120' y2='132' stroke='#1b2540' stroke-width='2'/><line x1='200' y1='104' x2='200' y2='132' stroke='#1b2540' stroke-width='2'/><line x1='280' y1='104' x2='280' y2='132' stroke='#1b2540' stroke-width='2'/><line x1='360' y1='104' x2='360' y2='132' stroke='#1b2540' stroke-width='2'/><text x='36' y='98' font-size='12' fill='#1b2540'>0</text><text x='108' y='98' font-size='12' fill='#1b2540'>0.25</text><text x='192' y='98' font-size='12' fill='#1b2540'>0.5</text><text x='268' y='98' font-size='12' fill='#1b2540'>0.75</text><text x='356' y='98' font-size='12' fill='#1b2540'>1</text><text x='32' y='148' font-size='12' fill='#1b2540'>0%</text><text x='108' y='148' font-size='12' fill='#1b2540'>25%</text><text x='188' y='148' font-size='12' fill='#1b2540'>50%</text><text x='268' y='148' font-size='12' fill='#1b2540'>75%</text><text x='344' y='148' font-size='12' fill='#1b2540'>100%</text><polygon points='328,84 322,72 334,72' fill='#2563eb'/><text x='292' y='64' font-size='12' fill='#2563eb'>Kettle 0.9</text><text x='40' y='190' font-size='12' fill='#1b2540'>No units</text><text x='230' y='190' font-size='12' fill='#b91c1c'>Above 1 is impossible</text><text x='40' y='30' font-size='13' fill='#1b2540'>Efficiency scale</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Rearranging the equation",
+    "p": "Questions often give you the efficiency and ask for the useful energy or the total energy supplied. Rearrange before substituting. If the efficiency is given as a percentage, convert it to a decimal first by dividing by 100.",
+    "bullets": [
+     "useful energy = efficiency x total energy supplied",
+     "total energy supplied = useful energy / efficiency",
+     "Convert 40% to 0.40 before using it",
+     "Check: the useful energy must always be smaller than the total supplied"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Sense check",
+      "p": "Dividing by an efficiency (less than 1) makes the number bigger, which is right for total input. Multiplying by an efficiency makes the number smaller, which is right for useful output."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Equation triangle for efficiency. Cover the quantity you want: useful = efficiency x total; efficiency = useful / total; total = useful / efficiency.",
+      "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><polygon points='200,30 320,200 80,200' fill='#e9d5ff' stroke='#6b21a8' stroke-width='3'/><line x1='143' y1='120' x2='257' y2='120' stroke='#6b21a8' stroke-width='3'/><line x1='200' y1='120' x2='200' y2='200' stroke='#6b21a8' stroke-width='3'/><text x='180' y='100' font-size='13' fill='#1b2540'>Useful</text><text x='122' y='168' font-size='12' fill='#1b2540'>Efficiency</text><text x='214' y='168' font-size='12' fill='#1b2540'>Total</text><text x='262' y='55' font-size='12' fill='#6b21a8'>Cover what you want</text><text x='105' y='226' font-size='12' fill='#1b2540'>useful = efficiency x total</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Finding useful energy from wasted energy",
+    "p": "Some questions give the total energy and the wasted energy instead of the useful energy. Use conservation of energy first, then the efficiency equation.",
+    "bullets": [
+     "Step 1: useful energy = total energy supplied - wasted energy",
+     "Step 2: efficiency = useful / total",
+     "Alternatively: efficiency = 1 - (wasted / total)",
+     "Watch the units: convert kJ to J (x 1000) or make sure both are in kJ"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Wasted is not on top",
+      "p": "A common error is wasted / total. That gives the fraction wasted, not the efficiency."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Efficiency using power",
+    "p": "Power is the energy transferred per second, so you can also calculate efficiency using power values, as long as both are measured over the same time. This is useful when a question gives the input and output in watts.",
+    "bullets": [
+     "efficiency = useful power output / total power input",
+     "Both powers in watts (W) or both in kilowatts (kW)",
+     "Example: a motor with 400 W input and 300 W useful output has efficiency 300 / 400 = 0.75",
+     "The same rules apply: no units, never above 1"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Why no device is 100% efficient",
+    "p": "In every real energy transfer, some energy is **dissipated** to the surroundings. Moving parts experience friction and air resistance, currents heat wires, and hot objects transfer energy to cooler surroundings. So the useful energy is always less than the total energy supplied and the efficiency is always less than 1.",
+    "bullets": [
+     "Friction between moving parts heats them",
+     "Electrical resistance heats wires and components",
+     "Sound is produced by vibrating parts",
+     "Hot parts transfer energy to the surroundings by conduction, convection and radiation",
+     "Energy is conserved: total input = useful output + wasted output"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Link to conservation",
+      "p": "Efficiency below 100% does not mean energy is destroyed. The 'missing' energy is in the thermal store of the surroundings."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Efficiency from a Sankey diagram",
+    "p": "In a Sankey diagram the width of each arrow is proportional to the energy. Read off the input and the useful output (count squares if a grid is drawn), then use the efficiency equation.",
+    "bullets": [
+     "Input = width of the arrow coming in",
+     "Useful = width of the arrow going straight on",
+     "Efficiency = useful width / input width",
+     "Check that useful + wasted = input"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": [
+     {
+      "cap": "Sankey diagram for an electric kettle. 2000 J is supplied, 1800 J goes to the thermal store of the water and 200 J is dissipated to the surroundings. Efficiency = 1800 / 2000 = 0.9 (90%).",
+      "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><text x='20' y='30' font-size='13' fill='#1b2540'>Kettle: efficiency 0.9</text><rect x='20' y='60' width='180' height='100' fill='#fde68a' stroke='#92400e' stroke-width='2'/><text x='30' y='115' font-size='12' fill='#1b2540'>Electrical 2000 J</text><polygon points='200,60 330,60 330,50 375,105 330,160 330,150 200,150' fill='#bbf7d0' stroke='#166534' stroke-width='2'/><text x='212' y='100' font-size='12' fill='#14532d'>Useful 1800 J</text><text x='212' y='118' font-size='12' fill='#14532d'>Thermal store of water</text><path d='M200 150 L215 150 Q225 150 225 160 L225 190 L233 190 L220 215 L207 190 L215 190 L215 165 Q215 160 210 160 L200 160 Z' fill='#fecaca' stroke='#b91c1c' stroke-width='2'/><text x='242' y='198' font-size='12' fill='#b91c1c'>Wasted 200 J</text><text x='242' y='214' font-size='12' fill='#b91c1c'>To surroundings</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "How to increase efficiency: the principle",
+    "p": "To increase efficiency you must **reduce the wasted energy**, so that a greater proportion of the energy supplied is transferred to the useful store. You do this by identifying where energy is being dissipated and then reducing that unwanted transfer.",
+    "bullets": [
+     "Identify the wasted pathway: friction, air resistance, electrical heating, sound, heating of surroundings",
+     "Reduce that pathway with lubrication, streamlining, insulation or better design",
+     "For the same input, more useful output; or for the same useful output, less input needed",
+     "State the result in terms of the equation: useful energy is a larger fraction of total energy supplied"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Explain, do not just list",
+      "p": "For each method, say what it reduces and why that raises efficiency, for example 'lubrication reduces friction, so less energy is dissipated by heating, so more of the input is transferred usefully'."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "The same 100 J is supplied to a machine before and after its moving parts are lubricated. Lubrication reduces the wasted energy from 40 J to 25 J, so the useful energy rises from 60 J to 75 J and the efficiency rises from 60% to 75%.",
+      "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><line x1='60' y1='200' x2='310' y2='200' stroke='#1b2540' stroke-width='2'/><line x1='60' y1='200' x2='60' y2='45' stroke='#1b2540' stroke-width='2'/><text x='10' y='22' font-size='12' fill='#1b2540'>Energy / J</text><text x='30' y='54' font-size='11' fill='#1b2540'>100</text><text x='45' y='204' font-size='11' fill='#1b2540'>0</text><rect x='100' y='110' width='70' height='90' fill='#bbf7d0' stroke='#166534' stroke-width='2'/><rect x='100' y='50' width='70' height='60' fill='#fecaca' stroke='#b91c1c' stroke-width='2'/><rect x='220' y='87' width='70' height='113' fill='#bbf7d0' stroke='#166534' stroke-width='2'/><rect x='220' y='50' width='70' height='37' fill='#fecaca' stroke='#b91c1c' stroke-width='2'/><text x='120' y='160' font-size='12' fill='#14532d'>60 J</text><text x='120' y='84' font-size='12' fill='#7f1d1d'>40 J</text><text x='240' y='150' font-size='12' fill='#14532d'>75 J</text><text x='240' y='73' font-size='12' fill='#7f1d1d'>25 J</text><text x='122' y='40' font-size='12' fill='#1b2540'>60%</text><text x='242' y='40' font-size='12' fill='#1b2540'>75%</text><text x='112' y='218' font-size='12' fill='#1b2540'>Before</text><text x='224' y='218' font-size='12' fill='#1b2540'>Lubricated</text><rect x='320' y='60' width='12' height='12' fill='#bbf7d0' stroke='#166534'/><text x='338' y='71' font-size='12' fill='#1b2540'>Useful</text><rect x='320' y='86' width='12' height='12' fill='#fecaca' stroke='#b91c1c'/><text x='338' y='97' font-size='12' fill='#1b2540'>Wasted</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Ways to increase efficiency",
+    "p": "Match each method to the wasted energy it reduces. These are the examples most often rewarded in mark schemes.",
+    "bullets": [
+     "Methods that reduce friction or air resistance help mechanical devices",
+     "Methods that reduce heating losses help thermal devices and buildings",
+     "Better components (such as LEDs) help electrical devices"
+    ],
+    "table": {
+     "head": [
+      "Method",
+      "What it reduces",
+      "Example"
+     ],
+     "rows": [
+      [
+       "Lubrication (oil, grease)",
+       "Friction between moving parts, so less heating",
+       "Engines, bicycle chains, motor bearings"
+      ],
+      [
+       "Thermal insulation",
+       "Energy transfer by heating to the surroundings",
+       "Kettle body, hot water tank jacket, loft insulation"
+      ],
+      [
+       "Streamlining",
+       "Air resistance",
+       "Cars, lorries, trains"
+      ],
+      [
+       "Using LEDs instead of filament lamps",
+       "Heating of the lamp; more input transferred as light",
+       "Household lighting"
+      ],
+      [
+       "Tightening loose parts / damping",
+       "Wasted sound and vibration",
+       "Machinery, fans"
+      ],
+      [
+       "Using wires with lower resistance",
+       "Heating in cables",
+       "Thicker cables, good conductors"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Why efficiency matters",
+    "p": "Choosing efficient devices has real consequences. Exam questions may ask you to compare two devices or justify a choice.",
+    "bullets": [
+     "Less energy needs to be supplied for the same useful output, so running costs are lower",
+     "Less fuel is burned in power stations, so fewer fossil fuels are used up",
+     "Less carbon dioxide is released, reducing contribution to climate change",
+     "When comparing devices, also consider purchase cost, lifetime and payback time, not just efficiency",
+     "A more efficient device can cost more to buy but save money over its lifetime"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Calculation technique for full marks",
+    "p": "Efficiency questions are usually 2 or 3 marks. Follow the same routine every time and you will pick up method marks even if you slip on the arithmetic.",
+    "bullets": [
+     "Write the equation in words or symbols",
+     "Convert units so useful and total are the same (J and J, or kJ and kJ)",
+     "Convert percentages to decimals before rearranging",
+     "Substitute the numbers",
+     "Give the answer as a decimal or percentage, as asked, with no units",
+     "Check the answer is between 0 and 1 (0% and 100%)"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Show working",
+      "p": "Mark schemes award a mark for correct substitution, so write 'efficiency = 300 / 400' before the answer."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Pocket money with leaks",
+   "p": "Imagine you are given 10 pounds (total energy supplied) to buy a book (the useful job). On the way, some coins fall through a hole in your pocket (wasted energy). If you arrive with 8 pounds to spend, your 'efficiency' is 8 / 10 = 0.8. Sewing up the hole (lubrication, insulation) means more of the money reaches the shop, so efficiency goes up. You can never arrive with more than you started with, just as efficiency can never exceed 1. Where it breaks down: the lost coins are gone from you but still exist somewhere, just as wasted energy still exists in the surroundings; however, unlike coins, dissipated energy is spread so thinly that it can never practically be picked up again."
+  },
+  "terms": [
+   {
+    "t": "Efficiency",
+    "d": "The proportion of the total energy supplied to a device that is transferred usefully: useful energy / total energy supplied."
+   },
+   {
+    "t": "Useful energy",
+    "d": "Energy transferred to the store the device is designed to fill."
+   },
+   {
+    "t": "Total energy supplied",
+    "d": "All the energy put into the device (the input energy)."
+   },
+   {
+    "t": "Wasted energy",
+    "d": "Energy transferred to stores that are not useful, usually the thermal store of the surroundings."
+   },
+   {
+    "t": "Dissipation",
+    "d": "Spreading out of energy into the surroundings so it is stored in less useful ways."
+   },
+   {
+    "t": "Power",
+    "d": "The rate of energy transfer, measured in watts (W); 1 W = 1 J/s."
+   },
+   {
+    "t": "Joule (J)",
+    "d": "The unit of energy."
+   },
+   {
+    "t": "Percentage efficiency",
+    "d": "Efficiency multiplied by 100 to give a value between 0% and 100%."
+   },
+   {
+    "t": "Conservation of energy",
+    "d": "Energy cannot be created or destroyed, so total input = useful output + wasted output."
+   },
+   {
+    "t": "Lubrication",
+    "d": "Using oil or grease to reduce friction between moving parts, reducing wasted energy."
+   },
+   {
+    "t": "Thermal insulation",
+    "d": "A material with low thermal conductivity that reduces unwanted energy transfer by heating."
+   },
+   {
+    "t": "Streamlining",
+    "d": "Shaping an object to reduce air resistance."
+   },
+   {
+    "t": "Sankey diagram",
+    "d": "An energy transfer diagram with arrow widths proportional to the amount of energy."
+   },
+   {
+    "t": "Friction",
+    "d": "A force opposing motion between surfaces; work done against it heats the surfaces."
+   },
+   {
+    "t": "Payback time",
+    "d": "The time taken for the money saved by an efficiency improvement to equal its cost."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "efficiency = total / useful",
+    "r": "efficiency = useful energy transferred / total energy supplied; useful goes on top."
+   },
+   {
+    "w": "Efficiency = 0.75 J",
+    "r": "Efficiency has no units: 0.75 or 75%."
+   },
+   {
+    "w": "Efficiency = 120%",
+    "r": "Efficiency can never be more than 100%; check the fraction is not upside down."
+   },
+   {
+    "w": "Using 40 instead of 0.40 for a 40% efficiency when rearranging.",
+    "r": "Convert the percentage to a decimal (divide by 100) before using it."
+   },
+   {
+    "w": "Efficiency = wasted / total",
+    "r": "That is the fraction wasted; efficiency uses useful energy on the top."
+   },
+   {
+    "w": "Mixing kJ and J in the same fraction.",
+    "r": "Convert so useful and total energy are in the same unit."
+   },
+   {
+    "w": "Making a device more efficient creates more energy.",
+    "r": "It reduces wasted energy, so a greater proportion of the energy supplied is transferred usefully."
+   },
+   {
+    "w": "Lubrication increases efficiency because it gives the machine more energy.",
+    "r": "Lubrication reduces friction, so less energy is dissipated by heating."
+   },
+   {
+    "w": "A device is 100% efficient if it is new.",
+    "r": "No real device is 100% efficient because some energy is always dissipated to the surroundings."
+   }
+  ],
+  "exam": [
+   {
+    "q": "State the equation linking efficiency, useful energy transferred and total energy supplied.",
+    "marks": 1,
+    "model": [
+     "efficiency = useful energy transferred by the device / total energy supplied to the device"
+    ],
+    "tip": "This equation must be recalled."
+   },
+   {
+    "q": "Explain why efficiency has no units.",
+    "marks": 1,
+    "model": [
+     "It is energy divided by energy, so the units (J / J) cancel."
+    ],
+    "tip": "Mention both quantities have the same unit."
+   },
+   {
+    "q": "A motor is supplied with 800 J and transfers 600 J usefully. Calculate its efficiency.",
+    "marks": 2,
+    "model": [
+     "efficiency = 600 / 800",
+     "= 0.75 (or 75%)"
+    ],
+    "tip": "Show the substitution for the first mark."
+   },
+   {
+    "q": "A lamp is supplied with 1200 J. It wastes 960 J by heating. Calculate its percentage efficiency.",
+    "marks": 3,
+    "model": [
+     "useful energy = 1200 - 960 = 240 J",
+     "efficiency = 240 / 1200 = 0.2",
+     "= 20%"
+    ],
+    "tip": "Find the useful energy first."
+   },
+   {
+    "q": "An electric heater has an efficiency of 0.95. It is supplied with 5000 J. Calculate the useful energy transferred.",
+    "marks": 2,
+    "model": [
+     "useful energy = 0.95 x 5000",
+     "= 4750 J"
+    ],
+    "tip": "Rearrange before substituting."
+   },
+   {
+    "q": "A crane motor has an efficiency of 40%. It transfers 12 000 J to the gravitational potential store of a load. Calculate the total energy supplied.",
+    "marks": 3,
+    "model": [
+     "Convert: 40% = 0.40",
+     "total = useful / efficiency = 12 000 / 0.40",
+     "= 30 000 J"
+    ],
+    "tip": "Answer must be bigger than the useful energy."
+   },
+   {
+    "q": "A student calculates the efficiency of a motor as 1.3. Explain why this must be wrong.",
+    "marks": 2,
+    "model": [
+     "Efficiency cannot be greater than 1 (100%).",
+     "That would mean more useful energy out than was supplied, which breaks conservation of energy."
+    ],
+    "tip": "Refer to conservation of energy."
+   },
+   {
+    "q": "Explain how lubricating the axle of a motor increases its efficiency.",
+    "marks": 3,
+    "model": [
+     "Lubrication reduces friction at the axle.",
+     "So less energy is dissipated by heating the surroundings.",
+     "So a greater proportion of the energy supplied is transferred usefully."
+    ],
+    "tip": "End with 'greater proportion of input transferred usefully'."
+   },
+   {
+    "q": "Suggest two ways of increasing the efficiency of an electric kettle and explain each.",
+    "marks": 4,
+    "model": [
+     "Insulate the kettle body / use a material with low thermal conductivity.",
+     "This reduces energy transferred by heating from the kettle to the surroundings.",
+     "Fit a lid / keep the lid closed (or use a concealed element).",
+     "This reduces energy transferred to the air by convection/evaporation, so more heats the water."
+    ],
+    "tip": "Method plus reason for each pair of marks."
+   },
+   {
+    "q": "A manufacturer wants to make a new car more efficient. Explain how efficiency is calculated and describe how the design of the car could be changed to increase its efficiency.",
+    "marks": 6,
+    "model": [
+     "Efficiency = useful energy transferred / total energy supplied (from the fuel).",
+     "Energy is wasted by friction between moving parts, air resistance, heating and sound.",
+     "Lubricating moving parts reduces friction so less energy is dissipated by heating.",
+     "Streamlining the body reduces air resistance so less work is done against it.",
+     "Insulating / reducing sound and vibration, or using a lighter body, reduces energy wasted.",
+     "So a greater proportion of the energy from the fuel is transferred to the kinetic store, increasing efficiency."
+    ],
+    "tip": "Start with the equation, then link each change to the pathway it reduces."
+   }
+  ],
+  "worked": [
+   {
+    "q": "An electric motor is supplied with 2.5 kJ of energy. It lifts a load, transferring 1800 J to the load's gravitational potential store. Calculate the efficiency as a decimal and a percentage.",
+    "steps": [
+     "Convert to the same unit: 2.5 kJ = 2500 J.",
+     "efficiency = useful energy transferred / total energy supplied",
+     "efficiency = 1800 / 2500",
+     "efficiency = 0.72",
+     "Percentage: 0.72 x 100 = 72%"
+    ],
+    "ans": "Efficiency = 0.72 (72%), no units."
+   },
+   {
+    "q": "A power station has an efficiency of 35%. It must supply 7000 MJ of useful electrical energy. How much energy must be supplied from the fuel, and how much is wasted?",
+    "steps": [
+     "Convert: 35% = 0.35.",
+     "total energy supplied = useful energy / efficiency",
+     "total = 7000 / 0.35 = 20 000 MJ",
+     "wasted = total - useful = 20 000 - 7000 = 13 000 MJ"
+    ],
+    "ans": "20 000 MJ supplied from the fuel; 13 000 MJ is wasted."
+   },
+   {
+    "q": "Motor A: input 500 J, useful output 350 J. Motor B: input power 200 W, useful output power 150 W. Which motor is more efficient?",
+    "steps": [
+     "Motor A: efficiency = 350 / 500 = 0.70 (70%).",
+     "Motor B: efficiency = useful power / total power = 150 / 200 = 0.75 (75%).",
+     "0.75 is greater than 0.70."
+    ],
+    "ans": "Motor B is more efficient (75% compared with 70%)."
+   }
+  ],
+  "svg": [],
+  "pid": "phy_edx.2.4",
+  "sid": "phy_edx",
+  "v": 2,
+  "src": "pre",
+  "by": "claude/claude-opus-5-5",
+  "ts": "2026-11-25T01:27:07.508Z"
+ }
+}
