@@ -929,5 +929,371 @@
   "src": "pre",
   "by": "gemini/gemini-flash-lite-latest",
   "ts": "2026-11-25T21:21:42.070Z"
+ },
+ "bio_ocra.1.1": {
+  "summary": "Protein synthesis is the two-stage process by which the genetic information stored in DNA is used to build functional proteins. It involves transcription, where a messenger RNA (mRNA) copy of a gene is made in the nucleus, and translation, where ribosomes in the cytoplasm read the mRNA sequence in triplets to assemble amino acids in a specific order. This precise sequence of amino acids determines how the protein folds into a unique 3D shape, which is essential for its specific biological function as an enzyme, hormone, or structural component.",
+  "core": [
+   {
+    "h": "The Genetic Code and Triplets",
+    "p": "DNA carries the instructions for life in the sequence of its bases (A, T, C, and G). A group of **three bases** is known as a **triplet**. Each triplet codes for one specific **amino acid**. Because there are four different bases, there are 64 possible triplet combinations (4x4x4), which is more than enough to code for the 20 different amino acids used by living organisms.",
+    "bullets": [
+     "The code is non-overlapping: each base is only part of one triplet.",
+     "The sequence of triplets determines the sequence of amino acids.",
+     "The sequence of amino acids determines the final shape and function of the protein."
+    ],
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Triplet Code",
+      "p": "A sequence of three bases in DNA that codes for a specific amino acid during protein synthesis."
+     }
+    ]
+   },
+   {
+    "h": "The Problem: Nucleus vs Ribosome",
+    "p": "DNA is a very large molecule found in the **nucleus** of eukaryotic cells. It is too big to leave the nucleus through the nuclear pores. However, proteins are synthesised at the **ribosomes**, which are located in the cytoplasm. To solve this, the cell makes a smaller, mobile copy of the gene called **mRNA**.",
+    "bullets": [
+     "DNA stays protected in the nucleus.",
+     "mRNA acts as a messenger between the nucleus and the cytoplasm.",
+     "mRNA is single-stranded and shorter than DNA."
+    ],
+    "fig": [
+     {
+      "cap": "The flow of genetic information from the protected DNA in the nucleus to the protein-making machinery in the cytoplasm.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" rx=\"15\" fill=\"#f3f4f6\" stroke=\"#1b2540\"/><circle cx=\"120\" cy=\"120\" r=\"80\" fill=\"#dbeafe\" stroke=\"#1b2540\"/><path d=\"M80 100 Q120 80 160 100 M80 110 Q120 90 160 110\" stroke=\"#1b2540\" fill=\"none\"/><text x=\"95\" y=\"145\" font-size=\"12\" fill=\"#1b2540\">DNA (Nucleus)</text><path d=\"M160 120 L240 120\" stroke=\"#1b2540\" stroke-dasharray=\"4\" marker-end=\"url(#arrow)\"/><text x=\"175\" y=\"115\" font-size=\"11\" fill=\"#1b2540\">mRNA Copy</text><rect x=\"260\" y=\"80\" width=\"100\" height=\"80\" rx=\"10\" fill=\"#bbf7d0\" stroke=\"#1b2540\"/><text x=\"275\" y=\"125\" font-size=\"12\" fill=\"#1b2540\">Ribosome</text><text x=\"270\" y=\"180\" font-size=\"11\" fill=\"#1b2540\">Protein Synthesis</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Transcription: Making the mRNA",
+    "p": "Transcription is the first stage of protein synthesis. It occurs in the nucleus. An enzyme called **RNA polymerase** binds to a region of non-coding DNA in front of a gene. It then moves along the DNA, unzipping the strands and building a complementary strand of mRNA.",
+    "bullets": [
+     "The DNA strands unzip to expose the bases.",
+     "RNA polymerase uses one DNA strand as a template.",
+     "Free RNA nucleotides pair with the DNA bases.",
+     "In RNA, the base **Uracil (U)** replaces Thymine (T) and pairs with Adenine (A)."
+    ],
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Base Pairing in Transcription",
+      "p": "DNA A pairs with RNA U; DNA T pairs with RNA A; DNA C pairs with RNA G; DNA G pairs with RNA C."
+     }
+    ]
+   },
+   {
+    "h": "mRNA Structure",
+    "p": "Messenger RNA (mRNA) is a polymer of nucleotides, similar to DNA, but with three key differences that allow it to function as a temporary messenger.",
+    "table": {
+     "head": [
+      "Feature",
+      "DNA",
+      "mRNA"
+     ],
+     "rows": [
+      [
+       "Strands",
+       "Double-stranded (Helix)",
+       "Single-stranded"
+      ],
+      [
+       "Sugar",
+       "Deoxyribose",
+       "Ribose"
+      ],
+      [
+       "Bases",
+       "A, T, C, G",
+       "A, U, C, G"
+      ]
+     ]
+    }
+   },
+   {
+    "h": "Translation: The Assembly Line",
+    "p": "Once the mRNA molecule is complete, it leaves the nucleus and enters the cytoplasm, where it attaches to a **ribosome**. This is where translation occurs: the 'language' of nucleic acids is translated into the 'language' of proteins (amino acids).",
+    "bullets": [
+     "The ribosome moves along the mRNA strand.",
+     "It 'reads' the mRNA in groups of three bases called **codons**.",
+     "Each codon codes for one specific amino acid."
+    ],
+    "fig": [
+     {
+      "cap": "Transcription: RNA polymerase unzipping DNA and creating a complementary mRNA strand using base-pairing rules.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><path d=\"M20 40 Q100 40 150 100 Q200 160 380 160\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M20 160 Q100 160 150 100 Q200 40 380 40\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><ellipse cx=\"150\" cy=\"100\" rx=\"60\" ry=\"40\" fill=\"#fde68a\" fill-opacity=\"0.5\" stroke=\"#1b2540\"/><text x=\"115\" y=\"105\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\">RNA Polymerase</text><path d=\"M160 105 L300 105\" stroke=\"#fecaca\" stroke-width=\"4\"/><text x=\"200\" y=\"120\" font-size=\"11\" fill=\"#1b2540\">Growing mRNA strand</text><text x=\"30\" y=\"30\" font-size=\"11\" fill=\"#1b2540\">DNA Strand</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "The Role of tRNA",
+    "p": "**Transfer RNA (tRNA)** molecules are the 'translators'. Each tRNA molecule carries a specific **amino acid** to the ribosome. At the other end of the tRNA is an **anticodon**—a sequence of three bases that is complementary to a codon on the mRNA.",
+    "bullets": [
+     "tRNA molecules ensure the correct amino acid is brought for each codon.",
+     "The anticodon on the tRNA binds to the codon on the mRNA by complementary base pairing.",
+     "This ensures the amino acids are lined up in the exact order dictated by the DNA."
+    ]
+   },
+   {
+    "h": "Forming the Polypeptide",
+    "p": "As the ribosome moves along the mRNA, it brings together the mRNA and the correct tRNA molecules. The amino acids carried by the tRNA molecules are joined together by **peptide bonds** to form a long chain called a **polypeptide**.",
+    "bullets": [
+     "The first tRNA binds to the first codon.",
+     "The second tRNA binds to the next codon.",
+     "A bond forms between the two amino acids.",
+     "The first tRNA leaves to collect another amino acid, and the ribosome moves forward."
+    ],
+    "fig": [
+     {
+      "cap": "Translation: The ribosome reading mRNA codons and tRNA molecules delivering the correct amino acids to build a polypeptide chain.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"50\" y=\"160\" width=\"300\" height=\"20\" rx=\"5\" fill=\"#e9d5ff\" stroke=\"#1b2540\"/><text x=\"60\" y=\"175\" font-size=\"10\" fill=\"#1b2540\">A U G  C G U  U U A  G C C</text><rect x=\"120\" y=\"80\" width=\"160\" height=\"90\" rx=\"20\" fill=\"#bbf7d0\" fill-opacity=\"0.7\" stroke=\"#1b2540\"/><text x=\"170\" y=\"140\" font-size=\"12\" fill=\"#1b2540\">Ribosome</text><path d=\"M180 80 L180 120 L200 120 L200 80 Z\" fill=\"#fde68a\" stroke=\"#1b2540\"/><circle cx=\"190\" cy=\"70\" r=\"10\" fill=\"#fecaca\" stroke=\"#1b2540\"/><text x=\"178\" y=\"115\" font-size=\"9\" fill=\"#1b2540\">GCA</text><text x=\"175\" y=\"55\" font-size=\"10\" fill=\"#1b2540\">Amino Acid</text><text x=\"210\" y=\"100\" font-size=\"10\" fill=\"#1b2540\">tRNA</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Protein Folding",
+    "p": "A polypeptide chain is not yet a functional protein. Once the chain is complete, it detaches from the ribosome and **folds** into a specific three-dimensional shape. This shape is determined entirely by the sequence of amino acids.",
+    "bullets": [
+     "Chemical interactions (like hydrogen bonds) between amino acids cause the chain to fold.",
+     "The 3D shape creates specific features like the **active site** of an enzyme.",
+     "If the sequence of amino acids is wrong, the protein may fold incorrectly and fail to function."
+    ]
+   },
+   {
+    "h": "Protein Functions",
+    "p": "The final shape of the protein allows it to carry out its specific job in the cell. The variety of shapes possible allows proteins to perform many different roles.",
+    "table": {
+     "head": [
+      "Protein Type",
+      "Example/Function",
+      "Importance of Shape"
+     ],
+     "rows": [
+      [
+       "Enzymes",
+       "Biological catalysts",
+       "Active site must match the substrate."
+      ],
+      [
+       "Hormones",
+       "Chemical messengers",
+       "Must fit into specific receptors on target cells."
+      ],
+      [
+       "Structural",
+       "Collagen/Keratin",
+       "Must provide strength or flexibility."
+      ]
+     ]
+    }
+   },
+   {
+    "h": "Summary of the Process",
+    "p": "The entire process can be summarised as: **DNA -> Transcription -> mRNA -> Translation -> Polypeptide -> Folding -> Protein**. Every step is controlled and precise to ensure the cell produces the exact proteins it needs at the right time.",
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Common Confusion",
+      "p": "Students often swap the names 'transcription' and 'translation'. Remember: Transcription comes first (C before L) and involves 'scripting' (writing) the mRNA copy."
+     }
+    ]
+   }
+  ],
+  "analogy": {
+   "t": "The Master Recipe Book",
+   "p": "Imagine the DNA is a huge, fragile Master Recipe Book kept in a library (the nucleus) that cannot be taken out. To make a cake (the protein), you must first make a photocopy of the specific recipe (mRNA). You take this photocopy to the kitchen (the ribosome). In the kitchen, the chef (ribosome) reads the instructions. Assistants (tRNA) bring the specific ingredients (amino acids) in the exact order listed. The ingredients are mixed to form a batter (polypeptide), which is then baked into a specific shape (folding) to become a cake. The analogy breaks down because, in a cell, the 'ingredients' are linked together in a chain, whereas in a cake, they are blended into a uniform mixture."
+  },
+  "terms": [
+   {
+    "t": "Transcription",
+    "d": "The process of making an mRNA copy of a DNA gene sequence."
+   },
+   {
+    "t": "Translation",
+    "d": "The process where ribosomes use the mRNA code to assemble amino acids into a polypeptide."
+   },
+   {
+    "t": "mRNA",
+    "d": "Messenger RNA; a single-stranded molecule that carries the genetic code from the nucleus to the ribosome."
+   },
+   {
+    "t": "tRNA",
+    "d": "Transfer RNA; molecules that transport specific amino acids to the ribosome during translation."
+   },
+   {
+    "t": "Codon",
+    "d": "A sequence of three bases on mRNA that codes for a single amino acid."
+   },
+   {
+    "t": "Anticodon",
+    "d": "A sequence of three bases on a tRNA molecule that is complementary to an mRNA codon."
+   },
+   {
+    "t": "RNA Polymerase",
+    "d": "The enzyme responsible for unzipping DNA and joining RNA nucleotides during transcription."
+   },
+   {
+    "t": "Amino Acid",
+    "d": "The building blocks of proteins."
+   },
+   {
+    "t": "Polypeptide",
+    "d": "A long chain of amino acids joined by peptide bonds."
+   },
+   {
+    "t": "Ribosome",
+    "d": "The organelle in the cytoplasm where protein synthesis (translation) takes place."
+   },
+   {
+    "t": "Uracil",
+    "d": "The nitrogenous base found in RNA that replaces Thymine."
+   },
+   {
+    "t": "Non-coding DNA",
+    "d": "Regions of DNA that do not code for proteins but can control gene expression by providing binding sites for RNA polymerase."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "DNA leaves the nucleus to go to the ribosome.",
+    "r": "DNA is too large to leave the nucleus; an mRNA copy is made instead."
+   },
+   {
+    "w": "Transcription happens in the cytoplasm.",
+    "r": "Transcription happens in the nucleus; translation happens in the cytoplasm/ribosome."
+   },
+   {
+    "w": "The bases in DNA are the amino acids.",
+    "r": "Bases are part of nucleotides; three bases (a triplet) code for one amino acid."
+   },
+   {
+    "w": "mRNA has Thymine (T).",
+    "r": "mRNA contains Uracil (U) instead of Thymine."
+   },
+   {
+    "w": "Proteins are made of glucose.",
+    "r": "Proteins are made of amino acids; starch/cellulose are made of glucose."
+   },
+   {
+    "w": "The ribosome makes the mRNA.",
+    "r": "RNA polymerase makes mRNA; the ribosome uses mRNA to make proteins."
+   },
+   {
+    "w": "A single base codes for an amino acid.",
+    "r": "It takes a triplet (three bases) to code for one amino acid."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Explain why the sequence of bases in a gene is important for the function of an enzyme.",
+    "marks": 4,
+    "model": [
+     "The sequence of bases determines the sequence of amino acids.",
+     "The sequence of amino acids determines how the protein folds.",
+     "This creates a specific 3D shape.",
+     "Which forms a specific active site that is complementary to a substrate."
+    ],
+    "tip": "Always link 'base sequence' to 'amino acid sequence' and then to 'protein shape'."
+   },
+   {
+    "q": "Describe the role of RNA polymerase in protein synthesis.",
+    "marks": 2,
+    "model": [
+     "It binds to non-coding DNA in front of a gene.",
+     "It joins RNA nucleotides together to form an mRNA strand."
+    ],
+    "tip": "Mention its binding site and its role in building the polymer."
+   },
+   {
+    "q": "State the names of the two main stages of protein synthesis.",
+    "marks": 2,
+    "model": [
+     "Transcription",
+     "Translation"
+    ],
+    "tip": "Spell these correctly; they are very similar."
+   },
+   {
+    "q": "A DNA triplet is GCA. State the complementary mRNA codon.",
+    "marks": 1,
+    "model": [
+     "CGU"
+    ],
+    "tip": "Remember A pairs with U in RNA, not T."
+   },
+   {
+    "q": "Describe what happens during translation.",
+    "marks": 4,
+    "model": [
+     "mRNA attaches to a ribosome.",
+     "tRNA molecules bring specific amino acids.",
+     "The tRNA anticodon binds to the complementary mRNA codon.",
+     "Amino acids are joined together to form a polypeptide chain."
+    ],
+    "tip": "Focus on the ribosome, tRNA, and the growing chain."
+   },
+   {
+    "q": "Explain why mRNA is needed for protein synthesis.",
+    "marks": 2,
+    "model": [
+     "DNA is too large to leave the nucleus.",
+     "mRNA is small enough to travel to the ribosome in the cytoplasm."
+    ],
+    "tip": "Think about the physical locations of DNA and ribosomes."
+   },
+   {
+    "q": "How many bases code for 5 amino acids?",
+    "marks": 1,
+    "model": [
+     "15"
+    ],
+    "tip": "Multiply the number of amino acids by 3."
+   },
+   {
+    "q": "What determines the order in which amino acids are joined together?",
+    "marks": 1,
+    "model": [
+     "The sequence of bases (or codons) in the mRNA."
+    ],
+    "tip": "The mRNA sequence is the direct template for translation."
+   },
+   {
+    "q": "Describe the role of tRNA in translation.",
+    "marks": 2,
+    "model": [
+     "It carries a specific amino acid to the ribosome.",
+     "Its anticodon matches the codon on the mRNA to ensure the correct order."
+    ],
+    "tip": "tRNA is the 'bridge' between the code and the amino acid."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A section of mRNA has the sequence: AUG CGU GGC. Using a genetic code table, a student finds these code for Methionine, Arginine, and Glycine. If the DNA sequence changed from GGC to GGT, explain the likely effect on the protein.",
+    "steps": [
+     "Identify the original DNA triplet: GGC.",
+     "Identify the new DNA triplet: GGT.",
+     "Determine the new mRNA codon: CCA (complementary to GGT).",
+     "State that a different codon may code for a different amino acid.",
+     "Conclude that if the amino acid changes, the protein shape/function might change."
+    ],
+    "ans": "The mutation changes the DNA triplet, which changes the mRNA codon to CCA. This may result in a different amino acid being added to the chain. This change in the amino acid sequence could cause the protein to fold differently, potentially altering its function or active site."
+   },
+   {
+    "q": "Compare the structures of DNA and mRNA.",
+    "steps": [
+     "Compare the number of strands.",
+     "Compare the type of sugar present.",
+     "Compare the nitrogenous bases used."
+    ],
+    "ans": "DNA is double-stranded forming a double helix, whereas mRNA is single-stranded. DNA contains the sugar deoxyribose, while mRNA contains ribose. Finally, DNA uses the base Thymine (T), which is replaced by Uracil (U) in mRNA."
+   }
+  ],
+  "svg": [],
+  "pid": "bio_ocra.1.1",
+  "sid": "bio_ocra",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3-flash-preview",
+  "ts": "2026-11-26T19:10:48.910Z"
  }
 }
