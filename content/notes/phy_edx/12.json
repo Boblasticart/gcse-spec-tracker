@@ -1,0 +1,3076 @@
+{
+ "phy_edx.12.0": {
+  "summary": "When a conductor and a magnetic field move relative to each other, the conductor **cuts magnetic field lines** and a **potential difference is induced** across it; if the conductor is part of a complete circuit, this drives an **induced current**. This is **electromagnetic induction**. In the lab you show it by moving a magnet into or out of a coil connected to a sensitive ammeter (or moving a wire between magnetic poles); in power stations a turbine spins a large magnet (electromagnet) inside fixed coils so a current is generated continuously.",
+  "core": [
+   {
+    "h": "What electromagnetic induction is",
+    "p": "Electromagnetic induction is producing a potential difference (and so a current, if the circuit is complete) in a conductor because of **relative movement** between the conductor and a magnetic field. The key idea is that the conductor must **cut** (or experience a change in) magnetic field lines.",
+    "bullets": [
+     "A **potential difference (p.d.) is induced** across the ends of the conductor.",
+     "If the conductor is part of a **complete circuit**, an **induced current** flows.",
+     "No movement (or no change in field) means **no induced p.d.** and no current.",
+     "It does not matter which one moves: magnet moving past a still wire, or wire moving past a still magnet, both work.",
+     "This is the reverse of the motor effect: there, current plus field gives movement; here, movement plus field gives a p.d."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Electromagnetic induction",
+      "p": "A potential difference is induced across a conductor when it experiences a change in magnetic field, for example when it moves relative to a magnetic field and cuts field lines."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Why relative movement is essential",
+    "p": "The p.d. is only induced while field lines are being cut, i.e. while the magnetic field through the conductor is **changing**. A magnet sitting still inside a coil produces a field through it, but that field is not changing, so nothing is induced.",
+    "bullets": [
+     "Moving magnet, still coil: induced p.d.",
+     "Still magnet, moving coil: induced p.d.",
+     "Both moving at the **same velocity**: no relative movement, so no p.d.",
+     "Moving a wire **parallel** to the field lines: no lines are cut, so no p.d.",
+     "Maximum effect when the wire moves at **right angles** to the field lines."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Still magnet trap",
+      "p": "A strong magnet held still inside a coil gives a reading of zero. Students often say a current flows because the magnet is there; the mark is for saying there is no movement, so no field lines are cut."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Lab method 1: magnet and coil",
+    "p": "The classic small-scale demonstration uses a bar magnet, a coil of insulated wire (a solenoid) and a **sensitive ammeter** or **centre-zero galvanometer** connected across the coil to make a complete circuit.",
+    "bullets": [
+     "Connect the two ends of the coil to a centre-zero meter so readings either side of zero can be seen.",
+     "Push the N pole of the magnet **into** the coil: the needle **deflects** one way.",
+     "Hold the magnet **still** inside the coil: the needle returns to **zero**.",
+     "Pull the magnet **out**: the needle deflects the **opposite way**.",
+     "Push the S pole in: the needle deflects the opposite way to the N pole going in.",
+     "Move the magnet faster: the deflection is **larger** (but lasts a shorter time)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Why centre-zero?",
+      "p": "A centre-zero meter shows the direction of the current as well as its size, so you can show the current reverses when the motion reverses."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A bar magnet pushed into a coil connected to a centre-zero meter. While the magnet moves, field lines cut the turns of the coil, a p.d. is induced and the meter needle deflects. When the magnet stops, the reading drops back to zero.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 Z\" fill=\"#b91c1c\"/></marker></defs><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><text x=\"200\" y=\"22\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1b2540\">Magnet pushed into a coil</text><rect x=\"30\" y=\"95\" width=\"50\" height=\"40\" fill=\"#fecaca\" stroke=\"#991b1b\" stroke-width=\"2\"/><rect x=\"80\" y=\"95\" width=\"50\" height=\"40\" fill=\"#dbeafe\" stroke=\"#1e3a8a\" stroke-width=\"2\"/><text x=\"55\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1b2540\">N</text><text x=\"105\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1b2540\">S</text><line x1=\"60\" y1=\"160\" x2=\"120\" y2=\"160\" stroke=\"#b91c1c\" stroke-width=\"2.5\" marker-end=\"url(#ah)\"/><text x=\"80\" y=\"180\" font-size=\"11\" text-anchor=\"middle\" fill=\"#b91c1c\">magnet moves in</text><ellipse cx=\"190\" cy=\"115\" rx=\"10\" ry=\"32\" fill=\"none\" stroke=\"#b45309\" stroke-width=\"3\"/><ellipse cx=\"210\" cy=\"115\" rx=\"10\" ry=\"32\" fill=\"none\" stroke=\"#b45309\" stroke-width=\"3\"/><ellipse cx=\"230\" cy=\"115\" rx=\"10\" ry=\"32\" fill=\"none\" stroke=\"#b45309\" stroke-width=\"3\"/><ellipse cx=\"250\" cy=\"115\" rx=\"10\" ry=\"32\" fill=\"none\" stroke=\"#b45309\" stroke-width=\"3\"/><text x=\"220\" y=\"68\" font-size=\"12\" text-anchor=\"middle\" fill=\"#b45309\">coil of wire</text><polyline points=\"190,147 190,200 290,200\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><polyline points=\"250,147 250,170 330,170 330,185\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"330\" cy=\"200\" r=\"16\" fill=\"#bbf7d0\" stroke=\"#166534\" stroke-width=\"2\"/><line x1=\"330\" y1=\"204\" x2=\"338\" y2=\"190\" stroke=\"#166534\" stroke-width=\"2\"/><line x1=\"290\" y1=\"200\" x2=\"314\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"330\" y=\"232\" font-size=\"12\" text-anchor=\"middle\" fill=\"#166534\">galvanometer</text><text x=\"330\" y=\"140\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">needle deflects</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Lab method 2: wire between magnetic poles",
+    "p": "A single straight wire connected to a sensitive meter can be moved up and down between the poles of a U-shaped (horseshoe) magnet or two flat magnets on a yoke.",
+    "bullets": [
+     "Move the wire **across** the field (at right angles to the field lines): a small p.d. is induced and the needle flicks.",
+     "Reverse the direction of movement: the needle flicks the other way.",
+     "Move the wire **along** the field lines (from N towards S): no deflection.",
+     "Stop the wire: no deflection.",
+     "The effect is small with one wire, which is why a very sensitive meter is needed and why coils are used in practice."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": [
+     {
+      "cap": "A straight wire moved sideways between N and S poles cuts the vertical field lines, so a p.d. is induced across it. Moving it up or down along the field lines would cut no lines and induce nothing.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 Z\" fill=\"#b91c1c\"/></marker></defs><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><text x=\"200\" y=\"22\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1b2540\">Wire moved through a field</text><rect x=\"40\" y=\"50\" width=\"120\" height=\"40\" fill=\"#fecaca\" stroke=\"#991b1b\" stroke-width=\"2\"/><text x=\"100\" y=\"75\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1b2540\">N</text><rect x=\"40\" y=\"170\" width=\"120\" height=\"40\" fill=\"#dbeafe\" stroke=\"#1e3a8a\" stroke-width=\"2\"/><text x=\"100\" y=\"195\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1b2540\">S</text><line x1=\"60\" y1=\"92\" x2=\"60\" y2=\"166\" stroke=\"#7c3aed\" stroke-width=\"1.5\" stroke-dasharray=\"4,3\"/><line x1=\"140\" y1=\"92\" x2=\"140\" y2=\"166\" stroke=\"#7c3aed\" stroke-width=\"1.5\" stroke-dasharray=\"4,3\"/><text x=\"210\" y=\"135\" font-size=\"11\" fill=\"#7c3aed\">field lines N to S</text><line x1=\"100\" y1=\"100\" x2=\"100\" y2=\"160\" stroke=\"#b45309\" stroke-width=\"4\"/><text x=\"210\" y=\"105\" font-size=\"11\" fill=\"#b45309\">wire (conductor)</text><line x1=\"105\" y1=\"130\" x2=\"135\" y2=\"130\" stroke=\"#b91c1c\" stroke-width=\"2.5\" marker-end=\"url(#ah)\"/><line x1=\"95\" y1=\"130\" x2=\"65\" y2=\"130\" stroke=\"#b91c1c\" stroke-width=\"2.5\" marker-end=\"url(#ah)\"/><text x=\"210\" y=\"160\" font-size=\"11\" fill=\"#b91c1c\">move across the lines</text><rect x=\"250\" y=\"190\" width=\"120\" height=\"30\" rx=\"4\" fill=\"#bbf7d0\" stroke=\"#166534\" stroke-width=\"2\"/><text x=\"310\" y=\"210\" font-size=\"12\" text-anchor=\"middle\" fill=\"#166534\">p.d. induced</text><line x1=\"200\" y1=\"101\" x2=\"110\" y2=\"110\" stroke=\"#b45309\" stroke-width=\"1\"/></svg>"
+     }
+    ]
+   },
+   {
+    "h": "What the meter shows and why",
+    "p": "The pattern of readings is the evidence for electromagnetic induction. Learn it as a set of rules linking the motion to the reading.",
+    "bullets": [
+     "Reading only appears **during** movement.",
+     "Reversing the direction of movement **reverses** the current.",
+     "Reversing the pole (S instead of N) **reverses** the current.",
+     "Reversing both movement and pole gives the **original** direction.",
+     "Faster movement means field lines are cut **at a greater rate**, so a **bigger** p.d. and current.",
+     "Moving the magnet in and out continuously gives a current that keeps changing direction: an **alternating current**."
+    ],
+    "table": {
+     "head": [
+      "Action",
+      "Meter reading"
+     ],
+     "rows": [
+      [
+       "N pole pushed in",
+       "deflects one way, e.g. right"
+      ],
+      [
+       "Magnet held still",
+       "zero"
+      ],
+      [
+       "N pole pulled out",
+       "deflects the other way, e.g. left"
+      ],
+      [
+       "S pole pushed in",
+       "deflects left"
+      ],
+      [
+       "N pole pushed in faster",
+       "bigger deflection right"
+      ],
+      [
+       "Coil moved onto still magnet",
+       "same as magnet moved into coil"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": [
+     {
+      "cap": "Summary of meter readings in the magnet and coil experiment. Direction depends on the direction of motion and which pole is used; size depends on how quickly the field lines are cut.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 Z\" fill=\"#b91c1c\"/></marker></defs><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><text x=\"200\" y=\"22\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1b2540\">Meter readings for each action</text><rect x=\"20\" y=\"40\" width=\"360\" height=\"190\" fill=\"#ffffff\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"20\" y1=\"70\" x2=\"380\" y2=\"70\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"220\" y1=\"40\" x2=\"220\" y2=\"230\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"120\" y=\"60\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">Action</text><text x=\"300\" y=\"60\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">Needle</text><rect x=\"21\" y=\"71\" width=\"358\" height=\"38\" fill=\"#dbeafe\"/><text x=\"120\" y=\"94\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">N pole pushed in</text><text x=\"300\" y=\"94\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1e3a8a\">flicks right</text><rect x=\"21\" y=\"109\" width=\"358\" height=\"38\" fill=\"#fecaca\"/><text x=\"120\" y=\"132\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">N pole pulled out</text><text x=\"300\" y=\"132\" font-size=\"12\" text-anchor=\"middle\" fill=\"#991b1b\">flicks left</text><rect x=\"21\" y=\"147\" width=\"358\" height=\"38\" fill=\"#fde68a\"/><text x=\"120\" y=\"170\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">Magnet held still</text><text x=\"300\" y=\"170\" font-size=\"12\" text-anchor=\"middle\" fill=\"#92400e\">zero</text><rect x=\"21\" y=\"185\" width=\"358\" height=\"44\" fill=\"#bbf7d0\"/><text x=\"120\" y=\"211\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">Pushed in faster</text><text x=\"300\" y=\"211\" font-size=\"12\" text-anchor=\"middle\" fill=\"#166534\">bigger flick right</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Induced p.d. versus induced current",
+    "p": "Edexcel mark schemes carefully separate the **induced potential difference** from the **induced current**. A p.d. is always induced when field lines are cut; a current only flows if there is a complete circuit.",
+    "bullets": [
+     "Open circuit (meter disconnected): p.d. still induced, but **no current**.",
+     "Closed circuit: the induced p.d. drives an induced current.",
+     "Size of current depends on the induced p.d. and the resistance of the circuit (I = V / R).",
+     "A voltmeter across the coil would show the induced p.d. directly."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Must-know",
+      "p": "Movement induces a potential difference. A current flows only if the conductor is part of a complete circuit."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Energy transfers in induction",
+    "p": "Induction does not create energy from nothing. The person or machine moving the magnet does **work**, and this energy is transferred **electrically** to the circuit.",
+    "bullets": [
+     "Kinetic energy store of the moving magnet or wire is transferred to the circuit electrically.",
+     "When a current is induced you have to push slightly harder: the induced current makes its own magnetic field that **opposes the movement** (covered in 13.2).",
+     "If there is no current (open circuit), there is no opposing force and no electrical energy is transferred.",
+     "In the circuit, the energy is then transferred to the thermal store of the wires and meter, or to whatever device is connected."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Large scale: generating electricity in power stations",
+    "p": "Almost all mains electricity is produced by electromagnetic induction in **generators**. The principle is exactly the lab experiment, scaled up: a magnetic field and coils of wire move relative to each other continuously.",
+    "bullets": [
+     "In most power stations a **turbine** is turned, e.g. by high-pressure **steam** (from burning fossil fuels, nuclear fission or biomass), by moving water (hydroelectric, tidal) or by wind.",
+     "The turbine is connected to a **generator** by a shaft, so the generator spins.",
+     "In large generators the **magnet (usually an electromagnet) rotates** inside **fixed (stationary) coils** of wire.",
+     "As the magnet rotates, its field lines continuously cut the coils, inducing a p.d. across them.",
+     "Because each coil sees a N pole then a S pole pass by, the induced p.d. keeps reversing: power stations generate **alternating current (a.c.)**.",
+     "In the UK the mains supply has a frequency of **50 Hz**, so the generator must rotate at a steady rate."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Why the magnet spins, not the coils",
+      "p": "In power-station generators the heavy output coils stay still and the magnet rotates. This means the very large generated current can be taken from fixed coils by fixed connections, without sliding contacts."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Energy chain in a thermal power station: fuel heats water, steam turns a turbine, the turbine spins the magnet inside the generator coils, and the induced current is sent to the National Grid.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 Z\" fill=\"#b91c1c\"/></marker></defs><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><text x=\"200\" y=\"22\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1b2540\">Power station energy chain</text><rect x=\"10\" y=\"90\" width=\"80\" height=\"50\" rx=\"6\" fill=\"#fde68a\" stroke=\"#92400e\" stroke-width=\"2\"/><text x=\"50\" y=\"112\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">Fuel heats</text><text x=\"50\" y=\"128\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">water</text><rect x=\"110\" y=\"90\" width=\"80\" height=\"50\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#1e3a8a\" stroke-width=\"2\"/><text x=\"150\" y=\"112\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">Steam</text><text x=\"150\" y=\"128\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">turns turbine</text><rect x=\"210\" y=\"90\" width=\"80\" height=\"50\" rx=\"6\" fill=\"#e9d5ff\" stroke=\"#5b21b6\" stroke-width=\"2\"/><text x=\"250\" y=\"112\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">Generator</text><text x=\"250\" y=\"128\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">spins magnet</text><rect x=\"310\" y=\"90\" width=\"80\" height=\"50\" rx=\"6\" fill=\"#bbf7d0\" stroke=\"#166534\" stroke-width=\"2\"/><text x=\"350\" y=\"112\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">Current</text><text x=\"350\" y=\"128\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">to grid</text><line x1=\"90\" y1=\"115\" x2=\"108\" y2=\"115\" stroke=\"#b91c1c\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><line x1=\"190\" y1=\"115\" x2=\"208\" y2=\"115\" stroke=\"#b91c1c\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><line x1=\"290\" y1=\"115\" x2=\"308\" y2=\"115\" stroke=\"#b91c1c\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><text x=\"50\" y=\"170\" font-size=\"11\" text-anchor=\"middle\" fill=\"#92400e\">thermal</text><text x=\"150\" y=\"170\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1e3a8a\">kinetic</text><text x=\"250\" y=\"170\" font-size=\"11\" text-anchor=\"middle\" fill=\"#5b21b6\">kinetic</text><text x=\"350\" y=\"170\" font-size=\"11\" text-anchor=\"middle\" fill=\"#166534\">electrical</text><text x=\"200\" y=\"210\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">magnet rotates inside fixed coils</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Comparing lab scale and power station",
+    "p": "The physics is identical; only the scale and engineering change.",
+    "bullets": [
+     "Both need a **magnetic field**, a **conductor**, and **relative movement**.",
+     "Lab: movement by hand, tiny p.d., brief pulses of current.",
+     "Power station: continuous rotation, very large p.d. and current, steady a.c. output."
+    ],
+    "table": {
+     "head": [
+      "Feature",
+      "Lab demonstration",
+      "Power station generator"
+     ],
+     "rows": [
+      [
+       "Magnet",
+       "Small permanent bar magnet",
+       "Large rotating electromagnet"
+      ],
+      [
+       "Conductor",
+       "Coil or single wire",
+       "Many fixed coils with many turns"
+      ],
+      [
+       "Movement",
+       "Pushed in and out by hand",
+       "Turned continuously by a turbine"
+      ],
+      [
+       "Output",
+       "Small, brief pulses",
+       "Large, continuous a.c. at 50 Hz"
+      ],
+      [
+       "Detected by",
+       "Sensitive ammeter or galvanometer",
+       "Supplied to National Grid"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Getting a bigger effect",
+    "p": "Engineers want a large induced p.d. The same things that increase the meter deflection in the lab are used in real generators (detail of these factors is spec point 13.2).",
+    "bullets": [
+     "**Faster** relative movement (faster rotation).",
+     "**Stronger** magnetic field (stronger magnet or electromagnet).",
+     "**More turns** on the coil, so more wire cuts the field lines.",
+     "Using an **iron core** inside the coil to concentrate the field."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Describing the experiment in a 6-mark answer",
+    "p": "Questions often ask you to describe how to show that a current can be produced by moving a magnet, and what you would observe. Structure the answer as apparatus, method, observations and explanation.",
+    "bullets": [
+     "Apparatus: coil, bar magnet, connecting leads, centre-zero ammeter/galvanometer.",
+     "Method: connect coil to meter; move magnet into coil, hold still, pull out; repeat faster and with the other pole.",
+     "Observations: deflection only while moving; opposite deflection for opposite motion or pole; bigger when faster.",
+     "Explanation: magnet's field lines are cut by the coil, inducing a p.d.; the complete circuit lets an induced current flow."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Use the key words",
+      "p": "Mark schemes reward: relative movement, cuts field lines, induced potential difference, induced current, complete circuit, reverses direction."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Strumming a guitar string",
+   "p": "Think of the field lines as tightly stretched strings and the wire as your finger. Only when your finger **moves across** the strings do they make a sound (an induced p.d.); resting your finger on them, or sliding it along a string, makes nothing. Strum faster and you hit more strings per second, so the effect is bigger. Strum the other way and the sound pattern reverses. Where it breaks down: field lines are not real physical objects and nothing is plucked; the p.d. is due to the changing magnetic field acting on free electrons in the conductor, and the induced current also exerts a force that opposes your motion, which strings do not do."
+  },
+  "terms": [
+   {
+    "t": "Electromagnetic induction",
+    "d": "Producing a potential difference across a conductor when it experiences a changing magnetic field, e.g. by relative movement between conductor and magnet."
+   },
+   {
+    "t": "Induced potential difference",
+    "d": "The p.d. produced across a conductor by electromagnetic induction."
+   },
+   {
+    "t": "Induced current",
+    "d": "The current that flows when an induced p.d. acts in a complete circuit."
+   },
+   {
+    "t": "Relative movement",
+    "d": "Movement of the magnet and conductor compared with each other; either or both may move, but not at the same velocity."
+   },
+   {
+    "t": "Cutting field lines",
+    "d": "A conductor moving across (not along) magnetic field lines, which causes a p.d. to be induced."
+   },
+   {
+    "t": "Magnetic field",
+    "d": "Region around a magnet or current-carrying conductor where a magnetic material or another magnet experiences a force."
+   },
+   {
+    "t": "Coil (solenoid)",
+    "d": "A conductor wound into many turns; used because each turn adds to the induced p.d."
+   },
+   {
+    "t": "Centre-zero ammeter / galvanometer",
+    "d": "A sensitive meter with zero in the middle of its scale that shows both size and direction of a small current."
+   },
+   {
+    "t": "Complete circuit",
+    "d": "An unbroken conducting path through which current can flow."
+   },
+   {
+    "t": "Generator",
+    "d": "A device that transfers kinetic energy into electrical energy using electromagnetic induction."
+   },
+   {
+    "t": "Turbine",
+    "d": "A set of blades turned by steam, water or wind, connected to the shaft of a generator."
+   },
+   {
+    "t": "Electromagnet",
+    "d": "A coil carrying current, often around an iron core, that acts as a magnet; used as the rotating magnet in large generators."
+   },
+   {
+    "t": "Alternating current (a.c.)",
+    "d": "A current that repeatedly reverses direction; produced by power station generators."
+   },
+   {
+    "t": "Frequency of mains",
+    "d": "The number of complete cycles of the a.c. per second; 50 Hz in the UK."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "A current flows when the magnet is inside the coil.",
+    "r": "A p.d. is induced only while there is relative movement; a stationary magnet gives zero reading."
+   },
+   {
+    "w": "The magnet gives the coil its electricity / electrons come from the magnet.",
+    "r": "The movement causes the conductor to cut field lines, inducing a p.d. that drives the free electrons already in the wire."
+   },
+   {
+    "w": "Moving the wire up and down along the field lines makes a current.",
+    "r": "The wire must cut field lines; moving parallel to the field induces nothing."
+   },
+   {
+    "w": "A current is always induced when a conductor moves in a field.",
+    "r": "A p.d. is induced; a current flows only if the conductor is in a complete circuit."
+   },
+   {
+    "w": "Pulling the magnet out gives a current in the same direction.",
+    "r": "Reversing the direction of movement reverses the direction of the induced p.d. and current."
+   },
+   {
+    "w": "In a power station the coils spin inside the magnet.",
+    "r": "In large power station generators the magnet (electromagnet) rotates inside fixed coils."
+   },
+   {
+    "w": "The turbine produces the electricity.",
+    "r": "The turbine turns the generator; the generator produces the p.d. by electromagnetic induction."
+   },
+   {
+    "w": "Moving faster makes the current last longer.",
+    "r": "Moving faster gives a larger induced p.d. and current, because field lines are cut at a greater rate."
+   }
+  ],
+  "exam": [
+   {
+    "q": "State what is meant by electromagnetic induction.",
+    "marks": 1,
+    "model": [
+     "A potential difference is induced in a conductor when it moves relative to / cuts a magnetic field (or the field through it changes)."
+    ],
+    "tip": "Say induced potential difference, not just electricity."
+   },
+   {
+    "q": "A magnet is held stationary inside a coil connected to an ammeter. State the reading on the ammeter and explain why.",
+    "marks": 2,
+    "model": [
+     "Reading is zero.",
+     "No relative movement, so no field lines are cut / magnetic field not changing, so no p.d. induced."
+    ],
+    "tip": "Two marks: the observation and the reason."
+   },
+   {
+    "q": "A student pushes the N pole of a magnet into a coil and the meter needle moves to the right. Describe what happens to the needle when the student pulls the magnet out of the coil.",
+    "marks": 1,
+    "model": [
+     "It deflects to the left (opposite direction)."
+    ],
+    "tip": "Opposite movement gives opposite deflection."
+   },
+   {
+    "q": "State two ways the student could make the needle deflect further.",
+    "marks": 2,
+    "model": [
+     "Move the magnet faster.",
+     "Use a stronger magnet / use a coil with more turns."
+    ],
+    "tip": "Avoid vague answers like 'use a bigger magnet'; say stronger."
+   },
+   {
+    "q": "A wire connected to a sensitive meter is placed between the poles of a U-shaped magnet. Explain why moving the wire parallel to the field lines gives no reading but moving it at right angles does.",
+    "marks": 2,
+    "model": [
+     "Moving parallel, the wire does not cut field lines so no p.d. is induced.",
+     "Moving at right angles, the wire cuts field lines so a p.d. is induced and a current flows in the circuit."
+    ],
+    "tip": "Use the phrase cuts field lines."
+   },
+   {
+    "q": "The coil is disconnected from the meter and the magnet is pushed in. State whether a potential difference is induced and whether a current flows.",
+    "marks": 2,
+    "model": [
+     "A p.d. is still induced (across the ends of the coil).",
+     "No current flows because the circuit is not complete."
+    ],
+    "tip": "Separate p.d. from current."
+   },
+   {
+    "q": "Explain why a student finds it slightly harder to push the magnet into the coil when the coil is connected to the meter than when it is disconnected.",
+    "marks": 2,
+    "model": [
+     "The induced current produces its own magnetic field.",
+     "This field opposes the movement of the magnet, so work must be done against it (energy transferred electrically)."
+    ],
+    "tip": "Link to energy conservation for a top answer."
+   },
+   {
+    "q": "Describe how electricity is generated by a generator in a power station.",
+    "marks": 4,
+    "model": [
+     "Steam (or water/wind) turns a turbine.",
+     "The turbine turns the generator shaft.",
+     "A magnet / electromagnet rotates inside fixed coils of wire.",
+     "The magnetic field lines are cut by the coils / field through the coils changes, inducing a p.d. (alternating), which drives a current to the grid."
+    ],
+    "tip": "Give the chain in order and name electromagnetic induction."
+   },
+   {
+    "q": "Explain why the generator in a power station produces alternating current.",
+    "marks": 2,
+    "model": [
+     "As the magnet rotates, the N pole then the S pole pass each coil.",
+     "So the direction of the induced p.d. reverses each half turn, giving a.c."
+    ],
+    "tip": "Link reversal to the poles changing."
+   },
+   {
+    "q": "Describe an experiment to show that a current can be produced by the relative movement of a magnet and a coil. Include what you would observe and explain your observations.",
+    "marks": 6,
+    "model": [
+     "Connect a coil to a sensitive centre-zero ammeter/galvanometer to form a complete circuit.",
+     "Push a bar magnet into the coil: needle deflects.",
+     "Hold magnet still: reading is zero.",
+     "Pull magnet out (or use S pole): needle deflects the opposite way.",
+     "Move magnet faster: larger deflection.",
+     "Explanation: relative movement means the coil cuts field lines, inducing a p.d. which drives a current in the complete circuit; direction depends on direction of motion/pole; size depends on rate of cutting."
+    ],
+    "tip": "Level-marked: include apparatus, method, observations AND explanation for top band."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Predict the meter reading in each case, given that pushing the N pole into the coil gives a deflection of +4 divisions: (a) S pole pushed in at the same speed (b) N pole pulled out at the same speed (c) coil moved towards a still N pole at the same speed (d) magnet and coil moved together in the same direction at the same speed.",
+    "steps": [
+     "(a) Changing the pole reverses the direction, same speed gives same size: -4.",
+     "(b) Reversing the direction of motion reverses the direction: -4.",
+     "(c) Only relative movement matters; this is the same as the N pole moving in: +4.",
+     "(d) No relative movement, so no field lines cut: 0."
+    ],
+    "ans": "(a) -4 (b) -4 (c) +4 (d) 0"
+   },
+   {
+    "q": "A coil connected to a meter has a total resistance of 2.0 ohms. Moving a magnet into it induces a p.d. of 0.012 V. Calculate the induced current. What would the current be if the meter were disconnected?",
+    "steps": [
+     "Use V = I x R, so I = V / R.",
+     "I = 0.012 / 2.0 = 0.006 A = 6 mA.",
+     "If disconnected, the circuit is not complete: the p.d. is still induced but the current is 0."
+    ],
+    "ans": "6 mA (0.006 A) when connected; 0 A when disconnected, although the 0.012 V p.d. is still induced."
+   },
+   {
+    "q": "Model answer: explain how a wind turbine generates a current.",
+    "steps": [
+     "Wind turns the blades (kinetic energy store of the air transferred).",
+     "The blades turn a shaft connected to a generator.",
+     "In the generator a magnet rotates relative to coils of wire.",
+     "The coils cut the magnetic field lines, so a p.d. is induced (electromagnetic induction).",
+     "The coils are connected to a complete circuit, so an alternating current flows."
+    ],
+    "ans": "Moving air turns the turbine, which spins the generator, producing relative movement between magnet and coils that induces a p.d. and an alternating current."
+   }
+  ],
+  "svg": [],
+  "pid": "phy_edx.12.0",
+  "sid": "phy_edx",
+  "v": 2,
+  "src": "pre",
+  "by": "claude/claude-opus-5-5",
+  "ts": "2026-11-26T01:56:11.473Z"
+ },
+ "phy_edx.12.1": {
+  "summary": "The **size** of an induced potential difference depends on how quickly the magnetic field lines are cut: it increases with the **speed of movement**, the **strength of the magnetic field** and the **number of turns on the coil**. The **direction** of the induced p.d. reverses if you reverse the **direction of movement** or the **polarity of the magnet**. Whenever an induced current flows, it creates its **own magnetic field that opposes the original change** (the movement that caused it), which is why work must be done to generate electricity.",
+  "core": [
+   {
+    "h": "Quick recap: what is being induced",
+    "p": "When a conductor and a magnetic field move relative to each other, the conductor cuts field lines and a **potential difference is induced** across it. If the conductor is part of a complete circuit, an **induced current** flows. This spec point is about what decides how big that p.d. is, which way it acts, and what the resulting current does.",
+    "bullets": [
+     "An induced p.d. needs a **change** in the magnetic field experienced by the conductor.",
+     "No relative movement means no induced p.d. at all.",
+     "The p.d. exists even in an open circuit; a current needs a complete circuit.",
+     "Bigger induced p.d. gives a bigger induced current for the same circuit resistance."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Factor 1: speed of relative movement",
+    "p": "Moving the magnet or conductor **faster** means field lines are cut **at a greater rate** (more lines per second), so the induced p.d. is **larger**.",
+    "bullets": [
+     "Push the magnet in twice as fast: bigger deflection on the meter, but for a shorter time.",
+     "In a generator: spin the coil or magnet faster, get a larger p.d.",
+     "Speed affects the size only, not the direction.",
+     "Zero speed (stationary) gives zero p.d."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Rate of cutting",
+      "p": "Every size factor works the same way: it increases the rate at which field lines are cut, so the induced p.d. increases."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Factor 2: strength of the magnetic field",
+    "p": "A **stronger magnetic field** has field lines packed more closely together. Moving through it at the same speed cuts more lines per second, so the induced p.d. is larger.",
+    "bullets": [
+     "Use a **stronger magnet** (not just a bigger one).",
+     "Use an **electromagnet** with a larger current.",
+     "Put a **soft iron core** inside the coil to concentrate the field.",
+     "Bring the magnet closer: the field is stronger near the poles."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Bigger is not stronger",
+      "p": "Write 'stronger magnet', not 'bigger magnet'. A bigger magnet is not necessarily stronger and will not get the mark."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Factor 3: number of turns on the coil",
+    "p": "Each turn of a coil has its own small p.d. induced across it. The turns are connected in series, so the p.d.s **add up**. **More turns** gives a **larger total induced p.d.**",
+    "bullets": [
+     "Double the turns (same speed, same magnet) roughly doubles the induced p.d.",
+     "This is why generators and microphones use coils, not single wires.",
+     "A single straight wire gives only a tiny p.d.",
+     "More turns also means more wire, so more resistance; the p.d. still increases."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Summary of the size factors",
+    "p": "Learn these three as the standard answer. Some textbooks also mention the area of the coil, but the three below are the ones mark schemes expect.",
+    "bullets": [
+     "**Speed** of movement (faster = bigger).",
+     "**Strength** of the magnetic field (stronger = bigger).",
+     "**Number of turns** on the coil (more = bigger)."
+    ],
+    "table": {
+     "head": [
+      "Change made",
+      "Effect on size of induced p.d.",
+      "Why"
+     ],
+     "rows": [
+      [
+       "Move magnet faster",
+       "Increases",
+       "Field lines cut at a greater rate"
+      ],
+      [
+       "Use stronger magnet",
+       "Increases",
+       "More field lines cut per second"
+      ],
+      [
+       "More turns on coil",
+       "Increases",
+       "p.d. in each turn adds up"
+      ],
+      [
+       "Add iron core",
+       "Increases",
+       "Concentrates the magnetic field"
+      ],
+      [
+       "Stop moving",
+       "Becomes zero",
+       "No field lines cut"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": [
+     {
+      "cap": "The three factors that increase the size of the induced p.d. (left) and the two changes that reverse its direction (right). Reversing both the movement and the pole gives the original direction again.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 Z\" fill=\"#b91c1c\"/></marker><marker id=\"ag\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 Z\" fill=\"#166534\"/></marker></defs><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><text x=\"200\" y=\"22\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1b2540\">What controls the induced p.d.</text><text x=\"100\" y=\"48\" font-size=\"12\" text-anchor=\"middle\" fill=\"#166534\">SIZE increases with</text><text x=\"300\" y=\"48\" font-size=\"12\" text-anchor=\"middle\" fill=\"#991b1b\">DIRECTION reverses with</text><rect x=\"20\" y=\"60\" width=\"160\" height=\"48\" rx=\"6\" fill=\"#bbf7d0\" stroke=\"#166534\" stroke-width=\"2\"/><text x=\"100.0\" y=\"82\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">Faster movement</text><text x=\"100.0\" y=\"98\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">greater speed</text><rect x=\"20\" y=\"118\" width=\"160\" height=\"48\" rx=\"6\" fill=\"#bbf7d0\" stroke=\"#166534\" stroke-width=\"2\"/><text x=\"100.0\" y=\"140\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">Stronger field</text><text x=\"100.0\" y=\"156\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">stronger magnet</text><rect x=\"20\" y=\"176\" width=\"160\" height=\"48\" rx=\"6\" fill=\"#bbf7d0\" stroke=\"#166534\" stroke-width=\"2\"/><text x=\"100.0\" y=\"198\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">More turns</text><text x=\"100.0\" y=\"214\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">on the coil</text><rect x=\"220\" y=\"60\" width=\"160\" height=\"48\" rx=\"6\" fill=\"#fecaca\" stroke=\"#991b1b\" stroke-width=\"2\"/><text x=\"300.0\" y=\"82\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">Reverse movement</text><text x=\"300.0\" y=\"98\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">in becomes out</text><rect x=\"220\" y=\"118\" width=\"160\" height=\"48\" rx=\"6\" fill=\"#fecaca\" stroke=\"#991b1b\" stroke-width=\"2\"/><text x=\"300.0\" y=\"140\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">Reverse the pole</text><text x=\"300.0\" y=\"156\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">N becomes S</text><rect x=\"220\" y=\"176\" width=\"160\" height=\"48\" rx=\"6\" fill=\"#fde68a\" stroke=\"#92400e\" stroke-width=\"2\"/><text x=\"300.0\" y=\"198\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">Reverse both</text><text x=\"300.0\" y=\"214\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">original direction</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Factors affecting direction",
+    "p": "The **direction** of the induced p.d. (and so the induced current) depends on the **direction of movement** and the **direction of the magnetic field** (which pole is used).",
+    "bullets": [
+     "Reverse the **direction of movement** (push in becomes pull out): p.d. reverses.",
+     "Reverse the **magnetic field / pole** (N becomes S): p.d. reverses.",
+     "Reverse **both**: the p.d. is in the original direction.",
+     "Changing speed, field strength or turns does **not** change direction.",
+     "A magnet moving in and out repeatedly gives an alternating p.d."
+    ],
+    "table": {
+     "head": [
+      "Action",
+      "Direction of induced current"
+     ],
+     "rows": [
+      [
+       "N pole into coil",
+       "Say clockwise (reference)"
+      ],
+      [
+       "N pole out of coil",
+       "Anticlockwise"
+      ],
+      [
+       "S pole into coil",
+       "Anticlockwise"
+      ],
+      [
+       "S pole out of coil",
+       "Clockwise"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": [
+     {
+      "cap": "Sketch of induced p.d. against time: a fast push in gives a tall, narrow pulse; holding still gives zero; a slow push gives a smaller, wider pulse; pulling out gives pulses in the opposite direction.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 Z\" fill=\"#b91c1c\"/></marker><marker id=\"ag\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 Z\" fill=\"#166534\"/></marker></defs><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><text x=\"200\" y=\"20\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1b2540\">Induced p.d. as magnet goes in, out</text><line x1=\"50\" y1=\"125\" x2=\"380\" y2=\"125\" stroke=\"#1b2540\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/><line x1=\"50\" y1=\"215\" x2=\"50\" y2=\"38\" stroke=\"#1b2540\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/><text x=\"40\" y=\"45\" font-size=\"11\" text-anchor=\"end\" fill=\"#1b2540\">p.d.</text><text x=\"370\" y=\"142\" font-size=\"11\" text-anchor=\"end\" fill=\"#1b2540\">time</text><polyline points=\"50,125 70,125 85,70 100,125 160,125 180,95 200,125 210,125 225,180 240,125 300,125 320,155 340,125 370,125\" fill=\"none\" stroke=\"#1d4ed8\" stroke-width=\"2.5\"/><text x=\"85\" y=\"60\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1d4ed8\">fast in</text><text x=\"130\" y=\"112\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">still</text><text x=\"180\" y=\"85\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1d4ed8\">slow in</text><text x=\"225\" y=\"198\" font-size=\"11\" text-anchor=\"middle\" fill=\"#991b1b\">fast out</text><text x=\"320\" y=\"173\" font-size=\"11\" text-anchor=\"middle\" fill=\"#991b1b\">slow out</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "The induced field opposes the change",
+    "p": "When an induced current flows in a coil, the coil becomes an **electromagnet** with its own magnetic field. The direction of the induced current is always such that this field **opposes the original change** (the movement) that produced it.",
+    "bullets": [
+     "N pole **pushed in**: the near end of the coil becomes a **N pole**, which **repels** the incoming magnet.",
+     "N pole **pulled out**: the near end of the coil becomes a **S pole**, which **attracts** the magnet, resisting it leaving.",
+     "Either way, the coil tries to stop the relative movement.",
+     "For a straight wire in a generator or a moving conductor, the induced current feels a force (the motor effect) that acts **against** the direction of motion.",
+     "This rule is known as Lenz's law, though Edexcel only needs the idea, not the name."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Opposing the change",
+      "p": "The induced current produces a magnetic field that opposes the original change (the movement of the magnet or conductor) that caused it."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "N pole pushed into the coil: the induced current makes the near end of the coil a N pole, so it repels the approaching magnet and opposes the movement.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 Z\" fill=\"#b91c1c\"/></marker><marker id=\"ag\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 Z\" fill=\"#166534\"/></marker></defs><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><text x=\"200\" y=\"22\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1b2540\">N pole pushed in: coil repels</text><rect x=\"20\" y=\"100\" width=\"45\" height=\"40\" fill=\"#dbeafe\" stroke=\"#1e3a8a\" stroke-width=\"2\"/><rect x=\"65\" y=\"100\" width=\"45\" height=\"40\" fill=\"#fecaca\" stroke=\"#991b1b\" stroke-width=\"2\"/><text x=\"42\" y=\"125\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1b2540\">S</text><text x=\"87\" y=\"125\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1b2540\">N</text><line x1=\"40\" y1=\"170\" x2=\"100\" y2=\"170\" stroke=\"#b91c1c\" stroke-width=\"2.5\" marker-end=\"url(#ah)\"/><text x=\"70\" y=\"190\" font-size=\"11\" text-anchor=\"middle\" fill=\"#b91c1c\">magnet moves in</text><ellipse cx=\"190\" cy=\"120\" rx=\"10\" ry=\"30\" fill=\"none\" stroke=\"#b45309\" stroke-width=\"3\"/><ellipse cx=\"210\" cy=\"120\" rx=\"10\" ry=\"30\" fill=\"none\" stroke=\"#b45309\" stroke-width=\"3\"/><ellipse cx=\"230\" cy=\"120\" rx=\"10\" ry=\"30\" fill=\"none\" stroke=\"#b45309\" stroke-width=\"3\"/><ellipse cx=\"250\" cy=\"120\" rx=\"10\" ry=\"30\" fill=\"none\" stroke=\"#b45309\" stroke-width=\"3\"/><text x=\"175\" y=\"78\" font-size=\"12\" text-anchor=\"middle\" fill=\"#991b1b\">induced N</text><text x=\"270\" y=\"78\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1e3a8a\">induced S</text><line x1=\"170\" y1=\"58\" x2=\"125\" y2=\"58\" stroke=\"#166534\" stroke-width=\"2.5\" marker-end=\"url(#ag)\"/><text x=\"130\" y=\"46\" font-size=\"11\" text-anchor=\"middle\" fill=\"#166534\">repulsion</text><polyline points=\"190,150 190,215 300,215\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><polyline points=\"250,150 250,180 340,180 340,199\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"340\" cy=\"215\" r=\"16\" fill=\"#bbf7d0\" stroke=\"#166534\" stroke-width=\"2\"/><line x1=\"300\" y1=\"215\" x2=\"324\" y2=\"215\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"340\" y=\"219\" font-size=\"12\" text-anchor=\"middle\" fill=\"#166534\">A</text><text x=\"340\" y=\"160\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">induced current</text></svg>"
+     },
+     {
+      "cap": "N pole pulled out: the induced current reverses, the near end of the coil becomes a S pole and attracts the magnet, again opposing the movement.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 Z\" fill=\"#b91c1c\"/></marker><marker id=\"ag\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 Z\" fill=\"#166534\"/></marker></defs><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><text x=\"200\" y=\"22\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1b2540\">N pole pulled out: coil attracts</text><rect x=\"20\" y=\"100\" width=\"45\" height=\"40\" fill=\"#dbeafe\" stroke=\"#1e3a8a\" stroke-width=\"2\"/><rect x=\"65\" y=\"100\" width=\"45\" height=\"40\" fill=\"#fecaca\" stroke=\"#991b1b\" stroke-width=\"2\"/><text x=\"42\" y=\"125\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1b2540\">S</text><text x=\"87\" y=\"125\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1b2540\">N</text><line x1=\"100\" y1=\"170\" x2=\"40\" y2=\"170\" stroke=\"#b91c1c\" stroke-width=\"2.5\" marker-end=\"url(#ah)\"/><text x=\"70\" y=\"190\" font-size=\"11\" text-anchor=\"middle\" fill=\"#b91c1c\">magnet moves out</text><ellipse cx=\"190\" cy=\"120\" rx=\"10\" ry=\"30\" fill=\"none\" stroke=\"#b45309\" stroke-width=\"3\"/><ellipse cx=\"210\" cy=\"120\" rx=\"10\" ry=\"30\" fill=\"none\" stroke=\"#b45309\" stroke-width=\"3\"/><ellipse cx=\"230\" cy=\"120\" rx=\"10\" ry=\"30\" fill=\"none\" stroke=\"#b45309\" stroke-width=\"3\"/><ellipse cx=\"250\" cy=\"120\" rx=\"10\" ry=\"30\" fill=\"none\" stroke=\"#b45309\" stroke-width=\"3\"/><text x=\"175\" y=\"78\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1e3a8a\">induced S</text><text x=\"270\" y=\"78\" font-size=\"12\" text-anchor=\"middle\" fill=\"#991b1b\">induced N</text><line x1=\"125\" y1=\"58\" x2=\"170\" y2=\"58\" stroke=\"#166534\" stroke-width=\"2.5\" marker-end=\"url(#ag)\"/><text x=\"130\" y=\"46\" font-size=\"11\" text-anchor=\"middle\" fill=\"#166534\">attraction</text><polyline points=\"190,150 190,215 300,215\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><polyline points=\"250,150 250,180 340,180 340,199\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"340\" cy=\"215\" r=\"16\" fill=\"#bbf7d0\" stroke=\"#166534\" stroke-width=\"2\"/><line x1=\"300\" y1=\"215\" x2=\"324\" y2=\"215\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"340\" y=\"219\" font-size=\"12\" text-anchor=\"middle\" fill=\"#166534\">A</text><text x=\"340\" y=\"160\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">current reversed</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Why opposition must happen: energy",
+    "p": "The opposing field is a consequence of **conservation of energy**. Electrical energy is transferred to the circuit, so work must be done on the system by whatever is pushing the magnet or turning the generator.",
+    "bullets": [
+     "If the induced field **helped** the movement, the magnet would speed up by itself and produce energy from nothing, which is impossible.",
+     "So you feel a resistive force: you must do **work** against the opposing magnetic force.",
+     "The work done is transferred **electrically** to the circuit (then to thermal stores, devices, etc.).",
+     "Larger induced current means a larger opposing force, so a generator supplying more current is harder to turn.",
+     "If the circuit is **open**, no current flows, there is no opposing field and the magnet moves freely."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Top-band link",
+      "p": "In explain questions, link opposition to energy: work done against the opposing force is transferred electrically to the circuit."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Working out the poles step by step",
+    "p": "Exam questions often give a diagram and ask which pole forms at one end of the coil, or which way the current flows. Use this routine.",
+    "bullets": [
+     "Step 1: identify the change (which pole, approaching or leaving).",
+     "Step 2: approaching, the coil end facing it becomes the **same pole** (repel).",
+     "Step 3: leaving, the coil end facing it becomes the **opposite pole** (attract).",
+     "Step 4: the other end of the coil is the opposite pole to that end.",
+     "Step 5 (if needed): use the right-hand grip rule to find current direction from the pole."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Remember",
+      "p": "Coming in: repel. Going out: attract. The coil always tries to keep things as they were."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Effects in real devices",
+    "p": "These factors explain the design of every induction device in the rest of the topic.",
+    "bullets": [
+     "Generators use strong electromagnets, coils with many turns and high rotation speeds to make a large p.d.",
+     "Faster rotation in an alternator also raises the frequency of the a.c.",
+     "A cyclist's dynamo light is brighter when they pedal faster.",
+     "Turning a generator connected to a lamp is harder than when it is disconnected (opposing force)."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Practical investigation tips",
+    "p": "You might be asked to plan an investigation into one factor, such as the number of turns.",
+    "bullets": [
+     "Independent variable: e.g. number of turns (wind coils of 50, 100, 150 turns).",
+     "Dependent variable: maximum induced p.d., measured with a data logger or sensitive voltmeter.",
+     "Control variables: same magnet, same speed (e.g. drop the magnet from the same height through the coil), same coil diameter.",
+     "Dropping a magnet through a vertical tube coil gives a repeatable speed.",
+     "Repeat and calculate a mean; plot maximum p.d. against number of turns."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Control speed",
+      "p": "Pushing by hand gives an uncontrolled speed. Dropping from a fixed height is a better way to keep speed constant."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Pushing through a crowd",
+   "p": "Imagine field lines as people standing in a crowd and the coil as you walking through. The more people you brush past each second (the induced p.d.), the bigger the effect: walk faster (speed), pack the crowd tighter (stronger field) or link arms with friends so you all brush past people at once (more turns). Turn round and walk back and the direction reverses. And the crowd always pushes back against you, whichever way you go, so you have to do work to get through (the induced field opposes the change). Where it breaks down: field lines are not real objects, and the opposition only appears if a current flows in a complete circuit, whereas a crowd pushes back regardless."
+  },
+  "terms": [
+   {
+    "t": "Induced potential difference",
+    "d": "The p.d. produced across a conductor that experiences a changing magnetic field."
+   },
+   {
+    "t": "Induced current",
+    "d": "The current that flows when an induced p.d. acts around a complete circuit."
+   },
+   {
+    "t": "Rate of cutting field lines",
+    "d": "How many magnetic field lines are cut per second; a greater rate gives a larger induced p.d."
+   },
+   {
+    "t": "Magnetic field strength",
+    "d": "How strong a field is, shown by how close together the field lines are."
+   },
+   {
+    "t": "Number of turns",
+    "d": "How many loops of wire a coil has; the p.d. induced in each turn adds up."
+   },
+   {
+    "t": "Polarity",
+    "d": "Which pole (N or S) of a magnet is facing the coil; reversing it reverses the induced p.d."
+   },
+   {
+    "t": "Direction of movement",
+    "d": "Which way the magnet or conductor moves; reversing it reverses the induced p.d."
+   },
+   {
+    "t": "Opposing the change",
+    "d": "The induced current produces a magnetic field that opposes the movement that caused it."
+   },
+   {
+    "t": "Lenz's law",
+    "d": "Name for the rule that an induced current always acts to oppose the change producing it."
+   },
+   {
+    "t": "Electromagnet",
+    "d": "A coil carrying a current, which has a magnetic field like a bar magnet."
+   },
+   {
+    "t": "Soft iron core",
+    "d": "Iron placed inside a coil to concentrate the magnetic field, increasing the induced p.d."
+   },
+   {
+    "t": "Conservation of energy",
+    "d": "Energy cannot be created or destroyed; the electrical energy produced comes from work done against the opposing force."
+   },
+   {
+    "t": "Work done",
+    "d": "Energy transferred when a force moves an object; here, done against the opposing magnetic force."
+   },
+   {
+    "t": "Right-hand grip rule",
+    "d": "Curl right-hand fingers in the direction of current round a coil; thumb points to the N pole end."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Use a bigger magnet.",
+    "r": "Use a stronger magnet (stronger magnetic field)."
+   },
+   {
+    "w": "Move the magnet slower to get a bigger p.d. because it stays in the coil longer.",
+    "r": "Move the magnet faster: field lines are cut at a greater rate, so the induced p.d. is larger."
+   },
+   {
+    "w": "Using a stronger magnet reverses the current.",
+    "r": "Strength, speed and number of turns change only the size; direction depends on direction of movement and the pole."
+   },
+   {
+    "w": "When the N pole approaches, the coil becomes a S pole to attract it.",
+    "r": "The coil end becomes a N pole to repel it, opposing the movement."
+   },
+   {
+    "w": "The induced field helps the magnet move into the coil.",
+    "r": "The induced field always opposes the change (movement) that caused it."
+   },
+   {
+    "w": "Reversing both the pole and the movement makes the current reverse twice as much.",
+    "r": "Reversing both gives the original direction."
+   },
+   {
+    "w": "More turns makes the p.d. smaller because of more resistance.",
+    "r": "More turns increases the induced p.d., because the p.d. in each turn adds up."
+   },
+   {
+    "w": "The opposing force exists even when the coil is disconnected.",
+    "r": "No current flows in an open circuit, so there is no induced field and no opposing force."
+   }
+  ],
+  "exam": [
+   {
+    "q": "State two factors that affect the size of the potential difference induced when a magnet is moved into a coil.",
+    "marks": 2,
+    "model": [
+     "Speed of movement (of magnet/coil).",
+     "Strength of the magnet / magnetic field.",
+     "Number of turns on the coil. (any two)"
+    ],
+    "tip": "Say 'stronger', not 'bigger'."
+   },
+   {
+    "q": "State one way to reverse the direction of the induced current.",
+    "marks": 1,
+    "model": [
+     "Move the magnet in the opposite direction / use the opposite pole."
+    ],
+    "tip": "Not 'change the speed'."
+   },
+   {
+    "q": "A student pushes the N pole into a coil, then pushes the S pole in at the same speed. Describe the difference in the meter readings.",
+    "marks": 2,
+    "model": [
+     "Same size of deflection.",
+     "Opposite direction."
+    ],
+    "tip": "Comment on both size and direction."
+   },
+   {
+    "q": "Explain why moving the magnet faster produces a larger induced potential difference.",
+    "marks": 2,
+    "model": [
+     "Field lines are cut at a greater rate / magnetic field changes faster.",
+     "So a larger p.d. is induced."
+    ],
+    "tip": "Rate is the key word."
+   },
+   {
+    "q": "The N pole of a magnet is pushed towards end X of a coil connected in a complete circuit. State the magnetic pole induced at end X and explain why.",
+    "marks": 2,
+    "model": [
+     "N pole.",
+     "The induced current produces a field that opposes the movement, so it repels the approaching N pole."
+    ],
+    "tip": "Same pole to repel an approaching magnet."
+   },
+   {
+    "q": "The magnet is now pulled away from end X. State and explain the pole at end X.",
+    "marks": 2,
+    "model": [
+     "S pole.",
+     "It attracts the magnet, opposing it moving away."
+    ],
+    "tip": "Opposite pole to attract a leaving magnet."
+   },
+   {
+    "q": "A student turns a small generator connected to a lamp. Explain why it is harder to turn when the lamp is connected than when it is disconnected.",
+    "marks": 3,
+    "model": [
+     "With the lamp connected, an induced current flows.",
+     "The current produces a magnetic field / force that opposes the motion.",
+     "More work must be done; energy transferred electrically to the lamp. (Disconnected: no current, no opposing force.)"
+    ],
+    "tip": "Link to energy for the third mark."
+   },
+   {
+    "q": "Explain, in terms of energy, why the magnetic field of an induced current must oppose the change that produced it.",
+    "marks": 3,
+    "model": [
+     "Electrical energy is transferred to the circuit.",
+     "This energy must come from work done by the person/machine moving the magnet.",
+     "If the field helped the motion, energy would be created from nothing, breaking conservation of energy."
+    ],
+    "tip": "Mention conservation of energy explicitly."
+   },
+   {
+    "q": "Describe how you would investigate how the number of turns on a coil affects the induced potential difference.",
+    "marks": 4,
+    "model": [
+     "Make coils with different numbers of turns (e.g. 50, 100, 150).",
+     "Drop the same magnet through each coil from the same height (control speed).",
+     "Measure the maximum induced p.d. with a data logger/voltmeter.",
+     "Repeat, take mean, keep magnet strength and coil size constant; plot p.d. against turns."
+    ],
+    "tip": "Name independent, dependent and control variables."
+   },
+   {
+    "q": "Explain how the size and direction of the induced potential difference in a coil can be changed, and describe how the magnetic field of the induced current affects the movement of the magnet.",
+    "marks": 6,
+    "model": [
+     "Size increases with greater speed of movement.",
+     "Size increases with a stronger magnetic field.",
+     "Size increases with more turns on the coil; all because field lines are cut at a greater rate.",
+     "Direction reverses if the direction of movement is reversed or the pole is reversed (both reversed gives original direction).",
+     "Induced current makes the coil an electromagnet whose field opposes the change: approaching N pole repelled (coil end N).",
+     "Leaving magnet attracted (coil end S); so work must be done, energy transferred electrically."
+    ],
+    "tip": "Cover size, direction and opposition to reach the top level."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Pushing a magnet into a 100-turn coil at a certain speed induces a maximum p.d. of 0.20 V. Predict the p.d. if (a) a 300-turn coil is used at the same speed, (b) the 100-turn coil is used with the magnet moving twice as fast, (c) the S pole is used with the 100-turn coil at the original speed.",
+    "steps": [
+     "(a) The p.d. in each turn adds up, so 3 times the turns gives about 3 times the p.d.: 3 x 0.20 = 0.60 V.",
+     "(b) Twice the speed cuts field lines at twice the rate: 2 x 0.20 = 0.40 V.",
+     "(c) Same speed and turns, so same size, but opposite pole reverses direction: -0.20 V."
+    ],
+    "ans": "(a) about 0.60 V (b) about 0.40 V (c) 0.20 V in the opposite direction (-0.20 V)."
+   },
+   {
+    "q": "A magnet is dropped N pole first through a vertical coil connected to a data logger. Describe and explain the p.d.-time graph and the effect on the magnet's fall.",
+    "steps": [
+     "As the N pole enters, the top of the coil becomes a N pole to oppose it: p.d. pulse in one direction.",
+     "As the magnet leaves the bottom, the coil opposes it leaving, so the current reverses: pulse in the opposite direction.",
+     "The second pulse is taller and narrower because the magnet is moving faster (it has accelerated).",
+     "Opposing forces act upwards on the magnet both times, so it falls with a slightly smaller acceleration than a free-falling magnet."
+    ],
+    "ans": "Two opposite pulses, the second larger and shorter; the opposing induced field slightly slows the magnet's fall."
+   },
+   {
+    "q": "Model answer: why is a generator in a power station connected to a large turbine rather than just set spinning once?",
+    "steps": [
+     "When the generator supplies current, the induced current creates a field that opposes the rotation.",
+     "Without a continuous driving force it would slow down and stop.",
+     "The turbine provides a continuous force, doing work against the opposing force.",
+     "This work is transferred electrically to the National Grid."
+    ],
+    "ans": "Because the induced current opposes the rotation, continuous work must be done by the turbine to keep the generator turning and supplying energy."
+   }
+  ],
+  "svg": [],
+  "pid": "phy_edx.12.1",
+  "sid": "phy_edx",
+  "v": 2,
+  "src": "pre",
+  "by": "claude/claude-opus-5-5",
+  "ts": "2026-11-26T01:56:11.484Z"
+ },
+ "phy_edx.12.2": {
+  "summary": "Both **alternators** and **dynamos** are generators: a **coil rotates in a magnetic field** (or a magnet rotates near a coil), the coil cuts field lines and a **potential difference is induced** by electromagnetic induction. In an alternator the coil is connected to the external circuit through **slip rings and brushes**, so the induced p.d. reverses every half turn and the output is **alternating current (a.c.)**. In a dynamo a **split-ring commutator** swaps the connections every half turn, at the moment the p.d. reverses, so the current in the external circuit always flows in the same direction: **direct current (d.c.)**.",
+  "core": [
+   {
+    "h": "The basic generator",
+    "p": "A simple generator is a rectangular coil of wire on an axle, placed between the poles of a magnet. Something (a turbine, a wheel, a handle) turns the axle. As the coil **rotates**, its sides **cut the magnetic field lines**, so a **potential difference is induced** across the coil.",
+    "bullets": [
+     "Energy transfer: **kinetic** energy of the rotating coil transferred **electrically** to the circuit.",
+     "The faster it rotates, the faster the field lines are cut.",
+     "The two long sides of the coil do the cutting; they move in opposite directions (one up, one down), so their p.d.s add round the coil.",
+     "The ends of the coil must be connected to the outside circuit without the wires twisting up: this is the job of the **slip rings** or **commutator** with **brushes**."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Same physics, different connection",
+      "p": "Alternators and dynamos induce the p.d. in exactly the same way. The only difference is how the coil is connected to the external circuit."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Why the induced p.d. reverses every half turn",
+    "p": "Each side of the coil moves **up** through the field for half a turn, then **down** for the next half. Reversing the direction of movement reverses the induced p.d., so inside the coil the p.d. is always alternating.",
+    "bullets": [
+     "First half turn: left side moving up, right side moving down: p.d. in one direction.",
+     "Second half turn: left side moving down, right side moving up: p.d. reversed.",
+     "So the coil itself always produces an alternating p.d.",
+     "What reaches the external circuit depends on the slip rings or commutator."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Coil position and size of p.d.",
+    "p": "The size of the induced p.d. depends on how quickly the coil's sides are cutting field lines at that moment, which depends on the coil's angle.",
+    "bullets": [
+     "Coil **horizontal** (plane parallel to the field lines): sides move at **right angles** to the field, cutting lines fastest: **maximum p.d.**",
+     "Coil **vertical** (plane at right angles to the field lines): sides move **along** the field lines, cutting none: **p.d. is zero**.",
+     "At angles between, the p.d. is between zero and maximum.",
+     "So the output rises and falls smoothly, giving a sine-shaped graph.",
+     "The p.d. is zero and changes direction each time the coil passes the vertical position."
+    ],
+    "table": {
+     "head": [
+      "Coil position",
+      "Sides moving",
+      "Induced p.d."
+     ],
+     "rows": [
+      [
+       "Horizontal (parallel to field)",
+       "At right angles to field lines",
+       "Maximum"
+      ],
+      [
+       "Vertical (perpendicular to field)",
+       "Parallel to field lines",
+       "Zero, about to reverse"
+      ],
+      [
+       "At 45 degrees",
+       "At an angle to field lines",
+       "In between"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Position trap",
+      "p": "Students often think the p.d. is biggest when the coil faces the magnets (vertical). It is the opposite: biggest when the coil is horizontal and its sides slice straight across the field."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Left: coil horizontal, its sides move up and down across the horizontal field lines, cutting them fastest, so the p.d. is maximum. Right: coil vertical, its sides move along the field lines, cutting none, so the p.d. is momentarily zero.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 Z\" fill=\"#1b2540\"/></marker></defs><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><text x=\"200\" y=\"20\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1b2540\">Coil position and induced p.d.</text><rect x=\"20\" y=\"40\" width=\"170\" height=\"130\" rx=\"8\" fill=\"#bbf7d0\" stroke=\"#166534\" stroke-width=\"2\"/><rect x=\"210\" y=\"40\" width=\"170\" height=\"130\" rx=\"8\" fill=\"#fecaca\" stroke=\"#991b1b\" stroke-width=\"2\"/><text x=\"105\" y=\"60\" font-size=\"12\" text-anchor=\"middle\" fill=\"#166534\">Coil horizontal</text><text x=\"295\" y=\"60\" font-size=\"12\" text-anchor=\"middle\" fill=\"#991b1b\">Coil vertical</text><text x=\"35\" y=\"115\" font-size=\"12\" fill=\"#991b1b\">N</text><text x=\"165\" y=\"115\" font-size=\"12\" fill=\"#1e3a8a\">S</text><line x1=\"60\" y1=\"110\" x2=\"150\" y2=\"110\" stroke=\"#b45309\" stroke-width=\"4\"/><line x1=\"60\" y1=\"100\" x2=\"60\" y2=\"78\" stroke=\"#1b2540\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><line x1=\"150\" y1=\"120\" x2=\"150\" y2=\"142\" stroke=\"#1b2540\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><text x=\"225\" y=\"115\" font-size=\"12\" fill=\"#991b1b\">N</text><text x=\"355\" y=\"115\" font-size=\"12\" fill=\"#1e3a8a\">S</text><line x1=\"295\" y1=\"75\" x2=\"295\" y2=\"150\" stroke=\"#b45309\" stroke-width=\"4\"/><line x1=\"305\" y1=\"75\" x2=\"330\" y2=\"75\" stroke=\"#1b2540\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><line x1=\"285\" y1=\"150\" x2=\"260\" y2=\"150\" stroke=\"#1b2540\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><text x=\"105\" y=\"160\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">sides cut lines</text><text x=\"295\" y=\"166\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">sides move along lines</text><text x=\"105\" y=\"195\" font-size=\"12\" text-anchor=\"middle\" fill=\"#166534\">maximum p.d.</text><text x=\"295\" y=\"195\" font-size=\"12\" text-anchor=\"middle\" fill=\"#991b1b\">zero p.d.</text><text x=\"200\" y=\"225\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">field lines run from N to S</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Alternator: slip rings and brushes",
+    "p": "An **alternator** generates **alternating current**. Each end of the coil is fixed to its own complete metal ring, a **slip ring**, which turns with the coil. Stationary carbon **brushes** press on the rings and connect them to the external circuit.",
+    "bullets": [
+     "Each end of the coil is **always** connected to the **same** slip ring and the same brush.",
+     "So when the induced p.d. in the coil reverses, the p.d. across the brushes reverses too.",
+     "The current in the external circuit changes direction **every half turn**.",
+     "Output: **a.c.**, a sine-wave graph with positive and negative halves.",
+     "Brushes let the rings rotate while keeping electrical contact, so the wires do not twist."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Alternator",
+      "p": "A generator that uses slip rings and brushes so that the induced current in the external circuit alternates in direction (a.c.)."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A simple alternator: a coil rotates between N and S poles. Each end of the coil is joined to its own slip ring, and fixed brushes connect the rings to the external circuit, giving an alternating output.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 Z\" fill=\"#1b2540\"/></marker></defs><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><text x=\"200\" y=\"22\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1b2540\">Alternator: slip rings</text><rect x=\"20\" y=\"50\" width=\"45\" height=\"110\" fill=\"#fecaca\" stroke=\"#991b1b\" stroke-width=\"2\"/><text x=\"42\" y=\"110\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1b2540\">N</text><rect x=\"255\" y=\"50\" width=\"45\" height=\"110\" fill=\"#dbeafe\" stroke=\"#1e3a8a\" stroke-width=\"2\"/><text x=\"277\" y=\"110\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1b2540\">S</text><polygon points=\"95,70 225,60 225,150 95,140\" fill=\"none\" stroke=\"#b45309\" stroke-width=\"3\"/><text x=\"160\" y=\"44\" font-size=\"12\" text-anchor=\"middle\" fill=\"#b45309\">rotating coil</text><line x1=\"160\" y1=\"105\" x2=\"160\" y2=\"175\" stroke=\"#1b2540\" stroke-width=\"2\"/><ellipse cx=\"160\" cy=\"185\" rx=\"22\" ry=\"6\" fill=\"#fde68a\" stroke=\"#92400e\" stroke-width=\"2\"/><ellipse cx=\"160\" cy=\"203\" rx=\"22\" ry=\"6\" fill=\"#fde68a\" stroke=\"#92400e\" stroke-width=\"2\"/><text x=\"80\" y=\"198\" font-size=\"12\" text-anchor=\"middle\" fill=\"#92400e\">slip rings</text><rect x=\"186\" y=\"179\" width=\"14\" height=\"12\" fill=\"#9ca3af\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><rect x=\"186\" y=\"197\" width=\"14\" height=\"12\" fill=\"#9ca3af\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><polyline points=\"200,185 330,185\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><polyline points=\"200,203 330,203\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"235\" y=\"228\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">brushes</text><circle cx=\"345\" cy=\"194\" r=\"16\" fill=\"#bbf7d0\" stroke=\"#166534\" stroke-width=\"2\"/><line x1=\"330\" y1=\"185\" x2=\"330\" y2=\"203\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"345\" y=\"198\" font-size=\"12\" text-anchor=\"middle\" fill=\"#166534\">V</text><text x=\"345\" y=\"164\" font-size=\"12\" text-anchor=\"middle\" fill=\"#166534\">a.c. out</text><text x=\"345\" y=\"80\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">field N to S</text><line x1=\"310\" y1=\"95\" x2=\"380\" y2=\"95\" stroke=\"#7c3aed\" stroke-width=\"2\" marker-end=\"url(#ah)\"/></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Dynamo: split-ring commutator",
+    "p": "A **dynamo** generates **direct current**. Instead of two slip rings, both ends of the coil are joined to the two halves of a single **split ring** called a **commutator**. Two brushes press on opposite sides of it.",
+    "bullets": [
+     "The split ring rotates with the coil; the gaps pass the brushes every half turn.",
+     "The gaps are positioned so the swap happens when the coil is **vertical**, just as the induced p.d. passes through zero and reverses.",
+     "At that moment the connections of the coil to the external circuit are **swapped**.",
+     "The p.d. in the coil reverses, but so do the connections, so the current in the external circuit **keeps the same direction**.",
+     "Output: **d.c.**, although it is not steady: it rises and falls (a series of humps) but **never reverses**."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Dynamo",
+      "p": "A generator that uses a split-ring commutator to reverse the connections to the external circuit every half turn, so the output current is direct current (d.c.)."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A simple dynamo: the coil ends are joined to the two halves of a split-ring commutator. Every half turn the brushes swap which half they touch, keeping the output current in one direction.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 Z\" fill=\"#1b2540\"/></marker></defs><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><text x=\"200\" y=\"22\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1b2540\">Dynamo: split-ring commutator</text><rect x=\"20\" y=\"50\" width=\"45\" height=\"110\" fill=\"#fecaca\" stroke=\"#991b1b\" stroke-width=\"2\"/><text x=\"42\" y=\"110\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1b2540\">N</text><rect x=\"255\" y=\"50\" width=\"45\" height=\"110\" fill=\"#dbeafe\" stroke=\"#1e3a8a\" stroke-width=\"2\"/><text x=\"277\" y=\"110\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1b2540\">S</text><polygon points=\"95,70 225,60 225,150 95,140\" fill=\"none\" stroke=\"#b45309\" stroke-width=\"3\"/><text x=\"160\" y=\"44\" font-size=\"12\" text-anchor=\"middle\" fill=\"#b45309\">rotating coil</text><line x1=\"160\" y1=\"105\" x2=\"160\" y2=\"175\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M140,195 A20,12 0 0,1 157,183 L157,207 A20,12 0 0,1 140,195 Z\" fill=\"#fde68a\" stroke=\"#92400e\" stroke-width=\"2\"/><path d=\"M180,195 A20,12 0 0,0 163,183 L163,207 A20,12 0 0,0 180,195 Z\" fill=\"#fde68a\" stroke=\"#92400e\" stroke-width=\"2\"/><text x=\"80\" y=\"200\" font-size=\"12\" text-anchor=\"middle\" fill=\"#92400e\">split ring</text><rect x=\"122\" y=\"189\" width=\"14\" height=\"12\" fill=\"#9ca3af\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><rect x=\"184\" y=\"189\" width=\"14\" height=\"12\" fill=\"#9ca3af\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><polyline points=\"129,201 129,222 345,222 345,210\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><polyline points=\"198,195 329,195\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"240\" y=\"186\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">brushes</text><circle cx=\"345\" cy=\"195\" r=\"16\" fill=\"#bbf7d0\" stroke=\"#166534\" stroke-width=\"2\"/><text x=\"345\" y=\"199\" font-size=\"12\" text-anchor=\"middle\" fill=\"#166534\">V</text><text x=\"345\" y=\"164\" font-size=\"12\" text-anchor=\"middle\" fill=\"#166534\">d.c. out</text><text x=\"345\" y=\"80\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">field N to S</text><line x1=\"310\" y1=\"95\" x2=\"380\" y2=\"95\" stroke=\"#7c3aed\" stroke-width=\"2\" marker-end=\"url(#ah)\"/></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Comparing the outputs",
+    "p": "On an oscilloscope or p.d.-time graph the two outputs look different, even though the coils are turning in the same way.",
+    "bullets": [
+     "Alternator: smooth wave above and below the axis; **p.d. reverses**.",
+     "Dynamo: the negative halves are flipped above the axis; humps all on one side.",
+     "Both reach zero twice per rotation (coil vertical).",
+     "Both have the same peak p.d. for the same coil, field and speed.",
+     "One full rotation of an alternator gives one complete cycle of a.c."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": [
+     {
+      "cap": "Output p.d. against time for two rotations. The alternator output alternates above and below zero. The dynamo output has the same humps but every one is on the positive side, so the current always flows the same way.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 Z\" fill=\"#1b2540\"/></marker></defs><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><text x=\"200\" y=\"20\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1b2540\">Output p.d. against time</text><text x=\"110\" y=\"42\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1d4ed8\">Alternator (a.c.)</text><text x=\"300\" y=\"42\" font-size=\"12\" text-anchor=\"middle\" fill=\"#166534\">Dynamo (d.c.)</text><line x1=\"30\" y1=\"130\" x2=\"190\" y2=\"130\" stroke=\"#1b2540\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/><line x1=\"30\" y1=\"210\" x2=\"30\" y2=\"55\" stroke=\"#1b2540\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/><polyline points=\"30.0,130.0 31.9,120.6 33.8,111.5 35.6,102.8 37.5,94.7 39.4,87.6 41.2,81.5 43.1,76.5 45.0,72.9 46.9,70.7 48.8,70.0 50.6,70.7 52.5,72.9 54.4,76.5 56.2,81.5 58.1,87.6 60.0,94.7 61.9,102.8 63.8,111.5 65.6,120.6 67.5,130.0 69.4,139.4 71.2,148.5 73.1,157.2 75.0,165.3 76.9,172.4 78.8,178.5 80.6,183.5 82.5,187.1 84.4,189.3 86.2,190.0 88.1,189.3 90.0,187.1 91.9,183.5 93.8,178.5 95.6,172.4 97.5,165.3 99.4,157.2 101.2,148.5 103.1,139.4 105.0,130.0 106.9,120.6 108.8,111.5 110.6,102.8 112.5,94.7 114.4,87.6 116.2,81.5 118.1,76.5 120.0,72.9 121.9,70.7 123.8,70.0 125.6,70.7 127.5,72.9 129.4,76.5 131.2,81.5 133.1,87.6 135.0,94.7 136.9,102.8 138.8,111.5 140.6,120.6 142.5,130.0 144.4,139.4 146.2,148.5 148.1,157.2 150.0,165.3 151.9,172.4 153.8,178.5 155.6,183.5 157.5,187.1 159.4,189.3 161.2,190.0 163.1,189.3 165.0,187.1 166.9,183.5 168.8,178.5 170.6,172.4 172.5,165.3 174.4,157.2 176.2,148.5 178.1,139.4 180.0,130.0\" fill=\"none\" stroke=\"#1d4ed8\" stroke-width=\"2.5\"/><text x=\"110\" y=\"228\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1d4ed8\">reverses each half turn</text><line x1=\"220\" y1=\"190\" x2=\"385\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/><line x1=\"220\" y1=\"210\" x2=\"220\" y2=\"55\" stroke=\"#1b2540\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/><polyline points=\"220.0,190.0 221.9,172.8 223.8,156.0 225.6,140.1 227.5,125.3 229.4,112.2 231.2,101.0 233.1,92.0 235.0,85.4 236.9,81.4 238.8,80.0 240.6,81.4 242.5,85.4 244.4,92.0 246.2,101.0 248.1,112.2 250.0,125.3 251.9,140.1 253.8,156.0 255.6,172.8 257.5,190.0 259.4,172.8 261.2,156.0 263.1,140.1 265.0,125.3 266.9,112.2 268.8,101.0 270.6,92.0 272.5,85.4 274.4,81.4 276.2,80.0 278.1,81.4 280.0,85.4 281.9,92.0 283.8,101.0 285.6,112.2 287.5,125.3 289.4,140.1 291.2,156.0 293.1,172.8 295.0,190.0 296.9,172.8 298.8,156.0 300.6,140.1 302.5,125.3 304.4,112.2 306.2,101.0 308.1,92.0 310.0,85.4 311.9,81.4 313.8,80.0 315.6,81.4 317.5,85.4 319.4,92.0 321.2,101.0 323.1,112.2 325.0,125.3 326.9,140.1 328.8,156.0 330.6,172.8 332.5,190.0 334.4,172.8 336.2,156.0 338.1,140.1 340.0,125.3 341.9,112.2 343.8,101.0 345.6,92.0 347.5,85.4 349.4,81.4 351.2,80.0 353.1,81.4 355.0,85.4 356.9,92.0 358.8,101.0 360.6,112.2 362.5,125.3 364.4,140.1 366.2,156.0 368.1,172.8 370.0,190.0\" fill=\"none\" stroke=\"#166534\" stroke-width=\"2.5\"/><text x=\"300\" y=\"228\" font-size=\"11\" text-anchor=\"middle\" fill=\"#166534\">never below zero</text><text x=\"185\" y=\"148\" font-size=\"11\" text-anchor=\"end\" fill=\"#1b2540\">time</text><text x=\"380\" y=\"206\" font-size=\"11\" text-anchor=\"end\" fill=\"#1b2540\">time</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Alternator vs dynamo at a glance",
+    "p": "Learn this comparison table; it covers most short-answer questions on this point.",
+    "bullets": [
+     "Same: rotating coil, magnetic field, electromagnetic induction, brushes.",
+     "Different: slip rings vs split ring, a.c. vs d.c."
+    ],
+    "table": {
+     "head": [
+      "Feature",
+      "Alternator",
+      "Dynamo"
+     ],
+     "rows": [
+      [
+       "Connection to circuit",
+       "Two slip rings and brushes",
+       "Split-ring commutator and brushes"
+      ],
+      [
+       "Coil ends",
+       "Each always joined to same brush",
+       "Swapped between brushes every half turn"
+      ],
+      [
+       "Output current",
+       "Alternating (a.c.)",
+       "Direct (d.c.), varying in size"
+      ],
+      [
+       "Output graph",
+       "Sine wave, positive and negative",
+       "Humps, all one side of axis"
+      ],
+      [
+       "Examples",
+       "Power stations, car alternators",
+       "Old bicycle dynamo lights, simple d.c. generators"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Motor link",
+      "p": "A dynamo has the same split-ring commutator as a d.c. motor. A motor uses current to make rotation; a dynamo uses rotation to make current."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Increasing the output",
+    "p": "The factors from 13.2 apply directly to a rotating coil.",
+    "bullets": [
+     "**Faster rotation**: larger peak p.d. **and** a higher **frequency** (more cycles per second).",
+     "**Stronger magnetic field**: larger peak p.d., same frequency.",
+     "**More turns** on the coil: larger peak p.d., same frequency.",
+     "An **iron core** inside the coil concentrates the field: larger peak p.d.",
+     "Reversing the direction of rotation reverses the sequence of the output, but an alternator still gives a.c."
+    ],
+    "table": {
+     "head": [
+      "Change",
+      "Peak p.d.",
+      "Frequency (time per cycle)"
+     ],
+     "rows": [
+      [
+       "Rotate faster",
+       "Increases",
+       "Increases (shorter period)"
+      ],
+      [
+       "Stronger magnet",
+       "Increases",
+       "Unchanged"
+      ],
+      [
+       "More turns",
+       "Increases",
+       "Unchanged"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Graph question",
+      "p": "If asked to draw the output when the coil turns twice as fast: peaks twice as tall and twice as many cycles in the same time."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Frequency and rotation",
+    "p": "For a simple alternator one complete rotation of the coil produces one complete cycle of a.c. So the frequency of the output equals the number of rotations per second.",
+    "bullets": [
+     "frequency (Hz) = number of rotations per second.",
+     "time period T = 1 / f.",
+     "UK mains a.c. is **50 Hz**, so power-station generators are controlled to rotate at a steady rate.",
+     "A 25 rotations per second coil gives 25 Hz a.c."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Real alternators: rotating magnets",
+    "p": "Large alternators, such as those in power stations, are usually built the other way round: an **electromagnet rotates** inside **fixed coils**. The relative movement is the same, so a.c. is still induced.",
+    "bullets": [
+     "The large output current is taken directly from the fixed coils, avoiding sliding contacts that would spark and wear.",
+     "Only the small current for the rotating electromagnet passes through slip rings.",
+     "Car alternators also use this design; the a.c. is then converted to d.c. to charge the battery.",
+     "Edexcel may describe either design; both rely on relative motion of magnet and coil."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Why the opposing force matters",
+    "p": "When the generator supplies a current, the induced current in the coil produces a magnetic field (a motor-effect force) that **opposes the rotation**. This is why a generator gets harder to turn when it is lighting a lamp.",
+    "bullets": [
+     "More current drawn means a larger opposing force.",
+     "The turbine or cyclist must do more work, which is transferred electrically to the circuit.",
+     "With nothing connected (open circuit), no current flows and the coil turns easily."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Writing a 6-mark explanation",
+    "p": "A typical question asks you to explain how a generator produces a.c. or d.c. Use a clear sequence.",
+    "bullets": [
+     "1. Coil rotates in a magnetic field (turned by turbine etc.).",
+     "2. Sides of the coil cut field lines, so a p.d. is induced (electromagnetic induction).",
+     "3. Each side moves up then down, so the p.d. reverses every half turn.",
+     "4. Alternator: slip rings keep each end connected to the same brush, so output alternates (a.c.).",
+     "5. Dynamo: split-ring commutator swaps connections every half turn as the p.d. reverses, so output current is in one direction (d.c.).",
+     "6. Maximum p.d. when coil horizontal, zero when vertical; faster rotation gives larger p.d."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Name the part",
+      "p": "Use the exact names: slip rings, brushes, split-ring commutator. Saying 'the ring thing' or just 'commutator' for an alternator loses marks."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "A skipping rope and a swapping referee",
+   "p": "Picture the induced p.d. in the spinning coil as a skipping rope swinging up then down: inside the coil it always alternates. In an alternator the rope's ends are held by the same two people the whole time, so the people feel it go up, then down: alternating current. In a dynamo, a referee (the split-ring commutator) swaps which person holds which end every time the rope reaches the bottom of its swing, so each person always feels it pulling the same way: direct current. Where it breaks down: no physical rope is moving round the circuit; it is the direction of the induced p.d. that reverses, and the swap in a dynamo is done by the rotating split ring sliding under fixed brushes, not by a separate controller."
+  },
+  "terms": [
+   {
+    "t": "Generator",
+    "d": "A device that uses electromagnetic induction to transfer energy from a kinetic store to electrical energy."
+   },
+   {
+    "t": "Alternator",
+    "d": "A generator that produces alternating current, using slip rings and brushes."
+   },
+   {
+    "t": "Dynamo",
+    "d": "A generator that produces direct current, using a split-ring commutator and brushes."
+   },
+   {
+    "t": "Slip rings",
+    "d": "Two complete metal rings, each fixed to one end of the coil, rotating with it so each end always connects to the same brush."
+   },
+   {
+    "t": "Split-ring commutator",
+    "d": "A metal ring split into two halves joined to the coil ends, which reverses the coil's connections to the external circuit every half turn."
+   },
+   {
+    "t": "Brushes",
+    "d": "Fixed carbon contacts that press against the rotating rings to connect the coil to the external circuit."
+   },
+   {
+    "t": "Alternating current (a.c.)",
+    "d": "Current that repeatedly reverses direction."
+   },
+   {
+    "t": "Direct current (d.c.)",
+    "d": "Current that flows in one direction only (its size may vary)."
+   },
+   {
+    "t": "Electromagnetic induction",
+    "d": "Inducing a p.d. across a conductor by a changing magnetic field, e.g. a coil rotating in a field."
+   },
+   {
+    "t": "Peak p.d.",
+    "d": "The maximum value of the induced p.d., when the coil sides cut field lines fastest (coil parallel to field)."
+   },
+   {
+    "t": "Frequency",
+    "d": "Number of complete cycles per second, measured in hertz (Hz); equals rotations per second for a simple alternator."
+   },
+   {
+    "t": "Time period",
+    "d": "Time for one complete cycle; T = 1 / f, measured in seconds."
+   },
+   {
+    "t": "Oscilloscope",
+    "d": "An instrument that displays how a p.d. varies with time as a trace on a screen."
+   },
+   {
+    "t": "Turbine",
+    "d": "Rotating blades turned by steam, water or wind that drive the generator shaft."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "A dynamo produces a.c. and an alternator produces d.c.",
+    "r": "Alternator gives alternating current; dynamo gives direct current."
+   },
+   {
+    "w": "An alternator uses a split-ring commutator.",
+    "r": "An alternator uses slip rings and brushes; a dynamo uses a split-ring commutator."
+   },
+   {
+    "w": "The p.d. is greatest when the coil is vertical, facing the magnets.",
+    "r": "It is greatest when the coil is horizontal (parallel to field), as the sides cut field lines at the greatest rate; zero when vertical."
+   },
+   {
+    "w": "The commutator stops the p.d. in the coil from reversing.",
+    "r": "The p.d. in the coil still reverses; the commutator reverses the connections to the external circuit at the same moment, so the output is d.c."
+   },
+   {
+    "w": "D.c. from a dynamo is a steady, constant value.",
+    "r": "Dynamo output is in one direction but varies in size, rising and falling to zero twice each rotation."
+   },
+   {
+    "w": "Rotating faster only increases the frequency.",
+    "r": "Rotating faster increases both the peak p.d. and the frequency."
+   },
+   {
+    "w": "The brushes rotate with the coil.",
+    "r": "The brushes are fixed; the rings or commutator rotate and slide against them."
+   },
+   {
+    "w": "Using a stronger magnet increases the frequency.",
+    "r": "A stronger magnet increases the peak p.d. only; frequency depends on the rotation rate."
+   }
+  ],
+  "exam": [
+   {
+    "q": "State the type of current produced by an alternator.",
+    "marks": 1,
+    "model": [
+     "Alternating current (a.c.)."
+    ],
+    "tip": "One word answers are fine for 1 mark."
+   },
+   {
+    "q": "Name the part of a dynamo that allows it to produce direct current.",
+    "marks": 1,
+    "model": [
+     "Split-ring commutator."
+    ],
+    "tip": "Give the full name."
+   },
+   {
+    "q": "State the position of the coil, relative to the magnetic field, when the induced p.d. is (a) maximum and (b) zero.",
+    "marks": 2,
+    "model": [
+     "(a) Plane of coil parallel to field lines (horizontal).",
+     "(b) Plane of coil perpendicular to field lines (vertical)."
+    ],
+    "tip": "Think about whether the sides cut lines."
+   },
+   {
+    "q": "Explain why the induced p.d. is zero when the coil is vertical.",
+    "marks": 2,
+    "model": [
+     "The sides of the coil are moving parallel to / along the field lines.",
+     "So no field lines are cut (at that instant) and no p.d. is induced."
+    ],
+    "tip": "Key phrase: no field lines cut."
+   },
+   {
+    "q": "Explain how slip rings in an alternator result in an alternating output.",
+    "marks": 2,
+    "model": [
+     "Each end of the coil is always connected to the same slip ring/brush.",
+     "So when the induced p.d. in the coil reverses each half turn, the current in the external circuit reverses."
+    ],
+    "tip": "Link the fixed connection to the reversal."
+   },
+   {
+    "q": "Sketch and describe how the output p.d. of an alternator changes if the coil rotates twice as fast.",
+    "marks": 2,
+    "model": [
+     "Peak p.d. increases (doubles).",
+     "Frequency doubles / twice as many cycles in the same time (period halves)."
+    ],
+    "tip": "Two changes: height and spacing."
+   },
+   {
+    "q": "A simple alternator coil turns 30 times per second. Calculate the frequency and the time period of the a.c. output.",
+    "marks": 2,
+    "model": [
+     "f = 30 Hz.",
+     "T = 1 / f = 1 / 30 = 0.033 s."
+    ],
+    "tip": "Include units."
+   },
+   {
+    "q": "State two ways of increasing the peak p.d. of a dynamo without changing the speed of rotation.",
+    "marks": 2,
+    "model": [
+     "Use a stronger magnet / magnetic field.",
+     "Use more turns on the coil / add an iron core."
+    ],
+    "tip": "Speed is excluded, so give the other two."
+   },
+   {
+    "q": "Describe the difference between the output of an alternator and a dynamo as shown on an oscilloscope.",
+    "marks": 2,
+    "model": [
+     "Alternator trace goes above and below the zero line (sine wave).",
+     "Dynamo trace stays on one side of the zero line (humps), falling to zero but not reversing."
+    ],
+    "tip": "Describe the shape relative to the zero line."
+   },
+   {
+    "q": "Explain how a dynamo produces direct current. Refer to electromagnetic induction and the parts of the dynamo.",
+    "marks": 6,
+    "model": [
+     "Coil rotates in a magnetic field (between poles of a magnet).",
+     "Sides of the coil cut field lines, inducing a p.d. (electromagnetic induction).",
+     "Each side moves up then down, so the p.d. in the coil reverses every half turn.",
+     "Coil ends are connected to a split-ring commutator; brushes connect it to the circuit.",
+     "The commutator swaps the connections every half turn, when the coil is vertical / p.d. is zero and reversing.",
+     "So current in the external circuit always flows the same way (d.c.), varying from zero to a maximum."
+    ],
+    "tip": "Link the timing of the swap to the p.d. reversing for the top level."
+   }
+  ],
+  "worked": [
+   {
+    "q": "An alternator produces an a.c. output with a peak of 6.0 V and a frequency of 20 Hz. The coil rotation rate is then increased to 40 rotations per second. Predict the new frequency, time period and peak p.d.",
+    "steps": [
+     "Originally 20 Hz means 20 rotations per second (one cycle per rotation).",
+     "New frequency = 40 rotations per second = 40 Hz.",
+     "Time period T = 1 / f = 1 / 40 = 0.025 s.",
+     "Rotating twice as fast cuts field lines at twice the rate, so the peak p.d. doubles: 2 x 6.0 = 12 V."
+    ],
+    "ans": "Frequency 40 Hz, time period 0.025 s, peak p.d. about 12 V."
+   },
+   {
+    "q": "On an oscilloscope, one complete cycle of an alternator's output covers 4 squares horizontally. The time base is set to 5 ms per square. Calculate the frequency and the rotation rate of the coil.",
+    "steps": [
+     "Time period T = 4 squares x 5 ms = 20 ms = 0.020 s.",
+     "f = 1 / T = 1 / 0.020 = 50 Hz.",
+     "One cycle per rotation, so the coil rotates 50 times per second."
+    ],
+    "ans": "50 Hz; 50 rotations per second."
+   },
+   {
+    "q": "Model answer: a simple generator has its slip rings replaced with a split-ring commutator. Explain what happens to the output.",
+    "steps": [
+     "The p.d. induced in the coil still reverses every half turn.",
+     "With the commutator, the connections to the external circuit swap every half turn, when the coil is vertical and the p.d. is zero.",
+     "So the reversed p.d. is reconnected the other way round.",
+     "The current in the external circuit is now always in the same direction: the alternator has become a dynamo producing d.c. (varying size, same peak)."
+    ],
+    "ans": "The output changes from a.c. to d.c.: same peak and timing of humps, but all on one side of the zero line."
+   }
+  ],
+  "svg": [],
+  "pid": "phy_edx.12.2",
+  "sid": "phy_edx",
+  "v": 2,
+  "src": "pre",
+  "by": "claude/claude-opus-5-5",
+  "ts": "2026-11-26T01:56:11.496Z"
+ },
+ "phy_edx.12.3": {
+  "summary": "A **moving-coil microphone** uses **electromagnetic induction**: the pressure variations in a sound wave make a diaphragm and an attached coil vibrate in the field of a permanent magnet, inducing an alternating potential difference whose pattern matches the sound. A **loudspeaker** (or headphone) does the reverse using the **motor effect**: an alternating current in a coil in a magnetic field produces a changing force that makes a cone vibrate and push on the air, producing sound waves with the same frequency as the current.",
+  "core": [
+   {
+    "h": "What the spec asks",
+    "p": "Edexcel 13.4P (triple only) asks you to **explain the action of a microphone in converting the pressure variations in sound waves into variations in current in electrical circuits, and the reverse effect as used in loudspeakers and headphones**. The two devices are built almost identically but work in opposite directions.",
+    "bullets": [
+     "Microphone: **sound energy in, electrical signal out** (a transducer using electromagnetic induction)",
+     "Loudspeaker and headphones: **electrical signal in, sound out** (a transducer using the motor effect)",
+     "Both contain a **permanent magnet**, a **coil of wire** and a part that vibrates (a **diaphragm** or **cone**)",
+     "You must be able to describe the chain of cause and effect step by step, in order"
+    ],
+    "table": {
+     "head": [
+      "Device",
+      "Input",
+      "Physics used",
+      "Output"
+     ],
+     "rows": [
+      [
+       "Microphone",
+       "Sound (pressure variations)",
+       "Electromagnetic induction",
+       "Varying (alternating) current"
+      ],
+      [
+       "Loudspeaker / headphone",
+       "Varying (alternating) current",
+       "Motor effect",
+       "Sound (pressure variations)"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "One line summary",
+      "p": "Microphone = generator effect (movement makes current). Loudspeaker = motor effect (current makes movement)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Sound waves are pressure variations",
+    "p": "A sound wave is a **longitudinal wave**: air particles vibrate backwards and forwards along the direction the wave travels. This creates regions of high pressure (**compressions**) and low pressure (**rarefactions**). When a sound wave hits a surface, the changing pressure pushes and pulls on it, so the surface vibrates at the **same frequency** as the sound.",
+    "bullets": [
+     "Compression = higher pressure pushes the diaphragm **in**",
+     "Rarefaction = lower pressure lets the diaphragm move **out**",
+     "Louder sound = larger pressure variations = **larger amplitude** of vibration",
+     "Higher pitch = higher **frequency** = faster vibration of the diaphragm"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Structure of a moving-coil microphone",
+    "p": "A moving-coil (dynamic) microphone has a thin, light **diaphragm** attached to a **coil of wire**. The coil sits in the narrow gap of a **permanent magnet**, where there is a strong magnetic field. The ends of the coil are connected to the circuit (usually an amplifier).",
+    "bullets": [
+     "**Diaphragm**: thin and light so that even small pressure changes make it move",
+     "**Coil**: fixed to the diaphragm, so it moves whenever the diaphragm moves",
+     "**Permanent magnet**: provides a strong, steady magnetic field across the coil",
+     "The coil is free to move **backwards and forwards** in the field"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": [
+     {
+      "cap": "Moving-coil microphone. Sound waves push the diaphragm, which moves the attached coil in and out of the strong magnetic field between the central N pole and the outer S pole. The induced p.d. is sent to an amplifier.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"ar\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto\"><path d=\"M0 0 L10 5 L0 10 z\" fill=\"#1b2540\"/></marker></defs>\n<rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/>\n<path d=\"M40 80 Q55 120 40 160\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/>\n<path d=\"M60 70 Q78 120 60 170\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/>\n<path d=\"M80 60 Q100 120 80 180\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/>\n<line x1=\"20\" y1=\"120\" x2=\"110\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"1.5\" marker-end=\"url(#ar)\"/>\n<rect x=\"118\" y=\"50\" width=\"7\" height=\"140\" fill=\"#fde68a\" stroke=\"#92400e\"/>\n<line x1=\"125\" y1=\"96\" x2=\"168\" y2=\"96\" stroke=\"#92400e\" stroke-width=\"2\"/>\n<line x1=\"125\" y1=\"144\" x2=\"168\" y2=\"144\" stroke=\"#92400e\" stroke-width=\"2\"/>\n<rect x=\"150\" y=\"70\" width=\"130\" height=\"20\" fill=\"#fecaca\" stroke=\"#991b1b\"/>\n<rect x=\"150\" y=\"150\" width=\"130\" height=\"20\" fill=\"#fecaca\" stroke=\"#991b1b\"/>\n<rect x=\"260\" y=\"70\" width=\"20\" height=\"100\" fill=\"#fecaca\" stroke=\"#991b1b\"/>\n<rect x=\"160\" y=\"108\" width=\"100\" height=\"24\" fill=\"#dbeafe\" stroke=\"#1e3a8a\"/>\n<ellipse cx=\"168\" cy=\"120\" rx=\"4\" ry=\"24\" fill=\"none\" stroke=\"#b45309\" stroke-width=\"2\"/><ellipse cx=\"175\" cy=\"120\" rx=\"4\" ry=\"24\" fill=\"none\" stroke=\"#b45309\" stroke-width=\"2\"/><ellipse cx=\"182\" cy=\"120\" rx=\"4\" ry=\"24\" fill=\"none\" stroke=\"#b45309\" stroke-width=\"2\"/><ellipse cx=\"189\" cy=\"120\" rx=\"4\" ry=\"24\" fill=\"none\" stroke=\"#b45309\" stroke-width=\"2\"/><ellipse cx=\"196\" cy=\"120\" rx=\"4\" ry=\"24\" fill=\"none\" stroke=\"#b45309\" stroke-width=\"2\"/>\n<text x=\"225\" y=\"124\" font-size=\"12\" fill=\"#1e3a8a\">N</text>\n<text x=\"225\" y=\"84\" font-size=\"12\" fill=\"#991b1b\">S</text>\n<text x=\"225\" y=\"164\" font-size=\"12\" fill=\"#991b1b\">S</text>\n<line x1=\"134\" y1=\"144\" x2=\"134\" y2=\"230\" stroke=\"#1b2540\" stroke-width=\"1.5\"/>\n<line x1=\"134\" y1=\"230\" x2=\"300\" y2=\"230\" stroke=\"#1b2540\" stroke-width=\"1.5\"/>\n<line x1=\"146\" y1=\"144\" x2=\"146\" y2=\"214\" stroke=\"#1b2540\" stroke-width=\"1.5\"/>\n<line x1=\"146\" y1=\"214\" x2=\"300\" y2=\"214\" stroke=\"#1b2540\" stroke-width=\"1.5\"/>\n<rect x=\"300\" y=\"203\" width=\"88\" height=\"32\" fill=\"#bbf7d0\" stroke=\"#166534\"/>\n<text x=\"344\" y=\"223\" font-size=\"12\" text-anchor=\"middle\" fill=\"#166534\">Amplifier</text>\n<text x=\"10\" y=\"40\" font-size=\"12\" fill=\"#1d4ed8\">Sound waves</text>\n<text x=\"100\" y=\"40\" font-size=\"12\" fill=\"#92400e\">Diaphragm</text>\n<text x=\"290\" y=\"62\" font-size=\"12\" fill=\"#991b1b\">Permanent magnet</text>\n<text x=\"200\" y=\"192\" font-size=\"12\" fill=\"#b45309\">Coil of wire</text>\n<line x1=\"210\" y1=\"182\" x2=\"190\" y2=\"142\" stroke=\"#b45309\" stroke-width=\"1\"/>\n<text x=\"290\" y=\"124\" font-size=\"11\" fill=\"#1e3a8a\">Central pole</text>\n</svg>"
+     }
+    ]
+   },
+   {
+    "h": "How a microphone works: step by step",
+    "p": "This is the sequence mark schemes look for. Each step causes the next, so keep them in order.",
+    "bullets": [
+     "1. **Pressure variations** in the sound wave make the **diaphragm vibrate**",
+     "2. The **coil**, attached to the diaphragm, **vibrates** (moves backwards and forwards) too",
+     "3. The coil **moves relative to the magnetic field** of the permanent magnet, so the wire **cuts magnetic field lines**",
+     "4. A **potential difference is induced** across the ends of the coil (**electromagnetic induction**)",
+     "5. Because the coil is part of a **complete circuit**, an **induced current** flows",
+     "6. The coil changes direction each half-vibration, so the induced p.d. and current **change direction**: an **alternating** current",
+     "7. The current **varies in the same way as the pressure** of the sound wave: same frequency, and amplitude related to loudness"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam tip",
+      "p": "Always say the coil moves IN a magnetic field (or cuts field lines). Saying only 'the diaphragm vibrates and makes a current' loses the induction mark."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Why the current copies the sound",
+    "p": "The induced p.d. depends on how fast the coil moves through the field and in which direction. The diaphragm follows the pressure pattern of the sound, so the coil's motion, and therefore the induced p.d., follows the same pattern. This is what makes the electrical signal a copy (an analogue) of the sound.",
+    "bullets": [
+     "**Frequency**: one full vibration of the diaphragm gives one full cycle of alternating current, so the current has the **same frequency** as the sound",
+     "**Amplitude**: a louder sound moves the coil further and faster, so it cuts field lines faster and a **larger p.d.** is induced",
+     "Direction: coil moving in induces current one way; coil moving out induces current the **opposite way**",
+     "Faster cutting of field lines = larger induced p.d. (links to 13.2 factors)"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Must-know",
+      "p": "The output of a microphone is an alternating current whose variations match the pressure variations of the sound wave."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "The air pressure at the diaphragm (top) and the current in the microphone coil (bottom) have the same frequency and the same pattern of change.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"ar\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto\"><path d=\"M0 0 L10 5 L0 10 z\" fill=\"#1b2540\"/></marker></defs>\n<rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/>\n<line x1=\"40\" y1=\"20\" x2=\"40\" y2=\"110\" stroke=\"#1b2540\" stroke-width=\"1.5\"/>\n<line x1=\"40\" y1=\"65\" x2=\"380\" y2=\"65\" stroke=\"#1b2540\" stroke-width=\"1\"/>\n<path d=\"M40 65 C60 25 80 25 100 65 S140 105 160 65 S200 25 220 65 S260 105 280 65 S320 25 340 65\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/>\n<line x1=\"40\" y1=\"130\" x2=\"40\" y2=\"220\" stroke=\"#1b2540\" stroke-width=\"1.5\"/>\n<line x1=\"40\" y1=\"175\" x2=\"380\" y2=\"175\" stroke=\"#1b2540\" stroke-width=\"1\"/>\n<path d=\"M40 175 C60 135 80 135 100 175 S140 215 160 175 S200 135 220 175 S260 215 280 175 S320 135 340 175\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/>\n<text x=\"48\" y=\"16\" font-size=\"11\" fill=\"#1d4ed8\">Air pressure</text>\n<text x=\"48\" y=\"128\" font-size=\"11\" fill=\"#166534\">Current in coil</text>\n<text x=\"345\" y=\"80\" font-size=\"11\" fill=\"#1b2540\">time</text>\n<text x=\"345\" y=\"190\" font-size=\"11\" fill=\"#1b2540\">time</text>\n<text x=\"240\" y=\"16\" font-size=\"11\" fill=\"#1b2540\">Same frequency</text>\n<text x=\"240\" y=\"236\" font-size=\"11\" fill=\"#1b2540\">Same pattern of change</text>\n</svg>"
+     }
+    ]
+   },
+   {
+    "h": "Energy transfers in a microphone",
+    "p": "A microphone transfers energy from the sound wave to the electrical circuit. The energy it produces is tiny, which is why the signal must be **amplified** before it can drive a loudspeaker.",
+    "bullets": [
+     "Energy carried by the sound wave is transferred **mechanically** to the diaphragm and coil (kinetic energy)",
+     "Energy is then transferred **electrically** to the circuit by the induced current",
+     "Some energy is wasted as **heating** the coil (resistance) and as sound reflected from the diaphragm",
+     "The output current is very small, so an **amplifier** increases its size"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Structure of a loudspeaker",
+    "p": "A loudspeaker has a **coil** attached to a light **paper or plastic cone**. The coil sits in the strong field of a **permanent magnet**. The coil is connected to an amplifier, which supplies an **alternating current** that carries the sound signal.",
+    "bullets": [
+     "**Cone**: large area so it pushes a lot of air, producing a loud sound",
+     "**Coil**: attached to the back of the cone and free to move in and out",
+     "**Permanent magnet**: gives a steady magnetic field at right angles to the wire of the coil",
+     "Headphones work in exactly the same way, with a smaller diaphragm instead of a cone"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": [
+     {
+      "cap": "Loudspeaker. An alternating current from the amplifier flows in the coil in the field of the permanent magnet. The force on the coil makes the cone vibrate back and forth (double arrow), sending sound waves into the air.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"ar\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto\"><path d=\"M0 0 L10 5 L0 10 z\" fill=\"#1b2540\"/></marker></defs>\n<rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/>\n<polygon points=\"150,96 250,35 250,205 150,144\" fill=\"#dbeafe\" stroke=\"#1e3a8a\" stroke-width=\"2\"/>\n<rect x=\"40\" y=\"70\" width=\"110\" height=\"20\" fill=\"#fecaca\" stroke=\"#991b1b\"/>\n<rect x=\"40\" y=\"150\" width=\"110\" height=\"20\" fill=\"#fecaca\" stroke=\"#991b1b\"/>\n<rect x=\"40\" y=\"70\" width=\"20\" height=\"100\" fill=\"#fecaca\" stroke=\"#991b1b\"/>\n<rect x=\"60\" y=\"108\" width=\"80\" height=\"24\" fill=\"#e9d5ff\" stroke=\"#6b21a8\"/>\n<ellipse cx=\"118\" cy=\"120\" rx=\"4\" ry=\"24\" fill=\"none\" stroke=\"#b45309\" stroke-width=\"2\"/><ellipse cx=\"125\" cy=\"120\" rx=\"4\" ry=\"24\" fill=\"none\" stroke=\"#b45309\" stroke-width=\"2\"/><ellipse cx=\"132\" cy=\"120\" rx=\"4\" ry=\"24\" fill=\"none\" stroke=\"#b45309\" stroke-width=\"2\"/><ellipse cx=\"139\" cy=\"120\" rx=\"4\" ry=\"24\" fill=\"none\" stroke=\"#b45309\" stroke-width=\"2\"/>\n<text x=\"95\" y=\"124\" font-size=\"12\" fill=\"#6b21a8\">N</text>\n<text x=\"95\" y=\"84\" font-size=\"12\" fill=\"#991b1b\">S</text>\n<text x=\"95\" y=\"164\" font-size=\"12\" fill=\"#991b1b\">S</text>\n<path d=\"M275 80 Q290 120 275 160\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/>\n<path d=\"M298 70 Q316 120 298 170\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/>\n<path d=\"M321 60 Q342 120 321 180\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/>\n<line x1=\"190\" y1=\"120\" x2=\"235\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"1.5\" marker-end=\"url(#ar)\"/>\n<line x1=\"235\" y1=\"120\" x2=\"190\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"1.5\" marker-end=\"url(#ar)\"/>\n<line x1=\"152\" y1=\"146\" x2=\"152\" y2=\"222\" stroke=\"#1b2540\" stroke-width=\"1.5\"/>\n<line x1=\"152\" y1=\"222\" x2=\"20\" y2=\"222\" stroke=\"#1b2540\" stroke-width=\"1.5\"/>\n<line x1=\"160\" y1=\"150\" x2=\"160\" y2=\"232\" stroke=\"#1b2540\" stroke-width=\"1.5\"/>\n<line x1=\"160\" y1=\"232\" x2=\"20\" y2=\"232\" stroke=\"#1b2540\" stroke-width=\"1.5\"/>\n<text x=\"20\" y=\"55\" font-size=\"12\" fill=\"#991b1b\">Permanent magnet</text>\n<text x=\"200\" y=\"24\" font-size=\"12\" fill=\"#1e3a8a\">Paper cone</text>\n<text x=\"150\" y=\"190\" font-size=\"12\" fill=\"#b45309\">Coil</text>\n<line x1=\"158\" y1=\"180\" x2=\"138\" y2=\"144\" stroke=\"#b45309\" stroke-width=\"1\"/>\n<text x=\"30\" y=\"205\" font-size=\"12\" fill=\"#166534\">a.c. from amplifier</text>\n<text x=\"290\" y=\"205\" font-size=\"12\" fill=\"#1d4ed8\">Sound waves</text>\n</svg>"
+     }
+    ]
+   },
+   {
+    "h": "How a loudspeaker works: step by step",
+    "p": "The loudspeaker reverses the microphone chain. Instead of movement causing a current, a current in a magnetic field causes movement: the **motor effect**.",
+    "bullets": [
+     "1. An **alternating current** from the amplifier flows through the **coil**",
+     "2. The current-carrying coil is in the **magnetic field** of the permanent magnet, so it experiences a **force** (motor effect)",
+     "3. When the current **reverses direction**, the **force reverses direction**",
+     "4. So the coil is pushed **in and out** (backwards and forwards): it **vibrates**",
+     "5. The **cone**, attached to the coil, vibrates at the **same frequency** as the current",
+     "6. The cone pushes and pulls the air, creating **compressions and rarefactions**: a **sound wave**",
+     "7. Larger current = larger force = larger vibrations = **louder** sound; higher frequency current = **higher pitch**"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Common trap",
+      "p": "A loudspeaker does not use electromagnetic induction to make the sound. It uses the motor effect: a force on a current-carrying conductor in a magnetic field."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Why an alternating current is needed",
+    "p": "A sound wave needs the cone to move back and forth repeatedly. A steady direct current would give a steady force in one direction, so the cone would just move out once and stay there: no sound would be produced.",
+    "bullets": [
+     "**d.c.**: constant force, cone pushed to one position, **no vibration, no sound** (apart from a click when switched)",
+     "**a.c.**: force keeps reversing, cone vibrates, **sound produced**",
+     "The frequency of the a.c. sets the **frequency (pitch)** of the sound",
+     "The size of the current sets the **amplitude (loudness)** of the sound"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Comparing the two devices",
+    "p": "The microphone and loudspeaker are a matched pair. In fact a loudspeaker can be used as a crude microphone, because speaking into it moves the coil in the field and induces a p.d.",
+    "bullets": [
+     "Same parts: magnet, coil, vibrating diaphragm or cone",
+     "Opposite direction of energy transfer",
+     "Microphone needs a **light** diaphragm to respond to small pressure changes",
+     "Loudspeaker needs a **large** cone to move lots of air"
+    ],
+    "table": {
+     "head": [
+      "Feature",
+      "Microphone",
+      "Loudspeaker"
+     ],
+     "rows": [
+      [
+       "Starts with",
+       "Sound wave",
+       "Alternating current"
+      ],
+      [
+       "Moving part",
+       "Diaphragm + coil",
+       "Coil + cone"
+      ],
+      [
+       "Effect used",
+       "Electromagnetic induction (generator effect)",
+       "Motor effect"
+      ],
+      [
+       "Ends with",
+       "Induced alternating current",
+       "Sound wave"
+      ],
+      [
+       "Energy transfer",
+       "Sound to electrical",
+       "Electrical to sound"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": [
+     {
+      "cap": "The microphone chain of cause and effect, and the reversed chain in a loudspeaker.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"ar\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto\"><path d=\"M0 0 L10 5 L0 10 z\" fill=\"#1b2540\"/></marker></defs>\n<rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/>\n<text x=\"10\" y=\"20\" font-size=\"12\" fill=\"#1b2540\">Microphone: sound to current</text>\n<rect x=\"10\" y=\"35\" width=\"120\" height=\"40\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#1e3a8a\" stroke-width=\"1.5\"/><text x=\"70\" y=\"59\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">Sound waves</text><rect x=\"140\" y=\"35\" width=\"120\" height=\"40\" rx=\"6\" fill=\"#fde68a\" stroke=\"#92400e\" stroke-width=\"1.5\"/><text x=\"200\" y=\"59\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">Diaphragm vibrates</text><rect x=\"270\" y=\"35\" width=\"120\" height=\"40\" rx=\"6\" fill=\"#fecaca\" stroke=\"#991b1b\" stroke-width=\"1.5\"/><text x=\"330\" y=\"59\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">Coil cuts field lines</text>\n<rect x=\"270\" y=\"105\" width=\"120\" height=\"40\" rx=\"6\" fill=\"#e9d5ff\" stroke=\"#6b21a8\" stroke-width=\"1.5\"/><text x=\"330\" y=\"129\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">p.d. induced</text><rect x=\"140\" y=\"105\" width=\"120\" height=\"40\" rx=\"6\" fill=\"#bbf7d0\" stroke=\"#166534\" stroke-width=\"1.5\"/><text x=\"200\" y=\"129\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">Varying current</text><rect x=\"10\" y=\"105\" width=\"120\" height=\"40\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#1e3a8a\" stroke-width=\"1.5\"/><text x=\"70\" y=\"129\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">Signal to amplifier</text>\n<line x1=\"130\" y1=\"55\" x2=\"139\" y2=\"55\" stroke=\"#1b2540\" stroke-width=\"1.5\" marker-end=\"url(#ar)\"/>\n<line x1=\"260\" y1=\"55\" x2=\"269\" y2=\"55\" stroke=\"#1b2540\" stroke-width=\"1.5\" marker-end=\"url(#ar)\"/>\n<line x1=\"330\" y1=\"75\" x2=\"330\" y2=\"104\" stroke=\"#1b2540\" stroke-width=\"1.5\" marker-end=\"url(#ar)\"/>\n<line x1=\"270\" y1=\"125\" x2=\"261\" y2=\"125\" stroke=\"#1b2540\" stroke-width=\"1.5\" marker-end=\"url(#ar)\"/>\n<line x1=\"140\" y1=\"125\" x2=\"131\" y2=\"125\" stroke=\"#1b2540\" stroke-width=\"1.5\" marker-end=\"url(#ar)\"/>\n<text x=\"10\" y=\"175\" font-size=\"12\" fill=\"#1b2540\">Loudspeaker: same chain reversed</text>\n<text x=\"10\" y=\"200\" font-size=\"11\" fill=\"#166534\">a.c. in coil, force on coil</text>\n<text x=\"10\" y=\"222\" font-size=\"11\" fill=\"#1d4ed8\">Cone vibrates, sound produced</text>\n</svg>"
+     }
+    ]
+   },
+   {
+    "h": "A complete sound system",
+    "p": "In a public address system or phone call, a microphone and a loudspeaker are linked through an amplifier. The sound pattern is carried through every stage as a varying current.",
+    "bullets": [
+     "Microphone converts sound into a **small varying current**",
+     "**Amplifier** increases the size (amplitude) of the signal while keeping its **frequency and shape**",
+     "Loudspeaker converts the large varying current back into **sound**",
+     "If the signal shape is kept, the output sound is a faithful copy of the input sound"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Linking to other topics",
+    "p": "Higher-mark questions often expect you to link this point to the rest of the magnetism and induction topics.",
+    "bullets": [
+     "13.1P and 13.2: induced p.d. is larger if the coil moves **faster**, the field is **stronger**, or there are **more turns**",
+     "13.3P: like an alternator, the microphone gives **a.c.** because the coil keeps reversing direction",
+     "Topic 12 (triple): the motor effect force is given by **F = B x I x l**, so a bigger current gives a bigger force on the loudspeaker coil",
+     "Fleming's left-hand rule gives the direction of the force on the loudspeaker coil"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "6 mark answers",
+      "p": "For a 6 mark 'explain how a microphone and loudspeaker work' question, give both chains in order, name induction for the microphone and the motor effect for the loudspeaker, and say why the current alternates."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "A trampoline and a drum",
+   "p": "A microphone is like a trampoline with a bell rope tied to it: every time someone bounces (a sound wave pushes), the rope is pulled up and down, ringing a signal that copies the bounces exactly. A loudspeaker is the reverse: you pull the rope (the current) and the trampoline moves, pushing the air above it. Where it breaks down: there is no rope; the link is made by a magnetic field, and in the microphone it is the coil cutting field lines that creates the p.d., not a mechanical pull."
+  },
+  "terms": [
+   {
+    "t": "Microphone",
+    "d": "A device that converts the pressure variations of a sound wave into variations in an electric current."
+   },
+   {
+    "t": "Loudspeaker",
+    "d": "A device that converts variations in an electric current into pressure variations in the air (sound) using the motor effect."
+   },
+   {
+    "t": "Headphones",
+    "d": "Small loudspeakers worn on the ears that work in the same way, using the motor effect to vibrate a diaphragm."
+   },
+   {
+    "t": "Diaphragm",
+    "d": "A thin, light, flexible sheet in a microphone that vibrates when sound waves hit it."
+   },
+   {
+    "t": "Cone",
+    "d": "The light paper or plastic part of a loudspeaker attached to the coil, which vibrates and pushes the air."
+   },
+   {
+    "t": "Coil",
+    "d": "Many turns of insulated wire attached to the diaphragm or cone and sitting in a magnetic field."
+   },
+   {
+    "t": "Permanent magnet",
+    "d": "A magnet that produces its own steady magnetic field; provides the field the coil moves in."
+   },
+   {
+    "t": "Electromagnetic induction",
+    "d": "The production of a potential difference across a conductor when it moves relative to a magnetic field (or the field around it changes)."
+   },
+   {
+    "t": "Induced potential difference",
+    "d": "The p.d. produced across a conductor by electromagnetic induction; it causes a current if the circuit is complete."
+   },
+   {
+    "t": "Motor effect",
+    "d": "A current-carrying conductor in a magnetic field experiences a force."
+   },
+   {
+    "t": "Alternating current (a.c.)",
+    "d": "A current that repeatedly changes direction."
+   },
+   {
+    "t": "Pressure variation",
+    "d": "The changes between high pressure (compressions) and low pressure (rarefactions) in a sound wave."
+   },
+   {
+    "t": "Frequency",
+    "d": "The number of vibrations or waves per second, measured in hertz (Hz); sets the pitch of a sound."
+   },
+   {
+    "t": "Amplitude",
+    "d": "The maximum displacement from the rest position; a larger amplitude gives a louder sound or larger signal."
+   },
+   {
+    "t": "Amplifier",
+    "d": "A device that increases the amplitude of an electrical signal without changing its frequency."
+   },
+   {
+    "t": "Transducer",
+    "d": "A device that converts a signal from one form to another, such as sound to electrical."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "The loudspeaker uses electromagnetic induction to make sound.",
+    "r": "A loudspeaker uses the motor effect: the current-carrying coil in a magnetic field experiences a force."
+   },
+   {
+    "w": "The microphone uses the motor effect.",
+    "r": "A microphone uses electromagnetic induction: the moving coil cuts magnetic field lines and a p.d. is induced."
+   },
+   {
+    "w": "The sound waves create electricity in the magnet.",
+    "r": "The p.d. is induced in the coil, which moves relative to the magnet's field."
+   },
+   {
+    "w": "The diaphragm vibrates and this makes a current.",
+    "r": "The diaphragm moves the attached coil in the magnetic field; the coil cuts field lines, inducing a p.d. and so a current."
+   },
+   {
+    "w": "The magnet vibrates in the microphone.",
+    "r": "In a moving-coil microphone the coil moves; the permanent magnet stays still."
+   },
+   {
+    "w": "A loudspeaker works with direct current.",
+    "r": "It needs alternating (varying) current so the force reverses and the cone vibrates back and forth."
+   },
+   {
+    "w": "The current has a different frequency from the sound.",
+    "r": "The current has the same frequency as the sound wave (and the loudspeaker cone vibrates at the same frequency as the current)."
+   },
+   {
+    "w": "Louder sound means faster current.",
+    "r": "Louder sound means larger amplitude vibrations, so a larger induced p.d. and current."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Name the effect used by a moving-coil microphone to produce a current.",
+    "marks": 1,
+    "model": [
+     "Electromagnetic induction (generator effect)"
+    ],
+    "tip": "One word answer is fine, but 'induction' alone needs 'electromagnetic' to be safe."
+   },
+   {
+    "q": "Name the effect that makes the coil of a loudspeaker move.",
+    "marks": 1,
+    "model": [
+     "The motor effect"
+    ],
+    "tip": "Do not confuse with induction."
+   },
+   {
+    "q": "State the energy transfer in a microphone.",
+    "marks": 1,
+    "model": [
+     "Sound (kinetic energy of vibrating air) to electrical energy"
+    ],
+    "tip": "Order matters: input first."
+   },
+   {
+    "q": "Explain why the current from a microphone is alternating.",
+    "marks": 2,
+    "model": [
+     "The coil moves backwards and forwards / vibrates",
+     "So the direction of the induced p.d. (current) reverses each time the coil changes direction"
+    ],
+    "tip": "Link the reversal of motion to the reversal of current."
+   },
+   {
+    "q": "A microphone picks up a sound of frequency 500 Hz. State the frequency of the current produced and explain why.",
+    "marks": 2,
+    "model": [
+     "500 Hz",
+     "The coil vibrates at the same frequency as the diaphragm / sound wave"
+    ],
+    "tip": "Frequency is unchanged through microphone, amplifier and loudspeaker."
+   },
+   {
+    "q": "Explain why a loudspeaker connected to a d.c. supply does not produce a continuous sound.",
+    "marks": 2,
+    "model": [
+     "Direct current gives a force in one direction only",
+     "So the cone moves once and does not vibrate (no pressure variations)"
+    ],
+    "tip": "Mention lack of vibration explicitly."
+   },
+   {
+    "q": "Explain how increasing the current in a loudspeaker coil affects the sound.",
+    "marks": 2,
+    "model": [
+     "Larger current gives a larger force on the coil",
+     "Cone vibrates with larger amplitude so the sound is louder"
+    ],
+    "tip": "Force is proportional to current (F = BIl)."
+   },
+   {
+    "q": "Explain how a louder sound changes the output of a microphone.",
+    "marks": 2,
+    "model": [
+     "Larger pressure variations make the diaphragm / coil move further and faster",
+     "Coil cuts field lines faster so a larger p.d. / current is induced"
+    ],
+    "tip": "Amplitude, not frequency, changes."
+   },
+   {
+    "q": "Describe how a loudspeaker produces sound from an alternating current.",
+    "marks": 4,
+    "model": [
+     "Alternating current flows in the coil in the magnetic field of a permanent magnet",
+     "A force acts on the coil (motor effect)",
+     "The force reverses when the current reverses so the coil and cone vibrate",
+     "The cone pushes the air producing compressions and rarefactions / sound waves of the same frequency"
+    ],
+    "tip": "Four steps, four marks: current, force, reversal, sound."
+   },
+   {
+    "q": "Explain how a moving-coil microphone converts the pressure variations in a sound wave into variations in current.",
+    "marks": 4,
+    "model": [
+     "Pressure variations make the diaphragm vibrate",
+     "The coil attached to the diaphragm moves in the magnetic field of the magnet",
+     "The coil cuts field lines so a p.d. is induced (electromagnetic induction)",
+     "The induced current varies / alternates with the same frequency as the sound"
+    ],
+    "tip": "Name the coil and the magnetic field."
+   },
+   {
+    "q": "A microphone is connected through an amplifier to a loudspeaker. Explain how a sound made at the microphone is reproduced by the loudspeaker. (6 marks)",
+    "marks": 6,
+    "model": [
+     "Sound wave pressure variations make the microphone diaphragm and coil vibrate",
+     "Coil moves in magnetic field and cuts field lines",
+     "p.d. / alternating current is induced that varies with the same frequency as the sound",
+     "Amplifier increases the size of the current",
+     "In the loudspeaker the alternating current in the coil in a magnetic field experiences a force (motor effect) that reverses as current reverses",
+     "Coil and cone vibrate, producing pressure variations / sound waves of the same frequency"
+    ],
+    "tip": "Structure as two chains joined by the amplifier; use the words induced and motor effect."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Model answer (4 marks): Explain how headphones produce sound.",
+    "steps": [
+     "Headphones contain a coil attached to a thin diaphragm, in the field of a permanent magnet.",
+     "An alternating current from the device flows through the coil.",
+     "The current-carrying coil in the magnetic field experiences a force (motor effect).",
+     "As the current changes direction the force changes direction, so the coil and diaphragm vibrate at the frequency of the current.",
+     "The vibrating diaphragm creates pressure variations in the air: a sound wave."
+    ],
+    "ans": "Alternating current in the coil, force from the motor effect that reverses, diaphragm vibrates, sound waves of the same frequency."
+   },
+   {
+    "q": "Applied example: A singer moves from a quiet low note to a loud high note in front of a microphone. Describe two changes to the current produced.",
+    "steps": [
+     "Higher note = higher frequency sound, so the diaphragm and coil vibrate more times per second.",
+     "So the induced alternating current has a higher frequency.",
+     "Louder note = larger pressure variations, so the coil moves further and faster through the field.",
+     "The coil cuts field lines faster, so a larger p.d. is induced and the current has a larger amplitude."
+    ],
+    "ans": "The current alternates at a higher frequency and has a larger amplitude (peak value)."
+   },
+   {
+    "q": "Applied example: Explain why speaking into a loudspeaker connected to a sensitive meter makes the meter needle flicker.",
+    "steps": [
+     "The sound waves make the cone vibrate.",
+     "The coil attached to the cone moves in the magnetic field of the magnet.",
+     "The coil cuts field lines, so a p.d. is induced (electromagnetic induction) and a small current flows.",
+     "The coil moves back and forth, so the current keeps changing direction and size: the needle flickers."
+    ],
+    "ans": "The loudspeaker acts as a microphone: induction produces a small alternating current."
+   }
+  ],
+  "svg": [],
+  "pid": "phy_edx.12.3",
+  "sid": "phy_edx",
+  "v": 2,
+  "src": "pre",
+  "by": "claude/claude-opus-5-5",
+  "ts": "2026-11-26T01:56:11.508Z"
+ },
+ "phy_edx.12.4": {
+  "summary": "A **transformer** is two coils of insulated wire, the **primary** and the **secondary**, wound on the same **iron core**. An **alternating current** in the primary coil produces a **changing magnetic field** in the core, and this changing field passing through the secondary coil **induces an alternating potential difference** across it, so a current flows in any circuit connected to it. Because the induced p.d. depends on the number of turns, a transformer can **change the size of an alternating voltage**: step-up transformers increase it and step-down transformers decrease it. Transformers only work with a.c.",
+  "core": [
+   {
+    "h": "What the spec asks",
+    "p": "Edexcel 13.5 and 13.6 (all students) ask you to **explain how an alternating current in one circuit can induce a current in another circuit in a transformer**, and to **recall that a transformer can change the size of an alternating voltage**.",
+    "bullets": [
+     "Know the **structure**: primary coil, secondary coil, iron core",
+     "Explain the **sequence**: a.c. in primary, changing field in core, changing field through secondary, induced p.d., induced current",
+     "Explain **why a.c. is needed** (d.c. does not work)",
+     "Recall that a transformer **changes the size of an alternating voltage** (step-up or step-down)"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Must-know",
+      "p": "A transformer can change the size of an alternating voltage. It does not work with direct current."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Structure of a transformer",
+    "p": "A basic transformer has two separate coils of **insulated wire** wrapped around a shared **core** made of **iron**. The two coils are **not electrically connected**: no current flows from one coil to the other through a wire. The only link between them is the **magnetic field** in the core.",
+    "bullets": [
+     "**Primary coil**: connected to the **input** a.c. supply",
+     "**Secondary coil**: connected to the **output** circuit (the load)",
+     "**Iron core**: links the two coils magnetically",
+     "Wire is **insulated** so current flows round the turns, not across them or into the core",
+     "The number of turns on each coil is chosen to give the output p.d. needed"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": [
+     {
+      "cap": "A transformer. The a.c. supply drives an alternating current in the primary coil (red). This produces a changing magnetic field in the soft iron core (purple dashed loop), which passes through the secondary coil (blue) and induces an alternating p.d. that lights the lamp.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"ar\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto\"><path d=\"M0 0 L10 5 L0 10 z\" fill=\"#1b2540\"/></marker></defs><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/>\n<rect x=\"120\" y=\"40\" width=\"160\" height=\"160\" fill=\"#d1d5db\" stroke=\"#374151\" stroke-width=\"1.5\"/><rect x=\"150\" y=\"70\" width=\"100\" height=\"100\" fill=\"#f8fafc\" stroke=\"#374151\" stroke-width=\"1.5\"/>\n<rect x=\"133\" y=\"53\" width=\"134\" height=\"134\" fill=\"none\" stroke=\"#7c3aed\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/>\n<line x1=\"200\" y1=\"53\" x2=\"215\" y2=\"53\" stroke=\"#7c3aed\" stroke-width=\"1.5\" marker-end=\"url(#ar)\"/>\n<line x1=\"200\" y1=\"187\" x2=\"185\" y2=\"187\" stroke=\"#7c3aed\" stroke-width=\"1.5\" marker-end=\"url(#ar)\"/>\n<line x1=\"112\" y1=\"76\" x2=\"158\" y2=\"82\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><line x1=\"112\" y1=\"88\" x2=\"158\" y2=\"94\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><line x1=\"112\" y1=\"100\" x2=\"158\" y2=\"106\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><line x1=\"112\" y1=\"112\" x2=\"158\" y2=\"118\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><line x1=\"112\" y1=\"124\" x2=\"158\" y2=\"130\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><line x1=\"112\" y1=\"136\" x2=\"158\" y2=\"142\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><line x1=\"112\" y1=\"148\" x2=\"158\" y2=\"154\" stroke=\"#dc2626\" stroke-width=\"2.5\"/>\n<line x1=\"242\" y1=\"76\" x2=\"288\" y2=\"82\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"242\" y1=\"88\" x2=\"288\" y2=\"94\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"242\" y1=\"100\" x2=\"288\" y2=\"106\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"242\" y1=\"112\" x2=\"288\" y2=\"118\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"242\" y1=\"124\" x2=\"288\" y2=\"130\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"242\" y1=\"136\" x2=\"288\" y2=\"142\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"242\" y1=\"148\" x2=\"288\" y2=\"154\" stroke=\"#2563eb\" stroke-width=\"2.5\"/>\n<line x1=\"112\" y1=\"76\" x2=\"50\" y2=\"76\" stroke=\"#dc2626\" stroke-width=\"1.5\"/>\n<line x1=\"50\" y1=\"76\" x2=\"50\" y2=\"106\" stroke=\"#dc2626\" stroke-width=\"1.5\"/>\n<line x1=\"50\" y1=\"134\" x2=\"50\" y2=\"154\" stroke=\"#dc2626\" stroke-width=\"1.5\"/>\n<line x1=\"50\" y1=\"154\" x2=\"112\" y2=\"154\" stroke=\"#dc2626\" stroke-width=\"1.5\"/>\n<circle cx=\"50\" cy=\"120\" r=\"14\" fill=\"#fecaca\" stroke=\"#991b1b\" stroke-width=\"1.5\"/>\n<path d=\"M42 120 Q46 112 50 120 T58 120\" fill=\"none\" stroke=\"#991b1b\" stroke-width=\"1.5\"/>\n<line x1=\"288\" y1=\"76\" x2=\"350\" y2=\"76\" stroke=\"#2563eb\" stroke-width=\"1.5\"/>\n<line x1=\"350\" y1=\"76\" x2=\"350\" y2=\"108\" stroke=\"#2563eb\" stroke-width=\"1.5\"/>\n<line x1=\"350\" y1=\"132\" x2=\"350\" y2=\"160\" stroke=\"#2563eb\" stroke-width=\"1.5\"/>\n<line x1=\"350\" y1=\"160\" x2=\"288\" y2=\"160\" stroke=\"#2563eb\" stroke-width=\"1.5\"/>\n<circle cx=\"350\" cy=\"120\" r=\"12\" fill=\"#fde68a\" stroke=\"#92400e\" stroke-width=\"1.5\"/>\n<line x1=\"342\" y1=\"112\" x2=\"358\" y2=\"128\" stroke=\"#92400e\" stroke-width=\"1.5\"/>\n<line x1=\"358\" y1=\"112\" x2=\"342\" y2=\"128\" stroke=\"#92400e\" stroke-width=\"1.5\"/>\n<text x=\"170\" y=\"28\" font-size=\"12\" fill=\"#374151\">Soft iron core</text>\n<text x=\"60\" y=\"226\" font-size=\"12\" fill=\"#dc2626\">Primary coil</text>\n<text x=\"230\" y=\"226\" font-size=\"12\" fill=\"#2563eb\">Secondary coil</text>\n<text x=\"6\" y=\"172\" font-size=\"12\" fill=\"#991b1b\">a.c. supply</text>\n<text x=\"335\" y=\"178\" font-size=\"12\" fill=\"#92400e\">Lamp</text>\n<text x=\"155\" y=\"116\" font-size=\"11\" fill=\"#7c3aed\">Changing</text>\n<text x=\"155\" y=\"132\" font-size=\"11\" fill=\"#7c3aed\">magnetic field</text>\n</svg>"
+     }
+    ]
+   },
+   {
+    "h": "Step 1: a.c. in the primary makes a changing field",
+    "p": "A current in a coil produces a magnetic field, just like an electromagnet. Because the supply is **alternating**, the current keeps changing size and reversing direction, so the magnetic field it produces also keeps **changing in size and direction**.",
+    "bullets": [
+     "Current in a coil produces a **magnetic field** (the coil is a solenoid)",
+     "Iron core is **magnetised** by this field, making it much **stronger**",
+     "a.c. means the current **rises, falls and reverses** many times a second (50 Hz in the UK mains)",
+     "So the field in the core is **constantly changing** (alternating)"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Step 2: the core carries the field to the secondary",
+    "p": "The iron core forms a closed loop through both coils. The magnetic field produced by the primary is concentrated in the iron and passes round the core, so it also passes through the secondary coil.",
+    "bullets": [
+     "Iron is a **magnetic material**: it is easily magnetised and concentrates the field lines",
+     "Almost all of the field from the primary **passes through the secondary** coil",
+     "Without the core, much of the field would spread out into the air and be wasted",
+     "The core links the coils **magnetically**, not electrically"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Common trap",
+      "p": "Current does NOT flow through the iron core from one coil to the other. The coils are insulated; only the magnetic field is shared."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Step 3: the changing field induces a p.d. in the secondary",
+    "p": "This is **electromagnetic induction**. When the magnetic field through a coil **changes**, a **potential difference is induced** across the coil. Here nothing physically moves: the field itself is changing, which has the same effect as moving a magnet in and out of the coil.",
+    "bullets": [
+     "Changing field through the secondary = field lines effectively **cutting** the secondary turns",
+     "An **alternating p.d. is induced** across the secondary coil",
+     "If the secondary is part of a **complete circuit**, an **alternating current** flows in it",
+     "The induced p.d. has the **same frequency** as the supply to the primary",
+     "More turns on the secondary = a larger induced p.d. (each turn adds a bit)"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Definition",
+      "p": "Electromagnetic induction: a potential difference is induced across a conductor when the magnetic field through it changes (or when it moves relative to a magnetic field)."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "The chain of events in a transformer. Every arrow is caused by a change: with a steady d.c. supply the field does not change, so nothing is induced.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"ar\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto\"><path d=\"M0 0 L10 5 L0 10 z\" fill=\"#1b2540\"/></marker></defs><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/>\n<text x=\"6\" y=\"20\" font-size=\"12\" fill=\"#1b2540\">How a transformer works</text>\n<rect x=\"6\" y=\"32\" width=\"124\" height=\"40\" rx=\"6\" fill=\"#fecaca\" stroke=\"#991b1b\" stroke-width=\"1.5\"/><text x=\"68\" y=\"56\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">a.c. in primary</text><rect x=\"138\" y=\"32\" width=\"124\" height=\"40\" rx=\"6\" fill=\"#e9d5ff\" stroke=\"#6b21a8\" stroke-width=\"1.5\"/><text x=\"200\" y=\"56\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">Core field changes</text><rect x=\"270\" y=\"32\" width=\"124\" height=\"40\" rx=\"6\" fill=\"#e9d5ff\" stroke=\"#6b21a8\" stroke-width=\"1.5\"/><text x=\"332\" y=\"56\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">Links secondary coil</text>\n<rect x=\"270\" y=\"104\" width=\"124\" height=\"40\" rx=\"6\" fill=\"#e9d5ff\" stroke=\"#6b21a8\" stroke-width=\"1.5\"/><text x=\"332\" y=\"128\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">Field keeps changing</text><rect x=\"138\" y=\"104\" width=\"124\" height=\"40\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#1e3a8a\" stroke-width=\"1.5\"/><text x=\"200\" y=\"128\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">p.d. induced</text><rect x=\"6\" y=\"104\" width=\"124\" height=\"40\" rx=\"6\" fill=\"#bbf7d0\" stroke=\"#166534\" stroke-width=\"1.5\"/><text x=\"68\" y=\"128\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">Current in secondary</text>\n<line x1=\"130\" y1=\"52\" x2=\"137\" y2=\"52\" stroke=\"#1b2540\" stroke-width=\"1.5\" marker-end=\"url(#ar)\"/>\n<line x1=\"262\" y1=\"52\" x2=\"269\" y2=\"52\" stroke=\"#1b2540\" stroke-width=\"1.5\" marker-end=\"url(#ar)\"/>\n<line x1=\"332\" y1=\"72\" x2=\"332\" y2=\"103\" stroke=\"#1b2540\" stroke-width=\"1.5\" marker-end=\"url(#ar)\"/>\n<line x1=\"270\" y1=\"124\" x2=\"263\" y2=\"124\" stroke=\"#1b2540\" stroke-width=\"1.5\" marker-end=\"url(#ar)\"/>\n<line x1=\"138\" y1=\"124\" x2=\"131\" y2=\"124\" stroke=\"#1b2540\" stroke-width=\"1.5\" marker-end=\"url(#ar)\"/>\n<rect x=\"6\" y=\"166\" width=\"388\" height=\"64\" rx=\"6\" fill=\"#fde68a\" stroke=\"#92400e\"/>\n<text x=\"16\" y=\"188\" font-size=\"12\" fill=\"#92400e\">d.c. gives a steady field</text>\n<text x=\"16\" y=\"212\" font-size=\"12\" fill=\"#92400e\">No change, so no induced p.d.</text>\n</svg>"
+     }
+    ]
+   },
+   {
+    "h": "Why transformers need alternating current",
+    "p": "Induction only happens while the magnetic field is **changing**. A steady direct current gives a **steady** magnetic field, so after the moment it is switched on there is no change and no p.d. is induced in the secondary.",
+    "bullets": [
+     "**a.c.**: field changes continuously, so a p.d. is induced **all the time**",
+     "**d.c.**: field is constant, so **no p.d.** is induced (except a brief pulse when switching on or off)",
+     "This is one of the main reasons the **mains supply and National Grid use a.c.**",
+     "Exam phrase: 'a changing magnetic field is needed to induce a p.d.'"
+    ],
+    "table": {
+     "head": [
+      "Supply to primary",
+      "Field in core",
+      "p.d. induced in secondary?"
+     ],
+     "rows": [
+      [
+       "Alternating current",
+       "Changing (alternating)",
+       "Yes, continuous alternating p.d."
+      ],
+      [
+       "Steady direct current",
+       "Constant",
+       "No (only a brief pulse at switch on / off)"
+      ],
+      [
+       "d.c. being switched on and off",
+       "Changes only at switching",
+       "Only short pulses"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Transformers change the size of an alternating voltage",
+    "p": "Because the induced p.d. depends on the number of turns, the output p.d. can be bigger or smaller than the input p.d. This is the key fact to recall from 13.6.",
+    "bullets": [
+     "**Step-up transformer**: **more turns on the secondary** than the primary, output p.d. **greater** than input p.d.",
+     "**Step-down transformer**: **fewer turns on the secondary** than the primary, output p.d. **smaller** than input p.d.",
+     "Same number of turns: output p.d. **equals** input p.d. (an isolating transformer)",
+     "A transformer changes **voltage**, not **frequency**: input and output have the same frequency"
+    ],
+    "table": {
+     "head": [
+      "Type",
+      "Turns",
+      "Output p.d.",
+      "Example use"
+     ],
+     "rows": [
+      [
+       "Step-up",
+       "Ns greater than Np",
+       "Vs greater than Vp",
+       "Power station to National Grid"
+      ],
+      [
+       "Step-down",
+       "Ns less than Np",
+       "Vs less than Vp",
+       "Grid to homes; phone chargers"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Memory aid",
+      "p": "Step-UP = UP the turns on the secondary = UP the voltage."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A step-up transformer (left) has more turns on the secondary coil, so its output p.d. is bigger than the input. A step-down transformer (right) has fewer turns on the secondary, so its output p.d. is smaller.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/>\n<rect x=\"20\" y=\"50\" width=\"160\" height=\"110\" fill=\"#d1d5db\" stroke=\"#374151\" stroke-width=\"1.5\"/><rect x=\"45\" y=\"75\" width=\"110\" height=\"60\" fill=\"#f8fafc\" stroke=\"#374151\" stroke-width=\"1.5\"/><line x1=\"14\" y1=\"68\" x2=\"51\" y2=\"74\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><line x1=\"14\" y1=\"93\" x2=\"51\" y2=\"99\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><line x1=\"14\" y1=\"118\" x2=\"51\" y2=\"124\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><line x1=\"149\" y1=\"68\" x2=\"186\" y2=\"74\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"149\" y1=\"79\" x2=\"186\" y2=\"85\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"149\" y1=\"90\" x2=\"186\" y2=\"96\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"149\" y1=\"101\" x2=\"186\" y2=\"107\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"149\" y1=\"112\" x2=\"186\" y2=\"118\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"149\" y1=\"123\" x2=\"186\" y2=\"129\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"149\" y1=\"134\" x2=\"186\" y2=\"140\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><rect x=\"220\" y=\"50\" width=\"160\" height=\"110\" fill=\"#d1d5db\" stroke=\"#374151\" stroke-width=\"1.5\"/><rect x=\"245\" y=\"75\" width=\"110\" height=\"60\" fill=\"#f8fafc\" stroke=\"#374151\" stroke-width=\"1.5\"/><line x1=\"214\" y1=\"68\" x2=\"251\" y2=\"74\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><line x1=\"214\" y1=\"79\" x2=\"251\" y2=\"85\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><line x1=\"214\" y1=\"90\" x2=\"251\" y2=\"96\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><line x1=\"214\" y1=\"101\" x2=\"251\" y2=\"107\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><line x1=\"214\" y1=\"112\" x2=\"251\" y2=\"118\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><line x1=\"214\" y1=\"123\" x2=\"251\" y2=\"129\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><line x1=\"214\" y1=\"134\" x2=\"251\" y2=\"140\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><line x1=\"349\" y1=\"68\" x2=\"386\" y2=\"74\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"349\" y1=\"93\" x2=\"386\" y2=\"99\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"349\" y1=\"118\" x2=\"386\" y2=\"124\" stroke=\"#2563eb\" stroke-width=\"2.5\"/>\n<text x=\"70\" y=\"32\" font-size=\"13\" fill=\"#166534\">Step-up</text>\n<text x=\"262\" y=\"32\" font-size=\"13\" fill=\"#9a3412\">Step-down</text>\n<text x=\"20\" y=\"186\" font-size=\"11\" fill=\"#dc2626\">Primary</text>\n<text x=\"120\" y=\"186\" font-size=\"11\" fill=\"#2563eb\">Secondary</text>\n<text x=\"220\" y=\"186\" font-size=\"11\" fill=\"#dc2626\">Primary</text>\n<text x=\"320\" y=\"186\" font-size=\"11\" fill=\"#2563eb\">Secondary</text>\n<text x=\"20\" y=\"206\" font-size=\"12\" fill=\"#1b2540\">More secondary turns</text>\n<text x=\"20\" y=\"226\" font-size=\"12\" fill=\"#166534\">Output p.d. bigger</text>\n<text x=\"220\" y=\"206\" font-size=\"12\" fill=\"#1b2540\">Fewer secondary turns</text>\n<text x=\"220\" y=\"226\" font-size=\"12\" fill=\"#9a3412\">Output p.d. smaller</text>\n</svg>"
+     }
+    ]
+   },
+   {
+    "h": "Voltage up means current down",
+    "p": "A transformer cannot create energy. If it steps the voltage up, the current in the secondary must be smaller than in the primary so that the power output is no greater than the power input. (The power equation is covered in 13.10.)",
+    "bullets": [
+     "Step-up: **voltage increases, current decreases**",
+     "Step-down: **voltage decreases, current increases**",
+     "For an ideal (100% efficient) transformer, **power in = power out**",
+     "Real transformers are very efficient but some energy is wasted as **heating** of the coils and core"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Why the core is made of iron",
+    "p": "The core is made of **soft iron** because it is easily magnetised and demagnetised. With a.c. the field reverses 100 times a second (50 Hz), so the core must be able to follow these rapid changes.",
+    "bullets": [
+     "**Easily magnetised**: makes the field much stronger",
+     "**Easily demagnetised** (soft magnetic material): the field can reverse quickly and keep up with the a.c.",
+     "**Concentrates** the field and guides it through the secondary coil",
+     "A **steel** (permanently magnetisable) core would not work well, because it stays magnetised",
+     "Cores are usually built from thin insulated **layers (laminations)** to reduce energy wasted by heating"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Energy transfer in a transformer",
+    "p": "Energy is transferred from the primary circuit to the secondary circuit by the **magnetic field**, even though the circuits are not connected by any wire.",
+    "bullets": [
+     "Electrical energy in the primary circuit",
+     "Stored and carried in the **changing magnetic field** of the core",
+     "Transferred electrically to the secondary circuit by the **induced current**",
+     "Some energy is dissipated as **thermal energy** in the coils (resistance) and the core, which is why large transformers are cooled",
+     "Less waste means the transformer is closer to 100% efficient"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Where transformers are used",
+    "p": "Transformers are everywhere that a.c. has to be changed to a different voltage. Questions often give an everyday context and ask you to say whether a step-up or step-down transformer is needed.",
+    "bullets": [
+     "**National Grid**: step-up at power stations (to around 400 kV), step-down near homes (to 230 V)",
+     "**Phone and laptop chargers**: step-down from 230 V mains to a few volts (then changed to d.c.)",
+     "**Doorbells, model railways, halogen lamps**: step-down to a safe low voltage",
+     "**Microwave ovens, old TVs**: step-up to thousands of volts",
+     "If the device needs a **lower** voltage than the supply, use a **step-down** transformer"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Exam-ready explanation",
+    "p": "For a 4 to 6 mark 'explain how a transformer works' question, write the chain in order using the key words. Each sentence below is usually one marking point.",
+    "bullets": [
+     "An **alternating current** flows in the **primary coil**",
+     "This produces a **changing (alternating) magnetic field** in the **iron core**",
+     "The core carries the changing field **through the secondary coil**",
+     "The changing field **induces an alternating potential difference** across the secondary coil",
+     "If the secondary is connected in a **complete circuit**, an **alternating current** flows",
+     "The size of the output p.d. depends on the **number of turns** on the secondary compared with the primary"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Key words",
+      "p": "Use 'changing magnetic field' and 'induced'. Answers that say 'the current travels through the core' get no credit."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "A shared skipping rope",
+   "p": "Imagine two people holding the same skipping rope over a pulley. One person (the primary) shakes their end up and down; the rope (the iron core) carries the movement across, and the other person's hand (the secondary) is shaken too, even though the two people never touch. If the first person just holds the rope still (d.c.), nothing reaches the other end. Where it breaks down: the rope carries a mechanical wave, whereas a transformer carries a changing magnetic field, and a rope cannot make the second person's movement bigger the way extra secondary turns increase the voltage."
+  },
+  "terms": [
+   {
+    "t": "Transformer",
+    "d": "A device made of two coils of wire on an iron core that changes the size of an alternating voltage."
+   },
+   {
+    "t": "Primary coil",
+    "d": "The input coil of a transformer, connected to the alternating supply."
+   },
+   {
+    "t": "Secondary coil",
+    "d": "The output coil of a transformer, in which an alternating p.d. is induced."
+   },
+   {
+    "t": "Iron core",
+    "d": "The soft iron frame that links the two coils and concentrates the changing magnetic field."
+   },
+   {
+    "t": "Soft magnetic material",
+    "d": "A material such as iron that is easily magnetised and easily loses its magnetism."
+   },
+   {
+    "t": "Electromagnetic induction",
+    "d": "The production of a potential difference across a conductor when the magnetic field through it changes or it moves relative to a field."
+   },
+   {
+    "t": "Induced potential difference",
+    "d": "The p.d. produced across a coil by a changing magnetic field."
+   },
+   {
+    "t": "Induced current",
+    "d": "The current that flows when an induced p.d. acts in a complete circuit."
+   },
+   {
+    "t": "Alternating current (a.c.)",
+    "d": "Current that repeatedly reverses direction; UK mains a.c. has a frequency of 50 Hz."
+   },
+   {
+    "t": "Direct current (d.c.)",
+    "d": "Current that flows in one direction only; gives a steady magnetic field, so cannot work a transformer."
+   },
+   {
+    "t": "Step-up transformer",
+    "d": "A transformer with more turns on the secondary than the primary, so the output p.d. is larger than the input p.d."
+   },
+   {
+    "t": "Step-down transformer",
+    "d": "A transformer with fewer turns on the secondary than the primary, so the output p.d. is smaller than the input p.d."
+   },
+   {
+    "t": "Turns",
+    "d": "The number of times the wire is wrapped around the core in a coil."
+   },
+   {
+    "t": "Magnetic field",
+    "d": "The region around a magnet or current-carrying wire where a magnetic material or moving charge experiences a force."
+   },
+   {
+    "t": "Efficiency",
+    "d": "The fraction of the input energy that is usefully transferred; an ideal transformer is 100% efficient."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Current flows from the primary coil through the core to the secondary coil.",
+    "r": "The coils are not electrically connected; the changing magnetic field in the core induces a p.d. in the secondary."
+   },
+   {
+    "w": "A transformer works on d.c. or batteries.",
+    "r": "Transformers need a.c.; a steady d.c. gives a constant field, so no p.d. is induced."
+   },
+   {
+    "w": "The magnetic field induces a current (without saying it changes).",
+    "r": "It must be a CHANGING (alternating) magnetic field that induces the p.d."
+   },
+   {
+    "w": "The core is made of copper / steel.",
+    "r": "The core is made of (soft) iron, which is easily magnetised and demagnetised."
+   },
+   {
+    "w": "A step-up transformer increases the power / energy.",
+    "r": "It increases the voltage but decreases the current; the power output cannot exceed the power input."
+   },
+   {
+    "w": "A step-up transformer has more turns on the primary.",
+    "r": "A step-up transformer has more turns on the secondary coil than on the primary."
+   },
+   {
+    "w": "A transformer changes a.c. into d.c.",
+    "r": "A transformer changes the size of an alternating voltage; the output is still a.c. at the same frequency."
+   },
+   {
+    "w": "The primary coil induces a voltage in the core which flows to the secondary.",
+    "r": "The primary current magnetises the core; the changing field passing through the secondary induces the p.d. in the secondary."
+   }
+  ],
+  "exam": [
+   {
+    "q": "State what a transformer is used to do.",
+    "marks": 1,
+    "model": [
+     "Change the size of an alternating voltage (p.d.)"
+    ],
+    "tip": "Include 'alternating'."
+   },
+   {
+    "q": "Name the material used for the core of a transformer.",
+    "marks": 1,
+    "model": [
+     "(Soft) iron"
+    ],
+    "tip": "Not steel, not copper."
+   },
+   {
+    "q": "State how the number of turns on the coils of a step-down transformer compare.",
+    "marks": 1,
+    "model": [
+     "Fewer turns on the secondary coil than on the primary coil"
+    ],
+    "tip": "Name which coil has fewer turns."
+   },
+   {
+    "q": "Explain why a transformer will not work with a direct current supply.",
+    "marks": 2,
+    "model": [
+     "d.c. produces a constant / unchanging magnetic field",
+     "A p.d. is only induced when the magnetic field (through the secondary) changes"
+    ],
+    "tip": "Two marks: steady field, and induction needs change."
+   },
+   {
+    "q": "Explain why the core of a transformer is made of iron.",
+    "marks": 2,
+    "model": [
+     "Iron is easily magnetised (and demagnetised)",
+     "So it concentrates / links the changing magnetic field through the secondary coil"
+    ],
+    "tip": "Link the property to the job it does."
+   },
+   {
+    "q": "A transformer has a 230 V a.c. input and a 12 V output. State whether it is step-up or step-down and give a reason.",
+    "marks": 2,
+    "model": [
+     "Step-down",
+     "Output voltage is less than input voltage (so fewer turns on secondary)"
+    ],
+    "tip": "Give the reason from the data."
+   },
+   {
+    "q": "State and explain what happens to the current when a transformer steps up the voltage.",
+    "marks": 2,
+    "model": [
+     "The current decreases (output current smaller than input current)",
+     "Because power output cannot be more than power input / energy is conserved"
+    ],
+    "tip": "Voltage up, current down."
+   },
+   {
+    "q": "The primary and secondary coils of a transformer are not connected by any wire. Explain how energy is transferred from the primary circuit to the secondary circuit.",
+    "marks": 3,
+    "model": [
+     "Alternating current in primary produces a changing magnetic field",
+     "Field passes through the iron core to the secondary coil",
+     "Changing field induces a p.d. / current in the secondary coil"
+    ],
+    "tip": "Energy is carried by the magnetic field."
+   },
+   {
+    "q": "Explain how an alternating current in the primary coil of a transformer causes a current in the secondary circuit.",
+    "marks": 4,
+    "model": [
+     "Alternating current in primary coil produces a magnetic field that is changing / alternating",
+     "The iron core carries / concentrates this field through the secondary coil",
+     "The changing magnetic field induces an alternating p.d. across the secondary coil",
+     "Which causes a current in the secondary if it is part of a complete circuit"
+    ],
+    "tip": "Key words: changing field, iron core, induced, complete circuit."
+   },
+   {
+    "q": "A student connects a 6 V battery to the primary coil of a transformer and a lamp to the secondary. The lamp flashes briefly when the switch is closed but then stays off. Explain these observations.",
+    "marks": 3,
+    "model": [
+     "When switched on the current rises so the magnetic field changes, inducing a brief p.d. / current in the secondary (lamp flashes)",
+     "After that the current is steady so the magnetic field is constant",
+     "No change in field means no induced p.d., so the lamp stays off"
+    ],
+    "tip": "Link each observation to whether the field is changing."
+   },
+   {
+    "q": "Describe the structure of a transformer and explain how it can be used to produce an output voltage greater than its input voltage. (6 marks)",
+    "marks": 6,
+    "model": [
+     "Two coils of insulated wire (primary and secondary) wound on an iron core",
+     "Alternating current / p.d. supplied to the primary coil",
+     "Produces a changing magnetic field in the iron core",
+     "Changing field passes through the secondary coil and induces an alternating p.d.",
+     "For a larger output the secondary coil has more turns than the primary (step-up)",
+     "Output is still a.c. of the same frequency; current in secondary is smaller"
+    ],
+    "tip": "Cover structure, mechanism and the turns condition."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Applied example: A laptop charger plugs into the 230 V mains and supplies 19 V. A power station generator produces 25 kV which is sent along the National Grid at 400 kV. State the type of transformer needed in each case and which coil has more turns.",
+    "steps": [
+     "Charger: 230 V in, 19 V out, output smaller than input, so step-down.",
+     "Step-down means fewer turns on the secondary, so the primary has more turns.",
+     "Power station: 25 kV in, 400 kV out, output larger than input, so step-up.",
+     "Step-up means more turns on the secondary."
+    ],
+    "ans": "Charger: step-down (more turns on primary). Power station: step-up (more turns on secondary)."
+   },
+   {
+    "q": "Model answer (4 marks): Explain how a transformer can light a lamp connected only to its secondary coil.",
+    "steps": [
+     "An alternating current flows in the primary coil connected to the a.c. supply.",
+     "This produces a changing magnetic field which is concentrated in the iron core.",
+     "The changing magnetic field passes through the secondary coil and induces an alternating p.d. across it.",
+     "The lamp completes the secondary circuit, so an induced alternating current flows through the lamp and lights it."
+    ],
+    "ans": "a.c. in primary, changing field in iron core, induced p.d. in secondary, current through the lamp."
+   },
+   {
+    "q": "Applied example: The primary coil of a transformer is connected to a 50 Hz a.c. supply. Describe the frequency and type of the output, and what would change if the secondary coil were given more turns.",
+    "steps": [
+     "The induced p.d. follows the changing field, which changes at the supply frequency.",
+     "So the output is alternating at 50 Hz.",
+     "More turns on the secondary means each turn adds its own induced p.d.",
+     "So the output p.d. would be larger, but the frequency would still be 50 Hz."
+    ],
+    "ans": "The output is a.c. at 50 Hz; more secondary turns gives a larger output p.d. at the same frequency."
+   }
+  ],
+  "svg": [],
+  "pid": "phy_edx.12.4",
+  "sid": "phy_edx",
+  "v": 2,
+  "src": "pre",
+  "by": "claude/claude-opus-5-5",
+  "ts": "2026-11-26T01:56:11.521Z"
+ },
+ "phy_edx.12.5": {
+  "summary": "The **turns ratio equation** links the voltages across the two coils of a transformer to their numbers of turns: **Vp / Vs = Np / Ns**, where p is the primary (input) coil and s is the secondary (output) coil. The ratio of the voltages equals the ratio of the turns, so the output voltage is **directly proportional** to the number of secondary turns. Triple students must be able to rearrange it to find either a **missing voltage** or a **missing number of turns**, and use it to decide whether a transformer is step-up or step-down.",
+  "core": [
+   {
+    "h": "What the spec asks",
+    "p": "Edexcel 13.7P (triple only) says: **use the turns ratio equation for transformers to calculate either the missing voltage or the missing number of turns**. The equation is given on the Physics equation sheet, but you must be able to substitute, rearrange and give units confidently.",
+    "bullets": [
+     "Equation: **Vp / Vs = Np / Ns**",
+     "Find a missing **voltage** (Vp or Vs)",
+     "Find a missing **number of turns** (Np or Ns)",
+     "Use the ratio to decide **step-up or step-down**"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "The equation",
+      "p": "potential difference across primary coil / potential difference across secondary coil = number of turns on primary coil / number of turns on secondary coil.  Vp / Vs = Np / Ns"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "The symbols and units",
+    "p": "There are only two kinds of quantity in this equation, and the units of each pair cancel, so the ratios have no units.",
+    "bullets": [
+     "**Vp** = potential difference (voltage) across the **primary** coil, in volts (V)",
+     "**Vs** = potential difference across the **secondary** coil, in volts (V)",
+     "**Np** = number of turns on the primary coil (just a number, **no unit**)",
+     "**Ns** = number of turns on the secondary coil (no unit)",
+     "Vp and Vs must be in the **same unit** (both V, or both kV) because they appear as a ratio"
+    ],
+    "table": {
+     "head": [
+      "Symbol",
+      "Quantity",
+      "Unit"
+     ],
+     "rows": [
+      [
+       "Vp",
+       "p.d. across primary (input)",
+       "volt, V"
+      ],
+      [
+       "Vs",
+       "p.d. across secondary (output)",
+       "volt, V"
+      ],
+      [
+       "Np",
+       "turns on primary",
+       "none"
+      ],
+      [
+       "Ns",
+       "turns on secondary",
+       "none"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": [
+     {
+      "cap": "Labelling a transformer for the turns ratio equation: the input voltage Vp is across the primary coil of Np turns and the output voltage Vs is across the secondary coil of Ns turns. This one has 4 primary turns and 8 secondary turns, so it is a step-up transformer that doubles the voltage.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/>\n<rect x=\"130\" y=\"50\" width=\"140\" height=\"140\" fill=\"#d1d5db\" stroke=\"#374151\" stroke-width=\"1.5\"/>\n<rect x=\"158\" y=\"78\" width=\"84\" height=\"84\" fill=\"#f8fafc\" stroke=\"#374151\" stroke-width=\"1.5\"/>\n<line x1=\"122\" y1=\"88\" x2=\"166\" y2=\"94\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><line x1=\"122\" y1=\"108\" x2=\"166\" y2=\"114\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><line x1=\"122\" y1=\"128\" x2=\"166\" y2=\"134\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><line x1=\"122\" y1=\"148\" x2=\"166\" y2=\"154\" stroke=\"#dc2626\" stroke-width=\"2.5\"/>\n<line x1=\"234\" y1=\"82\" x2=\"278\" y2=\"88\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"234\" y1=\"92\" x2=\"278\" y2=\"98\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"234\" y1=\"102\" x2=\"278\" y2=\"108\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"234\" y1=\"112\" x2=\"278\" y2=\"118\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"234\" y1=\"122\" x2=\"278\" y2=\"128\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"234\" y1=\"132\" x2=\"278\" y2=\"138\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"234\" y1=\"142\" x2=\"278\" y2=\"148\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"234\" y1=\"152\" x2=\"278\" y2=\"158\" stroke=\"#2563eb\" stroke-width=\"2.5\"/>\n<line x1=\"122\" y1=\"88\" x2=\"60\" y2=\"88\" stroke=\"#dc2626\" stroke-width=\"1.5\"/>\n<line x1=\"122\" y1=\"154\" x2=\"60\" y2=\"154\" stroke=\"#dc2626\" stroke-width=\"1.5\"/>\n<line x1=\"60\" y1=\"88\" x2=\"60\" y2=\"154\" stroke=\"#dc2626\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/>\n<line x1=\"278\" y1=\"82\" x2=\"340\" y2=\"82\" stroke=\"#2563eb\" stroke-width=\"1.5\"/>\n<line x1=\"278\" y1=\"158\" x2=\"340\" y2=\"158\" stroke=\"#2563eb\" stroke-width=\"1.5\"/>\n<line x1=\"340\" y1=\"82\" x2=\"340\" y2=\"158\" stroke=\"#2563eb\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/>\n<text x=\"10\" y=\"124\" font-size=\"13\" fill=\"#dc2626\">Vp</text>\n<text x=\"350\" y=\"124\" font-size=\"13\" fill=\"#2563eb\">Vs</text>\n<text x=\"160\" y=\"34\" font-size=\"12\" fill=\"#374151\">Iron core</text>\n<text x=\"40\" y=\"190\" font-size=\"12\" fill=\"#dc2626\">Primary: Np turns</text>\n<text x=\"250\" y=\"210\" font-size=\"12\" fill=\"#2563eb\">Secondary: Ns turns</text>\n<text x=\"10\" y=\"232\" font-size=\"12\" fill=\"#1b2540\">Input (a.c.)</text>\n<text x=\"300\" y=\"232\" font-size=\"12\" fill=\"#1b2540\">Output (a.c.)</text>\n</svg>"
+     }
+    ]
+   },
+   {
+    "h": "What the equation means",
+    "p": "Each turn of wire on the core experiences the same changing magnetic field, so each turn has the same p.d. induced across it (the 'volts per turn'). The total p.d. across a coil is the volts per turn multiplied by the number of turns. That is why the voltage ratio equals the turns ratio.",
+    "bullets": [
+     "Volts per turn is the **same on both coils**: Vp / Np = Vs / Ns",
+     "Double the secondary turns and you **double** the output voltage",
+     "Vs is **directly proportional** to Ns (for fixed Vp and Np)",
+     "Vs is **directly proportional** to Vp (for fixed turns)",
+     "Vs is **inversely proportional** to Np (for fixed Vp and Ns)"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Tip",
+      "p": "Vs / Vp = Ns / Np is the same equation flipped. Either is correct, as long as both sides are flipped together."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "For a transformer with 100 primary turns and a 12 V input, the output voltage is directly proportional to the number of secondary turns: a straight line through the origin. When Ns equals Np (100 turns), Vs equals Vp (12 V).",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/>\n<line x1=\"50\" y1=\"200\" x2=\"380\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"1.5\"/>\n<line x1=\"50\" y1=\"200\" x2=\"50\" y2=\"30\" stroke=\"#1b2540\" stroke-width=\"1.5\"/>\n<line x1=\"50\" y1=\"200\" x2=\"50\" y2=\"205\" stroke=\"#1b2540\"/><text x=\"50\" y=\"218\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">0</text><line x1=\"114\" y1=\"200\" x2=\"114\" y2=\"205\" stroke=\"#1b2540\"/><text x=\"114\" y=\"218\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">100</text><line x1=\"178\" y1=\"200\" x2=\"178\" y2=\"205\" stroke=\"#1b2540\"/><text x=\"178\" y=\"218\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">200</text><line x1=\"242\" y1=\"200\" x2=\"242\" y2=\"205\" stroke=\"#1b2540\"/><text x=\"242\" y=\"218\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">300</text><line x1=\"306\" y1=\"200\" x2=\"306\" y2=\"205\" stroke=\"#1b2540\"/><text x=\"306\" y=\"218\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">400</text><line x1=\"370\" y1=\"200\" x2=\"370\" y2=\"205\" stroke=\"#1b2540\"/><text x=\"370\" y=\"218\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">500</text><line x1=\"45\" y1=\"200.0\" x2=\"50\" y2=\"200.0\" stroke=\"#1b2540\"/><text x=\"40\" y=\"204.0\" font-size=\"11\" text-anchor=\"end\" fill=\"#1b2540\">0</text><line x1=\"45\" y1=\"146.7\" x2=\"50\" y2=\"146.7\" stroke=\"#1b2540\"/><text x=\"40\" y=\"150.7\" font-size=\"11\" text-anchor=\"end\" fill=\"#1b2540\">20</text><line x1=\"45\" y1=\"93.3\" x2=\"50\" y2=\"93.3\" stroke=\"#1b2540\"/><text x=\"40\" y=\"97.3\" font-size=\"11\" text-anchor=\"end\" fill=\"#1b2540\">40</text><line x1=\"45\" y1=\"40.0\" x2=\"50\" y2=\"40.0\" stroke=\"#1b2540\"/><text x=\"40\" y=\"44.0\" font-size=\"11\" text-anchor=\"end\" fill=\"#1b2540\">60</text>\n<line x1=\"50\" y1=\"200\" x2=\"370\" y2=\"40\" stroke=\"#2563eb\" stroke-width=\"2\"/>\n<circle cx=\"114.0\" cy=\"168.0\" r=\"3.5\" fill=\"#dc2626\" stroke=\"#7f1d1d\"/><circle cx=\"178.0\" cy=\"136.0\" r=\"3.5\" fill=\"#dc2626\" stroke=\"#7f1d1d\"/><circle cx=\"242.0\" cy=\"104.0\" r=\"3.5\" fill=\"#dc2626\" stroke=\"#7f1d1d\"/><circle cx=\"306.0\" cy=\"72.0\" r=\"3.5\" fill=\"#dc2626\" stroke=\"#7f1d1d\"/><circle cx=\"370.0\" cy=\"40.0\" r=\"3.5\" fill=\"#dc2626\" stroke=\"#7f1d1d\"/>\n<text x=\"58\" y=\"26\" font-size=\"12\" fill=\"#1b2540\">Vs / V</text>\n<text x=\"150\" y=\"235\" font-size=\"12\" fill=\"#1b2540\">Secondary turns Ns</text>\n<text x=\"70\" y=\"70\" font-size=\"12\" fill=\"#2563eb\">Np = 100, Vp = 12 V</text>\n<text x=\"124\" y=\"176\" font-size=\"11\" fill=\"#7f1d1d\">Ns = Np so Vs = Vp</text>\n<text x=\"250\" y=\"160\" font-size=\"11\" fill=\"#166534\">Straight line</text>\n<text x=\"250\" y=\"176\" font-size=\"11\" fill=\"#166534\">through origin</text>\n</svg>"
+     }
+    ]
+   },
+   {
+    "h": "Step-up or step-down from the ratio",
+    "p": "You can tell the type of transformer just by comparing the turns, without calculating anything.",
+    "bullets": [
+     "**Ns greater than Np**: Vs greater than Vp, **step-up**",
+     "**Ns less than Np**: Vs less than Vp, **step-down**",
+     "**Ns equal to Np**: Vs equals Vp (no change)",
+     "A turns ratio Np : Ns of **1 : 20** steps the voltage **up** 20 times",
+     "A turns ratio Np : Ns of **20 : 1** steps the voltage **down** to one twentieth"
+    ],
+    "table": {
+     "head": [
+      "Np",
+      "Ns",
+      "Vp",
+      "Vs",
+      "Type"
+     ],
+     "rows": [
+      [
+       "100",
+       "2000",
+       "20 V",
+       "400 V",
+       "Step-up (x20)"
+      ],
+      [
+       "2000",
+       "100",
+       "400 V",
+       "20 V",
+       "Step-down (divide by 20)"
+      ],
+      [
+       "500",
+       "500",
+       "12 V",
+       "12 V",
+       "Neither"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Rearranging the equation",
+    "p": "Cross-multiplying gives **Vp x Ns = Vs x Np**, from which any one quantity can be made the subject. Learn this cross-multiplied form: it avoids mistakes.",
+    "bullets": [
+     "**Vs = Vp x Ns / Np** (find output voltage)",
+     "**Vp = Vs x Np / Ns** (find input voltage)",
+     "**Ns = Np x Vs / Vp** (find secondary turns)",
+     "**Np = Ns x Vp / Vs** (find primary turns)",
+     "Check: the unknown is always on top of one fraction after rearranging"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Cross-multiply first",
+      "p": "Write Vp x Ns = Vs x Np, then divide both sides by whatever is multiplied by the unknown."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "The four rearrangements of the turns ratio equation. Blue forms give a missing voltage; green forms give a missing number of turns.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/>\n<rect x=\"100\" y=\"12\" width=\"200\" height=\"44\" rx=\"8\" fill=\"#fde68a\" stroke=\"#92400e\" stroke-width=\"2\"/>\n<text x=\"200\" y=\"39\" font-size=\"13\" text-anchor=\"middle\" fill=\"#92400e\">Vp / Vs = Np / Ns</text>\n<rect x=\"14\" y=\"76\" width=\"180\" height=\"46\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#1e3a8a\" stroke-width=\"1.5\"/><text x=\"104\" y=\"104\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1b2540\">Vs = Vp x Ns / Np</text><rect x=\"206\" y=\"76\" width=\"180\" height=\"46\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#1e3a8a\" stroke-width=\"1.5\"/><text x=\"296\" y=\"104\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1b2540\">Vp = Vs x Np / Ns</text>\n<rect x=\"14\" y=\"140\" width=\"180\" height=\"46\" rx=\"6\" fill=\"#bbf7d0\" stroke=\"#166534\" stroke-width=\"1.5\"/><text x=\"104\" y=\"168\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1b2540\">Ns = Np x Vs / Vp</text><rect x=\"206\" y=\"140\" width=\"180\" height=\"46\" rx=\"6\" fill=\"#bbf7d0\" stroke=\"#166534\" stroke-width=\"1.5\"/><text x=\"296\" y=\"168\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1b2540\">Np = Ns x Vp / Vs</text>\n<text x=\"14\" y=\"214\" font-size=\"12\" fill=\"#1e3a8a\">Blue: find a voltage</text>\n<text x=\"206\" y=\"214\" font-size=\"12\" fill=\"#166534\">Green: find turns</text>\n<text x=\"14\" y=\"232\" font-size=\"11\" fill=\"#1b2540\">Same units for Vp and Vs</text>\n</svg>"
+     }
+    ]
+   },
+   {
+    "h": "Method for any calculation",
+    "p": "Examiners give marks for substitution and for the answer, so show each step clearly.",
+    "bullets": [
+     "1. **Write down** the equation: Vp / Vs = Np / Ns",
+     "2. **List** the values with their symbols; make sure p and s are matched correctly",
+     "3. **Convert** so Vp and Vs are in the same unit (e.g. both in V)",
+     "4. **Substitute** the numbers into the equation",
+     "5. **Rearrange** and calculate",
+     "6. **Give units** for a voltage (V); turns have no unit, and should be a **whole number**",
+     "7. **Sense check**: step-up means Vs bigger than Vp and Ns bigger than Np"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Finding a missing voltage",
+    "p": "The most common question. Usually you are given the input voltage and both numbers of turns and asked for the output voltage.",
+    "bullets": [
+     "Example: Vp = 230 V, Np = 2000, Ns = 100",
+     "Vs = Vp x Ns / Np = 230 x 100 / 2000",
+     "Vs = **11.5 V**",
+     "Ns is less than Np, so it is step-down: an answer smaller than 230 V makes sense"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Finding a missing number of turns",
+    "p": "Here you are given both voltages and one number of turns. The answer is a count of loops of wire, so it should be a whole number and has no unit.",
+    "bullets": [
+     "Example: Vp = 12 V, Vs = 240 V, Np = 50",
+     "Ns = Np x Vs / Vp = 50 x 240 / 12",
+     "Ns = **1000 turns**",
+     "Vs is 20 times Vp, so Ns must be 20 times Np: 20 x 50 = 1000, consistent"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Common trap",
+      "p": "Do not write a unit such as V or A after a number of turns. Write 'turns' or no unit."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Working with kV and large numbers",
+    "p": "National Grid questions use kilovolts (kV). 1 kV = 1000 V. Because the equation uses a ratio, you can leave both voltages in kV, but you must not mix kV and V.",
+    "bullets": [
+     "Convert both to V, or keep both in kV",
+     "Example: Vp = 25 kV, Vs = 400 kV, Np = 1500: Ns = 1500 x 400 / 25 = **24 000 turns**",
+     "Mixing units (25 kV with 230 V) without converting gives an answer 1000 times too big or small",
+     "Standard form may help with large turn numbers"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Ratio and scale-factor shortcut",
+    "p": "Often the numbers are chosen so that you can spot the scale factor. Finding it first is quick and makes errors obvious.",
+    "bullets": [
+     "Find how many times bigger (or smaller) the secondary is: **Ns / Np**",
+     "Multiply Vp by the same factor to get Vs",
+     "Example: Np = 400, Ns = 40: factor = 40 / 400 = 0.1, so 230 V becomes **23 V**",
+     "Example: Vp = 6 V, Vs = 30 V: factor 5, so Ns = 5 x Np"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Assumptions and real transformers",
+    "p": "The turns ratio equation gives the output of an **ideal** transformer. Real transformers are very efficient, so the equation is a very good prediction, but a measured Vs is usually slightly lower than predicted.",
+    "bullets": [
+     "Assumes all the magnetic field from the primary passes through the secondary",
+     "Assumes no energy wasted by **heating** of the coils or core",
+     "The equation applies to **alternating** voltages only (transformers do not work on d.c.)",
+     "The **frequency** is unchanged; only the size of the voltage changes",
+     "Linked equation (13.10): for 100% efficiency, **Vp x Ip = Vs x Is**, so stepping up the voltage steps down the current by the same factor"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Combined and multi-step questions",
+    "p": "Higher marks come from questions that join the turns ratio equation to another idea, such as the power equation or choosing a transformer.",
+    "bullets": [
+     "Find Vs with the turns ratio, then the current with Vp x Ip = Vs x Is",
+     "Choose which of several transformers gives the voltage needed for a device",
+     "Explain why a student's measured Vs is lower than calculated (energy losses, not 100% efficient)",
+     "Calculate the turns needed to step up for transmission and then down again for homes"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam tip",
+      "p": "If a question gives turns and voltages for both coils and asks 'is the transformer ideal?', calculate the predicted Vs and compare with the measured value."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Stairs with equal steps",
+   "p": "Think of each turn of wire as one step on a staircase, and every step is exactly the same height (the volts per turn, set by the changing field in the core). The primary coil has Np steps adding up to height Vp; the secondary has Ns steps of the same height, so its total height is Vs. More steps means more height, in exact proportion. Where it breaks down: the 'step height' is not fixed by the stairs themselves but by the input voltage and primary turns, and stairs do not need anything to keep changing, whereas a transformer only works while the magnetic field is alternating."
+  },
+  "terms": [
+   {
+    "t": "Turns ratio equation",
+    "d": "Vp / Vs = Np / Ns: the ratio of primary to secondary voltage equals the ratio of primary to secondary turns."
+   },
+   {
+    "t": "Turns ratio",
+    "d": "The ratio of the number of turns on the primary coil to the number on the secondary coil, Np : Ns."
+   },
+   {
+    "t": "Primary coil",
+    "d": "The input coil of a transformer, connected to the a.c. supply."
+   },
+   {
+    "t": "Secondary coil",
+    "d": "The output coil of a transformer, across which an alternating p.d. is induced."
+   },
+   {
+    "t": "Vp",
+    "d": "The potential difference across the primary coil, measured in volts (V)."
+   },
+   {
+    "t": "Vs",
+    "d": "The potential difference across the secondary coil, measured in volts (V)."
+   },
+   {
+    "t": "Np",
+    "d": "The number of turns of wire on the primary coil (no unit)."
+   },
+   {
+    "t": "Ns",
+    "d": "The number of turns of wire on the secondary coil (no unit)."
+   },
+   {
+    "t": "Step-up transformer",
+    "d": "A transformer with Ns greater than Np, so that Vs is greater than Vp."
+   },
+   {
+    "t": "Step-down transformer",
+    "d": "A transformer with Ns less than Np, so that Vs is less than Vp."
+   },
+   {
+    "t": "Directly proportional",
+    "d": "Two quantities are directly proportional if doubling one doubles the other; Vs is directly proportional to Ns."
+   },
+   {
+    "t": "Kilovolt (kV)",
+    "d": "1000 volts."
+   },
+   {
+    "t": "Ideal transformer",
+    "d": "A transformer assumed to be 100% efficient, with no energy wasted, so power in equals power out."
+   },
+   {
+    "t": "Potential difference",
+    "d": "The energy transferred per unit charge between two points, measured in volts (V)."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Vs = Vp x Np / Ns",
+    "r": "Vs = Vp x Ns / Np: the output voltage increases with the number of SECONDARY turns."
+   },
+   {
+    "w": "Mixing p and s, e.g. Vp / Vs = Ns / Np",
+    "r": "Keep primary with primary: Vp / Vs = Np / Ns (or Vs / Vp = Ns / Np)."
+   },
+   {
+    "w": "Using 25 kV and 230 V directly in the ratio.",
+    "r": "Convert to the same unit first (25 000 V and 230 V) before substituting."
+   },
+   {
+    "w": "Answer for turns given as 1000 V or with a decimal like 333.3 turns without comment.",
+    "r": "Turns have no unit and are a whole number; round sensibly (e.g. 333 turns)."
+   },
+   {
+    "w": "A step-up transformer has more primary turns.",
+    "r": "A step-up transformer has more turns on the secondary (Ns greater than Np)."
+   },
+   {
+    "w": "Using the turns ratio to calculate current as if current is proportional to turns.",
+    "r": "Current goes the opposite way: Is / Ip = Np / Ns for an ideal transformer, from Vp x Ip = Vs x Is."
+   },
+   {
+    "w": "A step-down answer bigger than the input voltage, accepted without checking.",
+    "r": "Always sense check: step-down means Vs must be less than Vp."
+   },
+   {
+    "w": "The equation works for a battery (d.c.) input.",
+    "r": "Transformers and the turns ratio equation only apply to alternating voltages."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Write down the equation linking the potential differences across the coils of a transformer and the numbers of turns on the coils.",
+    "marks": 1,
+    "model": [
+     "Vp / Vs = Np / Ns (or equivalent)"
+    ],
+    "tip": "Symbols must be defined or words used."
+   },
+   {
+    "q": "A transformer has 200 turns on the primary coil and 50 turns on the secondary coil. State whether it is step-up or step-down.",
+    "marks": 1,
+    "model": [
+     "Step-down (fewer turns on secondary)"
+    ],
+    "tip": "Compare Ns with Np."
+   },
+   {
+    "q": "A transformer has a turns ratio Np : Ns of 1 : 10. The input voltage is 23 V. Calculate the output voltage.",
+    "marks": 2,
+    "model": [
+     "Vs = 23 x 10",
+     "Vs = 230 V"
+    ],
+    "tip": "Scale factor shortcut."
+   },
+   {
+    "q": "The primary coil of a transformer has 1200 turns and the secondary has 60 turns. The input voltage is 230 V. Calculate the output voltage.",
+    "marks": 3,
+    "model": [
+     "230 / Vs = 1200 / 60",
+     "Vs = 230 x 60 / 1200",
+     "Vs = 11.5 V"
+    ],
+    "tip": "Show the substitution for the method marks."
+   },
+   {
+    "q": "A transformer changes 230 V to 6 V. The primary coil has 1150 turns. Calculate the number of turns on the secondary coil.",
+    "marks": 3,
+    "model": [
+     "230 / 6 = 1150 / Ns",
+     "Ns = 1150 x 6 / 230",
+     "Ns = 30 (turns)"
+    ],
+    "tip": "No unit for turns."
+   },
+   {
+    "q": "A transformer steps up 400 V to 132 kV. The secondary coil has 33 000 turns. Calculate the number of turns on the primary coil.",
+    "marks": 3,
+    "model": [
+     "132 kV = 132 000 V",
+     "Np = Ns x Vp / Vs = 33 000 x 400 / 132 000",
+     "Np = 100 (turns)"
+    ],
+    "tip": "Convert kV first."
+   },
+   {
+    "q": "A student calculates that the output of a transformer should be 12.0 V, but measures 11.4 V. Suggest why.",
+    "marks": 2,
+    "model": [
+     "The transformer is not 100% efficient / not ideal",
+     "Energy is wasted (heating the coils / core) or not all the magnetic field links the secondary"
+    ],
+    "tip": "The equation assumes an ideal transformer."
+   },
+   {
+    "q": "Explain, using the turns ratio, why a transformer with more turns on its secondary coil than on its primary coil produces a larger output voltage.",
+    "marks": 2,
+    "model": [
+     "Vs / Vp = Ns / Np so if Ns is greater than Np then Vs is greater than Vp",
+     "Each turn has the same induced p.d., so more turns give a larger total p.d."
+    ],
+    "tip": "Volts per turn idea is grade 9."
+   },
+   {
+    "q": "An ideal transformer has Np = 500 and Ns = 25. The input is 240 V and the input current is 0.10 A. Calculate the output voltage and the output current.",
+    "marks": 4,
+    "model": [
+     "Vs = 240 x 25 / 500",
+     "Vs = 12 V",
+     "Vp x Ip = Vs x Is so 240 x 0.10 = 12 x Is",
+     "Is = 2.0 A"
+    ],
+    "tip": "Voltage down by 20, current up by 20."
+   },
+   {
+    "q": "A model railway needs 12 V from the 230 V mains. A student has a transformer core, a primary coil of 920 turns, and wire to make a secondary coil. Describe how the student should choose the number of secondary turns, including a calculation, and how they could check the transformer works. (6 marks)",
+    "marks": 6,
+    "model": [
+     "Use Vp / Vs = Np / Ns",
+     "Ns = Np x Vs / Vp = 920 x 12 / 230",
+     "Ns = 48 turns",
+     "Secondary has fewer turns than primary so it is a step-down transformer",
+     "Connect primary to a.c. (not d.c.) supply",
+     "Measure output with a voltmeter across the secondary; expect slightly less than 12 V because the transformer is not 100% efficient"
+    ],
+    "tip": "Combine calculation with practical sense."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A phone charger transformer has 1150 turns on its primary coil and 60 turns on its secondary coil. It is connected to the 230 V mains. Calculate the output voltage.",
+    "steps": [
+     "Equation: Vp / Vs = Np / Ns",
+     "Values: Vp = 230 V, Np = 1150, Ns = 60",
+     "Rearrange: Vs = Vp x Ns / Np",
+     "Substitute: Vs = 230 x 60 / 1150 = 13 800 / 1150",
+     "Calculate: Vs = 12 V",
+     "Check: Ns is less than Np, so step-down, and 12 V is less than 230 V. Correct."
+    ],
+    "ans": "Vs = 12 V"
+   },
+   {
+    "q": "A power station transformer steps up 25 kV to 400 kV. The primary coil has 500 turns. Calculate the number of turns on the secondary coil.",
+    "steps": [
+     "Equation: Vp / Vs = Np / Ns",
+     "Both voltages in kV: Vp = 25 kV, Vs = 400 kV (same unit, so no conversion needed)",
+     "Rearrange: Ns = Np x Vs / Vp",
+     "Substitute: Ns = 500 x 400 / 25",
+     "Calculate: Ns = 8000",
+     "Check: voltage up 16 times, so turns up 16 times: 16 x 500 = 8000."
+    ],
+    "ans": "Ns = 8000 turns"
+   },
+   {
+    "q": "A doorbell needs 5.0 V. Its transformer has 40 turns on the secondary and runs from 230 V. Calculate the number of turns on the primary coil.",
+    "steps": [
+     "Equation: Vp / Vs = Np / Ns",
+     "Values: Vp = 230 V, Vs = 5.0 V, Ns = 40",
+     "Cross-multiply: Vp x Ns = Vs x Np",
+     "Rearrange: Np = Vp x Ns / Vs = 230 x 40 / 5.0",
+     "Calculate: Np = 9200 / 5.0 = 1840",
+     "Check: step-down, so Np should be bigger than Ns. 1840 is bigger than 40."
+    ],
+    "ans": "Np = 1840 turns"
+   }
+  ],
+  "svg": [],
+  "pid": "phy_edx.12.5",
+  "sid": "phy_edx",
+  "v": 2,
+  "src": "pre",
+  "by": "claude/claude-opus-5-5",
+  "ts": "2026-11-26T01:56:11.541Z"
+ }
+}
