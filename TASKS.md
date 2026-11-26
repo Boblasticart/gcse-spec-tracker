@@ -5,10 +5,10 @@ Runs read **only this file and `docs/CONTEXT.md`**. Keep this file short: finish
 ## Status
 
 ```
-RUN LOCK:       running since 2026-11-26 01:11 UTC, session session_01Sm3c8jTKZ4Zgy52upHhVPt
+RUN LOCK:       none
 CURRENT JOB:    none (J2b done; J3 Maths carries on by itself via the daily pipeline run)
 CURRENT STEPS:  none
-LAST RUN ENDED: 2026-11-23 01:57 UTC (nightly). Pipeline healthy (last run 22 Nov 17:40, 106 saved; 713 of 5168 done). Same 2 maths items stuck, left for now. Claude wrote 76 notes (bio_edx 6.14-8.14, so bio_edx is finished; chem_edx 0.0-3.14), all passed the gate; CI green. Pipeline ~106 + Claude 76 = about 180 a day, about 320 short of 500. Next run: chem_edx 4.0 onwards (about 66 left), then phy_edx.
+LAST RUN ENDED: 2026-11-26 UTC (nightly). Pipeline healthy (last run 25 Nov 21:26, 151 saved; 1251 of 5168 done). Same 2 maths items stuck, left for now. Claude wrote 75 notes (phy_edx 4.3-12.5), all passed the gate; CI green. (The 25 Nov run wrote 45 notes, chem_edx 9.12-phy_edx 4.2, but was cut off before releasing the lock.) Pipeline ~151 + Claude 75 = about 225 a day, about 275 short of 500. Next run: phy_edx 12.6 onwards (19 left), then the OCR sciences (bio_ocra is also being started by the pipeline, so check what is missing first).
 ```
 
 ## Claude is also writing notes (owner asked in chat, 2026-11-16; restarted 2026-11-20: "lets utilise groq key more until limit and well let you write notes lets aim for 500 every day")
@@ -17,7 +17,7 @@ LAST RUN ENDED: 2026-11-23 01:57 UTC (nightly). Pipeline healthy (last run 22 No
 - **Every nightly run, after the pipeline check, writes notes with the rest of its usage.** Claude-written notes go through the same repairs and quality gate (`scripts/notes/add.ts`), are saved to the same files and marked `by: claude/...`; the pipeline skips points that already have a note.
 - How: list missing points (kind.items() where !done), then hand 3 points each to a few general-purpose subagents in parallel: each runs `tsx scripts/notes/add.ts prompt <id>`, writes `<id>.json` in the scratchpad, runs `add.ts check <file> <okdir>` and fixes until OK. Then `tsx scripts/notes/add.ts save <okdir> claude/<model>`, commit, push. About 35k tokens per note. The check needs Playwright: if `@playwright/test` is missing, make a stand-in package that re-exports /opt/npm-tools/node_modules/playwright and set `PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers`.
 - To avoid clashing with the pipeline (which is on maths, then English), Claude works on the sciences: `bio_edx` first, then `chem_edx`, `phy_edx`, then the OCR sciences. Only topic files are touched, never progress.json / failures.json.
-- Done so far: 18 bio_edx notes (16 Nov) + 12 (20 Nov: bio_edx 0.2, 0.3, 0.6, 0.7, 0.10, 0.11, 1.0, 1.3, 1.4, 1.7, 1.8, 1.11) + 12 (21 Nov: bio_edx 1.12, 2.3-2.13) + 60 (22 Nov: bio_edx 2.14-6.13, 4 rounds of 5 subagents x 3 points) + 76 (23 Nov: bio_edx 6.14-8.14, so bio_edx is finished; chem_edx 0.0-3.14). Next: chem_edx 4.0 onwards, then phy_edx. The check needs `@playwright/test`, and Node ignores NODE_PATH for imports: put the stand-in package at `node_modules/@playwright/test` inside the repo (gitignored) or use an import resolve hook that falls back to /opt/npm-tools/node_modules. Stop when the owner says stop.
+- Done so far: 18 bio_edx notes (16 Nov) + 12 (20 Nov: bio_edx 0.2, 0.3, 0.6, 0.7, 0.10, 0.11, 1.0, 1.3, 1.4, 1.7, 1.8, 1.11) + 12 (21 Nov: bio_edx 1.12, 2.3-2.13) + 60 (22 Nov: bio_edx 2.14-6.13, 4 rounds of 5 subagents x 3 points) + 76 (23 Nov: bio_edx 6.14-8.14, so bio_edx is finished; chem_edx 0.0-3.14) + chem_edx 4.0-9.17 and phy_edx 0.0-4.2 (24-25 Nov) + 75 (26 Nov: phy_edx 4.3-12.5). Next: phy_edx 12.6 onwards, then the OCR sciences. The check needs `@playwright/test`, and Node ignores NODE_PATH for imports: put the stand-in package at `node_modules/@playwright/test` inside the repo (gitignored) or use an import resolve hook that falls back to /opt/npm-tools/node_modules. Stop when the owner says stop.
 
 ## Queue (top = next)
 
