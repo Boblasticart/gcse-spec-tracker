@@ -3072,5 +3072,1120 @@
   "src": "pre",
   "by": "claude/claude-opus-5-5",
   "ts": "2026-11-26T01:56:11.541Z"
+ },
+ "phy_edx.12.6": {
+  "summary": "The **National Grid** is the nationwide network of cables and transformers that transfers electrical energy from power stations to homes, schools and factories. **Step-up transformers** at power stations increase the potential difference to very high values (such as 400 kV), which **reduces the current** in the transmission cables so that much less energy is wasted by **heating the cables**. **Step-down transformers** near where people live then reduce the potential difference to a safer value (230 V for UK homes). For a transformer that is 100% efficient, **power in = power out**, so **Vp x Ip = Vs x Is**.",
+  "core": [
+   {
+    "h": "What the National Grid is",
+    "p": "The National Grid is a system of **power stations, transformers, overhead cables on pylons and underground cables** that links electricity generation to electricity users across the whole country. It lets electricity generated in one place be used hundreds of kilometres away, and lets supply be shared between regions.",
+    "bullets": [
+     "Power stations generate electricity, usually as **alternating current (a.c.)**.",
+     "**Step-up transformers** increase the potential difference before transmission.",
+     "**Transmission cables** (overhead on pylons or underground) carry the energy long distances.",
+     "**Step-down transformers** (at substations) reduce the potential difference for local use.",
+     "Homes receive mains electricity at about **230 V a.c., 50 Hz** in the UK.",
+     "Transformers only work with **alternating current**, which is one reason the grid uses a.c."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "National Grid",
+      "p": "The network of cables and transformers that transfers electrical energy from power stations to consumers."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "The journey of electrical energy",
+    "p": "Following the electricity from start to finish shows exactly where each type of transformer is used and why the potential difference changes at each stage.",
+    "bullets": [
+     "Power station output is typically around **25 kV** (tens of thousands of volts).",
+     "A step-up transformer raises this to transmission voltages such as **132 kV, 275 kV or 400 kV**.",
+     "Energy travels along transmission cables at **high p.d. and low current**.",
+     "At substations, step-down transformers reduce the p.d. in stages for local distribution.",
+     "A final step-down transformer near homes reduces it to **230 V**.",
+     "Some factories receive electricity at higher p.d.s than homes because they need more power."
+    ],
+    "table": {
+     "head": [
+      "Stage",
+      "Typical p.d.",
+      "Current in cables"
+     ],
+     "rows": [
+      [
+       "Power station output",
+       "about 25 kV",
+       "very high"
+      ],
+      [
+       "After step-up transformer",
+       "up to 400 kV",
+       "low"
+      ],
+      [
+       "Transmission cables",
+       "up to 400 kV",
+       "low"
+      ],
+      [
+       "After step-down transformers",
+       "230 V (homes)",
+       "higher again"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Order matters",
+      "p": "Power station, then step-up transformer, then transmission cables, then step-down transformer, then consumers."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Why transmit at high voltage?",
+    "p": "When a current flows through a cable, the cable's resistance causes it to **heat up**, and this energy is **wasted** to the surroundings. The heating effect depends on the **current**: a bigger current means much more heating. For the same power, raising the potential difference lowers the current, so the cables waste far less energy.",
+    "bullets": [
+     "Power transferred: **P = I x V**, so for a fixed power, if V goes up, I goes down.",
+     "A **lower current** means **less heating** of the transmission cables.",
+     "Less heating means **less energy is wasted** (dissipated to the surroundings).",
+     "So the National Grid is **more efficient** at transferring energy.",
+     "The heating power in a cable depends on the **square** of the current (P = I squared x R), so halving the current cuts the heating to a quarter (the full calculation is triple content, 13.11P).",
+     "Lower currents also allow **thinner, cheaper, lighter cables** to be used."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "The chain of reasoning",
+      "p": "High p.d. means low current; low current means less heating of cables; less heating means less energy wasted; so transmission is more efficient."
+     },
+     {
+      "k": "warn",
+      "t": "Do not say less power is lost because voltage is lower",
+      "p": "It is the reduced CURRENT that reduces heating losses. The voltage is increased, not decreased, for transmission."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Why step down before use?",
+    "p": "Very high potential differences are **extremely dangerous**: they could cause fatal electric shocks and could arc across air gaps. Household appliances are designed to work at **230 V**, so the p.d. must be reduced before it reaches homes.",
+    "bullets": [
+     "Step-down transformers reduce the p.d. to a **safer** level for consumers.",
+     "Appliances are designed for **230 V**; 400 kV would destroy them.",
+     "Reducing the p.d. **increases the current** available on the secondary side (power is conserved).",
+     "This higher current is fine because the local cables to homes are **short**, so heating losses are small.",
+     "Overhead high-voltage cables are kept **high up on pylons** and well insulated from the ground for safety."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Two-word reason",
+      "p": "Step-up for EFFICIENCY (less energy wasted). Step-down for SAFETY (and to match appliances)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "How transformers work (quick reminder)",
+    "p": "A transformer is two coils of wire wound on a **soft iron core**. An **alternating current** in the primary coil produces a **changing magnetic field** in the core. This changing field passes through the secondary coil and **induces an alternating potential difference** across it.",
+    "bullets": [
+     "**Primary coil**: the input coil, connected to the a.c. supply.",
+     "**Secondary coil**: the output coil, connected to the load.",
+     "The **iron core** concentrates the magnetic field and links the two coils.",
+     "The coils are **not electrically connected**: energy is transferred by the magnetic field.",
+     "A **direct current** would give a steady field, so no p.d. would be induced: transformers need a.c."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": [
+     {
+      "cap": "A step-up transformer: the secondary coil has more turns than the primary coil, so the output p.d. Vs is greater than the input p.d. Vp. The alternating current in the primary coil creates a changing magnetic field in the soft iron core, which induces a p.d. in the secondary coil.",
+      "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><rect x='120' y='40' width='160' height='150' fill='#d1d5db' stroke='#374151' stroke-width='2'/><rect x='150' y='70' width='100' height='90' fill='#ffffff' stroke='#374151' stroke-width='2'/><g fill='none' stroke='#b45309' stroke-width='3'><line x1='114' y1='90' x2='156' y2='96'/><line x1='114' y1='105' x2='156' y2='111'/><line x1='114' y1='120' x2='156' y2='126'/><line x1='114' y1='135' x2='156' y2='141'/></g><g fill='none' stroke='#1d4ed8' stroke-width='3'><line x1='244' y1='80' x2='286' y2='86'/><line x1='244' y1='92' x2='286' y2='98'/><line x1='244' y1='104' x2='286' y2='110'/><line x1='244' y1='116' x2='286' y2='122'/><line x1='244' y1='128' x2='286' y2='134'/><line x1='244' y1='140' x2='286' y2='146'/><line x1='244' y1='152' x2='286' y2='158'/></g><polyline points='114,90 40,90 40,106' fill='none' stroke='#b45309' stroke-width='2'/><polyline points='114,141 40,141 40,134' fill='none' stroke='#b45309' stroke-width='2'/><circle cx='40' cy='120' r='14' fill='#fde68a' stroke='#b45309' stroke-width='2'/><path d='M30 120 Q35 110 40 120 T50 120' fill='none' stroke='#1b2540' stroke-width='2'/><polyline points='286,80 360,80 360,104' fill='none' stroke='#1d4ed8' stroke-width='2'/><polyline points='286,158 360,158 360,136' fill='none' stroke='#1d4ed8' stroke-width='2'/><rect x='350' y='104' width='20' height='32' fill='#bbf7d0' stroke='#15803d' stroke-width='2'/><text x='200' y='28' font-size='12' text-anchor='middle' fill='#1b2540'>Soft iron core</text><text x='60' y='52' font-size='12' text-anchor='middle' fill='#b45309'>Primary coil</text><text x='60' y='68' font-size='11' text-anchor='middle' fill='#b45309'>fewer turns</text><text x='340' y='52' font-size='12' text-anchor='middle' fill='#1d4ed8'>Secondary coil</text><text x='340' y='68' font-size='11' text-anchor='middle' fill='#1d4ed8'>more turns</text><text x='50' y='172' font-size='12' text-anchor='middle' fill='#1b2540'>a.c. input Vp</text><text x='345' y='182' font-size='12' text-anchor='middle' fill='#1b2540'>Output Vs</text><text x='200' y='220' font-size='13' text-anchor='middle' fill='#1b2540'>Step-up transformer</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Step-up and step-down transformers",
+    "p": "The two types of transformer do opposite jobs. Which one you have depends on whether the secondary coil has more or fewer turns than the primary coil.",
+    "bullets": [
+     "**Step-up transformer**: increases the p.d. (Vs greater than Vp); secondary coil has **more turns** than the primary.",
+     "A step-up transformer **decreases the current** (Is less than Ip).",
+     "**Step-down transformer**: decreases the p.d. (Vs less than Vp); secondary coil has **fewer turns** than the primary.",
+     "A step-down transformer **increases the current** (Is greater than Ip).",
+     "Neither type creates energy: if p.d. goes up, current must go down by the same factor."
+    ],
+    "table": {
+     "head": [
+      "Property",
+      "Step-up transformer",
+      "Step-down transformer"
+     ],
+     "rows": [
+      [
+       "Where in the grid",
+       "At the power station",
+       "At substations near users"
+      ],
+      [
+       "Effect on p.d.",
+       "Increases it",
+       "Decreases it"
+      ],
+      [
+       "Effect on current",
+       "Decreases it",
+       "Increases it"
+      ],
+      [
+       "Turns on secondary",
+       "More than primary",
+       "Fewer than primary"
+      ],
+      [
+       "Main purpose",
+       "Reduce energy wasted in cables",
+       "Safety and to match appliances"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "The transformer power equation",
+    "p": "If a transformer is **100% efficient**, all the electrical power going into the primary coil comes out of the secondary coil. Because electrical power is p.d. x current, this gives the transformer power equation, which you must be able to **recall and use**.",
+    "bullets": [
+     "**Vp x Ip = Vs x Is**",
+     "Vp = potential difference across the primary coil, in **volts (V)**.",
+     "Ip = current in the primary coil, in **amperes (A)**.",
+     "Vs = potential difference across the secondary coil, in **volts (V)**.",
+     "Is = current in the secondary coil, in **amperes (A)**.",
+     "Each side equals the **power** in watts (W): input power = output power.",
+     "Rearranging: Is = (Vp x Ip) / Vs, Vs = (Vp x Ip) / Is, Ip = (Vs x Is) / Vp, Vp = (Vs x Is) / Ip."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Transformer power equation (100% efficiency)",
+      "p": "potential difference across primary coil x current in primary coil = potential difference across secondary coil x current in secondary coil; Vp x Ip = Vs x Is"
+     },
+     {
+      "k": "warn",
+      "t": "Units must match",
+      "p": "If Vp is in kV, Vs must also be in kV (or convert both to V). Mixing kV and V gives answers 1000 times too big or too small."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Why power in equals power out",
+    "p": "The power equation comes from the **conservation of energy**. Energy cannot be created, so the secondary coil cannot deliver more power than the primary coil receives. In an ideal (100% efficient) transformer no energy is wasted, so the two powers are exactly equal.",
+    "bullets": [
+     "Input power = Vp x Ip; output power = Vs x Is.",
+     "If Vs is 16 times bigger than Vp, then Is must be 16 times smaller than Ip.",
+     "So p.d. and current change by the **same factor in opposite directions**.",
+     "Real transformers are very efficient (often over 95%), so the equation is a good approximation.",
+     "In a real transformer, output power is slightly less than input power, as some energy heats the coils and core."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Inverse relationship",
+      "p": "For a 100% efficient transformer, when the p.d. is stepped up the current is stepped down by the same factor, and vice versa."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Calculation method",
+    "p": "Transformer power questions follow the same steps every time. Writing each step clearly earns method marks even if you slip on the arithmetic.",
+    "bullets": [
+     "Write down the equation: **Vp x Ip = Vs x Is**.",
+     "List the values given, with units, and **convert kV to V** (x 1000) or keep all p.d.s in kV.",
+     "Substitute the numbers.",
+     "Rearrange to make the unknown the subject.",
+     "Calculate and give the answer with the **correct unit** (V or A) and sensible significant figures.",
+     "Sense check: if the p.d. went up, the current should have gone down."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Use the equation sheet carefully",
+      "p": "Learn this equation: it may be one you are expected to recall. Show substitution before rearranging to pick up the marks."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Same power, different current",
+    "p": "Seeing the numbers side by side makes clear why high-voltage transmission works. The same power can be carried by a large current at low p.d. or a small current at high p.d., and the small current heats the cables far less.",
+    "bullets": [
+     "10 MW at 25 kV needs a current of 400 A.",
+     "10 MW at 400 kV needs a current of only 25 A.",
+     "The current is 16 times smaller, so heating is much smaller (256 times smaller, since heating depends on current squared).",
+     "This is why grid voltages are made as high as is practical and safe to insulate."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": [
+     {
+      "cap": "For the same power of 10 MW, a step-up transformer raises the p.d. from 25 kV to 400 kV and so reduces the current from 400 A to 25 A. Power in equals power out for a 100% efficient transformer.",
+      "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><rect x='15' y='40' width='150' height='110' rx='8' fill='#fecaca' stroke='#b91c1c' stroke-width='2'/><rect x='235' y='40' width='150' height='110' rx='8' fill='#dbeafe' stroke='#1d4ed8' stroke-width='2'/><line x1='185' y1='60' x2='185' y2='130' stroke='#b45309' stroke-width='4'/><line x1='215' y1='60' x2='215' y2='130' stroke='#1d4ed8' stroke-width='4'/><line x1='200' y1='60' x2='200' y2='130' stroke='#374151' stroke-width='3'/><line x1='165' y1='95' x2='180' y2='95' stroke='#1b2540' stroke-width='2'/><line x1='220' y1='95' x2='235' y2='95' stroke='#1b2540' stroke-width='2'/><text x='200' y='24' font-size='13' text-anchor='middle' fill='#1b2540'>Power in = power out</text><text x='90' y='62' font-size='12' text-anchor='middle' fill='#b91c1c'>Primary side</text><text x='90' y='88' font-size='12' text-anchor='middle' fill='#1b2540'>Vp = 25 kV</text><text x='90' y='108' font-size='12' text-anchor='middle' fill='#1b2540'>Ip = 400 A</text><text x='90' y='128' font-size='12' text-anchor='middle' fill='#1b2540'>P = 10 MW</text><text x='310' y='62' font-size='12' text-anchor='middle' fill='#1d4ed8'>Secondary side</text><text x='310' y='88' font-size='12' text-anchor='middle' fill='#1b2540'>Vs = 400 kV</text><text x='310' y='108' font-size='12' text-anchor='middle' fill='#1b2540'>Is = 25 A</text><text x='310' y='128' font-size='12' text-anchor='middle' fill='#1b2540'>P = 10 MW</text><text x='200' y='168' font-size='12' text-anchor='middle' fill='#b45309'>Step-up</text><text x='200' y='196' font-size='13' text-anchor='middle' fill='#1b2540'>Vp x Ip = Vs x Is</text><text x='200' y='222' font-size='12' text-anchor='middle' fill='#15803d'>V up 16 times, I down 16 times</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Energy losses and efficiency",
+    "p": "Even with high-voltage transmission, the National Grid is not 100% efficient. Some energy is always dissipated as **thermal energy** in the cables and transformers. Using high p.d. keeps these losses small, typically only a few percent of the energy generated.",
+    "bullets": [
+     "Wasted energy heats the **cables** and the surroundings.",
+     "Transformers also waste a little energy heating their coils and core.",
+     "Reducing the current is the **most effective way** to reduce cable losses.",
+     "Using low-resistance cable materials (such as aluminium with a steel core) also helps.",
+     "Higher efficiency means less fuel is burned for the same useful energy delivered."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Energy is not 'used up'",
+      "p": "Say energy is wasted or dissipated by heating the cables and surroundings, not that energy is used up or destroyed."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Exam command words for this point",
+    "p": "Questions on the National Grid usually ask you to **explain** why high p.d.s are used, **state** which transformer goes where, or **calculate** a p.d. or current using Vp x Ip = Vs x Is.",
+    "bullets": [
+     "**State**: one short fact, for example 'a step-up transformer increases the p.d.'.",
+     "**Explain**: link each idea with 'so' or 'because' in a chain.",
+     "**Calculate**: equation, substitution, rearrangement, answer with unit.",
+     "**Describe**: say what happens at each stage in the right order.",
+     "In 6-mark answers, mention both transformers, current, heating, energy wasted, efficiency and safety."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Use key words",
+      "p": "Mark schemes reward: step-up, step-down, increases potential difference, decreases current, less heating, less energy wasted, more efficient, safer."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Delivering water through a hose",
+   "p": "Imagine you must deliver the same amount of water power through a long, leaky, rough pipe. Pushing a huge flow of water slowly causes lots of friction against the pipe walls and wastes energy. Instead you use a pump (step-up transformer) to push a small flow at very high pressure, which loses much less to friction along the long pipe. Near the house a pressure reducer (step-down transformer) lowers the pressure so your taps are safe to use and the flow is bigger again. Pressure maps to potential difference, flow rate maps to current, and friction losses map to heating of the cables. Where it breaks down: in a real pipe, high pressure can increase leaks, and water is actually delivered and used up, whereas in a circuit the charge is not used up; only energy is transferred. Also, transformers need alternating current, which has no simple water equivalent."
+  },
+  "terms": [
+   {
+    "t": "National Grid",
+    "d": "The network of cables and transformers that transfers electrical energy from power stations to consumers."
+   },
+   {
+    "t": "Transformer",
+    "d": "A device made of two coils on an iron core that changes the size of an alternating potential difference."
+   },
+   {
+    "t": "Step-up transformer",
+    "d": "A transformer that increases the potential difference (and decreases the current); its secondary coil has more turns than its primary coil."
+   },
+   {
+    "t": "Step-down transformer",
+    "d": "A transformer that decreases the potential difference (and increases the current); its secondary coil has fewer turns than its primary coil."
+   },
+   {
+    "t": "Primary coil",
+    "d": "The input coil of a transformer, connected to the alternating supply."
+   },
+   {
+    "t": "Secondary coil",
+    "d": "The output coil of a transformer, in which a potential difference is induced."
+   },
+   {
+    "t": "Potential difference (p.d.)",
+    "d": "The energy transferred per unit charge between two points, measured in volts (V)."
+   },
+   {
+    "t": "Current",
+    "d": "The rate of flow of charge, measured in amperes (A)."
+   },
+   {
+    "t": "Power",
+    "d": "The rate of energy transfer, measured in watts (W); for electricity P = I x V."
+   },
+   {
+    "t": "Transmission cables",
+    "d": "The overhead or underground cables that carry electricity at high potential difference over long distances."
+   },
+   {
+    "t": "Substation",
+    "d": "A site containing step-down transformers that reduce the p.d. for local distribution."
+   },
+   {
+    "t": "Alternating current (a.c.)",
+    "d": "A current that repeatedly reverses direction; needed for transformers to work. UK mains is 50 Hz."
+   },
+   {
+    "t": "Efficiency",
+    "d": "Useful energy (or power) output divided by total energy (or power) input."
+   },
+   {
+    "t": "100% efficient transformer",
+    "d": "An ideal transformer in which input power equals output power, so Vp x Ip = Vs x Is."
+   },
+   {
+    "t": "Dissipated energy",
+    "d": "Energy transferred to the surroundings in a way that is not useful, for example by heating cables."
+   },
+   {
+    "t": "Mains supply",
+    "d": "The electricity supplied to UK homes: about 230 V a.c. at a frequency of 50 Hz."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "High voltage is used so that the electricity travels faster.",
+    "r": "High p.d. reduces the current, which reduces heating of the cables, so less energy is wasted."
+   },
+   {
+    "w": "A step-up transformer increases the current.",
+    "r": "A step-up transformer increases the p.d. and decreases the current."
+   },
+   {
+    "w": "Step-down transformers are at the power station.",
+    "r": "Step-up transformers are at the power station; step-down transformers are near consumers (substations)."
+   },
+   {
+    "w": "Less power is lost because the voltage is high.",
+    "r": "Less power is lost because the current is low, so there is less heating of the cables."
+   },
+   {
+    "w": "Transformers make extra energy when they step up the voltage.",
+    "r": "Energy is conserved: for a 100% efficient transformer power in = power out, so current falls when p.d. rises."
+   },
+   {
+    "w": "The voltage is stepped down because homes need less energy.",
+    "r": "The p.d. is stepped down for safety and because appliances are designed to work at 230 V."
+   },
+   {
+    "w": "Using Vp = 25 kV and Vs = 400 V in the same calculation without converting.",
+    "r": "Convert both p.d.s to the same unit (V or kV) before substituting."
+   },
+   {
+    "w": "Transformers work with direct current.",
+    "r": "Transformers need alternating current so that the magnetic field in the core keeps changing."
+   },
+   {
+    "w": "Energy is used up in the cables.",
+    "r": "Energy is dissipated (wasted) to the surroundings by heating the cables."
+   }
+  ],
+  "exam": [
+   {
+    "q": "State the type of transformer used at a power station to connect it to the National Grid.",
+    "marks": 1,
+    "model": [
+     "Step-up transformer."
+    ],
+    "tip": "Power station = step-up; near homes = step-down."
+   },
+   {
+    "q": "State the potential difference of the mains supply to UK homes.",
+    "marks": 1,
+    "model": [
+     "230 V (a.c.)."
+    ],
+    "tip": "Learn 230 V and 50 Hz together."
+   },
+   {
+    "q": "Give one reason why a step-down transformer is used before electricity reaches homes.",
+    "marks": 1,
+    "model": [
+     "To reduce the p.d. to a safer level / to 230 V to match appliances."
+    ],
+    "tip": "Safety is the expected answer."
+   },
+   {
+    "q": "Write down the equation that links the potential differences and currents in a 100% efficient transformer.",
+    "marks": 1,
+    "model": [
+     "Vp x Ip = Vs x Is (or in words)."
+    ],
+    "tip": "Use the correct subscripts p and s."
+   },
+   {
+    "q": "Explain why a step-up transformer decreases the current.",
+    "marks": 2,
+    "model": [
+     "Power in = power out (energy is conserved) / Vp x Ip = Vs x Is.",
+     "So if the p.d. increases, the current must decrease."
+    ],
+    "tip": "Link to conservation of energy."
+   },
+   {
+    "q": "Explain why electricity is transmitted through the National Grid at a very high potential difference.",
+    "marks": 3,
+    "model": [
+     "A high p.d. means a low current (for the same power).",
+     "A low current causes less heating of the cables.",
+     "So less energy is wasted / transmission is more efficient."
+    ],
+    "tip": "Three linked steps: p.d. up, current down, less heating."
+   },
+   {
+    "q": "A transformer has a primary p.d. of 230 V and a primary current of 2.0 A. The secondary p.d. is 11.5 V. Calculate the secondary current. Assume the transformer is 100% efficient.",
+    "marks": 3,
+    "model": [
+     "Vp x Ip = Vs x Is.",
+     "230 x 2.0 = 11.5 x Is.",
+     "Is = 460 / 11.5 = 40 A."
+    ],
+    "tip": "Step-down, so the current should go up: 40 A makes sense."
+   },
+   {
+    "q": "A power station transfers 50 MW at 25 kV into a step-up transformer. The output p.d. is 400 kV. Calculate the current in the transmission cables.",
+    "marks": 3,
+    "model": [
+     "Is = P / Vs (or Vp x Ip = Vs x Is).",
+     "50 000 000 / 400 000.",
+     "= 125 A."
+    ],
+    "tip": "Convert MW and kV to W and V first."
+   },
+   {
+    "q": "A step-down transformer at a substation has an input current of 40 A at 132 000 V. The output current is 400 A. Calculate the output p.d.",
+    "marks": 3,
+    "model": [
+     "Vs = (Vp x Ip) / Is.",
+     "= (132 000 x 40) / 400.",
+     "= 13 200 V (13.2 kV)."
+    ],
+    "tip": "Current up by 10 times, so p.d. down by 10 times."
+   },
+   {
+    "q": "Describe how electrical energy is transferred from a power station to homes by the National Grid. Explain why transformers are used at each stage.",
+    "marks": 6,
+    "model": [
+     "Power station generates a.c. electricity.",
+     "Step-up transformer increases the p.d. (to about 400 kV).",
+     "This decreases the current in the transmission cables.",
+     "Lower current means less heating of cables so less energy is wasted / more efficient.",
+     "Step-down transformers (at substations) reduce the p.d. near consumers.",
+     "To 230 V, which is safer and matches the p.d. appliances are designed for.",
+     "Power in = power out for transformers, so Vp x Ip = Vs x Is."
+    ],
+    "tip": "Give the stages in order and use 'so' to link each cause and effect."
+   },
+   {
+    "q": "Suggest why the transformers used in the National Grid must be supplied with alternating current rather than direct current.",
+    "marks": 2,
+    "model": [
+     "An alternating current produces a changing magnetic field in the core.",
+     "A changing field is needed to induce a p.d. in the secondary coil (d.c. gives a constant field, so no p.d. induced)."
+    ],
+    "tip": "Key word: changing magnetic field."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A step-up transformer at a power station has an input p.d. of 25 kV and an input current of 2000 A. It steps the p.d. up to 400 kV. Assuming 100% efficiency, calculate the current in the transmission cables.",
+    "steps": [
+     "Equation: Vp x Ip = Vs x Is.",
+     "Keep p.d.s in the same unit: Vp = 25 kV, Vs = 400 kV.",
+     "Substitute: 25 x 2000 = 400 x Is.",
+     "Rearrange: Is = (25 x 2000) / 400.",
+     "Calculate: Is = 50 000 / 400 = 125 A.",
+     "Check: p.d. rose 16 times, current fell 16 times (2000 / 16 = 125)."
+    ],
+    "ans": "Is = 125 A"
+   },
+   {
+    "q": "A phone charger contains a transformer that steps 230 V mains down to 5.0 V. The output current is 1.2 A. Calculate the current drawn from the mains, assuming 100% efficiency.",
+    "steps": [
+     "Equation: Vp x Ip = Vs x Is.",
+     "Substitute: 230 x Ip = 5.0 x 1.2.",
+     "Output power = 6.0 W.",
+     "Rearrange: Ip = 6.0 / 230.",
+     "Calculate: Ip = 0.026 A (2 s.f.).",
+     "Sense check: step-down, so primary current is smaller than secondary current."
+    ],
+    "ans": "Ip = 0.026 A (26 mA)"
+   },
+   {
+    "q": "Explain, using the numbers, why sending 10 MW at 400 kV is better than sending it at 25 kV.",
+    "steps": [
+     "At 25 kV: I = P / V = 10 000 000 / 25 000 = 400 A.",
+     "At 400 kV: I = 10 000 000 / 400 000 = 25 A.",
+     "The current is 16 times smaller at 400 kV.",
+     "A smaller current causes much less heating of the cables.",
+     "So much less energy is wasted and transmission is more efficient."
+    ],
+    "ans": "At 400 kV the current is only 25 A instead of 400 A, so cable heating and wasted energy are far lower."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "The National Grid: a step-up transformer at the power station raises the p.d. so the current in the long transmission cables is low, reducing heating losses. Step-down transformers near homes reduce the p.d. to a safer 230 V.",
+    "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><defs><marker id='ah' markerWidth='8' markerHeight='8' refX='6' refY='3' orient='auto'><path d='M0 0 L6 3 L0 6 Z' fill='#1b2540'/></marker></defs><text x='200' y='24' font-size='13' text-anchor='middle' fill='#1b2540'>The National Grid</text><rect x='8' y='50' width='64' height='50' rx='6' fill='#e9d5ff' stroke='#6b21a8' stroke-width='2'/><rect x='88' y='50' width='64' height='50' rx='6' fill='#fde68a' stroke='#b45309' stroke-width='2'/><rect x='168' y='50' width='64' height='50' rx='6' fill='#dbeafe' stroke='#1d4ed8' stroke-width='2'/><rect x='248' y='50' width='64' height='50' rx='6' fill='#fde68a' stroke='#b45309' stroke-width='2'/><rect x='328' y='50' width='64' height='50' rx='6' fill='#bbf7d0' stroke='#15803d' stroke-width='2'/><g stroke='#1b2540' stroke-width='2' marker-end='url(#ah)'><line x1='72' y1='75' x2='86' y2='75'/><line x1='152' y1='75' x2='166' y2='75'/><line x1='232' y1='75' x2='246' y2='75'/><line x1='312' y1='75' x2='326' y2='75'/></g><text x='40' y='72' font-size='11' text-anchor='middle' fill='#1b2540'>Power</text><text x='40' y='88' font-size='11' text-anchor='middle' fill='#1b2540'>station</text><text x='120' y='80' font-size='11' text-anchor='middle' fill='#1b2540'>Step-up</text><text x='200' y='72' font-size='11' text-anchor='middle' fill='#1b2540'>Cables</text><text x='200' y='88' font-size='11' text-anchor='middle' fill='#1b2540'>on pylons</text><text x='280' y='80' font-size='11' text-anchor='middle' fill='#1b2540'>Step-down</text><text x='360' y='80' font-size='11' text-anchor='middle' fill='#1b2540'>Homes</text><text x='40' y='125' font-size='11' text-anchor='middle' fill='#6b21a8'>25 kV</text><text x='200' y='125' font-size='11' text-anchor='middle' fill='#1d4ed8'>400 kV</text><text x='360' y='125' font-size='11' text-anchor='middle' fill='#15803d'>230 V</text><text x='40' y='145' font-size='11' text-anchor='middle' fill='#6b21a8'>high current</text><text x='200' y='145' font-size='11' text-anchor='middle' fill='#1d4ed8'>low current</text><text x='360' y='145' font-size='11' text-anchor='middle' fill='#15803d'>high current</text><text x='120' y='185' font-size='12' text-anchor='middle' fill='#b45309'>raises p.d.</text><text x='280' y='185' font-size='12' text-anchor='middle' fill='#b45309'>lowers p.d.</text><text x='200' y='220' font-size='12' text-anchor='middle' fill='#1b2540'>Low current: less heating</text></svg>"
+   },
+   {
+    "cap": "The heating effect in transmission cables depends on the current. Sending the same power with a large current heats the cables a lot and wastes energy; sending it with a small current (at high p.d.) wastes far less.",
+    "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><text x='200' y='22' font-size='13' text-anchor='middle' fill='#1b2540'>Same power, two currents</text><text x='200' y='50' font-size='12' text-anchor='middle' fill='#b91c1c'>Low p.d., high current</text><rect x='40' y='62' width='320' height='18' rx='9' fill='#fecaca' stroke='#b91c1c' stroke-width='2'/><g fill='none' stroke='#ef4444' stroke-width='2'><path d='M80 92 q5 6 0 12 q-5 6 0 12'/><path d='M160 92 q5 6 0 12 q-5 6 0 12'/><path d='M240 92 q5 6 0 12 q-5 6 0 12'/><path d='M320 92 q5 6 0 12 q-5 6 0 12'/></g><text x='200' y='132' font-size='12' text-anchor='middle' fill='#b91c1c'>Hot cable: much energy wasted</text><text x='200' y='162' font-size='12' text-anchor='middle' fill='#1d4ed8'>High p.d., low current</text><rect x='40' y='174' width='320' height='18' rx='9' fill='#dbeafe' stroke='#1d4ed8' stroke-width='2'/><text x='200' y='218' font-size='12' text-anchor='middle' fill='#1d4ed8'>Cool cable: little energy wasted</text></svg>"
+   }
+  ],
+  "pid": "phy_edx.12.6",
+  "sid": "phy_edx",
+  "v": 2,
+  "src": "pre",
+  "by": "claude/claude-opus-5-5",
+  "ts": "2026-11-27T01:20:02.415Z"
+ },
+ "phy_edx.12.7": {
+  "summary": "Triple physics students must be able to **explain, with calculations**, why the National Grid transmits electrical energy at very high potential differences. Using **P = I x V**, a higher p.d. means a **smaller current** for the same power. Using **P = I squared x R**, the power wasted heating the cables depends on the **square of the current**, so even a modest reduction in current gives a huge reduction in energy wasted. This makes transmission far more **efficient** and allows thinner, cheaper cables, although high p.d.s need tall pylons, good insulation and transformers.",
+  "core": [
+   {
+    "h": "The problem: cables have resistance",
+    "p": "Transmission cables are hundreds of kilometres long. Even though they are made of good conductors, their total **resistance** is not zero. When a current flows through a resistance, energy is transferred by **heating** the cable, and this energy is **dissipated to the surroundings** rather than reaching consumers.",
+    "bullets": [
+     "Longer cables have **more resistance**, so long-distance transmission makes losses worse.",
+     "Electrons colliding with the ions in the metal make the cable **heat up**.",
+     "This **thermal energy is wasted**: it heats the air around the cable.",
+     "The aim of the National Grid design is to make this wasted power as small as possible."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Where the energy goes",
+      "p": "Energy is wasted (dissipated) by heating the transmission cables because of their resistance."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Equation 1: P = I x V",
+    "p": "The power transferred along a cable is the product of the **current** and the **potential difference**. For a fixed amount of power that a power station needs to send, current and p.d. are **inversely proportional**: if you raise one, the other falls by the same factor.",
+    "bullets": [
+     "**P = I x V**: power (W) = current (A) x potential difference (V).",
+     "Rearranged: **I = P / V**.",
+     "If V is made 10 times bigger, I becomes 10 times smaller for the same P.",
+     "Step-up transformers are used to make V large, so I is small."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Electrical power",
+      "p": "power = potential difference x current; P = I x V"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Equation 2: P = I squared x R",
+    "p": "The power wasted heating a cable depends on the **current** through it and its **resistance**. Because the current is **squared**, the losses depend very strongly on current.",
+    "bullets": [
+     "**P = I squared x R**: power (W) = current squared (A squared) x resistance (ohms).",
+     "Here P is the **power dissipated as heat in the cable**, not the power delivered.",
+     "Halve the current: losses become **one quarter**.",
+     "Reduce the current by 10 times: losses become **100 times smaller**.",
+     "Reduce the current by 16 times: losses become **256 times smaller**."
+    ],
+    "table": {
+     "head": [
+      "Current is divided by",
+      "Heating loss is divided by"
+     ],
+     "rows": [
+      [
+       "2",
+       "4"
+      ],
+      [
+       "4",
+       "16"
+      ],
+      [
+       "10",
+       "100"
+      ],
+      [
+       "16",
+       "256"
+      ],
+      [
+       "20",
+       "400"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Power and resistance",
+      "p": "power = (current) squared x resistance; P = I squared x R"
+     },
+     {
+      "k": "key",
+      "t": "The square is the whole point",
+      "p": "Because loss depends on I squared, cutting the current has a much bigger effect than you would expect."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Power wasted in a cable plotted against current, for a fixed resistance. The curve is a parabola because P = I squared x R: halving the current reduces the heating loss to a quarter.",
+      "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><line x1='50' y1='200' x2='370' y2='200' stroke='#1b2540' stroke-width='2'/><line x1='50' y1='200' x2='50' y2='34' stroke='#1b2540' stroke-width='2'/><path d='M50 200 Q200 200 350 40' fill='none' stroke='#b91c1c' stroke-width='3'/><line x1='200' y1='200' x2='200' y2='160' stroke='#1d4ed8' stroke-width='2' stroke-dasharray='4 3'/><line x1='50' y1='160' x2='200' y2='160' stroke='#1d4ed8' stroke-width='2' stroke-dasharray='4 3'/><line x1='350' y1='200' x2='350' y2='40' stroke='#6b21a8' stroke-width='2' stroke-dasharray='4 3'/><circle cx='200' cy='160' r='4' fill='#1d4ed8'/><circle cx='350' cy='40' r='4' fill='#6b21a8'/><text x='56' y='24' font-size='12' fill='#1b2540'>Power lost as heat (W)</text><text x='370' y='222' font-size='12' text-anchor='end' fill='#1b2540'>Current (A)</text><text x='42' y='214' font-size='11' text-anchor='middle' fill='#1b2540'>0</text><text x='180' y='80' font-size='13' text-anchor='middle' fill='#b91c1c'>P = I²R</text><text x='275' y='184' font-size='11' text-anchor='middle' fill='#1d4ed8'>Halve I: quarter loss</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Putting the two equations together",
+    "p": "The full argument for high-voltage transmission uses both equations in sequence. This is the chain of reasoning that earns marks in triple exam questions.",
+    "bullets": [
+     "Power stations must deliver a certain **power P** to consumers.",
+     "From **P = I x V**, increasing V means a **smaller current I** is needed for the same P.",
+     "From **P = I squared x R**, a smaller current gives a **much smaller power loss** in the cable resistance.",
+     "So **less energy is wasted** heating the cables and surroundings.",
+     "So the transmission system is **more efficient**, and more of the generated energy reaches consumers."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Name both equations",
+      "p": "In explain questions, quote P = I x V to show the current falls, then P = I squared x R to show the losses fall. Each link is usually a separate mark."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "A worked comparison with numbers",
+    "p": "Suppose a power station sends **100 MW** through transmission cables with a total resistance of **5 ohms**. Comparing two transmission p.d.s shows how dramatic the difference is.",
+    "bullets": [
+     "At 25 kV: I = 100 000 000 / 25 000 = **4000 A**.",
+     "Loss = 4000 squared x 5 = **80 000 000 W = 80 MW** (80% of the power wasted).",
+     "At 400 kV: I = 100 000 000 / 400 000 = **250 A**.",
+     "Loss = 250 squared x 5 = **312 500 W, about 0.31 MW** (about 0.3% wasted).",
+     "Raising the p.d. by 16 times reduced the current by 16 times and the losses by **256 times**."
+    ],
+    "table": {
+     "head": [
+      "Transmission p.d.",
+      "Current",
+      "Power lost in cables",
+      "Percentage lost"
+     ],
+     "rows": [
+      [
+       "25 kV",
+       "4000 A",
+       "80 MW",
+       "80%"
+      ],
+      [
+       "400 kV",
+       "250 A",
+       "0.31 MW",
+       "about 0.3%"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": [
+     {
+      "cap": "Power wasted in 5 ohm cables when 100 MW is sent at 25 kV compared with 400 kV. The higher p.d. gives a much smaller current, so the heating loss is about 256 times smaller.",
+      "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><text x='200' y='18' font-size='13' text-anchor='middle' fill='#1b2540'>100 MW sent, cable R = 5 Ω</text><line x1='40' y1='190' x2='360' y2='190' stroke='#1b2540' stroke-width='2'/><rect x='80' y='56' width='80' height='134' fill='#fecaca' stroke='#b91c1c' stroke-width='2'/><rect x='240' y='187' width='80' height='3' fill='#bbf7d0' stroke='#15803d' stroke-width='2'/><text x='120' y='48' font-size='12' text-anchor='middle' fill='#b91c1c'>80 MW lost</text><text x='280' y='176' font-size='12' text-anchor='middle' fill='#15803d'>0.31 MW lost</text><text x='120' y='208' font-size='12' text-anchor='middle' fill='#1b2540'>at 25 kV</text><text x='280' y='208' font-size='12' text-anchor='middle' fill='#1b2540'>at 400 kV</text><text x='120' y='226' font-size='11' text-anchor='middle' fill='#b91c1c'>I = 4000 A</text><text x='280' y='226' font-size='11' text-anchor='middle' fill='#15803d'>I = 250 A</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Advantage 1: less energy wasted, higher efficiency",
+    "p": "The main advantage of high-voltage transmission is that **far less energy is dissipated** in the cables. Because more of the energy generated actually reaches homes and businesses, the grid's **efficiency** is high.",
+    "bullets": [
+     "Less fuel needs to be burned (or fewer turbines built) to supply the same demand.",
+     "Lower running costs for the electricity supply.",
+     "Fewer emissions from fossil-fuel power stations for the same useful energy delivered.",
+     "Efficiency = useful power out / total power in, so reducing losses raises efficiency."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Advantage 2: thinner, cheaper cables",
+    "p": "A cable carrying a **large current** would need to be very thick (low resistance) to avoid overheating. Because the grid's current is small, **thinner cables** can be used, which are cheaper and lighter.",
+    "bullets": [
+     "Thinner cables use **less metal**, so they cost less to make.",
+     "Lighter cables need **less support**, so pylons can be spaced further apart.",
+     "Cables do not get hot enough to sag dangerously or be damaged.",
+     "Overhead cables are usually aluminium (light, good conductor) with a steel core for strength."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Where the losses happen in the circuit",
+    "p": "The transmission cables act like a resistor in **series** with the consumers. The same current flows through the cables as is supplied, so the loss in the cables depends on that current.",
+    "bullets": [
+     "The current leaves the power station, flows through the cable resistance, through the load, and back.",
+     "Both the outgoing and return conductors have resistance and both waste energy.",
+     "Power delivered to consumers = power supplied minus power wasted in the cables.",
+     "Making the current small is the most effective way to cut the I squared R loss."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": [
+     {
+      "cap": "A simple model of transmission: the cables have resistance R in series with the consumers. The current I in the cables causes a heating loss of I squared x R, which is why the current is kept small.",
+      "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><defs><marker id='ar' markerWidth='8' markerHeight='8' refX='6' refY='3' orient='auto'><path d='M0 0 L6 3 L0 6 Z' fill='#1d4ed8'/></marker></defs><line x1='50' y1='60' x2='160' y2='60' stroke='#1b2540' stroke-width='2'/><line x1='240' y1='60' x2='350' y2='60' stroke='#1b2540' stroke-width='2'/><line x1='50' y1='180' x2='160' y2='180' stroke='#1b2540' stroke-width='2'/><line x1='240' y1='180' x2='350' y2='180' stroke='#1b2540' stroke-width='2'/><line x1='50' y1='60' x2='50' y2='98' stroke='#1b2540' stroke-width='2'/><line x1='50' y1='142' x2='50' y2='180' stroke='#1b2540' stroke-width='2'/><line x1='350' y1='60' x2='350' y2='95' stroke='#1b2540' stroke-width='2'/><line x1='350' y1='145' x2='350' y2='180' stroke='#1b2540' stroke-width='2'/><circle cx='50' cy='120' r='22' fill='#e9d5ff' stroke='#6b21a8' stroke-width='2'/><path d='M38 120 Q44 108 50 120 T62 120' fill='none' stroke='#6b21a8' stroke-width='2'/><rect x='160' y='50' width='80' height='20' fill='#fecaca' stroke='#b91c1c' stroke-width='2'/><rect x='160' y='170' width='80' height='20' fill='#fecaca' stroke='#b91c1c' stroke-width='2'/><rect x='330' y='95' width='40' height='50' fill='#bbf7d0' stroke='#15803d' stroke-width='2'/><line x1='85' y1='60' x2='120' y2='60' stroke='#1d4ed8' stroke-width='3' marker-end='url(#ar)'/><text x='200' y='40' font-size='12' text-anchor='middle' fill='#b91c1c'>Cable resistance R</text><text x='100' y='48' font-size='12' text-anchor='middle' fill='#1d4ed8'>Current I</text><text x='50' y='162' font-size='11' text-anchor='middle' fill='#6b21a8'>Supply</text><text x='350' y='162' font-size='11' text-anchor='middle' fill='#15803d'>Users</text><text x='200' y='210' font-size='12' text-anchor='middle' fill='#b91c1c'>Return cable</text><text x='200' y='232' font-size='12' text-anchor='middle' fill='#1b2540'>Heat lost = I²R</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Why not just use lower-resistance cables?",
+    "p": "Losses could also be reduced by lowering R, but there are practical limits. Making R smaller means much **thicker cables**, which are heavy and expensive. Reducing current is far more effective because loss depends on **I squared** but only on R to the first power.",
+    "bullets": [
+     "Halving R halves the losses (loss proportional to R).",
+     "Halving I quarters the losses (loss proportional to I squared).",
+     "Thicker cables would need stronger, more expensive pylons.",
+     "So engineers **increase the p.d.** rather than relying only on thicker cables."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Proportionality",
+      "p": "Power loss is directly proportional to R, but proportional to the square of I."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Disadvantages and costs of high voltages",
+    "p": "High-voltage transmission is not free of problems. Exam questions sometimes ask you to weigh the advantages against these costs.",
+    "bullets": [
+     "Very high p.d.s are **dangerous**: contact can be fatal and current can arc across air gaps.",
+     "Cables must be **well insulated** from pylons and held **high above the ground**.",
+     "**Transformers** are needed to step up and step down, which costs money and wastes a small amount of energy.",
+     "Overhead pylons are seen by some people as **unsightly**; burying cables underground is much more expensive.",
+     "Overall, the energy savings **far outweigh** these extra costs for long-distance transmission."
+    ],
+    "table": {
+     "head": [
+      "Advantages of high p.d.",
+      "Disadvantages of high p.d."
+     ],
+     "rows": [
+      [
+       "Low current, so much less I squared R heating",
+       "Dangerous: needs high pylons and insulation"
+      ],
+      [
+       "Higher efficiency, less fuel wasted",
+       "Transformers needed at both ends"
+      ],
+      [
+       "Thinner, cheaper, lighter cables",
+       "Pylons visually intrusive"
+      ],
+      [
+       "Pylons can be further apart",
+       "Underground cables are expensive"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Linking to transformers",
+    "p": "High-voltage transmission is only possible because transformers can change the size of an **alternating** p.d. efficiently. For a 100% efficient transformer, **Vp x Ip = Vs x Is**, so stepping up the p.d. steps down the current by the same factor.",
+    "bullets": [
+     "Step-up transformer at the power station: p.d. up, current down.",
+     "Step-down transformers near consumers: p.d. down to a safe 230 V, current up.",
+     "The current is large only in **short** local cables, where R is small, so losses stay small.",
+     "This is one reason the grid uses **a.c.**: transformers do not work with d.c."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Which P is which?",
+      "p": "In P = I x V, P is the power transmitted. In P = I squared x R, P is the power wasted in the cable. Do not use the transmission p.d. with the cable resistance in V = I x R: the 400 kV is not across the cable."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Calculation skills checklist",
+    "p": "Triple questions on this point often combine both equations in a 3 to 5 mark calculation. A clear layout earns method marks.",
+    "bullets": [
+     "Convert units first: **kV x 1000 = V**, **MW x 1 000 000 = W**.",
+     "Step 1: find the current using **I = P / V**.",
+     "Step 2: find the loss using **P = I squared x R** (square the current first).",
+     "Step 3 (if asked): percentage lost = (loss / power supplied) x 100.",
+     "Compare answers at two p.d.s and comment: higher p.d. gives much lower loss.",
+     "Use standard form for very large numbers to avoid calculator errors."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Square properly",
+      "p": "Type (250)^2 x 5 or 250 x 250 x 5 into your calculator. A common slip is to calculate 250 x 2 x 5."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Carrying shopping along a rough corridor",
+   "p": "Imagine you must move 100 kg of shopping down a long, rough corridor where every trip costs you energy through friction. You could send lots of people each carrying a small bag (large current, low p.d. per charge), but every person rubbing along the walls wastes energy, and the more people crowding the corridor the worse the jostling gets, faster than in proportion. Or you could send a few strong people each carrying a very heavy bag (small current, high energy per charge, which is what high p.d. means). The same shopping arrives, but with far fewer people in the corridor much less energy is wasted. The people map to charges flowing (current), the energy per person maps to p.d., and the corridor friction maps to cable resistance. Where it breaks down: charges do not get tired, they are not used up, and they flow back round the circuit; also the exact I squared rule comes from the physics of resistance, not crowding."
+  },
+  "terms": [
+   {
+    "t": "Transmission",
+    "d": "Transferring electrical energy over long distances through cables from power stations to consumers."
+   },
+   {
+    "t": "Resistance",
+    "d": "Opposition to the flow of current, measured in ohms; R = V / I."
+   },
+   {
+    "t": "Power",
+    "d": "The rate of energy transfer, measured in watts (W)."
+   },
+   {
+    "t": "P = I x V",
+    "d": "Electrical power = current x potential difference; used to find the current needed to transmit a given power."
+   },
+   {
+    "t": "P = I squared x R",
+    "d": "Power dissipated in a resistance = current squared x resistance; used to find energy wasted heating cables."
+   },
+   {
+    "t": "Power loss",
+    "d": "The rate at which energy is wasted by heating the transmission cables and surroundings."
+   },
+   {
+    "t": "Dissipated",
+    "d": "Transferred to the surroundings as thermal energy so it is no longer useful."
+   },
+   {
+    "t": "Efficiency",
+    "d": "Useful power output divided by total power input, often given as a percentage."
+   },
+   {
+    "t": "Heating effect of a current",
+    "d": "When charge flows through a resistance, collisions between electrons and ions transfer energy and the conductor gets hotter."
+   },
+   {
+    "t": "Inverse proportion",
+    "d": "When one quantity doubles, the other halves; I and V are inversely proportional for a fixed power."
+   },
+   {
+    "t": "Step-up transformer",
+    "d": "Transformer that increases the p.d. and decreases the current, used at power stations."
+   },
+   {
+    "t": "Step-down transformer",
+    "d": "Transformer that decreases the p.d. and increases the current, used near consumers."
+   },
+   {
+    "t": "National Grid",
+    "d": "The network of cables and transformers linking power stations to consumers."
+   },
+   {
+    "t": "Insulator",
+    "d": "A material that does not allow charge to flow easily; used to keep high-voltage cables separated from pylons."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "High voltage reduces the resistance of the cables.",
+    "r": "Resistance of the cables is unchanged; high p.d. reduces the current, which reduces I squared R heating."
+   },
+   {
+    "w": "Halving the current halves the power lost.",
+    "r": "Power lost depends on current squared, so halving the current reduces the loss to one quarter."
+   },
+   {
+    "w": "Using V = 400 000 V and R of the cable in P = V squared / R to find the loss.",
+    "r": "The transmission p.d. is not across the cable; find I = P / V first, then use P = I squared x R."
+   },
+   {
+    "w": "High voltage means more energy is transferred so it is more efficient.",
+    "r": "The same power is transferred; the advantage is that less energy is wasted heating the cables."
+   },
+   {
+    "w": "Calculating I squared as I x 2.",
+    "r": "Square the current: I x I."
+   },
+   {
+    "w": "Forgetting to convert kV to V or MW to W.",
+    "r": "Multiply kV by 1000 and MW by 1 000 000 before calculating."
+   },
+   {
+    "w": "Energy is lost as sound and light from the cables.",
+    "r": "Energy is wasted mainly by heating the cables (thermal energy dissipated to the surroundings)."
+   },
+   {
+    "w": "The only advantage is safety.",
+    "r": "High p.d. is more dangerous; the advantages are lower current, smaller losses, higher efficiency and thinner cables."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Write down the equation that links power, current and resistance.",
+    "marks": 1,
+    "model": [
+     "P = I squared x R (power = current squared x resistance)."
+    ],
+    "tip": "Learn both power equations."
+   },
+   {
+    "q": "State what happens to the power wasted in a cable if the current in it is halved.",
+    "marks": 1,
+    "model": [
+     "It falls to one quarter (of its original value)."
+    ],
+    "tip": "Because P is proportional to I squared."
+   },
+   {
+    "q": "State one disadvantage of transmitting electricity at very high potential differences.",
+    "marks": 1,
+    "model": [
+     "Dangerous / needs tall pylons and insulation / needs transformers (cost)."
+    ],
+    "tip": "Any one valid point."
+   },
+   {
+    "q": "Explain why thinner cables can be used for high-voltage transmission.",
+    "marks": 2,
+    "model": [
+     "The current is lower.",
+     "So there is less heating, so cables with a higher resistance (thinner) do not overheat."
+    ],
+    "tip": "Link low current to less heating."
+   },
+   {
+    "q": "A power station transmits 50 MW at 400 kV. Calculate the current in the cables.",
+    "marks": 2,
+    "model": [
+     "I = P / V = 50 000 000 / 400 000.",
+     "= 125 A."
+    ],
+    "tip": "Convert MW and kV first."
+   },
+   {
+    "q": "The cables in the question above have a total resistance of 8 ohms. Calculate the power wasted in the cables.",
+    "marks": 2,
+    "model": [
+     "P = I squared x R = 125 squared x 8.",
+     "= 125 000 W."
+    ],
+    "tip": "Square the current before multiplying by R."
+   },
+   {
+    "q": "Explain, using the equations P = I x V and P = I squared x R, why electricity is transmitted at high potential difference.",
+    "marks": 4,
+    "model": [
+     "P = I x V so, for the same power, a higher p.d. means a lower current.",
+     "P = I squared x R, so the power wasted in the cables depends on current squared.",
+     "A lower current gives (much) less heating of the cables.",
+     "So less energy is wasted / transmission is more efficient."
+    ],
+    "tip": "Quote both equations and link them with 'so'."
+   },
+   {
+    "q": "20 MW is sent through cables of resistance 2 ohms at 20 kV and then at 400 kV. Calculate the power lost in each case and the percentage lost at 20 kV.",
+    "marks": 4,
+    "model": [
+     "At 20 kV: I = 20 000 000 / 20 000 = 1000 A; loss = 1000 squared x 2 = 2 000 000 W.",
+     "At 400 kV: I = 50 A; loss = 50 squared x 2 = 5000 W.",
+     "Percentage at 20 kV = 2 000 000 / 20 000 000 x 100.",
+     "= 10%."
+    ],
+    "tip": "Set out each step on a separate line."
+   },
+   {
+    "q": "The p.d. of a transmission line is increased by a factor of 10. State the effect on the current and on the power wasted, for the same power transmitted.",
+    "marks": 2,
+    "model": [
+     "Current is reduced by a factor of 10.",
+     "Power wasted is reduced by a factor of 100."
+    ],
+    "tip": "Square the factor for the loss."
+   },
+   {
+    "q": "Evaluate the use of high-voltage overhead cables to transmit electricity across the country.",
+    "marks": 6,
+    "model": [
+     "High p.d. means low current for the same power (P = I x V).",
+     "Power loss = I squared x R so losses in cables are much smaller.",
+     "So less energy is wasted and transmission is more efficient / less fuel burned.",
+     "Low current allows thinner, cheaper, lighter cables and wider pylon spacing.",
+     "But high p.d.s are dangerous: cables must be high up and well insulated.",
+     "Transformers are needed (cost, small losses); pylons are unsightly.",
+     "Conclusion: advantages outweigh disadvantages for long-distance transmission."
+    ],
+    "tip": "Evaluate means give both sides AND a conclusion."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A power station sends 100 MW through cables with a total resistance of 5 ohms. Compare the power wasted when it is transmitted at 25 kV and at 400 kV.",
+    "steps": [
+     "Convert: P = 100 MW = 100 000 000 W; 25 kV = 25 000 V; 400 kV = 400 000 V.",
+     "At 25 kV: I = P / V = 100 000 000 / 25 000 = 4000 A.",
+     "Loss = I squared x R = 4000 x 4000 x 5 = 80 000 000 W (80 MW).",
+     "At 400 kV: I = 100 000 000 / 400 000 = 250 A.",
+     "Loss = 250 x 250 x 5 = 312 500 W (0.31 MW).",
+     "Ratio: 80 000 000 / 312 500 = 256, so losses are 256 times smaller."
+    ],
+    "ans": "80 MW wasted at 25 kV but only about 0.31 MW at 400 kV: 256 times less."
+   },
+   {
+    "q": "A transmission line carries a current of 300 A and wastes 450 kW as heat. Calculate the resistance of the line. The current is then reduced to 100 A. Calculate the new power wasted.",
+    "steps": [
+     "P = I squared x R, so R = P / I squared.",
+     "R = 450 000 / (300 x 300) = 450 000 / 90 000 = 5.0 ohms.",
+     "New loss = 100 x 100 x 5.0 = 50 000 W.",
+     "Check: current divided by 3, so loss divided by 9: 450 000 / 9 = 50 000 W."
+    ],
+    "ans": "R = 5.0 ohms; new power wasted = 50 000 W (50 kW)."
+   },
+   {
+    "q": "A village needs 2.0 MW. It is supplied through cables of resistance 4.0 ohms at 11 kV. Calculate the percentage of the supplied power wasted in the cables (assume the 2.0 MW is the power supplied).",
+    "steps": [
+     "I = P / V = 2 000 000 / 11 000 = 181.8 A.",
+     "Loss = I squared x R = 181.8 x 181.8 x 4.0 = 132 200 W (about 1.3 x 10^5 W).",
+     "Percentage = 132 200 / 2 000 000 x 100.",
+     "= 6.6%."
+    ],
+    "ans": "About 6.6% of the power is wasted."
+   }
+  ],
+  "svg": [],
+  "pid": "phy_edx.12.7",
+  "sid": "phy_edx",
+  "v": 2,
+  "src": "pre",
+  "by": "claude/claude-opus-5-5",
+  "ts": "2026-11-27T01:20:02.914Z"
  }
 }
