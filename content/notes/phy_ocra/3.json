@@ -1,0 +1,2226 @@
+{
+ "phy_ocra.3.0": {
+  "summary": "Speed tells you **how much distance is covered per unit time**, so to find a speed you must **measure a distance and a time** accurately and then use **speed = distance ÷ time**. The best measuring method depends on the scenario: tape measures, trundle wheels and metre rules for distance, and stopwatches, light gates or video analysis for time, chosen to reduce errors such as human reaction time. You must also **convert units** confidently, for example km/h to m/s, using ratios and proportional reasoning.",
+  "core": [
+   {
+    "h": "What speed means",
+    "p": "Speed is a measure of **how fast something is moving**: the **distance travelled per unit time**. An object with a speed of 5 m/s covers 5 metres every second.",
+    "bullets": [
+     "**Speed = distance travelled ÷ time taken**.",
+     "Speed is a **scalar**: it has size (magnitude) only, no direction.",
+     "SI unit of speed is the **metre per second (m/s)**.",
+     "Other units: km/h, mph, cm/s.",
+     "Most speeds you calculate are **average speeds** over a journey, because real objects speed up and slow down."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Speed",
+      "p": "The distance travelled per unit time."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "The speed equation",
+    "p": "The spec equation is **distance travelled = speed × time**. You must recall it and rearrange it.",
+    "bullets": [
+     "**d = v × t** (OCR often writes s for distance, v for speed).",
+     "**v = d ÷ t** to find speed.",
+     "**t = d ÷ v** to find time.",
+     "Distance in **metres (m)**, time in **seconds (s)**, speed in **m/s**.",
+     "If distance is in km and time in hours, speed comes out in km/h."
+    ],
+    "table": {
+     "head": [
+      "Quantity",
+      "Symbol",
+      "SI unit"
+     ],
+     "rows": [
+      [
+       "Distance travelled",
+       "d (or s)",
+       "metre, m"
+      ],
+      [
+       "Speed",
+       "v",
+       "metre per second, m/s"
+      ],
+      [
+       "Time",
+       "t",
+       "second, s"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Formula triangle",
+      "p": "Put d on top, v and t below. Cover the quantity you want: covering v leaves d over t."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Measuring distance",
+    "p": "Choose an instrument whose **range** covers the distance and whose **resolution** is small enough to give an accurate measurement.",
+    "bullets": [
+     "**Metre rule** (resolution 1 mm) for short distances up to 1 m, e.g. a toy car on a ramp.",
+     "**Tape measure** (resolution about 1 mm or 1 cm) for a few metres up to about 30 m, e.g. a corridor or a running track section.",
+     "**Trundle wheel** for long distances outdoors (tens to hundreds of metres), e.g. the length of a playing field: count clicks, each click is usually 1 m.",
+     "**Maps or GPS** for very long distances such as a car journey.",
+     "Measure along the **actual path** the object travels.",
+     "Mark clear **start and finish lines** so the distance is fixed."
+    ],
+    "table": {
+     "head": [
+      "Distance",
+      "Best instrument",
+      "Example"
+     ],
+     "rows": [
+      [
+       "Under 1 m",
+       "Metre rule",
+       "Trolley on ramp"
+      ],
+      [
+       "1 m to 30 m",
+       "Tape measure",
+       "Walking down a corridor"
+      ],
+      [
+       "30 m to 500 m",
+       "Trundle wheel",
+       "Running round a field"
+      ],
+      [
+       "Kilometres",
+       "Map, GPS, odometer",
+       "Car journey"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Measuring time",
+    "p": "The method for timing depends on how long the event lasts. **Short times** are badly affected by human reaction time, so automatic methods are better.",
+    "bullets": [
+     "**Stopwatch**: easy, but includes **human reaction time** (about 0.2 to 0.3 s) at start and stop.",
+     "**Light gates** connected to a data logger: start and stop timing automatically when a card breaks the beam; resolution about 0.001 s.",
+     "**Video recording** with a timer or frame count: replay frame by frame to find the time.",
+     "**Ticker timer** or **motion sensor** in the lab for trolleys.",
+     "Stopwatches are fine for **long times** (tens of seconds) where reaction time is a small fraction of the total."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Reaction time",
+      "p": "Human reaction time is about 0.2 to 0.3 s. For a 2 s event this is a large percentage error; for a 60 s event it is small."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Light gates",
+    "p": "A light gate shines a beam of light across a gap to a sensor. When an object passes through, it **breaks the beam**, and the data logger records how long the beam is blocked or the times between two gates.",
+    "bullets": [
+     "**One gate method**: attach a card (interrupt card) of known length to a trolley. Speed = **card length ÷ time beam is blocked**.",
+     "**Two gate method**: speed = **distance between gates ÷ time to travel between them**.",
+     "Removes **reaction time** error and gives very **precise** times.",
+     "Measures the speed at a **particular point** (one gate) or average over a short distance (two gates)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Card length",
+      "p": "Measure the card with a ruler. A 10 cm card blocking the beam for 0.25 s gives v = 0.10 ÷ 0.25 = 0.4 m/s."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Method: measuring the speed of a person walking",
+    "p": "A typical practical question asks you to plan how to measure someone's walking speed. Include the equipment, the method and how to improve accuracy.",
+    "bullets": [
+     "Use a **tape measure** or trundle wheel to mark out a distance, e.g. **20 m**, with start and finish lines.",
+     "Person walks from a run up so they are already at a **steady speed** at the start line.",
+     "Start a **stopwatch** as they cross the start line; stop it as they cross the finish line.",
+     "Calculate speed = **20 m ÷ time**.",
+     "**Repeat** several times and calculate a **mean** to reduce the effect of random errors.",
+     "Use a **longer distance** so reaction time is a smaller fraction of the time measured."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Errors and improving accuracy",
+    "p": "Exam questions often ask how to make measurements more **accurate** (closer to the true value) or more **precise** (less spread in repeats).",
+    "bullets": [
+     "**Random errors**, e.g. reaction time varying: reduce by repeating and averaging.",
+     "**Systematic errors**, e.g. a stretched tape measure or zero error: check and correct the instrument.",
+     "Use **light gates** instead of a stopwatch to remove reaction time.",
+     "Use the **same person** to time each run, standing level with the line to avoid **parallax**.",
+     "Measure **longer distances and times** so the percentage uncertainty is smaller.",
+     "Discard **anomalous** results before averaging."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Accuracy and precision",
+      "p": "Accurate means close to the true value. Precise means repeat readings are close together. Do not use them interchangeably."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Typical speeds",
+    "p": "You should know typical everyday speeds, because exam questions ask you to estimate and check answers are sensible.",
+    "bullets": [
+     "Use these to **sense check** an answer: a walker at 50 m/s means you have made a mistake.",
+     "Speeds of sound and wind vary with conditions, so these are typical values only."
+    ],
+    "table": {
+     "head": [
+      "Moving thing",
+      "Typical speed"
+     ],
+     "rows": [
+      [
+       "Walking",
+       "about 1.5 m/s"
+      ],
+      [
+       "Running",
+       "about 3 m/s"
+      ],
+      [
+       "Cycling",
+       "about 6 m/s"
+      ],
+      [
+       "Car in town",
+       "about 13 m/s (30 mph)"
+      ],
+      [
+       "Car on motorway",
+       "about 31 m/s (70 mph)"
+      ],
+      [
+       "Train",
+       "about 30 to 50 m/s"
+      ],
+      [
+       "Sound in air",
+       "about 330 to 340 m/s"
+      ],
+      [
+       "Commercial jet",
+       "about 250 m/s"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Converting units using ratios",
+    "p": "Converting units is **proportional reasoning**: you multiply or divide by a conversion factor. Always ask whether the number should get **bigger or smaller**.",
+    "bullets": [
+     "**1 km = 1000 m**, **1 m = 100 cm**, **1 cm = 10 mm**.",
+     "**1 hour = 60 min = 3600 s**; **1 min = 60 s**.",
+     "To convert **km/h to m/s**: multiply by 1000 and divide by 3600, which is the same as **dividing by 3.6**.",
+     "To convert **m/s to km/h**: **multiply by 3.6**.",
+     "**cm/s to m/s**: divide by 100.",
+     "**1 mile ≈ 1.6 km**, so mph to km/h: multiply by about 1.6.",
+     "Convert to **SI units before** using equations."
+    ],
+    "table": {
+     "head": [
+      "From",
+      "To",
+      "Do this"
+     ],
+     "rows": [
+      [
+       "km/h",
+       "m/s",
+       "÷ 3.6"
+      ],
+      [
+       "m/s",
+       "km/h",
+       "× 3.6"
+      ],
+      [
+       "cm/s",
+       "m/s",
+       "÷ 100"
+      ],
+      [
+       "minutes",
+       "seconds",
+       "× 60"
+      ],
+      [
+       "hours",
+       "seconds",
+       "× 3600"
+      ],
+      [
+       "km",
+       "m",
+       "× 1000"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Check the direction",
+      "p": "There are more km/h than m/s for the same speed (36 km/h = 10 m/s), so going from km/h to m/s the number must get smaller."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Calculating rates",
+    "p": "Speed is one example of a **rate**: a quantity per unit time. The same ratio thinking works for any rate.",
+    "bullets": [
+     "Rate = **quantity ÷ time**.",
+     "Speed is the rate of change of **distance**.",
+     "Using proportion: if a car goes 15 m in 1 s, in 8 s it goes 15 × 8 = 120 m.",
+     "Rates can be scaled up or down: 90 km in 1 hour is 1.5 km per minute.",
+     "Answers should be given to a sensible number of **significant figures**, matching the data."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Average speed over a journey",
+    "p": "Real objects rarely move at constant speed. Dividing the **total distance by the total time** gives the **average speed**, including stops and slow parts.",
+    "bullets": [
+     "**Average speed = total distance ÷ total time**.",
+     "Include time spent **stopped** in the total time.",
+     "Do not average the speeds of separate sections unless the times are equal.",
+     "Instantaneous speed is the speed at one moment, e.g. a speedometer reading or a single light gate."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Averaging trap",
+      "p": "30 km/h for 1 h then 60 km/h for 1 h gives 45 km/h, but 30 km/h for 30 km then 60 km/h for 30 km gives 40 km/h. Always use totals."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Speed is like a pay rate",
+   "p": "Speed is like earning money per hour: distance is the money, time is the hours worked, and speed is the pay rate. If you earn 10 pounds per hour and work 3 hours you get 30 pounds, just as 10 m/s for 3 s gives 30 m. Converting pounds per hour into pence per minute is like converting km/h into m/s: you scale both the top and bottom units. Where it breaks down: your pay rate is usually fixed, but a moving object's speed changes from moment to moment, so the speed you calculate is usually only an average."
+  },
+  "terms": [
+   {
+    "t": "Speed",
+    "d": "Distance travelled per unit time; a scalar quantity."
+   },
+   {
+    "t": "Distance",
+    "d": "How far an object travels along its path, measured in metres."
+   },
+   {
+    "t": "Time",
+    "d": "Duration of an event, measured in seconds."
+   },
+   {
+    "t": "Average speed",
+    "d": "Total distance travelled divided by total time taken."
+   },
+   {
+    "t": "Instantaneous speed",
+    "d": "The speed at a particular moment."
+   },
+   {
+    "t": "Metre per second (m/s)",
+    "d": "SI unit of speed."
+   },
+   {
+    "t": "Light gate",
+    "d": "Sensor that times an object automatically when it breaks a light beam."
+   },
+   {
+    "t": "Trundle wheel",
+    "d": "Wheel of known circumference, often 1 m, used to measure long distances on the ground."
+   },
+   {
+    "t": "Reaction time",
+    "d": "Time between an event and a person responding to it, about 0.2 to 0.3 s."
+   },
+   {
+    "t": "Resolution",
+    "d": "The smallest change an instrument can measure."
+   },
+   {
+    "t": "Accuracy",
+    "d": "How close a measurement is to the true value."
+   },
+   {
+    "t": "Precision",
+    "d": "How close repeated measurements are to each other."
+   },
+   {
+    "t": "Random error",
+    "d": "Unpredictable variation in readings; reduced by repeating and averaging."
+   },
+   {
+    "t": "Systematic error",
+    "d": "Error that shifts all readings by the same amount, e.g. zero error."
+   },
+   {
+    "t": "Rate",
+    "d": "A quantity divided by the time taken."
+   },
+   {
+    "t": "Scalar",
+    "d": "A quantity with magnitude only, no direction."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "speed = time ÷ distance",
+    "r": "speed = distance ÷ time"
+   },
+   {
+    "w": "Converting 72 km/h to m/s by multiplying by 3.6, giving 259 m/s.",
+    "r": "Divide by 3.6: 72 ÷ 3.6 = 20 m/s."
+   },
+   {
+    "w": "Using minutes directly in v = d ÷ t to get m/s.",
+    "r": "Convert minutes to seconds (× 60) first."
+   },
+   {
+    "w": "Repeat the experiment to make it more accurate.",
+    "r": "Repeating and averaging reduces the effect of random errors; say how it improves the result."
+   },
+   {
+    "w": "Use a stopwatch for a trolley on a short ramp.",
+    "r": "Use light gates to remove human reaction time for short times."
+   },
+   {
+    "w": "Average speed = (speed 1 + speed 2) ÷ 2.",
+    "r": "Average speed = total distance ÷ total time."
+   },
+   {
+    "w": "Leaving out the unit or writing m/s².",
+    "r": "Speed is in m/s (or km/h); m/s² is acceleration."
+   },
+   {
+    "w": "Ignoring time spent stopped in average speed.",
+    "r": "Total time includes stops."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Write down the equation that links distance travelled, speed and time.",
+    "marks": 1,
+    "model": [
+     "distance travelled = speed × time"
+    ],
+    "tip": "Learn it word for word."
+   },
+   {
+    "q": "Suggest a suitable instrument to measure the length of a school field.",
+    "marks": 1,
+    "model": [
+     "Trundle wheel (or long tape measure)"
+    ],
+    "tip": "Match the instrument to the size of the distance."
+   },
+   {
+    "q": "A cyclist travels 1800 m in 300 s. Calculate her speed.",
+    "marks": 2,
+    "model": [
+     "v = 1800 ÷ 300",
+     "v = 6 m/s"
+    ],
+    "tip": "Always show the substitution."
+   },
+   {
+    "q": "Convert 90 km/h into m/s.",
+    "marks": 2,
+    "model": [
+     "90 × 1000 = 90 000 m per hour; ÷ 3600",
+     "= 25 m/s"
+    ],
+    "tip": "Or simply divide by 3.6."
+   },
+   {
+    "q": "A sound travels at 340 m/s. How long does it take to travel 1.7 km?",
+    "marks": 3,
+    "model": [
+     "1.7 km = 1700 m",
+     "t = d ÷ v = 1700 ÷ 340",
+     "t = 5 s"
+    ],
+    "tip": "Convert km to m before substituting."
+   },
+   {
+    "q": "Explain why light gates give a more accurate measurement of the time for a trolley to travel down a short ramp than a stopwatch.",
+    "marks": 2,
+    "model": [
+     "A stopwatch includes human reaction time (about 0.2 to 0.3 s)",
+     "This is a large fraction of a short time; light gates time automatically with no reaction time and better resolution"
+    ],
+    "tip": "Give the reason and say why it matters for short times."
+   },
+   {
+    "q": "A trolley carries a 5.0 cm card through a light gate. The card blocks the beam for 0.020 s. Calculate the speed of the trolley.",
+    "marks": 3,
+    "model": [
+     "5.0 cm = 0.050 m",
+     "v = 0.050 ÷ 0.020",
+     "v = 2.5 m/s"
+    ],
+    "tip": "The distance is the length of the card."
+   },
+   {
+    "q": "A car travels 30 km in 20 minutes. Calculate its average speed in km/h and m/s.",
+    "marks": 3,
+    "model": [
+     "20 min = 1/3 h, so speed = 30 ÷ (1/3) = 90 km/h",
+     "Or 30 000 m ÷ 1200 s",
+     "= 25 m/s"
+    ],
+    "tip": "Proportional reasoning: 20 minutes is one third of an hour."
+   },
+   {
+    "q": "Estimate the time it takes a person to walk 450 m.",
+    "marks": 2,
+    "model": [
+     "Typical walking speed about 1.5 m/s",
+     "t = 450 ÷ 1.5 = 300 s (5 minutes)"
+    ],
+    "tip": "State the typical speed you used."
+   },
+   {
+    "q": "Describe how you would measure the average walking speed of a student. Include how you would make the result as accurate as possible.",
+    "marks": 6,
+    "model": [
+     "Measure out a distance, e.g. 20 m, with a tape measure or trundle wheel and mark start and finish",
+     "Student walks with a run up so walking at steady speed at the start",
+     "Start a stopwatch as the student crosses the start line and stop at the finish line",
+     "Calculate speed = distance ÷ time",
+     "Repeat several times and calculate a mean, ignoring anomalies",
+     "Use a longer distance so reaction time is a smaller fraction of the time, or use light gates or video",
+     "Same timer each run standing level with the line"
+    ],
+    "tip": "Level 3 needs equipment, a clear method, the calculation, and at least one accuracy improvement with reason."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A runner completes a 400 m lap in 1 minute 20 seconds. Calculate her average speed in m/s and in km/h.",
+    "steps": [
+     "Time = 60 + 20 = 80 s",
+     "v = d ÷ t = 400 ÷ 80 = 5 m/s",
+     "In km/h: 5 × 3.6 = 18 km/h"
+    ],
+    "ans": "5 m/s, which is 18 km/h"
+   },
+   {
+    "q": "A train travels at 50 m/s for 12 minutes. How far does it travel in km?",
+    "steps": [
+     "t = 12 × 60 = 720 s",
+     "d = v × t = 50 × 720 = 36 000 m",
+     "36 000 ÷ 1000 = 36 km"
+    ],
+    "ans": "36 km"
+   },
+   {
+    "q": "Two light gates are 0.80 m apart. A trolley passes the first at t = 0.35 s and the second at t = 0.75 s. Calculate its average speed between the gates.",
+    "steps": [
+     "Time between gates = 0.75 − 0.35 = 0.40 s",
+     "v = 0.80 ÷ 0.40",
+     "v = 2.0 m/s"
+    ],
+    "ans": "2.0 m/s"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Measuring speed with two light gates. The data logger records the time between the trolley breaking the first and second beams; speed = distance between gates ÷ time.",
+    "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><defs><marker id='m1' markerWidth='8' markerHeight='8' refX='4' refY='4' orient='auto'><path d='M0,0 L8,4 L0,8 z' fill='#1b2540'/></marker></defs><rect x='0' y='0' width='400' height='240' fill='#ffffff'/><line x1='20' y1='170' x2='380' y2='170' stroke='#1b2540' stroke-width='3'/><rect x='40' y='140' width='60' height='25' fill='#bbf7d0' stroke='#166534' stroke-width='2'/><rect x='62' y='118' width='6' height='22' fill='#fecaca' stroke='#991b1b'/><circle cx='52' cy='167' r='4' fill='#1b2540'/><circle cx='88' cy='167' r='4' fill='#1b2540'/><rect x='140' y='100' width='12' height='70' fill='#e9d5ff' stroke='#6b21a8' stroke-width='2'/><rect x='290' y='100' width='12' height='70' fill='#e9d5ff' stroke='#6b21a8' stroke-width='2'/><line x1='146' y1='190' x2='296' y2='190' stroke='#1b2540' marker-end='url(#m1)' marker-start='url(#m1)'/><text x='170' y='207' font-size='12' fill='#1b2540'>Distance between gates</text><rect x='180' y='20' width='90' height='36' fill='#dbeafe' stroke='#1d4ed8' stroke-width='2'/><text x='192' y='43' font-size='12' fill='#1d4ed8'>Data logger</text><line x1='146' y1='100' x2='190' y2='56' stroke='#1b2540'/><line x1='296' y1='100' x2='260' y2='56' stroke='#1b2540'/><text x='105' y='92' font-size='12' fill='#6b21a8'>Gate 1</text><text x='310' y='112' font-size='12' fill='#6b21a8'>Gate 2</text><text x='30' y='112' font-size='12' fill='#991b1b'>Card</text><text x='40' y='190' font-size='12' fill='#166534'>Trolley</text><line x1='105' y1='130' x2='130' y2='130' stroke='#1b2540' marker-end='url(#m1)'/></svg>"
+   },
+   {
+    "cap": "Choosing a distance measuring instrument by the size of the distance: metre rule for short lab distances, tape measure for a few metres, trundle wheel for long outdoor distances.",
+    "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='400' height='240' fill='#ffffff'/><rect x='20' y='40' width='110' height='14' fill='#fde68a' stroke='#92400e'/><line x1='30' y1='40' x2='30' y2='48' stroke='#92400e'/><line x1='50' y1='40' x2='50' y2='48' stroke='#92400e'/><line x1='70' y1='40' x2='70' y2='48' stroke='#92400e'/><line x1='90' y1='40' x2='90' y2='48' stroke='#92400e'/><line x1='110' y1='40' x2='110' y2='48' stroke='#92400e'/><text x='30' y='80' font-size='12' fill='#1b2540'>Metre rule</text><text x='30' y='96' font-size='12' fill='#1b2540'>Up to 1 m</text><circle cx='200' cy='48' r='20' fill='#bbf7d0' stroke='#166534' stroke-width='2'/><path d='M200,48 L300,58' stroke='#ca8a04' stroke-width='4'/><text x='160' y='96' font-size='12' fill='#1b2540'>Tape measure</text><text x='160' y='110' font-size='12' fill='#1b2540'>Up to about 30 m</text><circle cx='320' cy='170' r='30' fill='#dbeafe' stroke='#1d4ed8' stroke-width='3'/><line x1='320' y1='170' x2='270' y2='120' stroke='#1b2540' stroke-width='3'/><line x1='260' y1='200' x2='390' y2='200' stroke='#166534' stroke-width='2'/><text x='60' y='170' font-size='12' fill='#1b2540'>Trundle wheel</text><text x='60' y='186' font-size='12' fill='#1b2540'>Long outdoor distances</text><text x='60' y='202' font-size='12' fill='#1b2540'>Each click is 1 m</text></svg>"
+   },
+   {
+    "cap": "Unit conversion map for speed. Going from km/h to m/s, divide by 3.6 (multiply by 1000 m and divide by 3600 s); going back, multiply by 3.6.",
+    "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><defs><marker id='m3' markerWidth='8' markerHeight='8' refX='4' refY='4' orient='auto'><path d='M0,0 L8,4 L0,8 z' fill='#1b2540'/></marker></defs><rect x='0' y='0' width='400' height='240' fill='#ffffff'/><rect x='30' y='90' width='110' height='50' rx='8' fill='#fde68a' stroke='#92400e' stroke-width='2'/><text x='62' y='120' font-size='13' fill='#92400e'>km/h</text><rect x='260' y='90' width='110' height='50' rx='8' fill='#bbf7d0' stroke='#166534' stroke-width='2'/><text x='298' y='120' font-size='13' fill='#166534'>m/s</text><path d='M145,95 Q200,50 255,95' fill='none' stroke='#dc2626' stroke-width='2' marker-end='url(#m3)'/><path d='M255,135 Q200,180 145,135' fill='none' stroke='#1d4ed8' stroke-width='2' marker-end='url(#m3)'/><text x='178' y='52' font-size='13' fill='#dc2626'>÷ 3.6</text><text x='178' y='185' font-size='13' fill='#1d4ed8'>× 3.6</text><text x='40' y='30' font-size='12' fill='#1b2540'>36 km/h = 10 m/s</text><text x='40' y='220' font-size='12' fill='#1b2540'>1 h = 3600 s, 1 km = 1000 m</text></svg>"
+   }
+  ],
+  "pid": "phy_ocra.3.0",
+  "sid": "phy_ocra",
+  "v": 2,
+  "src": "pre",
+  "by": "claude/claude-opus-5-5",
+  "ts": "2026-11-27T01:28:33.311Z"
+ },
+ "phy_ocra.3.1": {
+  "summary": "Physical quantities are either **scalars**, which have **magnitude (size) only**, or **vectors**, which have **both magnitude and direction**. **Distance** and **speed** are scalars, while **displacement** and **velocity** are their vector partners: displacement is distance in a stated direction from the start point, and velocity is speed in a stated direction. This distinction explains why a runner who finishes a lap where they started has run 400 m but has zero displacement, and why an object moving in a circle at constant speed has a **changing velocity**.",
+  "core": [
+   {
+    "h": "Scalars and vectors",
+    "p": "Every quantity in physics can be sorted into one of two groups. A **scalar** is fully described by a number and a unit. A **vector** also needs a **direction** to be fully described.",
+    "bullets": [
+     "**Scalar**: magnitude only, e.g. 30 m, 12 s, 5 kg.",
+     "**Vector**: magnitude **and** direction, e.g. 30 m north, 20 N downwards.",
+     "Vectors can be shown as **arrows**: the **length** represents the magnitude and the **arrow points** in the direction.",
+     "The magnitude of a vector is always **positive**; a negative sign just shows the **opposite direction**.",
+     "Scalars are added by simple arithmetic; vectors must take **direction** into account."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Scalar",
+      "p": "A quantity that has magnitude (size) only."
+     },
+     {
+      "k": "def",
+      "t": "Vector",
+      "p": "A quantity that has both magnitude (size) and direction."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Examples of scalars and vectors",
+    "p": "Learn these lists. Examiners often ask you to sort quantities or to name a vector partner of a scalar.",
+    "bullets": [
+     "**Force** is always a vector: it acts in a direction. Weight is a force, so it is a vector, but **mass is a scalar**.",
+     "**Energy** and **time** are scalars, even though they are linked to motion.",
+     "Acceleration and momentum are vectors (covered elsewhere in P2)."
+    ],
+    "table": {
+     "head": [
+      "Scalars",
+      "Vectors"
+     ],
+     "rows": [
+      [
+       "Distance",
+       "Displacement"
+      ],
+      [
+       "Speed",
+       "Velocity"
+      ],
+      [
+       "Mass",
+       "Weight (force)"
+      ],
+      [
+       "Time",
+       "Acceleration"
+      ],
+      [
+       "Energy",
+       "Force"
+      ],
+      [
+       "Temperature",
+       "Momentum"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Distance",
+    "p": "**Distance** is how far an object travels **along the actual path** it takes, regardless of direction. It can only stay the same or increase as an object moves.",
+    "bullets": [
+     "Distance is a **scalar**, measured in **metres (m)**.",
+     "It depends on the **route** taken.",
+     "A car driving 3 km east then 3 km west has travelled a **distance of 6 km**.",
+     "Distance is never negative."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Distance",
+      "p": "How far an object moves along its path; a scalar quantity."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Displacement",
+    "p": "**Displacement** is the **straight line distance from the start point to the end point**, together with the **direction**. It only cares about where you start and finish, not the route.",
+    "bullets": [
+     "Displacement is a **vector**, measured in **metres (m)** with a direction.",
+     "Same car: 3 km east then 3 km west has a **displacement of 0 km**.",
+     "Displacement can be given as a direction (e.g. 5 km north east) or with a **sign** (+ for one way, − for the other).",
+     "The magnitude of displacement is **always less than or equal to** the distance travelled.",
+     "They are equal only for motion in a **straight line without changing direction**."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Displacement",
+      "p": "The distance in a straight line from the starting point to the finishing point, in a stated direction."
+     },
+     {
+      "k": "warn",
+      "t": "Include the direction",
+      "p": "An answer such as 50 m for a displacement loses the mark. Write 50 m east, or 50 m to the left."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Speed",
+    "p": "**Speed** is the **distance travelled per unit time**. It tells you how fast something is moving but not which way.",
+    "bullets": [
+     "Speed is a **scalar**, unit **m/s**.",
+     "**speed = distance ÷ time**.",
+     "A speedometer shows speed, not velocity.",
+     "Speed is never negative."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Speed",
+      "p": "Distance travelled per unit time; a scalar."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Velocity",
+    "p": "**Velocity** is **speed in a given direction**, or more precisely the **displacement per unit time**. Two cars at 20 m/s going opposite ways have the same speed but **different velocities**.",
+    "bullets": [
+     "Velocity is a **vector**, unit **m/s** with a direction.",
+     "**velocity = displacement ÷ time**.",
+     "Velocities in opposite directions can be written as **+20 m/s and −20 m/s**.",
+     "Velocity changes if **speed changes, direction changes, or both** change.",
+     "Average velocity over a round trip that returns to the start is **zero**, even though average speed is not."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Velocity",
+      "p": "Speed in a given direction; the rate of change of displacement. A vector."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Comparing the four quantities",
+    "p": "The four quantities form two pairs: distance with displacement, speed with velocity. In each pair the vector is the scalar plus a direction (and uses the start to end straight line rather than the path).",
+    "bullets": [
+     "Distance and displacement share the unit **m**.",
+     "Speed and velocity share the unit **m/s**.",
+     "The vector version is the one that **uses direction**."
+    ],
+    "table": {
+     "head": [
+      "Quantity",
+      "Scalar or vector",
+      "Unit",
+      "Depends on"
+     ],
+     "rows": [
+      [
+       "Distance",
+       "Scalar",
+       "m",
+       "Actual path"
+      ],
+      [
+       "Displacement",
+       "Vector",
+       "m",
+       "Start and end points, direction"
+      ],
+      [
+       "Speed",
+       "Scalar",
+       "m/s",
+       "Distance ÷ time"
+      ],
+      [
+       "Velocity",
+       "Vector",
+       "m/s",
+       "Displacement ÷ time, direction"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Using signs for direction in one dimension",
+    "p": "For motion along a straight line, pick one direction as **positive**. Anything in the opposite direction is **negative**. This makes adding vectors easy.",
+    "bullets": [
+     "Choose a direction, e.g. **right = positive**.",
+     "10 m right = **+10 m**, 4 m left = **−4 m**.",
+     "Resultant displacement = +10 + (−4) = **+6 m** (6 m to the right).",
+     "A ball thrown upwards at +8 m/s returns at **−8 m/s**: same speed, opposite velocity.",
+     "State your sign convention in written answers."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Negative velocity",
+      "p": "A negative velocity does not mean slower than zero; it means moving in the opposite direction to the one you chose as positive."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Displacement in two directions",
+    "p": "If movements are at right angles, the displacement is the **diagonal** from start to finish. Its size can be found with **Pythagoras' theorem** or a **scale drawing**.",
+    "bullets": [
+     "Walk 3 m east then 4 m north: distance = **7 m**.",
+     "Displacement magnitude = √(3² + 4²) = **5 m**, in a direction north of east.",
+     "A **scale drawing** with arrows drawn tip to tail gives the same result: measure the line from start to finish.",
+     "The displacement is always the **shortest route**, so it is shorter than the distance whenever direction changes."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Circular motion: constant speed, changing velocity",
+    "p": "An object moving in a circle at a **steady speed** is always changing **direction**, so its **velocity is constantly changing** even though its speed is not. This is a favourite higher demand question.",
+    "bullets": [
+     "Speed (scalar) is **constant**.",
+     "Direction is **always changing** (velocity is along the tangent to the circle).",
+     "So velocity (vector) **is changing**.",
+     "A changing velocity means the object is **accelerating**, which needs a resultant force towards the centre.",
+     "Examples: a satellite in a circular orbit, a car going round a roundabout at constant speed."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Must know",
+      "p": "An object moving in a circle at constant speed has a changing velocity, because velocity is a vector and its direction changes."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Round trips and average values",
+    "p": "When an object returns to where it started, the scalar and vector answers are dramatically different. This is a common calculation trap.",
+    "bullets": [
+     "Runner completes one **400 m lap** in 80 s.",
+     "Distance = **400 m**; displacement = **0 m**.",
+     "Average speed = 400 ÷ 80 = **5 m/s**.",
+     "Average velocity = 0 ÷ 80 = **0 m/s**.",
+     "Halfway round a circular track, displacement equals the **diameter** of the track."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Zero displacement trap",
+      "p": "Never say the runner has travelled 0 m. They have travelled 400 m of distance but have zero displacement."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The taxi meter and the crow",
+   "p": "A taxi meter measures distance: every street, detour and loop adds to the fare, and it never goes down. A crow flying straight from where you were picked up to where you were dropped off measures displacement: it ignores the route and only cares about the straight line and which way it points. If the taxi brings you back home, the meter shows a big distance but the crow has nowhere to fly: zero displacement. Where it breaks down: a crow flies in a single real direction, but in physics a displacement is just an arrow with size and direction, and it can be added to other arrows tip to tail in ways a crow cannot."
+  },
+  "terms": [
+   {
+    "t": "Scalar",
+    "d": "Quantity with magnitude only."
+   },
+   {
+    "t": "Vector",
+    "d": "Quantity with both magnitude and direction."
+   },
+   {
+    "t": "Magnitude",
+    "d": "The size of a quantity, always positive."
+   },
+   {
+    "t": "Distance",
+    "d": "How far an object travels along its path; scalar."
+   },
+   {
+    "t": "Displacement",
+    "d": "Straight line distance from start to finish in a stated direction; vector."
+   },
+   {
+    "t": "Speed",
+    "d": "Distance travelled per unit time; scalar."
+   },
+   {
+    "t": "Velocity",
+    "d": "Speed in a given direction, or displacement per unit time; vector."
+   },
+   {
+    "t": "Average speed",
+    "d": "Total distance divided by total time."
+   },
+   {
+    "t": "Average velocity",
+    "d": "Total displacement divided by total time."
+   },
+   {
+    "t": "Resultant",
+    "d": "Single vector with the same effect as two or more vectors combined."
+   },
+   {
+    "t": "Sign convention",
+    "d": "Choosing one direction as positive so the opposite is negative."
+   },
+   {
+    "t": "Tip to tail",
+    "d": "Method of adding vectors by joining the start of each arrow to the end of the previous one."
+   },
+   {
+    "t": "Tangent",
+    "d": "A line touching a curve at one point; the direction of velocity in circular motion."
+   },
+   {
+    "t": "Acceleration",
+    "d": "Rate of change of velocity; a vector."
+   },
+   {
+    "t": "Force",
+    "d": "A push or pull; a vector."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Velocity is just another word for speed.",
+    "r": "Velocity is speed in a given direction; it is a vector, speed is a scalar."
+   },
+   {
+    "w": "Displacement of 200 m.",
+    "r": "Must give direction: 200 m east (or with a sign)."
+   },
+   {
+    "w": "A satellite moving at constant speed in a circle has constant velocity.",
+    "r": "Its direction keeps changing so its velocity is changing (it is accelerating)."
+   },
+   {
+    "w": "After a full lap the runner has travelled 0 m.",
+    "r": "Distance = 400 m; displacement = 0 m."
+   },
+   {
+    "w": "Mass is a vector because it is pulled down.",
+    "r": "Mass is a scalar; weight (a force) is the vector."
+   },
+   {
+    "w": "A negative velocity means it is slowing down.",
+    "r": "Negative velocity means moving in the opposite direction to the chosen positive direction."
+   },
+   {
+    "w": "Displacement for 3 m east then 4 m north is 7 m.",
+    "r": "7 m is the distance; displacement is 5 m (by Pythagoras) in a direction north of east."
+   },
+   {
+    "w": "Distance and displacement are always equal.",
+    "r": "They are equal only for straight line motion in one direction."
+   }
+  ],
+  "exam": [
+   {
+    "q": "State the difference between a scalar and a vector quantity.",
+    "marks": 1,
+    "model": [
+     "A vector has magnitude and direction; a scalar has magnitude only"
+    ],
+    "tip": "Both halves are needed for the mark."
+   },
+   {
+    "q": "Which of these is a vector: speed, distance, velocity, time?",
+    "marks": 1,
+    "model": [
+     "Velocity"
+    ],
+    "tip": "Velocity and displacement are the vector partners."
+   },
+   {
+    "q": "Sort these into scalars and vectors: mass, force, energy, displacement.",
+    "marks": 2,
+    "model": [
+     "Scalars: mass, energy",
+     "Vectors: force, displacement"
+    ],
+    "tip": "Mass is scalar, weight is vector."
+   },
+   {
+    "q": "Explain the difference between distance and displacement.",
+    "marks": 2,
+    "model": [
+     "Distance is how far travelled along the path and has no direction (scalar)",
+     "Displacement is the straight line distance from start to finish in a given direction (vector)"
+    ],
+    "tip": "Mention scalar or vector as well as the definition."
+   },
+   {
+    "q": "A girl walks 60 m north then 20 m south. State her total distance travelled and her displacement.",
+    "marks": 2,
+    "model": [
+     "Distance = 80 m",
+     "Displacement = 40 m north"
+    ],
+    "tip": "Give the direction for displacement."
+   },
+   {
+    "q": "A car travels round a roundabout at a constant speed of 8 m/s. Explain why its velocity is not constant.",
+    "marks": 2,
+    "model": [
+     "Velocity is a vector (has direction)",
+     "The direction of motion is changing, so velocity changes even though speed is constant"
+    ],
+    "tip": "The word direction is essential."
+   },
+   {
+    "q": "Two trains pass each other, one travelling east at 30 m/s and one west at 30 m/s. Compare their speeds and velocities.",
+    "marks": 2,
+    "model": [
+     "Same speed, 30 m/s",
+     "Different velocities because they travel in opposite directions (+30 m/s and −30 m/s)"
+    ],
+    "tip": "Using signs earns credit."
+   },
+   {
+    "q": "A runner completes 2 laps of a 400 m track in 160 s and stops at the start line. Calculate her average speed and her average velocity.",
+    "marks": 3,
+    "model": [
+     "Distance = 800 m, average speed = 800 ÷ 160 = 5 m/s",
+     "Displacement = 0 m",
+     "Average velocity = 0 m/s"
+    ],
+    "tip": "Velocity uses displacement."
+   },
+   {
+    "q": "A drone flies 30 m east and then 40 m north. Calculate the magnitude of its displacement and state its distance travelled.",
+    "marks": 3,
+    "model": [
+     "Distance = 70 m",
+     "Displacement² = 30² + 40² = 2500",
+     "Displacement = 50 m (north east direction)"
+    ],
+    "tip": "Pythagoras for vectors at right angles."
+   },
+   {
+    "q": "A student says a ball thrown straight up and caught at the same height has the same velocity when thrown and when caught. Evaluate this statement using ideas about scalars and vectors.",
+    "marks": 4,
+    "model": [
+     "The speed is (roughly) the same when thrown and caught",
+     "But velocity is a vector and depends on direction",
+     "When thrown it moves upwards, when caught it moves downwards",
+     "So the velocities are different (opposite signs); the student is wrong"
+    ],
+    "tip": "Separate speed from velocity clearly."
+   },
+   {
+    "q": "Describe the differences between distance, displacement, speed and velocity. Use a journey that returns to its starting point to illustrate your answer.",
+    "marks": 6,
+    "model": [
+     "Distance is a scalar: how far travelled along the path",
+     "Displacement is a vector: straight line from start to finish with direction",
+     "Speed is a scalar: distance per unit time",
+     "Velocity is a vector: speed in a given direction / displacement per unit time",
+     "Example: a 400 m lap gives distance 400 m but displacement 0",
+     "Average speed is distance ÷ time, but average velocity is 0 for the lap",
+     "Velocity also changes when direction changes, even at constant speed"
+    ],
+    "tip": "Level 3 needs all four defined correctly plus a correct worked illustration."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A cyclist rides 1200 m east in 200 s, then 400 m west in 100 s. Find distance, displacement, average speed and average velocity.",
+    "steps": [
+     "Distance = 1200 + 400 = 1600 m",
+     "Taking east as positive: displacement = +1200 + (−400) = +800 m, so 800 m east",
+     "Total time = 200 + 100 = 300 s",
+     "Average speed = 1600 ÷ 300 = 5.3 m/s",
+     "Average velocity = 800 ÷ 300 = 2.7 m/s east"
+    ],
+    "ans": "Distance 1600 m; displacement 800 m east; average speed 5.3 m/s; average velocity 2.7 m/s east"
+   },
+   {
+    "q": "A hiker walks 6 km south then 8 km east. Find the distance and the magnitude of the displacement.",
+    "steps": [
+     "Distance = 6 + 8 = 14 km",
+     "Displacement² = 6² + 8² = 36 + 64 = 100",
+     "Displacement = √100 = 10 km",
+     "Direction is south east of the start (between south and east)"
+    ],
+    "ans": "Distance 14 km; displacement 10 km towards the south east"
+   },
+   {
+    "q": "A runner goes halfway round a circular track of diameter 100 m. State her displacement and explain why it differs from the distance.",
+    "steps": [
+     "Displacement = straight line from start to finish = the diameter",
+     "So displacement = 100 m (across the track, in the direction from start to finish)",
+     "Distance = half the circumference = π × 100 ÷ 2 ≈ 157 m",
+     "The distance follows the curved path; displacement is the shortest straight line"
+    ],
+    "ans": "Displacement 100 m across the track; distance about 157 m"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "A journey of 3 m east then 4 m north. The distance travelled is 7 m along the path, but the displacement is the straight 5 m arrow from start to finish, pointing north of east.",
+    "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><defs><marker id='v1' markerWidth='8' markerHeight='8' refX='4' refY='4' orient='auto'><path d='M0,0 L8,4 L0,8 z' fill='#1b2540'/></marker></defs><rect x='0' y='0' width='400' height='240' fill='#ffffff'/><circle cx='80' cy='200' r='6' fill='#bbf7d0' stroke='#166534' stroke-width='2'/><circle cx='230' cy='40' r='6' fill='#fecaca' stroke='#991b1b' stroke-width='2'/><line x1='80' y1='200' x2='225' y2='200' stroke='#1d4ed8' stroke-width='3' marker-end='url(#v1)'/><line x1='230' y1='200' x2='230' y2='50' stroke='#1d4ed8' stroke-width='3' marker-end='url(#v1)'/><line x1='80' y1='200' x2='224' y2='47' stroke='#dc2626' stroke-width='3' marker-end='url(#v1)'/><text x='120' y='222' font-size='12' fill='#1d4ed8'>3 m east</text><text x='240' y='125' font-size='12' fill='#1d4ed8'>4 m north</text><text x='70' y='115' font-size='12' fill='#dc2626'>Displacement 5 m</text><text x='40' y='222' font-size='12' fill='#166534'>Start</text><text x='245' y='44' font-size='12' fill='#991b1b'>Finish</text><text x='270' y='200' font-size='12' fill='#1b2540'>Distance = 7 m</text></svg>"
+   },
+   {
+    "cap": "Speed versus velocity. Two cars with the same speed of 20 m/s travelling in opposite directions have different velocities, +20 m/s and −20 m/s, when right is taken as positive.",
+    "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><defs><marker id='v2' markerWidth='8' markerHeight='8' refX='4' refY='4' orient='auto'><path d='M0,0 L8,4 L0,8 z' fill='#1b2540'/></marker></defs><rect x='0' y='0' width='400' height='240' fill='#ffffff'/><rect x='40' y='60' width='70' height='30' rx='6' fill='#bbf7d0' stroke='#166534' stroke-width='2'/><line x1='120' y1='75' x2='220' y2='75' stroke='#166534' stroke-width='3' marker-end='url(#v2)'/><text x='130' y='60' font-size='12' fill='#166534'>v = +20 m/s</text><rect x='290' y='150' width='70' height='30' rx='6' fill='#fecaca' stroke='#991b1b' stroke-width='2'/><line x1='280' y1='165' x2='180' y2='165' stroke='#991b1b' stroke-width='3' marker-end='url(#v2)'/><text x='185' y='195' font-size='12' fill='#991b1b'>v = −20 m/s</text><line x1='20' y1='120' x2='380' y2='120' stroke='#64748b' stroke-width='1'/><text x='120' y='225' font-size='12' fill='#1b2540'>Both have speed 20 m/s</text><text x='300' y='30' font-size='12' fill='#1b2540'>Right = +</text></svg>"
+   },
+   {
+    "cap": "Circular motion at constant speed. The velocity arrows are all the same length (same speed) but point in different directions along the tangent, so the velocity is changing.",
+    "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><defs><marker id='v3' markerWidth='8' markerHeight='8' refX='4' refY='4' orient='auto'><path d='M0,0 L8,4 L0,8 z' fill='#dc2626'/></marker></defs><rect x='0' y='0' width='400' height='240' fill='#ffffff'/><circle cx='150' cy='120' r='80' fill='#dbeafe' stroke='#1d4ed8' stroke-width='2'/><circle cx='150' cy='40' r='6' fill='#fde68a' stroke='#92400e' stroke-width='2'/><circle cx='230' cy='120' r='6' fill='#fde68a' stroke='#92400e' stroke-width='2'/><circle cx='150' cy='200' r='6' fill='#fde68a' stroke='#92400e' stroke-width='2'/><circle cx='70' cy='120' r='6' fill='#fde68a' stroke='#92400e' stroke-width='2'/><line x1='150' y1='40' x2='200' y2='40' stroke='#dc2626' stroke-width='3' marker-end='url(#v3)'/><line x1='230' y1='120' x2='230' y2='170' stroke='#dc2626' stroke-width='3' marker-end='url(#v3)'/><line x1='150' y1='200' x2='100' y2='200' stroke='#dc2626' stroke-width='3' marker-end='url(#v3)'/><line x1='70' y1='120' x2='70' y2='70' stroke='#dc2626' stroke-width='3' marker-end='url(#v3)'/><text x='260' y='60' font-size='12' fill='#1b2540'>Same speed</text><text x='260' y='76' font-size='12' fill='#dc2626'>Direction changes</text><text x='260' y='92' font-size='12' fill='#dc2626'>Velocity changes</text><text x='122' y='124' font-size='12' fill='#1d4ed8'>Circular path</text></svg>"
+   }
+  ],
+  "pid": "phy_ocra.3.1",
+  "sid": "phy_ocra",
+  "v": 2,
+  "src": "pre",
+  "by": "claude/claude-opus-5-5",
+  "ts": "2026-11-27T01:28:33.318Z"
+ },
+ "phy_ocra.3.2": {
+  "summary": "Motion graphs let you read a whole journey at a glance. On a **distance-time graph** the **gradient is the speed**, so a flat line means stationary and a steeper line means faster; for a curve you draw a **tangent** to find the speed at an instant. On a **velocity-time graph** the **gradient is the acceleration** and the **area under the graph is the distance travelled** (displacement). In PAG P3 you collect your own data, for example with light gates or a ticker timer, and plot these graphs yourself.",
+  "core": [
+   {
+    "h": "What a distance-time graph shows",
+    "p": "A distance-time graph plots **distance from the start (y-axis)** against **time (x-axis)**. Because speed = distance / time, the steepness of the line tells you how fast the object is moving at each moment.",
+    "bullets": [
+     "Time always goes on the **x-axis** because it is the independent variable.",
+     "A **straight sloping line** means **constant speed**.",
+     "A **horizontal (flat) line** means the object is **stationary** - distance is not changing.",
+     "A **steeper line** means a **greater speed**.",
+     "A line that **curves upwards** (getting steeper) means the object is **accelerating**.",
+     "A line that **curves and flattens** means the object is **decelerating**.",
+     "If you plot displacement instead of distance, a line sloping **down** means moving back towards the start."
+    ],
+    "table": {
+     "head": [
+      "Shape on d-t graph",
+      "What the object is doing"
+     ],
+     "rows": [
+      [
+       "Horizontal line",
+       "Stationary (speed = 0)"
+      ],
+      [
+       "Straight line, gentle slope",
+       "Constant low speed"
+      ],
+      [
+       "Straight line, steep slope",
+       "Constant high speed"
+      ],
+      [
+       "Curve getting steeper",
+       "Accelerating"
+      ],
+      [
+       "Curve getting flatter",
+       "Decelerating"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Gradient = speed",
+      "p": "On a distance-time graph, **gradient = change in distance / change in time = speed**."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Calculating speed from the gradient",
+    "p": "To find speed from a straight section, pick two points far apart on the line, find the change in distance (rise) and the change in time (run), then divide.",
+    "bullets": [
+     "**Gradient = rise / run = change in distance / change in time**.",
+     "Use a **large triangle** - it reduces reading errors.",
+     "Read values carefully from the axis scales and include **units** (m/s).",
+     "Example: distance rises from 20 m to 80 m between 4 s and 10 s; speed = 60 / 6 = **10 m/s**.",
+     "For a section with zero gradient the speed is zero.",
+     "The **average speed** for a whole journey is total distance / total time, not the average of the gradients."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Show the triangle",
+      "p": "Draw the gradient triangle on the graph in the exam - examiners often give a mark for a correctly drawn triangle even if the arithmetic slips."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Speed at an instant: drawing a tangent (Higher)",
+    "p": "When the line is curved the speed is changing, so there is no single gradient. To find the speed at one moment you draw a **tangent** - a straight line that just touches the curve at that point - and find the gradient of the tangent.",
+    "bullets": [
+     "Place a ruler so it **touches the curve at one point** and follows its direction there.",
+     "The tangent should not cut across the curve near the point.",
+     "Make the tangent **long**, then draw a big gradient triangle on it.",
+     "**Instantaneous speed = gradient of the tangent**.",
+     "A steeper tangent at a later time shows the object is accelerating.",
+     "The same tangent method gives instantaneous acceleration on a curved velocity-time graph."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Do not use the origin",
+      "p": "Do not just divide the distance at that point by the time - that gives the **average** speed from the start, not the speed at that instant."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A curved distance-time graph for an accelerating object. The red tangent touches the curve at t = 6 s; its gradient (rise / run from the green triangle) gives the instantaneous speed at that moment.",
+      "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='400' height='240' fill='#ffffff'/><line x1='50' y1='200' x2='380' y2='200' stroke='#1b2540' stroke-width='2'/><line x1='50' y1='200' x2='50' y2='20' stroke='#1b2540' stroke-width='2'/><path d='M50 200 Q 220 195 350 40' fill='none' stroke='#2563eb' stroke-width='3'/><line x1='140' y1='210' x2='340' y2='70' stroke='#dc2626' stroke-width='2'/><polyline points='180,182 300,182 300,98' fill='#bbf7d0' fill-opacity='0.5' stroke='#15803d' stroke-width='2'/><circle cx='243' cy='138' r='4' fill='#dc2626'/><text x='215' y='228' font-size='12' fill='#1b2540'>time / s</text><text x='12' y='15' font-size='12' fill='#1b2540'>distance / m</text><text x='240' y='196' font-size='11' fill='#15803d'>run</text><text x='306' y='144' font-size='11' fill='#15803d'>rise</text><text x='255' y='60' font-size='12' fill='#dc2626'>tangent</text><text x='90' y='120' font-size='12' fill='#2563eb'>curve</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "What a velocity-time graph shows",
+    "p": "A velocity-time graph plots **velocity (y-axis)** against **time (x-axis)**. It looks similar to a distance-time graph but means something completely different, so always check the y-axis label first.",
+    "bullets": [
+     "A **horizontal line** means **constant velocity** (not stationary!).",
+     "A horizontal line **on the time axis** (v = 0) means stationary.",
+     "A **straight line sloping up** means **constant (uniform) acceleration**.",
+     "A **straight line sloping down** means **constant deceleration**.",
+     "A **steeper slope** means a **larger acceleration**.",
+     "A **curved line** means the acceleration is **changing** (non-uniform).",
+     "A line below the time axis means moving in the **opposite direction**."
+    ],
+    "table": {
+     "head": [
+      "Shape on v-t graph",
+      "What the object is doing"
+     ],
+     "rows": [
+      [
+       "Horizontal line above axis",
+       "Constant velocity"
+      ],
+      [
+       "Line along time axis",
+       "Stationary"
+      ],
+      [
+       "Straight line sloping up",
+       "Uniform acceleration"
+      ],
+      [
+       "Straight line sloping down",
+       "Uniform deceleration"
+      ],
+      [
+       "Curve getting flatter",
+       "Acceleration decreasing (e.g. towards terminal velocity)"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Gradient = acceleration",
+      "p": "On a velocity-time graph, **gradient = change in velocity / change in time = acceleration** (m/s2)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Calculating acceleration from the gradient",
+    "p": "Acceleration is the rate of change of velocity, so it is the gradient of a velocity-time graph. A negative gradient gives a negative acceleration, which is a deceleration.",
+    "bullets": [
+     "**a = (v - u) / t** is the same as the gradient of a straight v-t line.",
+     "Units: **m/s2** (metres per second squared).",
+     "Example: velocity rises from 0 to 12 m/s in 4 s; a = 12 / 4 = **3 m/s2**.",
+     "Example: velocity falls from 20 m/s to 5 m/s in 5 s; a = -15 / 5 = **-3 m/s2** (deceleration of 3 m/s2).",
+     "For a curve, draw a **tangent** to find the acceleration at an instant.",
+     "A gradient of zero means zero acceleration, so the **resultant force is zero**."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Deceleration sign",
+      "p": "If asked for the **deceleration**, give a positive number (e.g. 3 m/s2). If asked for the acceleration, give the negative value (-3 m/s2)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Area under a velocity-time graph = distance travelled",
+    "p": "Distance = speed x time. On a velocity-time graph, velocity x time is the area of a strip under the line, so the **total area between the line and the time axis is the distance travelled** (strictly, the displacement).",
+    "bullets": [
+     "Split the area into **rectangles and triangles**.",
+     "Rectangle area = **base x height** (constant velocity sections).",
+     "Triangle area = **1/2 x base x height** (uniform acceleration from or to rest).",
+     "Trapezium area = **1/2 x (a + b) x h**, or a rectangle plus a triangle.",
+     "Add all the areas to get the **total distance** in metres.",
+     "Areas **below** the time axis count as displacement in the opposite direction.",
+     "Use the axis **units**, not grid squares, unless you then multiply by the value of one square."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Area = distance",
+      "p": "**Area under a velocity-time graph = distance travelled (displacement)**. Area under a distance-time graph has no useful meaning at GCSE."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Velocity-time graph of a journey: A accelerates uniformly from rest, B travels at constant velocity, C decelerates to rest. Distance travelled = triangle A + rectangle B + triangle C.",
+      "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='400' height='240' fill='#ffffff'/><polygon points='50,200 130,80 130,200' fill='#dbeafe' stroke='#1d4ed8' stroke-width='1'/><polygon points='130,80 270,80 270,200 130,200' fill='#fde68a' stroke='#b45309' stroke-width='1'/><polygon points='270,80 360,200 270,200' fill='#fecaca' stroke='#b91c1c' stroke-width='1'/><polyline points='50,200 130,80 270,80 360,200' fill='none' stroke='#1b2540' stroke-width='3'/><line x1='50' y1='200' x2='380' y2='200' stroke='#1b2540' stroke-width='2'/><line x1='50' y1='200' x2='50' y2='20' stroke='#1b2540' stroke-width='2'/><text x='215' y='228' font-size='12' fill='#1b2540'>time / s</text><text x='12' y='15' font-size='12' fill='#1b2540'>velocity / m/s</text><text x='100' y='170' font-size='13' fill='#1d4ed8'>A</text><text x='195' y='145' font-size='13' fill='#b45309'>B</text><text x='290' y='170' font-size='13' fill='#b91c1c'>C</text><text x='60' y='70' font-size='11' fill='#1d4ed8'>accelerating</text><text x='160' y='62' font-size='11' fill='#b45309'>constant velocity</text><text x='300' y='100' font-size='11' fill='#b91c1c'>decelerating</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Estimating area under a curved v-t graph",
+    "p": "When the line is curved, you cannot use simple shapes exactly. Instead you **count squares** under the curve and multiply by the distance that one square represents.",
+    "bullets": [
+     "Count every **whole square** under the line.",
+     "Count squares that are **half or more** under the line as one; ignore those less than half.",
+     "Work out what one square is worth: (velocity per square) x (time per square), e.g. 2 m/s x 1 s = 2 m.",
+     "**Distance = number of squares x value of one square**.",
+     "This is an **estimate**, so answers in a range are usually accepted.",
+     "Alternatively, approximate the curve with straight lines (triangles and trapeziums)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "State the square value",
+      "p": "Write down what one square represents before counting - it earns a method mark and stops unit errors."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Comparing the two graphs",
+    "p": "Most exam errors come from confusing distance-time and velocity-time graphs. The same shape can mean different motion depending on the axis.",
+    "bullets": [
+     "Flat line on **d-t** = stationary; flat line on **v-t** = constant velocity.",
+     "Straight slope on **d-t** = constant speed; straight slope on **v-t** = constant acceleration.",
+     "Gradient of **d-t** = speed; gradient of **v-t** = acceleration.",
+     "Area under **v-t** = distance; area under d-t is not used.",
+     "A d-t graph for constant acceleration is a **curve**; the matching v-t graph is a **straight line**."
+    ],
+    "table": {
+     "head": [
+      "Feature",
+      "Distance-time",
+      "Velocity-time"
+     ],
+     "rows": [
+      [
+       "Gradient",
+       "Speed (m/s)",
+       "Acceleration (m/s2)"
+      ],
+      [
+       "Horizontal line",
+       "Stationary",
+       "Constant velocity"
+      ],
+      [
+       "Straight slope",
+       "Constant speed",
+       "Uniform acceleration"
+      ],
+      [
+       "Area under line",
+       "No meaning",
+       "Distance travelled (m)"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Read the axis first",
+      "p": "Always read the **y-axis label** before describing a graph."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Distance-time graph: P constant speed, Q stationary (horizontal), R faster constant speed (steeper). The gradient of each straight section is the speed.",
+      "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='400' height='240' fill='#ffffff'/><line x1='50' y1='200' x2='380' y2='200' stroke='#1b2540' stroke-width='2'/><line x1='50' y1='200' x2='50' y2='20' stroke='#1b2540' stroke-width='2'/><line x1='50' y1='200' x2='150' y2='140' stroke='#2563eb' stroke-width='3'/><line x1='150' y1='140' x2='250' y2='140' stroke='#16a34a' stroke-width='3'/><line x1='250' y1='140' x2='310' y2='40' stroke='#dc2626' stroke-width='3'/><text x='215' y='228' font-size='12' fill='#1b2540'>time / s</text><text x='12' y='15' font-size='12' fill='#1b2540'>distance / m</text><text x='110' y='190' font-size='12' fill='#2563eb'>P constant speed</text><text x='160' y='128' font-size='12' fill='#16a34a'>Q stationary</text><text x='300' y='100' font-size='12' fill='#dc2626'>R faster</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Plotting motion graphs from data",
+    "p": "You must be able to **plot** distance-time and velocity-time graphs from a table of results, as well as read them.",
+    "bullets": [
+     "Put **time on the x-axis**, distance or velocity on the y-axis.",
+     "Choose scales that use **more than half** the grid and go up in easy steps (1, 2, 5, 10).",
+     "Label axes with **quantity and unit**, e.g. velocity / m/s.",
+     "Plot points accurately to within **half a small square** with small crosses.",
+     "Draw a **line or smooth curve of best fit** - do not join dot to dot.",
+     "Identify and circle any **anomalous** points and ignore them when drawing the line."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "PAG P3: investigating motion",
+    "p": "In PAG P3 you measure how an object such as a trolley moves, then use the data to draw motion graphs and calculate speed and acceleration.",
+    "bullets": [
+     "Typical set-up: a **trolley rolling down a ramp**, timed with **light gates** connected to a data logger, or a **ticker timer** and tape.",
+     "Light gates measure time to the nearest millisecond, reducing **human reaction time** errors compared with a stopwatch.",
+     "Speed at a light gate = **length of card (interrupter) / time the beam is blocked**.",
+     "Acceleration = (v - u) / t using two light gates, or from the gradient of the v-t graph.",
+     "Ticker timer: dots every **0.02 s** (50 Hz); dot spacing increasing shows acceleration.",
+     "**Independent variable**: e.g. ramp height; **dependent**: speed or acceleration; **control**: same trolley, same ramp surface, same release point.",
+     "Repeat readings and calculate a **mean** to improve reliability (repeatability)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Release, do not push",
+      "p": "Release the trolley from rest without pushing so the starting velocity is the same each time (a fair test)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Linking gradients and forces",
+    "p": "Graph shapes link to forces: a constant gradient on a v-t graph means constant acceleration, which needs a constant resultant force.",
+    "bullets": [
+     "Zero gradient on v-t means **balanced forces** (resultant force = 0).",
+     "A v-t curve that flattens to a horizontal line shows an object reaching **terminal velocity**.",
+     "A d-t graph that curves upwards shows the object is speeding up, so there is an **unbalanced force** in the direction of motion."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The graph as a road",
+   "p": "Think of a distance-time graph as a hill you are cycling up: the steeper the hill, the faster the distance is climbing, so steepness is speed; a flat road means you are not gaining any distance at all. On a velocity-time graph, the steepness is how hard you are pressing the pedals to change speed (acceleration), and the area painted under the line is how much road you have covered. It breaks down because a real hill gets harder to ride when steeper, while a steep d-t line simply means fast motion with no extra effort implied, and a graph line can never go back in time."
+  },
+  "terms": [
+   {
+    "t": "Distance-time graph",
+    "d": "A graph of distance travelled (y-axis) against time (x-axis); its gradient is the speed."
+   },
+   {
+    "t": "Velocity-time graph",
+    "d": "A graph of velocity (y-axis) against time (x-axis); its gradient is acceleration and the area under it is distance travelled."
+   },
+   {
+    "t": "Gradient",
+    "d": "The steepness of a line: change in y-value divided by change in x-value (rise / run)."
+   },
+   {
+    "t": "Speed",
+    "d": "Distance travelled per unit time; a scalar measured in m/s."
+   },
+   {
+    "t": "Velocity",
+    "d": "Speed in a stated direction; a vector measured in m/s."
+   },
+   {
+    "t": "Acceleration",
+    "d": "The rate of change of velocity: change in velocity divided by time taken, measured in m/s2."
+   },
+   {
+    "t": "Deceleration",
+    "d": "Negative acceleration; the rate at which velocity decreases."
+   },
+   {
+    "t": "Uniform acceleration",
+    "d": "Acceleration that stays constant; shown as a straight sloping line on a velocity-time graph."
+   },
+   {
+    "t": "Tangent",
+    "d": "A straight line that touches a curve at a single point and has the same gradient as the curve at that point."
+   },
+   {
+    "t": "Instantaneous speed",
+    "d": "The speed at one particular moment, found from the gradient of the tangent to a distance-time curve."
+   },
+   {
+    "t": "Average speed",
+    "d": "Total distance travelled divided by total time taken."
+   },
+   {
+    "t": "Area under the graph",
+    "d": "On a velocity-time graph, the area between the line and the time axis, equal to the distance travelled (displacement)."
+   },
+   {
+    "t": "Stationary",
+    "d": "Not moving; a horizontal line on a distance-time graph or a line along the time axis on a velocity-time graph."
+   },
+   {
+    "t": "Light gate",
+    "d": "A sensor with a beam of light that records the time an object takes to pass through it, used with a data logger to find speed."
+   },
+   {
+    "t": "Line of best fit",
+    "d": "A straight line or smooth curve drawn through the general trend of plotted points, with points evenly spread either side."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "A horizontal line on a velocity-time graph means the object has stopped.",
+    "r": "A horizontal line on a v-t graph means **constant velocity**; only a line along v = 0 means stationary."
+   },
+   {
+    "w": "The gradient of a velocity-time graph is the speed.",
+    "r": "The gradient of a v-t graph is the **acceleration**; the gradient of a d-t graph is the speed."
+   },
+   {
+    "w": "The area under a distance-time graph gives the distance.",
+    "r": "The **area under a velocity-time graph** gives the distance travelled."
+   },
+   {
+    "w": "Speed at a point on a curve = distance at that point / time at that point.",
+    "r": "Draw a **tangent** at the point and calculate its **gradient**."
+   },
+   {
+    "w": "Triangle area = base x height.",
+    "r": "Triangle area = **1/2 x base x height**."
+   },
+   {
+    "w": "Joining plotted points dot to dot.",
+    "r": "Draw a single **line or smooth curve of best fit**."
+   },
+   {
+    "w": "A steeper line on a v-t graph means the object is going faster.",
+    "r": "A steeper v-t line means a **greater acceleration** (velocity changing faster)."
+   },
+   {
+    "w": "Using grid squares as the answer when counting area.",
+    "r": "Multiply the number of squares by the **distance one square represents** and give the unit (m)."
+   },
+   {
+    "w": "Light gates are used because they are more accurate (with no reason).",
+    "r": "Light gates **remove human reaction time** errors and record time to a much higher resolution."
+   }
+  ],
+  "exam": [
+   {
+    "q": "State what the gradient of a distance-time graph represents.",
+    "marks": 1,
+    "model": [
+     "Speed"
+    ],
+    "tip": "One word answer - do not say velocity unless the graph is displacement-time."
+   },
+   {
+    "q": "State what the area under a velocity-time graph represents.",
+    "marks": 1,
+    "model": [
+     "Distance travelled (displacement)"
+    ],
+    "tip": "Do not confuse with the gradient."
+   },
+   {
+    "q": "Describe the motion shown by a horizontal line on a velocity-time graph above the time axis.",
+    "marks": 1,
+    "model": [
+     "Constant velocity (zero acceleration)"
+    ],
+    "tip": "A classic trap - it is not stationary."
+   },
+   {
+    "q": "A distance-time graph shows a cyclist travel 150 m in 30 s at a steady rate. Calculate the cyclist's speed.",
+    "marks": 2,
+    "model": [
+     "speed = gradient = 150 / 30",
+     "= 5 m/s"
+    ],
+    "tip": "Always include units."
+   },
+   {
+    "q": "A car's velocity increases uniformly from 4 m/s to 24 m/s in 5 s. Calculate its acceleration.",
+    "marks": 2,
+    "model": [
+     "a = (24 - 4) / 5",
+     "= 4 m/s2"
+    ],
+    "tip": "Change in velocity, not final velocity, goes on top."
+   },
+   {
+    "q": "A train accelerates uniformly from rest to 20 m/s in 40 s. Calculate the distance travelled in this time.",
+    "marks": 3,
+    "model": [
+     "distance = area under v-t graph (triangle)",
+     "= 1/2 x 40 x 20",
+     "= 400 m"
+    ],
+    "tip": "Sketch the v-t graph if it is not given - it makes the area obvious."
+   },
+   {
+    "q": "Explain how you would find the speed of an object at t = 4 s from a curved distance-time graph.",
+    "marks": 3,
+    "model": [
+     "Draw a tangent to the curve at t = 4 s",
+     "Draw a large triangle on the tangent and find change in distance and change in time",
+     "Speed = change in distance / change in time (gradient of tangent)"
+    ],
+    "tip": "Higher tier - the word tangent is essential."
+   },
+   {
+    "q": "Sketch a distance-time graph for an object that travels at constant speed, stops, and then travels at a greater constant speed.",
+    "marks": 3,
+    "model": [
+     "Straight sloping line from origin",
+     "Horizontal section",
+     "Steeper straight section"
+    ],
+    "tip": "Label axes even on a sketch."
+   },
+   {
+    "q": "A velocity-time graph shows a runner accelerating from 0 to 8 m/s in 4 s, then running at 8 m/s for 10 s. Calculate the total distance.",
+    "marks": 4,
+    "model": [
+     "Triangle area = 1/2 x 4 x 8 = 16 m",
+     "Rectangle area = 10 x 8 = 80 m",
+     "Total = 16 + 80",
+     "= 96 m"
+    ],
+    "tip": "Show each area separately for method marks."
+   },
+   {
+    "q": "Describe how a student could use light gates to investigate how the acceleration of a trolley down a ramp depends on the height of the ramp. Explain how the data would be processed.",
+    "marks": 6,
+    "model": [
+     "Set ramp at a measured height; place two light gates a measured distance apart on the ramp",
+     "Attach a card of known length to the trolley and release from rest at the same point each time",
+     "Data logger records time card blocks each gate and time between gates",
+     "Speed at each gate = card length / time blocked",
+     "Acceleration = (v - u) / time between gates",
+     "Repeat for each height (at least 5 heights), take means, and plot acceleration against height",
+     "Control variables: same trolley mass, same ramp surface, same release point",
+     "Light gates reduce reaction-time errors compared with stopwatches"
+    ],
+    "tip": "Level of response: give a logical method, the calculation, and control variables to reach the top band."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A bus accelerates uniformly from rest to 15 m/s in 10 s, travels at 15 m/s for 30 s, then decelerates uniformly to rest in 5 s. Find (a) the initial acceleration, (b) the deceleration, (c) the total distance.",
+    "steps": [
+     "(a) a = change in velocity / time = (15 - 0) / 10 = 1.5 m/s2",
+     "(b) deceleration = (15 - 0) / 5 = 3 m/s2 (acceleration = -3 m/s2)",
+     "(c) Area 1 (triangle) = 1/2 x 10 x 15 = 75 m",
+     "Area 2 (rectangle) = 30 x 15 = 450 m",
+     "Area 3 (triangle) = 1/2 x 5 x 15 = 37.5 m",
+     "Total = 75 + 450 + 37.5 = 562.5 m"
+    ],
+    "ans": "(a) 1.5 m/s2 (b) 3 m/s2 (c) 562.5 m (about 560 m)"
+   },
+   {
+    "q": "On a curved distance-time graph, a tangent drawn at t = 6 s passes through (2 s, 0 m) and (10 s, 96 m). Find the instantaneous speed at t = 6 s.",
+    "steps": [
+     "Gradient of tangent = change in distance / change in time",
+     "= (96 - 0) / (10 - 2)",
+     "= 96 / 8 = 12"
+    ],
+    "ans": "12 m/s at t = 6 s"
+   },
+   {
+    "q": "Under a curved velocity-time graph a student counts 42 squares. Each square is 2 m/s high and 0.5 s wide. Estimate the distance travelled.",
+    "steps": [
+     "Value of one square = 2 m/s x 0.5 s = 1 m",
+     "Distance = 42 x 1 m"
+    ],
+    "ans": "About 42 m"
+   }
+  ],
+  "svg": [],
+  "pid": "phy_ocra.3.2",
+  "sid": "phy_ocra",
+  "v": 2,
+  "src": "pre",
+  "by": "claude/claude-opus-5-5",
+  "ts": "2026-11-27T01:28:33.324Z"
+ },
+ "phy_ocra.3.3": {
+  "summary": "Real objects rarely move at a perfectly steady speed, so we use **average speed = total distance / total time** to describe a whole journey. For motion with **uniform (constant) acceleration**, two key equations link the quantities: **acceleration = change in velocity / time**, a = (v - u) / t, and **v2 - u2 = 2as**, which connects velocities and distance without needing time. Grade 9 answers choose the right equation, rearrange it confidently and keep units consistent.",
+  "core": [
+   {
+    "h": "Average speed",
+    "p": "Most journeys involve speeding up, slowing down and stopping, so the speed changes all the time. **Average speed** describes the whole journey as if it were done at one steady speed.",
+    "bullets": [
+     "**Average speed = total distance travelled / total time taken**.",
+     "In symbols: **v = s / t** (OCR also writes distance = speed x time, s = vt).",
+     "Include **all** the time, including any time spent stopped.",
+     "Average speed is **not** the mean of the speeds for each section unless each section takes the same time.",
+     "Units: m/s (also km/h, convert if needed: divide km/h by 3.6 to get m/s).",
+     "The instantaneous speed can be much higher or lower than the average speed."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Average speed",
+      "p": "**Average speed = total distance travelled / total time taken.**"
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Distance-time graph of a real journey (blue) with changing speed. The dashed orange straight line from start to finish has a gradient equal to the average speed for the whole journey.",
+      "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='400' height='240' fill='#ffffff'/><line x1='50' y1='200' x2='380' y2='200' stroke='#1b2540' stroke-width='2'/><line x1='50' y1='200' x2='50' y2='20' stroke='#1b2540' stroke-width='2'/><polyline points='50,200 110,150 170,150 250,70 340,50' fill='none' stroke='#2563eb' stroke-width='3'/><line x1='50' y1='200' x2='340' y2='50' stroke='#ea580c' stroke-width='2' stroke-dasharray='6 4'/><circle cx='340' cy='50' r='4' fill='#1b2540'/><text x='215' y='228' font-size='12' fill='#1b2540'>time / s</text><text x='12' y='15' font-size='12' fill='#1b2540'>distance / m</text><text x='120' y='140' font-size='11' fill='#2563eb'>stopped</text><text x='175' y='175' font-size='11' fill='#ea580c'>average speed line</text><text x='300' y='40' font-size='11' fill='#1b2540'>finish</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Typical everyday speeds",
+    "p": "Exam questions often expect you to estimate speeds, so learn some typical values. These help you judge whether an answer is sensible.",
+    "bullets": [
+     "Walking: about **1.5 m/s**.",
+     "Running: about **3 m/s**.",
+     "Cycling: about **6 m/s**.",
+     "Car in town: about **13 m/s** (30 mph); on a motorway about **31 m/s** (70 mph).",
+     "Train: up to about **50 m/s**.",
+     "Speed of sound in air: about **330 m/s**."
+    ],
+    "table": {
+     "head": [
+      "Moving thing",
+      "Typical speed (m/s)"
+     ],
+     "rows": [
+      [
+       "Walking",
+       "1.5"
+      ],
+      [
+       "Running",
+       "3"
+      ],
+      [
+       "Cycling",
+       "6"
+      ],
+      [
+       "Car (town / motorway)",
+       "13 / 31"
+      ],
+      [
+       "Sound in air",
+       "330"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Uniform motion: s = vt",
+    "p": "When an object moves at a **constant speed** in a straight line, the distance it covers rises steadily with time, so distance = speed x time exactly.",
+    "bullets": [
+     "**Distance travelled = speed x time**, s = v t.",
+     "Rearrange: v = s / t and t = s / v.",
+     "Use the formula triangle or algebra - both are accepted.",
+     "Check units: m, m/s and s go together; km, km/h and h go together.",
+     "For non-uniform motion this equation gives the **average** speed."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Convert first",
+      "p": "Convert minutes to seconds (x 60) and km to m (x 1000) **before** substituting."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Acceleration equation: a = (v - u) / t",
+    "p": "Acceleration tells you how quickly velocity changes. If velocity changes by 10 m/s every 2 s, the acceleration is 5 m/s every second, written 5 m/s2.",
+    "bullets": [
+     "**Acceleration = change in velocity / time taken**.",
+     "**a = (v - u) / t**, where u = initial velocity, v = final velocity.",
+     "Units: **m/s2**.",
+     "Rearranged: **v = u + at** and **t = (v - u) / a**.",
+     "If the object slows down, v is smaller than u so a is **negative** (deceleration).",
+     "Starting **from rest** means u = 0."
+    ],
+    "table": {
+     "head": [
+      "Symbol",
+      "Quantity",
+      "Unit"
+     ],
+     "rows": [
+      [
+       "u",
+       "initial velocity",
+       "m/s"
+      ],
+      [
+       "v",
+       "final velocity",
+       "m/s"
+      ],
+      [
+       "a",
+       "acceleration",
+       "m/s2"
+      ],
+      [
+       "t",
+       "time",
+       "s"
+      ],
+      [
+       "s",
+       "distance (displacement)",
+       "m"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Acceleration",
+      "p": "**Acceleration (m/s2) = change in velocity (m/s) / time (s)**."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Uniform acceleration on a velocity-time graph: velocity rises from u to v in time t. The gradient (v - u) / t is the acceleration a, and the shaded area is the distance s.",
+      "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='400' height='240' fill='#ffffff'/><polygon points='60,150 320,50 320,200 60,200' fill='#bbf7d0' stroke='#15803d' stroke-width='1'/><line x1='60' y1='150' x2='320' y2='50' stroke='#1b2540' stroke-width='3'/><line x1='60' y1='200' x2='380' y2='200' stroke='#1b2540' stroke-width='2'/><line x1='60' y1='200' x2='60' y2='20' stroke='#1b2540' stroke-width='2'/><line x1='60' y1='50' x2='320' y2='50' stroke='#94a3b8' stroke-width='1' stroke-dasharray='4 4'/><text x='40' y='154' font-size='13' fill='#1d4ed8'>u</text><text x='40' y='54' font-size='13' fill='#dc2626'>v</text><text x='315' y='218' font-size='13' fill='#1b2540'>t</text><text x='150' y='232' font-size='12' fill='#1b2540'>time / s</text><text x='12' y='14' font-size='12' fill='#1b2540'>velocity / m/s</text><text x='150' y='95' font-size='12' fill='#1b2540'>gradient = a</text><text x='160' y='175' font-size='12' fill='#15803d'>area = s</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "The equation v2 - u2 = 2as",
+    "p": "Sometimes you know the distance but not the time, for example a car braking over 40 m. The equation **v2 - u2 = 2as** links velocities, acceleration and distance with **no time** in it.",
+    "bullets": [
+     "**(final velocity)2 - (initial velocity)2 = 2 x acceleration x distance**.",
+     "Only valid for **uniform (constant) acceleration**.",
+     "Rearrange for v: **v = square root of (u2 + 2as)**.",
+     "Rearrange for a: **a = (v2 - u2) / 2s**.",
+     "Rearrange for s: **s = (v2 - u2) / 2a**.",
+     "For an object that stops, v = 0, so 0 - u2 = 2as and a is negative.",
+     "This equation is given on the equation sheet, but you must be able to select and apply it."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Square first, then subtract",
+      "p": "v2 - u2 is **not** (v - u)2. Square each velocity separately, then subtract."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Choosing the right equation",
+    "p": "The skill examiners test most is picking which equation fits. List what you know and what you want, then pick the equation that contains exactly those quantities.",
+    "bullets": [
+     "Write down **u, v, a, s, t** and fill in the known values.",
+     "If **t** is known or wanted and s is not involved: use **a = (v - u) / t**.",
+     "If **s** is known or wanted and t is not involved: use **v2 - u2 = 2as**.",
+     "Constant speed (a = 0): use **s = vt**.",
+     "Look for hidden data: **from rest** means u = 0; **comes to a stop** means v = 0.",
+     "Free fall near Earth: **a = g = 9.8 m/s2** (often 10 m/s2 in questions)."
+    ],
+    "table": {
+     "head": [
+      "Known / wanted",
+      "Missing",
+      "Use"
+     ],
+     "rows": [
+      [
+       "u, v, a, t",
+       "s",
+       "a = (v - u) / t"
+      ],
+      [
+       "u, v, a, s",
+       "t",
+       "v2 - u2 = 2as"
+      ],
+      [
+       "s, v, t (constant speed)",
+       "a = 0",
+       "s = vt"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Write the list",
+      "p": "Writing out u = , v = , a = , s = , t = takes seconds and makes the right equation obvious."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Decision chart for choosing an equation of motion: check whether time or distance is involved, then select the equation that does not need the missing quantity.",
+      "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><defs><marker id='ar' markerWidth='8' markerHeight='8' refX='6' refY='4' orient='auto'><path d='M0,0 L8,4 L0,8 z' fill='#1b2540'/></marker></defs><rect x='0' y='0' width='400' height='240' fill='#ffffff'/><rect x='120' y='15' width='160' height='40' rx='8' fill='#e9d5ff' stroke='#6b21a8' stroke-width='2'/><text x='148' y='40' font-size='12' fill='#1b2540'>Is speed constant?</text><line x1='170' y1='55' x2='95' y2='100' stroke='#1b2540' stroke-width='2' marker-end='url(#ar)'/><line x1='230' y1='55' x2='300' y2='100' stroke='#1b2540' stroke-width='2' marker-end='url(#ar)'/><text x='105' y='78' font-size='11' fill='#15803d'>yes</text><text x='275' y='78' font-size='11' fill='#b91c1c'>no</text><rect x='20' y='105' width='140' height='40' rx='8' fill='#bbf7d0' stroke='#15803d' stroke-width='2'/><text x='60' y='130' font-size='13' fill='#1b2540'>s = v t</text><rect x='230' y='105' width='150' height='40' rx='8' fill='#fde68a' stroke='#b45309' stroke-width='2'/><text x='250' y='130' font-size='12' fill='#1b2540'>Time involved?</text><line x1='270' y1='145' x2='220' y2='180' stroke='#1b2540' stroke-width='2' marker-end='url(#ar)'/><line x1='340' y1='145' x2='345' y2='180' stroke='#1b2540' stroke-width='2' marker-end='url(#ar)'/><text x='225' y='165' font-size='11' fill='#15803d'>yes</text><text x='350' y='165' font-size='11' fill='#b91c1c'>no</text><rect x='150' y='185' width='120' height='40' rx='8' fill='#dbeafe' stroke='#1d4ed8' stroke-width='2'/><text x='162' y='210' font-size='12' fill='#1b2540'>a = (v - u) / t</text><rect x='285' y='185' width='105' height='40' rx='8' fill='#fecaca' stroke='#b91c1c' stroke-width='2'/><text x='295' y='210' font-size='12' fill='#1b2540'>v2 - u2 = 2as</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Rearranging the equations",
+    "p": "Higher-tier questions usually make you rearrange before substituting. Do the algebra in symbols first, then put in numbers - it is clearer and earns method marks.",
+    "bullets": [
+     "From a = (v - u) / t: multiply by t to get **at = v - u**, then **v = u + at**.",
+     "From a = (v - u) / t: **t = (v - u) / a**.",
+     "From v2 - u2 = 2as: **v2 = u2 + 2as**, then take the square root.",
+     "From v2 - u2 = 2as: **s = (v2 - u2) / (2a)**.",
+     "Remember the **square root** at the end when finding a velocity.",
+     "Keep negative signs: a braking acceleration is negative."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Units and conversions",
+    "p": "The equations only work if all values are in matching SI units. Many marks are lost by leaving speeds in km/h or times in minutes.",
+    "bullets": [
+     "Distance in **metres (m)**, time in **seconds (s)**, velocity in **m/s**, acceleration in **m/s2**.",
+     "**km/h to m/s**: divide by 3.6 (e.g. 72 km/h = 20 m/s).",
+     "**m/s to km/h**: multiply by 3.6.",
+     "1 km = 1000 m; 1 minute = 60 s; 1 hour = 3600 s.",
+     "Give answers to a sensible number of **significant figures** (usually match the data, 2 or 3 s.f.)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Hidden unit change",
+      "p": "If a question gives a time in minutes, convert to seconds before using a = (v - u) / t."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Free fall and acceleration due to gravity",
+    "p": "An object falling freely near the Earth's surface (ignoring air resistance) has a constant acceleration, so the equations of uniform acceleration apply.",
+    "bullets": [
+     "Acceleration of free fall **g is about 9.8 m/s2** near the Earth's surface.",
+     "Dropped from rest: u = 0, a = 9.8 m/s2.",
+     "Using v2 = 2gs gives the speed after falling a height s.",
+     "With air resistance the acceleration decreases, so the equations no longer apply exactly."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "g",
+      "p": "Near the Earth's surface, **g = 9.8 m/s2** (approximately 10 m/s2)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Braking and stopping problems",
+    "p": "A very common application is a vehicle braking to rest. Here v = 0 and the acceleration is negative.",
+    "bullets": [
+     "Use **0 - u2 = 2as** to find braking distance or deceleration.",
+     "Doubling the speed makes the braking distance **four times** as large (s is proportional to u2) for the same deceleration.",
+     "This explains why speed limits matter so much for safety.",
+     "Check answers: a braking car typically decelerates at a few m/s2."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Square relationship",
+      "p": "For a fixed deceleration, **braking distance is proportional to (speed)2**."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Checking your answer makes sense",
+    "p": "Grade 9 students sanity-check results against typical values and the direction of motion.",
+    "bullets": [
+     "A person running at 30 m/s is unrealistic - recheck units.",
+     "If an object slows down, the acceleration must come out **negative**.",
+     "The final velocity after acceleration from rest must be **positive** and larger than zero.",
+     "Average speed must lie between the lowest and highest instantaneous speeds."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The bank account of velocity",
+   "p": "Think of velocity as money in a bank account and acceleration as a steady wage paid every second: after t seconds you have your starting money u plus a x t, so v = u + at. Average speed is like your average daily spending over a holiday - you divide the total by all the days, including the days you spent nothing. The analogy breaks down because velocity has a direction, and v2 - u2 = 2as has no simple money equivalent; it comes from the area under the velocity-time graph."
+  },
+  "terms": [
+   {
+    "t": "Average speed",
+    "d": "Total distance travelled divided by total time taken."
+   },
+   {
+    "t": "Instantaneous speed",
+    "d": "The speed at one particular moment in time."
+   },
+   {
+    "t": "Uniform motion",
+    "d": "Motion at a constant speed in a straight line (zero acceleration)."
+   },
+   {
+    "t": "Uniform acceleration",
+    "d": "Acceleration that stays constant in size and direction."
+   },
+   {
+    "t": "Acceleration",
+    "d": "Rate of change of velocity: change in velocity divided by time taken, in m/s2."
+   },
+   {
+    "t": "Deceleration",
+    "d": "Negative acceleration, when velocity decreases."
+   },
+   {
+    "t": "Initial velocity (u)",
+    "d": "The velocity at the start of the time period being considered."
+   },
+   {
+    "t": "Final velocity (v)",
+    "d": "The velocity at the end of the time period being considered."
+   },
+   {
+    "t": "Displacement (s)",
+    "d": "Distance moved in a straight line in a stated direction; a vector."
+   },
+   {
+    "t": "From rest",
+    "d": "Starting with zero velocity, so u = 0."
+   },
+   {
+    "t": "Free fall",
+    "d": "Motion under gravity alone, with acceleration g of about 9.8 m/s2 near the Earth's surface."
+   },
+   {
+    "t": "SI units",
+    "d": "Standard units used in equations: metres, seconds, m/s and m/s2 for motion."
+   },
+   {
+    "t": "Braking distance",
+    "d": "The distance a vehicle travels while decelerating under braking to a stop."
+   },
+   {
+    "t": "Rearranging",
+    "d": "Changing the subject of an equation using algebra before substituting values."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Average speed = (speed 1 + speed 2) / 2.",
+    "r": "Average speed = **total distance / total time**."
+   },
+   {
+    "w": "Leaving out the time the object was stopped when calculating average speed.",
+    "r": "Use the **total time**, including stops."
+   },
+   {
+    "w": "a = v / t when the object did not start from rest.",
+    "r": "a = **(v - u) / t** using the change in velocity."
+   },
+   {
+    "w": "Writing v2 - u2 as (v - u)2.",
+    "r": "Square **each** velocity separately, then subtract."
+   },
+   {
+    "w": "Forgetting to square root when finding v from v2 = u2 + 2as.",
+    "r": "**Take the square root** of u2 + 2as to get v."
+   },
+   {
+    "w": "Substituting time in minutes or speed in km/h.",
+    "r": "Convert to **s and m/s** first."
+   },
+   {
+    "w": "Giving a positive acceleration for a car that is braking.",
+    "r": "A slowing object has a **negative acceleration** (or a positive deceleration)."
+   },
+   {
+    "w": "Using v2 - u2 = 2as for motion with changing acceleration.",
+    "r": "The equations apply only to **uniform acceleration**."
+   },
+   {
+    "w": "Acceleration unit written as m/s.",
+    "r": "Acceleration unit is **m/s2**."
+   }
+  ],
+  "exam": [
+   {
+    "q": "State the equation that links average speed, distance and time.",
+    "marks": 1,
+    "model": [
+     "average speed = total distance / total time"
+    ],
+    "tip": "Word equations are accepted; symbols must be defined."
+   },
+   {
+    "q": "State the unit of acceleration.",
+    "marks": 1,
+    "model": [
+     "m/s2 (metres per second squared)"
+    ],
+    "tip": "m/s is speed, not acceleration."
+   },
+   {
+    "q": "A student walks 1200 m to school in 800 s. Calculate her average speed.",
+    "marks": 2,
+    "model": [
+     "speed = 1200 / 800",
+     "= 1.5 m/s"
+    ],
+    "tip": "Compare with typical walking speed to check."
+   },
+   {
+    "q": "A cyclist travels 3 km in 10 minutes. Calculate the average speed in m/s.",
+    "marks": 3,
+    "model": [
+     "3 km = 3000 m and 10 min = 600 s",
+     "speed = 3000 / 600",
+     "= 5 m/s"
+    ],
+    "tip": "The conversion is worth a mark on its own."
+   },
+   {
+    "q": "A car accelerates from 10 m/s to 30 m/s in 8 s. Calculate its acceleration.",
+    "marks": 2,
+    "model": [
+     "a = (30 - 10) / 8",
+     "= 2.5 m/s2"
+    ],
+    "tip": "Always use the change in velocity."
+   },
+   {
+    "q": "A sprinter accelerates from rest at 4 m/s2 for 2.5 s. Calculate her final velocity.",
+    "marks": 3,
+    "model": [
+     "v = u + at",
+     "v = 0 + 4 x 2.5",
+     "= 10 m/s"
+    ],
+    "tip": "From rest gives u = 0."
+   },
+   {
+    "q": "A stone is dropped from rest and falls 20 m. Calculate its speed when it hits the ground. Take g = 9.8 m/s2 and ignore air resistance.",
+    "marks": 3,
+    "model": [
+     "v2 - 0 = 2 x 9.8 x 20",
+     "v2 = 392",
+     "v = 19.8 m/s (about 20 m/s)"
+    ],
+    "tip": "Remember the square root."
+   },
+   {
+    "q": "A car travelling at 25 m/s brakes uniformly and stops in 50 m. Calculate the deceleration.",
+    "marks": 3,
+    "model": [
+     "0 - 25 squared = 2 x a x 50",
+     "a = -625 / 100",
+     "deceleration = 6.25 m/s2"
+    ],
+    "tip": "State deceleration as a positive number, or acceleration as negative."
+   },
+   {
+    "q": "Explain why doubling a car's speed more than doubles its braking distance, assuming the same braking deceleration.",
+    "marks": 3,
+    "model": [
+     "Using v2 - u2 = 2as with v = 0, s = u2 / 2a (magnitude)",
+     "Braking distance is proportional to the square of initial speed",
+     "So doubling speed makes braking distance four times greater"
+    ],
+    "tip": "Link the equation to the proportionality explicitly."
+   },
+   {
+    "q": "A train accelerates uniformly from 12 m/s to 28 m/s over a distance of 400 m. Calculate (a) the acceleration and (b) the time taken. Explain your choice of equations.",
+    "marks": 6,
+    "model": [
+     "Time not known, so use v2 - u2 = 2as",
+     "28 squared - 12 squared = 784 - 144 = 640",
+     "a = 640 / (2 x 400) = 0.8 m/s2",
+     "Now a known, so use a = (v - u) / t rearranged to t = (v - u) / a",
+     "t = (28 - 12) / 0.8",
+     "t = 20 s"
+    ],
+    "tip": "Two-step problems: find a first, then use it."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A bus travels 2.4 km in 4 minutes, stops for 2 minutes, then travels 3.6 km in 6 minutes. Calculate its average speed for the whole journey in m/s.",
+    "steps": [
+     "Total distance = 2.4 + 3.6 = 6.0 km = 6000 m",
+     "Total time = 4 + 2 + 6 = 12 min = 720 s",
+     "Average speed = 6000 / 720"
+    ],
+    "ans": "8.3 m/s (3 s.f.: 8.33 m/s)"
+   },
+   {
+    "q": "An aircraft starts from rest and accelerates uniformly at 2.5 m/s2 along a runway. It needs a speed of 70 m/s to take off. Calculate the minimum runway length and the time taken.",
+    "steps": [
+     "u = 0, v = 70 m/s, a = 2.5 m/s2, s = ?",
+     "v2 - u2 = 2as, so s = (70 squared - 0) / (2 x 2.5)",
+     "s = 4900 / 5 = 980 m",
+     "t = (v - u) / a = (70 - 0) / 2.5 = 28 s"
+    ],
+    "ans": "Runway at least 980 m; time 28 s"
+   },
+   {
+    "q": "A car moving at 72 km/h brakes with a deceleration of 5 m/s2. Find its braking distance.",
+    "steps": [
+     "Convert: 72 / 3.6 = 20 m/s",
+     "u = 20 m/s, v = 0, a = -5 m/s2",
+     "0 - 20 squared = 2 x (-5) x s",
+     "-400 = -10 s, so s = 40 m"
+    ],
+    "ans": "40 m"
+   }
+  ],
+  "svg": [],
+  "pid": "phy_ocra.3.3",
+  "sid": "phy_ocra",
+  "v": 2,
+  "src": "pre",
+  "by": "claude/claude-opus-5-5",
+  "ts": "2026-11-27T01:28:33.335Z"
+ }
+}

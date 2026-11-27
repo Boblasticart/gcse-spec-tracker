@@ -1,0 +1,3199 @@
+{
+ "phy_ocra.7.0": {
+  "summary": "Circuits are drawn with **standard circuit symbols** so anyone can read them, and components can be joined in two basic ways. In a **series circuit** components are in **one single loop**, so the **current is the same everywhere** and the **potential difference of the supply is shared** between components. In a **parallel circuit** components are on **separate branches**, so each branch has the **same potential difference as the supply** and the **branch currents add up** to the total current. PAG P7 asks you to build both kinds of circuit and use ammeters and voltmeters to show these rules.",
+  "core": [
+   {
+    "h": "Why we use circuit symbols",
+    "p": "A **circuit diagram** uses agreed **circuit symbols** joined by straight lines (wires) so that a circuit can be drawn clearly and understood by anyone. You must be able to recognise, name and draw the standard symbols.",
+    "bullets": [
+     "Draw wires as straight lines with a ruler; corners are right angles.",
+     "A dot shows a **junction** where wires join.",
+     "Do not leave gaps in wires unless you mean an open switch.",
+     "The symbol shows what the component does, not what it looks like."
+    ],
+    "table": {
+     "head": [
+      "Component",
+      "What the symbol looks like",
+      "What it does"
+     ],
+     "rows": [
+      [
+       "Cell",
+       "Long thin line (+) and short thick line (-)",
+       "Provides a potential difference"
+      ],
+      [
+       "Battery",
+       "Two or more cells joined together",
+       "Provides a larger potential difference"
+      ],
+      [
+       "Switch (open / closed)",
+       "Gap with hinged line / line closed",
+       "Breaks or completes the circuit"
+      ],
+      [
+       "Lamp",
+       "Circle with a cross",
+       "Transfers energy as light"
+      ],
+      [
+       "Fixed resistor",
+       "Rectangle",
+       "Limits the current"
+      ],
+      [
+       "Variable resistor",
+       "Rectangle with a diagonal arrow",
+       "Resistance can be changed to control current"
+      ],
+      [
+       "Fuse",
+       "Rectangle with a line through it",
+       "Melts to break the circuit if current is too high"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Meters and semiconductor symbols",
+    "p": "Meters measure current and potential difference. Semiconductor components such as diodes, LEDs, LDRs and thermistors have their own symbols.",
+    "bullets": [
+     "**Ammeter**: circle with A; connected in series.",
+     "**Voltmeter**: circle with V; connected in parallel across a component.",
+     "**Diode**: triangle pointing at a bar; allows current in one direction only (the direction of the triangle).",
+     "**LED**: diode symbol in a circle with two arrows pointing outwards (light emitted).",
+     "**LDR**: resistor in a circle with two arrows pointing inwards (light falls on it).",
+     "**Thermistor**: resistor with a bent line through it; resistance changes with temperature."
+    ],
+    "table": {
+     "head": [
+      "Component",
+      "Symbol feature",
+      "Connection or behaviour"
+     ],
+     "rows": [
+      [
+       "Ammeter",
+       "Circle with A",
+       "In series"
+      ],
+      [
+       "Voltmeter",
+       "Circle with V",
+       "In parallel"
+      ],
+      [
+       "Diode",
+       "Triangle and bar",
+       "Current in one direction only"
+      ],
+      [
+       "LED",
+       "Diode with arrows out",
+       "Emits light when current flows forwards"
+      ],
+      [
+       "LDR",
+       "Resistor with arrows in",
+       "Resistance falls as light gets brighter"
+      ],
+      [
+       "Thermistor",
+       "Resistor with bent line",
+       "Resistance falls as temperature rises (NTC)"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam tip",
+      "p": "LED arrows point OUT (it gives out light); LDR arrows point IN (light comes in). This is a favourite 1 mark question."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Series circuits",
+    "p": "In a **series circuit** the components are connected **one after another in a single loop**. There is only one path for the charge, so every coulomb passes through every component.",
+    "bullets": [
+     "The **current is the same at every point** in the loop.",
+     "The **potential difference of the supply is shared** between the components: V total = V1 + V2 + ...",
+     "The **total resistance is the sum** of the individual resistances: R total = R1 + R2 + ...",
+     "Adding more lamps in series makes each lamp **dimmer** because the total resistance increases and the current falls.",
+     "If one component breaks or is removed, the circuit is broken and **everything goes off**."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Series circuit",
+      "p": "A circuit where components are connected in a single loop, so there is only one path for the current."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Why current is the same in series",
+    "p": "Charge is not used up by components. In a single loop all the charge that flows through the first component must also flow through the next, so the rate of flow of charge, the current, is the same everywhere.",
+    "bullets": [
+     "Ammeters placed anywhere in the loop give the same reading.",
+     "Components transfer energy from the charge, not charge itself.",
+     "The order of components in a series loop does not change the current."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Common trap",
+      "p": "Current is not used up as it passes through a lamp. It is energy that is transferred."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Why potential difference is shared in series",
+    "p": "The cell gives each coulomb of charge a certain amount of energy. As the charge travels round a series loop, it transfers some of that energy in each component. The total energy transferred per coulomb in all the components equals the energy given by the cell.",
+    "bullets": [
+     "Supply pd = sum of the pds across the components.",
+     "The component with the **bigger resistance gets the bigger share** of the pd.",
+     "Identical components in series share the pd equally.",
+     "This is why two identical lamps in series on a 6 V supply each have 3 V across them."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Must know",
+      "p": "Series: same current everywhere; supply pd is shared; total resistance adds up."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Parallel circuits",
+    "p": "In a **parallel circuit** the components are connected on **separate branches**, each connected directly across the supply. Charge splits at a junction, passes through one branch, and rejoins at the next junction.",
+    "bullets": [
+     "The **potential difference across each branch is the same** as the supply pd.",
+     "The **total current is the sum of the branch currents**: I total = I1 + I2 + ...",
+     "The current **splits at junctions** and **rejoins** afterwards.",
+     "The branch with the **smaller resistance carries the larger current**.",
+     "If one branch breaks, the **other branches keep working**."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Parallel circuit",
+      "p": "A circuit where components are connected on separate branches, so the current has more than one path."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Why parallel circuits behave this way",
+    "p": "Each branch is connected directly across the cell, so each coulomb going through any branch receives and transfers the full energy from the cell: the pd across every branch equals the supply pd. Charge is conserved at junctions, so the current in equals the current out.",
+    "bullets": [
+     "Adding another branch gives the charge **another path**, so the total current from the supply **increases**.",
+     "So the **total resistance of a parallel circuit is less than the resistance of the smallest branch**.",
+     "Lamps added in parallel stay **equally bright** because each still has the full supply pd.",
+     "But the cell has to supply more current, so it runs down faster."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Common trap",
+      "p": "Adding a resistor in parallel decreases the total resistance. Students often say it increases it."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Comparing series and parallel",
+    "p": "The two arrangements follow opposite rules for current and potential difference. Learning the comparison table is the quickest route to full marks.",
+    "bullets": [
+     "Series: one path; parallel: more than one path.",
+     "Series: current same; parallel: current splits.",
+     "Series: pd shared; parallel: pd the same across each branch.",
+     "Series: resistances add; parallel: total is less than the smallest branch."
+    ],
+    "table": {
+     "head": [
+      "Property",
+      "Series",
+      "Parallel"
+     ],
+     "rows": [
+      [
+       "Paths for current",
+       "One",
+       "More than one"
+      ],
+      [
+       "Current",
+       "Same at every point",
+       "Splits; branch currents add to total"
+      ],
+      [
+       "Potential difference",
+       "Shared between components",
+       "Same across each branch as supply"
+      ],
+      [
+       "Total resistance",
+       "Sum of resistances",
+       "Less than smallest branch resistance"
+      ],
+      [
+       "Adding a lamp",
+       "All lamps dimmer",
+       "Lamps stay same brightness"
+      ],
+      [
+       "One lamp breaks",
+       "All go out",
+       "Others stay on"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Household and everyday uses",
+    "p": "Most real circuits use **parallel** connections so devices can be switched independently and each gets the full supply pd. Series connections are used where one control must affect everything.",
+    "bullets": [
+     "House lights and sockets are wired in **parallel** so each gets 230 V and can be switched on or off separately.",
+     "A **switch or fuse** is placed in **series** with the device it controls or protects.",
+     "Cells are often joined in series to give a bigger pd: the pds add.",
+     "Old fairy lights were in series: one broken bulb made the whole string go out."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam tip",
+      "p": "For why homes use parallel circuits, give two reasons: each appliance gets the full pd, and appliances can be switched independently and keep working if one fails."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "PAG P7: investigating series and parallel circuits",
+    "p": "In this practical you build series and parallel circuits with lamps or resistors and use meters to test the rules for current and potential difference.",
+    "bullets": [
+     "Build a series circuit with a cell or low voltage power supply, a switch and two lamps.",
+     "Place an **ammeter in series** at different points (before, between and after the lamps) and record the readings.",
+     "Connect a **voltmeter in parallel** across each lamp in turn, then across the supply.",
+     "Repeat with the lamps in parallel: measure current in the main wire and in each branch, and pd across each branch.",
+     "Compare: series currents equal and pds add to supply; parallel branch currents add to total and pds equal.",
+     "Switch off between readings so lamps and wires do not get hot, and check meters read zero first."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Safety and accuracy",
+      "p": "Use a low voltage supply, switch off between readings to avoid heating (which changes resistance), and repeat readings to check they are consistent."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Reading and drawing circuit diagrams",
+    "p": "Exam questions often ask you to draw a circuit, complete one, or say which arrangement is shown. Trace the path of the current with your finger to decide.",
+    "bullets": [
+     "If there is only one route from + to - through every component, they are in series.",
+     "If you can go from one junction to another by two different routes, those routes are parallel.",
+     "Always draw ammeters in the wire, not across a component.",
+     "Always draw voltmeters with their own two wires connected across the component."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Common trap",
+      "p": "A voltmeter drawn in series in the main loop is a common error and loses the mark."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Roads and toll booths",
+   "p": "Think of charge as cars and the cell as a hill that gives each car energy. A series circuit is a single road with toll booths one after another: every car goes through every booth (same current), and the total toll paid is shared between the booths (pd shared). A parallel circuit is a road that splits into separate lanes, each with one booth: cars divide between lanes (current splits) but each car pays the whole toll at one booth (same pd across each branch). More lanes let more cars through overall, like lower total resistance. The analogy breaks down because cars can stop, overtake and leave the road, whereas charge flows continuously, is never used up and needs a complete loop."
+  },
+  "terms": [
+   {
+    "t": "Circuit diagram",
+    "d": "A drawing of a circuit using standard symbols joined by straight lines."
+   },
+   {
+    "t": "Series circuit",
+    "d": "Components connected in a single loop; one path for the current."
+   },
+   {
+    "t": "Parallel circuit",
+    "d": "Components connected on separate branches; more than one path for the current."
+   },
+   {
+    "t": "Junction",
+    "d": "A point where wires meet and the current splits or rejoins."
+   },
+   {
+    "t": "Branch",
+    "d": "One of the separate paths in a parallel circuit."
+   },
+   {
+    "t": "Cell",
+    "d": "A single source of potential difference; long line is positive."
+   },
+   {
+    "t": "Battery",
+    "d": "Two or more cells connected together."
+   },
+   {
+    "t": "Ammeter",
+    "d": "Measures current; connected in series."
+   },
+   {
+    "t": "Voltmeter",
+    "d": "Measures potential difference; connected in parallel across a component."
+   },
+   {
+    "t": "Potential difference",
+    "d": "The energy transferred per unit charge between two points, measured in volts."
+   },
+   {
+    "t": "Resistance",
+    "d": "How much a component opposes the current, measured in ohms."
+   },
+   {
+    "t": "Variable resistor",
+    "d": "A resistor whose resistance can be changed to control the current."
+   },
+   {
+    "t": "Fuse",
+    "d": "A thin wire that melts and breaks the circuit if the current is too large."
+   },
+   {
+    "t": "Diode",
+    "d": "A component that lets current flow in one direction only."
+   },
+   {
+    "t": "LED",
+    "d": "Light emitting diode: a diode that gives out light when current flows forwards."
+   },
+   {
+    "t": "LDR",
+    "d": "Light dependent resistor: resistance decreases as light intensity increases."
+   },
+   {
+    "t": "Thermistor",
+    "d": "A resistor whose resistance decreases as temperature increases."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "In a series circuit the current is shared between the lamps.",
+    "r": "In series the current is the same everywhere; it is the potential difference that is shared."
+   },
+   {
+    "w": "In a parallel circuit the voltage is shared between branches.",
+    "r": "In parallel the pd across each branch is the same as the supply pd; the current is shared."
+   },
+   {
+    "w": "Adding a resistor in parallel increases the total resistance.",
+    "r": "Adding a branch in parallel decreases the total resistance because there are more paths."
+   },
+   {
+    "w": "Voltmeter connected in series with the lamp.",
+    "r": "Voltmeter must be connected in parallel across the component."
+   },
+   {
+    "w": "LDR symbol drawn with arrows pointing outwards.",
+    "r": "LDR arrows point inwards (light falls on it); LED arrows point outwards."
+   },
+   {
+    "w": "Current is used up by each lamp so the ammeter after it reads less.",
+    "r": "Charge is conserved; current is the same before and after a component in series."
+   },
+   {
+    "w": "Homes use parallel circuits because it is cheaper.",
+    "r": "Each appliance gets the full mains pd and can be switched on and off independently."
+   },
+   {
+    "w": "Adding lamps in parallel makes them dimmer.",
+    "r": "Each parallel lamp keeps the full supply pd, so stays the same brightness; total current increases."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Draw the circuit symbol for a light dependent resistor.",
+    "marks": 1,
+    "model": [
+     "Rectangle (resistor) in a circle with two arrows pointing towards it."
+    ],
+    "tip": "Arrows in for LDR."
+   },
+   {
+    "q": "Name the component with a symbol of a triangle pointing at a bar inside a circle with two arrows pointing away.",
+    "marks": 1,
+    "model": [
+     "Light emitting diode (LED)."
+    ],
+    "tip": "Arrows out means light out."
+   },
+   {
+    "q": "State how an ammeter and a voltmeter should be connected in a circuit.",
+    "marks": 2,
+    "model": [
+     "Ammeter in series.",
+     "Voltmeter in parallel (across the component)."
+    ],
+    "tip": "Use the words series and parallel."
+   },
+   {
+    "q": "Two identical lamps are connected in series to a 6.0 V battery. State the pd across each lamp.",
+    "marks": 1,
+    "model": [
+     "3.0 V"
+    ],
+    "tip": "Identical components share the pd equally."
+   },
+   {
+    "q": "In a parallel circuit, the current in one branch is 0.30 A and in the other is 0.45 A. Calculate the current from the cell.",
+    "marks": 2,
+    "model": [
+     "I total = 0.30 + 0.45",
+     "= 0.75 A"
+    ],
+    "tip": "Branch currents add."
+   },
+   {
+    "q": "Explain why the lamps in a house are connected in parallel.",
+    "marks": 2,
+    "model": [
+     "Each lamp gets the full mains pd (so works at full brightness).",
+     "Each can be switched on or off independently and others keep working if one fails."
+    ],
+    "tip": "Two different reasons."
+   },
+   {
+    "q": "A third identical lamp is added in series with two lamps. Explain what happens to the brightness of the lamps.",
+    "marks": 3,
+    "model": [
+     "Total resistance increases.",
+     "So the current decreases.",
+     "Each lamp gets a smaller share of the pd, so all lamps are dimmer."
+    ],
+    "tip": "Chain: resistance, current, pd, brightness."
+   },
+   {
+    "q": "Explain why the total resistance of two resistors in parallel is less than either resistor alone.",
+    "marks": 2,
+    "model": [
+     "There are more paths for the current.",
+     "So for the same pd a larger total current flows, meaning a smaller total resistance."
+    ],
+    "tip": "Link more paths to more current."
+   },
+   {
+    "q": "Compare the current and potential difference in series and parallel circuits.",
+    "marks": 4,
+    "model": [
+     "Series: current is the same at all points.",
+     "Series: supply pd is shared between components.",
+     "Parallel: current splits between branches; branch currents add to total.",
+     "Parallel: pd across each branch equals the supply pd."
+    ],
+    "tip": "Four separate rules, one per mark."
+   },
+   {
+    "q": "Describe how you would use lamps, ammeters and voltmeters to show the rules for current and potential difference in series and parallel circuits (PAG P7).",
+    "marks": 6,
+    "model": [
+     "Set up two lamps in series with a cell and switch.",
+     "Put ammeter in series at different points; readings are the same.",
+     "Put voltmeter in parallel across each lamp and across the supply; lamp pds add up to the supply pd.",
+     "Rebuild with the lamps in parallel.",
+     "Measure current in each branch and main wire; branch currents add up to the main current.",
+     "Measure pd across each branch; each equals the supply pd. Switch off between readings and repeat."
+    ],
+    "tip": "Cover both circuits, both meters and a conclusion for each."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A 9.0 V battery is connected in series to a lamp and a resistor. The pd across the lamp is 5.5 V. Find the pd across the resistor and say how the currents through them compare.",
+    "steps": [
+     "In series, the supply pd is shared: V supply = V lamp + V resistor.",
+     "V resistor = 9.0 - 5.5.",
+     "V resistor = 3.5 V.",
+     "In series the current is the same through both components."
+    ],
+    "ans": "3.5 V across the resistor; the current is the same through the lamp and the resistor."
+   },
+   {
+    "q": "Three lamps are in parallel with a 12 V supply. The branch currents are 0.5 A, 0.5 A and 1.0 A. Find the pd across each lamp and the supply current.",
+    "steps": [
+     "In parallel, each branch has the supply pd: 12 V across each lamp.",
+     "Total current = sum of branch currents.",
+     "I total = 0.5 + 0.5 + 1.0.",
+     "I total = 2.0 A."
+    ],
+    "ans": "12 V across each lamp; supply current 2.0 A."
+   },
+   {
+    "q": "A student says that if one lamp breaks in a string of lights the rest go out, so the lights must be in parallel. Evaluate the claim.",
+    "steps": [
+     "If one lamp breaking stops the others, there is only one path for the current.",
+     "Only one path means the lamps are in series.",
+     "In parallel, a broken lamp only breaks its own branch; the others still have a complete path.",
+     "So the student's conclusion is wrong."
+    ],
+    "ans": "The lights must be in series, not parallel."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Standard circuit symbols. For the cell, the long thin line is the positive terminal. The variable resistor has a diagonal arrow; the fuse has a line through a rectangle; the diode allows current in the direction of the triangle.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><defs><marker id=\"c1\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 Z\" fill=\"#1b2540\"/></marker></defs><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#ffffff\"/><g stroke=\"#1b2540\" stroke-width=\"2\" fill=\"none\"><line x1=\"30\" y1=\"40\" x2=\"65\" y2=\"40\"/><line x1=\"75\" y1=\"40\" x2=\"110\" y2=\"40\"/><line x1=\"65\" y1=\"26\" x2=\"65\" y2=\"54\"/><line x1=\"75\" y1=\"33\" x2=\"75\" y2=\"47\" stroke-width=\"4\"/><line x1=\"160\" y1=\"40\" x2=\"185\" y2=\"40\"/><line x1=\"187\" y1=\"40\" x2=\"212\" y2=\"26\"/><line x1=\"217\" y1=\"40\" x2=\"240\" y2=\"40\"/><line x1=\"290\" y1=\"40\" x2=\"318\" y2=\"40\"/><line x1=\"342\" y1=\"40\" x2=\"370\" y2=\"40\"/><line x1=\"30\" y1=\"115\" x2=\"50\" y2=\"115\"/><line x1=\"90\" y1=\"115\" x2=\"110\" y2=\"115\"/><line x1=\"160\" y1=\"115\" x2=\"180\" y2=\"115\"/><line x1=\"220\" y1=\"115\" x2=\"240\" y2=\"115\"/><line x1=\"30\" y1=\"190\" x2=\"58\" y2=\"190\"/><line x1=\"82\" y1=\"190\" x2=\"110\" y2=\"190\"/><line x1=\"160\" y1=\"190\" x2=\"188\" y2=\"190\"/><line x1=\"212\" y1=\"190\" x2=\"240\" y2=\"190\"/><line x1=\"290\" y1=\"190\" x2=\"370\" y2=\"190\"/></g><circle cx=\"187\" cy=\"40\" r=\"3\" fill=\"#1b2540\"/><circle cx=\"215\" cy=\"40\" r=\"3\" fill=\"#1b2540\"/><circle cx=\"330\" cy=\"40\" r=\"12\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"322\" y1=\"32\" x2=\"338\" y2=\"48\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"338\" y1=\"32\" x2=\"322\" y2=\"48\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><rect x=\"50\" y=\"108\" width=\"40\" height=\"14\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"180\" y=\"108\" width=\"40\" height=\"14\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"180\" y1=\"132\" x2=\"220\" y2=\"98\" stroke=\"#1b2540\" stroke-width=\"1.5\" marker-end=\"url(#c1)\"/><rect x=\"310\" y=\"109\" width=\"40\" height=\"12\" fill=\"#fecaca\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"290\" y1=\"115\" x2=\"370\" y2=\"115\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"70\" cy=\"190\" r=\"12\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"70\" y=\"194\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">A</text><circle cx=\"200\" cy=\"190\" r=\"12\" fill=\"#e9d5ff\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"200\" y=\"194\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">V</text><polygon points=\"320,180 320,200 338,190\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"338\" y1=\"180\" x2=\"338\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><g font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\"><text x=\"70\" y=\"74\">Cell</text><text x=\"200\" y=\"74\">Open switch</text><text x=\"330\" y=\"74\">Lamp</text><text x=\"70\" y=\"150\">Resistor</text><text x=\"200\" y=\"150\">Variable resistor</text><text x=\"330\" y=\"150\">Fuse</text><text x=\"70\" y=\"224\">Ammeter</text><text x=\"200\" y=\"224\">Voltmeter</text><text x=\"330\" y=\"224\">Diode</text></g></svg>"
+   },
+   {
+    "cap": "Series circuit: the cell, ammeter and two lamps are in one loop. The current is the same at every point and the supply pd is shared between the two lamps.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#ffffff\"/><rect x=\"60\" y=\"50\" width=\"280\" height=\"140\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"194\" y=\"44\" width=\"12\" height=\"12\" fill=\"#ffffff\"/><line x1=\"195\" y1=\"36\" x2=\"195\" y2=\"64\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"205\" y1=\"43\" x2=\"205\" y2=\"57\" stroke=\"#1b2540\" stroke-width=\"4\"/><circle cx=\"60\" cy=\"120\" r=\"14\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"60\" y=\"124\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">A</text><circle cx=\"150\" cy=\"190\" r=\"12\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"142\" y1=\"182\" x2=\"158\" y2=\"198\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"158\" y1=\"182\" x2=\"142\" y2=\"198\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><circle cx=\"250\" cy=\"190\" r=\"12\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"242\" y1=\"182\" x2=\"258\" y2=\"198\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"258\" y1=\"182\" x2=\"242\" y2=\"198\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"185\" y=\"26\" font-size=\"12\" fill=\"#1b2540\">Cell</text><text x=\"10\" y=\"98\" font-size=\"12\" fill=\"#1b2540\">Ammeter</text><text x=\"128\" y=\"224\" font-size=\"12\" fill=\"#1b2540\">Lamp 1</text><text x=\"228\" y=\"224\" font-size=\"12\" fill=\"#1b2540\">Lamp 2</text><text x=\"120\" y=\"114\" font-size=\"12\" fill=\"#15803d\">One loop</text><text x=\"120\" y=\"132\" font-size=\"12\" fill=\"#15803d\">Same current everywhere</text></svg>"
+   },
+   {
+    "cap": "Parallel circuit: each lamp is on its own branch across the cell. The current splits at the junctions, and the pd across each branch equals the supply pd. If one lamp breaks, the other stays lit.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#ffffff\"/><polyline points=\"60,130 60,40 340,40 340,130\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"60\" y1=\"130\" x2=\"340\" y2=\"130\" stroke=\"#1b2540\" stroke-width=\"2\"/><polyline points=\"60,130 60,200 340,200 340,130\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"60\" cy=\"130\" r=\"4\" fill=\"#1b2540\"/><circle cx=\"340\" cy=\"130\" r=\"4\" fill=\"#1b2540\"/><rect x=\"194\" y=\"34\" width=\"12\" height=\"12\" fill=\"#ffffff\"/><line x1=\"195\" y1=\"26\" x2=\"195\" y2=\"54\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"205\" y1=\"33\" x2=\"205\" y2=\"47\" stroke=\"#1b2540\" stroke-width=\"4\"/><circle cx=\"60\" cy=\"85\" r=\"14\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"60\" y=\"89\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">A</text><circle cx=\"200\" cy=\"130\" r=\"12\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"192\" y1=\"122\" x2=\"208\" y2=\"138\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"208\" y1=\"122\" x2=\"192\" y2=\"138\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><circle cx=\"200\" cy=\"200\" r=\"12\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"192\" y1=\"192\" x2=\"208\" y2=\"208\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"208\" y1=\"192\" x2=\"192\" y2=\"208\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><text x=\"185\" y=\"18\" font-size=\"12\" fill=\"#1b2540\">Cell</text><text x=\"8\" y=\"62\" font-size=\"12\" fill=\"#1b2540\">Ammeter</text><text x=\"222\" y=\"120\" font-size=\"12\" fill=\"#1b2540\">Branch 1</text><text x=\"222\" y=\"190\" font-size=\"12\" fill=\"#1b2540\">Branch 2</text><text x=\"345\" y=\"150\" font-size=\"12\" fill=\"#1b2540\">Junction</text><text x=\"100\" y=\"226\" font-size=\"12\" fill=\"#15803d\">Same pd across each branch</text><text x=\"90\" y=\"100\" font-size=\"12\" fill=\"#15803d\">Current splits</text></svg>"
+   }
+  ],
+  "pid": "phy_ocra.7.0",
+  "sid": "phy_ocra",
+  "v": 2,
+  "src": "pre",
+  "by": "claude/claude-opus-5-5",
+  "ts": "2026-11-27T01:36:04.863Z"
+ },
+ "phy_ocra.7.1": {
+  "summary": "The **current** through a component depends on two things: the **potential difference (pd)** across it, which pushes the charge, and its **resistance**, which opposes the flow. The three are linked by **V = I x R**: potential difference (volts) = current (amps) x resistance (ohms). A bigger pd gives a bigger current, and a bigger resistance gives a smaller current for the same pd. In PAG P6 you measure current and pd with an ammeter and voltmeter to find resistance.",
+  "core": [
+   {
+    "h": "Current depends on pd and resistance",
+    "p": "The **current** through a component depends on **both** the **potential difference** across it and the **resistance** of the component. The pd is the push that drives charge round the circuit; the resistance is how much the component opposes that flow.",
+    "bullets": [
+     "**Increase the pd** (same resistance): current **increases**.",
+     "**Increase the resistance** (same pd): current **decreases**.",
+     "To get a bigger current you need a bigger pd or a smaller resistance.",
+     "A component with zero pd across it has no current through it."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Must know",
+      "p": "Current depends on both the potential difference across a component and the resistance of that component."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Potential difference",
+    "p": "**Potential difference** is the **energy transferred per unit charge** as charge moves between two points. It is measured in **volts (V)** using a **voltmeter** connected **in parallel** across the component.",
+    "bullets": [
+     "1 volt = 1 joule of energy transferred per coulomb of charge.",
+     "The cell gives energy to the charge; components transfer energy away from it.",
+     "pd is always measured **across** a component, between two points.",
+     "Voltmeters have a very high resistance so almost no current goes through them."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Potential difference",
+      "p": "The energy transferred per unit charge between two points in a circuit."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Current",
+    "p": "**Current** is the **rate of flow of charge**, measured in **amperes (A)** using an **ammeter** connected **in series**.",
+    "bullets": [
+     "1 A = 1 coulomb per second.",
+     "Ammeters have a very low resistance so they hardly change the current.",
+     "Convert mA to A by dividing by 1000 before using V = I R."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Resistance",
+    "p": "**Resistance** is a measure of how much a component **opposes the flow of current**. It is measured in **ohms**, written with the Greek letter omega. The resistance of a component is the pd across it divided by the current through it.",
+    "bullets": [
+     "In metals, resistance arises because moving electrons collide with the vibrating ions in the metal lattice, transferring energy.",
+     "A large resistance means a large pd is needed to drive each amp of current.",
+     "1 ohm = 1 volt per amp.",
+     "kilohm: 1 kilohm = 1000 ohms; megohm: 1 megohm = 1 000 000 ohms."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Resistance",
+      "p": "Resistance = potential difference / current; a measure of how much a component opposes the current."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "The equation V = I R",
+    "p": "The relationship between pd, current and resistance is written as one equation that you must recall and rearrange.",
+    "bullets": [
+     "**potential difference (V) = current (A) x resistance (ohms)**, written V = I R.",
+     "Rearranged: I = V / R and R = V / I.",
+     "Always use base units: volts, amps and ohms.",
+     "Show the equation, the substitution and the answer with its unit."
+    ],
+    "table": {
+     "head": [
+      "Quantity",
+      "Symbol",
+      "Unit",
+      "Measured with"
+     ],
+     "rows": [
+      [
+       "Potential difference",
+       "V",
+       "volt (V)",
+       "Voltmeter in parallel"
+      ],
+      [
+       "Current",
+       "I",
+       "ampere (A)",
+       "Ammeter in series"
+      ],
+      [
+       "Resistance",
+       "R",
+       "ohm",
+       "Calculated from V / I"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Equation to recall",
+      "p": "potential difference = current x resistance, V = I R"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Using V = I R in reasoning",
+    "p": "The equation also lets you predict changes without numbers.",
+    "bullets": [
+     "For a **fixed resistor**, doubling the pd doubles the current: I is directly proportional to V.",
+     "For a **fixed pd**, doubling the resistance halves the current: I is inversely proportional to R.",
+     "If a component's resistance changes (for example a thermistor warming up), the current changes even with the same pd.",
+     "A lower resistance path draws a larger current from the same supply."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam tip",
+      "p": "When explaining a change, quote V = I R and say which quantity is fixed."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Ohmic conductors",
+    "p": "For a **fixed resistor** or a metal wire **at constant temperature**, the current is **directly proportional** to the pd, so the resistance stays constant. This is **Ohm's law**. The graph of current against pd is a straight line through the origin.",
+    "bullets": [
+     "Constant temperature is the key condition.",
+     "A steeper I against V line means a **lower** resistance (more current for each volt).",
+     "Components such as filament lamps and diodes do not have constant resistance; they are covered in the I-V graphs point."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Common trap",
+      "p": "On a graph of current (y) against pd (x), the gradient is 1/R, not R. Steeper means lower resistance."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "PAG P6: measuring resistance",
+    "p": "To find the resistance of a component, measure the pd across it and the current through it for several settings, then calculate R = V / I.",
+    "bullets": [
+     "Connect the component in series with a cell or low voltage supply, an **ammeter** and a **variable resistor**.",
+     "Connect a **voltmeter in parallel** across the component.",
+     "Adjust the variable resistor to change the current; record pairs of V and I readings.",
+     "Reverse the connections to take negative readings if asked.",
+     "Calculate R = V / I for each pair, or plot I against V and use the gradient.",
+     "Switch off between readings so the component does not heat up, because a rise in temperature changes resistance."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Variables",
+      "p": "Independent: pd (set by variable resistor). Dependent: current. Control: temperature, length and thickness of wire, same component."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Errors and accuracy in the practical",
+    "p": "Good measurements make the resistance value more trustworthy.",
+    "bullets": [
+     "Check meters read zero before starting to avoid a **zero error**.",
+     "Take readings quickly and switch off between them to reduce **heating**.",
+     "Repeat readings and calculate a mean to reduce the effect of random errors.",
+     "Use meters with a suitable range for a good **resolution**.",
+     "Take at least 5 different readings across a wide range."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam tip",
+      "p": "In 6 mark method questions, name the circuit, the meters and how they are connected, what you change, what you measure and how you calculate R."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Unit conversions and standard form",
+    "p": "Many marks are lost on units rather than physics.",
+    "bullets": [
+     "mA to A: divide by 1000 (e.g. 40 mA = 0.040 A).",
+     "kilohm to ohm: multiply by 1000 (e.g. 2.2 kilohm = 2200 ohms).",
+     "kV to V: multiply by 1000.",
+     "Give answers to a sensible number of significant figures, matching the data."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Common trap",
+      "p": "Using 40 for 40 mA in R = V / I gives a resistance 1000 times too small."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Pushing water through a hose",
+   "p": "Imagine a pump pushing water through a hose. The pump pressure is like the pd, the rate of water flow is like the current, and a narrow or kinked section of hose is like a resistance. More pressure gives more flow; a narrower hose gives less flow for the same pressure, just as I = V / R. The analogy breaks down because water pressure pushes water out of an open end, whereas charge needs a complete circuit, and in a real wire the resistance comes from electrons colliding with ions, which heats the wire."
+  },
+  "terms": [
+   {
+    "t": "Current",
+    "d": "The rate of flow of charge, measured in amperes (A)."
+   },
+   {
+    "t": "Potential difference",
+    "d": "The energy transferred per unit charge between two points, measured in volts (V)."
+   },
+   {
+    "t": "Resistance",
+    "d": "How much a component opposes current; R = V / I, measured in ohms."
+   },
+   {
+    "t": "Ohm",
+    "d": "The unit of resistance; 1 ohm is 1 volt per amp."
+   },
+   {
+    "t": "Volt",
+    "d": "The unit of potential difference; 1 volt is 1 joule per coulomb."
+   },
+   {
+    "t": "Ampere",
+    "d": "The unit of current; 1 amp is 1 coulomb per second."
+   },
+   {
+    "t": "Ammeter",
+    "d": "Meter that measures current; connected in series; very low resistance."
+   },
+   {
+    "t": "Voltmeter",
+    "d": "Meter that measures pd; connected in parallel; very high resistance."
+   },
+   {
+    "t": "Variable resistor",
+    "d": "A resistor whose resistance can be adjusted to change the current in a circuit."
+   },
+   {
+    "t": "Ohm's law",
+    "d": "For a conductor at constant temperature, the current is directly proportional to the pd."
+   },
+   {
+    "t": "Ohmic conductor",
+    "d": "A component whose resistance stays constant as the current changes, at constant temperature."
+   },
+   {
+    "t": "Directly proportional",
+    "d": "When one quantity doubles, the other doubles; the graph is a straight line through the origin."
+   },
+   {
+    "t": "Inversely proportional",
+    "d": "When one quantity doubles, the other halves."
+   },
+   {
+    "t": "Zero error",
+    "d": "When a meter does not read zero when it should, shifting every reading by the same amount."
+   },
+   {
+    "t": "Resolution",
+    "d": "The smallest change a measuring instrument can show."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Resistance = current / pd.",
+    "r": "Resistance = pd / current, R = V / I."
+   },
+   {
+    "w": "Increasing the resistance increases the current.",
+    "r": "For a fixed pd, increasing resistance decreases the current."
+   },
+   {
+    "w": "R = 6 / 40 = 0.15 ohms for 6 V and 40 mA.",
+    "r": "Convert to amps: R = 6 / 0.040 = 150 ohms."
+   },
+   {
+    "w": "Voltage flows through the component.",
+    "r": "Current flows through a component; pd is across it."
+   },
+   {
+    "w": "Connected the voltmeter in series with the resistor.",
+    "r": "The voltmeter goes in parallel across the resistor; the ammeter in series."
+   },
+   {
+    "w": "Steeper I-V line means higher resistance.",
+    "r": "On a current against pd graph, steeper means lower resistance."
+   },
+   {
+    "w": "The resistance changes because the current changes.",
+    "r": "For an ohmic resistor at constant temperature the resistance stays constant; it only changes if temperature or the component changes."
+   },
+   {
+    "w": "Gave the unit of resistance as volts per amp squared or Ω/A.",
+    "r": "The unit of resistance is the ohm."
+   }
+  ],
+  "exam": [
+   {
+    "q": "State the equation linking potential difference, current and resistance.",
+    "marks": 1,
+    "model": [
+     "potential difference = current x resistance (V = I R)"
+    ],
+    "tip": "Words or symbols both score."
+   },
+   {
+    "q": "State the unit of resistance.",
+    "marks": 1,
+    "model": [
+     "Ohm"
+    ],
+    "tip": "Write the name or the omega symbol."
+   },
+   {
+    "q": "A current of 0.50 A flows through a 12 ohm resistor. Calculate the pd across it.",
+    "marks": 2,
+    "model": [
+     "V = I R = 0.50 x 12",
+     "V = 6.0 V"
+    ],
+    "tip": "Include the unit."
+   },
+   {
+    "q": "A 230 V heater draws a current of 10 A. Calculate its resistance.",
+    "marks": 2,
+    "model": [
+     "R = V / I = 230 / 10",
+     "R = 23 ohms"
+    ],
+    "tip": "Rearrange before substituting."
+   },
+   {
+    "q": "A 9.0 V battery is connected to a 4.5 kilohm resistor. Calculate the current in mA.",
+    "marks": 3,
+    "model": [
+     "R = 4500 ohms",
+     "I = V / R = 9.0 / 4500 = 0.0020 A",
+     "I = 2.0 mA"
+    ],
+    "tip": "Convert kilohms to ohms first, then A to mA."
+   },
+   {
+    "q": "State two factors that the current through a component depends on.",
+    "marks": 2,
+    "model": [
+     "The potential difference across the component.",
+     "The resistance of the component."
+    ],
+    "tip": "Use the full terms."
+   },
+   {
+    "q": "The pd across a fixed resistor is doubled. State and explain what happens to the current.",
+    "marks": 2,
+    "model": [
+     "The current doubles.",
+     "Resistance is constant so I = V / R means I is proportional to V."
+    ],
+    "tip": "Say which quantity stays fixed."
+   },
+   {
+    "q": "Draw a circuit diagram that could be used to find the resistance of a resistor.",
+    "marks": 3,
+    "model": [
+     "Cell or power supply in series with the resistor.",
+     "Ammeter in series with the resistor.",
+     "Voltmeter in parallel across the resistor."
+    ],
+    "tip": "A variable resistor in series earns credit in method marks."
+   },
+   {
+    "q": "Explain why the resistance of a metal wire is found to increase if the current is left on for a long time.",
+    "marks": 2,
+    "model": [
+     "The wire heats up as current flows.",
+     "Ions vibrate more so electrons collide more often, increasing resistance."
+    ],
+    "tip": "Link heating to collisions."
+   },
+   {
+    "q": "Describe how you would use a circuit to determine the resistance of a component and how you would make the result accurate (PAG P6).",
+    "marks": 6,
+    "model": [
+     "Set up the component in series with a power supply, ammeter and variable resistor.",
+     "Connect a voltmeter in parallel across the component.",
+     "Adjust the variable resistor to give a range of pd values and record V and I each time.",
+     "Take at least five readings and repeat each, calculating a mean.",
+     "Calculate R = V / I for each, or plot I against V and use 1 / gradient.",
+     "Switch off between readings to stop the component heating; check meters zero first."
+    ],
+    "tip": "Circuit, change, measure, calculate, improve."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A lamp has a pd of 3.0 V across it and a current of 250 mA through it. Calculate its resistance.",
+    "steps": [
+     "Write the equation: R = V / I.",
+     "Convert current: 250 mA = 0.250 A.",
+     "Substitute: R = 3.0 / 0.250.",
+     "Calculate: R = 12 ohms."
+    ],
+    "ans": "R = 12 ohms"
+   },
+   {
+    "q": "A 220 ohm resistor is connected to a supply and 0.060 A flows. Calculate the supply pd.",
+    "steps": [
+     "Write the equation: V = I R.",
+     "Substitute: V = 0.060 x 220.",
+     "Calculate: V = 13.2 V.",
+     "Round sensibly: V = 13 V (2 s.f.)."
+    ],
+    "ans": "V = 13 V"
+   },
+   {
+    "q": "A 12 V supply is connected first to a 6.0 ohm resistor, then to a 24 ohm resistor. Compare the currents.",
+    "steps": [
+     "I = V / R.",
+     "With 6.0 ohms: I = 12 / 6.0 = 2.0 A.",
+     "With 24 ohms: I = 12 / 24 = 0.50 A.",
+     "The resistance is 4 times bigger, so the current is 4 times smaller (inversely proportional)."
+    ],
+    "ans": "2.0 A and 0.50 A: the larger resistance gives a quarter of the current."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Circuit to measure resistance (PAG P6). The ammeter is in series and the voltmeter is in parallel across the resistor R. The variable resistor changes the current so several pairs of V and I readings can be taken; then R = V / I.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><defs><marker id=\"d1\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 Z\" fill=\"#1b2540\"/></marker></defs><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#ffffff\"/><rect x=\"60\" y=\"40\" width=\"280\" height=\"120\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"194\" y=\"34\" width=\"12\" height=\"12\" fill=\"#ffffff\"/><line x1=\"195\" y1=\"26\" x2=\"195\" y2=\"54\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"205\" y1=\"33\" x2=\"205\" y2=\"47\" stroke=\"#1b2540\" stroke-width=\"4\"/><rect x=\"270\" y=\"33\" width=\"40\" height=\"14\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"272\" y1=\"56\" x2=\"308\" y2=\"28\" stroke=\"#1b2540\" stroke-width=\"1.5\" marker-end=\"url(#d1)\"/><circle cx=\"60\" cy=\"110\" r=\"14\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"60\" y=\"114\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">A</text><rect x=\"180\" y=\"153\" width=\"40\" height=\"14\" fill=\"#fecaca\" stroke=\"#1b2540\" stroke-width=\"2\"/><polyline points=\"150,160 150,205 188,205\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><polyline points=\"212,205 250,205 250,160\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"150\" cy=\"160\" r=\"3\" fill=\"#1b2540\"/><circle cx=\"250\" cy=\"160\" r=\"3\" fill=\"#1b2540\"/><circle cx=\"200\" cy=\"205\" r=\"12\" fill=\"#e9d5ff\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"200\" y=\"209\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1b2540\">V</text><text x=\"185\" y=\"18\" font-size=\"12\" fill=\"#1b2540\">Cell</text><text x=\"245\" y=\"18\" font-size=\"12\" fill=\"#1b2540\">Variable resistor</text><text x=\"8\" y=\"84\" font-size=\"12\" fill=\"#1b2540\">Ammeter</text><text x=\"228\" y=\"148\" font-size=\"12\" fill=\"#1b2540\">Resistor R</text><text x=\"222\" y=\"230\" font-size=\"12\" fill=\"#1b2540\">Voltmeter</text></svg>"
+   },
+   {
+    "cap": "The V = I R triangle: cover the quantity you want. Cover V to get I x R; cover I to get V / R; cover R to get V / I. Always use volts, amps and ohms.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#ffffff\"/><polygon points=\"200,30 80,200 320,200\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"137\" y1=\"120\" x2=\"263\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"200\" y1=\"120\" x2=\"200\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"200\" y=\"100\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1b2540\">V</text><text x=\"160\" y=\"168\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1b2540\">I</text><text x=\"240\" y=\"168\" font-size=\"13\" text-anchor=\"middle\" fill=\"#1b2540\">R</text><text x=\"10\" y=\"30\" font-size=\"12\" fill=\"#1d4ed8\">V = I x R</text><text x=\"10\" y=\"50\" font-size=\"12\" fill=\"#1d4ed8\">I = V / R</text><text x=\"10\" y=\"70\" font-size=\"12\" fill=\"#1d4ed8\">R = V / I</text><text x=\"285\" y=\"30\" font-size=\"12\" fill=\"#15803d\">V in volts</text><text x=\"285\" y=\"50\" font-size=\"12\" fill=\"#15803d\">I in amps</text><text x=\"285\" y=\"70\" font-size=\"12\" fill=\"#15803d\">R in ohms</text></svg>"
+   },
+   {
+    "cap": "Current against pd for two fixed resistors at constant temperature. Both lines are straight through the origin (current proportional to pd). The steeper line carries more current per volt, so it has the lower resistance.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#ffffff\"/><line x1=\"60\" y1=\"200\" x2=\"370\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"60\" y1=\"200\" x2=\"60\" y2=\"30\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"60\" y1=\"200\" x2=\"300\" y2=\"50\" stroke=\"#b91c1c\" stroke-width=\"3\"/><line x1=\"60\" y1=\"200\" x2=\"340\" y2=\"120\" stroke=\"#1d4ed8\" stroke-width=\"3\"/><text x=\"100\" y=\"60\" font-size=\"12\" fill=\"#b91c1c\">Lower resistance</text><text x=\"240\" y=\"170\" font-size=\"12\" fill=\"#1d4ed8\">Higher resistance</text><text x=\"66\" y=\"22\" font-size=\"12\" fill=\"#1b2540\">Current / A</text><text x=\"200\" y=\"228\" font-size=\"12\" fill=\"#1b2540\">Potential difference / V</text><text x=\"48\" y=\"215\" font-size=\"11\" fill=\"#1b2540\">0</text></svg>"
+   }
+  ],
+  "pid": "phy_ocra.7.1",
+  "sid": "phy_ocra",
+  "v": 2,
+  "src": "pre",
+  "by": "claude/claude-opus-5-5",
+  "ts": "2026-11-27T01:36:04.871Z"
+ },
+ "phy_ocra.7.2": {
+  "summary": "For some components, such as a fixed resistor at constant temperature, the **resistance stays constant** whatever the current, but for others the resistance **changes as the current changes** or as conditions change. A filament lamp's resistance rises as it heats up, a diode lets current through in one direction only, a thermistor's resistance falls as temperature rises and an LDR's resistance falls as light intensity rises. You must be able to explain these changes and design circuits, using an ammeter in series, a voltmeter in parallel and a variable resistor, to investigate them.",
+  "core": [
+   {
+    "h": "Resistance: constant or changing?",
+    "p": "Resistance is how much a component opposes the flow of current. It is calculated from R = V / I. In some components R is the same at every current; in others R changes as the current changes, because the current itself changes the conditions inside the component (for example by heating it).",
+    "bullets": [
+     "R = V / I, where R is resistance in ohms (Ω), V is potential difference in volts (V) and I is current in amperes (A)",
+     "**Constant resistance**: a fixed resistor (or a metal wire) kept at constant temperature",
+     "**Resistance changes with current**: filament lamp (R increases), diode (R very high in reverse, low once switched on forwards)",
+     "**Resistance changes with conditions**: thermistor (temperature), LDR (light intensity)",
+     "For a fixed pd, a **bigger resistance gives a smaller current** and a smaller resistance gives a bigger current"
+    ],
+    "table": {
+     "head": [
+      "Component",
+      "What changes its resistance",
+      "Effect"
+     ],
+     "rows": [
+      [
+       "Fixed resistor",
+       "Nothing (at constant temperature)",
+       "R stays constant"
+      ],
+      [
+       "Filament lamp",
+       "Current heats the filament",
+       "R increases as current increases"
+      ],
+      [
+       "Diode",
+       "Direction of current",
+       "Very high R in reverse; low R forwards above about 0.6 V"
+      ],
+      [
+       "Thermistor",
+       "Temperature",
+       "R decreases as temperature increases"
+      ],
+      [
+       "LDR",
+       "Light intensity",
+       "R decreases as light intensity increases"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Resistance",
+      "p": "Resistance = potential difference ÷ current (R = V / I), measured in ohms (Ω)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Ohmic conductors: resistance that stays the same",
+    "p": "A fixed resistor or a metal wire at **constant temperature** obeys Ohm's law: the current through it is **directly proportional** to the potential difference across it. Doubling V doubles I, so V / I, the resistance, stays the same.",
+    "bullets": [
+     "Ohm's law only holds if the **temperature stays constant**",
+     "I-V graph is a **straight line through the origin**, so it is a linear component",
+     "The same size of current flows if the pd is reversed (the graph is symmetrical)",
+     "A steeper line on an I-V graph means a **lower** resistance"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Ohmic conductor",
+      "p": "Current is directly proportional to potential difference at constant temperature, so resistance is constant."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Filament lamp: resistance increases with current",
+    "p": "In a metal, current is a flow of free electrons through a lattice of positive metal ions. As the current through a filament lamp increases, the electrons collide with the ions more, transferring energy to them, so the filament **heats up**. Hotter ions **vibrate more**, so electrons collide with them **more often**, which makes it harder for current to flow: the resistance increases.",
+    "bullets": [
+     "More current → filament gets hotter → ions vibrate more → more collisions → **higher resistance**",
+     "So the current does not rise in proportion to the pd: the I-V graph **curves and flattens** at higher pd",
+     "It is a **non-linear** component",
+     "Works the same for both directions of current, so the graph is symmetrical",
+     "At low currents the filament is cool and the resistance is roughly constant"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Six-step chain",
+      "p": "Write the full chain: current increases, temperature increases, ions vibrate more, electrons collide more often, resistance increases, so current rises less than proportionally."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Diode: current in one direction only",
+    "p": "A diode lets current flow through it in **one direction only** (the forward direction, the way the triangle in the symbol points). In the reverse direction its resistance is **very high**, so almost no current flows. In the forward direction almost no current flows until the pd reaches about 0.6 V; above this the resistance drops sharply and the current rises steeply.",
+    "bullets": [
+     "Forward direction: very low resistance once the pd is above about 0.6 V",
+     "Reverse direction: **very high resistance**, current is (almost) zero",
+     "Its resistance therefore depends on the **direction** and the **size** of the pd",
+     "Non-linear component; graph is **not** symmetrical",
+     "Uses: protecting circuits from a battery connected the wrong way, converting a.c. to d.c. (rectifying)",
+     "A light-emitting diode (LED) behaves in the same way and gives out light when current flows"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Protect the diode",
+      "p": "In an investigation always put a fixed protective resistor in series with a diode, because once it conducts its resistance is so low that a large current could damage it."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Thermistor: resistance depends on temperature",
+    "p": "The thermistor in GCSE is an NTC thermistor, made from a semiconductor. As its **temperature increases, its resistance decreases**. Heating releases more charge carriers in the semiconductor, so current flows more easily.",
+    "bullets": [
+     "Hot → **low resistance**; cold → **high resistance**",
+     "The change is not linear: the R-temperature graph is a downward curve",
+     "Uses: temperature sensors, thermostats in heating systems, fire alarms, car engine temperature gauges, digital thermometers",
+     "In a circuit with a fixed pd, warming the thermistor makes the **current increase**"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Thermistor",
+      "p": "As temperature increases, the resistance of a thermistor decreases."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "LDR: resistance depends on light",
+    "p": "A light-dependent resistor (LDR) is also made from a semiconductor. As the **light intensity increases, its resistance decreases**. In the dark its resistance is very high.",
+    "bullets": [
+     "Bright light → **low resistance**; dark → **high resistance**",
+     "Non-linear R-light intensity graph, curving downwards",
+     "Uses: automatic street lights, security lights that come on at night, light meters in cameras, burglar detectors",
+     "With a fixed pd, shining more light on an LDR makes the **current increase**"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "LDR",
+      "p": "As light intensity increases, the resistance of an LDR decreases."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Qualitative effect of changing resistance on current",
+    "p": "Rearranging V = IR gives I = V / R. If the potential difference from the supply stays the same, the current is **inversely related** to the total resistance: increase R and I falls; decrease R and I rises. This lets you predict what an ammeter reads when a component changes.",
+    "bullets": [
+     "Thermistor heated → R falls → ammeter reading **rises**",
+     "LDR covered (darker) → R rises → ammeter reading **falls**",
+     "Variable resistor turned up → total R rises → current falls and a lamp in series gets **dimmer**",
+     "Diode reversed → R very high → current almost **zero**",
+     "Always say which way R changes **and** what that does to the current"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Two-step answers",
+      "p": "Mark schemes usually want the change in resistance first, then the change in current with a reason (I = V / R with V constant)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Designing a circuit to investigate a component (PAG P6)",
+    "p": "To find how the resistance of a component changes you measure the current through it and the potential difference across it for a range of values, then calculate R = V / I for each pair. The circuit must let you change the current in steps.",
+    "bullets": [
+     "**Ammeter in series** with the component, to measure current through it",
+     "**Voltmeter in parallel** across the component only, to measure the pd across it",
+     "**Variable resistor** (or a variable d.c. power supply) in series to change the current and pd",
+     "Use a switch so the circuit is only on when taking readings, so components do not heat up",
+     "Reverse the supply (or the component) to get negative values of V and I",
+     "Take at least 6 to 8 readings over a wide range and repeat to check they are repeatable",
+     "Calculate R = V / I for each reading, or plot an I-V graph"
+    ],
+    "table": {
+     "head": [
+      "Variable",
+      "For an I-V investigation"
+     ],
+     "rows": [
+      [
+       "Independent",
+       "Potential difference (changed with variable resistor)"
+      ],
+      [
+       "Dependent",
+       "Current"
+      ],
+      [
+       "Control",
+       "Same component, same temperature (for resistor), same wires"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Voltmeter position",
+      "p": "A voltmeter connected in series would stop almost all current flowing, because it has a very high resistance. It must go in parallel across the component."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Investigating a thermistor",
+    "p": "To show how a thermistor's resistance depends on temperature, put the thermistor (in a waterproof cover or with leads kept out of the water) in a beaker of water with a thermometer. Heat the water or add hot water and measure the resistance at a range of temperatures.",
+    "bullets": [
+     "Measure R with an **ohmmeter** (multimeter on the resistance setting), or with an ammeter and voltmeter and R = V / I",
+     "**Stir** the water so the thermistor and thermometer are at the same temperature",
+     "Wait for the reading to settle before recording",
+     "Take readings, for example, every 10 °C from 0 °C (ice) to near 100 °C",
+     "Plot resistance (y-axis) against temperature (x-axis)",
+     "Safety: care with hot water and a kettle; keep electrical connections dry"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Use a fixed pd",
+      "p": "If you use V and I, keep the supply pd low so the current does not heat the thermistor itself and spoil the readings."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Investigating an LDR",
+    "p": "To show how an LDR's resistance depends on light, connect it to an ohmmeter (or ammeter and voltmeter) and change the light falling on it, for example by moving a lamp to different distances or using a light meter to measure light intensity.",
+    "bullets": [
+     "Carry out in a **darkened room** so background light does not affect the result",
+     "Change light intensity by moving the lamp closer or further away, measured with a ruler",
+     "Better: measure light intensity directly with a **light meter** placed by the LDR",
+     "Keep the angle of the lamp the same each time (control variable)",
+     "Plot resistance against light intensity (or against distance)",
+     "Closer lamp → brighter → lower resistance"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Sensing circuits: using changing resistance",
+    "p": "Because thermistors and LDRs change resistance with their surroundings, they are used as **sensors** in circuits. Their changing resistance changes the current and the share of pd across components, which can switch something on or off, such as a heater, an alarm or a lamp.",
+    "bullets": [
+     "Street light: as it gets dark, LDR resistance **rises**, which is used to switch the light on",
+     "Fire alarm: as it gets hot, thermistor resistance **falls**, current rises and the alarm sounds",
+     "Thermostat: thermistor detects the room is too cold (high R) and switches the heater on",
+     "In a series circuit with a fixed resistor, the component with the larger resistance has the **larger share of the pd**"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Sharing pd",
+      "p": "In series, pd is shared in proportion to resistance, so if a thermistor's resistance falls, the pd across it falls and the pd across the fixed resistor rises."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Errors, accuracy and good practice",
+    "p": "Good investigations reduce errors so that the calculated resistances are accurate and repeatable.",
+    "bullets": [
+     "Check meters read zero before starting (avoids **zero error**)",
+     "Switch off between readings to stop **heating** changing the resistance of wires and resistors",
+     "Use meters with a suitable range and resolution",
+     "Repeat readings and calculate a mean; identify and discard anomalies",
+     "For a filament lamp, heating is the effect being studied, so do not switch off for so long that it cools between quick readings",
+     "Plot a line or curve of best fit to see the pattern"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Corridor of dancers",
+   "p": "Electrons moving through a filament are like people trying to walk down a crowded corridor. When the people standing in the corridor (the ions) stand still, it is easy to get through. Turn up the music (more current, so more heating) and they start dancing wildly, so you bump into them more often and progress slows: resistance has increased. A diode is like a one-way turnstile that only lets people through in one direction. A thermistor or LDR is the opposite of the dancers: warming it or shining light on it opens more doors, so more people get through. Where it breaks down: electrons do not choose a path or get tired, the ions vibrate about fixed positions rather than moving around, and in a semiconductor the extra 'doors' are really extra free charge carriers."
+  },
+  "terms": [
+   {
+    "t": "Resistance",
+    "d": "Potential difference across a component divided by the current through it, R = V / I, measured in ohms (Ω)."
+   },
+   {
+    "t": "Ohm (Ω)",
+    "d": "The unit of resistance; 1 Ω is the resistance when a pd of 1 V drives a current of 1 A."
+   },
+   {
+    "t": "Ohmic conductor",
+    "d": "A conductor in which current is directly proportional to potential difference at constant temperature, so its resistance is constant."
+   },
+   {
+    "t": "Linear component",
+    "d": "A component whose I-V graph is a straight line through the origin, so its resistance does not change."
+   },
+   {
+    "t": "Non-linear component",
+    "d": "A component whose I-V graph is not a straight line, so its resistance changes as current changes."
+   },
+   {
+    "t": "Filament lamp",
+    "d": "A lamp with a thin metal wire that glows when hot; its resistance increases as the current and temperature increase."
+   },
+   {
+    "t": "Diode",
+    "d": "A component that allows current to flow in one direction only; it has a very high resistance in the reverse direction."
+   },
+   {
+    "t": "Forward bias",
+    "d": "Connecting a diode so current flows in its allowed direction (the way the arrow of the symbol points)."
+   },
+   {
+    "t": "Thermistor",
+    "d": "A semiconductor resistor whose resistance decreases as its temperature increases."
+   },
+   {
+    "t": "LDR (light-dependent resistor)",
+    "d": "A semiconductor resistor whose resistance decreases as the light intensity falling on it increases."
+   },
+   {
+    "t": "Variable resistor",
+    "d": "A resistor whose resistance can be changed, used to vary the current and pd in a circuit."
+   },
+   {
+    "t": "Ammeter",
+    "d": "A meter that measures current; it is connected in series and has a very low resistance."
+   },
+   {
+    "t": "Voltmeter",
+    "d": "A meter that measures potential difference; it is connected in parallel across a component and has a very high resistance."
+   },
+   {
+    "t": "Ohmmeter",
+    "d": "A meter (often a multimeter setting) that measures resistance directly."
+   },
+   {
+    "t": "Sensor",
+    "d": "A component, such as a thermistor or LDR, whose resistance changes with a physical condition, used to control a circuit."
+   },
+   {
+    "t": "Protective resistor",
+    "d": "A fixed resistor placed in series with a component such as a diode to limit the current and prevent damage."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "The resistance of a thermistor increases when it gets hotter.",
+    "r": "For a (NTC) thermistor, resistance **decreases** as temperature increases."
+   },
+   {
+    "w": "An LDR has a high resistance in bright light.",
+    "r": "An LDR has a **low** resistance in bright light and a high resistance in the dark."
+   },
+   {
+    "w": "The filament lamp's resistance increases because the electrons get hot.",
+    "r": "The filament gets hotter so the **metal ions vibrate more** and electrons collide with them more often."
+   },
+   {
+    "w": "Connect the voltmeter in series with the component.",
+    "r": "The voltmeter goes in **parallel** across the component; the ammeter goes in **series**."
+   },
+   {
+    "w": "A diode lets current through in both directions but more in one.",
+    "r": "A diode lets current flow in **one direction only**; in reverse it has a very high resistance so (almost) no current flows."
+   },
+   {
+    "w": "Increasing the resistance increases the current.",
+    "r": "With the same pd, increasing the resistance **decreases** the current (I = V / R)."
+   },
+   {
+    "w": "A fixed resistor always has constant resistance.",
+    "r": "Its resistance is constant only **if its temperature stays constant**."
+   },
+   {
+    "w": "Use a variable resistor to measure the resistance.",
+    "r": "The variable resistor is used to **change** the current and pd; R is calculated from V and I (R = V / I)."
+   },
+   {
+    "w": "Resistance is the gradient of the I-V graph.",
+    "r": "R = V / I at a point; on an I-V graph a steeper line means lower resistance."
+   }
+  ],
+  "exam": [
+   {
+    "q": "State what happens to the resistance of a thermistor as its temperature increases.",
+    "marks": 1,
+    "model": [
+     "Resistance decreases."
+    ],
+    "tip": "One-word direction answers still need the right word: decreases, not changes."
+   },
+   {
+    "q": "State how the resistance of an LDR changes as it gets darker.",
+    "marks": 1,
+    "model": [
+     "Resistance increases."
+    ],
+    "tip": "Dark = high resistance."
+   },
+   {
+    "q": "State what a diode does in a circuit.",
+    "marks": 1,
+    "model": [
+     "Allows current to flow in one direction only (very high resistance in reverse)."
+    ],
+    "tip": "'One direction only' is the key phrase."
+   },
+   {
+    "q": "A student wants to measure the resistance of a filament lamp. Name the two meters she needs and state how each is connected.",
+    "marks": 2,
+    "model": [
+     "Ammeter connected in series with the lamp.",
+     "Voltmeter connected in parallel across the lamp."
+    ],
+    "tip": "Name and position for each meter."
+   },
+   {
+    "q": "State the purpose of the variable resistor in a circuit used to investigate how current varies with potential difference.",
+    "marks": 1,
+    "model": [
+     "To change the current / pd across the component (so a range of readings can be taken)."
+    ],
+    "tip": "It is not there to measure anything."
+   },
+   {
+    "q": "The pd across a lamp is 6.0 V and the current is 0.25 A. Calculate its resistance.",
+    "marks": 2,
+    "model": [
+     "R = V / I = 6.0 / 0.25",
+     "R = 24 Ω"
+    ],
+    "tip": "Write the equation first; include the unit ohms."
+   },
+   {
+    "q": "A thermistor is connected in series with an ammeter and a battery. The thermistor is warmed. Describe and explain what happens to the ammeter reading.",
+    "marks": 2,
+    "model": [
+     "Resistance of thermistor decreases (as temperature increases).",
+     "So current/ammeter reading increases (I = V / R, pd constant)."
+    ],
+    "tip": "Give the resistance change first, then the current."
+   },
+   {
+    "q": "Explain why the resistance of a filament lamp increases as the current through it increases.",
+    "marks": 4,
+    "model": [
+     "Larger current makes the filament hotter.",
+     "Metal ions in the filament vibrate more.",
+     "Electrons collide with the ions more often.",
+     "So it is harder for charge to flow / resistance increases."
+    ],
+    "tip": "Four marks = four linked steps; mention ions, not atoms getting bigger."
+   },
+   {
+    "q": "Suggest why a student should switch off the circuit between readings when measuring the resistance of a fixed resistor.",
+    "marks": 2,
+    "model": [
+     "Current heats the resistor/wires.",
+     "Increase in temperature would increase resistance (so readings would not be valid)."
+    ],
+    "tip": "Link heating to a change in resistance."
+   },
+   {
+    "q": "Describe how you would investigate how the resistance of a thermistor varies with temperature. Include the apparatus, measurements and how to make the results valid.",
+    "marks": 6,
+    "model": [
+     "Place thermistor in a beaker of water with a thermometer.",
+     "Connect thermistor to an ohmmeter, or to an ammeter in series and voltmeter in parallel with a power supply.",
+     "Heat the water / add hot water to change the temperature over a wide range (e.g. 0 to 100 °C).",
+     "Stir the water and wait so the thermistor reaches the water temperature.",
+     "Record temperature and resistance (or V and I and calculate R = V / I) at regular intervals.",
+     "Repeat readings and plot a graph of resistance against temperature; safety: care with hot water, keep connections dry."
+    ],
+    "tip": "Level 3 answers give a clear method, a way to calculate R and steps for valid, safe results."
+   },
+   {
+    "q": "Describe how the resistance of each of these changes: a fixed resistor, a filament lamp and a diode, as the pd across it increases from zero in the forward direction.",
+    "marks": 4,
+    "model": [
+     "Fixed resistor: resistance stays constant (at constant temperature).",
+     "Filament lamp: resistance increases (as it gets hotter).",
+     "Diode: very high resistance at first / until about 0.6 V.",
+     "Diode: then resistance falls sharply so current rises steeply."
+    ],
+    "tip": "Treat each component separately and give a direction for each."
+   },
+   {
+    "q": "An automatic street light uses an LDR. Explain how the LDR helps the light switch on at night.",
+    "marks": 2,
+    "model": [
+     "As it gets dark, light intensity falls so LDR resistance increases.",
+     "This change in resistance (and pd across the LDR) is used to switch the light on."
+    ],
+    "tip": "Link light level to resistance and resistance to the switching."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A filament lamp has a pd of 2.0 V across it when the current is 0.20 A, and 12.0 V when the current is 0.50 A. Calculate its resistance at each current and explain the difference.",
+    "steps": [
+     "R = V / I",
+     "At 0.20 A: R = 2.0 / 0.20 = 10 Ω",
+     "At 0.50 A: R = 12.0 / 0.50 = 24 Ω",
+     "Higher current makes the filament hotter, so ions vibrate more and electrons collide more often"
+    ],
+    "ans": "10 Ω and 24 Ω; the resistance is higher at the larger current because the filament is hotter."
+   },
+   {
+    "q": "A 6.0 V battery is connected in series with a thermistor and an ammeter. At 20 °C the thermistor's resistance is 300 Ω; at 60 °C it is 50 Ω. Calculate the current at each temperature.",
+    "steps": [
+     "I = V / R",
+     "At 20 °C: I = 6.0 / 300 = 0.020 A",
+     "At 60 °C: I = 6.0 / 50 = 0.12 A",
+     "Heating reduced the resistance, so the current increased six times"
+    ],
+    "ans": "0.020 A at 20 °C and 0.12 A at 60 °C."
+   },
+   {
+    "q": "Design a circuit to find how the current through a diode depends on the pd across it, in both directions.",
+    "steps": [
+     "Connect a d.c. supply, a variable resistor, a protective fixed resistor, an ammeter and the diode in series",
+     "Connect a voltmeter in parallel across the diode only",
+     "Adjust the variable resistor to take readings of V and I over a range of values",
+     "Reverse the diode (or the supply) and repeat to get negative values",
+     "Calculate R = V / I or plot an I-V graph"
+    ],
+    "ans": "A series circuit of supply, variable resistor, protective resistor, ammeter and diode, with a voltmeter across the diode, readings taken in both directions."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Circuit to investigate how resistance changes: the ammeter is in series, the voltmeter is in parallel across the component (here a filament lamp) and the variable resistor changes the current.",
+    "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='400' height='240' fill='#f8fafc'/><polyline points='40,110 40,50 300,50 300,105' fill='none' stroke='#1b2540' stroke-width='2'/><polyline points='300,135 300,190 40,190 40,120' fill='none' stroke='#1b2540' stroke-width='2'/><line x1='25' y1='110' x2='55' y2='110' stroke='#1b2540' stroke-width='2'/><line x1='33' y1='120' x2='47' y2='120' stroke='#1b2540' stroke-width='5'/><circle cx='120' cy='50' r='14' fill='#dbeafe' stroke='#1e40af' stroke-width='2'/><text x='120' y='55' font-size='13' text-anchor='middle' fill='#1e40af'>A</text><rect x='195' y='42' width='50' height='16' fill='#fde68a' stroke='#92400e' stroke-width='2'/><line x1='190' y1='70' x2='250' y2='30' stroke='#92400e' stroke-width='2'/><circle cx='300' cy='120' r='15' fill='#fef3c7' stroke='#1b2540' stroke-width='2'/><line x1='289' y1='109' x2='311' y2='131' stroke='#1b2540' stroke-width='2'/><line x1='311' y1='109' x2='289' y2='131' stroke='#1b2540' stroke-width='2'/><polyline points='300,80 360,80 360,106' fill='none' stroke='#1b2540' stroke-width='2'/><polyline points='360,134 360,160 300,160' fill='none' stroke='#1b2540' stroke-width='2'/><circle cx='360' cy='120' r='14' fill='#bbf7d0' stroke='#166534' stroke-width='2'/><text x='360' y='125' font-size='13' text-anchor='middle' fill='#166534'>V</text><text x='120' y='24' font-size='12' text-anchor='middle' fill='#1e40af'>Ammeter</text><text x='220' y='22' font-size='12' text-anchor='middle' fill='#92400e'>Variable resistor</text><text x='52' y='140' font-size='12' fill='#1b2540'>Battery</text><text x='280' y='124' font-size='12' text-anchor='end' fill='#1b2540'>Lamp</text><text x='360' y='182' font-size='12' text-anchor='middle' fill='#166534'>Voltmeter</text><text x='170' y='215' font-size='12' text-anchor='middle' fill='#1b2540'>Series: A   Parallel: V</text></svg>"
+   },
+   {
+    "cap": "How sensor resistance changes: a thermistor's resistance falls as temperature rises, and an LDR's resistance falls as light intensity rises. Both curves are non-linear.",
+    "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='400' height='240' fill='#f8fafc'/><text x='115' y='20' font-size='13' text-anchor='middle' fill='#b91c1c'>Thermistor</text><line x1='40' y1='35' x2='40' y2='190' stroke='#1b2540' stroke-width='2'/><line x1='40' y1='190' x2='190' y2='190' stroke='#1b2540' stroke-width='2'/><path d='M 48 45 Q 70 160 180 175' fill='none' stroke='#dc2626' stroke-width='3'/><text x='30' y='45' font-size='12' text-anchor='middle' fill='#1b2540'>R</text><text x='115' y='208' font-size='12' text-anchor='middle' fill='#1b2540'>Temperature</text><text x='305' y='20' font-size='13' text-anchor='middle' fill='#1e40af'>LDR</text><line x1='230' y1='35' x2='230' y2='190' stroke='#1b2540' stroke-width='2'/><line x1='230' y1='190' x2='380' y2='190' stroke='#1b2540' stroke-width='2'/><path d='M 238 45 Q 260 160 370 175' fill='none' stroke='#2563eb' stroke-width='3'/><text x='220' y='45' font-size='12' text-anchor='middle' fill='#1b2540'>R</text><text x='305' y='208' font-size='12' text-anchor='middle' fill='#1b2540'>Light intensity</text><text x='200' y='230' font-size='12' text-anchor='middle' fill='#1b2540'>Both: R falls as input rises</text></svg>"
+   },
+   {
+    "cap": "Resistance against current: a fixed resistor at constant temperature has constant resistance (flat line) while a filament lamp's resistance rises as the current heats it.",
+    "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='400' height='240' fill='#f8fafc'/><line x1='60' y1='30' x2='60' y2='190' stroke='#1b2540' stroke-width='2'/><line x1='60' y1='190' x2='360' y2='190' stroke='#1b2540' stroke-width='2'/><line x1='60' y1='140' x2='340' y2='140' stroke='#16a34a' stroke-width='3'/><path d='M 60 165 Q 220 160 340 55' fill='none' stroke='#ea580c' stroke-width='3'/><text x='45' y='40' font-size='12' text-anchor='middle' fill='#1b2540'>R</text><text x='210' y='208' font-size='12' text-anchor='middle' fill='#1b2540'>Current</text><text x='280' y='45' font-size='12' text-anchor='middle' fill='#ea580c'>Filament lamp</text><text x='260' y='130' font-size='12' text-anchor='middle' fill='#16a34a'>Fixed resistor</text></svg>"
+   },
+   {
+    "cap": "A diode only conducts in the forward direction. Connected forwards (left) current flows and the lamp lights; connected in reverse (right) its resistance is very high so the lamp stays off.",
+    "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='400' height='240' fill='#f8fafc'/><polyline points='30,105 30,60 85,60' fill='none' stroke='#1b2540' stroke-width='2'/><polyline points='105,60 170,60 170,105' fill='none' stroke='#1b2540' stroke-width='2'/><polyline points='170,135 170,180 30,180 30,115' fill='none' stroke='#1b2540' stroke-width='2'/><line x1='18' y1='105' x2='42' y2='105' stroke='#1b2540' stroke-width='2'/><line x1='24' y1='115' x2='36' y2='115' stroke='#1b2540' stroke-width='5'/><polygon points='85,50 85,70 103,60' fill='#bbf7d0' stroke='#166534' stroke-width='2'/><line x1='105' y1='50' x2='105' y2='70' stroke='#166534' stroke-width='2'/><circle cx='170' cy='120' r='15' fill='#fde68a' stroke='#1b2540' stroke-width='2'/><line x1='159' y1='109' x2='181' y2='131' stroke='#1b2540' stroke-width='2'/><line x1='181' y1='109' x2='159' y2='131' stroke='#1b2540' stroke-width='2'/><polyline points='230,105 230,60 285,60' fill='none' stroke='#1b2540' stroke-width='2'/><polyline points='305,60 370,60 370,105' fill='none' stroke='#1b2540' stroke-width='2'/><polyline points='370,135 370,180 230,180 230,115' fill='none' stroke='#1b2540' stroke-width='2'/><line x1='218' y1='105' x2='242' y2='105' stroke='#1b2540' stroke-width='2'/><line x1='224' y1='115' x2='236' y2='115' stroke='#1b2540' stroke-width='5'/><polygon points='305,50 305,70 287,60' fill='#fecaca' stroke='#b91c1c' stroke-width='2'/><line x1='285' y1='50' x2='285' y2='70' stroke='#b91c1c' stroke-width='2'/><circle cx='370' cy='120' r='15' fill='#e5e7eb' stroke='#1b2540' stroke-width='2'/><line x1='359' y1='109' x2='381' y2='131' stroke='#1b2540' stroke-width='2'/><line x1='381' y1='109' x2='359' y2='131' stroke='#1b2540' stroke-width='2'/><text x='100' y='30' font-size='13' text-anchor='middle' fill='#166534'>Forward</text><text x='300' y='30' font-size='13' text-anchor='middle' fill='#b91c1c'>Reverse</text><text x='100' y='205' font-size='12' text-anchor='middle' fill='#166534'>Lamp lights</text><text x='300' y='205' font-size='12' text-anchor='middle' fill='#b91c1c'>Lamp off</text></svg>"
+   }
+  ],
+  "pid": "phy_ocra.7.2",
+  "sid": "phy_ocra",
+  "v": 2,
+  "src": "pre",
+  "by": "claude/claude-opus-5-5",
+  "ts": "2026-11-27T01:36:04.881Z"
+ },
+ "phy_ocra.7.3": {
+  "summary": "An I-V graph plots the current through a component against the potential difference across it, and its shape tells you how the component behaves. A **straight line through the origin** shows a **linear** component with constant resistance (a fixed resistor at constant temperature), while a **curve** shows a **non-linear** component whose resistance changes, such as a filament lamp or a diode. You must be able to sketch, read and interpret these graphs, calculate resistance from points on them using R = V / I, and link each shape to what the component does and why.",
+  "core": [
+   {
+    "h": "What an I-V graph shows",
+    "p": "An I-V characteristic is a graph of **current (I) on the y-axis** against **potential difference (V) on the x-axis** for one component. Positive and negative values show what happens when the pd is applied one way and then reversed. Reading pairs of values from the graph lets you work out the resistance at any point.",
+    "bullets": [
+     "Axes: current in A (y-axis), pd in V (x-axis), with the origin in the middle so both directions show",
+     "Resistance at a point: **R = V / I** using the coordinates of that point",
+     "A **straight line through the origin** = constant resistance = **linear** component",
+     "A **curve** = resistance changes = **non-linear** component",
+     "On an I-V graph, a **steeper** line means a **smaller** resistance (more current for each volt)"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Linear component",
+      "p": "A component whose I-V graph is a straight line through the origin: current is directly proportional to potential difference."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Fixed resistor (ohmic conductor)",
+    "p": "For a fixed resistor at **constant temperature** the current is **directly proportional** to the pd. The I-V graph is a straight line through the origin, in both directions, so the resistance is the same at every point.",
+    "bullets": [
+     "Straight line through origin; symmetrical in the third quadrant",
+     "V / I is the same at every point → **constant resistance**",
+     "Obeys Ohm's law (at constant temperature)",
+     "Doubling V doubles I",
+     "If it heated up, its resistance would rise and the line would start to curve"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Gradient link",
+      "p": "For a straight-line I-V graph through the origin, gradient = I / V = 1 / R, so resistance = 1 ÷ gradient."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Comparing two resistors on one graph",
+    "p": "When two fixed resistors are plotted on the same I-V axes, both give straight lines through the origin. The line with the **steeper gradient** has the **lower resistance**, because it carries more current for the same pd.",
+    "bullets": [
+     "Steeper line → bigger I for the same V → smaller R",
+     "Shallower line → larger R",
+     "Pick the same pd on both lines and compare the currents to decide",
+     "Check axes: if the graph is plotted as V against I instead, a steeper line means a **larger** resistance"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Check the axes",
+      "p": "Always read which quantity is on which axis before using the gradient; the gradient is 1/R on an I-V graph but R on a V-I graph."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Filament lamp",
+    "p": "A filament lamp's I-V graph is an **S-shaped curve** through the origin that gets **less steep** (flattens) as the pd increases in either direction. More current heats the filament, its metal ions vibrate more, electrons collide with them more often and so the **resistance increases**.",
+    "bullets": [
+     "Near the origin: roughly straight (filament is cool, R roughly constant)",
+     "At higher pd: curve flattens → current increases less for each extra volt → **R increasing**",
+     "Symmetrical: the lamp behaves the same with current in either direction",
+     "Non-linear component",
+     "Calculate R at two points with R = V / I to show it has increased"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Use R = V / I, not the gradient",
+      "p": "For a curve, find resistance using the coordinates of the point: R = V / I. Do not use the gradient of the tangent."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Diode",
+    "p": "A diode's I-V graph shows **zero current for all reverse (negative) pd** and almost zero current for small forward pd. Once the forward pd reaches about **0.6 V**, the current rises very steeply. This shows that a diode lets current flow in **one direction only**.",
+    "bullets": [
+     "Reverse direction: line along the V-axis → **very high resistance**, no current",
+     "Forward direction below about 0.6 V: very high resistance",
+     "Forward direction above about 0.6 V: resistance becomes **very low**, current rises steeply",
+     "Not symmetrical; non-linear component",
+     "Function: controls the direction of current, e.g. protecting circuits, rectifying a.c."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Diode graph",
+      "p": "Flat along the axis for negative pd, then a sharp rise in current after about 0.6 V forward pd."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Linking shape to function and properties",
+    "p": "The spec requires you to relate each curve to what the component is for and the physics inside it. The graph is evidence of the component's properties.",
+    "bullets": [
+     "Fixed resistor: constant R → used to **set or limit** current to a known value",
+     "Filament lamp: R rises as it gets hot → lamp glows because the filament is very hot; switch-on current is high when it is cold",
+     "Diode: one-way conduction → used where current must only go one way",
+     "Thermistor at fixed temperature behaves like a resistor; its line gets **steeper** when heated (R falls)",
+     "LDR: its line gets **steeper** in brighter light (R falls)"
+    ],
+    "table": {
+     "head": [
+      "Component",
+      "Graph shape",
+      "Resistance",
+      "Linear?"
+     ],
+     "rows": [
+      [
+       "Fixed resistor",
+       "Straight line through origin",
+       "Constant",
+       "Yes"
+      ],
+      [
+       "Filament lamp",
+       "S-curve, flattening at high V",
+       "Increases as I increases",
+       "No"
+      ],
+      [
+       "Diode",
+       "Zero in reverse, steep rise after about 0.6 V",
+       "Very high in reverse, low forward",
+       "No"
+      ],
+      [
+       "Thermistor (hotter)",
+       "Steeper line",
+       "Lower",
+       "At fixed temperature"
+      ],
+      [
+       "LDR (brighter)",
+       "Steeper line",
+       "Lower",
+       "At fixed light level"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Calculating resistance from an I-V graph",
+    "p": "To find the resistance at a point, read the pd and current off the graph and divide. Convert mA to A first.",
+    "bullets": [
+     "Step 1: choose the point and read V from the x-axis",
+     "Step 2: read I from the y-axis; convert mA to A (÷ 1000)",
+     "Step 3: R = V / I",
+     "For a straight line, any point gives the same R",
+     "For a curve, R is different at different points, so state which point you used",
+     "Give the unit: ohms (Ω)"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Milliamps",
+      "p": "0.6 V and 20 mA gives R = 0.6 / 0.020 = 30 Ω, not 0.03 Ω. Always convert to amps."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Required practical: obtaining I-V characteristics (PAG P6)",
+    "p": "You plot an I-V graph by measuring current and pd for a range of settings, then repeating with the component reversed. The circuit is a series loop with the component, an ammeter and a variable resistor (or variable power supply), with a voltmeter across the component.",
+    "bullets": [
+     "Ammeter in **series**, voltmeter in **parallel** across the component",
+     "Change the pd in steps with the variable resistor or power pack",
+     "Record V and I for at least 6 to 8 values",
+     "Reverse the connections to the component (or supply) to get negative values",
+     "For a diode, include a **protective resistor** in series to limit the current",
+     "Plot I (y) against V (x), with the origin in the centre, and draw a smooth curve or line of best fit",
+     "Switch off between readings for the resistor so heating does not change R"
+    ],
+    "table": {
+     "head": [
+      "Variable",
+      "Type"
+     ],
+     "rows": [
+      [
+       "Potential difference",
+       "Independent"
+      ],
+      [
+       "Current",
+       "Dependent"
+      ],
+      [
+       "Component, temperature of resistor",
+       "Control"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Range of readings",
+      "p": "Take more readings where the graph bends (for example around 0.6 V for a diode) so the curve's shape is clear."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Drawing and reading graphs well",
+    "p": "Graph marks are easy to gain and to lose. Examiners look for sensible scales, labelled axes and good lines of best fit.",
+    "bullets": [
+     "Label axes with quantity and unit: current / A, potential difference / V",
+     "Use a scale that fills more than half the grid",
+     "Plot points accurately (within half a small square)",
+     "Draw a **smooth curve** through the points for a lamp or diode, not dot-to-dot",
+     "Draw a **straight line** with a ruler for a resistor",
+     "Identify anomalous points and leave them out of the line"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Why the lamp curve flattens: the particle picture",
+    "p": "Current in a metal is a flow of free electrons. As they move, they collide with the vibrating metal ions in the lattice and transfer energy, heating the filament. The hotter the filament, the more the ions vibrate, the more often electrons collide, and the harder it becomes for the current to increase.",
+    "bullets": [
+     "Energy transferred to the ions = **heating effect** of current",
+     "Higher temperature → larger ion vibrations → more collisions per second",
+     "More collisions → higher resistance → smaller increase in current per volt",
+     "This is why the curve flattens away from the origin",
+     "The same effect makes any resistor's resistance rise if it is allowed to get hot"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Ions, not atoms growing",
+      "p": "Say the ions vibrate more; do not say atoms get bigger or that electrons get hot."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Describing a graph in words",
+    "p": "Some questions ask you to describe the relationship shown. Use precise words that match the shape.",
+    "bullets": [
+     "Straight line through origin: 'current is **directly proportional** to pd'",
+     "Straight line not through origin: 'linear but not proportional'",
+     "Lamp: 'as pd increases, current increases but by smaller amounts each time; resistance increases'",
+     "Diode: 'no current in reverse; current only flows forwards above about 0.6 V'",
+     "Quote values from the graph to support your description"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Directly proportional",
+      "p": "Doubling one quantity doubles the other; the graph is a straight line through the origin."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Hill paths",
+   "p": "Think of the pd as how hard you push a trolley and the current as how fast it goes. A fixed resistor is a smooth, even path: twice the push gives twice the speed every time, giving a straight line. A filament lamp is a path that gets muddier the faster you go, because the trolley churns it up (heating), so each extra push gives less extra speed and the graph flattens. A diode is a one-way gate on a slope: pushing backwards does nothing at all, and pushing forwards does nothing until you push past a small lip (about 0.6 V), then the trolley shoots through. Where it breaks down: real electrons drift slowly and are pushed by an electric field rather than by contact, and the 'mud' in a lamp is really vibrating metal ions."
+  },
+  "terms": [
+   {
+    "t": "I-V characteristic",
+    "d": "A graph of current through a component against the potential difference across it."
+   },
+   {
+    "t": "Current (I)",
+    "d": "The rate of flow of charge, measured in amperes (A)."
+   },
+   {
+    "t": "Potential difference (V)",
+    "d": "The energy transferred per unit charge between two points, measured in volts (V)."
+   },
+   {
+    "t": "Resistance (R)",
+    "d": "Potential difference divided by current, R = V / I, measured in ohms (Ω)."
+   },
+   {
+    "t": "Linear component",
+    "d": "A component with a straight-line I-V graph through the origin, so constant resistance."
+   },
+   {
+    "t": "Non-linear component",
+    "d": "A component with a curved I-V graph, so its resistance changes as current changes."
+   },
+   {
+    "t": "Ohmic conductor",
+    "d": "A conductor in which current is directly proportional to pd at constant temperature."
+   },
+   {
+    "t": "Directly proportional",
+    "d": "When one quantity doubles the other doubles; shown by a straight line through the origin."
+   },
+   {
+    "t": "Gradient",
+    "d": "The steepness of a line, change in y ÷ change in x; on an I-V graph it equals 1/R for a straight line through the origin."
+   },
+   {
+    "t": "Filament lamp",
+    "d": "A lamp whose thin metal filament heats up and glows; its resistance increases with current."
+   },
+   {
+    "t": "Diode",
+    "d": "A component that lets current flow in one direction only; very high resistance in reverse."
+   },
+   {
+    "t": "Forward pd",
+    "d": "A pd applied across a diode in the direction that allows current to flow."
+   },
+   {
+    "t": "Reverse pd",
+    "d": "A pd applied across a diode in the direction that blocks current."
+   },
+   {
+    "t": "Line of best fit",
+    "d": "A straight line or smooth curve drawn to show the trend of plotted points, ignoring anomalies."
+   },
+   {
+    "t": "Anomalous result",
+    "d": "A reading that does not fit the pattern of the others and is left out of the line of best fit."
+   },
+   {
+    "t": "Protective resistor",
+    "d": "A fixed resistor in series with a diode to stop the current becoming large enough to damage it."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "The gradient of an I-V graph is the resistance.",
+    "r": "On an I-V graph the gradient is **1/R**; find R using **R = V / I** at a point."
+   },
+   {
+    "w": "The steeper line has the larger resistance.",
+    "r": "On an I-V graph the **steeper** line has the **smaller** resistance."
+   },
+   {
+    "w": "The lamp's resistance decreases because the graph curves.",
+    "r": "The curve flattens, so current rises less per volt: the lamp's resistance **increases**."
+   },
+   {
+    "w": "A diode has a straight line in the reverse direction.",
+    "r": "In reverse the current is **zero**: the graph lies along the V-axis, showing very high resistance."
+   },
+   {
+    "w": "Current and pd are proportional for a lamp.",
+    "r": "Only for a fixed resistor at constant temperature; a lamp is **non-linear**."
+   },
+   {
+    "w": "Join the points dot to dot.",
+    "r": "Draw a **smooth curve** or a **straight line of best fit**."
+   },
+   {
+    "w": "R = 0.6 / 20 = 0.03 Ω (using mA).",
+    "r": "Convert to amps first: 20 mA = 0.020 A, so R = 0.6 / 0.020 = **30 Ω**."
+   },
+   {
+    "w": "The diode lets a small current through backwards.",
+    "r": "A diode allows current in **one direction only**; reverse current is effectively zero."
+   },
+   {
+    "w": "Resistance of a resistor stays constant whatever happens.",
+    "r": "Only **at constant temperature**; if it gets hot its resistance increases."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Name the component whose I-V graph is a straight line through the origin.",
+    "marks": 1,
+    "model": [
+     "Fixed resistor (at constant temperature) / ohmic conductor."
+    ],
+    "tip": "Add 'at constant temperature' to be safe."
+   },
+   {
+    "q": "State what a straight line through the origin on an I-V graph shows about the resistance.",
+    "marks": 1,
+    "model": [
+     "Resistance is constant."
+    ],
+    "tip": "Linear = constant resistance."
+   },
+   {
+    "q": "Sketch the I-V graph for a diode.",
+    "marks": 2,
+    "model": [
+     "Zero current for negative (reverse) pd.",
+     "Steep rise in current for positive pd above a small value (about 0.6 V)."
+    ],
+    "tip": "Show both quadrants with labelled axes."
+   },
+   {
+    "q": "At one point on an I-V graph for a lamp, V = 3.0 V and I = 0.15 A. Calculate the resistance.",
+    "marks": 2,
+    "model": [
+     "R = V / I = 3.0 / 0.15",
+     "R = 20 Ω"
+    ],
+    "tip": "Use the point's coordinates, not the gradient."
+   },
+   {
+    "q": "Two resistors P and Q are plotted on the same I-V axes. The line for P is steeper. State and explain which has the larger resistance.",
+    "marks": 2,
+    "model": [
+     "Q has the larger resistance.",
+     "For the same pd, Q has a smaller current (R = V / I)."
+    ],
+    "tip": "Compare currents at the same pd."
+   },
+   {
+    "q": "Describe the shape of the I-V graph for a filament lamp and explain what it shows about resistance.",
+    "marks": 3,
+    "model": [
+     "Curve through the origin that becomes less steep / flattens at higher pd (S-shape, symmetrical).",
+     "Current increases less for each increase in pd.",
+     "So resistance increases as current/pd increases."
+    ],
+    "tip": "Shape, then what it means."
+   },
+   {
+    "q": "Explain, in terms of particles, why the I-V graph for a filament lamp is a curve.",
+    "marks": 4,
+    "model": [
+     "As current increases, filament temperature increases.",
+     "Metal ions vibrate more.",
+     "Electrons collide with ions more often.",
+     "Resistance increases, so current does not increase in proportion to pd."
+    ],
+    "tip": "Link the particle chain to the graph shape at the end."
+   },
+   {
+    "q": "A diode has a pd of 0.70 V across it and a current of 35 mA. Calculate its resistance.",
+    "marks": 3,
+    "model": [
+     "I = 35 mA = 0.035 A",
+     "R = V / I = 0.70 / 0.035",
+     "R = 20 Ω"
+    ],
+    "tip": "Unit conversion is a separate mark."
+   },
+   {
+    "q": "State why a protective resistor is used in series with a diode when obtaining its I-V graph.",
+    "marks": 1,
+    "model": [
+     "To limit the current / prevent a large current damaging the diode."
+    ],
+    "tip": "Link to low forward resistance."
+   },
+   {
+    "q": "Describe how to obtain the I-V characteristic of a filament lamp. Include the circuit, measurements, and how you would present the results.",
+    "marks": 6,
+    "model": [
+     "Circuit: lamp in series with ammeter and variable resistor/variable supply; voltmeter in parallel with lamp.",
+     "Adjust variable resistor to change pd in steps.",
+     "Record V and I for a range of at least 6 values.",
+     "Reverse the connections to obtain negative values.",
+     "Repeat readings and calculate means.",
+     "Plot I (y-axis) against V (x-axis) and draw a smooth curve of best fit; calculate R = V / I at points."
+    ],
+    "tip": "Level 3 needs a correct circuit, a method covering both directions and how the graph is drawn."
+   },
+   {
+    "q": "Compare the I-V graphs of a fixed resistor and a filament lamp.",
+    "marks": 2,
+    "model": [
+     "Resistor: straight line through origin / constant resistance.",
+     "Lamp: curve that flattens / resistance increases with current."
+    ],
+    "tip": "Use a comparative statement for each."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A filament lamp's I-V graph passes through (2.0 V, 0.40 A) and (6.0 V, 0.60 A). Calculate the resistance at each point and say what this shows.",
+    "steps": [
+     "R = V / I",
+     "At 2.0 V: R = 2.0 / 0.40 = 5.0 Ω",
+     "At 6.0 V: R = 6.0 / 0.60 = 10 Ω",
+     "Resistance has doubled as the current increased, because the filament is hotter"
+    ],
+    "ans": "5.0 Ω and 10 Ω; resistance increases with current, so the lamp is non-linear."
+   },
+   {
+    "q": "A straight-line I-V graph through the origin passes through (4.0 V, 0.050 A). Find the resistance and the current at 10 V.",
+    "steps": [
+     "R = V / I = 4.0 / 0.050 = 80 Ω",
+     "Straight line through origin, so R is constant",
+     "I = V / R = 10 / 80 = 0.125 A"
+    ],
+    "ans": "R = 80 Ω; I = 0.125 A (0.13 A to 2 s.f.) at 10 V."
+   },
+   {
+    "q": "Use the shape of a diode's I-V graph to explain why a diode in series with a lamp lights the lamp only one way round.",
+    "steps": [
+     "In reverse, the graph shows zero current: very high resistance",
+     "So no current flows through the lamp when the diode is reversed",
+     "Forwards, above about 0.6 V the current rises steeply: low resistance",
+     "So current flows through the lamp and it lights"
+    ],
+    "ans": "The diode conducts only in the forward direction, so the lamp lights only when the diode points the conventional current direction."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "I-V graph for a fixed resistor at constant temperature: a straight line through the origin, so current is directly proportional to pd and resistance is constant.",
+    "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='400' height='240' fill='#f8fafc'/><line x1='60' y1='120' x2='340' y2='120' stroke='#1b2540' stroke-width='2'/><line x1='200' y1='30' x2='200' y2='210' stroke='#1b2540' stroke-width='2'/><line x1='90' y1='190' x2='310' y2='50' stroke='#16a34a' stroke-width='3'/><text x='212' y='38' font-size='12' fill='#1b2540'>I / A</text><text x='345' y='124' font-size='12' fill='#1b2540'>V</text><text x='300' y='80' font-size='12' text-anchor='middle' fill='#16a34a'>Straight line</text><text x='110' y='70' font-size='13' text-anchor='middle' fill='#1b2540'>Fixed resistor</text><text x='130' y='228' font-size='12' text-anchor='middle' fill='#1b2540'>Constant resistance</text></svg>"
+   },
+   {
+    "cap": "I-V graph for a filament lamp: the S-shaped curve flattens at higher pd in both directions, showing that the resistance increases as the filament heats up.",
+    "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='400' height='240' fill='#f8fafc'/><line x1='40' y1='120' x2='350' y2='120' stroke='#1b2540' stroke-width='2'/><line x1='200' y1='30' x2='200' y2='210' stroke='#1b2540' stroke-width='2'/><path d='M 50 190 Q 110 180 160 155 Q 200 120 240 85 Q 290 60 340 50' fill='none' stroke='#ea580c' stroke-width='3'/><text x='212' y='38' font-size='12' fill='#1b2540'>I / A</text><text x='355' y='124' font-size='12' fill='#1b2540'>V</text><text x='110' y='70' font-size='13' text-anchor='middle' fill='#ea580c'>Filament lamp</text><text x='300' y='160' font-size='12' text-anchor='middle' fill='#1b2540'>Curve flattens</text><text x='300' y='176' font-size='12' text-anchor='middle' fill='#1b2540'>R increases</text></svg>"
+   },
+   {
+    "cap": "I-V graph for a diode: no current in the reverse direction, then a steep rise in current once the forward pd passes about 0.6 V.",
+    "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='400' height='240' fill='#f8fafc'/><line x1='40' y1='170' x2='350' y2='170' stroke='#1b2540' stroke-width='2'/><line x1='200' y1='30' x2='200' y2='210' stroke='#1b2540' stroke-width='2'/><path d='M 50 170 L 240 170 Q 265 168 275 140 L 295 40' fill='none' stroke='#7c3aed' stroke-width='3'/><line x1='255' y1='165' x2='255' y2='175' stroke='#1b2540' stroke-width='2'/><text x='255' y='192' font-size='12' text-anchor='middle' fill='#1b2540'>0.6 V</text><text x='212' y='38' font-size='12' fill='#1b2540'>I / A</text><text x='355' y='174' font-size='12' fill='#1b2540'>V</text><text x='110' y='150' font-size='12' text-anchor='middle' fill='#7c3aed'>Reverse: I = 0</text><text x='340' y='80' font-size='12' text-anchor='middle' fill='#7c3aed'>Steep rise</text><text x='110' y='60' font-size='13' text-anchor='middle' fill='#1b2540'>Diode</text></svg>"
+   },
+   {
+    "cap": "Two fixed resistors on the same I-V axes: the steeper line (A) carries more current at the same pd, so it has the lower resistance.",
+    "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='400' height='240' fill='#f8fafc'/><line x1='60' y1='200' x2='360' y2='200' stroke='#1b2540' stroke-width='2'/><line x1='60' y1='30' x2='60' y2='200' stroke='#1b2540' stroke-width='2'/><line x1='60' y1='200' x2='240' y2='40' stroke='#2563eb' stroke-width='3'/><line x1='60' y1='200' x2='340' y2='130' stroke='#dc2626' stroke-width='3'/><text x='72' y='38' font-size='12' fill='#1b2540'>I / A</text><text x='340' y='218' font-size='12' fill='#1b2540'>V / V</text><text x='255' y='52' font-size='12' fill='#2563eb'>A: lower R</text><text x='290' y='118' font-size='12' text-anchor='middle' fill='#dc2626'>B: higher R</text></svg>"
+   }
+  ],
+  "pid": "phy_ocra.7.3",
+  "sid": "phy_ocra",
+  "v": 2,
+  "src": "pre",
+  "by": "claude/claude-opus-5-5",
+  "ts": "2026-11-27T01:36:04.894Z"
+ },
+ "phy_ocra.7.4": {
+  "summary": "Adding resistors **in series increases the total resistance** because charge has to pass through every resistor in turn, while adding resistors **in parallel decreases the total resistance** because charge has extra paths to flow through. In series the current is the same everywhere and the supply pd is shared; in parallel each branch has the full supply pd and the currents in the branches add up to the total. Using these rules with V = IR you can calculate currents, potential differences and resistances in d.c. circuits and design circuits, such as sensing circuits, for measurement and testing.",
+  "core": [
+   {
+    "h": "Resistors in series",
+    "p": "Resistors in series are joined end to end in one loop, so the **same current** flows through each one. The charge must get through every resistor, so the total resistance is the **sum** of the individual resistances.",
+    "bullets": [
+     "**R total = R1 + R2 + R3 ...**",
+     "Current is the **same** at every point in a series circuit",
+     "The supply pd is **shared** between the components: V supply = V1 + V2 + ...",
+     "Adding another resistor in series always **increases** total resistance and so **decreases** current (for the same supply)",
+     "The largest resistor has the **largest share** of the pd (V = IR with the same I)"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Series rule",
+      "p": "In series, total resistance = R1 + R2: it is bigger than any single resistor."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Why series resistance increases (qualitative)",
+    "p": "Each resistor opposes the flow of charge. In series, every charge passes through all the resistors one after another, so the opposition adds up. For the same pd, less current can flow.",
+    "bullets": [
+     "One path only, so all charge meets every resistor",
+     "Energy transferred by each coulomb is split between the resistors",
+     "Like making a single pipe longer and narrower in places: harder to push water through",
+     "Result: **net resistance increased**"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Resistors in parallel",
+    "p": "Resistors in parallel are on separate branches, each connected directly across the supply. The **pd across each branch is the same** as the supply pd, and the **total current is the sum** of the branch currents.",
+    "bullets": [
+     "pd across each branch = supply pd (V1 = V2 = V supply)",
+     "Total current = I1 + I2 + ... (current splits at a junction and rejoins)",
+     "Each branch current is found from I = V / R for that branch",
+     "The branch with the **smallest resistance** carries the **largest current**",
+     "Adding another resistor in parallel **decreases** total resistance and **increases** total current",
+     "Total resistance is **less than the smallest** individual resistance"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Parallel rule",
+      "p": "Adding resistors in parallel decreases the net resistance: the total is smaller than the smallest single resistor."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Why parallel resistance decreases (qualitative)",
+    "p": "Adding a resistor in parallel gives the charge an **extra path**. Each branch still has the full supply pd across it, so the new branch carries its own extra current. More total current for the same pd means a smaller total resistance (R = V / I).",
+    "bullets": [
+     "More paths → more total current for the same pd",
+     "R total = V / I total, and I total has increased, so R total has decreased",
+     "Like opening more checkouts in a supermarket: more people get through each minute",
+     "The existing branches are **not affected**: their current stays the same"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Explain with current",
+      "p": "The neat exam explanation: extra branch, same pd across it, extra current, so total current up and total resistance down."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Comparing series and parallel",
+    "p": "Learn the rules in pairs so you can apply the right one quickly.",
+    "bullets": [
+     "Series: current same, pd shared, resistances add",
+     "Parallel: pd same, current shared (adds up), total resistance less than smallest",
+     "Series: one break stops everything; parallel: one branch can be switched off independently",
+     "Household lighting is wired in parallel so each lamp gets the full pd and can be switched separately"
+    ],
+    "table": {
+     "head": [
+      "Quantity",
+      "Series",
+      "Parallel"
+     ],
+     "rows": [
+      [
+       "Current",
+       "Same through every component",
+       "Splits; total = sum of branch currents"
+      ],
+      [
+       "Potential difference",
+       "Shared; total = sum of pds",
+       "Same across each branch as supply"
+      ],
+      [
+       "Total resistance",
+       "R1 + R2 (increases)",
+       "Less than smallest R (decreases)"
+      ],
+      [
+       "Adding a resistor",
+       "Current falls",
+       "Total current rises"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Calculating in series circuits",
+    "p": "Work out the total resistance first, then the current, then the pd across each component. Always check the pds add up to the supply pd.",
+    "bullets": [
+     "Step 1: R total = R1 + R2",
+     "Step 2: I = V supply / R total",
+     "Step 3: V1 = I × R1 and V2 = I × R2",
+     "Check: V1 + V2 = V supply",
+     "pd is shared in the **ratio of the resistances**: V1 / V2 = R1 / R2"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Write the equation",
+      "p": "Write V = IR (or its rearrangement) before substituting; this often earns a mark even if the arithmetic slips."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Calculating in parallel circuits",
+    "p": "In parallel, treat each branch separately because each has the full supply pd across it. Then add the branch currents and, if asked, find the total resistance from R = V / I total.",
+    "bullets": [
+     "Step 1: pd across each branch = supply pd",
+     "Step 2: I1 = V / R1 and I2 = V / R2",
+     "Step 3: I total = I1 + I2",
+     "Step 4: R total = V / I total",
+     "Check: R total is smaller than the smallest resistor",
+     "Ammeter in the main wire reads I total; ammeter in a branch reads that branch's current"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Do not add parallel resistances",
+      "p": "R1 + R2 is only for series. For parallel, the total must come out smaller than either resistor."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Combined circuits",
+    "p": "Some circuits have a parallel section in series with another resistor. Work in parts: the current through the series resistor equals the total current entering the parallel section, and the pd is shared between the series resistor and the parallel section.",
+    "bullets": [
+     "Find the current in each part using I = V / R where you know V and R",
+     "The current into a junction = current out of it (charge is conserved)",
+     "Around any loop, the pds across components add up to the supply pd (energy is conserved)",
+     "Two identical resistors in parallel have a total of **half** of one resistor"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Conservation",
+      "p": "Current rules come from conservation of charge; pd rules come from conservation of energy."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Designing circuits for measurement and testing",
+    "p": "Circuits are designed so that meters measure what is needed without changing the circuit. Ammeters have a very low resistance and go in series; voltmeters have a very high resistance and go in parallel. A variable resistor in series lets you control the current.",
+    "bullets": [
+     "To measure the current through one component, put the ammeter in **series** in that component's branch",
+     "To measure the pd across one component, put the voltmeter in **parallel** across just that component",
+     "A **variable resistor** in series varies the current, for example to dim a lamp or change motor speed",
+     "A **fixed resistor** in series protects components such as LEDs and diodes by limiting the current",
+     "Use a switch so testing is done briefly, reducing heating"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Meter mistakes",
+      "p": "An ammeter connected in parallel acts almost like a wire (short circuit); a voltmeter in series allows almost no current."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Sensing circuits",
+    "p": "A thermistor or LDR in **series with a fixed resistor** across a supply forms a sensing circuit. The supply pd is shared in the ratio of the resistances, so when the sensor's resistance changes, the pd across each component changes. A voltmeter (or a switching circuit) across one of them detects the change.",
+    "bullets": [
+     "LDR in series with a fixed resistor: as it gets darker, LDR resistance rises, so the **pd across the LDR rises** and the pd across the fixed resistor falls",
+     "Thermistor in series with a fixed resistor: as it gets hotter, thermistor resistance falls, so the **pd across the thermistor falls** and the pd across the fixed resistor rises",
+     "The output pd can be used to switch on a street light, heater or alarm",
+     "Using a variable resistor instead of the fixed resistor lets you **adjust the trigger level**"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Bigger share",
+      "p": "In series, the component with the bigger resistance always gets the bigger share of the pd."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Testing and fault finding",
+    "p": "Meters can be used to find faults. In a series circuit a break anywhere stops all current. A voltmeter across a broken component reads close to the full supply pd because there is no current to drop pd across the other components.",
+    "bullets": [
+     "Ammeter reads zero → there is a break somewhere in that loop",
+     "Voltmeter across a working component in a broken series loop reads 0 V",
+     "Voltmeter across the broken component reads about the supply pd",
+     "In parallel, a break in one branch only stops that branch's current"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "PAG P7: investigating series and parallel circuits",
+    "p": "In the practical you build series and parallel circuits with resistors or lamps, measure currents with ammeters and pds with voltmeters, and test the rules above.",
+    "bullets": [
+     "Build a series circuit; measure current at different points (should be equal)",
+     "Measure pd across each resistor and the supply; check they add up",
+     "Build a parallel circuit; measure branch currents and total current; check I total = I1 + I2",
+     "Measure pd across each branch (should equal supply pd)",
+     "Calculate total resistance as V / I total and compare with predictions",
+     "Repeat readings; small differences are due to meter resolution and resistance of wires"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Roads and toll booths",
+   "p": "Think of current as cars per minute and resistors as toll booths. In series, every car must pass every booth on one road, so adding booths slows the flow for everyone: resistance adds up. In parallel, each booth sits on its own lane across the same stretch of road, so opening another lane lets more cars through each minute: total resistance falls. The 'height' the cars drop through on the journey is like pd: in series the drop is shared between booths along the road, in parallel every lane drops through the full height. Where it breaks down: cars are not used up or pushed by a battery, and electrons in a wire start moving all at once rather than queueing to enter."
+  },
+  "terms": [
+   {
+    "t": "Series circuit",
+    "d": "A circuit with only one path for the current, components connected end to end."
+   },
+   {
+    "t": "Parallel circuit",
+    "d": "A circuit with two or more branches, each connected across the same two points."
+   },
+   {
+    "t": "Net (total) resistance",
+    "d": "The single resistance that would have the same effect as the combination of resistors."
+   },
+   {
+    "t": "Branch",
+    "d": "One of the separate paths in a parallel circuit."
+   },
+   {
+    "t": "Junction",
+    "d": "A point where the current splits or rejoins; current in equals current out."
+   },
+   {
+    "t": "Potential difference",
+    "d": "The energy transferred per unit charge between two points, measured in volts."
+   },
+   {
+    "t": "Current",
+    "d": "The rate of flow of charge, measured in amperes."
+   },
+   {
+    "t": "Resistance",
+    "d": "Potential difference divided by current, R = V / I, measured in ohms."
+   },
+   {
+    "t": "Ammeter",
+    "d": "Meter for current; very low resistance; connected in series."
+   },
+   {
+    "t": "Voltmeter",
+    "d": "Meter for potential difference; very high resistance; connected in parallel."
+   },
+   {
+    "t": "Variable resistor",
+    "d": "A resistor whose resistance can be changed to control the current."
+   },
+   {
+    "t": "Protective resistor",
+    "d": "A fixed resistor in series with a component to limit the current through it."
+   },
+   {
+    "t": "Sensing circuit",
+    "d": "A circuit with a sensor (thermistor or LDR) in series with a resistor so that the pd across it changes with conditions."
+   },
+   {
+    "t": "Conservation of charge",
+    "d": "Charge is not used up, so the current into a junction equals the current out."
+   },
+   {
+    "t": "Conservation of energy",
+    "d": "Around any loop, the sum of pds across components equals the supply pd."
+   },
+   {
+    "t": "Short circuit",
+    "d": "A path of very low resistance that lets a very large current flow, bypassing components."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Adding a resistor in parallel increases the total resistance.",
+    "r": "It **decreases** the total resistance, because it adds another path for current."
+   },
+   {
+    "w": "Current is used up as it goes round a series circuit.",
+    "r": "The current is the **same** at every point in a series circuit; charge is conserved."
+   },
+   {
+    "w": "In parallel the pd is shared between the branches.",
+    "r": "Each branch has the **same pd** as the supply; it is the current that is shared."
+   },
+   {
+    "w": "Total resistance of 6 Ω and 3 Ω in parallel is 9 Ω.",
+    "r": "9 Ω is the **series** total; in parallel the total is less than 3 Ω (it is 2 Ω)."
+   },
+   {
+    "w": "The smallest resistor in series has the biggest pd.",
+    "r": "In series the **largest** resistor has the largest share of the pd (V = IR, same I)."
+   },
+   {
+    "w": "The ammeter can go anywhere, even across the component.",
+    "r": "An ammeter goes in **series**; a voltmeter goes in **parallel** across the component."
+   },
+   {
+    "w": "When an LDR gets darker the pd across it falls.",
+    "r": "Darker → LDR resistance **rises** → it takes a **bigger** share of the pd."
+   },
+   {
+    "w": "Adding a branch in parallel reduces the current in the other branches.",
+    "r": "The other branches still have the full pd, so their current is **unchanged**; the total current increases."
+   }
+  ],
+  "exam": [
+   {
+    "q": "State the total resistance of a 4 Ω resistor and a 6 Ω resistor connected in series.",
+    "marks": 1,
+    "model": [
+     "10 Ω"
+    ],
+    "tip": "Series: just add."
+   },
+   {
+    "q": "State what happens to the total resistance of a circuit when another resistor is connected in parallel with an existing one.",
+    "marks": 1,
+    "model": [
+     "It decreases."
+    ],
+    "tip": "More paths, less resistance."
+   },
+   {
+    "q": "Explain why adding a resistor in series increases the total resistance of a circuit.",
+    "marks": 2,
+    "model": [
+     "All the charge has to pass through both resistors / only one path.",
+     "So the opposition to current adds up / less current for the same pd."
+    ],
+    "tip": "One path is the key idea."
+   },
+   {
+    "q": "Explain why two resistors in parallel have a smaller total resistance than either resistor alone.",
+    "marks": 3,
+    "model": [
+     "Each resistor has the full supply pd across it.",
+     "Each branch carries its own current, so total current is greater.",
+     "R = V / I, so with larger total current for the same pd, total resistance is smaller."
+    ],
+    "tip": "Talk about pd and current, not just 'more paths'."
+   },
+   {
+    "q": "A 12 V battery is connected to a 2 Ω and a 4 Ω resistor in series. Calculate the current and the pd across the 4 Ω resistor.",
+    "marks": 3,
+    "model": [
+     "R total = 2 + 4 = 6 Ω",
+     "I = V / R = 12 / 6 = 2.0 A",
+     "V = IR = 2.0 × 4 = 8.0 V"
+    ],
+    "tip": "Check: 4 V + 8 V = 12 V."
+   },
+   {
+    "q": "A 6.0 V supply is connected across a 3 Ω resistor and a 6 Ω resistor in parallel. Calculate the total current from the supply.",
+    "marks": 3,
+    "model": [
+     "I1 = 6.0 / 3 = 2.0 A",
+     "I2 = 6.0 / 6 = 1.0 A",
+     "I total = 3.0 A"
+    ],
+    "tip": "Same pd across each branch."
+   },
+   {
+    "q": "Use your answer to the previous question to calculate the total resistance of the parallel combination.",
+    "marks": 2,
+    "model": [
+     "R = V / I = 6.0 / 3.0",
+     "R = 2.0 Ω"
+    ],
+    "tip": "Check it is less than 3 Ω."
+   },
+   {
+    "q": "State how an ammeter and a voltmeter should be connected to measure the current through and pd across a resistor.",
+    "marks": 2,
+    "model": [
+     "Ammeter in series with the resistor.",
+     "Voltmeter in parallel across the resistor."
+    ],
+    "tip": "Name both positions."
+   },
+   {
+    "q": "An LDR is connected in series with a fixed resistor across a battery. Explain what happens to the pd across the LDR when it gets dark.",
+    "marks": 3,
+    "model": [
+     "LDR resistance increases in the dark.",
+     "pd is shared in proportion to resistance in series.",
+     "So the pd across the LDR increases (and across the fixed resistor decreases)."
+    ],
+    "tip": "Resistance change, sharing rule, then result."
+   },
+   {
+    "q": "Two lamps are connected in parallel to a battery. One lamp breaks. Explain what happens to the other lamp.",
+    "marks": 2,
+    "model": [
+     "The other lamp stays lit / same brightness.",
+     "It is on its own branch with the full supply pd, so its current is unchanged."
+    ],
+    "tip": "Compare with a series circuit, where both would go out."
+   },
+   {
+    "q": "Design a circuit that a student could use to show that the total current in a parallel circuit equals the sum of the branch currents. Describe how to use it and what results would confirm the rule.",
+    "marks": 6,
+    "model": [
+     "Battery connected to two resistors/lamps in parallel.",
+     "Ammeter in the main circuit (before the junction) to measure total current.",
+     "Ammeter in each branch, in series with each resistor.",
+     "Close the switch and record all three readings; repeat with different resistors.",
+     "Optional voltmeter across each branch to show pd is the same.",
+     "Results confirm the rule if total current = sum of branch currents (within experimental error)."
+    ],
+    "tip": "Level 3: correct circuit, positions of every meter, method, and what the results should show."
+   },
+   {
+    "q": "Calculate the total resistance of two 10 Ω resistors in parallel.",
+    "marks": 1,
+    "model": [
+     "5 Ω"
+    ],
+    "tip": "Identical resistors in parallel: halve one value."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A 9.0 V battery is connected in series with resistors of 1.0 Ω, 2.0 Ω and 6.0 Ω. Find the current and the pd across each resistor.",
+    "steps": [
+     "R total = 1.0 + 2.0 + 6.0 = 9.0 Ω",
+     "I = V / R = 9.0 / 9.0 = 1.0 A (same through each)",
+     "V1 = 1.0 × 1.0 = 1.0 V",
+     "V2 = 1.0 × 2.0 = 2.0 V",
+     "V3 = 1.0 × 6.0 = 6.0 V",
+     "Check: 1.0 + 2.0 + 6.0 = 9.0 V"
+    ],
+    "ans": "Current 1.0 A; pds 1.0 V, 2.0 V and 6.0 V."
+   },
+   {
+    "q": "A 12 V supply is connected across resistors of 4.0 Ω and 12 Ω in parallel. Find each branch current, the total current and the total resistance.",
+    "steps": [
+     "pd across each branch = 12 V",
+     "I1 = 12 / 4.0 = 3.0 A",
+     "I2 = 12 / 12 = 1.0 A",
+     "I total = 3.0 + 1.0 = 4.0 A",
+     "R total = V / I = 12 / 4.0 = 3.0 Ω",
+     "Check: 3.0 Ω is less than 4.0 Ω"
+    ],
+    "ans": "3.0 A and 1.0 A in the branches, 4.0 A in total, total resistance 3.0 Ω."
+   },
+   {
+    "q": "A thermistor and a 1000 Ω fixed resistor are in series with a 6.0 V supply. At a high temperature the thermistor's resistance is 500 Ω. Find the pd across the fixed resistor.",
+    "steps": [
+     "R total = 500 + 1000 = 1500 Ω",
+     "I = 6.0 / 1500 = 0.0040 A",
+     "V fixed = I × R = 0.0040 × 1000 = 4.0 V",
+     "pd across thermistor = 6.0 − 4.0 = 2.0 V"
+    ],
+    "ans": "4.0 V across the fixed resistor (and 2.0 V across the thermistor)."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Series circuit: the same current flows through both resistors and the 12 V supply pd is shared between them in the ratio of their resistances.",
+    "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='400' height='240' fill='#f8fafc'/><polyline points='60,110 60,60 120,60' fill='none' stroke='#1b2540' stroke-width='2'/><line x1='170' y1='60' x2='230' y2='60' stroke='#1b2540' stroke-width='2'/><polyline points='280,60 340,60 340,180 60,180 60,120' fill='none' stroke='#1b2540' stroke-width='2'/><line x1='45' y1='110' x2='75' y2='110' stroke='#1b2540' stroke-width='2'/><line x1='53' y1='120' x2='67' y2='120' stroke='#1b2540' stroke-width='5'/><rect x='120' y='50' width='50' height='20' fill='#dbeafe' stroke='#1e40af' stroke-width='2'/><rect x='230' y='50' width='50' height='20' fill='#fecaca' stroke='#b91c1c' stroke-width='2'/><text x='145' y='38' font-size='12' text-anchor='middle' fill='#1e40af'>2 Ω: 4 V</text><text x='255' y='38' font-size='12' text-anchor='middle' fill='#b91c1c'>4 Ω: 8 V</text><text x='80' y='150' font-size='12' fill='#1b2540'>12 V</text><text x='200' y='170' font-size='12' text-anchor='middle' fill='#1b2540'>I = 2 A everywhere</text><text x='200' y='215' font-size='13' text-anchor='middle' fill='#1b2540'>R total = 2 + 4 = 6 Ω</text></svg>"
+   },
+   {
+    "cap": "Parallel circuit: each branch has the full 6 V across it, the branch currents add to give the total current, and the total resistance (2 Ω) is less than the smallest resistor.",
+    "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='400' height='240' fill='#f8fafc'/><polyline points='50,110 50,40 330,40 330,190 50,190 50,120' fill='none' stroke='#1b2540' stroke-width='2'/><line x1='35' y1='110' x2='65' y2='110' stroke='#1b2540' stroke-width='2'/><line x1='43' y1='120' x2='57' y2='120' stroke='#1b2540' stroke-width='5'/><polyline points='140,40 140,95 175,95' fill='none' stroke='#1b2540' stroke-width='2'/><polyline points='225,95 260,95 260,40' fill='none' stroke='#1b2540' stroke-width='2'/><polyline points='140,95 140,150 175,150' fill='none' stroke='#1b2540' stroke-width='2'/><polyline points='225,150 260,150 260,95' fill='none' stroke='#1b2540' stroke-width='2'/><rect x='175' y='85' width='50' height='20' fill='#bbf7d0' stroke='#166534' stroke-width='2'/><rect x='175' y='140' width='50' height='20' fill='#e9d5ff' stroke='#6b21a8' stroke-width='2'/><circle cx='140' cy='40' r='3' fill='#1b2540'/><circle cx='260' cy='40' r='3' fill='#1b2540'/><text x='200' y='79' font-size='12' text-anchor='middle' fill='#166534'>3 Ω: 2 A</text><text x='200' y='134' font-size='12' text-anchor='middle' fill='#6b21a8'>6 Ω: 1 A</text><text x='75' y='150' font-size='12' fill='#1b2540'>6 V</text><text x='295' y='28' font-size='12' text-anchor='middle' fill='#1b2540'>I total = 3 A</text><text x='200' y='215' font-size='13' text-anchor='middle' fill='#1b2540'>R total = 6 / 3 = 2 Ω</text></svg>"
+   },
+   {
+    "cap": "Sensing circuit: an LDR in series with a fixed resistor shares the supply pd. In the dark the LDR's resistance rises, so the voltmeter across it reads a larger pd, which can switch on a light.",
+    "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='400' height='240' fill='#f8fafc'/><polyline points='60,110 60,40 220,40 220,60' fill='none' stroke='#1b2540' stroke-width='2'/><line x1='220' y1='100' x2='220' y2='130' stroke='#1b2540' stroke-width='2'/><polyline points='220,170 220,200 60,200 60,120' fill='none' stroke='#1b2540' stroke-width='2'/><line x1='45' y1='110' x2='75' y2='110' stroke='#1b2540' stroke-width='2'/><line x1='53' y1='120' x2='67' y2='120' stroke='#1b2540' stroke-width='5'/><rect x='210' y='60' width='20' height='40' fill='#dbeafe' stroke='#1e40af' stroke-width='2'/><circle cx='220' cy='150' r='22' fill='#fef3c7' stroke='#92400e' stroke-width='2'/><rect x='212' y='135' width='16' height='30' fill='#fde68a' stroke='#92400e' stroke-width='2'/><line x1='175' y1='125' x2='195' y2='138' stroke='#92400e' stroke-width='2'/><line x1='172' y1='140' x2='192' y2='153' stroke='#92400e' stroke-width='2'/><polyline points='220,120 300,120 300,136' fill='none' stroke='#1b2540' stroke-width='2'/><polyline points='300,164 300,185 220,185' fill='none' stroke='#1b2540' stroke-width='2'/><circle cx='300' cy='150' r='14' fill='#bbf7d0' stroke='#166534' stroke-width='2'/><text x='300' y='155' font-size='13' text-anchor='middle' fill='#166534'>V</text><text x='240' y='84' font-size='12' fill='#1e40af'>Fixed resistor</text><text x='155' y='110' font-size='12' text-anchor='middle' fill='#92400e'>LDR</text><text x='320' y='155' font-size='12' fill='#166534'>pd out</text><text x='85' y='150' font-size='12' fill='#1b2540'>Supply</text><text x='200' y='228' font-size='12' text-anchor='middle' fill='#1b2540'>Dark: LDR R up, pd up</text></svg>"
+   }
+  ],
+  "pid": "phy_ocra.7.4",
+  "sid": "phy_ocra",
+  "v": 2,
+  "src": "pre",
+  "by": "claude/claude-opus-5-5",
+  "ts": "2026-11-27T01:36:04.905Z"
+ },
+ "phy_ocra.7.5": {
+  "summary": "When charge flows through a component, the electrical supply **does work** on it and energy is transferred, for example from the chemical store of a battery to the thermal store of a heater or by light from a lamp. **Power** is the rate of this energy transfer and is calculated with **P = VI** or **P = I²R**, while the **energy transferred = power × time** (E = Pt) or **charge × pd** (E = QV). You must recall and apply these equations, rearrange them, handle units such as kW, mA and minutes, and explain why the heating effect of a current is sometimes useful and sometimes wasteful.",
+  "core": [
+   {
+    "h": "Energy transfers in circuits",
+    "p": "A cell or power supply transfers energy to the charges, and the charges transfer that energy to the components as they flow through them. We say the current **does work** on the component. The energy is shifted from one store (such as the chemical store of a battery) to another (such as the thermal store of a heating element or the surroundings).",
+    "bullets": [
+     "Battery: energy from the **chemical store** is transferred **electrically** (by an electric current doing work)",
+     "Heater or kettle: electrical work → **thermal store** of the element and water",
+     "Lamp: electrical work → thermal store of the filament, then by **light** and heating to the surroundings",
+     "Motor: electrical work → **kinetic store** of the motor (plus some wasted to thermal stores)",
+     "Energy is **conserved**: total energy out = energy in, but some is usually wasted"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Pathway",
+      "p": "Electric current is a way of transferring energy between stores: energy is transferred electrically when charge flows through a pd."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "The heating effect of a current",
+    "p": "When electrons flow through a resistor, they collide with the vibrating ions in the metal lattice and transfer energy to them. The ions vibrate more, so the resistor's temperature rises. This is the heating effect, and it happens in any component with resistance.",
+    "bullets": [
+     "Larger current → more collisions per second → more heating",
+     "Larger resistance → more energy transferred per coulomb → more heating",
+     "**Useful**: kettles, toasters, electric heaters, hair dryers, filament lamps",
+     "**Wasteful**: heating in wires, chargers and motors reduces efficiency",
+     "Heating can be a hazard: wires can overheat and melt insulation, so fuses and correct cable thickness are used"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Reducing waste",
+      "p": "Use low-resistance (thick, copper) wires and keep currents small to reduce unwanted heating."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Power: the rate of energy transfer",
+    "p": "Power is how quickly energy is transferred. A 2000 W kettle transfers 2000 joules every second; a 60 W lamp transfers 60 joules every second. Power is measured in **watts (W)**, where 1 W = 1 J/s.",
+    "bullets": [
+     "Power = energy transferred ÷ time",
+     "1 kilowatt (kW) = 1000 W",
+     "Higher power → energy transferred **faster**, not necessarily more energy in total",
+     "The power rating on an appliance tells you the energy transferred per second at its normal pd"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Power",
+      "p": "Power is the rate of energy transfer (or rate of doing work); 1 watt is 1 joule per second."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "P = VI",
+    "p": "Power depends on both the potential difference across a component and the current through it. pd is the energy transferred per coulomb and current is the coulombs per second, so multiplying them gives energy per second.",
+    "bullets": [
+     "**Power (W) = potential difference (V) × current (A)**",
+     "Rearranged: I = P / V and V = P / I",
+     "Why it works: (J/C) × (C/s) = J/s = W",
+     "Example: 230 V × 5 A = 1150 W",
+     "Used to choose a fuse: find I = P / V, then pick the next fuse rating above it"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Recall",
+      "p": "P = V × I must be recalled; you will not always be given it."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "P = I²R",
+    "p": "Substituting V = IR into P = VI gives P = I × IR = I²R. This form is useful when you know the current and resistance, and it shows clearly how the heating effect depends on current.",
+    "bullets": [
+     "**Power (W) = (current (A))² × resistance (Ω)**",
+     "Rearranged: R = P / I² and I = √(P / R)",
+     "Doubling the current **quadruples** the power (2² = 4) for the same resistance",
+     "Explains why power is transmitted at high pd and low current: less I means much less I²R loss in cables",
+     "Square the current **first**, then multiply by R"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Square only the current",
+      "p": "P = I²R means I × I × R, not (I × R)². Square I before multiplying."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Energy transferred = power × time",
+    "p": "If you know how quickly energy is transferred (power) and for how long, multiply to get the total energy transferred.",
+    "bullets": [
+     "**Energy transferred (J) = power (W) × time (s)**, E = Pt",
+     "Rearranged: P = E / t and t = E / P",
+     "Time **must be in seconds**: minutes × 60, hours × 3600",
+     "Combining with P = VI gives E = VIt",
+     "A low-power device left on for a long time can transfer more energy than a high-power device used briefly"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Units",
+      "p": "If power is in kW, convert to W (× 1000) before using E = Pt with time in seconds to get joules."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Energy transferred = charge × pd",
+    "p": "Potential difference is the energy transferred per unit charge. So the energy transferred to a component equals the charge that flows through it multiplied by the pd across it.",
+    "bullets": [
+     "**Energy transferred (J) = charge (C) × potential difference (V)**, E = QV",
+     "Rearranged: Q = E / V and V = E / Q",
+     "1 volt = 1 joule per coulomb",
+     "Link: charge = current × time (Q = It), so E = QV = VIt = Pt",
+     "Larger pd → each coulomb transfers more energy"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Potential difference",
+      "p": "The work done (energy transferred) per unit charge: 1 V = 1 J/C."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Choosing which equation to use",
+    "p": "List the quantities you know and the one you need, then pick the equation that links them. Sometimes you need two steps.",
+    "bullets": [
+     "Know V and I → P = VI",
+     "Know I and R → P = I²R",
+     "Know V and R → first I = V / R, then P = VI",
+     "Know P and t → E = Pt",
+     "Know Q and V → E = QV",
+     "Know I and t but need Q → Q = It"
+    ],
+    "table": {
+     "head": [
+      "Equation",
+      "Quantities",
+      "Units"
+     ],
+     "rows": [
+      [
+       "P = VI",
+       "power, pd, current",
+       "W, V, A"
+      ],
+      [
+       "P = I²R",
+       "power, current, resistance",
+       "W, A, Ω"
+      ],
+      [
+       "E = Pt",
+       "energy, power, time",
+       "J, W, s"
+      ],
+      [
+       "E = QV",
+       "energy, charge, pd",
+       "J, C, V"
+      ],
+      [
+       "Q = It",
+       "charge, current, time",
+       "C, A, s"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Comparing power in series and parallel",
+    "p": "The equations show how power is shared between components. In series the current is the same, so P = I²R means the **larger resistor transfers more power**. In parallel the pd is the same, and the smaller resistor carries more current, so P = VI means the **smaller resistor transfers more power**.",
+    "bullets": [
+     "Series, same I: bigger R → bigger P (P = I²R)",
+     "Parallel, same V: smaller R → bigger I → bigger P (P = VI)",
+     "Total power supplied = sum of the powers of all the components",
+     "Lamps in parallel at full pd each glow brighter than the same lamps in series"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Brightness",
+      "p": "A lamp's brightness depends on its power; compare powers, not just currents, when asked which lamp is brighter."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Unit conversions and standard form",
+    "p": "Many marks are lost on units. Convert to SI units before substituting into an equation.",
+    "bullets": [
+     "mA → A: ÷ 1000 (250 mA = 0.25 A)",
+     "kW → W: × 1000 (2.5 kW = 2500 W)",
+     "minutes → s: × 60; hours → s: × 3600",
+     "kJ → J: × 1000; MJ → J: × 1 000 000",
+     "kΩ → Ω: × 1000",
+     "Give answers to a sensible number of significant figures (match the data)"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Rearranging and multi-step problems",
+    "p": "Higher-tier questions often hide a step. For example, you may need to find the current from P = VI, then the charge from Q = It, or the energy from E = Pt and then the charge from E = QV.",
+    "bullets": [
+     "Write every equation you use, then substitute",
+     "Keep unrounded values for the next step",
+     "Check the answer is sensible: a kettle current of a few amps, a phone charger well under 1 kW",
+     "State the unit at the end of each step"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Show working",
+      "p": "Method marks are awarded for each correct step, even if the final answer is wrong."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Water wheels on a delivery route",
+   "p": "Imagine water (charge) carried up a hill by a pump (the battery) and then flowing down through water wheels (components). The height of the drop is the pd: energy given up per litre. The flow rate is the current: litres per second. Multiply energy per litre by litres per second and you get energy per second, which is power (P = VI). Total energy = power × how long the water flows (E = Pt), or energy per litre × total litres (E = QV). A narrow, rough channel (high resistance) heats up through friction, like the heating effect. Where it breaks down: charge is not lifted to a real height, electrons drift slowly while energy is transferred almost instantly around the circuit, and the battery does not supply new charge, it only gives energy to charge already in the wires."
+  },
+  "terms": [
+   {
+    "t": "Power",
+    "d": "The rate of energy transfer or rate of doing work, measured in watts (W)."
+   },
+   {
+    "t": "Watt (W)",
+    "d": "The unit of power; 1 W = 1 joule per second."
+   },
+   {
+    "t": "Kilowatt (kW)",
+    "d": "1000 watts."
+   },
+   {
+    "t": "Energy transferred",
+    "d": "The amount of energy moved from one store to another, measured in joules (J)."
+   },
+   {
+    "t": "Joule (J)",
+    "d": "The unit of energy; 1 J is transferred when 1 C of charge moves through a pd of 1 V."
+   },
+   {
+    "t": "Work done",
+    "d": "Energy transferred when a force moves or when a current flows through a pd."
+   },
+   {
+    "t": "Potential difference",
+    "d": "The energy transferred per unit charge between two points, measured in volts; 1 V = 1 J/C."
+   },
+   {
+    "t": "Current",
+    "d": "The rate of flow of charge, measured in amperes; 1 A = 1 C/s."
+   },
+   {
+    "t": "Charge (Q)",
+    "d": "The quantity of electricity, measured in coulombs (C); Q = It."
+   },
+   {
+    "t": "Resistance",
+    "d": "Potential difference ÷ current, measured in ohms (Ω)."
+   },
+   {
+    "t": "Heating effect",
+    "d": "The transfer of energy to the thermal store of a conductor when current flows through its resistance."
+   },
+   {
+    "t": "Power rating",
+    "d": "The power of an appliance when used at its normal potential difference."
+   },
+   {
+    "t": "Chemical store",
+    "d": "The energy store of a battery or fuel, released by chemical reactions."
+   },
+   {
+    "t": "Thermal store",
+    "d": "The energy store linked to the temperature of an object."
+   },
+   {
+    "t": "Efficiency",
+    "d": "Useful energy (or power) output ÷ total energy (or power) input."
+   },
+   {
+    "t": "Fuse",
+    "d": "A safety device that melts and breaks the circuit if the current is too large."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Power is the amount of energy used.",
+    "r": "Power is the **rate** of energy transfer (energy per second)."
+   },
+   {
+    "w": "E = Pt with t = 5 (minutes).",
+    "r": "Time must be in **seconds**: 5 minutes = 300 s."
+   },
+   {
+    "w": "P = I²R so P = (2 × 10)² = 400 W.",
+    "r": "Square the current only: P = 2² × 10 = **40 W**."
+   },
+   {
+    "w": "Electricity is used up in the lamp.",
+    "r": "Charge is not used up; **energy** is transferred from the charges to the lamp."
+   },
+   {
+    "w": "A 2 kW heater: E = 2 × 60 = 120 J in one minute.",
+    "r": "Convert kW to W: E = 2000 × 60 = **120 000 J**."
+   },
+   {
+    "w": "Using mA directly: P = 12 × 500 = 6000 W.",
+    "r": "500 mA = 0.5 A, so P = 12 × 0.5 = **6 W**."
+   },
+   {
+    "w": "Doubling the current doubles the power in a resistor.",
+    "r": "P = I²R, so doubling current **quadruples** the power."
+   },
+   {
+    "w": "Energy is converted into electricity in the battery.",
+    "r": "Energy is transferred from the **chemical store** of the battery **electrically** (by the current doing work)."
+   },
+   {
+    "w": "Watts are joules.",
+    "r": "1 watt is **1 joule per second**."
+   }
+  ],
+  "exam": [
+   {
+    "q": "State the equation linking power, potential difference and current.",
+    "marks": 1,
+    "model": [
+     "Power = potential difference × current (P = VI)."
+    ],
+    "tip": "Words or symbols are both accepted if symbols are defined."
+   },
+   {
+    "q": "State the unit of power.",
+    "marks": 1,
+    "model": [
+     "Watt (W)."
+    ],
+    "tip": "Not J or kWh."
+   },
+   {
+    "q": "A lamp has a pd of 12 V across it and a current of 2.0 A. Calculate its power.",
+    "marks": 2,
+    "model": [
+     "P = VI = 12 × 2.0",
+     "P = 24 W"
+    ],
+    "tip": "Equation, substitution, answer with unit."
+   },
+   {
+    "q": "A current of 3.0 A flows through a 5.0 Ω resistor. Calculate the power.",
+    "marks": 2,
+    "model": [
+     "P = I²R = 3.0² × 5.0",
+     "P = 45 W"
+    ],
+    "tip": "Square the current first."
+   },
+   {
+    "q": "A 1500 W hair dryer is used for 4 minutes. Calculate the energy transferred.",
+    "marks": 3,
+    "model": [
+     "t = 4 × 60 = 240 s",
+     "E = Pt = 1500 × 240",
+     "E = 360 000 J (3.6 × 10⁵ J)"
+    ],
+    "tip": "Time conversion earns a mark."
+   },
+   {
+    "q": "Calculate the energy transferred when 50 C of charge flows through a pd of 230 V.",
+    "marks": 2,
+    "model": [
+     "E = QV = 50 × 230",
+     "E = 11 500 J"
+    ],
+    "tip": "E = QV is a separate equation from E = Pt."
+   },
+   {
+    "q": "A 2.3 kW kettle is connected to the 230 V mains. Calculate the current.",
+    "marks": 3,
+    "model": [
+     "P = 2300 W",
+     "I = P / V = 2300 / 230",
+     "I = 10 A"
+    ],
+    "tip": "Convert kW to W first."
+   },
+   {
+    "q": "A heater has a resistance of 20 Ω and a power of 500 W. Calculate the current through it.",
+    "marks": 3,
+    "model": [
+     "P = I²R so I² = P / R",
+     "I² = 500 / 20 = 25",
+     "I = 5.0 A"
+    ],
+    "tip": "Rearrange before substituting."
+   },
+   {
+    "q": "Explain why a resistor gets hot when a current flows through it.",
+    "marks": 3,
+    "model": [
+     "Electrons collide with ions in the metal lattice.",
+     "Energy is transferred to the ions, which vibrate more.",
+     "Thermal store of the resistor increases / temperature rises."
+    ],
+    "tip": "Collisions, ions vibrate, temperature rises."
+   },
+   {
+    "q": "Explain why electricity is transmitted through cables at a high potential difference and low current.",
+    "marks": 3,
+    "model": [
+     "Power lost as heat in cables is P = I²R.",
+     "Lower current means much less heating loss (power loss depends on I squared).",
+     "For the same power transmitted (P = VI), a higher pd allows a lower current."
+    ],
+    "tip": "Link both equations."
+   },
+   {
+    "q": "A 12 V battery supplies a current of 0.50 A to a motor for 10 minutes. Calculate the charge that flows and the energy transferred.",
+    "marks": 4,
+    "model": [
+     "t = 600 s",
+     "Q = It = 0.50 × 600 = 300 C",
+     "E = QV = 300 × 12",
+     "E = 3600 J"
+    ],
+    "tip": "Two-step questions: give each step its own line."
+   },
+   {
+    "q": "Two identical lamps are connected first in series and then in parallel to the same battery. Explain in which arrangement the lamps are brighter.",
+    "marks": 3,
+    "model": [
+     "In parallel each lamp has the full battery pd (in series it is shared).",
+     "So the current through each lamp is larger in parallel.",
+     "Power (P = VI) of each lamp is larger, so they are brighter in parallel."
+    ],
+    "tip": "Brightness depends on power."
+   }
+  ],
+  "worked": [
+   {
+    "q": "An electric heater runs on 230 V and draws a current of 8.0 A. Calculate its power and the energy it transfers in 2 hours.",
+    "steps": [
+     "P = VI = 230 × 8.0 = 1840 W",
+     "t = 2 × 3600 = 7200 s",
+     "E = Pt = 1840 × 7200",
+     "E = 13 248 000 J"
+    ],
+    "ans": "Power 1840 W; energy 1.3 × 10⁷ J (13 MJ to 2 s.f.)."
+   },
+   {
+    "q": "A current of 0.20 A flows through a 150 Ω resistor. Calculate the power. What would the power be if the current doubled?",
+    "steps": [
+     "P = I²R = 0.20² × 150",
+     "P = 0.04 × 150 = 6.0 W",
+     "Doubled current: I = 0.40 A",
+     "P = 0.40² × 150 = 0.16 × 150 = 24 W"
+    ],
+    "ans": "6.0 W, rising to 24 W (four times larger) when the current doubles."
+   },
+   {
+    "q": "A phone battery has a pd of 3.7 V. It transfers 40 000 J of energy. Calculate the charge that flows.",
+    "steps": [
+     "E = QV, so Q = E / V",
+     "Q = 40 000 / 3.7",
+     "Q = 10 811 C"
+    ],
+    "ans": "About 1.1 × 10⁴ C."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Energy transfers in a simple circuit: energy from the battery's chemical store is transferred electrically to the lamp, which then transfers energy by light and by heating the surroundings.",
+    "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><defs><marker id='ar' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='7' markerHeight='7' orient='auto'><path d='M 0 0 L 10 5 L 0 10 z' fill='#1b2540'/></marker></defs><rect x='0' y='0' width='400' height='240' fill='#f8fafc'/><rect x='15' y='90' width='105' height='50' rx='8' fill='#bbf7d0' stroke='#166534' stroke-width='2'/><text x='67' y='112' font-size='12' text-anchor='middle' fill='#166534'>Chemical store</text><text x='67' y='128' font-size='12' text-anchor='middle' fill='#166534'>(battery)</text><line x1='122' y1='115' x2='175' y2='115' stroke='#1b2540' stroke-width='2' marker-end='url(#ar)'/><text x='148' y='105' font-size='11' text-anchor='middle' fill='#1b2540'>Electrically</text><rect x='178' y='90' width='80' height='50' rx='8' fill='#fde68a' stroke='#92400e' stroke-width='2'/><text x='218' y='119' font-size='12' text-anchor='middle' fill='#92400e'>Lamp</text><line x1='260' y1='105' x2='300' y2='65' stroke='#1b2540' stroke-width='2' marker-end='url(#ar)'/><line x1='260' y1='125' x2='300' y2='165' stroke='#1b2540' stroke-width='2' marker-end='url(#ar)'/><rect x='300' y='40' width='90' height='36' rx='8' fill='#dbeafe' stroke='#1e40af' stroke-width='2'/><text x='345' y='62' font-size='12' text-anchor='middle' fill='#1e40af'>Light (useful)</text><rect x='300' y='155' width='90' height='50' rx='8' fill='#fecaca' stroke='#b91c1c' stroke-width='2'/><text x='345' y='176' font-size='12' text-anchor='middle' fill='#b91c1c'>Thermal store</text><text x='345' y='192' font-size='12' text-anchor='middle' fill='#b91c1c'>(wasted)</text><text x='150' y='215' font-size='12' text-anchor='middle' fill='#1b2540'>Energy is conserved</text></svg>"
+   },
+   {
+    "cap": "The power equations: P = VI works because pd is joules per coulomb and current is coulombs per second; substituting V = IR gives P = I²R. Energy transferred is E = Pt or E = QV.",
+    "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='400' height='240' fill='#f8fafc'/><polygon points='100,30 30,150 170,150' fill='#dbeafe' stroke='#1e40af' stroke-width='2'/><line x1='60' y1='100' x2='140' y2='100' stroke='#1e40af' stroke-width='2'/><line x1='100' y1='100' x2='100' y2='150' stroke='#1e40af' stroke-width='2'/><text x='100' y='85' font-size='13' text-anchor='middle' fill='#1e40af'>P</text><text x='78' y='132' font-size='13' text-anchor='middle' fill='#1e40af'>V</text><text x='122' y='132' font-size='13' text-anchor='middle' fill='#1e40af'>I</text><polygon points='300,30 230,150 370,150' fill='#fde68a' stroke='#92400e' stroke-width='2'/><line x1='260' y1='100' x2='340' y2='100' stroke='#92400e' stroke-width='2'/><line x1='300' y1='100' x2='300' y2='150' stroke='#92400e' stroke-width='2'/><text x='300' y='85' font-size='13' text-anchor='middle' fill='#92400e'>E</text><text x='278' y='132' font-size='13' text-anchor='middle' fill='#92400e'>P</text><text x='322' y='132' font-size='13' text-anchor='middle' fill='#92400e'>t</text><text x='100' y='175' font-size='12' text-anchor='middle' fill='#1b2540'>P = VI = I²R</text><text x='300' y='175' font-size='12' text-anchor='middle' fill='#1b2540'>E = Pt = QV</text><text x='100' y='200' font-size='12' text-anchor='middle' fill='#1b2540'>W = V × A</text><text x='300' y='200' font-size='12' text-anchor='middle' fill='#1b2540'>J = W × s</text></svg>"
+   },
+   {
+    "cap": "Power against current for a fixed resistor: because P = I²R the graph is a curve, and doubling the current from 1 A to 2 A makes the power four times larger.",
+    "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='400' height='240' fill='#f8fafc'/><line x1='60' y1='200' x2='360' y2='200' stroke='#1b2540' stroke-width='2'/><line x1='60' y1='30' x2='60' y2='200' stroke='#1b2540' stroke-width='2'/><path d='M 60 200 Q 210 200 330 40' fill='none' stroke='#dc2626' stroke-width='3'/><line x1='160' y1='200' x2='160' y2='165' stroke='#64748b' stroke-width='1'/><line x1='260' y1='200' x2='260' y2='92' stroke='#64748b' stroke-width='1'/><text x='160' y='216' font-size='12' text-anchor='middle' fill='#1b2540'>1 A</text><text x='260' y='216' font-size='12' text-anchor='middle' fill='#1b2540'>2 A</text><text x='345' y='216' font-size='12' text-anchor='middle' fill='#1b2540'>I</text><text x='75' y='38' font-size='12' fill='#1b2540'>P / W</text><text x='160' y='155' font-size='12' text-anchor='middle' fill='#dc2626'>P</text><text x='225' y='82' font-size='12' text-anchor='middle' fill='#dc2626'>4P</text><text x='140' y='70' font-size='13' text-anchor='middle' fill='#1b2540'>P = I²R</text></svg>"
+   }
+  ],
+  "pid": "phy_ocra.7.5",
+  "sid": "phy_ocra",
+  "v": 2,
+  "src": "pre",
+  "by": "claude/claude-opus-5-5",
+  "ts": "2026-11-27T01:36:04.915Z"
+ }
+}

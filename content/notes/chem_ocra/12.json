@@ -1,0 +1,1366 @@
+{
+ "chem_ocra.12.0": {
+  "summary": "Mastering solution concentrations in both g/dm3 and mol/dm3 is essential for quantitative chemistry in OCR GCSE. This topic builds the foundational bridge between masses, moles, and volumes of solutions, allowing chemists to determine exact reacting quantities. Students must understand how to interconvert units, use standard equations, and scale concentrations up or down for titrations and reactions.",
+  "core": [
+   {
+    "h": "Introduction to Solution Concentration",
+    "p": "Concentration tells us the amount of a solute dissolved in a given volume of a solvent. In chemistry, we standardise these measurements using specific volume units, primarily cubic decimetres ($dm^3$), rather than cubic centimetres ($cm^3$).",
+    "bullets": [
+     "A solution is made by dissolving a solute in a solvent.",
+     "Concentration can be expressed in grams per cubic decimetre ($g/dm^3$).",
+     "Concentration can also be expressed in moles per cubic decimetre ($mol/dm^3$).",
+     "Higher concentrations mean more particles packed into the same volume."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Concentration",
+      "p": "The amount of solute dissolved in a specified volume of solution."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Understanding the Cubic Decimetre",
+    "p": "A cubic decimetre ($dm^3$) is identical in volume to one litre ($1dm^3 = 1000cm^3$). Converting accurately between $cm^3$ and $dm^3$ is the single most common requirement to get calculation questions correct.",
+    "bullets": [
+     "To convert from $cm^3$ to $dm^3$, divide by 1000.",
+     "To convert from $dm^3$ to $cm^3$, multiply by 1000.",
+     "$1dm^3$ is a cube measuring $10cm$ by $10cm$ by $10cm$.",
+     "Never use $cm^3$ directly in standard concentration or mole formulas."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Unit Trap",
+      "p": "Always convert $cm^3$ to $dm^3$ before substituting values into your mole equations."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Visualising the conversion between cubic centimetres and cubic decimetres.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#334155\" stroke-width=\"2\"/><rect x=\"40\" y=\"60\" width=\"120\" height=\"120\" fill=\"#dbeafe\" stroke=\"#1e40af\" stroke-width=\"2\"/><text x=\"100\" y=\"125\" text-anchor=\"middle\" fill=\"#1e40af\" font-size=\"13\">1000 cm3</text><text x=\"200\" y=\"110\" text-anchor=\"middle\" fill=\"#0f172a\" font-size=\"13\">÷ 1000</text><path d=\"M 170 115 L 230 115\" stroke=\"#0f172a\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><text x=\"200\" y=\"140\" text-anchor=\"middle\" fill=\"#0f172a\" font-size=\"13\">× 1000</text><rect x=\"250\" y=\"60\" width=\"120\" height=\"120\" fill=\"#bbf7d0\" stroke=\"#166534\" stroke-width=\"2\"/><text x=\"310\" y=\"125\" text-anchor=\"middle\" fill=\"#166534\" font-size=\"13\">1 dm3</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Concentration in Grams per Cubic Decimetre",
+    "p": "Expressing concentration in $g/dm^3$ tells us the mass of solute dissolved in one cubic decimetre of solution. It is calculated by dividing the mass of the solute by the volume of the solution in $dm^3$.",
+    "bullets": [
+     "Formula: Concentration ($g/dm^3$) = Mass ($g$) / Volume ($dm^3$).",
+     "Mass can also be found by multiplying concentration by volume.",
+     "Useful for industrial processes where weighing masses is practical.",
+     "Does not account for the different reacting masses of different elements."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Formula for g/dm3",
+      "p": "Concentration (g/dm3) = Mass (g) ÷ Volume (dm3)"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Concentration in Moles per Cubic Decimetre",
+    "p": "Chemists prefer using moles per cubic decimetre ($mol/dm^3$) because chemical reactions happen in molar ratios, not mass ratios. This unit is often called the molar concentration or molarity.",
+    "bullets": [
+     "Formula: Concentration ($mol/dm^3$) = Moles / Volume ($dm^3$).",
+     "Can be rearranged to find moles: Moles = Concentration $\\times$ Volume ($dm^3$).",
+     "Denoted by square brackets, e.g., $[HCl] = 2.0 mol/dm^3$.",
+     "Ensures equal numbers of reacting particles are compared."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Molar Concentration",
+      "p": "The number of moles of a solute dissolved in one cubic decimetre of solution."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Interconverting Between g/dm3 and mol/dm3",
+    "p": "You can convert a concentration in $g/dm^3$ to $mol/dm^3$ by dividing by the relative formula mass ($Mr$). Conversely, convert $mol/dm^3$ to $g/dm^3$ by multiplying by the $Mr$.",
+    "bullets": [
+     "To convert $g/dm^3$ to $mol/dm^3$: divide by Mr.",
+     "To convert $mol/dm^3$ to $g/dm^3$: multiply by Mr.",
+     "Derived from the link between mass, moles, and Mr.",
+     "Essential skill for higher tier OCR chemistry calculations."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Conversion Shortcut",
+      "p": "Remember: Grams to Moles always involves dividing by Mr."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Pathways for converting between concentration units using molar mass.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#334155\" stroke-width=\"2\"/><rect x=\"30\" y=\"90\" width=\"120\" height=\"60\" rx=\"6\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"2\"/><text x=\"90\" y=\"125\" text-anchor=\"middle\" fill=\"#78350f\" font-size=\"12\">Conc (g/dm3)</text><rect x=\"250\" y=\"90\" width=\"120\" height=\"60\" rx=\"6\" fill=\"#e9d5ff\" stroke=\"#6b21a8\" stroke-width=\"2\"/><text x=\"310\" y=\"125\" text-anchor=\"middle\" fill=\"#6b21a8\" font-size=\"12\">Conc (mol/dm3)</text><path d=\"M 150 110 L 250 110\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"200\" y=\"100\" text-anchor=\"middle\" fill=\"#0f172a\" font-size=\"11\">÷ Mr</text><path d=\"M 250 130 L 150 130\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"200\" y=\"150\" text-anchor=\"middle\" fill=\"#0f172a\" font-size=\"11\">× Mr</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Using Moles = Concentration × Volume",
+    "p": "To find the number of moles of a solute in a given volume of solution, multiply the concentration in $mol/dm^3$ by the volume in $dm^3$. This is a powerful tool for calculating reacting amounts.",
+    "bullets": [
+     "Ensure volume is in $dm^3$ before multiplying.",
+     "If volume is in $cm^3$, divide by 1000 first.",
+     "Allows determination of exact reactant quantities in solution.",
+     "Forms the basis of titration stoichiometry calculations."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "The Triangle Formula",
+      "p": "Moles = Concentration (×) Volume (in dm3)"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Step-by-Step Mass Calculations in Solutions",
+    "p": "Often exam questions ask for the mass of a substance needed to make a specific volume of a certain concentration. This requires a two-step calculation: finding moles first, then converting to mass.",
+    "bullets": [
+     "Step 1: Calculate moles required using Moles = Concentration $\\times$ Volume.",
+     "Step 2: Calculate mass using Mass = Moles $\\times$ Mr.",
+     "Always check final units requested by the exam question.",
+     "Show all working clearly to gain method marks."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Working Out",
+      "p": "Never skip finding the number of moles as an intermediate step."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Effect of Dilution on Concentration",
+    "p": "When a solution is diluted by adding more solvent (water), the number of moles of solute remains constant, but the total volume increases. Therefore, the concentration decreases.",
+    "bullets": [
+     "Moles of solute before dilution = Moles of solute after dilution.",
+     "Equation: $C_1 \\times V_1 = C_2 \\times V_2$.",
+     "Adding water spreads out the existing particles.",
+     "Diluting by a factor of 10 reduces concentration by a factor of 10."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Dilution",
+      "p": "The process of reducing the concentration of a solution by adding more solvent."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Standard Solutions",
+    "p": "A standard solution is a solution containing a accurately known concentration of a solute. They are crucial for analytical chemistry and titrations.",
+    "bullets": [
+     "Prepared using a volumetric flask for precise volume measurement.",
+     "Requires a solute that is available in a high degree of purity.",
+     "Must be weighed accurately on an analytical balance.",
+     "Dissolved in a small volume of distilled water before making up to the mark."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Standard Solution",
+      "p": "A solution of precisely known concentration used in titrations."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Preparing a standard solution using a volumetric flask.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#334155\" stroke-width=\"2\"/><path d=\"M 160 80 L 170 160 C 170 190 230 190 230 160 L 240 80 Z\" fill=\"#dbeafe\" stroke=\"#1e40af\" stroke-width=\"2\"/><line x1=\"200\" y1=\"90\" x2=\"210\" y2=\"90\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"260\" y=\"95\" text-anchor=\"start\" fill=\"#dc2626\" font-size=\"11\">Calibration mark</text><text x=\"200\" y=\"215\" text-anchor=\"middle\" fill=\"#1e40af\" font-size=\"12\">Volumetric flask</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Common Mistakes with Units and Volumes",
+    "p": "Examiners note that students frequently lose marks through simple arithmetic errors involving powers of ten when converting between units of volume and concentration.",
+    "bullets": [
+     "Forgetting to convert $cm^3$ to $dm^3$.",
+     "Multiplying by 1000 instead of dividing when converting $cm^3$ to $dm^3$.",
+     "Confusing grams per dm3 with moles per dm3.",
+     "Incorrectly rounding intermediate calculation steps."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Rounding Error",
+      "p": "Keep numbers in your calculator until the final answer to avoid rounding errors."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Stoichiometry of Solutions in Reactions",
+    "p": "When two solutions react, their volumes and concentrations are linked by the stoichiometric coefficients in the balanced chemical equation. Molar ratios must always be applied.",
+    "bullets": [
+     "Use balanced equations to find the mole ratio of reactants.",
+     "Calculate moles of the known reactant using $C \\times V$.",
+     "Use the molar ratio to find moles of the unknown reactant.",
+     "Calculate the unknown concentration or volume."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Reaction Ratios",
+      "p": "Always use the big numbers in the balanced equation to find reacting ratios."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Cordial and Water",
+   "p": "Imagine making squash or cordial. The cordial is the solute and the water is the solvent. If you pour a small amount of cordial into a massive jug of water, the concentration is low (weak taste, few solute particles per unit volume). If you pour the same amount of cordial into a tiny cup, the concentration is high (strong taste, many solute particles packed together). Where it breaks down: chemical solutions involve exact moles and particle numbers, whereas taste is subjective and doesn't account for molecular masses."
+  },
+  "terms": [
+   {
+    "t": "Solute",
+    "d": "The substance that dissolves in a solvent to form a solution."
+   },
+   {
+    "t": "Solvent",
+    "d": "The liquid in which a solute dissolves to form a solution."
+   },
+   {
+    "t": "Solution",
+    "d": "A mixture formed when a solute dissolves in a solvent."
+   },
+   {
+    "t": "Concentration",
+    "d": "The amount of solute dissolved in a given volume of solution."
+   },
+   {
+    "t": "Cubic decimetre",
+    "d": "A unit of volume equal to 1000 cm3 or 1 litre (dm3)."
+   },
+   {
+    "t": "Grams per cubic decimetre",
+    "d": "A unit of concentration measuring mass of solute per dm3 of solution."
+   },
+   {
+    "t": "Moles per cubic decimetre",
+    "d": "A unit of concentration measuring moles of solute per dm3 of solution."
+   },
+   {
+    "t": "Standard solution",
+    "d": "A solution of precisely known concentration."
+   },
+   {
+    "t": "Volumetric flask",
+    "d": "A piece of laboratory glassware calibrated to contain a precise volume at a specific temperature."
+   },
+   {
+    "t": "Dilution",
+    "d": "Making a solution less concentrated by adding more solvent."
+   },
+   {
+    "t": "Stoichiometry",
+    "d": "The relationship between the relative quantities of substances in a chemical reaction."
+   },
+   {
+    "t": "Relative formula mass",
+    "d": "The sum of the relative atomic masses of all the atoms in the formula."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Using cm3 directly in the moles = concentration × volume formula",
+    "r": "Always convert cm3 to dm3 by dividing by 1000 first."
+   },
+   {
+    "w": "Multiplying by Mr to convert g/dm3 to mol/dm3",
+    "r": "Divide by Mr to go from grams to moles."
+   },
+   {
+    "w": "Saying concentration increases when water is added",
+    "r": "Adding water causes dilution, which decreases concentration."
+   },
+   {
+    "w": "Confusing mass concentration with molar concentration",
+    "r": "Check units carefully: g/dm3 uses mass, mol/dm3 uses moles."
+   },
+   {
+    "w": "Rounding numbers too early in multi-step calculations",
+    "r": "Keep unrounded numbers in your calculator until the final step."
+   },
+   {
+    "w": "Forgetting to balance the equation before using molar ratios",
+    "r": "Always ensure the reaction equation is balanced first."
+   },
+   {
+    "w": "Stating that dm3 is equal to 100 cm3",
+    "r": "1 dm3 is equal to 1000 cm3."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Calculate the concentration in g/dm3 of a solution containing 25g of sodium chloride dissolved in 500cm3 of water.",
+    "marks": 2,
+    "model": [
+     "Convert volume to dm3: 500 / 1000 = 0.5 dm3",
+     "Concentration = 25 / 0.5 = 50 g/dm3"
+    ],
+    "tip": "Always convert the volume to dm3 before calculating."
+   },
+   {
+    "q": "Explain how to convert a concentration of 2.0 mol/dm3 into g/dm3 for sodium hydroxide (NaOH).",
+    "marks": 2,
+    "model": [
+     "Calculate Mr of NaOH = 23 + 16 + 1 = 40",
+     "Multiply concentration in mol/dm3 by Mr: 2.0 × 40 = 80 g/dm3"
+    ],
+    "tip": "Show your calculation of Mr clearly."
+   },
+   {
+    "q": "Calculate the number of moles of hydrochloric acid in 250cm3 of a 0.20 mol/dm3 solution.",
+    "marks": 2,
+    "model": [
+     "Convert volume to dm3: 250 / 1000 = 0.25 dm3",
+     "Moles = 0.20 × 0.25 = 0.05 moles"
+    ],
+    "tip": "State the formula Moles = Concentration × Volume."
+   },
+   {
+    "q": "Calculate the mass of potassium hydroxide (KOH) needed to make 200cm3 of a 0.50 mol/dm3 solution. (Ar: H=1, O=16, K=39)",
+    "marks": 4,
+    "model": [
+     "Convert volume to dm3: 200 / 1000 = 0.2 dm3",
+     "Calculate moles: 0.50 × 0.2 = 0.1 moles",
+     "Calculate Mr of KOH = 39 + 16 + 1 = 56",
+     "Calculate mass: 0.1 × 56 = 5.6 g"
+    ],
+    "tip": "Break multi-step calculations down into clear steps."
+   },
+   {
+    "q": "A student dilutes 50cm3 of 2.0 mol/dm3 hydrochloric acid to a total volume of 200cm3. Calculate the new concentration.",
+    "marks": 3,
+    "model": [
+     "Calculate moles of acid: 2.0 × (50/1000) = 0.1 moles",
+     "New volume in dm3 = 200 / 1000 = 0.2 dm3",
+     "New concentration = 0.1 / 0.2 = 1.0 mol/dm3"
+    ],
+    "tip": "Moles of solute remain constant during dilution."
+   },
+   {
+    "q": "Define the term 'standard solution'.",
+    "marks": 1,
+    "model": [
+     "A solution of precisely known concentration."
+    ],
+    "tip": "Learn definitions word for word."
+   },
+   {
+    "q": "Calculate the volume of 0.10 mol/dm3 sulfuric acid needed to provide 0.02 moles of acid.",
+    "marks": 2,
+    "model": [
+     "Rearrange formula: Volume = Moles / Concentration",
+     "Volume = 0.02 / 0.10 = 0.20 dm3 (or 200 cm3)"
+    ],
+    "tip": "Check if the question asks for cm3 or dm3 in the final answer."
+   },
+   {
+    "q": "State the unit of molar concentration.",
+    "marks": 1,
+    "model": [
+     "mol/dm3 (or moles per cubic decimetre)"
+    ],
+    "tip": "Use standard slash notation for units."
+   },
+   {
+    "q": "Explain why standard solutions are prepared in a volumetric flask rather than a beaker.",
+    "marks": 2,
+    "model": [
+     "Volumetric flasks are calibrated to measure one specific volume very accurately",
+     "A beaker has inaccurate volume markings"
+    ],
+    "tip": "Mention precise calibration."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Calculate the mass of sodium carbonate (Na2CO3) required to prepare 250 cm3 of a 0.20 mol/dm3 standard solution. (Ar: Na = 23, C = 12, O = 16)",
+    "steps": [
+     "Step 1: Convert the volume from cm3 to dm3. Volume = 250 / 1000 = 0.25 dm3.",
+     "Step 2: Calculate the moles of sodium carbonate needed using Moles = Concentration × Volume. Moles = 0.20 × 0.25 = 0.05 moles.",
+     "Step 3: Calculate the relative formula mass (Mr) of Na2CO3. Mr = (23 × 2) + 12 + (16 × 3) = 46 + 12 + 48 = 106.",
+     "Step 4: Calculate the mass required using Mass = Moles × Mr. Mass = 0.05 × 106 = 5.3 g."
+    ],
+    "ans": "5.3 g"
+   },
+   {
+    "q": "A solution of sodium hydroxide has a concentration of 80 g/dm3. Convert this concentration into mol/dm3. (Ar: Na = 23, O = 16, H = 1)",
+    "steps": [
+     "Step 1: Calculate the relative formula mass (Mr) of NaOH. Mr = 23 + 16 + 1 = 40.",
+     "Step 2: Recall the conversion rule: to convert g/dm3 to mol/dm3, divide by the Mr.",
+     "Step 3: Perform the calculation: Concentration in mol/dm3 = 80 / 40 = 2.0 mol/dm3."
+    ],
+    "ans": "2.0 mol/dm3"
+   }
+  ],
+  "pid": "chem_ocra.12.0",
+  "sid": "chem_ocra",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-27T19:05:31.403Z"
+ },
+ "chem_ocra.12.2": {
+  "summary": "These comprehensive revision notes cover the molar gas volume and gas calculations for OCR GCSE Chemistry C5.1d-e (Triple). They explain Avogadro's Law, the magic constant of 24.0 dm3/mol at room temperature and pressure (rtp), and step-by-step stoichiometric gas volume calculations. Master these concepts to easily convert between moles, masses, volumes, and reacting quantities of gases for top-grade exam success.",
+  "core": [
+   {
+    "h": "Introduction to Avogadro's Law",
+    "p": "Avogadro's Law is the foundation of all gas volume calculations in chemistry. It states that equal volumes of all gases, when measured at the same temperature and pressure, contain the exact same number of molecules or moles.",
+    "bullets": [
+     "Equal volumes of different gases contain equal numbers of particles.",
+     "This relationship is independent of the chemical identity or molar mass of the gas.",
+     "One mole of any gas occupies the same volume under specified conditions of temperature and pressure.",
+     "This law allows chemists to relate the volumes of reacting gases directly to their stoichiometric balancing numbers."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Avogadro's Law",
+      "p": "Equal volumes of all gases, under the same conditions of temperature and pressure, contain equal numbers of molecules."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Molar Gas Volume at RTP",
+    "p": "At room temperature and pressure (rtp), defined in OCR chemistry as 20 degrees Celsius and 1 atmosphere pressure, exactly one mole of any gas occupies a molar gas volume of 24.0 dm3 (or 24,000 cm3).",
+    "bullets": [
+     "Standard room temperature and pressure (rtp) is taken as 20°C and 1 atm in OCR specifications.",
+     "One mole of hydrogen gas, carbon dioxide gas, or oxygen gas all occupy 24.0 dm3 at rtp.",
+     "Molar gas volume is abbreviated with the unit dm3/mol.",
+     "Temperature and pressure changes will alter this volume, but 24.0 dm3/mol is your default constant."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Molar Gas Volume Value",
+      "p": "The molar gas volume at rtp is always 24.0 dm3/mol (or 24,000 cm3/mol). Learn this number!"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "The Gas Volume Formula Triangle",
+    "p": "To convert between the number of moles of a gas and its volume at rtp, you use a simple formula triangle. Volume (in dm3) is equal to moles multiplied by the molar gas volume (24.0).",
+    "bullets": [
+     "Volume of gas (dm3) = Moles × 24.0",
+     "Moles = Volume of gas (dm3) ÷ 24.0",
+     "Volume of gas (cm3) = Moles × 24,000",
+     "Always check whether the volume is given in cm3 or dm3 before doing your calculation."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Converting cm3 to dm3",
+      "p": "Always divide cm3 by 1000 to convert into dm3 before multiplying by 24.0, or multiply moles by 24,000 directly."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Formula triangle linking gas volume, moles, and molar volume (24.0 dm3/mol).",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"2\"/><polygon points=\"200,40 80,180 320,180\" fill=\"#dbeafe\" stroke=\"#1e40af\" stroke-width=\"2\"/><line x1=\"80\" y1=\"120\" x2=\"320\" y2=\"120\" stroke=\"#1e40af\" stroke-width=\"2\"/><line x1=\"200\" y1=\"120\" x2=\"200\" y2=\"180\" stroke=\"#1e40af\" stroke-width=\"2\"/><text x=\"180\" y=\"90\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e3a8a\">Volume (dm3)</text><text x=\"130\" y=\"155\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e3a8a\">Moles (mol)</text><text x=\"235\" y=\"155\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e3a8a\">24.0</text><text x=\"190\" y=\"210\" font-size=\"12\" fill=\"#475569\">Top: Volume = Moles × 24.0</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Calculating Gas Volume from Mass",
+    "p": "Often in exams, you are given the mass of a solid or reactant that produces a gas, and you must calculate the final volume of gas produced at rtp using stoichiometry.",
+    "bullets": [
+     "Step 1: Calculate the moles of the substance given using Moles = Mass ÷ Mr.",
+     "Step 2: Use the molar ratio from the balanced chemical equation to find the moles of the gas produced.",
+     "Step 3: Multiply the moles of the gas by 24.0 dm3 to find the gas volume.",
+     "Step 4: Include appropriate units (dm3 or cm3) in your final answer."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Ignoring Balances",
+      "p": "Do not skip the balanced equation ratio step; failing to use coefficients leads to completely wrong molar proportions."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Calculating Mass or Moles from Gas Volume",
+    "p": "Conversely, you might be given the volume of a gas evolved in a reaction and asked to find the mass of a reactant needed or the mass of a product formed.",
+    "bullets": [
+     "Step 1: Convert the given gas volume to moles by dividing by 24.0 (or 24,000 if in cm3).",
+     "Step 2: Use the stoichiometric coefficients from the balanced equation to find the moles of the unknown substance.",
+     "Step 3: Convert the moles of the unknown substance to mass by multiplying by its relative formula mass (Mr).",
+     "Step 4: Double-check significant figures to match the data provided in the question."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Working Backwards",
+      "p": "Going from volume to mass requires dividing by 24.0 first, applying the ratio, then multiplying by Mr."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Reacting Volumes of Gases in Equations",
+    "p": "When all reactants and products in a chemical reaction are gases, the volume ratio of the gases is exactly the same as the molar ratio given by the balancing numbers in the equation.",
+    "bullets": [
+     "In gas reactions, mole ratio equals volume ratio directly.",
+     "If 1 mole of N2 reacts with 3 moles of H2 to form 2 moles of NH3, then 1 dm3 of N2 reacts with 3 dm3 of H2 to form 2 dm3 of NH3.",
+     "This holds true as long as all gas volumes are measured at the same temperature and pressure.",
+     "It saves time because you do not even need to calculate moles when dealing entirely with reacting gas volumes!"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Gay-Lussac's Law of Combining Volumes",
+      "p": "When gases react, they do so in volumes which bear a simple whole number ratio to one another and to the volume of the products, if gaseous, under the same conditions."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Effect of Temperature on Gas Volume",
+    "p": "Temperature directly affects the volume of a fixed amount of gas. According to Charles's Law, as temperature increases, gas particles gain kinetic energy, move faster, and collide harder with container walls.",
+    "bullets": [
+     "If pressure is kept constant, heating a gas causes its volume to expand.",
+     "Cooling a gas causes its volume to contract.",
+     "Gas volumes must be measured under controlled or standard conditions (rtp) to be comparable.",
+     "Higher temperature increases average kinetic energy of gas molecules."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Temperature Units",
+      "p": "Always remember that standard rtp temperature in OCR is 20°C, though absolute zero (0 Kelvin) is -273°C."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Effect of Pressure on Gas Volume",
+    "p": "Pressure is inversely proportional to the volume of a fixed mass of gas at constant temperature (Boyle's Law). Squeezing gas molecules into a smaller space increases the frequency of collisions with container walls.",
+    "bullets": [
+     "Increasing the pressure on a gas decreases its volume.",
+     "Decreasing the pressure allows the gas to expand and increase its volume.",
+     "Standard pressure in OCR rtp calculations is 1 atmosphere (101.3 kPa).",
+     "Changes in atmospheric pressure in the lab can slightly affect measured gas volumes if not accounted for."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Inverse Relationship",
+      "p": "Higher pressure = smaller volume. Think of compressing a syringe plunger."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Apparatus for Measuring Gas Volumes",
+    "p": "In practical chemistry (such as rates of reaction PAG), gases are collected and measured using specialized glassware or gas syringes to ensure no gas escapes into the atmosphere.",
+    "bullets": [
+     "A gas syringe measures gas volume directly with high precision.",
+     "An inverted measuring cylinder over a trough of water can also collect gas by displacement of water.",
+     "A delivery tube must be airtight; any leaks will cause lower recorded gas volumes.",
+     "Using a microscale apparatus reduces escape losses for soluble gases like carbon dioxide."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Airtight Seal",
+      "p": "Checking equipment for leaks using a tightness test is essential before starting any gas volume experiment."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Experimental setup showing a conical flask connected via delivery tube to a gas syringe.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"2\"/><path d=\"M100,140 L140,140 L160,180 L80,180 Z\" fill=\"#e2e8f0\" stroke=\"#475569\" stroke-width=\"2\"/><rect x=\"115\" y=\"110\" width=\"30\" height=\"30\" fill=\"#94a3b8\" stroke=\"#475569\" stroke-width=\"2\"/><path d=\"M130,110 Q130,70 200,70 L260,120\" fill=\"none\" stroke=\"#334155\" stroke-width=\"3\"/><rect x=\"230\" y=\"110\" width=\"120\" height=\"30\" rx=\"5\" fill=\"#bfdbfe\" stroke=\"#1e40af\" stroke-width=\"2\"/><line x1=\"250\" y1=\"125\" x2=\"330\" y2=\"125\" stroke=\"#1e3a8a\" stroke-width=\"2\" stroke-dasharray=\"5,5\"/><text x=\"100\" y=\"205\" font-size=\"11\" fill=\"#1e293b\">Conical flask</text><text x=\"260\" y=\"160\" font-size=\"11\" fill=\"#1e293b\">Gas syringe</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Handling Soluble Gases",
+    "p": "Some gases produced in reactions, such as carbon dioxide or sulfur dioxide, are moderately soluble in water. Collecting them over water can lead to inaccuracies because part of the gas dissolves.",
+    "bullets": [
+     "Carbon dioxide dissolves in water, meaning water displacement underestimates the true volume produced.",
+     "Using a gas syringe avoids the problem of gas dissolving in water.",
+     "For very soluble gases like hydrogen chloride or ammonia, collection over water is entirely unsuitable.",
+     "Corrections or dry collection methods must be considered for precise quantitative analysis."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Solubility Error",
+      "p": "Always explain in exam questions that collecting CO2 over water gives a lower volume than expected due to solubility."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Ideal Gas Assumptions",
+    "p": "The molar gas volume constant of 24.0 dm3/mol assumes gases behave as ideal gases. Real gases deviate slightly from this behavior at very high pressures or very low temperatures.",
+    "bullets": [
+     "Ideal gas particles are assumed to have zero volume themselves.",
+     "There are assumed to be no intermolecular forces of attraction between ideal gas particles.",
+     "At high pressure, particles are close together, and their own volume becomes significant.",
+     "At low temperature, particles move slowly, and intermolecular attractions pull them closer, reducing volume."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Ideal Gas",
+      "p": "A theoretical gas that perfectly obeys the gas laws under all conditions of temperature and pressure without intermolecular forces."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Step-by-Step Problem Solving Strategy",
+    "p": "Mastering complex triple chemistry gas calculation questions requires a strict, methodical four-step approach to pick up all available marks.",
+    "bullets": [
+     "Step 1: Write down the balanced chemical equation if not already provided.",
+     "Step 2: Identify what information you have been given (mass, volume, or concentration) and convert it into moles.",
+     "Step 3: Use the stoichiometric ratio from the balanced equation to find the moles of the target species.",
+     "Step 4: Convert the moles of the target species into the final required unit (mass in grams, volume in dm3 or cm3)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Show All Working",
+      "p": "OCR examiners award intermediate marks for correct moles and ratios even if your final arithmetic is slightly off."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Party Balloon Analogy",
+   "p": "Imagine standard helium party balloons. At room temperature and pressure, every single balloon filled with exactly one mole of any gas—whether it is giant helium atoms, diatomic oxygen, or bulky carbon dioxide molecules—inflates to take up the exact same physical volume: 24.0 dm3. It does not matter what kind of gas is inside; the space between the free-moving molecules at rtp is so vast that the size of the individual particles is irrelevant. The analogy breaks down because real gas molecules do have tiny volumes and slight attractions for each other, whereas ideal gas particles are assumed to have zero volume and zero attraction."
+  },
+  "terms": [
+   {
+    "t": "Molar Gas Volume",
+    "d": "The volume occupied by one mole of any gas at room temperature and pressure, equal to 24.0 dm3/mol."
+   },
+   {
+    "t": "Avogadro's Law",
+    "d": "Equal volumes of all gases, under the same conditions of temperature and pressure, contain equal numbers of molecules."
+   },
+   {
+    "t": "RTP",
+    "d": "Room temperature and pressure, defined in OCR chemistry as 20°C and 1 atmosphere pressure."
+   },
+   {
+    "t": "Gas Syringe",
+    "d": "A piece of laboratory apparatus used to measure the volume of gas produced in a chemical reaction."
+   },
+   {
+    "t": "Stoichiometry",
+    "d": "The relationship between the relative quantities of substances taking part in a reaction or chemical change."
+   },
+   {
+    "t": "Mole",
+    "d": "The amount of a substance containing 6.02 × 10^23 particles (the Avogadro constant)."
+   },
+   {
+    "t": "Relative Formula Mass (Mr)",
+    "d": "The sum of the relative atomic masses of all the atoms in the formula of a substance."
+   },
+   {
+    "t": "Ideal Gas",
+    "d": "A hypothetical gas that perfectly obeys gas laws with no intermolecular forces and negligible particle volume."
+   },
+   {
+    "t": "Displacement of Water",
+    "d": "A method of collecting gas by bubbling it into an inverted measuring cylinder filled with water, pushing water out."
+   },
+   {
+    "t": "Gay-Lussac's Law",
+    "d": "Gases react in volumes that bear a simple whole number ratio to one another under constant temperature and pressure."
+   },
+   {
+    "t": "Concentration",
+    "d": "The amount of solute dissolved in a specific volume of solvent, measured in mol/dm3 or g/dm3."
+   },
+   {
+    "t": "Limiting Reactant",
+    "d": "The reactant that is completely used up in a reaction, limiting the amount of product formed."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Forgetting to convert cm3 into dm3 by dividing by 1000",
+    "r": "Always divide cm3 volumes by 1000 to get dm3 before multiplying by 24.0, or multiply moles by 24,000 directly."
+   },
+   {
+    "w": "Using 22.4 dm3/mol instead of 24.0 dm3/mol",
+    "r": "22.4 dm3/mol is for standard temperature and pressure (0°C); OCR specification strictly requires 24.0 dm3/mol for rtp (20°C)."
+   },
+   {
+    "w": "Ignoring balancing numbers when finding gas volumes from moles",
+    "r": "Always multiply or divide by the molar ratio from the balanced equation before calculating the gas volume."
+   },
+   {
+    "w": "Stating that 1 mole of different gases has different volumes at rtp",
+    "r": "One mole of ANY gas occupies 24.0 dm3 at rtp, regardless of its molar mass or molecular formula."
+   },
+   {
+    "w": "Stating that gas volume depends on the molecular mass of the gas",
+    "r": "Avogadro's law proves that equal volumes contain equal moles, so mass does not change the molar volume at rtp."
+   },
+   {
+    "w": "Confusing mass calculations with gas volume calculations",
+    "r": "Use Mr for mass calculations (mass = moles × Mr) and 24.0 for gas volume calculations (volume = moles × 24.0)."
+   },
+   {
+    "w": "Assuming carbon dioxide collected over water gives an accurate high volume",
+    "r": "CO2 dissolves in water, so the measured gas volume is lower than the actual volume produced."
+   }
+  ],
+  "exam": [
+   {
+    "q": "State the volume occupied by 1 mole of any gas at room temperature and pressure (rtp).",
+    "marks": 1,
+    "model": [
+     "24.0 dm3 (or 24,000 cm3)"
+    ],
+    "tip": "Learn this exact numerical value and unit combination."
+   },
+   {
+    "q": "Calculate the volume, in dm3, of 0.25 moles of carbon dioxide gas at rtp.",
+    "marks": 2,
+    "model": [
+     "0.25 × 24.0",
+     "= 6.0 dm3"
+    ],
+    "tip": "Show your multiplication clearly for method marks."
+   },
+   {
+    "q": "A student reacts 6.0 g of magnesium with excess hydrochloric acid. Mg + 2HCl -> MgCl2 + H2. Calculate the volume of hydrogen gas produced in dm3 at rtp. (Ar of Mg = 24).",
+    "marks": 4,
+    "model": [
+     "Moles of Mg = 6.0 ÷ 24 = 0.25 mol",
+     "Mole ratio Mg : H2 is 1 : 1, so moles of H2 = 0.25 mol",
+     "Volume of H2 = 0.25 × 24.0",
+     "= 6.0 dm3"
+    ],
+    "tip": "Break the calculation down into moles, ratio, and final volume."
+   },
+   {
+    "q": "Explain why collecting carbon dioxide gas over water in an inverted measuring cylinder can give a lower volume than expected.",
+    "marks": 2,
+    "model": [
+     "Carbon dioxide is soluble in water",
+     "Some of the gas dissolves in the water rather than being collected in the cylinder"
+    ],
+    "tip": "Mention both solubility and the loss of gas volume."
+   },
+   {
+    "q": "100 cm3 of nitrogen gas reacts completely with hydrogen gas to form ammonia. N2(g) + 3H2(g) -> 2NH3(g). Calculate the volume of ammonia produced.",
+    "marks": 2,
+    "model": [
+     "Mole / volume ratio of N2 to NH3 is 1 : 2",
+     "Volume of NH3 = 100 cm3 × 2 = 200 cm3"
+    ],
+    "tip": "For reacting gases, volume ratio equals stoichiometric ratio directly."
+   },
+   {
+    "q": "Calculate the number of moles of oxygen gas contained in a 72 dm3 sample at rtp.",
+    "marks": 2,
+    "model": [
+     "Moles = Volume ÷ 24.0",
+     "72 ÷ 24.0 = 3.0 mol"
+    ],
+    "tip": "Check formula triangle: Moles = Volume ÷ 24.0."
+   },
+   {
+    "q": "A reaction produces 480 cm3 of hydrogen gas at rtp. Calculate the number of moles of hydrogen produced.",
+    "marks": 2,
+    "model": [
+     "Convert cm3 to dm3: 480 ÷ 1000 = 0.48 dm3 (or use 24,000 cm3)",
+     "Moles = 0.48 ÷ 24.0 = 0.02 mol (or 480 ÷ 24,000 = 0.02 mol)"
+    ],
+    "tip": "Converting units first prevents careless arithmetic errors."
+   },
+   {
+    "q": "State Avogadro's Law in terms of gas volumes and molecules.",
+    "marks": 2,
+    "model": [
+     "Equal volumes of all gases",
+     "Under the same conditions of temperature and pressure contain equal numbers of molecules"
+    ],
+    "tip": "Learn this definition word for word."
+   },
+   {
+    "q": "Describe how you would check a gas syringe and conical flask apparatus for leaks before starting an experiment.",
+    "marks": 2,
+    "model": [
+     "Ensure all stoppers and tubing are tightly fitted",
+     "Push the gas syringe plunger in slightly and check if it springs back or test with a bubble leak detector / ensure airtight seal"
+    ],
+    "tip": "Mention airtight seals and checking connections."
+   },
+   {
+    "q": "Calculate the mass of calcium carbonate needed to produce 12.0 dm3 of carbon dioxide gas at rtp. CaCO3 -> CaO + CO2. (Mr of CaCO3 = 100).",
+    "marks": 4,
+    "model": [
+     "Moles of CO2 = 12.0 ÷ 24.0 = 0.5 mol",
+     "Ratio CaCO3 : CO2 is 1 : 1, so moles of CaCO3 = 0.5 mol",
+     "Mass = Moles × Mr = 0.5 × 100",
+     "= 50 g"
+    ],
+    "tip": "Work backwards from gas volume to moles, apply ratio, then convert moles to mass."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Calculate the volume of carbon dioxide produced at rtp when 10.0 g of calcium carbonate is completely thermally decomposed. Equation: CaCO3 -> CaO + CO2. (Ar: Ca = 40, C = 12, O = 16).",
+    "steps": [
+     "Calculate the relative formula mass (Mr) of CaCO3: 40 + 12 + (16 × 3) = 100.",
+     "Calculate the moles of CaCO3: Moles = Mass ÷ Mr = 10.0 g ÷ 100 = 0.10 mol.",
+     "Determine the molar ratio from the balanced equation: 1 mole of CaCO3 produces 1 mole of CO2, so moles of CO2 = 0.10 mol.",
+     "Calculate the volume of CO2 gas at rtp: Volume = Moles × 24.0 = 0.10 × 24.0 = 2.4 dm3."
+    ],
+    "ans": "2.4 dm3"
+   },
+   {
+    "q": "A student reacts 0.20 g of calcium with excess water. Ca + 2H2O -> Ca(OH)2 + H2. Calculate the volume of hydrogen gas produced in cm3 at rtp. (Ar of Ca = 40).",
+    "steps": [
+     "Calculate the moles of calcium reacted: Moles = 0.20 g ÷ 40 = 0.0050 mol.",
+     "Use the balanced equation to find moles of H2: Ratio Ca : H2 is 1 : 1, so moles of H2 = 0.0050 mol.",
+     "Calculate volume in dm3: Volume = 0.0050 × 24.0 = 0.12 dm3.",
+     "Convert volume to cm3 by multiplying by 1000: 0.12 × 1000 = 120 cm3 (or 0.0050 × 24,000 = 120 cm3)."
+    ],
+    "ans": "120 cm3"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Diagram illustrating Avogadro's Law: three different gases in equal volumes at rtp containing equal numbers of molecules.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"2\"/><rect x=\"30\" y=\"40\" width=\"90\" height=\"140\" rx=\"5\" fill=\"#dbeafe\" stroke=\"#1e40af\" stroke-width=\"2\"/><circle cx=\"55\" cy=\"70\" r=\"8\" fill=\"#ef4444\"/><circle cx=\"85\" cy=\"70\" r=\"8\" fill=\"#ef4444\"/><circle cx=\"70\" cy=\"110\" r=\"8\" fill=\"#ef4444\"/><circle cx=\"55\" cy=\"150\" r=\"8\" fill=\"#ef4444\"/><circle cx=\"90\" cy=\"150\" r=\"8\" fill=\"#ef4444\"/><text x=\"45\" y=\"195\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e3a8a\">1 dm3 H2</text><rect x=\"155\" y=\"40\" width=\"90\" height=\"140\" rx=\"5\" fill=\"#dbeafe\" stroke=\"#1e40af\" stroke-width=\"2\"/><circle cx=\"180\" cy=\"75\" r=\"7\" fill=\"#3b82f6\"/><circle cx=\"210\" cy=\"75\" r=\"7\" fill=\"#3b82f6\"/><circle cx=\"195\" cy=\"115\" r=\"7\" fill=\"#3b82f6\"/><circle cx=\"180\" cy=\"145\" r=\"7\" fill=\"#3b82f6\"/><circle cx=\"215\" cy=\"145\" r=\"7\" fill=\"#3b82f6\"/><text x=\"170\" y=\"195\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e3a8a\">1 dm3 O2</text><rect x=\"280\" y=\"40\" width=\"90\" height=\"140\" rx=\"5\" fill=\"#dbeafe\" stroke=\"#1e40af\" stroke-width=\"2\"/><circle cx=\"305\" cy=\"70\" r=\"9\" fill=\"#10b981\"/><circle cx=\"335\" cy=\"80\" r=\"9\" fill=\"#10b981\"/><circle cx=\"320\" cy=\"120\" r=\"9\" fill=\"#10b981\"/><circle cx=\"305\" cy=\"155\" r=\"9\" fill=\"#10b981\"/><circle cx=\"340\" cy=\"150\" r=\"9\" fill=\"#10b981\"/><text x=\"290\" y=\"195\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e3a8a\">1 dm3 CO2</text></svg>"
+   }
+  ],
+  "pid": "chem_ocra.12.2",
+  "sid": "chem_ocra",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-27T19:05:44.243Z"
+ },
+ "chem_ocra.12.3": {
+  "summary": "These comprehensive revision notes cover theoretical yield and percentage yield for OCR GCSE Chemistry C5.1g-h (Triple). They detail how to calculate the maximum possible mass of a product from a balanced chemical equation, compare it with the actual mass obtained in an experiment, and evaluate the efficiency of industrial and laboratory chemical processes. Mastering these calculations and understanding the reasons for incomplete reactions is essential for maximizing marks in Paper 4.",
+  "core": [
+   {
+    "h": "Introduction to Yield in Chemical Reactions",
+    "p": "In any chemical reaction, chemists want to know how efficient their process is. Yield is a measure of the amount of useful product obtained from a reaction compared to the maximum amount that could possibly be produced.",
+    "bullets": [
+     "**Yield** refers to the actual amount of product obtained from a chemical reaction.",
+     "Reactions in the laboratory or industry rarely produce 100% of the calculated product.",
+     "Understanding yield helps chemists evaluate the economic viability and efficiency of chemical manufacturing processes.",
+     "Both theoretical and percentage yields are crucial calculations for quantitative chemistry at GCSE Higher Tier."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Why Yield Matters",
+      "p": "Low percentage yields waste expensive raw resources and generate unwanted chemical waste, increasing manufacturing costs."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Defining Theoretical Yield",
+    "p": "The theoretical yield is the maximum calculated amount of product that can be formed from a given amount of limiting reactant, assuming the reaction goes to completion.",
+    "bullets": [
+     "Calculated using balanced chemical equations and relative formula masses (Mr).",
+     "Assumes 100% of the limiting reactant is converted into product.",
+     "Assumes no side reactions occur and no product is lost during separation.",
+     "Always expressed in units of mass (grams, g) or moles (mol)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Theoretical Yield",
+      "p": "The maximum mass of product that could be formed from a given mass of reactants, calculated using a balanced equation."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Defining Actual Yield",
+    "p": "The actual yield is the measured amount of pure product actually obtained from a real experimental procedure, which is almost always less than the theoretical yield.",
+    "bullets": [
+     "Determined by weighing the dry product on a balance after the reaction and separation.",
+     "Practically always lower than the theoretical yield due to physical and chemical factors.",
+     "Must be measured accurately to calculate the percentage yield correctly.",
+     "Can be affected by experimental errors and handling losses."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Actual Yield",
+      "p": "The actual mass of product obtained from a real chemical reaction performed in the laboratory or industry."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "The Percentage Yield Formula",
+    "p": "Percentage yield compares the actual yield obtained experimentally to the theoretical yield calculated on paper, expressed as a percentage.",
+    "bullets": [
+     "Formula: Percentage Yield = (Actual Yield / Theoretical Yield) * 100",
+     "The value can never exceed 100% in a valid experiment.",
+     "If a calculated percentage yield is over 100%, an experimental error or calculation mistake has occurred.",
+     "Units cancel out during the calculation because it is a ratio."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Formula Memorandum",
+      "p": "Always put Actual over Theoretical, then multiply by 100. Remember: (Actual / Theoretical) * 100."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Why Percentage Yield is Never 100%",
+    "p": "In practice, chemists never achieve a 100% yield due to several unavoidable physical and chemical reasons inherent to reactions.",
+    "bullets": [
+     "**Reversible reactions**: The products can react to reform the reactants, so the reaction never truly goes to completion.",
+     "**Side reactions**: Unintended secondary chemical reactions consume reactants to form different, unwanted products.",
+     "**Loss during separation**: Product is lost when filtering a precipitate, transferring liquids between vessels, or leaving residue on filter paper.",
+     "**Incomplete reactions**: The reaction may be too slow or stop before all reactants are fully consumed."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Common Misconception",
+      "p": "Never say 'impurities make the yield over 100%'. Impurities weigh down the product, making actual yield falsely high, but the true percentage yield of pure product is still limited by the chemistry."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Step-by-Step Calculation Method",
+    "p": "To calculate theoretical and percentage yields successfully in exam questions, follow a structured step-by-step mathematical routine.",
+    "bullets": [
+     "Step 1: Write and balance the chemical equation for the reaction.",
+     "Step 2: Calculate the relative formula masses (Mr) for the relevant reactant and product.",
+     "Step 3: Calculate the number of moles of the given reactant (Moles = Mass / Mr).",
+     "Step 4: Use the molar ratio from the balanced equation to find the moles of the product.",
+     "Step 5: Convert the product's moles into mass (Mass = Moles * Mr) to get the theoretical yield.",
+     "Step 6: Apply the percentage yield formula using the actual yield given in the question."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam Success Tip",
+      "p": "Show every working step clearly. Examiners award intermediate method marks even if your final arithmetic is incorrect."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Visualising Yield Losses in Experiments",
+    "p": "Laboratory procedures involve multiple physical steps where product can be accidentally left behind or lost.",
+    "bullets": [
+     "Transferring solutions leaves microscopic droplets on glass walls.",
+     "Filtration leaves solid precipitate trapped in filter paper pores or dissolved in the filtrate.",
+     "Evaporation or heating can cause spitting, ejecting tiny amounts of solid from the evaporating dish.",
+     "Product may remain dissolved in the cold solvent used for washing crystals."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Minimising Loss",
+      "p": "Washing precipitates with a little cold distilled solvent and drying to constant mass helps reduce experimental yield loss."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Figure 1: Common experimental stages where product mass is lost during separation and purification.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" rx=\"10\"/><text x=\"200\" y=\"45\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#1e293b\">Stages of Product Loss in Laboratory Work</text><rect x=\"40\" y=\"70\" width=\"90\" height=\"110\" fill=\"#dbeafe\" stroke=\"#1e3a8a\" rx=\"5\"/><text x=\"85\" y=\"95\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#1e3a8a\">1. Reaction</text><text x=\"85\" y=\"120\" font-size=\"10\" text-anchor=\"middle\" fill=\"#334155\">Incomplete or</text><text x=\"85\" y=\"135\" font-size=\"10\" text-anchor=\"middle\" fill=\"#334155\">reversible</text><text x=\"85\" y=\"150\" font-size=\"10\" text-anchor=\"middle\" fill=\"#334155\">reaction</text><line x1=\"130\" y1=\"125\" x2=\"155\" y2=\"125\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><rect x=\"155\" y=\"70\" width=\"90\" height=\"110\" fill=\"#fef3c7\" stroke=\"#b45309\" rx=\"5\"/><text x=\"200\" y=\"95\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#b45309\">2. Filtration</text><text x=\"200\" y=\"120\" font-size=\"10\" text-anchor=\"middle\" fill=\"#334155\">Solid left on</text><text x=\"200\" y=\"135\" font-size=\"10\" text-anchor=\"middle\" fill=\"#334155\">filter paper or</text><text x=\"200\" y=\"150\" font-size=\"10\" text-anchor=\"middle\" fill=\"#334155\">dissolved</text><line x1=\"245\" y1=\"125\" x2=\"270\" y2=\"125\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><rect x=\"270\" y=\"70\" width=\"90\" height=\"110\" fill=\"#dcfce7\" stroke=\"#15803d\" rx=\"5\"/><text x=\"315\" y=\"95\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#15803d\">3. Transfer</text><text x=\"315\" y=\"120\" font-size=\"10\" text-anchor=\"middle\" fill=\"#334155\">Spilling or</text><text x=\"315\" y=\"135\" font-size=\"10\" text-anchor=\"middle\" fill=\"#334155\">residue left</text><text x=\"315\" y=\"150\" font-size=\"10\" text-anchor=\"middle\" fill=\"#334155\">in glassware</text><defs><marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 2 L 10 5 L 0 8 z\" fill=\"#64748b\"/></marker></defs></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Industrial Application of Percentage Yield",
+    "p": "Industrial chemical synthesis relies heavily on maximizing percentage yield to ensure profitability and resource sustainability.",
+    "bullets": [
+     "High percentage yield means less wasted raw material and lower disposal costs for by-products.",
+     "Industrial processes must balance high yield with reaction rate and energy costs.",
+     "Recycling unreacted starting materials back into the reaction vessel improves overall process efficiency.",
+     "Catalysts do not increase percentage yield directly, but they help reactions reach equilibrium faster and at lower temperatures."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Catalysts and Yield",
+      "p": "A catalyst increases the rate of both forward and reverse reactions equally. It shifts position of equilibrium NOT at all, hence percentage yield remains unchanged."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Factors Influencing Choice of Reaction Pathway",
+    "p": "When chemical manufacturers decide how to make a product, percentage yield is only one of several crucial economic factors.",
+    "bullets": [
+     "**Percentage yield**: Higher yield is preferred to conserve expensive raw materials.",
+     "**Atom economy**: Measures how many atoms of reactants form useful products rather than waste.",
+     "**Rate of reaction**: Faster reactions produce more product per unit of time, saving plant operating costs.",
+     "**Position of equilibrium**: For reversible reactions, conditions are chosen to maximise product yield."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Yield vs Atom Economy",
+      "p": "Do not confuse percentage yield (actual vs theoretical amount) with atom economy (mass of desired product vs total mass of reactants)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Worked Example: Calculating Theoretical Yield",
+    "p": "Calculations involving masses require careful use of moles and molar masses from the periodic table.",
+    "bullets": [
+     "Example: Calculate the theoretical yield of iron produced when 40.0 g of iron(III) oxide reacts completely with excess carbon monoxide.",
+     "Equation: Fe2O3 + 3CO -> 2Fe + 3CO2",
+     "Mr of Fe2O3 = (56 * 2) + (16 * 3) = 112 + 48 = 160 g/mol.",
+     "Moles of Fe2O3 = 40.0 g / 160 g/mol = 0.250 mol."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Molar Ratio Step",
+      "p": "1 mole of Fe2O3 produces 2 moles of Fe. Therefore, 0.250 mol of Fe2O3 produces 0.250 * 2 = 0.500 mol of Fe."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Worked Example: Calculating Percentage Yield",
+    "p": "Using the theoretical yield from the previous step, we calculate the percentage yield when an actual mass is given.",
+    "bullets": [
+     "Continuing the previous example: Mass of iron (Fe) = 0.500 mol * 56 g/mol = 28.0 g (Theoretical Yield).",
+     "Suppose an experiment is carried out and only 22.4 g of pure iron is actually collected.",
+     "Apply formula: Percentage Yield = (Actual Yield / Theoretical Yield) * 100.",
+     "Calculation: (22.4 / 28.0) * 100 = 80.0%."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Final Answer Check",
+      "p": "Percentage yield = 80.0%. This is a realistic laboratory value demonstrating typical handling losses."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Figure 2: Flowchart summarising the calculation steps from mass of reactant to percentage yield.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" rx=\"10\"/><text x=\"200\" y=\"45\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#1e293b\">Calculation Flowchart for Percentage Yield</text><rect x=\"40\" y=\"65\" width=\"140\" height=\"40\" fill=\"#dbeafe\" stroke=\"#1e3a8a\" rx=\"5\"/><text x=\"110\" y=\"90\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1e3a8a\">1. Moles = Mass / Mr</text><line x1=\"180\" y1=\"85\" x2=\"220\" y2=\"85\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><rect x=\"220\" y=\"65\" width=\"140\" height=\"40\" fill=\"#fef3c7\" stroke=\"#b45309\" rx=\"5\"/><text x=\"290\" y=\"90\" font-size=\"11\" text-anchor=\"middle\" fill=\"#b45309\">2. Use Molar Ratio</text><line x1=\"290\" y1=\"105\" x2=\"290\" y2=\"135\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><rect x=\"220\" y=\"135\" width=\"140\" height=\"40\" fill=\"#dcfce7\" stroke=\"#15803d\" rx=\"5\"/><text x=\"290\" y=\"160\" font-size=\"11\" text-anchor=\"middle\" fill=\"#15803d\">3. Theoretical Mass</text><line x1=\"220\" y1=\"155\" x2=\"180\" y2=\"155\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><rect x=\"40\" y=\"135\" width=\"140\" height=\"40\" fill=\"#e9d5ff\" stroke=\"#7e22ce\" rx=\"5\"/><text x=\"110\" y=\"160\" font-size=\"11\" text-anchor=\"middle\" fill=\"#7e22ce\">4. (Actual / Theor) * 100</text><defs><marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 2 L 10 5 L 0 8 z\" fill=\"#64748b\"/></marker></defs></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Summary Table of Key Equations and Units",
+    "p": "A quick-reference guide for all mathematical relationships tested under OCR GCSE Chemistry C5.1g-h.",
+    "bullets": [
+     "Ensure all masses are converted to grams before calculating moles.",
+     "Check relative atomic masses given in the exam paper rather than memorising decimals.",
+     "Always state appropriate significant figures in final answers, usually 2 or 3."
+    ],
+    "table": {
+     "head": [
+      "Calculation Step",
+      "Formula / Rule",
+      "Units"
+     ],
+     "rows": [
+      [
+       "Moles",
+       "Mass / Mr",
+       "mol"
+      ],
+      [
+       "Mass",
+       "Moles * Mr",
+       "g"
+      ],
+      [
+       "Theoretical Yield",
+       "Calculated from balanced equation mass",
+       "g or mol"
+      ],
+      [
+       "Percentage Yield",
+       "(Actual Yield / Theoretical Yield) * 100",
+       "%"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Units Reminder",
+      "p": "Percentage yield has no units because it is a ratio expressed out of 100."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Bakery Analogy for Yield",
+   "p": "Imagine you have a recipe that mathematically predicts you can bake 10 large loaves of bread using a 1kg bag of flour (Theoretical Yield). However, when you finish baking, you find you only have 8 loaves because some dough stuck to the mixing bowl and one loaf burnt in the oven (Actual Yield). Your percentage yield is (8 / 10) * 100 = 80%. This breaks down because chemical reactions do not burn or stick due to human clumsiness in the exact same physical way, but rather through thermodynamic reversibility and competing side reactions."
+  },
+  "terms": [
+   {
+    "t": "Yield",
+    "d": "The amount of product obtained from a chemical reaction."
+   },
+   {
+    "t": "Theoretical Yield",
+    "d": "The maximum calculated mass of product that could be formed from a given reactant mass."
+   },
+   {
+    "t": "Actual Yield",
+    "d": "The measured mass of pure product actually obtained from an experiment."
+   },
+   {
+    "t": "Percentage Yield",
+    "d": "The ratio of actual yield to theoretical yield expressed as a percentage."
+   },
+   {
+    "t": "Limiting Reactant",
+    "d": "The reactant that is completely used up, limiting the amount of product formed."
+   },
+   {
+    "t": "Reversible Reaction",
+    "d": "A reaction where products can react to reform reactants, preventing 100% conversion."
+   },
+   {
+    "t": "Side Reaction",
+    "d": "An unintended secondary reaction that consumes reactants and reduces product yield."
+   },
+   {
+    "t": "Relative Formula Mass (Mr)",
+    "d": "The sum of the relative atomic masses of all the atoms in the chemical formula."
+   },
+   {
+    "t": "Mole",
+    "d": "The amount of a substance containing 6.02 * 10^23 particles."
+   },
+   {
+    "t": "Precipitate",
+    "d": "An insoluble solid formed by the reaction of two solutions in a test tube."
+   },
+   {
+    "t": "Filtration",
+    "d": "A separation technique used to isolate a solid precipitate from a liquid."
+   },
+   {
+    "t": "Atom Economy",
+    "d": "A measure of the proportion of starting materials that end up as useful products."
+   },
+   {
+    "t": "Catalyst",
+    "d": "A substance that speeds up a reaction without being used up."
+   },
+   {
+    "t": "Equilibrium",
+    "d": "State in a reversible reaction where forward and reverse rates are equal."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Stating percentage yield can be 150% because impurities make it heavier.",
+    "r": "Percentage yield can never exceed 100%; values over 100% indicate experimental or calculation errors."
+   },
+   {
+    "w": "Including units like grams (%) in the final percentage yield answer.",
+    "r": "Percentage yield has no units because it is a ratio multiplied by 100."
+   },
+   {
+    "w": "Forgetting to use balancing numbers (molar ratios) when calculating theoretical yield.",
+    "r": "Always multiply or divide by stoichiometric coefficients from the balanced equation."
+   },
+   {
+    "w": "Using actual yield as the denominator in the percentage yield formula.",
+    "r": "The theoretical yield is always the denominator: (Actual / Theoretical) * 100."
+   },
+   {
+    "w": "Saying a catalyst increases the percentage yield of a reaction.",
+    "r": "A catalyst only increases reaction rate and helps reach equilibrium faster; it does not change yield."
+   },
+   {
+    "w": "Confusing percentage yield with atom economy.",
+    "r": "Percentage yield compares actual vs theoretical amounts; atom economy compares desired product mass to total reactant mass."
+   },
+   {
+    "w": "Assuming all reactions go to completion.",
+    "r": "Many reactions are reversible or suffer from side reactions, meaning actual yield is less than theoretical."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Define the term 'theoretical yield'.",
+    "marks": 1,
+    "model": [
+     "The maximum calculated mass of product that can be formed from a given reactant mass."
+    ],
+    "tip": "Learn this exact definition word-for-word for quick recall."
+   },
+   {
+    "q": "Give two reasons why the percentage yield of a reaction is rarely 100%.",
+    "marks": 2,
+    "model": [
+     "Any two from: reaction is reversible / side reactions occur / product lost during separation or transfer / incomplete reaction."
+    ],
+    "tip": "List standard textbook reasons clearly without vague phrasing."
+   },
+   {
+    "q": "Write down the equation used to calculate percentage yield.",
+    "marks": 1,
+    "model": [
+     "Percentage Yield = (Actual Yield / Theoretical Yield) * 100"
+    ],
+    "tip": "Ensure division and multiplication order is correct."
+   },
+   {
+    "q": "Explain why a student's calculated percentage yield of 115% is incorrect.",
+    "marks": 2,
+    "model": [
+     "Percentage yield cannot exceed 100% (1 mark).",
+     "This indicates an experimental error such as the product not being fully dried or a calculation mistake (1 mark)."
+    ],
+    "tip": "Address both the mathematical limit and the practical reason."
+   },
+   {
+    "q": "Calculate the theoretical yield of magnesium oxide when 12.0 g of magnesium burns completely in oxygen. (Ar: Mg = 24, O = 16)",
+    "marks": 4,
+    "model": [
+     "Balanced equation: 2Mg + O2 -> 2MgO (1 mark)",
+     "Moles of Mg = 12.0 / 24 = 0.50 mol (1 mark)",
+     "Moles of MgO produced = 0.50 mol (1 mark)",
+     "Mr of MgO = 40; Mass of MgO = 0.50 * 40 = 20.0 g (1 mark)"
+    ],
+    "tip": "Always write out each calculation step clearly."
+   },
+   {
+    "q": "In an experiment, 20.0 g of calcium carbonate is thermally decomposed to produce calcium oxide and carbon dioxide. The theoretical yield of calcium oxide is 11.2 g. The student actually collects 9.8 g of calcium oxide. Calculate the percentage yield.",
+    "marks": 3,
+    "model": [
+     "Formula stated or used: (9.8 / 11.2) * 100 (2 marks for working)",
+     "Correct calculation: 87.5% (1 mark)"
+    ],
+    "tip": "Give answers to 3 significant figures unless told otherwise."
+   },
+   {
+    "q": "Explain why adding a catalyst does not increase the percentage yield in an industrial process.",
+    "marks": 2,
+    "model": [
+     "A catalyst speeds up both the forward and reverse reactions equally (1 mark).",
+     "It does not change the position of equilibrium or the maximum amount of product formed (1 mark)."
+    ],
+    "tip": "Remember that catalysts affect rate, not yield or equilibrium position."
+   },
+   {
+    "q": "State how product can be lost during the filtration stage of a preparation experiment.",
+    "marks": 1,
+    "model": [
+     "Some solid remains on the filter paper or dissolves in the filtrate."
+    ],
+    "tip": "Mention physical loss on apparatus."
+   },
+   {
+    "q": "Discuss why industrial chemical manufacturers prefer processes with high percentage yields.",
+    "marks": 3,
+    "model": [
+     "Conserves expensive raw materials (1 mark).",
+     "Reduces the amount of chemical waste produced (1 mark).",
+     "Lowers overall manufacturing and disposal costs, increasing profit (1 mark)."
+    ],
+    "tip": "Link chemical efficiency directly to economic profit."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Calculate the percentage yield if 5.0 g of copper(II) carbonate decomposes to produce 2.8 g of copper(II) oxide. (Ar: Cu = 64, C = 12, O = 16)",
+    "steps": [
+     "Step 1: Write the balanced equation: CuCO3 -> CuO + CO2",
+     "Step 2: Calculate Mr of CuCO3: 64 + 12 + (16 * 3) = 124 g/mol",
+     "Step 3: Calculate moles of CuCO3: 5.0 g / 124 g/mol = 0.0403 mol",
+     "Step 4: Use molar ratio (1:1) to find moles of CuO = 0.0403 mol",
+     "Step 5: Calculate Mr of CuO: 64 + 16 = 80 g/mol",
+     "Step 6: Calculate theoretical yield of CuO: 0.0403 mol * 80 g/mol = 3.22 g",
+     "Step 7: Calculate percentage yield: (2.8 / 3.22) * 100 = 86.96%"
+    ],
+    "ans": "87.0%"
+   },
+   {
+    "q": "Hydrogen reacts with nitrogen to form ammonia: N2 + 3H2 -> 2NH3. If 14.0 g of nitrogen reacts completely with excess hydrogen, calculate the theoretical yield of ammonia in grams. (Ar: N = 14, H = 1)",
+    "steps": [
+     "Step 1: Calculate Mr of N2 = 14 * 2 = 28 g/mol",
+     "Step 2: Calculate moles of N2 = 14.0 g / 28 g/mol = 0.50 mol",
+     "Step 3: Use molar ratio from equation (1 N2 : 2 NH3): Moles of NH3 = 0.50 * 2 = 1.00 mol",
+     "Step 4: Calculate Mr of NH3 = 14 + (1 * 3) = 17 g/mol",
+     "Step 5: Calculate theoretical mass of NH3 = 1.00 mol * 17 g/mol = 17.0 g"
+    ],
+    "ans": "17.0 g"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Figure 3: Graphical representation comparing theoretical yield (maximum potential) with actual yield (experimental reality).",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"200\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" rx=\"10\"/><text x=\"200\" y=\"45\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#1e293b\">Theoretical vs Actual Yield Comparison</text><rect x=\"70\" y=\"70\" width=\"80\" height=\"120\" fill=\"#e9d5ff\" stroke=\"#7e22ce\" rx=\"5\"/><text x=\"110\" y=\"135\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#7e22ce\">Theoretical</text><text x=\"110\" y=\"150\" font-size=\"10\" text-anchor=\"middle\" fill=\"#7e22ce\">(100%)\"</text><rect x=\"250\" y=\"95\" width=\"80\" height=\"95\" fill=\"#dbeafe\" stroke=\"#1e3a8a\" rx=\"5\"/><text x=\"290\" y=\"145\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#1e3a8a\">Actual</text><text x=\"290\" y=\"160\" font-size=\"10\" text-anchor=\"middle\" fill=\"#1e3a8a\">(e.g. 80%)\"</text><line x1=\"150\" y1=\"130\" x2=\"250\" y2=\"130\" stroke=\"#64748b\" stroke-dasharray=\"4\" stroke-width=\"2\"/><text x=\"200\" y=\"120\" font-size=\"10\" text-anchor=\"middle\" fill=\"#64748b\">Loss during process</text></svg>"
+   }
+  ],
+  "pid": "chem_ocra.12.3",
+  "sid": "chem_ocra",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-27T19:05:49.831Z"
+ }
+}
