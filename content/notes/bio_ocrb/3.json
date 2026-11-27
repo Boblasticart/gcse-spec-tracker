@@ -1339,5 +1339,2115 @@
   "src": "pre",
   "by": "gemini/gemini-flash-lite-latest",
   "ts": "2026-11-26T19:36:38.928Z"
+ },
+ "bio_ocrb.3.2": {
+  "summary": "The development of electron microscopy has revolutionised biology by allowing scientists to observe sub-cellular structures at a much higher resolution and magnification than light microscopes. This technological leap revealed the 'ultrastructure' of cells, including ribosomes and the internal membranes of mitochondria, which are too small to be resolved by light. Mastering this topic requires fluency in converting between units (mm, µm, nm, pm) and using standard form to express the very small dimensions of life.",
+  "core": [
+   {
+    "h": "Resolution vs Magnification",
+    "p": "It is vital to distinguish between these two terms. Increasing magnification without sufficient resolution results in a blurry image where no new detail is seen.",
+    "bullets": [
+     "**Magnification**: How many times larger an image is compared to the real object.",
+     "**Resolution**: The ability to distinguish between two separate points that are very close together. Higher resolution means more detail.",
+     "Light microscopes are limited by the **wavelength of light** (approx. 200nm resolution).",
+     "Electron microscopes use a beam of electrons, which has a much shorter wavelength, allowing for much higher resolution (approx. 0.2nm)."
+    ],
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Resolution",
+      "p": "The smallest distance between two points that can still be distinguished as separate entities."
+     }
+    ]
+   },
+   {
+    "h": "Types of Electron Microscope",
+    "p": "There are two main types used to study cell ultrastructure, each providing different information about the specimen.",
+    "bullets": [
+     "**Transmission Electron Microscope (TEM)**: Passes a beam of electrons through a very thin slice of a specimen. Used to study internal structures (2D).",
+     "**Scanning Electron Microscope (SEM)**: Scans a beam of electrons across the surface of a specimen. Used to create 3D images of the surface.",
+     "Both require a vacuum, meaning specimens must be dead and specially prepared (often coated in metal)."
+    ],
+    "table": {
+     "head": [
+      "Feature",
+      "Light Microscope",
+      "Electron Microscope"
+     ],
+     "rows": [
+      [
+       "Radiation used",
+       "Light rays",
+       "Electron beam"
+      ],
+      [
+       "Max Magnification",
+       "~x1,500",
+       "~x2,000,000"
+      ],
+      [
+       "Max Resolution",
+       "200 nm",
+       "0.2 nm"
+      ],
+      [
+       "Specimen",
+       "Living or dead",
+       "Dead (in vacuum)"
+      ]
+     ]
+    }
+   },
+   {
+    "h": "Revealing Sub-cellular Structures",
+    "p": "Because of their high resolution, electron microscopes allowed biologists to see structures that were previously 'invisible' or appeared only as dots.",
+    "bullets": [
+     "**Mitochondria**: EM reveals the inner folded membrane (cristae) where respiration reactions occur.",
+     "**Chloroplasts**: EM shows the stacks of thylakoids (grana) inside.",
+     "**Ribosomes**: These are tiny (approx. 20-30nm) and can only be seen with an electron microscope.",
+     "**Plasmids**: Small loops of DNA in bacteria are clearly visible under EM."
+    ],
+    "fig": []
+   },
+   {
+    "h": "The Magnification Formula",
+    "p": "Calculations are a core part of this topic. You must be able to rearrange the formula $I = AM$.",
+    "bullets": [
+     "**I** = Image size (what you measure with a ruler).",
+     "**A** = Actual size (the real size of the biological object).",
+     "**M** = Magnification (how many times it has been enlarged).",
+     "Always convert the Image size to the same units as the Actual size before calculating."
+    ],
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "The Triangle Method",
+      "p": "Cover the letter you want to find: I is at the top, A and M are at the bottom. I = A x M; A = I / M; M = I / A."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "The Magnification Triangle. Remember: Image size must be measured in the same units as the Actual size for the calculation to work.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><polygon points=\"200,20 350,200 50,200\" fill=\"#fef3c7\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"125\" y1=\"110\" x2=\"275\" y2=\"110\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"200\" y1=\"110\" x2=\"200\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"190\" y=\"80\" font-size=\"24\" font-weight=\"bold\">I</text><text x=\"110\" y=\"160\" font-size=\"24\" font-weight=\"bold\">A</text><text x=\"260\" y=\"160\" font-size=\"24\" font-weight=\"bold\">M</text><text x=\"180\" y=\"220\" font-size=\"12\">I = Image, A = Actual, M = Mag</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Units of Measurement",
+    "p": "Cells and organelles are measured in very small units. You must be able to convert between them by multiplying or dividing by 1000 at each step.",
+    "bullets": [
+     "1 millimetre (mm) = $10^{-3}$ m",
+     "1 micrometre (µm) = $10^{-6}$ m",
+     "1 nanometre (nm) = $10^{-9}$ m",
+     "1 picometre (pm) = $10^{-12}$ m"
+    ],
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Conversion Trap",
+      "p": "Students often multiply by 100 instead of 1000. Remember: there are 1000 µm in 1 mm!"
+     }
+    ]
+   },
+   {
+    "h": "Standard Form",
+    "p": "Standard form ($A \\times 10^n$) is used to handle very large or very small numbers easily. In biology, we use negative powers of 10 for cell sizes.",
+    "bullets": [
+     "A must be a number between 1 and 10.",
+     "Example: $0.005$ mm is $5 \\times 10^{-3}$ mm.",
+     "Example: $200$ µm is $2 \\times 10^2$ µm.",
+     "To convert $5 \\times 10^{-6}$ m to µm, you multiply by $10^6$, giving 5 µm."
+    ]
+   },
+   {
+    "h": "Scale and Orders of Magnitude",
+    "p": "Comparing sizes is often done using 'orders of magnitude'. If something is 10 times bigger, it is one order of magnitude larger ($10^1$).",
+    "bullets": [
+     "A typical plant cell (100 µm) is one order of magnitude larger than an animal cell (10 µm).",
+     "An animal cell (10 µm) is three orders of magnitude larger than a large virus (10 nm).",
+     "Calculation: $\\text{Difference in orders of magnitude} = \\log_{10}(\\text{Object A} / \\text{Object B})$."
+    ]
+   },
+   {
+    "h": "Using Scale Bars",
+    "p": "Micrographs often include a scale bar. This is a line that represents a specific actual length.",
+    "bullets": [
+     "To find magnification from a scale bar: Measure the scale bar with a ruler (Image size) and divide by the number written on the bar (Actual size).",
+     "To find the actual size of an organelle: Measure the organelle, measure the scale bar, and use the ratio to calculate the real length."
+    ],
+    "fig": [
+     {
+      "cap": "A mitochondrion with a scale bar. To find magnification: measure the bar (e.g. 20mm) and divide by the label (1µm). 20,000µm / 1µm = x20,000.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><ellipse cx=\"200\" cy=\"100\" rx=\"120\" ry=\"60\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M100 100 Q120 60 140 100 T180 100 T220 100 T260 100 T300 100\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"1.5\"/><line x1=\"250\" y1=\"180\" x2=\"350\" y2=\"180\" stroke=\"#1b2540\" stroke-width=\"3\"/><text x=\"280\" y=\"200\" font-size=\"12\" font-weight=\"bold\">1 µm</text><text x=\"160\" y=\"40\" font-size=\"12\">Mitochondrion Micrograph</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Specimen Preparation for EM",
+    "p": "The process of preparing a sample for electron microscopy is complex and can introduce 'artifacts' (things that appear in the image but aren't part of the living cell).",
+    "bullets": [
+     "**Fixation**: Using chemicals to preserve the structure.",
+     "**Dehydration**: Removing all water (essential for the vacuum).",
+     "**Staining**: Using heavy metals (like lead or uranium) to scatter electrons and create contrast.",
+     "**Sectioning**: For TEM, cutting slices thinner than the wavelength of light."
+    ]
+   },
+   {
+    "h": "The Limits of Light",
+    "p": "Why can't we just make better glass lenses for light microscopes?",
+    "bullets": [
+     "The limit is physical, not technological.",
+     "Light waves 'diffract' (spread out) when they pass through small apertures or around small objects.",
+     "If two objects are closer than half the wavelength of the light being used, the diffracted waves overlap so much they look like one object."
+    ]
+   }
+  ],
+  "analogy": {
+   "t": "The Google Earth Analogy",
+   "p": "Imagine looking at a map of a city. A light microscope is like looking at a paper map: you can see the big streets and the general shape of the park (the nucleus and cell wall). An electron microscope is like Google Earth: you can zoom in until you see individual cars, the leaves on the trees, and even the cracks in the pavement (ribosomes and mitochondrial membranes). The 'resolution' is the quality of the satellite camera; if the camera is low-quality, zooming in just makes the pixels bigger and blurrier."
+  },
+  "terms": [
+   {
+    "t": "Ultrastructure",
+    "d": "The detailed structure of a cell that can only be seen using an electron microscope."
+   },
+   {
+    "t": "Micrograph",
+    "d": "A photograph taken through a microscope."
+   },
+   {
+    "t": "Nanometre (nm)",
+    "d": "One billionth of a metre ($10^{-9}$ m)."
+   },
+   {
+    "t": "Micrometre (µm)",
+    "d": "One millionth of a metre ($10^{-6}$ m)."
+   },
+   {
+    "t": "Picometre (pm)",
+    "d": "One trillionth of a metre ($10^{-12}$ m)."
+   },
+   {
+    "t": "Scanning Electron Microscope (SEM)",
+    "d": "A microscope that produces 3D images of a specimen's surface."
+   },
+   {
+    "t": "Transmission Electron Microscope (TEM)",
+    "d": "A microscope used to study the internal ultrastructure of thin sections of cells."
+   },
+   {
+    "t": "Standard Form",
+    "d": "A way of writing very large or small numbers as a number between 1 and 10 multiplied by a power of 10."
+   },
+   {
+    "t": "Order of Magnitude",
+    "d": "A power of 10 used to compare the sizes of objects."
+   },
+   {
+    "t": "Resolution",
+    "d": "The ability to see two adjacent points as distinct entities."
+   },
+   {
+    "t": "Magnification",
+    "d": "The ratio of an object's image size to its real size."
+   },
+   {
+    "t": "Wavelength",
+    "d": "The distance between successive crests of a wave; determines the resolution limit of a microscope."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Saying electron microscopes have 'better' magnification.",
+    "r": "They have higher resolution, which allows for higher useful magnification."
+   },
+   {
+    "w": "Measuring the image in cm and not converting to mm or µm.",
+    "r": "Always convert to the smallest unit used in the question (usually µm) before calculating."
+   },
+   {
+    "w": "Thinking ribosomes can be seen with a light microscope.",
+    "r": "Ribosomes are too small (approx 20nm) for the 200nm resolution of light."
+   },
+   {
+    "w": "Confusing SEM and TEM functions.",
+    "r": "SEM = Surface/3D; TEM = Through/Internal/2D."
+   },
+   {
+    "w": "Writing standard form like 0.5 x 10^-3.",
+    "r": "The first number must be between 1 and 10 (e.g., 5 x 10^-4)."
+   },
+   {
+    "w": "Dividing by 100 to get from mm to µm.",
+    "r": "Multiply by 1000."
+   },
+   {
+    "w": "Assuming electron microscopes can show living processes.",
+    "r": "The vacuum and preparation process kill all living cells."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Explain why some cell structures can be seen with an electron microscope but not with a light microscope.",
+    "marks": 2,
+    "model": [
+     "Electron microscopes have a much higher resolution than light microscopes.",
+     "This is because the wavelength of an electron beam is much shorter than the wavelength of light.",
+     "Structures like ribosomes are smaller than the resolution limit of light (200nm)."
+    ],
+    "tip": "Always mention 'wavelength' when explaining resolution differences."
+   },
+   {
+    "q": "A mitochondrion is 0.002 mm long. Express this length in micrometres (µm) and in standard form (m).",
+    "marks": 2,
+    "model": [
+     "2 µm",
+     "2 x 10^-6 m"
+    ],
+    "tip": "1 mm = 1000 µm. 1 µm = 10^-6 m."
+   },
+   {
+    "q": "Compare the images produced by a Scanning Electron Microscope (SEM) and a Transmission Electron Microscope (TEM).",
+    "marks": 2,
+    "model": [
+     "SEM produces 3D images of the surface of a specimen.",
+     "TEM produces 2D images of the internal ultrastructure/cross-sections."
+    ],
+    "tip": "Think 'S' for Surface and 'T' for Through."
+   },
+   {
+    "q": "An image of a cell is 40 mm wide. The actual width of the cell is 80 µm. Calculate the magnification.",
+    "marks": 2,
+    "model": [
+     "Convert 40 mm to µm: 40 x 1000 = 40,000 µm.",
+     "Magnification = Image / Actual = 40,000 / 80 = x500."
+    ],
+    "tip": "Units must match! Never divide mm by µm directly."
+   },
+   {
+    "q": "A ribosome has a diameter of 25 nm. How many nanometres are in a millimetre? Express your answer in standard form.",
+    "marks": 2,
+    "model": [
+     "1,000,000 nm (1000 nm in a µm, 1000 µm in a mm).",
+     "1 x 10^6 nm."
+    ],
+    "tip": "Count the zeros carefully: 10^3 x 10^3 = 10^6."
+   },
+   {
+    "q": "State one advantage and one disadvantage of using an electron microscope compared to a light microscope.",
+    "marks": 2,
+    "model": [
+     "Advantage: Higher resolution/magnification allows you to see smaller organelles (e.g. ribosomes).",
+     "Disadvantage: Cannot observe living cells / expensive / not portable."
+    ],
+    "tip": "The 'living cells' point is a very common mark scheme answer."
+   },
+   {
+    "q": "Calculate the actual size of a structure that has an image size of 5 cm at x25,000 magnification. Give your answer in µm.",
+    "marks": 3,
+    "model": [
+     "Convert 5 cm to mm: 50 mm.",
+     "Convert 50 mm to µm: 50,000 µm.",
+     "Actual = Image / Mag = 50,000 / 25,000 = 2 µm."
+    ],
+    "tip": "Show every step of your conversion to secure method marks."
+   },
+   {
+    "q": "Explain how the development of the electron microscope improved our understanding of mitochondria.",
+    "marks": 2,
+    "model": [
+     "It allowed scientists to see the internal structure/ultrastructure of the mitochondrion.",
+     "It revealed the highly folded inner membrane (cristae), which increases surface area for respiration."
+    ],
+    "tip": "Link the structure seen to its biological function for full marks."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A student measures a scale bar on a micrograph. The scale bar is 20 mm long and is labelled '5 µm'. Calculate the magnification of the micrograph.",
+    "steps": [
+     "Identify the formula: Magnification = Image Size / Actual Size.",
+     "The Image Size (I) is the measured length of the bar: 20 mm.",
+     "The Actual Size (A) is the label on the bar: 5 µm.",
+     "Convert units so they match: 20 mm = 20,000 µm.",
+     "Calculate: 20,000 / 5 = 4,000."
+    ],
+    "ans": "x4,000"
+   },
+   {
+    "q": "A bacterial cell is 2 µm long. A virus is 200 nm long. How many orders of magnitude larger is the bacterium than the virus?",
+    "steps": [
+     "Convert both to the same units: Bacterium = 2000 nm, Virus = 200 nm.",
+     "Divide the larger by the smaller: 2000 / 200 = 10.",
+     "Since it is 10 times larger, it is $10^1$."
+    ],
+    "ans": "1 order of magnitude"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Unit conversion flow chart. To move to a smaller unit (e.g. mm to µm), multiply by 1000. To move to a larger unit, divide by 1000.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"80\" width=\"60\" height=\"40\" rx=\"5\" fill=\"#dbeafe\" stroke=\"#1b2540\"/><text x=\"25\" y=\"105\" font-size=\"12\">mm</text><rect x=\"110\" y=\"80\" width=\"60\" height=\"40\" rx=\"5\" fill=\"#fde68a\" stroke=\"#1b2540\"/><text x=\"125\" y=\"105\" font-size=\"12\">µm</text><rect x=\"210\" y=\"80\" width=\"60\" height=\"40\" rx=\"5\" fill=\"#bbf7d0\" stroke=\"#1b2540\"/><text x=\"225\" y=\"105\" font-size=\"12\">nm</text><rect x=\"310\" y=\"80\" width=\"60\" height=\"40\" rx=\"5\" fill=\"#fecaca\" stroke=\"#1b2540\"/><text x=\"325\" y=\"105\" font-size=\"12\">pm</text><path d=\"M70 90 L110 90\" stroke=\"#1b2540\" marker-end=\"url(#arrow)\"/><text x=\"75\" y=\"85\" font-size=\"10\">x1000</text><path d=\"M170 90 L210 90\" stroke=\"#1b2540\" marker-end=\"url(#arrow)\"/><text x=\"175\" y=\"85\" font-size=\"10\">x1000</text><path d=\"M270 90 L310 90\" stroke=\"#1b2540\" marker-end=\"url(#arrow)\"/><text x=\"275\" y=\"85\" font-size=\"10\">x1000</text><defs><marker id=\"arrow\" markerWidth=\"10\" markerHeight=\"10\" refX=\"0\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L0,6 L9,3 z\" fill=\"#1b2540\" /></marker></defs></svg>"
+   }
+  ],
+  "pid": "bio_ocrb.3.2",
+  "sid": "bio_ocrb",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3-flash-preview",
+  "ts": "2026-11-27T18:52:03.671Z"
+ },
+ "bio_ocrb.3.3": {
+  "summary": "These revision notes provide a comprehensive, Grade 9 level breakdown of the cell cycle, mitosis, and cancer for OCR GCSE Biology B. They detail every stage of interphase and nuclear division, explain how to observe mitosis using a light microscope via PAG1, and analyse how uncontrolled cell division leads to tumour formation. Thorough definitions, exam tips, warnings, worked examples, and vector diagrams ensure complete mastery of the specification.",
+  "core": [
+   {
+    "h": "The Purpose and Overview of the Cell Cycle",
+    "p": "The cell cycle is a series of carefully controlled events that cells go through to grow and divide, producing two genetically identical daughter cells. Understanding this cycle is essential for explaining growth, tissue repair, and asexual reproduction in multicellular organisms.",
+    "bullets": [
+     "Consists of two main phases: **interphase** (growth and DNA replication) and **cell division** (mitosis and cytokinesis).",
+     "Ensures that every new cell receives an exact copy of the parent cell's genetic material.",
+     "The duration of the cell cycle varies depending on cell type, ranging from hours in embryonic cells to days in human skin cells.",
+     "Disruption of the cycle controls can lead to uncontrolled growth, resulting in cancer."
+    ],
+    "table": {
+     "head": [
+      "Phase of Cycle",
+      "Key Processes Occurring",
+      "Relative Duration"
+     ],
+     "rows": [
+      [
+       "Interphase",
+       "Cell grows, sub-cellular structures multiply, DNA replicates",
+       "Longest phase (approx. 90% of cycle)"
+      ],
+      [
+       "Mitosis",
+       "Nucleus divides into two genetically identical nuclei",
+       "Short phase"
+      ],
+      [
+       "Cytokinesis",
+       "Cytoplasm and cell membrane divide to form two cells",
+       "Short phase"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Cell Cycle",
+      "p": "The regular sequence of growth and division that cells undergo."
+     },
+     {
+      "k": "key",
+      "t": "Genetic Identity",
+      "p": "Mitosis produces daughter cells that are genetically identical to each other and to the parent cell."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Interphase: Preparation for Division",
+    "p": "Before a cell can divide by mitosis, it must prepare by growing larger and making copies of all its internal components and genetic material. Although often misnamed as a 'resting' phase, interphase is actually the most metabolically active stage of the cell cycle.",
+    "bullets": [
+     "**G1 phase (Gap 1):** The cell grows larger, increases the volume of cytoplasm, and synthesizes new proteins and organelles such as mitochondria and ribosomes.",
+     "**S phase (Synthesis):** The cell replicates its DNA so that every chromosome consists of two identical sister chromatids joined at a centromere.",
+     "**G2 phase (Gap 2):** The cell continues to grow, checks the replicated DNA for any errors, and manufactures proteins needed for spindle fibre formation during mitosis.",
+     "DNA during interphase is in the form of long, thin, uncoiled threads called chromatin, making genes accessible for transcription."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Interphase Misconception",
+      "p": "Never call interphase 'resting'. The cell is actively growing, metabolising, and replicating DNA."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Figure 1: The stages of the cell cycle showing interphase (G1, S, G2), mitosis, and cytokinesis.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><circle cx=\"200\" cy=\"120\" r=\"90\" fill=\"#f1f5f9\" stroke=\"#334155\" stroke-width=\"3\"/><path d=\"M200,30 A90,90 0 0,1 290,120 L200,120 Z\" fill=\"#dbeafe\" stroke=\"#334155\" stroke-width=\"2\"/><path d=\"M290,120 A90,90 0 0,1 200,210 L200,120 Z\" fill=\"#fde68a\" stroke=\"#334155\" stroke-width=\"2\"/><path d=\"M200,210 A90,90 0 0,1 110,120 L200,120 Z\" fill=\"#bbf7d0\" stroke=\"#334155\" stroke-width=\"2\"/><path d=\"M110,120 A90,90 0 0,1 200,30 L200,120 Z\" fill=\"#e9d5ff\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"215\" y=\"75\" font-size=\"12\" fill=\"#1b2540\" font-weight=\"bold\">G1: Growth</text><text x=\"240\" y=\"155\" font-size=\"12\" fill=\"#1b2540\" font-weight=\"bold\">S: DNA Replicated</text><text x=\"135\" y=\"170\" font-size=\"12\" fill=\"#1b2540\" font-weight=\"bold\">G2: Final Checks</text><text x=\"130\" y=\"80\" font-size=\"12\" fill=\"#1b2540\" font-weight=\"bold\">Mitosis</text><text x=\"175\" y=\"115\" font-size=\"10\" fill=\"#64748b\">Interphase</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Stage 1 of Mitosis: Prophase",
+    "p": "Prophase is the first and longest stage of mitosis. During prophase, the diffuse chromatin in the nucleus condenses and coils tightly into distinct, visible chromosomes, preparing them for orderly separation.",
+    "bullets": [
+     "Chromosomes condense, become shorter, thicker, and visible under a light microscope as two sister chromatids joined at the centromere.",
+     "The nuclear envelope begins to break down and disintegrates, releasing chromosomes into the cytoplasm.",
+     "Protein microtubules form a structure called the spindle apparatus, extending from opposite poles of the cell.",
+     "Nucleolus disappears as ribosome synthesis pauses."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Visible Chromosomes",
+      "p": "Chromosomes only become clearly visible under a light microscope during prophase because they coil and supercoil."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Stage 2 of Mitosis: Metaphase",
+    "p": "In metaphase, the chromosomes reach their highest state of condensation and are organised across the centre of the cell to ensure an even distribution of genetic material.",
+    "bullets": [
+     "Chromosomes line up along the equator (metaphase plate) of the cell.",
+     "Spindle fibres attach firmly to the centromere of each individual chromosome.",
+     "A checkpoint ensures all chromosomes are correctly attached to spindle fibres before the cell proceeds to anaphase."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "M for Metaphase",
+      "p": "Remember 'M for Metaphase, M for Middle' – chromosomes line up in the middle."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Stage 3 of Mitosis: Anaphase",
+    "p": "Anaphase is the rapid separation phase of mitosis. The paired sister chromatids are pulled apart by shortening spindle fibres towards opposite poles of the cell.",
+    "bullets": [
+     "Spindle fibres shorten and contract.",
+     "Centromeres divide, separating the sister chromatids from one another.",
+     "Individual chromatids (now called chromosomes) are pulled towards opposite poles of the cell.",
+     "This process requires energy (ATP) supplied by cellular respiration."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Chromatid Separation",
+      "p": "The stage where sister chromatids separate and move to opposite poles of the cell."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Stage 4 of Mitosis: Telophase and Cytokinesis",
+    "p": "Telophase wraps up nuclear division by forming two new nuclei, which is immediately followed by cytokinesis to physically split the cell into two distinct daughter cells.",
+    "bullets": [
+     "Chromosomes reach the opposite poles and begin to uncoil back into thin chromatin threads.",
+     "New nuclear envelopes reform around each of the two sets of chromosomes, producing two separate nuclei.",
+     "Spindle fibres break down and disappear.",
+     "**Cytokinesis:** The cell membrane pinches inwards (in animal cells) or a cell plate forms (in plant cells), dividing the cytoplasm and creating two genetically identical daughter cells."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Cytokinesis Distinction",
+      "p": "Mitosis is the division of the nucleus; cytokinesis is the division of the cytoplasm and cell membrane."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Required Practical 1 (PAG1): Observing Mitosis with a Light Microscope",
+    "p": "To study mitosis in school laboratories, biologists use plant meristem tissues, commonly garlic or onion root tips, where cells are actively dividing by mitosis.",
+    "bullets": [
+     "**Root tip selection:** Cut the very tip (1-2 mm) of a growing onion or garlic root because this region contains the meristem where cell division occurs rapidly.",
+     "**Hydrochloric acid treatment:** Place root tips in dilute hydrochloric acid to break down pectin and break down the middle lamella, separating plant cells so the tissue can be squashed into a single cell layer.",
+     "**Staining:** Add a biological stain such as **Toluidine Blue** or **acetic orecin** to stain the chromosomes dark purple/red so they are clearly visible under the microscope.",
+     "**Squashing:** Firmly press a cover slip down over the root tip on a glass slide (using a mounted needle or cork) to spread cells into a thin, single layer without sliding sideways and breaking chromosomes."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Safety Hazard in PAG1",
+      "p": "Hydrochloric acid is corrosive and stains can irritate skin. Wear eye protection and handle slides carefully."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Calculating Mitotic Index from Microscope Observations",
+    "p": "The mitotic index is a quantitative measure used to determine the proportion of cells in a tissue population undergoing mitosis at any given time. High mitotic indexes are typical of rapidly growing tissues and cancerous tumours.",
+    "bullets": [
+     "Formula: Mitotic Index = (Number of cells in mitosis / Total number of cells observed) x 100.",
+     "Cells in mitosis include those visibly in prophase, metaphase, anaphase, or telophase.",
+     "To ensure reliability, count cells across multiple random fields of view under high power (400x total magnification).",
+     "A high mitotic index in human tissue biopsies is a strong indicator of abnormal, rapid cell proliferation."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Mitotic Index",
+      "p": "The ratio of cells in a population undergoing mitosis to the total number of cells."
+     },
+     {
+      "k": "tip",
+      "t": "Exam Calculation Tip",
+      "p": "Always multiply by 100 if the question asks for the mitotic index as a percentage."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Cancer: Uncontrolled Cell Division",
+    "p": "Cancer is not a single disease, but a broad group of diseases resulting from uncontrolled cell division. Mutations in genes that regulate the cell cycle cause cells to divide uncontrollably, forming abnormal tissue masses called tumours.",
+    "bullets": [
+     "Mutations in DNA (often caused by carcinogens like tobacco smoke, UV radiation, or ionising radiation) damage proto-oncogenes and tumour suppressor genes.",
+     "Damaged genes fail to halt the cell cycle at checkpoints, allowing cells to divide repeatedly without normal regulatory restraints.",
+     "**Benign tumours:** Grow locally, enclosed in a membrane, do not invade surrounding healthy tissue, and are generally non-cancerous and removable by surgery.",
+     "**Malignant tumours:** Grow rapidly, invade adjacent healthy tissues, and can break apart to spread through the blood or lymphatic system to form secondary tumours elsewhere in the body (metastasis)."
+    ],
+    "table": {
+     "head": [
+      "Feature",
+      "Benign Tumour",
+      "Malignant Tumour"
+     ],
+     "rows": [
+      [
+       "Growth Rate",
+       "Usually slow",
+       "Usually rapid"
+      ],
+      [
+       "Capsule/Membrane",
+       "Surrounded by a capsule (contained)",
+       "Not contained; invades surrounding tissues"
+      ],
+      [
+       "Metastasis",
+       "Does not spread to other body parts",
+       "Can spread around the body via blood/lymph"
+      ],
+      [
+       "Danger to Health",
+       "Less dangerous unless pressing on vital organs",
+       "Life-threatening; highly disruptive to body function"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Metastasis",
+      "p": "The spread of cancer cells from a primary tumour to form secondary tumours in other parts of the body."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Figure 3: Comparison between a benign tumour (encapsulated) and a malignant tumour (invading surrounding tissue and metastasising).",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"15\" y=\"20\" width=\"170\" height=\"190\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"40\" y=\"42\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\">Benign Tumour</text><circle cx=\"100\" cy=\"120\" r=\"50\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"2\"/><circle cx=\"100\" cy=\"120\" r=\"35\" fill=\"#86efac\" stroke=\"#15803d\" stroke-width=\"1.5\"/><text x=\"55\" y=\"190\" font-size=\"10\" fill=\"#15803d\">Contained by capsule</text><rect x=\"215\" y=\"20\" width=\"170\" height=\"190\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"235\" y=\"42\" font-size=\"12\" font-weight=\"bold\" fill=\"#1b2540\">Malignant Tumour</text><path d=\"M300,100 C320,90 340,110 330,130 C340,150 310,160 295,140 C280,150 270,120 290,110 Z\" fill=\"#fecaca\" stroke=\"#b91c1c\" stroke-width=\"2\"/><circle cx=\"355\" cy=\"75\" r=\"8\" fill=\"#fecaca\" stroke=\"#b91c1c\" stroke-width=\"1.5\"/><path d=\"M315,110 Q335,90 350,78\" stroke=\"#b91c1c\" stroke-width=\"1.5\" stroke-dasharray=\"3\" fill=\"none\"/><text x=\"230\" y=\"190\" font-size=\"10\" fill=\"#b91c1c\">Invades tissue &amp; metastasises</text></svg>"
+     }
+    ]
+   }
+  ],
+  "analogy": {
+   "t": "The Photocopying Factory Analogy",
+   "p": "Imagine a high-speed document photocopying factory operating 24/7. Interphase is the preparation stage where staff check the original master document, print extra toner cartridges, and make an exact photocopy of every single page. Mitosis is the rigorous sorting process where the two sets of copied pages are separated into two neat piles. Cytokinesis is the final cut where the factory floor is physically partitioned down the middle by a wall, creating two independent, fully equipped factories. Where the analogy breaks down: cells replicate autonomously using biological enzymes and chemical signals, unlike human factory workers following written instructions."
+  },
+  "terms": [
+   {
+    "t": "Cell Cycle",
+    "d": "The regular sequence of growth and division that cells undergo, consisting of interphase, mitosis, and cytokinesis."
+   },
+   {
+    "t": "Interphase",
+    "d": "The stage of the cell cycle where the cell grows, carries out normal metabolic functions, and replicates its DNA."
+   },
+   {
+    "t": "Mitosis",
+    "d": "A type of cell division resulting in two genetically identical daughter cells with the same number of chromosomes as the parent cell."
+   },
+   {
+    "t": "Prophase",
+    "d": "The first stage of mitosis where chromosomes condense and become visible, and the nuclear envelope breaks down."
+   },
+   {
+    "t": "Metaphase",
+    "d": "The stage of mitosis where chromosomes line up along the equator of the cell and attach to spindle fibres."
+   },
+   {
+    "t": "Anaphase",
+    "d": "The stage of mitosis where sister chromatids are pulled apart to opposite poles of the cell by contracting spindle fibres."
+   },
+   {
+    "t": "Telophase",
+    "d": "The final stage of mitosis where two new nuclear envelopes form around the separated sets of chromosomes."
+   },
+   {
+    "t": "Cytokinesis",
+    "d": "The physical division of the cytoplasm and cell membrane following mitosis to form two separate daughter cells."
+   },
+   {
+    "t": "Chromatid",
+    "d": "One of the two identical strands that make up a replicated chromosome, joined at the centromere."
+   },
+   {
+    "t": "Centromere",
+    "d": "The region of a chromosome where two sister chromatids are joined together and where spindle fibres attach."
+   },
+   {
+    "t": "Mitotic Index",
+    "d": "The ratio of cells undergoing mitosis to the total number of cells in a given population, expressed as a decimal or percentage."
+   },
+   {
+    "t": "Meristem",
+    "d": "Plant tissue containing undifferentiated cells capable of continuous mitosis, found in root tips and shoot tips."
+   },
+   {
+    "t": "Cancer",
+    "d": "A disease caused by uncontrolled, abnormal cell division resulting in the formation of tumours."
+   },
+   {
+    "t": "Benign Tumour",
+    "d": "A growth of abnormal cells that is contained within a capsule and does not invade other body tissues."
+   },
+   {
+    "t": "Malignant Tumour",
+    "d": "A cancerous tumour that invades surrounding tissues and can spread to other parts of the body."
+   },
+   {
+    "t": "Metastasis",
+    "d": "The spread of cancer cells from a primary tumour to secondary locations around the body via the blood or lymph."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Saying interphase is a resting phase.",
+    "r": "Interphase is the most active stage where cell growth and DNA replication occur."
+   },
+   {
+    "w": "Stating that mitosis produces genetically different cells.",
+    "r": "Mitosis produces two genetically identical daughter cells."
+   },
+   {
+    "w": "Confusing mitosis with cytokinesis.",
+    "r": "Mitosis is the division of the nucleus; cytokinesis is the division of the cytoplasm and cell membrane."
+   },
+   {
+    "w": "Believing chromosomes are visible throughout the entire cell cycle.",
+    "r": "Chromosomes only condense and become visible under a light microscope during prophase and metaphase."
+   },
+   {
+    "w": "Writing that plant cells pinch in two during cytokinesis.",
+    "r": "Plant cells form a cell plate because rigid cell walls prevent the cell membrane from pinching inward."
+   },
+   {
+    "w": "Confusing benign and malignant tumours regarding metastasis.",
+    "r": "Only malignant tumours metastasise (spread); benign tumours remain contained in a capsule."
+   },
+   {
+    "w": "Forgetting to multiply by 100 when calculating mitotic index percentage.",
+    "r": "Always multiply the fraction by 100 when expressing the mitotic index as a percentage."
+   }
+  ],
+  "exam": [
+   {
+    "q": "State the purpose of mitosis in multicellular organisms. [2]",
+    "marks": 2,
+    "model": [
+     "Growth of tissue / increase in cell number",
+     "Repair of damaged tissues / replacement of worn-out cells"
+    ],
+    "tip": "Give two distinct biological roles for full marks."
+   },
+   {
+    "q": "Describe what happens to DNA during interphase. [2]",
+    "marks": 2,
+    "model": [
+     "DNA is replicated / copied",
+     "Producing two identical copies of each chromosome / sister chromatids"
+    ],
+    "tip": "Mention replication and the creation of identical copies."
+   },
+   {
+    "q": "Explain why onion root tips are suitable for observing mitosis under a light microscope. [2]",
+    "marks": 2,
+    "model": [
+     "Root tips contain meristem tissue",
+     "Cells in this region are actively dividing by mitosis"
+    ],
+    "tip": "Reference meristem tissue and active division."
+   },
+   {
+    "q": "Describe the events that occur during metaphase of mitosis. [2]",
+    "marks": 2,
+    "model": [
+     "Chromosomes line up along the equator (middle) of the cell",
+     "Spindle fibres attach to the centromeres"
+    ],
+    "tip": "Mention chromosome alignment and spindle attachment."
+   },
+   {
+    "q": "Distinguish between a benign tumour and a malignant tumour. [2]",
+    "marks": 2,
+    "model": [
+     "Benign tumours are contained in a membrane and do not spread, whereas malignant tumours invade surrounding tissues",
+     "Malignant tumours can metastasise (spread) around the body, unlike benign tumours"
+    ],
+    "tip": "Use clear comparative statements covering containment and spreading."
+   },
+   {
+    "q": "A student counts 180 cells in an onion root tip slide. 45 of these cells are observed to be undergoing mitosis. Calculate the mitotic index. [2]",
+    "marks": 2,
+    "model": [
+     "Mitotic index = 45 / 180",
+     "Mitotic index = 0.25 (or 25%)"
+    ],
+    "tip": "Show your division clearly. Remember unit formatting if requested."
+   },
+   {
+    "q": "Explain why chromosomes must be replicated during interphase before mitosis begins. [2]",
+    "marks": 2,
+    "model": [
+     "To ensure each new daughter cell receives a full and identical set of genetic information",
+     "Preventing daughter cells from lacking vital genes"
+    ],
+    "tip": "Link DNA replication to genetic preservation in daughter cells."
+   },
+   {
+    "q": "Describe how cytokinesis differs between animal and plant cells. [2]",
+    "marks": 2,
+    "model": [
+     "In animal cells, the cell membrane pinches inwards to divide the cytoplasm",
+     "In plant cells, a cell plate forms across the equator to build a new cell wall"
+    ],
+    "tip": "Contrast pinching in animals with cell plate formation in plants."
+   },
+   {
+    "q": "Explain how mutations in genes regulating the cell cycle can lead to cancer. [2]",
+    "marks": 2,
+    "model": [
+     "Mutations damage genes that normally control checkpoints in the cell cycle",
+     "Cells divide uncontrollably and continuously, forming a tumour"
+    ],
+    "tip": "Connect DNA mutation and loss of cycle control to tumour growth."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A student examines an onion root tip slide under a microscope and counts a total of 250 cells. Out of these, 35 cells are in prophase, 12 in metaphase, 8 in anaphase, and 5 in telophase. Calculate the mitotic index of this tissue as a percentage, to 3 significant figures.",
+    "steps": [
+     "Step 1: Calculate the total number of cells undergoing mitosis by summing cells in all mitotic stages (35 + 12 + 8 + 5 = 60).",
+     "Step 2: Divide the number of cells in mitosis by the total number of cells observed (60 / 250 = 0.24).",
+     "Step 3: Multiply by 100 to convert to a percentage (0.24 x 100 = 24.0%)."
+    ],
+    "ans": "24.0%"
+   },
+   {
+    "q": "A cancerous tissue sample has a total of 1200 cells counted. 420 of these cells are undergoing mitosis. Calculate the mitotic index as a decimal.",
+    "steps": [
+     "Step 1: Identify the formula for mitotic index (Number of cells in mitosis / Total number of cells).",
+     "Step 2: Substitute the given values into the formula (420 / 1200).",
+     "Step 3: Perform the division calculation (420 / 1200 = 0.35)."
+    ],
+    "ans": "0.35"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Figure 4: Detailed overview of the cell cycle stages showing interphase and mitosis phases in sequence.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"15\" width=\"380\" height=\"210\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"130\" y=\"40\" font-size=\"13\" font-weight=\"bold\" fill=\"#1b2540\">The Complete Cell Cycle</text><rect x=\"25\" y=\"60\" width=\"210\" height=\"70\" rx=\"8\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"1.5\"/><text x=\"35\" y=\"80\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">Interphase (G1, S, G2)</text><text x=\"35\" y=\"100\" font-size=\"10\" fill=\"#1e3a8a\">Cell grows, organelles multiply,</text><text x=\"35\" y=\"115\" font-size=\"10\" fill=\"#1e3a8a\">and DNA is fully replicated.</text><rect x=\"250\" y=\"60\" width=\"125\" height=\"70\" rx=\"8\" fill=\"#e9d5ff\" stroke=\"#6b21a8\" stroke-width=\"1.5\"/><text x=\"260\" y=\"80\" font-size=\"12\" font-weight=\"bold\" fill=\"#581c87\">Mitosis</text><text x=\"260\" y=\"100\" font-size=\"10\" fill=\"#3b0764\">Nuclear division:</text><text x=\"260\" y=\"115\" font-size=\"10\" fill=\"#3b0764\">PMAT stages</text><rect x=\"140\" y=\"145\" width=\"140\" height=\"65\" rx=\"8\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"1.5\"/><text x=\"150\" y=\"165\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\">Cytokinesis</text><text x=\"150\" y=\"185\" font-size=\"10\" fill=\"#14532d\">Cytoplasm divides to</text><text x=\"150\" y=\"200\" font-size=\"10\" fill=\"#14532d\">form 2 identical cells</text><path d=\"M235,95 L250,95\" stroke=\"#334155\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><path d=\"M312,130 L280,160\" stroke=\"#334155\" stroke-width=\"2\"/><path d=\"M140,165 L130,130\" stroke=\"#334155\" stroke-width=\"2\"/></svg>"
+   }
+  ],
+  "pid": "bio_ocrb.3.3",
+  "sid": "bio_ocrb",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-27T18:52:13.744Z"
+ },
+ "bio_ocrb.3.5": {
+  "summary": "Multicellular organisms begin as a single undifferentiated cell that must divide and specialise to perform specific functions. Stem cells are unique, unspecialised cells that retain the ability to divide and differentiate into various cell types through the process of gene switching. In animals, this ability is largely restricted after the embryonic stage, whereas plants maintain regions called meristems that allow for continuous growth and differentiation throughout their entire lifespan.",
+  "core": [
+   {
+    "h": "Definition of Stem Cells",
+    "p": "A stem cell is an **undifferentiated cell** of an organism which is capable of giving rise to indefinitely more cells of the same type, and from which certain other kinds of cell arise by differentiation.",
+    "bullets": [
+     "They are unspecialised, meaning they do not have a specific structure for a specific function yet.",
+     "They can divide by **mitosis** to produce more stem cells (self-renewal).",
+     "They can differentiate into specialised cells like neurones or muscle cells.",
+     "The level of a stem cell's ability to differentiate is known as its **potency**."
+    ],
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Stem Cell",
+      "p": "An unspecialised cell that can divide to produce more stem cells or differentiate into specialised cells."
+     }
+    ]
+   },
+   {
+    "h": "Embryonic Stem Cells",
+    "p": "Embryonic stem cells are found in very early stage human embryos (blastocysts). These cells are particularly important because they are **pluripotent**.",
+    "bullets": [
+     "Formed when a zygote (fertilised egg) begins to divide.",
+     "Can differentiate into **any type of cell** in the human body.",
+     "They provide the 'building blocks' for all the different tissues and organs in a developing foetus.",
+     "Once an embryo develops into a foetus, most cells become specialised and lose this total flexibility."
+    ],
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Pluripotency",
+      "p": "Embryonic stem cells can become any cell type, making them more versatile than adult stem cells."
+     }
+    ]
+   },
+   {
+    "h": "Adult Stem Cells",
+    "p": "Adult stem cells are found in specific locations in a developed organism, such as the **bone marrow**, skin, and brain. Unlike embryonic stem cells, they are **multipotent**.",
+    "bullets": [
+     "They can only differentiate into a **limited range** of cell types.",
+     "For example, stem cells in the bone marrow can only differentiate into different types of blood cells (red blood cells, white blood cells, platelets).",
+     "Their primary role is **repair and replacement** of damaged or aged tissues.",
+     "They cannot be used to grow entirely new organs as easily as embryonic stem cells."
+    ]
+   },
+   {
+    "h": "Plant Stem Cells: Meristems",
+    "p": "Plants have a different strategy for growth. They contain regions of unspecialised cells called **meristems**, which allow the plant to grow throughout its entire life.",
+    "bullets": [
+     "Found in the **tips of roots and shoots** (apical meristems).",
+     "Meristem cells can differentiate into **any type of plant cell** at any time.",
+     "This allows plants to regrow parts or be cloned from a small cutting.",
+     "Cells produced in the meristem then elongate and differentiate into tissues like xylem, phloem, or mesophyll."
+    ],
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam Tip",
+      "p": "Always remember that plant meristems retain the ability to differentiate into any cell type for the plant's whole life, unlike animal cells."
+     }
+    ]
+   },
+   {
+    "h": "The Process of Differentiation",
+    "p": "Differentiation is the process by which a cell changes to become **specialised** for its job. As a cell differentiates, it acquires different sub-cellular structures to enable it to carry out a certain function.",
+    "bullets": [
+     "In animals, most cells differentiate at an early stage of development.",
+     "In plants, the ability to differentiate is never fully lost.",
+     "Specialised cells work together in tissues, organs, and organ systems to keep the organism alive."
+    ]
+   },
+   {
+    "h": "Mechanism: Switching Genes On and Off",
+    "p": "Every cell in an organism (except gametes) contains the **exact same DNA** and the same set of genes. Differentiation is controlled by which genes are active.",
+    "bullets": [
+     "A cell becomes specialised by **switching specific genes on** and others off.",
+     "When a gene is 'on', it is **expressed**, meaning the cell uses the instructions in that gene to make a specific protein.",
+     "These proteins determine the cell's structure and how it functions.",
+     "For example, a muscle cell switches on genes for contractile proteins, while a nerve cell switches on genes for neurotransmitter production."
+    ],
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Gene Expression",
+      "p": "Differentiation is driven by the selective expression of genes, not by changing the DNA sequence itself."
+     }
+    ]
+   },
+   {
+    "h": "Comparing Stem Cell Types",
+    "p": "The following table summarises the key differences between the three main types of stem cells discussed in the OCR specification.",
+    "table": {
+     "head": [
+      "Feature",
+      "Embryonic Stem Cell",
+      "Adult Stem Cell",
+      "Plant Meristem"
+     ],
+     "rows": [
+      [
+       "Potency",
+       "Pluripotent (Any type)",
+       "Multipotent (Limited)",
+       "Totipotent/Pluripotent"
+      ],
+      [
+       "Location",
+       "Early embryo",
+       "Bone marrow, etc.",
+       "Root and shoot tips"
+      ],
+      [
+       "Main Role",
+       "Initial development",
+       "Repair and replacement",
+       "Continuous growth"
+      ]
+     ]
+    }
+   },
+   {
+    "h": "Animal Cell Specialisation Examples",
+    "p": "Once genes are switched on, the cell's anatomy changes. This is vital for the division of labour in multicellular organisms.",
+    "bullets": [
+     "**Sperm cells**: Switch on genes for flagellum (tail) proteins and many mitochondria for energy.",
+     "**Nerve cells**: Switch on genes to grow long axons and dendrites for signal transmission.",
+     "**Muscle cells**: Switch on genes for protein filaments that slide over each other to cause contraction."
+    ]
+   },
+   {
+    "h": "Plant Cell Specialisation Examples",
+    "p": "Meristematic cells differentiate into various tissues that support the plant's unique needs for transport and photosynthesis.",
+    "bullets": [
+     "**Root hair cells**: Switch on genes to grow long 'hairs' that increase surface area for water absorption.",
+     "**Xylem cells**: Switch on genes to produce **lignin**, which strengthens the cell wall before the cell dies to form a hollow tube.",
+     "**Phloem cells**: Switch on genes to form sieve plates that allow the transport of sugars."
+    ]
+   },
+   {
+    "h": "Growth in Animals vs Plants",
+    "p": "The distribution and use of stem cells lead to different growth patterns in animals and plants.",
+    "bullets": [
+     "Animals grow to a finite size and then stop; cell division is mainly for repair.",
+     "Plants have **indeterminate growth**, meaning they can keep growing taller and wider as long as the meristems are active.",
+     "This is why you can take a cutting from a plant and grow a whole new individual (cloning)."
+    ]
+   },
+   {
+    "h": "Importance of Differentiation",
+    "p": "Without differentiation, multicellular organisms would just be a large, useless clump of identical cells.",
+    "bullets": [
+     "Allows for **complex structures** like hearts, lungs, and leaves.",
+     "Enables organisms to become larger and more efficient.",
+     "Allows for the development of systems to transport nutrients and waste (circulatory/vascular systems)."
+    ]
+   },
+   {
+    "h": "Summary of Gene Switching",
+    "p": "To achieve grade 9, you must be able to explain the link between the genome and the phenotype of a cell.",
+    "bullets": [
+     "Genome: The entire set of genetic material in an organism.",
+     "Phenotype: The physical characteristics of the cell.",
+     "Gene switching is the bridge that allows one genome to create many different phenotypes (cell types)."
+    ],
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Common Trap",
+      "p": "Students often think cells lose genes they don't use. This is wrong. Every cell keeps all the genes; they just 'silence' the ones they don't need."
+     }
+    ]
+   }
+  ],
+  "analogy": {
+   "t": "The Master Library Analogy",
+   "p": "Imagine every cell in your body is a chef in a different themed restaurant (Italian, Chinese, French). Every chef has the exact same 'Master Cookbook' (the DNA) containing every recipe in the world. However, the Italian chef only 'switches on' the pasta and pizza pages and ignores the rest. The Chinese chef only 'switches on' the stir-fry pages. They all have the same information, but by only using specific parts, they become specialised. The analogy breaks down because, in cells, once a 'chef' specialises, they usually cannot go back to being a general student (stem cell), whereas a real chef could learn a new cuisine."
+  },
+  "terms": [
+   {
+    "t": "Stem Cell",
+    "d": "An undifferentiated cell capable of dividing and giving rise to specialised cells."
+   },
+   {
+    "t": "Differentiation",
+    "d": "The process by which a cell becomes specialised for a particular function."
+   },
+   {
+    "t": "Meristem",
+    "d": "Region in plant shoots and roots containing undifferentiated cells that divide by mitosis."
+   },
+   {
+    "t": "Pluripotent",
+    "d": "A stem cell that can differentiate into any type of body cell."
+   },
+   {
+    "t": "Multipotent",
+    "d": "A stem cell that can only differentiate into a limited number of related cell types."
+   },
+   {
+    "t": "Gene Expression",
+    "d": "The process where information from a gene is used to synthesise a functional protein."
+   },
+   {
+    "t": "Zygote",
+    "d": "A fertilised egg cell, the very first stem cell of a new organism."
+   },
+   {
+    "t": "Blastocyst",
+    "d": "An early-stage embryo (about 5 days after fertilisation) where embryonic stem cells are harvested."
+   },
+   {
+    "t": "Specialised Cell",
+    "d": "A cell that has developed specific features to perform a particular job."
+   },
+   {
+    "t": "Mitosis",
+    "d": "Cell division that produces two genetically identical daughter cells."
+   },
+   {
+    "t": "Lignin",
+    "d": "A chemical that strengthens the cell walls of xylem cells during differentiation."
+   },
+   {
+    "t": "Apical Meristem",
+    "d": "Meristematic tissue found at the very tip of a plant shoot or root."
+   },
+   {
+    "t": "Self-renewal",
+    "d": "The ability of stem cells to divide and produce more stem cells."
+   },
+   {
+    "t": "Genome",
+    "d": "The entire set of DNA found in a cell."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Stem cells are only found in embryos.",
+    "r": "Stem cells are found in embryos AND in adult tissues like bone marrow."
+   },
+   {
+    "w": "Cells lose the genes they don't need when they differentiate.",
+    "r": "Cells keep all their genes; they just switch the unnecessary ones off."
+   },
+   {
+    "w": "Plants stop growing when they are mature.",
+    "r": "Plants have meristems that allow for continuous growth throughout their life."
+   },
+   {
+    "w": "Adult stem cells can become any type of cell.",
+    "r": "Adult stem cells are multipotent and can only become a limited range of cells."
+   },
+   {
+    "w": "Differentiation is just a change in shape.",
+    "r": "Differentiation involves changes in gene expression and the production of specific proteins."
+   },
+   {
+    "w": "Meristems are only found in the roots of plants.",
+    "r": "Meristems are found in both the root tips and the shoot tips."
+   },
+   {
+    "w": "Stem cells are the same as gametes.",
+    "r": "Stem cells are diploid and undifferentiated; gametes are haploid and highly specialised."
+   },
+   {
+    "w": "All animal cells can differentiate at any time.",
+    "r": "Most animal cells lose the ability to differentiate very early in development."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Define the term 'stem cell'.",
+    "marks": 2,
+    "model": [
+     "An unspecialised cell",
+     "That can differentiate into specialised cells OR divide to produce more stem cells."
+    ],
+    "tip": "Always mention both the ability to differentiate and the ability to self-renew for full marks."
+   },
+   {
+    "q": "Compare the potency of embryonic stem cells and adult stem cells.",
+    "marks": 2,
+    "model": [
+     "Embryonic stem cells are pluripotent/can become any cell type.",
+     "Adult stem cells are multipotent/can only become a limited range of cell types."
+    ],
+    "tip": "Use the specific terms 'pluripotent' and 'multipotent' to demonstrate grade 9 knowledge."
+   },
+   {
+    "q": "Explain how a stem cell becomes a specialised muscle cell.",
+    "marks": 4,
+    "model": [
+     "Specific genes are switched on/expressed.",
+     "Other genes are switched off/silenced.",
+     "This causes the cell to produce specific proteins.",
+     "These proteins change the cell's structure/sub-cellular features to suit its function."
+    ],
+    "tip": "The key phrase is 'switching genes on and off'—ensure you link this to protein production."
+   },
+   {
+    "q": "State two locations where meristems are found in plants.",
+    "marks": 1,
+    "model": [
+     "Tips of roots and tips of shoots."
+    ],
+    "tip": "Both locations are needed for the single mark in many papers."
+   },
+   {
+    "q": "Why can scientists easily clone plants from a small piece of tissue, but not humans?",
+    "marks": 2,
+    "model": [
+     "Plant meristem cells retain the ability to differentiate into any cell type throughout life.",
+     "Most animal cells lose this ability early in development/become permanently specialised."
+    ],
+    "tip": "Focus on the 'retention' of ability in plants versus the 'loss' in animals."
+   },
+   {
+    "q": "Describe the role of adult stem cells in the human body.",
+    "marks": 2,
+    "model": [
+     "To replace damaged or dead cells.",
+     "In specific tissues like bone marrow or skin."
+    ],
+    "tip": "Do not say they are for growth of the whole body; that is the role of embryonic cells."
+   },
+   {
+    "q": "Explain why it is important that all cells in an organism contain the same genome.",
+    "marks": 2,
+    "model": [
+     "So that any cell has the potential to carry out any function if the right genes are switched on.",
+     "Ensures genetic consistency across all tissues of the organism."
+    ],
+    "tip": "This links to the idea that differentiation is about expression, not DNA content."
+   },
+   {
+    "q": "A student says 'Xylem cells are stem cells because they are in the plant.' Explain why the student is wrong.",
+    "marks": 2,
+    "model": [
+     "Xylem cells are specialised/differentiated cells.",
+     "They have specific structures (lignin/hollow) and cannot divide or become other cell types."
+    ],
+    "tip": "Contrast 'specialised' with 'undifferentiated'."
+   },
+   {
+    "q": "Evaluate the use of embryonic stem cells versus adult stem cells in medicine.",
+    "marks": 4,
+    "model": [
+     "Embryonic stem cells can treat a wider range of diseases because they can become any cell type.",
+     "Adult stem cells are less likely to be rejected if taken from the patient's own body.",
+     "Embryonic stem cell use involves the destruction of an embryo (ethical issue).",
+     "Adult stem cells are harder to find and grow in a lab."
+    ],
+    "tip": "This question tests your ability to link the biological properties to practical applications."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Explain the biological reason why a skin cell and a neurone from the same person look different despite having identical DNA.",
+    "steps": [
+     "Identify that both cells contain the same set of genes (the genome).",
+     "Explain that differentiation occurs through selective gene expression.",
+     "In the skin cell, genes for keratin production are switched on, while neurotransmitter genes are switched off.",
+     "In the neurone, genes for axon growth and neurotransmitters are switched on, while keratin genes are switched off.",
+     "Conclude that different proteins are synthesised, leading to different structures and functions."
+    ],
+    "ans": "Skin cells and neurones look different because they express different sets of genes. Although they share identical DNA, the skin cell switches on genes for protective proteins like keratin, while the neurone switches on genes for signal transmission. This 'gene switching' ensures only the necessary proteins are made for that specific cell's role."
+   },
+   {
+    "q": "A researcher is studying a group of cells from a plant shoot tip. Describe what will happen to these cells as the plant grows.",
+    "steps": [
+     "Identify the cells as meristematic cells.",
+     "State that they will divide by mitosis to increase the number of cells.",
+     "Explain that the new cells will then undergo elongation.",
+     "Explain that the cells will then differentiate by switching specific genes on or off.",
+     "Give examples of what they might become, such as photosynthetic mesophyll or transport tissues."
+    ],
+    "ans": "The cells in the shoot tip are meristematic stem cells. They will first divide rapidly by mitosis. Following this, the new cells will elongate and then differentiate. Depending on which genes are switched on, they will specialise into various plant tissues such as xylem, phloem, or leaf mesophyll cells to support the plant's growth."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "The pathway of differentiation from a single zygote to specialised animal cells. The zygote divides to form embryonic stem cells which can then differentiate into any cell type by switching specific genes on.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"200\" cy=\"40\" r=\"20\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"200\" y=\"75\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">Single Zygote</text><line x1=\"200\" y1=\"85\" x2=\"200\" y2=\"105\" stroke=\"#1b2540\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><g transform=\"translate(170,110)\"><circle cx=\"15\" cy=\"15\" r=\"12\" fill=\"#fde68a\" stroke=\"#1b2540\"/><circle cx=\"45\" cy=\"15\" r=\"12\" fill=\"#fde68a\" stroke=\"#1b2540\"/><circle cx=\"15\" cy=\"45\" r=\"12\" fill=\"#fde68a\" stroke=\"#1b2540\"/><circle cx=\"45\" cy=\"45\" r=\"12\" fill=\"#fde68a\" stroke=\"#1b2540\"/></g><text x=\"200\" y=\"175\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">Embryonic Stem Cells</text><path d=\"M170 180 L100 200\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M230 180 L300 200\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"80\" y=\"220\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b2540\">Specialised Nerve Cell</text><text x=\"320\" y=\"220\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b2540\">Specialised Muscle Cell</text><defs><marker id=\"arrow\" markerWidth=\"10\" markerHeight=\"10\" refX=\"0\" refY=\"3\" orient=\"auto\" markerUnits=\"strokeWidth\"><path d=\"M0,0 L0,6 L9,3 z\" fill=\"#1b2540\" /></marker></defs></svg>"
+   },
+   {
+    "cap": "Locations of meristematic tissue in a plant. These regions at the shoot and root tips contain undifferentiated cells that allow for continuous growth and the formation of new organs throughout the plant's life.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"190\" y=\"40\" width=\"20\" height=\"160\" fill=\"#bbf7d0\" stroke=\"#1b2540\"/><path d=\"M200 40 Q240 60 260 40\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M200 40 Q160 60 140 40\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"35\" r=\"8\" fill=\"#fecaca\" stroke=\"#1b2540\"/><text x=\"215\" y=\"35\" font-size=\"12\" fill=\"#1b2540\">Shoot Apical Meristem</text><path d=\"M190 200 L170 230 M210 200 L230 230 M200 200 L200 235\" stroke=\"#1b2540\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"220\" r=\"8\" fill=\"#fecaca\" stroke=\"#1b2540\"/><text x=\"215\" y=\"220\" font-size=\"12\" fill=\"#1b2540\">Root Apical Meristem</text><text x=\"100\" y=\"120\" font-size=\"12\" fill=\"#1b2540\">Stem Tissue</text><line x1=\"140\" y1=\"120\" x2=\"185\" y2=\"120\" stroke=\"#1b2540\" stroke-dasharray=\"4\"/></svg>"
+   },
+   {
+    "cap": "The mechanism of gene switching. All cells have the same DNA, but differentiation occurs when specific genes are 'switched on' to produce proteins, while others remain 'switched off' and silent.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M50 40 Q100 20 150 40 T250 40 T350 40\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M50 50 Q100 30 150 50 T250 50 T350 50\" fill=\"none\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"200\" y=\"20\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\">DNA Strand (Genome)</text><rect x=\"80\" y=\"90\" width=\"100\" height=\"30\" rx=\"5\" fill=\"#bbf7d0\" stroke=\"#1b2540\"/><text x=\"130\" y=\"110\" text-anchor=\"middle\" font-size=\"11\">Gene A: ON</text><rect x=\"220\" y=\"90\" width=\"100\" height=\"30\" rx=\"5\" fill=\"#fecaca\" stroke=\"#1b2540\"/><text x=\"270\" y=\"110\" text-anchor=\"middle\" font-size=\"11\">Gene B: OFF</text><path d=\"M130 125 L130 160\" stroke=\"#1b2540\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><circle cx=\"130\" cy=\"185\" r=\"15\" fill=\"#e9d5ff\" stroke=\"#1b2540\"/><text x=\"130\" y=\"215\" text-anchor=\"middle\" font-size=\"11\">Specific Protein Made</text><text x=\"270\" y=\"185\" text-anchor=\"middle\" font-size=\"11\" fill=\"#94a3b8\">No Protein Made</text><line x1=\"270\" y1=\"125\" x2=\"270\" y2=\"160\" stroke=\"#94a3b8\" stroke-width=\"2\" stroke-dasharray=\"4\"/><defs><marker id=\"arrow\" markerWidth=\"10\" markerHeight=\"10\" refX=\"0\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L0,6 L9,3 z\" fill=\"#1b2540\" /></marker></defs></svg>"
+   }
+  ],
+  "pid": "bio_ocrb.3.5",
+  "sid": "bio_ocrb",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3-flash-preview",
+  "ts": "2026-11-27T18:53:14.838Z"
+ },
+ "bio_ocrb.3.0": {
+  "summary": "Respiration is an exothermic, continuous enzyme-controlled chemical process that transfers energy from food molecules (like glucose) to produce ATP for all living processes. Organisms can respire aerobically using oxygen for maximum ATP yield, or anaerobically without oxygen, producing lactate in animals or ethanol and carbon dioxide in plants and yeast. Mastering these pathways, their chemical equations, and energy yields is essential for top marks in OCR GCSE Biology B.",
+  "core": [
+   {
+    "h": "1. Definition and Purpose of Respiration",
+    "p": "Respiration is not breathing; it is a fundamental cellular process that occurs continuously in every living cell. Its primary role is to transfer energy from nutrient molecules, such as glucose, to drive vital metabolic reactions, active transport, muscle contraction, and protein synthesis.",
+    "bullets": [
+     "Occurs in all living cells, plant, animal, and microbial, 24 hours a day.",
+     "Transfers chemical potential energy stored in glucose into usable cellular energy.",
+     "Essential for maintaining life, growth, repair, and movement.",
+     "Enzyme-controlled reactions mean temperature and pH critically affect its rate."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Respiration",
+      "p": "The process of transferring energy from glucose, which goes on in every cell."
+     },
+     {
+      "k": "key",
+      "t": "Continuous Process",
+      "p": "Respiration never stops while an organism is alive; stopping completely results in immediate cell death."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Figure 1: Cellular respiration takes glucose and oxygen to release usable energy.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"40\" y=\"80\" width=\"100\" height=\"80\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"90\" y=\"125\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">Glucose + O2</text><polygon points=\"155,120 185,120 185,110 205,125 185,140 185,130 155,130\" fill=\"#1b2540\"/><rect x=\"215\" y=\"60\" width=\"140\" height=\"120\" rx=\"6\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"285\" y=\"100\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">Mitochondria</text><text x=\"285\" y=\"135\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">ATP + CO2 + H2O</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "2. Exothermic Nature of Respiration",
+    "p": "Respiration is an exothermic chemical reaction. This means it transfers energy to the surroundings, specifically releasing thermal energy that helps mammals and birds maintain a constant core body temperature.",
+    "bullets": [
+     "Exothermic reactions release energy to the surroundings.",
+     "Energy is released as heat as well as being trapped in ATP molecules.",
+     "Thermal energy from respiration is crucial for endotherms (warm-blooded animals).",
+     "Contrast with endothermic reactions which absorb energy from the surroundings."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Exothermic definition",
+      "p": "A reaction that transfers energy to the environment, increasing thermal energy."
+     },
+     {
+      "k": "tip",
+      "t": "Exam phrasing",
+      "p": "Always state that respiration 'transfers' energy rather than 'creates' energy, adhering to the conservation of energy."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "3. The Role of ATP",
+    "p": "Cells cannot use the energy released by glucose directly because it would be too large and damaging a packet of energy. Instead, energy from respiration is used to synthesize ATP (adenosine triphosphate), which acts as the universal energy currency of the cell.",
+    "bullets": [
+     "ATP is broken down into ADP and Pi to release energy instantly where needed.",
+     "Provides small, manageable packets of energy for cellular work.",
+     "Can be rapidly recycled inside cells by adding phosphate back onto ADP.",
+     "Couples energy-releasing reactions with energy-consuming reactions."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "ATP",
+      "p": "Adenosine triphosphate, the immediate source of energy in cells."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Aerobic Respiration: Conditions and Overview",
+    "p": "Aerobic respiration requires a continuous supply of oxygen. It is the most efficient way for cells to transfer energy from glucose, taking place mainly inside the mitochondria and yielding a high amount of ATP.",
+    "bullets": [
+     "Requires sufficient oxygen delivery via the respiratory and circulatory systems.",
+     "Complete breakdown of glucose into carbon dioxide and water.",
+     "Produces a large yield of ATP per molecule of glucose oxidized.",
+     "Dominant form of respiration in resting animals and plants."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Aerobic requirement",
+      "p": "Must have oxygen present; without oxygen, aerobic pathways halt immediately."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "5. Word and Balanced Symbol Equations for Aerobic Respiration",
+    "p": "Examiners frequently ask for either the word equation or the balanced symbol equation for aerobic respiration. You must memorise both precisely, including state symbols if required.",
+    "bullets": [
+     "Word equation: Glucose + Oxygen -> Carbon dioxide + Water (+ ATP)",
+     "Balanced symbol equation: C6H12O6 + 6O2 -> 6CO2 + 6H2O",
+     "Reactants are glucose and oxygen gas.",
+     "Products are carbon dioxide gas and liquid water."
+    ],
+    "table": {
+     "head": [
+      "Substance",
+      "Chemical Formula",
+      "Role"
+     ],
+     "rows": [
+      [
+       "Glucose",
+       "C6H12O6",
+       "Reactant (Fuel)"
+      ],
+      [
+       "Oxygen",
+       "O2",
+       "Reactant (Oxidising agent)"
+      ],
+      [
+       "Carbon Dioxide",
+       "CO2",
+       "Waste product"
+      ],
+      [
+       "Water",
+       "H2O",
+       "Product / solvent"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Equation balancing trap",
+      "p": "Make sure you put 6 in front of O2, CO2, and H2O to balance the carbon, hydrogen, and oxygen atoms."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Anaerobic Respiration in Animals",
+    "p": "When exercising vigorously, your body cannot supply oxygen to muscle cells fast enough for aerobic respiration. Muscle cells switch to anaerobic respiration, breaking down glucose without oxygen to keep supplying ATP, albeit with a lower yield and a toxic byproduct.",
+    "bullets": [
+     "Occurs when oxygen supply is insufficient (e.g., intense sprint).",
+     "Incomplete breakdown of glucose yielding lactic acid (lactate).",
+     "Much lower ATP yield per glucose molecule compared to aerobic respiration.",
+     "Causes muscle fatigue and oxygen debt due to lactic acid accumulation."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Anaerobic Respiration (Animals)",
+      "p": "Glucose -> Lactic acid (+ small amount of ATP)"
+     },
+     {
+      "k": "key",
+      "t": "Oxygen Debt",
+      "p": "The amount of extra oxygen the body needs after exercise to react with and remove accumulated lactic acid."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Anaerobic Respiration in Plants and Yeast (Fermentation)",
+    "p": "Plant cells and microorganisms like yeast can also respire anaerobically. In yeast, this process is known as fermentation, which is economically vital for baking and brewing industries.",
+    "bullets": [
+     "Word equation: Glucose -> Ethanol + Carbon dioxide (+ small ATP)",
+     "Occurs in yeast cells when oxygen is depleted (anaerobic conditions).",
+     "Carbon dioxide gas causes bread dough to rise.",
+     "Ethanol is used to produce alcoholic drinks like beer and wine."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Fermentation",
+      "p": "Anaerobic respiration in yeast cells producing ethanol and carbon dioxide."
+     },
+     {
+      "k": "tip",
+      "t": "Yeast products",
+      "p": "Never write 'lactic acid' for yeast; plants and yeast make ethanol and carbon dioxide, whereas animals make lactic acid."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Comparing Aerobic and Anaerobic Respiration",
+    "p": "A clear understanding of the differences between aerobic and anaerobic respiration is a staple of OCR examination questions. You must be able to contrast their location, oxygen dependence, products, and energy yields.",
+    "bullets": [
+     "Aerobic uses oxygen; anaerobic does not use oxygen.",
+     "Aerobic fully oxidises glucose; anaerobic only partially breaks it down.",
+     "Aerobic yields a high amount of ATP; anaerobic yields very little ATP.",
+     "Aerobic produces harmless CO2 and H2O; anaerobic produces lactic acid or ethanol + CO2."
+    ],
+    "table": {
+     "head": [
+      "Feature",
+      "Aerobic Respiration",
+      "Anaerobic Respiration"
+     ],
+     "rows": [
+      [
+       "Oxygen",
+       "Required",
+       "Not required"
+      ],
+      [
+       "Breakdown",
+       "Complete (glucose broken down fully)",
+       "Incomplete (glucose partially broken down)"
+      ],
+      [
+       "Products",
+       "CO2 and H2O",
+       "Animals: Lactic acid / Plants & Yeast: Ethanol + CO2"
+      ],
+      [
+       "ATP Yield",
+       "High (approx. 30-32 ATP per glucose)",
+       "Low (2 ATP per glucose)"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": [
+     {
+      "cap": "Figure 2: Summary flowchart comparing aerobic and anaerobic pathways from glucose.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"140\" y=\"20\" width=\"120\" height=\"40\" rx=\"6\" fill=\"#fef08a\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"200\" y=\"45\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">Glucose</text><line x1=\"200\" y1=\"60\" x2=\"100\" y2=\"100\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"200\" y1=\"60\" x2=\"300\" y2=\"100\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"40\" y=\"100\" width=\"120\" height=\"50\" rx=\"6\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"100\" y=\"120\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b2540\">Aerobic (with O2)</text><text x=\"100\" y=\"138\" text-anchor=\"middle\" font-size=\"10\" fill=\"#1b2540\">CO2 + H2O + High ATP</text><rect x=\"240\" y=\"100\" width=\"120\" height=\"50\" rx=\"6\" fill=\"#fecaca\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"300\" y=\"120\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b2540\">Anaerobic (no O2)</text><text x=\"300\" y=\"138\" text-anchor=\"middle\" font-size=\"10\" fill=\"#1b2540\">Lactate or Ethanol + Low ATP</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "9. ATP Yield Differences Explained",
+    "p": "At Higher tier, you must understand why aerobic respiration yields vastly more ATP than anaerobic respiration. Aerobic respiration utilizes oxygen as the final electron acceptor in the electron transport chain inside mitochondria, allowing complete breakdown.",
+    "bullets": [
+     "In aerobic respiration, glucose is fully disassembled, releasing all available chemical energy.",
+     "Anaerobic respiration stops after glycolysis in the cytoplasm, leaving most energy trapped inside the bonds of lactic acid or ethanol.",
+     "Without oxygen, mitochondria cannot run their oxidative phosphorylation pathways.",
+     "High ATP yield supports complex multicellular life; low ATP yield is only sufficient for short bursts or unicellular organisms."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Energy extraction efficiency",
+      "p": "Aerobic extracts ~20 times more ATP per glucose molecule than anaerobic respiration."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Removal of Lactic Acid (Oxygen Debt)",
+    "p": "Lactic acid is toxic and lowers cellular pH, which can denature metabolic enzymes. After anaerobic exercise, heavy breathing continues to supply an oxygen debt, which oxidizes lactic acid into carbon dioxide and water, or transports it to the liver to be converted back into glucose.",
+    "bullets": [
+     "Lactic acid is carried in the bloodstream from muscles to the liver.",
+     "In the liver, lactic acid is converted back into glucose or broken down with oxygen.",
+     "Deep, rapid breathing after exercise repays the oxygen debt.",
+     "Heart rate remains elevated to maintain blood flow clearing metabolic waste."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Oxygen Debt",
+      "p": "The volume of oxygen needed to react with accumulated lactic acid and break it down to carbon dioxide and water."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Phone Battery and Power Sources",
+   "p": "Imagine your body is a smartphone running apps constantly. Respiration is the process of generating electrical charge (ATP) to keep the phone alive. Aerobic respiration is like plugging your phone into a high-speed wall charger: it runs efficiently, produces a massive charge, and generates a little warmth (exothermic). Anaerobic respiration is like running your phone on a tiny emergency backup battery pack: it keeps the phone alive for a few more minutes when the wall charger isn't available, but it gives very little charge (low ATP), gets quite hot, and leaves toxic chemical waste inside. Where the analogy breaks down: a phone battery stores ready-made electricity, whereas cellular respiration synthesizes ATP chemical bonds from raw nutrient fuel."
+  },
+  "terms": [
+   {
+    "t": "Respiration",
+    "d": "A continuous exothermic chemical reaction that occurs in all living cells, transferring energy from glucose to make ATP."
+   },
+   {
+    "t": "Aerobic respiration",
+    "d": "Respiration that requires oxygen, fully breaking down glucose to carbon dioxide and water, yielding a high amount of ATP."
+   },
+   {
+    "t": "Anaerobic respiration",
+    "d": "Respiration that takes place without oxygen, incompletely breaking down glucose and yielding a low amount of ATP."
+   },
+   {
+    "t": "Exothermic reaction",
+    "d": "A chemical reaction that transfers energy to the surroundings, usually in the form of thermal energy."
+   },
+   {
+    "t": "ATP",
+    "d": "Adenosine triphosphate, the primary energy currency molecule of biological cells."
+   },
+   {
+    "t": "Fermentation",
+    "d": "Anaerobic respiration in yeast and plant cells that produces ethanol and carbon dioxide."
+   },
+   {
+    "t": "Lactic acid",
+    "d": "A toxic organic acid produced during anaerobic respiration in animal muscle cells."
+   },
+   {
+    "t": "Oxygen debt",
+    "d": "The extra oxygen required after anaerobic exercise to break down accumulated lactic acid."
+   },
+   {
+    "t": "Mitochondria",
+    "d": "Sub-cellular structures where aerobic respiration and the majority of ATP synthesis take place."
+   },
+   {
+    "t": "Glucose",
+    "d": "A simple sugar (C6H12O6) used as the primary substrate for cellular respiration."
+   },
+   {
+    "t": "Ethanol",
+    "d": "An alcohol produced alongside carbon dioxide during yeast fermentation."
+   },
+   {
+    "t": "Metabolism",
+    "d": "The sum of all the chemical reactions that happen in an organism."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Saying respiration is breathing or gas exchange.",
+    "r": "Breathing is the physical ventilation of lungs; respiration is a chemical reaction inside cells that releases energy from glucose."
+   },
+   {
+    "w": "Writing that respiration 'produces' or 'creates' energy.",
+    "r": "Energy cannot be created or destroyed; respiration 'transfers' energy from glucose into ATP."
+   },
+   {
+    "w": "Confusing aerobic and anaerobic products in plants/animals.",
+    "r": "Animals make lactic acid anaerobically; plants and yeast make ethanol and carbon dioxide."
+   },
+   {
+    "w": "Forgetting the balancing numbers in the aerobic symbol equation.",
+    "r": "C6H12O6 + 6O2 -> 6CO2 + 6H2O. Ensure you include the 6s in front of oxygen, carbon dioxide, and water."
+   },
+   {
+    "w": "Stating anaerobic respiration produces zero ATP.",
+    "r": "Anaerobic respiration does produce ATP, but in very small amounts (2 ATP per glucose) compared to aerobic."
+   },
+   {
+    "w": "Stating that anaerobic respiration occurs in mitochondria.",
+    "r": "Anaerobic respiration reactions take place entirely in the cytoplasm of cells."
+   },
+   {
+    "w": "Describing respiration as endothermic because it needs fuel.",
+    "r": "Respiration is exothermic because it releases thermal energy to the surroundings."
+   }
+  ],
+  "exam": [
+   {
+    "q": "State the word equation for aerobic respiration.",
+    "marks": 1,
+    "model": [
+     "Glucose + Oxygen -> Carbon dioxide + Water"
+    ],
+    "tip": "Do not include ATP in the word equation unless requested, but ensure reactants and products are on the correct sides with an arrow."
+   },
+   {
+    "q": "Explain why respiration is classified as an exothermic reaction.",
+    "marks": 2,
+    "model": [
+     "It transfers energy to the surroundings (1)",
+     "in the form of thermal energy / heat (1)"
+    ],
+    "tip": "Use the word 'transfer' rather than 'release' if preferred, but make sure heat or thermal energy to the environment is mentioned."
+   },
+   {
+    "q": "Compare the ATP yield of aerobic respiration with anaerobic respiration in human muscle cells.",
+    "marks": 2,
+    "model": [
+     "Aerobic respiration yields a high amount of ATP (1)",
+     "whereas anaerobic respiration yields a low amount of ATP (1)"
+    ],
+    "tip": "Comparison questions require you to refer to both processes clearly."
+   },
+   {
+    "q": "Write the balanced symbol equation for aerobic respiration.",
+    "marks": 2,
+    "model": [
+     "C6H12O6 + 6O2 (1)",
+     "-> 6CO2 + 6H2O (1)"
+    ],
+    "tip": "Check subscripts and balancing coefficients carefully."
+   },
+   {
+    "q": "Name the products of anaerobic respiration in yeast cells.",
+    "marks": 2,
+    "model": [
+     "Ethanol (1)",
+     "Carbon dioxide (1)"
+    ],
+    "tip": "Do not write lactic acid for yeast; yeast always produces ethanol and carbon dioxide."
+   },
+   {
+    "q": "Explain what is meant by 'oxygen debt' after a period of hard exercise.",
+    "marks": 3,
+    "model": [
+     "Lactic acid accumulates in muscles due to anaerobic respiration (1)",
+     "Oxygen is needed post-exercise to break down / oxidise this lactic acid (1)",
+     "into carbon dioxide and water (1)"
+    ],
+    "tip": "Link the debt directly to the oxidation of built-up lactic acid."
+   },
+   {
+    "q": "Describe where in the cell aerobic respiration mainly takes place.",
+    "marks": 1,
+    "model": [
+     "Mitochondria"
+    ],
+    "tip": "One word is enough for 1 mark, but make sure spelling is accurate (mitochondria)."
+   },
+   {
+    "q": "Give two commercial uses of anaerobic respiration in yeast.",
+    "marks": 2,
+    "model": [
+     "Bread making / making dough rise (1)",
+     "Brewing alcohol / making beer or wine (1)"
+    ],
+    "tip": "Keep examples specific: carbon dioxide makes bread rise, ethanol makes alcohol."
+   },
+   {
+    "q": "Explain why aerobic respiration is more efficient than anaerobic respiration in terms of glucose breakdown.",
+    "marks": 3,
+    "model": [
+     "Aerobic respiration breaks down glucose completely (1)",
+     "whereas anaerobic respiration breaks down glucose incompletely (1)",
+     "releasing far more ATP per glucose molecule (1)"
+    ],
+    "tip": "Use the key contrast terms: 'complete' vs 'incomplete' breakdown."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A student measures the time taken for yeast to produce 20 cm3 of carbon dioxide during anaerobic respiration at 30 °C. The volume is collected in 100 seconds. Calculate the rate of respiration in cm3 per second.",
+    "steps": [
+     "Identify the formula for rate: Rate = Volume / Time",
+     "Substitute the given values into the formula: Rate = 20 cm3 / 100 s",
+     "Perform the calculation: 20 / 100 = 0.2",
+     "Include correct units: cm3/s"
+    ],
+    "ans": "0.2 cm3/s"
+   },
+   {
+    "q": "During vigorous exercise, an athlete's muscles respire anaerobically. If 5 glucose molecules undergo anaerobic respiration in human muscle cells, calculate the total number of ATP molecules produced, assuming 2 ATP molecules are yielded per glucose molecule.",
+    "steps": [
+     "Identify ATP yield per glucose molecule in animal anaerobic respiration: 2 ATP",
+     "Identify the number of glucose molecules respiring: 5",
+     "Multiply the number of glucose molecules by the ATP yield per molecule: 5 x 2",
+     "State the final answer with units: 10 ATP molecules"
+    ],
+    "ans": "10 ATP molecules"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Figure 3: Detailed comparison of aerobic and anaerobic pathways, highlighting reactants, locations, and products.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"30\" y=\"30\" width=\"100\" height=\"40\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"80\" y=\"55\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b2540\">Glucose + O2</text><line x1=\"130\" y1=\"50\" x2=\"170\" y2=\"50\" stroke=\"#1b2540\" stroke-width=\"2\"/><polygon points=\"165,45 175,50 165,55\" fill=\"#1b2540\"/><rect x=\"175\" y=\"30\" width=\"190\" height=\"40\" rx=\"6\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"270\" y=\"55\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b2540\">Aerobic: CO2 + H2O + High ATP</text><rect x=\"30\" y=\"110\" width=\"100\" height=\"40\" rx=\"6\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"80\" y=\"135\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b2540\">Glucose (No O2)</text><line x1=\"130\" y1=\"130\" x2=\"170\" y2=\"130\" stroke=\"#1b2540\" stroke-width=\"2\"/><polygon points=\"165,125 175,130 165,135\" fill=\"#1b2540\"/><rect x=\"175\" y=\"100\" width=\"190\" height=\"60\" rx=\"6\" fill=\"#fecaca\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"270\" y=\"122\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b2540\">Anaerobic Animals: Lactic Acid</text><text x=\"270\" y=\"148\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b2540\">Anaerobic Yeast: Ethanol + CO2</text><text x=\"200\" y=\"200\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b2540\">Cellular Respiration Pathways</text></svg>"
+   }
+  ],
+  "pid": "bio_ocrb.3.0",
+  "sid": "bio_ocrb",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-27T18:53:49.303Z"
+ },
+ "bio_ocrb.3.7": {
+  "summary": "This revision note covers the roles of gibberellins and ethene in controlling plant growth and development, specifically for GCSE Biology B (Twenty First Century Science) triple science students aiming for a grade 9. It explains how gibberellins stimulate seed germination, stem elongation, and flowering, while ethene controls fruit ripening and cell division as a gas. Additionally, it details the commercial agricultural and horticultural applications of plant hormones, including weedkillers, rooting powders, seedless fruit production, and ripening control.",
+  "core": [
+   {
+    "h": "Introduction to Gibberellins and Ethene",
+    "p": "Alongside auxins, plants produce other vital hormones that coordinate their growth and responses to environmental changes. Gibberellins and ethene are key chemical messengers that regulate distinct developmental processes throughout a plant's lifecycle, from germination through to fruit maturation.",
+    "bullets": [
+     "Gibberellins are a group of plant hormones important for initiating seed germination, promoting stem elongation, and triggering flowering.",
+     "Ethene is a unique plant hormone because it is a hydrocarbon gas rather than a liquid solution.",
+     "Ethene controls cell division and stimulates the ripening of fruits.",
+     "Unlike auxins which are mainly produced in shoot tips, gibberellins are produced in young leaves, seeds, and roots."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Gibberellin Definition",
+      "p": "A plant hormone that stimulates seed germination, stem growth, and flowering."
+     },
+     {
+      "k": "def",
+      "t": "Ethene Definition",
+      "p": "A gaseous plant hormone that controls cell division and fruit ripening."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Gibberellins and Seed Germination",
+    "p": "When a seed absorbs water, it breaks its dormancy. This triggers the embryo inside the seed to produce gibberellins, which act as a chemical signal to start the process of growth and provide energy for the developing seedling.",
+    "bullets": [
+     "Water absorption initiates the synthesis and release of gibberellin by the seed embryo.",
+     "Gibberellin travels through the seed tissues to the aleurone layer.",
+     "It stimulates the production of vital hydrolytic enzymes, such as amylase.",
+     "Amylase breaks down stored starch reserves in the endosperm into soluble glucose.",
+     "The embryo uses this glucose for respiration, providing the energy needed for rapid cell division and growth."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Germination Pathway",
+      "p": "Water → Gibberellin released → Amylase produced → Starch converted to glucose → Respiration fuels growth."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Figure 1: Gibberellin signaling pathway during seed germination, showing enzyme activation and starch breakdown.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" fill=\"#f0fdf4\" stroke=\"#166534\" rx=\"10\"/><ellipse cx=\"200\" cy=\"130\" rx=\"140\" ry=\"70\" fill=\"#fef9c3\" stroke=\"#ca8a04\" stroke-width=\"2\"/><text x=\"200\" y=\"50\" font-size=\"13\" font-weight=\"bold\" fill=\"#166534\" text-anchor=\"middle\">Seed Germination &amp; Gibberellin</text><text x=\"80\" y=\"100\" font-size=\"11\" fill=\"#1f2937\">1. Water enters</text><text x=\"80\" y=\"120\" font-size=\"11\" fill=\"#1f2937\">2. Embryo makes</text><text x=\"80\" y=\"140\" font-size=\"11\" fill=\"#1f2937\">   Gibberellin</text><path d=\"M 160 120 L 210 120\" fill=\"none\" stroke=\"#166534\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><text x=\"240\" y=\"100\" font-size=\"11\" fill=\"#1f2937\">3. Amylase produced</text><text x=\"240\" y=\"120\" font-size=\"11\" fill=\"#1f2937\">4. Starch converted</text><text x=\"240\" y=\"140\" font-size=\"11\" fill=\"#1f2937\">   to glucose</text><text x=\"200\" y=\"185\" font-size=\"11\" font-weight=\"bold\" fill=\"#166534\" text-anchor=\"middle\">Result: Energy for seedling growth</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Gibberellins and Stem Elongation",
+    "p": "Gibberellins play a critical role in controlling the overall height of plants by stimulating stem elongation. They encourage both cell division and cell elongation in the stem internodes, allowing plants to reach greater heights.",
+    "bullets": [
+     "Gibberellins stimulate cell elongation in the stems of plants.",
+     "They also encourage cell division in the internodal regions.",
+     "Dwarf plant varieties often possess a genetic mutation that prevents them from producing gibberellins normally.",
+     "Applying exogenous gibberellins to dwarf plants causes them to grow to normal heights by restoring stem elongation."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Common Misconception",
+      "p": "Gibberellins do not cause phototropic bending (that is auxins); they cause overall vertical stem elongation."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Gibberellins and Flowering",
+    "p": "Many plants require specific environmental triggers, such as altered day length (photoperiod) or a period of cold temperatures (vernalisation), to switch from vegetative growth to flowering. Gibberellins can bypass these environmental requirements in some species.",
+    "bullets": [
+     "Gibberellins can stimulate flowering independently of day length or temperature requirements.",
+     "In some biennial plants, gibberellin application induces flowering in their first year rather than their second.",
+     "This ensures synchronized flowering and seed production under optimal horticultural conditions."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Flowering Trigger",
+      "p": "Gibberellins can substitute for cold or long-day treatments to trigger early flowering."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Ethene and Fruit Ripening",
+    "p": "Ethene is the plant hormone responsible for initiating and coordinating the ripening of fleshy fruits. Unlike most plant hormones that move through vascular tissues, ethene is a gas that can diffuse from cell to cell and between adjacent plants.",
+    "bullets": [
+     "Ethene stimulates the enzymatic breakdown of cell walls in fruits.",
+     "It converts stored starches into sugars, making fruits sweeter.",
+     "It breaks down chlorophyll to reveal bright carotenoid pigments (colour change).",
+     "It softens the fruit flesh and creates aromatic volatile compounds.",
+     "Ethene action is a positive feedback loop: ripening fruit releases ethene, which triggers nearby fruit to ripen faster."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Climacteric Fruit",
+      "p": "Fruits that undergo a surge in respiration and ethene production during ripening, e.g., bananas, tomatoes, and apples."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Figure 2: Ethene gas diffusion causing fruit ripening in a storage crate.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" fill=\"#eff6ff\" stroke=\"#1e40af\" rx=\"10\"/><text x=\"200\" y=\"40\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" text-anchor=\"middle\">Ethene Gas &amp; Fruit Ripening</text><circle cx=\"130\" cy=\"130\" r=\"35\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"2\"/><text x=\"130\" y=\"135\" font-size=\"10\" fill=\"#1f2937\" text-anchor=\"middle\">Ripe Fruit</text><path d=\"M 170 120 Q 200 100 230 120\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><text x=\"200\" y=\"95\" font-size=\"10\" fill=\"#dc2626\" text-anchor=\"middle\">Ethene gas (C2H4)</text><circle cx=\"270\" cy=\"130\" r=\"35\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"2\"/><text x=\"270\" y=\"135\" font-size=\"10\" fill=\"#1f2937\" text-anchor=\"middle\">Unripe Fruit</text><text x=\"200\" y=\"190\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\" text-anchor=\"middle\">Gas diffusion triggers ripening in neighbouring fruit</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Commercial Uses of Plant Hormones: Auxins",
+    "p": "Human understanding of plant hormones has allowed us to synthesize analogues and apply them commercially to control plant growth in agriculture and horticulture, improving crop yields and efficiency.",
+    "bullets": [
+     "Selective weedkillers: Synthetic auxins are sprayed on lawns. They cause broad-leaved weeds to grow at an unsustainable, rapid rate, disrupting their vascular system and killing them, while narrow-leaved grass remains unaffected.",
+     "Rooting powders: Cuttings dipped in powders containing auxins rapidly produce roots at the cut stem, enabling fast clonal propagation.",
+     "Producing seedless fruit: Auxins applied to unpollinated flowers cause fruit to develop without fertilization, resulting in seedless varieties."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Selective Weedkiller Action",
+      "p": "Auxins over-stimulate growth in broad-leaved weeds, causing them to die from exhaustion."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Commercial Uses of Plant Hormones: Gibberellins",
+    "p": "Horticulturists and farmers apply gibberellins commercially to manipulate seed germination, fruit size, and flowering times to meet market demands.",
+    "bullets": [
+     "Ending seed dormancy: Gibberellins are sprayed on seeds to force them to germinate out of season or at uniform rates.",
+     "Promoting flowering: Applied to crops to encourage flowering under suboptimal day-length conditions.",
+     "Increasing fruit size: Gibberellins are sprayed on seedless grapes (along with auxins) to make the individual grapes grow larger and elongate."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam Tip",
+      "p": "Be precise when asked about commercial uses: state the hormone and the exact outcome (e.g., gibberellins increase grape size; auxins make seedless fruit)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Commercial Uses of Plant Hormones: Ethene",
+    "p": "The gaseous nature of ethene makes it particularly useful for controlling the timing of fruit harvesting, transport, and sale in the global food supply chain.",
+    "bullets": [
+     "Controlling ripening during transport: Fruits are picked unripe and hard, which prevents bruising during shipping. Before sale, they are exposed to ethene gas in ripening rooms to bring them to optimal ripeness simultaneously.",
+     "Delaying ripening: Chemical inhibitors that block ethene synthesis or action can be applied to keep fruits fresh for longer storage periods."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Ripening Control",
+      "p": "Harvesting fruit unripe and ripening artificially with ethene gas before sale to reduce wastage."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Summary Table of Plant Hormones and Commercial Uses",
+    "p": "A clear comparison of the three major plant hormone groups covered in the specification helps consolidate their functions and commercial applications for the exam.",
+    "bullets": [
+     "Memorise the hormone, its natural plant function, and its specific commercial application.",
+     "Pay attention to whether the hormone is a gas, liquid, or applied as a powder."
+    ],
+    "table": {
+     "head": [
+      "Hormone",
+      "Natural Function",
+      "Commercial Application"
+     ],
+     "rows": [
+      [
+       "Auxin",
+       "Phototropism and gravitropism",
+       "Selective weedkillers, rooting powders, seedless fruit"
+      ],
+      [
+       "Gibberellin",
+       "Seed germination, stem elongation, flowering",
+       "End dormancy, increase fruit size, promote flowering"
+      ],
+      [
+       "Ethene",
+       "Fruit ripening and cell division",
+       "Control ripening of harvested fruit during transport"
+      ]
+     ]
+    },
+    "callouts": null,
+    "fig": []
+   },
+   {
+    "h": "Required Practical Context (PAG6) - Plant Responses",
+    "p": "Although PAG6 specifically focuses on auxins and phototropism/gravitropism, understanding experimental design is vital for all plant hormone investigations.",
+    "bullets": [
+     "Controlling variables: light intensity, temperature, and water availability must be managed.",
+     "Using dark boxes with unilateral light for phototropism investigations.",
+     "Using clinostats to cancel out one-sided gravitational pull in gravitropism experiments.",
+     "Measuring growth rates using a transparent ruler or image analysis software."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Experimental Control",
+      "p": "Always ensure only one variable is changed (e.g., direction of light) while keeping all others constant."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Post Office and Delivery System",
+   "p": "Plant hormones act like a postal network delivering specific parcels of instructions to different parts of the plant. Auxins and gibberellins are like courier letters sent through vascular transport to stimulate growth or germination at specific destinations. Ethene, however, is like an airborne alarm signal or gas leak that immediately alerts everyone in the room (or neighbouring fruits) to start the ripening process simultaneously. The analogy breaks down because hormones act on target cells through specific receptors rather than physical mail delivery, and ethene is a simple organic molecule produced internally by the plant itself."
+  },
+  "terms": [
+   {
+    "t": "Gibberellin",
+    "d": "A plant hormone that stimulates seed germination, stem elongation, and flowering."
+   },
+   {
+    "t": "Ethene",
+    "d": "A gaseous plant hormone that controls cell division and fruit ripening."
+   },
+   {
+    "t": "Seed Dormancy",
+    "d": "A period in a seed's life cycle when growth and metabolism temporarily halt until environmental conditions become favourable."
+   },
+   {
+    "t": "Aleurone Layer",
+    "d": "A layer of tissue in seeds that responds to gibberellin by producing hydrolytic enzymes such as amylase."
+   },
+   {
+    "t": "Amylase",
+    "d": "An enzyme that breaks down stored starch into soluble glucose during seed germination."
+   },
+   {
+    "t": "Internode",
+    "d": "The section of a plant stem between two nodes where leaves are attached, elongated by gibberellins."
+   },
+   {
+    "t": "Climacteric Fruit",
+    "d": "Fruit that continues to ripen after harvesting, accompanied by a surge in respiration and ethene production."
+   },
+   {
+    "t": "Selective Weedkiller",
+    "d": "A synthetic auxin used in agriculture and gardening to kill broad-leaved weeds while leaving grass unharmed."
+   },
+   {
+    "t": "Rooting Powder",
+    "d": "A horticultural powder containing auxins applied to plant cuttings to stimulate rapid root growth."
+   },
+   {
+    "t": "Ripening Room",
+    "d": "A facility where harvested unripe fruit is exposed to ethene gas to control the exact timing of ripening."
+   },
+   {
+    "t": "Photoperiod",
+    "d": "The developmental response of plants to the relative lengths of light and dark periods, influenced by gibberellins."
+   },
+   {
+    "t": "Exogenous Hormone",
+    "d": "A hormone applied externally to a plant by humans for commercial or experimental purposes."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Saying ethene is a liquid hormone.",
+    "r": "Ethene is a hydrocarbon gas."
+   },
+   {
+    "w": "Stating that gibberellins cause phototropic bending.",
+    "r": "Gibberellins cause overall stem elongation; auxins cause directional bending."
+   },
+   {
+    "w": "Confusing the commercial uses of auxins and gibberellins.",
+    "r": "Auxins are used as weedkillers and rooting powders; gibberellins are used to increase fruit size and end seed dormancy."
+   },
+   {
+    "w": "Stating that ethene inhibits fruit ripening.",
+    "r": "Ethene promotes and stimulates fruit ripening."
+   },
+   {
+    "w": "Writing that amylase builds up starch during germination.",
+    "r": "Amylase breaks down starch into glucose."
+   },
+   {
+    "w": "Forgetting that ethene is involved in cell division.",
+    "r": "Ethene controls cell division as well as fruit ripening."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Describe how gibberellins stimulate the germination of a seed.",
+    "marks": 4,
+    "model": [
+     "Water absorption triggers the embryo to produce gibberellin.",
+     "Gibberellin moves to the aleurone layer.",
+     "It stimulates the production of enzymes such as amylase.",
+     "Amylase breaks down starch into glucose to provide energy for respiration and growth."
+    ],
+    "tip": "Mention the specific enzyme (amylase) and its substrate (starch) to secure all 4 marks."
+   },
+   {
+    "q": "Explain why bananas are harvested unripe and treated with ethene before being sold in supermarkets.",
+    "marks": 3,
+    "model": [
+     "Unripe fruit is firmer and less easily bruised during transport.",
+     "Ethene is the plant hormone that triggers fruit ripening.",
+     "Treating fruit with ethene gas before sale ensures they reach optimal ripeness simultaneously."
+    ],
+    "tip": "Link the physical state of the fruit to transport durability and ethene's role as a ripening hormone."
+   },
+   {
+    "q": "A gardener wants to propagate new plants from stem cuttings. Describe how plant hormones can be used to help this process.",
+    "marks": 2,
+    "model": [
+     "Apply rooting powder containing auxins to the cut end of the stem.",
+     "The synthetic auxins stimulate rapid root growth from the cutting."
+    ],
+    "tip": "Name the specific hormone (auxin) and its exact commercial application (rooting powder)."
+   },
+   {
+    "q": "Compare the roles of auxins and gibberellins in plant growth.",
+    "marks": 4,
+    "model": [
+     "Auxins control tropisms like phototropism and gravitropism by unequal cell elongation; gibberellins stimulate overall vertical stem elongation.",
+     "Auxins are used commercially as weedkillers and rooting powders; gibberellins are used to increase fruit size and end seed dormancy.",
+     "Both are plant hormones that coordinate growth, but they affect different physiological processes."
+    ],
+    "tip": "Use a clear comparative structure highlighting differences in function and commercial use."
+   },
+   {
+    "q": "Explain how selective weedkillers work on lawns containing broad-leaved weeds and grass.",
+    "marks": 3,
+    "model": [
+     "Selective weedkillers contain synthetic auxins.",
+     "They cause broad-leaved weeds to grow uncontrollably and rapidly.",
+     "The weeds exhaust themselves and die, while narrow-leaved grass is unaffected."
+    ],
+    "tip": "Make sure to explain why the weeds die (rapid, unsustainable growth leading to exhaustion)."
+   },
+   {
+    "q": "Name the plant hormone that is a gas and describe its main commercial use.",
+    "marks": 2,
+    "model": [
+     "Ethene.",
+     "Used to control the ripening of harvested fruit during transport and storage."
+    ],
+    "tip": "State both the hormone name and its commercial application clearly."
+   },
+   {
+    "q": "Explain why dwarf plant varieties grow to normal height when treated with gibberellic acid.",
+    "marks": 2,
+    "model": [
+     "Dwarf plants lack the ability to produce sufficient gibberellins naturally.",
+     "Applying gibberellins externally restores stem elongation and cell division."
+    ],
+    "tip": "Link the hormone treatment directly to the restoration of stem elongation."
+   },
+   {
+    "q": "State the role of amylase in seed germination.",
+    "marks": 2,
+    "model": [
+     "Amylase is a hydrolytic enzyme produced in response to gibberellins.",
+     "It breaks down stored starch into glucose for respiration by the embryo."
+    ],
+    "tip": "Mention both starch breakdown and glucose for respiration."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A researcher treats a batch of dwarf pea plants with a solution containing gibberellin. Explain the biochemical and physical changes that occur in the stems of these plants over the next week.",
+    "steps": [
+     "Identify the hormone applied (gibberellin) and its primary target process in stems (stem elongation).",
+     "Explain that gibberellin stimulates cell division and cell elongation in the internodes.",
+     "Conclude that the dwarf plants will grow taller, reaching a height similar to non-dwarf varieties by overcoming their genetic limitation."
+    ],
+    "ans": "The applied gibberellin stimulates both cell division and cell elongation in the internodal regions of the stem. As a result, the dwarf pea plants undergo rapid vertical growth, overcoming their genetic mutation and reaching normal stem height."
+   },
+   {
+    "q": "Describe the chain of events that occurs from the moment a dry seed absorbs water to the emergence of the embryonic root (radicle).",
+    "steps": [
+     "Step 1: Water uptake breaks seed dormancy and triggers the embryo to synthesize gibberellin.",
+     "Step 2: Gibberellin diffuses to the aleurone layer and induces the production of amylase enzymes.",
+     "Step 3: Amylase hydrolyses stored starch into soluble glucose in the endosperm.",
+     "Step 4: Glucose is transported to the embryo where aerobic respiration provides ATP for rapid cell division and radical emergence."
+    ],
+    "ans": "Water absorption triggers gibberellin production by the embryo. Gibberellin stimulates amylase synthesis, which converts starch into glucose. This glucose fuels respiration in the embryo, providing energy for cell division and the emergence of the radicle."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Figure 3: Overview of plant hormones: auxins, gibberellins, and ethene, showing their primary sites of action and key commercial uses.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" fill=\"#f8fafc\" stroke=\"#475569\" rx=\"10\"/><text x=\"200\" y=\"35\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e293b\" text-anchor=\"middle\">Summary of Plant Hormones</text><rect x=\"25\" y=\"55\" width=\"105\" height=\"145\" fill=\"#dbeafe\" stroke=\"#2563eb\" rx=\"6\"/><text x=\"77\" y=\"75\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\" text-anchor=\"middle\">Auxins</text><text x=\"32\" y=\"95\" font-size=\"9\" fill=\"#1f2937\">• Shoot tips &amp; roots</text><text x=\"32\" y=\"115\" font-size=\"9\" fill=\"#1f2937\">• Tropisms</text><text x=\"32\" y=\"135\" font-size=\"9\" fill=\"#1f2937\">• Weedkillers</text><text x=\"32\" y=\"155\" font-size=\"9\" fill=\"#1f2937\">• Rooting powder</text><rect x=\"147\" y=\"55\" width=\"105\" height=\"145\" fill=\"#fef3c7\" stroke=\"#d97706\" rx=\"6\"/><text x=\"199\" y=\"75\" font-size=\"11\" font-weight=\"bold\" fill=\"#b45309\" text-anchor=\"middle\">Gibberellins</text><text x=\"154\" y=\"95\" font-size=\"9\" fill=\"#1f2937\">• Seeds &amp; leaves</text><text x=\"154\" y=\"115\" font-size=\"9\" fill=\"#1f2937\">• Germination</text><text x=\"154\" y=\"135\" font-size=\"9\" fill=\"#1f2937\">• Stem elongation</text><text x=\"154\" y=\"155\" font-size=\"9\" fill=\"#1f2937\">• Bigger fruit</text><rect x=\"269\" y=\"55\" width=\"105\" height=\"145\" fill=\"#fce7f3\" stroke=\"#db2777\" rx=\"6\"/><text x=\"321\" y=\"75\" font-size=\"11\" font-weight=\"bold\" fill=\"#be185d\" text-anchor=\"middle\">Ethene</text><text x=\"276\" y=\"95\" font-size=\"9\" fill=\"#1f2937\">• Gas hormone</text><text x=\"276\" y=\"115\" font-size=\"9\" fill=\"#1f2937\">• Fruit ripening</text><text x=\"276\" y=\"135\" font-size=\"9\" fill=\"#1f2937\">• Cell division</text><text x=\"276\" y=\"155\" font-size=\"9\" fill=\"#1f2937\">• Storage control</text></svg>"
+   }
+  ],
+  "pid": "bio_ocrb.3.7",
+  "sid": "bio_ocrb",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-27T18:54:13.237Z"
  }
 }

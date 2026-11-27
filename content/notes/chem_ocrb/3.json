@@ -1,0 +1,970 @@
+{
+ "chem_ocrb.3.6": {
+  "summary": "Nanoparticles are extremely tiny structures measuring between 1 and 100 nanometres across, containing only a few hundred to thousands of atoms. Due to their exceptionally high surface area to volume ratio, they exhibit very different properties compared to the same bulk materials, making them revolutionary for catalysis, medicine, and electronics. However, their unique size also raises valid concerns regarding potential toxicity and environmental accumulation because they can easily penetrate biological barriers.",
+  "core": [
+   {
+    "h": "Definition and Size Scale of Nanoparticles",
+    "p": "Nanoparticles sit in the transitional zone between individual atoms and molecules and bulk macroscopic materials. Understanding their scale requires appreciating standard metric prefixes, specifically the nanometre.",
+    "bullets": [
+     "A **nanometre (nm)** is one billionth of a metre (10^-9 m).",
+     "Nanoparticles typically range in size from **1 nm to 100 nm**.",
+     "They contain roughly a few hundred to a few thousand atoms.",
+     "To put this in perspective, a human hair is about 80,000 to 100,000 nm wide.",
+     "Atoms and small molecules are smaller than 1 nm, so they are not nanoparticles."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Nanoparticle",
+      "p": "A structure that is 1–100 nm in size and contains a few hundred to thousands of atoms."
+     },
+     {
+      "k": "key",
+      "t": "Scale Comparison",
+      "p": "Nanoparticles are larger than molecules but vastly smaller than fine dust or cells."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Surface Area to Volume Ratio",
+    "p": "The defining characteristic that drives all unique nanoparticle properties is the dramatic increase in surface area relative to volume as particle size shrinks.",
+    "bullets": [
+     "As a cube or sphere is divided into smaller particles, the total **surface area to volume ratio** increases exponentially.",
+     "For a solid cube of side length $s$, surface area is 6s^2 and volume is s^3, giving a surface area to volume ratio of **6/s**.",
+     "If you decrease $s$ by a factor of 10, the surface area to volume ratio increases by a factor of 10.",
+     "A much higher proportion of atoms are located on the **surface** rather than trapped in the bulk interior.",
+     "This means significantly more atoms are exposed to react with surrounding substances."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Calculation Trap",
+      "p": "Never confuse absolute surface area with the surface area to volume ratio; it is the ratio that matters for reactivity."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Visualising Nanoparticle Scale and Cube Comparison",
+    "p": "A geometric comparison demonstrates how dividing a large block into nanoparticles drastically increases the exposed surface area.",
+    "bullets": [
+     "Consider cutting a 1 cm cube into cubes of 1 nm side length.",
+     "The total volume remains constant, but the exposed surface area multiplies massively.",
+     "More surface atoms lead to faster reaction rates and enhanced catalytic activity."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam Visualisation",
+      "p": "Imagine painting a large wooden block versus thousands of tiny grains of sand made from the same block."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Comparing a bulk cube to subdivided nanoparticles, showing the massive increase in exposed surface atoms.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><rect x=\"40\" y=\"70\" width=\"100\" height=\"100\" fill=\"#dbeafe\" stroke=\"#1e3a8a\" stroke-width=\"2\"/><text x=\"90\" y=\"125\" font-size=\"12\" fill=\"#1e3a8a\" text-anchor=\"middle\">Bulk Cube</text><text x=\"90\" y=\"190\" font-size=\"11\" fill=\"#334155\" text-anchor=\"middle\">Low SA:Vol ratio</text><line x1=\"160\" y1=\"120\" x2=\"220\" y2=\"120\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><text x=\"190\" y=\"110\" font-size=\"11\" fill=\"#64748b\" text-anchor=\"middle\">Divide</text><rect x=\"240\" y=\"50\" width=\"120\" height=\"140\" fill=\"#fef3c7\" stroke=\"#b45309\" stroke-width=\"2\"/><text x=\"300\" y=\"80\" font-size=\"12\" fill=\"#b45309\" text-anchor=\"middle\">Nanoparticles</text><text x=\"300\" y=\"115\" font-size=\"11\" fill=\"#334155\" text-anchor=\"middle\">High SA:Vol</text><text x=\"300\" y=\"135\" font-size=\"11\" fill=\"#334155\" text-anchor=\"middle\">Ratio</text><text x=\"300\" y=\"170\" font-size=\"11\" fill=\"#b45309\" text-anchor=\"middle\">Millions of tiny cubes</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Altered Properties Compared to Bulk Materials",
+    "p": "Materials at the nanoscale often display entirely different chemical and physical properties compared to the exact same substance in bulk form.",
+    "bullets": [
+     "Gold is typically shiny and unreactive in bulk, but gold nanoparticles are **deep red or purple** and act as highly effective catalysts.",
+     "Titanium dioxide bulk is a white opaque solid, but titanium dioxide nanoparticles can be **transparent** on skin.",
+     "Melting points and electrical conductivity can change dramatically at the nanoscale.",
+     "Quantum effects start to dominate behavior when particles become extremely small."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Property Shifts",
+      "p": "Never assume a nanoparticle shares the colour, melting point, or reactivity of its bulk parent material."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Uses in Sunscreens and Cosmetics",
+    "p": "Nanoparticles are widely utilised in personal care products due to their unique optical and physical properties.",
+    "bullets": [
+     "Titanium dioxide and zinc oxide nanoparticles are used in **sunscreens**.",
+     "Bulk titanium dioxide leaves an unwanted white chalky layer on skin.",
+     "Nanoparticles are too small to scatter visible light, making the cream **transparent** and cosmetically appealing.",
+     "Despite being transparent, they still absorb and reflect harmful **ultraviolet (UV) radiation** effectively.",
+     "They provide better skin coverage than bulk sunscreens."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam Link",
+      "p": "Always link transparency to light scattering and UV protection to absorption when discussing sunscreens."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Uses as Catalysts",
+    "p": "The massive surface area to volume ratio makes nanoparticles exceptional catalysts in industrial and environmental chemistry.",
+    "bullets": [
+     "A catalyst increases the rate of a chemical reaction without being used up.",
+     "Because a higher percentage of atoms are on the surface, more reactant particles can collide with the catalyst simultaneously.",
+     "This results in **higher catalytic activity** compared to bulk catalysts.",
+     "Used in catalytic converters in cars to reduce toxic gas emissions.",
+     "Used in industrial manufacturing to save energy by operating at lower temperatures."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Catalytic Efficiency",
+      "p": "More surface atoms mean more active sites available for colliding reactant molecules."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Uses in Medicine and Drug Delivery",
+    "p": "Nanoparticles offer groundbreaking medical applications, particularly in targeted therapy and diagnostics.",
+    "bullets": [
+     "Gold nanoparticles can be engineered to bind to specific diseased cells, such as cancer cells.",
+     "Nanoparticles can encapsulate medicines and act as **targeted drug delivery** systems.",
+     "They release medication directly inside specific cells or organs, reducing side effects on healthy tissue.",
+     "Used in diagnostic biosensors for extremely sensitive and early detection of diseases."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Targeted Delivery",
+      "p": "Carrying medication directly to specific diseased sites in the body using nanoparticle carriers."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Uses in Electronics and Computing",
+    "p": "Unique electrical and thermal properties of nanoparticles enable advancements in modern electronics.",
+    "bullets": [
+     "Carbon nanotubes and silver nanoparticles are used to create **conductive inks** for printed electronics.",
+     "Used to manufacture ultra-thin, flexible electronic displays and touchscreens.",
+     "Quantum dots (semiconductor nanoparticles) are used in advanced high-definition QLED television screens.",
+     "They help miniaturise electronic components, making devices smaller and faster."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Modern Tech",
+      "p": "Remember conductive inks and quantum dot displays as prime electronic applications."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Risks and Health Concerns of Nanoparticles",
+    "p": "Despite their immense benefits, the properties that make nanoparticles useful also pose potential health and environmental hazards.",
+    "bullets": [
+     "Because they are extremely small, nanoparticles can easily pass through cell membranes and enter the bloodstream.",
+     "They can potentially cross the **blood-brain barrier** or enter human lungs when inhaled.",
+     "Once inside the body, their high reactivity could generate toxic free radicals or damage cellular DNA.",
+     "Long-term toxicological effects on human health and ecosystems are still not fully understood."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Toxicity Trap",
+      "p": "Examiners often ask why nanoparticles are dangerous; emphasize their ability to enter cells due to tiny size."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Environmental and Ecotoxicological Risks",
+    "p": "The widespread manufacture and use of engineered nanoparticles inevitably leads to release into the environment.",
+    "bullets": [
+     "Nanoparticles washed off from sunscreens enter rivers, lakes, and oceans.",
+     "They can accumulate in aquatic organisms and disrupt local food chains.",
+     "Their high surface reactivity can catalyze harmful reactions in natural water systems.",
+     "Wastewater treatment plants struggle to filter out particles of nanometre dimensions effectively."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Environmental Accumulation",
+      "p": "Small size allows nanoparticles to bypass standard municipal water filtration systems."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Comparing Nanoparticles, Fine Particles, and Coarse Particles",
+    "p": "Particle classification depends strictly on physical dimensions, which dictates how they interact with light and biological systems.",
+    "bullets": [
+     "**Coarse particles** (PM10) range from 2,500 nm to 10,000 nm in diameter (often called dust).",
+     "**Fine particles** (PM2.5) range from 100 nm to 2,500 nm.",
+     "**Nanoparticles** (PM0.1) range from 1 nm to 100 nm.",
+     "As particle size decreases, the percentage of atoms on the surface increases dramatically."
+    ],
+    "table": {
+     "head": [
+      "Particle Type",
+      "Size Range",
+      "Common Example"
+     ],
+     "rows": [
+      [
+       "Coarse particles",
+       "2,500 nm – 10,000 nm",
+       "Dust, pollen"
+      ],
+      [
+       "Fine particles",
+       "100 nm – 2,500 nm",
+       "Smoke, haze"
+      ],
+      [
+       "Nanoparticles",
+       "1 nm – 100 nm",
+       "Sunscreens, fullerenes"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "PM2.5",
+      "p": "Fine particulate matter with a diameter of less than 2.5 micrometres."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Visualising Nanoparticle Penetration into Biological Cells",
+    "p": "The microscopic scale of nanoparticles allows them to bypass natural biological defenses.",
+    "bullets": [
+     "Normal cell membranes have tiny pores, but nanoparticles can slip right through or be endocytosed.",
+     "This property makes them brilliant for drug delivery but hazardous if toxic substances hitch a ride inside."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam Diagram",
+      "p": "Be prepared to interpret diagrams showing particle size relative to cellular pores or DNA strands."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Diagram illustrating how nanoparticles penetrate cell membranes compared to larger bulk particles.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><path d=\"M 50 120 Q 120 70 200 120 Q 280 170 350 120\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"4\"/><text x=\"180\" y=\"45\" font-size=\"12\" fill=\"#0f172a\" text-anchor=\"middle\">Cell Membrane</text><circle cx=\"120\" cy=\"110\" r=\"22\" fill=\"#fecaca\" stroke=\"#991b1b\" stroke-width=\"2\"/><text x=\"120\" y=\"114\" font-size=\"10\" fill=\"#991b1b\" text-anchor=\"middle\">Bulk</text><circle cx=\"270\" cy=\"118\" r=\"6\" fill=\"#bbf7d0\" stroke=\"#166534\" stroke-width=\"2\"/><text x=\"270\" y=\"100\" font-size=\"10\" fill=\"#166534\" text-anchor=\"middle\">Nano</text><text x=\"200\" y=\"205\" font-size=\"11\" fill=\"#334155\" text-anchor=\"middle\">Nanoparticles pass through barriers easily</text></svg>"
+     }
+    ]
+   }
+  ],
+  "analogy": {
+   "t": "The Chopped Wood Analogy",
+   "p": "Imagine you have a single large log of wood. If you try to burn it, it catches fire slowly because only the outer surface touches the air. If you chop that log into millions of tiny sawdust particles, the total exposed wood surface area becomes massive, and if ignited, it explodes in a flash fire due to rapid oxygen contact. Nanoparticles behave similarly: shrinking size massively increases exposed surface area, boosting reactivity.\n\nWhere the analogy breaks down: Sawdust particles are still millions of nanometres across, whereas true nanoparticles are in the 1–100 nm quantum scale where physical properties like colour and melting point actually change, not just reaction speed."
+  },
+  "terms": [
+   {
+    "t": "Nanometre",
+    "d": "One billionth of a metre (10^-9 m)."
+   },
+   {
+    "t": "Nanoparticle",
+    "p": "",
+    "d": "A particle between 1 nm and 100 nm in size, containing a few hundred to thousands of atoms."
+   },
+   {
+    "t": "Surface Area to Volume Ratio",
+    "d": "The proportion of a object's surface area compared to its internal volume, which increases as particle size decreases."
+   },
+   {
+    "t": "Bulk Material",
+    "d": "Matter in its normal macroscopic scale, possessing constant physical properties regardless of sample size."
+   },
+   {
+    "t": "Catalyst",
+    "d": "A substance that speeds up a chemical reaction without being used up."
+   },
+   {
+    "t": "Targeted Drug Delivery",
+    "d": "Using nanoparticle carriers to transport medicine directly to specific diseased cells."
+   },
+   {
+    "t": "Titanium Dioxide",
+    "d": "A compound used in sunscreens that appears white in bulk but transparent at the nanoscale."
+   },
+   {
+    "t": "Quantum Dots",
+    "d": "Semiconductor nanoparticles used in advanced electronic displays and lighting."
+   },
+   {
+    "t": "Coarse Particles",
+    "d": "Particles with diameters between 2,500 nm and 10,000 nm, also known as dust."
+   },
+   {
+    "t": "Fine Particles",
+    "d": "Particles with diameters between 100 nm and 2,500 nm."
+   },
+   {
+    "t": "Blood-Brain Barrier",
+    "d": "A highly selective semipermeable border that prevents solutes in the circulating blood from non-selectively crossing into the extracellular fluid of the central nervous system."
+   },
+   {
+    "t": "Toxicity",
+    "d": "The degree to which a substance can damage an organism or living tissue."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Saying nanoparticles are microscopic.",
+    "r": "Microscopic means visible under a light microscope (micrometres). Nanoparticles are much smaller and require an electron microscope."
+   },
+   {
+    "w": "Stating that nanoparticles have a smaller surface area.",
+    "r": "Nanoparticles have a much larger surface area relative to their volume compared to bulk materials."
+   },
+   {
+    "w": "Assuming nanoparticles have the same properties as bulk materials.",
+    "r": "Nanoparticles often have completely different colours, melting points, and catalytic properties."
+   },
+   {
+    "w": "Confusing nanometres with micrometres.",
+    "r": "A nanometre is 10^-9 m, whereas a micrometre is 10^-6 m (one thousand times larger)."
+   },
+   {
+    "w": "Writing that nanoparticles are made of single atoms.",
+    "r": "Nanoparticles consist of a few hundred to thousands of atoms clustered together, not single atoms."
+   },
+   {
+    "w": "Saying sunscreens with nanoparticles let UV light through.",
+    "r": "They let visible light through (making them transparent), but they absorb and reflect harmful UV radiation."
+   },
+   {
+    "w": "Claiming nanoparticles cannot enter living cells.",
+    "r": "Their tiny size allows them to easily cross cell membranes and biological barriers."
+   }
+  ],
+  "exam": [
+   {
+    "q": "State the size range of nanoparticles in nanometres.",
+    "marks": 1,
+    "model": [
+     "1 nm to 100 nm"
+    ],
+    "tip": "Learn this exact range by heart; no marks are awarded for approximate figures."
+   },
+   {
+    "q": "Explain why gold nanoparticles have different properties compared to bulk gold.",
+    "marks": 2,
+    "model": [
+     "They have a very high surface area to volume ratio.",
+     "A much higher proportion of atoms are on the surface compared to the bulk material."
+    ],
+    "tip": "Always mention the surface area to volume ratio for property change questions."
+   },
+   {
+    "q": "Give two uses of nanoparticles in everyday consumer products.",
+    "marks": 2,
+    "model": [
+     "Sunscreens / cosmetics",
+     "Catalysts in cars / industrial processes",
+     "Conductive inks in electronics"
+    ],
+    "tip": "State clear, distinct everyday applications."
+   },
+   {
+    "q": "Explain why titanium dioxide nanoparticles are used in sunscreens instead of bulk titanium dioxide.",
+    "marks": 4,
+    "model": [
+     "Bulk titanium dioxide leaves a white, chalky appearance on the skin.",
+     "Nanoparticles are too small to scatter visible light, making them transparent.",
+     "However, they still effectively absorb and reflect UV radiation.",
+     "This provides better skin protection without the undesirable white colour."
+    ],
+    "tip": "Contrast the optical properties of bulk versus nano forms."
+   },
+   {
+    "q": "Calculate the surface area to volume ratio of a cube with side length 2 cm. State the units.",
+    "marks": 3,
+    "model": [
+     "Surface area = 6 x (2 x 2) = 24 cm^2",
+     "Volume = 2 x 2 x 2 = 8 cm^3",
+     "Ratio = 24 / 8 = 3 cm^-1"
+    ],
+    "tip": "Show working for surface area and volume separately before dividing."
+   },
+   {
+    "q": "Discuss the potential risks to human health of using nanoparticles in medicine and cosmetics.",
+    "marks": 6,
+    "model": [
+     "Nanoparticles are extremely small and can easily enter the bloodstream.",
+     "They can cross biological barriers such as the blood-brain barrier or cell membranes.",
+     "Once inside cells, their high surface reactivity can cause damage or generate toxic free radicals.",
+     "Long-term health effects are currently unknown and untested.",
+     "However, these risks are often balanced against the life-saving benefits in targeted drug delivery."
+    ],
+    "tip": "For 6-mark questions, balance risks with benefits and explain the mechanism (entering cells)."
+   },
+   {
+    "q": "Compare the size of nanoparticles with fine particles and coarse particles.",
+    "marks": 3,
+    "model": [
+     "Coarse particles are 2,500 nm to 10,000 nm in size.",
+     "Fine particles are 100 nm to 2,500 nm in size.",
+     "Nanoparticles are the smallest, ranging from 1 nm to 100 nm."
+    ],
+    "tip": "List them in order of size with correct units."
+   },
+   {
+    "q": "Explain how a high surface area to volume ratio improves the efficiency of a catalyst.",
+    "marks": 2,
+    "model": [
+     "More atoms are exposed on the surface of the catalyst.",
+     "There are more active sites available for reactant particles to collide with simultaneously."
+    ],
+    "tip": "Use the terms 'surface atoms' and 'collision/active sites'."
+   },
+   {
+    "q": "Suggest why environmental agencies are concerned about nanoparticles washing into rivers from sunscreens.",
+    "marks": 2,
+    "model": [
+     "They can accumulate in aquatic organisms and disrupt ecosystems.",
+     "Standard water treatment plants cannot easily filter out particles of nanometre size."
+    ],
+    "tip": "Mention environmental persistence and filtration difficulties."
+   },
+   {
+    "q": "Explain what is meant by 'targeted drug delivery' using nanoparticles.",
+    "marks": 2,
+    "model": [
+     "Medicines are encapsulated inside nanoparticles.",
+     "They are transported directly to specific diseased cells (such as cancer cells) with minimal side effects."
+    ],
+    "tip": "Mention direct transport to specific cells and reduced side effects."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A cube has a side length of 5 nm. Calculate its surface area, its volume, and its surface area to volume ratio.",
+    "steps": [
+     "Calculate surface area of a cube: 6 x (side^2) = 6 x (5 x 5) = 6 x 25 = 150 nm^2.",
+     "Calculate volume of a cube: side^3 = 5 x 5 x 5 = 125 nm^3.",
+     "Calculate surface area to volume ratio: Surface Area / Volume = 150 / 125 = 1.2 nm^-1."
+    ],
+    "ans": "Surface Area = 150 nm^2, Volume = 125 nm^3, Ratio = 1.2 nm^-1."
+   },
+   {
+    "q": "A spherical nanoparticle has a radius of 10 nm. (Surface area of sphere = 4 x pi x r^2, Volume of sphere = 4/3 x pi x r^3). Calculate the surface area to volume ratio.",
+    "steps": [
+     "Calculate surface area: 4 x pi x (10)^2 = 400pi nm^2.",
+     "Calculate volume: 4/3 x pi x (10)^3 = 4000/3 pi nm^3.",
+     "Divide surface area by volume: (400pi) / (4000/3 pi) = 400 x 3 / 4000 = 1200 / 4000 = 0.3 nm^-1."
+    ],
+    "ans": "Surface area to volume ratio is 0.3 nm^-1."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Overview of nanoparticle size scale compared to atoms and bulk objects.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"40\" y1=\"120\" x2=\"360\" y2=\"120\" stroke=\"#94a3b8\" stroke-width=\"4\"/><circle cx=\"80\" cy=\"120\" r=\"10\" fill=\"#f87171\"/><text x=\"80\" y=\"90\" font-size=\"11\" fill=\"#b91c1c\" text-anchor=\"middle\">Atom (&lt;1nm)</text><rect x=\"170\" y=\"100\" width=\"40\" height=\"40\" fill=\"#fde047\" stroke=\"#ca8a04\" stroke-width=\"2\"/><text x=\"190\" y=\"80\" font-size=\"11\" fill=\"#ca8a04\" text-anchor=\"middle\">Nanoparticle (1-100nm)</text><rect x=\"290\" y=\"85\" width=\"70\" height=\"70\" fill=\"#93c5fd\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><text x=\"325\" y=\"70\" font-size=\"11\" fill=\"#1d4ed8\" text-anchor=\"middle\">Bulk (&gt;100nm)</text><text x=\"200\" y=\"200\" font-size=\"12\" fill=\"#0f172a\" text-anchor=\"middle\">Scale of Matter in Nanochemistry</text></svg>"
+   }
+  ],
+  "pid": "chem_ocrb.3.6",
+  "sid": "chem_ocrb",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-27T19:14:13.913Z"
+ },
+ "chem_ocrb.3.10": {
+  "summary": "Life Cycle Assessments evaluate the total environmental impact of a manufactured product across four key stages: extracting raw materials, manufacturing and packaging, use, and disposal. To conserve finite resources and reduce energy consumption, materials such as PET plastic bottles and metals are extensively reused and recycled. Recycling metals saves high-grade ore reserves and requires significantly less energy than primary extraction, while polymer recycling reduces landfill waste and crude oil depletion.",
+  "core": [
+   {
+    "h": "1. Introduction to Life Cycle Assessment (LCA)",
+    "p": "A Life Cycle Assessment is a systematic tool used by scientists and environmentalists to assess the environmental impact of a manufactured product right from its creation to its final disposal. It evaluates every single stage of a product's life to give a comprehensive picture of its true cost to the planet.",
+    "bullets": [
+     "LCAs assess environmental impacts across four distinct stages.",
+     "Stage 1: Extracting and processing raw materials.",
+     "Stage 2: Manufacturing and packaging the product.",
+     "Stage 3: Using the product during its lifetime.",
+     "Stage 4: Disposal of the product at the end of its useful life, including incineration or landfill."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Life Cycle Assessment (LCA)",
+      "p": "An assessment of the total environmental impact of a product during its entire life cycle."
+     },
+     {
+      "k": "key",
+      "t": "Four Stages",
+      "p": "Extraction, Manufacturing, Use, Disposal. Memorise this exact sequence for exams."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Figure 1: The four stages of a Life Cycle Assessment, tracing a product from raw material extraction to final disposal.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><circle cx=\"200\" cy=\"120\" r=\"90\" fill=\"none\" stroke=\"#cbd5e1\" stroke-width=\"4\" stroke-dasharray=\"6 6\"/><rect x=\"160\" y=\"20\" width=\"80\" height=\"40\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#1e40af\" stroke-width=\"2\"/><text x=\"200\" y=\"45\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1e3a8a\">1. Extraction</text><rect x=\"280\" y=\"100\" width=\"80\" height=\"40\" rx=\"6\" fill=\"#dcfce7\" stroke=\"#166534\" stroke-width=\"2\"/><text x=\"320\" y=\"125\" font-size=\"12\" text-anchor=\"middle\" fill=\"#14532d\">2. Manufacture</text><rect x=\"160\" y=\"180\" width=\"80\" height=\"40\" rx=\"6\" fill=\"#fef9c3\" stroke=\"#854d0e\" stroke-width=\"2\"/><text x=\"200\" y=\"205\" font-size=\"12\" text-anchor=\"middle\" fill=\"#713f12\">3. Use Phase</text><rect x=\"40\" y=\"100\" width=\"80\" height=\"40\" rx=\"6\" fill=\"#fee2e2\" stroke=\"#991b1b\" stroke-width=\"2\"/><text x=\"80\" y=\"125\" font-size=\"12\" text-anchor=\"middle\" fill=\"#7f1d1d\">4. Disposal</text><path d=\"M 240 40 Q 280 40 300 100\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/></svg>"
+     }
+    ]
+   },
+   {
+    "h": "2. Quantifying Energy, Water, and Waste in LCAs",
+    "p": "Carrying out an LCA involves gathering hard data for each stage of production and use. Scientists measure the exact quantities of raw materials and energy consumed, as well as the volume of waste products released into water systems or the atmosphere.",
+    "bullets": [
+     "Energy usage: Calculated for powering machinery, transporting goods, and heating processing vats.",
+     "Water usage: Measured in terms of extraction, cooling, and wastewater contamination.",
+     "Waste generation: Includes solid waste sent to landfill and gaseous emissions contributing to global warming or acid rain.",
+     "Data collection allows companies to compare alternative materials, such as paper bags versus plastic bags."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Quantitative vs Qualitative",
+      "p": "Some LCA aspects (like energy used) are easily quantified in megajoules. Other aspects (like visual pollution of a mine) are subjective and harder to quantify."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "3. Limitations and Bias in Life Cycle Assessments",
+    "p": "While LCAs are powerful, they are not always straightforward. Some parts of an assessment rely on value judgements, and companies can sometimes manipulate LCA data to make their own products appear more environmentally friendly than they actually are.",
+    "bullets": [
+     "Value judgements: Deciding how much weight to give to greenhouse gas emissions versus toxic waste is subjective.",
+     "Selective reporting: Advertisements may use biased LCAs that omit inconvenient stages, such as disposal problems.",
+     "Transport emissions: Calculating transport impacts depends heavily on fuel types and shipping distances, which can fluctuate.",
+     "Complexity: Tracking every single chemical input across global supply chains is extremely difficult."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Exam Trap",
+      "p": "Do not state that LCAs give a single definitive factual score. They involve value judgements and can be biased."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Comparative LCAs: Plastic vs Paper Bags",
+    "p": "Examiners frequently test your ability to compare two everyday items using LCA principles. A classic example is comparing single-use plastic carrier bags with paper bags.",
+    "bullets": [
+     "Raw materials: Plastic uses crude oil (finite); paper uses wood pulp from trees (renewable if managed).",
+     "Manufacturing: Making paper bags requires significantly more electrical energy and water than making plastic bags.",
+     "Transportation: Paper bags are heavier and bulkier than plastic bags, meaning more fuel is burned transporting them.",
+     "Disposal: Plastic bags persist in landfill for hundreds of years; paper bags biodegrade much faster but take up more landfill space if not recycled."
+    ],
+    "table": {
+     "head": [
+      "LCA Stage",
+      "Plastic Bag",
+      "Paper Bag"
+     ],
+     "rows": [
+      [
+       "Raw Material",
+       "Crude oil (finite)",
+       "Trees (renewable)"
+      ],
+      [
+       "Energy Used",
+       "Lower energy",
+       "Higher energy"
+      ],
+      [
+       "Transport Cost",
+       "Lower fuel use (lightweight)",
+       "Higher fuel use (heavier)"
+      ],
+      [
+       "Reusability",
+       "Can be reused multiple times",
+       "Tears easily, limited reuse"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "5. Conserving Resources and Reducing Waste",
+    "p": "Human demand for finite resources such as metal ores and crude oil is rapidly depleting natural reserves. By reusing existing products and recycling materials into new items, we can drastically reduce the environmental damage caused by extraction.",
+    "bullets": [
+     "Finite resources will eventually run out if consumed at current rates.",
+     "Quarrying and mining cause severe habitat destruction, noise pollution, and scarring of the landscape.",
+     "Processing raw ores releases massive quantities of carbon dioxide and sulfur dioxide (causing acid rain).",
+     "Recycling closes the loop, keeping valuable materials in productive use and out of landfills."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Sustainability Goal",
+      "p": "Minimising the use of limited resources, energy consumption, and environmental waste."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Recycling of Metals",
+    "p": "Metals are exceptionally well-suited to recycling because they can be melted down and reshaped repeatedly without losing their desirable mechanical properties. Aluminium and steel recycling are major global industries.",
+    "bullets": [
+     "Scrap metal is collected and sorted (e.g., using magnets to separate magnetic iron and steel from non-magnetic metals).",
+     "The sorted metal is melted down in furnaces.",
+     "Molten metal is cast into blocks called ingots, which can be rolled into sheets for new products.",
+     "Recycling aluminium saves over 95% of the energy needed to extract aluminium from bauxite ore."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Metal Recycling",
+      "p": "The process of recovering scrap metal, melting it down, and reprocessing it into new metal objects."
+     },
+     {
+      "tip": "Always mention energy savings in exam questions about metal recycling.",
+      "t": "Exam Tip",
+      "p": "Always mention energy savings in exam questions about metal recycling."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Figure 2: The metal recycling loop showing collection, magnetic separation, melting, and casting into new products.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><rect x=\"40\" y=\"100\" width=\"70\" height=\"40\" rx=\"6\" fill=\"#e2e8f0\" stroke=\"#475569\" stroke-width=\"2\"/><text x=\"75\" y=\"125\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1e293b\">Scrap Metal</text><path d=\"M 120 120 L 160 120\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><rect x=\"170\" y=\"90\" width=\"80\" height=\"60\" rx=\"6\" fill=\"#fef08a\" stroke=\"#a16207\" stroke-width=\"2\"/><text x=\"210\" y=\"125\" font-size=\"12\" text-anchor=\"middle\" fill=\"#713f12\">Furnace Melt</text><path d=\"M 260 120 L 300 120\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><rect x=\"310\" y=\"100\" width=\"60\" height=\"40\" rx=\"6\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"2\"/><text x=\"340\" y=\"125\" font-size=\"12\" text-anchor=\"middle\" fill=\"#14532d\">New Ingot</text><path d=\"M 340 140 Q 340 200 210 200 Q 80 200 75 145\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"2\" stroke-dasharray=\"4 4\" marker-end=\"url(#arrow)\"/><text x=\"210\" y=\"215\" font-size=\"11\" text-anchor=\"middle\" fill=\"#475569\">Remelt &amp; Reprocess Loop</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "7. Recycling of Polymers: PET Bottles",
+    "p": "Polymers such as poly(ethene) and poly(ethylene terephthalate) — commonly known as PET — are widely used for drinks bottles and packaging. Because addition polymers are unreactive and non-biodegradable, discarding them creates severe plastic pollution in oceans and landfills.",
+    "bullets": [
+     "PET bottles are collected from kerbside recycling schemes and deposit return schemes.",
+     "The bottles are sorted by polymer type and colour, then washed to remove labels and adhesive residues.",
+     "Clean bottles are shredded into small plastic flakes.",
+     "These flakes are melted down and extruded to form new polymer granules, which can be spun into polyester fibres for clothing or moulded into new bottles."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "PET Properties",
+      "p": "PET is strong, lightweight, and impermeable to carbon dioxide, making it ideal for fizzy drink bottles."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Challenges in Recycling Polymers",
+    "p": "While metal recycling is straightforward, recycling polymers presents significant technical and economic challenges that keep recycling rates lower than desired.",
+    "bullets": [
+     "Sorting difficulty: There are many different types of polymers (e.g., HDPE, LDPE, PVC, PET), and they cannot be melted down together because they have different melting points and properties.",
+     "Contamination: Food residue, paper labels, and inks contaminate the molten polymer batch, weakening the recycled plastic.",
+     "Degradation: Each time a polymer is melted and reshaped, polymer chains can break slightly, shortening the chains and reducing the tensile strength of the recycled material.",
+     "Collection costs: Transporting bulky, lightweight plastic waste from households to processing plants is expensive and energy-intensive."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Common Misconception",
+      "p": "Students often think all plastics can be melted together. In reality, mixing different polymer types ruins the batch."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Reducing Raw Material Extraction",
+    "p": "The ultimate goal of sustainable material management is reducing the extraction of raw materials at source. This is achieved through product redesign, lightweighting, and promoting a circular economy.",
+    "bullets": [
+     "Lightweighting: Using less material per item (e.g., making drink cans thinner or plastic bottle walls narrower).",
+     "Designing for disassembly: Making products easy to take apart so components and materials can be separated and recycled efficiently.",
+     "Reusable packaging: Implementing deposit-return schemes for glass bottles and crates.",
+     "Extending product lifespan: Designing electronics and appliances that are durable and easily repairable."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Circular Economy",
+      "p": "An economic system aimed at eliminating waste and the continual use of resources by reusing, repairing, and recycling."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Comparing Primary and Secondary Production",
+    "p": "Primary production involves extracting new materials from the Earth's crust (e.g., mining iron ore or distilling crude oil to make virgin polymers). Secondary production involves processing waste materials into usable substances.",
+    "bullets": [
+     "Primary production consumes vast amounts of electrical and thermal energy.",
+     "Secondary production (recycling) generally requires much less energy because melting scrap metal or plastic takes less heat energy than chemical reduction of metal oxides.",
+     "Secondary production significantly reduces greenhouse gas emissions associated with fossil fuel combustion.",
+     "Secondary production preserves finite natural reserves for future generations."
+    ],
+    "table": {
+     "head": [
+      "Feature",
+      "Primary Production",
+      "Secondary Production"
+     ],
+     "rows": [
+      [
+       "Source",
+       "Raw ores and crude oil",
+       "Waste and scrap materials"
+      ],
+      [
+       "Energy Consumption",
+       "Extremely high",
+       "Significantly lower"
+      ],
+      [
+       "Resource Depletion",
+       "High (depletes reserves)",
+       "Low (conserves reserves)"
+      ],
+      [
+       "Environmental Impact",
+       "High habitat disruption",
+       "Lower environmental impact"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "11. Economic and Environmental Trade-offs",
+    "p": "Deciding whether to recycle a material or manufacture a new one involves balancing environmental benefits against economic costs.",
+    "bullets": [
+     "Collection costs: Kerbside sorting and transport can sometimes cost more than producing virgin materials if crude oil prices are low.",
+     "Energy costs: Even though recycling saves energy overall, sorting facilities require electricity to run conveyor belts, optical scanners, and shredders.",
+     "Public participation: Recycling schemes rely heavily on individual households correctly washing and sorting waste.",
+     "Government legislation: Landfill taxes and plastic packaging taxes incentivise companies to adopt recycled materials."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam Key Phrase",
+      "p": "Use the phrase 'economic and environmental trade-offs' when evaluating recycling programmes."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Restaurant Kitchen and Food Waste Analogy",
+   "p": "Imagine a busy restaurant kitchen. Primary production is like buying brand-new ingredients from farms across the country every single day, which requires fuel for delivery vans, land to grow crops, and heavy packaging. Recycling is like taking leftover vegetable peelings and bones to make a rich stock for tomorrow's soup, saving money and reducing food waste. Where the analogy breaks down: unlike vegetable stock which loses flavor over time, some metals can be recycled indefinitely without losing their core atomic properties, whereas polymers do experience slight chain degradation during repeated melting."
+  },
+  "terms": [
+   {
+    "t": "Life Cycle Assessment (LCA)",
+    "d": "An evaluation of the total environmental impact of a product across all stages of its life."
+   },
+   {
+    "t": "Primary Production",
+    "d": "The extraction of raw materials from the Earth, such as mining ores or drilling for crude oil."
+   },
+   {
+    "t": "Secondary Production",
+    "d": "The processing of waste or scrap materials into new usable products, commonly known as recycling."
+   },
+   {
+    "t": "Finite Resource",
+    "d": "A natural resource that cannot be replaced at the same rate it is being consumed, such as metal ores."
+   },
+   {
+    "t": "PET",
+    "d": "Polyethylene terephthalate, a thermoplastic polymer widely used for making drinks bottles."
+   },
+   {
+    "t": "Thermoplastic",
+    "d": "A polymer that softens when heated and can be melted and remoulded into new shapes."
+   },
+   {
+    "t": "Scrap Metal",
+    "d": "Discarded metal objects and metal waste collected for recycling."
+   },
+   {
+    "t": "Ingot",
+    "d": "A block of cast metal, typically formed into a rectangular shape for easy transport and rolling."
+   },
+   {
+    "t": "Extrusion",
+    "d": "A manufacturing process where melted polymer is forced through a shaped die to create continuous lengths."
+   },
+   {
+    "t": "Circular Economy",
+    "d": "An economic model focused on eliminating waste through continuous reuse, repair, and recycling."
+   },
+   {
+    "t": "Value Judgement",
+    "d": "A subjective assessment or opinion used in LCAs when assigning relative importance to different environmental impacts."
+   },
+   {
+    "t": "Bauxite",
+    "d": "The primary ore from which aluminium metal is extracted."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Saying recycling uses more energy than primary extraction.",
+    "r": "Recycling almost always uses significantly less energy, especially for metals like aluminium and copper."
+   },
+   {
+    "w": "Stating that all plastics can be melted down together.",
+    "r": "Different polymers have different melting points and properties; mixing them ruins the recycled batch."
+   },
+   {
+    "w": "Forgetting one of the four LCA stages.",
+    "r": "The four stages are extraction, manufacturing, use, and disposal. You must include all four."
+   },
+   {
+    "w": "Describing crude oil as a renewable resource.",
+    "r": "Crude oil is a finite resource formed over millions of years."
+   },
+   {
+    "w": "Stating that LCAs provide an absolute scientific fact without bias.",
+    "r": "LCAs involve subjective value judgements and can be manipulated by selective data reporting."
+   },
+   {
+    "w": "Claiming metal recycling destroys the metal's crystal structure permanently.",
+    "r": "Melting and recasting metals restores their metallic bonding and properties completely."
+   }
+  ],
+  "exam": [
+   {
+    "q": "State the four stages of a Life Cycle Assessment (LCA).",
+    "marks": 2,
+    "model": [
+     "Extracting and processing raw materials (1)",
+     "Manufacturing and packaging / Use phase / Disposal (Any 3 for 1 mark, all 4 correct for 2 marks)"
+    ],
+    "tip": "List the stages in chronological order from raw material to disposal."
+   },
+   {
+    "q": "Explain why recycling aluminium cans is more environmentally friendly than extracting aluminium from bauxite ore.",
+    "marks": 4,
+    "model": [
+     "Recycling uses significantly less energy than primary extraction from bauxite (1)",
+     "Less fossil fuel is burned, reducing carbon dioxide emissions (1)",
+     "Conserves finite bauxite ore reserves (1)",
+     "Reduces landfill waste and habitat destruction from quarrying (1)"
+    ],
+    "tip": "Link energy savings directly to carbon emissions and resource conservation."
+   },
+   {
+    "q": "Give two reasons why recycling polymers is more difficult than recycling metals.",
+    "marks": 2,
+    "model": [
+     "Polymers must be sorted by exact type, whereas many scrap metals can be melted together or separated magnetically (1)",
+     "Polymers degrade slightly in chain length when repeatedly melted, whereas metals retain their properties (1)"
+    ],
+    "tip": "Contrast sorting difficulty and polymer chain degradation with metal properties."
+   },
+   {
+    "q": "Evaluate the use of LCAs when comparing paper shopping bags with plastic shopping bags. Include one difficulty in carrying out an LCA.",
+    "marks": 6,
+    "model": [
+     "Plastic bags use crude oil (finite); paper bags use trees (renewable) (1)",
+     "Paper manufacturing requires more water and electrical energy than plastic (1)",
+     "Paper bags are heavier, resulting in higher transport fuel consumption (1)",
+     "Plastic bags persist in landfill; paper bags biodegrade faster but take up more space (1)",
+     "Difficulty: LCAs involve subjective value judgements when weighting different environmental impacts (1)",
+     "Difficulty: Companies can manipulate data or omit certain stages to show bias (1)"
+    ],
+    "tip": "Structure your answer by comparing raw materials, energy, transport, and disposal before addressing LCA limitations."
+   },
+   {
+    "q": "Describe the process of recycling PET drinks bottles after they have been collected.",
+    "marks": 3,
+    "model": [
+     "Bottles are sorted by polymer type and colour, then washed to remove labels (1)",
+     "Clean bottles are shredded into small plastic flakes (1)",
+     "Flakes are melted down and extruded into granules for moulding into new products (1)"
+    ],
+    "tip": "Mention sorting, shredding, and melting/extruding in sequence."
+   },
+   {
+    "q": "Explain why crude oil is classified as a finite resource in an LCA.",
+    "marks": 2,
+    "model": [
+     "It is being consumed at a much faster rate than it is formed (1)",
+     "It takes millions of years to form naturally from ancient biomass (1)"
+    ],
+    "tip": "Mention formation rate versus consumption rate."
+   },
+   {
+    "q": "Suggest one economic disadvantage of recycling household plastic waste.",
+    "marks": 1,
+    "model": [
+     "High cost of collecting, sorting, and transporting bulky plastic waste (1)"
+    ],
+    "tip": "Keep it concise and focus on logistics or processing costs."
+   },
+   {
+    "q": "Explain what is meant by 'primary production' in the context of material choices.",
+    "marks": 2,
+    "model": [
+     "Extracting raw materials directly from the Earth (1)",
+     "Examples include mining metal ores or distilling crude oil (1)"
+    ],
+    "tip": "Define it clearly and give a standard example."
+   },
+   {
+    "q": "Give two environmental benefits of reducing the amount of packaging used for manufactured goods.",
+    "marks": 2,
+    "model": [
+     "Conserves raw materials / reduces resource depletion (1)",
+     "Reduces the volume of waste sent to landfill or litter in the environment (1)"
+    ],
+    "tip": "Focus on resources and waste reduction."
+   }
+  ],
+  "worked": [
+   {
+    "q": "An aluminium recycling plant processes 5000 kg of scrap aluminium cans. If primary extraction of aluminium requires 150 MJ of energy per kg, and recycling requires only 5% of that energy, calculate the total energy saved by recycling this batch compared to primary production.",
+    "steps": [
+     "Step 1: Calculate the energy required for primary production of 5000 kg of aluminium. Energy = 5000 kg × 150 MJ/kg = 750,000 MJ.",
+     "Step 2: Calculate the energy required for recycling (secondary production). Recycling uses 5% of primary energy: 5% of 150 MJ/kg = 0.05 × 150 = 7.5 MJ/kg. Total recycling energy = 5000 kg × 7.5 MJ/kg = 37,500 MJ.",
+     "Step 3: Calculate the energy saved by subtracting recycling energy from primary energy. Energy saved = 750,000 MJ - 37,500 MJ = 712,500 MJ."
+    ],
+    "ans": "712,500 MJ"
+   },
+   {
+    "q": "A local council collects 12 tonnes of mixed plastic waste. Due to contamination and mixing of different polymer types, 25% of the plastic cannot be recycled and must be sent to landfill. Calculate the mass of plastic that is successfully recycled.",
+    "steps": [
+     "Step 1: Identify the total mass of plastic collected = 12 tonnes.",
+     "Step 2: Identify the percentage that is successfully recycled = 100% - 25% = 75%.",
+     "Step 3: Calculate the mass recycled: 0.75 × 12 tonnes = 9 tonnes."
+    ],
+    "ans": "9 tonnes"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Figure 3: Detailed comparison of energy consumption and environmental impact between primary extraction and secondary recycling of metals.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><rect x=\"40\" y=\"40\" width=\"140\" height=\"160\" rx=\"8\" fill=\"#fee2e2\" stroke=\"#991b1b\" stroke-width=\"2\"/><text x=\"110\" y=\"70\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#7f1d1d\">Primary Extraction</text><text x=\"110\" y=\"100\" font-size=\"11\" text-anchor=\"middle\" fill=\"#7f1d1d\">- Raw Ores / Oil</text><text x=\"110\" y=\"125\" font-size=\"11\" text-anchor=\"middle\" fill=\"#7f1d1d\">- Very High Energy</text><text x=\"110\" y=\"150\" font-size=\"11\" text-anchor=\"middle\" fill=\"#7f1d1d\">- Habitat Destruction</text><text x=\"110\" y=\"175\" font-size=\"11\" text-anchor=\"middle\" fill=\"#7f1d1d\">- High CO2 Emissions</text><rect x=\"220\" y=\"40\" width=\"140\" height=\"160\" rx=\"8\" fill=\"#dcfce7\" stroke=\"#166534\" stroke-width=\"2\"/><text x=\"290\" y=\"70\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#14532d\">Secondary Recycling</text><text x=\"290\" y=\"100\" font-size=\"11\" text-anchor=\"middle\" fill=\"#14532d\">- Scrap Materials</text><text x=\"290\" y=\"125\" font-size=\"11\" text-anchor=\"middle\" fill=\"#14532d\">- Low Energy (e.g. 5%)</text><text x=\"290\" y=\"150\" font-size=\"11\" text-anchor=\"middle\" fill=\"#14532d\">- Conserves Reserves</text><text x=\"290\" y=\"175\" font-size=\"11\" text-anchor=\"middle\" fill=\"#14532d\">- Reduced Landfill</text></svg>"
+   }
+  ],
+  "pid": "chem_ocrb.3.10",
+  "sid": "chem_ocrb",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-27T19:14:50.161Z"
+ }
+}

@@ -1342,5 +1342,871 @@
   "src": "pre",
   "by": "gemini/gemini-flash-lite-latest",
   "ts": "2026-11-26T19:42:34.340Z"
+ },
+ "chem_ocra.2.2": {
+  "summary": "The empirical formula is the simplest whole-number ratio of atoms of each element in a compound. Calculating it requires finding the mass or percentage of each element, converting these values to moles using relative atomic masses, and finding the simplest ratio by dividing by the smallest number of moles. This fundamental concept allows chemists to determine the chemical formulae of unknown substances from experimental data.",
+  "core": [
+   {
+    "h": "Introduction to Empirical Formulae",
+    "p": "Chemical formulae come in different types, and understanding the distinction is vital for quantitative chemistry. An empirical formula gives the simplest ratio of elements, whereas a molecular formula gives the actual number of atoms of each element in a molecule.",
+    "bullets": [
+     "Empirical formula shows the simplest whole-number ratio of atoms.",
+     "Molecular formula shows the exact number of atoms of each element in one molecule.",
+     "Ionic compounds always have empirical formulae because they exist as giant lattices.",
+     "Some covalent substances have the same empirical and molecular formula (e.g., water, H2O)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Empirical Formula",
+      "p": "The simplest whole-number ratio of atoms of each element in a compound."
+     },
+     {
+      "k": "key",
+      "t": "Giant Structures",
+      "p": "Ionic compounds like sodium chloride only have empirical formulae (NaCl) because they are continuous giant lattices, not discrete molecules."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Comparison of empirical and molecular formulae showing how giant ionic lattices reduce to simplest ratios while molecular substances can be scaled.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><rect x=\"30\" y=\"40\" width=\"150\" height=\"160\" rx=\"10\" fill=\"#dbeafe\" stroke=\"#1e40af\" stroke-width=\"2\"/><text x=\"105\" y=\"65\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" text-anchor=\"middle\">Empirical Formula</text><text x=\"105\" y=\"110\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\" text-anchor=\"middle\">CH2O (Glucose simplest)</text><text x=\"105\" y=\"145\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\" text-anchor=\"middle\">NaCl (Sodium chloride)</text><rect x=\"220\" y=\"40\" width=\"150\" height=\"160\" rx=\"10\" fill=\"#fef3c7\" stroke=\"#b45309\" stroke-width=\"2\"/><text x=\"295\" y=\"65\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#b45309\" text-anchor=\"middle\">Molecular Formula</text><text x=\"295\" y=\"110\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\" text-anchor=\"middle\">C6H12O6 (Actual glucose)</text><text x=\"295\" y=\"145\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\" text-anchor=\"middle\">H2O2 (Hydrogen peroxide)</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Step-by-Step Calculation Method",
+    "p": "Calculating an empirical formula from experimental mass or percentage data follows a strict, repeatable four-step algorithm. Mastering this structured layout prevents careless calculation errors in exams.",
+    "bullets": [
+     "Step 1: Write down the masses or percentage composition of each element given in the question.",
+     "Step 2: Divide each mass or percentage by the relative atomic mass (Ar) of that element to find the number of moles.",
+     "Step 3: Divide all the answers from step 2 by the smallest number of moles calculated.",
+     "Step 4: If the numbers are whole integers (or very close), write the formula. If not, multiply to find whole numbers."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Table Layout",
+      "p": "Always set out your calculation in a table with columns for Element, Mass/Percentage, Moles (mass / Ar), Divide by Smallest, and Ratio."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Dealing with Percentages",
+    "p": "Questions frequently provide percentage compositions by mass instead of absolute masses. You can treat these percentages as masses out of a total 100g sample to simplify the math.",
+    "bullets": [
+     "Assume a total sample mass of exactly 100g.",
+     "Convert % directly to grams (e.g., 40% becomes 40g).",
+     "Proceed with the standard moles calculation.",
+     "Check that all percentages add up to 100% before starting."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "100g Assumption",
+      "p": "Treating percentages as grams out of 100g gives the exact same simplest ratio without changing any values."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Handling Non-Integer Ratios",
+    "p": "Sometimes dividing by the smallest number of moles does not give immediate whole numbers. You must multiply all ratios by a common factor to reach integers.",
+    "bullets": [
+     "A ratio ending in .5 must be multiplied by 2 (e.g., 1.5 becomes 3).",
+     "A ratio ending in .33 or .67 must be multiplied by 3 (e.g., 1.33 becomes 4).",
+     "A ratio ending in .25 or .75 must be multiplied by 4 (e.g., 1.25 becomes 5).",
+     "Always apply the multiplier to ALL elements in the ratio equally."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Rounding Prematurely",
+      "p": "Do not round 1.33 down to 1 or up to 1.5. Recognise common fractions and multiply correctly."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Experimental Determination: Combustion",
+    "p": "In the laboratory, empirical formulae are often found by reacting elements together and measuring masses. A classic experiment involves burning magnesium ribbon in a crucible to form magnesium oxide.",
+    "bullets": [
+     "Weigh the empty crucible and lid.",
+     "Add clean magnesium ribbon and reweigh to find the initial mass of magnesium.",
+     "Heat strongly, lifting the lid occasionally to let oxygen in without losing magnesium oxide smoke.",
+     "Weigh the final mass of crucible, lid, and magnesium oxide, then subtract to find oxygen mass."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Lid Lifting",
+      "p": "Lifting the crucible lid allows oxygen to enter so the reaction goes to completion, but must be done carefully to prevent escape of white smoke."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Apparatus for heating magnesium in a crucible to determine its empirical oxide formula.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"200\" x2=\"350\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"3\"/><rect x=\"170\" y=\"160\" width=\"60\" height=\"40\" fill=\"#cbd5e1\" stroke=\"#475569\" stroke-width=\"2\"/><path d=\"M180,110 L220,110 L230,160 L170,160 Z\" fill=\"#94a3b8\" stroke=\"#334155\" stroke-width=\"2\"/><line x1=\"170\" y1=\"100\" x2=\"230\" y2=\"105\" stroke=\"#64748b\" stroke-width=\"3\"/><path d=\"M190,120 Q200,90 210,120\" fill=\"#fef08a\" stroke=\"#eab308\" stroke-width=\"2\"/><text x=\"200\" y=\"225\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\" text-anchor=\"middle\">Tripod and Bunsen Burner</text><text x=\"100\" y=\"80\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#1e40af\" text-anchor=\"middle\">Crucible with Lid</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Experimental Determination: Reduction",
+    "p": "Another standard method involves reducing a metal oxide using a reducing agent like hydrogen or methane gas. By measuring the loss of oxygen mass, the empirical formula of the metal oxide can be calculated.",
+    "bullets": [
+     "Pass dry hydrogen gas over a weighed amount of heated copper(II) oxide in a combustion tube.",
+     "The black copper(II) oxide turns pink/brown as it is reduced to pure copper metal.",
+     "Water is produced as a byproduct and collects at the cooler end of the tube.",
+     "Weigh the remaining solid copper to find its mass, and subtract from the initial mass to find oxygen."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Safety Hazard",
+      "p": "Hydrogen gas is extremely flammable. It must be allowed to flush through the apparatus before lighting, and burned off at the end to prevent explosions."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Water of Crystallisation",
+    "p": "Some ionic compounds trap water molecules within their crystal lattices when they form crystals from aqueous solution. These are hydrated salts, and their empirical formulae include moles of water (e.g., CuSO4 . 5H2O).",
+    "bullets": [
+     "Heating a hydrated salt drives off the water of crystallisation, leaving an anhydrous salt.",
+     "Mass of water lost = Mass of hydrated salt - Mass of anhydrous salt.",
+     "Calculate moles of anhydrous salt and moles of water evaporated.",
+     "Find the simplest whole-number ratio of salt to water molecules."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Water of Crystallisation",
+      "p": "Water molecules chemically bonded into the crystal structure of certain salts."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Relating Empirical to Molecular Formulae",
+    "p": "Higher tier students must be able to use the empirical formula and relative formula mass (Mr) of a compound to find its true molecular formula.",
+    "bullets": [
+     "Calculate the relative mass of the empirical formula unit.",
+     "Divide the actual molecular Mr (given in the question) by the empirical mass.",
+     "Multiply each number in the empirical formula by this integer.",
+     "Check that the final molecular mass matches the given Mr."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Formula Relationship",
+      "p": "Molecular Formula = n x (Empirical Formula), where n = (Molecular Mr) / (Empirical Mr)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Common Mistakes in Empirical Calculations",
+    "p": "Examiners consistently see the same errors made by students when answering quantitative chemistry questions. Being aware of these pitfalls secures top marks.",
+    "bullets": [
+     "Failing to divide by Ar and instead dividing masses directly.",
+     "Dividing by the largest number of moles rather than the smallest.",
+     "Rounding numbers too early in the calculation steps.",
+     "Forgetting to include units or writing incorrect chemical symbols."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Check Your Work",
+      "p": "Always ask yourself: does this ratio make chemical sense based on valencies and bonding?"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Exam Technique for 6-Mark Calculation Questions",
+    "p": "Six-mark questions on empirical formula require a clear, logical, and fully laid-out response. Marks are awarded for communication and method as well as the final numerical answer.",
+    "bullets": [
+     "State all headings clearly so the examiner can follow your steps.",
+     "Show working out for every division step.",
+     "State the final ratio clearly before writing the final formula.",
+     "Include units where appropriate and state final answers to appropriate significant figures."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Method Marks",
+      "p": "Even if your final arithmetic has a minor error, correct use of moles and division will earn most of the available method marks."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Making a Recipe from Ingredient Proportions",
+   "p": "Finding an empirical formula is exactly like scaling down a mega-recipe for a giant cake factory into a single family-sized batch. If a factory uses 100kg of flour and 50kg of sugar, the simplest ratio is 2 parts flour to 1 part sugar (CH2O style). The actual total amount might be massive (molecular formula), but the fundamental ratio of ingredients remains identical."
+  },
+  "terms": [
+   {
+    "t": "Empirical Formula",
+    "d": "The simplest whole-number ratio of atoms of each element in a compound."
+   },
+   {
+    "t": "Molecular Formula",
+    "d": "The actual number of atoms of each element in a molecule."
+   },
+   {
+    "t": "Relative Atomic Mass (Ar)",
+    "d": "The weighted mean mass of an atom of an element compared to 1/12th of the mass of an atom of carbon-12."
+   },
+   {
+    "t": "Relative Formula Mass (Mr)",
+    "d": "The sum of the relative atomic masses of all the atoms in the formula given."
+   },
+   {
+    "t": "Mole",
+    "d": "The amount of a substance containing 6.02 x 10^23 particles."
+   },
+   {
+    "t": "Hydrated Salt",
+    "d": "A salt that contains water of crystallisation."
+   },
+   {
+    "t": "Anhydrous Salt",
+    "d": "A salt that contains no water of crystallisation."
+   },
+   {
+    "t": "Water of Crystallisation",
+    "d": "Water molecules chemically bound within a crystal structure."
+   },
+   {
+    "t": "Combustion",
+    "d": "A chemical reaction involving burning in oxygen."
+   },
+   {
+    "t": "Reduction",
+    "d": "The removal of oxygen or gain of electrons."
+   },
+   {
+    "t": "Crucible",
+    "d": "A porcelain container capable of withstanding high temperatures."
+   },
+   {
+    "t": "Significant Figures",
+    "d": "Digits that carry meaning contributing to precision."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Dividing Ar by the mass instead of mass by Ar.",
+    "r": "Moles = Mass / Ar. Always divide mass by the atomic mass."
+   },
+   {
+    "w": "Dividing by the largest number of moles to find the ratio.",
+    "r": "Always divide all mole values by the SMALLEST number of moles."
+   },
+   {
+    "w": "Treating percentages as absolute masses without assuming 100g.",
+    "r": "Assume 100g total so percentages convert directly to grams."
+   },
+   {
+    "w": "Rounding 1.33 to 1 or 1.5 to 2 prematurely.",
+    "r": "Multiply fractions by appropriate factors (e.g., .33 by 3) to get integers."
+   },
+   {
+    "w": "Confusing empirical formula with molecular formula.",
+    "r": "Empirical is the simplest ratio; molecular is the true count."
+   },
+   {
+    "w": "Forgetting to subtract crucible mass in practical questions.",
+    "r": "Always subtract empty container mass to find pure reactant/product mass."
+   },
+   {
+    "w": "Leaving water out of hydrated salt empirical formula calculations.",
+    "r": "Treat H2O as a single chemical entity with an Mr of 18."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Define the term 'empirical formula'.",
+    "marks": 1,
+    "model": [
+     "The simplest whole-number ratio of atoms of each element in a compound."
+    ],
+    "tip": "Must include 'simplest' and 'ratio'."
+   },
+   {
+    "q": "A compound contains 85.7% carbon and 14.3% hydrogen by mass. Calculate its empirical formula. (Ar: C = 12, H = 1)",
+    "marks": 4,
+    "model": [
+     "Moles C = 85.7 / 12 = 7.14",
+     "Moles H = 14.3 / 1 = 14.3",
+     "Divide by smallest (7.14): C = 1, H = 2",
+     "Empirical formula = CH2"
+    ],
+    "tip": "Show division by Ar and division by smallest clearly."
+   },
+   {
+    "q": "Explain why sodium chloride does not have a molecular formula.",
+    "marks": 2,
+    "model": [
+     "Sodium chloride is a giant ionic lattice",
+     "It consists of a continuous 3D network of ions, not discrete molecules."
+    ],
+    "tip": "Mention giant structure / lattice."
+   },
+   {
+    "q": "A sample of hydrated copper(II) sulfate (CuSO4 . xH2O) has a mass of 25.0g. Upon heating, 15.9g of anhydrous copper(II) sulfate remains. Calculate x. (Ar: Cu = 63.5, S = 32, O = 16, H = 1)",
+    "marks": 4,
+    "model": [
+     "Mass of water lost = 25.0 - 15.9 = 9.1g",
+     "Moles CuSO4 = 15.9 / 159.5 = 0.1",
+     "Moles H2O = 9.1 / 18 = 0.5",
+     "Ratio = 1 : 5, so x = 5"
+    ],
+    "tip": "Find mass of water by subtraction first."
+   },
+   {
+    "q": "State one safety precaution when reducing copper oxide with hydrogen gas.",
+    "marks": 1,
+    "model": [
+     "Burn off excess hydrogen / wear safety goggles / allow hydrogen to flush air out first."
+    ],
+    "tip": "Hydrogen is explosive with air."
+   },
+   {
+    "q": "The empirical formula of a compound is CH2O and its relative formula mass is 180. Find its molecular formula. (Ar: C = 12, H = 1, O = 16)",
+    "marks": 3,
+    "model": [
+     "Empirical mass = 12 + (2x1) + 16 = 30",
+     "Multiplier n = 180 / 30 = 6",
+     "Molecular formula = C6H12O6"
+    ],
+    "tip": "Find empirical mass first, then divide molecular Mr by it."
+   },
+   {
+    "q": "Describe how to safely heat magnesium ribbon in a crucible to find its empirical oxide formula.",
+    "marks": 4,
+    "model": [
+     "Weigh clean magnesium in a weighed crucible with lid.",
+     "Heat strongly with a Bunsen burner.",
+     "Lift the lid periodically to allow oxygen in.",
+     "Cool and reweigh, repeating until constant mass."
+    ],
+    "tip": "Mention constant mass for complete reaction."
+   },
+   {
+    "q": "A hydrocarbon contains 82.8% carbon and 17.2% hydrogen by mass. Determine its empirical formula.",
+    "marks": 3,
+    "model": [
+     "Moles C = 82.8 / 12 = 6.9",
+     "Moles H = 17.2 / 1 = 17.2",
+     "Ratio = 1 : 2.5 (multiply by 2 to get C2H5)"
+    ],
+    "tip": "Look out for .5 ratios requiring multiplication by 2."
+   },
+   {
+    "q": "What is the difference between an empirical formula and a molecular formula?",
+    "marks": 2,
+    "model": [
+     "Empirical formula is the simplest ratio of atoms.",
+     "Molecular formula is the actual number of atoms in a molecule."
+    ],
+    "tip": "Keep definitions distinct and direct."
+   },
+   {
+    "q": "A compound of iron and oxygen contains 72.4% iron by mass. Calculate its empirical formula. (Ar: Fe = 56, O = 16)",
+    "marks": 4,
+    "model": [
+     "Oxygen percentage = 100 - 72.4 = 27.6%",
+     "Moles Fe = 72.4 / 56 = 1.29",
+     "Moles O = 27.6 / 16 = 1.725",
+     "Ratio = 1 : 1.33 (multiply by 3 to get Fe3O4)"
+    ],
+    "tip": "Calculate missing percentage first if only one element is given."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Calculate the empirical formula of an oxide of iron formed when 11.2g of iron reacts with 4.8g of oxygen. (Ar: Fe = 56, O = 16)",
+    "steps": [
+     "Step 1: Write masses: Fe = 11.2g, O = 4.8g.",
+     "Step 2: Calculate moles: Moles Fe = 11.2 / 56 = 0.2 mol. Moles O = 4.8 / 16 = 0.3 mol.",
+     "Step 3: Divide by smallest (0.2): Fe = 0.2 / 0.2 = 1. O = 0.3 / 0.2 = 1.5.",
+     "Step 4: Multiply by 2 to get whole numbers: Fe = 2, O = 3.",
+     "Final Answer: Fe2O3"
+    ],
+    "ans": "Fe2O3"
+   },
+   {
+    "q": "Find the molecular formula of a compound with empirical formula CH2 and relative molecular mass 42. (Ar: C = 12, H = 1)",
+    "steps": [
+     "Step 1: Calculate empirical formula mass: 12 + (2 x 1) = 14.",
+     "Step 2: Divide molecular Mr by empirical mass: 42 / 14 = 3.",
+     "Step 3: Multiply each number in empirical formula by 3: C(1x3)H(2x3) = C3H6.",
+     "Final Answer: C3H6"
+    ],
+    "ans": "C3H6"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Flowchart outlining the four-step calculation process for determining empirical formulae from mass data.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><rect x=\"20\" y=\"20\" width=\"170\" height=\"80\" rx=\"8\" fill=\"#dbeafe\" stroke=\"#1e40af\" stroke-width=\"2\"/><text x=\"105\" y=\"45\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\" text-anchor=\"middle\">1. Mass / Percentage</text><text x=\"105\" y=\"70\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#334155\" text-anchor=\"middle\">Write down given values</text><rect x=\"210\" y=\"20\" width=\"170\" height=\"80\" rx=\"8\" fill=\"#dbeafe\" stroke=\"#1e40af\" stroke-width=\"2\"/><text x=\"295\" y=\"45\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\" text-anchor=\"middle\">2. Calculate Moles</text><text x=\"295\" y=\"70\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#334155\" text-anchor=\"middle\">Divide mass by Ar</text><rect x=\"20\" y=\"130\" width=\"170\" height=\"80\" rx=\"8\" fill=\"#fef3c7\" stroke=\"#b45309\" stroke-width=\"2\"/><text x=\"105\" y=\"155\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#b45309\" text-anchor=\"middle\">3. Divide by Smallest</text><text x=\"105\" y=\"180\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#334155\" text-anchor=\"middle\">Find relative mole ratio</text><rect x=\"210\" y=\"130\" width=\"170\" height=\"80\" rx=\"8\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"2\"/><text x=\"295\" y=\"155\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\" text-anchor=\"middle\">4. Whole Number Ratio</text><text x=\"295\" y=\"180\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#334155\" text-anchor=\"middle\">Multiply if needed for integers</text></svg>"
+   }
+  ],
+  "pid": "chem_ocra.2.2",
+  "sid": "chem_ocra",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-27T18:59:13.370Z"
+ },
+ "chem_ocra.2.5": {
+  "summary": "Chromatography is a fundamental analytical technique used to separate and identify the components of a mixture based on their relative distribution between a mobile phase and a stationary phase. In OCR GCSE Chemistry, students must master the practical execution of paper and thin-layer chromatography (TLC), understand the molecular interactions driving separation, and accurately calculate Rf values to identify substances by comparison with known standards. This topic is essential for the PAG C3 practical requirement and forms the basis for forensic and chemical analysis.",
+  "core": [
+   {
+    "h": "The Concept of Chromatography",
+    "p": "Chromatography is used to separate mixtures of soluble substances, such as dyes, inks, or food colorings. The separation occurs because different substances in the mixture have different levels of attraction to the stationary phase and different solubilities in the mobile phase.",
+    "bullets": [
+     "Separation depends on the distribution of substances between two phases.",
+     "A substance that is more soluble in the mobile phase will move further up the chromatogram.",
+     "A substance with a stronger affinity for the stationary phase will move more slowly.",
+     "Pure substances produce a single spot, while mixtures produce multiple spots."
+    ],
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Chromatography",
+      "p": "An analytical technique used to separate the components of a mixture based on their relative solubilities in a mobile phase and their attraction to a stationary phase."
+     }
+    ]
+   },
+   {
+    "h": "The Mobile Phase",
+    "p": "The mobile phase is the phase that moves through the chromatography system. In paper and thin-layer chromatography, this is a liquid solvent (or a mixture of solvents).",
+    "bullets": [
+     "The solvent moves up the paper or plate by capillary action.",
+     "Common solvents include water, ethanol, or organic solvents like propanone.",
+     "The choice of solvent affects how far each component travels.",
+     "Components must be soluble in the mobile phase to move at all."
+    ],
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Mobile Phase",
+      "p": "The phase that moves, carrying the components of the mixture with it. In PC and TLC, it is the liquid solvent."
+     }
+    ]
+   },
+   {
+    "h": "The Stationary Phase",
+    "p": "The stationary phase is the phase that does not move. It acts as a support that 'holds back' the components of the mixture as the mobile phase passes over it.",
+    "bullets": [
+     "In paper chromatography, the stationary phase is the chromatography paper (cellulose).",
+     "In thin-layer chromatography (TLC), the stationary phase is a thin layer of silica gel or alumina on a glass or plastic plate.",
+     "The stationary phase provides a surface for the molecules to interact with.",
+     "The interaction is often called 'adsorption' in TLC."
+    ],
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Stationary Phase",
+      "p": "The phase that does not move. In paper chromatography, it is the paper; in TLC, it is the silica or alumina layer."
+     }
+    ]
+   },
+   {
+    "h": "The Mechanism of Separation",
+    "p": "Separation is a dynamic process. Molecules are constantly moving between being dissolved in the solvent (mobile) and being stuck to the stationary phase. This is known as partitioning.",
+    "bullets": [
+     "Substances with a high affinity for the stationary phase spend more time 'stuck' and move slowly.",
+     "Substances with high solubility in the mobile phase spend more time 'moving' and travel further.",
+     "The unique balance of these two forces for each substance results in different travel distances.",
+     "This allows us to identify substances by their specific Rf values."
+    ],
+    "fig": [
+     {
+      "cap": "Standard setup for paper chromatography showing the baseline, solvent level, and the lid to prevent evaporation.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"120\" y=\"30\" width=\"160\" height=\"190\" fill=\"#f3f4f6\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"140\" y=\"40\" width=\"120\" height=\"170\" fill=\"#ffffff\" stroke=\"#1b2540\" stroke-dasharray=\"2\"/><rect x=\"120\" y=\"190\" width=\"160\" height=\"30\" fill=\"#dbeafe\" opacity=\"0.6\"/><line x1=\"140\" y1=\"180\" x2=\"260\" y2=\"180\" stroke=\"#1b2540\" stroke-width=\"1\"/><circle cx=\"170\" cy=\"180\" r=\"4\" fill=\"#fecaca\"/><circle cx=\"210\" cy=\"180\" r=\"4\" fill=\"#bbf7d0\"/><circle cx=\"230\" cy=\"180\" r=\"4\" fill=\"#e9d5ff\"/><line x1=\"110\" y1=\"30\" x2=\"290\" y2=\"30\" stroke=\"#1b2540\" stroke-width=\"3\"/><text x=\"300\" y=\"35\" fill=\"#1b2540\" font-size=\"12\">Lid</text><text x=\"160\" y=\"100\" fill=\"#1b2540\" font-size=\"12\">Paper</text><text x=\"300\" y=\"210\" fill=\"#1b2540\" font-size=\"12\">Solvent</text><text x=\"300\" y=\"185\" fill=\"#1b2540\" font-size=\"12\">Baseline</text><text x=\"50\" y=\"220\" fill=\"#1b2540\" font-size=\"12\">Beaker</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Thin-Layer Chromatography (TLC)",
+    "p": "TLC is a more advanced version of paper chromatography. Instead of paper, a thin layer of adsorbent material (like silica) is coated onto a rigid plate.",
+    "bullets": [
+     "TLC is faster than paper chromatography.",
+     "It provides better separation of components (sharper spots).",
+     "It is more sensitive, meaning smaller samples can be used.",
+     "The plates can be heated or treated with chemicals that would destroy paper."
+    ],
+    "table": {
+     "head": [
+      "Feature",
+      "Paper Chromatography",
+      "Thin-Layer Chromatography"
+     ],
+     "rows": [
+      [
+       "Stationary Phase",
+       "Cellulose (Paper)",
+       "Silica or Alumina layer"
+      ],
+      [
+       "Speed",
+       "Slower",
+       "Faster"
+      ],
+      [
+       "Sensitivity",
+       "Lower",
+       "Higher"
+      ]
+     ]
+    }
+   },
+   {
+    "h": "Practical Procedure (PAG C3)",
+    "p": "To ensure accurate results, specific steps must be followed during the chromatography experiment. Errors in setup can lead to unusable chromatograms.",
+    "bullets": [
+     "Draw the baseline (start line) in **pencil**, as ink from a pen would dissolve and interfere with the results.",
+     "Place the spots of sample on the baseline and let them dry.",
+     "Ensure the solvent level is **below** the pencil line so the samples don't wash into the beaker.",
+     "Place a lid on the container to create a saturated atmosphere and prevent the solvent from evaporating.",
+     "Remove the paper/plate before the solvent reaches the very top and mark the **solvent front** immediately."
+    ],
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Common Error",
+      "p": "If the solvent level is above the pencil line, the samples will dissolve into the bulk solvent in the beaker rather than moving up the paper."
+     }
+    ]
+   },
+   {
+    "h": "Calculating Rf Values",
+    "p": "The Retention Factor (Rf) is a ratio used to identify substances. It compares the distance traveled by a substance to the distance traveled by the solvent.",
+    "bullets": [
+     "Rf = (distance moved by substance) / (distance moved by solvent).",
+     "The distance for the substance is measured from the baseline to the **center** of the spot.",
+     "The distance for the solvent is measured from the baseline to the solvent front.",
+     "Rf values are always between 0 and 1 and have **no units**."
+    ],
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Rf Value",
+      "p": "The ratio of the distance moved by a compound to the distance moved by the solvent front."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Measurements required for Rf calculation: Distance A (substance) and Distance B (solvent).",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"140\" y=\"40\" width=\"120\" height=\"170\" fill=\"#ffffff\" stroke=\"#1b2540\"/><line x1=\"140\" y1=\"185\" x2=\"260\" y2=\"185\" stroke=\"#1b2540\" stroke-width=\"1\"/><line x1=\"140\" y1=\"65\" x2=\"260\" y2=\"65\" stroke=\"#1b2540\" stroke-dasharray=\"4\"/><circle cx=\"200\" cy=\"110\" r=\"6\" fill=\"#fde68a\" stroke=\"#1b2540\"/><line x1=\"120\" y1=\"185\" x2=\"120\" y2=\"110\" stroke=\"#1b2540\" marker-end=\"url(#arrow)\"/><line x1=\"280\" y1=\"185\" x2=\"280\" y2=\"65\" stroke=\"#1b2540\" marker-end=\"url(#arrow)\"/><text x=\"50\" y=\"150\" fill=\"#1b2540\" font-size=\"12\">Distance A</text><text x=\"290\" y=\"130\" fill=\"#1b2540\" font-size=\"12\">Distance B</text><text x=\"50\" y=\"185\" fill=\"#1b2540\" font-size=\"12\">Baseline</text><text x=\"50\" y=\"65\" fill=\"#1b2540\" font-size=\"12\">Solvent Front</text><defs><marker id=\"arrow\" markerWidth=\"10\" markerHeight=\"10\" refX=\"0\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L0,6 L9,3 z\" fill=\"#1b2540\" /></marker></defs></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Interpreting Chromatograms",
+    "p": "Chromatograms allow us to determine if a substance is pure or a mixture and to identify specific components by comparing them to known standards.",
+    "bullets": [
+     "A pure substance will only produce one spot in any given solvent.",
+     "An impure substance (mixture) will separate into two or more spots.",
+     "Two substances are likely the same if they have the same Rf value in the **same solvent**.",
+     "If a spot does not move from the baseline, it is insoluble in that specific solvent."
+    ],
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam Tip",
+      "p": "If two spots have the same Rf value in one solvent, they might be the same, but to be sure, you should test them again using a different solvent."
+     }
+    ]
+   },
+   {
+    "h": "Locating Agents",
+    "p": "Many substances, such as amino acids or sugars, are colorless and cannot be seen on a chromatogram with the naked eye.",
+    "bullets": [
+     "Locating agents are chemicals used to make colorless spots visible.",
+     "Ninhydrin is a common locating agent used to turn amino acids purple/pink.",
+     "UV light can also be used; some TLC plates contain a fluorescent dye that glows, and the spots appear as dark patches where they block the glow.",
+     "Iodine vapor is another common locating agent that turns spots brown."
+    ]
+   },
+   {
+    "h": "Factors Affecting Rf Values",
+    "p": "An Rf value is not a fixed physical constant like a melting point; it depends on the conditions of the experiment.",
+    "bullets": [
+     "The solvent used (mobile phase) is the biggest factor.",
+     "The type of paper or TLC plate (stationary phase) used.",
+     "The temperature of the experiment.",
+     "The presence of other dissolved substances (though this is usually a minor effect)."
+    ]
+   },
+   {
+    "h": "The Role of Adsorption in TLC",
+    "p": "In TLC, the separation is primarily due to adsorption. This is the process where molecules 'stick' to the surface of the stationary phase.",
+    "bullets": [
+     "Silica gel is very polar.",
+     "Polar molecules will adsorb strongly to the silica and move slowly.",
+     "Non-polar molecules will have a higher affinity for the mobile phase (if the solvent is non-polar) and move faster.",
+     "This difference in 'stickiness' is what creates the separation."
+    ],
+    "fig": [
+     {
+      "cap": "A TLC plate after development. The silica layer is coated on a plastic or glass backing.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"150\" y=\"20\" width=\"100\" height=\"200\" fill=\"#e5e7eb\" stroke=\"#1b2540\"/><rect x=\"155\" y=\"20\" width=\"90\" height=\"200\" fill=\"#ffffff\"/><line x1=\"155\" y1=\"190\" x2=\"245\" y2=\"190\" stroke=\"#1b2540\"/><line x1=\"155\" y1=\"50\" x2=\"245\" y2=\"50\" stroke=\"#1b2540\" stroke-dasharray=\"2\"/><circle cx=\"200\" cy=\"190\" r=\"3\" fill=\"#1b2540\"/><circle cx=\"200\" cy=\"120\" r=\"5\" fill=\"#bbf7d0\" stroke=\"#1b2540\"/><circle cx=\"200\" cy=\"80\" r=\"5\" fill=\"#fecaca\" stroke=\"#1b2540\"/><text x=\"260\" y=\"55\" fill=\"#1b2540\" font-size=\"12\">Solvent Front</text><text x=\"50\" y=\"120\" fill=\"#1b2540\" font-size=\"12\">TLC Plate</text><text x=\"260\" y=\"120\" fill=\"#1b2540\" font-size=\"12\">Silica Layer</text><text x=\"260\" y=\"150\" fill=\"#1b2540\" font-size=\"12\">Separated Spot</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Summary of PAG C3 Requirements",
+    "p": "For the OCR practical endorsement, you must be able to perform these techniques safely and accurately.",
+    "bullets": [
+     "Safety: Wear eye protection; some solvents are flammable or toxic.",
+     "Accuracy: Use a capillary tube to apply small, concentrated spots.",
+     "Measurement: Use a ruler with mm precision for distance measurements.",
+     "Calculation: Show all working for Rf values, usually to 2 decimal places."
+    ]
+   }
+  ],
+  "analogy": {
+   "t": "The Moving Walkway",
+   "p": "Imagine a moving walkway (the mobile phase) in an airport. Along the side of the walkway are various shops (the stationary phase). People (the substances) get on the walkway. Some people love shopping and keep stepping off the walkway to look at the stores; they move through the airport very slowly. Other people aren't interested in shopping and stay on the walkway the whole time; they reach the end very quickly. The 'separation' happens because of how much time each person spends on the walkway versus in the shops. This breaks down because molecules don't 'choose' to stop; they are distributed based on physical forces and probability (equilibrium)."
+  },
+  "terms": [
+   {
+    "t": "Mobile Phase",
+    "d": "The phase that moves in chromatography, consisting of the solvent."
+   },
+   {
+    "t": "Stationary Phase",
+    "d": "The phase that does not move in chromatography, such as the paper or silica layer."
+   },
+   {
+    "t": "Rf Value",
+    "d": "Retention factor; the ratio of the distance moved by a substance to the distance moved by the solvent front."
+   },
+   {
+    "t": "Solvent Front",
+    "d": "The furthest point reached by the solvent on the chromatography paper or plate."
+   },
+   {
+    "t": "Baseline",
+    "d": "The pencil line drawn near the bottom of the paper where the samples are applied."
+   },
+   {
+    "t": "Adsorption",
+    "d": "The process by which molecules of a substance adhere to the surface of the stationary phase."
+   },
+   {
+    "t": "Partitioning",
+    "d": "The distribution of a substance between the mobile and stationary phases."
+   },
+   {
+    "t": "Locating Agent",
+    "d": "A chemical or physical treatment used to make colorless spots visible on a chromatogram."
+   },
+   {
+    "t": "TLC",
+    "d": "Thin-Layer Chromatography; a technique using a thin layer of adsorbent on a flat plate."
+   },
+   {
+    "t": "Chromatogram",
+    "d": "The final record (the paper or plate) showing the separated substances."
+   },
+   {
+    "t": "Affinity",
+    "d": "The natural attraction or force between a substance and a phase (mobile or stationary)."
+   },
+   {
+    "t": "Capillary Action",
+    "d": "The process by which the solvent moves up the stationary phase against gravity."
+   },
+   {
+    "t": "Ninhydrin",
+    "d": "A specific locating agent used to detect amino acids."
+   },
+   {
+    "t": "Pure Substance",
+    "d": "A substance that consists of only one type of element or compound, producing one spot in chromatography."
+   },
+   {
+    "t": "Mixture",
+    "d": "Two or more substances that are not chemically combined, which can be separated by chromatography."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Drawing the baseline in ink.",
+    "r": "Draw the baseline in pencil because ink will dissolve in the solvent and move up the paper."
+   },
+   {
+    "w": "The Rf value is 1.2.",
+    "r": "Rf values must always be less than 1.0 because the substance cannot travel further than the solvent."
+   },
+   {
+    "w": "The Rf value is 0.5 cm.",
+    "r": "Rf values have no units because they are a ratio of two distances."
+   },
+   {
+    "w": "Putting the solvent level above the spots.",
+    "r": "The solvent must be below the baseline so the spots don't wash off into the solvent reservoir."
+   },
+   {
+    "w": "Measuring the substance distance from the bottom of the paper.",
+    "r": "All distances must be measured starting from the pencil baseline."
+   },
+   {
+    "w": "Forgetting to put a lid on the beaker.",
+    "r": "A lid is needed to stop the solvent from evaporating, which ensures the atmosphere is saturated."
+   },
+   {
+    "w": "Measuring to the top of the spot.",
+    "r": "Measure to the vertical center of the spot for the most accurate Rf value."
+   },
+   {
+    "w": "Thinking a substance is pure because it only shows one spot in one solvent.",
+    "r": "It might be a mixture where components have the same Rf in that solvent; test with a different solvent to confirm."
+   }
+  ],
+  "exam": [
+   {
+    "q": "State the formula used to calculate the Rf value of a substance.",
+    "marks": 1,
+    "model": [
+     "Rf = distance moved by substance / distance moved by solvent front"
+    ],
+    "tip": "Always write the formula before substituting numbers to gain a 'method' mark if you make a calculation error."
+   },
+   {
+    "q": "Explain why the start line in chromatography must be drawn in pencil rather than pen.",
+    "marks": 2,
+    "model": [
+     "Pencil lead (graphite) is insoluble in the solvent.",
+     "Ink from a pen would dissolve and move up the paper, interfering with the results."
+    ],
+    "tip": "Use the word 'insoluble' to describe the pencil and 'interfere' for the ink."
+   },
+   {
+    "q": "A spot moved 4.5 cm from the baseline. The solvent front moved 9.0 cm. Calculate the Rf value.",
+    "marks": 2,
+    "model": [
+     "Rf = 4.5 / 9.0",
+     "Rf = 0.5"
+    ],
+    "tip": "Ensure you do not include units like 'cm' in your final answer."
+   },
+   {
+    "q": "Describe how chromatography separates the components of a mixture.",
+    "marks": 3,
+    "model": [
+     "The mixture is dissolved in a mobile phase (solvent).",
+     "Components move at different speeds depending on their relative attraction to the stationary phase...",
+     "...and their solubility in the mobile phase."
+    ],
+    "tip": "Mention both phases and the idea of 'different speeds' or 'distribution'."
+   },
+   {
+    "q": "Give two advantages of using thin-layer chromatography (TLC) instead of paper chromatography.",
+    "marks": 2,
+    "model": [
+     "TLC is faster.",
+     "TLC provides better/sharper separation of spots.",
+     "TLC is more sensitive (requires less sample)."
+    ],
+    "tip": "Any two of these will get full marks."
+   },
+   {
+    "q": "Why is a lid placed on the beaker during a chromatography experiment?",
+    "marks": 1,
+    "model": [
+     "To prevent the solvent from evaporating (and to saturate the air with solvent vapor)."
+    ],
+    "tip": "Evaporation is the key word here."
+   },
+   {
+    "q": "What is a locating agent and why is it used?",
+    "marks": 2,
+    "model": [
+     "A chemical or UV light used to make spots visible.",
+     "It is used when the substances being separated are colorless."
+    ],
+    "tip": "Mention 'colorless' to explain the 'why'."
+   },
+   {
+    "q": "A student finds that a spot has an Rf value of 0.0. Suggest what this means about the substance.",
+    "marks": 1,
+    "model": [
+     "The substance is insoluble in the solvent used."
+    ],
+    "tip": "If it doesn't move, it didn't dissolve in the mobile phase."
+   },
+   {
+    "q": "Describe the method for carrying out paper chromatography to identify the dyes in a food coloring. (PAG C3)",
+    "marks": 6,
+    "model": [
+     "Draw a pencil baseline 1-2 cm from the bottom of the chromatography paper.",
+     "Use a capillary tube to place a small spot of the food coloring on the line.",
+     "Pour the solvent into a beaker to a depth below the pencil line.",
+     "Place the paper in the beaker, ensuring it is vertical and the spots are not submerged.",
+     "Place a lid on the beaker and wait for the solvent to travel near the top.",
+     "Remove the paper, mark the solvent front with a pencil, and allow it to dry."
+    ],
+    "tip": "For 6 marks, ensure the steps are in a logical order and include all key practical details (pencil, solvent level, lid, solvent front)."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A student is analyzing a mixture of three dyes (A, B, and C). Dye A moves 2.4 cm, Dye B moves 5.6 cm, and Dye C moves 7.2 cm. The solvent front is at 8.0 cm. Calculate the Rf values for all three dyes and identify which dye has the highest affinity for the stationary phase.",
+    "steps": [
+     "Rf (A) = 2.4 / 8.0 = 0.30",
+     "Rf (B) = 5.6 / 8.0 = 0.70",
+     "Rf (C) = 7.2 / 8.0 = 0.90",
+     "The dye with the highest affinity for the stationary phase moves the slowest (shortest distance)."
+    ],
+    "ans": "Rf values: A=0.30, B=0.70, C=0.90. Dye A has the highest affinity for the stationary phase because it traveled the shortest distance."
+   },
+   {
+    "q": "A technician uses TLC to identify an unknown drug sample. The unknown sample produces a spot with an Rf of 0.45. Known standards for Drug X (Rf 0.32), Drug Y (Rf 0.45), and Drug Z (Rf 0.58) are run under the same conditions. Identify the unknown drug and explain your reasoning.",
+    "steps": [
+     "Compare the Rf value of the unknown to the standards.",
+     "The unknown Rf (0.45) matches the Rf of Drug Y (0.45).",
+     "Since the conditions (solvent and stationary phase) were the same, the substances are likely the same."
+    ],
+    "ans": "The unknown drug is Drug Y. This is because it has the same Rf value as the known standard of Drug Y when tested under identical conditions."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Complete setup for paper chromatography (PAG C3).",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"130\" y=\"20\" width=\"140\" height=\"200\" fill=\"#f3f4f6\" stroke=\"#1b2540\"/><rect x=\"150\" y=\"30\" width=\"100\" height=\"180\" fill=\"#ffffff\" stroke=\"#1b2540\" stroke-dasharray=\"2\"/><rect x=\"130\" y=\"195\" width=\"140\" height=\"25\" fill=\"#dbeafe\"/><line x1=\"150\" y1=\"185\" x2=\"250\" y2=\"185\" stroke=\"#1b2540\"/><circle cx=\"175\" cy=\"185\" r=\"3\" fill=\"#fecaca\"/><circle cx=\"225\" cy=\"185\" r=\"3\" fill=\"#bbf7d0\"/><line x1=\"120\" y1=\"20\" x2=\"280\" y2=\"20\" stroke=\"#1b2540\" stroke-width=\"4\"/><text x=\"285\" y=\"25\" font-size=\"12\">Lid</text><text x=\"285\" y=\"190\" font-size=\"12\">Pencil Line</text><text x=\"285\" y=\"210\" font-size=\"12\">Solvent</text><text x=\"70\" y=\"100\" font-size=\"12\">Paper</text></svg>"
+   },
+   {
+    "cap": "A developed TLC plate showing the separation of a mixture into three distinct components.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"160\" y=\"20\" width=\"80\" height=\"200\" fill=\"#ffffff\" stroke=\"#1b2540\"/><line x1=\"160\" y1=\"190\" x2=\"240\" y2=\"190\" stroke=\"#1b2540\"/><line x1=\"160\" y1=\"40\" x2=\"240\" y2=\"40\" stroke=\"#1b2540\" stroke-dasharray=\"3\"/><circle cx=\"200\" cy=\"160\" r=\"5\" fill=\"#fecaca\"/><circle cx=\"200\" cy=\"110\" r=\"5\" fill=\"#bbf7d0\"/><circle cx=\"200\" cy=\"60\" r=\"5\" fill=\"#e9d5ff\"/><text x=\"250\" y=\"45\" font-size=\"12\">Solvent Front</text><text x=\"250\" y=\"195\" font-size=\"12\">Baseline</text><text x=\"80\" y=\"110\" font-size=\"12\">TLC Plate</text></svg>"
+   },
+   {
+    "cap": "Diagram illustrating the measurements needed to calculate the Rf value of the middle spot.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"150\" y=\"30\" width=\"100\" height=\"180\" fill=\"#ffffff\" stroke=\"#1b2540\"/><line x1=\"150\" y1=\"180\" x2=\"250\" y2=\"180\" stroke=\"#1b2540\"/><line x1=\"150\" y1=\"50\" x2=\"250\" y2=\"50\" stroke=\"#1b2540\" stroke-dasharray=\"2\"/><circle cx=\"200\" cy=\"100\" r=\"6\" fill=\"#fde68a\"/><line x1=\"130\" y1=\"180\" x2=\"130\" y2=\"100\" stroke=\"#1b2540\" stroke-width=\"1\"/><line x1=\"125\" y1=\"180\" x2=\"135\" y2=\"180\" stroke=\"#1b2540\"/><line x1=\"125\" y1=\"100\" x2=\"135\" y2=\"100\" stroke=\"#1b2540\"/><line x1=\"270\" y1=\"180\" x2=\"270\" y2=\"50\" stroke=\"#1b2540\" stroke-width=\"1\"/><line x1=\"265\" y1=\"180\" x2=\"275\" y2=\"180\" stroke=\"#1b2540\"/><line x1=\"265\" y1=\"50\" x2=\"275\" y2=\"50\" stroke=\"#1b2540\"/><text x=\"30\" y=\"145\" font-size=\"12\">Substance (a)</text><text x=\"280\" y=\"120\" font-size=\"12\">Solvent (b)</text><text x=\"165\" y=\"225\" font-size=\"12\">Rf = a / b</text></svg>"
+   }
+  ],
+  "pid": "chem_ocra.2.5",
+  "sid": "chem_ocra",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3-flash-preview",
+  "ts": "2026-11-27T18:59:46.066Z"
  }
 }

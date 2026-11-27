@@ -1678,5 +1678,904 @@
   "src": "pre",
   "by": "claude/claude-opus-5-5",
   "ts": "2026-11-27T01:44:17.068Z"
+ },
+ "phy_ocra.11.3": {
+  "summary": "When sound waves travel from one medium into another, such as from air into water or a solid wall, their speed and wavelength change while their frequency remains constant. This change in speed causes the waves to change direction, a phenomenon known as refraction, and results in partial reflection and transmission at the boundary. Understanding these boundary behaviors is essential for explaining how sonar operates, why sound behaves differently in various materials, and how seismic waves travel through the Earth.",
+  "core": [
+   {
+    "h": "1. Introduction to Sound Wave Boundaries",
+    "p": "Sound waves are longitudinal waves that require a medium to travel through. When a sound wave meets a boundary between two different media, part of the wave is reflected, and part is transmitted into the second medium, where its speed and wavelength change.",
+    "bullets": [
+     "Sound requires particles to oscillate; thus, it cannot travel through a vacuum.",
+     "Different media have different densities and elastic properties, affecting how fast sound travels.",
+     "At any boundary, energy is shared between the reflected wave and the transmitted wave."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Energy Conservation",
+      "p": "The total energy of the incident wave equals the sum of the energies of the reflected and transmitted waves."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. What Happens to Frequency at a Boundary?",
+    "p": "When a sound wave crosses a boundary into a new medium, its frequency remains completely unchanged. Frequency is determined entirely by the source producing the sound and cannot be altered by the medium it travels through.",
+    "bullets": [
+     "Source determines frequency: If a tuning fork vibrates at 440 Hz, the sound wave has a frequency of 440 Hz in air, water, and steel.",
+     "Vibration rate matches: The particles at the boundary are forced to vibrate at the exact same frequency as the incoming wave.",
+     "Constant frequency is the foundational rule for wave boundary calculations."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Frequency Trap",
+      "p": "Never state that frequency changes when a wave crosses a boundary; only speed and wavelength change."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "3. Changes in Wave Speed Across Media",
+    "p": "The speed of sound depends strongly on the medium's density and stiffness. In general, sound travels fastest in solids, slower in liquids, and slowest in gases because particles are closer together in denser, stiffer materials.",
+    "bullets": [
+     "Speed in air is approximately 340 m/s at room temperature.",
+     "Speed in water is about 1500 m/s because water molecules are more tightly bound than gas molecules.",
+     "Speed in steel is around 5000 m/s due to very strong elastic forces between iron atoms."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Wave Speed Definition",
+      "p": "Wave speed is the distance travelled by a wave per second, calculated as v = f times lambda."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. The Wave Equation and Wavelength Scaling",
+    "p": "Because the wave speed (v) changes across a boundary while frequency (f) stays constant, the wavelength (lambda) must change proportionally according to the wave equation v = f * lambda.",
+    "bullets": [
+     "If speed increases upon entering a new medium, wavelength must also increase.",
+     "If speed decreases, wavelength must decrease by the exact same factor.",
+     "Wavelength is directly proportional to wave speed since frequency is constant."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Proportionality Rule",
+      "p": "Since v = f * lambda and f is constant, v is directly proportional to lambda."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "5. Refraction of Sound Waves",
+    "p": "Refraction is the change in direction of a wave when it crosses a boundary at an angle, caused by the change in wave speed as it enters a different medium.",
+    "bullets": [
+     "When sound passes from a slower medium into a faster medium, it bends away from the normal.",
+     "When sound passes from a faster medium into a slower medium, it bends towards the normal.",
+     "Refraction explains why sounds can sometimes be heard over much greater distances at night."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Refraction",
+      "p": "The change in direction of a wave as it passes from one medium to another at an angle, due to a change in speed."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Acoustic Impedance and Reflection",
+    "p": "Acoustic impedance (Z) is a measure of how much resistance a medium offers to the flow of sound waves, calculated as the product of density and wave speed (Z = rho * v).",
+    "bullets": [
+     "A large difference in acoustic impedance between two media results in strong reflection and weak transmission.",
+     "A small difference in impedance results in most of the sound being transmitted and little reflected.",
+     "Air and human tissue have very different acoustic impedances, requiring gel during ultrasound scans."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Impedance Formula",
+      "p": "Acoustic impedance Z = rho * v, where rho is density and v is wave speed."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Reflection of Sound at Boundaries",
+    "p": "When sound hits a hard boundary, it reflects according to the law of reflection, where the angle of incidence equals the angle of reflection. This is the underlying principle behind echoes and echolocation.",
+    "bullets": [
+     "Hard surfaces like concrete walls or cave walls are excellent reflectors of sound.",
+     "Soft materials like foam or carpets absorb sound and reduce reflections.",
+     "Echo sounding uses reflected sound pulses to measure water depth or locate objects."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Law of Reflection",
+      "p": "The angle of incidence is equal to the angle of reflection, measured relative to the normal."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Ultrasound Applications in Medicine",
+    "p": "Ultrasound uses high-frequency sound waves above 20,000 Hz. When these waves cross boundaries between different tissues in the body, partial reflections occur, which are detected to build real-time images.",
+    "bullets": [
+     "A coupling gel is applied to the skin to match acoustic impedance and prevent reflection at the air-skin boundary.",
+     "Different internal tissues (muscle, bone, blood, fat) have different densities, creating clear boundary reflections.",
+     "Safe non-ionizing technique used for prenatal scans and diagnostic imaging."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam Tip",
+      "p": "Always explain the role of acoustic matching gel when discussing medical ultrasound scans."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Sonar and Underwater Detection",
+    "p": "SONAR (Sound Navigation and Ranging) relies on transmitting sound pulses through water and timing how long the reflected echo takes to return from the seabed or submerged objects.",
+    "bullets": [
+     "Distance is calculated using the equation distance = speed * time / 2 (dividing by 2 because the sound travels to the target and back).",
+     "Used by ships to map the ocean floor and detect submarines.",
+     "Low frequency sonar travels vast distances underwater."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Sonar Equation",
+      "p": "d = (v * t) / 2 is essential for calculating depths using echo times."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Seismic Waves Through Earth Boundaries",
+    "p": "Earthquakes produce seismic waves (P-waves and S-waves) that travel through the Earth. As they cross boundaries between different mantle and core layers, they refract and reflect, providing evidence for the Earth's internal structure.",
+    "bullets": [
+     "P-waves are longitudinal and can travel through both solids and liquids.",
+     "S-waves are transverse and can only travel through solids, stopping at the liquid outer core boundary.",
+     "Abrupt changes in wave speeds reveal the boundaries between crust, mantle, outer core, and inner core."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Seismic Evidence",
+      "p": "Shadow zones for S-waves prove that the Earth's outer core is liquid."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "11. Transmission and Absorption Summary",
+    "p": "When sound interacts with a boundary, transmission allows the wave to continue into the new medium, while absorption converts some acoustic energy into thermal energy within the material.",
+    "bullets": [
+     "Transmission efficiency depends on the matching of acoustic impedances.",
+     "Absorption turns organized particle oscillations into random thermal motion.",
+     "Soundproofing materials combine absorption and reflection properties to block noise."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Absorption",
+      "p": "The process where wave energy is taken up by a material and converted into thermal energy."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Marching band crossing a muddy field",
+   "p": "Imagine a marching band walking in straight rows from a smooth pavement (fast medium) onto a muddy field (slow medium) at an angle. The musicians on one side hit the mud first and slow down, while the others on the pavement are still moving fast. This speed difference causes the entire line of musicians to pivot and change direction (refraction). Furthermore, their stride length (wavelength) gets shorter in the mud, but the number of steps taken per minute (frequency) stays exactly the same. However, this analogy breaks down because sound wave particles only oscillate back and forth about a fixed point rather than walking forward through the medium."
+  },
+  "terms": [
+   {
+    "t": "Acoustic Impedance",
+    "d": "The product of the density of a medium and the speed of sound within that medium."
+   },
+   {
+    "t": "Boundary",
+    "d": "An interface separating two different media with different physical properties."
+   },
+   {
+    "t": "Echo",
+    "d": "A reflection of sound waves off a hard surface, heard after the direct sound."
+   },
+   {
+    "t": "Frequency",
+    "d": "The number of complete wave oscillations passing a point per second, measured in Hertz."
+   },
+   {
+    "t": "Normal",
+    "d": "An imaginary line perpendicular to a boundary at the point where a wave strikes it."
+   },
+   {
+    "t": "Refraction",
+    "d": "The change in direction of a wave when it crosses a boundary at an angle due to a change in speed."
+   },
+   {
+    "t": "Sonar",
+    "d": "A technique using sound propagation to navigate, communicate, or detect objects underwater."
+   },
+   {
+    "t": "Transmission",
+    "d": "The passing of wave energy through a medium or across a boundary into a new medium."
+   },
+   {
+    "t": "Ultrasound",
+    "d": "Sound waves with frequencies higher than the upper limit of human hearing, above 20,000 Hz."
+   },
+   {
+    "t": "Wave Speed",
+    "d": "The speed at which wave energy travels through a medium, measured in metres per second."
+   },
+   {
+    "t": "Wavelength",
+    "d": "The distance between two corresponding points on consecutive waves, measured in metres."
+   },
+   {
+    "t": "Seismic Wave",
+    "d": "Shock waves generated by earthquakes that travel through the Earth's interior and crust."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Saying frequency changes when sound crosses a boundary.",
+    "r": "Frequency is determined entirely by the source and remains constant across all media."
+   },
+   {
+    "w": "Forgetting to divide by 2 in sonar calculations.",
+    "r": "Remember that the sonar pulse travels to the target and back, so the total time must be halved for distance to one-way depth."
+   },
+   {
+    "w": "Stating that sound travels faster in gases than in solids.",
+    "r": "Sound travels fastest in solids because particles are closer together and bonds are stronger."
+   },
+   {
+    "w": "Confusing transverse and longitudinal sound waves.",
+    "r": "Sound waves are strictly longitudinal; particles oscillate parallel to energy propagation."
+   },
+   {
+    "w": "Saying reflection only happens with light.",
+    "r": "Sound waves also reflect off boundaries, producing echoes."
+   },
+   {
+    "w": "Stating wavelength stays the same during refraction.",
+    "r": "Because speed changes while frequency is constant, wavelength must change proportionally (v = f * lambda)."
+   },
+   {
+    "w": "Believing ultrasound can travel through a vacuum.",
+    "r": "Ultrasound is a sound wave and therefore requires a physical medium of particles to travel."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Explain what happens to the frequency and wavelength of a sound wave when it passes from air into water.",
+    "marks": 4,
+    "model": [
+     "Frequency remains constant",
+     "Because frequency is determined by the source",
+     "Wave speed increases in water",
+     "Therefore wavelength increases because v = f * lambda"
+    ],
+    "tip": "Always link the change in wavelength directly to the constant frequency and increasing speed using the wave equation."
+   },
+   {
+    "q": "A sound wave travels from air into a concrete wall. Describe the changes to the wave.",
+    "marks": 3,
+    "model": [
+     "Part of the wave is reflected and part is transmitted",
+     "Speed of sound increases significantly in concrete",
+     "Wavelength increases while frequency remains unchanged"
+    ],
+    "tip": "Mention both reflection and transmission alongside the changes in speed and wavelength."
+   },
+   {
+    "q": "Calculate the depth of the ocean if a sonar pulse takes 0.4 seconds to return to a ship. The speed of sound in water is 1500 m/s.",
+    "marks": 3,
+    "model": [
+     "Distance = speed * time",
+     "Total distance = 1500 * 0.4 = 600 m",
+     "Depth = 600 / 2 = 300 m"
+    ],
+    "tip": "Show your division by 2 clearly to secure the final method mark."
+   },
+   {
+    "q": "Explain why ultrasound gel is applied to a patient's skin before a scan.",
+    "marks": 3,
+    "model": [
+     "Air and skin have very different acoustic impedances",
+     "Without gel, most ultrasound would be reflected at the skin-air boundary",
+     "Gel matches acoustic impedance so more ultrasound enters the body"
+    ],
+    "tip": "Use the term acoustic impedance to gain full credit in OCR exams."
+   },
+   {
+    "q": "Define acoustic impedance and state its unit.",
+    "marks": 2,
+    "model": [
+     "Product of density and speed of sound",
+     "Unit is kg/(m^2 s) or Rayls"
+    ],
+    "tip": "Learn the formula Z = rho * v to help recall the definition."
+   },
+   {
+    "q": "Describe how seismic P-waves provide evidence for the Earth's structure when crossing boundaries.",
+    "marks": 4,
+    "model": [
+     "P-waves are longitudinal waves",
+     "They change speed abruptly at boundaries between mantle and core layers",
+     "This causes refraction of the wave paths",
+     "Proves that the Earth has different layers with varying densities and states"
+    ],
+    "tip": "Mention refraction and speed changes caused by density variations."
+   },
+   {
+    "q": "State the law of reflection for sound waves.",
+    "marks": 2,
+    "model": [
+     "Angle of incidence equals angle of reflection",
+     "Angles are measured relative to the normal"
+    ],
+    "tip": "Always specify that angles are measured from the normal line."
+   },
+   {
+    "q": "Explain why sound travels faster in steel than in air.",
+    "marks": 2,
+    "model": [
+     "Steel has much stronger elastic bonds between particles",
+     "Particles are much closer together, allowing vibrations to pass faster"
+    ],
+    "tip": "Reference both particle proximity and elastic stiffness."
+   },
+   {
+    "q": "A sound wave of frequency 500 Hz has a wavelength of 0.68 m in air. Calculate its speed.",
+    "marks": 2,
+    "model": [
+     "v = f * lambda",
+     "v = 500 * 0.68 = 340 m/s"
+    ],
+    "tip": "State the formula, substitute numbers, and include correct units."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A sound wave with a frequency of 200 Hz passes from air (speed 340 m/s) into water (speed 1500 m/s). Calculate its wavelength in air and in water.",
+    "steps": [
+     "Step 1: Use v = f * lambda to find wavelength in air. lambda = v / f = 340 / 200 = 1.7 m.",
+     "Step 2: Note that frequency remains constant at 200 Hz in water.",
+     "Step 3: Use v = f * lambda to find wavelength in water. lambda = v / f = 1500 / 200 = 7.5 m."
+    ],
+    "ans": "Wavelength in air is 1.7 m and in water is 7.5 m."
+   },
+   {
+    "q": "A research vessel sends a pulse of ultrasound into the ocean. The echo returns after 0.80 seconds. If the average speed of sound in seawater is 1500 m/s, calculate the depth of the seabed.",
+    "steps": [
+     "Step 1: Calculate total distance travelled by the pulse using distance = speed * time.",
+     "Step 2: Distance = 1500 m/s * 0.80 s = 1200 metres.",
+     "Step 3: Divide by 2 because the wave travelled down to the seabed and back up to the ship.",
+     "Step 4: Depth = 1200 / 2 = 600 metres."
+    ],
+    "ans": "The depth of the seabed is 600 metres."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Figure 1: Sound wave reflection and transmission at a boundary between air and a solid medium.",
+    "svg": "<svg viewBox=\"0 0 400 240\">\n  <rect x=\"0\" y=\"0\" width=\"200\" height=\"240\" fill=\"#dbeafe\" />\n  <rect x=\"200\" y=\"0\" width=\"200\" height=\"240\" fill=\"#bbf7d0\" />\n  <line x1=\"200\" y1=\"0\" x2=\"200\" y2=\"240\" stroke=\"#1b2540\" stroke-dasharray=\"4\" stroke-width=\"2\" />\n  <text x=\"80\" y=\"30\" font-size=\"12\" fill=\"#1b2540\">Medium 1 (Air)</text>\n  <text x=\"240\" y=\"30\" font-size=\"12\" fill=\"#1b2540\">Medium 2 (Solid)</text>\n  <line x1=\"60\" y1=\"180\" x2=\"200\" y2=\"100\" stroke=\"#2563eb\" stroke-width=\"3\" marker-end=\"url(#arrow)\" />\n  <text x=\"70\" y=\"150\" font-size=\"11\" fill=\"#1b2540\">Incident Wave</text>\n  <line x1=\"200\" y1=\"100\" x2=\"320\" y2=\"60\" stroke=\"#16a34a\" stroke-width=\"3\" marker-end=\"url(#arrow)\" />\n  <text x=\"240\" y=\"70\" font-size=\"11\" fill=\"#1b2540\">Transmitted</text>\n  <line x1=\"200\" y1=\"100\" x2=\"100\" y2=\"20\" stroke=\"#dc2626\" stroke-width=\"2\" stroke-dasharray=\"3\" />\n  <text x=\"110\" y=\"45\" font-size=\"11\" fill=\"#1b2540\">Reflected</text>\n  <circle cx=\"200\" cy=\"100\" r=\"4\" fill=\"#1b2540\" />\n  <text x=\"170\" y=\"115\" font-size=\"11\" fill=\"#1b2540\">Boundary</text>\n  <defs>\n    <marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#1b2540\" />\n    </marker>\n  </defs>\n</svg>"
+   },
+   {
+    "cap": "Figure 2: Refraction of sound wave crossing a boundary into a denser medium at an angle.",
+    "svg": "<svg viewBox=\"0 0 400 240\">\n  <rect x=\"0\" y=\"0\" width=\"400\" height=\"120\" fill=\"#fef08a\" />\n  <rect x=\"0\" y=\"120\" width=\"400\" height=\"120\" fill=\"#fed7aa\" />\n  <line x1=\"0\" y1=\"120\" x2=\"400\" y2=\"120\" stroke=\"#1b2540\" stroke-width=\"2\" />\n  <line x1=\"200\" y1=\"20\" x2=\"200\" y2=\"220\" stroke=\"#64748b\" stroke-dasharray=\"4\" />\n  <text x=\"210\" y=\"35\" font-size=\"11\" fill=\"#64748b\">Normal</text>\n  <text x=\"20\" y=\"30\" font-size=\"12\" fill=\"#1b2540\">Lower Density</text>\n  <text x=\"20\" y=\"145\" font-size=\"12\" fill=\"#1b2540\">Higher Density</text>\n  <line x1=\"120\" y1=\"50\" x2=\"200\" y2=\"120\" stroke=\"#ea580c\" stroke-width=\"3\" />\n  <text x=\"100\" y=\"75\" font-size=\"11\" fill=\"#1b2540\">Incoming Wave</text>\n  <line x1=\"200\" y1=\"120\" x2=\"250\" y2=\"190\" stroke=\"#0284c7\" stroke-width=\"3\" />\n  <text x=\"230\" y=\"160\" font-size=\"11\" fill=\"#1b2540\">Refracted Wave</text>\n  <circle cx=\"200\" cy=\"120\" r=\"4\" fill=\"#1b2540\" />\n</svg>"
+   },
+   {
+    "cap": "Figure 3: Sonar reflection setup measuring ocean depth using sound pulses.",
+    "svg": "<svg viewBox=\"0 0 400 240\">\n  <rect x=\"0\" y=\"0\" width=\"400\" height=\"80\" fill=\"#dbeafe\" />\n  <rect x=\"0\" y=\"80\" width=\"400\" height=\"160\" fill=\"#3b82f6\" />\n  <rect x=\"170\" y=\"60\" width=\"60\" height=\"20\" fill=\"#94a3b8\" />\n  <text x=\"175\" y=\"75\" font-size=\"11\" fill=\"#ffffff\">Ship</text>\n  <line x1=\"190\" y1=\"80\" x2=\"190\" y2=\"200\" stroke=\"#fde047\" stroke-width=\"3\" stroke-dasharray=\"6\" />\n  <text x=\"95\" y=\"130\" font-size=\"11\" fill=\"#ffffff\">Pulse Down</text>\n  <line x1=\"210\" y1=\"200\" x2=\"210\" y2=\"80\" stroke=\"#f97316\" stroke-width=\"3\" stroke-dasharray=\"6\" />\n  <text x=\"220\" y=\"130\" font-size=\"11\" fill=\"#ffffff\">Echo Return</text>\n  <line x1=\"0\" y1=\"200\" x2=\"400\" y2=\"200\" stroke=\"#78350f\" stroke-width=\"8\" />\n  <text x=\"160\" y=\"225\" font-size=\"12\" fill=\"#ffffff\">Seabed</text>\n  <circle cx=\"200\" cy=\"200\" r=\"5\" fill=\"#fde047\" />\n</svg>"
+   }
+  ],
+  "pid": "phy_ocra.11.3",
+  "sid": "phy_ocra",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-27T19:18:41.713Z"
+ },
+ "phy_ocra.11.5": {
+  "summary": "This topic covers how sound travels through solids via particle vibrations, the mechanism of human hearing across our finite frequency range, and the physics of ultrasound and infrasound. Students must master how density and elasticity affect wave speed in solid media and why human ears lose high-frequency sensitivity with age. It is a vital triple-award topic bridging wave mechanics with biological sensory systems.",
+  "core": [
+   {
+    "h": "Nature of Sound Waves in Solids",
+    "p": "Sound waves are longitudinal waves that require a medium to travel. In solids, sound is transmitted through the parallel oscillation of particles, causing regions of compression and rarefaction.",
+    "bullets": [
+     "Solids contain particles that are very close together and held tightly by strong chemical bonds.",
+     "When a solid is disturbed, particles collide rapidly with their neighbours, transferring kinetic energy efficiently.",
+     "Particles oscillate back and forth parallel to the direction of energy propagation.",
+     "Compressions are regions where particles are pushed closer together, resulting in higher local pressure.",
+     "Rarefactions are regions where particles are pulled further apart, resulting in lower local pressure."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Longitudinal Wave",
+      "p": "A wave where the oscillations are parallel to the direction of energy transfer."
+     },
+     {
+      "k": "key",
+      "t": "Medium Requirement",
+      "p": "Sound cannot travel through a vacuum because there are no particles to vibrate."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Why Sound Travels Faster in Solids than Gases",
+    "p": "The speed of sound depends on the properties of the medium through which it travels, specifically its density and elastic stiffness. Solids have much higher elastic moduli than gases, enabling extremely rapid energy transfer.",
+    "bullets": [
+     "Sound travels slowest in gases, faster in liquids, and fastest in solids.",
+     "The elastic properties of solids mean restoring forces between particles are exceptionally strong.",
+     "Particles return to their equilibrium positions much faster in solids than in gases or liquids.",
+     "Steel conducts sound at approximately 5900 m/s, compared to air at roughly 343 m/s at room temperature.",
+     "Temperature also affects speed: sound travels faster in warmer air because molecules have more kinetic energy."
+    ],
+    "table": {
+     "head": [
+      "Medium",
+      "State",
+      "Approximate Sound Speed (m/s)"
+     ],
+     "rows": [
+      [
+       "Air",
+       "Gas",
+       "343"
+      ],
+      [
+       "Water",
+       "Liquid",
+       "1480"
+      ],
+      [
+       "Glass",
+       "Solid",
+       "5200"
+      ],
+      [
+       "Steel",
+       "Solid",
+       "5900"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Density Trap",
+      "p": "Students often think sound is faster in solids just because they are denser. It is the high elasticity (stiffness) that primarily causes the high speed, outweighing the effect of high density."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "How Sound Enters the Human Ear",
+    "p": "Hearing is the biological process of converting airborne sound waves into electrochemical signals that the brain interprets as sound. This involves a sequence of mechanical transfers through the outer, middle, and inner ear.",
+    "bullets": [
+     "The **pinna** (outer ear) funnels sound waves into the ear canal.",
+     "Sound waves travel down the ear canal and strike the **ear drum** (tympanic membrane).",
+     "Variations in air pressure cause the flexible ear drum to vibrate back and forth.",
+     "The frequency of the ear drum's vibration matches the frequency of the incoming sound wave.",
+     "The amplitude of the vibration corresponds to the volume or intensity of the sound."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Energy Conversion",
+      "p": "The ear acts as a transducer, converting acoustic energy into mechanical energy, then hydraulic energy, and finally electrical nerve impulses."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "The Ossicles and Middle Ear Amplification",
+    "p": "The middle ear contains three tiny bones called ossicles, which bridge the air-filled outer ear to the fluid-filled inner ear.",
+    "bullets": [
+     "The three bones are the **malleus** (hammer), **incus** (anvil), and **stapes** (stirrup).",
+     "The malleus is attached to the ear drum and passes vibrations to the incus, which passes them to the stapes.",
+     "The ossicles act as a mechanical lever system, amplifying the force of the vibrations.",
+     "The surface area of the ear drum is much larger than the oval window of the inner ear, further increasing pressure.",
+     "This amplification is essential because sound waves lose energy when passing from air into the denser fluid of the cochlea."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam Keyword",
+      "p": "Always use the term **ossicles** and name at least two of the bones (malleus, incus, stapes) when asked about middle ear function."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "The Cochlea and Hair Cells in the Inner Ear",
+    "p": "The inner ear houses the cochlea, a snail shell-shaped structure filled with fluid and lined with specialized sensory receptors known as hair cells.",
+    "bullets": [
+     "The stapes pushes against the **oval window**, creating pressure waves in the cochlear fluid.",
+     "Fluid movement causes the flexible basilar membrane inside the cochlea to vibrate.",
+     "Different frequencies of sound cause maximum vibration at different locations along the basilar membrane.",
+     "High-frequency sounds stimulate hair cells near the base of the cochlea; low-frequency sounds stimulate hair cells near the apex.",
+     "When hair cells are bent by fluid motion, they generate electrical signals."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Cochlea",
+      "p": "A coiled, fluid-filled tube in the inner ear containing the organ of Corti and auditory hair cells."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "The Auditory Nerve and the Brain",
+    "p": "Once mechanical vibrations are converted into electrical impulses by the hair cells, the auditory nerve transmits these signals to the brain for processing.",
+    "bullets": [
+     "Electrical impulses travel along the **auditory nerve** directly to the auditory cortex in the brain.",
+     "The brain interprets the frequency of the impulses as pitch.",
+     "The brain interprets the rate of firing and number of activated hair cells as volume (loudness).",
+     "Without the brain's interpretation, hearing sound is impossible; the ear only detects physical stimuli.",
+     "Damage to the auditory nerve or brain cortex results in sensorineural deafness."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Neural Pathway",
+      "p": "Hair cells -> Auditory nerve -> Brain (Auditory Cortex)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Human Hearing Frequency Range",
+    "p": "A healthy human ear can only detect sound waves within a specific band of frequencies, known as the human hearing range.",
+    "bullets": [
+     "The typical hearing range for a healthy young human is **20 Hz to 20,000 Hz** (20 kHz).",
+     "Sounds below 20 Hz are classified as **infrasound**.",
+     "Sounds above 20,000 Hz are classified as **ultrasound**.",
+     "Neither infrasound nor ultrasound can be detected by the human ear.",
+     "The upper limit of human hearing is not fixed throughout life."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Unit Confusion",
+      "p": "Do not confuse Hz with kHz. 20 kHz equals 20,000 Hz. Always check units in calculation and data analysis questions."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Age-Related Hearing Loss (Presbycusis)",
+    "p": "As humans age, physiological changes in the inner ear lead to a progressive loss of hearing sensitivity, particularly at high frequencies.",
+    "bullets": [
+     "The condition of losing high-frequency hearing with age is called **presbycusis**.",
+     "Hair cells near the base of the cochlea (which detect high frequencies) degenerate over time due to wear and tear.",
+     "Older adults often struggle to hear high-pitched sounds like birds singing or a telephone ringing.",
+     "Exposure to loud noises over a lifetime accelerates the damage to auditory hair cells.",
+     "Hair cells in humans do not regenerate naturally once destroyed."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Presbycusis",
+      "p": "The gradual loss of hearing in both ears that commonly occurs as people age, particularly affecting high frequencies."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Limitations of Human Hearing",
+    "p": "The human ear has distinct physical limitations regarding frequency and intensity, restricting the sounds we can perceive.",
+    "bullets": [
+     "We cannot hear sounds below 20 Hz because the ear drum and ossicles cannot resonate effectively at such low frequencies.",
+     "We cannot hear sounds above 20,000 Hz because the basilar membrane and hair cells cannot respond quickly enough.",
+     "The threshold of hearing varies with frequency; humans are most sensitive to frequencies between 1,000 Hz and 4,000 Hz (human speech range).",
+     "Prolonged exposure to sounds above 85 dB can cause permanent hearing damage.",
+     "Some animals (e.g., dogs, bats, elephants) have evolved hearing ranges far outside human limits for survival."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam Link",
+      "p": "Link animal hearing ranges (like dogs hearing up to 45,000 Hz) to the concept of ultrasound and adaptation."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Infrasound and Ultrasound Applications",
+    "p": "Sound waves outside the human hearing range have important industrial, medical, and scientific applications.",
+    "bullets": [
+     "**Infrasound** (<20 Hz): Used by scientists to monitor volcanic eruptions, earthquakes, and meteor impacts.",
+     "**Ultrasound** (>20 kHz): Used in medicine for prenatal scanning without ionizing radiation.",
+     "Ultrasound is used industrially for non-destructive testing (NDT) to detect internal flaws in metal structures or pipes.",
+     "SONAR uses high-frequency sound waves to map the ocean floor and measure water depth.",
+     "Ultrasound reflects partially at boundaries between different media due to differences in acoustic impedance."
+    ],
+    "table": {
+     "head": [
+      "Type",
+      "Frequency",
+      "Key Application"
+     ],
+     "rows": [
+      [
+       "Infrasound",
+       "Below 20 Hz",
+       "Detecting seismic activity and volcanic tremors"
+      ],
+      [
+       "Audible Sound",
+       "20 Hz - 20,000 Hz",
+       "Communication and music"
+      ],
+      [
+       "Ultrasound",
+       "Above 20,000 Hz",
+       "Medical scans, SONAR, and flaw detection"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Safety Advantage",
+      "p": "Unlike X-rays, ultrasound uses non-ionizing sound waves, making it safe for imaging developing fetuses."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Domino Chain and the Factory Conveyor Belt",
+   "p": "Imagine a long line of dominoes set up close together (representing solid particles). When you push the first one, it falls into the next instantly because they are tightly packed. This is like sound travelling fast through a solid. Now imagine the dominoes are spaced far apart across a large room (gas particles); it takes much longer for the energy to travel down the line. Where the analogy breaks down is that dominoes only fall once, whereas sound wave particles oscillate back and forth repeatedly around a fixed equilibrium position without permanently moving along with the wave."
+  },
+  "terms": [
+   {
+    "t": "Longitudinal wave",
+    "d": "A wave where the particle oscillations are parallel to the direction of energy transfer."
+   },
+   {
+    "t": "Compression",
+    "d": "A region in a longitudinal wave where particles are closest together."
+   },
+   {
+    "t": "Rarefaction",
+    "d": "A region in a longitudinal wave where particles are furthest apart."
+   },
+   {
+    "t": "Pinna",
+    "d": "The visible outer part of the ear that collects and funnels sound waves."
+   },
+   {
+    "t": "Eardrum",
+    "d": "A thin, flexible membrane that vibrates when sound waves strike it."
+   },
+   {
+    "t": "Ossicles",
+    "d": "Three tiny bones (malleus, incus, stapes) in the middle ear that amplify vibrations."
+   },
+   {
+    "t": "Cochlea",
+    "d": "A coiled, fluid-filled tube in the inner ear containing hair cells that detect sound."
+   },
+   {
+    "t": "Auditory nerve",
+    "d": "The nerve that transmits electrical impulses from the cochlea to the brain."
+   },
+   {
+    "t": "Infrasound",
+    "d": "Sound waves with frequencies below the lower limit of human hearing (under 20 Hz)."
+   },
+   {
+    "t": "Ultrasound",
+    "d": "Sound waves with frequencies above the upper limit of human hearing (above 20,000 Hz)."
+   },
+   {
+    "t": "Presbycusis",
+    "d": "Age-related hearing loss characterized by a reduced ability to hear high-frequency sounds."
+   },
+   {
+    "t": "Basilar membrane",
+    "d": "A stiff structural element within the cochlea that separates two liquid-filled tubes and holds hair cells."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Sound travels fastest in gases because they have more space.",
+    "r": "Sound travels fastest in solids because strong elastic bonds allow rapid particle interaction."
+   },
+   {
+    "w": "The ear converts sound directly into electrical signals in the air.",
+    "r": "Sound is mechanical in the air/eardrum/ossicles, hydraulic in the cochlea, and electrical only at the hair cells and auditory nerve."
+   },
+   {
+    "w": "Humans can hear all frequencies of sound.",
+    "r": "Human hearing is strictly limited to the range of 20 Hz to 20,000 Hz."
+   },
+   {
+    "w": "Ultrasound is a type of X-ray used for scanning babies.",
+    "r": "Ultrasound is high-frequency sound waves, not electromagnetic radiation."
+   },
+   {
+    "w": "Infrasound is sound that is too quiet to hear.",
+    "r": "Infrasound is sound with a frequency too low to hear (<20 Hz), regardless of its volume."
+   },
+   {
+    "w": "Presbycusis is caused by listening to music too loudly once.",
+    "r": "Presbycusis is age-related hearing loss caused by gradual degeneration of hair cells over time."
+   },
+   {
+    "w": "Sound waves carry matter along with them as they travel through a solid.",
+    "r": "Waves transfer energy, not matter; particles only oscillate about a fixed position."
+   }
+  ],
+  "exam": [
+   {
+    "q": "State the typical range of human hearing in Hertz.",
+    "marks": 1,
+    "model": [
+     "20 Hz to 20,000 Hz (allow 20 Hz to 20 kHz)"
+    ],
+    "tip": "Memorize this range precisely. Do not mix up Hz and kHz."
+   },
+   {
+    "q": "Explain why sound travels faster in steel than in air.",
+    "marks": 3,
+    "model": [
+     "Steel has particles that are much closer together and held by stronger bonds / higher elasticity (1)",
+     "This allows restoring forces between particles to act much more rapidly (1)",
+     "Therefore, kinetic energy is transferred between particles faster in solids than in gases (1)"
+    ],
+    "tip": "Mention elasticity and particle spacing, not just density."
+   },
+   {
+    "q": "Describe the function of the ossicles in the human ear.",
+    "marks": 2,
+    "model": [
+     "They amplify the vibrations / force of the sound waves (1)",
+     "They pass the vibrations from the eardrum to the oval window / inner ear (1)"
+    ],
+    "tip": "Use the words amplify and pass vibrations for full marks."
+   },
+   {
+    "q": "A student claims that a sound wave of frequency 15 Hz can be heard by humans. Explain why this claim is incorrect.",
+    "marks": 2,
+    "model": [
+     "15 Hz is below 20 Hz (1)",
+     "This is classified as infrasound which is outside the human hearing range (1)"
+    ],
+    "tip": "State the lower limit of human hearing and name the frequency category (infrasound)."
+   },
+   {
+    "q": "Explain how the cochlea converts fluid pressure waves into electrical signals.",
+    "marks": 3,
+    "model": [
+     "Pressure waves move the fluid inside the cochlea (1)",
+     "This fluid movement vibrates the basilar membrane and bends sensory hair cells (1)",
+     "Bending the hair cells triggers electrical impulses in the auditory nerve (1)"
+    ],
+    "tip": "Follow the chain: fluid -> basilar membrane / hair cells -> electrical impulse."
+   },
+   {
+    "q": "Define ultrasound and give one medical use.",
+    "marks": 2,
+    "model": [
+     "Sound waves with a frequency above 20,000 Hz (1)",
+     "Prenatal scanning / imaging soft tissue (1)"
+    ],
+    "tip": "Make sure you include the '>' symbol or 'above' alongside the numerical value."
+   },
+   {
+    "q": "Describe what happens to high-frequency hearing sensitivity as a person ages.",
+    "marks": 2,
+    "model": [
+     "High-frequency hearing sensitivity decreases / deteriorates (1)",
+     "Due to damage or degeneration of hair cells near the base of the cochlea (1)"
+    ],
+    "tip": "Mention the specific location in the cochlea (base) for top marks."
+   },
+   {
+    "q": "Explain why sound waves cannot travel through a vacuum.",
+    "marks": 2,
+    "model": [
+     "Sound waves are longitudinal and require a medium to travel (1)",
+     "A vacuum contains no particles to vibrate or transfer energy (1)"
+    ],
+    "tip": "Keep it concise: mention lack of particles/medium."
+   },
+   {
+    "q": "Name the three bones of the middle ear.",
+    "marks": 3,
+    "model": [
+     "Malleus (hammer) (1)",
+     "Incus (anvil) (1)",
+     "Stapes (stirrup) (1)"
+    ],
+    "tip": "Knowing both common and scientific names is safest."
+   },
+   {
+    "q": "Give one industrial use of ultrasound and explain how it works.",
+    "marks": 2,
+    "model": [
+     "Non-destructive testing / detecting internal cracks in metals (1)",
+     "Ultrasound reflects from boundaries or cracks and the time taken for echoes is measured (1)"
+    ],
+    "tip": "Mention reflection and time delay / echoes."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A sound wave travels through a steel rail at 5900 m/s with a frequency of 295 Hz. Calculate its wavelength.",
+    "steps": [
+     "State the wave speed equation: v = f x lambda",
+     "Rearrange the equation to solve for wavelength: lambda = v / f",
+     "Substitute the values: lambda = 5900 / 295",
+     "Calculate the final answer: lambda = 20 metres"
+    ],
+    "ans": "20 m"
+   },
+   {
+    "q": "An ultrasound scanner emits waves into human tissue where the wave speed is 1540 m/s. If an echo returns from a boundary in 0.00004 seconds (40 microseconds), calculate the depth of the boundary.",
+    "steps": [
+     "Understand that the wave travels to the boundary and back, so total distance = v x t",
+     "Calculate total distance: distance = 1540 x 0.00004 = 0.0616 metres",
+     "Divide by 2 because the wave made a round trip (to and back): depth = 0.0616 / 2",
+     "Calculate final depth: depth = 0.0308 metres (or 30.8 mm)"
+    ],
+    "ans": "0.0308 m (30.8 mm)"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Diagram of the human ear showing the outer ear (pinna, ear canal), middle ear (ear drum, ossicles: malleus, incus, stapes), and inner ear (cochlea and auditory nerve).",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><path d=\"M30,120 Q50,70 80,90 Q100,100 90,130 Q80,160 50,150 Z\" fill=\"#fed7aa\" stroke=\"#c2410c\" stroke-width=\"2\"/><text x=\"40\" y=\"115\" font-size=\"12\" fill=\"#9a3412\">Pinna</text><line x1=\"90\" y1=\"110\" x2=\"130\" y2=\"110\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"135\" y=\"114\" font-size=\"12\" fill=\"#334155\">Ear canal</text><line x1=\"155\" y1=\"95\" x2=\"155\" y2=\"140\" stroke=\"#ef4444\" stroke-width=\"2.5\"/><text x=\"162\" y=\"122\" font-size=\"12\" fill=\"#b91c1c\">Eardrum</text><circle cx=\"180\" cy=\"110\" r=\"8\" fill=\"#cbd5e1\" stroke=\"#334155\" stroke-width=\"1.5\"/><circle cx=\"198\" cy=\"105\" r=\"7\" fill=\"#cbd5e1\" stroke=\"#334155\" stroke-width=\"1.5\"/><ellipse cx=\"215\" cy=\"108\" rx=\"9\" ry=\"5\" fill=\"#cbd5e1\" stroke=\"#334155\" stroke-width=\"1.5\"/><text x=\"170\" y=\"80\" font-size=\"12\" fill=\"#334155\">Ossicles</text><path d=\"M235,90 Q270,70 290,100 Q305,125 285,145 Q265,165 240,140 Q230,125 245,110 Z\" fill=\"#bfdbfe\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><text x=\"255\" y=\"122\" font-size=\"12\" fill=\"#1e40af\">Cochlea</text><path d=\"M295,120 Q330,110 350,90\" fill=\"none\" stroke=\"#7c3aed\" stroke-width=\"3\"/><text x=\"310\" y=\"80\" font-size=\"12\" fill=\"#6d28d9\">Auditory nerve</text></svg>"
+   },
+   {
+    "cap": "Longitudinal wave in a solid showing alternating regions of compressions (particles close together) and rarefactions (particles far apart) oscillating parallel to wave direction.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"40\" y1=\"120\" x2=\"360\" y2=\"120\" stroke=\"#94a3b8\" stroke-width=\"1\" stroke-dasharray=\"4\"/><circle cx=\"60\" cy=\"120\" r=\"6\" fill=\"#38bdf8\" stroke=\"#0369a1\"/><circle cx=\"80\" cy=\"120\" r=\"6\" fill=\"#38bdf8\" stroke=\"#0369a1\"/><circle cx=\"95\" cy=\"120\" r=\"6\" fill=\"#38bdf8\" stroke=\"#0369a1\"/><circle cx=\"130\" cy=\"120\" r=\"6\" fill=\"#38bdf8\" stroke=\"#0369a1\"/><circle cx=\"170\" cy=\"120\" r=\"6\" fill=\"#38bdf8\" stroke=\"#0369a1\"/><circle cx=\"200\" cy=\"120\" r=\"6\" fill=\"#38bdf8\" stroke=\"#0369a1\"/><circle cx=\"215\" cy=\"120\" r=\"6\" fill=\"#38bdf8\" stroke=\"#0369a1\"/><circle cx=\"250\" cy=\"120\" r=\"6\" fill=\"#38bdf8\" stroke=\"#0369a1\"/><circle cx=\"290\" cy=\"120\" r=\"6\" fill=\"#38bdf8\" stroke=\"#0369a1\"/><circle cx=\"320\" cy=\"120\" r=\"6\" fill=\"#38bdf8\" stroke=\"#0369a1\"/><circle cx=\"335\" cy=\"120\" r=\"6\" fill=\"#38bdf8\" stroke=\"#0369a1\"/><text x=\"70\" y=\"75\" font-size=\"12\" fill=\"#0369a1\">Compression</text><text x=\"150\" y=\"75\" font-size=\"12\" fill=\"#0369a1\">Rarefaction</text><text x=\"210\" y=\"75\" font-size=\"12\" fill=\"#0369a1\">Compression</text><path d=\"M60,95 L95,95\" fill=\"none\" stroke=\"#0284c7\" stroke-width=\"1.5\" marker-end=\"url(#arrow)\"/><path d=\"M170,95 L130,95\" fill=\"none\" stroke=\"#0284c7\" stroke-width=\"1.5\"/><text x=\"160\" y=\"180\" font-size=\"12\" fill=\"#334155\">Particle vibration parallel to wave</text><path d=\"M130,205 L210,205\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><text x=\"145\" y=\"225\" font-size=\"12\" fill=\"#0f172a\">Direction of wave</text></svg>"
+   },
+   {
+    "cap": "Human hearing frequency spectrum showing infrasound (<20 Hz), the human audible range (20 Hz to 20,000 Hz), and ultrasound (>20,000 Hz).",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><rect x=\"30\" y=\"80\" width=\"90\" height=\"60\" fill=\"#fecaca\" stroke=\"#b91c1c\" stroke-width=\"2\"/><rect x=\"120\" y=\"80\" width=\"160\" height=\"60\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"2\"/><rect x=\"280\" y=\"80\" width=\"90\" height=\"60\" fill=\"#bfdbfe\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><text x=\"45\" y=\"115\" font-size=\"12\" fill=\"#991b1b\">Infrasound</text><text x=\"135\" y=\"115\" font-size=\"12\" fill=\"#166534\">Audible Range</text><text x=\"295\" y=\"115\" font-size=\"12\" fill=\"#1e40af\">Ultrasound</text><text x=\"35\" y=\"165\" font-size=\"12\" fill=\"#334155\">&lt; 20 Hz</text><text x=\"145\" y=\"165\" font-size=\"12\" fill=\"#334155\">20 Hz - 20 kHz</text><text x=\"285\" y=\"165\" font-size=\"12\" fill=\"#334155\">&gt; 20 kHz</text><text x=\"130\" y=\"45\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\">Sound Frequency Spectrum</text></svg>"
+   }
+  ],
+  "pid": "phy_ocra.11.5",
+  "sid": "phy_ocra",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-27T19:19:06.606Z"
  }
 }

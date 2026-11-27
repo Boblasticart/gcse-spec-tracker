@@ -906,5 +906,443 @@
   "src": "pre",
   "by": "gemini/gemini-flash-lite-latest",
   "ts": "2026-11-26T19:46:30.635Z"
+ },
+ "chem_ocra.6.1": {
+  "summary": "Reaction profiles are graphical representations that show the relative energy levels of reactants and products during a chemical reaction, including the crucial role of activation energy. An exothermic reaction profile displays products at a lower energy level than reactants, whereas an endothermic profile displays products at a higher energy level. Understanding these diagrams allows chemists to visualise energy pathways, trace the energy barrier that must be overcome for a reaction to start, and evaluate how catalysts alter reaction mechanics.",
+  "core": [
+   {
+    "h": "Introduction to Reaction Profiles",
+    "p": "A reaction profile is a line graph that charts how the overall chemical potential energy of a reacting system changes as the reaction progresses from start to finish. The horizontal axis represents the progress of the reaction (sometimes called reaction coordinate or time), while the vertical axis represents the potential energy of the particles involved. These graphs give instant visual proof of whether an overall energy change is releasing heat to the surroundings or absorbing it from them.",
+    "bullets": [
+     "Horizontal axis shows the progress of the reaction from reactants to products.",
+     "Vertical axis shows the potential energy of the chemical system.",
+     "Reactants are always placed on the left-hand side of the profile.",
+     "Products are always placed on the right-hand side of the profile."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Reaction Profile",
+      "p": "A graph that shows the relative energies of reactants and products, the activation energy, and the overall energy change of a chemical reaction."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A basic exothermic reaction profile showing reactants on the left, products on the lower right, and a peak in between representing the energy barrier.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"200\" x2=\"350\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"40\" x2=\"50\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"200\" y=\"225\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">Reaction Progress</text><text x=\"20\" y=\"120\" font-size=\"12\" fill=\"#1b2540\" transform=\"rotate(-90 20 120)\" text-anchor=\"middle\">Potential Energy</text><path d=\"M 70 90 L 150 90 Q 200 10 250 90 L 330 160\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><text x=\"70\" y=\"80\" font-size=\"11\" fill=\"#1b2540\">Reactants</text><text x=\"330\" y=\"180\" font-size=\"11\" fill=\"#1b2540\">Products</text><text x=\"200\" y=\"25\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">Exothermic Profile</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Defining Activation Energy",
+    "p": "Before any chemical reaction can begin, the reacting particles must collide with enough energy to break existing chemical bonds. The minimum amount of energy that particles must have to react successfully is known as the activation energy. On a reaction profile, this is visualised as the height of the energy hill between the reactants and the top of the curve. Reactions with very high activation energy barriers require a significant input of energy or a catalyst to proceed at a noticeable rate.",
+    "bullets": [
+     "Symbolised by the term Ea in chemical equations and diagrams.",
+     "Measured as the energy difference between the reactants and the peak of the curve.",
+     "Represents the energy needed to break initial bonds in the reactants.",
+     "Higher activation energy means fewer particles have sufficient energy to react at room temperature."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Activation Energy (Ea)",
+      "p": "The minimum amount of energy required for particles to collide with each other and react successfully."
+     },
+     {
+      "k": "key",
+      "t": "Measuring Activation Energy",
+      "p": "On a profile, Ea is measured vertically from the energy level of the reactants up to the highest point (peak) of the curve."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Exothermic Reaction Profiles",
+    "p": "In an exothermic reaction, energy is released to the surroundings, meaning the chemical energy stored within the bonds decreases. When drawing an exothermic reaction profile, the energy level of the products is lower than the energy level of the reactants. The overall energy change (Delta H) is negative. Despite releasing energy overall, the reaction still requires an initial input of activation energy to climb the energy barrier before the downhill drop to the products can occur.",
+    "bullets": [
+     "Reactants start at a higher energy level than products.",
+     "The overall energy change (Delta H) is negative.",
+     "Energy is released to the surroundings, causing temperature to rise.",
+     "The peak is higher than the reactants, showing the activation energy barrier."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Exothermic Trap",
+      "p": "Students often think exothermic reactions need no energy to start. They always need activation energy to break initial bonds."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Detailed exothermic profile highlighting the activation energy and the negative overall energy change.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"200\" x2=\"350\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"30\" x2=\"50\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M 70 80 L 140 80 Q 200 10 260 80 L 330 160\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"3\"/><text x=\"70\" y=\"70\" font-size=\"11\" fill=\"#1b2540\">Reactants</text><text x=\"330\" y=\"175\" font-size=\"11\" fill=\"#1b2540\">Products</text><line x1=\"200\" y1=\"10\" x2=\"200\" y2=\"80\" stroke=\"#64748b\" stroke-dasharray=\"4\"/><text x=\"210\" y=\"50\" font-size=\"11\" fill=\"#dc2626\">Ea</text><line x1=\"70\" y1=\"80\" x2=\"200\" y2=\"80\" stroke=\"#64748b\" stroke-dasharray=\"4\"/><line x1=\"260\" y1=\"160\" x2=\"340\" y2=\"160\" stroke=\"#64748b\" stroke-dasharray=\"4\"/><text x=\"205\" y=\"130\" font-size=\"11\" fill=\"#2563eb\">Delta H (-)</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Endothermic Reaction Profiles",
+    "p": "In an endothermic reaction, energy is taken in from the surroundings, meaning the chemical energy stored within the bonds increases. On an endothermic reaction profile, the energy level of the products is higher than the energy level of the reactants. The overall energy change (Delta H) is positive. The activation energy in an endothermic reaction spans from the reactant line all the way up to the peak, and because products sit higher than reactants, the activation energy is often very large.",
+    "bullets": [
+     "Reactants start at a lower energy level than products.",
+     "The overall energy change (Delta H) is positive.",
+     "Energy is absorbed from the surroundings, causing temperature to fall.",
+     "The energy required to break bonds is greater than the energy released when new bonds form."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Endothermic Profile Feature",
+      "p": "Products are positioned vertically higher than reactants because thermal energy from the surroundings has been converted into chemical potential energy."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Endothermic reaction profile showing products higher than reactants and a positive overall energy change.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"200\" x2=\"350\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"30\" x2=\"50\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M 70 160 L 140 160 Q 200 60 260 160 L 330 90\" fill=\"none\" stroke=\"#0284c7\" stroke-width=\"3\"/><text x=\"70\" y=\"175\" font-size=\"11\" fill=\"#1b2540\">Reactants</text><text x=\"330\" y=\"85\" font-size=\"11\" fill=\"#1b2540\">Products</text><line x1=\"200\" y1=\"60\" x2=\"200\" y2=\"160\" stroke=\"#64748b\" stroke-dasharray=\"4\"/><text x=\"210\" y=\"115\" font-size=\"11\" fill=\"#0284c7\">Ea</text><line x1=\"70\" y1=\"160\" x2=\"200\" y2=\"160\" stroke=\"#64748b\" stroke-dasharray=\"4\"/><line x1=\"330\" y1=\"90\" x2=\"350\" y2=\"90\" stroke=\"#64748b\" stroke-dasharray=\"4\"/><text x=\"205\" y=\"130\" font-size=\"11\" fill=\"#dc2626\">Delta H (+)</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Interpreting Energy Changes (Delta H)",
+    "p": "The overall energy change of a reaction is represented by the symbol Delta H (enthalpy change). On a reaction profile, Delta H is measured as the vertical distance between the energy level of the reactants and the energy level of the products. If the products are lower than the reactants, Delta H is negative (exothermic). If the products are higher than the reactants, Delta H is positive (endothermic). The magnitude of Delta H tells us exactly how much energy is transferred per mole of reaction.",
+    "bullets": [
+     "Delta H is negative for exothermic reactions.",
+     "Delta H is positive for endothermic reactions.",
+     "Calculated as Energy of Products minus Energy of Reactants.",
+     "Independent of the pathway taken or the activation energy barrier height."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Delta H Formula",
+      "p": "Delta H = Energy(Products) - Energy(Reactants)"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Effect of Catalysts on Reaction Profiles",
+    "p": "A catalyst is a substance that increases the rate of a chemical reaction without being chemically changed or used up by the end of the reaction. It works by providing an alternative reaction pathway that has a lower activation energy. On a reaction profile, the uncatalyzed pathway has a tall energy peak, while the catalyzed pathway is shown as a second curve with a lower peak. Because the activation energy is reduced, more colliding particles have enough energy to react, speeding up the reaction rate.",
+    "bullets": [
+     "Catalysts lower the activation energy by providing an alternative pathway.",
+     "Represented on profiles by a lower peak drawn beneath the original curve.",
+     "Does not change the energy of the reactants or the products.",
+     "Does not change the overall energy change (Delta H)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Drawing Catalysts",
+      "p": "When adding a catalyst curve to a profile, ensure the start and end points touch the original reactant and product lines precisely."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Reaction profile demonstrating how a catalyst provides an alternative pathway with a lower activation energy peak.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"200\" x2=\"350\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"30\" x2=\"50\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><path d=\"M 70 80 L 140 80 Q 200 10 260 80 L 330 160\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"3\"/><path d=\"M 70 80 Q 200 60 330 160\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"3\" stroke-dasharray=\"6\"/><text x=\"70\" y=\"70\" font-size=\"11\" fill=\"#1b2540\">Reactants</text><text x=\"330\" y=\"175\" font-size=\"11\" fill=\"#1b2540\">Products</text><text x=\"210\" y=\"35\" font-size=\"10\" fill=\"#dc2626\">No Catalyst</text><text x=\"210\" y=\"75\" font-size=\"10\" fill=\"#16a34a\">With Catalyst</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Comparing Exothermic and Endothermic Profiles",
+    "p": "Exam questions frequently require students to distinguish between exothermic and endothermic profiles. The easiest way to identify them is to look at the relative positions of the reactant and product lines. In exothermic profiles, the product line is lower down the y-axis than the reactant line. In endothermic profiles, the product line is higher up the y-axis than the reactant line. Both profiles, however, feature an activation energy peak pointing upward from the reactants.",
+    "bullets": [
+     "Exothermic: Products lower than reactants, Delta H negative.",
+     "Endothermic: Products higher than reactants, Delta H positive.",
+     "Both profiles require an activation energy peak starting from the reactant level.",
+     "Neither profile's overall Delta H is altered by adding a catalyst."
+    ],
+    "table": {
+     "head": [
+      "Feature",
+      "Exothermic Profile",
+      "Endothermic Profile"
+     ],
+     "rows": [
+      [
+       "Product Energy",
+       "Lower than reactants",
+       "Higher than reactants"
+      ],
+      [
+       "Delta H Sign",
+       "Negative (-)",
+       "Positive (+)"
+      ],
+      [
+       "Surroundings Temp",
+       "Increases",
+       "Decreases"
+      ],
+      [
+       "Activation Energy",
+       "Measured from reactants to peak",
+       "Measured from reactants to peak"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Bond Breaking and Bond Forming Mechanics",
+    "p": "The height of the activation energy peak and the overall enthalpy change are governed by what happens to chemical bonds during a reaction. Breaking chemical bonds requires an input of energy, which is why energy must be absorbed to climb up to the peak of the reaction profile. Making new chemical bonds releases energy, which corresponds to the downward slope from the peak to the products. If more energy is released making bonds than was absorbed breaking them, the overall process is exothermic.",
+    "bullets": [
+     "Bond breaking is always endothermic (absorbs energy, goes up).",
+     "Bond making is always exothermic (releases energy, goes down).",
+     "Peak height reflects the energy needed to break initial bonds.",
+     "Net energy change determines the final product position."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Mnemonic for Bonds",
+      "p": "BARF: Breaking Absorbs, Releases Forms."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Reading Values from Reaction Profiles",
+    "p": "In higher-tier calculations and structured exam questions, you may be given a reaction profile with numerical values on the y-axis in kilojoules per mole (kJ/mol). To find the activation energy without a catalyst, subtract the reactant energy value from the peak energy value. To find the activation energy with a catalyst, subtract the reactant energy value from the catalyzed peak value. To find Delta H, subtract the reactant energy value from the product energy value.",
+    "bullets": [
+     "Ea (uncatalyzed) = Peak Energy - Reactant Energy.",
+     "Ea (catalyzed) = Catalyzed Peak Energy - Reactant Energy.",
+     "Delta H = Product Energy - Reactant Energy.",
+     "Always check units given on the y-axis (typically kJ/mol)."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Exam Strategy for Sketching Profiles",
+    "p": "When asked to sketch a reaction profile in an exam, precision and clear labelling are vital. You must always label both axes with 'Progress of reaction' and 'Potential energy'. Clear horizontal lines must be drawn for reactants and products, labelled explicitly. The curve must rise to a distinct peak representing activation energy. If comparing catalyzed and uncatalyzed reactions on the same axes, draw the catalyzed peak visibly lower than the original peak.",
+    "bullets": [
+     "Always label both axes fully with quantities.",
+     "Use a ruler for axis lines and ensure arrows point in the correct directions.",
+     "Ensure reactant and product energy levels are distinctly different and labelled.",
+     "Check whether the question specifies exothermic or endothermic before drawing."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Unlabelled Axes",
+      "p": "Examiners award zero marks for the curve if the axes are left unlabelled or incorrectly labelled."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Hiking over a mountain pass",
+   "p": "Imagine you are hiking from a valley on the west side of a mountain range to a valley on the east side. The west valley represents your reactants, and the east valley represents your products. To get from one valley to the other, you cannot walk straight across; you must climb up and over the mountain pass. The height of that mountain pass from your starting valley is the activation energy -- the effort needed to get over the ridge. If the east valley is lower down than the west valley, you have finished at a lower altitude overall (exothermic). Where the analogy breaks down is that chemical reactions do not choose to climb passes out of willpower; particles rely on random kinetic collisions to scramble up the energy hill."
+  },
+  "terms": [
+   {
+    "t": "Reaction Profile",
+    "d": "A graph showing the potential energy of reactants and products during a chemical reaction."
+   },
+   {
+    "t": "Activation Energy",
+    "d": "The minimum amount of energy particles must collide with to react."
+   },
+   {
+    "t": "Exothermic Reaction",
+    "d": "A reaction that transfers energy to the surroundings, resulting in a temperature increase."
+   },
+   {
+    "t": "Endothermic Reaction",
+    "d": "A reaction that takes in energy from the surroundings, resulting in a temperature decrease."
+   },
+   {
+    "t": "Enthalpy Change (Delta H)",
+    "d": "The overall change in thermal or chemical potential energy during a reaction."
+   },
+   {
+    "t": "Catalyst",
+    "d": "A substance that speeds up a reaction by providing an alternative pathway with lower activation energy."
+   },
+   {
+    "t": "Reactants",
+    "d": "The starting substances in a chemical reaction, shown on the left of a profile."
+   },
+   {
+    "t": "Products",
+    "d": "The new substances formed in a chemical reaction, shown on the right of a profile."
+   },
+   {
+    "t": "Reaction Progress",
+    "d": "The horizontal axis of a profile representing the advancement of a reaction over time."
+   },
+   {
+    "t": "Potential Energy",
+    "d": "The vertical axis of a profile representing the chemical energy stored in bonds."
+   },
+   {
+    "t": "Alternative Pathway",
+    "d": "A different route for reactant particles to form products, characteristic of catalyzed reactions."
+   },
+   {
+    "t": "Peak",
+    "d": "The highest point on a reaction profile curve representing the transition state or maximum energy barrier."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Drawing products higher than reactants for an exothermic reaction.",
+    "r": "Exothermic reactions must show products lower than reactants because energy is released."
+   },
+   {
+    "w": "Measuring activation energy from the bottom of the graph axis.",
+    "r": "Activation energy is measured vertically from the reactant energy line up to the peak."
+   },
+   {
+    "w": "Stating that a catalyst changes the overall Delta H value.",
+    "r": "A catalyst lowers the activation energy peak but leaves the reactant and product energy levels unchanged."
+   },
+   {
+    "w": "Saying exothermic reactions have zero activation energy.",
+    "r": "All reactions require activation energy to break initial bonds, regardless of whether they are exothermic or endothermic."
+   },
+   {
+    "w": "Labelling the y-axis simply as 'Energy' or 'Time'.",
+    "r": "The OCR mark scheme requires 'Potential energy' for the y-axis and 'Progress of reaction' for the x-axis."
+   },
+   {
+    "w": "Drawing the catalyzed curve starting at a lower energy level than reactants.",
+    "r": "A catalyst does not alter the starting energy of the reactants; the curve must start on the reactant line."
+   }
+  ],
+  "exam": [
+   {
+    "q": "What is meant by the term 'activation energy'?",
+    "marks": 1,
+    "model": [
+     "The minimum amount of energy required for particles to react"
+    ],
+    "tip": "Learn this definition word for word as mark schemes are strict."
+   },
+   {
+    "q": "Explain how a reaction profile shows whether a reaction is exothermic.",
+    "marks": 2,
+    "model": [
+     "The energy of the products is lower than the energy of the reactants",
+     "Showing that energy is released overall"
+    ],
+    "tip": "Reference both product and reactant relative positions."
+   },
+   {
+    "q": "A reaction profile has reactants at 50 kJ/mol, a peak at 120 kJ/mol, and products at 20 kJ/mol. Calculate the activation energy.",
+    "marks": 2,
+    "model": [
+     "120 - 50",
+     "= 70 kJ/mol"
+    ],
+    "tip": "Subtract the reactant energy from the peak energy."
+   },
+   {
+    "q": "Explain how a catalyst increases the rate of a chemical reaction using ideas about activation energy.",
+    "marks": 3,
+    "model": [
+     "Provides an alternative pathway",
+     "Which has a lower activation energy",
+     "So more particles have energy greater than or equal to the activation energy and collide successfully"
+    ],
+    "tip": "Include all three standard marking points for catalyst questions."
+   },
+   {
+    "q": "Sketch a labelled reaction profile for an endothermic reaction.",
+    "marks": 3,
+    "model": [
+     "Correctly labelled axes (Potential energy and Progress of reaction)",
+     "Reactants lower than products",
+     "A curve showing an activation energy peak"
+    ],
+    "tip": "Use a ruler for axes and make sure the product line is visibly higher than the reactant line."
+   },
+   {
+    "q": "Using the profile data from question 3, calculate the overall energy change (Delta H).",
+    "marks": 2,
+    "model": [
+     "20 - 50",
+     "= -30 kJ/mol"
+    ],
+    "tip": "Delta H is Products minus Reactants. Remember the negative sign for exothermic."
+   },
+   {
+    "q": "Explain why adding a catalyst does not change the overall energy change of a reaction.",
+    "marks": 2,
+    "model": [
+     "It lowers the activation energy by providing an alternative pathway",
+     "The starting energy of reactants and final energy of products remain unchanged"
+    ],
+    "tip": "Mention that reactant and product levels stay identical."
+   },
+   {
+    "q": "State what the peak of a reaction profile represents.",
+    "marks": 1,
+    "model": [
+     "The activation energy or transition state"
+    ],
+    "tip": "Keep the answer concise and direct."
+   },
+   {
+    "q": "Describe the energy change that occurs during bond breaking.",
+    "marks": 1,
+    "model": [
+     "Energy is absorbed (endothermic)"
+    ],
+    "tip": "Remember BARF: Breaking Absorbs."
+   },
+   {
+    "q": "Compare the activation energy of an uncatalyzed reaction with that of a catalyzed reaction on a reaction profile.",
+    "marks": 2,
+    "model": [
+     "The catalyzed reaction has a lower peak than the uncatalyzed reaction",
+     "Showing that less energy is required for the reaction to take place"
+    ],
+    "tip": "Contrast the heights of the two peaks clearly."
+   }
+  ],
+  "worked": [
+   {
+    "q": "For a chemical reaction, the energy of the reactants is 150 kJ/mol, the peak of the uncatalyzed reaction profile is 280 kJ/mol, and the energy of the products is 90 kJ/mol. A catalyst is added which reduces the peak height to 210 kJ/mol. Calculate: (a) The activation energy without a catalyst, (b) The activation energy with a catalyst, (c) The overall energy change (Delta H).",
+    "steps": [
+     "For uncatalyzed activation energy: subtract reactant energy from uncatalyzed peak energy. Ea = 280 - 150.",
+     "For catalyzed activation energy: subtract reactant energy from catalyzed peak energy. Ea (catalyzed) = 210 - 150.",
+     "For overall energy change (Delta H): subtract reactant energy from product energy. Delta H = 90 - 150."
+    ],
+    "ans": "(a) 130 kJ/mol, (b) 60 kJ/mol, (c) -60 kJ/mol"
+   },
+   {
+    "q": "An endothermic reaction has reactants at 200 kJ/mol and products at 350 kJ/mol. The activation energy is 180 kJ/mol. Calculate the energy at the peak of the reaction profile and the overall Delta H.",
+    "steps": [
+     "To find peak energy, add the activation energy to the reactant energy. Peak = 200 + 180 = 380 kJ/mol.",
+     "To find Delta H, subtract reactant energy from product energy. Delta H = 350 - 200 = +150 kJ/mol."
+    ],
+    "ans": "Peak energy is 380 kJ/mol, Delta H is +150 kJ/mol."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Comprehensive reaction profile showing all key measurements including reactant energy, product energy, uncatalyzed peak, catalyzed peak, and overall Delta H.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"200\" x2=\"350\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"20\" x2=\"50\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"200\" y=\"225\" font-size=\"11\" fill=\"#1b2540\" text-anchor=\"middle\">Reaction Progress</text><text x=\"20\" y=\"110\" font-size=\"11\" fill=\"#1b2540\" transform=\"rotate(-90 20 110)\" text-anchor=\"middle\">Potential Energy</text><path d=\"M 70 80 L 150 80 Q 200 15 250 80 L 330 150\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"3\"/><path d=\"M 70 80 Q 200 50 330 150\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"3\" stroke-dasharray=\"5\"/><text x=\"70\" y=\"70\" font-size=\"10\" fill=\"#1b2540\">Reactants</text><text x=\"330\" y=\"165\" font-size=\"10\" fill=\"#1b2540\">Products</text><line x1=\"200\" y1=\"15\" x2=\"200\" y2=\"80\" stroke=\"#64748b\" stroke-dasharray=\"3\"/><text x=\"205\" y=\"45\" font-size=\"10\" fill=\"#dc2626\">Ea (Uncatalyzed)</text></svg>"
+   }
+  ],
+  "pid": "chem_ocra.6.1",
+  "sid": "chem_ocra",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-27T19:01:51.518Z"
  }
 }
