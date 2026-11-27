@@ -3341,5 +3341,2726 @@
   "src": "pre",
   "by": "claude/claude-opus-5-5",
   "ts": "2026-11-27T01:28:33.405Z"
+ },
+ "phy_ocra.4.10": {
+  "summary": "An object moving in a circle at constant speed is **constantly accelerating**, because velocity is a vector and its **direction keeps changing** even though its size (the speed) stays the same. By Newton's first and second laws, a changing velocity needs a **resultant force**, and for circular motion this force always acts **towards the centre of the circle**. OCR asks for this qualitatively: explain why constant speed does not mean constant velocity, and name the force that provides the centripetal pull in real examples such as orbits, cars on bends and objects whirled on strings.",
+  "core": [
+   {
+    "h": "Speed versus velocity",
+    "p": "Speed is a **scalar**: it has size (magnitude) only. Velocity is a **vector**: it has size and **direction**. Two objects can have the same speed but different velocities if they move in different directions. This difference is the key to understanding circular motion.",
+    "bullets": [
+     "Speed = distance travelled / time taken (scalar).",
+     "Velocity = displacement / time, in a stated direction (vector).",
+     "A change in **either** the size **or** the direction of velocity is a change in velocity.",
+     "Going round a bend at a steady 20 m/s still changes velocity, because direction changes."
+    ],
+    "table": {
+     "head": [
+      "Quantity",
+      "Scalar or vector",
+      "Constant in uniform circular motion?"
+     ],
+     "rows": [
+      [
+       "Speed",
+       "Scalar",
+       "Yes"
+      ],
+      [
+       "Velocity",
+       "Vector",
+       "No, direction changes"
+      ],
+      [
+       "Acceleration",
+       "Vector",
+       "Size constant, direction changes"
+      ],
+      [
+       "Resultant force",
+       "Vector",
+       "Size constant, always to centre"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Velocity",
+      "p": "Velocity is the speed of an object in a given direction; it is a vector quantity."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Why constant speed in a circle means acceleration",
+    "p": "Acceleration is the **rate of change of velocity**. In a circle the direction of motion changes all the time, so the velocity changes all the time, so the object is **accelerating** even though the speedometer reading never changes. This is the big idea OCR tests.",
+    "bullets": [
+     "Acceleration = change in velocity / time taken.",
+     "Changing direction alone = changing velocity = acceleration.",
+     "At every instant the velocity points along a **tangent** to the circle.",
+     "The acceleration points **towards the centre** of the circle.",
+     "Because the force is at **90 degrees** to the motion, it changes direction but not speed."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Must-know",
+      "p": "Motion in a circle at constant speed involves a changing velocity, so the object is accelerating and there must be a resultant force."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Newton's laws applied to circular motion",
+    "p": "Newton's first law says an object keeps moving at **constant velocity** (same speed in a straight line) unless a **resultant force** acts on it. An object in circular motion is not moving in a straight line, so a resultant force must be acting. Newton's second law (F = ma) tells us the force is in the same direction as the acceleration: towards the centre.",
+    "bullets": [
+     "No resultant force: object moves in a **straight line** at constant speed.",
+     "Resultant force towards centre: object is pulled round into a circle.",
+     "F = m x a, so a bigger mass needs a bigger force for the same circle and speed.",
+     "The forces on a circling object are **not balanced**; it is not in equilibrium."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Common trap",
+      "p": "Do not say the forces are balanced because the speed is constant. Balanced forces give constant velocity, i.e. a straight line."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "The centripetal force",
+    "p": "The resultant force that keeps an object moving in a circle is called the **centripetal force** (centripetal means centre-seeking). It is **not a new kind of force**; it is simply the name for whatever real force, or combination of forces, points to the centre.",
+    "bullets": [
+     "Always directed **towards the centre** of the circle.",
+     "Acts at right angles to the velocity.",
+     "Provided by tension, gravity, friction, electrostatic attraction or a contact force.",
+     "Never draw an extra arrow labelled centripetal force on top of the real forces."
+    ],
+    "table": {
+     "head": [
+      "Situation",
+      "Force providing centripetal force"
+     ],
+     "rows": [
+      [
+       "Ball whirled on a string",
+       "Tension in the string"
+      ],
+      [
+       "Moon orbiting Earth",
+       "Gravitational attraction"
+      ],
+      [
+       "Satellite orbiting Earth",
+       "Gravitational attraction"
+      ],
+      [
+       "Car going round a bend",
+       "Friction between tyres and road"
+      ],
+      [
+       "Electron orbiting nucleus (simple model)",
+       "Electrostatic attraction"
+      ],
+      [
+       "Clothes in spin dryer drum",
+       "Contact (normal) force from drum wall"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Centripetal force",
+      "p": "The resultant force acting towards the centre of a circle that keeps an object moving in circular motion."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Direction of velocity: the tangent",
+    "p": "At any moment the object is moving along the **tangent** to the circle: a straight line that just touches the circle at that point, at 90 degrees to the radius. If the centripetal force suddenly disappeared, the object would carry on in a straight line along that tangent (Newton's first law).",
+    "bullets": [
+     "Tangent is perpendicular to the radius at that point.",
+     "Velocity arrow is drawn along the tangent, in the direction of travel.",
+     "Force/acceleration arrow is drawn along the radius, pointing inwards.",
+     "If a string snaps, the ball flies off **along the tangent**, not outwards along the radius."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam tip",
+      "p": "Draw velocity arrows touching the circle and force arrows pointing to the centre. Examiners check both directions."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "What happens if the force is removed",
+    "p": "Removing the centripetal force removes the resultant force, so the object stops accelerating and continues at **constant velocity**: the same speed in a straight line along the tangent at the point of release. This is why a hammer thrower releases at just the right moment.",
+    "bullets": [
+     "String breaks: ball moves off at a tangent.",
+     "Car hits ice (little friction): car slides straight on instead of turning.",
+     "Gravity switched off (thought experiment): Moon would move off in a straight line.",
+     "The object does **not** fly directly away from the centre."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Common trap",
+      "p": "There is no outward centrifugal force pushing objects away. Feeling thrown outwards is your body trying to keep moving in a straight line."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Factors affecting the size of the force needed",
+    "p": "OCR only requires qualitative ideas, but grade 9 answers can explain trends. A larger centripetal force is needed when the object has **more mass**, is moving **faster**, or moves in a **tighter (smaller radius) circle**, because in each case the velocity must change more sharply or more mass must be accelerated.",
+    "bullets": [
+     "Greater mass: more force for the same acceleration (F = ma).",
+     "Greater speed: direction must change faster, so more force.",
+     "Smaller radius: tighter turn, so more force.",
+     "If the force available is too small, the object moves into a wider path or slides off."
+    ],
+    "table": {
+     "head": [
+      "Change",
+      "Force needed"
+     ],
+     "rows": [
+      [
+       "Increase mass",
+       "Increases"
+      ],
+      [
+       "Increase speed",
+       "Increases"
+      ],
+      [
+       "Decrease radius",
+       "Increases"
+      ],
+      [
+       "Decrease speed",
+       "Decreases"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Road safety link",
+      "p": "On wet or icy roads the maximum friction is lower, so cars must slow down on bends or they cannot get enough centripetal force."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Orbits of planets, moons and satellites",
+    "p": "A planet, moon or satellite in a circular orbit moves at constant speed but is constantly accelerating towards the body it orbits. **Gravity** provides the centripetal force. The object is continually falling towards the centre but moving sideways fast enough to keep missing it.",
+    "bullets": [
+     "Gravity acts along the line joining the two centres, so it points to the centre of the orbit.",
+     "Speed is constant in a circular orbit, so kinetic energy is constant.",
+     "Gravity is perpendicular to the motion, so it does **no work** on the object in a circular orbit.",
+     "Satellites closer to Earth must travel faster to stay in orbit."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam tip",
+      "p": "For orbit questions always name gravity (gravitational attraction) as the force and say it acts towards the centre."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Cars, bikes and fairground rides",
+    "p": "Everyday examples let you apply the idea. On a level road, **friction** between tyres and road acts sideways towards the centre of the bend. On a fairground ride or in a spin dryer, the wall pushes inwards on the person or clothes.",
+    "bullets": [
+     "Car on a bend: sideways friction from road on tyres, towards centre.",
+     "Passenger in car: seat belt, seat or door pushes them inwards.",
+     "Spin dryer: drum wall pushes clothes inwards; water escapes through holes along tangents.",
+     "Cyclist leaning into a bend: friction at the tyres provides the inward force."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Energy and work in uniform circular motion",
+    "p": "Work done = force x distance moved **in the direction of the force**. The centripetal force is always at 90 degrees to the motion, so it does **no work**. This explains why the speed, and therefore the kinetic energy, stays constant.",
+    "bullets": [
+     "Force perpendicular to motion: no energy transferred by that force.",
+     "Kinetic energy store stays the same in uniform circular motion.",
+     "Only a force component along the direction of motion can change speed."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Linking idea",
+      "p": "Force perpendicular to velocity changes direction only; force along velocity changes speed only."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Writing top-mark explanations",
+    "p": "Six-mark questions reward a clear chain of reasoning. Link each step with because or so: direction changing, so velocity changing, so accelerating, so resultant force, which acts towards the centre, provided by a named force.",
+    "bullets": [
+     "Step 1: velocity is a vector (speed and direction).",
+     "Step 2: direction changes continuously, so velocity changes.",
+     "Step 3: changing velocity means acceleration.",
+     "Step 4: acceleration requires a resultant force (Newton's first and second laws).",
+     "Step 5: force acts towards the centre (centripetal).",
+     "Step 6: name what provides it in this situation."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam tip",
+      "p": "Use the words vector, direction, accelerating, resultant force and towards the centre: these are the mark-scheme keywords."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "A dog on a lead running round you",
+   "p": "Imagine a dog that always wants to run straight ahead, held on a tight lead while you stand still. The dog keeps running at the same speed, but the lead keeps tugging it inwards towards you, so its path bends into a circle. The lead is the centripetal force (tension) and the dog's wish to go straight is inertia. Let go and the dog runs off in a straight line, not directly away from you. Where it breaks down: a real dog chooses its own direction using its legs and friction, whereas a ball on a string has no intention; also a dog is not moving at perfectly constant speed."
+  },
+  "terms": [
+   {
+    "t": "Scalar",
+    "d": "A quantity with magnitude (size) only, e.g. speed, distance, mass."
+   },
+   {
+    "t": "Vector",
+    "d": "A quantity with magnitude and direction, e.g. velocity, force, acceleration."
+   },
+   {
+    "t": "Speed",
+    "d": "Distance travelled per unit time; a scalar."
+   },
+   {
+    "t": "Velocity",
+    "d": "Speed in a given direction; a vector."
+   },
+   {
+    "t": "Acceleration",
+    "d": "The rate of change of velocity; a vector."
+   },
+   {
+    "t": "Resultant force",
+    "d": "The single force that has the same effect as all the forces acting on an object combined."
+   },
+   {
+    "t": "Uniform circular motion",
+    "d": "Motion in a circle at constant speed."
+   },
+   {
+    "t": "Centripetal force",
+    "d": "The resultant force towards the centre of the circle that keeps an object moving in a circle."
+   },
+   {
+    "t": "Centripetal acceleration",
+    "d": "The acceleration of an object in circular motion, directed towards the centre."
+   },
+   {
+    "t": "Tangent",
+    "d": "A straight line that touches a circle at one point, at right angles to the radius; the direction of velocity."
+   },
+   {
+    "t": "Radius",
+    "d": "The distance from the centre of a circle to its edge."
+   },
+   {
+    "t": "Inertia",
+    "d": "The tendency of an object to stay at rest or keep moving at constant velocity."
+   },
+   {
+    "t": "Orbit",
+    "d": "The curved path of a planet, moon or satellite around a larger body, maintained by gravity."
+   },
+   {
+    "t": "Tension",
+    "d": "The pulling force in a stretched string, rope or cable."
+   },
+   {
+    "t": "Friction",
+    "d": "A force that opposes the relative motion of surfaces in contact."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "The object is not accelerating because its speed is constant.",
+    "r": "It is accelerating because its direction, and so its velocity, is changing."
+   },
+   {
+    "w": "Velocity is constant in a circle.",
+    "r": "Speed is constant; velocity changes because direction changes."
+   },
+   {
+    "w": "The forces on it are balanced.",
+    "r": "There is a resultant (unbalanced) force towards the centre."
+   },
+   {
+    "w": "Centrifugal force pushes it outwards.",
+    "r": "The resultant force acts inwards, towards the centre; there is no outward force on the object."
+   },
+   {
+    "w": "When the string breaks the ball flies straight outwards.",
+    "r": "It moves off in a straight line along the tangent to the circle."
+   },
+   {
+    "w": "The centripetal force acts in the direction of motion.",
+    "r": "It acts at right angles to the motion, towards the centre."
+   },
+   {
+    "w": "Centripetal force is an extra force added to the free body diagram.",
+    "r": "It is provided by a real force such as tension, gravity or friction."
+   },
+   {
+    "w": "The Moon stays up because there is no gravity in space.",
+    "r": "Gravity provides the centripetal force that keeps the Moon in orbit."
+   }
+  ],
+  "exam": [
+   {
+    "q": "State the difference between speed and velocity.",
+    "marks": 1,
+    "model": [
+     "Velocity has direction (is a vector) but speed does not (is a scalar)."
+    ],
+    "tip": "Use the words scalar and vector."
+   },
+   {
+    "q": "A satellite moves in a circular orbit at constant speed. Explain why it is accelerating.",
+    "marks": 2,
+    "model": [
+     "Its direction of motion is constantly changing, so its velocity is changing.",
+     "Acceleration is a change in velocity, so it is accelerating."
+    ],
+    "tip": "Link direction to velocity to acceleration."
+   },
+   {
+    "q": "State the direction of the resultant force on an object moving in a circle at constant speed.",
+    "marks": 1,
+    "model": [
+     "Towards the centre of the circle."
+    ],
+    "tip": "Do not say inwards without saying towards the centre."
+   },
+   {
+    "q": "Name the force that provides the centripetal force for the Moon orbiting the Earth.",
+    "marks": 1,
+    "model": [
+     "Gravity / gravitational attraction of the Earth."
+    ],
+    "tip": "Weight is accepted by some schemes but gravitational force is safest."
+   },
+   {
+    "q": "A car travels round a roundabout at a steady 10 m/s. Name the force that keeps it moving in a circle and give its direction.",
+    "marks": 2,
+    "model": [
+     "Friction (between tyres and road).",
+     "Acting towards the centre of the roundabout."
+    ],
+    "tip": "Two marks: name and direction."
+   },
+   {
+    "q": "A ball on a string is whirled in a horizontal circle. The string breaks. Describe the motion of the ball immediately afterwards and explain your answer.",
+    "marks": 2,
+    "model": [
+     "Ball moves in a straight line along the tangent to the circle (in the direction it was moving).",
+     "Because there is no longer a resultant force, so velocity stays constant (Newton's first law)."
+    ],
+    "tip": "Say tangent, not outwards."
+   },
+   {
+    "q": "Explain why the centripetal force does not change the speed of an object in uniform circular motion.",
+    "marks": 2,
+    "model": [
+     "The force acts at right angles to the direction of motion.",
+     "So no work is done / no energy is transferred to the kinetic store, only direction changes."
+    ],
+    "tip": "Use the 90 degree idea."
+   },
+   {
+    "q": "A student says: the forces on a fairground chair moving round in a circle at constant speed must be balanced. Evaluate this statement.",
+    "marks": 2,
+    "model": [
+     "The statement is wrong.",
+     "Velocity is changing (direction), so there must be a resultant force towards the centre."
+    ],
+    "tip": "State clearly whether you agree, then justify."
+   },
+   {
+    "q": "A car is driven round the same bend faster. Explain why it is more likely to skid.",
+    "marks": 2,
+    "model": [
+     "A larger centripetal force is needed at higher speed.",
+     "Friction may not be large enough to provide it, so the car cannot follow the curve."
+    ],
+    "tip": "Mention that friction has a maximum value."
+   },
+   {
+    "q": "Explain, using Newton's laws, why a satellite moving at constant speed in a circular orbit must have a force acting on it and describe this force.",
+    "marks": 6,
+    "model": [
+     "Velocity is a vector, with magnitude and direction.",
+     "In a circular orbit the direction of motion changes continuously.",
+     "So velocity changes, which means the satellite is accelerating.",
+     "Newton's first law: without a resultant force it would move in a straight line at constant speed.",
+     "Newton's second law: acceleration requires a resultant force in the same direction as the acceleration.",
+     "The force is towards the centre of the orbit (centripetal) and is provided by Earth's gravitational attraction; it is perpendicular to the motion so speed stays constant."
+    ],
+    "tip": "Six-mark answers need a logical chain using the key words."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A toy train goes round a circular track at a steady 0.5 m/s. Is its velocity constant? Is it accelerating? Explain.",
+    "steps": [
+     "Speed is 0.5 m/s all the time, so speed is constant.",
+     "The train's direction keeps changing as it goes round the track.",
+     "Velocity includes direction, so velocity is changing.",
+     "A changing velocity is an acceleration, directed towards the centre.",
+     "A resultant force must act towards the centre: the contact force from the rails on the wheels."
+    ],
+    "ans": "Velocity is not constant; the train is accelerating towards the centre even though its speed is constant."
+   },
+   {
+    "q": "An athlete swings a hammer in a circle and releases it. Draw arrows (in words) for the velocity and the force on the hammer just before release, and describe the path just after release.",
+    "steps": [
+     "Just before release, velocity is along the tangent to the circle in the direction of motion.",
+     "The force on the hammer (tension in the wire) points along the wire towards the athlete, the centre of the circle.",
+     "On release the tension becomes zero, so there is no horizontal resultant force.",
+     "Horizontally the hammer carries on at the velocity it had at the moment of release, along the tangent.",
+     "Gravity then pulls it downwards, so it follows a curved path towards the ground."
+    ],
+    "ans": "Velocity along the tangent, force towards the centre; after release the hammer moves off along the tangent (and falls under gravity)."
+   },
+   {
+    "q": "Two identical cars go round the same bend, car A at 15 m/s and car B at 25 m/s. Which needs the larger resultant force and what provides it?",
+    "steps": [
+     "Both cars have the same mass and follow the same radius.",
+     "Car B is faster, so its direction must change more quickly.",
+     "So car B has a larger centripetal acceleration.",
+     "F = ma with the same m, so car B needs a larger force.",
+     "The force is provided by friction between the tyres and the road, towards the centre of the bend."
+    ],
+    "ans": "Car B needs the larger centripetal force, provided by friction from the road towards the centre of the bend."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "An object moving clockwise in a circle at constant speed. Its velocity (blue) is along the tangent; the resultant force and acceleration (red) point to the centre, at 90 degrees to the velocity.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"ab\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#1d4ed8\"/></marker><marker id=\"ar\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#b91c1c\"/></marker></defs><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><circle cx=\"160\" cy=\"125\" r=\"85\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\" stroke-dasharray=\"5,4\"/><circle cx=\"160\" cy=\"125\" r=\"4\" fill=\"#1b2540\"/><text x=\"140\" y=\"150\" font-size=\"12\" fill=\"#1b2540\">centre</text><circle cx=\"160\" cy=\"40\" r=\"10\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"172\" y1=\"40\" x2=\"260\" y2=\"40\" stroke=\"#1d4ed8\" stroke-width=\"3\" marker-end=\"url(#ab)\"/><text x=\"268\" y=\"44\" font-size=\"12\" fill=\"#1d4ed8\">velocity (tangent)</text><line x1=\"160\" y1=\"52\" x2=\"160\" y2=\"108\" stroke=\"#b91c1c\" stroke-width=\"3\" marker-end=\"url(#ar)\"/><text x=\"168\" y=\"85\" font-size=\"12\" fill=\"#b91c1c\">resultant force</text><text x=\"168\" y=\"100\" font-size=\"12\" fill=\"#b91c1c\">to centre</text><text x=\"260\" y=\"170\" font-size=\"12\" fill=\"#1b2540\">constant speed</text><text x=\"260\" y=\"186\" font-size=\"12\" fill=\"#1b2540\">changing velocity</text><text x=\"104\" y=\"30\" font-size=\"12\" fill=\"#1b2540\">object</text></svg>"
+   },
+   {
+    "cap": "The same object at four points on its path. The velocity arrows are all the same length (same speed) but point in different directions, so the velocity is always changing.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"vb\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#1d4ed8\"/></marker></defs><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><circle cx=\"200\" cy=\"120\" r=\"80\" fill=\"#bbf7d0\" stroke=\"#166534\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"40\" r=\"8\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"210\" y1=\"40\" x2=\"260\" y2=\"40\" stroke=\"#1d4ed8\" stroke-width=\"3\" marker-end=\"url(#vb)\"/><circle cx=\"280\" cy=\"120\" r=\"8\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"280\" y1=\"130\" x2=\"280\" y2=\"180\" stroke=\"#1d4ed8\" stroke-width=\"3\" marker-end=\"url(#vb)\"/><circle cx=\"200\" cy=\"200\" r=\"8\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"190\" y1=\"200\" x2=\"140\" y2=\"200\" stroke=\"#1d4ed8\" stroke-width=\"3\" marker-end=\"url(#vb)\"/><circle cx=\"120\" cy=\"120\" r=\"8\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"120\" y1=\"110\" x2=\"120\" y2=\"60\" stroke=\"#1d4ed8\" stroke-width=\"3\" marker-end=\"url(#vb)\"/><text x=\"270\" y=\"30\" font-size=\"12\" fill=\"#1d4ed8\">v east</text><text x=\"292\" y=\"160\" font-size=\"12\" fill=\"#1d4ed8\">v south</text><text x=\"80\" y=\"225\" font-size=\"12\" fill=\"#1d4ed8\">v west</text><text x=\"40\" y=\"60\" font-size=\"12\" fill=\"#1d4ed8\">v north</text><text x=\"160\" y=\"124\" font-size=\"12\" fill=\"#166534\">same speed</text></svg>"
+   },
+   {
+    "cap": "A ball whirled on a string. Tension provides the centripetal force. If the string snaps at point P, the ball moves off in a straight line along the tangent (green), not straight outwards (crossed out).",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"g\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#15803d\"/></marker><marker id=\"r\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#b91c1c\"/></marker></defs><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><circle cx=\"130\" cy=\"130\" r=\"80\" fill=\"#e9d5ff\" stroke=\"#6b21a8\" stroke-width=\"2\" stroke-dasharray=\"5,4\"/><circle cx=\"130\" cy=\"130\" r=\"5\" fill=\"#1b2540\"/><text x=\"70\" y=\"150\" font-size=\"12\" fill=\"#1b2540\">hand</text><line x1=\"130\" y1=\"130\" x2=\"210\" y2=\"130\" stroke=\"#6b21a8\" stroke-width=\"2\"/><text x=\"150\" y=\"122\" font-size=\"12\" fill=\"#6b21a8\">string</text><circle cx=\"210\" cy=\"130\" r=\"9\" fill=\"#fecaca\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"218\" y=\"150\" font-size=\"12\" fill=\"#1b2540\">P</text><line x1=\"210\" y1=\"118\" x2=\"210\" y2=\"30\" stroke=\"#15803d\" stroke-width=\"3\" marker-end=\"url(#g)\"/><text x=\"220\" y=\"40\" font-size=\"12\" fill=\"#15803d\">path if string snaps</text><text x=\"220\" y=\"56\" font-size=\"12\" fill=\"#15803d\">(along tangent)</text><line x1=\"222\" y1=\"130\" x2=\"320\" y2=\"130\" stroke=\"#b91c1c\" stroke-width=\"2\" stroke-dasharray=\"4,3\" marker-end=\"url(#r)\"/><line x1=\"260\" y1=\"120\" x2=\"280\" y2=\"140\" stroke=\"#b91c1c\" stroke-width=\"2\"/><line x1=\"260\" y1=\"140\" x2=\"280\" y2=\"120\" stroke=\"#b91c1c\" stroke-width=\"2\"/><text x=\"280\" y=\"160\" font-size=\"12\" fill=\"#b91c1c\">not outwards</text><text x=\"20\" y=\"228\" font-size=\"12\" fill=\"#1b2540\">tension pulls ball to centre</text></svg>"
+   }
+  ],
+  "pid": "phy_ocra.4.10",
+  "sid": "phy_ocra",
+  "v": 2,
+  "src": "pre",
+  "by": "claude/claude-opus-5-5",
+  "ts": "2026-11-27T01:36:04.208Z"
+ },
+ "phy_ocra.4.6": {
+  "summary": "Force, mass, velocity and acceleration are tied together by Newton's second law: a resultant force F acting on a mass m produces an acceleration a, so F = m x a, and acceleration is the rate of change of velocity, a = (v - u) / t. Combining these gives the triple-only idea that **force equals rate of change of momentum**, F = (mv - mu) / t. This explains why safety features such as crumple zones, airbags, seat belts and helmets work: they make the change in momentum happen over a **longer time**, so the force on the person is **smaller**.",
+  "core": [
+   {
+    "h": "The key quantities and their units",
+    "p": "Before linking anything, you must know exactly what each quantity is, whether it is a vector or scalar, and its SI unit. Force, velocity, acceleration and momentum are all **vectors**, so their direction matters and a negative sign simply means the opposite direction.",
+    "bullets": [
+     "**Force (F)**: a push or pull, measured in **newtons (N)**, vector.",
+     "**Mass (m)**: the amount of matter in an object, measured in **kilograms (kg)**, scalar.",
+     "**Velocity (v)**: speed in a stated direction, measured in **metres per second (m/s)**, vector.",
+     "**Acceleration (a)**: rate of change of velocity, measured in **m/s²**, vector.",
+     "**Momentum (p)**: mass x velocity, measured in **kg m/s**, vector.",
+     "**Time (t)**: measured in **seconds (s)**; always convert minutes or milliseconds first.",
+     "1 N is the resultant force that gives a 1 kg mass an acceleration of 1 m/s², so 1 N = 1 kg m/s²."
+    ],
+    "table": {
+     "head": [
+      "Quantity",
+      "Symbol",
+      "Unit",
+      "Vector or scalar"
+     ],
+     "rows": [
+      [
+       "Resultant force",
+       "F",
+       "N",
+       "Vector"
+      ],
+      [
+       "Mass",
+       "m",
+       "kg",
+       "Scalar"
+      ],
+      [
+       "Initial velocity",
+       "u",
+       "m/s",
+       "Vector"
+      ],
+      [
+       "Final velocity",
+       "v",
+       "m/s",
+       "Vector"
+      ],
+      [
+       "Acceleration",
+       "a",
+       "m/s²",
+       "Vector"
+      ],
+      [
+       "Momentum",
+       "p",
+       "kg m/s",
+       "Vector"
+      ],
+      [
+       "Time",
+       "t",
+       "s",
+       "Scalar"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Acceleration",
+      "p": "Acceleration is the rate of change of velocity: acceleration = change in velocity / time taken."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Acceleration from velocity and time",
+    "p": "Acceleration tells you how quickly velocity changes. If velocity changes by a lot in a short time, the acceleration is large. Because velocity is a vector, slowing down is a **negative acceleration** (deceleration).",
+    "bullets": [
+     "Equation: **acceleration = change in velocity / time**, a = (v - u) / t.",
+     "u is the initial velocity, v is the final velocity.",
+     "If v is less than u, a is negative: the object is **decelerating**.",
+     "Rearranged: v = u + at and t = (v - u) / a.",
+     "On a velocity-time graph, acceleration is the **gradient** of the line.",
+     "A steeper gradient means a larger acceleration; a horizontal line means zero acceleration (constant velocity)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Sign of deceleration",
+      "p": "If a question asks for deceleration, give the size as a positive number, e.g. a deceleration of 4 m/s² is the same as an acceleration of -4 m/s²."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Velocity-time graph for uniform acceleration. The gradient (change in velocity divided by change in time) equals the acceleration.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"200\" x2=\"380\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"200\" x2=\"50\" y2=\"30\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"320\" y=\"225\" font-size=\"12\" fill=\"#1b2540\">Time / s</text><text x=\"56\" y=\"22\" font-size=\"12\" fill=\"#1b2540\">Velocity / m/s</text><line x1=\"50\" y1=\"180\" x2=\"300\" y2=\"60\" stroke=\"#1d4ed8\" stroke-width=\"3\"/><polygon points=\"100,156 250,156 250,84\" fill=\"#dbeafe\" stroke=\"#1e3a8a\" stroke-width=\"1\" stroke-dasharray=\"4 3\"/><text x=\"175\" y=\"172\" font-size=\"13\" fill=\"#1e3a8a\" text-anchor=\"middle\">Δt</text><text x=\"258\" y=\"124\" font-size=\"13\" fill=\"#1e3a8a\">Δv</text><text x=\"110\" y=\"70\" font-size=\"12\" fill=\"#b45309\">gradient = acceleration</text><text x=\"36\" y=\"184\" font-size=\"12\" fill=\"#1b2540\">u</text><text x=\"306\" y=\"58\" font-size=\"12\" fill=\"#1b2540\">v</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Newton's second law: F = ma",
+    "p": "Newton's second law says that the acceleration of an object is **directly proportional to the resultant force** on it and **inversely proportional to its mass**. Doubling the resultant force doubles the acceleration; doubling the mass halves it.",
+    "bullets": [
+     "Equation: **resultant force (N) = mass (kg) x acceleration (m/s²)**, F = ma.",
+     "It must be the **resultant** (net) force, not just one of the forces.",
+     "The acceleration is always in the **same direction as the resultant force**.",
+     "a = F / m: a bigger mass needs a bigger force for the same acceleration.",
+     "m = F / a: this ratio is the inertial mass.",
+     "If the resultant force is zero, a = 0, so velocity stays constant (links to the first law)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Must know",
+      "p": "F = ma uses the RESULTANT force. Always find the resultant force first by adding forces in the same direction and subtracting opposing ones."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A 5 kg block pushed with 20 N against 5 N of friction. The resultant force is 15 N, so the acceleration is 15 / 5 = 3 m/s² in the direction of the resultant force.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"40\" y1=\"150\" x2=\"380\" y2=\"150\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"150\" y=\"90\" width=\"100\" height=\"60\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"200\" y=\"125\" font-size=\"13\" fill=\"#1b2540\" text-anchor=\"middle\">m = 5 kg</text><line x1=\"250\" y1=\"120\" x2=\"340\" y2=\"120\" stroke=\"#b45309\" stroke-width=\"4\"/><polygon points=\"340,112 354,120 340,128\" fill=\"#b45309\" stroke=\"#b45309\"/><text x=\"268\" y=\"106\" font-size=\"12\" fill=\"#b45309\">F = 20 N</text><line x1=\"150\" y1=\"120\" x2=\"95\" y2=\"120\" stroke=\"#b91c1c\" stroke-width=\"4\"/><polygon points=\"95,112 81,120 95,128\" fill=\"#b91c1c\" stroke=\"#b91c1c\"/><text x=\"62\" y=\"106\" font-size=\"12\" fill=\"#b91c1c\">Friction 5 N</text><line x1=\"160\" y1=\"62\" x2=\"235\" y2=\"62\" stroke=\"#15803d\" stroke-width=\"3\"/><polygon points=\"235,56 247,62 235,68\" fill=\"#15803d\" stroke=\"#15803d\"/><text x=\"200\" y=\"48\" font-size=\"12\" fill=\"#15803d\" text-anchor=\"middle\">a = 3 m/s²</text><text x=\"200\" y=\"178\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">Resultant = 15 N</text><text x=\"200\" y=\"200\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">a = F ÷ m</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Finding the resultant force first",
+    "p": "Most mistakes in F = ma questions come from using the wrong force. Draw a quick free body diagram, decide on a positive direction, and combine the forces along that line before you use the equation.",
+    "bullets": [
+     "Forces in the same direction **add**.",
+     "Forces in opposite directions **subtract**.",
+     "Driving force minus resistive forces (friction, air resistance, drag) = resultant force.",
+     "For a falling object: resultant = weight - air resistance.",
+     "For a rocket taking off: resultant = thrust - weight.",
+     "If the resultant comes out negative, the object accelerates in the negative direction (or decelerates)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Common trap",
+      "p": "Using the driving force in F = ma when friction is also acting. The question will often give you both forces deliberately."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Momentum",
+    "p": "Momentum is a measure of how hard it is to stop a moving object. It depends on both mass and velocity, so a slow lorry and a fast bullet can both have large momentum.",
+    "bullets": [
+     "Equation: **momentum (kg m/s) = mass (kg) x velocity (m/s)**, p = mv.",
+     "Momentum is a **vector**: it has the same direction as the velocity.",
+     "Change in momentum = final momentum - initial momentum = mv - mu.",
+     "If an object reverses direction, the change in momentum is larger than either momentum alone because the signs differ.",
+     "A stationary object has zero momentum."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Momentum",
+      "p": "Momentum = mass x velocity. It is a vector quantity measured in kg m/s."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Force as rate of change of momentum (triple, higher)",
+    "p": "Substituting a = (v - u) / t into F = ma gives F = m(v - u) / t = (mv - mu) / t. This is Newton's second law in its most general form: **the resultant force on an object equals its rate of change of momentum**.",
+    "bullets": [
+     "Equation: **force (N) = change in momentum (kg m/s) / time (s)**, F = Δp / t.",
+     "Change in momentum = force x time (F x t), sometimes called impulse.",
+     "For a given change in momentum, a **longer time gives a smaller force**.",
+     "For a given change in momentum, a **shorter time gives a larger force**.",
+     "The force on an object is equal and opposite to the force it exerts on what it hits (third law link).",
+     "Derivation: F = ma and a = (v - u)/t so F = m(v - u)/t = (mv - mu)/t."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "The big idea",
+      "p": "Force = change in momentum / time. Increasing the collision time reduces the rate of change of momentum, which reduces the force."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Force-time graphs for the same car crash with and without a crumple zone. The change in momentum (area under the graph) is the same, but the longer collision time gives a much smaller peak force.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"200\" x2=\"380\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"200\" x2=\"50\" y2=\"30\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"320\" y=\"225\" font-size=\"12\" fill=\"#1b2540\">Time / s</text><text x=\"56\" y=\"22\" font-size=\"12\" fill=\"#1b2540\">Force / N</text><path d=\"M60,200 Q85,-60 110,200 Z\" fill=\"#fecaca\" stroke=\"#b91c1c\" stroke-width=\"2\"/><path d=\"M130,200 Q230,134 330,200 Z\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"2\"/><text x=\"100\" y=\"60\" font-size=\"12\" fill=\"#b91c1c\">No crumple zone</text><text x=\"100\" y=\"76\" font-size=\"12\" fill=\"#b91c1c\">Large peak force</text><text x=\"170\" y=\"135\" font-size=\"12\" fill=\"#15803d\">With crumple zone</text><text x=\"170\" y=\"151\" font-size=\"12\" fill=\"#15803d\">Smaller peak force</text><text x=\"215\" y=\"40\" font-size=\"12\" fill=\"#1b2540\">Same area = same Δp</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Using F = (mv - mu) / t in calculations",
+    "p": "Treat momentum questions methodically: pick a positive direction, work out initial and final momentum with signs, find the change, then divide by the time.",
+    "bullets": [
+     "Step 1: choose a positive direction.",
+     "Step 2: initial momentum = m x u; final momentum = m x v (include signs).",
+     "Step 3: change in momentum = mv - mu.",
+     "Step 4: force = change in momentum / time.",
+     "Convert time to seconds: 50 ms = 0.050 s.",
+     "A negative answer means the force acts opposite to your chosen positive direction.",
+     "If an object bounces back, v and u have opposite signs, so the change is the sum of their sizes."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Bouncing ball",
+      "p": "A 0.5 kg ball hitting a wall at 10 m/s and rebounding at 8 m/s has a change in momentum of 0.5 x (8 - (-10)) = 9 kg m/s, not 1 kg m/s."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Car safety features",
+    "p": "In a crash the car and passengers must lose all their momentum. The change in momentum is fixed by the mass and speed, so the only way to reduce the force on the passengers is to make the stopping **take longer**.",
+    "bullets": [
+     "**Crumple zones**: the front and back of the car deform on impact, increasing the time taken for the car to stop.",
+     "**Seat belts**: stretch slightly, increasing the time for the passenger to stop and spreading the force over the chest.",
+     "**Airbags**: inflate and slowly deflate as the head hits them, increasing the stopping time and spreading the force over a bigger area.",
+     "**Collapsible steering columns** and **padded dashboards** also increase stopping time.",
+     "Each feature: same change in momentum, **longer time**, so **smaller rate of change of momentum**, so **smaller force**, so less injury.",
+     "Seat belts must be replaced after a crash because they have been permanently stretched."
+    ],
+    "table": {
+     "head": [
+      "Safety feature",
+      "How it increases time",
+      "Extra benefit"
+     ],
+     "rows": [
+      [
+       "Crumple zone",
+       "Car body deforms progressively",
+       "Absorbs energy as it deforms"
+      ],
+      [
+       "Seat belt",
+       "Belt stretches a little",
+       "Spreads force across chest and hips"
+      ],
+      [
+       "Airbag",
+       "Bag deflates as head moves into it",
+       "Larger area so lower pressure"
+      ],
+      [
+       "Cycle helmet",
+       "Foam liner crushes",
+       "Spreads force over the skull"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Full-mark chain",
+      "p": "For 4 to 6 marks write the full chain: increases time to stop, same change in momentum, so rate of change of momentum is smaller, so force is smaller, so fewer injuries."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Other everyday examples",
+    "p": "The same idea explains lots of everyday design and sporting technique. Anything that lengthens the time of an impact reduces the force; anything that shortens it increases the force.",
+    "bullets": [
+     "**Cycle and motorcycle helmets**: crushable foam lengthens impact time.",
+     "**Crash mats and soft playground surfaces**: deform to increase the time a falling child takes to stop.",
+     "**Bending your knees** when you land after a jump increases stopping time and reduces force on the legs.",
+     "**Catching a ball**: moving your hands back with the ball increases the time, so it stings less.",
+     "**Following through** in golf, tennis or cricket keeps the club or bat in contact longer, giving a bigger change in momentum so the ball leaves faster.",
+     "**Packaging** such as bubble wrap and polystyrene increases the stopping time of fragile items.",
+     "**Hammers**: a hard head stops in a very short time, giving a very large force on the nail."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Large decelerations and estimating forces",
+    "p": "OCR expects you to estimate the forces and decelerations involved in road transport. Large decelerations cause serious injury because the forces on the body are large.",
+    "bullets": [
+     "Typical car mass: about 1000 to 1500 kg; typical person: about 70 kg.",
+     "A car at about 13 m/s (30 mph) stopping in a crash in about 0.1 s has a deceleration of about 130 m/s².",
+     "Force on a 70 kg passenger: F = ma = 70 x 130, about 9000 N.",
+     "If a safety feature makes that stop take 0.5 s instead, the force falls to about 1800 N.",
+     "Use a = (v - u)/t then F = ma, or F = (mv - mu)/t directly; both give the same answer.",
+     "Doubling the stopping time halves the force."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Estimates",
+      "p": "In an estimate question, state your assumed values clearly and round sensibly. Examiners give marks for reasonable assumptions and correct method."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Proportional reasoning",
+    "p": "Many 1 and 2 mark questions test the relationships rather than the numbers. Use the equations to reason about what changes when one quantity is altered.",
+    "bullets": [
+     "F = ma: at constant mass, **a is directly proportional to F**.",
+     "F = ma: at constant force, **a is inversely proportional to m**.",
+     "F = Δp / t: at constant Δp, **F is inversely proportional to t**.",
+     "p = mv: at constant mass, momentum is directly proportional to velocity.",
+     "Doubling speed doubles momentum, so doubles the force needed to stop in the same time."
+    ],
+    "table": {
+     "head": [
+      "Change",
+      "Effect on acceleration (F = ma)"
+     ],
+     "rows": [
+      [
+       "Double resultant force, same mass",
+       "Acceleration doubles"
+      ],
+      [
+       "Double mass, same force",
+       "Acceleration halves"
+      ],
+      [
+       "Double both force and mass",
+       "Acceleration unchanged"
+      ],
+      [
+       "Halve force, same mass",
+       "Acceleration halves"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Equations you must recall",
+    "p": "These equations are on the recall list, so you need to know them without the equation sheet and be able to rearrange them.",
+    "bullets": [
+     "**force = mass x acceleration** (F = ma).",
+     "**momentum = mass x velocity** (p = mv).",
+     "**acceleration = change in velocity / time** (a = Δv / t).",
+     "Triple, higher: **force = change in momentum / time** (F = (mv - mu) / t).",
+     "Always write the equation, substitute with units, then give the answer with a unit."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Method marks",
+      "p": "Even if your final answer is wrong, writing the equation and a correct substitution usually earns method marks."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Stopping a runaway shopping trolley",
+   "p": "Imagine a loaded shopping trolley rolling towards you. Its momentum is how much stopping it needs. You could stop it with a sudden hard shove (short time, big force, sore hands) or by walking backwards with it and slowing it gently (long time, small force). Either way you remove the same amount of momentum. Crumple zones and airbags are the walking-backwards method. The analogy breaks down because a real crash happens in a fraction of a second, the forces vary during the impact, and the car also transfers energy into deforming metal rather than just being slowed by a steady push."
+  },
+  "terms": [
+   {
+    "t": "Resultant force",
+    "d": "The single force that has the same effect as all the forces acting on an object combined."
+   },
+   {
+    "t": "Mass",
+    "d": "The amount of matter in an object, measured in kilograms; a scalar."
+   },
+   {
+    "t": "Velocity",
+    "d": "Speed in a given direction; a vector measured in m/s."
+   },
+   {
+    "t": "Acceleration",
+    "d": "The rate of change of velocity, measured in m/s²."
+   },
+   {
+    "t": "Deceleration",
+    "d": "A negative acceleration: the velocity decreasing with time."
+   },
+   {
+    "t": "Newton's second law",
+    "d": "The acceleration of an object is directly proportional to the resultant force and inversely proportional to its mass, F = ma."
+   },
+   {
+    "t": "Momentum",
+    "d": "Mass multiplied by velocity, a vector measured in kg m/s."
+   },
+   {
+    "t": "Change in momentum",
+    "d": "Final momentum minus initial momentum, mv - mu."
+   },
+   {
+    "t": "Rate of change of momentum",
+    "d": "Change in momentum divided by the time taken; equal to the resultant force."
+   },
+   {
+    "t": "Impulse",
+    "d": "Force multiplied by the time it acts for; equal to the change in momentum."
+   },
+   {
+    "t": "Newton",
+    "d": "The force that gives a mass of 1 kg an acceleration of 1 m/s²."
+   },
+   {
+    "t": "Inertial mass",
+    "d": "A measure of how difficult it is to change an object's velocity; the ratio of force to acceleration."
+   },
+   {
+    "t": "Crumple zone",
+    "d": "A part of a car designed to deform in a collision, increasing the time to stop and reducing the force."
+   },
+   {
+    "t": "Airbag",
+    "d": "A bag that inflates in a crash so the occupant stops over a longer time and larger area, reducing force."
+   },
+   {
+    "t": "Vector",
+    "d": "A quantity with both magnitude and direction."
+   },
+   {
+    "t": "Gradient of a velocity-time graph",
+    "d": "Equal to the acceleration of the object."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Crumple zones reduce the change in momentum.",
+    "r": "The change in momentum is the same; crumple zones increase the time taken, so the rate of change of momentum and the force are smaller."
+   },
+   {
+    "w": "Airbags absorb the force.",
+    "r": "Airbags increase the time taken for the head to stop (and spread the force over a larger area), so the force is reduced."
+   },
+   {
+    "w": "Using the driving force in F = ma when friction acts.",
+    "r": "Use the resultant force: driving force minus resistive forces."
+   },
+   {
+    "w": "Momentum is measured in N or kg/m/s.",
+    "r": "Momentum is measured in kg m/s."
+   },
+   {
+    "w": "A ball that rebounds has a change in momentum of m(v - u) using sizes only.",
+    "r": "Take direction into account: the velocities have opposite signs, so the change is m(v + u) in size."
+   },
+   {
+    "w": "Using time in milliseconds directly in F = Δp/t.",
+    "r": "Convert to seconds first, e.g. 20 ms = 0.020 s."
+   },
+   {
+    "w": "A bigger mass means a bigger acceleration.",
+    "r": "For the same resultant force, a bigger mass gives a smaller acceleration (a = F/m)."
+   },
+   {
+    "w": "Seat belts work by stopping you moving.",
+    "r": "Seat belts stretch, increasing the time for you to stop, so the force on you is smaller."
+   },
+   {
+    "w": "Acceleration = velocity / time.",
+    "r": "Acceleration = change in velocity / time taken."
+   }
+  ],
+  "exam": [
+   {
+    "q": "State the equation linking resultant force, mass and acceleration.",
+    "marks": 1,
+    "model": [
+     "resultant force = mass x acceleration (F = ma)"
+    ],
+    "tip": "Words or standard symbols are both accepted."
+   },
+   {
+    "q": "A car of mass 1200 kg accelerates at 2.5 m/s². Calculate the resultant force on the car.",
+    "marks": 2,
+    "model": [
+     "F = ma = 1200 x 2.5",
+     "= 3000 N"
+    ],
+    "tip": "Always give the unit."
+   },
+   {
+    "q": "A 0.40 kg ball accelerates from rest to 15 m/s. Calculate the change in momentum of the ball.",
+    "marks": 2,
+    "model": [
+     "change in momentum = m(v - u) = 0.40 x (15 - 0)",
+     "= 6.0 kg m/s"
+    ],
+    "tip": "From rest means u = 0."
+   },
+   {
+    "q": "A cyclist and bike of total mass 80 kg have a forward force of 200 N and resistive forces of 120 N. Calculate the acceleration.",
+    "marks": 3,
+    "model": [
+     "resultant force = 200 - 120 = 80 N",
+     "a = F / m = 80 / 80",
+     "= 1.0 m/s²"
+    ],
+    "tip": "Find the resultant force before using F = ma."
+   },
+   {
+    "q": "A tennis ball of mass 0.058 kg changes velocity from 0 to 40 m/s while in contact with a racket for 0.005 s. Calculate the average force on the ball.",
+    "marks": 3,
+    "model": [
+     "change in momentum = 0.058 x 40 = 2.32 kg m/s",
+     "F = change in momentum / time = 2.32 / 0.005",
+     "= 464 N"
+    ],
+    "tip": "This is the triple-only equation F = (mv - mu)/t."
+   },
+   {
+    "q": "Explain why a person who bends their knees on landing is less likely to be injured.",
+    "marks": 3,
+    "model": [
+     "bending knees increases the time taken to stop",
+     "change in momentum is the same",
+     "so rate of change of momentum / force is smaller"
+    ],
+    "tip": "Name all three links: time, same momentum change, smaller force."
+   },
+   {
+    "q": "Explain how a crumple zone reduces injuries to passengers in a crash.",
+    "marks": 4,
+    "model": [
+     "crumple zone deforms / crumples on impact",
+     "this increases the time taken for the car (and passengers) to stop",
+     "the change in momentum is the same",
+     "so the rate of change of momentum is smaller, so the force on passengers is smaller"
+    ],
+    "tip": "Avoid saying it absorbs the force or reduces momentum."
+   },
+   {
+    "q": "A 70 kg passenger travelling at 15 m/s is brought to rest by a seat belt in 0.30 s. Without a seat belt they would stop in 0.020 s against the dashboard. Calculate both forces and comment on the difference.",
+    "marks": 4,
+    "model": [
+     "change in momentum = 70 x 15 = 1050 kg m/s",
+     "with seat belt F = 1050 / 0.30 = 3500 N",
+     "without seat belt F = 1050 / 0.020 = 52 500 N",
+     "force without seat belt is 15 times larger, so much more likely to cause injury"
+    ],
+    "tip": "Compare with a ratio to earn the evaluation mark."
+   },
+   {
+    "q": "Describe the relationship between resultant force, mass and acceleration.",
+    "marks": 2,
+    "model": [
+     "acceleration is directly proportional to resultant force (for constant mass)",
+     "acceleration is inversely proportional to mass (for constant force)"
+    ],
+    "tip": "State which quantity is held constant."
+   },
+   {
+    "q": "Use the equations F = ma and a = (v - u)/t to show that force equals rate of change of momentum.",
+    "marks": 2,
+    "model": [
+     "substitute a: F = m(v - u)/t",
+     "= (mv - mu)/t which is change in momentum / time"
+    ],
+    "tip": "Show each algebraic step clearly."
+   },
+   {
+    "q": "Car manufacturers fit crumple zones, airbags and seat belts. Explain, using ideas about momentum and forces, how these features protect passengers. Include an estimate of the forces involved.",
+    "marks": 6,
+    "model": [
+     "in a crash the car and passengers lose all their momentum",
+     "the change in momentum is fixed by mass and velocity",
+     "crumple zones deform, increasing the time for the car to stop",
+     "seat belts stretch and airbags deflate, increasing the time for passengers to stop",
+     "longer time gives smaller rate of change of momentum, so smaller force (F = Δp/t)",
+     "airbags and seat belts spread the force over a larger area, reducing pressure",
+     "estimate: 70 kg person at 13 m/s stopping in 0.1 s feels about 9000 N; stopping in 0.5 s reduces this to about 1800 N"
+    ],
+    "tip": "Level 3 answers link every feature to time and force and include a sensible numerical estimate."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A lorry of mass 12 000 kg slows from 20 m/s to 8 m/s in 6.0 s. Calculate its deceleration and the resultant braking force.",
+    "steps": [
+     "a = (v - u) / t = (8 - 20) / 6.0",
+     "a = -2.0 m/s², so the deceleration is 2.0 m/s²",
+     "F = ma = 12 000 x 2.0",
+     "F = 24 000 N acting backwards"
+    ],
+    "ans": "Deceleration 2.0 m/s²; resultant braking force 24 000 N (2.4 x 10^4 N)."
+   },
+   {
+    "q": "A 0.15 kg cricket ball travelling at 30 m/s towards a bat is hit straight back at 25 m/s. The contact time is 1.5 ms. Calculate the average force on the ball.",
+    "steps": [
+     "Take the direction the ball leaves the bat as positive: u = -30 m/s, v = +25 m/s.",
+     "initial momentum = 0.15 x (-30) = -4.5 kg m/s",
+     "final momentum = 0.15 x 25 = 3.75 kg m/s",
+     "change in momentum = 3.75 - (-4.5) = 8.25 kg m/s",
+     "t = 1.5 ms = 0.0015 s",
+     "F = 8.25 / 0.0015 = 5500 N"
+    ],
+    "ans": "Average force = 5500 N in the direction the ball leaves the bat."
+   },
+   {
+    "q": "A 60 kg stunt performer falls and hits the ground at 8.0 m/s. Compare the force on landing on concrete (stops in 0.010 s) and on a crash mat (stops in 0.40 s).",
+    "steps": [
+     "change in momentum = 60 x 8.0 = 480 kg m/s",
+     "concrete: F = 480 / 0.010 = 48 000 N",
+     "crash mat: F = 480 / 0.40 = 1200 N",
+     "ratio = 48 000 / 1200 = 40"
+    ],
+    "ans": "The crash mat reduces the force from 48 000 N to 1200 N, 40 times smaller, because it increases the stopping time 40 times."
+   }
+  ],
+  "svg": [],
+  "pid": "phy_ocra.4.6",
+  "sid": "phy_ocra",
+  "v": 2,
+  "src": "pre",
+  "by": "claude/claude-opus-5-5",
+  "ts": "2026-11-27T01:36:04.705Z"
+ },
+ "phy_ocra.4.7": {
+  "summary": "When a force moves an object through a distance along the line of action of the force, **work is done** and energy is transferred from one store to another. The amount of work done is calculated using **work done = force x distance (along the line of action of the force)**, measured in joules, where **1 joule = 1 newton-metre**. Work done against friction or air resistance transfers energy to the **thermal store** of the objects and surroundings, which is why brakes and sliding surfaces get hot.",
+  "core": [
+   {
+    "h": "What work done means",
+    "p": "In physics, work is not just effort. **Work is done whenever a force moves an object through a distance in the direction of the force.** Doing work is one of the ways energy is transferred between stores, so work done always equals energy transferred.",
+    "bullets": [
+     "Work is done only if there is **movement along the line of action of the force**.",
+     "Pushing a wall that does not move: no distance, so **no work is done** on the wall.",
+     "Carrying a bag horizontally at constant height: the lifting force is upwards but the movement is sideways, so the lifting force does no work on the bag.",
+     "**Work done = energy transferred**: if 500 J of work is done, 500 J of energy has moved between stores.",
+     "Work is a scalar; it is measured in **joules (J)**.",
+     "Transferring energy by a force is called transfer **mechanically** (by forces doing work)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Work done",
+      "p": "Work is done when a force moves an object through a distance. Work done = force x distance moved along the line of action of the force."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "The work done equation",
+    "p": "This is a recall equation: you must know it and rearrange it. The distance must be the distance moved **in the direction of the force** (along its line of action).",
+    "bullets": [
+     "**work done (J) = force (N) x distance (m)** (along the line of action of the force).",
+     "Symbols: W = F x d (some books write E = F x d).",
+     "Rearranged: F = W / d and d = W / F.",
+     "Doubling the force at the same distance doubles the work done.",
+     "Doubling the distance at the same force doubles the work done.",
+     "Convert distances to metres (e.g. 50 cm = 0.50 m) and forces to newtons (e.g. 2 kN = 2000 N)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Must know",
+      "p": "work done = force x distance (along the line of action of the force). This is on the recall list."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A 50 N horizontal push moves a box 4.0 m along the floor in the direction of the force, so the work done is 50 x 4.0 = 200 J.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><text x=\"200\" y=\"40\" font-size=\"13\" fill=\"#1b2540\" text-anchor=\"middle\">W = F x d = 200 J</text><line x1=\"20\" y1=\"170\" x2=\"380\" y2=\"170\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"60\" y=\"120\" width=\"60\" height=\"50\" fill=\"#e9d5ff\" stroke=\"#6b21a8\" stroke-width=\"2\" stroke-dasharray=\"5 3\"/><text x=\"90\" y=\"150\" font-size=\"12\" fill=\"#6b21a8\" text-anchor=\"middle\">Start</text><rect x=\"260\" y=\"120\" width=\"60\" height=\"50\" fill=\"#dbeafe\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"290\" y=\"150\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">End</text><line x1=\"60\" y1=\"105\" x2=\"108\" y2=\"105\" stroke=\"#b45309\" stroke-width=\"3\"/><polygon points=\"108,99 120,105 108,111\" fill=\"#b45309\" stroke=\"#b45309\"/><text x=\"60\" y=\"92\" font-size=\"12\" fill=\"#b45309\">F = 50 N</text><line x1=\"260\" y1=\"105\" x2=\"308\" y2=\"105\" stroke=\"#b45309\" stroke-width=\"3\"/><polygon points=\"308,99 320,105 308,111\" fill=\"#b45309\" stroke=\"#b45309\"/><text x=\"260\" y=\"92\" font-size=\"12\" fill=\"#b45309\">F = 50 N</text><line x1=\"100\" y1=\"192\" x2=\"280\" y2=\"192\" stroke=\"#15803d\" stroke-width=\"2\"/><polygon points=\"100,186 90,192 100,198\" fill=\"#15803d\" stroke=\"#15803d\"/><polygon points=\"280,186 290,192 280,198\" fill=\"#15803d\" stroke=\"#15803d\"/><text x=\"190\" y=\"215\" font-size=\"12\" fill=\"#15803d\" text-anchor=\"middle\">d = 4.0 m</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Joules and newton-metres",
+    "p": "Because work done = force x distance, the unit of work can be written as newton x metre. OCR expects you to be able to convert between the two.",
+    "bullets": [
+     "**1 joule = 1 newton-metre** (1 J = 1 N m).",
+     "One joule of work is done when a force of 1 N moves an object 1 m along its line of action.",
+     "So 350 N m = 350 J.",
+     "1 kJ = 1000 J; 1 MJ = 1 000 000 J.",
+     "Do not confuse this with the moment of a force, which is also written in N m but is a turning effect, not energy."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "The joule",
+      "p": "One joule is the work done when a force of one newton moves an object one metre in the direction of the force."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Energy stores and transfer pathways",
+    "p": "To describe what happens when work is done, say which **store** energy leaves, which store it goes to, and the **pathway** it uses. Doing work by a force is the mechanical pathway.",
+    "bullets": [
+     "Stores: **kinetic, gravitational potential, elastic potential, thermal, chemical, magnetic, electrostatic, nuclear**.",
+     "Pathways: **mechanically** (forces doing work), **electrically** (current doing work), **by heating**, **by radiation** (light, sound waves).",
+     "Example: kicking a ball transfers energy mechanically from the chemical store of the player to the kinetic store of the ball.",
+     "Example: lifting a book transfers energy from the chemical store of your muscles to the gravitational potential store of the book.",
+     "Example: stretching a spring transfers energy to its elastic potential store.",
+     "Energy is always **conserved**: the total in a closed system stays the same; it is just moved between stores."
+    ],
+    "table": {
+     "head": [
+      "Situation",
+      "Energy from",
+      "Energy to"
+     ],
+     "rows": [
+      [
+       "Lifting a box",
+       "Chemical store of person",
+       "Gravitational potential store of box"
+      ],
+      [
+       "Car accelerating",
+       "Chemical store of fuel",
+       "Kinetic store of car (and thermal store)"
+      ],
+      [
+       "Car braking",
+       "Kinetic store of car",
+       "Thermal store of brakes and surroundings"
+      ],
+      [
+       "Stretching a spring",
+       "Chemical store of person",
+       "Elastic potential store of spring"
+      ],
+      [
+       "Pushing a box at constant speed",
+       "Chemical store of person",
+       "Thermal store of box, floor and surroundings"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Work done lifting objects",
+    "p": "When you lift an object at a steady speed, the upward force equals its weight. The work done against gravity is stored in the object's **gravitational potential energy store**.",
+    "bullets": [
+     "Work done lifting = weight x vertical height = F x h.",
+     "Weight = mass x gravitational field strength (W = mg), so work done = mgh.",
+     "Only the **vertical height** counts for work done against gravity, not the length of a ramp or stairs.",
+     "The work done lifting equals the **gain in gravitational potential energy**.",
+     "Lowering an object: gravity does work on it and energy leaves the GPE store."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Ramps",
+      "p": "Pushing a box up a ramp: the force along the ramp x the ramp length gives the work you do. Some goes into GPE (weight x vertical height) and the rest is wasted against friction."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Lifting a box with a 30 N force (equal to its weight) through a vertical height of 2.0 m does 60 J of work, which is transferred to the box's gravitational potential energy store.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"20\" y1=\"200\" x2=\"380\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"60\" y=\"170\" width=\"50\" height=\"30\" fill=\"#e9d5ff\" stroke=\"#6b21a8\" stroke-width=\"2\" stroke-dasharray=\"5 3\"/><rect x=\"60\" y=\"60\" width=\"50\" height=\"30\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"2\"/><line x1=\"85\" y1=\"165\" x2=\"85\" y2=\"108\" stroke=\"#b91c1c\" stroke-width=\"3\"/><polygon points=\"79,108 85,96 91,108\" fill=\"#b91c1c\" stroke=\"#b91c1c\"/><text x=\"96\" y=\"135\" font-size=\"12\" fill=\"#b91c1c\">F = 30 N</text><line x1=\"190\" y1=\"92\" x2=\"190\" y2=\"198\" stroke=\"#15803d\" stroke-width=\"2\"/><polygon points=\"184,100 190,90 196,100\" fill=\"#15803d\" stroke=\"#15803d\"/><polygon points=\"184,190 190,200 196,190\" fill=\"#15803d\" stroke=\"#15803d\"/><text x=\"198\" y=\"150\" font-size=\"12\" fill=\"#15803d\">h = 2.0 m</text><text x=\"250\" y=\"56\" font-size=\"12\" fill=\"#1b2540\">W = F x h</text><text x=\"250\" y=\"74\" font-size=\"12\" fill=\"#1b2540\">= 30 x 2.0</text><text x=\"250\" y=\"92\" font-size=\"12\" fill=\"#1b2540\">= 60 J</text><text x=\"250\" y=\"120\" font-size=\"12\" fill=\"#b45309\">Gain in GPE store</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Work done against friction causes heating",
+    "p": "When surfaces rub together, the force of friction opposes the motion. Work done against friction transfers energy to the **thermal store** of the surfaces and the surroundings, so they get warmer. This energy is usually wasted (dissipated).",
+    "bullets": [
+     "Rubbing your hands together: work done against friction warms your hands.",
+     "Pushing a box across a floor at constant speed: all the work you do goes into the thermal store of box, floor and air.",
+     "Air resistance and drag are frictional forces; work done against them heats the air and the object.",
+     "A meteor heats up and glows because of work done against air resistance.",
+     "Reducing friction (lubrication with oil, streamlining) reduces wasted energy.",
+     "Energy dissipated to the surroundings spreads out and is hard to use again."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Wording",
+      "p": "Say energy is transferred to the thermal store, not that friction 'creates heat' or 'uses up energy'. Energy is never created or destroyed."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Braking: work done to stop a vehicle",
+    "p": "When a driver brakes, the friction force between the brake pads and the discs does work on the wheels. This transfers energy from the **kinetic store** of the vehicle to the **thermal store** of the brakes, which can get very hot.",
+    "bullets": [
+     "Work done by brakes = braking force x braking distance.",
+     "To stop completely, work done by brakes = kinetic energy of the vehicle: F x d = ½ m v².",
+     "For the same braking force, **doubling the speed gives four times the kinetic energy**, so four times the braking distance.",
+     "Larger braking forces give large decelerations, which can make brakes overheat or tyres skid.",
+     "A heavier vehicle at the same speed has more kinetic energy, so it needs more work done to stop it."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Braking chain",
+      "p": "Brakes apply friction, friction does work, energy moves from the kinetic store of the car to the thermal store of the brakes, the car slows down and the brakes get hot."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Energy transfer when a car brakes. Work done by friction moves energy from the car's kinetic store mainly to the thermal store of the brakes, with some dissipated to the surroundings.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><text x=\"200\" y=\"30\" font-size=\"13\" fill=\"#1b2540\" text-anchor=\"middle\">Braking car</text><rect x=\"20\" y=\"90\" width=\"110\" height=\"50\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#1e3a8a\" stroke-width=\"2\"/><text x=\"75\" y=\"112\" font-size=\"12\" fill=\"#1e3a8a\" text-anchor=\"middle\">Kinetic store</text><text x=\"75\" y=\"128\" font-size=\"12\" fill=\"#1e3a8a\" text-anchor=\"middle\">of car</text><rect x=\"270\" y=\"90\" width=\"110\" height=\"50\" rx=\"6\" fill=\"#fecaca\" stroke=\"#b91c1c\" stroke-width=\"2\"/><text x=\"325\" y=\"112\" font-size=\"12\" fill=\"#b91c1c\" text-anchor=\"middle\">Thermal store</text><text x=\"325\" y=\"128\" font-size=\"12\" fill=\"#b91c1c\" text-anchor=\"middle\">of brakes</text><line x1=\"130\" y1=\"115\" x2=\"258\" y2=\"115\" stroke=\"#b45309\" stroke-width=\"4\"/><polygon points=\"258,108 270,115 258,122\" fill=\"#b45309\" stroke=\"#b45309\"/><text x=\"200\" y=\"84\" font-size=\"12\" fill=\"#b45309\" text-anchor=\"middle\">Work done</text><text x=\"200\" y=\"100\" font-size=\"12\" fill=\"#b45309\" text-anchor=\"middle\">by friction</text><line x1=\"200\" y1=\"117\" x2=\"200\" y2=\"168\" stroke=\"#b45309\" stroke-width=\"2\"/><polygon points=\"194,168 200,180 206,168\" fill=\"#b45309\" stroke=\"#b45309\"/><rect x=\"140\" y=\"182\" width=\"120\" height=\"34\" rx=\"6\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"2\"/><text x=\"200\" y=\"204\" font-size=\"12\" fill=\"#92400e\" text-anchor=\"middle\">Surroundings</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Describing changes in a system",
+    "p": "OCR questions often ask you to describe all the changes in the way energy is stored when a system changes. Identify the system, the stores at the start and end, and the work done by each force.",
+    "bullets": [
+     "Ball thrown upwards: kinetic store decreases, gravitational store increases; some energy goes to thermal store of air (air resistance).",
+     "Object accelerated by a constant force: work done by resultant force increases the kinetic store.",
+     "Vehicle slowing down: kinetic store decreases; thermal store of brakes increases.",
+     "Bringing water to boil in a kettle: electrical work increases thermal store of water (not mechanical, but same idea of work transferring energy).",
+     "Moving vehicle hitting an obstacle: kinetic store transferred to thermal stores and work done deforming the vehicle.",
+     "Always state where energy starts, where it ends, and the mechanism (which force does the work)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Describe fully",
+      "p": "For full marks name both stores AND the pathway: 'energy is transferred mechanically by the frictional force from the kinetic store of the car to the thermal store of the brakes'."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "When no work is done",
+    "p": "Students lose marks by assuming any force does work. A force only does work on an object if the object moves along the line of action of that force.",
+    "bullets": [
+     "Holding a heavy weight still: no movement, so no work done on the weight (your muscles get tired because of internal processes, not work on the weight).",
+     "A satellite in circular orbit: gravity acts towards the centre, at right angles to the motion, so gravity does no work and the speed stays constant.",
+     "Reaction force from the floor on a sliding box: acts upwards, motion is sideways, so it does no work.",
+     "A force at an angle: only the part of the movement in the direction of the force counts."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Feeling tired is not work",
+      "p": "Holding a box still feels hard, but in physics no work is done on the box because it does not move."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Efficiency and wasted work",
+    "p": "In real machines not all the work done ends up in the useful store. The rest is dissipated, usually by work done against friction, heating the surroundings.",
+    "bullets": [
+     "Useful work done + wasted energy = total work done (input energy).",
+     "Efficiency = useful energy output / total energy input (as a decimal or x100 for %).",
+     "Lubrication reduces friction so less work is wasted.",
+     "Streamlining reduces air resistance on vehicles, so less fuel is needed.",
+     "No machine can be more than 100% efficient because energy cannot be created."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Calculation strategy",
+    "p": "Use a consistent method in every work-done question so you collect all the method marks.",
+    "bullets": [
+     "Write the equation: work done = force x distance.",
+     "Check the distance is along the line of action of the force (vertical height for lifting).",
+     "Convert units: kN to N, cm or km to m, kJ to J.",
+     "Substitute with units and calculate.",
+     "State the answer with the unit J (or N m if asked).",
+     "Where needed, link to another equation: e.g. W = mgh for lifting, or W = ½ m v² for stopping a moving object."
+    ],
+    "table": {
+     "head": [
+      "Quantity",
+      "Symbol",
+      "Unit"
+     ],
+     "rows": [
+      [
+       "Work done / energy transferred",
+       "W or E",
+       "J (= N m)"
+      ],
+      [
+       "Force",
+       "F",
+       "N"
+      ],
+      [
+       "Distance (along line of action)",
+       "d",
+       "m"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Two-step questions",
+      "p": "If a question gives mass instead of force when lifting, find the weight first with W = mg (g = 10 N/kg on OCR papers), then use work done = weight x height."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Work done as paying for a journey",
+   "p": "Think of energy as money in bank accounts (stores). Doing work is like paying for a journey: the force is the price per metre and the distance is how far you travel, so the total bill is force x distance. The money leaves one account (say your chemical store) and lands in another (kinetic, gravitational or thermal). Friction is like a fee that goes to the surroundings and can never be spent again. The analogy breaks down because money can be printed or destroyed, whereas energy is always conserved, and because work is only paid when movement is in the direction of the force."
+  },
+  "terms": [
+   {
+    "t": "Work done",
+    "d": "Energy transferred when a force moves an object a distance along the line of action of the force."
+   },
+   {
+    "t": "Line of action",
+    "d": "The straight line along which a force acts; only movement along it counts towards work done."
+   },
+   {
+    "t": "Joule (J)",
+    "d": "The unit of energy and work; 1 J is the work done when 1 N moves an object 1 m."
+   },
+   {
+    "t": "Newton-metre (N m)",
+    "d": "Equal to one joule when used for work done or energy."
+   },
+   {
+    "t": "Energy store",
+    "d": "A way energy is held, e.g. kinetic, gravitational potential, elastic potential, thermal, chemical."
+   },
+   {
+    "t": "Kinetic energy store",
+    "d": "Energy an object has because it is moving."
+   },
+   {
+    "t": "Gravitational potential energy store",
+    "d": "Energy an object has because of its height in a gravitational field."
+   },
+   {
+    "t": "Elastic potential energy store",
+    "d": "Energy stored in a stretched, compressed or bent object."
+   },
+   {
+    "t": "Thermal energy store",
+    "d": "Energy stored in an object due to its temperature."
+   },
+   {
+    "t": "Mechanical transfer",
+    "d": "Energy transfer by a force moving an object (work done by a force)."
+   },
+   {
+    "t": "Friction",
+    "d": "A force that opposes motion between surfaces in contact; work done against it heats the surfaces."
+   },
+   {
+    "t": "Dissipation",
+    "d": "Energy spreading out into the surroundings, usually as thermal energy, so it is less useful."
+   },
+   {
+    "t": "Conservation of energy",
+    "d": "Energy cannot be created or destroyed, only transferred between stores."
+   },
+   {
+    "t": "System",
+    "d": "An object or group of objects being studied."
+   },
+   {
+    "t": "Efficiency",
+    "d": "Useful energy output divided by total energy input."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Work done = force / distance or force x time.",
+    "r": "Work done = force x distance moved along the line of action of the force."
+   },
+   {
+    "w": "Holding a heavy box still does work on the box.",
+    "r": "No work is done on the box because it does not move a distance."
+   },
+   {
+    "w": "Friction creates heat energy.",
+    "r": "Work done against friction transfers energy to the thermal store of the surfaces and surroundings."
+   },
+   {
+    "w": "Energy is lost when a car brakes.",
+    "r": "Energy is transferred from the kinetic store to the thermal store of the brakes and surroundings; it is dissipated, not destroyed."
+   },
+   {
+    "w": "Using the length of a ramp for work done against gravity.",
+    "r": "Use the vertical height for work done against gravity (gain in GPE)."
+   },
+   {
+    "w": "Using mass in kg as the force.",
+    "r": "Convert mass to weight first using W = mg before using work done = force x distance."
+   },
+   {
+    "w": "1 J = 1 N/m.",
+    "r": "1 J = 1 N m (newton-metre)."
+   },
+   {
+    "w": "Doubling speed doubles the braking distance.",
+    "r": "Kinetic energy depends on v², so doubling speed gives four times the work needed and four times the braking distance for the same force."
+   },
+   {
+    "w": "Saying energy is transferred 'by friction' with no stores named.",
+    "r": "Name the stores: from the kinetic store of the object to the thermal store of the surfaces and surroundings."
+   }
+  ],
+  "exam": [
+   {
+    "q": "State the equation linking work done, force and distance.",
+    "marks": 1,
+    "model": [
+     "work done = force x distance (along the line of action of the force)"
+    ],
+    "tip": "Include 'along the line of action' if asked to define."
+   },
+   {
+    "q": "Convert 450 N m into joules.",
+    "marks": 1,
+    "model": [
+     "450 J"
+    ],
+    "tip": "1 N m = 1 J."
+   },
+   {
+    "q": "A person pushes a trolley with a force of 60 N for 25 m. Calculate the work done.",
+    "marks": 2,
+    "model": [
+     "W = F x d = 60 x 25",
+     "= 1500 J"
+    ],
+    "tip": "Always include the unit."
+   },
+   {
+    "q": "A crane does 36 000 J of work lifting a load 12 m. Calculate the force applied by the crane.",
+    "marks": 2,
+    "model": [
+     "F = W / d = 36 000 / 12",
+     "= 3000 N"
+    ],
+    "tip": "Rearrange before substituting."
+   },
+   {
+    "q": "A student holds a 20 N bag still for 2 minutes. Explain why no work is done on the bag.",
+    "marks": 2,
+    "model": [
+     "work is only done when a force moves an object a distance",
+     "the bag does not move so distance = 0 and work done = 0"
+    ],
+    "tip": "Link to the equation W = F x d."
+   },
+   {
+    "q": "Describe the energy transfer when a box is pushed across a rough floor at constant speed.",
+    "marks": 3,
+    "model": [
+     "work is done against friction",
+     "energy transferred from chemical store of person",
+     "to thermal store of box, floor and surroundings (kinetic store unchanged as speed is constant)"
+    ],
+    "tip": "Constant speed means no gain in kinetic energy."
+   },
+   {
+    "q": "A 2.5 kg book is lifted onto a shelf 1.6 m high. Calculate the work done. (g = 10 N/kg)",
+    "marks": 3,
+    "model": [
+     "weight = mg = 2.5 x 10 = 25 N",
+     "W = F x d = 25 x 1.6",
+     "= 40 J"
+    ],
+    "tip": "Convert mass to weight first."
+   },
+   {
+    "q": "A car of mass 1000 kg travelling at 20 m/s brakes to a stop. The braking force is 5000 N. Calculate the braking distance.",
+    "marks": 4,
+    "model": [
+     "kinetic energy = ½ m v² = 0.5 x 1000 x 20² = 200 000 J",
+     "work done by brakes = kinetic energy lost",
+     "d = W / F = 200 000 / 5000",
+     "= 40 m"
+    ],
+    "tip": "Equate work done by the brakes to the kinetic energy lost."
+   },
+   {
+    "q": "Explain why the brakes of a car get hot when the car stops.",
+    "marks": 3,
+    "model": [
+     "friction between brake pads and discs does work",
+     "energy is transferred from the kinetic store of the car",
+     "to the thermal store of the brakes, increasing their temperature"
+    ],
+    "tip": "Name the force, the starting store and the end store."
+   },
+   {
+    "q": "Explain why the braking distance of a car is four times larger when its speed doubles, if the braking force is the same.",
+    "marks": 3,
+    "model": [
+     "kinetic energy = ½ m v², so doubling v gives four times the kinetic energy",
+     "work done by brakes must equal kinetic energy, and work done = F x d",
+     "with the same F, d must be four times larger"
+    ],
+    "tip": "Use both equations in the explanation."
+   },
+   {
+    "q": "A cyclist freewheels down a hill, then brakes to stop at the bottom. Describe all the changes in the way energy is stored during this journey and explain the role of work done by forces.",
+    "marks": 6,
+    "model": [
+     "at the top, energy is in the gravitational potential store of cyclist and bike",
+     "going down, gravity does work, so the GPE store decreases and the kinetic store increases",
+     "air resistance and friction do work against the motion, transferring some energy to the thermal store of the surroundings",
+     "when braking, friction in the brakes does work on the wheels",
+     "energy moves from the kinetic store to the thermal store of the brakes, which warm up",
+     "total energy is conserved; the energy ends up dissipated in the surroundings"
+    ],
+    "tip": "A logical sequence naming stores, forces and conservation reaches Level 3."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A tractor pulls a plough with a force of 4.5 kN over a distance of 0.80 km. Calculate the work done in MJ.",
+    "steps": [
+     "Convert: F = 4.5 kN = 4500 N; d = 0.80 km = 800 m",
+     "W = F x d = 4500 x 800",
+     "W = 3 600 000 J",
+     "3 600 000 J = 3.6 MJ"
+    ],
+    "ans": "Work done = 3.6 MJ (3.6 x 10^6 J)."
+   },
+   {
+    "q": "A 60 kg student climbs stairs with a vertical height of 4.0 m. The staircase is 7.0 m long. Calculate the work done against gravity. (g = 10 N/kg)",
+    "steps": [
+     "Weight = mg = 60 x 10 = 600 N",
+     "Use the vertical height, not the stair length: d = 4.0 m",
+     "W = F x d = 600 x 4.0 = 2400 J",
+     "This 2400 J goes into the student's gravitational potential energy store."
+    ],
+    "ans": "Work done against gravity = 2400 J."
+   },
+   {
+    "q": "A sledge is pulled 30 m at constant speed across snow with a horizontal force of 40 N. Calculate the work done and describe where the energy goes.",
+    "steps": [
+     "W = F x d = 40 x 30 = 1200 J",
+     "Constant speed means the kinetic store does not change.",
+     "The pulling force balances friction, so all the work done is against friction.",
+     "The 1200 J is transferred to the thermal store of the sledge, snow and surroundings."
+    ],
+    "ans": "1200 J of work is done, all transferred to thermal stores (dissipated) because the speed is constant."
+   }
+  ],
+  "svg": [],
+  "pid": "phy_ocra.4.7",
+  "sid": "phy_ocra",
+  "v": 2,
+  "src": "pre",
+  "by": "claude/claude-opus-5-5",
+  "ts": "2026-11-27T01:36:04.722Z"
+ },
+ "phy_ocra.4.8": {
+  "summary": "Power is the **rate at which energy is transferred**, or the rate at which work is done. It is calculated using **power = work done / time** (or energy transferred / time) and measured in **watts**, where **1 watt = 1 joule per second**. Two machines can do exactly the same work, but the one that does it in less time has the greater power, which is why power ratings are used to compare motors, engines, appliances and even people climbing stairs.",
+  "core": [
+   {
+    "h": "What power means",
+    "p": "Power tells you **how quickly** energy is transferred, not how much. A powerful motor and a weak motor can both lift the same load to the same height (same work done), but the powerful one does it faster.",
+    "bullets": [
+     "**Power is the rate of energy transfer** (or the rate of doing work).",
+     "Power is a **scalar** quantity.",
+     "More energy transferred in the same time means more power.",
+     "The same energy transferred in less time means more power.",
+     "Power ratings on appliances show how many joules they transfer each second."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Power",
+      "p": "Power is the rate at which energy is transferred or the rate at which work is done."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "The power equation",
+    "p": "This is a recall equation. You need to know it, rearrange it and use the correct units.",
+    "bullets": [
+     "**power (W) = work done (J) / time (s)**.",
+     "Equivalently: **power (W) = energy transferred (J) / time (s)**, P = E / t.",
+     "Rearranged: E = P x t and t = E / P.",
+     "Time must be in **seconds**: 2 minutes = 120 s, 1 hour = 3600 s.",
+     "Energy must be in **joules**: 1 kJ = 1000 J."
+    ],
+    "table": {
+     "head": [
+      "Quantity",
+      "Symbol",
+      "Unit"
+     ],
+     "rows": [
+      [
+       "Power",
+       "P",
+       "watt, W"
+      ],
+      [
+       "Work done / energy transferred",
+       "W or E",
+       "joule, J"
+      ],
+      [
+       "Time",
+       "t",
+       "second, s"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Must know",
+      "p": "power = work done / time. Work done = energy transferred, so power = energy transferred / time."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "The watt",
+    "p": "Because power is joules divided by seconds, its unit is joules per second, given the special name the watt.",
+    "bullets": [
+     "**1 watt = 1 joule per second** (1 W = 1 J/s).",
+     "1 kilowatt (kW) = 1000 W.",
+     "1 megawatt (MW) = 1 000 000 W.",
+     "A 60 W lamp transfers 60 J of energy every second.",
+     "A 2 kW kettle transfers 2000 J every second."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "The watt",
+      "p": "One watt is a rate of energy transfer of one joule per second."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Comparing power: same work, different time",
+    "p": "The clearest way to understand power is to compare two objects doing the same job. Work done depends only on force and distance, so time is what makes the difference.",
+    "bullets": [
+     "Two students of equal weight climbing the same stairs do the **same work** against gravity.",
+     "The student who climbs faster has a **greater power**.",
+     "Halving the time doubles the power for the same work.",
+     "A car with a more powerful engine can accelerate to the same speed in a shorter time, because it transfers energy to the kinetic store faster.",
+     "A more powerful crane can lift the same load the same height in less time."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": [
+     {
+      "cap": "Two 80 kg people climb the same 3.0 m stairs, so each does 2400 J of work against gravity. A takes 4 s and B takes 8 s, so A's power is twice B's.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><polygon points=\"40,200 40,172 72,172 72,144 104,144 104,116 136,116 136,88 168,88 168,60 200,60 200,200\" fill=\"#e9d5ff\" stroke=\"#6b21a8\" stroke-width=\"2\"/><line x1=\"20\" y1=\"200\" x2=\"240\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"215\" y1=\"70\" x2=\"215\" y2=\"190\" stroke=\"#15803d\" stroke-width=\"2\"/><polygon points=\"209,72 215,60 221,72\" fill=\"#15803d\" stroke=\"#15803d\"/><polygon points=\"209,188 215,200 221,188\" fill=\"#15803d\" stroke=\"#15803d\"/><text x=\"222\" y=\"185\" font-size=\"12\" fill=\"#15803d\">h = 3.0 m</text><text x=\"290\" y=\"50\" font-size=\"12\" fill=\"#1b2540\">Same work done</text><text x=\"290\" y=\"80\" font-size=\"12\" fill=\"#1d4ed8\">A: 2400 J in 4 s</text><text x=\"290\" y=\"96\" font-size=\"12\" fill=\"#1d4ed8\">P = 600 W</text><text x=\"290\" y=\"126\" font-size=\"12\" fill=\"#b91c1c\">B: 2400 J in 8 s</text><text x=\"290\" y=\"142\" font-size=\"12\" fill=\"#b91c1c\">P = 300 W</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Power on an energy-time graph",
+    "p": "If you plot energy transferred (or work done) against time, the **gradient** of the line is the power. A steeper line means energy is transferred faster.",
+    "bullets": [
+     "Gradient = change in energy / change in time = power.",
+     "A straight line means constant power.",
+     "A steeper line means a greater power.",
+     "A curve that gets less steep shows the power decreasing.",
+     "Reading two points from the line and dividing gives the power."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": [
+     {
+      "cap": "Energy transferred against time for two motors. The gradient of each line is the power, so the steeper line (Motor A) has the higher power.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"200\" x2=\"380\" y2=\"200\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"50\" y1=\"200\" x2=\"50\" y2=\"30\" stroke=\"#1b2540\" stroke-width=\"2\"/><text x=\"320\" y=\"225\" font-size=\"12\" fill=\"#1b2540\">Time / s</text><text x=\"56\" y=\"22\" font-size=\"12\" fill=\"#1b2540\">Energy transferred / J</text><line x1=\"50\" y1=\"200\" x2=\"200\" y2=\"50\" stroke=\"#1d4ed8\" stroke-width=\"3\"/><line x1=\"50\" y1=\"200\" x2=\"350\" y2=\"110\" stroke=\"#b91c1c\" stroke-width=\"3\"/><text x=\"205\" y=\"50\" font-size=\"12\" fill=\"#1d4ed8\">Motor A (high power)</text><text x=\"260\" y=\"80\" font-size=\"12\" fill=\"#1b2540\">gradient = power</text><text x=\"200\" y=\"178\" font-size=\"12\" fill=\"#b91c1c\">Motor B (low power)</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Measuring the power of a motor",
+    "p": "A simple experiment measures the output power of an electric motor by timing how long it takes to lift a known weight through a measured height.",
+    "bullets": [
+     "Hang a known mass from a string wound onto the motor spindle.",
+     "Measure the weight: W = mg (g = 10 N/kg).",
+     "Measure the height lifted with a metre rule.",
+     "Time the lift with a stopwatch.",
+     "Work done = weight x height; power = work done / time.",
+     "Repeat and take a mean to reduce the effect of random errors (e.g. reaction time).",
+     "The motor's output power is less than its electrical input power because some energy is dissipated by friction and heating."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Improving accuracy",
+      "p": "Lift through a larger height so the time is longer; reaction time then causes a smaller percentage error. Light gates or data loggers can replace the stopwatch."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Measuring the output power of a motor. The motor lifts a load of known weight through a height measured on the metre rule, timed with a stopwatch; power = weight x height / time.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><rect x=\"40\" y=\"40\" width=\"150\" height=\"12\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"2\"/><text x=\"50\" y=\"70\" font-size=\"12\" fill=\"#15803d\">Bench</text><rect x=\"120\" y=\"16\" width=\"64\" height=\"24\" fill=\"#dbeafe\" stroke=\"#1e3a8a\" stroke-width=\"2\"/><text x=\"152\" y=\"32\" font-size=\"12\" fill=\"#1e3a8a\" text-anchor=\"middle\">Motor</text><circle cx=\"196\" cy=\"28\" r=\"6\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\"/><line x1=\"202\" y1=\"28\" x2=\"202\" y2=\"150\" stroke=\"#1b2540\" stroke-width=\"2\"/><rect x=\"182\" y=\"150\" width=\"40\" height=\"30\" fill=\"#fecaca\" stroke=\"#b91c1c\" stroke-width=\"2\"/><text x=\"202\" y=\"170\" font-size=\"11\" fill=\"#b91c1c\" text-anchor=\"middle\">Load</text><rect x=\"260\" y=\"50\" width=\"16\" height=\"170\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"2\"/><line x1=\"260\" y1=\"80\" x2=\"268\" y2=\"80\" stroke=\"#b45309\"/><line x1=\"260\" y1=\"110\" x2=\"268\" y2=\"110\" stroke=\"#b45309\"/><line x1=\"260\" y1=\"140\" x2=\"268\" y2=\"140\" stroke=\"#b45309\"/><line x1=\"260\" y1=\"170\" x2=\"268\" y2=\"170\" stroke=\"#b45309\"/><line x1=\"260\" y1=\"200\" x2=\"268\" y2=\"200\" stroke=\"#b45309\"/><text x=\"284\" y=\"100\" font-size=\"12\" fill=\"#b45309\">Metre rule</text><text x=\"284\" y=\"130\" font-size=\"12\" fill=\"#b45309\">Measures height</text><circle cx=\"90\" cy=\"150\" r=\"22\" fill=\"#dbeafe\" stroke=\"#1e3a8a\" stroke-width=\"2\"/><line x1=\"90\" y1=\"150\" x2=\"90\" y2=\"134\" stroke=\"#1e3a8a\" stroke-width=\"2\"/><text x=\"90\" y=\"192\" font-size=\"12\" fill=\"#1e3a8a\" text-anchor=\"middle\">Stopwatch</text><line x1=\"20\" y1=\"225\" x2=\"380\" y2=\"225\" stroke=\"#1b2540\" stroke-width=\"2\"/></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Measuring your own power",
+    "p": "A common practical is to measure the power a person develops when running up stairs or doing step-ups.",
+    "bullets": [
+     "Measure the person's mass on scales and calculate weight W = mg.",
+     "Measure the vertical height of the stairs (height of one step x number of steps).",
+     "Time the climb with a stopwatch.",
+     "Work done = weight x vertical height.",
+     "Power = work done / time.",
+     "Typical values: a student running upstairs develops a few hundred watts."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Vertical height only",
+      "p": "Use the vertical height of the stairs, not the length along the staircase, because work against gravity depends only on vertical height."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Power and efficiency",
+    "p": "Real devices waste some of the energy they transfer, usually by heating the surroundings. Efficiency can be calculated from energies or from powers.",
+    "bullets": [
+     "Efficiency = useful power output / total power input.",
+     "Efficiency = useful energy output / total energy input.",
+     "Multiply by 100 to give a percentage.",
+     "Wasted power = total power input - useful power output.",
+     "An efficiency can never be greater than 1 (100%).",
+     "Example: a 500 W motor with 400 W useful output is 400 / 500 = 0.80 (80%) efficient."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Same units",
+      "p": "When using efficiency with powers, make sure both powers are in the same unit (both W or both kW)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Power ratings of everyday devices",
+    "p": "The power rating on an appliance tells you how much energy it transfers per second when working normally. A higher power rating means more energy transferred in the same time, which usually costs more to run.",
+    "bullets": [
+     "Kettle: about 2 to 3 kW (heats water quickly).",
+     "Microwave oven: about 800 W to 1 kW.",
+     "LED lamp: around 5 to 10 W.",
+     "Car engine: tens of kilowatts.",
+     "Energy transferred = power x time, so leaving a high-power device on for longer transfers more energy.",
+     "Comparing a 2 kW and a 1 kW heater: in the same time, the 2 kW heater transfers twice as much energy."
+    ],
+    "table": {
+     "head": [
+      "Device",
+      "Typical power",
+      "Energy in 1 minute"
+     ],
+     "rows": [
+      [
+       "LED lamp",
+       "8 W",
+       "480 J"
+      ],
+      [
+       "Microwave",
+       "1000 W",
+       "60 000 J"
+      ],
+      [
+       "Kettle",
+       "2500 W",
+       "150 000 J"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Explaining power in vehicles and lifting",
+    "p": "Exam questions often ask why one car, lift or crane is more powerful than another. Always link power to energy transferred AND time.",
+    "bullets": [
+     "A more powerful car transfers more energy per second to its kinetic store, so it reaches a given speed in less time.",
+     "A more powerful lift raises the same passengers through the same height in less time.",
+     "To lift a heavier load in the same time, more work is done, so more power is needed.",
+     "Power can be limited by friction: more power is needed to maintain speed against large resistive forces."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Do not say 'stronger'",
+      "p": "Power is not force. A more powerful machine is not necessarily one that exerts a larger force; it is one that transfers energy faster."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Calculation strategy",
+    "p": "Use a clear method to get full marks on power calculations, which are often combined with work done or weight.",
+    "bullets": [
+     "Step 1: find the work done or energy transferred (use W = F x d or W = mg x h if needed).",
+     "Step 2: convert time to seconds.",
+     "Step 3: write P = E / t, substitute and calculate.",
+     "Step 4: give the unit W (or kW if asked).",
+     "For energy questions use E = P x t, with P in W and t in s to get J.",
+     "Check your answer is sensible: people develop hundreds of watts, cars tens of kilowatts."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "kW and minutes",
+      "p": "A very common slip is to leave power in kW and time in minutes. Convert both: 1.5 kW for 2 minutes = 1500 W x 120 s = 180 000 J."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Filling a bath",
+   "p": "Think of energy as water filling a bath. The total water that ends up in the bath is the energy transferred (work done). Power is how fast the tap runs, in litres per second. A wide-open tap (high power) and a dribbling tap (low power) can fill the same bath, but the wide-open tap does it much faster. The analogy breaks down because some energy is always wasted by heating the surroundings, which would be like water splashing out of the bath, and because energy is not a physical substance."
+  },
+  "terms": [
+   {
+    "t": "Power",
+    "d": "The rate at which energy is transferred or work is done."
+   },
+   {
+    "t": "Watt (W)",
+    "d": "The unit of power; 1 W = 1 joule per second."
+   },
+   {
+    "t": "Kilowatt (kW)",
+    "d": "1000 watts."
+   },
+   {
+    "t": "Megawatt (MW)",
+    "d": "1 000 000 watts."
+   },
+   {
+    "t": "Work done",
+    "d": "Energy transferred when a force moves an object along its line of action; work done = force x distance."
+   },
+   {
+    "t": "Energy transferred",
+    "d": "The amount of energy moved from one store to another, in joules."
+   },
+   {
+    "t": "Joule (J)",
+    "d": "The unit of energy and work done."
+   },
+   {
+    "t": "Rate",
+    "d": "How quickly something happens, i.e. an amount per unit time."
+   },
+   {
+    "t": "Power rating",
+    "d": "The power of an appliance when operating normally, showing the energy it transfers each second."
+   },
+   {
+    "t": "Efficiency",
+    "d": "Useful power (or energy) output divided by total power (or energy) input."
+   },
+   {
+    "t": "Useful output power",
+    "d": "The rate at which energy is transferred to the wanted store."
+   },
+   {
+    "t": "Wasted power",
+    "d": "The rate at which energy is dissipated to unwanted stores, usually thermal."
+   },
+   {
+    "t": "Weight",
+    "d": "The force on a mass due to gravity, W = mg, measured in newtons."
+   },
+   {
+    "t": "Gradient of an energy-time graph",
+    "d": "Equal to the power."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Power is the amount of energy a device has.",
+    "r": "Power is the rate of energy transfer: energy transferred per second."
+   },
+   {
+    "w": "Power = energy x time.",
+    "r": "Power = energy transferred / time; energy = power x time."
+   },
+   {
+    "w": "A more powerful machine does more work.",
+    "r": "A more powerful machine does work faster; for the same task it does the same work in less time."
+   },
+   {
+    "w": "1 W = 1 J/min or 1 J x s.",
+    "r": "1 W = 1 J/s."
+   },
+   {
+    "w": "Using time in minutes or hours in P = E / t.",
+    "r": "Convert time to seconds first."
+   },
+   {
+    "w": "Using kW with J to get W directly.",
+    "r": "Convert kW to W (x1000) before calculating, or keep units consistent."
+   },
+   {
+    "w": "Using mass instead of weight when finding work done climbing stairs.",
+    "r": "Calculate weight = mg first, then work done = weight x vertical height."
+   },
+   {
+    "w": "Power and force are the same thing.",
+    "r": "Force is measured in N; power is energy transfer per second in W."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Define power.",
+    "marks": 1,
+    "model": [
+     "the rate of energy transfer / rate of doing work (energy transferred per second)"
+    ],
+    "tip": "Use the word rate."
+   },
+   {
+    "q": "State the unit of power and what it is equal to in joules and seconds.",
+    "marks": 2,
+    "model": [
+     "watt (W)",
+     "1 W = 1 J/s"
+    ],
+    "tip": "Both parts are needed for 2 marks."
+   },
+   {
+    "q": "A lamp transfers 3600 J in 60 s. Calculate its power.",
+    "marks": 2,
+    "model": [
+     "P = E / t = 3600 / 60",
+     "= 60 W"
+    ],
+    "tip": "Show the equation and substitution."
+   },
+   {
+    "q": "A 2.0 kW kettle is switched on for 3 minutes. Calculate the energy transferred.",
+    "marks": 3,
+    "model": [
+     "P = 2000 W and t = 180 s",
+     "E = P x t = 2000 x 180",
+     "= 360 000 J"
+    ],
+    "tip": "Convert both kW and minutes."
+   },
+   {
+    "q": "A motor does 4500 J of work in 15 s. Calculate its power.",
+    "marks": 2,
+    "model": [
+     "P = W / t = 4500 / 15",
+     "= 300 W"
+    ],
+    "tip": "Work done can be used in place of energy transferred."
+   },
+   {
+    "q": "Two cranes lift identical loads to the same height. Crane X takes 20 s and crane Y takes 40 s. Compare the work done and the power of the cranes.",
+    "marks": 3,
+    "model": [
+     "both cranes do the same work (same force, same distance)",
+     "crane X takes half the time",
+     "so crane X has twice the power of crane Y"
+    ],
+    "tip": "Comment on work done and power separately."
+   },
+   {
+    "q": "A student of mass 50 kg runs up stairs of vertical height 4.0 m in 5.0 s. Calculate the student's power. (g = 10 N/kg)",
+    "marks": 4,
+    "model": [
+     "weight = mg = 50 x 10 = 500 N",
+     "work done = 500 x 4.0 = 2000 J",
+     "P = W / t = 2000 / 5.0",
+     "= 400 W"
+    ],
+    "tip": "Three linked equations: weight, work done, power."
+   },
+   {
+    "q": "An electric motor has an input power of 250 W and a useful output power of 200 W. Calculate its efficiency.",
+    "marks": 2,
+    "model": [
+     "efficiency = useful power output / total power input = 200 / 250",
+     "= 0.8 or 80%"
+    ],
+    "tip": "Efficiency has no unit."
+   },
+   {
+    "q": "Explain why a car with a more powerful engine can accelerate to 30 m/s more quickly than a car with a less powerful engine of the same mass.",
+    "marks": 3,
+    "model": [
+     "both cars need the same kinetic energy to reach 30 m/s (same mass and speed)",
+     "the more powerful engine transfers energy at a greater rate / more energy per second",
+     "so it transfers the required energy in less time"
+    ],
+    "tip": "Link power to energy and time."
+   },
+   {
+    "q": "Describe how you would measure the output power of a small electric motor that lifts a mass. Include the measurements, equipment and calculation.",
+    "marks": 6,
+    "model": [
+     "attach a known mass to a string wound on the motor spindle and calculate weight W = mg",
+     "measure the height the mass is lifted using a metre rule",
+     "measure the time for the lift with a stopwatch",
+     "calculate work done = weight x height",
+     "calculate power = work done / time",
+     "repeat and calculate a mean; lift through a large height to reduce timing errors",
+     "control variables such as supply voltage and the mass used"
+    ],
+    "tip": "Level 3 answers give a clear method, equations and ways to improve accuracy."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A lift raises 8 people of total mass 600 kg through a height of 30 m in 25 s. Calculate the useful power output of the lift motor. (g = 10 N/kg)",
+    "steps": [
+     "weight = mg = 600 x 10 = 6000 N",
+     "work done = weight x height = 6000 x 30 = 180 000 J",
+     "P = W / t = 180 000 / 25",
+     "P = 7200 W = 7.2 kW"
+    ],
+    "ans": "Useful power output = 7200 W (7.2 kW)."
+   },
+   {
+    "q": "A 1.2 kW microwave oven heats food for 2 minutes 30 seconds. Calculate the energy transferred in kJ.",
+    "steps": [
+     "P = 1.2 kW = 1200 W",
+     "t = 2 minutes 30 s = 150 s",
+     "E = P x t = 1200 x 150 = 180 000 J",
+     "180 000 J = 180 kJ"
+    ],
+    "ans": "Energy transferred = 180 kJ."
+   },
+   {
+    "q": "An electric motor with an input power of 800 W lifts a 40 kg load 6.0 m in 4.0 s. Calculate the useful output power and the efficiency. (g = 10 N/kg)",
+    "steps": [
+     "weight = 40 x 10 = 400 N",
+     "work done = 400 x 6.0 = 2400 J",
+     "useful power = 2400 / 4.0 = 600 W",
+     "efficiency = 600 / 800 = 0.75"
+    ],
+    "ans": "Useful output power = 600 W; efficiency = 0.75 (75%)."
+   }
+  ],
+  "svg": [],
+  "pid": "phy_ocra.4.8",
+  "sid": "phy_ocra",
+  "v": 2,
+  "src": "pre",
+  "by": "claude/claude-opus-5-5",
+  "ts": "2026-11-27T01:36:04.738Z"
+ },
+ "phy_ocra.4.9": {
+  "summary": "Newton's third law states that **when two objects interact, the forces they exert on each other are equal in size and opposite in direction**. These two forces form an **interaction pair**: they are always the **same type of force** and act on **different objects**, so they never cancel each other out. The law explains walking, swimming, rockets and recoil, and must be kept separate from the idea of balanced forces on a single object in equilibrium.",
+  "core": [
+   {
+    "h": "Statement of Newton's third law",
+    "p": "Forces always come in pairs. You cannot push something without it pushing back on you. Newton's third law describes this pairing exactly.",
+    "bullets": [
+     "**When two objects interact, they exert equal and opposite forces on each other.**",
+     "If object A exerts a force on object B, then B exerts a force of **equal size** in the **opposite direction** on A.",
+     "The two forces exist at the same time: one cannot happen without the other.",
+     "This is true whether the objects are moving or stationary, accelerating or not.",
+     "It applies to contact forces (pushes, friction) and non-contact forces (gravity, magnetism, electrostatic)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Newton's third law",
+      "p": "When two objects interact, the forces they exert on each other are equal in magnitude and opposite in direction."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Features of an interaction pair",
+    "p": "A pair of forces only counts as a Newton's third law pair if it passes every one of these tests. This is what examiners check.",
+    "bullets": [
+     "**Equal in size** (magnitude).",
+     "**Opposite in direction**.",
+     "**Act on different objects** (one on A, one on B).",
+     "**Same type of force** (both gravitational, both contact, both magnetic...).",
+     "**Act along the same line**.",
+     "Exist for the same length of time."
+    ],
+    "table": {
+     "head": [
+      "Test",
+      "Third law pair",
+      "Balanced forces on one object"
+     ],
+     "rows": [
+      [
+       "Equal size",
+       "Yes",
+       "Yes"
+      ],
+      [
+       "Opposite direction",
+       "Yes",
+       "Yes"
+      ],
+      [
+       "Act on",
+       "Two different objects",
+       "The same object"
+      ],
+      [
+       "Type of force",
+       "Always the same type",
+       "Can be different types"
+      ],
+      [
+       "Can cancel out",
+       "No, act on different objects",
+       "Yes, resultant is zero"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Different objects",
+      "p": "Third law forces act on DIFFERENT objects, so they can never cancel out or produce equilibrium on their own."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Two skaters pushing apart",
+    "p": "When two skaters on ice push each other, each feels a force of the same size pushing them backwards. Both move apart, even if only one of them actively pushes.",
+    "bullets": [
+     "Skater A pushes B forwards; B pushes A backwards with an equal force.",
+     "The forces are equal, but the **accelerations need not be**: a = F / m.",
+     "The lighter skater has the larger acceleration and moves away faster.",
+     "This links to momentum: the two skaters gain equal and opposite momentum, so total momentum stays zero."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": [
+     {
+      "cap": "Two skaters push apart. The force of B on A and the force of A on B are a Newton's third law pair: equal in size, opposite in direction, acting on different skaters.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"20\" y1=\"172\" x2=\"380\" y2=\"172\" stroke=\"#1e3a8a\" stroke-width=\"2\"/><circle cx=\"120\" cy=\"74\" r=\"14\" fill=\"#dbeafe\" stroke=\"#1e3a8a\" stroke-width=\"2\"/><rect x=\"105\" y=\"90\" width=\"30\" height=\"80\" fill=\"#dbeafe\" stroke=\"#1e3a8a\" stroke-width=\"2\"/><text x=\"120\" y=\"150\" font-size=\"13\" fill=\"#1e3a8a\" text-anchor=\"middle\">A</text><circle cx=\"280\" cy=\"74\" r=\"14\" fill=\"#fecaca\" stroke=\"#b91c1c\" stroke-width=\"2\"/><rect x=\"265\" y=\"90\" width=\"30\" height=\"80\" fill=\"#fecaca\" stroke=\"#b91c1c\" stroke-width=\"2\"/><text x=\"280\" y=\"150\" font-size=\"13\" fill=\"#b91c1c\" text-anchor=\"middle\">B</text><line x1=\"135\" y1=\"105\" x2=\"200\" y2=\"105\" stroke=\"#1e3a8a\" stroke-width=\"3\"/><line x1=\"265\" y1=\"105\" x2=\"200\" y2=\"105\" stroke=\"#b91c1c\" stroke-width=\"3\"/><line x1=\"105\" y1=\"130\" x2=\"58\" y2=\"130\" stroke=\"#b45309\" stroke-width=\"4\"/><polygon points=\"58,123 44,130 58,137\" fill=\"#b45309\" stroke=\"#b45309\"/><text x=\"20\" y=\"116\" font-size=\"12\" fill=\"#b45309\">B on A: 100 N</text><line x1=\"295\" y1=\"130\" x2=\"342\" y2=\"130\" stroke=\"#b45309\" stroke-width=\"4\"/><polygon points=\"342,123 356,130 342,137\" fill=\"#b45309\" stroke=\"#b45309\"/><text x=\"298\" y=\"116\" font-size=\"12\" fill=\"#b45309\">A on B: 100 N</text><text x=\"200\" y=\"200\" font-size=\"12\" fill=\"#1b2540\" text-anchor=\"middle\">Equal size, opposite direction</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Equal forces, different effects",
+    "p": "Students often think that if forces are equal, the effects must be equal. They are not, because each force acts on a different mass.",
+    "bullets": [
+     "An apple falling: the Earth pulls the apple down with a force equal to the apple's weight.",
+     "The apple pulls the Earth up with an **equal** gravitational force.",
+     "The Earth's mass is enormous, so its acceleration (a = F / m) is far too small to notice.",
+     "A car hitting a fly: the force on the fly equals the force on the car, but the fly's tiny mass means a huge acceleration.",
+     "Use F = ma for each object separately to compare the effects."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Common trap",
+      "p": "'The lorry exerts a bigger force on the car in a crash' is wrong. The forces are equal; the car has the larger acceleration because its mass is smaller."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Rockets and jet engines",
+    "p": "A rocket works even in space with nothing to push against, because it pushes on its own exhaust gases.",
+    "bullets": [
+     "The rocket engine pushes hot exhaust gases **downwards (backwards)**.",
+     "The gases push the rocket **upwards (forwards)** with an equal force, called **thrust**.",
+     "The rocket does not need air to push against: the interaction is between rocket and gas.",
+     "Jet engines push air backwards; the air pushes the plane forwards.",
+     "If thrust is greater than weight plus drag, there is a resultant upward force and the rocket accelerates (second law)."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": [
+     {
+      "cap": "A rocket pushes exhaust gas downwards, and the gas pushes the rocket upwards with an equal force (thrust). These two forces act on different objects: rocket and gas.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><polygon points=\"180,60 200,22 220,60\" fill=\"#fecaca\" stroke=\"#b91c1c\" stroke-width=\"2\"/><rect x=\"180\" y=\"60\" width=\"40\" height=\"100\" fill=\"#e9d5ff\" stroke=\"#6b21a8\" stroke-width=\"2\"/><polygon points=\"185,160 200,205 215,160\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"2\"/><line x1=\"260\" y1=\"130\" x2=\"260\" y2=\"64\" stroke=\"#15803d\" stroke-width=\"4\"/><polygon points=\"253,64 260,50 267,64\" fill=\"#15803d\" stroke=\"#15803d\"/><text x=\"270\" y=\"90\" font-size=\"12\" fill=\"#15803d\">Gas on rocket</text><text x=\"270\" y=\"106\" font-size=\"12\" fill=\"#15803d\">(thrust)</text><line x1=\"140\" y1=\"160\" x2=\"140\" y2=\"214\" stroke=\"#b91c1c\" stroke-width=\"4\"/><polygon points=\"133,214 140,228 147,214\" fill=\"#b91c1c\" stroke=\"#b91c1c\"/><text x=\"130\" y=\"190\" font-size=\"12\" fill=\"#b91c1c\" text-anchor=\"end\">Rocket on gas</text><text x=\"230\" y=\"200\" font-size=\"12\" fill=\"#b45309\">Exhaust gas</text><text x=\"200\" y=\"115\" font-size=\"11\" fill=\"#6b21a8\" text-anchor=\"middle\">Rocket</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Walking, running and swimming",
+    "p": "You move forwards because something else pushes you forwards, and that push is the third law partner of your own push backwards.",
+    "bullets": [
+     "**Walking**: your foot pushes backwards on the ground (friction); the ground pushes forwards on your foot with an equal force.",
+     "On ice there is little friction, so you cannot push backwards hard and the ground cannot push you forwards much, so you slip.",
+     "**Swimming**: your hands and feet push water backwards; the water pushes you forwards.",
+     "**Rowing**: the oar pushes water backwards; the water pushes the oar (and boat) forwards.",
+     "**Car tyres**: the tyres push backwards on the road; the road pushes forwards on the tyres (the driving force)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Name both objects",
+      "p": "Always write 'X exerts a force on Y' and 'Y exerts an equal and opposite force on X'. Naming the two objects earns the marks."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Recoil",
+    "p": "When a gun fires a bullet, or a cannon fires a cannonball, the weapon moves backwards. This is recoil, explained by the third law (and by conservation of momentum).",
+    "bullets": [
+     "The gun pushes the bullet forwards with a large force.",
+     "The bullet pushes the gun backwards with an equal force.",
+     "The gun has a much larger mass, so its backward acceleration and recoil velocity are much smaller.",
+     "Total momentum before firing is zero, so after firing the bullet and gun have equal and opposite momenta.",
+     "Stepping off a small boat onto a jetty pushes the boat away from the jetty for the same reason."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Third law pairs and equilibrium",
+    "p": "OCR expects you to apply Newton's third law to equilibrium situations, and to avoid confusing third law pairs with balanced forces. A book resting on a table is the classic example.",
+    "bullets": [
+     "Forces **on the book**: its weight (Earth pulls book down) and the normal contact force (table pushes book up).",
+     "These two are **balanced**: equal, opposite and on the same object, so the book is in **equilibrium** (first law).",
+     "They are **not** a third law pair: they are different types of force and act on the same object.",
+     "Third law partner of the table pushing up on the book: **the book pushes down on the table**.",
+     "Third law partner of the Earth pulling the book down: **the book pulls the Earth up** (gravitationally).",
+     "Third law explains why the contact forces are equal: book and table push on each other equally."
+    ],
+    "table": {
+     "head": [
+      "Force",
+      "Type",
+      "Its third law partner"
+     ],
+     "rows": [
+      [
+       "Earth pulls book down",
+       "Gravitational",
+       "Book pulls Earth up"
+      ],
+      [
+       "Table pushes book up",
+       "Contact (normal)",
+       "Book pushes table down"
+      ],
+      [
+       "Book pushes table down",
+       "Contact (normal)",
+       "Table pushes book up"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Classic exam trap",
+      "p": "The weight of the book and the reaction from the table are NOT a Newton's third law pair. They act on the same object and are different types of force."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A book on a table. The table pushing up on the book and the book pushing down on the table form a Newton's third law pair of contact forces acting on different objects.",
+      "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><rect x=\"80\" y=\"140\" width=\"240\" height=\"14\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"2\"/><rect x=\"92\" y=\"154\" width=\"10\" height=\"24\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"2\"/><rect x=\"298\" y=\"154\" width=\"10\" height=\"24\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"2\"/><text x=\"74\" y=\"152\" font-size=\"12\" fill=\"#b45309\" text-anchor=\"end\">Table</text><rect x=\"160\" y=\"110\" width=\"80\" height=\"30\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"2\"/><text x=\"200\" y=\"130\" font-size=\"12\" fill=\"#15803d\" text-anchor=\"middle\">Book</text><line x1=\"200\" y1=\"110\" x2=\"200\" y2=\"66\" stroke=\"#1d4ed8\" stroke-width=\"4\"/><polygon points=\"193,66 200,52 207,66\" fill=\"#1d4ed8\" stroke=\"#1d4ed8\"/><text x=\"212\" y=\"72\" font-size=\"12\" fill=\"#1d4ed8\">Table pushes book up</text><line x1=\"200\" y1=\"154\" x2=\"200\" y2=\"198\" stroke=\"#b91c1c\" stroke-width=\"4\"/><polygon points=\"193,198 200,212 207,198\" fill=\"#b91c1c\" stroke=\"#b91c1c\"/><text x=\"212\" y=\"210\" font-size=\"12\" fill=\"#b91c1c\">Book pushes table down</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Third law in collisions",
+    "p": "During a collision the two objects push on each other with equal and opposite forces for the same time. This is why momentum is conserved.",
+    "bullets": [
+     "Car A hits car B: the force of A on B equals the force of B on A, but in the opposite direction.",
+     "Both forces act for the same contact time.",
+     "Change in momentum = force x time, so the changes in momentum are equal and opposite.",
+     "Therefore the total momentum of the two cars is unchanged (conserved).",
+     "The car with smaller mass has the larger change in velocity, which is why occupants of lighter cars tend to suffer worse injuries."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Link",
+      "p": "Newton's third law (equal and opposite forces for equal times) is the reason why momentum is conserved in collisions and explosions."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Non-contact interaction pairs",
+    "p": "Third law pairs are not just pushes. Any interaction between two objects produces a pair, even at a distance.",
+    "bullets": [
+     "**Gravitational**: Earth pulls Moon; Moon pulls Earth with an equal force (causing tides).",
+     "**Magnetic**: two magnets attract or repel each other with equal and opposite forces, even if one is much stronger.",
+     "**Electrostatic**: two charged balloons repel each other with equal and opposite forces.",
+     "Example: a strong magnet and a small paperclip attract each other with equal forces; the paperclip moves because its mass is small."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "How to identify a third law pair in an exam",
+    "p": "Use a simple sentence template to find the partner of any force. This works for every situation.",
+    "bullets": [
+     "Write the force as: '**A** exerts a [type] force on **B** in [direction]'.",
+     "Swap the objects and reverse the direction: '**B** exerts a [type] force on **A** in [opposite direction]'.",
+     "Keep the type of force the same.",
+     "State that the two forces are equal in size.",
+     "Check the two forces act on different objects: if they act on the same object, it is not a third law pair."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Template",
+      "p": "Force of person on wall (contact, to the right) pairs with force of wall on person (contact, to the left), equal size."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "A handshake",
+   "p": "A handshake cannot be one-sided: when you grip someone's hand, their hand presses back on yours at the same moment. Neither of you can push without being pushed. That is Newton's third law: interactions always involve two objects and two equal forces. The analogy breaks down because in a handshake people can squeeze with different strengths, whereas in physics the two forces are always exactly equal, and a handshake suggests both objects choose to act, whereas a book on a table pushes back without 'trying'."
+  },
+  "terms": [
+   {
+    "t": "Newton's third law",
+    "d": "When two objects interact, they exert equal and opposite forces on each other."
+   },
+   {
+    "t": "Interaction pair",
+    "d": "Two forces that are equal in size, opposite in direction, of the same type and act on two different objects."
+   },
+   {
+    "t": "Interaction",
+    "d": "A situation in which two objects exert forces on each other."
+   },
+   {
+    "t": "Normal contact force",
+    "d": "The force a surface exerts at right angles to itself on an object in contact with it."
+   },
+   {
+    "t": "Weight",
+    "d": "The gravitational force of the Earth on an object, W = mg."
+   },
+   {
+    "t": "Balanced forces",
+    "d": "Forces on the same object whose resultant is zero."
+   },
+   {
+    "t": "Equilibrium",
+    "d": "The state of an object when the resultant force on it is zero, so it stays at rest or moves at constant velocity."
+   },
+   {
+    "t": "Resultant force",
+    "d": "The single force with the same effect as all the forces acting on an object."
+   },
+   {
+    "t": "Thrust",
+    "d": "The forward force on a rocket or jet produced by pushing gases backwards."
+   },
+   {
+    "t": "Recoil",
+    "d": "The backward movement of a gun or cannon when it fires, due to the equal and opposite force from the projectile."
+   },
+   {
+    "t": "Contact force",
+    "d": "A force that acts only when objects touch, e.g. friction, normal contact force."
+   },
+   {
+    "t": "Non-contact force",
+    "d": "A force that acts at a distance through a field, e.g. gravitational, magnetic, electrostatic."
+   },
+   {
+    "t": "Friction",
+    "d": "A contact force that opposes relative motion between surfaces."
+   },
+   {
+    "t": "Conservation of momentum",
+    "d": "In a closed system the total momentum before an interaction equals the total momentum after it."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "The weight of a book and the normal contact force from the table are a Newton's third law pair.",
+    "r": "They act on the same object and are different types of force, so they are balanced forces, not a third law pair."
+   },
+   {
+    "w": "Third law forces cancel out so nothing can move.",
+    "r": "They act on different objects, so they cannot cancel each other."
+   },
+   {
+    "w": "In a crash the heavier vehicle exerts a bigger force.",
+    "r": "Both vehicles exert equal and opposite forces on each other; the lighter one has a bigger acceleration."
+   },
+   {
+    "w": "Rockets need air to push against.",
+    "r": "A rocket pushes on its exhaust gases and the gases push back on the rocket, so it works in a vacuum."
+   },
+   {
+    "w": "Only the object doing the pushing feels a force.",
+    "r": "Both objects experience a force of equal size."
+   },
+   {
+    "w": "The Earth does not feel a force from a falling apple.",
+    "r": "The apple pulls the Earth with an equal force, but the Earth's huge mass means its acceleration is negligible."
+   },
+   {
+    "w": "Third law pairs are equal and opposite forces (with nothing more).",
+    "r": "Also state they act on different objects and are the same type of force."
+   },
+   {
+    "w": "When you walk, you push yourself forwards.",
+    "r": "Your foot pushes the ground backwards; the ground pushes your foot forwards with an equal force."
+   }
+  ],
+  "exam": [
+   {
+    "q": "State Newton's third law.",
+    "marks": 1,
+    "model": [
+     "when two objects interact they exert equal and opposite forces on each other"
+    ],
+    "tip": "Include 'two objects' and 'equal and opposite'."
+   },
+   {
+    "q": "A person pushes on a wall with a force of 80 N. State the size and direction of the force the wall exerts on the person.",
+    "marks": 2,
+    "model": [
+     "80 N",
+     "in the opposite direction (away from the wall / towards the person)"
+    ],
+    "tip": "Size and direction are separate marks."
+   },
+   {
+    "q": "Give two ways in which the forces in a Newton's third law pair are different from a pair of balanced forces.",
+    "marks": 2,
+    "model": [
+     "third law pair act on different objects (balanced forces act on the same object)",
+     "third law pair are always the same type of force (balanced forces can be different types)"
+    ],
+    "tip": "Compare both types of pair in each point."
+   },
+   {
+    "q": "A book rests on a table. A student says the weight of the book and the upward force from the table are a Newton's third law pair. Explain why the student is wrong.",
+    "marks": 3,
+    "model": [
+     "both forces act on the same object (the book)",
+     "they are different types of force (gravitational and contact)",
+     "the partner of the book's weight is the book pulling the Earth upwards (or partner of table on book is book on table)"
+    ],
+    "tip": "Name the correct partner for the third mark."
+   },
+   {
+    "q": "Explain, using Newton's third law, how a swimmer moves forwards.",
+    "marks": 3,
+    "model": [
+     "the swimmer pushes water backwards",
+     "the water pushes the swimmer forwards",
+     "with an equal (and opposite) force"
+    ],
+    "tip": "Name both objects in each force."
+   },
+   {
+    "q": "Explain how a rocket can accelerate in space where there is no air.",
+    "marks": 3,
+    "model": [
+     "rocket pushes exhaust gases backwards / out",
+     "gases exert an equal and opposite force on the rocket (thrust)",
+     "this gives a resultant force on the rocket so it accelerates; it does not need air to push against"
+    ],
+    "tip": "Link third law (force) to second law (acceleration)."
+   },
+   {
+    "q": "An apple falls towards the Earth. Explain why the Earth does not noticeably move towards the apple.",
+    "marks": 3,
+    "model": [
+     "the apple pulls the Earth with an equal and opposite force",
+     "acceleration = force / mass",
+     "the Earth's mass is huge, so its acceleration is negligible"
+    ],
+    "tip": "Use a = F/m to explain different effects."
+   },
+   {
+    "q": "A small car and a lorry collide. Compare the forces on each vehicle and explain why the car's occupants are more likely to be injured.",
+    "marks": 4,
+    "model": [
+     "the forces on each vehicle are equal in size",
+     "and opposite in direction (third law)",
+     "the car has a much smaller mass",
+     "so the car has a much larger deceleration / change in velocity, giving larger forces on its occupants"
+    ],
+    "tip": "Do not say the lorry exerts a bigger force."
+   },
+   {
+    "q": "A gun of mass 2.0 kg fires a bullet. During firing the force on the bullet is 500 N. State the force on the gun and calculate the initial acceleration of the gun.",
+    "marks": 3,
+    "model": [
+     "force on gun = 500 N backwards",
+     "a = F / m = 500 / 2.0",
+     "= 250 m/s²"
+    ],
+    "tip": "Third law gives the force; second law gives the acceleration."
+   },
+   {
+    "q": "A person stands still on the floor. Describe and explain all the forces acting, identifying which forces are Newton's third law pairs and which are balanced forces.",
+    "marks": 6,
+    "model": [
+     "the Earth pulls the person down (weight)",
+     "the floor pushes up on the person (normal contact force)",
+     "these two forces act on the person, are equal and opposite, so the person is in equilibrium (balanced, first law)",
+     "they are not a third law pair because they act on the same object and are different types",
+     "the person pushes down on the floor; this pairs with the floor pushing up on the person (contact pair)",
+     "the person pulls the Earth up gravitationally; this pairs with the Earth pulling the person down (gravitational pair)"
+    ],
+    "tip": "Level 3 answers identify both third law pairs and explain why the balanced pair is not a third law pair."
+   }
+  ],
+  "worked": [
+   {
+    "q": "An ice skater of mass 60 kg pushes a second skater of mass 40 kg with a force of 120 N. Calculate the acceleration of each skater.",
+    "steps": [
+     "Third law: the second skater pushes the first with 120 N in the opposite direction.",
+     "First skater: a = F / m = 120 / 60 = 2.0 m/s² backwards",
+     "Second skater: a = F / m = 120 / 40 = 3.0 m/s² forwards",
+     "Equal forces, but the lighter skater accelerates more."
+    ],
+    "ans": "60 kg skater: 2.0 m/s²; 40 kg skater: 3.0 m/s², in opposite directions."
+   },
+   {
+    "q": "A 3.0 kg box rests on a shelf. Identify the Newton's third law partner of each force acting on the box. (g = 10 N/kg)",
+    "steps": [
+     "Weight of box = mg = 3.0 x 10 = 30 N downwards (Earth pulls box). Partner: box pulls Earth up with 30 N (gravitational).",
+     "Normal contact force from shelf = 30 N upwards (shelf pushes box). Partner: box pushes shelf down with 30 N (contact).",
+     "The weight and the normal contact force are balanced forces on the box, so it is in equilibrium; they are not a third law pair."
+    ],
+    "ans": "Partners: box pulls Earth up with 30 N; box pushes shelf down with 30 N."
+   },
+   {
+    "q": "A rocket of mass 50 000 kg has engines that push exhaust gases with a force of 800 000 N. Calculate the resultant force on the rocket at lift-off and its acceleration. (g = 10 N/kg)",
+    "steps": [
+     "Third law: gases push the rocket up with 800 000 N (thrust).",
+     "Weight = mg = 50 000 x 10 = 500 000 N downwards",
+     "Resultant force = 800 000 - 500 000 = 300 000 N upwards",
+     "a = F / m = 300 000 / 50 000 = 6.0 m/s²"
+    ],
+    "ans": "Resultant force 300 000 N upwards; acceleration 6.0 m/s² upwards."
+   }
+  ],
+  "svg": [],
+  "pid": "phy_ocra.4.9",
+  "sid": "phy_ocra",
+  "v": 2,
+  "src": "pre",
+  "by": "claude/claude-opus-5-5",
+  "ts": "2026-11-27T01:36:04.754Z"
  }
 }
