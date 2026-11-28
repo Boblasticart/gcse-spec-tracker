@@ -5,7 +5,7 @@ Runs read **only this file and `docs/CONTEXT.md`**. Keep this file short: finish
 ## Status
 
 ```
-RUN LOCK:       running since 2026-11-27T01:11Z, session 01Sm3c8gg6vMhr9AbAMeCUZM
+RUN LOCK:       running since 2026-11-28T01:11Z, session 01Sm3c8jtF1TfpDsgFoeGVYD
 CURRENT JOB:    none (J2b done; J3 Maths carries on by itself via the daily pipeline run)
 CURRENT STEPS:  none
 LAST RUN ENDED: 2026-11-26 UTC (nightly). Pipeline healthy (last run 25 Nov 21:26, 151 saved; 1251 of 5168 done). Same 2 maths items stuck, left for now. Claude wrote 75 notes (phy_edx 4.3-12.5), all passed the gate; CI green. (The 25 Nov run wrote 45 notes, chem_edx 9.12-phy_edx 4.2, but was cut off before releasing the lock.) Pipeline ~151 + Claude 75 = about 225 a day, about 275 short of 500. Next run: phy_edx 12.6 onwards (19 left), then the OCR sciences (bio_ocra is also being started by the pipeline, so check what is missing first).
