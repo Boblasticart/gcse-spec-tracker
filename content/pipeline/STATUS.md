@@ -1,10 +1,10 @@
 # Pipeline status
 
-Last run finished: 2026-11-27 19:28 UTC. This file is written by the pipeline after every run.
+Last run finished: 2026-11-28 18:15 UTC. This file is written by the pipeline after every run.
 
 ## notes
 
-**1656 of 5168 done** (32%). This run: 112 saved, 188 failed the checks.
+**1853 of 5168 done** (35%). This run: 115 saved, 185 failed the checks.
 
 | Spec | Done | Of |
 | --- | ---: | ---: |
@@ -19,17 +19,19 @@ Last run finished: 2026-11-27 19:28 UTC. This file is written by the pipeline af
 | englang_ocr (finished) | 33 | 33 |
 | englit_aqa (finished) | 205 | 205 |
 | englit_eduqas (finished) | 154 | 154 |
-| englit_ocr | 146 | 147 |
+| englit_ocr (finished) | 147 | 147 |
 | bio_edx (finished) | 127 | 127 |
-| bio_ocra | 68 | 93 |
-| bio_ocrb | 46 | 85 |
+| bio_ocra | 87 | 93 |
+| bio_ocrb | 61 | 85 |
 | chem_edx (finished) | 117 | 117 |
-| chem_ocra | 33 | 96 |
-| chem_ocrb | 18 | 71 |
+| chem_ocra | 56 | 96 |
+| chem_ocrb | 30 | 71 |
 | phy_edx (finished) | 133 | 133 |
-| phy_ocra | 65 | 107 |
+| phy_ocra (finished) | 107 | 107 |
+| phy_ocrb | 55 | 69 |
+| hist_aqa | 30 | 151 |
 
-Not started yet: 32 specs. Waiting for another try: 188 items.
+Not started yet: 30 specs. Waiting for another try: 185 items.
 
 **Stuck (failed 6 runs, needs a person to look): 2**
 
@@ -40,25 +42,26 @@ Not started yet: 32 specs. Waiting for another try: 188 items.
 
 | Provider | Requests today |
 | --- | ---: |
-| gemini | 305 |
-| groq | 71 |
+| gemini | 324 |
+| groq | 67 |
 | openrouter | 45 |
 
 | Model | Passed | Failed | |
 | --- | ---: | ---: | --- |
-| gemini/gemini-flash-lite-latest | 143 | 357 |  |
-| groq/openai/gpt-oss-120b | 132 | 35 |  |
-| groq/openai/gpt-oss-20b | 84 | 95 |  |
-| gemini/gemini-3.5-flash-lite | 68 | 211 |  |
-| gemini/gemini-3.6-flash | 47 | 35 |  |
-| gemini/gemini-3-flash-preview | 32 | 48 |  |
-| gemini/gemini-3.5-flash | 5 | 5 |  |
-| groq/qwen/qwen3.8-27b | 4 | 1 |  |
+| gemini/gemini-flash-lite-latest | 164 | 412 |  |
+| groq/openai/gpt-oss-120b | 148 | 46 |  |
+| gemini/gemini-3.5-flash-lite | 125 | 335 |  |
+| groq/openai/gpt-oss-20b | 87 | 127 |  |
+| gemini/gemini-3.6-flash | 49 | 35 |  |
+| gemini/gemini-3-flash-preview | 42 | 53 |  |
+| gemini/gemini-3.5-flash | 7 | 5 |  |
+| openrouter/nvidia/nemotron-3-ultra-550b-a55b:free | 6 | 11 |  |
+| openrouter/baidu/ernie-5.5-flash-preview:free | 4 | 5 |  |
+| groq/qwen/qwen3.8-27b | 4 | 2 |  |
 | gemini/gemini-3.8-flash | 4 | 0 |  |
-| openrouter/baidu/ernie-5.5-flash-preview:free | 3 | 4 |  |
-| openrouter/nvidia/nemotron-3-ultra-550b-a55b:free | 3 | 5 |  |
 | openrouter/particle-ai/particle-1:free | 2 | 13 | skipped for now |
 | openrouter/inclusionai/ling-3.2-flash:free | 1 | 0 |  |
 | gemini/gemini-3.1-flash-lite | 0 | 13 | skipped for now |
 | gemini/gemini-3.1-flash-lite-preview | 0 | 13 | skipped for now |
 | gemini/gemini-3.7-flash | 0 | 1 |  |
+| openrouter/nvidia/nemotron-3.5-super-vl:free | 0 | 1 |  |

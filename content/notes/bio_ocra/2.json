@@ -437,5 +437,544 @@
   "src": "pre",
   "by": "gemini/gemini-flash-lite-latest",
   "ts": "2026-11-25T21:19:13.222Z"
+ },
+ "bio_ocra.2.1": {
+  "summary": "Aerobic respiration uses oxygen to completely break down glucose, yielding up to 38 ATP per molecule, while anaerobic respiration occurs when oxygen is unavailable, producing far less ATP and different end‑products in plants, fungi and animals. Both processes start with glycolysis in the cytoplasm, but the subsequent pathways diverge, giving distinct energy yields and waste products that are crucial for understanding metabolism and adaptations.",
+  "core": [
+   {
+    "h": "1. Overview of Respiration Types",
+    "p": "Respiration is the set of metabolic pathways that convert biochemical energy from nutrients into ATP. **Aerobic respiration** requires O₂ and proceeds through glycolysis, the link reaction, the Krebs cycle and oxidative phosphorylation. **Anaerobic respiration** (fermentation) occurs without O₂ and ends after glycolysis, producing different end‑products in different kingdoms.",
+    "bullets": [
+     "Aerobic: glucose + 6 O₂ → 6 CO₂ + 6 H₂O + up to 38 ATP",
+     "Anaerobic (fermentation): glucose → pyruvate → end‑product + 2 ATP",
+     "All organisms perform glycolysis – a universal, exothermic process"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Aerobic respiration",
+      "p": "A series of metabolic reactions that use oxygen to completely oxidise glucose to carbon dioxide and water, producing a large amount of ATP."
+     },
+     {
+      "k": "def",
+      "t": "Anaerobic respiration (fermentation)",
+      "p": "Metabolic pathways that regenerate NAD⁺ from NADH without oxygen, allowing glycolysis to continue, producing far less ATP and characteristic end‑products."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. Glycolysis – Common to All",
+    "p": "Glycolysis occurs in the cytoplasm of plant, fungal and animal cells. One molecule of glucose (6‑C) is split into two molecules of pyruvate (3‑C).",
+    "bullets": [
+     "Consumes 2 ATP, produces 4 ATP → net gain **2 ATP**",
+     "Produces 2 NADH (used later in aerobic respiration)",
+     "Key enzymes: hexokinase, phosphofructokinase (PFK), pyruvate kinase"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "",
+      "p": "PFK is the main regulatory step – inhibited by ATP, activated by ADP."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Glycolysis pathway showing substrates, enzymes and ATP/NADH yields.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" fill=\"#dbeafe\" stroke=\"#1b2540\"/><text x=\"20\" y=\"30\" font-size=\"12\" fill=\"#1b2540\">Glucose</text><text x=\"80\" y=\"30\" font-size=\"12\" fill=\"#1b2540\">→ 2 Pyruvate</text><text x=\"20\" y=\"70\" font-size=\"12\" fill=\"#1b2540\">-2 ATP</text><text x=\"20\" y=\"100\" font-size=\"12\" fill=\"#1b2540\">+4 ATP</text><text x=\"20\" y=\"130\" font-size=\"12\" fill=\"#1b2540\">Net +2 ATP</text><text x=\"20\" y=\"160\" font-size=\"12\" fill=\"#1b2540\">+2 NADH</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "3. Aerobic Respiration in Animals",
+    "p": "After glycolysis, pyruvate enters mitochondria where it is converted to acetyl‑CoA (link reaction), then oxidised in the Krebs cycle and finally used in oxidative phosphorylation.",
+    "bullets": [
+     "Link reaction: Pyruvate + CoA + NAD⁺ → Acetyl‑CoA + CO₂ + NADH",
+     "Krebs cycle (citric acid cycle): each acetyl‑CoA yields 3 NADH, 1 FADH₂, 1 GTP (≈ ATP) and 2 CO₂",
+     "Oxidative phosphorylation: NADH and FADH₂ donate electrons to the electron transport chain (ETC) → proton gradient → ATP synthase produces ~34 ATP"
+    ],
+    "table": {
+     "head": [
+      "Stage",
+      "Location",
+      "ATP (net)",
+      "NADH",
+      "FADH₂",
+      "CO₂",
+      "O₂ used"
+     ],
+     "rows": [
+      [
+       "Glycolysis",
+       "Cytoplasm",
+       "2",
+       "2",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "Link reaction",
+       "Mitochondrial matrix",
+       "0",
+       "2",
+       "0",
+       "2",
+       "0"
+      ],
+      [
+       "Krebs cycle",
+       "Mitochondrial matrix",
+       "2 (GTP)",
+       "6",
+       "2",
+       "4",
+       "0"
+      ],
+      [
+       "Oxidative phosphorylation",
+       "Inner mitochondrial membrane",
+       "34",
+       "0",
+       "0",
+       "0",
+       "6"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "",
+      "p": "Remember the total ATP from aerobic respiration is **38** (2+2+34). Some textbooks quote 36 when accounting for transport costs."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Anaerobic Respiration in Animals (Lactic Acid Fermentation)",
+    "p": "When oxygen is scarce (e.g., intense exercise), animal muscle cells convert pyruvate to lactate, regenerating NAD⁺ so glycolysis can continue.",
+    "bullets": [
+     "Pyruvate + NADH → Lactate + NAD⁺ (catalysed by lactate dehydrogenase)",
+     "Net ATP from glycolysis only – **2 ATP per glucose**",
+     "Lactate accumulates → muscle fatigue; later transported to liver for gluconeogenesis (Cori cycle)"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "",
+      "p": "Do NOT confuse lactic acid fermentation with alcoholic fermentation – the end‑product differs."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Lactic acid fermentation pathway in animal muscle.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" fill=\"#fde68a\" stroke=\"#1b2540\"/><text x=\"20\" y=\"30\" font-size=\"12\" fill=\"#1b2540\">Glucose → 2 Pyruvate</text><text x=\"20\" y=\"70\" font-size=\"12\" fill=\"#1b2540\">+2 ATP (glycolysis)</text><text x=\"20\" y=\"110\" font-size=\"12\" fill=\"#1b2540\">Pyruvate + NADH → Lactate + NAD⁺</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "5. Anaerobic Respiration in Yeast (Alcoholic Fermentation)",
+    "p": "Fungi such as yeast convert pyruvate to ethanol and CO₂, a process exploited in bread making and brewing.",
+    "bullets": [
+     "Pyruvate → Acetaldehyde + CO₂ (pyruvate decarboxylase)",
+     "Acetaldehyde + NADH → Ethanol + NAD⁺ (alcohol dehydrogenase)",
+     "Net ATP = **2 ATP per glucose** (from glycolysis only)",
+     "CO₂ production causes bread to rise; ethanol is the alcohol in beer/wine"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "",
+      "p": "Alcoholic fermentation is the only respiration type that produces a gas (CO₂) as a waste product."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Alcoholic fermentation in yeast – steps and products.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" fill=\"#fecaca\" stroke=\"#1b2540\"/><text x=\"20\" y=\"30\" font-size=\"12\" fill=\"#1b2540\">Glucose → 2 Pyruvate</text><text x=\"20\" y=\"70\" font-size=\"12\" fill=\"#1b2540\">Pyruvate → Acetaldehyde + CO₂</text><text x=\"20\" y=\"110\" font-size=\"12\" fill=\"#1b2540\">Acetaldehyde + NADH → Ethanol + NAD⁺</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "6. Anaerobic Respiration in Plants (Alcoholic Fermentation)",
+    "p": "Plants also ferment when oxygen is limited (e.g., water‑logged soils). The pathway mirrors that of yeast, producing ethanol and CO₂.",
+    "bullets": [
+     "Occurs in the cytoplasm of root cells under hypoxic conditions",
+     "Same enzymes as yeast – pyruvate decarboxylase and alcohol dehydrogenase",
+     "Provides only 2 ATP per glucose, sufficient for short‑term survival"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "",
+      "p": "In exam questions, always state that the plant pathway is **alcoholic fermentation**, not lactic."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Comparison of End‑Products",
+    "p": "The three major groups produce distinct waste molecules after glycolysis.",
+    "bullets": [
+     "Animals (muscle) – **lactate**",
+     "Fungi (yeast) – **ethanol + CO₂**",
+     "Plants – **ethanol + CO₂** (same as yeast)"
+    ],
+    "table": {
+     "head": [
+      "Organism",
+      "Fermentation type",
+      "End‑product(s)",
+      "ATP from glucose"
+     ],
+     "rows": [
+      [
+       "Animal muscle",
+       "Lactic acid",
+       "Lactate",
+       "2"
+      ],
+      [
+       "Yeast (fungi)",
+       "Alcoholic",
+       "Ethanol + CO₂",
+       "2"
+      ],
+      [
+       "Plant roots (anaerobic)",
+       "Alcoholic",
+       "Ethanol + CO₂",
+       "2"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "8. Why Aerobic Respiration Yields More ATP",
+    "p": "Oxidative phosphorylation uses the energy of electrons from NADH/FADH₂ to pump protons across the inner mitochondrial membrane, creating a chemiosmotic gradient.",
+    "bullets": [
+     "Each NADH → ~3 ATP; each FADH₂ → ~2 ATP",
+     "Proton motive force drives ATP synthase (ADP + Pi → ATP)",
+     "O₂ is the final electron acceptor, forming H₂O"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "",
+      "p": "The **electron transport chain** is located in the inner mitochondrial membrane."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Chemiosmotic theory – proton gradient and ATP synthase.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"220\" fill=\"#e9d5ff\" stroke=\"#1b2540\"/><text x=\"20\" y=\"30\" font-size=\"12\" fill=\"#1b2540\">ETC pumps H⁺ out</text><text x=\"20\" y=\"70\" font-size=\"12\" fill=\"#1b2540\">H⁺ gradient</text><text x=\"20\" y=\"110\" font-size=\"12\" fill=\"#1b2540\">ATP synthase uses H⁺ flow → ATP</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "9. Practical Evidence of Fermentation",
+    "p": "Key OCR practicals demonstrate the different end‑products.",
+    "bullets": [
+     "Lactate test – add FeSO₄ to muscle extract; a brown precipitate indicates lactate.",
+     "Ethanol test – add potassium dichromate (K₂Cr₂O₇) in H₂SO₄; colour change from orange to green shows ethanol oxidation.",
+     "CO₂ detection – limewater turns milky when CO₂ is bubbled through (used for yeast fermentation)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "",
+      "p": "Do not confuse the ethanol test with the alcohol flame test – the former is a chemical oxidation test."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Adaptations to Anaerobic Environments",
+    "p": "Organisms that frequently experience low O₂ have specialised adaptations.",
+    "bullets": [
+     "Plants – aerenchyma tissue in roots and stems to transport O₂ from shoots.",
+     "Fungi – can switch rapidly between aerobic respiration and fermentation.",
+     "Animals – fast‑twitch muscle fibres rely heavily on lactic fermentation for short bursts of activity."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "11. Higher‑Tier Extension: Fermentation in Food Production",
+    "p": "Understanding fermentation allows explanation of real‑world applications, a higher‑tier requirement.",
+    "bullets": [
+     "Bread – CO₂ from yeast fermentation inflates dough; ethanol evaporates during baking.",
+     "Alcoholic drinks – ethanol concentration depends on yeast strain and fermentation time.",
+     "Sauerkraut – lactic acid bacteria ferment sugars to lactic acid, preserving the cabbage."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "",
+      "p": "When answering, link the end‑product to its practical effect (e.g., CO₂ → dough rise)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "12. Summary of Energy Yields",
+    "p": "A concise table helps recall the ATP yields for each respiration type across kingdoms.",
+    "bullets": [],
+    "table": {
+     "head": [
+      "Organism",
+      "Respiration type",
+      "ATP per glucose",
+      "End‑product(s)"
+     ],
+     "rows": [
+      [
+       "Animal (aerobic)",
+       "Aerobic",
+       "38",
+       "CO₂ + H₂O"
+      ],
+      [
+       "Animal (anaerobic)",
+       "Lactic fermentation",
+       "2",
+       "Lactate"
+      ],
+      [
+       "Fungi (yeast)",
+       "Alcoholic fermentation",
+       "2",
+       "Ethanol + CO₂"
+      ],
+      [
+       "Plant (aerobic)",
+       "Aerobic",
+       "38",
+       "CO₂ + H₂O"
+      ],
+      [
+       "Plant (anaerobic)",
+       "Alcoholic fermentation",
+       "2",
+       "Ethanol + CO₂"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Cellular respiration is like a power plant.",
+   "p": "Glucose is the fuel, glycolysis is the coal‑crushing plant that prepares the fuel, the mitochondrion is the main generator where the link reaction and Krebs cycle are the boilers that turn fuel into steam, and the electron transport chain is the turbine that finally produces electricity (ATP). The analogy breaks down because a real power plant does not recycle NAD⁺ and does not produce waste gases like CO₂ and ethanol in the same way as cells."
+  },
+  "terms": [
+   {
+    "t": "Aerobic respiration",
+    "d": "A set of metabolic pathways that use oxygen to completely oxidise glucose to CO₂ and H₂O, producing up to 38 ATP per glucose molecule."
+   },
+   {
+    "t": "Anaerobic respiration",
+    "d": "Metabolic pathways that occur without oxygen, ending after glycolysis and producing limited ATP and characteristic end‑products such as lactate or ethanol."
+   },
+   {
+    "t": "Glycolysis",
+    "d": "The cytoplasmic breakdown of one glucose molecule into two pyruvate molecules, yielding a net gain of 2 ATP and 2 NADH."
+   },
+   {
+    "t": "Link reaction",
+    "d": "Conversion of pyruvate to acetyl‑CoA in the mitochondrial matrix, producing CO₂ and NADH."
+   },
+   {
+    "t": "Krebs cycle",
+    "d": "A series of reactions in the mitochondrial matrix that oxidise acetyl‑CoA, producing NADH, FADH₂, GTP (ATP) and CO₂."
+   },
+   {
+    "t": "Oxidative phosphorylation",
+    "d": "ATP synthesis driven by the proton gradient generated by the electron transport chain in the inner mitochondrial membrane."
+   },
+   {
+    "t": "Lactic acid fermentation",
+    "d": "Anaerobic pathway in animal muscle where pyruvate is reduced to lactate, regenerating NAD⁺."
+   },
+   {
+    "t": "Alcoholic fermentation",
+    "d": "Anaerobic pathway in yeast and some plant cells where pyruvate is converted to ethanol and CO₂."
+   },
+   {
+    "t": "Electron transport chain (ETC)",
+    "d": "A series of membrane‑bound proteins that transfer electrons from NADH/FADH₂ to O₂, pumping protons to create a gradient."
+   },
+   {
+    "t": "ATP synthase",
+    "d": "Enzyme complex that synthesises ATP as protons flow back into the mitochondrial matrix through it."
+   },
+   {
+    "t": "Aerenchyma",
+    "d": "Spongy tissue in aquatic plants that allows diffusion of O₂ to submerged roots."
+   },
+   {
+    "t": "Cori cycle",
+    "d": "The metabolic pathway that transports lactate from muscle to liver, where it is converted back to glucose."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Anaerobic respiration produces 38 ATP",
+    "r": "Anaerobic (fermentation) only yields 2 ATP per glucose; the 38 ATP figure applies to aerobic respiration."
+   },
+   {
+    "w": "Plants only perform aerobic respiration",
+    "r": "Plants can also undergo alcoholic fermentation when O₂ is limited, e.g., in water‑logged roots."
+   },
+   {
+    "w": "Lactate is produced by yeast",
+    "r": "Yeast produces ethanol and CO₂; lactate is produced by animal muscle cells."
+   },
+   {
+    "w": "The link reaction occurs in the cytoplasm",
+    "r": "The link reaction takes place in the mitochondrial matrix."
+   },
+   {
+    "w": "FADH₂ yields 3 ATP",
+    "r": "Each FADH₂ yields about 2 ATP in oxidative phosphorylation."
+   },
+   {
+    "w": "Fermentation needs oxygen",
+    "r": "Fermentation is defined by the *absence* of oxygen; it regenerates NAD⁺ without O₂."
+   },
+   {
+    "w": "All NADH from glycolysis enters the mitochondria directly",
+    "r": "In animal cells, cytoplasmic NADH transfers its electrons to mitochondrial carriers via shuttle systems (e.g., malate‑aspartate)."
+   }
+  ],
+  "exam": [
+   {
+    "q": "State the overall equation for aerobic respiration in animals and write down the net ATP yield.",
+    "marks": 4,
+    "model": [
+     "C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O",
+     "Net ATP = 38 (or 36 if transport costs are considered)"
+    ],
+    "tip": "Write the balanced equation first, then the ATP total – remember to mention the possible 36/38 variation."
+   },
+   {
+    "q": "Explain why anaerobic respiration produces far less ATP than aerobic respiration.",
+    "marks": 6,
+    "model": [
+     "Both start with glycolysis, which yields only 2 ATP and 2 NADH.",
+     "In aerobic respiration the NADH and FADH₂ enter the electron transport chain, producing ~34 ATP via oxidative phosphorylation.",
+     "In anaerobic respiration the NADH is re‑oxidised in fermentation, so no oxidative phosphorylation occurs.",
+     "Therefore only the 2 ATP from glycolysis are produced."
+    ],
+    "tip": "Structure answer: start with common step, then contrast the presence/absence of ETC."
+   },
+   {
+    "q": "Write the equation for alcoholic fermentation in yeast and name the two end‑products.",
+    "marks": 3,
+    "model": [
+     "C₆H₁₂O₆ → 2 C₂H₅OH + 2 CO₂",
+     "End‑products: ethanol and carbon dioxide"
+    ],
+    "tip": "Remember to include the stoichiometry – two molecules of each product per glucose."
+   },
+   {
+    "q": "A plant root is flooded and cannot obtain oxygen. Describe the metabolic pathway it will use to obtain ATP and state the amount of ATP produced per glucose.",
+    "marks": 6,
+    "model": [
+     "The root will use alcoholic fermentation.",
+     "Glucose → 2 pyruvate (glycolysis) → ethanol + CO₂ (fermentation).",
+     "Net ATP = 2 per glucose."
+    ],
+    "tip": "Specify that the pathway occurs in the cytoplasm and that only glycolysis yields ATP."
+   },
+   {
+    "q": "Compare the end‑products of anaerobic respiration in animal muscle and in yeast, stating why they differ.",
+    "marks": 4,
+    "model": [
+     "Animal muscle: lactate (lactic acid fermentation).",
+     "Yeast: ethanol and CO₂ (alcoholic fermentation).",
+     "Difference due to the enzymes present – lactate dehydrogenase in muscle vs pyruvate decarboxylase and alcohol dehydrogenase in yeast."
+    ],
+    "tip": "Link the enzyme difference directly to the product difference."
+   },
+   {
+    "q": "Explain how the electron transport chain generates ATP in aerobic respiration.",
+    "marks": 6,
+    "model": [
+     "Electrons from NADH/FADH₂ are passed through a series of membrane proteins.",
+     "Energy released pumps H⁺ from the matrix to the inter‑membrane space, creating a proton gradient.",
+     "Protons flow back through ATP synthase, driving the synthesis of ATP from ADP + Pi.",
+     "O₂ acts as the final electron acceptor, forming H₂O."
+    ],
+    "tip": "Use the term ‘chemiosmotic gradient’ and mention the location – inner mitochondrial membrane."
+   },
+   {
+    "q": "A student claims that fermentation in plants produces lactic acid. Using knowledge of the OCR specification, evaluate this claim.",
+    "marks": 4,
+    "model": [
+     "The claim is incorrect – plants perform alcoholic fermentation, not lactic.",
+     "Evidence: plant roots under anaerobic conditions produce ethanol and CO₂, the same as yeast.",
+     "Lactic acid fermentation is characteristic of animal muscle cells."
+    ],
+    "tip": "State the correct pathway and give a brief reason."
+   },
+   {
+    "q": "List three adaptations that allow organisms to survive in low‑oxygen environments.",
+    "marks": 3,
+    "model": [
+     "Aerenchyma tissue in aquatic plants",
+     "Ability to switch to fermentation (yeast)",
+     "Fast‑twitch muscle fibres relying on lactic fermentation"
+    ],
+    "tip": "One point per line – keep it concise."
+   },
+   {
+    "q": "During a practical, a student adds FeSO₄ to a muscle extract and observes a brown precipitate. What does this indicate and why?",
+    "marks": 2,
+    "model": [
+     "Presence of lactate – Fe²⁺ reacts with lactate to form a brown Fe‑lactate precipitate."
+    ],
+    "tip": "Link the test directly to the end‑product of lactic fermentation."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Calculate the total ATP yield from one molecule of glucose undergoing aerobic respiration in an animal cell, assuming each NADH from glycolysis yields 2 ATP (shuttle cost) and each FADH₂ yields 2 ATP.",
+    "steps": [
+     "Glycolysis: 2 ATP (net) + 2 NADH → 2 × 2 = 4 ATP",
+     "Link reaction: 2 NADH → 2 × 3 = 6 ATP",
+     "Krebs cycle: 6 NADH → 6 × 3 = 18 ATP; 2 FADH₂ → 2 × 2 = 4 ATP; 2 GTP → 2 ATP",
+     "Add all ATP: 2 (glycolysis) + 4 + 6 + 18 + 4 + 2 = 36 ATP"
+    ],
+    "ans": "36 ATP (some textbooks state 38 ATP if the glycolytic NADH yields 3 ATP)."
+   },
+   {
+    "q": "Write the complete set of equations for lactic acid fermentation in animal muscle, starting from glucose.",
+    "steps": [
+     "Glycolysis: C₆H₁₂O₆ → 2 C₃H₄O₃ + 2 ATP + 2 NADH",
+     "Fermentation: 2 C₃H₄O₃ + 2 NADH → 2 C₃H₆O₃ + 2 NAD⁺"
+    ],
+    "ans": "Overall: C₆H₁₂O₆ → 2 C₃H₆O₃ + 2 ATP"
+   }
+  ],
+  "pid": "bio_ocra.2.1",
+  "sid": "bio_ocra",
+  "v": 2,
+  "src": "pre",
+  "by": "groq/openai/gpt-oss-120b",
+  "ts": "2026-11-28T17:11:55.888Z"
  }
 }

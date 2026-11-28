@@ -3190,5 +3190,424 @@
   "src": "pre",
   "by": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
   "ts": "2026-11-27T18:44:48.073Z"
+ },
+ "bio_ocra.8.6": {
+  "summary": "ADH (antidiuretic hormone) is released from the posterior pituitary when plasma osmolality rises. It acts on the kidneys to increase water re‑absorption, concentrating the urine and restoring normal water balance. This forms a classic negative feedback loop: the stimulus (high osmolality) triggers ADH release, the response (water re‑absorption) reduces the stimulus, and ADH secretion falls again. Understanding this loop is essential for explaining how the body maintains homeostasis of water and solutes.",
+  "core": [
+   {
+    "h": "What is ADH?",
+    "p": "ADH, also called vasopressin, is a peptide hormone produced by the hypothalamus and stored in the posterior pituitary.",
+    "bullets": [
+     "Synthesised in supra‑optic nuclei of the hypothalamus",
+     "Stored in neurosecretory vesicles in the posterior pituitary",
+     "Released into the bloodstream in response to increased plasma osmolality or low blood volume"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "ADH (antidiuretic hormone)",
+      "p": "A hormone that increases the permeability of the distal convoluted tubule and collecting duct to water, thereby reducing urine volume."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Stimulus for ADH release – plasma osmolality",
+    "p": "The primary sensor for ADH release is the osmoreceptors in the hypothalamus.",
+    "bullets": [
+     "Osmoreceptors detect changes in plasma osmolality (mOsm kg⁻¹).",
+     "When osmolality rises above ~295 mOsm kg⁻¹, they fire more rapidly.",
+     "If osmolality falls below ~285 mOsm kg⁻¹, firing rate decreases and ADH release stops."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "",
+      "p": "Normal plasma osmolality ≈ 285‑295 mOsm kg⁻¹."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Pathway of ADH from brain to kidney",
+    "p": "After synthesis, ADH travels down the hypothalamo‑hypophyseal tract to be released into the systemic circulation.",
+    "bullets": [
+     "Hypothalamic neurones → axons → posterior pituitary → bloodstream",
+     "Travels to Vasa recta of the renal medulla"
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": [
+     {
+      "cap": "ADH secretion pathway",
+      "svg": "<svg viewBox=\"0 0 400 240\" fill=\"#dbeafe\" stroke=\"#1b2540\" font-size=\"12\"><rect x=\"20\" y=\"20\" width=\"80\" height=\"30\" fill=\"#bbf7d0\"/><text x=\"30\" y=\"40\">Hypothalamus</text><line x1=\"100\" y1=\"35\" x2=\"150\" y2=\"35\" stroke=\"#1b2540\"/><rect x=\"150\" y=\"20\" width=\"80\" height=\"30\" fill=\"#fde68a\"/><text x=\"160\" y=\"40\">Posterior Pituitary</text><line x1=\"230\" y1=\"35\" x2=\"280\" y2=\"35\" stroke=\"#1b2540\"/><rect x=\"280\" y=\"20\" width=\"80\" height=\"30\" fill=\"#e9d5ff\"/><text x=\"285\" y=\"40\">Bloodstream</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "ADH action on the kidney",
+    "p": "ADH binds to V2 receptors on the basolateral membrane of principal cells in the collecting ducts.",
+    "bullets": [
+     "Activates adenylate cyclase → ↑cAMP → protein kinase A",
+     "PKA phosphorylates aquaporin‑2 (AQP2) vesicles",
+     "AQP2 vesicles fuse with the apical membrane, inserting water channels",
+     "Water moves from tubular fluid into interstitium (osmosis)",
+     "Result: urine becomes more concentrated, volume falls"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Aquaporin‑2 (AQP2)",
+      "p": "A water‑channel protein inserted into the apical membrane of collecting‑duct cells in response to ADH."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "ADH‑induced insertion of AQP2 into collecting‑duct cells",
+      "svg": "<svg viewBox=\"0 0 400 240\" fill=\"#dbeafe\" stroke=\"#1b2540\" font-size=\"12\"><rect x=\"50\" y=\"150\" width=\"100\" height=\"30\" fill=\"#bbf7d0\"/><text x=\"55\" y=\"170\">Collecting Duct Cell</text><line x1=\"100\" y1=\"150\" x2=\"100\" y2=\"130\" stroke=\"#1b2540\"/><circle cx=\"100\" cy=\"120\" r=\"8\" fill=\"#fde68a\"/><text x=\"85\" y=\"115\">ADH</text><line x1=\"100\" y1=\"112\" x2=\"100\" y2=\"100\" stroke=\"#1b2540\"/><rect x=\"90\" y=\"80\" width=\"20\" height=\"20\" fill=\"#e9d5ff\"/><text x=\"92\" y=\"95\">AQP2</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Negative feedback loop – step by step",
+    "p": "The whole system works as a classic negative feedback mechanism.",
+    "bullets": [
+     "1️⃣ Stimulus: plasma osmolality rises (e.g., after drinking salty food).",
+     "2️⃣ Sensor: hypothalamic osmoreceptors detect the rise.",
+     "3️⃣ Control centre: hypothalamus signals posterior pituitary.",
+     "4️⃣ Effector: ADH released → kidneys re‑absorb water.",
+     "5️⃣ Response: plasma osmolality falls back toward normal.",
+     "6️⃣ Feedback: reduced osmolality decreases osmoreceptor firing → ADH secretion stops."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "",
+      "p": "Negative feedback always acts to *reduce* the original stimulus."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Effect of ADH on urine volume and concentration",
+    "p": "ADH determines the final urine output and its osmolality.",
+    "bullets": [
+     "High ADH → collecting ducts become permeable → water re‑absorbed → **low urine volume, high urine osmolality**.",
+     "Low/absent ADH (e.g., diabetes insipidus) → ducts remain impermeable → **high urine volume, low urine osmolality**."
+    ],
+    "table": {
+     "head": [
+      "ADH level",
+      "Collecting‑duct permeability",
+      "Urine volume",
+      "Urine osmolality"
+     ],
+     "rows": [
+      [
+       "High",
+       "High",
+       "Low",
+       "High"
+      ],
+      [
+       "Low/None",
+       "Low",
+       "High",
+       "Low"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Higher‑tier extension – ADH and blood pressure",
+    "p": "ADH also has a vasoconstrictive effect via V1 receptors on blood‑vessel smooth muscle.",
+    "bullets": [
+     "V1‑receptor activation → ↑Ca²⁺ → vasoconstriction",
+     "Raises systemic vascular resistance → **increases blood pressure**",
+     "Important when both plasma osmolality and blood volume are low"
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "",
+      "p": "Do not confuse the V1‑mediated vasoconstriction with the water‑re‑absorption effect (V2)."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Clinical link – Diabetes insipidus",
+    "p": "A disorder of ADH production or response, illustrating the importance of the feedback loop.",
+    "bullets": [
+     "Central DI: insufficient ADH synthesis (hypothalamic damage).",
+     "Nephrogenic DI: kidneys fail to respond to ADH (AQP2 defect).",
+     "Symptoms: polyuria, polydipsia, risk of dehydration.",
+     "Treatment: Desmopressin (synthetic ADH) for central DI; thiazide diuretics & low‑salt diet for nephrogenic DI."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "",
+      "p": "Desmopressin mimics ADH and acts on V2 receptors."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Experimental evidence – water‑deprivation test",
+    "p": "A practical used to assess ADH function.",
+    "bullets": [
+     "Subject abstains from water for several hours.",
+     "Measure body weight, plasma osmolality and urine osmolality at intervals.",
+     "In a normal response, urine osmolality rises as ADH is secreted.",
+     "In DI, urine remains dilute despite rising plasma osmolality."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "",
+      "p": "Remember to note the *direction* of change for each variable – this is what examiners look for."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Key summary of the ADH feedback loop",
+    "p": "Putting the pieces together:",
+    "bullets": [
+     "**Stimulus** – ↑ plasma osmolality or ↓ blood volume.",
+     "**Sensor** – hypothalamic osmoreceptors (and baroreceptors).",
+     "**Control centre** – hypothalamus → posterior pituitary.",
+     "**Effector** – ADH acts on V2 receptors in kidney (water re‑absorption) and V1 receptors in blood vessels (vasoconstriction).",
+     "**Response** – urine volume falls, plasma osmolality returns to normal, blood pressure may rise.",
+     "**Feedback** – when normality is restored, ADH secretion stops."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Thermostat analogy",
+   "p": "Think of ADH as a thermostat for the body's water level. When the 'room' (blood) gets too dry (high osmolality), the thermostat (hypothalamus) turns the heater (ADH) on, causing the radiator (kidney) to pull in moisture and warm the room back to a comfortable level. The analogy breaks down because a thermostat simply switches on/off, whereas ADH secretion is graded and also affects blood vessels, not just water re‑absorption."
+  },
+  "terms": [
+   {
+    "t": "ADH (antidiuretic hormone)",
+    "d": "A hormone released from the posterior pituitary that increases water re‑absorption in the kidneys by inserting aquaporin‑2 channels into the collecting‑duct cells."
+   },
+   {
+    "t": "Osmoreceptor",
+    "d": "Specialised neurones in the hypothalamus that detect changes in plasma osmolality and alter firing rate accordingly."
+   },
+   {
+    "t": "Plasma osmolality",
+    "d": "The concentration of solutes in blood plasma, expressed in milliosmoles per kilogram (mOsm kg⁻¹)."
+   },
+   {
+    "t": "Aquaporin‑2 (AQP2)",
+    "d": "A water‑channel protein inserted into the apical membrane of collecting‑duct cells in response to ADH."
+   },
+   {
+    "t": "V2 receptor",
+    "d": "A G‑protein‑coupled receptor on the basolateral membrane of principal cells in the collecting duct that mediates ADH's water‑re‑absorption effect."
+   },
+   {
+    "t": "Negative feedback",
+    "d": "A control mechanism in which the output of a system reduces the original stimulus, restoring the variable to its set point."
+   },
+   {
+    "t": "Collecting duct",
+    "d": "The final segment of the nephron where ADH regulates water permeability."
+   },
+   {
+    "t": "V1 receptor",
+    "d": "Receptor on vascular smooth muscle that mediates ADH‑induced vasoconstriction."
+   },
+   {
+    "t": "Diabetes insipidus",
+    "d": "A disorder characterised by insufficient ADH activity, leading to excessive urine output and thirst."
+   },
+   {
+    "t": "Desmopressin",
+    "d": "A synthetic analogue of ADH used to treat central diabetes insipidus."
+   },
+   {
+    "t": "Baroreceptor",
+    "d": "Pressure‑sensitive receptors in the carotid sinus and aortic arch that detect changes in blood pressure and can influence ADH release."
+   },
+   {
+    "t": "cAMP",
+    "d": "Cyclic adenosine monophosphate, a second messenger that rises in collecting‑duct cells after ADH binds to V2 receptors."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "ADH makes the kidneys produce more urine",
+    "r": "ADH **reduces** urine volume by increasing water re‑absorption."
+   },
+   {
+    "w": "Osmoreceptors are in the kidney",
+    "r": "Osmoreceptors are located in the hypothalamus, not the kidney."
+   },
+   {
+    "w": "ADH acts on the proximal tubule",
+    "r": "ADH acts mainly on the distal convoluted tubule and collecting duct."
+   },
+   {
+    "w": "Negative feedback means the response continues to increase",
+    "r": "Negative feedback means the response **decreases** the original stimulus."
+   },
+   {
+    "w": "High ADH causes high blood pressure only by increasing blood volume",
+    "r": "High ADH also causes vasoconstriction via V1 receptors, contributing to blood pressure rise."
+   },
+   {
+    "w": "Diabetes insipidus is caused by high blood sugar",
+    "r": "Diabetes insipidus is a problem with ADH, not glucose; high blood sugar causes diabetes mellitus."
+   },
+   {
+    "w": "ADH is a steroid hormone",
+    "r": "ADH is a peptide hormone, not a steroid."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Explain how ADH helps to maintain water balance when plasma osmolality rises. (4 marks)",
+    "marks": 4,
+    "model": [
+     "Stimulus – plasma osmolality rises above normal.",
+     "Osmoreceptors in the hypothalamus detect the rise and increase firing.",
+     "Hypothalamus signals the posterior pituitary to release ADH into the blood.",
+     "ADH acts on V2 receptors in the collecting ducts, causing insertion of AQP2 channels, increasing water re‑absorption, reducing urine volume and returning plasma osmolality to normal."
+    ],
+    "tip": "Give the sequence and link each step with the correct term (osmoreceptor, V2 receptor, AQP2)."
+   },
+   {
+    "q": "Describe the negative feedback loop that controls water balance. (6 marks)",
+    "marks": 6,
+    "model": [
+     "Stimulus – increase in plasma osmolality or decrease in blood volume.",
+     "Sensor – hypothalamic osmoreceptors (and baroreceptors).",
+     "Control centre – hypothalamus processes the information and signals posterior pituitary.",
+     "Effector – ADH released; acts on kidneys (V2) and blood vessels (V1).",
+     "Response – water re‑absorption reduces plasma osmolality and raises blood pressure.",
+     "Feedback – when normal values are reached, osmoreceptor firing falls and ADH secretion stops."
+    ],
+    "tip": "State each component (stimulus, sensor, control centre, effector, response, feedback) and the direction of change."
+   },
+   {
+    "q": "A patient with diabetes insipidus is unable to concentrate urine. State two possible causes and one treatment for each. (4 marks)",
+    "marks": 4,
+    "model": [
+     "Central DI – insufficient ADH production (hypothalamic/pituitary damage). Treatment: Desmopressin (synthetic ADH).",
+     "Nephrogenic DI – kidneys do not respond to ADH (AQP2 defect). Treatment: Thiazide diuretic and low‑salt diet."
+    ],
+    "tip": "Use the correct terminology ‘central’ and ‘nephrogenic’; give one treatment per type."
+   },
+   {
+    "q": "Predict what will happen to urine volume and urine osmolality if ADH secretion is blocked. (2 marks)",
+    "marks": 2,
+    "model": [
+     "Urine volume will increase (polyuria).",
+     "Urine osmolality will decrease (dilute urine)."
+    ],
+    "tip": "Link the block to loss of water re‑absorption."
+   },
+   {
+    "q": "Explain why ADH also raises blood pressure. (2 marks)",
+    "marks": 2,
+    "model": [
+     "ADH binds to V1 receptors on vascular smooth muscle causing vasoconstriction, which increases peripheral resistance and therefore blood pressure."
+    ],
+    "tip": "Mention V1 receptors and vasoconstriction."
+   },
+   {
+    "q": "During a water‑deprivation test, a subject’s plasma osmolality rises from 285 to 300 mOsm kg⁻¹ and urine osmolality rises from 150 to 600 mOsm kg⁻¹. Explain these changes. (4 marks)",
+    "marks": 4,
+    "model": [
+     "Water deprivation raises plasma osmolality, stimulating osmoreceptors.",
+     "Hypothalamus releases ADH.",
+     "ADH increases water re‑absorption in the collecting ducts, concentrating the urine.",
+     "Result: plasma osmolality is reduced towards normal and urine becomes more concentrated."
+    ],
+    "tip": "Show cause‑effect for both plasma and urine changes."
+   },
+   {
+    "q": "State the normal range for plasma osmolality and explain what would happen if it fell below this range. (2 marks)",
+    "marks": 2,
+    "model": [
+     "Normal range: 285‑295 mOsm kg⁻¹.",
+     "If it falls, osmoreceptor firing decreases, ADH secretion stops, kidneys produce a large volume of dilute urine."
+    ],
+    "tip": "Combine normal range with the feedback response."
+   },
+   {
+    "q": "Compare the actions of ADH on the kidney and on blood vessels. (4 marks)",
+    "marks": 4,
+    "model": [
+     "Kidney – ADH binds V2 receptors → ↑cAMP → insertion of AQP2 → ↑ water re‑absorption → concentrated urine.",
+     "Blood vessels – ADH binds V1 receptors → ↑Ca²⁺ → vasoconstriction → ↑ peripheral resistance → raised blood pressure."
+    ],
+    "tip": "Use receptor types (V2 vs V1) and the downstream effect."
+   },
+   {
+    "q": "Why is ADH release considered a ‘graded’ response rather than an ‘all‑or‑none’ response? (2 marks)",
+    "marks": 2,
+    "model": [
+     "The amount of ADH released varies with the degree of change in plasma osmolality; small rises cause small releases, large rises cause larger releases."
+    ],
+    "tip": "Emphasise the proportional relationship."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A person drinks 0.5 L of seawater (≈1000 mOsm L⁻¹). Explain how ADH will respond to prevent dehydration.",
+    "steps": [
+     "Calculate extra solute: 0.5 L × 1000 mOsm L⁻¹ = 500 mOsm added to plasma.",
+     "Plasma osmolality rises → osmoreceptors fire faster.",
+     "Hypothalamus releases ADH.",
+     "ADH increases water re‑absorption in the collecting ducts, concentrating urine and conserving water.",
+     "Result: plasma osmolality is brought back towards normal, preventing further water loss."
+    ],
+    "ans": "ADH secretion increases, leading to reduced urine volume and higher urine concentration, which helps retain water and restore normal osmolality."
+   },
+   {
+    "q": "In an experiment a rabbit’s plasma osmolality rises from 290 to 310 mOsm kg⁻¹. After 30 min its urine osmolality is 800 mOsm kg⁻¹. Explain the physiological changes that have occurred.",
+    "steps": [
+     "Rise in plasma osmolality activates hypothalamic osmoreceptors.",
+     "Posterior pituitary releases ADH into the bloodstream.",
+     "ADH binds V2 receptors on collecting‑duct cells, causing AQP2 insertion.",
+     "Water is re‑absorbed from the tubular fluid, concentrating the urine to 800 mOsm kg⁻¹.",
+     "Re‑absorption reduces plasma osmolality back towards normal."
+    ],
+    "ans": "The rabbit’s kidneys have increased water re‑absorption under ADH control, producing a highly concentrated urine and helping to lower the elevated plasma osmolality."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "ADH secretion pathway",
+    "svg": "<svg viewBox=\"0 0 400 240\" fill=\"#dbeafe\" stroke=\"#1b2540\" font-size=\"12\"><rect x=\"20\" y=\"20\" width=\"80\" height=\"30\" fill=\"#bbf7d0\"/><text x=\"30\" y=\"40\">Hypothalamus</text><line x1=\"100\" y1=\"35\" x2=\"150\" y2=\"35\" stroke=\"#1b2540\"/><rect x=\"150\" y=\"20\" width=\"80\" height=\"30\" fill=\"#fde68a\"/><text x=\"160\" y=\"40\">Posterior Pituitary</text><line x1=\"230\" y1=\"35\" x2=\"280\" y2=\"35\" stroke=\"#1b2540\"/><rect x=\"280\" y=\"20\" width=\"80\" height=\"30\" fill=\"#e9d5ff\"/><text x=\"285\" y=\"40\">Bloodstream</text></svg>"
+   },
+   {
+    "cap": "ADH‑induced insertion of AQP2 into collecting‑duct cells",
+    "svg": "<svg viewBox=\"0 0 400 240\" fill=\"#dbeafe\" stroke=\"#1b2540\" font-size=\"12\"><rect x=\"50\" y=\"150\" width=\"100\" height=\"30\" fill=\"#bbf7d0\"/><text x=\"55\" y=\"170\">Collecting Duct Cell</text><line x1=\"100\" y1=\"150\" x2=\"100\" y2=\"130\" stroke=\"#1b2540\"/><circle cx=\"100\" cy=\"120\" r=\"8\" fill=\"#fde68a\"/><text x=\"85\" y=\"115\">ADH</text><line x1=\"100\" y1=\"112\" x2=\"100\" y2=\"100\" stroke=\"#1b2540\"/><rect x=\"90\" y=\"80\" width=\"20\" height=\"20\" fill=\"#e9d5ff\"/><text x=\"92\" y=\"95\">AQP2</text></svg>"
+   }
+  ],
+  "pid": "bio_ocra.8.6",
+  "sid": "bio_ocra",
+  "v": 2,
+  "src": "pre",
+  "by": "groq/openai/gpt-oss-120b",
+  "ts": "2026-11-28T17:05:55.843Z"
  }
 }
