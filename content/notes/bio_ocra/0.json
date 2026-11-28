@@ -877,5 +877,513 @@
   "src": "pre",
   "by": "groq/openai/gpt-oss-20b",
   "ts": "2026-11-26T19:39:06.443Z"
+ },
+ "bio_ocra.0.2": {
+  "summary": "The development of electron microscopy in the 1930s revolutionized cell biology by utilizing electron beams with significantly shorter wavelengths than visible light. This allowed scientists to achieve much higher resolving power and magnification, transitioning from viewing cells as simple structures with basic nuclei to revealing intricate sub-cellular organelles such as ribosomes, endoplasmic reticulum, and internal mitochondrial cristae. Understanding how electron microscopes function and how they compare to light microscopes is essential for understanding modern cellular architecture.",
+  "core": [
+   {
+    "h": "1. The Light Microscope Limit and the Need for Higher Resolution",
+    "p": "For centuries, optical (light) microscopes were the primary tool for studying biological tissues. However, light microscopes are fundamentally limited by the physics of light waves, leaving many tiny internal cellular structures completely invisible.",
+    "bullets": [
+     "**Visible light** has a wavelength range of approximately 400 nm to 700 nm.",
+     "A microscope cannot separate or resolve two points that are closer together than half the wavelength of the radiation being used.",
+     "Therefore, the maximum theoretical resolution of a light microscope is about **200 nm (0.2 µm)**.",
+     "Structures smaller than 200 nm, or internal details separated by less than 200 nm, appear as a single blurry object under a light microscope.",
+     "Because of this limit, light microscopes could only reveal major organelles like the nucleus, large chloroplasts, cell walls, and cytoplasm."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Limit of Light",
+      "p": "Light microscopes cannot resolve objects smaller than roughly 200 nm due to the long wavelength of light waves."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. Physics of Electron Microscopy: Radiation and Wavelength",
+    "p": "Electron microscopes overcome the resolution barrier of light microscopes by replacing light rays with a focused beam of high-energy electrons.",
+    "bullets": [
+     "Electrons act as moving particles but also exhibit wave-like properties with an extremely short wavelength.",
+     "The wavelength of an electron beam is approximately **0.005 nm**, which is over **100,000 times shorter** than the wavelength of visible light.",
+     "Because the wavelength is so much shorter, the resolving power is dramatically increased.",
+     "Electrons are focused using **electromagnets** rather than glass lenses, as glass would scatter electron beams.",
+     "The entire electron beam path must operate inside a **vacuum** so that electrons do not collide with air molecules."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Electron Microscope",
+      "p": "A microscope that uses a beam of accelerated electrons as a source of illumination to produce images of biological and non-biological specimens."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "3. Resolution vs Magnification: Defining the Key Optical Terms",
+    "p": "Students frequently confuse magnification and resolution. In exam answers, mark schemes strictly test the distinction between these two concepts.",
+    "bullets": [
+     "**Magnification**: The factor by which an image is enlarged compared to the actual size of the specimen.",
+     "**Resolution (Resolving Power)**: The ability to distinguish between two separate points that are close together, showing detail clearly.",
+     "Increasing magnification without increasing resolution yields a larger image that is blurry and reveals no extra detail (known as empty magnification).",
+     "Electron microscopes offer both higher maximum magnification (up to x1,000,000 or more) and higher resolution (down to 0.1–0.2 nm)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Resolution",
+      "p": "The minimum distance apart that two separate points can be seen as distinct and separate entities."
+     },
+     {
+      "k": "warn",
+      "t": "Common Mark Scheme Trap",
+      "p": "Never define resolution as 'how clear an image is'. Always state 'the ability to distinguish between two points as separate'."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Transmission Electron Microscopy (TEM): Mechanism and Capabilities",
+    "p": "Transmission Electron Microscopes (TEM) were developed first and provide the highest resolution images of internal sub-cellular structures.",
+    "bullets": [
+     "In a **TEM**, a beam of electrons passes directly **through** an extremely thin slice of specimen.",
+     "Denser parts of the specimen absorb or scatter more electrons, appearing darker on the resulting micrograph.",
+     "TEM provides a maximum resolution of approximately **0.1 to 0.2 nm** and magnification exceeding **x1,000,000**.",
+     "TEM produces **2D cross-sectional images** showing internal ultra-structure.",
+     "Requires extensive specimen preparation, including dehydration and staining with heavy metal salts (e.g., lead or osmium)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "TEM Key Feature",
+      "p": "TEM passes electrons THROUGH the sample to produce high-resolution 2D internal cross-sections."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "5. Scanning Electron Microscopy (SEM): Mechanism and Capabilities",
+    "p": "Scanning Electron Microscopes (SEM) provide dramatic three-dimensional visual representations of the outer surfaces of cells and sub-cellular structures.",
+    "bullets": [
+     "In an **SEM**, a focused electron beam is bounced or **scanned across the surface** of a specimen.",
+     "The surface is coated in a thin layer of metal (such as gold). Reflected electrons (secondary electrons) are collected by a detector.",
+     "SEM produces **3D images of surface topography**.",
+     "Maximum resolution is typically **3 to 10 nm** (lower than TEM, but far superior to light microscopes).",
+     "Maximum magnification is around **x100,000 to x500,000**."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "SEM Key Feature",
+      "p": "SEM scans electrons OVER the surface to create detailed 3D images of external surfaces."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "6. Discovery of New Sub-cellular Structures",
+    "p": "Before electron microscopy, several fundamental cellular components were completely unknown because they were smaller than the 200 nm resolution limit of light microscopes.",
+    "bullets": [
+     "**Ribosomes**: Measuring only 20–30 nm in diameter, ribosomes were entirely invisible under light microscopes.",
+     "**Lysosomes and Peroxisomes**: Membrane-bound vesicles (~100–500 nm) that could not be distinguished from general cytoplasmic dots.",
+     "**Cytoskeleton**: Microtubules (25 nm diameter) and microfilaments (7 nm diameter) were discovered, explaining cell shape and internal transport.",
+     "**Plasmids**: Small circular rings of DNA in bacteria that cannot be resolved with light microscopes."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam Example",
+      "p": "If an exam question asks for an organelle discovered due to electron microscopes, name ribosomes or endoplasmic reticulum."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Detailed Architecture of Mitochondria and Chloroplasts",
+    "p": "Light microscopes showed mitochondria and chloroplasts only as tiny featureless rods or oval blobs. Electron microscopes revealed their complex internal membranes.",
+    "bullets": [
+     "**Mitochondrial Ultrastructure**: TEM revealed the double membrane, the folded inner membrane (**cristae**), and the internal fluid matrix.",
+     "**Functional Insights**: Scientists realized cristae provide a large surface area for enzymes involved in aerobic respiration (ATP synthesis).",
+     "**Chloroplast Ultrastructure**: TEM revealed stacks of thylakoids called **grana**, joined by intergranal lamellae, suspended in fluid **stroma**.",
+     "**Functional Insights**: The arrangement of thylakoid membranes maximizes light absorption for photosynthesis."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Form Follows Function",
+      "p": "TEM revealed how inner membrane folding increases surface area for vital metabolic reactions like respiration and photosynthesis."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Mapping the Endomembrane System and Ribosomes",
+    "p": "The internal organization of eukaryotic cells was remapped once high-resolution TEM revealed interconnected membrane networks.",
+    "bullets": [
+     "**Endoplasmic Reticulum (ER)**: Revealed an extensive network of folded membranes forming flattened sacs (cisternae).",
+     "**Rough vs Smooth ER**: TEM differentiated Rough ER (studded with 20 nm ribosomes for protein synthesis) from Smooth ER (lipid synthesis).",
+     "**Golgi Apparatus**: Identified as stacks of flattened membrane-bound sacs involved in modifying and packaging proteins into vesicles.",
+     "**Nuclear Envelope and Pores**: Revealed that the nucleus is surrounded by a double membrane containing nuclear pores to allow mRNA export."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Ultrastructure",
+      "p": "The detailed internal structure of a cell or organelle that can only be resolved using an electron microscope."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "9. Key Differences Between Light and Electron Microscopes",
+    "p": "A classic OCR 4-mark or 6-mark comparative evaluation question requires contrasting light and electron microscopy across multiple factors.",
+    "bullets": [
+     "Electrons have shorter wavelengths, yielding higher resolution.",
+     "Preparation methods differ significantly in complexity, specimen state, and color output."
+    ],
+    "table": {
+     "head": [
+      "Feature",
+      "Light Microscope",
+      "Electron Microscope (TEM/SEM)"
+     ],
+     "rows": [
+      [
+       "Radiation Source",
+       "Visible light rays",
+       "Beam of electrons"
+      ],
+      [
+       "Focusing Mechanism",
+       "Glass lenses",
+       "Electromagnets"
+      ],
+      [
+       "Max Resolution",
+       "200 nm (0.2 µm)",
+       "0.1–0.2 nm (TEM) / 3–10 nm (SEM)"
+      ],
+      [
+       "Max Magnification",
+       "x1,500",
+       "x1,000,000+"
+      ],
+      [
+       "Specimen Condition",
+       "Living or dead specimens",
+       "Dead specimens only (vacuum required)"
+      ],
+      [
+       "Image Appearance",
+       "Colored images (natural/stains)",
+       "Black and white (false color added)"
+      ],
+      [
+       "Cost & Portability",
+       "Inexpensive, portable",
+       "Very expensive, non-portable"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Living Samples",
+      "p": "Always remember: electron microscopes CANNOT view living specimens because samples are in a vacuum and dead."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Limitations of Electron Microscopy and Artefacts",
+    "p": "Despite their incredible resolving power, electron microscopes have distinct drawbacks that biologists must consider when interpreting images.",
+    "bullets": [
+     "**Vacuum Requirement**: Living cells cannot survive in a vacuum; biological processes (e.g., mitosis, ciliary motion) cannot be observed live.",
+     "**Complex Preparation**: Samples must undergo complex fixation, dehydration, embedding in resin, and sectioning with diamond knives.",
+     "**Creation of Artefacts**: An artefact is a structural detail visible in a micrograph that resulted from specimen preparation rather than natural cell structure.",
+     "**Cost and Maintenance**: Requires dedicated rooms with anti-vibration floors and specialized technical expertise."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Artefact",
+      "p": "A feature or structure introduced artificially into a biological specimen during preparation, fixating, or staining."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "11. Unit Conversions and Scale in Microscopy Calculations",
+    "p": "Understanding scale and sub-cellular dimensions requires fluency in converting between millimetres (mm), micrometres (µm), and nanometres (nm).",
+    "bullets": [
+     "**1 millimetre (mm)** = 1,000 micrometres (µm) = 1,000,000 nanometres (nm).",
+     "**1 micrometre (µm)** = 1,000 nanometres (nm) = 10⁻⁶ metres.",
+     "**1 nanometre (nm)** = 10⁻⁹ metres.",
+     "To convert **mm to µm**: multiply by 1,000.",
+     "To convert **µm to nm**: multiply by 1,000.",
+     "To convert **nm to µm**: divide by 1,000.",
+     "To convert **µm to mm**: divide by 1,000."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Conversion Shortcut",
+      "p": "Always convert all measurements to the same unit (usually µm or nm) before using the Magnification formula M = I / A."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "12. Impact of Electron Microscopy on Modern Biological Understanding",
+    "p": "The transition from light to electron microscopy fundamentally changed how cell biology is researched and applied in medicine.",
+    "bullets": [
+     "**Pathology & Virology**: Allowed direct visualization of viruses (20–300 nm) such as HIV and Influenza, which are invisible under light microscopes.",
+     "**Organelle Function Link**: Correlated structural features with biochemical pathways (e.g., ATP synthase enzymes on mitochondrial cristae).",
+     "**Membrane Fluidity & Structure**: Proved the phospholipid bilayer model of membranes.",
+     "**Prokaryotes vs Eukaryotes**: Clarified internal distinctions including 70S vs 80S ribosomes and bacterial plasmid structures."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Viruses",
+      "p": "Viruses are not cellular and are too small to be seen under a light microscope; their discovery relied on electron microscopy."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Pixelated Screen Analogy",
+   "p": "Imagine looking at an old television screen with a low resolution of 240 pixels. If you try to zoom in (magnify), the image becomes huge but blocky and pixelated—you cannot make out smaller details like individual threads on a shirt. Light microscopy is like this low-resolution screen; zooming in beyond x1500 gives 'empty magnification'. Electron microscopy is like upgrading to an Ultra-HD 8K display with millions of tiny pixels. Because the pixels (wavelengths) are vastly smaller, zooming in reveals fine details clearly, such as the weave of the fabric or tiny droplets on a leaf. The analogy breaks down because light microscopes use continuous light waves rather than digital pixels, and electron microscopes require dead samples in a vacuum, whereas televisions display live motion."
+  },
+  "terms": [
+   {
+    "t": "Resolution",
+    "d": "The ability to distinguish between two points as separate and distinct entities."
+   },
+   {
+    "t": "Magnification",
+    "d": "The degree to which the image of an object is enlarged relative to its real size."
+   },
+   {
+    "t": "Transmission Electron Microscope (TEM)",
+    "d": "A microscope that passes an electron beam through a thin slice of specimen to produce high-resolution 2D internal images."
+   },
+   {
+    "t": "Scanning Electron Microscope (SEM)",
+    "d": "A microscope that scans an electron beam across the surface of a specimen to create detailed 3D surface images."
+   },
+   {
+    "t": "Wavelength",
+    "d": "The distance between consecutive crests of a wave; determines the maximum resolution achievable by radiation."
+   },
+   {
+    "t": "Ultrastructure",
+    "d": "The detailed architecture of cell organelles revealed by high resolution electron microscopy."
+   },
+   {
+    "t": "Artefact",
+    "d": "A structural detail introduced artificially during specimen preparation rather than naturally present."
+   },
+   {
+    "t": "Ribosome",
+    "d": "A non-membrane-bound organelle (~20-30 nm) responsible for protein synthesis, invisible under light microscopes."
+   },
+   {
+    "t": "Cristae",
+    "d": "Folds of the inner mitochondrial membrane revealed by TEM, providing a high surface area for respiration."
+   },
+   {
+    "t": "Electromagnet",
+    "d": "A coil of wire acting as a magnet when electrical current passes through, used to focus electron beams in electron microscopes."
+   },
+   {
+    "t": "Micrometrical Conversion",
+    "d": "Mathematical process of converting units: 1 mm = 1,000 µm = 1,000,000 nm."
+   },
+   {
+    "t": "Thylakoids",
+    "d": "Flattened membrane sacs inside chloroplasts stacked into grana, resolved using TEM."
+   },
+   {
+    "t": "Nanometre (nm)",
+    "d": "A unit of length equal to one-billionth of a metre (1 x 10⁻⁹ m)."
+   },
+   {
+    "t": "Vacuum",
+    "d": "A space completely devoid of matter, required inside electron microscopes to prevent air molecules scattering electrons."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Electron microscopes have higher magnification so they let us see living cells moving.",
+    "r": "Electron microscopes require a vacuum, so specimens must be dead; living cells cannot be observed."
+   },
+   {
+    "w": "Resolution is how clear or sharp an image appears.",
+    "r": "Resolution is the ability to distinguish between two separate points as distinct entities."
+   },
+   {
+    "w": "Light microscopes cannot show mitochondria because mitochondria are too small.",
+    "r": "Light microscopes can show mitochondria as tiny dots, but cannot resolve their internal structure (cristae)."
+   },
+   {
+    "w": "SEM produces higher resolution images than TEM.",
+    "r": "TEM produces higher resolution (~0.2 nm) than SEM (~3-10 nm), though SEM gives 3D surface images."
+   },
+   {
+    "w": "Electron microscopes focus light with stronger glass lenses.",
+    "r": "Electron microscopes focus electron beams using electromagnets, not light or glass lenses."
+   },
+   {
+    "w": "To convert nm to µm, you multiply by 1000.",
+    "r": "To convert nm to µm, you divide by 1000 (e.g. 20 nm = 0.02 µm)."
+   },
+   {
+    "w": "Ribosomes were first seen using light microscopes after improved staining.",
+    "r": "Ribosomes (~20 nm) are far below the 200 nm limit of light and were discovered using electron microscopes."
+   },
+   {
+    "w": "Increasing magnification automatically improves the resolution of a microscope.",
+    "r": "Magnification and resolution are independent; increasing magnification without resolution results in a blurry image."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Define the term 'resolution' in the context of microscopy.",
+    "marks": 1,
+    "model": [
+     "The ability to distinguish between two points as separate entities."
+    ],
+    "tip": "Avoid vague phrases like 'clarity' or 'detail'. Mark schemes strictly look for 'distinguish between two points'."
+   },
+   {
+    "q": "Explain why electron microscopes have a higher resolution than light microscopes.",
+    "marks": 2,
+    "model": [
+     "Electron beams have a much shorter wavelength than visible light waves.",
+     "A shorter wavelength allows smaller distances between two points to be resolved."
+    ],
+    "tip": "Always link the shorter wavelength of electrons directly to the ability to distinguish smaller distances."
+   },
+   {
+    "q": "State TWO sub-cellular structures that were discovered only after the invention of the electron microscope.",
+    "marks": 2,
+    "model": [
+     "Ribosomes",
+     "Endoplasmic reticulum (or internal mitochondrial cristae / lysosomes / microfilaments)"
+    ],
+    "tip": "Do not give nucleus, cell wall, or chloroplasts, as these were known under light microscopes."
+   },
+   {
+    "q": "Compare Transmission Electron Microscopes (TEM) and Scanning Electron Microscopes (SEM) in terms of image produced and primary function.",
+    "marks": 4,
+    "model": [
+     "TEM passes electrons through thin slices to produce 2D images of internal cell structures.",
+     "SEM bounces/scans electrons off the surface to produce 3D images of external surface topography.",
+     "TEM offers higher resolution (down to ~0.2 nm) compared to SEM (~3-10 nm).",
+     "TEM is ideal for internal organelle ultrastructure while SEM is ideal for surface detail."
+    ],
+    "tip": "Structure your answer using comparative sentences or direct contrasting pairs."
+   },
+   {
+    "q": "Evaluate the advantages and limitations of using an electron microscope compared to a light microscope for studying human cheek cells.",
+    "marks": 6,
+    "model": [
+     "Advantages:",
+     "Electron microscopes have much higher magnification (over x100,000) and resolution (down to 0.2 nm).",
+     "Enables visualization of internal ultrastructure such as ribosomes, ER, and mitochondrial cristae.",
+     "Limitations:",
+     "Specimen must be placed in a vacuum so cells must be dead; dynamic processes (e.g., membrane movements) cannot be observed live.",
+     "Specimen preparation is complex, time-consuming, and prone to creating artefacts.",
+     "Equipment is extremely expensive, non-portable, and produces black and white images unless artificially false-colored."
+    ],
+    "tip": "To achieve full 6 marks, ensure balanced evaluation covering both advantages and limitations with biological terminology."
+   },
+   {
+    "q": "A ribosome measures 25 nm in diameter. Calculate its size in micrometres (µm).",
+    "marks": 1,
+    "model": [
+     "0.025 µm (25 / 1000 = 0.025)"
+    ],
+    "tip": "Remember: nm to µm means dividing by 1,000."
+   },
+   {
+    "q": "Explain why living biological processes cannot be studied using a electron microscope.",
+    "marks": 2,
+    "model": [
+     "Electron microscopy requires a high vacuum because air particles scatter the electron beam.",
+     "Living organisms cannot survive in a vacuum and are killed during extensive fixation and dehydration preparation steps."
+    ],
+    "tip": "Mention both the vacuum environment and the harsh sample preparation steps."
+   },
+   {
+    "q": "A student looks at a mitochondrion using a light microscope at x1000 magnification and cannot see cristae. Explain why.",
+    "marks": 2,
+    "model": [
+     "The distance between cristae is smaller than the resolution limit of a light microscope (~200 nm).",
+     "Light waves have too long a wavelength to resolve individual internal folds/cristae."
+    ],
+    "tip": "State clearly that increasing magnification does not overcome the fundamental resolution limit of light."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A TEM micrograph shows an organelle with an image length of 45 mm. The actual length of the organelle is 1.5 µm. Calculate the magnification of the micrograph.",
+    "steps": [
+     "Step 1: Identify the formula: Magnification = Image size / Actual size.",
+     "Step 2: Convert measurements to the same unit (µm).",
+     "45 mm = 45 x 1,000 = 45,000 µm.",
+     "Step 3: Calculate Magnification = 45,000 µm / 1.5 µm.",
+     "Step 4: Magnification = 30,000."
+    ],
+    "ans": "x30,000"
+   },
+   {
+    "q": "A mitochondrion appears 30 mm long in an electron micrograph with a magnification of x20,000. Calculate the actual length of the mitochondrion in nanometres (nm).",
+    "steps": [
+     "Step 1: Identify the formula: Actual size = Image size / Magnification.",
+     "Step 2: Convert image size from mm to µm: 30 mm = 30,000 µm.",
+     "Step 3: Calculate Actual size in µm = 30,000 µm / 20,000 = 1.5 µm.",
+     "Step 4: Convert actual size to nanometres (nm): 1.5 µm x 1,000 = 1,500 nm."
+    ],
+    "ans": "1,500 nm"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Figure 1: Comparison of light wave vs electron wave diffraction and resolving power.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><rect x=\"15\" y=\"15\" width=\"175\" height=\"210\" rx=\"8\" fill=\"#dbeafe\" stroke=\"#1e40af\" stroke-width=\"1.5\"/><rect x=\"210\" y=\"15\" width=\"175\" height=\"210\" rx=\"8\" fill=\"#fef3c7\" stroke=\"#b45309\" stroke-width=\"1.5\"/><text x=\"102\" y=\"38\" fill=\"#1e3a8a\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Light Microscope</text><path d=\"M 30 75 Q 50 55 70 75 T 110 75 T 150 75 T 170 75\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><text x=\"102\" y=\"100\" fill=\"#1e40af\" font-size=\"11\" text-anchor=\"middle\">Long Wavelength</text><text x=\"102\" y=\"116\" fill=\"#1e40af\" font-size=\"11\" text-anchor=\"middle\">λ ≈ 500 nm</text><circle cx=\"82\" cy=\"155\" r=\"8\" fill=\"#ef4444\"/><circle cx=\"122\" cy=\"155\" r=\"8\" fill=\"#ef4444\"/><text x=\"102\" y=\"185\" fill=\"#991b1b\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">Points &lt; 200nm Apart</text><text x=\"102\" y=\"203\" fill=\"#1e40af\" font-size=\"11\" text-anchor=\"middle\">Merged / Unresolved</text><text x=\"297\" y=\"38\" fill=\"#78350f\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Electron Microscope</text><path d=\"M 225 75 Q 230 68 235 75 T 245 75 T 255 75 T 265 75 T 275 75 T 285 75 T 295 75 T 305 75 T 315 75 T 325 75 T 335 75 T 345 75 T 355 75 T 365 75 T 375 75\" fill=\"none\" stroke=\"#d97706\" stroke-width=\"1.5\"/><text x=\"297\" y=\"100\" fill=\"#92400e\" font-size=\"11\" text-anchor=\"middle\">Very Short Wavelength</text><text x=\"297\" y=\"116\" fill=\"#92400e\" font-size=\"11\" text-anchor=\"middle\">λ ≈ 0.005 nm</text><circle cx=\"277\" cy=\"155\" r=\"5\" fill=\"#10b981\"/><circle cx=\"317\" cy=\"155\" r=\"5\" fill=\"#10b981\"/><text x=\"297\" y=\"185\" fill=\"#065f46\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">Points &gt; 0.2nm Apart</text><text x=\"297\" y=\"203\" fill=\"#92400e\" font-size=\"11\" text-anchor=\"middle\">Resolved Separately</text></svg>"
+   },
+   {
+    "cap": "Figure 2: Understanding the crucial optical difference between magnification and resolution.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><rect x=\"15\" y=\"15\" width=\"175\" height=\"210\" rx=\"8\" fill=\"#fecaca\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><rect x=\"210\" y=\"15\" width=\"175\" height=\"210\" rx=\"8\" fill=\"#bbf7d0\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"102\" y=\"38\" fill=\"#991b1b\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">High Mag + Low Res</text><ellipse cx=\"102\" cy=\"110\" rx=\"45\" ry=\"30\" fill=\"#f87171\" opacity=\"0.6\" filter=\"blur(4px)\"/><text x=\"102\" y=\"170\" fill=\"#991b1b\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">'Empty Magnification'</text><text x=\"102\" y=\"190\" fill=\"#7f1d1d\" font-size=\"11\" text-anchor=\"middle\">Blurry, no extra detail</text><text x=\"297\" y=\"38\" fill=\"#14532d\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">High Mag + High Res</text><circle cx=\"272\" cy=\"110\" r=\"16\" fill=\"#15803d\"/><circle cx=\"322\" cy=\"110\" r=\"16\" fill=\"#15803d\"/><text x=\"297\" y=\"170\" fill=\"#14532d\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">High Resolving Power</text><text x=\"297\" y=\"190\" fill=\"#14532d\" font-size=\"11\" text-anchor=\"middle\">Two distinct structures</text></svg>"
+   },
+   {
+    "cap": "Figure 3: Schematic diagram comparing Transmission (TEM) and Scanning (SEM) electron microscopy pathways.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><rect x=\"10\" y=\"10\" width=\"180\" height=\"220\" rx=\"6\" fill=\"#e0f2fe\" stroke=\"#0284c7\" stroke-width=\"1.5\"/><text x=\"100\" y=\"30\" fill=\"#0369a1\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">TEM (Transmission)</text><circle cx=\"100\" cy=\"50\" r=\"8\" fill=\"#f59e0b\"/><text x=\"100\" y=\"72\" fill=\"#1e293b\" font-size=\"11\" text-anchor=\"middle\">Electron Beam</text><line x1=\"100\" y1=\"78\" x2=\"100\" y2=\"110\" stroke=\"#d97706\" stroke-width=\"2\" stroke-dasharray=\"3,3\"/><rect x=\"50\" y=\"110\" width=\"100\" height=\"8\" fill=\"#94a3b8\" rx=\"2\"/><text x=\"100\" y=\"132\" fill=\"#0f172a\" font-size=\"11\" text-anchor=\"middle\">Thin Slice Specimen</text><line x1=\"100\" y1=\"138\" x2=\"100\" y2=\"170\" stroke=\"#d97706\" stroke-width=\"2\" stroke-dasharray=\"3,3\"/><rect x=\"40\" y=\"170\" width=\"120\" height=\"18\" fill=\"#38bdf8\" rx=\"4\"/><text x=\"100\" y=\"183\" fill=\"#0c4a6e\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">2D Internal Image</text><text x=\"100\" y=\"215\" fill=\"#0369a1\" font-size=\"11\" text-anchor=\"middle\">Passes THROUGH sample</text><rect x=\"210\" y=\"10\" width=\"180\" height=\"220\" rx=\"6\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"1.5\"/><text x=\"300\" y=\"30\" fill=\"#b45309\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">SEM (Scanning)</text><circle cx=\"300\" cy=\"50\" r=\"8\" fill=\"#f59e0b\"/><text x=\"300\" y=\"72\" fill=\"#1e293b\" font-size=\"11\" text-anchor=\"middle\">Scanning Electron Gun</text><path d=\"M 300 78 L 275 125 M 300 78 L 325 125\" stroke=\"#d97706\" stroke-width=\"2\" stroke-dasharray=\"3,3\"/><path d=\"M 260 125 C 280 115 320 115 340 125 L 340 135 L 260 135 Z\" fill=\"#fbbf24\" stroke=\"#b45309\"/><text x=\"300\" y=\"152\" fill=\"#0f172a\" font-size=\"11\" text-anchor=\"middle\">3D Surface Specimen</text><path d=\"M 280 125 L 245 165 M 320 125 L 355 165\" stroke=\"#ef4444\" stroke-width=\"1.5\" stroke-dasharray=\"2,2\"/><rect x=\"240\" y=\"170\" width=\"120\" height=\"18\" fill=\"#fde047\" rx=\"4\"/><text x=\"300\" y=\"183\" fill=\"#713f12\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">3D Surface Image</text><text x=\"300\" y=\"215\" fill=\"#b45309\" font-size=\"11\" text-anchor=\"middle\">Scans OVER surface</text></svg>"
+   },
+   {
+    "cap": "Figure 4: Mitochondrion structure as seen under light microscope vs TEM ultrastructure detail.",
+    "svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><rect x=\"15\" y=\"15\" width=\"160\" height=\"210\" rx=\"8\" fill=\"#e2e8f0\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"95\" y=\"38\" fill=\"#334155\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Light Microscope</text><ellipse cx=\"95\" cy=\"110\" rx=\"25\" ry=\"12\" fill=\"#94a3b8\"/><text x=\"95\" y=\"165\" fill=\"#475569\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">Indistinct Dot</text><text x=\"95\" y=\"185\" fill=\"#475569\" font-size=\"11\" text-anchor=\"middle\">No cristae visible</text><rect x=\"195\" y=\"15\" width=\"190\" height=\"210\" rx=\"8\" fill=\"#f3e8ff\" stroke=\"#7e22ce\" stroke-width=\"1.5\"/><text x=\"290\" y=\"38\" fill=\"#6b21a8\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">TEM Ultrastructure</text><rect x=\"210\" y=\"65\" width=\"160\" height=\"90\" rx=\"45\" fill=\"#d8b4fe\" stroke=\"#6b21a8\" stroke-width=\"2\"/><path d=\"M 235 85 C 255 85 245 105 235 105 C 255 105 245 125 235 125\" fill=\"none\" stroke=\"#581c87\" stroke-width=\"2\"/><path d=\"M 345 85 C 325 85 335 105 345 105 C 325 105 335 125 345 125\" fill=\"none\" stroke=\"#581c87\" stroke-width=\"2\"/><text x=\"290\" y=\"175\" fill=\"#6b21a8\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">Inner Cristae Folds</text><text x=\"290\" y=\"195\" fill=\"#581c87\" font-size=\"11\" text-anchor=\"middle\">Double Membrane &amp; Matrix</text></svg>"
+   }
+  ],
+  "pid": "bio_ocra.0.2",
+  "sid": "bio_ocra",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.6-flash",
+  "ts": "2026-11-28T17:29:34.567Z"
  }
 }

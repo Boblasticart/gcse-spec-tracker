@@ -2577,5 +2577,1200 @@
   "src": "pre",
   "by": "gemini/gemini-3.5-flash-lite",
   "ts": "2026-11-27T19:19:06.606Z"
+ },
+ "phy_ocra.11.4": {
+  "summary": "When a wave meets the boundary (interface) between two materials, its energy can be **reflected** back, **transmitted** into the new material or **absorbed** by it, and usually all three happen at once in different proportions. Which outcome dominates depends on the **material**, the **surface** and the **wavelength** of the wave. Grade 9 answers link each outcome to what happens to the wave's energy and use correct ray-diagram language: normal, angle of incidence, angle of reflection, specular and diffuse reflection.",
+  "core": [
+   {
+    "h": "What happens at an interface",
+    "p": "An **interface** is the boundary where one material meets another, for example air and glass, air and water, or air and a wall. When a wave arrives at an interface, the energy it carries has three possible fates. Usually the energy is **shared** between all three, so a pane of glass reflects a little light, absorbs a little and transmits most of it.",
+    "bullets": [
+     "**Reflection**: the wave bounces back into the first material.",
+     "**Transmission**: the wave passes through into the second material (it may change direction, which is refraction).",
+     "**Absorption**: the wave's energy is taken in by the material, usually heating it up.",
+     "The proportions depend on the type of material, the surface texture and the wavelength (frequency) of the wave.",
+     "Energy is conserved: incident energy = reflected + transmitted + absorbed."
+    ],
+    "table": {
+     "head": [
+      "Outcome",
+      "Where the energy goes",
+      "Everyday example"
+     ],
+     "rows": [
+      [
+       "Reflection",
+       "Back into the first medium",
+       "Image in a mirror, echo from a cliff"
+      ],
+      [
+       "Transmission",
+       "Onward through the second medium",
+       "Light through a window"
+      ],
+      [
+       "Absorption",
+       "Into the material's thermal store",
+       "Black car roof warming in sunshine"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "All three at once",
+      "p": "Real interfaces almost never do only one thing. Say 'mostly reflected' or 'most energy is absorbed', not 'only'."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Reflection and the law of reflection",
+    "p": "When a wave reflects from a flat surface it obeys the **law of reflection**: the angle of incidence equals the angle of reflection. Both angles are measured from the **normal**, an imaginary line drawn at 90 degrees to the surface at the point where the ray hits it. Measuring from the normal works for any surface shape, which is why physicists use it instead of the surface itself.",
+    "bullets": [
+     "**Angle of incidence (i)**: angle between the incident ray and the normal.",
+     "**Angle of reflection (r)**: angle between the reflected ray and the normal.",
+     "Law of reflection: **i = r**.",
+     "The incident ray, the reflected ray and the normal all lie in the same plane.",
+     "A ray hitting along the normal (i = 0) reflects straight back along itself.",
+     "Reflection does not change the wave's speed, frequency or wavelength, because it stays in the same medium."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Normal",
+      "p": "A line drawn at right angles (90 degrees) to a surface at the point where a ray meets it."
+     },
+     {
+      "k": "warn",
+      "t": "Measure from the normal",
+      "p": "Measuring the angle from the mirror surface gives 90 minus the correct angle and loses the mark."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Law of reflection: the angle of incidence i equals the angle of reflection r, both measured from the dashed normal drawn at 90 degrees to the mirror.",
+      "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><defs><marker id='a1' markerWidth='8' markerHeight='8' refX='6' refY='3' orient='auto'><path d='M0,0 L6,3 L0,6 Z' fill='#b91c1c'/></marker></defs><rect x='0' y='0' width='400' height='240' fill='#f8fafc'/><rect x='60' y='180' width='280' height='12' fill='#bfdbfe' stroke='#1b2540'/><line x1='60' y1='196' x2='340' y2='196' stroke='#1b2540' stroke-width='2'/><line x1='200' y1='45' x2='200' y2='180' stroke='#475569' stroke-dasharray='6,4'/><line x1='90' y1='70' x2='200' y2='180' stroke='#b91c1c' stroke-width='2.5' marker-end='url(#a1)'/><line x1='200' y1='180' x2='310' y2='70' stroke='#b91c1c' stroke-width='2.5' marker-end='url(#a1)'/><path d='M179,159 A30,30 0 0 1 200,150' fill='none' stroke='#7c3aed' stroke-width='2'/><path d='M200,150 A30,30 0 0 1 221,159' fill='none' stroke='#7c3aed' stroke-width='2'/><text x='182' y='142' font-size='13' fill='#7c3aed'>i</text><text x='212' y='142' font-size='13' fill='#7c3aed'>r</text><text x='206' y='38' font-size='12' fill='#334155'>Normal</text><text x='20' y='62' font-size='12' fill='#1b2540'>Incident ray</text><text x='290' y='62' font-size='12' fill='#1b2540'>Reflected ray</text><text x='60' y='216' font-size='12' fill='#1b2540'>Plane mirror</text><text x='250' y='216' font-size='12' fill='#7c3aed'>i = r</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Specular and diffuse reflection",
+    "p": "Whether you see an image depends on how smooth the surface is compared with the wavelength. A **smooth** surface such as a mirror or still water gives **specular reflection**: parallel rays stay parallel after reflecting, so a clear image forms. A **rough** surface such as paper gives **diffuse reflection**: the normal points in a different direction at every tiny bump, so each ray obeys i = r but the reflected rays scatter in many directions and no clear image forms.",
+    "bullets": [
+     "Specular reflection: smooth surface, reflected rays parallel, clear image (mirror, calm lake).",
+     "Diffuse reflection: rough surface, reflected rays scattered, no image (paper, wall, clothing).",
+     "The law of reflection is still obeyed at every point in diffuse reflection; only the normals differ.",
+     "Diffuse reflection is why you can see a non-glowing object from any angle in a room.",
+     "What counts as rough depends on wavelength: a surface rough for light can be smooth for long radio waves."
+    ],
+    "table": {
+     "head": [
+      "Feature",
+      "Specular",
+      "Diffuse"
+     ],
+     "rows": [
+      [
+       "Surface",
+       "Smooth",
+       "Rough"
+      ],
+      [
+       "Reflected rays",
+       "Parallel",
+       "Scattered"
+      ],
+      [
+       "Image formed?",
+       "Yes, clear",
+       "No"
+      ],
+      [
+       "Obeys i = r?",
+       "Yes",
+       "Yes, at each point"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Explain diffuse properly",
+      "p": "Top answers say the surface is uneven so the normal is in a different direction at each point, so rays reflect at different angles."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Specular reflection from a smooth surface keeps parallel rays parallel; diffuse reflection from a rough surface scatters them because each bump has a different normal.",
+      "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><defs><marker id='a2' markerWidth='8' markerHeight='8' refX='6' refY='3' orient='auto'><path d='M0,0 L6,3 L0,6 Z' fill='#c2410c'/></marker></defs><rect x='0' y='0' width='400' height='240' fill='#fffbeb'/><rect x='20' y='170' width='160' height='14' fill='#bfdbfe' stroke='#1b2540'/><line x1='40' y1='80' x2='80' y2='170' stroke='#c2410c' stroke-width='2'/><line x1='70' y1='80' x2='110' y2='170' stroke='#c2410c' stroke-width='2'/><line x1='100' y1='80' x2='140' y2='170' stroke='#c2410c' stroke-width='2'/><line x1='80' y1='170' x2='120' y2='80' stroke='#c2410c' stroke-width='2' marker-end='url(#a2)'/><line x1='110' y1='170' x2='150' y2='80' stroke='#c2410c' stroke-width='2' marker-end='url(#a2)'/><line x1='140' y1='170' x2='180' y2='80' stroke='#c2410c' stroke-width='2' marker-end='url(#a2)'/><polyline points='220,176 232,166 244,180 256,164 268,178 280,166 292,180 304,164 316,178 328,166 340,180 352,170 370,176' fill='#fde68a' stroke='#1b2540' stroke-width='2'/><line x1='240' y1='80' x2='262' y2='170' stroke='#c2410c' stroke-width='2'/><line x1='280' y1='80' x2='302' y2='170' stroke='#c2410c' stroke-width='2'/><line x1='320' y1='80' x2='342' y2='170' stroke='#c2410c' stroke-width='2'/><line x1='262' y1='170' x2='228' y2='100' stroke='#c2410c' stroke-width='2' marker-end='url(#a2)'/><line x1='302' y1='170' x2='330' y2='92' stroke='#c2410c' stroke-width='2' marker-end='url(#a2)'/><line x1='342' y1='170' x2='384' y2='120' stroke='#c2410c' stroke-width='2' marker-end='url(#a2)'/><text x='40' y='40' font-size='13' fill='#1b2540'>Specular</text><text x='240' y='40' font-size='13' fill='#1b2540'>Diffuse</text><text x='40' y='206' font-size='12' fill='#1e40af'>Smooth surface</text><text x='240' y='206' font-size='12' fill='#92400e'>Rough surface</text><text x='40' y='224' font-size='11' fill='#334155'>Clear image</text><text x='240' y='224' font-size='11' fill='#334155'>No clear image</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Transmission",
+    "p": "**Transmission** means the wave passes through the material and comes out the other side. Materials that transmit light well are **transparent** (glass, clear water); those that transmit light but scatter it so you cannot see a clear image are **translucent** (frosted glass, tracing paper). As the wave travels through, some energy is usually absorbed, so the transmitted wave has a **smaller amplitude** and carries less energy.",
+    "bullets": [
+     "Transparent: transmits light with little scattering, clear image seen through it.",
+     "Translucent: transmits light but scatters it, blurred or no image.",
+     "Opaque: transmits no light (it reflects and/or absorbs it all).",
+     "When a wave enters a new medium its **speed changes**; if it enters at an angle to the normal it changes direction (**refraction**).",
+     "Frequency stays the same on transmission; wavelength changes because speed changes (v = f x wavelength).",
+     "Thicker material absorbs more, so less is transmitted."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Frequency is fixed by the source",
+      "p": "On crossing an interface the frequency does not change. Speed and wavelength change together."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Absorption",
+    "p": "**Absorption** happens when the material takes in the wave's energy instead of passing it on or sending it back. The absorbed energy is usually transferred to the material's **thermal energy store**, so the material warms up. A material that absorbs strongly at one wavelength may transmit a different wavelength, which is why absorption always has to be described for a particular type of wave.",
+    "bullets": [
+     "Absorbed energy usually increases the temperature of the absorber.",
+     "Dark, matt surfaces are good absorbers (and good emitters) of infrared; light, shiny surfaces reflect it.",
+     "Water absorbs microwaves strongly, which is how a microwave oven heats food.",
+     "Soft, porous materials (curtains, foam, carpet) absorb sound, reducing echoes.",
+     "Dense materials such as bone and lead absorb X-rays more than soft tissue does.",
+     "If all visible light is absorbed the object looks black."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Absorption",
+      "p": "The transfer of a wave's energy to the material it meets, usually increasing the material's thermal store."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "One wave, three outcomes",
+    "p": "Light hitting a glass block shows everything at once. A small fraction is **partially reflected** from the front surface (you can see faint reflections in a window), most is **transmitted** and **refracted** towards the normal as it slows down, and a little is **absorbed** by the glass. The arrows in a diagram can be drawn thinner for the weaker parts to show how the energy is shared.",
+    "bullets": [
+     "Partial reflection: some light reflects even from a transparent surface.",
+     "Refraction towards the normal when light slows (air into glass).",
+     "Absorption reduces the amplitude of the transmitted ray.",
+     "At night, a lit room's window acts like a mirror because the reflected indoor light is brighter than the dim light transmitted from outside."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Use energy language",
+      "p": "Say the energy of the incident wave is shared between the reflected, transmitted and absorbed parts."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "At an air to glass interface the incident light is partly reflected, mostly transmitted (refracting towards the normal) and partly absorbed by the glass.",
+      "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><defs><marker id='a3' markerWidth='8' markerHeight='8' refX='6' refY='3' orient='auto'><path d='M0,0 L6,3 L0,6 Z' fill='#1d4ed8'/></marker></defs><rect x='0' y='0' width='400' height='240' fill='#f8fafc'/><rect x='0' y='120' width='400' height='120' fill='#dbeafe' stroke='#1b2540'/><line x1='200' y1='30' x2='200' y2='225' stroke='#475569' stroke-dasharray='6,4'/><line x1='100' y1='30' x2='200' y2='120' stroke='#1d4ed8' stroke-width='3.5' marker-end='url(#a3)'/><line x1='200' y1='120' x2='290' y2='40' stroke='#1d4ed8' stroke-width='1.2' marker-end='url(#a3)'/><line x1='200' y1='120' x2='250' y2='210' stroke='#1d4ed8' stroke-width='2.6' marker-end='url(#a3)'/><circle cx='228' cy='170' r='7' fill='#fecaca' stroke='#b91c1c'/><text x='14' y='26' font-size='12' fill='#1b2540'>Incident light</text><text x='296' y='40' font-size='12' fill='#1b2540'>Reflected</text><text x='256' y='212' font-size='12' fill='#1b2540'>Transmitted</text><text x='238' y='166' font-size='12' fill='#b91c1c'>Absorbed</text><text x='14' y='112' font-size='12' fill='#334155'>Air</text><text x='14' y='140' font-size='12' fill='#1e40af'>Glass</text><text x='206' y='26' font-size='12' fill='#334155'>Normal</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Why the outcome depends on wavelength",
+    "p": "Whether a wave is reflected, transmitted or absorbed depends on how the particles in the material respond to that particular **wavelength (frequency)**. Glass transmits visible light but absorbs much ultraviolet and infrared. Brick walls are opaque to light but transmit radio waves, which is why a radio works indoors. Grade 9 answers name the wave and the material together.",
+    "bullets": [
+     "Glass: transmits visible light; absorbs a lot of UV.",
+     "Walls: absorb or reflect light; transmit radio waves.",
+     "Body: soft tissue transmits X-rays; bone absorbs them, giving a shadow image.",
+     "Water: transmits visible light; absorbs microwaves and infrared strongly.",
+     "Earth's atmosphere: transmits visible light and radio, absorbs much UV and X-ray radiation."
+    ],
+    "table": {
+     "head": [
+      "Wave",
+      "Material",
+      "Main outcome"
+     ],
+     "rows": [
+      [
+       "Visible light",
+       "Clear glass",
+       "Transmitted"
+      ],
+      [
+       "Radio waves",
+       "Brick wall",
+       "Transmitted"
+      ],
+      [
+       "X-rays",
+       "Bone",
+       "Absorbed"
+      ],
+      [
+       "Microwaves",
+       "Water in food",
+       "Absorbed"
+      ],
+      [
+       "Visible light",
+       "Mirror",
+       "Reflected"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Material plus wavelength",
+      "p": "A material is not simply transparent; it is transparent to a particular range of wavelengths."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Colour: selective reflection and absorption",
+    "p": "The colour of an opaque object comes from which visible wavelengths it **reflects** and which it **absorbs**. White light contains all colours. A red apple reflects red light and absorbs the other colours, so only red reaches your eye. A transparent coloured filter works by **transmitting** its own colour and absorbing the rest.",
+    "bullets": [
+     "White object: reflects all visible wavelengths equally.",
+     "Black object: absorbs all visible wavelengths.",
+     "Red object in white light: reflects red, absorbs other colours.",
+     "Red object in blue light: there is no red to reflect, so it absorbs the blue and looks black.",
+     "Green filter: transmits green, absorbs other colours."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Objects do not add colour",
+      "p": "An object cannot reflect a colour that is not in the light shining on it."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Sound at interfaces",
+    "p": "Sound waves also reflect, transmit and absorb at boundaries. A reflected sound wave is an **echo**. Hard, smooth, flat surfaces (tiled walls, cliffs) reflect sound well; soft, porous, uneven surfaces (curtains, carpet, acoustic foam) absorb it, because the vibrating air loses energy in the tiny pockets of the material.",
+    "bullets": [
+     "Echo = reflected sound; the time delay can be used to find a distance.",
+     "Empty rooms sound echoey; furnished rooms absorb more sound.",
+     "Recording studios and cinemas use foam panels to absorb sound.",
+     "Some sound is always transmitted through walls, which is why you can hear neighbours."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Reflection of water waves",
+    "p": "In a **ripple tank**, plane water waves striking a straight barrier reflect so that the angle of incidence equals the angle of reflection, exactly as light does. This shows that the law of reflection is a property of **waves in general**, not just light.",
+    "bullets": [
+     "Wavelength and speed are unchanged after reflection (same depth of water).",
+     "A curved barrier can focus reflected ripples to a point.",
+     "Waves entering shallower water slow down and change direction: refraction."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "PAG P8: investigating reflection with a ray box",
+    "p": "In the practical you shine a narrow ray of light at a plane mirror and measure angles to test the law of reflection, and you can extend it to a glass block to see transmission and refraction.",
+    "bullets": [
+     "Draw a straight line for the mirror on paper and use a protractor to draw a normal at 90 degrees.",
+     "Draw incident lines at angles such as 20, 30, 40, 50 and 60 degrees from the normal.",
+     "Place the mirror on the line and shine a **narrow ray** from a ray box along each incident line, in a darkened room.",
+     "Mark the reflected ray with two crosses far apart, remove the mirror and join them with a ruler.",
+     "Measure the angle of reflection from the normal with a protractor; compare with i.",
+     "Use a **narrow** ray and crosses far apart to reduce uncertainty in drawing the ray.",
+     "Safety: the ray box gets hot; do not touch the bulb."
+    ],
+    "table": {
+     "head": [
+      "Variable",
+      "In this practical"
+     ],
+     "rows": [
+      [
+       "Independent",
+       "Angle of incidence"
+      ],
+      [
+       "Dependent",
+       "Angle of reflection"
+      ],
+      [
+       "Control",
+       "Same mirror, same narrow ray, darkened room"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Expected result",
+      "p": "A graph of r against i is a straight line through the origin with gradient 1, showing r = i."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Ray box practical: the narrow ray is traced with crosses, and both angles are measured from the drawn normal with a protractor.",
+      "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='400' height='240' fill='#f8fafc'/><rect x='20' y='20' width='360' height='190' fill='#ffffff' stroke='#94a3b8'/><rect x='120' y='160' width='160' height='12' fill='#bfdbfe' stroke='#1b2540'/><line x1='200' y1='50' x2='200' y2='160' stroke='#475569' stroke-dasharray='5,4'/><rect x='50' y='52' width='44' height='26' fill='#fde68a' stroke='#1b2540' transform='rotate(45 72 65)'/><line x1='88' y1='80' x2='200' y2='160' stroke='#dc2626' stroke-width='2'/><line x1='200' y1='160' x2='312' y2='80' stroke='#dc2626' stroke-width='2'/><text x='270' y='104' font-size='12' fill='#1b2540'>x</text><text x='300' y='88' font-size='12' fill='#1b2540'>x</text><path d='M160,160 A40,40 0 0 1 240,160' fill='#e9d5ff' stroke='#7c3aed' stroke-width='1.5'/><text x='30' y='112' font-size='12' fill='#1b2540'>Ray box</text><text x='206' y='46' font-size='12' fill='#334155'>Normal</text><text x='290' y='186' font-size='12' fill='#1b2540'>Mirror</text><text x='130' y='196' font-size='12' fill='#7c3aed'>Protractor</text><text x='318' y='70' font-size='12' fill='#1b2540'>Crosses</text><text x='30' y='230' font-size='11' fill='#334155'>Plain paper on bench</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Applications and consequences",
+    "p": "Engineers choose materials by how they reflect, transmit or absorb particular waves.",
+    "bullets": [
+     "Optical fibres and periscopes rely on reflection.",
+     "Solar panels and thermal collectors are dark to absorb more radiation.",
+     "Sunscreen and some glass absorb UV to protect skin.",
+     "Lead aprons absorb X-rays to protect radiographers.",
+     "Stealth aircraft use shapes and coatings to absorb or scatter radar."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Exam technique",
+    "p": "Questions often give an unfamiliar situation (a window at night, a satellite dish, a concert hall) and ask you to explain it with reflection, transmission and absorption.",
+    "bullets": [
+     "Name the wave, the material and the outcome in the same sentence.",
+     "Draw rays with a ruler, add arrows, and draw the normal as a dashed line at 90 degrees.",
+     "Always measure angles from the normal.",
+     "Link absorption to energy transfer and temperature rise.",
+     "For a 6 mark question, describe all three outcomes and give an example of each."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Arrows matter",
+      "p": "Ray diagrams without arrows usually lose a mark."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "A ball thrown at a fence",
+   "p": "Imagine throwing tennis balls at a garden fence. Some bounce straight back (reflection), some squeeze through the gaps and carry on (transmission), and some get stuck in the netting and stop, their energy turning into a little heat and sound (absorption). A smooth fence sends balls back neatly at matching angles (specular); a bumpy fence sends them off every which way (diffuse). Where it breaks down: a wave is not a stream of separate balls, and the wavelength of the wave, not just the size of the gaps, decides what happens; also a transmitted wave can change speed and direction, which a ball through a gap does not."
+  },
+  "terms": [
+   {
+    "t": "Interface",
+    "d": "The boundary between two different materials (media)."
+   },
+   {
+    "t": "Reflection",
+    "d": "When a wave bounces back from a surface into the medium it came from."
+   },
+   {
+    "t": "Transmission",
+    "d": "When a wave passes through a material and continues on the other side."
+   },
+   {
+    "t": "Absorption",
+    "d": "When a material takes in a wave's energy, usually increasing its thermal store."
+   },
+   {
+    "t": "Normal",
+    "d": "A line at 90 degrees to a surface at the point where a ray meets it."
+   },
+   {
+    "t": "Angle of incidence",
+    "d": "The angle between the incident ray and the normal."
+   },
+   {
+    "t": "Angle of reflection",
+    "d": "The angle between the reflected ray and the normal."
+   },
+   {
+    "t": "Law of reflection",
+    "d": "The angle of incidence equals the angle of reflection."
+   },
+   {
+    "t": "Specular reflection",
+    "d": "Reflection from a smooth surface in a single direction, producing a clear image."
+   },
+   {
+    "t": "Diffuse reflection",
+    "d": "Reflection from a rough surface in which reflected rays are scattered in many directions."
+   },
+   {
+    "t": "Transparent",
+    "d": "Transmits light without significant scattering, so objects can be seen clearly through it."
+   },
+   {
+    "t": "Translucent",
+    "d": "Transmits light but scatters it, so objects cannot be seen clearly through it."
+   },
+   {
+    "t": "Opaque",
+    "d": "Does not transmit light; it is all reflected or absorbed."
+   },
+   {
+    "t": "Refraction",
+    "d": "Change in direction of a wave when it crosses an interface at an angle, caused by a change in speed."
+   },
+   {
+    "t": "Echo",
+    "d": "A reflected sound wave."
+   },
+   {
+    "t": "Ray",
+    "d": "A straight line with an arrow showing the direction a wave travels."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "The angle of incidence is measured from the mirror.",
+    "r": "Both angles are measured from the normal, the line at 90 degrees to the surface."
+   },
+   {
+    "w": "Diffuse reflection happens because the law of reflection is not obeyed.",
+    "r": "Each ray still obeys i = r; the normals point in different directions on a rough surface, so rays scatter."
+   },
+   {
+    "w": "Glass transmits all the light that hits it.",
+    "r": "Glass partially reflects and absorbs some light; most, but not all, is transmitted."
+   },
+   {
+    "w": "A black object reflects black light.",
+    "r": "A black object absorbs all visible wavelengths and reflects none."
+   },
+   {
+    "w": "Absorbed energy disappears.",
+    "r": "Absorbed energy is transferred to the material's thermal store, so its temperature rises."
+   },
+   {
+    "w": "The frequency changes when a wave is transmitted into a new material.",
+    "r": "Frequency stays the same; speed and wavelength change."
+   },
+   {
+    "w": "A red object looks red in any light.",
+    "r": "In light containing no red, a red object absorbs the light and appears black."
+   },
+   {
+    "w": "Walls block all electromagnetic waves.",
+    "r": "Walls absorb or reflect visible light but transmit radio waves."
+   }
+  ],
+  "exam": [
+   {
+    "q": "State the law of reflection.",
+    "marks": 1,
+    "model": [
+     "Angle of incidence = angle of reflection."
+    ],
+    "tip": "Write it as an equation in words, not just 'the angles are the same'."
+   },
+   {
+    "q": "Define the normal in a ray diagram.",
+    "marks": 1,
+    "model": [
+     "A line drawn at 90 degrees to the surface where the ray strikes it."
+    ],
+    "tip": "Say 90 degrees or right angles."
+   },
+   {
+    "q": "A ray strikes a plane mirror at 35 degrees to the mirror surface. Calculate the angle of reflection.",
+    "marks": 2,
+    "model": [
+     "Angle of incidence = 90 - 35 = 55 degrees.",
+     "Angle of reflection = 55 degrees."
+    ],
+    "tip": "Check whether the angle given is to the surface or to the normal."
+   },
+   {
+    "q": "Explain why you can see your reflection in a mirror but not in a sheet of white paper.",
+    "marks": 4,
+    "model": [
+     "Mirror is smooth so gives specular reflection.",
+     "Parallel rays stay parallel so a clear image forms.",
+     "Paper is rough so the normal is in different directions at each point.",
+     "Rays reflect in many directions (diffuse), so no clear image forms."
+    ],
+    "tip": "Mention that i = r still holds on the paper."
+   },
+   {
+    "q": "Name the three things that can happen to a wave when it meets a boundary between two materials.",
+    "marks": 3,
+    "model": [
+     "Reflected.",
+     "Transmitted.",
+     "Absorbed."
+    ],
+    "tip": "Refraction is a type of transmission; the three named in the spec are reflection, transmission and absorption."
+   },
+   {
+    "q": "Explain why a sunlit black car roof gets hotter than a white one.",
+    "marks": 2,
+    "model": [
+     "Black surface absorbs more of the radiation; white reflects more.",
+     "Absorbed energy is transferred to the thermal store, raising temperature."
+    ],
+    "tip": "Link absorption to energy transfer."
+   },
+   {
+    "q": "Explain why a red rose appears black when lit only with blue light.",
+    "marks": 2,
+    "model": [
+     "Rose only reflects red light.",
+     "There is no red light to reflect, so blue light is absorbed and no light reaches the eye."
+    ],
+    "tip": "Say what happens to the blue light."
+   },
+   {
+    "q": "At night you see your own reflection in a window of a brightly lit room. Explain this.",
+    "marks": 3,
+    "model": [
+     "Glass partially reflects light from the room.",
+     "Little light is transmitted in from the dark outside.",
+     "The reflected light is brighter than the transmitted light, so the reflection is seen."
+    ],
+    "tip": "Compare the two light paths reaching your eye."
+   },
+   {
+    "q": "Describe how to use a ray box and plane mirror to show that the angle of incidence equals the angle of reflection.",
+    "marks": 6,
+    "model": [
+     "Draw a line for the mirror and a normal at 90 degrees using a protractor.",
+     "Shine a narrow ray from the ray box at the mirror along a measured angle of incidence.",
+     "Mark the reflected ray with two crosses far apart and join them with a ruler.",
+     "Measure the angle of reflection from the normal.",
+     "Repeat for several angles of incidence, e.g. 20 to 70 degrees.",
+     "Compare i and r: they should be equal; use a darkened room and narrow ray to improve accuracy."
+    ],
+    "tip": "Structure as setup, measurements, repeats, conclusion, improvements."
+   },
+   {
+    "q": "Explain why radio waves can be received inside a house but visible light from outside cannot pass through the brick walls.",
+    "marks": 2,
+    "model": [
+     "Brick absorbs/reflects visible light.",
+     "Brick transmits radio waves (longer wavelength)."
+    ],
+    "tip": "The outcome depends on the wavelength as well as the material."
+   },
+   {
+    "q": "Explain why soft furnishings reduce echoes in a hall.",
+    "marks": 2,
+    "model": [
+     "Soft materials absorb sound energy.",
+     "Less sound is reflected, so echoes are quieter."
+    ],
+    "tip": "Echo = reflection, so reducing reflection reduces echo."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A ray hits a plane mirror with an angle of 28 degrees between the ray and the mirror surface. Find the angle of incidence, the angle of reflection and the angle between the incident and reflected rays.",
+    "steps": [
+     "The normal is at 90 degrees to the mirror.",
+     "Angle of incidence i = 90 - 28 = 62 degrees.",
+     "Law of reflection: r = i = 62 degrees.",
+     "Angle between incident and reflected rays = i + r = 62 + 62 = 124 degrees."
+    ],
+    "ans": "i = 62 degrees, r = 62 degrees, angle between rays = 124 degrees."
+   },
+   {
+    "q": "A beam of light carrying 200 J of energy hits a glass panel. 8 J is reflected and 12 J is absorbed. How much is transmitted, and what percentage is this?",
+    "steps": [
+     "Energy is conserved: incident = reflected + absorbed + transmitted.",
+     "Transmitted = 200 - 8 - 12 = 180 J.",
+     "Percentage = (180 / 200) x 100 = 90%."
+    ],
+    "ans": "180 J transmitted, which is 90% of the incident energy."
+   },
+   {
+    "q": "Explain, using reflection, transmission and absorption, what happens to sunlight hitting a green leaf.",
+    "steps": [
+     "White sunlight contains all visible colours.",
+     "Green light is mostly reflected, so the leaf looks green.",
+     "Other colours (especially red and blue) are mostly absorbed, transferring energy to the leaf.",
+     "A little light is transmitted through the thin leaf, which is why a leaf looks green when held up to the sky."
+    ],
+    "ans": "Green is reflected (and some transmitted); other colours are absorbed, so the leaf appears green."
+   }
+  ],
+  "svg": [],
+  "pid": "phy_ocra.11.4",
+  "sid": "phy_ocra",
+  "v": 2,
+  "src": "pre",
+  "by": "claude/claude-opus-5-5",
+  "ts": "2026-11-28T01:19:20.731Z"
+ },
+ "phy_ocra.11.6": {
+  "summary": "Ripples on water are **transverse waves**: the water surface moves up and down while the wave travels across it, and sound in air is a **longitudinal wave** in which air particles vibrate back and forth. In both cases it is the **wave (energy)** that travels, not the water or air itself, and simple evidence such as a floating cork bobbing on the spot shows this. You must be able to describe how to **measure the speed** of ripples in a ripple tank and of sound in air, and use v = f x wavelength or speed = distance / time to calculate it.",
+  "core": [
+   {
+    "h": "Ripples on water are transverse waves",
+    "p": "When you drop a stone into a pond or dip a bar into a ripple tank, ripples spread across the surface. Each bit of water surface **oscillates up and down**, at right angles to the direction the ripple travels, so water ripples are a model **transverse wave**. The ripple carries energy outward from the source, but each bit of water stays roughly where it started.",
+    "bullets": [
+     "Oscillation of water surface: up and down (vertical).",
+     "Direction of energy transfer: across the surface (horizontal).",
+     "Oscillations perpendicular to energy transfer means **transverse**.",
+     "Crests (peaks) and troughs move outward; the water does not flow outward.",
+     "A point dip makes circular ripples; a straight bar makes plane (straight) ripples."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Transverse wave",
+      "p": "A wave in which the oscillations are perpendicular (at right angles) to the direction of energy transfer."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Evidence that the wave travels, not the water",
+    "p": "If the water itself travelled with the ripple, a floating object would be carried along with it. Instead, a cork, leaf or rubber duck **bobs up and down** in the same place as ripples pass. It moves up as a crest arrives and down as a trough arrives, then returns to its starting point. This shows the **energy** moves across the surface but the water does not.",
+    "bullets": [
+     "Place a small cork or piece of paper on a ripple tank or pond.",
+     "Observe it as ripples pass: it moves up and down but stays in the same position horizontally.",
+     "Conclusion: waves transfer energy and information without transferring matter.",
+     "Water near a beach does slowly drift, but that is due to currents and breaking waves, not the ripple itself."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Waves transfer energy, not matter",
+      "p": "The medium oscillates about a fixed position; only energy (and information) moves from place to place."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "A floating cork bobs up and down as ripples pass but does not travel with the wave, showing that the wave transfers energy, not water.",
+      "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><defs><marker id='b1' markerWidth='8' markerHeight='8' refX='6' refY='3' orient='auto'><path d='M0,0 L6,3 L0,6 Z' fill='#1b2540'/></marker></defs><rect x='0' y='0' width='400' height='240' fill='#f0f9ff'/><path d='M20,140 C45,100 70,100 95,140 C120,180 145,180 170,140 C195,100 220,100 245,140 C270,180 295,180 320,140 C345,100 370,100 390,135 L390,230 L20,230 Z' fill='#bfdbfe' stroke='#1d4ed8' stroke-width='2'/><ellipse cx='207' cy='108' rx='14' ry='9' fill='#fde68a' stroke='#92400e' stroke-width='2'/><line x1='207' y1='60' x2='207' y2='90' stroke='#b91c1c' stroke-width='2' marker-end='url(#b1)'/><line x1='207' y1='60' x2='207' y2='40' stroke='#b91c1c' stroke-width='2' marker-end='url(#b1)'/><line x1='40' y1='40' x2='140' y2='40' stroke='#1b2540' stroke-width='2' marker-end='url(#b1)'/><text x='40' y='30' font-size='12' fill='#1b2540'>Wave direction</text><text x='222' y='52' font-size='12' fill='#b91c1c'>Cork bobs up and down</text><text x='232' y='112' font-size='12' fill='#92400e'>Cork</text><text x='40' y='96' font-size='12' fill='#1e40af'>Crest</text><text x='120' y='196' font-size='12' fill='#1e40af'>Trough</text><text x='250' y='214' font-size='12' fill='#1e40af'>Water surface</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Sound in air: evidence the air does not travel",
+    "p": "Sound is a **longitudinal wave**: air particles vibrate **back and forth parallel** to the direction the sound travels, making regions of **compression** (particles squashed together) and **rarefaction** (particles spread out). The air does not flow from the source to your ear, otherwise every loud sound would feel like a gust of wind.",
+    "bullets": [
+     "A loudspeaker cone vibrates in and out but stays in place; the air next to it does the same.",
+     "A candle flame in front of a loudspeaker flickers back and forth but is not blown steadily away.",
+     "You hear someone across a still room without feeling a breeze from them.",
+     "Each air particle oscillates about a fixed position and passes the vibration on to its neighbours."
+    ],
+    "table": {
+     "head": [
+      "Feature",
+      "Water ripples",
+      "Sound in air"
+     ],
+     "rows": [
+      [
+       "Wave type",
+       "Transverse",
+       "Longitudinal"
+      ],
+      [
+       "Particle motion",
+       "Up and down",
+       "Back and forth"
+      ],
+      [
+       "Evidence",
+       "Cork bobs in place",
+       "Candle flame flickers in place"
+      ],
+      [
+       "What travels",
+       "Energy",
+       "Energy"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Longitudinal wave",
+      "p": "A wave in which the oscillations are parallel to the direction of energy transfer."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "The ripple tank",
+    "p": "A **ripple tank** is a shallow transparent tray of water used to study water waves. A motor-driven **vibrating bar (dipper)** touches the surface and makes plane waves. A **lamp** above shines through the water; each crest acts like a small lens and focuses light, so a pattern of **bright and dark lines** appears on paper or a screen underneath. The bright lines are the crests, so the distance between neighbouring bright lines is one wavelength.",
+    "bullets": [
+     "Shallow water (about 5 mm) of uniform depth so the speed is the same everywhere.",
+     "Motor speed sets the frequency of the waves.",
+     "Shadow pattern is larger than the real waves if the lamp is high; measure the real waves or account for magnification.",
+     "Damping material or sloped edges at the sides reduce reflections that confuse the pattern."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Safety",
+      "p": "Water and mains electricity: keep the lamp and power supply away from spills and mop up water at once."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Ripple tank set-up: a lamp above the tank projects the moving ripples as bright and dark lines onto paper below, where a ruler measures the wavelength.",
+      "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='400' height='240' fill='#f8fafc'/><circle cx='200' cy='28' r='14' fill='#fde68a' stroke='#92400e' stroke-width='2'/><line x1='190' y1='40' x2='90' y2='100' stroke='#f59e0b' stroke-dasharray='4,3'/><line x1='210' y1='40' x2='320' y2='100' stroke='#f59e0b' stroke-dasharray='4,3'/><rect x='80' y='100' width='250' height='26' fill='#dbeafe' stroke='#1b2540' stroke-width='2'/><rect x='60' y='86' width='16' height='44' fill='#e9d5ff' stroke='#6b21a8'/><rect x='80' y='96' width='10' height='18' fill='#94a3b8' stroke='#1b2540'/><rect x='80' y='172' width='250' height='34' fill='#ffffff' stroke='#1b2540'/><rect x='100' y='172' width='10' height='34' fill='#fef08a'/><rect x='140' y='172' width='10' height='34' fill='#fef08a'/><rect x='180' y='172' width='10' height='34' fill='#fef08a'/><rect x='220' y='172' width='10' height='34' fill='#fef08a'/><rect x='260' y='172' width='10' height='34' fill='#fef08a'/><rect x='300' y='172' width='10' height='34' fill='#fef08a'/><line x1='105' y1='214' x2='145' y2='214' stroke='#b91c1c' stroke-width='2'/><line x1='105' y1='209' x2='105' y2='219' stroke='#b91c1c' stroke-width='2'/><line x1='145' y1='209' x2='145' y2='219' stroke='#b91c1c' stroke-width='2'/><text x='222' y='32' font-size='12' fill='#1b2540'>Lamp</text><text x='6' y='78' font-size='12' fill='#6b21a8'>Motor</text><text x='96' y='148' font-size='12' fill='#1e40af'>Water in tank</text><text x='96' y='92' font-size='12' fill='#334155'>Vibrating bar</text><text x='340' y='192' font-size='12' fill='#1b2540'>Paper</text><text x='152' y='230' font-size='12' fill='#b91c1c'>One wavelength</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Measuring wavelength in a ripple tank",
+    "p": "Wavelength is the distance from one crest to the next. Because ripples move quickly and a single wavelength is small, you measure **across several waves** and divide, which reduces the percentage uncertainty.",
+    "bullets": [
+     "Use a **stroboscope** at the same frequency as the motor to make the pattern appear frozen, or take a photo of the pattern next to a ruler.",
+     "Measure the distance across, for example, 10 bright lines (10 wavelengths).",
+     "Wavelength = total distance / number of waves.",
+     "Measuring over many waves reduces the effect of the ruler's resolution and of judging line edges."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Count gaps, not lines",
+      "p": "10 wavelengths span 11 bright lines. Count the gaps between lines."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Measuring frequency in a ripple tank",
+    "p": "Frequency is the number of waves passing a point each second.",
+    "bullets": [
+     "Count the number of waves passing a fixed point (a mark on the paper) in a measured time, e.g. 10 s, using a stopwatch.",
+     "Frequency = number of waves / time.",
+     "Alternatively, the frequency equals the strobe frequency when the pattern looks frozen, or the motor frequency read from the power supply.",
+     "Filming with a phone and replaying in slow motion makes counting more accurate."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Calculating ripple speed: two methods",
+    "p": "Once you have frequency and wavelength, use the wave equation. Alternatively you can time one ripple travelling a known distance.",
+    "bullets": [
+     "**Method 1**: wave speed v = frequency f x wavelength (lambda). Units: m/s = Hz x m.",
+     "**Method 2**: time a single ripple crossing the tank of known length: v = distance / time.",
+     "Repeat and calculate a mean to reduce random error.",
+     "Typical ripple speeds in a tank are around 0.1 to 0.3 m/s; ripples travel slower in shallower water."
+    ],
+    "table": {
+     "head": [
+      "Quantity",
+      "Symbol",
+      "Unit"
+     ],
+     "rows": [
+      [
+       "Wave speed",
+       "v",
+       "m/s"
+      ],
+      [
+       "Frequency",
+       "f",
+       "Hz"
+      ],
+      [
+       "Wavelength",
+       "lambda",
+       "m"
+      ],
+      [
+       "Distance",
+       "d",
+       "m"
+      ],
+      [
+       "Time",
+       "t",
+       "s"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "The wave equation",
+      "p": "wave speed (m/s) = frequency (Hz) x wavelength (m)"
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Measuring the speed of sound: two people far apart",
+    "p": "Sound in air travels at roughly **330 to 340 m/s**, so you need a large distance to get a measurable time. One person makes a sound with a visible action (clapping cymbals or a starting pistol with smoke); a second person far away starts a stopwatch on seeing it and stops on hearing it.",
+    "bullets": [
+     "Measure a long distance, e.g. 400 m, with a trundle wheel or tape measure.",
+     "Light arrives almost instantly, so the time measured is the time for the sound to travel.",
+     "Speed of sound = distance / time.",
+     "**Human reaction time** (about 0.2 s) is large compared with the travel time (about 1.2 s for 400 m), so repeat many times and average; use a longer distance."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Reaction time",
+      "p": "The main source of error in timing methods is human reaction time. Bigger distances make it a smaller fraction of the measured time."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Measuring the speed of sound: echo method",
+    "p": "Stand a measured distance, e.g. 50 m, from a large flat wall and clap. The sound travels to the wall and back, so it covers **twice** the distance. To beat reaction time, clap in rhythm so each clap coincides with the echo of the previous one, and time 20 claps.",
+    "bullets": [
+     "Distance travelled by sound = 2 x distance to wall.",
+     "Time 20 intervals between claps; time for one echo = total time / 20.",
+     "Speed = 2d / t.",
+     "Large, hard, flat wall reflects sound well; open space avoids other echoes."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Do not forget the 2",
+      "p": "An echo goes there and back, so the distance is doubled."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Echo method: the clap travels to the wall and back, so the sound covers twice the measured distance d before the echo is heard.",
+      "svg": "<svg viewBox='0 0 400 240' xmlns='http://www.w3.org/2000/svg'><defs><marker id='b2' markerWidth='8' markerHeight='8' refX='6' refY='3' orient='auto'><path d='M0,0 L6,3 L0,6 Z' fill='#b91c1c'/></marker></defs><rect x='0' y='0' width='400' height='240' fill='#f8fafc'/><rect x='0' y='190' width='400' height='50' fill='#bbf7d0'/><circle cx='60' cy='110' r='12' fill='#fecaca' stroke='#1b2540' stroke-width='2'/><line x1='60' y1='122' x2='60' y2='160' stroke='#1b2540' stroke-width='3'/><line x1='60' y1='160' x2='48' y2='190' stroke='#1b2540' stroke-width='3'/><line x1='60' y1='160' x2='72' y2='190' stroke='#1b2540' stroke-width='3'/><line x1='60' y1='134' x2='80' y2='124' stroke='#1b2540' stroke-width='3'/><rect x='330' y='40' width='40' height='150' fill='#fde68a' stroke='#92400e' stroke-width='2'/><line x1='90' y1='100' x2='322' y2='100' stroke='#b91c1c' stroke-width='2' marker-end='url(#b2)'/><line x1='322' y1='130' x2='90' y2='130' stroke='#b91c1c' stroke-width='2' stroke-dasharray='6,4' marker-end='url(#b2)'/><line x1='60' y1='208' x2='330' y2='208' stroke='#1b2540' stroke-width='1.5'/><line x1='60' y1='202' x2='60' y2='214' stroke='#1b2540'/><line x1='330' y1='202' x2='330' y2='214' stroke='#1b2540'/><text x='160' y='88' font-size='12' fill='#b91c1c'>Clap sound</text><text x='160' y='150' font-size='12' fill='#b91c1c'>Echo returns</text><text x='334' y='30' font-size='12' fill='#92400e'>Wall</text><text x='20' y='90' font-size='12' fill='#1b2540'>Student</text><text x='150' y='228' font-size='12' fill='#1b2540'>Distance d, e.g. 50 m</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Measuring the speed of sound: microphones and oscilloscope",
+    "p": "A more accurate laboratory method avoids reaction time altogether. A **signal generator** drives a loudspeaker at a known frequency. Two **microphones** connected to a dual-trace **oscilloscope** are placed in front of it. Start with the microphones side by side so the traces line up, then move one microphone away until the traces line up again: it has moved **one wavelength**.",
+    "bullets": [
+     "Frequency f read from the signal generator.",
+     "Distance between microphones when traces next line up = one wavelength (measure across several for accuracy).",
+     "Speed of sound v = f x wavelength.",
+     "Electronic detection removes human reaction time, making this method more accurate."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Comparing the methods",
+    "p": "Exam questions often ask you to evaluate a method. Think about the size of the timing uncertainty compared with the quantity being timed.",
+    "bullets": [
+     "Two-person timing: simple, but large reaction-time error.",
+     "Echo with rhythmic claps: reduces reaction-time error by timing many echoes.",
+     "Microphones and oscilloscope: most accurate, no reaction time.",
+     "Ripple tank v = f x wavelength: more accurate than timing one ripple, because many wavelengths and many waves are measured."
+    ],
+    "table": {
+     "head": [
+      "Method",
+      "Main error",
+      "Improvement"
+     ],
+     "rows": [
+      [
+       "Two people far apart",
+       "Reaction time",
+       "Longer distance, repeat and average"
+      ],
+      [
+       "Echo",
+       "Reaction time, matching rhythm",
+       "Time 20 or more echoes"
+      ],
+      [
+       "Ripple single timing",
+       "Fast ripple, hard to time",
+       "Use v = f x wavelength or video"
+      ],
+      [
+       "Ripple wavelength",
+       "Moving pattern",
+       "Stroboscope or photo with ruler"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Exam technique for practical descriptions",
+    "p": "Six mark questions on this point usually ask you to describe how to measure a wave speed. Mark schemes reward a clear sequence: apparatus, what you measure, how you measure it, the calculation, and how you improve accuracy.",
+    "bullets": [
+     "Name the measuring instruments: ruler, metre rule, stopwatch, trundle wheel, stroboscope, signal generator.",
+     "Say exactly what is measured and over how many waves or repeats.",
+     "Give the equation used and its units.",
+     "State one source of error and how to reduce it.",
+     "Link evidence to conclusion: the cork stays in place, so energy not water travels."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Measure many, divide",
+      "p": "Measuring 10 wavelengths or 20 echoes and dividing is a reliable mark-scoring improvement."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "A Mexican wave in a stadium",
+   "p": "In a Mexican wave each fan stands up and sits down in their own seat, yet the wave races round the stadium. The fans are like the water particles: they move up and down on the spot while the wave, the pattern of energy, travels around. A spectator watching one fan sees them bob up and down like the cork. Where it breaks down: fans choose to stand when they see their neighbour, whereas water particles are pushed by forces between them; and a Mexican wave cannot show a longitudinal wave like sound unless the fans sway sideways along the row."
+  },
+  "terms": [
+   {
+    "t": "Ripple",
+    "d": "A small transverse wave travelling across the surface of water."
+   },
+   {
+    "t": "Transverse wave",
+    "d": "A wave whose oscillations are perpendicular to the direction of energy transfer."
+   },
+   {
+    "t": "Longitudinal wave",
+    "d": "A wave whose oscillations are parallel to the direction of energy transfer."
+   },
+   {
+    "t": "Medium",
+    "d": "The material through which a wave travels, such as water or air."
+   },
+   {
+    "t": "Crest",
+    "d": "The highest point of a transverse wave."
+   },
+   {
+    "t": "Trough",
+    "d": "The lowest point of a transverse wave."
+   },
+   {
+    "t": "Compression",
+    "d": "A region in a longitudinal wave where particles are closer together."
+   },
+   {
+    "t": "Rarefaction",
+    "d": "A region in a longitudinal wave where particles are further apart."
+   },
+   {
+    "t": "Wavelength",
+    "d": "The distance from one point on a wave to the equivalent point on the next wave, e.g. crest to crest."
+   },
+   {
+    "t": "Frequency",
+    "d": "The number of waves passing a point each second, measured in hertz (Hz)."
+   },
+   {
+    "t": "Wave speed",
+    "d": "The distance a wave travels per second; v = f x wavelength."
+   },
+   {
+    "t": "Ripple tank",
+    "d": "A shallow tray of water with a vibrating bar and lamp used to study water waves."
+   },
+   {
+    "t": "Stroboscope",
+    "d": "A flashing light whose frequency can be set to make a moving wave pattern appear stationary."
+   },
+   {
+    "t": "Echo",
+    "d": "A reflected sound wave."
+   },
+   {
+    "t": "Oscilloscope",
+    "d": "A device that displays an electrical signal as a trace on a screen."
+   },
+   {
+    "t": "Reaction time",
+    "d": "The delay between a person seeing or hearing an event and responding to it."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "The water moves along with the wave.",
+    "r": "The water oscillates up and down about a fixed position; only energy is transferred."
+   },
+   {
+    "w": "Sound waves are transverse because air moves up and down.",
+    "r": "Sound is longitudinal: air particles vibrate parallel to the direction of travel."
+   },
+   {
+    "w": "Speed of sound by echo = distance to wall / time.",
+    "r": "Sound travels to the wall and back, so speed = 2 x distance / time."
+   },
+   {
+    "w": "Measure one wavelength with a ruler.",
+    "r": "Measure across several wavelengths and divide, to reduce uncertainty."
+   },
+   {
+    "w": "Count 10 bright lines to measure 10 wavelengths.",
+    "r": "10 wavelengths are the gaps between 11 bright lines."
+   },
+   {
+    "w": "Repeat the experiment to make it more accurate.",
+    "r": "Repeating and averaging reduces the effect of random errors such as reaction time; say which error it reduces."
+   },
+   {
+    "w": "Waves transfer matter and energy.",
+    "r": "Waves transfer energy (and information) without transferring matter."
+   },
+   {
+    "w": "Light takes a long time to travel 400 m, so it adds error.",
+    "r": "Light travels so fast its travel time is negligible; the error is human reaction time."
+   }
+  ],
+  "exam": [
+   {
+    "q": "State whether ripples on water are transverse or longitudinal.",
+    "marks": 1,
+    "model": [
+     "Transverse."
+    ],
+    "tip": "Water surface moves up and down at right angles to the wave direction."
+   },
+   {
+    "q": "A cork floats on water as ripples pass. Describe the motion of the cork and explain what this shows.",
+    "marks": 2,
+    "model": [
+     "Cork moves up and down but does not move along with the wave.",
+     "Shows the wave transfers energy, not the water."
+    ],
+    "tip": "Give both the observation and the conclusion."
+   },
+   {
+    "q": "Describe evidence that it is the sound wave, not the air, that travels from a loudspeaker.",
+    "marks": 2,
+    "model": [
+     "A candle flame/air near the speaker vibrates back and forth but is not blown away.",
+     "So air particles oscillate about a fixed position while energy travels."
+    ],
+    "tip": "Use the word oscillate or vibrate."
+   },
+   {
+    "q": "A ripple tank produces waves of frequency 8 Hz and wavelength 0.025 m. Calculate the wave speed.",
+    "marks": 2,
+    "model": [
+     "v = f x wavelength = 8 x 0.025.",
+     "v = 0.2 m/s."
+    ],
+    "tip": "Check the wavelength is in metres."
+   },
+   {
+    "q": "A student measures the distance across 10 wavelengths of ripples as 18 cm. Calculate one wavelength in metres.",
+    "marks": 2,
+    "model": [
+     "18 / 10 = 1.8 cm.",
+     "= 0.018 m."
+    ],
+    "tip": "Convert cm to m by dividing by 100."
+   },
+   {
+    "q": "A student stands 85 m from a wall and hears the echo of a clap 0.50 s later. Calculate the speed of sound.",
+    "marks": 3,
+    "model": [
+     "Distance travelled = 2 x 85 = 170 m.",
+     "v = d / t = 170 / 0.50.",
+     "v = 340 m/s."
+    ],
+    "tip": "Double the distance for an echo."
+   },
+   {
+    "q": "Explain why measuring the speed of sound by timing over 20 m gives an unreliable result.",
+    "marks": 2,
+    "model": [
+     "Sound takes only about 0.06 s to travel 20 m.",
+     "This is much shorter than human reaction time (about 0.2 s), so the timing error is very large."
+    ],
+    "tip": "Compare the travel time with reaction time."
+   },
+   {
+    "q": "Explain why a stroboscope is used in a ripple tank experiment.",
+    "marks": 2,
+    "model": [
+     "Ripples move too fast to measure easily.",
+     "Strobe at the same frequency makes the waves appear stationary so the wavelength can be measured."
+    ],
+    "tip": "Mention matching frequencies."
+   },
+   {
+    "q": "Describe how to measure the speed of ripples on water in a ripple tank.",
+    "marks": 6,
+    "model": [
+     "Set up a ripple tank with a vibrating bar and lamp so ripples are seen as lines on paper below.",
+     "Use a stroboscope or photograph to freeze the pattern.",
+     "Measure the distance across several (e.g. 10) wavelengths with a ruler and divide to find one wavelength.",
+     "Count the waves passing a point in 10 s, or use the strobe/motor frequency, to find the frequency.",
+     "Calculate speed using v = f x wavelength.",
+     "Repeat and average; keep water depth constant."
+    ],
+    "tip": "Cover set-up, wavelength, frequency, equation and improvement."
+   },
+   {
+    "q": "Describe how to measure the speed of sound in air using two people outside.",
+    "marks": 4,
+    "model": [
+     "Measure a large distance (e.g. 400 m) with a trundle wheel.",
+     "Person A makes a loud sound with a visible action, e.g. clapping cymbals.",
+     "Person B starts a stopwatch on seeing the action and stops on hearing the sound.",
+     "Speed = distance / time; repeat and take a mean."
+    ],
+    "tip": "Say why light is used to start the timer."
+   },
+   {
+    "q": "Suggest why the microphone and oscilloscope method is more accurate than the echo method.",
+    "marks": 2,
+    "model": [
+     "No human reaction time is involved.",
+     "Wavelength and frequency are measured precisely with electronic equipment."
+    ],
+    "tip": "Name the error that is removed."
+   }
+  ],
+  "worked": [
+   {
+    "q": "In a ripple tank, 12 waves pass a mark in 4.0 s. The distance across 6 wavelengths is 0.15 m. Calculate the speed of the ripples.",
+    "steps": [
+     "Frequency f = number of waves / time = 12 / 4.0 = 3.0 Hz.",
+     "Wavelength = 0.15 / 6 = 0.025 m.",
+     "v = f x wavelength = 3.0 x 0.025.",
+     "v = 0.075 m/s."
+    ],
+    "ans": "0.075 m/s"
+   },
+   {
+    "q": "A student stands 60 m from a wall and claps in time with the echoes. 20 claps take 7.2 s. Calculate the speed of sound.",
+    "steps": [
+     "Time between claps = 7.2 / 20 = 0.36 s; this is the time for sound to go to the wall and back.",
+     "Distance travelled = 2 x 60 = 120 m.",
+     "v = distance / time = 120 / 0.36.",
+     "v = 333 m/s (3 s.f.)."
+    ],
+    "ans": "About 330 m/s"
+   },
+   {
+    "q": "A signal generator set to 1700 Hz drives a loudspeaker. Moving one microphone away, the traces line up again every 0.20 m. Calculate the speed of sound.",
+    "steps": [
+     "Traces line up again after moving one wavelength, so wavelength = 0.20 m.",
+     "v = f x wavelength = 1700 x 0.20.",
+     "v = 340 m/s."
+    ],
+    "ans": "340 m/s"
+   }
+  ],
+  "svg": [],
+  "pid": "phy_ocra.11.6",
+  "sid": "phy_ocra",
+  "v": 2,
+  "src": "pre",
+  "by": "claude/claude-opus-5-5",
+  "ts": "2026-11-28T01:19:21.306Z"
  }
 }

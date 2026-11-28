@@ -441,5 +441,1315 @@
   "src": "pre",
   "by": "gemini/gemini-3.5-flash-lite",
   "ts": "2026-11-27T19:18:16.451Z"
+ },
+ "chem_ocrb.6.1": {
+  "summary": "Mastering data presentation under OCR Chemistry B Ideas about Science (IaS2) requires rigorous use of SI units, precise control of significant figures matching raw data, and precise construction of graphs with lines of best fit. Examiners expect clean linear or curved trends, proper axis labeling with quantities and units, and clear identification of anomalies that must be ignored when drawing trend lines.",
+  "core": [
+   {
+    "h": "1. Standard Units and SI Quantities",
+    "p": "Every physical measurement recorded in chemistry must be accompanied by its standard International System of Units (SI) symbol. Examiners strictly penalize missing units, incorrect case sensitivity, or confusing compound units in final calculations and tables.",
+    "bullets": [
+     "Base SI units include mass in kilograms (kg), length in metres (m), time in seconds (s), and amount of substance in moles (mol).",
+     "Laboratory chemistry frequently uses derived or convenient sub-units such as grams (g) for mass, cubic centimetres (cm3) for volume, and decimetres cubed (dm3).",
+     "Temperature must be correctly converted between Celsius degrees (degC) and Kelvin (K) where absolute zero or gas laws are involved.",
+     "Compound units like concentration must be written correctly, such as mol/dm3 or g/dm3, avoiding ambiguous slashes."
+    ],
+    "table": {
+     "head": [
+      "Quantity",
+      "Standard Unit",
+      "Symbol"
+     ],
+     "rows": [
+      [
+       "Mass",
+       "Kilogram / Gram",
+       "kg / g"
+      ],
+      [
+       "Volume",
+       "Cubic decimetre",
+       "dm3"
+      ],
+      [
+       "Amount of substance",
+       "Mole",
+       "mol"
+      ],
+      [
+       "Concentration",
+       "Moles per dm3",
+       "mol/dm3"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Case Sensitivity",
+      "p": "Always write mL or cm3 with the superscript 3 clearly shown; writing cm3 on a single baseline loses marks."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "2. Decimal Places versus Significant Figures",
+    "p": "Knowing when to use decimal places and when to use significant figures is a core skill for processing experimental data and final calculated results.",
+    "bullets": [
+     "Decimal places refer to the number of digits after the decimal point; they are crucial for raw instrument readings like balance masses.",
+     "Significant figures (s.f.) count all digits starting from the first non-zero digit on the left.",
+     "When performing calculations, your final answer should generally be rounded to the same number of significant figures as the least precise set of data provided in the question.",
+     "Never round intermediate steps in a multi-step calculation; only round the final answer to avoid rounding error accumulation."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Significant Figures",
+      "p": "Digits that carry meaning contributing to the precision of a number, starting with the first non-zero digit."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "3. Choosing Appropriate Scales for Graphs",
+    "p": "A well-drawn graph starts with a sensible scale that maximizes the use of the available grid paper and makes plotting and reading values straightforward.",
+    "bullets": [
+     "The independent variable (what you change) goes on the horizontal x-axis; the dependent variable (what you measure) goes on the vertical y-axis.",
+     "Scales must be linear and increase by uniform increments, such as blocks of 1, 2, 5, or 10, never awkward divisions like 3, 7, or 11.",
+     "The plotted data must occupy at least half of the grid in both horizontal and vertical directions.",
+     "Label axes clearly with the quantity name followed by a forward slash and the unit, for example: Temperature / degC."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Awkward Scales",
+      "p": "Avoid using 3cm to represent 10 units on graph paper because it makes manual plotting and interpolation prone to arithmetic errors."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "4. Plotting Data Points Accurately",
+    "p": "Points must be positioned on the grid with extreme precision using sharp pencils so that the center of the cross or dot aligns with the exact coordinate.",
+    "bullets": [
+     "Use a sharp cross (x) or a small enclosed dot (circ) to plot data points; crosses are preferred as the intersection marks the exact coordinate.",
+     "Plot all points to within half of a small grid square accuracy.",
+     "Check every third or fourth plotted point against the table to eliminate transcription errors.",
+     "Do not force points onto the grid if they are genuine anomalous results; plot them honestly."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Pencil Only",
+      "p": "Always draw graphs, lines of best fit, and data points in sharp HB pencil so that mistakes can be cleanly erased."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "5. Straight Lines of Best Fit",
+    "p": "A line of best fit shows the underlying trend of the data, balancing points evenly on either side rather than blindly connecting dot-to-dot.",
+    "bullets": [
+     "A line of best fit can be straight or curved depending on the chemical relationship being investigated.",
+     "For a straight line, use a transparent long ruler to position the line so that roughly equal numbers of points lie above and below the line.",
+     "Ignore obvious anomalous outliers when positioning your line of best fit.",
+     "The line does not necessarily have to pass through the origin (0,0) unless physical theory dictates it must."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Dot-to-Dot Ban",
+      "p": "Connecting data points with straight line segments like a zig-zag is heavily penalized on OCR Chemistry papers."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Example of a correct straight line of best fit balancing points with an ignored outlier.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"50\" y1=\"30\" x2=\"50\" y2=\"200\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"70\" y1=\"180\" x2=\"330\" y2=\"50\" stroke=\"#2563eb\" stroke-width=\"2\"/><circle cx=\"70\" cy=\"180\" r=\"3\" fill=\"#dc2626\"/><circle cx=\"110\" cy=\"150\" r=\"3\" fill=\"#dc2626\"/><circle cx=\"150\" cy=\"135\" r=\"3\" fill=\"#dc2626\"/><circle cx=\"190\" cy=\"105\" r=\"3\" fill=\"#dc2626\"/><circle cx=\"230\" cy=\"90\" r=\"3\" fill=\"#dc2626\"/><circle cx=\"270\" cy=\"65\" r=\"3\" fill=\"#dc2626\"/><circle cx=\"330\" cy=\"50\" r=\"3\" fill=\"#dc2626\"/><circle cx=\"200\" cy=\"40\" r=\"3\" fill=\"#94a3b8\"/><text x=\"180\" y=\"225\" font-size=\"12\" fill=\"#1e293b\">Time / s</text><text x=\"15\" y=\"110\" font-size=\"12\" fill=\"#1e293b\" transform=\"rotate(-90 15 110)\">Volume / cm3</text><text x=\"215\" y=\"35\" font-size=\"11\" fill=\"#dc2626\">Outlier ignored</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "6. Curved Lines of Best Fit",
+    "p": "Many chemical rates and equilibrium trends produce smooth curves rather than straight lines, requiring careful freehand sketching.",
+    "bullets": [
+     "Draw smooth, continuous curves without sketching sketchy, feathered, or double lines.",
+     "Ensure the curve reflects the general trend smoothly, curving gently through or between the plotted points.",
+     "Practice drawing curves in one confident sweep of the wrist, rotating your paper if necessary to achieve a smooth arc.",
+     "Do not force a curve to be straight, and vice versa; let the data distribution guide your choice."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Smooth Sweeps",
+      "p": "If your hand slips or the curve looks jagged, erase it completely and redraw with a single smooth motion."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "7. Handling Anomalous Data Points",
+    "p": "Anomalies are results that do not fit the overall pattern of the rest of the data. They must be identified, investigated, and managed correctly.",
+    "bullets": [
+     "Look for points that lie far away from the smooth trend established by neighboring points.",
+     "When drawing a line of best fit, anomalous results must be completely ignored and excluded from the line calculation.",
+     "In experimental tables, anomalies should be omitted when calculating mean values to avoid skewing the average.",
+     "In written evaluations, state clearly why a point is considered an anomaly and suggest a possible experimental cause."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Anomalous Result",
+      "p": "Data point that does not fit the trend of the surrounding data, often caused by experimental error."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "8. Gradient Calculations from Graphs",
+    "p": "Finding the gradient of a straight-line graph or a tangent to a curve allows chemists to determine rates of reaction and other proportional relationships.",
+    "bullets": [
+     "Select a large triangle for gradient calculation; the hypotenuse should cover at least half of the line segment.",
+     "Read off the coordinates (x1, y1) and (x2, y2) where the triangle lines intersect the best fit line cleanly.",
+     "Calculate the gradient using the formula: Gradient = Change in y / Change in x = (y2 - y1) / (x2 - x1).",
+     "Include the correct combined unit for the gradient by dividing the y-axis unit by the x-axis unit."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Tiny Triangles",
+      "p": "Using a triangle constructed from two adjacent data points magnifies reading errors; always draw a large gradient triangle."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Constructing a large gradient triangle on a straight line of best fit.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"50\" y1=\"30\" x2=\"50\" y2=\"200\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"70\" y1=\"190\" x2=\"330\" y2=\"40\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"90\" y1=\"178\" x2=\"290\" y2=\"64\" stroke=\"#059669\" stroke-width=\"1.5\" stroke-dasharray=\"4\"/><line x1=\"90\" y1=\"178\" x2=\"290\" y2=\"178\" stroke=\"#059669\" stroke-width=\"1.5\" stroke-dasharray=\"4\"/><line x1=\"290\" y1=\"64\" x2=\"290\" y2=\"178\" stroke=\"#059669\" stroke-width=\"1.5\" stroke-dasharray=\"4\"/><text x=\"170\" y=\"195\" font-size=\"11\" fill=\"#059669\">Change in x</text><text x=\"295\" y=\"125\" font-size=\"11\" fill=\"#059669\">Change in y</text><text x=\"180\" y=\"225\" font-size=\"12\" fill=\"#1e293b\">Time / s</text><text x=\"15\" y=\"110\" font-size=\"12\" fill=\"#1e293b\" transform=\"rotate(-90 15 110)\">Mass / g</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "9. Tangents to Curved Graphs",
+    "p": "To find the rate of reaction at a specific instant on a curved graph, you must construct a tangent to the curve.",
+    "bullets": [
+     "Place a transparent ruler precisely at the point on the curve where you need to find the instantaneous rate.",
+     "Adjust the ruler so that the angle of space between the curve and the ruler is equal on both sides of the point of contact.",
+     "Draw a straight line extending well beyond the point of contact to form a large working line.",
+     "Calculate the gradient of this tangent using a large triangle to find the exact rate at that specific time."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Tangent",
+      "p": "A straight line that touches a curve at a single point without crossing it, sharing the exact instantaneous gradient."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "10. Interpolation and Extrapolation",
+    "p": "Graphs allow scientists to predict values both within the measured data range and beyond it.",
+    "bullets": [
+     "Interpolation involves finding an unknown value that lies in between two measured data points on your graph line.",
+     "Extrapolation involves extending the line of best fit beyond your measured data points to predict unmeasured values.",
+     "Extrapolation carries much higher uncertainty because you must assume the trend continues unchanged outside tested conditions.",
+     "Always use dashed lines when extending a graph line beyond your actual data points to show extrapolation."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Dashed Extrapolations",
+      "p": "Examiners look for dashed lines when you extend a best fit line past your plotted points to indicate extrapolation."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "11. Tables and Data Organization",
+    "p": "Data tables must be structured logically with clear headings, consistent decimal formatting, and proper unit placement.",
+    "bullets": [
+     "Independent variables should be placed in the left-hand column, with dependent variables in subsequent columns to the right.",
+     "Table headers must contain both the physical quantity and its correct SI unit, separated by a slash.",
+     "All raw readings taken from an instrument must be recorded to the same number of decimal places matching instrument precision.",
+     "Calculated mean values should match the precision of the raw data or have at most one extra decimal place."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Units in Data Cells",
+      "p": "Never repeat units inside every single cell of a table; put the unit in the header row only."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Archery Target and the Trend Line",
+   "p": "Presenting data and drawing a line of best fit is like analyzing a series of arrows shot at a target. The individual arrows are your raw data points, which might scatter slightly due to slight variations in wind or technique (experimental error). Drawing a line of best fit is like finding the center of mass of that scatter pattern, capturing the true aim of the archer while recognizing that any single erratic arrow far off target is an anomaly that should be ignored. The analogy breaks down because chemical data follows mathematical functions like linear or exponential curves, whereas arrows scatter in two dimensions around a central point."
+  },
+  "terms": [
+   {
+    "t": "Anomalous Result",
+    "d": "A data point that does not fit the trend of the surrounding data."
+   },
+   {
+    "t": "Axis",
+    "d": "The reference line on a graph used for plotting independent and dependent variables."
+   },
+   {
+    "t": "Decimal Places",
+    "d": "The number of digits specified after the decimal point."
+   },
+   {
+    "t": "Dependent Variable",
+    "d": "The variable that is measured for every change in the independent variable."
+   },
+   {
+    "t": "Extrapolation",
+    "d": "Extending a line of best fit beyond the range of measured data to predict new values."
+   },
+   {
+    "t": "Gradient",
+    "d": "The steepness of a graph line, calculated as change in y divided by change in x."
+   },
+   {
+    "t": "Independent Variable",
+    "d": "The variable that is deliberately changed or selected by the experimenter."
+   },
+   {
+    "t": "Interpolation",
+    "d": "Determining an unknown value between two known plotted points on a graph."
+   },
+   {
+    "t": "Line of Best Fit",
+    "d": "A smooth straight or curved line that best represents the overall trend of plotted data."
+   },
+   {
+    "t": "Significant Figures",
+    "d": "Digits starting from the first non-zero digit that contribute to the precision of a number."
+   },
+   {
+    "t": "SI Units",
+    "d": "The internationally agreed standard system of units for physical measurements."
+   },
+   {
+    "t": "Tangent",
+    "d": "A straight line that touches a curve at one point without crossing it."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Connecting all data points with straight dot-to-dot lines.",
+    "r": "Draw a single smooth line or curve of best fit that balances points."
+   },
+   {
+    "w": "Including anomalous results when calculating lines of best fit or means.",
+    "r": "Identify and exclude anomalies from trend lines and calculations."
+   },
+   {
+    "w": "Putting units inside every table data cell.",
+    "r": "Place units in the table column header only, using a forward slash."
+   },
+   {
+    "w": "Using a tiny triangle to calculate a graph gradient.",
+    "r": "Construct a large gradient triangle covering over half the line segment."
+   },
+   {
+    "w": "Forgetting to label graph axes with quantities and units.",
+    "r": "Always label both axes with Quantity / Unit."
+   },
+   {
+    "w": "Rounding intermediate steps in multi-step calculations.",
+    "r": "Keep full calculator numbers until the final step, then round."
+   },
+   {
+    "w": "Writing units with incorrect case or baseline placement like cm3.",
+    "r": "Use correct superscript notation like cm3 and correct case."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A student measures the temperature of a neutralization reaction every 30 seconds. State where the independent variable should be plotted on the graph.",
+    "marks": 1,
+    "model": [
+     "Horizontal axis (x-axis)"
+    ],
+    "tip": "The independent variable is always placed on the x-axis."
+   },
+   {
+    "q": "Explain why a student should draw a line of best fit rather than connecting the plotted points with straight line segments.",
+    "marks": 2,
+    "model": [
+     "It shows the underlying trend of the data",
+     "It reduces the effect of random experimental errors"
+    ],
+    "tip": "Mention both trend visualization and random error reduction."
+   },
+   {
+    "q": "Describe how to deal with an anomalous result when plotting a graph of reaction rate.",
+    "marks": 2,
+    "model": [
+     "Ignore the anomalous point when drawing the line of best fit",
+     "Do not include it in any mean calculations"
+    ],
+    "tip": "Examiners award marks for explicitly stating the point is ignored."
+   },
+   {
+    "q": "Calculate the gradient of a straight line graph where the change in y is 45.0 cm3 and the change in x is 150 s. Include units.",
+    "marks": 3,
+    "model": [
+     "Gradient = 45.0 / 150",
+     "Answer = 0.3",
+     "Unit = cm3/s"
+    ],
+    "tip": "Always check that your unit combines y-axis unit over x-axis unit."
+   },
+   {
+    "q": "A student records burette readings to 2 decimal places. Their final titration volume calculation has 4 decimal places. Explain why this is incorrect.",
+    "marks": 2,
+    "model": [
+     "Calculated results should match the precision of the raw data",
+     "Raw burette readings are only precise to 2 decimal places"
+    ],
+    "tip": "Match final significant figures or decimal places to the least precise data."
+   },
+   {
+    "q": "Define what is meant by interpolation on a graph.",
+    "marks": 1,
+    "model": [
+     "Finding an unknown value between two known data points on the graph line"
+    ],
+    "tip": "Interpolation is *inside* the data range; extrapolation is *outside*."
+   },
+   {
+    "q": "State two key rules for choosing a proper scale for the axes of a graph.",
+    "marks": 2,
+    "model": [
+     "The scale must be linear and increase in uniform increments",
+     "The plotted data must occupy at least half of the grid paper"
+    ],
+    "tip": "Avoid awkward scales like 3s or 7s."
+   },
+   {
+    "q": "Describe how to find the instantaneous rate of reaction at 40 seconds from a curved volume-time graph.",
+    "marks": 3,
+    "model": [
+     "Place a ruler at 40 seconds touching the curve",
+     "Draw a tangent that matches the gradient of the curve at that point",
+     "Calculate the gradient of the tangent using a large triangle"
+    ],
+    "tip": "Mention drawing a tangent and calculating its gradient."
+   },
+   {
+    "q": "A student plots data with an awkward scale where 3 cm represents 10 units. Explain why this is poor practice.",
+    "marks": 1,
+    "model": [
+     "It makes plotting and reading intermediate values prone to arithmetic errors"
+    ],
+    "tip": "Stick to scales based on 1, 2, 5, or 10."
+   },
+   {
+    "q": "Explain how to format a table column header for mass measured in grams.",
+    "marks": 1,
+    "model": [
+     "Mass / g"
+    ],
+    "tip": "Quantity followed by a forward slash and unit."
+   },
+   {
+    "q": "State why extrapolation of a graph line carries more uncertainty than interpolation.",
+    "marks": 2,
+    "model": [
+     "Extrapolation predicts values outside tested experimental conditions",
+     "It assumes the trend continues without change, which may not be true"
+    ],
+    "tip": "Mention unmeasured conditions outside the tested range."
+   }
+  ],
+  "worked": [
+   {
+    "q": "Calculate the gradient of the straight line of best fit where coordinates at the line extremes are (10, 20) and (90, 180). State the gradient to 3 significant figures.",
+    "steps": [
+     "Identify coordinates: (x1, y1) = (10, 20) and (x2, y2) = (90, 180).",
+     "Apply gradient formula: Gradient = (y2 - y1) / (x2 - x1).",
+     "Substitute values: (180 - 20) / (90 - 10) = 160 / 80 = 2.00."
+    ],
+    "ans": "2.00"
+   },
+   {
+    "q": "Round the number 0.045826 to 2 significant figures.",
+    "steps": [
+     "Locate the first non-zero digit from the left, which is 4.",
+     "Look at the second significant digit, which is 5.",
+     "Look at the digit immediately to the right of the 5, which is 8.",
+     "Since 8 is 5 or greater, round the 5 up to 6, giving 0.046."
+    ],
+    "ans": "0.046"
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Complete graph layout showing axes, linear scale, plotted crosses, and straight line of best fit.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"50\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"50\" y1=\"30\" x2=\"50\" y2=\"200\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"70\" y1=\"180\" x2=\"340\" y2=\"50\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"50\" y1=\"160\" x2=\"360\" y2=\"160\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"50\" y1=\"120\" x2=\"360\" y2=\"120\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"50\" y1=\"80\" x2=\"360\" y2=\"80\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"120\" y1=\"30\" x2=\"120\" y2=\"200\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"190\" y1=\"30\" x2=\"190\" y2=\"200\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"260\" y1=\"30\" x2=\"260\" y2=\"200\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"330\" y1=\"30\" x2=\"330\" y2=\"200\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><text x=\"180\" y=\"225\" font-size=\"12\" fill=\"#1e293b\">Independent Variable / Unit</text><text x=\"15\" y=\"120\" font-size=\"12\" fill=\"#1e293b\" transform=\"rotate(-90 15 120)\">Dependent / Unit</text><circle cx=\"70\" cy=\"180\" r=\"3\" fill=\"#dc2626\"/><circle cx=\"120\" cy=\"150\" r=\"3\" fill=\"#dc2626\"/><circle cx=\"190\" cy=\"115\" r=\"3\" fill=\"#dc2626\"/><circle cx=\"260\" cy=\"85\" r=\"3\" fill=\"#dc2626\"/><circle cx=\"340\" cy=\"50\" r=\"3\" fill=\"#dc2626\"/></svg>"
+   }
+  ],
+  "pid": "chem_ocrb.6.1",
+  "sid": "chem_ocrb",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-28T17:51:54.625Z"
+ },
+ "chem_ocrb.6.2": {
+  "summary": "This topic covers how experimental data is analysed and evaluated for quality in OCR GCSE Chemistry B. Students must understand how to calculate means and ranges, identify and manage anomalous results or outliers, and distinguish between accuracy, precision, and repeatability. High-level analysis requires evaluating data sets to draw valid scientific conclusions supported by evidence.",
+  "core": [
+   {
+    "h": "Calculating Means",
+    "p": "When repeat measurements are taken in an investigation, a mean (average) is calculated to find the best estimate of the true value and to reduce the effect of random errors.",
+    "bullets": [
+     "Add together all the valid repeat values in a data set.",
+     "Divide the sum by the total number of valid repeat values used.",
+     "Do not include identified anomalies (outliers) when calculating the mean.",
+     "Round the final mean to an appropriate number of decimal places or significant figures, usually matching the raw data."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Excluding Anomalies",
+      "p": "Always discard anomalous results before calculating a mean so that the average is not skewed by experimental errors."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Determining Ranges",
+    "p": "The range gives a quantitative measure of the spread of data and indicates the consistency or variability of replicate measurements.",
+    "bullets": [
+     "Find the maximum value and the minimum value within a set of repeat data.",
+     "Calculate the range by subtracting the minimum value from the maximum value (Range = Maximum - Minimum).",
+     "A small range indicates high precision and good repeatability among replicates.",
+     "A large range indicates high variability, suggesting random errors or poorly controlled variables."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Range",
+      "p": "The spread of data, calculated as the difference between the maximum and minimum values in a data set."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Identifying and Managing Outliers",
+    "p": "Outliers are results that do not fit the pattern of the rest of the data set and indicate potential experimental or reading errors.",
+    "bullets": [
+     "Spot outliers by inspecting repeat readings for values that are significantly higher or lower than the others.",
+     "Exclude outliers from calculations of the mean to prevent distortion.",
+     "Investigate the cause of the outlier, such as incorrect measurement, equipment failure, or contamination.",
+     "Repeat the experiment if possible to replace the discarded outlier with a valid data point."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "warn",
+      "t": "Do Not Just Ignore",
+      "p": "In exams, you must explicitly state whether an anomalous result is included or excluded when calculating means; never just cross it out without explanation."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Understanding Accuracy",
+    "p": "Accuracy relates to how close a measured value is to the true or accepted value, reflecting the absence of systematic errors.",
+    "bullets": [
+     "A measurement is accurate if it is very close to the true value.",
+     "Inaccuracies are usually caused by systematic errors, such as a zero error on a balance or an uncalibrated thermometer.",
+     "Improving accuracy requires fixing systematic errors, recalibrating equipment, or using more refined apparatus.",
+     "Comparing experimental results to literature values helps evaluate overall accuracy."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Accuracy",
+      "p": "How close a measurement is to the true or accepted value."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Understanding Precision",
+    "p": "Precision describes how close replicate measurements are to each other, regardless of whether they are close to the true value.",
+    "bullets": [
+     "High precision means there is very little spread between repeat readings (a small range).",
+     "Precision is determined by the limits of resolution of the measuring instrument.",
+     "Using equipment with finer graduations (e.g., a burette instead of a measuring cylinder) improves precision.",
+     "Precision does not imply accuracy; measurements can be tightly clustered (precise) but wrong due to a systematic error."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Bullseye Analogy",
+      "p": "Think of a dartboard: all darts tightly grouped off-center is precise but inaccurate; all darts scattered around the bullseye is inaccurate and imprecise."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Repeatability and Reproducibility",
+    "p": "These terms evaluate the reliability of experimental data by examining who takes the measurements and how consistently the method works.",
+    "bullets": [
+     "Repeatability is the precision obtained when the same person uses the same equipment and method to get the same results.",
+     "Reproducibility is the precision obtained when different people use different equipment or methods to get similar results.",
+     "High repeatability confirms that random errors are small and the technique is stable.",
+     "High reproducibility confirms that the scientific finding is robust and not dependent on a single laboratory setup."
+    ],
+    "table": {
+     "head": [
+      "Feature",
+      "Repeatability",
+      "Reproducibility"
+     ],
+     "rows": [
+      [
+       "Who performs it?",
+       "Same person / group",
+       "Different people / labs"
+      ],
+      [
+       "Equipment",
+       "Same equipment",
+       "Different equipment"
+      ],
+      [
+       "Checks for",
+       "Random errors & technique",
+       "General validity & bias"
+      ]
+     ]
+    },
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Drawing Scientific Conclusions",
+    "p": "Evaluating data allows scientists to draw conclusions that link independent and dependent variables, supported by direct evidence.",
+    "bullets": [
+     "State the relationship clearly (e.g., as temperature increases, the rate of reaction increases).",
+     "Use data from the results table or graph (with units) to quote specific evidence supporting the conclusion.",
+     "Check whether the data supports the initial hypothesis.",
+     "Consider limitations and sources of error when assessing the strength of the conclusion."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Quote Data",
+      "p": "Always back up your conclusions in exams by quoting specific numbers and units from the data set."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Evaluating Experimental Methods",
+    "p": "Critical evaluation of a method helps identify why errors occurred and how the procedure can be improved for future investigations.",
+    "bullets": [
+     "Identify sources of random error, such as heat loss to surroundings during an enthalpy change experiment.",
+     "Identify sources of systematic error, such as parallax error when reading meniscus levels.",
+     "Suggest concrete improvements, such as using digital probes, lagging a calorimeter, or using a burette.",
+     "Evaluate whether the sample size or range of the independent variable was sufficient to establish a valid trend."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Random Error",
+      "p": "Errors caused by unknown and unpredictable changes in an experiment, affecting repeatability."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "Archery and Target Practice",
+   "p": "Imagine shooting arrows at a target. Precision is hitting the exact same spot on the board repeatedly, even if it is completely off the bullseye. Accuracy is hitting the bullseye itself. If your bow has a bent sight (systematic error), all your arrows might group tightly in the top left corner (high precision, low accuracy). If your hands shake (random error), your arrows scatter across the target (low precision). Repeatability is you hitting the same tight group again yourself, while reproducibility is another archer using a different bow achieving the same bullseye. This breaks down slightly because chemical measurements involve numerical scales rather than physical spatial coordinates, but the concepts of spread and deviation remain identical."
+  },
+  "terms": [
+   {
+    "t": "Mean",
+    "d": "The arithmetic average of a set of numbers, calculated by dividing the sum of the values by the number of values."
+   },
+   {
+    "t": "Range",
+    "d": "The spread of data between the highest and lowest values in a data set."
+   },
+   {
+    "t": "Outlier",
+    "d": "A result that does not fit the trend or pattern of the rest of the data set."
+   },
+   {
+    "t": "Accuracy",
+    "d": "How close a measured value is to the true or accepted value."
+   },
+   {
+    "t": "Precision",
+    "d": "How close replicate measurements are to each other, indicating the spread of data."
+   },
+   {
+    "t": "Repeatability",
+    "d": "The precision obtained when the same person repeats an experiment using the same method and equipment."
+   },
+   {
+    "t": "Reproducibility",
+    "d": "The precision obtained when different people or different groups perform the experiment with different equipment."
+   },
+   {
+    "t": "Systematic Error",
+    "d": "An error that consistently differs from the true value by a consistent amount, often due to faulty equipment."
+   },
+   {
+    "t": "Random Error",
+    "d": "An unpredictable variation in measurements that causes readings to spread above and below the true value."
+   },
+   {
+    "t": "True Value",
+    "d": "The accurate value that would be obtained in an ideal measurement with zero errors."
+   },
+   {
+    "t": "Resolution",
+    "d": "The smallest change in the quantity being measured that can be detected by an instrument."
+   },
+   {
+    "t": "Valid Conclusion",
+    "d": "A deduction supported by valid data obtained from a fair test with controlled variables."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Including anomalous results when calculating the mean.",
+    "r": "Identify and exclude outliers before calculating the mean."
+   },
+   {
+    "w": "Saying precision means getting the right answer.",
+    "r": "Precision means close agreement among repeats; accuracy is getting the right answer."
+   },
+   {
+    "w": "Defining range as just the maximum number.",
+    "r": "Range is the difference between maximum and minimum values (Max - Min)."
+   },
+   {
+    "w": "Stating that repeating an experiment fixes a systematic error.",
+    "r": "Repeating an experiment only reduces random errors; systematic errors affect all repeats equally."
+   },
+   {
+    "w": "Writing conclusions without quoting data from the table.",
+    "r": "Always quote specific numerical values with units from the data to support conclusions."
+   },
+   {
+    "w": "Confusing repeatability and reproducibility.",
+    "r": "Repeatability is done by the same person; reproducibility is done by different people or labs."
+   }
+  ],
+  "exam": [
+   {
+    "q": "A student measures the pH of a solution three times as 4.1, 4.2, and 4.1. Calculate the mean pH.",
+    "marks": 2,
+    "model": [
+     "Sum = 4.1 + 4.2 + 4.1 = 12.4",
+     "Mean = 12.4 / 3 = 4.13"
+    ],
+    "tip": "Show your working clearly and round to an appropriate number of decimal places."
+   },
+   {
+    "q": "Explain the difference between accuracy and precision.",
+    "marks": 2,
+    "model": [
+     "Accuracy is how close a measurement is to the true value.",
+     "Precision is how close replicate measurements are to each other."
+    ],
+    "tip": "Learn standard definitions word-for-word for full marks."
+   },
+   {
+    "q": "Define repeatability in the context of scientific investigations.",
+    "marks": 1,
+    "model": [
+     "The precision obtained when the same person carries out the experiment again using the same method and equipment."
+    ],
+    "tip": "Include reference to the same person and same equipment."
+   },
+   {
+    "q": "A student carries out a titration and obtains titre volumes of 24.5 cm3, 24.6 cm3, and 28.1 cm3. Explain what should be done with the 28.1 cm3 result.",
+    "marks": 2,
+    "model": [
+     "It is an outlier or anomalous result.",
+     "It should be excluded from the mean calculation."
+    ],
+    "tip": "Always identify anomalies before averaging titrations."
+   },
+   {
+    "q": "Explain why a zero error on a balance is classified as a systematic error rather than a random error.",
+    "marks": 2,
+    "model": [
+     "It shifts all measurements by the same amount in the same direction.",
+     "It does not fluctuate randomly above and below the true value."
+    ],
+    "tip": "Systematic errors are consistent and predictable in direction."
+   },
+   {
+    "q": "Describe how to find the range of a set of temperature change data: 2.1 °C, 2.5 °C, 2.3 °C.",
+    "marks": 2,
+    "model": [
+     "Identify maximum (2.5 °C) and minimum (2.1 °C).",
+     "Calculate 2.5 - 2.1 = 0.4 °C."
+    ],
+    "tip": "State the range with proper units."
+   },
+   {
+    "q": "A student concludes that 'adding more catalyst always increases the rate of reaction infinitely'. Evaluate this conclusion based on data showing rate levelling off.",
+    "marks": 2,
+    "model": [
+     "The conclusion is incorrect because the rate levels off.",
+     "Beyond a certain concentration, another factor becomes limiting."
+    ],
+    "tip": "Use data trends to qualify or refute sweeping statements."
+   },
+   {
+    "q": "State one way to improve the precision of measuring 25 cm3 of acid.",
+    "marks": 1,
+    "model": [
+     "Use a pipette or burette instead of a measuring cylinder."
+    ],
+    "tip": "Mention equipment with higher resolution."
+   },
+   {
+    "q": "Explain why reproducibility is an important feature of scientific evidence.",
+    "marks": 2,
+    "model": [
+     "It shows that the results are not due to a fluke or bias in one specific lab.",
+     "It increases confidence that the scientific conclusion is valid."
+    ],
+    "tip": "Link reproducibility to scientific confidence and validity."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A student measures the mass of gas produced in a reaction at 30 seconds across three identical trials. The results are 1.42 g, 1.40 g, and 1.12 g. Identify any anomaly, calculate the range of the valid data, and find the mean mass.",
+    "steps": [
+     "Step 1: Identify the anomaly. 1.12 g is significantly lower than 1.42 g and 1.40 g, so it is an outlier and should be excluded.",
+     "Step 2: Calculate the range of the valid data. Max = 1.42 g, Min = 1.40 g. Range = 1.42 - 1.40 = 0.02 g.",
+     "Step 3: Calculate the mean of the valid data. Sum = 1.42 + 1.40 = 2.82 g. Mean = 2.82 / 2 = 1.41 g."
+    ],
+    "ans": "Anomaly: 1.12 g. Range: 0.02 g. Mean mass: 1.41 g."
+   },
+   {
+    "q": "A class investigates the temperature change when neutralising an acid. Group A gets a mean temperature rise of 5.2 °C with a range of 0.6 °C. Group B gets a mean temperature rise of 5.3 °C with a range of 0.1 °C. Compare the precision and repeatability of the two groups.",
+    "steps": [
+     "Step 1: Compare the ranges. Group B has a smaller range (0.1 °C) than Group A (0.6 °C).",
+     "Step 2: Relate range to precision. A smaller range indicates a tighter spread of repeat readings.",
+     "Step 3: Conclude regarding precision and repeatability. Group B's data is more precise, demonstrating better repeatability in their experimental technique."
+    ],
+    "ans": "Group B's data is more precise and has better repeatability because its range is smaller (0.1 °C compared to 0.6 °C), showing less spread in repeat measurements."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Comparison of accuracy and precision using dartboard analogies: high precision with low accuracy (systematic error), and high accuracy with high precision.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><circle cx=\"110\" cy=\"120\" r=\"70\" fill=\"#f1f5f9\" stroke=\"#334155\" stroke-width=\"2\"/><circle cx=\"110\" cy=\"120\" r=\"45\" fill=\"#e2e8f0\" stroke=\"#334155\" stroke-width=\"1\"/><circle cx=\"110\" cy=\"120\" r=\"20\" fill=\"#cbd5e1\" stroke=\"#334155\" stroke-width=\"1\"/><circle cx=\"110\" cy=\"120\" r=\"4\" fill=\"#ef4444\"/><circle cx=\"90\" cy=\"95\" r=\"5\" fill=\"#2563eb\"/><circle cx=\"93\" cy=\"92\" r=\"5\" fill=\"#2563eb\"/><circle cx=\"88\" cy=\"98\" r=\"5\" fill=\"#2563eb\"/><text x=\"110\" y=\"210\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1e293b\" font-weight=\"bold\">Precise, Not Accurate</text><circle cx=\"290\" cy=\"120\" r=\"70\" fill=\"#f1f5f9\" stroke=\"#334155\" stroke-width=\"2\"/><circle cx=\"290\" cy=\"120\" r=\"45\" fill=\"#e2e8f0\" stroke=\"#334155\" stroke-width=\"1\"/><circle cx=\"290\" cy=\"120\" r=\"20\" fill=\"#cbd5e1\" stroke=\"#334155\" stroke-width=\"1\"/><circle cx=\"290\" cy=\"120\" r=\"4\" fill=\"#ef4444\"/><circle cx=\"288\" cy=\"119\" r=\"5\" fill=\"#16a34a\"/><circle cx=\"291\" cy=\"121\" r=\"5\" fill=\"#16a34a\"/><circle cx=\"289\" cy=\"120\" r=\"5\" fill=\"#16a34a\"/><text x=\"290\" y=\"210\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1e293b\" font-weight=\"bold\">Accurate and Precise</text></svg>"
+   },
+   {
+    "cap": "Identifying an outlier in repeat measurements: one result deviates significantly from the cluster of consistent readings.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><line x1=\"60\" y1=\"180\" x2=\"360\" y2=\"180\" stroke=\"#334155\" stroke-width=\"2\"/><line x1=\"60\" y1=\"60\" x2=\"60\" y2=\"180\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"210\" y=\"215\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1e293b\" font-weight=\"bold\">Repeat Measurements</text><text x=\"30\" y=\"120\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1e293b\" transform=\"rotate(-90 30 120)\" font-weight=\"bold\">Value</text><circle cx=\"120\" cy=\"90\" r=\"6\" fill=\"#2563eb\"/><text x=\"120\" y=\"70\" font-size=\"11\" text-anchor=\"middle\" fill=\"#2563eb\">Trial 1</text><circle cx=\"200\" cy=\"95\" r=\"6\" fill=\"#2563eb\"/><text x=\"200\" y=\"70\" font-size=\"11\" text-anchor=\"middle\" fill=\"#2563eb\">Trial 2</text><circle cx=\"280\" cy=\"160\" r=\"6\" fill=\"#ef4444\"/><text x=\"280\" y=\"195\" font-size=\"11\" text-anchor=\"middle\" fill=\"#ef4444\" font-weight=\"bold\">Outlier (Discard)</text><path d=\"M 270 145 Q 260 120 240 105\" fill=\"none\" stroke=\"#ef4444\" stroke-dasharray=\"4\" stroke-width=\"1.5\"/></svg>"
+   },
+   {
+    "cap": "Comparison of systematic and random errors on a measurement scale showing how the true value relates to readings.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect width=\"400\" height=\"240\" fill=\"#f8fafc\"/><rect x=\"50\" y=\"80\" width=\"300\" height=\"40\" fill=\"#e2e8f0\" rx=\"6\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"200\" y1=\"80\" x2=\"200\" y2=\"120\" stroke=\"#16a34a\" stroke-width=\"3\"/><text x=\"200\" y=\"65\" font-size=\"12\" text-anchor=\"middle\" fill=\"#16a34a\" font-weight=\"bold\">True Value</text><line x1=\"240\" y1=\"80\" x2=\"240\" y2=\"120\" stroke=\"#2563eb\" stroke-width=\"3\"/><text x=\"240\" y=\"145\" font-size=\"12\" text-anchor=\"middle\" fill=\"#2563eb\" font-weight=\"bold\">Systematic Error</text><line x1=\"170\" y1=\"160\" x2=\"230\" y2=\"160\" stroke=\"#ea580c\" stroke-width=\"2\"/><circle cx=\"170\" cy=\"160\" r=\"4\" fill=\"#ea580c\"/><circle cx=\"230\" cy=\"160\" r=\"4\" fill=\"#ea580c\"/><circle cx=\"200\" cy=\"160\" r=\"4\" fill=\"#ea580c\"/><text x=\"200\" y=\"195\" font-size=\"12\" text-anchor=\"middle\" fill=\"#ea580c\" font-weight=\"bold\">Random Error Spread</text></svg>"
+   }
+  ],
+  "pid": "chem_ocrb.6.2",
+  "sid": "chem_ocrb",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-flash-lite-latest",
+  "ts": "2026-11-28T17:52:03.000Z"
+ },
+ "chem_ocrb.6.3": {
+  "summary": "This comprehensive revision guide covers OCR GCSE Chemistry B (J258) Ideas about Science 3: Correlation and cause, how explanations develop over time, peer review, and using models. It explores how scientists distinguish between simple patterns and underlying mechanisms, scrutinise new evidence through peer review, trace the historical evolution of scientific theories, and employ physical and mathematical models to represent complex chemical systems. Mastering these concepts is essential for evaluating scientific claims critically in exams and real-world contexts.",
+  "core": [
+   {
+    "h": "Correlation vs Cause (Causation)",
+    "p": "In science, it is vital to distinguish between a simple relationship where two variables change together and a direct mechanism where one variable actually causes the changes in the other. A correlation does not automatically mean there is a causal link.",
+    "bullets": [
+     "**Correlation**: A relationship or pattern between two variables where they change together.",
+     "**Causation (Cause)**: When a change in one variable directly **causes** a change in another variable through a proven mechanism.",
+     "**Positive correlation**: As one variable increases, the other variable also increases (shown by an upward sloping trend line).",
+     "**Negative correlation**: As one variable increases, the other variable decreases (shown by a downward sloping trend line).",
+     "**No correlation**: There is no discernible relationship or pattern between the two variables on a scatter graph.",
+     "**Coincidence and Third Variables**: A strong correlation can occur purely by chance or because a third, unmeasured variable affects both variables simultaneously."
+    ],
+    "table": {
+     "head": [
+      "Feature",
+      "Correlation",
+      "Cause"
+     ],
+     "rows": [
+      [
+       "Definition",
+       "Variables change together",
+       "A change in A produces a change in B"
+      ],
+      [
+       "Mechanism",
+       "Does not require a known mechanism",
+       "Requires a physical or chemical mechanism"
+      ],
+      [
+       "Proof",
+       "Can be misleading or coincidental",
+       "Backed by experimental evidence and theory"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Correlation",
+      "p": "A relationship between two variables where a change in one is accompanied by a change in the other."
+     },
+     {
+      "k": "warn",
+      "t": "Assuming Causation",
+      "p": "Never state that variable A 'causes' variable B just because they show a correlation on a graph. You must state the underlying mechanism!"
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Figure 1: Scatter graphs illustrating positive correlation, negative correlation, and no correlation between two variables.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\" /><line x1=\"40\" y1=\"190\" x2=\"120\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\" /><line x1=\"40\" y1=\"190\" x2=\"40\" y2=\"110\" stroke=\"#1b2540\" stroke-width=\"2\" /><line x1=\"160\" y1=\"190\" x2=\"240\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\" /><line x1=\"160\" y1=\"190\" x2=\"160\" y2=\"110\" stroke=\"#1b2540\" stroke-width=\"2\" /><line x1=\"280\" y1=\"190\" x2=\"360\" y2=\"190\" stroke=\"#1b2540\" stroke-width=\"2\" /><line x1=\"280\" y1=\"190\" x2=\"280\" y2=\"110\" stroke=\"#1b2540\" stroke-width=\"2\" /><circle cx=\"55\" cy=\"175\" r=\"3\" fill=\"#2563eb\" /><circle cx=\"70\" cy=\"160\" r=\"3\" fill=\"#2563eb\" /><circle cx=\"85\" cy=\"145\" r=\"3\" fill=\"#2563eb\" /><circle cx=\"105\" cy=\"125\" r=\"3\" fill=\"#2563eb\" /><circle cx=\"175\" cy=\"130\" r=\"3\" fill=\"#dc2626\" /><circle cx=\"190\" cy=\"145\" r=\"3\" fill=\"#dc2626\" /><circle cx=\"210\" cy=\"165\" r=\"3\" fill=\"#dc2626\" /><circle cx=\"225\" cy=\"180\" r=\"3\" fill=\"#dc2626\" /><circle cx=\"295\" cy=\"135\" r=\"3\" fill=\"#16a34a\" /><circle cx=\"315\" cy=\"170\" r=\"3\" fill=\"#16a34a\" /><circle cx=\"335\" cy=\"140\" r=\"3\" fill=\"#16a34a\" /><circle cx=\"350\" cy=\"165\" r=\"3\" fill=\"#16a34a\" /><text x=\"55\" y=\"215\" font-size=\"11\" fill=\"#1b2540\">Positive</text><text x=\"170\" y=\"215\" font-size=\"11\" fill=\"#1b2540\">Negative</text><text x=\"295\" y=\"215\" font-size=\"11\" fill=\"#1b2540\">No pattern</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Identifying Causal Mechanisms",
+    "p": "To prove that a correlation is actually a causal relationship, scientists must investigate and explain the underlying mechanism that connects the cause to the effect.",
+    "bullets": [
+     "**Mechanism**: A detailed description of the step-by-step physical, chemical, or biological processes that link cause and effect.",
+     "**Experimental Testing**: Scientists manipulate the independent variable while carefully controlling all other variables to see if the dependent variable changes as predicted by the mechanism.",
+     "**Chemical Example**: Increased atmospheric carbon dioxide correlates with rising global temperatures. The causal mechanism is the greenhouse effect: CO2 molecules absorb and re-emit infrared radiation.",
+     "**Rejection of False Links**: If no plausible mechanism can be found to explain a correlation, the relationship is typically dismissed as coincidence or attributed to an unknown confounding variable."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Mechanism is Key",
+      "p": "In exam questions asking why a correlation might not mean causation, always state that 'correlation does not prove causation and no mechanism has been shown'."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Evaluating Evidence and Risk",
+    "p": "Scientific claims about risks and benefits must be evaluated using reliable data, large sample sizes, and valid control measures to ensure conclusions are trustworthy.",
+    "bullets": [
+     "**Risk Assessment**: Evaluating the probability that a harmful event will occur and the severity of its consequences.",
+     "**Absolute vs Relative Risk**: Distinguishing between the actual chance of something happening versus the proportional change in risk.",
+     "**Confounding Factors**: Variables other than the independent variable that could affect the results and lead to false conclusions if not controlled.",
+     "**Sample Bias**: If the sample tested is not representative of the wider population, any claimed correlation or cause is invalid."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Risk Evaluation",
+      "p": "When asked to evaluate a risk in chemistry, look at the scale of the hazard, the likelihood of exposure, and the reliability of the data source."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "How Scientific Explanations Develop Over Time",
+    "p": "Scientific knowledge is not static; it evolves continuously as new technologies are invented, new experimental evidence is gathered, and existing theories are challenged or refined.",
+    "bullets": [
+     "**Accumulation of Evidence**: As more experiments are performed, data either supports current theories or reveals anomalies that cannot be explained.",
+     "**Technological Advances**: Better instruments (e.g., electron microscopes, mass spectrometers) allow scientists to observe phenomena at much finer scales, prompting model updates.",
+     "**Paradigm Shifts**: When overwhelming new evidence contradicts an established theory, the scientific community replaces it with a new, more comprehensive explanation.",
+     "**Historical Context**: Theories are always limited by the technology and knowledge available at the specific time they were proposed."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Scientific Theory",
+      "p": "A well-tested and widely accepted explanation of a set of observations or experimental results, backed by extensive evidence."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Case Study: The Evolution of Atomic Models",
+    "p": "The atomic model provides a classic example of how scientific explanations develop over time as new experimental evidence disproves older models.",
+    "bullets": [
+     "**Dalton's Solid Sphere (1808)**: Atoms were thought to be tiny, indestructible solid spheres that could not be divided.",
+     "**Thomson's Plum Pudding (1897)**: Discovery of the electron led to the model of a positive sphere with negative electrons embedded inside.",
+     "**Rutherford's Nuclear Model (1911)**: Alpha particle scattering experiment proved atoms have a tiny, dense, positive nucleus at the centre.",
+     "**Bohr's Planetary Model (1913)**: Electrons orbit the nucleus at fixed energy levels (shells), preventing them from spiralling into the nucleus.",
+     "**Chadwick's Neutron (1932)**: Discovery of the neutron completed the modern standard model of the atom."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Rutherford's Experiment",
+      "p": "Most alpha particles passed straight through (atom is mostly empty space), few deflected (centre is positive and dense)."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Figure 2: Evolution of atomic models from Dalton's solid sphere to Rutherford's nuclear model.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\" /><circle cx=\"70\" cy=\"120\" r=\"35\" fill=\"#bfdbfe\" stroke=\"#1b2540\" stroke-width=\"2\" /><text x=\"70\" y=\"180\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">Dalton (1808)</text><circle cx=\"200\" cy=\"120\" r=\"35\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\" /><circle cx=\"190\" cy=\"110\" r=\"5\" fill=\"#dc2626\" /><circle cx=\"215\" cy=\"125\" r=\"5\" fill=\"#dc2626\" /><circle cx=\"195\" cy=\"135\" r=\"5\" fill=\"#dc2626\" /><text x=\"200\" y=\"180\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">Thomson (1897)</text><circle cx=\"330\" cy=\"120\" r=\"35\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\" /><circle cx=\"330\" cy=\"120\" r=\"8\" fill=\"#dc2626\" /><circle cx=\"330\" cy=\"90\" r=\"3\" fill=\"#2563eb\" /><circle cx=\"360\" cy=\"120\" r=\"3\" fill=\"#2563eb\" /><text x=\"330\" y=\"180\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">Rutherford (1911)</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Peer Review and Validation",
+    "p": "Before scientific research, experimental data, and new theories are accepted by the wider scientific community, they must undergo rigorous peer review by independent experts in the same field.",
+    "bullets": [
+     "**Process of Peer Review**: Scientists submit their written research findings to a reputable scientific journal. The editors send the manuscript anonymously to other qualified experts (peers).",
+     "**Checking Validity**: Reviewers scrutinise the experimental methodology, check calculations, assess whether conclusions are justified by the data, and look for bias or flaws.",
+     "**Feedback and Revision**: Reviewers can recommend acceptance, rejection, or request further experiments and amendments before publication.",
+     "**Preventing Fraud and Error**: Peer review helps to filter out poor quality science, fraudulent data, and unsubstantiated claims, maintaining the integrity of published scientific knowledge.",
+     "**Scientific Communication**: Once published, other scientists can attempt to replicate the experiments to test if the findings are reproducible."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Peer Review",
+      "p": "The evaluation of scientific research by independent experts in the same field before it is published in a scientific journal."
+     },
+     {
+      "k": "warn",
+      "t": "Media vs Peer Review",
+      "p": "Never assume scientific claims reported in newspapers or social media have undergone peer review. Always check primary academic sources."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Publishing and Communicating Science",
+    "p": "Effective communication of scientific findings ensures that discoveries benefit society, inform public policy, and allow other researchers to build upon existing work.",
+    "bullets": [
+     "**Scientific Journals**: Specialist publications where peer-reviewed research is shared globally (e.g., Nature, Science).",
+     "**Conferences**: Scientists present their work orally or via posters to peers, allowing immediate debate, questioning, and collaboration.",
+     "**Public Understanding**: Translating complex chemical research into accessible language for the general public and government bodies.",
+     "**Addressing Misinformation**: Peer review and transparent publication help combat pseudoscience and incorrect claims in the public domain."
+    ],
+    "table": null,
+    "callouts": [],
+    "fig": []
+   },
+   {
+    "h": "Using Models in Chemistry",
+    "p": "Models are essential tools used by chemists to represent abstract, microscopic, or complex systems that cannot be easily seen or manipulated directly.",
+    "bullets": [
+     "**Purpose of Models**: To simplify complex phenomena, explain observations, and make testable predictions about chemical behavior.",
+     "**Types of Models**: Physical models (ball-and-stick), mathematical models (equations and computer simulations), and abstract conceptual models (particle theory).",
+     "**Limitations**: Every model has limitations because it is a simplification of reality and cannot capture every aspect of the actual system perfectly.",
+     "**Choosing the Right Model**: The choice of model depends on what property is being investigated (e.g., dot-and-cross diagrams show bonding, while 3D space-filling models show molecular shape)."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "def",
+      "t": "Scientific Model",
+      "p": "A representation of an idea, object, or system used to explain and predict phenomena that cannot be experienced directly."
+     }
+    ],
+    "fig": []
+   },
+   {
+    "h": "Types of Chemical Models",
+    "p": "Chemists use several different types of models to represent atoms, molecules, bonding, and chemical reactions.",
+    "bullets": [
+     "**Ball-and-Stick Models**: Uses spheres for atoms and rods for chemical bonds. Great for showing 3D spatial arrangement and bond angles, but bonds are not actually rigid sticks and atoms are not scaled to atomic radii.",
+     "**Space-Filling Models**: Shows atoms represented as touching spheres proportional to their atomic radii. Excellent for showing relative size and steric hindrance, but internal bonding angles are hard to measure.",
+     "**Dot-and-Cross Diagrams**: Shows outer shell electrons involved in ionic or covalent bonding. Clear for tracking electron transfer or sharing, but does not represent 3D shape or relative atomic sizes.",
+     "**Chemical Equations**: Mathematical and symbolic models representing reactants and products in a reaction, conserving mass and atoms."
+    ],
+    "table": {
+     "head": [
+      "Model Type",
+      "Advantages",
+      "Limitations"
+     ],
+     "rows": [
+      [
+       "Ball-and-stick",
+       "Shows 3D shape and angles clearly",
+       "Bonds are not physical sticks; scale is off"
+      ],
+      [
+       "Dot-and-Cross",
+       "Shows electron transfer or sharing",
+       "2D representation; ignores 3D geometry"
+      ],
+      [
+       "Space-filling",
+       "Accurate relative atom sizes",
+       "Difficult to see hidden atoms inside structure"
+      ]
+     ]
+    },
+    "callouts": [
+     {
+      "k": "tip",
+      "t": "Exam Question on Models",
+      "p": "When asked why a model is useful, mention it helps visualise abstract ideas. When asked about limitations, state what the model leaves out or misrepresents."
+     }
+    ],
+    "fig": [
+     {
+      "cap": "Figure 3: Comparison of a ball-and-stick model and a space-filling model for a water molecule.",
+      "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\" /><circle cx=\"100\" cy=\"120\" r=\"25\" fill=\"#ef4444\" stroke=\"#1b2540\" stroke-width=\"2\" /><circle cx=\"60\" cy=\"80\" r=\"15\" fill=\"#e2e8f0\" stroke=\"#1b2540\" stroke-width=\"2\" /><circle cx=\"140\" cy=\"80\" r=\"15\" fill=\"#e2e8f0\" stroke=\"#1b2540\" stroke-width=\"2\" /><line x1=\"82\" y1=\"102\" x2=\"65\" y2=\"85\" stroke=\"#1b2540\" stroke-width=\"4\" /><line x1=\"118\" y1=\"102\" x2=\"135\" y2=\"85\" stroke=\"#1b2540\" stroke-width=\"4\" /><text x=\"100\" y=\"180\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">Ball-and-Stick Model</text><circle cx=\"300\" cy=\"120\" r=\"30\" fill=\"#ef4444\" stroke=\"#1b2540\" stroke-width=\"2\" /><circle cx=\"260\" cy=\"100\" r=\"20\" fill=\"#e2e8f0\" stroke=\"#1b2540\" stroke-width=\"2\" /><circle cx=\"335\" cy=\"100\" r=\"20\" fill=\"#e2e8f0\" stroke=\"#1b2540\" stroke-width=\"2\" /><text x=\"300\" y=\"180\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">Space-Filling Model</text></svg>"
+     }
+    ]
+   },
+   {
+    "h": "Evaluating and Refining Models",
+    "p": "Scientific models are continually evaluated against empirical data. When experimental results do not match predictions made by a model, the model must be modified or replaced.",
+    "bullets": [
+     "**Testing Predictions**: Scientists use models to predict the outcome of experiments. If predictions match observations, confidence in the model increases.",
+     "**Anomalies and Failures**: If experimental data contradicts the model's predictions, the model is deemed limited or flawed.",
+     "**Refinement**: Models are updated to incorporate new variables or mechanisms (e.g., upgrading Bohr's atomic model to the quantum mechanical model with electron clouds).",
+     "**No Model is Perfect**: All models are simplifications of reality; scientists choose the simplest model that adequately explains the phenomenon being studied."
+    ],
+    "table": null,
+    "callouts": [
+     {
+      "k": "key",
+      "t": "Model Limitation",
+      "p": "Always remember that models do not replicate reality in every detail; they are mental or physical frameworks designed to make complex data understandable."
+     }
+    ],
+    "fig": []
+   }
+  ],
+  "analogy": {
+   "t": "The Weather App and Forecasting Analogy",
+   "p": "Imagine using a smartphone weather app (a computer model) that shows a strong positive correlation between wearing sunglasses and carrying an umbrella: whenever people wear sunglasses, it often rains later. However, sunglasses do not *cause* rain (no causal mechanism). Instead, a third variable—bright, changeable daytime weather—causes people to wear sunglasses and also brings afternoon rain showers. Furthermore, weather apps are models: they simplify the Earth's chaotic atmosphere using mathematical equations, meaning they have limitations and can occasionally get forecasts wrong. Peer review in science is like a panel of expert meteorologists checking the app's forecasting algorithm before it is released to the public."
+  },
+  "terms": [
+   {
+    "t": "Correlation",
+    "d": "A relationship between two variables where a change in one variable is accompanied by a change in the other."
+   },
+   {
+    "t": "Causation",
+    "d": "When a change in one variable directly causes a change in another variable through a proven mechanism."
+   },
+   {
+    "t": "Mechanism",
+    "d": "A detailed explanation of the step-by-step physical or chemical processes that link cause and effect."
+   },
+   {
+    "t": "Peer Review",
+    "d": "The critical evaluation of scientific research by independent experts in the same field prior to publication."
+   },
+   {
+    "t": "Scientific Model",
+    "d": "A physical, mathematical, or conceptual representation of a system used to explain and predict phenomena."
+   },
+   {
+    "t": "Confounding Variable",
+    "d": "An unmeasured variable that affects both variables under investigation, creating a false correlation."
+   },
+   {
+    "t": "Empirical Evidence",
+    "d": "Information acquired by observation or experimentation that is used to test scientific hypotheses and models."
+   },
+   {
+    "t": "Scientific Theory",
+    "d": "A well-tested, comprehensive explanation of a set of observations, backed by extensive peer-reviewed evidence."
+   },
+   {
+    "t": "Ball-and-Stick Model",
+    "d": "A physical model representing atoms as spheres and bonds as rods to show 3D molecular geometry."
+   },
+   {
+    "t": "Space-Filling Model",
+    "d": "A model showing relative atomic sizes and touching atoms to represent molecular volume."
+   },
+   {
+    "t": "Dot-and-Cross Diagram",
+    "d": "A model representing electrons in shells using dots and crosses to illustrate chemical bonding."
+   },
+   {
+    "t": "Absolute Risk",
+    "d": "The actual probability or chance of a hazard or adverse event occurring."
+   }
+  ],
+  "mistakes": [
+   {
+    "w": "Correlation means that variable A causes variable B.",
+    "r": "Correlation only shows variables change together; causation requires proving an underlying physical or chemical mechanism."
+   },
+   {
+    "w": "Scientific models are exact copies of reality.",
+    "r": "Models are always simplifications that have limitations and cannot represent every microscopic detail."
+   },
+   {
+    "w": "Peer review means scientists review their own work before publishing.",
+    "r": "Peer review is conducted by independent, anonymous expert scientists working in the same specialized field."
+   },
+   {
+    "w": "Once a scientific theory is published, it never changes.",
+    "r": "Theories evolve and are updated or replaced when new experimental evidence or advanced technology emerges."
+   },
+   {
+    "w": "Ball-and-stick models show the exact scale and size of atoms and bonds.",
+    "r": "Ball-and-stick models use arbitrary sphere sizes and rigid rods, omitting true atomic radii and bond flexibility."
+   },
+   {
+    "w": "If two variables show a positive correlation on a graph, there must be a direct link.",
+    "r": "The correlation could be entirely coincidental or caused by an unmeasured third confounding variable."
+   },
+   {
+    "w": "Scientific journals publish any article submitted by researchers.",
+    "r": "Journals only publish articles after rigorous peer review where methodology and conclusions are thoroughly checked."
+   }
+  ],
+  "exam": [
+   {
+    "q": "Explain the difference between correlation and causation.",
+    "marks": 2,
+    "model": [
+     "Correlation means two variables change together / show a pattern.",
+     "Causation means a change in one variable directly causes a change in the other through a mechanism."
+    ],
+    "tip": "Make sure you define both terms clearly to secure both marks."
+   },
+   {
+    "q": "A student states: 'Data shows that ice cream sales and shark attacks increase at the same time during summer. Therefore, eating ice cream causes shark attacks.' Explain why the student's conclusion is incorrect.",
+    "marks": 2,
+    "model": [
+     "Correlation does not mean causation.",
+     "There is no mechanism linking ice cream to shark attacks; a third confounding variable (hot weather / more people swimming) causes both."
+    ],
+    "tip": "Always mention confounding variables or coincidence when refuting a false causal claim."
+   },
+   {
+    "q": "Describe the purpose of peer review in science.",
+    "marks": 2,
+    "model": [
+     "To check the validity of experimental methods and data.",
+     "To prevent flawed, biased, or fraudulent research from being published."
+    ],
+    "tip": "Mention independent experts checking the work before publication."
+   },
+   {
+    "q": "State one advantage and one limitation of using a ball-and-stick model to represent a methane molecule.",
+    "marks": 2,
+    "model": [
+     "Advantage: Shows the 3D tetrahedral shape / bond angles clearly.",
+     "Limitation: Bonds are not rigid sticks / atoms are not to true relative scale."
+    ],
+    "tip": "Ensure your advantage matches the specific model asked about."
+   },
+   {
+    "q": "Explain how scientific explanations develop over time, using the atomic model as an example.",
+    "marks": 4,
+    "model": [
+     "Scientific explanations develop as new evidence and technologies emerge.",
+     "Dalton's solid sphere model was replaced by Thomson's plum pudding model when electrons were discovered.",
+     "Rutherford's alpha scattering experiment proved the existence of a central nucleus, updating the model.",
+     "Bohr and Chadwick further refined the model with energy shells and neutrons."
+    ],
+    "tip": "Structure your answer chronologically and link each model change to new evidence."
+   },
+   {
+    "q": "Give two reasons why scientists use models in chemistry.",
+    "marks": 2,
+    "model": [
+     "To help visualise abstract or microscopic concepts that cannot be seen.",
+     "To make predictions about chemical reactions and properties."
+    ],
+    "tip": "Keep answers concise and directly related to the purpose of modeling."
+   },
+   {
+    "q": "Explain why a scientific theory might be rejected or modified.",
+    "marks": 2,
+    "model": [
+     "New experimental data or anomalies are found that do not fit the current theory.",
+     "A better theory supported by more robust evidence replaces it."
+    ],
+    "tip": "Use terms like 'anomalies', 'new evidence', and 'replacement'."
+   },
+   {
+    "q": "Describe what happens during the peer review process.",
+    "marks": 3,
+    "model": [
+     "The research is submitted to a scientific journal.",
+     "Independent expert peers in the same field check the methods, data, and conclusions anonymously.",
+     "They recommend acceptance, revision, or rejection of the paper."
+    ],
+    "tip": "Include submission, independent expert review, and feedback stages."
+   },
+   {
+    "q": "Evaluate the use of space-filling models compared to dot-and-cross diagrams for representing water.",
+    "marks": 3,
+    "model": [
+     "Space-filling models show relative atomic sizes and 3D volume accurately.",
+     "Dot-and-cross diagrams show electron sharing and bonding clearly.",
+     "Neither model is perfect: space-filling hides internal details, while dot-and-cross ignores 3D shape."
+    ],
+    "tip": "Contrast the specific strengths and limitations of both model types."
+   }
+  ],
+  "worked": [
+   {
+    "q": "A scientist investigates the correlation between the concentration of a reactant and the rate of a chemical reaction. They plot a scatter graph and find a straight line passing through the origin. Explain how the scientist can establish whether this correlation is causal and describe the underlying mechanism.",
+    "steps": [
+     "Step 1: Recognise that a positive correlation alone is insufficient to prove causation.",
+     "Step 2: Propose an underlying chemical mechanism (e.g., collision theory: higher concentration means more reactant particles per unit volume, leading to a higher frequency of successful collisions).",
+     "Step 3: Perform controlled experiments varying only reactant concentration while keeping temperature and surface area constant to test the mechanism."
+    ],
+    "ans": "The scientist establishes causation by proposing collision theory as the mechanism and confirming experimentally that increasing concentration increases successful collision frequency."
+   },
+   {
+    "q": "Evaluate a student's claim that 'a ball-and-stick model is the best possible representation of an ionic lattice like sodium chloride'.",
+    "steps": [
+     "Step 1: Identify what a ball-and-stick model shows well (relative positions of ions in a 3D repeating lattice structure).",
+     "Step 2: Identify its major limitations when applied to ionic compounds (ionic bonds are electrostatic attractions acting in all directions, not rigid sticks holding ions apart; spaces shown between ions do not exist in the real crystal lattice).",
+     "Step 3: Conclude whether the claim is valid (the claim is false because no single model is 'best'; space-filling or ionic formula models are better suited for other properties)."
+    ],
+    "ans": "The claim is false. While ball-and-stick models show 3D geometry clearly, they incorrectly imply that bonds are rigid rods and that ions are separated by empty space."
+   }
+  ],
+  "svg": [
+   {
+    "cap": "Figure 4: The peer review cycle showing submission, expert review, feedback, and publication in scientific journals.",
+    "svg": "<svg viewBox=\"0 0 400 240\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"240\" fill=\"#f8fafc\" rx=\"8\" /><rect x=\"40\" y=\"40\" width=\"100\" height=\"50\" fill=\"#bfdbfe\" stroke=\"#1b2540\" stroke-width=\"2\" rx=\"6\" /><text x=\"90\" y=\"70\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">Research Paper</text><rect x=\"260\" y=\"40\" width=\"100\" height=\"50\" fill=\"#bbf7d0\" stroke=\"#1b2540\" stroke-width=\"2\" rx=\"6\" /><text x=\"310\" y=\"70\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">Peer Review</text><rect x=\"260\" y=\"150\" width=\"100\" height=\"50\" fill=\"#fde68a\" stroke=\"#1b2540\" stroke-width=\"2\" rx=\"6\" /><text x=\"310\" y=\"180\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">Feedback</text><rect x=\"40\" y=\"150\" width=\"100\" height=\"50\" fill=\"#fecaca\" stroke=\"#1b2540\" stroke-width=\"2\" rx=\"6\" /><text x=\"90\" y=\"180\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1b2540\">Publication</text><line x1=\"140\" y1=\"65\" x2=\"260\" y2=\"65\" stroke=\"#1b2540\" stroke-width=\"2\" /><line x1=\"310\" y1=\"90\" x2=\"310\" y2=\"150\" stroke=\"#1b2540\" stroke-width=\"2\" /><line x1=\"260\" y1=\"175\" x2=\"140\" y2=\"175\" stroke=\"#1b2540\" stroke-width=\"2\" /><line x1=\"90\" y1=\"150\" x2=\"90\" y2=\"90\" stroke=\"#1b2540\" stroke-width=\"2\" /></svg>"
+   }
+  ],
+  "pid": "chem_ocrb.6.3",
+  "sid": "chem_ocrb",
+  "v": 2,
+  "src": "pre",
+  "by": "gemini/gemini-3.5-flash-lite",
+  "ts": "2026-11-28T17:52:18.943Z"
  }
 }
